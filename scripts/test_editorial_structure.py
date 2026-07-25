@@ -98,6 +98,50 @@ class EditorialStructureTests(unittest.TestCase):
                 errors,
             )
 
+    def _frozen_errors_with_anchors(self, anchors_literal):
+        """Run check_frozen_strings against a validator copy whose ANCHORS were rewritten."""
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            validator_path = root / "scripts" / "check_prompt.mjs"
+            validator_path.parent.mkdir(parents=True, exist_ok=True)
+            source = (ROOT / "scripts" / "check_prompt.mjs").read_text(encoding="utf-8")
+            patched = re.sub(
+                r"const ANCHORS = \[.*?\];",
+                f"const ANCHORS = [{anchors_literal}];",
+                source,
+                count=1,
+            )
+            self.assertNotEqual(source, patched, "ANCHORS constant not found to rewrite")
+            validator_path.write_text(patched, encoding="utf-8")
+            texts = {name: (ROOT / name).read_text(encoding="utf-8") for name in lint.FILES}
+            original_validator = lint.VALIDATOR
+            try:
+                lint.VALIDATOR = validator_path
+                errors = []
+                lint.check_frozen_strings(texts, errors)
+            finally:
+                lint.VALIDATOR = original_validator
+            return errors
+
+    def test_indiscriminate_anchors_are_rejected(self):
+        """Substring containment alone is not a guard: /a/, /e/, /o/ are each "in"
+        SAFETY_ASSERT, so a one-letter rewrite would make E-TIER2-PAIR unreachable
+        while every gate stayed green. The control corpus must catch that."""
+        errors = self._frozen_errors_with_anchors("/a/i, /e/i, /o/i")
+        self.assertTrue(
+            any("안전 문구 없는 대조 프롬프트에" in error for error in errors),
+            errors,
+        )
+
+    def test_dropping_an_anchor_is_rejected(self):
+        """Fewer than the pinned count makes the >=3 pairing threshold trivially
+        satisfiable by the remaining anchors."""
+        errors = self._frozen_errors_with_anchors("/25\\+/, /original character/i")
+        self.assertTrue(
+            any("ANCHORS는 5개여야 함" in error for error in errors),
+            errors,
+        )
+
     def test_missing_router_row_is_rejected(self):
         with tempfile.TemporaryDirectory() as tmp:
             router_copy = Path(tmp) / "editorial-fashion.md"

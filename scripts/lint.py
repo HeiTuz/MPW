@@ -42,6 +42,15 @@ FILES = ["SKILL.md", "references/image/from-image.md", "references/templates.md"
 SSOT = "references/image/editorial/tier2-safety.md"   # Tier-2 동결 문자열 정본 (§2 코드블록)
 COMPILER = "references/image/compiler.md"
 VALIDATOR = ROOT / "scripts" / "check_prompt.mjs"
+# check_prompt.mjs ANCHORS 구조 고정. E-TIER2-PAIR는 앵커 3개 이상이 잡혀야 tail 단독을
+# 허용하므로, 앵커가 줄거나 무차별해지면 그 게이트가 조용히 죽는다. 대조 코퍼스는 안전
+# 문구가 전혀 없는 일반 프롬프트이며 앵커는 여기 거의 걸리지 않아야 한다.
+ANCHOR_COUNT = 5
+ANCHOR_PAIR_THRESHOLD = 3
+ANCHOR_CONTROL_CORPUS = (
+    "Korean event poster, bold serif headline, neon night market scene, four-color palette, "
+    "commercial print finish, legible hangul copy, wide establishing composition"
+)
 # 라벨 3+1포맷: "N자 실측"(괄호형 포함) / "실측: N자" / bare "(…, N자)" — "블록당 N자"(규칙 문구)와
 # "제3자" 같은 비라벨은 제외. bare 포맷은 실길이 라벨만 대상(N >= 50).
 LABEL_PATTERNS = [r"(?<!블록당 )(?<!\d)(\d+)자 실측", r"실측:\s*(\d+)자", r"(?<!제)(?<!\d)(\d+)자\)"]
@@ -486,12 +495,31 @@ def check_frozen_strings(texts, errors):
     if not ma:
         errors.append("check_prompt.mjs: ANCHORS 상수를 찾지 못함")
     else:
+        anchor_variants = []
         for pat in re.findall(r"/((?:[^/\\]|\\.)*)/", ma.group(1)):
             lit = pat.replace("\\+", "+")
             m2 = re.match(r"^(.*)\(\?\:([^)]*)\)(.*)$", lit)
             variants = [m2.group(1) + alt + m2.group(3) for alt in m2.group(2).split("|")] if m2 else [lit]
+            anchor_variants.append((pat, variants))
             if not any(v.lower() in a.lower() for v in variants):
                 errors.append(f"check_prompt.mjs: ANCHORS 패턴 /{pat}/ 이 SSOT SAFETY_ASSERT에 없음")
+        # Containment alone is not a guard: /a/, /e/, /o/ are all "in" SAFETY_ASSERT, so a
+        # one-letter rewrite makes E-TIER2-PAIR unreachable while every gate stays green.
+        # Pin the arity and require the set to stay discriminating against a prompt that
+        # carries no safety assert at all.
+        if len(anchor_variants) != ANCHOR_COUNT:
+            errors.append(
+                f"check_prompt.mjs: ANCHORS는 {ANCHOR_COUNT}개여야 함 (현재 {len(anchor_variants)}개) — "
+                "개수가 줄면 E-TIER2-PAIR 페어 임계가 무의미해진다"
+            )
+        matched = [pat for pat, variants in anchor_variants
+                   if any(v.lower() in ANCHOR_CONTROL_CORPUS.lower() for v in variants)]
+        if len(matched) >= ANCHOR_PAIR_THRESHOLD:
+            errors.append(
+                "check_prompt.mjs: ANCHORS가 안전 문구 없는 대조 프롬프트에 "
+                f"{len(matched)}개 매치({', '.join('/' + p + '/' for p in matched)}) — "
+                f"{ANCHOR_PAIR_THRESHOLD}개 이상이면 Tier-2 tail 단독 게이트가 무력화된다"
+            )
 
 
 def main():
