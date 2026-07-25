@@ -26,6 +26,22 @@ def load_manifest() -> dict[str, Any]:
     return value
 
 
+def write_manifest(manifest_path: Path = MANIFEST, contracts_root: Path = CONTRACTS) -> dict[str, Any]:
+    """Refresh every listed file hash and write the manifest deterministically."""
+    value = json.loads(manifest_path.read_text(encoding="utf-8"))
+    if value.get("manifest_version") != 1 or not isinstance(value.get("files"), dict):
+        raise ValueError("invalid_contract_manifest")
+    value["files"] = {
+        relative: sha256_file(contracts_root / relative)
+        for relative in sorted(value["files"])
+    }
+    manifest_path.write_text(
+        json.dumps(value, ensure_ascii=False, indent=2, sort_keys=True) + "\n",
+        encoding="utf-8",
+    )
+    return value
+
+
 def source_errors(manifest: dict[str, Any]) -> list[str]:
     errors: list[str] = []
     for relative, expected in sorted(manifest["files"].items()):
@@ -69,11 +85,16 @@ def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description="Check or synchronize portable GardenRecipe/PromptBundle contract mirrors")
     parser.add_argument("--dest", action="append", type=Path, default=[], help="Independent skill repo or installed skill root")
     parser.add_argument("--sync", action="store_true", help="Copy canonical contracts before checking")
+    parser.add_argument(
+        "--write-manifest",
+        action="store_true",
+        help="Regenerate the canonical manifest hashes before checking",
+    )
     parser.add_argument("--json", action="store_true")
     args = parser.parse_args(argv)
 
     try:
-        manifest = load_manifest()
+        manifest = write_manifest() if args.write_manifest else load_manifest()
     except (OSError, json.JSONDecodeError, ValueError) as exc:
         result = {"ok": False, "errors": [str(exc)]}
     else:

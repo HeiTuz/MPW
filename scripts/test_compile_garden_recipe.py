@@ -91,13 +91,19 @@ class CompileGardenRecipeTests(unittest.TestCase):
 
 
     def test_gpt_image_renderer_requires_palette_gate_and_omits_ar(self) -> None:
+        for mode in ("IMAGE", "IMAGE_COMPOSITE"):
+            with self.subTest(mode=mode):
+                recipe = copy.deepcopy(self.recipe)
+                recipe["intended_use"]["engine"] = "gpt-image-2"
+                recipe["intended_use"]["mode"] = mode
+                with self.assertRaisesRegex(self.compiler.CompileError, "requires 3-5 distinct observed #RRGGBB"):
+                    self.compiler.compile_recipe(recipe)
+                recipe["observations"]["palette"]["items"][0]["value"] = "warm beige without a color token"
+                with self.assertRaisesRegex(self.compiler.CompileError, "received 0"):
+                    self.compiler.compile_recipe(recipe)
+
         recipe = copy.deepcopy(self.recipe)
         recipe["intended_use"]["engine"] = "gpt-image-2"
-        with self.assertRaisesRegex(self.compiler.CompileError, "requires 3-5 distinct observed #RRGGBB"):
-            self.compiler.compile_recipe(recipe)
-        recipe["observations"]["palette"]["items"][0]["value"] = "warm beige without a color token"
-        with self.assertRaisesRegex(self.compiler.CompileError, "received 0"):
-            self.compiler.compile_recipe(recipe)
         recipe["observations"]["palette"]["items"][0]["value"] = "#C7B7A4"
 
         palette = recipe["observations"]["palette"]["items"]
@@ -111,6 +117,39 @@ class CompileGardenRecipeTests(unittest.TestCase):
         text = bundle["handoff"]["prompt_blocks"][0]["text"]
         self.assertNotIn("AR", text)
         self.assertNotIn("Exclude:", text)
+
+    def test_mode_engine_compatibility_matrix(self) -> None:
+        valid = (
+            ("DESIGN", "frontend-agent"),
+            ("IMAGE", "gpt-image-2"),
+            ("IMAGE_COMPOSITE", "higgsfield"),
+            ("IMAGE", "generic-image"),
+        )
+        invalid = (
+            ("DESIGN", "gpt-image-2"),
+            ("DESIGN", "higgsfield"),
+            ("DESIGN", "generic-image"),
+            ("IMAGE", "frontend-agent"),
+            ("IMAGE_COMPOSITE", "frontend-agent"),
+        )
+        for mode, engine in valid:
+            with self.subTest(mode=mode, engine=engine, valid=True):
+                recipe = copy.deepcopy(self.recipe)
+                recipe["intended_use"].update(mode=mode, engine=engine)
+                self.assertFalse(
+                    any("incompatible_mode_engine" in error for error in self.contracts.validate_document(recipe))
+                )
+        for mode, engine in invalid:
+            with self.subTest(mode=mode, engine=engine, valid=False):
+                recipe = copy.deepcopy(self.recipe)
+                recipe["intended_use"].update(mode=mode, engine=engine)
+                errors = self.contracts.validate_document(recipe)
+                self.assertIn("$.intended_use: incompatible_mode_engine", errors)
+
+    def test_contract_root_override_is_documented(self) -> None:
+        documentation = (ROOT / "references" / "garden-recipe-compiler.md").read_text(encoding="utf-8")
+        self.assertIn("MASTER_PROMPT_CONTRACT_ROOT", documentation)
+        self.assertIn("sync_contracts.py --dest", documentation)
 
     def test_low_confidence_valid_inference_is_not_dropped(self) -> None:
         recipe = copy.deepcopy(self.recipe)

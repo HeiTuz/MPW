@@ -87,10 +87,10 @@ def _resolve_ref(root_schema: dict[str, Any], ref: str) -> dict[str, Any]:
 
 
 def _schema_errors(value: Any, schema: dict[str, Any], root_schema: dict[str, Any], path: str) -> list[str]:
-    if "$ref" in schema:
-        return _schema_errors(value, _resolve_ref(root_schema, schema["$ref"]), root_schema, path)
-
     errors: list[str] = []
+    if "$ref" in schema:
+        errors.extend(_schema_errors(value, _resolve_ref(root_schema, schema["$ref"]), root_schema, path))
+
     if "const" in schema and value != schema["const"]:
         errors.append(f"{path}: expected_const:{schema['const']!r}")
         return errors
@@ -211,6 +211,8 @@ def unsupported_keywords(schema: Any, path: str = "#") -> list[str]:
     if not isinstance(schema, dict):
         return []
     errors: list[str] = []
+    if isinstance(schema.get("items"), list):
+        errors.append(f"{path}/items: items_array_form_unsupported")
     for keyword, child in schema.items():
         if keyword not in SUPPORTED_KEYWORDS:
             errors.append(f"{path}: unsupported_schema_keyword:{keyword}")
@@ -246,6 +248,14 @@ def _privacy_errors(value: Any, path: str = "$") -> list[str]:
 
 def _garden_semantic_errors(value: dict[str, Any]) -> list[str]:
     errors = _privacy_errors(value)
+    intended_use = value.get("intended_use", {})
+    if isinstance(intended_use, dict):
+        mode = intended_use.get("mode")
+        engine = intended_use.get("engine")
+        if engine == "frontend-agent" and mode != "DESIGN":
+            errors.append("$.intended_use: incompatible_mode_engine")
+        elif engine in {"gpt-image-2", "higgsfield", "generic-image"} and mode not in {"IMAGE", "IMAGE_COMPOSITE"}:
+            errors.append("$.intended_use: incompatible_mode_engine")
     observations = value.get("observations", {})
     observed_ids: set[str] = set()
     if isinstance(observations, dict):
@@ -394,6 +404,21 @@ def _production_semantic_errors(value: dict[str, Any]) -> list[str]:
     return errors
 
 
+def _image_handoff_semantic_errors(value: dict[str, Any]) -> list[str]:
+    errors: list[str] = []
+    seen_paths: set[str] = set()
+    for index, image in enumerate(value.get("input_images", [])):
+        if not isinstance(image, dict):
+            continue
+        path = image.get("path")
+        if not isinstance(path, str):
+            continue
+        if path in seen_paths:
+            errors.append(f"$.input_images[{index}].path: duplicate_input_path")
+        seen_paths.add(path)
+    return errors
+
+
 def _recompile_semantic_errors(value: dict[str, Any]) -> list[str]:
     errors = _privacy_errors(value)
     axes = value.get("failed_axes", [])
@@ -465,6 +490,8 @@ def validate_document(
         errors.extend(_production_semantic_errors(value))
     elif key == "mpw-recompile-request/v1":
         errors.extend(_recompile_semantic_errors(value))
+    elif key == "image-production-handoff/v2":
+        errors.extend(_image_handoff_semantic_errors(value))
     return sorted(set(errors))
 
 

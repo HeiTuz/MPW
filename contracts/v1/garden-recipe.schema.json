@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://schemas.gajae.local/prompt-contracts/garden-recipe/v1",
+  "$id": "https://raw.githubusercontent.com/HeiTuz/MPW/main/contracts/v1/garden-recipe.schema.json",
   "title": "GardenRecipe v1",
   "type": "object",
   "additionalProperties": false,

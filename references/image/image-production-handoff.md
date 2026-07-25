@@ -19,7 +19,7 @@ Required request fields:
 
 Optional prompt fields are `action`, `scene`, `composition`, `lighting`, `style`, and `text`. Optional execution hints are `negative_prompt`, `aspect_ratio`, `image_size`, and string-valued `metadata`.
 
-`input_images` entries contain only `path` and `role`. Paths must be relative to the handoff bundle or public HTTPS URLs. Absolute paths, home-directory shortcuts, credentials in URLs, and traversal are rejected. Bundle relative assets beside the JSON when moving it between machines.
+`input_images` entries contain only `path` and `role`. The array accepts at most 20 entries, and each path may occur only once regardless of role. Paths must be relative to the handoff bundle or public HTTPS URLs. Absolute paths, home-directory shortcuts, credentials in URLs, and traversal are rejected. Bundle relative assets beside the JSON when moving it between machines.
 
 ## Execute
 

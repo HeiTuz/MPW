@@ -6,6 +6,8 @@
 
 `scripts/compile_garden_recipe.py`는 `contracts/validate.py`가 오류 0개로 판정한 `garden-recipe/v1` JSON만 받는다. 원시 분석 JSON, 과거 자유형 레시피, schema version 없는 객체는 컴파일하지 않는다. 호출자가 먼저 adapter 출력물을 GardenRecipe로 승격·검증해야 한다. 계약 파일이 설치되지 않았으면 추측성 fallback 대신 `contract_validator_missing`으로 실패한다.
 
+`MASTER_PROMPT_CONTRACT_ROOT`를 설정하면 기본값인 MPW `contracts/` 대신 해당 계약 미러의 `validate.py`를 입력 게이트로 사용한다. 이 값은 `contracts/` 디렉터리 자체를 가리켜야 하며, 사용 전에 정본에서 `python3 scripts/sync_contracts.py --dest <mirror-root>`를 실행해 미러의 `contracts/manifest.json`과 listed file 해시가 모두 일치하는지 확인한다.
+
 ```sh
 python3 scripts/compile_garden_recipe.py recipe.json --output prompt-bundle.json
 ```
@@ -23,7 +25,7 @@ python3 scripts/compile_garden_recipe.py recipe.json --output prompt-bundle.json
 - opaque reference ID 기반 reference requirement
 - locks·negative·reference·길이를 검사하는 QC acceptance criteria
 
-필수 공통 문맥·locks·exclusions를 유지한 자기완결 블록이 2000자를 넘으면 내용을 누락하거나 경로로 빼지 않고 `self_contained_prompt_overflow`로 실패한다. 긍정형 전용 이미지 레인의 exclusion은 의미가 검증된 positive boundary로 번역하고, 번역 규칙이 없으면 `untranslatable_positive_exclusion`으로 거부한다. gpt-image-2 입력은 관찰 evidence에서 서로 다른 `#RRGGBB` 3~5개가 확인되어야 한다. 호출자는 GardenRecipe를 보완·재검증한 뒤 다시 컴파일한다.
+필수 공통 문맥·locks·exclusions를 유지한 자기완결 블록이 2000자를 넘으면 내용을 누락하거나 경로로 빼지 않고 `self_contained_prompt_overflow`로 실패한다. 긍정형 전용 이미지 레인의 exclusion은 의미가 검증된 positive boundary로 번역하고, 번역 규칙이 없으면 `untranslatable_positive_exclusion`으로 거부한다. 허용 mode×engine 조합은 `references/contracts.md` §GardenRecipe v1이 정본이다. 허용된 모든 gpt-image-2 입력은 관찰 evidence에서 서로 다른 `#RRGGBB` 3~5개가 확인되어야 한다. 호출자는 GardenRecipe를 보완·재검증한 뒤 다시 컴파일한다.
 
 ## 기계 핸드오프와 마이그레이션
 

@@ -125,6 +125,12 @@ class ApparelHandoffCompilerTests(unittest.TestCase):
         with self.assertRaisesRegex(compiler.CompileError, "explicit color_identity"):
             compiler.compile_request(request)
 
+    def test_unknown_role_map_fields_fail_closed(self) -> None:
+        request = copy.deepcopy(self.request)
+        request["vision_role_map"][0]["raw_caption"] = "private source caption"
+        with self.assertRaisesRegex(compiler.CompileError, "unsupported fields: raw_caption"):
+            compiler.compile_request(request)
+
     def test_role_map_does_not_infer_identity_from_filename(self) -> None:
         request = copy.deepcopy(self.request)
         request["vision_role_map"] = [{"file": "navy-front.png", "role": "color_front"}]

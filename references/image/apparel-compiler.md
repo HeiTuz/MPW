@@ -40,6 +40,6 @@ Report compiler completion as compiled prompts, never as generation progress —
 
 ## Portable handoff
 
-`scripts/compile_apparel_handoff.py` emits the contract defined by `contracts/v1/apparel-handoff.schema.json`. The handoff preserves the complete `sources`, `vision_role_map`, normalized front-color identities, `unique_color_count`, folder master, QC contract, complete output inventory, and each output's ID, filename, and final prompt.
+`scripts/compile_apparel_handoff.py` emits the contract defined by `contracts/v1/apparel-handoff.schema.json`. The handoff preserves the complete `sources`, the contract-defined `vision_role_map` fields (`file`, `role`, and optional `color_identity`), normalized front-color identities, `unique_color_count`, folder master, QC contract, complete output inventory, and each output's ID, filename, and final prompt. Unknown role-map fields are rejected rather than forwarded.
 
 The handoff is sufficient for a network-free consumer to prepare isolated candidate tasks. Unknown versions, missing sources, missing front identities, zero colors, duplicate output ownership, or an overlong prompt fail closed. Runtime-specific installation and consumer routing belong only in `references/adapters.md`.

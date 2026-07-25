@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import copy
 import json
+import shutil
 import sys
 import tempfile
 import unittest
@@ -21,7 +22,7 @@ from validate import (  # noqa: E402
     unsupported_keywords,
     validate_document,
 )
-from sync_contracts import load_manifest, mirror_errors, source_errors, sync  # noqa: E402
+from sync_contracts import load_manifest, mirror_errors, source_errors, sync, write_manifest  # noqa: E402
 
 FIXTURES = ROOT / "contracts" / "v1" / "fixtures"
 
@@ -47,10 +48,18 @@ def _schema_errors_top(value, schema):
 
 class SchemaFixtureTests(unittest.TestCase):
     def test_schema_documents_are_draft_2020_12(self) -> None:
-        for name in ("garden-recipe.schema.json", "prompt-bundle.schema.json"):
-            schema = json.loads((ROOT / "contracts" / "v1" / name).read_text(encoding="utf-8"))
-            self.assertEqual(schema["$schema"], "https://json-schema.org/draft/2020-12/schema")
-            self.assertTrue(schema["$id"].endswith("/v1"))
+        ids = []
+        for key, path in SCHEMA_FILES.items():
+            schema = json.loads(path.read_text(encoding="utf-8"))
+            self.assertEqual(schema["$schema"], "https://json-schema.org/draft/2020-12/schema", key)
+            self.assertEqual(
+                schema["$id"],
+                f"https://raw.githubusercontent.com/HeiTuz/MPW/main/contracts/v1/{path.name}",
+                key,
+            )
+            ids.append(schema["$id"])
+        self.assertEqual(len({value.rsplit("/", 1)[0] for value in ids}), 1)
+        self.assertTrue(all(".local/" not in value for value in ids))
 
     def test_image_and_design_recipes_validate(self) -> None:
         for name in ("garden-recipe.image.valid.json", "garden-recipe.design.valid.json"):
@@ -162,6 +171,35 @@ class PortableHandoffContractTests(unittest.TestCase):
             schema = json.loads(path.read_text(encoding="utf-8"))
             self.assertEqual(unsupported_keywords(schema), [], key)
 
+    def test_ref_siblings_are_enforced(self) -> None:
+        schema = {
+            "type": "object",
+            "properties": {
+                "job_id": {
+                    "$ref": "#/$defs/portableId",
+                    "maxLength": 8,
+                    "pattern": "^job-",
+                }
+            },
+            "$defs": {"portableId": {"type": "string", "minLength": 1}},
+        }
+        errors = _schema_errors_top(
+            {"job_id": "NOT-A-JOB-ID-AND-WAY-OVER-EIGHT-CHARACTERS"},
+            schema,
+        )
+        self.assertTrue(any("max_length:8" in error for error in errors), errors)
+        self.assertTrue(any("pattern_mismatch" in error for error in errors), errors)
+
+    def test_array_form_items_is_reported_as_unsupported(self) -> None:
+        schema = {
+            "type": "array",
+            "items": [
+                {"type": "string"},
+                {"type": "integer"},
+            ],
+        }
+        self.assertIn("#/items: items_array_form_unsupported", unsupported_keywords(schema))
+
     def test_apparel_and_image_handoff_fixtures_validate(self) -> None:
         self.assertEqual(validate_document(self.apparel), [])
         self.assertEqual(validate_document(self.apparel, schema_version="apparel-handoff/v1"), [])
@@ -191,6 +229,29 @@ class PortableHandoffContractTests(unittest.TestCase):
         errors = validate_document(document)
         self.assertTrue(any("additional_property" in error for error in errors), errors)
 
+    def test_apparel_rejects_unknown_role_map_key(self) -> None:
+        document = copy.deepcopy(self.apparel)
+        document["vision_role_map"][0]["image_path"] = "/Users/operator/private/source.png"
+        errors = validate_document(document, schema_version="apparel-handoff/v1")
+        self.assertTrue(
+            any("$.vision_role_map[0].image_path: additional_property" in error for error in errors),
+            errors,
+        )
+
+    def test_apparel_basename_fields_reject_dot_entries(self) -> None:
+        mutations = (
+            lambda document: document.__setitem__("folder_id", ".."),
+            lambda document: document["sources"].__setitem__(0, "."),
+            lambda document: document["vision_role_map"][0].__setitem__("file", ".."),
+            lambda document: document["outputs"][0].__setitem__("id", "."),
+        )
+        for mutate in mutations:
+            with self.subTest(mutate=mutate):
+                document = copy.deepcopy(self.apparel)
+                mutate(document)
+                errors = validate_document(document, schema_version="apparel-handoff/v1")
+                self.assertTrue(any("pattern_mismatch" in error for error in errors), errors)
+
     def test_edit_operation_requires_input_images(self) -> None:
         document = copy.deepcopy(self.image)
         del document["input_images"]
@@ -215,6 +276,53 @@ class PortableHandoffContractTests(unittest.TestCase):
         errors = validate_document(document)
         self.assertTrue(any("one_of_match_count:0" in error for error in errors), errors)
 
+    def test_input_image_paths_must_be_unique(self) -> None:
+        document = copy.deepcopy(self.image)
+        duplicate = copy.deepcopy(document["input_images"][0])
+        duplicate["role"] = "A second role for the same file"
+        document["input_images"].append(duplicate)
+        errors = validate_document(document)
+        self.assertTrue(any("duplicate_input_path" in error for error in errors), errors)
+
+    def test_identical_input_image_entries_are_schema_invalid(self) -> None:
+        document = copy.deepcopy(self.image)
+        document["input_images"].append(copy.deepcopy(document["input_images"][0]))
+        errors = validate_document(document)
+        self.assertTrue(any("unique_items" in error for error in errors), errors)
+
+    def test_recompile_codes_are_derived_in_failure_order(self) -> None:
+        document = fixture("mpw-recompile-request.valid.json")
+        document["failed_axes"] = ["goal_fit", "layout"]
+        document["failed_promo_checks"] = ["generic_card_regression"]
+        document["reason_codes"] = [
+            "qc_axis:layout",
+            "qc_axis:goal_fit",
+            "promo_check:generic_card_regression",
+        ]
+        document["requested_delta_codes"] = [
+            "clarify_layout",
+            "clarify_goal_fit",
+            "resolve_promo_generic_card_regression",
+        ]
+        errors = validate_document(document)
+        self.assertIn("$.reason_codes: recompile_reason_mapping_mismatch", errors)
+        self.assertIn("$.requested_delta_codes: recompile_delta_mapping_mismatch", errors)
+
+    def test_recompile_reason_codes_are_enumerated(self) -> None:
+        document = fixture("mpw-recompile-request.valid.json")
+        document["reason_codes"] = ["unregistered_reason"]
+        errors = validate_document(document)
+        self.assertTrue(any("$.reason_codes[0]: expected_one_of" in error for error in errors), errors)
+
+    def test_recompile_semantic_errors_are_documented(self) -> None:
+        documentation = (ROOT / "references" / "contracts.md").read_text(encoding="utf-8")
+        for error in (
+            "$.reason_codes: recompile_reason_mapping_mismatch",
+            "$.requested_delta_codes: recompile_delta_mapping_mismatch",
+            "$: recompile_failure_fact_required",
+        ):
+            self.assertIn(error, documentation)
+
     def test_unregistered_schema_version_is_rejected(self) -> None:
         document = copy.deepcopy(self.image)
         document["schema_version"] = "image-production-handoff/v9"
@@ -225,6 +333,21 @@ class PortableHandoffContractTests(unittest.TestCase):
 class ManifestAndMirrorTests(unittest.TestCase):
     def test_canonical_manifest_has_no_drift(self) -> None:
         self.assertEqual(source_errors(load_manifest()), [])
+
+    def test_manifest_writer_reproduces_committed_manifest(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            copied_contracts = Path(tmp) / "contracts"
+            shutil.copytree(ROOT / "contracts", copied_contracts)
+            copied_manifest = copied_contracts / "manifest.json"
+            write_manifest(copied_manifest, copied_contracts)
+            self.assertEqual(
+                copied_manifest.read_bytes(),
+                (ROOT / "contracts" / "manifest.json").read_bytes(),
+            )
+
+    def test_contract_update_docs_name_manifest_writer(self) -> None:
+        documentation = (ROOT / "references" / "contracts.md").read_text(encoding="utf-8")
+        self.assertIn("scripts/sync_contracts.py --write-manifest", documentation)
 
     def test_sync_creates_exact_mirror_and_detects_drift(self) -> None:
         manifest = load_manifest()

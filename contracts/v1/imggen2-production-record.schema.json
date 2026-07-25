@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://schemas.gajae.local/prompt-contracts/imggen2-production-record/v1",
+  "$id": "https://raw.githubusercontent.com/HeiTuz/MPW/main/contracts/v1/imggen2-production-record.schema.json",
   "title": "ImgGen2 production record v1",
   "type": "object",
   "additionalProperties": false,

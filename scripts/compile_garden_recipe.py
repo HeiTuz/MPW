@@ -141,12 +141,6 @@ def _palette_hex_values(recipe: dict[str, Any]) -> list[str]:
 
 
 def _render_gpt_image(recipe: dict[str, Any]) -> str:
-    palette = _palette_hex_values(recipe)
-    if not 3 <= len(palette) <= 5:
-        raise CompileError(
-            "lane_requirement_missing:gpt-image-2 requires 3-5 distinct observed #RRGGBB values; "
-            f"received {len(palette)}"
-        )
     sections = [
         f"Core scene: {recipe['intended_use']['goal'].strip()}",
         *_evidence_lines(recipe),
@@ -245,6 +239,13 @@ def compile_recipe(recipe: dict[str, Any]) -> dict[str, Any]:
     if recipe.get("schema_version") != "garden-recipe/v1":
         raise CompileError("garden_recipe_validation_failed:unsupported GardenRecipe version")
 
+    if recipe["intended_use"]["engine"] == "gpt-image-2":
+        palette = _palette_hex_values(recipe)
+        if not 3 <= len(palette) <= 5:
+            raise CompileError(
+                "lane_requirement_missing:gpt-image-2 requires 3-5 distinct observed #RRGGBB values; "
+                f"received {len(palette)}"
+            )
     text = _render_prompt(recipe)
     count = len(text)
     if count > MAX_BLOCK_CHARS:

@@ -7,7 +7,7 @@
 소스 레포가 편집 권한을 가진다. `~/.hermes/skills/...` 같은 설치본은 배포 산출물이며 직접 수정하지 않는다. 설치본 전용 변경이 발견되면 먼저 해당 소스 레포로 분리·검토한 뒤 배포한다. 계약 갱신 순서는 다음과 같다.
 
 1. `MPW/contracts/`에서 스키마·검증기·fixture를 함께 변경한다.
-2. manifest SHA-256을 갱신하고 `python3 scripts/test_contracts.py`를 통과한다.
+2. `python3 scripts/sync_contracts.py --write-manifest`로 manifest SHA-256을 재생성하고 `python3 scripts/test_contracts.py`를 통과한다.
 3. `python3 scripts/sync_contracts.py --sync --dest <contract-mirror>`로 각 독립 소스·가드너 미러에 동기화한다.
 4. 각 스킬의 기존 설치 절차로 소스 전체를 설치본에 배포한다. 정본에서 설치본으로 역복사하지 않는다.
 5. 정본 레포에서 `python3 scripts/sync_contracts.py --dest <contract-mirror> ...`로 모든 미러에 drift가 없음을 확인한다.
@@ -23,7 +23,7 @@
 | `ImageProductionHandoff v2` | MPW compile_image_handoff → 범용 이미지 실행기 | 상대경로/HTTPS 입력만·operation별 입력 요구·프롬프트 ≤2000자 | 스키마 위반 시 거부 |
 | `ApparelHandoff v1` | apparel compiler → image producer | 제품 role map·불변 lock·전체 인벤토리·자기완결 프롬프트 | 입력/lock 누락 시 거부 |
 | `ImgGen2ProductionRecord v1` | image producer → QC/recompile | 소스 증거 인덱스·생성 결과·검증 상태 | provenance 또는 결과 불일치 시 거부 |
-| `MPWRecompileRequest v1` | QC → Master | 실패 축·보존 lock·허용 delta를 명시한 재컴파일 요청 | 범위 밖 수정 요구 시 거부 |
+| `MPWRecompileRequest v1` | QC → Master | 아래 §MPWRecompileRequest v1의 실패 사실에서 순서대로 파생한 reason·delta | 범위 밖 수정 요구 시 거부 |
 | `ProductionAdapterOptions v1` | Master → runtime adapter | 런타임 중립 옵션만 허용 | 비공개·엔진 고유 key면 거부 |
 | `SourceEvidenceIndex v1` | source inventory → compiler/QC | 해시 기반 증거와 역할 매핑 | 경로·비밀·원문 의존 시 거부 |
 | `generation-handoff/v1` | Master → 모든 실행 adapter | `handoff` 객체만으로 실행 입력·lock·QC 해석 가능, 런타임 고유 key 없음 | adapter가 모르는 protocol이면 거부 |
@@ -39,6 +39,8 @@
 - `locks.identity`는 해당 사항이 없으면 빈 배열일 수 있다. `locks.subject`는 비어 있을 수 없다.
 - `intended_use`는 컴파일 목표의 mode/engine/goal만 나타낸다. 분석·저장 동작은 포함하지 않는다.
 
+mode와 engine의 호환성은 다음과 같다. `frontend-agent`는 `DESIGN`에서만 허용하고, `gpt-image-2`·`higgsfield`·`generic-image`는 `IMAGE` 또는 `IMAGE_COMPOSITE`에서만 허용한다. 다른 조합은 `$.intended_use: incompatible_mode_engine`으로 거부한다.
+
 ## PromptBundle v1
 
 정본 스키마: `contracts/v1/prompt-bundle.schema.json`.
@@ -50,6 +52,17 @@
 - `source_recipe.recipe_id`와 canonical JSON SHA-256 일치
 - `immutable_locks`의 identity/subject byte-for-byte 보존
 - intended mode/engine 보존
+
+## MPWRecompileRequest v1
+
+정본 스키마: `contracts/v1/mpw-recompile-request.schema.json`.
+
+`failed_axes`와 `failed_promo_checks` 중 적어도 하나에는 실패 사실이 있어야 하며, 두 배열 안의 값은 중복될 수 없다. `reason_codes`와 `requested_delta_codes`는 작성자가 독립적으로 선택하지 않고 다음 순서로 파생한다.
+
+- `reason_codes = [qc_axis:<axis> for axis in failed_axes] + [promo_check:<check> for check in failed_promo_checks]`
+- `requested_delta_codes = [axis에 대응하는 delta for axis in failed_axes] + [resolve_promo_<check> for check in failed_promo_checks]`
+
+배열 순서는 각 실패 배열의 순서를 그대로 보존한다. 파생 결과가 다르면 각각 `$.reason_codes: recompile_reason_mapping_mismatch`, `$.requested_delta_codes: recompile_delta_mapping_mismatch`로 거부하고, 실패 사실이 모두 비었으면 `$: recompile_failure_fact_required`로 거부한다.
 
 ## 검증 CLI
 

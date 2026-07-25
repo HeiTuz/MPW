@@ -70,6 +70,9 @@ def _validate_role_map(raw: Any, sources: list[str]) -> tuple[list[dict[str, Any
     for index, item in enumerate(raw):
         if not isinstance(item, dict):
             raise CompileError(f"vision_role_map[{index}] must be an object")
+        unknown = sorted(set(item) - {"file", "role", "color_identity"})
+        if unknown:
+            raise CompileError(f"vision_role_map[{index}] contains unsupported fields: {', '.join(unknown)}")
         row = dict(item)
         filename = _basename(row.get("file"), f"vision_role_map[{index}].file")
         if filename not in inventory:
