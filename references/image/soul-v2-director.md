@@ -26,7 +26,7 @@
 | L4 카메라·렌즈·모션·질감 | 카메라 바디 1개, 주 렌즈 1개, 심도, 필름 스톡/컬러 사이언스, 그레인, 소재 질감, (영상) 카메라 무브·속도·2차 모션·셔터 | 이미지: `[body], [lens], [DoF], [film/color], [grain+texture], [ratio]` / 영상: `[body], [lens], [camera move], [speed], [secondary motion], [shutter], [texture], [ratio]` |
 
 - 물리적으로 모순되는 조명을 섞지 않는다 (`soft overcast + hard noon sun + neon night` 금지).
-- 비율·품질·Color signature는 본문이 아니라 파라미터 또는 UI 라벨 줄로 분리한다 ([lanes.md](lanes.md) §인물·사실감 이미지 레인, [surfaces.md](surfaces.md) §4). 이 사용자 기본 비율은 3:4.
+- 비율·품질·Color signature는 본문이 아니라 파라미터 또는 UI 라벨 줄로 분리한다 ([lanes.md](lanes.md) §인물·사실감 이미지 레인, [surfaces.md](surfaces.md) §4). 기본값은 설치가 공급하고, 없으면 [lanes.md](lanes.md) §이미지 슬롯 기본값 절차로 고른다.
 - **훈련된 Soul ID 사용 시 L1의 얼굴·민족·정체성 서술은 soul_id가 권위다.** 프롬프트에는 장면·스타일·행동·의상만 쓰고 외모 반복으로 정체성을 고정하려 들지 않는다 (기존 레인 규칙 유지).
 
 ## 브랜드 = 디자인 앵커
@@ -70,7 +70,7 @@
 - 렌즈 의도: 24mm 환경 왜곡 / 28mm 에너지 스트리트 / 35mm 다큐 친밀 / 50mm 중립 시네마틱 / 65mm 정제 에디토리얼 / 80–85mm 패션 압축 / 100–120mm 뷰티·디테일 / 아나모픽 40–75mm 수평 플레어. 얼굴 비율 왜곡이 허용되지 않으면 24/28mm 금지.
 - 컷 하나 = 카메라 바디 1 + 주 렌즈 1. 키라이트의 방향과 경도는 항상 명시한다.
 - 질감은 소재 특정으로: `brushed wool fibers, dense satin highlights, translucent organza layering, creased technical nylon, cracked patent leather, visible denim twill, natural skin pores, flyaway hair strands`.
-- 필름 스톡 언어는 색 반응·그레인 제어이지 물리 필름 프레임 허가가 아니다. 보더리스는 `digital color grade inspired by Kodak Portra 160` 형으로 쓴다 (실측 교훈: higgsfield-generate references/soul-v2-borderless-film-look.md).
+- 필름 스톡 언어는 색 반응·그레인 제어이지 물리 필름 프레임 허가가 아니다. 보더리스는 `digital color grade inspired by Kodak Portra 160` 형으로 쓴다.
 
 ## 이미지 모드
 
@@ -99,7 +99,7 @@
 
 ## 레퍼런스 이미지 처리
 
-가장 명확한 풀뷰 = 실루엣 권위, 클로즈업 = 디테일·질감 권위, 앞/뒤/옆/안감 = 구조 권위. 같은 물리 디자인만 결합하고, 안 보이는 디테일은 발명하지 말고 보이는 의복과 일관된 최소 구조로 채운다. 비대칭 디자인은 그대로 보존하고, 착용 왜곡·일시적 주름은 패턴과 구분해 교정하되 의도된 드레이핑·개더·플리츠·디스트레싱·불규칙 헴은 보존한다. (단일 패스 레퍼런스 누출·탈취 대응 실행은 higgsfield-generate references/soul-v2-reference-pitfalls.md 정본.)
+가장 명확한 풀뷰 = 실루엣 권위, 클로즈업 = 디테일·질감 권위, 앞/뒤/옆/안감 = 구조 권위. 같은 물리 디자인만 결합하고, 안 보이는 디테일은 발명하지 말고 보이는 의복과 일관된 최소 구조로 채운다. 비대칭 디자인은 그대로 보존하고, 착용 왜곡·일시적 주름은 패턴과 구분해 교정하되 의도된 드레이핑·개더·플리츠·디스트레싱·불규칙 헴은 보존한다. 단일 패스에서 레퍼런스가 결과에 누출되거나 탈취되면 설치가 공급한 대응 절차를 따르고, 없으면 권한 축을 하나씩 분리해 실패 축만 다시 컴파일한다.
 
 ## 산출 형식
 

@@ -24,6 +24,13 @@ class LintInvariantSmokeTests(unittest.TestCase):
         errors = []
         lint.check_runtime_names(texts, errors)
         self.assertTrue(any("[I1]" in error for error in errors), errors)
+    def test_i1_rejects_operator_address_in_image_core(self):
+        texts = {name: "safe text" for name in lint.CORE_RUNTIME_NAME_FILES}
+        texts["references/image/from-image.md"] = "이 사용자 기본값"
+        errors = []
+        lint.check_runtime_names(texts, errors)
+        self.assertTrue(any("[I1]" in error for error in errors), errors)
+
 
     def test_i2_rejects_broken_relative_link_and_orphan(self):
         with tempfile.TemporaryDirectory() as directory:
@@ -35,6 +42,21 @@ class LintInvariantSmokeTests(unittest.TestCase):
             lint.check_links_and_orphans(root, errors)
         self.assertTrue(any("broken relative link" in error and "[I2]" in error for error in errors), errors)
         self.assertTrue(any("orphan reference" in error and "[I2]" in error for error in errors), errors)
+    def test_i2_rejects_broken_plaintext_path_and_unlinked_router_pointer(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            (root / "references").mkdir()
+            (root / "SKILL.md").write_text("# skill\n", encoding="utf-8")
+            (root / "references" / "target.md").write_text("# target\n", encoding="utf-8")
+            router = root / "references" / "sample-router.md"
+            router.write_text(
+                "`missing-contract.md`\ntarget.md\n",
+                encoding="utf-8",
+            )
+            errors = []
+            lint.check_plaintext_paths(root, errors)
+        self.assertTrue(any("broken plaintext path pointer" in error for error in errors), errors)
+        self.assertTrue(any("router path pointer must be a Markdown link" in error for error in errors), errors)
 
     def test_i15_rejects_contract_index_table_drift(self):
         with tempfile.TemporaryDirectory() as directory:

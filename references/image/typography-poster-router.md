@@ -16,8 +16,8 @@ TP와 P가 겹치면 제품/브랜드를 팔면 P, 글자 조형을 감상시키
 ## 점진 로딩
 
 1. 이 표에서 TP 하나를 고른다.
-2. `typography-poster-patterns.md`의 해당 TP 행만 읽는다.
-3. compiler.md와 lanes.md의 공통 게이트를 적용한다. TP2·TP14의 반복/미세 텍스트 예외는 아래 레그빌리티 계약으로만 허용한다.
+2. [typography-poster-patterns.md](typography-poster-patterns.md)의 해당 TP 행만 읽는다.
+3. [compiler.md](compiler.md)와 [lanes.md](lanes.md)의 공통 게이트를 적용한다. TP2·TP14의 반복/미세 텍스트 예외는 아래 레그빌리티 계약으로만 허용한다.
 
 | TP | 핵심 신호 | 기본 AR 후보 |
 |---|---|---|

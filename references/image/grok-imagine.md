@@ -1,6 +1,6 @@
 # Grok Imagine (xAI) — IMAGE 컴파일 레인
 
-요청 신호가 `Grok` / `그록` / `xAI` / `Grok Imagine`이면 이 레인을 쓴다. 실행·OAuth·exact-N 큐는 ImgGen2 `references/grok-oauth-explicit-routing.md` 소관. 여기 소관은 **붙여넣기 프롬프트 문법**만.
+요청 신호가 `Grok` / `그록` / `xAI` / `Grok Imagine`이면 이 레인을 쓴다. 실행·OAuth·exact-N 큐는 설치가 공급하는 실행 어댑터 소관이며, 없으면 사용자가 선택한 도구에서 직접 처리한다. 여기 소관은 **붙여넣기 프롬프트 문법**만이다.
 
 ## 게이트 카드
 

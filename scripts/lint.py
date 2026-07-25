@@ -13,11 +13,11 @@ Checks the skill's own hardlines against its files:
 - every ```text example block is <= 2000 chars (all core files)
 - no approximate labels (`약 N자`)
 - YAML frontmatter parses and carries version + dated model/role review stamps (rejects future dates; re-verify after 6 calendar months)
-- canonical inline `(YYYY-MM 실측...)` measurement stamps are current, non-future, and used across all Markdown
+- canonical inline `(YYYY-MM 실측...)` measurement stamps are current, non-future, and used across all repository-owned Markdown
 - no Cyrillic/Greek lookalike letters
 - canonical rules defined exactly once (gate necessity test, non-inferable slot list)
 - package.json version matches SKILL.md frontmatter version
-- runtime/model names stay out of core prompt files except image/video engine names
+- runtime/model names and operator-specific address stay out of core prompt files except image/video engine names
 - Tier-2 frozen strings byte-identical 3-way: editorial/tier2-safety.md §2 code blocks
   (SSOT) == compiler.md §2 inline copy == check_prompt.mjs SAFETY_ASSERT/TAIL constants;
   ANCHORS remains a containment guard for runtime anchor drift.
@@ -51,11 +51,31 @@ BIND_WINDOW = 200  # 라벨-코드블록 펜스 간 인접 판정 거리(문자)
 MEASUREMENT_STAMP_PATTERN = re.compile(r"\((\d{4})-(\d{2}) 실측[^)\n]*\)")
 REVIEW_STAMP_FIELDS = ("model_claims_reviewed_at", "role_routing_reviewed_at")
 LINK_PATTERN = re.compile(r"(?<!!)\[[^\]]*\]\(([^\n)]+)\)")
+PLAIN_PATH_PATTERN = re.compile(
+    r"(?<![\w/{*/])((?:\.\.?/)*(?:(?:[A-Za-z0-9_-]+/)+)?[A-Za-z0-9_-]+\.(?:md|py))(?![\w/}*])"
+)
 RUNTIME_NAME_PATTERNS = (
     r"\bHermes\b", r"\bClaude\b", r"\bCodex\b", r"\bGJC\b",
     r"\bSol\b", r"\bTerra\b", r"\bLuna\b", r"\bOpus\b", r"\bSonnet\b",
+    r"\bBoss\b", r"(?:이|해당|우리) 사용자(?:의)?\s+(?:기본|선호|설정|취향)",
 )
-CORE_RUNTIME_NAME_FILES = ("SKILL.md", "references/templates.md", "references/model-playbooks.md")
+CORE_RUNTIME_NAME_FILES = (
+    "SKILL.md",
+    "references/templates.md",
+    "references/model-playbooks.md",
+    *(
+        path.relative_to(ROOT).as_posix()
+        for path in sorted((ROOT / "references" / "image").rglob("*.md"))
+    ),
+)
+# External/conceptual filenames used as examples, not package pointers. A resolved
+# path or removed mention makes its entry stale and therefore fails.
+PLAIN_PATH_WHITELIST = {
+    ("AGENTS.md", "hermes/scripts/prompt_writing_doctrine_check.py"),
+    ("agents/README.md", "CLAUDE.md"),
+    ("agents/README.md", "INSTALL_FOR_AGENTS.md"),
+    ("references/templates.md", "summary.md"),
+}
 # These operational references are deliberately not dispatched from the compact
 # SKILL.md kernel. Keep exceptions explicit: a deleted or newly reachable file
 # must not silently remain here.
@@ -186,7 +206,7 @@ def check_universal_2000_regression(text, errors, filename="references/templates
 
 
 def check_runtime_names(texts, errors):
-    """I1: runtime-specific product names belong in adapters or compatibility notes."""
+    """I1: runtime-specific names and operator address do not belong in core."""
     for f in CORE_RUNTIME_NAME_FILES:
         scan_text = texts[f]
         if f == "references/model-playbooks.md":
@@ -195,7 +215,7 @@ def check_runtime_names(texts, errors):
             match = re.search(pat, scan_text)
             if match:
                 errors.append(
-                    f"{f}:{line_of(scan_text, match.start())}: [I1] runtime/model name belongs in references/adapters.md or dated compatibility notes, not core ({match.group(0)})"
+                    f"{f}:{line_of(scan_text, match.start())}: [I1] runtime/operator token belongs in references/adapters.md or dated compatibility notes, not core ({match.group(0)})"
                 )
 
 
@@ -228,6 +248,46 @@ def link_base(root, source):
     """Installer overlays link as if copied into the payload root, not under agents/."""
     relative = source.relative_to(root)
     return root if relative.parts[0] == "agents" else source.parent
+
+def check_plaintext_paths(root, errors):
+    """I2: path-like prose/code pointers resolve; routers use graph-visible links."""
+    files = markdown_files(root)
+    repository_files = [path for path in root.rglob("*") if path.is_file()]
+    unresolved = set()
+    for source in files:
+        source_name = source.relative_to(root).as_posix()
+        text = source.read_text(encoding="utf-8")
+        # Markdown links are validated and added to the reachability graph below.
+        scan_text = LINK_PATTERN.sub(lambda match: " " * len(match.group(0)), text)
+        seen = set()
+        for match in PLAIN_PATH_PATTERN.finditer(scan_text):
+            target = match.group(1)
+            key = (source_name, target)
+            if key in seen:
+                continue
+            seen.add(key)
+            relative = (link_base(root, source) / target).resolve()
+            root_relative = (root / target).resolve()
+            bare_match = "/" not in target and any(
+                path.name == target for path in repository_files
+            )
+            resolved = relative.is_file() or root_relative.is_file() or bare_match
+            if not resolved:
+                unresolved.add(key)
+                continue
+            if source.name.endswith("-router.md") and target.endswith(".md"):
+                errors.append(
+                    f"{source_name}:{line_of(text, match.start())}: [I2] router path pointer must be a Markdown link ({target})"
+                )
+
+    stale = PLAIN_PATH_WHITELIST - unresolved
+    for source_name, target in sorted(stale):
+        errors.append(
+            f"{source_name}: [I2] plaintext path whitelist entry is stale ({target})"
+        )
+    for source_name, target in sorted(unresolved - PLAIN_PATH_WHITELIST):
+        errors.append(f"{source_name}: [I2] broken plaintext path pointer ({target})")
+
 
 
 def check_links_and_orphans(root, errors):
@@ -442,11 +502,15 @@ def main():
     if missing:
         fail([f"missing file: {m}" for m in missing])
     texts = {f: (ROOT / f).read_text(encoding="utf-8") for f in FILES}
-    stamp_files = ["SKILL.md", "AGENTS.md", "README.md"] + [
+    stamp_files = [
         path.relative_to(ROOT).as_posix()
-        for path in sorted((ROOT / "references").rglob("*.md"))
+        for path in markdown_files(ROOT)
     ]
     stamp_texts = {f: (ROOT / f).read_text(encoding="utf-8") for f in stamp_files}
+    runtime_texts = {
+        f: (ROOT / f).read_text(encoding="utf-8")
+        for f in CORE_RUNTIME_NAME_FILES
+    }
 
     # frontmatter
     skill = texts["SKILL.md"]
@@ -481,7 +545,7 @@ def main():
     for f, s in texts.items():
         check_labels(f, s, errors)
 
-    # dated measurement stamps and near-misses (SKILL.md, AGENTS.md, README.md, references/**/*.md)
+    # dated measurement stamps and near-misses (all repository-owned Markdown)
     for f, s in stamp_texts.items():
         check_measurement_stamps(f, s, errors, today)
         check_measurement_near_misses(f, s, errors)
@@ -512,10 +576,11 @@ def main():
         errors.append("non-inferable slot canon must appear exactly once in templates.md")
 
     # I1 — host names remain in adapters and host overlays, not the core.
-    check_runtime_names(texts, errors)
+    check_runtime_names(runtime_texts, errors)
 
     # I2 / I6 / I14 scan the full repository-owned documentation surface.
     check_links_and_orphans(ROOT, errors)
+    check_plaintext_paths(ROOT, errors)
     check_key_fill_ratios(ROOT, errors)
     check_agent_skill_sync(ROOT, skill, errors)
 

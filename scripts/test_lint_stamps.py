@@ -78,6 +78,23 @@ class NearMissTests(unittest.TestCase):
             errors = []
             lint.check_measurement_near_misses("fixture.md", text, errors)
             self.assertEqual(errors, [])
+    def test_repository_markdown_scope_includes_agents_and_examples(self):
+        from tempfile import TemporaryDirectory
+
+        with TemporaryDirectory() as directory:
+            root = Path(directory)
+            (root / "agents").mkdir()
+            (root / "examples").mkdir()
+            (root / ".cache").mkdir()
+            (root / "agents" / "AGENTS.md").write_text("agent", encoding="utf-8")
+            (root / "examples" / "README.md").write_text("example", encoding="utf-8")
+            (root / ".cache" / "ignored.md").write_text("ignored", encoding="utf-8")
+            names = {
+                path.relative_to(root).as_posix()
+                for path in lint.markdown_files(root)
+            }
+
+        self.assertEqual(names, {"agents/AGENTS.md", "examples/README.md"})
 
 
 class FrontmatterParserTests(unittest.TestCase):

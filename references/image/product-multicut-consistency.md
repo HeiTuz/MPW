@@ -12,7 +12,7 @@ Use when the user asks for several product photos delivered as separate images, 
 
 ## White-background studio default
 
-When Boss specifies pure white + frontal lighting, state: seamless pure-white `#FFFFFF` background without props, gradient, or environmental depth; soft even frontal light; only a faint short contact shadow at the product-floor meeting point to retain edge legibility. This avoids white products dissolving into the backdrop without introducing a gray studio look.
+When the request specifies pure white + frontal lighting, state: seamless pure-white `#FFFFFF` background without props, gradient, or environmental depth; soft even frontal light; only a faint short contact shadow at the product-floor meeting point to retain edge legibility. This avoids white products dissolving into the backdrop without introducing a gray studio look.
 
 ## Delivery and QC
 
