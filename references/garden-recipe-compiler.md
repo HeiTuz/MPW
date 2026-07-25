@@ -31,7 +31,7 @@ python3 scripts/compile_garden_recipe.py recipe.json --output prompt-bundle.json
 
 ### 구형 소비자 어댑터 형식: legacy-bridge
 
---format legacy-bridge로 호출하면 다음 구조의 레거시 번들을 산출한다: `{compiled_by, blocks, assumptions}`. 이 형식은 MPW에서 관리하지 않는 오래된 PromptBundle 레이아웃이며, 현행 `handoff` 기반 소비자는 지원하지 않는다. 알 수 없는 `handoff.protocol` 처리 규칙은 [contracts.md](contracts.md) §PromptBundle v1이 정본이다. 레거시 형식의 락과 QC 계약은 브리지 소비자(예: higgsfield-prompt-bridge)가 `locks`, `qc.pass_criteria`, `media` 필드로 이관 의무를 진다.
+--format legacy-bridge로 호출하면 다음 구조의 레거시 번들을 산출한다: `{compiled_by, blocks, assumptions}`. 이 형식은 MPW에서 관리하지 않는 오래된 PromptBundle 레이아웃이며, 현행 `handoff` 기반 소비자는 지원하지 않는다. 알 수 없는 `handoff.protocol` 처리 규칙은 [contracts.md](contracts.md) §PromptBundle v1이 정본이다. 레거시 형식의 락과 QC 계약은 그 형식을 소비하는 브리지 쪽이 `locks`, `qc.pass_criteria`, `media` 필드로 이관 의무를 진다.
 
 검증:
 
