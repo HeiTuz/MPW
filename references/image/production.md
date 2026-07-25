@@ -32,7 +32,7 @@
 
 재검증: 위 값은 (2026-07 실측) 기준이다. 벌크 러너가 바뀌면 즉시 낡는다. 90일 넘게 재확인되지 않았으면 단정하지 말고 실제 러너로 확인한다.
 
-**검증기 소관:** `scripts/check_prompt.mjs`는 이 S1-legacy 벌크 규칙(사이즈락 6종·ar↔size 매핑·`quality auto` 금지)과 붙여넣기 길이(2000자 코드포인트)를 검사한다. **S2 플랫폼 파라미터 표면의 권위가 아니다** — S2 산출물을 이 검증기에 넣으면 존재하지 않는 픽셀 size를 요구하거나 상한 없는 길이를 초과로 잡는다. S2는 모델 런타임 정의로 검증한다.
+**검증기 소관:** `scripts/check_prompt.mjs`는 이 S1-legacy 벌크 규칙(사이즈락 6종·ar↔size 매핑·`quality auto` 금지)과 표면/채널/엔진 컨텍스트 기반 길이 구속을 검사한다. 길이는 `--surface`(s1|s2|s3), `--channel`(bounded|unbounded)·`--channel-limit`, `--engine`(gpt-image|higgsfield|midjourney|unknown)이 주는 3층 컨텍스트 중 가장 좁은 상한이 구속한다. 표면 미지정이면 S3를 가정하고, 엔진 미지정이면 S2에서만 unknown(상한 미상 → `W-LENGTH-UNGATED` 경고), 그 외 표면은 gpt-image를 기본값으로 쓴다. jsonl 모드에서는 기계 계약 상한(스키마 2000자 코드포인트)이 무조건 살아 있고(표면·엔진 필드로 우회 불가), 더 좁은 채널 상한이 구속해도 계약 위반은 별도 `E-OVERFLOW-2000`으로 함께 보고된다. `--engine midjourney`는 구조 판정을 스코프 거부(`E-ENGINE-SCOPE`)하되 채널·계약 층의 문자 상한 판정은 그대로 적용한다 — 미드저니 자체 길이는 단어 수 소관이다(surfaces.md §0-1). **S2 플랫폼 파라미터 표면의 권위가 아니다** — 표면을 `s2`로 선언하면 길이 판정은 층 모델을 따르지만, size·구조 게이트는 여전히 S1-legacy 문법 기준이다. S2는 모델 런타임 정의로 검증한다.
 
 ## 2. prompts.jsonl 스키마
 
@@ -67,6 +67,10 @@
 | `format` | `A` 또는 `B` | 생략 시 자동 판별. |
 | `tier` | `0`, `1`, `2` | 기본 0. |
 | `lane` | `standard` 또는 `editorial` | `editorial`이면 tier 2. |
+| `surface` | `s1`·`s2`·`s3` | 선택. 길이 컨텍스트 전용 필드(러너 레코드 소관 — imggen2 스키마 인스턴스의 필드가 아님). CLI `--surface`가 우선하며, jsonl에서는 어느 값이든 기계 계약 상한이 유지된다. |
+| `engine` | `gpt-image`·`higgsfield`·`midjourney`·`unknown` | 선택. 타깃 엔진 층. 열거 밖 값은 `E-REC-CONTEXT`. |
+| `channel` | `bounded`·`unbounded` | 선택. 전달 채널 층. |
+| `channel_limit` | 양의 정수 | 선택. 런타임에서 실측한 채널 상한 주입(`bounded` 함의). |
 | `palette` | HEX 배열 | full_prompt 반영 누락 시 `W-PALETTE-MISS`. |
 | `promo_pattern` | `P1`~`P8` | `cut_type: promo_poster`일 때 필수. 선택 파일은 `promo-router.md` 정본. |
 | `tp_pattern` | `TP1`~`TP14` | `cut_type: typography_poster`일 때 필수. 라우팅·공통 계약은 `typography-poster-router.md`, 패턴별 관찰 시그니처·실패·재시도 계약은 `typography-poster-patterns.md` 정본. |
@@ -219,6 +223,9 @@ Reply only with the saved file path.
 | stdin | `node ../../scripts/check_prompt.mjs` |
 | jsonl | `node ../../scripts/check_prompt.mjs --jsonl <file>` |
 | 티어 강제 | `node ../../scripts/check_prompt.mjs --tier <0|1|2> <file>` |
+| 표면 지정 | `node ../../scripts/check_prompt.mjs --surface <s1|s2|s3> <file>` |
+| 채널 상한 | `node ../../scripts/check_prompt.mjs --channel <bounded|unbounded> <file>` 또는 `--channel-limit <양의 정수>` |
+| 엔진 지정 | `node ../../scripts/check_prompt.mjs --engine <gpt-image|higgsfield|midjourney|unknown> <file>` |
 | API 모드 | `node ../../scripts/check_prompt.mjs --api --jsonl <file>` |
 | 자체 fixture | `node ../../scripts/check_prompt.mjs --test` |
 
@@ -310,7 +317,18 @@ Reply only with the saved file path.
 | `E-PROMO-KO-MASK-LEN` | 한글 마스킹·압출이 3음절 이상 | 2음절로 축소하거나 효과 변경. |
 | `E-PROMO-METAUI` | P5가 실제 앱 화면으로 읽힘 | 인쇄된 메타 그래픽으로 재서술. |
 
-### 9.6 워닝
+### 9.6 길이·컨텍스트
+
+| 코드 | 조건 | 조치 |
+|---|---|---|
+| `E-OVERFLOW-2000` | 기계 계약(스키마) 또는 기본 채널 배선의 상한 초과 | 장식 → 중복 → 방법 설명 순으로 감량, 그래도 넘으면 컷 분리. |
+| `E-OVERFLOW-LIMIT` | 기본 배선 밖 유한 상한(엔진 32,000 또는 실측 채널 값) 초과 | 같은 감량 절차. 메시지의 구속 층·상한을 확인. |
+| `E-ENGINE-SCOPE` | `--engine midjourney` 선언 | 이 검증기로 구조 판정 불가 — 미드저니 단어 대역은 surfaces.md §0-1 소관. 채널·계약 층 문자 판정은 함께 보고됨. |
+| `E-REC-CONTEXT` | 레코드 surface/engine/channel/channel_limit의 열거·타입 위반 | 허용 값으로 수정. |
+| `E-INPUT-FLAG` | CLI 플래그의 열거 밖 값 또는 미지 플래그 | 플래그 철자·값 수정. |
+| `W-LENGTH-UNGATED` | 세 층 모두 수치 상한 없음 | 신호 밀도로 관리(surfaces.md §0-1). |
+
+### 9.7 워닝
 
 | 코드 | 조건 | 조치 |
 |---|---|---|

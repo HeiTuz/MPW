@@ -34,7 +34,7 @@
 
 ```sh
 python3 scripts/lint.py               # 항상 — 라벨 실측·2000자·정본 단일성·유사문자
-node scripts/check_prompt.mjs --test  # references/image/ 또는 검증기 변경 시 — 21 fixtures (S1-legacy·S3 소관, S2 권위 아님)
+node scripts/check_prompt.mjs --test  # references/image/ 또는 검증기 변경 시 — 28 fixtures (S1-legacy·S3 소관, 표면·채널·엔진 컨텍스트 플래그 포함, S2 권위 아님)
 cd scripts && for t in test_*.py; do python3 -m unittest "${t%.py}"; done   # 교차 스킬 계약 포함
 python3 ~/.hermes/scripts/prompt_writing_doctrine_check.py                  # 표면 문서 ↔ 기계 계약 드리프트, 로스터 신선도
 ```

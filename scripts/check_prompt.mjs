@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 // MPW 이미지 프롬프트 검증기 (gpt-image-2 레인) — SPEC-FREEZE-v2 동결 스펙 준수. zero-dependency Node ESM.
-// 사용: node check_prompt.mjs <file> (stdin 파이프 가능) | --jsonl <file> | --tier <0|1|2> | --api | --test
+// 사용: node check_prompt.mjs <file> (stdin 파이프 가능) | --jsonl <file> | --tier <0|1|2> | --api | --surface <s1|s2|s3> | --engine <gpt-image|higgsfield|midjourney|unknown> | --channel <bounded|unbounded> | --channel-limit <양의 정수> | --test
 import { readFileSync } from "node:fs";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -15,6 +15,13 @@ const TAIL = ["no nudity","no nipple or genital exposure","no wardrobe malfuncti
 const SAFETY_ASSERT = "adult Korean woman in her late 20s, 25+, original character, non-nude fashion editorial styling, fully opaque fabric, covered chest line, editorial upright pose";
 const TAIL_ONLY = TAIL.slice(0, 4); // Tier-2 전용 항목 — 이게 있어야 tail로 간주
 const ANCHORS = [/25\+/, /original character/i, /fully opaque/i, /covered (?:chest|bust)/i, /editorial upright/i];
+// 표면/채널/엔진 컨텍스트 층 — 길이 구속 상한 판정용. null = 문자 상한 없음(미공개 [미확인] 또는 단어 단위) — 숫자 발명 금지.
+const CHANNEL_BOUNDED_DEFAULT = 2000;
+const ENGINE_LIMITS = { "gpt-image": 32000, "higgsfield": null, "midjourney": null, "unknown": null }; // midjourney는 단어 수로 잼 — 문자 min 계산 비혼입
+const CONTRACT_LIMIT = 2000;
+const VALID_SURFACES = new Set(["s1", "s2", "s3"]);
+const VALID_ENGINES = new Set(Object.keys(ENGINE_LIMITS));
+const VALID_CHANNELS = new Set(["bounded", "unbounded"]);
 const REWRITE_MAP = {
   "no people": "빈 배경, 인물 없는 구성", "no text": "텍스트 없음(한국어 긍정형)", "no watermark": "브랜드 없는 클린 마감",
   "no logo": "로고 없는 클린 마감", "no background": "단색 스튜디오 배경", "no blur": "엣지까지 또렷한 포커스",
@@ -85,6 +92,62 @@ function checkNegatives(p, tier, renderText, errors) {
 }
 
 
+function resolveLengthContext(opts, rec, mode) {
+  // rec 값은 열거·타입 검증을 통과한 것만 소비한다 — 열거 밖 값은 validateRecord가 E-REC-CONTEXT로 잡고, 여기서는 기본값으로 폴백해 크래시·게이트 약화를 막는다.
+  const surface = VALID_SURFACES.has(opts.surface) ? opts.surface
+    : VALID_SURFACES.has(rec?.surface) ? rec.surface
+    : mode === "jsonl" ? "s1" : "s3";
+  // S2는 플랫폼 파라미터 표면 — 타깃 엔진 상한 미공개가 기본이므로 gpt-image를 가정하지 않는다 (surfaces.md §2).
+  const engine = VALID_ENGINES.has(opts.engine) ? opts.engine
+    : VALID_ENGINES.has(rec?.engine) ? rec.engine
+    : surface === "s2" ? "unknown" : "gpt-image";
+
+  let channelLimit;
+  if (opts.channelLimit !== undefined) {
+    channelLimit = opts.channelLimit;
+  } else if (opts.channel === "unbounded") {
+    channelLimit = null;
+  } else if (opts.channel === "bounded") {
+    channelLimit = CHANNEL_BOUNDED_DEFAULT;
+  } else if (Number.isInteger(rec?.channel_limit) && rec.channel_limit > 0) {
+    channelLimit = rec.channel_limit;
+  } else if (rec?.channel === "unbounded") {
+    channelLimit = null;
+  } else if (rec?.channel === "bounded") {
+    channelLimit = CHANNEL_BOUNDED_DEFAULT;
+  } else {
+    channelLimit = surface === "s3" ? CHANNEL_BOUNDED_DEFAULT : null;
+  }
+
+  const engineLimit = ENGINE_LIMITS[engine] ?? null;
+  const contractLimit = (mode === "jsonl" || surface === "s1") ? CONTRACT_LIMIT : null;
+
+  // 층 수집 — push 순서가 동률 시 귀속 우선순위(기계 계약 > 전달 채널 > 타깃 엔진, stable sort)
+  const layers = [];
+  if (contractLimit !== null) layers.push({ kind: "contract", limit: contractLimit, layer: "기계 계약(prompt-bundle/v1 스키마)" });
+  if (channelLimit !== null) layers.push({ kind: "channel", limit: channelLimit, layer: "전달 채널" });
+  if (engineLimit !== null) layers.push({ kind: "engine", limit: engineLimit, layer: "타깃 엔진" });
+  const binding = layers.length ? [...layers].sort((a, b) => a.limit - b.limit)[0] : null;
+
+  return { surface, engine, layers, binding };
+}
+
+function checkLength(p, ctx, errors, warnings) {
+  const codePoints = [...p].length;
+  // 코드는 숫자가 아니라 층으로 고른다 — 계약층과 기본 채널 배선만 E-OVERFLOW-2000, 그 외 유한 상한은 E-OVERFLOW-LIMIT.
+  const codeOf = (l) => l.kind === "contract" || (l.kind === "channel" && l.limit === CHANNEL_BOUNDED_DEFAULT) ? "E-OVERFLOW-2000" : "E-OVERFLOW-LIMIT";
+  const emit = (l) => err(errors, codeOf(l), `프롬프트 코드포인트 수 ${codePoints}자 — 구속 층 ${l.layer} 상한 ${l.limit}자 초과 (표면 ${ctx.surface.toUpperCase()}, 엔진 ${ctx.engine}).`);
+  if (ctx.binding && codePoints > ctx.binding.limit) {
+    emit(ctx.binding);
+    // 더 좁은 채널 상한이 구속해도 기계 계약 위반은 숨기지 않는다 — 하류 스키마가 어차피 거부한다.
+    const contract = ctx.layers.find((l) => l.kind === "contract");
+    if (contract && contract !== ctx.binding && codePoints > contract.limit) emit(contract);
+  }
+  if (!ctx.binding) {
+    err(warnings, "W-LENGTH-UNGATED", "세 층(기계 계약, 전달 채널, 타깃 엔진) 모두 수치 상한 없음 — 신호 밀도로 관리, references/image/surfaces.md 참조.");
+  }
+}
+
 function checkEditorialFinish(p, errors, warnings) {
   if (/\b(?:micro[\s-]?skin texture|skin texture\s+ai|realistic skin\s+ai)\b/i.test(p))
     err(errors, "E-SKIN-AI", "malformed 피부 토큰(micro·AI) — `natural skin texture, visible pores, fine vellus hair`처럼 관찰 결과로.");
@@ -94,11 +157,9 @@ function checkEditorialFinish(p, errors, warnings) {
   if (glow >= 4 && !MATTE_QUALIFIER.test(p))
     err(warnings, "W-GLOW-STACK", `피부 글로우 토큰 ${glow}종 적층 + 매트존 부재 — 주 글로우 1개 + 전략적 매트존으로 (§15.4).`);
 }
-function validateText(raw, opts = {}, rec = null) {
+function validateText(raw, opts = {}, rec = null, mode = "text") {
   const errors = [], warnings = [];
   const p = raw.replace(/^﻿/, "").trim();
-  const codePoints = [...p].length;
-  if (codePoints > 2000) err(errors, "E-OVERFLOW-2000", `프롬프트 코드포인트 수 ${codePoints}자 — 블록당 2000자를 초과함.`);
   const has = (re) => re.test(p);
   const format = rec && (rec.format === "A" || rec.format === "B") ? rec.format : detectFormat(p);
   const quotes = quotesOf(p);
@@ -106,6 +167,18 @@ function validateText(raw, opts = {}, rec = null) {
   const tier = [0, 1, 2].includes(opts.tier) ? opts.tier // Tier-2는 명시 선언만 — 휴리스틱 승격 불가
     : rec && [0, 1, 2].includes(rec.tier) ? rec.tier
     : rec && rec.lane === "editorial" ? 2 : renderText ? 1 : 0;
+
+  // 길이 구속 컨텍스트 판정 — 미드저니 포함 모든 엔진에서 채널·계약 층이 산다 (§0-1: 어느 층도 다른 층을 대체하지 않는다)
+  const lengthCtx = resolveLengthContext(opts, rec, mode);
+  checkLength(p, lengthCtx, errors, warnings);
+
+  // 미드저니 엔진: 구조 판정 스코프 거부 (format/tier 해석 뒤, E-AR-END 앞) — 엔진 층은 단어 대역이라 문자 min 계산에 혼입하지 않는다
+  if (lengthCtx.engine === "midjourney") {
+    const words = p.split(/\s+/).filter(Boolean).length;
+    const msg = `이 검증기는 gpt-image-2 레인 전용이라 미드저니 프롬프트 구조를 판정하지 않습니다(전달 채널·기계 계약 층의 문자 상한 판정은 그대로 적용됨). 미드저니 길이는 문자가 아니라 단어로 재며 현재 ${words}단어 — 권장 ~40 / 40~60 신호 손실 / 60~80 대체로 무시 / 80 초과 금지. 이 대역은 커뮤니티 합의이고 공식 근거 [미확인]이며 하드 실패 조건이 아닙니다. 판정은 references/image/surfaces.md §0-1.`;
+    err(errors, "E-ENGINE-SCOPE", msg);
+    return { ok: false, format, tier, errors, warnings };
+  }
 
   if (!/AR\s+\d+\s*:\s*\d+$/i.test(p)) err(errors, "E-AR-END", "끝에 `AR 3:4` 형태의 종횡비 토큰이 없음(반드시 프롬프트 맨 끝).");
   const hexCount = (p.match(/#[0-9A-Fa-f]{6}/g) || []).length;
@@ -275,6 +348,15 @@ function validateRecord(rec, ids, opts) {
     if (rec[f] === undefined || rec[f] === null || rec[f] === "") err(errors, "E-REC-FIELD", `필수 필드 누락: ${f}.`);
   if (rec.id !== undefined) { if (ids.has(rec.id)) err(errors, "E-REC-DUPID", `중복 id: ${rec.id}.`); ids.add(rec.id); }
   if (rec.quality === "auto") err(errors, "E-REC-QUALITY", 'quality "auto" 금지 — high/medium/low를 명시.');
+  // 표면/채널/엔진 컨텍스트 필드 — CLI 플래그와 같은 열거·타입 제약. 열거 밖 값은 조용한 수용도 배치 크래시도 아닌 레코드 단위 실패.
+  if (rec.surface !== undefined && !VALID_SURFACES.has(rec.surface))
+    err(errors, "E-REC-CONTEXT", `surface ${JSON.stringify(rec.surface)}는 열거 밖(s1|s2|s3).`);
+  if (rec.engine !== undefined && !VALID_ENGINES.has(rec.engine))
+    err(errors, "E-REC-CONTEXT", `engine ${JSON.stringify(rec.engine)}는 열거 밖(${[...VALID_ENGINES].join("|")}).`);
+  if (rec.channel !== undefined && !VALID_CHANNELS.has(rec.channel))
+    err(errors, "E-REC-CONTEXT", `channel ${JSON.stringify(rec.channel)}는 열거 밖(bounded|unbounded).`);
+  if (rec.channel_limit !== undefined && !(Number.isInteger(rec.channel_limit) && rec.channel_limit > 0))
+    err(errors, "E-REC-CONTEXT", `channel_limit ${JSON.stringify(rec.channel_limit)}는 양의 정수여야 함.`);
   if (typeof rec.size === "string") {
     if (!SIZE_WHITELIST.includes(rec.size)) {
       const msg = `size ${rec.size}는 6종 화이트리스트 밖.`, hint = `가장 가까운 허용 size: ${nearestSize(rec.size)}`;
@@ -297,7 +379,7 @@ function validateRecord(rec, ids, opts) {
       err(warnings, "W-PALETTE-MISS", "record palette가 full_prompt에 반영되지 않음.");
     if ((rec.korean_copy || /Text-in-image\s*:|["“]/.test(rec.full_prompt)) && rec.quality !== "high")
       err(warnings, "W-TEXT-QUALITY", '텍스트 heavy record는 quality "high" 권장.');
-    t = validateText(rec.full_prompt, opts, rec);
+    t = validateText(rec.full_prompt, opts, rec, "jsonl");
     errors.push(...t.errors); warnings.push(...t.warnings);
   }
   return { id: rec.id ?? null, ok: errors.length === 0, format: t.format, tier: t.tier, errors, warnings };
@@ -319,8 +401,53 @@ function runJsonl(content, opts) {
 }
 
 function parseFlags(flags) {
-  const o = { api: false, tier: undefined };
-  for (let i = 0; i < flags.length; i++) { if (flags[i] === "--api") o.api = true; else if (flags[i] === "--tier") o.tier = Number(flags[++i]); }
+  const o = { api: false, tier: undefined, surface: undefined, engine: undefined, channel: undefined, channelLimit: undefined, file: null, jsonlPath: null, test: false };
+
+  for (let i = 0; i < flags.length; i++) {
+    const a = flags[i];
+    if (a === "--api") o.api = true;
+    else if (a === "--test") o.test = true;
+    else if (a === "--tier") o.tier = Number(flags[++i]);
+    else if (a === "--surface") {
+      const val = flags[++i];
+      if (!VALID_SURFACES.has(val)) {
+        console.log(JSON.stringify({ ok: false, errors: [{ code: "E-INPUT-FLAG", msg: `--surface ${val}은 열거 밖 값(s1|s2|s3만 허용).` }], warnings: [] }, null, 2));
+        process.exit(1);
+      }
+      o.surface = val;
+    }
+    else if (a === "--engine") {
+      const val = flags[++i];
+      if (!VALID_ENGINES.has(val)) {
+        console.log(JSON.stringify({ ok: false, errors: [{ code: "E-INPUT-FLAG", msg: `--engine ${val}은 열거 밖 값(gpt-image|higgsfield|midjourney|unknown만 허용).` }], warnings: [] }, null, 2));
+        process.exit(1);
+      }
+      o.engine = val;
+    }
+    else if (a === "--channel") {
+      const val = flags[++i];
+      if (!VALID_CHANNELS.has(val)) {
+        console.log(JSON.stringify({ ok: false, errors: [{ code: "E-INPUT-FLAG", msg: `--channel ${val}은 열거 밖 값(bounded|unbounded만 허용).` }], warnings: [] }, null, 2));
+        process.exit(1);
+      }
+      o.channel = val;
+    }
+    else if (a === "--channel-limit") {
+      const val = flags[++i];
+      // 엄격 파싱 — parseInt는 "1e9"→1, "2000abc"→2000, "5.9"→5로 조용히 잘라 운영자 의도를 뒤집는다.
+      if (!/^\d+$/.test(val ?? "") || Number(val) <= 0) {
+        console.log(JSON.stringify({ ok: false, errors: [{ code: "E-INPUT-FLAG", msg: `--channel-limit ${val}은 양의 정수여야 함(십진 숫자만).` }], warnings: [] }, null, 2));
+        process.exit(1);
+      }
+      o.channelLimit = Number(val);
+    }
+    else if (a === "--jsonl") o.jsonlPath = flags[++i];
+    else if (a.startsWith("--")) {
+      console.log(JSON.stringify({ ok: false, errors: [{ code: "E-INPUT-FLAG", msg: `미지 플래그: ${a}` }], warnings: [] }, null, 2));
+      process.exit(1);
+    }
+    else o.file = a;
+  }
   return o;
 }
 
@@ -330,12 +457,13 @@ function runTest() { // fixtures/manifest.json 셀프테스트 — 경로는 스
   const rows = entries.map((e) => {
     const opts = parseFlags(e.flags || []);
     const content = readFileSync(resolve(SCRIPT_DIR, e.path), "utf8");
-    const res = e.mode === "jsonl" ? runJsonl(content, opts) : validateText(content, opts);
-    const codes = e.mode === "jsonl" ? res.results.flatMap((r) => r.errors.map((x) => x.code)) : res.errors.map((x) => x.code);
+    const mode = e.mode || "text";
+    const res = mode === "jsonl" ? runJsonl(content, opts) : validateText(content, opts, null, "text");
+    const codes = mode === "jsonl" ? res.results.flatMap((r) => r.errors.map((x) => x.code)) : res.errors.map((x) => x.code);
     const missing = (e.expect.codes || []).filter((c) => !codes.includes(c)); // expect.codes ⊆ 실코드
     const pass = res.ok === e.expect.ok && missing.length === 0;
     if (!pass) fails++;
-    return [pass ? "PASS" : "FAIL", e.path, e.mode, pass ? "" : `ok=${res.ok}(기대 ${e.expect.ok})${missing.length ? ` 누락코드:${missing.join(",")}` : ""} 실코드:${[...new Set(codes)].join(",") || "-"}`];
+    return [pass ? "PASS" : "FAIL", e.path, mode, pass ? "" : `ok=${res.ok}(기대 ${e.expect.ok})${missing.length ? ` 누락코드:${missing.join(",")}` : ""} 실코드:${[...new Set(codes)].join(",") || "-"}`];
   });
   const wp = Math.max(...rows.map((r) => r[1].length), 4);
   console.log(`RESULT  ${"PATH".padEnd(wp)}  MODE   DETAIL`);
@@ -346,21 +474,13 @@ function runTest() { // fixtures/manifest.json 셀프테스트 — 경로는 스
 
 // ── CLI ──
 const argv = process.argv.slice(2);
-const opts = { api: false, tier: undefined };
-let file = null, jsonlPath = null, test = false;
-for (let i = 0; i < argv.length; i++) {
-  const a = argv[i];
-  if (a === "--api") opts.api = true;
-  else if (a === "--test") test = true;
-  else if (a === "--tier") opts.tier = Number(argv[++i]);
-  else if (a === "--jsonl") jsonlPath = argv[++i];
-  else file = a;
-}
-if (test) runTest();
+const opts = parseFlags(argv);
+
+if (opts.test) runTest();
 else {
   let out;
   try {
-    out = jsonlPath ? runJsonl(readFileSync(jsonlPath, "utf8"), opts) : validateText(readFileSync(file ?? 0, "utf8"), opts);
+    out = opts.jsonlPath ? runJsonl(readFileSync(opts.jsonlPath, "utf8"), opts) : validateText(readFileSync(opts.file ?? 0, "utf8"), opts);
   } catch (e) {
     console.log(JSON.stringify({ ok: false, errors: [{ code: "E-INPUT", msg: `입력을 읽지 못함: ${e.message}` }], warnings: [] }, null, 2));
     process.exit(1);

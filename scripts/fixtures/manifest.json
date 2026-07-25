@@ -209,5 +209,63 @@
       "ok": false,
       "codes": ["E-TP-PALETTE", "E-TP-PALETTE-RANGE", "E-TP-DUP-GUARD", "E-TEXT-QUOTE", "E-TP-LEGIBILITY", "E-TP-GRAFT", "E-TP-REPEATED-GUARDS", "E-TP-EXACT-GUARD", "E-TP-EXACT-PRIMARY", "E-TP-TEXTURE"]
     }
+  },
+  {
+    "path": "fixtures/good/s2_platform_long.txt",
+    "mode": "text",
+    "flags": ["--surface", "s2"],
+    "expect": {
+      "ok": true
+    }
+  },
+  {
+    "path": "fixtures/good/s2_platform_long.txt",
+    "mode": "text",
+    "flags": ["--surface", "s2", "--engine", "higgsfield"],
+    "expect": {
+      "ok": true
+    }
+  },
+  {
+    "path": "fixtures/good/s2_platform_long.txt",
+    "mode": "text",
+    "flags": ["--surface", "s3", "--channel", "unbounded"],
+    "expect": {
+      "ok": true
+    }
+  },
+  {
+    "path": "fixtures/good/s2_platform_long.txt",
+    "mode": "text",
+    "expect": {
+      "ok": false,
+      "codes": ["E-OVERFLOW-2000"]
+    }
+  },
+  {
+    "path": "fixtures/bad/overflow_2000.txt",
+    "mode": "text",
+    "flags": ["--surface", "s2", "--channel", "bounded"],
+    "expect": {
+      "ok": false,
+      "codes": ["E-OVERFLOW-2000"]
+    }
+  },
+  {
+    "path": "fixtures/bad/s1_overflow_record.jsonl",
+    "mode": "jsonl",
+    "expect": {
+      "ok": false,
+      "codes": ["E-OVERFLOW-2000"]
+    }
+  },
+  {
+    "path": "fixtures/bad/midjourney_engine.txt",
+    "mode": "text",
+    "flags": ["--engine", "midjourney"],
+    "expect": {
+      "ok": false,
+      "codes": ["E-ENGINE-SCOPE"]
+    }
   }
 ]
