@@ -10,9 +10,26 @@
 
 채널별 상한 값은 이 문서에도 적지 않는다 — 각 런타임 배선(예: Hermes 채널 설정)에서 읽는다. 코어 파일(SKILL.md·references/templates.md·references/image/* 전체)은 채널을 익명으로만 지칭한다("상한 있는 메신저형 채널", "에이전트 CLI 무제한 표면").
 
+## 기계 계약 인덱스
+
+이 표는 배선 포인터다. 각 계약의 불변식·생산자 → 소비자 경계·실패 방식은 [contracts.md](contracts.md) 인터페이스 표가 정본이며 여기서 반복하지 않는다. 이 표는 스키마 파일·MPW 생성 명령·검증 경로·규칙 정본 문서의 위치만 준다.
+
+계약 목록의 정본은 `contracts/manifest.json`이고 각 계약의 valid fixture는 `contracts/v1/fixtures/`에 있다. 계약이 추가되면 이 표에 행을 추가한다.
+
+| 계약 | 스키마 (`contracts/v1/`) | MPW 생성 명령 | 검증 경로 | 규칙 정본 |
+|---|---|---|---|---|
+| `garden-recipe/v1` | `garden-recipe.schema.json` | MPW 스크립트 없음(외부 생산) | `contracts/validate.py` | [contracts.md](contracts.md) §GardenRecipe v1 |
+| `prompt-bundle/v1` | `prompt-bundle.schema.json` | `scripts/compile_garden_recipe.py` | `contracts/validate.py` (`--recipe` 교차검증) | [garden-recipe-compiler.md](garden-recipe-compiler.md) · [contracts.md](contracts.md) §PromptBundle v1 |
+| `image-production-handoff/v2` | `image-production-handoff.schema.json` | `scripts/compile_image_handoff.py` | `contracts/validate.py` · 보조 경로: 컴파일러 게이트 + `scripts/test_compile_image_handoff.py` | [image/image-production-handoff.md](image/image-production-handoff.md) |
+| apparel-handoff (`schema_version: 1`) | `apparel-handoff.schema.json` | `scripts/compile_apparel_handoff.py` | `contracts/validate.py` (정수 discriminator라 `--schema apparel-handoff/v1`이 canonical path) · 보조 경로: 컴파일러 게이트 + `scripts/test_compile_apparel_handoff.py` | [image/apparel-compiler.md](image/apparel-compiler.md) · 런타임 소비는 아래 §의류 핸드오프 소비자 |
+| `production-adapter-options/v1` | `production-adapter-options.schema.json` | MPW 스크립트 없음(외부 생산) | `contracts/validate.py` | 스키마가 정본 · 표면 판정 [image/surfaces.md](image/surfaces.md) §S1 |
+| `imggen2-production-record/v1` | `imggen2-production-record.schema.json` | MPW 스크립트 없음(외부 생산) | `contracts/validate.py` | 스키마가 정본 · 표면 판정 [image/surfaces.md](image/surfaces.md) §S1 |
+| `mpw-recompile-request/v1` | `mpw-recompile-request.schema.json` | MPW 스크립트 없음(외부 생산) | `contracts/validate.py` | 전용 문서 없음 — 스키마와 [contracts.md](contracts.md) 인터페이스 표 |
+| `source-evidence-index/v1` | `source-evidence-index.schema.json` | MPW 스크립트 없음(외부 생산) | `contracts/validate.py` | 전용 문서 없음 — 스키마와 [contracts.md](contracts.md) 인터페이스 표 |
+
 ## 의류 핸드오프 소비자
 
-휴대 가능한 의류 생성 계약은 `contracts/v1/apparel-handoff.schema.json`이 정의한다. `python3 scripts/compile_apparel_handoff.py request.json --output handoff.json`으로 생성하며, 런타임은 네트워크 호출 없이 이 파일을 읽어 후보 작업을 준비한다. Hermes 설치에서는 `ImgGen2`가 소비자이며, 핸드오프의 `unique_color_count`와 검증된 `vision_role_map`을 다시 확인한 뒤 동일한 전체 인벤토리를 가진 격리 작업을 만든다. 알 수 없는 버전이나 불일치는 자유형 프롬프트로 강등하지 않고 거부한다. 컴파일 규칙·입력 게이트 정본: [image/apparel-compiler.md](image/apparel-compiler.md).
+스키마·생성 명령·규칙 정본은 위 인덱스 표에 있다. 이 절은 런타임 소비 배선만 기록한다. 런타임은 네트워크 호출 없이 핸드오프 파일을 읽어 후보 작업을 준비한다. Hermes 설치에서는 `ImgGen2`가 소비자이며, 핸드오프의 `unique_color_count`와 검증된 `vision_role_map`을 다시 확인한 뒤 동일한 전체 인벤토리를 가진 격리 작업을 만든다. 알 수 없는 버전이나 불일치는 자유형 프롬프트로 강등하지 않고 거부한다.
 
 
 ## Claude

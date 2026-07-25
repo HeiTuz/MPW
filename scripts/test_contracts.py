@@ -13,7 +13,14 @@ ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "contracts"))
 sys.path.insert(0, str(ROOT / "scripts"))
 
-from validate import canonical_hash, validate_document  # noqa: E402
+from validate import (  # noqa: E402
+    SCHEMA_FILES,
+    WIRE_SCHEMA_ALIASES,
+    _schema_errors,
+    canonical_hash,
+    unsupported_keywords,
+    validate_document,
+)
 from sync_contracts import load_manifest, mirror_errors, source_errors, sync  # noqa: E402
 
 FIXTURES = ROOT / "contracts" / "v1" / "fixtures"
@@ -32,6 +39,11 @@ def walk_keys(value):
         for child in value:
             yield from walk_keys(child)
 
+
+
+def _schema_errors_top(value, schema):
+    """루트 스키마와 문서가 같은 최상위 호출 — 합성 스키마 검사용."""
+    return _schema_errors(value, schema, schema, "$")
 
 class SchemaFixtureTests(unittest.TestCase):
     def test_schema_documents_are_draft_2020_12(self) -> None:
@@ -105,6 +117,109 @@ class PromptBundleTests(unittest.TestCase):
         errors = validate_document(self.bundle, self.recipe)
         self.assertTrue(any("forbidden_path_or_embedded_original" in error for error in errors), errors)
         self.assertTrue(any("external_file_dependency" in error for error in errors), errors)
+
+
+class PortableHandoffContractTests(unittest.TestCase):
+    def setUp(self) -> None:
+        self.apparel = fixture("apparel-handoff.valid.json")
+        self.image = fixture("image-production-handoff.valid.json")
+
+    def test_registry_covers_every_manifest_schema(self) -> None:
+        mirrored = {
+            relative.rsplit("/", 1)[-1]
+            for relative in load_manifest()["files"]
+            if relative.startswith("v1/") and relative.endswith(".schema.json")
+        }
+        registered = {path.name for path in SCHEMA_FILES.values()}
+        self.assertEqual(registered, mirrored)
+
+    def test_registry_key_matches_each_schema_discriminator(self) -> None:
+        """파일명 집합만 비교하면 키가 엉뚱한 스키마를 가리켜도 통과한다."""
+        for key, path in SCHEMA_FILES.items():
+            schema = json.loads(path.read_text(encoding="utf-8"))
+            const = schema.get("properties", {}).get("schema_version", {}).get("const")
+            self.assertIsNotNone(const, f"{key}: schema_version const 부재")
+            resolved = WIRE_SCHEMA_ALIASES.get(const, const)
+            self.assertEqual(resolved, key, f"{key} -> {path.name} (const={const!r})")
+
+    def test_if_then_else_branches_all_evaluate(self) -> None:
+        """레포 스키마가 else를 쓰지 않아 커버가 비는 분기를 합성 스키마로 고정."""
+        schema = {
+            "type": "object",
+            "properties": {"k": {"type": "integer"}, "a": {"type": "string"}, "b": {"type": "string"}},
+            "if": {"properties": {"k": {"const": 1}}, "required": ["k"]},
+            "then": {"required": ["a"]},
+            "else": {"required": ["b"]},
+        }
+        self.assertTrue(any("$.a: required" in e for e in _schema_errors_top({"k": 1}, schema)))
+        self.assertTrue(any("$.b: required" in e for e in _schema_errors_top({"k": 2}, schema)))
+        self.assertTrue(any("$.b: required" in e for e in _schema_errors_top({}, schema)))
+        self.assertEqual(_schema_errors_top({"k": 1, "a": "x"}, schema), [])
+        self.assertEqual(_schema_errors_top({"k": 2, "b": "y"}, schema), [])
+
+    def test_registered_schemas_use_only_supported_keywords(self) -> None:
+        for key, path in SCHEMA_FILES.items():
+            schema = json.loads(path.read_text(encoding="utf-8"))
+            self.assertEqual(unsupported_keywords(schema), [], key)
+
+    def test_apparel_and_image_handoff_fixtures_validate(self) -> None:
+        self.assertEqual(validate_document(self.apparel), [])
+        self.assertEqual(validate_document(self.apparel, schema_version="apparel-handoff/v1"), [])
+        self.assertEqual(validate_document(self.image), [])
+
+    def test_apparel_color_front_requires_color_identity(self) -> None:
+        document = copy.deepcopy(self.apparel)
+        del document["vision_role_map"][0]["color_identity"]
+        errors = validate_document(document)
+        self.assertTrue(any("color_identity: required" in error for error in errors), errors)
+
+    def test_apparel_sources_must_be_unique(self) -> None:
+        document = copy.deepcopy(self.apparel)
+        document["sources"].append(document["sources"][0])
+        errors = validate_document(document)
+        self.assertTrue(any("unique_items" in error for error in errors), errors)
+
+    def test_apparel_output_prompt_must_start_with_image(self) -> None:
+        document = copy.deepcopy(self.apparel)
+        document["outputs"][0]["prompt"] = document["outputs"][0]["prompt"].removeprefix("IMAGE")
+        errors = validate_document(document)
+        self.assertTrue(any("pattern_mismatch" in error for error in errors), errors)
+
+    def test_apparel_rejects_unknown_top_level_key(self) -> None:
+        document = copy.deepcopy(self.apparel)
+        document["operator_note"] = "unregistered"
+        errors = validate_document(document)
+        self.assertTrue(any("additional_property" in error for error in errors), errors)
+
+    def test_edit_operation_requires_input_images(self) -> None:
+        document = copy.deepcopy(self.image)
+        del document["input_images"]
+        errors = validate_document(document)
+        self.assertTrue(any("input_images: required" in error for error in errors), errors)
+
+    def test_edit_operation_rejects_empty_input_images(self) -> None:
+        document = copy.deepcopy(self.image)
+        document["input_images"] = []
+        errors = validate_document(document)
+        self.assertTrue(any("min_items:1" in error for error in errors), errors)
+
+    def test_metadata_values_are_length_bounded(self) -> None:
+        document = copy.deepcopy(self.image)
+        document["metadata"]["campaign"] = "a" * 501
+        errors = validate_document(document)
+        self.assertTrue(any("max_length:500" in error for error in errors), errors)
+
+    def test_input_image_path_must_be_relative_or_https(self) -> None:
+        document = copy.deepcopy(self.image)
+        document["input_images"][0]["path"] = "../escape.png"
+        errors = validate_document(document)
+        self.assertTrue(any("one_of_match_count:0" in error for error in errors), errors)
+
+    def test_unregistered_schema_version_is_rejected(self) -> None:
+        document = copy.deepcopy(self.image)
+        document["schema_version"] = "image-production-handoff/v9"
+        errors = validate_document(document)
+        self.assertTrue(any("unsupported_schema_version" in error for error in errors), errors)
 
 
 class ManifestAndMirrorTests(unittest.TestCase):

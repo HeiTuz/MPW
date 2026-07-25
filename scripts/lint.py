@@ -325,6 +325,35 @@ def check_agent_skill_sync(root, canonical_text, errors):
             errors.append(f"{name}: [I14] rule body drift from SKILL.md")
 
 
+def check_contract_index_table(root, errors):
+    """I15 — adapters.md 기계 계약 인덱스 표가 manifest의 계약 전부를 담는지.
+
+    manifest·validate.py·테스트는 계약 추가 시 함께 움직이지만(test_contracts.py가
+    강제) 인덱스 표는 사람 규칙으로만 유지돼 조용히 낡는다.
+    """
+    manifest_path = root / "contracts" / "manifest.json"
+    adapters_path = root / "references" / "adapters.md"
+    if not manifest_path.is_file() or not adapters_path.is_file():
+        return
+    try:
+        files = json.loads(manifest_path.read_text(encoding="utf-8"))["files"]
+    except Exception as e:  # noqa: BLE001
+        errors.append(f"contracts/manifest.json: [I15] 읽기 실패 — {e}")
+        return
+    schemas = sorted(
+        rel.rsplit("/", 1)[-1]
+        for rel in files
+        if rel.startswith("v1/") and rel.endswith(".schema.json")
+    )
+    table = adapters_path.read_text(encoding="utf-8")
+    for name in schemas:
+        if name not in table:
+            errors.append(
+                f"references/adapters.md: [I15] 기계 계약 인덱스 표에 {name} 행이 없다"
+                " — manifest에 계약이 추가되면 표도 갱신한다"
+            )
+
+
 def check_labels(f, s, errors):
     blocks = [(m.start(), m.end(), m.group(1)) for m in re.finditer(r"```text\n(.*?)```", s, re.S)]
     lengths = {measured_len(b) for _, _, b in blocks}
@@ -445,6 +474,8 @@ def main():
     for f in check_targets:
         if f in texts:
             check_universal_2000_regression(texts[f], errors, f)
+
+    check_contract_index_table(ROOT, errors)
 
     # label == adjacent block length (전 FILES)
     for f, s in texts.items():

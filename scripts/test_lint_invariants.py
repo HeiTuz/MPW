@@ -36,6 +36,24 @@ class LintInvariantSmokeTests(unittest.TestCase):
         self.assertTrue(any("broken relative link" in error and "[I2]" in error for error in errors), errors)
         self.assertTrue(any("orphan reference" in error and "[I2]" in error for error in errors), errors)
 
+    def test_i15_rejects_contract_index_table_drift(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            (root / "contracts").mkdir()
+            (root / "references").mkdir()
+            (root / "contracts" / "manifest.json").write_text(
+                '{"files": {"v1/listed.schema.json": "x", "v1/missing.schema.json": "y"}}\n',
+                encoding="utf-8",
+            )
+            (root / "references" / "adapters.md").write_text(
+                "| 계약 | 스키마 |\n| --- | --- |\n| listed | `listed.schema.json` |\n",
+                encoding="utf-8",
+            )
+            errors = []
+            lint.check_contract_index_table(root, errors)
+        self.assertTrue(any("missing.schema.json" in e and "[I15]" in e for e in errors), errors)
+        self.assertFalse(any("listed.schema.json" in e for e in errors), errors)
+
     def test_i6_rejects_reversed_key_fill_ratio(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
