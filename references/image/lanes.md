@@ -92,6 +92,31 @@
 
 연산 금지는 이 레인에서 필요한 계약이다. 장면 내용은 긍정형으로 쓴다. 긴 불리언 스택은 캐노니컬 문장으로 병합하고, 픽셀 고정 지원 여부가 불명확한 엔진은 확인 노트를 남긴다.
 
+### 압축 규칙
+
+긴 `SYSTEM OVERRIDE` 헤더나 반복되는 절대 금지 조항을 프롬프트에 복사하지 않는다. 다음 5단계로 압축한다:
+
+1. 한 가지 작업 선언 (배경 합성, 픽셀 고정)
+2. 캔버스/피사체/정체성/의상 락
+3. 제한된 톤/조명 통합
+4. 배경 위치 단서 팩
+5. 짧은 실패 조항
+
+### 적격 키워드
+
+규칙 1~7에서 다루지 않는 추가 제약들을 간결히 지정:
+
+- **recognition over beauty**: 미화보다 동일인 인식을 우선. 얼굴 평균화·대칭 보정·피부 스무딩 금지.
+- **background clipping allowance**: 배경 오브제를 살리려 카메라를 움직이지 않는다. 잠긴 프레임 밖 요소는 잘림.
+- **passive perspective match**: 카메라 재추정/보정 없이 기존 사진 시점에 배경 깊이만 정합.
+- **environment cue pack**: 장소를 로고·간판 아닌 재료·시간·빛·필수 구조물로 정의.
+
+### Compact clause template
+
+```text
+This is a pixel-bound background replacement composite, not free image generation. Preserve the original canvas, crop, aspect ratio, subject position, subject bounding box, pose, silhouette, face geometry, expression, hair edges, garment color/pattern/texture, and foot contact exactly. The original subject photo is the immutable base layer; subject pixels are read-only. Generate only a new external background plate that fills the locked canvas; background elements may be clipped by the frame. Keep face recognition and garment fidelity above beauty or composition improvement. Apply only bounded tone matching: preserve face hue/microtexture and garment hue/chroma, with bounded global grade only (±0.3 stop, tint ≤0.2, undertone ≥0.75). Add realistic contact shadow, matching grain, clean edge integration, no halo or pasted-on separation. If any crop, recentering, subject shift, resize, pose change, face redraw, or garment reinterpretation occurs, the edit fails.
+```
+
 ## 영상 공통 규칙
 
 스토리보드(씬 순서·길이·설명·카메라·오디오)를 먼저 만들고 씬별 프롬프트를 작성한다. 씬마다 지배 카메라 모션 1개와 핵심 행동 1개만 둔다. 대사는 따옴표로, SFX·앰비언스는 명시한다. 비영어 대사는 `Dialogue - {Character}: ({emotion} in Korean) "대사"`처럼 영어 지문으로 언어를 표시한다.

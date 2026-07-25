@@ -21,7 +21,7 @@ metadata:
 
 **출력 원칙**: 결론과 판정 기준을 먼저 둔다. 고정 양식을 채우지 말고 필요한 슬롯만 [references/templates.md](references/templates.md)의 조립 규칙으로 선택한다. 평문이 더 명확하면 구조화하지 않으며, 가독성이 인위적 압축보다 우선한다. **그래프는 조립 도구이지 납품물이 아니다** — 사용자에게 나가는 것은 완성된 프롬프트 블록뿐이다.
 
-**references 접근**: 구조·권한·체인은 [references/prompt-graph.md](references/prompt-graph.md), 범용 골격·예시·모호어·보강은 [references/templates.md](references/templates.md), 역할·권한·모델 적응은 [references/model-playbooks.md](references/model-playbooks.md)를 읽는다. IMAGE 계열은 **표면 판정 [references/image/surfaces.md](references/image/surfaces.md) → 모델 선택 [references/image/model-routing.md](references/image/model-routing.md) → 레인 규칙 [references/image/lanes.md](references/image/lanes.md)** 순이다.
+**references 접근**: 구조·권한·체인은 [references/prompt-graph.md](references/prompt-graph.md), 범용 골격·예시·모호어·보강은 [references/templates.md](references/templates.md), 역할·권한·모델 적응은 [references/model-playbooks.md](references/model-playbooks.md)를 읽는다. IMAGE 계열은 **표면 판정 [references/image/surfaces.md](references/image/surfaces.md) → 모델 선택 [references/image/model-routing.md](references/image/model-routing.md) → 레인 규칙 [references/image/lanes.md](references/image/lanes.md)** 순이다. 검증된 GardenRecipe를 PromptBundle로 컴파일하거나 공유 계약을 동기화할 때는 [references/garden-recipe-compiler.md](references/garden-recipe-compiler.md)와 [references/contracts.md](references/contracts.md)를 읽는다.
 
 ## 3층 설계 모델
 

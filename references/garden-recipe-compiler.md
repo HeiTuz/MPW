@@ -1,6 +1,6 @@
 # GardenRecipe → PromptBundle 컴파일 계약
 
-이 문서는 MPW의 구조화 컴파일·핸드오프 정본이다. GardenRecipe 필드 정의·개인정보 금지·provenance 검증은 `contracts/` 정본을 참조하며 여기서 반복하지 않는다. 이미지 문장 구성 규칙은 `references/image/compiler.md`, 레인 게이트는 `references/image/lanes.md`가 정본이다.
+이 문서는 MPW의 구조화 컴파일·핸드오프 정본이다. GardenRecipe 필드 정의·개인정보 금지·provenance 검증은 `contracts/` 정본을 참조하며 여기서 반복하지 않는다. 이미지 문장 구성 규칙은 `references/image/compiler.md`, 레인 게이트는 `references/image/lanes.md`가 정본이다. 계약 시스템 전체는 [references/contracts.md](contracts.md)에서 시작한다.
 
 ## 입력 게이트
 
@@ -27,7 +27,11 @@ python3 scripts/compile_garden_recipe.py recipe.json --output prompt-bundle.json
 
 ## 기계 핸드오프와 마이그레이션
 
-기본 출력은 엔진 불가지 `PromptBundle`이다. 다운스트림은 `handoff.protocol`로 버전을 협상하고 `prompt_blocks`, `immutable_locks`, `variable_axes`, `negative_constraints`, `reference_requirements`, `qc_acceptance_criteria`를 직접 소비한다. 구형 소비자 어댑터는 `references/adapters.md`에만 정의한다.
+기본 출력은 엔진 불가지 `PromptBundle`이다. 다운스트림은 `handoff.protocol`로 버전을 협상하고 `prompt_blocks`, `immutable_locks`, `variable_axes`, `negative_constraints`, `reference_requirements`, `qc_acceptance_criteria`를 직접 소비한다.
+
+### 구형 소비자 어댑터 형식: legacy-bridge
+
+--format legacy-bridge로 호출하면 다음 구조의 레거시 번들을 산출한다: `{compiled_by, blocks, assumptions}`. 이 형식은 MPW에서 관리하지 않는 오래된 PromptBundle 레이아웃이며, 현행 `handoff` 기반 소비자는 지원하지 않는다. 알 수 없는 `handoff.protocol` 처리 규칙은 [contracts.md](contracts.md) §PromptBundle v1이 정본이다. 레거시 형식의 락과 QC 계약은 브리지 소비자(예: higgsfield-prompt-bridge)가 `locks`, `qc.pass_criteria`, `media` 필드로 이관 의무를 진다.
 
 검증:
 

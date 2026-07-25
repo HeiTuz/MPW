@@ -36,7 +36,7 @@ ImgGen2 can consume this contract. It is optional: MPW still writes standalone p
   "operation": "edit",
   "subject": "A product launch card preserving the supplied product and label",
   "scene": "Pale stone surface with soft window light",
-  "composition": "Centered 4:5 product framing",
+  "composition": "Centered product framing",
   "style": "Restrained editorial design",
   "input_images": [
     {"path": "assets/product.png", "role": "Product identity reference"}

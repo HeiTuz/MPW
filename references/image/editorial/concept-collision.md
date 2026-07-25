@@ -9,7 +9,7 @@ Format B([format-b.md](format-b.md) §1)의 특수형이다. **하나의 컨셉 
 **그래머 체인 (Format B 슬롯의 특수 배열, 재배열 금지):**
 
 ```text
-성인 가상 페르소나/정체성 앵커 → 헤어·뷰티 구체 → 컨셉 충돌(의상+소품으로 가시화) → 바디 포즈(가구/오브젝트 지오메트리 결속 또는 포착된 모션) → 배경 소재/색 → 빛 방향·그림자 거동 → 표정/시선 → 구도/네거티브 스페이스 → real skin/매체 마감 → AR x:y
+성인 가상 페르소나/정체성 앵커 → 헤어·뷰티 구체 → 컨셉 충돌(의상+소품으로 가시화) → 바디 포즈(가구/오브젝트 지오메트리 결속 또는 포착된 모션) → 배경 소재/색 → 빛 방향·그림자 거동 → 표정/시선 → 구도/네거티브 스페이스 → natural skin/매체 마감 → AR x:y
 ```
 
 - **컨셉은 서술하지 말고 증명한다.** `balletcore × office utility`라고 쓰는 것으로 끝내지 않는다 — 발레 플랫·튜튜형 미디 스커트(발레)와 테일러드 블레이저·클립보드·머그컵·스캐너(오피스)를 **동시에** 프레임에 둬야 충돌이 읽힌다. 소품이 컨셉의 증거다.
@@ -57,7 +57,7 @@ malformed 피부 토큰 정규화: `micro skin texture AI`·`skin texture AI` �
 **완성 예제 — Tier-0 컨셉-콜리전(부정문 0, 검증기 `ok:true`·경고 0 확인 완료):**
 
 ```text
-20대 후반 East Asian woman 1인 단독, chok-chok skin(dewy base)과 aegyo-sal, 슬릭백 번, 한국 남성지풍 클린 화보 컷, office utility × balletcore 충돌: 그레이 테일러드 블레이저와 새틴 발레 플랫, 클립보드·머그컵을 실로 매단 부유 소품, 리본 묶인 우드 체어에 languid recline·한쪽 다리 뻗음, 크림 심리스 배경, soft high-key strobe near-shadowless 5500K, 무표정의 aloof gaze, subject offset with generous negative space, 팔레트 #F2ECE1 #D8C7B0 #9FB0C4 #2B2A28, glass skin translucency는 유리 아닌 soft subsurface glow로 자격화 + 매트한 T존, real skin texture with visible pores, Portra film tonality, medium-format clarity(clean tonal separation), AR 3:4
+20대 후반 East Asian woman 1인 단독, chok-chok skin(dewy base)과 aegyo-sal, 슬릭백 번, 한국 남성지풍 클린 화보 컷, office utility × balletcore 충돌: 그레이 테일러드 블레이저와 새틴 발레 플랫, 클립보드·머그컵을 실로 매단 부유 소품, 리본 묶인 우드 체어에 languid recline·한쪽 다리 뻗음, 크림 심리스 배경, soft high-key strobe near-shadowless 5500K, 무표정의 aloof gaze, subject offset with generous negative space, 팔레트 #F2ECE1 #D8C7B0 #9FB0C4 #2B2A28, glass skin translucency는 유리 아닌 soft subsurface glow로 자격화 + 매트한 T존, natural skin texture, visible pores, subtle film grain, Portra film tonality, medium-format clarity(clean tonal separation), AR 3:4
 ```
 
-실측: 546자. Tier-0이므로 부정문 0개다. 이 예제는 `scripts/fixtures/good/editorial_collision.txt` 회귀 기준선과 동일하다.
+실측: 564자. Tier-0이므로 부정문 0개다. 이 예제는 `scripts/fixtures/good/editorial_collision.txt` 회귀 기준선과 동일하다.

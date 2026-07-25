@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+// .npmignore 삭제됨 — npm pack 검사가 대체 방어선
 import assert from "node:assert/strict";
 import fs from "node:fs";
 import os from "node:os";

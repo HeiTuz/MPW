@@ -201,7 +201,7 @@
 | 패턴 정합 | mismatched pattern | `stripe alignment continuous across the side seam, pattern scale identical on every panel` |
 | 의상 좌우 | asymmetric sleeves | `both sleeves ending at the same point on the wrist, placket straight down the centre front with evenly spaced buttons` |
 | 신발·액세서리 | floating feet, broken chain | `both shoes symmetric with even sole thickness, both soles in full contact with the ground, one continuous chain with uniform link size, earrings matching as a pair` |
-| 얼굴·눈 | deformed iris | `features symmetric about the vertical midline, both irises circular and equal in diameter, matching catchlight in each eye` |
+| 얼굴·눈 | deformed iris | `both irises circular and equal in diameter, matching catchlight in each eye, iris corneal reflex aligned symmetrically` |
 | 신체 계수·비례 | extra limbs | `two arms and two legs, each traceable to one shoulder or hip joint, proportion around seven and a half heads` |
 | 머리카락 경계 | melted hair | `hair strands separating cleanly against the background, flyaway strands at the crown` |
 | 브랜드·문자 | logos, background text | `solid unmarked fabric face, clean brand-free finish, background surfaces plain, signage kept out of frame` |

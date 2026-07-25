@@ -17,14 +17,15 @@ compiler.md 발전표(피부·조명·필름 3행)와 **상보** — 그 3행은
 | 증상 | 근본 원인 | 긍정형 처방 토큰 | 엔진 메모 |
 |---|---|---|---|
 | 플라스틱 피부·과매끈 | 미화 형용사, 결 토큰 부재 | `natural skin texture, visible pores, fine vellus hair, subtle tonal variation, under-eye texture, unretouched`(정본 철칙 7) | 공통. Higgsfield는 `flawless/porcelain/glass skin` 회피 + 같은 결 토큰 병기 |
-| 균일·무방향 조명 | 광원 방향·비율 미지정 | 단일 key 방향 1개(`soft light from camera left`) + `key:fill 1:2` + 그림자 거동(정본 editorial/photo-vocab.md §7.2·editorial/scene-craft.md §10) | 공통 |
+| 균일·무방향 조명 | 광원 방향·비율 미지정 | 단일 key 방향 1개(`soft light from camera left`) + `key:fill 2:1` + 그림자 거동(정본 editorial/photo-vocab.md §7.2·editorial/scene-craft.md §10) | 공통 |
 | 물리 불가 그림자·반사·캐치라이트 | 그림자·반사·catchlight 방향이 광원과 불일치, 다중 그림자·부유 | 그림자·specular·catchlight 방향=key 1개로 고정, `contact/grounding shadow` 명시, 반사 내용=주변 지오메트리 일치 | 공통. 배경합성은 §4 |
 | 과포화·HDR·글로시 AI 룩 | 채도·로컬 대비 과다, 광고식 과선명 | `muted/desaturated`(글로벌 −8~−12), `gentle highlight roll-off, lifted blacks`, 필름 룩 병기. 다큐 레지스터면 `raw photo, taken on a real camera, available light, unposed feel, mundane environment`로 낮춤(시네마틱 키아트 목적이면 유지) | gpt-image-2 HEX+켈빈 억제 / Higgsfield 저채도·필름 프리셋. 레지스터 토큰 개별 효능 (미검증) |
-| 비현실적 완벽 대칭·정돈 | 대칭 얼굴·정중 구도·stock pose | `natural facial asymmetry, uneven catchlights`, off-center `rule of thirds`, `candid/unposed, in-between moment`, 한쪽에만 잔머리 | 텍스트·구조 레인은 긍정형 토큰 / Soul ID는 실사 학습이 대칭 완화 — 훈련이 담당(정본 lanes.md §인물·사실감 이미지 레인) |
+| 비현실적 완벽 대칭·정돈 | 대칭 얼굴·정중 구도·stock pose | `natural facial asymmetry, catchlights in both eyes, not perfectly identical`, off-center `rule of thirds`, `candid/unposed, in-between moment`, 한쪽에만 잔머리 | 텍스트·구조 레인은 긍정형 토큰 / Soul ID는 실사 학습이 대칭 완화 — 훈련이 담당(정본 lanes.md §인물·사실감 이미지 레인) |
 | 배경 인물·소품 붕괴 | 배경 군중·텍스트 세밀 지정 | 배경 인물=`distant motion-blur silhouettes, no identifiable faces`, 소품 수 축소+거리 m, 간판=`abstract light shapes, no readable text`, 배경=`follows perspective, consistent vanishing point`(전부 긍정형 재서술) | 공통 |
 | 렌즈 물리 부재 | 심도·왜곡·플레어·압축이 초점거리와 불일치 | 한 컷 한 렌즈 character 통일: 얕은 심도면 배경 일관 blur+보케, 광각이면 `mild edge stretch`, 망원이면 `compressed perspective, flattened planes`, 플레어·비네트는 광원 방향 일치(정본 editorial/photo-vocab.md §7.1) | 공통. 바디명 대신 결과·mm character(철칙 4, 세컨드 패스도 바디명 저신뢰로 수렴) |
 | 재질 광택 획일화 | 모든 소재 같은 광택·micro texture 부재 | 소재별 빛 반응 차등(정본 editorial/scene-craft.md §9): 레더 hard highlight 단절 / 스웨이드 흡수 / 실크 흐르는 하이라이트 / 유리 `fingerprints, soft reflection` / 금속 `anisotropic highlights` | 공통. 제품·실내 컷에 특히 |
 | 합성 광원·색온도·그레인·원근 불일치 | 피사체-배경 통합 미흡 | §4 배경합성 정합 참조 | COMPOSITE 전용 |
+| 비현실적 질량·toy-like 설치물 | 신체 대비 스케일·수량 밀도·하중 기하학·중력·접촉 증명 부재 | **신체 스케일 락:** 높이·폭을 피사체 신체 기준 실측값으로 명시(예: 2.4~2.8m 높이, 1.8~2.2m 폭 무거운 베이스, 상단 테이퍼링). **수량 밀도:** 수백~수천 개 밀도로 명시, "몇 개 초대형 소품" 회피. **하중 지지 지오메트리:** 넓은 베이스, 상단 테이퍼링, 무게 중심이 피사체 아래. **중력·압축:** 하층 무게 압축, 중층 팽창·처짐, 상층 밀착+앉은 지점 흔적 보임. **접촉 증명:** 접지 그림자, 압력 흔적, 소재 변형, 간격, 사실적 더미 지오메트리. **지지 현실성:** 보이는 표면은 요청 소재 정합, 숨겨진 지지는 암시로 충분(명시 불요) | 인물·라이프스타일. Compact clause: `<소품>을 신체 정합으로 표현: 높이 <실측>, 폭 <실측> 무거운 베이스, 상단 테이퍼링. 수백~수천 개 실제 <아이템> 밀도, 초대형 소품 아님. 하층 압축, 중층 팽창·처짐, 상층 밀착+앉은 자리 흔적. 접지 그림자·압력·변형·간격 보이게. 보이는 표면은 <소재>, 숨겨진 지지 허용.` |
 
 ## 2. 불완전성 어휘 (의도된 불완전성)
 
@@ -38,7 +39,7 @@ compiler.md 발전표(피부·조명·필름 3행)와 **상보** — 그 3행은
 | 소품·생활감 | `lived-in props, slight wear, asymmetric placement, dust/fingerprints on surfaces` | editorial/tier2-safety.md §13 리얼리티 축 |
 | 노출 | `minor exposure unevenness, slightly blown highlight, lifted black` | editorial/photo-vocab.md §7.4 |
 | 광학·그레인 | `subtle film grain, gentle vignette, halation around bright edges, faint handheld tilt, natural optical softness` | editorial/photo-vocab.md §7.6 |
-| 구도·비대칭 | `natural facial asymmetry, uneven catchlights, off-center framing, candid/unposed moment` | 이 파일 정본 |
+| 구도·비대칭 | `natural facial asymmetry, catchlights in both eyes, not perfectly identical, off-center framing, candid/unposed moment` | 이 파일 정본 |
 
 | 레인 | 필수 N | 선택 풀 |
 |---|---|---|

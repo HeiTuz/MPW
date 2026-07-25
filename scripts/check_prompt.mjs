@@ -283,7 +283,9 @@ function validateRecord(rec, ids, opts) {
     }
     checkHardConstraints(rec.size, errors); // 하드 제약은 --api에서도 유지
   }
-  if (rec.ar && rec.size && AR_SIZE_MAP[rec.ar] && !AR_SIZE_MAP[rec.ar].includes(rec.size))
+  if (rec.ar && !Object.hasOwn(AR_SIZE_MAP, rec.ar))
+    err(errors, "E-AR-ENUM", `ar ${rec.ar}는 허용 목록 밖(허용: ${Object.keys(AR_SIZE_MAP).join(", ")}).`);
+  if (rec.ar && rec.size && Object.hasOwn(AR_SIZE_MAP, rec.ar) && !AR_SIZE_MAP[rec.ar].includes(rec.size))
     err(errors, "E-SIZE-AR", `ar ${rec.ar} ↔ size ${rec.size} 매핑 불일치(허용: ${AR_SIZE_MAP[rec.ar].join(", ")}).`);
   validatePromo(rec, errors);
   validateTypographyPoster(rec, errors);

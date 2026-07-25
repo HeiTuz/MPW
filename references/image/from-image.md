@@ -44,7 +44,7 @@
 레퍼런스가 여럿이면 **레퍼런스마다 authority 축을 따로 배정한다.** 한 축에 레퍼런스가 둘이면 그 축은 재현되지 않는다([prompt-graph.md](../prompt-graph.md) §7 "결과가 매번 다름").
 
 - 배선 예: `ref-01`(내 생성 인물컷) = I9 얼굴 기하 + I6 의상 / `ref-02`(외부 무드보드) = S1~S4 감도.
-- 충돌하면 산출 첫 문장에 **우선순위 1줄**을 박는다. 관련 함정 정본: [image-reference-editing-prompt-pitfalls.md](../image-reference-editing-prompt-pitfalls.md), [image-reference-wardrobe-preservation-pitfall.md](../image-reference-wardrobe-preservation-pitfall.md).
+- 충돌하면 산출 첫 문장에 **우선순위 1줄**을 박는다. 관련 함정 정본: [image-reference-editing-prompt-pitfalls.md](../image-reference-editing-prompt-pitfalls.md), [image-reference-wardrobe-preservation-pitfall.md](../image-reference-wardrobe-preservation-pitfall.md), [portrait-reference-moderation-triage.md](portrait-reference-moderation-triage.md).
 - 어떤 축의 권한자도 아닌 레퍼런스는 **빼거나 축을 배정한다.** 넣어놓고 안 쓰는 것은 고아 EVIDENCE다.
 
 ---
@@ -381,7 +381,7 @@ ref-01 | I8 렌더 텍스트 | unreadable 0.9 | 좌상단에 4~6글자 상당 �
 | 레퍼런스 전달 | `image` 롤(S2) / S1은 계약 필드 | `medias.roles` — 확신 없으면 `image` | 슬롯이 갈린다(§6.4) |
 | 조용한 실패 | — | `aspect_ratio` 근사 치환·파라미터 기본값 주입 | 모더레이션이 `--no` 값을 단어 단위로 읽음 |
 
-길이 상한은 **세 층에서 오고 가장 좁은 것이 이긴다:** 전달 채널(텔레그램·hermes 2000자 / Claude Code·앱 실질 무제한) · 타깃 엔진(위 표) · 기계 계약(`prompt-bundle/v1` = 2000, 스키마 강제). **전역 2000자 하드라인은 없다.** 붙여넣기 UI 표면의 2000자는 S3에만 적용되는 계약이다([surfaces.md](surfaces.md) §3).
+길이 상한은 **세 층에서 오고 가장 좁은 것이 이긴다:** 전달 채널(메시지당 상한이 있는 메신저형 채널 = 그 채널의 상한 / 에이전트 CLI·데스크톱 앱 = 실질 제약 없음) · 타깃 엔진(위 표) · 기계 계약(`prompt-bundle/v1` = 2000, 스키마 강제). **전역 2000자 하드라인은 없다.** 구체 배선은 [adapters.md](../adapters.md)·런타임 소관이다. 붙여넣기 UI 표면의 2000자는 S3에만 적용되는 계약이 아니라 현행 메신저 배선의 합성값이다([surfaces.md](surfaces.md) §3).
 
 ### 6.2 산출 형식 — 언제나 한 블록
 
@@ -502,5 +502,6 @@ Higgsfield 항목은 플랫폼이 모델을 추가·제거하면 즉시 낡는�
 | `--sw` 수치 조절표, `--stylize` 에디토리얼 권장 대역 | 커뮤니티 단일·소수 출처. 규범으로 쓰지 않는다 |
 | Higgsfield `image` 롤과 `image_references` 롤의 **의미적 동작 차이** | 런타임 description에 서술이 없다. 롤 이름으로 동작 차이를 설명하는 문장을 만들지 않는다 |
 | `max` 미선언 모델의 실제 레퍼런스 장수 상한 | 프리플라이트는 통과하나 백엔드 상한 미확인. 프리플라이트 통과 ≠ 생성 성공 |
-| gpt-image-2 32,000자 상한, Midjourney 단어 수 40/60/80 | **이번 라운드 전달 계약**이며 근거 문서에서 확인한 값이 아니다. 이 파일에서는 MPW 운영 게이트로 적용한다 |
 | §5의 축 개수 임계값, D1/D2/D3 명칭 | 운영 설계값. 실산출물로 캘리브레이션 필요 |
+
+gpt-image 길이 상한·Midjourney 단어 대역의 검증 상태·근거는 [surfaces.md](surfaces.md) §7 재검증 표가 정본이다(MJ 단어 대역은 공식 문서 근거 없음 [미확인] 단서 포함).

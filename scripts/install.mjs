@@ -100,10 +100,10 @@ export const ALLOWED_INSTALL_ROOTS = new Set([
 
 const EXCLUDED_PARTS = new Set([".git", "node_modules", ".gjc", ".omx", "__pycache__", "docs-internal"]);
 
-export function shouldSkip(rel, { includeAgents = false } = {}) {
+export function shouldSkip(rel) {
   const parts = rel.split(path.sep);
   if (!ALLOWED_INSTALL_ROOTS.has(parts[0])) return true;
-  if (!includeAgents && parts[0] === "agents") return true;
+  if (parts[0] === "agents") return true;
   return parts.some((part) => EXCLUDED_PARTS.has(part) || part.startsWith(".")) ||
     rel.endsWith(".pyc") ||
     rel === "package-lock.json" ||
@@ -168,6 +168,7 @@ function validateHostOverlay(sourceRoot, host) {
   }
   const allowed = new Set(["AGENTS.md", "README.md", "SKILL.md"]);
   for (const entry of fs.readdirSync(overlay)) {
+    if (!overlayEntryIsSafe(entry)) continue;
     if (!allowed.has(entry)) throw new Error(`Unsupported ${normalized} overlay entry: ${entry}`);
   }
   return overlay;

@@ -67,11 +67,11 @@
 |---|---|
 | 카메라 | 중형·필름 바디 선호. 렌즈 빈도 35>50>85>24mm. `Lens character:` 블록(초점거리·평면성·왜곡 적음·배경 분리) = 골드 100/100 필수 |
 | 필름/컬러 | Portra·desaturated·teal&orange·CineStill 800T 빈출. Film 3파트 = `[필름] emulation — [스킨], [섀도], [하이라이트]. [매거진] roll-off` |
-| 조명 | 결과 어휘로 쓴다. `key:fill 1:X` 비율 항상 명시. neon/practical/golden hour/창광 |
+| 조명 | 결과 어휘로 쓴다. `key:fill X:1` 비율 항상 명시(정본: [photo-vocab.md](photo-vocab.md) §7.2). neon/practical/golden hour/창광 |
 | 구도 | 카메라 거리 m 명시, rule of thirds, 포즈는 영문 표기(`contrapposto` 등), `Director signature:` 라인 = 골드 100/100 필수 |
 | 무드 | light+color+expression 트리플. 예: `melancholic — desaturated cool, low key, downcast` |
 | 페르소나 | ethnicity+age → hair → eye(쌍꺼풀·홍채색) → beauty mark(점 보통 1개) → lip finish → outfit(가상 브랜드+소재+HEX) → 배경 HEX → 카메라 거리 m. 4~7줄 |
-| 퀄리티 앵커 | 전부 긍정형: `symmetrical facial features`, `eye-focus AF`, `natural skin texture, visible pores, subtle film grain`, 클로징 `The look must be unmistakable to a non-photographer viewer.`, `clean, brand-free, copy-free finish` |
+| 퀄리티 앵커 | 전부 긍정형: `eye-focus AF`, `natural skin texture, visible pores, subtle film grain`, `natural facial asymmetry, catchlights in both eyes, not perfectly identical`, 클로징 `The look must be unmistakable to a non-photographer viewer.`, `clean, brand-free, copy-free finish` |
 | 배경 | 솔리드 컬러는 HEX, 소품은 m 거리 명시 |
 
 v1→v2 업그레이드 7종: Lens character 블록 / Director signature 라인 / 클로징 명령문 / 페르소나 세분화(홍채·점·립피니시·쌍꺼풀) / Film 3파트 / 배경 HEX+소품 거리 / [format-b.md](format-b.md) §1 publication tier.

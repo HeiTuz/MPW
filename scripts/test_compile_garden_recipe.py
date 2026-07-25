@@ -45,9 +45,11 @@ class CompileGardenRecipeTests(unittest.TestCase):
         self.assertTrue(handoff["reference_requirements"])
         self.assertTrue(handoff["qc_acceptance_criteria"])
         text = handoff["prompt_blocks"][0]["text"]
-        self.assertTrue(text.startswith("[프리셋: Warm Ambient · 비율 2:3 | Color signature:"))
+        self.assertNotIn("[프리셋:", text)
+        self.assertNotIn("비율", text)
+        self.assertNotIn("UI에서 선택/업로드", text)
         self.assertNotIn("Exclude:", text)
-        self.assertEqual(1, text.count("\n"))
+        self.assertNotIn("\n", text)
         self.assertNotIn("#C7B7A4", text)
         self.assertIn("natural skin texture, visible pores, subtle film grain", text)
         self.assertIn("unbranded clean finish", text)
@@ -88,7 +90,7 @@ class CompileGardenRecipeTests(unittest.TestCase):
         self.assertIn("FAIL if", text)
 
 
-    def test_gpt_image_renderer_requires_palette_gate_and_terminal_ar(self) -> None:
+    def test_gpt_image_renderer_requires_palette_gate_and_omits_ar(self) -> None:
         recipe = copy.deepcopy(self.recipe)
         recipe["intended_use"]["engine"] = "gpt-image-2"
         with self.assertRaisesRegex(self.compiler.CompileError, "requires 3-5 distinct observed #RRGGBB"):
@@ -107,7 +109,7 @@ class CompileGardenRecipeTests(unittest.TestCase):
         bundle = self.compiler.compile_recipe(recipe)
         self.assertEqual([], self.contracts.validate_document(bundle, recipe))
         text = bundle["handoff"]["prompt_blocks"][0]["text"]
-        self.assertTrue(text.endswith("AR 2:3"))
+        self.assertNotIn("AR", text)
         self.assertNotIn("Exclude:", text)
 
     def test_low_confidence_valid_inference_is_not_dropped(self) -> None:

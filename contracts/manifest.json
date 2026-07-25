@@ -3,7 +3,7 @@
   "contract_release": "2026-07-21.v2",
   "files": {
     "v1/apparel-handoff.schema.json": "6d4ae133d33fc8d409f43b6626ca55a28181cf262d54e3903e8007709aa84f87",
-    "v1/fixtures/apparel-handoff.valid.json": "946575de051af8f0e168821d2518b9d58ab6e49184997332204aa2b52248a490",
+    "v1/fixtures/apparel-handoff.valid.json": "84d16046bceeea0f25714ea5c81894f5e4b40d6c9a9a0d75e8eb5a6c96f7bc29",
     "v1/fixtures/garden-recipe.design.valid.json": "3eeb548aa1c84591a1ce1d45d332693baa9ccbb709ce4d8acc0bc461728d2d1d",
     "v1/fixtures/garden-recipe.image.valid.json": "c9a928a3cd07bb6192e232a633eed4001423abbac890c6153af3faa7dac8061d",
     "v1/fixtures/garden-recipe.private.invalid.json": "2b32e2428d21efc9edb219f0f1a943f61b0fd2c987d49aef3db1ea7fd844c7e7",

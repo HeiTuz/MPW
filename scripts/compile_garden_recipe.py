@@ -113,24 +113,7 @@ def _positive_exclusion_line(recipe: dict[str, Any]) -> str:
     return "Positive boundaries: " + "; ".join(translated) + "."
 
 
-def _higgsfield_preset(recipe: dict[str, Any]) -> str:
-    evidence = " ".join(
-        [recipe["intended_use"]["goal"], *_axis_values(recipe, "lighting"), *_qualified_tokens(recipe)]
-    ).casefold()
-    if any(token in evidence for token in ("flash", "strobe", "direct light")):
-        return "Flash Editorial"
-    if recipe["category"] == "product_reference":
-        return "Subtle Flash"
-    return "Warm Ambient"
-
-
 def _render_higgsfield(recipe: dict[str, Any]) -> str:
-    preset = _higgsfield_preset(recipe)
-    ratio = "2:3" if recipe["category"] == "photo_editorial" else "4:5"
-    label = (
-        f"[프리셋: {preset} · 비율 {ratio} | Color signature: "
-        f"{recipe['source']['reference_id']} 1장 — UI에서 선택/업로드]"
-    )
     anchors = (
         "natural skin texture, visible pores, subtle film grain"
         if recipe["category"] == "photo_editorial"
@@ -144,7 +127,7 @@ def _render_higgsfield(recipe: dict[str, Any]) -> str:
         _reference_line(recipe).removesuffix("."),
         anchors,
     ]
-    return label + "\n" + ". ".join(body_parts) + "."
+    return ". ".join(body_parts) + "."
 
 
 def _palette_hex_values(recipe: dict[str, Any]) -> list[str]:
@@ -171,7 +154,6 @@ def _render_gpt_image(recipe: dict[str, Any]) -> str:
         _positive_exclusion_line(recipe),
         _reference_line(recipe),
         "Output: one finished, self-contained image with exact subject and layout continuity.",
-        "AR 2:3",
     ]
     return "\n".join(sections)
 

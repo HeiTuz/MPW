@@ -49,7 +49,7 @@
 | 골든아워 역광 | `golden hour backlight`, 헤어와 어깨선에 따뜻한 rim | 얼굴은 gentle fill로 유지, 윤곽선에 amber halo, 긴 바닥 그림자 | STY-02, STY-17 |
 | 오버캐스트 | `overcast diffuse sky`, 전체 contrast가 낮고 색이 균일 | 하이라이트가 넓게 눌리고 그림자 방향성이 약함, 소재 색 재현이 안정됨 | STY-06, STY-11, STY-14 |
 | 네온 혼합 | `practical neon glow`, 피부와 의상 가장자리에 컬러 분리 | 한쪽 rim은 cyan, 반대쪽 fill은 magenta/orange, 젖은 표면에 color streak | STY-07, STY-20 |
-| low key split | `low key split light, key:fill 1:3`, 얼굴 반쪽만 읽힌다 | 암부가 깊고 의상 윤곽은 rim으로 분리, 하이라이트 면적 작음 | STY-09, STY-20 |
+| low key split | `low key split light, key:fill 8:1`, 얼굴 반쪽만 읽힌다 | 암부가 깊고 의상 윤곽은 rim으로 분리, 하이라이트 면적 작음 | STY-09, STY-20 |
 | clamshell beauty | `clamshell soft light, key:fill 1:1`, 눈 밑 그림자 완화 | 위아래 균등광, 피부 결은 유지하고 하이라이트는 부드럽게 퍼짐 | STY-10, STY-16, STY-21 |
 ## 11. 시즌/로케이션 × 패션 무드 매트릭스
 

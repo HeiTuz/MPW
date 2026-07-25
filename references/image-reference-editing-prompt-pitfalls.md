@@ -55,3 +55,18 @@ Tone and lighting: early-2000s glossy magazine scan, warm cream-white background
 ```
 
 Avoid copying unrelated content from the tone reference, such as its clothes, props, text, or pose, unless the user asks for those.
+
+## Composite vs similar generation
+
+If the user says "합성 말고 비슷하게 생성" or similar:
+
+- Start with: `Generate an original image, not a composite.`
+- Treat the model/reference photo as **styling inspiration**, not identity lock.
+- Avoid exact cloning language such as `preserve her face` unless the user still wants same-person identity.
+- Keep the reference model's observable style traits: hair shape, outfit category, silhouette, expression, shoes, posture energy.
+
+## Clothing vs prop collision
+
+When the person's outfit uses the same material as the prop, distinguish them explicitly:
+
+`Her worn jeans stay clothing; the denim pile is a separate sculptural prop.`

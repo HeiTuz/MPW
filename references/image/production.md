@@ -1,6 +1,6 @@
 # 이미지 양산·jsonl·검증기 운영
 
-**운영 정본:** 라이브러리·배치·챕터 단위 이미지 생성은 이 파일을 따른다. 프롬프트 본문 규칙은 `look-and-concept.md`와 `typography.md`, 컴파일 금지·예외 원칙은 **철칙: compiler.md**를 참조한다.
+**운영 정본:** 라이브러리·배치·챕터 단위 이미지 생성은 이 파일을 따른다. 프롬프트 본문 규칙은 `look-and-concept.md`와 `typography.md`, 컴파일 금지·예외 원칙은 **철칙: compiler.md**를 참조한다. 이미지 생성 계약의 사용 절차와 스키마 검증은 [image-production-handoff.md](image-production-handoff.md)를 참조한다.
 
 ## 1. 이 파일의 적용 범위 — S1-legacy 벌크 경로
 
@@ -79,7 +79,7 @@
 | `finishing_devices` | 문자열 배열 1~3개 | 바코드·메타 행·크롭마크·에디션 번호·세로 라벨·스탬프·종이 물성 등 실제 선택한 장치만 기록. |
 | `palette_authority` | `P` 또는 `L` | promo에서 필수. |
 | `palette_sources` | `["P"]` 또는 `["L"]` | 권한자와 같은 단일 소스만 허용. |
-| `ar` | `1:1`, `2:3`, `3:4`, `4:5`, `3:2`, `4:3`, `16:9`, `9:16` | 프롬프트 끝 AR과 다르면 `E-REC-ARMATCH`. |
+| `ar` | `1:1`, `2:3`, `3:4`, `4:5`, `3:2`, `4:3`, `16:9`, `9:16` | 8종 목록 밖이면 `E-AR-ENUM`; 프롬프트 끝과 다르면 `E-REC-ARMATCH`. |
 | `size` | 사이즈락 6종 | 필수, ar 매핑 불일치 시 `E-SIZE-AR`. |
 | `quality` | `low`, `medium`, `high` | 필수, `auto` 금지. |
 | `output_format` | `webp` 등 | 운영 출력 포맷. |
@@ -240,6 +240,7 @@ Reply only with the saved file path.
 | `E-SIZE-PIXELS` | 총픽셀 655,360~8,294,400 밖 | 사이즈락 6종으로 변경. |
 | `E-SIZE-LOCK` | size가 6종 화이트리스트 밖 | 추천 허용 size로 변경. `--api`에서는 warning 강등. |
 | `E-SIZE-AR` | `ar`와 `size` 매핑 불일치 | AR 매핑표에 맞게 수정. |
+| `E-AR-ENUM` | `ar`이 8종 목록 밖 | 허용 ar(`1:1`, `2:3`, `3:4`, `4:5`, `3:2`, `4:3`, `16:9`, `9:16`)로 교체. |
 | `E-REC-FIELD` | 필수 필드 누락 | `id`, `category`, `ar`, `size`, `quality`, `full_prompt`, `output_path` 채움. |
 | `E-REC-DUPID` | id 중복 | id 고유화. |
 | `E-REC-QUALITY` | `quality: "auto"` | `low`, `medium`, `high` 중 하나로 명시. |

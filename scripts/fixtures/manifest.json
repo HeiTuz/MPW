@@ -165,6 +165,7 @@
       "codes": [
         "E-SIZE-LOCK",
         "E-SIZE-AR",
+        "E-AR-ENUM",
         "E-REC-QUALITY",
         "E-REC-ARMATCH",
         "E-REC-DUPID"

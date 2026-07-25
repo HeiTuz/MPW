@@ -26,6 +26,8 @@
 | 패션·전시, 회전한 읽기 축 | P7 editorial rotate | [promo/P7-editorial-rotate.md](promo/P7-editorial-rotate.md) | 9:16 또는 2:3 |
 | 럭셔리 제품군의 단색 무대 | P8 monochrome staging | [promo/P8-monochrome-staging.md](promo/P8-monochrome-staging.md) | 3:4 |
 
+**공통 각주:** 각 P 파일의 끝 토큰 AR 표기는 S3 붙여넣기·S1-legacy 벌크(jsonl, E-AR-END 필수) 표면 한정이다 — S1 기계 계약·S2 플랫폼에서는 비율이 파라미터이므로 본문 AR을 두지 않는다(정본: [compiler.md](compiler.md) 철칙 1·§5, [production.md](production.md) §2).
+
 ## 3. P/L 권한 계약
 
 - **P**는 레이아웃·타이포 위계·타이포와 피사체의 물리 관계만 결정한다.

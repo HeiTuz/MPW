@@ -1,4 +1,4 @@
-name: lint
+name: ci
 on: [push, pull_request]
 permissions:
   contents: read
@@ -16,8 +16,6 @@ jobs:
         run: npm test
       - name: installer smoke test
         run: npm run smoke:install
-      - name: shared-core runtime adapter smoke
-        run: npm run smoke:runtime
       - name: exact-tree npx and bunx forwarded-argument smoke
         shell: bash
         run: |

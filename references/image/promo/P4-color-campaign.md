@@ -6,6 +6,8 @@
 
 **드롭인:** `a flat two-color campaign world where every surface and prop stays inside the locked palette, the product silhouette and label placement identical across the series, oversized campaign copy physically interlocking with the product, one changing concept prop per cut`
 
+**promo_text_effect:** `interlock` (정본: [../production.md](../production.md) §2 레코드 — `promo_text_effect` 필드)
+
 **마감 후보:** 고정 코너 에디션 칩 또는 메타 행 중 1개.
 
 **팔레트:** P가 정한 2색을 전 컷에 동일하게 반복한다. 제3색은 사용자 카피 대비가 필요한 때만 추가한다.

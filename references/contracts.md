@@ -2,7 +2,7 @@
 
 ## 정본과 배포
 
-`contracts/`는 이 인터페이스의 유일한 편집 정본이다. 독립 설치를 위해 어댑터 소스(`image-reference-adapter`·`design-reference-adapter`)와 가드너 스킬(`prompt-knowledge-gardener`·`design-reference-gardener`·`image-reference-gardener`)은 동일한 상대 경로 `contracts/`에 바이트 동일 미러를 포함할 수 있지만, 미러에서 계약을 편집하지 않는다 — 미러 로컬 수정은 동일 릴리스 ID 아래 스키마 포크를 만든다(2026-07-16에 실제로 발견·해소된 사고 유형). `contracts/manifest.json`의 SHA-256 목록이 릴리스 provenance다.
+`contracts/`는 이 인터페이스의 유일한 편집 정본이다. 독립 설치를 위해 가드너 스킬(`prompt-knowledge-gardener`·`design-reference-gardener`·`image-reference-gardener`)은 동일한 상대 경로 `contracts/`에 바이트 동일 미러를 포함할 수 있지만, 미러에서 계약을 편집하지 않는다 — 미러 로컬 수정은 동일 릴리스 ID 아래 스키마 포크를 만든다(2026-07-16에 실제로 발견·해소된 사고 유형). `contracts/manifest.json`의 SHA-256 목록이 릴리스 provenance다.
 
 소스 레포가 편집 권한을 가진다. `~/.hermes/skills/...` 같은 설치본은 배포 산출물이며 직접 수정하지 않는다. 설치본 전용 변경이 발견되면 먼저 해당 소스 레포로 분리·검토한 뒤 배포한다. 계약 갱신 순서는 다음과 같다.
 
@@ -18,8 +18,9 @@
 
 | 경계 | 생산자 → 소비자 | 필수 불변식 | 실패 방식 |
 |---|---|---|---|
-| `GardenRecipe v1` | image/design adapter 또는 gardener 스킬(producer enum: `*-adapter` 3종 + `*-gardener` 3종, provenance 진실 기재) → Master | opaque `ref_*` ID + `sha256:*`만, observation/inference 분리, 근거 confidence, qualified token, identity/subject lock, camera/light/palette evidence, exclusions, intended use | 검증 오류와 함께 컴파일 거부 |
+| `GardenRecipe v1` | image/design adapter 또는 gardener 스킬(producer enum: `*-adapter` 3종(구 하위호환) + `*-gardener` 3종, provenance 진실 기재) → Master | opaque `ref_*` ID + `sha256:*`만, observation/inference 분리, 근거 confidence, qualified token, identity/subject lock, camera/light/palette evidence, exclusions, intended use | 검증 오류와 함께 컴파일 거부 |
 | `PromptBundle v1` | Master → executor/bridge | validated recipe hash, 단일 `handoff`, 블록별 Unicode code point ≤2,000, lock 보존, variable axes, negatives, reference requirements, QC | handoff 거부; 자동 완화 금지 |
+| `ImageProductionHandoff v2` | MPW compile_image_handoff → 범용 이미지 실행기 | 상대경로/HTTPS 입력만·operation별 입력 요구·프롬프트 ≤2000자 | 스키마 위반 시 거부 |
 | `ApparelHandoff v1` | apparel compiler → image producer | 제품 role map·불변 lock·전체 인벤토리·자기완결 프롬프트 | 입력/lock 누락 시 거부 |
 | `ImgGen2ProductionRecord v1` | image producer → QC/recompile | 소스 증거 인덱스·생성 결과·검증 상태 | provenance 또는 결과 불일치 시 거부 |
 | `MPWRecompileRequest v1` | QC → Master | 실패 축·보존 lock·허용 delta를 명시한 재컴파일 요청 | 범위 밖 수정 요구 시 거부 |
@@ -42,7 +43,7 @@
 
 정본 스키마: `contracts/v1/prompt-bundle.schema.json`.
 
-`PromptBundle`의 실행 표면은 `handoff` 하나다. Higgsfield를 포함한 실행 adapter는 다른 Master 내부 상태나 adapter 저장소를 읽지 않고 이 객체만 소비한다. 엔진 선택은 `handoff.engine` 값이며, 엔진별 비공개 옵션을 새 key로 추가하지 않는다.
+`PromptBundle`의 실행 표면은 `handoff` 하나다. Higgsfield를 포함한 실행 adapter는 다른 Master 내부 상태나 adapter 저장소를 읽지 않고 이 객체만 소비한다. 엔진 선택은 `handoff.engine` 값이며, 엔진별 비공개 옵션을 새 key로 추가하지 않는다. 알 수 없는 handoff.protocol은 자유형 강등 없이 명시 거부한다(legacy `compiled_by`+`blocks` 형태 예외는 브리지 소관).
 
 각 `prompt_blocks[].unicode_char_count`는 JSON 문자열의 Unicode code point 수와 정확히 같아야 하고 2,000 이하여야 한다. 블록은 파일 경로나 외부 파일 읽기 지시 없이 자기완결이어야 한다. `--recipe` 교차 검증은 다음을 함께 증명한다.
 

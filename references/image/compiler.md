@@ -15,6 +15,7 @@
 | 무드→룩 프리셋·컨셉 변수 축·죽은 단어 환원 | [look-and-concept.md](look-and-concept.md) |
 | 정보성 C7 카드 vs 디자인 홍보물 분기·P1~P8 점진 로딩·promo 게이트 | [promo-router.md](promo-router.md) |
 | 글자 자체가 주제인 TP1~TP14 타이포 포스터 라우팅·레그빌리티·패턴 계약 | [typography-poster-router.md](typography-poster-router.md) → [typography-poster-patterns.md](typography-poster-patterns.md) |
+| 의류 컴파일 규칙·입력 게이트 | [apparel-compiler.md](apparel-compiler.md) |
 | jsonl 스키마·배치/챕터·모델 팩트·검증기 에러 코드 | [production.md](production.md) |
 | 실사감(카메라·조명·불완전성)·현실감 실패 모드·현실감 게이트·실사 영상 증분 | [realism.md](realism.md) |
 

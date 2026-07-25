@@ -1,9 +1,0 @@
-.DS_Store
-.omx/
-.gjc/
-docs-internal/
-**/__pycache__/
-*.pyc
-package-lock.json
-bun.lock
-bun.lockb

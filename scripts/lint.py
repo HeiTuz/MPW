@@ -50,6 +50,18 @@ BARE_PATTERN_MIN = 50
 BIND_WINDOW = 200  # 라벨-코드블록 펜스 간 인접 판정 거리(문자)
 MEASUREMENT_STAMP_PATTERN = re.compile(r"\((\d{4})-(\d{2}) 실측[^)\n]*\)")
 REVIEW_STAMP_FIELDS = ("model_claims_reviewed_at", "role_routing_reviewed_at")
+LINK_PATTERN = re.compile(r"(?<!!)\[[^\]]*\]\(([^\n)]+)\)")
+RUNTIME_NAME_PATTERNS = (
+    r"\bHermes\b", r"\bClaude\b", r"\bCodex\b", r"\bGJC\b",
+    r"\bSol\b", r"\bTerra\b", r"\bLuna\b", r"\bOpus\b", r"\bSonnet\b",
+)
+CORE_RUNTIME_NAME_FILES = ("SKILL.md", "references/templates.md", "references/model-playbooks.md")
+# These operational references are deliberately not dispatched from the compact
+# SKILL.md kernel. Keep exceptions explicit: a deleted or newly reachable file
+# must not silently remain here.
+# 고아 레퍼런스 화이트리스트 — 도달 불가능하지만 공개 문서 목적인 파일들만 기록.
+# 현재 비어있음: 모든 문서가 도달 가능해야 함(장기 미사용은 git 청소 대상).
+ORPHAN_REFERENCE_WHITELIST = set()
 
 
 def fail(msgs):
@@ -156,6 +168,161 @@ def check_measurement_near_misses(f, s, errors):
         errors.append(
             f"{f}:{line_of(s, match.start())}: noncanonical measurement stamp — use (YYYY-MM 실측) form"
         )
+
+
+def check_universal_2000_regression(text, errors, filename="references/templates.md"):
+    """I0: must not turn a surface-specific limit into a universal constant."""
+    patterns = (
+        r"(?:모든|전부|각)\s*(?:프롬프트|출력|블록)[^\n.]{0,80}2000\s*자",
+        r"2000\s*자[^\n.]{0,80}(?:모든|전부|각)\s*(?:프롬프트|출력|블록)",
+        r"전역\s*2000\s*자(?![^\n.]{0,24}(?:없|아닌|아님|않))",
+    )
+    for pat in patterns:
+        match = re.search(pat, text, re.I)
+        if match:
+            errors.append(
+                f"{filename}:{line_of(text, match.start())}: [I0] universal 2000-character rule regression"
+            )
+
+
+def check_runtime_names(texts, errors):
+    """I1: runtime-specific product names belong in adapters or compatibility notes."""
+    for f in CORE_RUNTIME_NAME_FILES:
+        scan_text = texts[f]
+        if f == "references/model-playbooks.md":
+            scan_text = scan_text.split("\n## 호환 노트", 1)[0]
+        for pat in RUNTIME_NAME_PATTERNS:
+            match = re.search(pat, scan_text)
+            if match:
+                errors.append(
+                    f"{f}:{line_of(scan_text, match.start())}: [I1] runtime/model name belongs in references/adapters.md or dated compatibility notes, not core ({match.group(0)})"
+                )
+
+
+def markdown_files(root):
+    """Repository-owned Markdown only; hidden caches and local session traces are not documentation."""
+    excluded = {"node_modules", "docs-internal", "__pycache__"}
+    return sorted(
+        path for path in root.rglob("*.md")
+        if not any(part.startswith(".") or part in excluded for part in path.relative_to(root).parts)
+    )
+
+
+def markdown_link_target(raw):
+    """Return a local path component, ignoring anchors, titles, and external URI schemes."""
+    raw = raw.strip()
+    if raw.startswith("<"):
+        end = raw.find(">")
+        if end == -1:
+            return None
+        raw = raw[1:end]
+    else:
+        raw = raw.split(None, 1)[0]
+    target = raw.split("#", 1)[0]
+    if not target or "://" in target or target.startswith(("mailto:", "/")):
+        return None
+    return target
+
+
+def link_base(root, source):
+    """Installer overlays link as if copied into the payload root, not under agents/."""
+    relative = source.relative_to(root)
+    return root if relative.parts[0] == "agents" else source.parent
+
+
+def check_links_and_orphans(root, errors):
+    """I2: validate local Markdown links and require canonical reachability for references."""
+    files = markdown_files(root)
+    doc_names = {path.relative_to(root).as_posix() for path in files}
+    graph = {name: set() for name in doc_names}
+    for source in files:
+        source_name = source.relative_to(root).as_posix()
+        text = source.read_text(encoding="utf-8")
+        for match in LINK_PATTERN.finditer(text):
+            target = markdown_link_target(match.group(1))
+            if target is None:
+                continue
+            resolved = (link_base(root, source) / target).resolve()
+            try:
+                relative = resolved.relative_to(root.resolve())
+            except ValueError:
+                errors.append(f"{source_name}:{line_of(text, match.start())}: [I2] relative link escapes repository ({target})")
+                continue
+            target_name = relative.as_posix()
+            if not resolved.is_file():
+                errors.append(f"{source_name}:{line_of(text, match.start())}: [I2] broken relative link ({target})")
+            elif target_name in graph:
+                graph[source_name].add(target_name)
+
+    reachable = set()
+    pending = ["SKILL.md"]
+    while pending:
+        current = pending.pop()
+        if current in reachable:
+            continue
+        reachable.add(current)
+        pending.extend(graph.get(current, set()) - reachable)
+
+    references = {name for name in doc_names if name.startswith("references/")}
+    stale = ORPHAN_REFERENCE_WHITELIST - references
+    for name in sorted(stale):
+        errors.append(f"{name}: [I2] orphan whitelist entry no longer names a reference")
+    for name in sorted(references - reachable - ORPHAN_REFERENCE_WHITELIST):
+        errors.append(f"{name}: [I2] orphan reference is not reachable from SKILL.md")
+
+
+def check_key_fill_ratios(root, errors):
+    """I6: key:fill uses key-side:shadow-side notation; 1:n reverses its meaning."""
+    pattern = re.compile(r"\bkey\s*:\s*fill\s+(\d+)\s*:\s*(\d+)\b", re.I)
+    for path in markdown_files(root):
+        text = path.read_text(encoding="utf-8")
+        for match in pattern.finditer(text):
+            key_val, fill_val = int(match.group(1)), int(match.group(2))
+            if key_val == 1 and fill_val >= 2:  # 1:n where n >= 2 (all reversed ratios)
+                name = path.relative_to(root).as_posix()
+                errors.append(f"{name}:{line_of(text, match.start())}: [I6] key:fill ratio must be key-side:shadow-side, not 1:{fill_val}")
+
+
+def skill_body_without_host_surface(text, is_overlay=False):
+    """Normalize the only allowed overlay differences before comparing rule bodies."""
+    frontmatter = re.match(r"---\n.*?\n---\n", text, re.S)
+    if not frontmatter:
+        return None
+    body = text[frontmatter.end():]
+    if not is_overlay:
+        return body
+    body = re.sub(r"^(\n?)# MPW — 디스패치 커널 \([^)\n]+ 표면\)\n\n", r"\1# MPW — 디스패치 커널\n\n", body)
+    body = re.sub(r"^(\n?# MPW — 디스패치 커널\n\n)> \*\*호스트 통합 —.*?\n\n", r"\1", body, count=1, flags=re.S)
+    return body
+
+
+def check_agent_skill_sync(root, canonical_text, errors):
+    """I14: each host overlay must preserve the canonical rule body exactly."""
+    canonical_body = skill_body_without_host_surface(canonical_text)
+    if canonical_body is None:
+        return
+    canonical_version, _ = parse_frontmatter(re.match(r"---\n(.*?)\n---\n", canonical_text, re.S).group(1))
+    for path in sorted((root / "agents").glob("*/SKILL.md")):
+        host = path.parent.name
+        name = path.relative_to(root).as_posix()
+        text = path.read_text(encoding="utf-8")
+        match = re.match(r"---\n(.*?)\n---\n", text, re.S)
+        overlay_body = skill_body_without_host_surface(text, is_overlay=True)
+        if not match or overlay_body is None:
+            errors.append(f"{name}: [I14] missing parseable frontmatter or host integration block")
+            continue
+        _, metadata = parse_frontmatter(match.group(1))
+        host_surface = re.search(r"^  host_surface:\s*([^\n#]+)", match.group(1), re.M)
+        source = re.search(r"^  canonical_source:\s*[\"']?([^\n\"']+)", match.group(1), re.M)
+        if not host_surface or host_surface.group(1).strip().strip("\"'") != host:
+            errors.append(f"{name}: [I14] host_surface must match overlay directory ({host})")
+        expected_source = f"HeiTuz/MPW SKILL.md v{canonical_version}"
+        if not source or source.group(1).strip() != expected_source:
+            errors.append(f"{name}: [I14] canonical_source must be {expected_source}")
+        if text == canonical_text:
+            errors.append(f"{name}: [I14] overlay must retain host migration evidence")
+        if overlay_body != canonical_body:
+            errors.append(f"{name}: [I14] rule body drift from SKILL.md")
 
 
 def check_labels(f, s, errors):
@@ -271,7 +438,13 @@ def main():
         except Exception as e:
             errors.append(f"package.json version check failed: {e}")
 
-    tm = texts.get("references/templates.md", "")
+    # I0 — templates, SKILL, and references/** (except surfaces.md) may describe a surface-specific 2000-character contract,
+    # never a universal prompt constant.
+    check_targets = ["references/templates.md", "SKILL.md"]
+    check_targets += [f for f in texts.keys() if f.startswith("references/") and f != "references/image/surfaces.md"]
+    for f in check_targets:
+        if f in texts:
+            check_universal_2000_regression(texts[f], errors, f)
 
     # label == adjacent block length (전 FILES)
     for f, s in texts.items():
@@ -303,22 +476,17 @@ def main():
     # canonical single definitions
     if skill.count("게이트 필요성 테스트** —") != 1:
         errors.append("gate necessity test must be defined exactly once in SKILL.md")
+    tm = texts.get("references/templates.md", "")
     if tm.count("질문이 정당한 유일 목록 (정본)") != 1:
         errors.append("non-inferable slot canon must appear exactly once in templates.md")
 
-    core_runtime_names = {
-        "SKILL.md": [r"\bClaude\b", r"\bCodex\b", r"\bHermes\b", r"\bGJC\b", r"\bSol\b", r"\bTerra\b", r"\bLuna\b", r"\bOpus\b", r"\bSonnet\b"],
-        "references/templates.md": [r"\bClaude\b", r"\bCodex\b", r"\bHermes\b", r"\bGJC\b", r"\bSol\b", r"\bTerra\b", r"\bLuna\b", r"\bOpus\b", r"\bSonnet\b"],
-        "references/model-playbooks.md": [r"\bClaude\b", r"\bCodex\b", r"\bHermes\b", r"\bGJC\b", r"\bSol\b", r"\bTerra\b", r"\bLuna\b", r"\bOpus\b", r"\bSonnet\b"],
-    }
-    for f, pats in core_runtime_names.items():
-        scan_text = texts[f]
-        if f == "references/model-playbooks.md":
-            scan_text = scan_text.split("\n## 호환 노트", 1)[0]
-        for pat in pats:
-            m = re.search(pat, scan_text)
-            if m:
-                errors.append(f"{f}:{line_of(scan_text, m.start())}: runtime/model name belongs in references/adapters.md or dated compatibility notes, not core ({m.group(0)})")
+    # I1 — host names remain in adapters and host overlays, not the core.
+    check_runtime_names(texts, errors)
+
+    # I2 / I6 / I14 scan the full repository-owned documentation surface.
+    check_links_and_orphans(ROOT, errors)
+    check_key_fill_ratios(ROOT, errors)
+    check_agent_skill_sync(ROOT, skill, errors)
 
     # Tier-2 동결 문자열 3자 byte 대조
     check_frozen_strings(texts, errors)
