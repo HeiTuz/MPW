@@ -4,6 +4,7 @@ from __future__ import annotations
 import copy
 import importlib.util
 import json
+import os
 import tempfile
 import unittest
 from pathlib import Path
@@ -13,6 +14,10 @@ SPEC = importlib.util.spec_from_file_location("compile_apparel_handoff", ROOT / 
 compiler = importlib.util.module_from_spec(SPEC)
 assert SPEC.loader is not None
 SPEC.loader.exec_module(compiler)
+CONTRACT_SPEC = importlib.util.spec_from_file_location("contract_validator", ROOT / "contracts" / "validate.py")
+contracts = importlib.util.module_from_spec(CONTRACT_SPEC)
+assert CONTRACT_SPEC.loader is not None
+CONTRACT_SPEC.loader.exec_module(contracts)
 
 
 class ApparelHandoffCompilerTests(unittest.TestCase):
@@ -66,6 +71,28 @@ class ApparelHandoffCompilerTests(unittest.TestCase):
         self.assertTrue(all(item["prompt"].startswith("IMAGE.") for item in result["outputs"]))
         self.assertTrue(all(len(item["prompt"]) <= 2000 for item in result["outputs"]))
         self.assertNotIn(str(self.source), "\n".join(item["prompt"] for item in result["outputs"]))
+
+    def test_preserves_caller_relative_source_folder(self) -> None:
+        relative_source = os.path.relpath(self.source, ROOT)
+        self.request["source_folder"] = relative_source
+        original_cwd = Path.cwd()
+        try:
+            os.chdir(ROOT)
+            result = compiler.compile_request(self.request)
+        finally:
+            os.chdir(original_cwd)
+        self.assertEqual(relative_source, result["source_folder"])
+        self.assertFalse(Path(result["source_folder"]).is_absolute())
+
+    def test_compiler_output_passes_apparel_handoff_schema(self) -> None:
+        result = compiler.compile_request(self.request)
+        self.assertEqual([], contracts.validate_document(result, schema_version="apparel-handoff/v1"))
+
+    def test_rejects_uppercase_output_extension(self) -> None:
+        request = copy.deepcopy(self.request)
+        request["requested_outputs"][0]["filename"] = "NAVY-FRONT.PNG"
+        with self.assertRaisesRegex(compiler.CompileError, "must end in .png"):
+            compiler.compile_request(request)
 
     def test_duplicate_normalized_front_identity_counts_once(self) -> None:
         duplicate = dict(self.request["vision_role_map"][0])

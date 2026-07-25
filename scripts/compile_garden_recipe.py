@@ -261,7 +261,7 @@ def compile_recipe(recipe: dict[str, Any]) -> dict[str, Any]:
         "The attached reference is used only for the stated evidence-backed visual guidance.",
         "Every prompt block is self-contained and at most 2000 Unicode characters.",
     ]
-    return {
+    bundle = {
         "schema_version": "prompt-bundle/v1",
         "bundle_version": 1,
         "bundle_id": f"pb_{bundle_suffix}",
@@ -282,6 +282,10 @@ def compile_recipe(recipe: dict[str, Any]) -> dict[str, Any]:
             "qc_acceptance_criteria": qc,
         },
     }
+    bundle_errors = validate_document(bundle, recipe)
+    if bundle_errors:
+        raise CompileError("prompt_bundle_validation_failed:" + " | ".join(bundle_errors))
+    return bundle
 
 
 def legacy_bridge_bundle(bundle: dict[str, Any]) -> dict[str, Any]:

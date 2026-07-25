@@ -35,8 +35,9 @@ def _nonempty(value: Any, field: str) -> str:
     return " ".join(value.split())
 
 
-def _validate_sources(request: dict[str, Any]) -> tuple[Path, list[str]]:
-    source_folder = Path(_nonempty(request.get("source_folder"), "source_folder")).expanduser().resolve()
+def _validate_sources(request: dict[str, Any]) -> tuple[str, list[str]]:
+    source_folder_value = _nonempty(request.get("source_folder"), "source_folder")
+    source_folder = Path(source_folder_value).expanduser().resolve()
     if not source_folder.is_dir():
         raise CompileError(f"source_folder is not a directory: {source_folder}")
     raw = request.get("sources")
@@ -52,7 +53,7 @@ def _validate_sources(request: dict[str, Any]) -> tuple[Path, list[str]]:
             raise CompileError(f"missing inventory source: {name}")
         seen.add(name)
         sources.append(name)
-    return source_folder, sources
+    return source_folder_value, sources
 
 
 def _validate_role_map(raw: Any, sources: list[str]) -> tuple[list[dict[str, Any]], list[str]]:
@@ -92,7 +93,7 @@ def _validate_role_map(raw: Any, sources: list[str]) -> tuple[list[dict[str, Any
 def _render_prompt(output: dict[str, Any], valid_colors: set[str]) -> tuple[str, str, str]:
     output_id = _basename(output.get("id"), "requested_outputs[].id")
     filename = _basename(output.get("filename"), "requested_outputs[].filename")
-    if not filename.lower().endswith(".png"):
+    if not filename.endswith(".png"):
         raise CompileError(f"output {output_id} filename must end in .png")
     view = _nonempty(output.get("view"), f"output {output_id} view")
     color = normalize_color_identity(output.get("color_identity"))

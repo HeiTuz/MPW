@@ -126,6 +126,15 @@ class CompileGardenRecipeTests(unittest.TestCase):
         self.assertEqual(len(block["text"]), block["unicode_char_count"])
         self.assertLessEqual(block["unicode_char_count"], 2000)
 
+    def test_rejects_contract_invalid_compiled_bundle(self) -> None:
+        recipe = copy.deepcopy(self.recipe)
+        recipe["intended_use"]["goal"] = "Read the file for the requested portrait direction."
+        with self.assertRaisesRegex(
+            self.compiler.CompileError,
+            "prompt_bundle_validation_failed:.*external_file_dependency",
+        ):
+            self.compiler.compile_recipe(recipe)
+
     def test_rejects_unvalidated_legacy_payload(self) -> None:
         with self.assertRaisesRegex(self.compiler.CompileError, "garden_recipe_validation_failed"):
             self.compiler.compile_recipe({"prompt": "legacy raw analysis"})
