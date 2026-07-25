@@ -5,7 +5,7 @@
 - `~/.claude/skills/MPW` — 런타임 멤버(SKILL.md·references·contracts·scripts·examples·package.json·LICENSE·README.md·AGENTS.md) 심링크
 - `~/.hermes/skills/prompt-writing/MPW` — 동일
 
-**레포 루트를 통째로 심링크하지 않는다.** `agents/`는 installer 오버레이 원본이고 설치본에는 들어간 적이 없는데, 루트를 심링크하면 hermes 인덱서가 `agents/claude/SKILL.md`·`agents/codex/SKILL.md`를 활성 스킬로 잡아 **같은 이름의 MPW가 3개**가 된다((2026-07 실측), 2026-07-25 확인). 런타임 멤버만 링크해 기존 배포 표면을 그대로 재현한다. 최상위 런타임 파일을 새로 추가하면 양쪽 링크도 추가해야 하며, 빠뜨리면 `~/.hermes/scripts/prompt_writing_doctrine_check.py`가 주간으로 잡는다.
+**레포 루트를 통째로 심링크하지 않는다.** `agents/`는 installer 오버레이 원본이고 설치본에는 들어간 적이 없는데, 루트를 심링크하면 호스트 인덱서가 `agents/claude/SKILL.md`·`agents/codex/SKILL.md`를 활성 스킬로 잡아 **같은 이름의 MPW가 3개**가 된다((2026-07 실측), 2026-07-25 확인). 런타임 멤버만 링크해 기존 배포 표면을 그대로 재현한다. 최상위 런타임 파일을 새로 추가하면 양쪽 링크도 추가해야 하며, 빠뜨리면 아래 §검증 루틴의 운영자 전용 doctrine 검사가 주간으로 잡는다.
 
 편집은 여기서 한다 — 설치 경로에서 편집하지 않는다. 그게 v2.11~v2.13이 사라진 원인이었다. 공개 배포(`github:HeiTuz/MPW`)는 푸시 이후에만 유효하다.
 

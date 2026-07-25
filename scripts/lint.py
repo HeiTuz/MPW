@@ -71,7 +71,6 @@ CORE_RUNTIME_NAME_FILES = (
 # External/conceptual filenames used as examples, not package pointers. A resolved
 # path or removed mention makes its entry stale and therefore fails.
 PLAIN_PATH_WHITELIST = {
-    ("AGENTS.md", "hermes/scripts/prompt_writing_doctrine_check.py"),
     ("agents/README.md", "CLAUDE.md"),
     ("agents/README.md", "INSTALL_FOR_AGENTS.md"),
     ("references/templates.md", "summary.md"),
