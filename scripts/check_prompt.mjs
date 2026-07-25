@@ -34,6 +34,8 @@ const MATTE_QUALIFIER = /(matte|무광|매트|비유광|semi[- ]?matte|restraine
 const SCRIPT_DIR = dirname(fileURLToPath(import.meta.url));
 const esc = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 const err = (list, code, msg, hint) => list.push(hint ? { code, msg, hint } : { code, msg });
+const BANNED_MJ_FLAGS = ["no", "ar", "p", "stylize", "v", "sref", "seed"];
+const BANNED_MJ_FLAG_RE = new RegExp(`--(?:${BANNED_MJ_FLAGS.map(esc).join("|")})\\b`, "i");
 const quotesOf = (p) => [...p.matchAll(/"([^"\n]+)"|“([^”\n]+)”/g)].map((m) => (m[1] ?? m[2]).replace(/\s+/g, " ").trim());
 
 function localFailureTokens() { // editorial-hwabo.local.md의 FAILURE_TOKENS: 라인 — 없으면 조용히 무시
@@ -217,8 +219,12 @@ function validateText(raw, opts = {}, rec = null, mode = "text") {
   if (slots) err(errors, "E-SLOT-LEAK", `슬롯 토큰 잔존: ${[...new Set(slots)].join(", ")} — 최종 프롬프트에는 치환 완료된 값만.`);
   const banned = p.match(/\b(masterpiece|best[ _]quality|(?:4|8)k|uhd|trending on artstation|ultra[- ]?detailed|hyper[- ]?detailed|highly detailed|intricate details?|sharp focus|award[- ]winning|raw photo)\b/gi);
   if (banned) err(errors, "E-SD-VOCAB", `SD 품질태그 폐기 어휘: ${[...new Set(banned.map((s) => s.toLowerCase()))].join(", ")}.`);
-  if (has(/\([^()]*:\s*[01]?\.\d+\s*\)/)) err(errors, "E-WEIGHT", "가중치 문법 `(word:1.3)` 금지.");
-  if (has(/--(ar|v|no|style|niji)\b/)) err(errors, "E-MJ-FLAG", "Midjourney식 슬래시 플래그(`--ar/--v/--no`) 금지.");
+  const weightedSyntax = [...p.matchAll(/\(([^():\n]+):\s*\d+(?:\.\d+)?\s*\)/g)]
+    .some((m) => !/^\s*\d+\s*$/.test(m[1]))
+    || [...p.matchAll(/<([^<>\n]+):\s*\d+(?:\.\d+)?\s*>/g)]
+      .some((m) => !/^\s*\d+\s*$/.test(m[1]));
+  if (weightedSyntax) err(errors, "E-WEIGHT", "가중치 문법 `(word:1.3)` / `<lora:name:0.8>` 금지.");
+  if (has(BANNED_MJ_FLAG_RE)) err(errors, "E-MJ-FLAG", `Midjourney식 슬래시 플래그(${BANNED_MJ_FLAGS.map((flag) => `--${flag}`).join("/")}) 금지.`);
   if (has(/(^|\n)\s*§|§\s*\d/)) err(warnings, "W-SECTION-MARK", "본문에 `§` 기호 사용 — 헤더 `# 1.` 형식만 허용.");
   const filler = p.match(/(어워드 수준|전문가처럼|(?:멋지게|감성적으로|고급스럽게|예쁘게|세련되게|감도있게|world-class|beautifully|stunning|atmospheric|perfect|professional)(?![\p{L}\p{N}_]))/giu);
   if (filler) err(warnings, "W-FILLER", `빈 형용사(구체 명세로 대체): ${[...new Set(filler.map((s) => s.toLowerCase()))].join(", ")}.`);
@@ -415,7 +421,14 @@ function parseFlags(flags) {
     const a = flags[i];
     if (a === "--api") o.api = true;
     else if (a === "--test") o.test = true;
-    else if (a === "--tier") o.tier = Number(flags[++i]);
+    else if (a === "--tier") {
+      const val = flags[++i];
+      if (!["0", "1", "2"].includes(val)) {
+        console.log(JSON.stringify({ ok: false, errors: [{ code: "E-INPUT-FLAG", msg: `--tier ${val}은 열거 밖 값(0|1|2만 허용).` }], warnings: [] }, null, 2));
+        process.exit(1);
+      }
+      o.tier = Number(val);
+    }
     else if (a === "--surface") {
       const val = flags[++i];
       if (!VALID_SURFACES.has(val)) {

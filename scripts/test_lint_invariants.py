@@ -14,9 +14,40 @@ SPEC.loader.exec_module(lint)
 
 class LintInvariantSmokeTests(unittest.TestCase):
     def test_i0_rejects_universal_2000_character_rule(self):
+        for sentence in (
+            "모든 프롬프트는 2000자 이하로 작성한다.",
+            "프롬프트는 언제나 2000자 이내여야 한다.",
+            "표면과 무관하게 상한은 항상 2000자다.",
+        ):
+            with self.subTest(sentence=sentence):
+                errors = []
+                lint.check_universal_2000_regression(sentence, errors)
+                self.assertTrue(any("[I0]" in error for error in errors), errors)
+
+    def test_text_block_cap_uses_trimmed_code_points(self):
         errors = []
-        lint.check_universal_2000_regression("모든 프롬프트는 2000자 이하로 작성한다.", errors)
-        self.assertTrue(any("[I0]" in error for error in errors), errors)
+        lint.check_example_lengths("sample.md", f"```text\n{'가' * 2000}\n```", errors)
+        self.assertEqual([], errors)
+
+        lint.check_example_lengths("sample.md", f"```text\n{'가' * 2001}\n```", errors)
+        self.assertTrue(any("2001 chars (> 2000)" in error for error in errors), errors)
+
+    def test_i16_rejects_mj_flag_drift(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            (root / "references" / "image").mkdir(parents=True)
+            (root / "scripts").mkdir()
+            (root / "references" / "image" / "grok-imagine.md").write_text(
+                "## 게이트 카드\n\n| 금지 | `--ar` / `--stylize` |\n\n## 다음\n",
+                encoding="utf-8",
+            )
+            (root / "scripts" / "check_prompt.mjs").write_text(
+                'const BANNED_MJ_FLAGS = ["ar"];\n',
+                encoding="utf-8",
+            )
+            errors = []
+            lint.check_mj_flag_sync(root, errors)
+        self.assertTrue(any("[I16]" in error for error in errors), errors)
 
     def test_i1_rejects_runtime_name_in_core(self):
         texts = {name: "safe text" for name in lint.CORE_RUNTIME_NAME_FILES}

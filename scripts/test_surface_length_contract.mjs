@@ -107,6 +107,17 @@ const tests = [];
   tests.push({ name: "(i) 미지 플래그 --surfce → E-INPUT-FLAG + exit≠0", pass });
 }
 
+// (i-2) --tier 관대 파싱 금지: 범위 밖·비숫자·경로형 값 → E-INPUT-FLAG, exit≠0
+{
+  const path = join(tmpDir, "test_i_tier.txt");
+  writeFileSync(path, "x\nAR 3:4");
+  const pass = ["5", "abc", path].every((value) => {
+    const res = run(["--tier", value, path]);
+    return res.exitCode !== 0 && res.stdout.includes("E-INPUT-FLAG");
+  });
+  tests.push({ name: "(i-2) --tier 5/abc/file.txt → 전부 E-INPUT-FLAG + exit≠0", pass });
+}
+
 // (j) MJ 엔진이 채널 층을 죽이지 못함: 무플래그 + --engine midjourney + 2100자 → E-ENGINE-SCOPE와 E-OVERFLOW-2000 공존
 {
   const prompt = "word ".repeat(420).trim(); // 2099cp, 420단어

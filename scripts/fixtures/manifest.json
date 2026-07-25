@@ -71,6 +71,26 @@
     }
   },
   {
+    "path": "fixtures/bad/weight_high.txt",
+    "mode": "text",
+    "expect": {
+      "ok": false,
+      "codes": [
+        "E-WEIGHT"
+      ]
+    }
+  },
+  {
+    "path": "fixtures/bad/mj_flags.txt",
+    "mode": "text",
+    "expect": {
+      "ok": false,
+      "codes": [
+        "E-MJ-FLAG"
+      ]
+    }
+  },
+  {
     "path": "fixtures/bad/neg_outside_whitelist.txt",
     "mode": "text",
     "flags": [

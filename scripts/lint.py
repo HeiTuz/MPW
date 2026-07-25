@@ -201,9 +201,11 @@ def check_measurement_near_misses(f, s, errors):
 def check_universal_2000_regression(text, errors, filename="references/templates.md"):
     """I0: must not turn a surface-specific limit into a universal constant."""
     patterns = (
-        r"(?:모든|전부|각)\s*(?:프롬프트|출력|블록)[^\n.]{0,80}2000\s*자",
-        r"2000\s*자[^\n.]{0,80}(?:모든|전부|각)\s*(?:프롬프트|출력|블록)",
+        r"(?:모든|전부|각|항상|언제나|무조건|일괄)\s*(?:프롬프트|출력|블록)[^\n.]{0,80}2000\s*자",
+        r"2000\s*자[^\n.]{0,80}(?:모든|전부|각|항상|언제나|무조건|일괄)\s*(?:프롬프트|출력|블록)",
         r"전역\s*2000\s*자(?![^\n.]{0,24}(?:없|아닌|아님|않))",
+        r"(?:표면|채널|엔진)[^\n.]{0,20}(?:무관|상관없)[^\n.]{0,40}2000\s*자",
+        r"(?:프롬프트|출력|블록)[^\n.]{0,20}(?:항상|언제나|무조건|일괄)[^\n.]{0,60}2000\s*자",
     )
     for pat in patterns:
         match = re.search(pat, text, re.I)
@@ -211,6 +213,29 @@ def check_universal_2000_regression(text, errors, filename="references/templates
             errors.append(
                 f"{filename}:{line_of(text, match.start())}: [I0] universal 2000-character rule regression"
             )
+
+
+def check_mj_flag_sync(root, errors):
+    """I16: Grok gate-card MJ flags and the validator constant stay byte-identical."""
+    doc_path = root / "references" / "image" / "grok-imagine.md"
+    validator_path = root / "scripts" / "check_prompt.mjs"
+    try:
+        doc = doc_path.read_text(encoding="utf-8")
+        validator = validator_path.read_text(encoding="utf-8")
+    except OSError as exc:
+        errors.append(f"[I16] MJ flag sync input missing — {exc}")
+        return
+    gate = re.search(r"^## 게이트 카드\s*$\n(.*?)(?=^## |\Z)", doc, re.M | re.S)
+    constant = re.search(r'const BANNED_MJ_FLAGS = \[([^\]]*)\];', validator)
+    if not gate or not constant:
+        errors.append("[I16] MJ flag sync source is not parseable")
+        return
+    documented = list(dict.fromkeys(re.findall(r"`--([a-z][a-z0-9-]*)\b", gate.group(1), re.I)))
+    implemented = re.findall(r'"([a-z][a-z0-9-]*)"', constant.group(1), re.I)
+    if "\0".join(documented).encode("utf-8") != "\0".join(implemented).encode("utf-8"):
+        errors.append(
+            "[I16] Grok gate-card Midjourney flags and check_prompt.mjs BANNED_MJ_FLAGS byte mismatch"
+        )
 
 
 def check_runtime_names(texts, errors):
@@ -453,6 +478,13 @@ def check_labels(f, s, errors):
                 errors.append(f"{f}:{ln}: label {n}자 — 인접 블록 없음 + 파일 내 어떤 text 블록과도 불일치")
 
 
+def check_example_lengths(filename, text, errors):
+    for i, body in enumerate(re.findall(r"```text\n(.*?)```", text, re.S)):
+        actual = measured_len(body)
+        if actual > 2000:
+            errors.append(f"{filename}: text block #{i} is {actual} chars (> 2000)")
+
+
 def check_frozen_strings(texts, errors):
     """Tier-2 동결 문자열 3자 byte 대조: SSOT(editorial/tier2-safety.md §2) / compiler.md 인라인 / check_prompt.mjs SAFETY_ASSERT 상수."""
     ssot = texts.get(SSOT, "")
@@ -567,6 +599,7 @@ def main():
             check_universal_2000_regression(texts[f], errors, f)
 
     check_contract_index_table(ROOT, errors)
+    check_mj_flag_sync(ROOT, errors)
 
     # label == adjacent block length (전 FILES)
     for f, s in texts.items():
@@ -576,12 +609,9 @@ def main():
     for f, s in stamp_texts.items():
         check_measurement_stamps(f, s, errors, today)
         check_measurement_near_misses(f, s, errors)
-
-    # all example blocks under 2000 (전 FILES)
+    # all example blocks at or under the trimmed 2000-character contract (전 FILES)
     for f, s in texts.items():
-        for i, b in enumerate(re.findall(r"```text\n(.*?)```", s, re.S)):
-            if len(b) > 2000:
-                errors.append(f"{f}: text block #{i} is {len(b)} chars (> 2000)")
+        check_example_lengths(f, s, errors)
 
     # no approximate labels
     for f, s in texts.items():
