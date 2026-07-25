@@ -1,14 +1,14 @@
 ---
 name: MPW
 description: "프롬프트 작성·퇴고·라우팅 전용 통합 스킬 — '프롬프트 만들어줘/다듬어줘/검토해줘' 류 요청에 발동. 소관: 자율 goal 루프 지시문, 팀·멀티에이전트 작업지시 프롬프트, 시스템 프롬프트·자동화 잡, 직무 업무 프롬프트, 모델 튜닝·퇴고, UI/디자인 프롬프트, 이미지·배경합성·영상 프롬프트 정밀 컴파일. 문장을 쓰기 전에 의존 순서·축별 권한자·배제 관계를 그래프로 세운 뒤 조립한다(references/prompt-graph.md). 길이·비율·해상도는 보편 상수가 아니라 실행 표면의 속성으로 다룬다 — 전달 채널 / 타깃 엔진 / 기계 계약 중 가장 좁은 상한이 구속하며(전역 2000자 하드라인은 없고 미드저니는 문자가 아니라 단어 수로 잰다) references/image/surfaces.md에서 먼저 판정하고, 이미지·영상 모델 선택은 references/image/model-routing.md의 목적축 표를 따르고, 선택한 엔진의 붙여넣기 문법·시트 변환·피드 진단(Grok Imagine, Seedream 캐릭터 시트, Midjourney 피드 진단)은 같은 파일 §4 규칙 7의 표면 어댑터가 소관이다. 실행자가 파라미터를 갖는 축은 산문에 중복 기술하지 않는다. 이미지·디자인 레퍼런스 분석 결과를 생성 프롬프트로 컴파일하며, 런타임별 호출 문법은 references/adapters.md를 따른다. 프롬프트 산출 없이 실제 코드 실행·이미지 생성·문서 조판만 원하는 요청은 이 스킬이 아니라 해당 실행 경로 소관."
-version: 2.18.0
+version: 2.19.0
 license: MIT
 metadata:
   category: prompt-writing
   locale: ko-KR
   doctrine: graph-first-delegation-contract
   host_surface: codex
-  canonical_source: "HeiTuz/MPW SKILL.md v2.18.0"
+  canonical_source: "HeiTuz/MPW SKILL.md v2.19.0"
   updated_at: "2026-07-25"
   model_claims_reviewed_at: "2026-07-25"
   platform_roster_reviewed_at: "2026-07-25"
