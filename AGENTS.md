@@ -38,7 +38,12 @@
 python3 scripts/lint.py               # 항상 — 라벨 실측·2000자·정본 단일성·유사문자
 node scripts/check_prompt.mjs --test  # references/image/ 또는 검증기 변경 시 — 28 fixtures (S1-legacy·S3 소관, 표면·채널·엔진 컨텍스트 플래그 포함, S2 권위 아님)
 cd scripts && for t in test_*.py; do python3 -m unittest "${t%.py}"; done   # 교차 스킬 계약 포함
-python3 ~/.hermes/scripts/prompt_writing_doctrine_check.py                  # 표면 문서 ↔ 기계 계약 드리프트, 로스터 신선도
+```
+
+운영자 전용 doctrine 검사는 이 레포 밖의 설치별 도구이며 공개 소비자의 필수 검증 단계가 아니다. 실행할 때는 검사기 경로를 `MPW_DOCTRINE_CHECKER`로 주입하고, exit code가 아니라 stdout이 비어 있는지를 합격 조건으로 판정한다:
+
+```sh
+doctrine_output="$(python3 "$MPW_DOCTRINE_CHECKER")" && test -z "$doctrine_output"
 ```
 
 `test_adapter_master_integration.py`는 가드너·브리지와의 교차 배선을 검증한다. 이 테스트가 `setUpClass`에서 의존성 누락으로 죽으면 **통과가 아니라 무증상 실패**다 — 실제로 스킬 디렉터리 rename 이후 이 상태로 방치되어 `compiled_by` 불일치·API 드리프트 3건이 숨어 있었다(2026-07-25 수리). 스킵/에러를 green으로 읽지 않는다.

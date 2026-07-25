@@ -5,6 +5,7 @@ from __future__ import annotations
 import importlib.util
 import json
 import os
+import subprocess
 import sys
 import unittest
 from pathlib import Path
@@ -13,29 +14,16 @@ from typing import Any
 MASTER_ROOT = Path(__file__).resolve().parents[1]
 
 
-def skill_root(env_name: str, *skill_names: str) -> Path:
-    """Resolve a companion skill root, tolerating the adapter→gardener rename.
-
-    The loop scripts were renamed alongside their skills; probe every known
-    directory name so a rename fails the assertion under test rather than
-    erroring out of setUpClass with a missing-dependency message."""
+def skill_root(env_name: str) -> Path:
+    """Resolve a companion root only from an explicit environment input."""
     configured = os.environ.get(env_name)
     if configured:
         return Path(configured)
-    candidates = [
-        base / skill_name
-        for skill_name in skill_names
-        for base in (
-            MASTER_ROOT.parent,
-            Path.home() / "src",
-            Path.home() / ".hermes" / "skills" / "prompt-writing",
-        )
-    ]
-    return next((path for path in candidates if path.is_dir()), candidates[0])
+    return MASTER_ROOT / ".external-integration-unconfigured" / env_name
 
 
-IMAGE_ROOT = skill_root("IMAGE_REFERENCE_ADAPTER_ROOT", "image-reference-gardener", "image-reference-adapter")
-DESIGN_ROOT = skill_root("DESIGN_REFERENCE_ADAPTER_ROOT", "design-reference-gardener", "design-reference-adapter")
+IMAGE_ROOT = skill_root("IMAGE_REFERENCE_ADAPTER_ROOT")
+DESIGN_ROOT = skill_root("DESIGN_REFERENCE_ADAPTER_ROOT")
 # The per-skill loop module kept its old name in some installs.
 LOOP_FILENAMES = ("gardener_loop.py", "adapter_loop.py")
 
@@ -45,9 +33,31 @@ def loop_path(root: Path) -> Path:
         (root / "scripts" / name for name in LOOP_FILENAMES if (root / "scripts" / name).is_file()),
         root / "scripts" / LOOP_FILENAMES[0],
     )
-BRIDGE_ROOT = skill_root("HIGGSFIELD_BRIDGE_ROOT", "higgsfield-prompt-bridge")
+BRIDGE_ROOT = skill_root("HIGGSFIELD_BRIDGE_ROOT")
 CONTRACT_ROOT = Path(os.environ.get("MASTER_PROMPT_CONTRACT_ROOT", MASTER_ROOT / "contracts"))
 COMPILER_ROOT = Path(os.environ.get("MASTER_PROMPT_COMPILER_ROOT", MASTER_ROOT))
+EXTERNAL_INTEGRATION_OPT_OUT = "MPW_ALLOW_MISSING_EXTERNAL_INTEGRATION"
+
+
+def external_dependency_paths() -> tuple[Path, ...]:
+    return (
+        loop_path(IMAGE_ROOT),
+        loop_path(DESIGN_ROOT),
+        BRIDGE_ROOT / "scripts/higgsfield_job.py",
+    )
+
+
+def external_dependencies_available() -> bool:
+    missing = [path for path in external_dependency_paths() if not path.is_file()]
+    if not missing:
+        return True
+    if os.environ.get(EXTERNAL_INTEGRATION_OPT_OUT) == "1":
+        return False
+    raise RuntimeError(
+        "external integration dependencies missing; configure the three root "
+        f"environment variables or set {EXTERNAL_INTEGRATION_OPT_OUT}=1 to opt out: "
+        + ", ".join(str(path) for path in missing)
+    )
 
 
 def load_module(name: str, path: Path) -> Any:
@@ -62,14 +72,14 @@ def load_module(name: str, path: Path) -> Any:
 class AdapterMasterIntegrationTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls) -> None:
+        if not external_dependencies_available():
+            raise unittest.SkipTest("external integration explicitly opted out")
         required = [
             CONTRACT_ROOT / "validate.py",
             CONTRACT_ROOT / "v1/fixtures/garden-recipe.image.valid.json",
             CONTRACT_ROOT / "v1/fixtures/garden-recipe.design.valid.json",
             COMPILER_ROOT / "scripts/compile_garden_recipe.py",
-            loop_path(IMAGE_ROOT),
-            loop_path(DESIGN_ROOT),
-            BRIDGE_ROOT / "scripts/higgsfield_job.py",
+            *external_dependency_paths(),
         ]
         missing = [str(path) for path in required if not path.is_file()]
         if missing:
@@ -158,9 +168,29 @@ class AdapterMasterIntegrationTests(unittest.TestCase):
             )
 
 
+class ExternalDependencyPolicyTests(unittest.TestCase):
+    def test_missing_roots_fail_without_explicit_opt_out(self) -> None:
+        env = os.environ.copy()
+        nonexistent = MASTER_ROOT / ".dependency-policy-test-missing"
+        env.update({
+            "IMAGE_REFERENCE_ADAPTER_ROOT": str(nonexistent / "image"),
+            "DESIGN_REFERENCE_ADAPTER_ROOT": str(nonexistent / "design"),
+            "HIGGSFIELD_BRIDGE_ROOT": str(nonexistent / "bridge"),
+        })
+        env.pop(EXTERNAL_INTEGRATION_OPT_OUT, None)
+        result = subprocess.run(
+            [sys.executable, __file__, "--dependency-check-only"],
+            env=env,
+            capture_output=True,
+            text=True,
+            check=False,
+        )
+        self.assertNotEqual(0, result.returncode, result.stdout + result.stderr)
+        self.assertIn("external integration dependencies missing", result.stderr)
+
+
 if __name__ == "__main__":
-    missing_roots = [str(path) for path in (IMAGE_ROOT, DESIGN_ROOT, BRIDGE_ROOT) if not path.is_dir()]
-    if missing_roots:
-        print("SKIP: external adapter repos absent (" + ", ".join(missing_roots) + ")")
+    if "--dependency-check-only" in sys.argv:
+        external_dependencies_available()
         sys.exit(0)
     unittest.main(verbosity=2)
