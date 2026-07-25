@@ -10,7 +10,7 @@ Seedream용 프롬프트는 다음 우선순위를 유지한다.
 
 1. 산출물·레이아웃: single photograph 또는 single 3:4 canvas containing a 1×4 row.
 2. 실제 프레이밍: `top of hair to mid-thigh` 또는 `hair to soles`.
-3. 체형 기하: 추상적인 curvy 라벨만 쓰지 말고 `slender lean body, narrow shoulders, slim arms, small waist, broad pelvis, rounded high hips, full glutes, curved upper thighs`처럼 실루엣을 적는다. `lean and visibly defined`는 큰 근육이 아니라 낮은 체지방에서 오는 선명도로 풀어 쓴다.
+3. 체형 기하: 추상적인 curvy 라벨만 쓰지 말고 어깨·허리·골반·다리를 각각 해부 축으로 적어 실루엣을 고정한다 — 라벨 하나가 여러 해석을 허용하면 시트 패널마다 체형이 흔들린다. `lean and visibly defined`는 큰 근육이 아니라 낮은 체지방에서 오는 선명도로 풀어 쓴다. **구체 토큰 세트는 보편 기본값이 아니라 운영자 취향이므로 이 공개 문서가 아니라 각 설치의 로컬 기본값이 보유한다.**
 4. 베이스 의상: 몸을 압축하거나 가리지 않는 fitted sports-bra top + fitted short shorts. 사용자가 흰색을 지정하면 `pure white matte stretch fabric`과 `no off-white or gray color shift`를 함께 고정한다.
 5. 정체성·헤어: 3×3 시트를 sole identity reference로 선언하고 식별점만 짧게 쓴다.
 6. 촬영: eye-level, 70–85 mm look, minimal perspective distortion, neutral studio.
@@ -21,7 +21,7 @@ Seedream용 프롬프트는 다음 우선순위를 유지한다.
 - `beauty upper-body shot`은 얼굴 중심 크롭을 유도해 골반과 쇼츠가 잘릴 수 있다. 골반까지 필요한 단일 베이스는 `three-quarter character base portrait, top of hair to mid-thigh`로 쓴다.
 - `170 cm, eight heads tall`은 전신이 보일 때만 판정 가능하다. 미드타이 크롭에서는 전체 키를 보장한다고 쓰지 않는다.
 - 1×4 전신 시트는 `front / three-quarter / profile / back` 순서와 동일 baseline·scale·camera height를 고정한다.
-- 큰 골반은 `hips visibly wider than shoulders from every angle`과 `strong smooth S-curve from waist to hips`를 함께 써야 직선 체형으로 약화되는 것을 줄인다.
+- 체형 축을 한 번만 언급하면 패널마다 직선 체형으로 약화된다. 유지하려는 축은 **모든 각도에서 성립하는 관계**로 쓰고(각 패널을 독립 생성하므로), 정면·3/4·측면·후면 전부에서 같은 관계가 보이는지를 DoD로 삼는다.
 
 ## 헤어와 실루엣
 
