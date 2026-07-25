@@ -12,11 +12,11 @@ jobs:
       - uses: oven-sh/setup-bun@v2
       - name: skill self-lint
         run: python3 scripts/lint.py
-      # Companion repositories are not present in the isolated CI checkout.
-      # Keep the integration stage visible while explicitly opting out of its external portion.
+      # The companion repositories are absent from an isolated checkout, so the npm
+      # test script carries the named opt-out for the external integration stage.
+      # Do not re-add it here: if that opt-out is ever dropped without configuring
+      # the three root variables, this job must fail loudly rather than skip quietly.
       - name: full network-free test suite
-        env:
-          MPW_ALLOW_MISSING_EXTERNAL_INTEGRATION: "1"
         run: npm test
       - name: installer smoke test
         run: npm run smoke:install

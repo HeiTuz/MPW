@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 import unicodedata
 from pathlib import Path
 from typing import Any
@@ -11,6 +12,9 @@ from typing import Any
 MAX_PROMPT_CHARS = 2000
 REQUEST_VERSION = "apparel-compile-request/v1"
 HANDOFF_VERSION = 1
+# Mirrors apparel-handoff.schema.json outputs[].filename exactly; a looser producer
+# check emits documents the shared validator rejects.
+OUTPUT_NAME = re.compile(r"[^/\\]+\.png")
 
 
 class CompileError(RuntimeError):
@@ -93,7 +97,7 @@ def _validate_role_map(raw: Any, sources: list[str]) -> tuple[list[dict[str, Any
 def _render_prompt(output: dict[str, Any], valid_colors: set[str]) -> tuple[str, str, str]:
     output_id = _basename(output.get("id"), "requested_outputs[].id")
     filename = _basename(output.get("filename"), "requested_outputs[].filename")
-    if not filename.endswith(".png"):
+    if not OUTPUT_NAME.fullmatch(filename):
         raise CompileError(f"output {output_id} filename must end in .png")
     view = _nonempty(output.get("view"), f"output {output_id} view")
     color = normalize_color_identity(output.get("color_identity"))

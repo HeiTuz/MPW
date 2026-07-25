@@ -94,6 +94,14 @@ class ApparelHandoffCompilerTests(unittest.TestCase):
         with self.assertRaisesRegex(compiler.CompileError, "must end in .png"):
             compiler.compile_request(request)
 
+    def test_rejects_extensionless_stem_the_schema_refuses(self) -> None:
+        """A bare '.png' has no stem, so the schema pattern rejects it. The producer
+        must refuse it too, or it emits a document the shared validator will not accept."""
+        request = copy.deepcopy(self.request)
+        request["requested_outputs"][0]["filename"] = ".png"
+        with self.assertRaisesRegex(compiler.CompileError, "must end in .png"):
+            compiler.compile_request(request)
+
     def test_duplicate_normalized_front_identity_counts_once(self) -> None:
         duplicate = dict(self.request["vision_role_map"][0])
         duplicate["file"] = "navy-back.png"
