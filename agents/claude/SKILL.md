@@ -108,7 +108,7 @@ Tie-break: 자율 루프는 GOAL을 우선한다. 완성 문서 조판은 문서
 
 ## 모드별 압축 안내
 
-GOAL·TEAM·CONTRACT·BUSINESS·MODEL·리서치·추출의 필수 코어와 조건부 확장은 [references/templates.md](references/templates.md)가 정본이다. 안티패턴·워크플로우·후속 보강도 그 파일의 상세를 따른다. Midjourney는 버전 호환·파라미터·`--no`·무드보드·길이 단위가 [references/midjourney-identity.md](references/midjourney-identity.md)에 있고, 캐릭터 시트 산문 규칙만 [references/midjourney-character-sheets.md](references/midjourney-character-sheets.md)에 있다. 엔진 문법이 필요하면 전자부터 읽는다.
+GOAL·TEAM·CONTRACT·BUSINESS·MODEL·DESIGN·리서치·추출의 필수 코어와 조건부 확장은 [references/templates.md](references/templates.md)가 정본이다. 안티패턴·워크플로우·후속 보강도 그 파일의 상세를 따른다. Midjourney는 버전 호환·파라미터·`--no`·무드보드·길이 단위가 [references/midjourney-identity.md](references/midjourney-identity.md)에 있고, 캐릭터 시트 산문 규칙만 [references/midjourney-character-sheets.md](references/midjourney-character-sheets.md)에 있다. 엔진 문법이 필요하면 전자부터 읽는다.
 
 ## 출력 게이트
 
