@@ -10,7 +10,7 @@ Seedream용 프롬프트는 다음 우선순위를 유지한다.
 
 1. 산출물·레이아웃: single photograph 또는 single 3:4 canvas containing a 1×4 row.
 2. 실제 프레이밍: `top of hair to mid-thigh` 또는 `hair to soles`.
-3. 체형 기하: 추상적인 curvy 라벨만 쓰지 말고 어깨·허리·골반·다리를 각각 해부 축으로 적어 실루엣을 고정한다 — 라벨 하나가 여러 해석을 허용하면 시트 패널마다 체형이 흔들린다. `lean and visibly defined`는 큰 근육이 아니라 낮은 체지방에서 오는 선명도로 풀어 쓴다. **구체 토큰 세트는 보편 기본값이 아니라 운영자 취향이므로 이 공개 문서가 아니라 각 설치의 로컬 기본값이 보유한다.**
+3. 체형 기하: 추상적인 curvy 라벨만 쓰지 말고 어깨·허리·골반·다리를 각각 해부 축으로 적어 실루엣을 고정한다 — 라벨 하나가 여러 해석을 허용하면 시트 패널마다 체형이 흔들린다. `lean and visibly defined`는 큰 근육이 아니라 낮은 체지방에서 오는 선명도로 풀어 쓴다. **구체 토큰 세트는 보편 기본값이 아니라 운영자 취향이므로 이 공개 문서가 보유하지 않는다** — 설치에 로컬 기본값이 선언돼 있으면 그것이 공급하고, 없으면 축별 값을 사용자에게 묻는다.
 4. 베이스 의상: 몸을 압축하거나 가리지 않는 fitted sports-bra top + fitted short shorts. 사용자가 흰색을 지정하면 `pure white matte stretch fabric`과 `no off-white or gray color shift`를 함께 고정한다.
 5. 정체성·헤어: 3×3 시트를 sole identity reference로 선언하고 식별점만 짧게 쓴다.
 6. 촬영: eye-level, 70–85 mm look, minimal perspective distortion, neutral studio.
