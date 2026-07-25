@@ -22,6 +22,7 @@ const CONTRACT_LIMIT = 2000;
 const VALID_SURFACES = new Set(["s1", "s2", "s3"]);
 const VALID_ENGINES = new Set(Object.keys(ENGINE_LIMITS));
 const VALID_CHANNELS = new Set(["bounded", "unbounded"]);
+const VALID_QUALITIES = new Set(["low", "medium", "high"]);
 const REWRITE_MAP = {
   "no people": "빈 배경, 인물 없는 구성", "no text": "텍스트 없음(한국어 긍정형)", "no watermark": "브랜드 없는 클린 마감",
   "no logo": "로고 없는 클린 마감", "no background": "단색 스튜디오 배경", "no blur": "엣지까지 또렷한 포커스",
@@ -344,10 +345,17 @@ function validateTypographyPoster(rec, errors) {
 
 function validateRecord(rec, ids, opts) {
   const errors = [], warnings = [];
-  for (const f of ["id", "category", "ar", "size", "quality", "full_prompt", "output_path"])
-    if (rec[f] === undefined || rec[f] === null || rec[f] === "") err(errors, "E-REC-FIELD", `필수 필드 누락: ${f}.`);
+  for (const f of ["id", "category", "ar", "size", "quality", "full_prompt", "output_path"]) {
+    if (typeof rec[f] !== "string" || rec[f] === "")
+      err(errors, "E-REC-FIELD", `필수 필드 ${f}는 비어 있지 않은 문자열이어야 함.`);
+  }
   if (rec.id !== undefined) { if (ids.has(rec.id)) err(errors, "E-REC-DUPID", `중복 id: ${rec.id}.`); ids.add(rec.id); }
-  if (rec.quality === "auto") err(errors, "E-REC-QUALITY", 'quality "auto" 금지 — high/medium/low를 명시.');
+  if (typeof rec.quality === "string" && rec.quality !== "" && !VALID_QUALITIES.has(rec.quality)) {
+    if (rec.quality.trim().toLowerCase() === "auto")
+      err(errors, "E-REC-QUALITY", 'quality "auto" 금지 — high/medium/low를 명시.');
+    else
+      err(errors, "E-REC-QUALITY", `quality ${JSON.stringify(rec.quality)}는 허용 목록 밖(허용: low, medium, high).`);
+  }
   // 표면/채널/엔진 컨텍스트 필드 — CLI 플래그와 같은 열거·타입 제약. 열거 밖 값은 조용한 수용도 배치 크래시도 아닌 레코드 단위 실패.
   if (rec.surface !== undefined && !VALID_SURFACES.has(rec.surface))
     err(errors, "E-REC-CONTEXT", `surface ${JSON.stringify(rec.surface)}는 열거 밖(s1|s2|s3).`);

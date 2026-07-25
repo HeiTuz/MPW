@@ -267,5 +267,21 @@
       "ok": false,
       "codes": ["E-ENGINE-SCOPE"]
     }
+  },
+  {
+    "path": "fixtures/bad/nonstring_full_prompt.jsonl",
+    "mode": "jsonl",
+    "expect": {
+      "ok": false,
+      "codes": ["E-REC-FIELD"]
+    }
+  },
+  {
+    "path": "fixtures/bad/quality_enum.jsonl",
+    "mode": "jsonl",
+    "expect": {
+      "ok": false,
+      "codes": ["E-REC-QUALITY"]
+    }
   }
 ]
