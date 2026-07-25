@@ -114,33 +114,17 @@
 
 ### 5.1 기본값
 
-렌더 텍스트가 있는 모든 컷에 긍정형 1줄을 1회 넣는다.
+렌더 텍스트가 있는 모든 컷에 Tier-0 긍정형 기본값 1줄을 1회 넣는다.
 
 ```text
 모든 텍스트는 한 번씩만, 완벽히 또렷하게
 ```
 
-### 5.2 Tier-1 승격 시 캐노니컬 결합 1줄
+### 5.2 Tier-1 승격 시 방출 규칙
 
-아래 문자열은 동결한다.
+Tier-1 결합 공식과 화이트리스트의 정본은 [compiler.md](compiler.md) §2 철칙 2다. 이 파일은 값을 복제하지 않고 아래 승격 조건만 소유한다.
 
-```text
-All text appears once, perfectly legible — no duplicate text, no extra words, no invented glyphs, no watermark.
-```
-
-### 5.3 Tier-1 화이트리스트
-
-| 문자열 | 용도 |
-|---|---|
-| `no extra words` | 카피 외 텍스트 발명 차단 |
-| `no duplicate text` | 동일 카피 중복 렌더 차단 |
-| `no invented glyphs` | 유령 글리프·가짜 한글 차단 |
-| `no watermark` | 워터마크 차단 |
-| `no logo` | 임의 로고 차단 |
-| `no extra text` | 배경 잡텍스트 차단 |
-| `verbatim, no extra characters` | 따옴표 카피 축자 렌더 |
-
-### 5.4 승격 조건
+### 5.3 승격 조건
 
 | 조건 | 예 |
 |---|---|

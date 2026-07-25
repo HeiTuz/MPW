@@ -9,16 +9,16 @@ Format B는 콤마로 이어지는 평탄화 단문 1개다. 라벨 섹션(`Scen
 **슬롯 순서 (고정, 재배열 금지):**
 
 ```text
-피사체 → 얼굴 → 헤어 → 장르앵커 → 장면/포즈 → 의상 → 구도 → 조명 → 팔레트 #HEX×3~5 → 질감 → [Tier-2 tail] → AR x:y
+피사체 → 얼굴 → 헤어 → 장르앵커 → 장면/포즈 → 의상 → 구도 → 조명 → 팔레트 #HEX×3~5 → 질감 → [Tier-2 tail] → [S3 한정 AR x:y]
 ```
 
 | 규칙 | 값 |
 |---|---|
 | 길이 밴드 | **350~450자** 타깃. 검증기는 300~550 밖이면 `W-LEN-B` |
-| 기본 AR | **2:3** (`size: 1024x1536`) — 세로 화보 표준 |
+| 기본 AR | 표면별 기본값과 유효성 판정은 [../compiler.md](../compiler.md) §4 표가 정본 |
 | 장르앵커 | **`한국 남성지풍 클린 화보 컷`** — 고정 스타일 앵커, 모든 컷에 동일 문구 |
 | HEX | 팔레트 절에 3~5개 (`E-FMT-B-HEX`) |
-| 끝 토큰 | `AR x:y` 하나만, 앞머리 브래킷 금지. 철칙: ../compiler.md |
+| 끝 토큰 | S3 표면에서만 `AR x:y` 하나. S1·S2는 본문 AR 0개. 정본: [../compiler.md](../compiler.md) 철칙 1·§5 |
 | Tier-2 tail | 선언된 tier 2에서만, [tier2-safety.md](tier2-safety.md) §2 규칙대로 팔레트·질감 뒤 · AR 직전 |
 
 - 피사체 절이 attention을 가장 강하게 받는다. 단독 인물 선언과 성인 선언을 맨 앞에 둔다.
@@ -96,11 +96,11 @@ jsonl 레코드로 쓸 때:
 - 미감 어휘를 사용하고 해부학/클리니컬 어휘는 쓰지 않는다. 이미지 첨부 없이 텍스트만으로 작성한다.
 ## 12. Format B ↔ Higgsfield Soul 교차 규칙
 
-같은 화보 요청이라도 표면이 다르면 어휘를 변환한다. **gpt-image-2 Format B**로 갈 때는 슬롯 순서, 끝 `AR x:y`, HEX 3~5, Tier-2 assert/tail 페어, 장르앵커를 유지하고 사진 장비는 결과 기반 lens character로 압축한다. **Higgsfield 플랫폼에서 Soul V2를 선택했을 때**는 6섹션 장문이 아니라 [../soul-v2-director.md](../soul-v2-director.md)의 4레이어 고정 순서(피사체·의상·동작·구도 → 미학·브랜드 앵커·환경 → 조명·그림자 → 카메라·렌즈·질감)를 따르는 콤마 명사구 1문단으로 줄인다. 비율·품질은 해당 모델의 파라미터이며, 프리셋은 image-to-video일 때만 적용하므로 스틸 프롬프트의 필수 라벨로 취급하지 않는다. S3 UI에서 사용자가 별도로 고르는 값은 본문 밖 라벨로만 전달한다. 빈 품질어는 보이는 특성 토큰으로 치환하고 카메라 바디 1·주 렌즈 1을 지킨다. 전역 팔레트·무드·컬러 그레이드는 Soul 2.0 웹 `Color signature`에 레퍼런스 1~20장을 넣어 전달하며, 대상별 역할형 HEX 3~5를 Soul 프롬프트 기본값으로 강제하지 않는다. Soul은 텍스트 렌더 정확도에 의존하지 않으므로 카피가 필요하면 gpt-image-2 컷으로 분리한다. 동일 인물 시리즈는 Soul ID 훈련 절차의 영역이므로 프롬프트에서 외모 반복으로 정체성을 고정하려 들지 않고, 장면·스타일·행동만 쓴다. 브랜드: Format B는 가상 컬렉션·가상 라벨 유지, Soul 레인은 디자인 앵커로 주1+보조1까지 허용하되 로고·텍스트 렌더와 의복 구조 치환은 금지. 공통으로 자기완결, S3 붙여넣기 표면이면 [surfaces.md](../surfaces.md) §0-1의 세 층 중 가장 좁은 값으로 실측(메신저 배선 표면 한정), 그 외 표면은 [surfaces.md](../surfaces.md)의 표면별 예산, 긍정형 재서술, `natural skin texture, visible pores, subtle film grain`, 실재 인물 금지를 지킨다.
+같은 화보 요청이라도 표면이 다르면 어휘를 변환한다. **gpt-image-2 Format B**로 갈 때는 [../compiler.md](../compiler.md) §4의 표면별 슬롯·AR 규칙, HEX 3~5, Tier-2 assert/tail 페어, 장르앵커를 유지하고 사진 장비는 결과 기반 lens character로 압축한다. **Higgsfield 플랫폼에서 Soul V2를 선택했을 때**는 6섹션 장문이 아니라 [../soul-v2-director.md](../soul-v2-director.md) §필수 4레이어 구조의 고정 순서를 따르는 콤마 명사구 1문단으로 줄인다. 비율·품질은 해당 모델의 파라미터이며, 프리셋은 image-to-video일 때만 적용하므로 스틸 프롬프트의 필수 라벨로 취급하지 않는다. S3 UI에서 사용자가 별도로 고르는 값은 본문 밖 라벨로만 전달한다. 빈 품질어는 보이는 특성 토큰으로 치환하고 카메라 바디 1·주 렌즈 1을 지킨다. 전역 팔레트·무드·컬러 그레이드는 Soul 2.0 웹 `Color signature`에 레퍼런스 1~20장을 넣어 전달하며, 대상별 역할형 HEX 3~5를 Soul 프롬프트 기본값으로 강제하지 않는다. Soul은 텍스트 렌더 정확도에 의존하지 않으므로 카피가 필요하면 gpt-image-2 컷으로 분리한다. 동일 인물 시리즈는 Soul ID 훈련 절차의 영역이므로 프롬프트에서 외모 반복으로 정체성을 고정하려 들지 않고, 장면·스타일·행동만 쓴다. 브랜드: Format B는 가상 컬렉션·가상 라벨 유지, Soul 레인은 디자인 앵커로 주1+보조1까지 허용하되 로고·텍스트 렌더와 의복 구조 치환은 금지. 공통으로 자기완결, S3 붙여넣기 표면이면 [surfaces.md](../surfaces.md) §0-1의 세 층 중 가장 좁은 값으로 실측(메신저 배선 표면 한정), 그 외 표면은 [surfaces.md](../surfaces.md)의 표면별 예산, 긍정형 재서술, `natural skin texture, visible pores, subtle film grain`, 실재 인물 금지를 지킨다.
 
 | 요청 요소 | Format B 변환 | Soul 변환 |
 |---|---|---|
-| 비율 | 끝에 `AR 2:3` | `[프리셋: Flash Editorial · 비율 2:3 — UI에서 선택]` 라벨 |
+| 비율 | S3에서만 끝 토큰, 그 밖의 표면은 [../compiler.md](../compiler.md) §4의 파라미터 규칙 | `[프리셋: Flash Editorial · 비율 2:3 — UI에서 선택]` 라벨 |
 | 장르 | `한국 남성지풍 클린 화보 컷` 슬롯 | 프리셋 + `fashion editorial still` 성격만 본문에 |
 | 안전 | Tier-2면 assert 첫 절 + tail AR 직전 | 긍정형 안전 스타일링 문장. 고정 tail을 본문에 억지 삽입하지 않음 |
 | 조명 | `부드러운 창가 자연광이 왼쪽에서...` 같은 결과 절 | L3 골격: `direct on-camera flash, rapid highlight falloff, dense background shadow` 식 키라이트 방향·경도 명시 |
@@ -109,7 +109,7 @@ jsonl 레코드로 쓸 때:
 | 카메라·질감 | 장비명 대신 lens character | L4에 바디 1·렌즈 1·필름 색 반응·소재 질감 명시 (선택 로직: [../soul-v2-director.md](../soul-v2-director.md)) |
 | 텍스트 | 필요 시 gpt-image-2 텍스트 렌더 가드 사용 | 텍스트 비의존. 카피 컷 분리 |
 
-Soul 스틸 예시 형식 (4레이어: L1 피사체·의상·포즈·구도 → L2 미학·환경 → L3 조명 → L4 카메라·필름·질감):
+Soul 스틸 예시 형식 ([../soul-v2-director.md](../soul-v2-director.md) §필수 4레이어 구조의 고정 순서):
 
 ```text
 [프리셋: Flash Editorial · 비율 2:3 | Color signature: cool urban night reference 1장 — UI에서 선택/업로드]
@@ -119,7 +119,7 @@ late-20s Korean woman, 짧은 웨이브 단발, 무광 블랙 레더 재킷에 �
 
 | 체크 | 통과 기준 |
 |---|---|
-| Format B | 슬롯 순서 고정, 라벨 섹션 없음, 끝 `AR x:y` 하나 |
+| Format B | 슬롯 순서 고정, 라벨 섹션 없음, S3에서만 끝 `AR x:y` 하나 |
 | 길이 | Tier-0은 350~450자 타깃, 검증기 300~550 범위. Tier-2 예제 실측은 [tier2-safety.md](tier2-safety.md) §2 예시 라벨 참조 |
 | 팔레트 | HEX 3~5개, record와 prompt 양쪽 일치 |
 | 페르소나 | 가상 인물, 25+ 필요 시 선언, 실존 인물 금지 |

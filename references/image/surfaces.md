@@ -155,18 +155,20 @@
 | Midjourney 단어 대역 40/60/80 | 커뮤니티(Prompt-FAQs 계열) 합의, 웹 확인. **공식 문서 근거 없음 [미확인]** — 실무 대역으로만 쓴다 | 2026-07-25 |
 | Midjourney 문자 하드 상한(6,000자설) | 공식 출처 없음 **[미확인]** — 실효 제약은 단어 대역이 훨씬 좁다 | 2026-07-25 |
 | Midjourney 문법·파라미터(`--no` 단일 명사·모더레이션 단어 단위 판독 / 무드보드 `--p` 참조·`--sw` 비호환·강도는 `--stylize` / `--sref` 텍스트 Best Practices) | 공식 문서·릴리스노트. **규칙 서술 정본은 [../midjourney-identity.md](../midjourney-identity.md) §5·§6·§7** | 2026-07-25 |
-| Midjourney subject leakage(공식 용어, V7 sref 재작성으로 완화되나 미제거) | 공식 문서. **규칙 서술 정본은 [from-image.md](from-image.md) §6.5** — midjourney-identity.md에는 이 항목 서술이 없다 | 2026-07-25 |
+| Midjourney subject leakage(공식 용어, V7 sref 재작성으로 완화되나 미제거) | 공식 문서. **규칙 서술 정본은 [../midjourney-identity.md](../midjourney-identity.md) §6** | 2026-07-25 |
 | Midjourney V8 계열 `--sv` 기본값·유효 범위 | 공식 문서에 V7(1–6)·V6(1–4)만 있고 **V8 섹션 자체가 없다** **[미확인]** — 커뮤니티 수치를 기입하지 않는다. 규칙 서술은 [../midjourney-identity.md](../midjourney-identity.md) §3 | 2026-07-25 |
 | Midjourney V8 계열 Draft Mode 호환 | **공식 문서 내부가 서로 어긋난다** — 버전 호환표는 V8.1·V8.2를 미지원(✗)으로 적고 Draft 아티클은 "7 and 8.1" 호환이라 쓰며, V8.2는 아티클에 언급 자체가 없다 **[미확인]** — 실행 전 UI 확인. 규칙 서술은 [../midjourney-identity.md](../midjourney-identity.md) §7 | 2026-07-25 |
 | Midjourney 무드보드 최대·권장 장수 | 공식 권장도 최댓값도 없고 **커뮤니티 수치가 서로 불일치**한다(5–10 / 8–12 / 최대 100) **[미확인]** — 숫자 대신 방향성만 쓴다. 규칙 서술은 [../midjourney-identity.md](../midjourney-identity.md) §7 | 2026-07-25 |
 | Midjourney `--sw` 수치 조절표 | **커뮤니티 단일 출처뿐** **[미확인]** — 규범으로 쓰지 않는다. 규칙 서술은 [../midjourney-identity.md](../midjourney-identity.md) §6 | 2026-07-25 |
-| Midjourney `--stylize` 에디토리얼 권장 대역 | **커뮤니티 단일·소수 출처뿐** **[미확인]** — 규범으로 쓰지 않는다. `--s`의 범위·기본값(0–1000 / 100) 자체는 공식이며 그 서술은 [../midjourney-identity.md](../midjourney-identity.md) §3이 갖지만, **"에디토리얼 권장 대역"이라는 값은 어느 파일에도 서술이 없다** — 이 행이 그 항목의 전부다 | 2026-07-25 |
+| Midjourney `--stylize` 에디토리얼 권장 대역 | **커뮤니티 단일·소수 출처뿐** **[미확인]** — 규범으로 쓰지 않는다. `--s`의 범위·기본값(0–1000 / 100) 자체는 공식이며 그 서술은 [../midjourney-identity.md](../midjourney-identity.md) §3이 갖는다. 피드 진단용 시작 대역은 [midjourney-feed-diagnosis.md](midjourney-feed-diagnosis.md) §Minimum ablation matrix를 가리킨다 | 2026-07-25 |
 | Midjourney `--sref A::2 B::1` 개별 가중치 | 공식 sref 문서에 문자열로 존재하나, **참조 지시된 가중치 문서가 V7·V8 계열을 지원 대상에서 제외한다 — 미해결 충돌** **[미확인]**. `::` 자체가 V7·V8에서 죽었다는 서술은 [../midjourney-identity.md](../midjourney-identity.md) §5에 있으나 **sref 개별 가중치 문자열의 이 충돌은 어느 파일에도 서술이 없다** — 이 행이 그 항목의 전부다. 생성하지 않는다 | 2026-07-25 |
 | Higgsfield 이미지·영상 전 모델에 `negative_prompt` 없음(3D `tripo_3d`만 예외) | `models_explore(list)`를 이미지·영상·3D 각각 `has_more:false`까지 따라간 전수 확인(31·31·14, 후처리 모델 포함 수치) | 2026-07-25 |
 | Higgsfield 모델 길이 상한 | 런타임 파라미터 정의에 상한 필드가 없음(전수 확인). 백엔드 실제 상한은 미공개 **[미확인]** → 신호 밀도로 관리 | 2026-07-25 |
 | Higgsfield 롤 비대칭·`aspect_ratio` 조용한 치환·정체성 3경로 배타성 | MCP 런타임 프로브(`models_explore`, `generate_image get_cost:true`) | 2026-07-25 |
 | Higgsfield `image` 롤과 `image_references` 롤의 **의미적 동작 차이** | 런타임 description에 서술이 없다 **[미확인]** — 롤 이름으로 동작 차이를 설명하지 않는다 | 2026-07-25 |
 | `max` 미선언 모델의 레퍼런스 장수 상한 | 프리플라이트 통과 ≠ 생성 성공. 백엔드 상한 **[미확인]** | 2026-07-25 |
+| Grok Imagine 지원 비율 목록 | 원 이관 문서에 확인 경로가 보존되지 않음 **[미확인]** — 실행 전 문서와 UI 대조 | 2026-07-25 |
+| Midjourney `chaos`·`stylize` ablation 시작 대역 | 원 이관 문서에 출처 등급이 보존되지 않음 **[미확인]** — 규범이 아니라 피드 진단용 시작점 | 2026-07-25 |
 | Rentmeester v. Nike / selection-and-arrangement / idea-expression | 판례·해설 | 2026-07-25 |
 | S3 2000자 | 붙여넣기 UX 제약 + 상한 있는 채널 배선의 합성. 그 표면의 보편 상수가 아니다 | — |
 | 전달 채널 상한 | 런타임 배선 값 — 이 문서가 아니라 실행 런타임이 권한자([../adapters.md](../adapters.md)) | — |

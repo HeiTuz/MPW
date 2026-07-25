@@ -27,7 +27,7 @@ Hold the literal prompt and all other settings fixed:
 - B — one primary profile;
 - C — current stacked profiles.
 
-Start with `chaos 0–8`, `stylize 50–100`, one unobstructed subject, and a simple pose. Compare anatomy, garment boundaries, four-candidate identity consistency, age/gender/ethnic drift, and prompt fidelity versus profile takeover.
+Start with `chaos 0–8`, `stylize 50–100`, one unobstructed subject, and a simple pose **[미확인]**. Treat these as ablation starting bands, not engine limits; evidence status is registered in [surfaces.md](surfaces.md) §7. Compare anatomy, garment boundaries, four-candidate identity consistency, age/gender/ethnic drift, and prompt fidelity versus profile takeover.
 
 - C fails while A/B remain stable → profile stacking is primary.
 - All three fail → simplify pose/composition, then inspect prose.
