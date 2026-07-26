@@ -215,6 +215,105 @@ def check_universal_2000_regression(text, errors, filename="references/templates
             )
 
 
+def check_s2_parameter_redefinition(text, errors, filename):
+    """I17: S2 runtime values belong to surfaces/model-routing, not prose rules."""
+    s2_tokens = list(re.finditer(r"(?<![A-Za-z0-9_])S2(?![A-Za-z0-9_])", text, re.I))
+    concrete_value = re.compile(
+        r"(?:"
+        r"`*(?:resolution|해상도)`*(?:은|는|을|를)?[ \t]*(?::|=)?[ \t\r\n]*"
+        r"`*(?:\d+(?:\.\d+)?k|low|medium|high|basic|최상단|중간[ \t]*티어)`*"
+        r"|"
+        r"`*(?:quality|품질)`*(?:은|는|을|를)?[ \t]*(?::|=)?[ \t\r\n]*"
+        r"`*(?:low|medium|high|basic|최상단|중간[ \t]*티어)`*"
+        r")",
+        re.I,
+    )
+    clause_boundary = re.compile(r"[.!?。|;；—·]")
+    for token in s2_tokens:
+        line_start = text.rfind("\n", 0, token.start()) + 1
+        found_line_end = text.find("\n", token.end())
+        line_end = len(text) if found_line_end == -1 else found_line_end
+        line = text[line_start:line_end]
+        local_start = token.start() - line_start
+        local_end = token.end() - line_start
+        if "|" in line:
+            cells = line.split("|")
+            cell_index = line[:local_start].count("|")
+            if cell_index < len(cells):
+                label_cell = cells[cell_index]
+                # A dedicated S2 row owns the immediately adjacent value cell.
+                # A combined S1·S2·S3 pointer row does not make its S1 values S2 rules.
+                if not re.search(r"(?<![A-Za-z0-9_])S[13](?![A-Za-z0-9_])", label_cell, re.I):
+                    adjacent = label_cell
+                    if cell_index + 1 < len(cells):
+                        adjacent += " " + cells[cell_index + 1]
+                    if concrete_value.search(adjacent):
+                        errors.append(
+                            f"{filename}:{line_of(text, token.start())}: [I17] S2 runtime parameter values redefined outside surfaces/model-routing"
+                        )
+                        return
+        left_boundaries = list(clause_boundary.finditer(line, 0, local_start))
+        clause_start = left_boundaries[-1].end() if left_boundaries else 0
+        right_boundary = clause_boundary.search(line, local_end)
+        clause_end = right_boundary.start() if right_boundary else len(line)
+        forward = line[local_end:clause_end]
+        if concrete_value.search(forward):
+            errors.append(
+                f"{filename}:{line_of(text, token.start())}: [I17] S2 runtime parameter values redefined outside surfaces/model-routing"
+            )
+            return
+        backward = line[clause_start:local_end]
+        for value in concrete_value.finditer(backward):
+            between = line[clause_start + value.end():local_start]
+            # A preceding S1/S1-legacy clause may name its own canonical value before
+            # a later "S1·S2·S3는 surfaces 참조" pointer. That is not an S2 rule.
+            if re.search(r"(?<![A-Za-z0-9_])S1(?:-legacy)?(?![A-Za-z0-9_])", between, re.I):
+                continue
+            # Reversed declarations stay clause-local: "quality high를 S2에서".
+            # A longer gap usually crosses into a new sentence or table clause.
+            if len(between) > 32 or re.search(r"[.!?。]|—", between):
+                continue
+            errors.append(
+                f"{filename}:{line_of(text, token.start())}: [I17] S2 runtime parameter values redefined outside surfaces/model-routing"
+            )
+            return
+        # A label-only line may put the concrete declaration on the next line.
+        # Do not scan arbitrary following prose: that recreates cross-row false positives.
+        label_tail = line[local_end:]
+        if re.fullmatch(
+            r"(?:는|면|에서|에서는)?(?:[ \t]*(?:플랫폼|파라미터|platform))?[ \t]*[:：][ \t]*",
+            label_tail,
+            re.I,
+        ):
+            next_lines = text[line_end + 1:].splitlines()[:2]
+            if concrete_value.search("\n".join(next_lines)):
+                errors.append(
+                    f"{filename}:{line_of(text, token.start())}: [I17] S2 runtime parameter values redefined outside surfaces/model-routing"
+                )
+                return
+
+
+def check_prompt_graph_canon(texts, errors):
+    """I18: transient PromptGraph lifecycle has one documentation authority."""
+    canonical = "references/prompt-graph.md"
+    graph = texts.get(canonical, "")
+    markers = (
+        "PromptGraphIR/v0",
+        "### 3-1. Extract",
+        "### 3-2. Resolve",
+        "### 3-3. Validate/Assemble",
+        "### 3-4. Serialize",
+        "### 3-5. Evaluate",
+        "PG-SERIALIZE-LEAK",
+    )
+    for marker in markers:
+        if marker not in graph:
+            errors.append(f"{canonical}: [I18] prompt graph canon missing {marker!r}")
+    owners = [name for name, text in texts.items() if "PromptGraphIR/v0" in text]
+    if owners != [canonical]:
+        errors.append(f"[I18] PromptGraphIR/v0 must be defined only in {canonical}; found {owners}")
+
+
 def check_mj_flag_sync(root, errors):
     """I16: Grok gate-card MJ flags and the validator constant stay byte-identical."""
     doc_path = root / "references" / "image" / "grok-imagine.md"
@@ -597,6 +696,16 @@ def main():
     for f in check_targets:
         if f in texts:
             check_universal_2000_regression(texts[f], errors, f)
+
+    # I17 — concrete S2 runtime values live in surfaces.md or the dated model roster.
+    for f, s in stamp_texts.items():
+        if f.startswith("references/") and f not in {
+            "references/image/surfaces.md",
+            "references/image/model-routing.md",
+        }:
+            check_s2_parameter_redefinition(s, errors, f)
+
+    check_prompt_graph_canon(stamp_texts, errors)
 
     check_contract_index_table(ROOT, errors)
     check_mj_flag_sync(ROOT, errors)

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Negative smoke coverage for lint.py invariants I0, I1, I2, I6, and I14."""
+"""Negative smoke coverage for lint.py documentation and contract invariants."""
 import importlib.util
 from pathlib import Path
 import tempfile
@@ -31,6 +31,71 @@ class LintInvariantSmokeTests(unittest.TestCase):
 
         lint.check_example_lengths("sample.md", f"```text\n{'가' * 2001}\n```", errors)
         self.assertTrue(any("2001 chars (> 2000)" in error for error in errors), errors)
+
+    def test_i17_rejects_s2_runtime_value_redefinition(self):
+        for sentence in (
+            "S2 플랫폼은 resolution 2k 이상 + quality high를 쓴다.",
+            "S2면 resolution 2k 이상 + quality high를 쓴다.",
+            "S2는 resolution 2k 이상 + quality high를 쓴다.",
+            "S2에서는 resolution 2k 이상 + quality high를 쓴다.",
+            "S2 quality high를 쓴다.",
+            "S2 resolution 4k를 쓴다.",
+            "S2 해상도 8k를 쓴다.",
+            "quality high를 S2에서 쓴다.",
+            "S2:\nresolution: 4k",
+            "S2는 `resolution` `4k`를 쓴다.",
+            "S2 플랫폼:\nresolution: 4k",
+            "| S2 플랫폼 파라미터 | `resolution` 2k 이상 + `quality` 최상단 티어. |",
+            "| S2 | resolution 4k |",
+        ):
+            with self.subTest(sentence=sentence):
+                errors = []
+                lint.check_s2_parameter_redefinition(
+                    sentence,
+                    errors,
+                    "references/image/example.md",
+                )
+                self.assertTrue(any("[I17]" in error for error in errors), errors)
+
+    def test_i17_allows_runtime_owned_s2_pointer(self):
+        for sentence in (
+            "S2는 선택 모델의 런타임 정의가 실제로 제공하는 축만 쓴다.",
+            "S1-legacy는 quality high, S1·S2·S3는 surfaces.md의 표면별 정책을 참조한다.",
+            "S2는 런타임 정의를 따른다. S1은 resolution 4k를 쓴다.",
+            "| S1·S2·S3 | S1-legacy quality high, 나머지는 surfaces.md 참조 |",
+        ):
+            with self.subTest(sentence=sentence):
+                errors = []
+                lint.check_s2_parameter_redefinition(
+                    sentence,
+                    errors,
+                    "references/image/example.md",
+                )
+                self.assertEqual([], errors)
+
+    def test_i18_requires_single_prompt_graph_canon(self):
+        graph = "\n".join((
+            "PromptGraphIR/v0",
+            "### 3-1. Extract",
+            "### 3-2. Resolve",
+            "### 3-3. Validate/Assemble",
+            "### 3-4. Serialize",
+            "### 3-5. Evaluate",
+            "PG-SERIALIZE-LEAK",
+        ))
+        errors = []
+        lint.check_prompt_graph_canon({"references/prompt-graph.md": graph}, errors)
+        self.assertEqual([], errors)
+
+        errors = []
+        lint.check_prompt_graph_canon(
+            {
+                "references/prompt-graph.md": graph,
+                "references/new-public-file.md": "PromptGraphIR/v0",
+            },
+            errors,
+        )
+        self.assertTrue(any("[I18]" in error for error in errors), errors)
 
     def test_i16_rejects_mj_flag_drift(self):
         with tempfile.TemporaryDirectory() as directory:
