@@ -289,6 +289,66 @@ def _garden_semantic_errors(value: dict[str, Any]) -> list[str]:
         for observation_id in inference.get("based_on", []):
             if observation_id not in observed_ids:
                 errors.append(f"$.inferences[{index}].based_on: unknown_observation_id:{observation_id}")
+    errors.extend(_token_provenance_errors(value, observed_ids))
+    return errors
+
+
+# Each origin admits exactly the statuses that can honestly describe it, and
+# only the two evidence-backed origins may cite an observation.
+ORIGIN_STATUS_BINDING = {
+    "user": {"explicit"},
+    "surface": {"explicit"},
+    "evidence": {"explicit", "derived"},
+    "derived": {"derived"},
+    "default": {"assumed"},
+}
+ORIGIN_REQUIRES_SOURCE = {"evidence", "derived"}
+
+
+def _token_provenance_errors(value: dict[str, Any], observed_ids: set[str]) -> list[str]:
+    """Node-level provenance on the recipe tokens a prompt is compiled from.
+
+    The fields are optional so existing v1 records stay valid, but a token that
+    declares provenance must declare all of it: a half-filled token is worse
+    than none because it reads as evidence-backed while citing nothing.
+
+    Provenance is audited here, at the recipe. It is deliberately not carried
+    into PromptBundle — that payload is what an engine executes, and the
+    compiler renders only the token text into it.
+    """
+    errors: list[str] = []
+    for field in ("qualified_tokens", "layout_tokens"):
+        tokens = value.get(field)
+        if not isinstance(tokens, list):
+            continue
+        for index, token in enumerate(tokens):
+            if not isinstance(token, dict):
+                continue
+            path = f"$.{field}[{index}]"
+            origin = token.get("origin")
+            status = token.get("status")
+            source_ref = token.get("source_ref")
+            if (origin is None) != (status is None):
+                errors.append(f"{path}: incomplete_token_provenance")
+            if source_ref is not None and status is None:
+                errors.append(f"{path}: incomplete_token_provenance")
+            if isinstance(source_ref, list):
+                for observation_id in source_ref:
+                    if observation_id not in observed_ids:
+                        errors.append(f"{path}.source_ref: unknown_observation_id:{observation_id}")
+            # Every origin is bound, not just the obvious two. A token whose
+            # value came from the user or the surface must not cite an
+            # observation as its source: the citation would read as
+            # evidence-backed in an audit when nothing was observed.
+            allowed_statuses = ORIGIN_STATUS_BINDING.get(origin)
+            if allowed_statuses is not None and status not in allowed_statuses:
+                errors.append(f"{path}: origin_status_conflict")
+            if origin is not None and origin in ORIGIN_REQUIRES_SOURCE and not source_ref:
+                errors.append(f"{path}: provenance_requires_source_ref")
+            if origin is not None and origin not in ORIGIN_REQUIRES_SOURCE and source_ref:
+                errors.append(f"{path}: origin_must_not_cite_observation")
+            if status == "assumed" and source_ref:
+                errors.append(f"{path}: assumed_token_must_not_cite_source")
     return errors
 
 

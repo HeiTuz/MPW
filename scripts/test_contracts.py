@@ -83,6 +83,82 @@ class SchemaFixtureTests(unittest.TestCase):
         self.assertTrue(any("unavailable_axis_must_be_empty" in error for error in errors), errors)
         self.assertTrue(any("unknown_observation_id" in error for error in errors), errors)
 
+    def test_token_provenance_is_optional_but_complete_when_declared(self) -> None:
+        recipe = fixture("garden-recipe.image.valid.json")
+        token = recipe["qualified_tokens"][0]
+        self.assertEqual(validate_document(recipe), [])
+        stripped = {key: token[key] for key in ("term", "effect", "scene_fit", "en")}
+        recipe["qualified_tokens"][0] = stripped
+        self.assertEqual(validate_document(recipe), [], "provenance stays optional for v1 records")
+        recipe["qualified_tokens"][0] = {**stripped, "origin": "evidence"}
+        self.assertTrue(
+            any("incomplete_token_provenance" in error for error in validate_document(recipe)),
+            "origin without status is half-filled provenance",
+        )
+
+    def test_token_provenance_must_match_its_evidence(self) -> None:
+        recipe = fixture("garden-recipe.image.valid.json")
+        base = recipe["qualified_tokens"][0]
+        recipe["qualified_tokens"][0] = {**base, "source_ref": ["obs_missing_01"]}
+        self.assertTrue(
+            any("unknown_observation_id:obs_missing_01" in e for e in validate_document(recipe)),
+        )
+        cited = {key: base[key] for key in ("term", "effect", "scene_fit", "en")}
+        recipe["qualified_tokens"][0] = {**cited, "origin": "evidence", "status": "explicit"}
+        self.assertTrue(
+            any("provenance_requires_source_ref" in e for e in validate_document(recipe)),
+            "an evidence-backed token must name the evidence",
+        )
+        recipe["qualified_tokens"][0] = {
+            **cited,
+            "origin": "default",
+            "status": "assumed",
+            "source_ref": ["obs_camera_01"],
+        }
+        self.assertTrue(
+            any("assumed_token_must_not_cite_source" in e for e in validate_document(recipe)),
+            "citing an observation makes a value derived, not assumed",
+        )
+        recipe["qualified_tokens"][0] = {**cited, "origin": "default", "status": "explicit"}
+        self.assertTrue(
+            any("origin_status_conflict" in e for e in validate_document(recipe)),
+        )
+
+    def test_every_origin_is_bound_to_the_statuses_it_can_honestly_carry(self) -> None:
+        recipe = fixture("garden-recipe.image.valid.json")
+        base = {
+            key: recipe["qualified_tokens"][0][key]
+            for key in ("term", "effect", "scene_fit", "en")
+        }
+
+        for provenance in (
+            {"origin": "evidence", "status": "explicit", "source_ref": ["obs_camera_01"]},
+            {"origin": "derived", "status": "derived", "source_ref": ["obs_camera_01"]},
+            {"origin": "user", "status": "explicit"},
+            {"origin": "surface", "status": "explicit"},
+            {"origin": "default", "status": "assumed"},
+        ):
+            recipe["qualified_tokens"][0] = {**base, **provenance}
+            self.assertEqual(validate_document(recipe), [], provenance)
+
+        for provenance, expected in (
+            # A user-supplied or surface-supplied value citing an observation
+            # would read as evidence-backed in an audit when nothing was observed.
+            ({"origin": "user", "status": "explicit", "source_ref": ["obs_camera_01"]},
+             "origin_must_not_cite_observation"),
+            ({"origin": "surface", "status": "explicit", "source_ref": ["obs_camera_01"]},
+             "origin_must_not_cite_observation"),
+            ({"origin": "derived", "status": "explicit", "source_ref": ["obs_camera_01"]},
+             "origin_status_conflict"),
+            ({"origin": "surface", "status": "assumed"}, "origin_status_conflict"),
+            ({"origin": "derived", "status": "derived"}, "provenance_requires_source_ref"),
+        ):
+            recipe["qualified_tokens"][0] = {**base, **provenance}
+            self.assertTrue(
+                any(expected in error for error in validate_document(recipe)),
+                f"expected {expected} for {provenance}",
+            )
+
 
 class PromptBundleTests(unittest.TestCase):
     def setUp(self) -> None:

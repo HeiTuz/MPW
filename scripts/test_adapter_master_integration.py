@@ -34,6 +34,10 @@ def loop_path(root: Path) -> Path:
         root / "scripts" / LOOP_FILENAMES[0],
     )
 BRIDGE_ROOT = skill_root("HIGGSFIELD_BRIDGE_ROOT")
+# The prompt-knowledge gardener carries the same contract mirror but has no
+# loop module: its analysis-to-recipe assembler lives in the skill script.
+PROMPT_KNOWLEDGE_ROOT = skill_root("PROMPT_KNOWLEDGE_ADAPTER_ROOT")
+PROMPT_KNOWLEDGE_SCRIPT = "scripts/prompt_knowledge_garden.py"
 CONTRACT_ROOT = Path(os.environ.get("MASTER_PROMPT_CONTRACT_ROOT", MASTER_ROOT / "contracts"))
 COMPILER_ROOT = Path(os.environ.get("MASTER_PROMPT_COMPILER_ROOT", MASTER_ROOT))
 EXTERNAL_INTEGRATION_OPT_OUT = "MPW_ALLOW_MISSING_EXTERNAL_INTEGRATION"
@@ -44,6 +48,7 @@ def external_dependency_paths() -> tuple[Path, ...]:
         loop_path(IMAGE_ROOT),
         loop_path(DESIGN_ROOT),
         BRIDGE_ROOT / "scripts/higgsfield_job.py",
+        PROMPT_KNOWLEDGE_ROOT / PROMPT_KNOWLEDGE_SCRIPT,
     )
 
 
@@ -54,7 +59,7 @@ def external_dependencies_available() -> bool:
     if os.environ.get(EXTERNAL_INTEGRATION_OPT_OUT) == "1":
         return False
     raise RuntimeError(
-        "external integration dependencies missing; configure the three root "
+        "external integration dependencies missing; configure the four root "
         f"environment variables or set {EXTERNAL_INTEGRATION_OPT_OUT}=1 to opt out: "
         + ", ".join(str(path) for path in missing)
     )
@@ -90,6 +95,9 @@ class AdapterMasterIntegrationTests(unittest.TestCase):
         cls.image_loop = load_module("integration_image_loop", loop_path(IMAGE_ROOT))
         cls.design_loop = load_module("integration_design_loop", loop_path(DESIGN_ROOT))
         cls.bridge = load_module("integration_higgsfield_bridge", BRIDGE_ROOT / "scripts/higgsfield_job.py")
+        cls.prompt_knowledge = load_module(
+            "integration_prompt_knowledge", PROMPT_KNOWLEDGE_ROOT / PROMPT_KNOWLEDGE_SCRIPT
+        )
         cls.image_recipe = json.loads((CONTRACT_ROOT / "v1/fixtures/garden-recipe.image.valid.json").read_text(encoding="utf-8"))
         cls.design_recipe = json.loads((CONTRACT_ROOT / "v1/fixtures/garden-recipe.design.valid.json").read_text(encoding="utf-8"))
 
@@ -131,6 +139,31 @@ class AdapterMasterIntegrationTests(unittest.TestCase):
             "media": [],
         }
         self.assertEqual([], self.bridge.schema_errors(job))
+
+    def test_prompt_knowledge_recipe_compiles_and_keeps_token_provenance(self) -> None:
+        """The prompt-knowledge gardener assembles recipes too, so its output
+        has to clear the same contract and compiler the image lane does."""
+        fixture = (
+            PROMPT_KNOWLEDGE_ROOT
+            / "scripts/fixtures/prompt-knowledge-analysis/image-doctrine.expected.json"
+        )
+        analysis = json.loads(fixture.read_text(encoding="utf-8"))
+        recipe = self.prompt_knowledge.build_garden_recipe(analysis)
+        self.assertEqual([], self.contracts.validate_document(recipe))
+
+        observation_ids = {
+            item["observation_id"]
+            for axis in recipe["observations"].values()
+            for item in axis.get("items", [])
+        }
+        cited = [token for token in recipe["qualified_tokens"] if "source_ref" in token]
+        self.assertTrue(cited, "the fixture must exercise the provenance handoff")
+        for token in cited:
+            self.assertIn(token["status"], {"explicit", "derived"})
+            self.assertTrue(set(token["source_ref"]) <= observation_ids)
+
+        bundle = self.compiler.compile_recipe(recipe)
+        self.assertEqual([], self.contracts.validate_document(bundle, recipe))
 
     def test_feedback_is_explicit_scoped_and_proposal_only(self) -> None:
         module = self.image_loop

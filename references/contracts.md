@@ -36,6 +36,7 @@
 - `source`에는 opaque `reference_id`와 content `reference_hash`만 둔다. 원본, caption, 파일/URL 경로, 계정·채팅 식별자, secret은 허용하지 않는다.
 - `observations`는 `subject`, `camera`, `lighting`, `palette` 축을 항상 포함한다. 적용할 수 없는 축은 `status: not_applicable`과 빈 `items`로 명시한다. UI/layout은 선택 `layout` evidence와 `layout_tokens`를 사용한다.
 - 각 inference는 `based_on` observation ID를 1개 이상 참조한다. 관찰 문장을 inference에 복사해 provenance를 흐리지 않는다.
+- `qualified_tokens`·`layout_tokens`의 각 토큰은 `origin`·`status`·`source_ref`로 노드 수준 provenance를 가질 수 있다. v1 기존 레코드 호환을 위해 선택이지만 **선언하면 완전해야 한다** — `origin`과 `status`는 함께 오고, `explicit`·`derived`는 `source_ref`로 근거 observation을 지목하며, `assumed`는 근거를 지목하지 않는다(지목하는 순간 관례값이 아니라 유도값이다). `status`에 `unresolved`는 없다. 미결 슬롯은 프롬프트에 실리는 토큰이 아니라 `unresolved_inputs` 소관이다.
 - `locks.identity`는 해당 사항이 없으면 빈 배열일 수 있다. `locks.subject`는 비어 있을 수 없다.
 - `intended_use`는 컴파일 목표의 mode/engine/goal만 나타낸다. 분석·저장 동작은 포함하지 않는다.
 

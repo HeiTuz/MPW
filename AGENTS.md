@@ -48,14 +48,17 @@ doctrine_output="$(python3 "$MPW_DOCTRINE_CHECKER")" && test -z "$doctrine_outpu
 
 `test_adapter_master_integration.py`는 가드너·브리지와의 교차 배선을 검증한다. 이 테스트가 `setUpClass`에서 의존성 누락으로 죽으면 **통과가 아니라 무증상 실패**다 — 실제로 스킬 디렉터리 rename 이후 이 상태로 방치되어 `compiled_by` 불일치·API 드리프트 3건이 숨어 있었다(2026-07-25 수리). 스킵/에러를 green으로 읽지 않는다.
 
-위 repo-local 루프는 이 모듈만 명시적으로 제외한다. 교차계약은 아래 세 경로를 주입한 별도 명령이 필수이며, 두 명령의 결과를 합쳐 전체 검증으로 판정한다. 루프 마지막 모듈의 성공이 앞선 실패를 덮지 않도록 실패 상태를 누적한다.
+위 repo-local 루프는 이 모듈만 명시적으로 제외한다. 교차계약은 아래 네 경로를 주입한 별도 명령이 필수이며, 두 명령의 결과를 합쳐 전체 검증으로 판정한다. 루프 마지막 모듈의 성공이 앞선 실패를 덮지 않도록 실패 상태를 누적한다.
 
-동반 레포 경로는 **환경변수로만** 주입한다(`IMAGE_REFERENCE_ADAPTER_ROOT`·`DESIGN_REFERENCE_ADAPTER_ROOT`·`HIGGSFIELD_BRIDGE_ROOT`). 자동 탐색은 없다 — 머신마다 다른 결과가 나오고 공개 배포물이 남의 홈 디렉터리 배치를 가정하게 되기 때문이다. 셋 중 하나라도 없으면 이 테스트는 **실패로 멈춘다**. `npm test`는 `MPW_ALLOW_MISSING_EXTERNAL_INTEGRATION=1`을 달고 이 단계를 부르므로 동반 레포가 없는 체크아웃에서도 그린이지만, 그때 교차 배선 4건은 **돌지 않은 것**이다. 교차 계약을 실제로 검증하려면 세 경로를 주입해 직접 부른다:
+동반 레포 경로는 **환경변수로만** 주입한다(`IMAGE_REFERENCE_ADAPTER_ROOT`·`DESIGN_REFERENCE_ADAPTER_ROOT`·`HIGGSFIELD_BRIDGE_ROOT`·`PROMPT_KNOWLEDGE_ADAPTER_ROOT`). 자동 탐색은 없다 — 머신마다 다른 결과가 나오고 공개 배포물이 남의 홈 디렉터리 배치를 가정하게 되기 때문이다. 넷 중 하나라도 없으면 이 테스트는 **실패로 멈춘다**. `npm test`는 `MPW_ALLOW_MISSING_EXTERNAL_INTEGRATION=1`을 달고 이 단계를 부르므로 동반 레포가 없는 체크아웃에서도 그린이지만, 그때 교차 배선 5건은 **돌지 않은 것**이다. 교차 계약을 실제로 검증하려면 네 경로를 주입해 직접 부른다:
 
 ```sh
 IMAGE_REFERENCE_ADAPTER_ROOT=<path> DESIGN_REFERENCE_ADAPTER_ROOT=<path> HIGGSFIELD_BRIDGE_ROOT=<path> \
+PROMPT_KNOWLEDGE_ADAPTER_ROOT=<path> \
   python3 scripts/test_adapter_master_integration.py
 ```
+
+prompt-knowledge 가드너는 loop 모듈이 없고 스킬 스크립트가 직접 레시피를 조립한다. 계약 미러만 들고 검증에서 빠져 있던 사각지대였다(2026-07-27 편입).
 
 검증기(`check_prompt.mjs`)와 문서 규칙이 어긋나면 어느 쪽이 맞는지 판정하고 한쪽을 고쳐 정렬한다 — 괴리를 남기는 게 최악이다(2026-07 캘리브레이션에서 헤더형 감지·조명 토큰 괴리를 이렇게 잡았다).
 
