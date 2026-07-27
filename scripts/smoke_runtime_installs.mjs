@@ -30,7 +30,7 @@ if (!completeAgentTree(root)) {
   fs.writeFileSync(path.join(distributionRoot, "agents", "codex", "SKILL.md"), `${canonical}\n<!-- Codex fixture integration surface -->\n`);
 }
 const installer = path.join(distributionRoot, "scripts", "install.mjs");
-const targets = ["claude", "gpt", "codex", "hermes", "gjc", "agents"];
+const targets = ["claude", "gpt", "codex", "hermes"];
 const required = [
   "SKILL.md",
   "references/templates.md",
@@ -45,7 +45,6 @@ const adapterHeadings = {
   gpt: "GPT/Codex",
   codex: "GPT/Codex",
   hermes: "Hermes",
-  gjc: "GJC",
 };
 
 function fail(message) {
@@ -88,8 +87,6 @@ function checkLinks(destination, relative) {
 function destination(home, target) {
   if (target === "hermes") return path.join(home, ".hermes", "skills", "prompt-writing", "MPW");
   if (target === "claude") return path.join(home, ".claude", "skills", "MPW");
-  if (target === "gjc") return path.join(home, ".gjc", "agent", "skills", "MPW");
-  if (target === "agents") return path.join(home, ".agents", "skills", "MPW");
   return path.join(home, ".codex", "skills", "MPW");
 }
 

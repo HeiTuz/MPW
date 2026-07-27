@@ -16,16 +16,13 @@ import {
 const here = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(here, "..");
 const skillName = "MPW";
-const legacyTargets = new Set(["gjc", "agents"]);
-const knownTargets = new Set(["auto", "all", "hermes", "claude", "codex", "gpt", ...legacyTargets]);
+const knownTargets = new Set(["auto", "all", "hermes", "claude", "codex", "gpt"]);
 
 export function destinationForTarget(homeDir, target) {
   const normalized = normalizeAgentHost(target);
   if (normalized === "hermes") return path.join(homeDir, ".hermes", "skills", "prompt-writing", skillName);
   if (normalized === "claude") return path.join(homeDir, ".claude", "skills", skillName);
   if (normalized === "codex") return path.join(homeDir, ".codex", "skills", skillName);
-  if (normalized === "gjc") return path.join(homeDir, ".gjc", "agent", "skills", skillName);
-  if (normalized === "agents") return path.join(homeDir, ".agents", "skills", skillName);
   throw new Error(`Unknown target: ${target}`);
 }
 
@@ -40,7 +37,7 @@ Usage:
   node scripts/install.mjs --dest /custom/skills/MPW
 
 Options:
-  --target <auto|all|hermes|codex|gpt|claude|gjc|agents>
+  --target <auto|all|claude|hermes|codex|gpt>
                                               Auto-detect by default, or install to a known target.
   --dest <path>                               Install to an explicit directory.
   --force                                     Replace an existing destination.
@@ -262,13 +259,10 @@ async function resolvePlans(opts, homeDir) {
       throw new Error("--target all cannot be combined with --dest; omit --dest to use host-specific locations");
     }
     const destination = path.resolve(expandDestination(opts.dest, homeDir));
-    const explicitHost = opts.targetExplicit && !["auto", "all", ...legacyTargets].includes(opts.target)
+    const explicitHost = opts.targetExplicit && !["auto", "all"].includes(opts.target)
       ? normalizeAgentHost(opts.target)
       : inferHostFromDestination(homeDir, destination);
     return [{ host: explicitHost, destination }];
-  }
-  if (legacyTargets.has(opts.target)) {
-    return [{ host: null, destination: destinationForTarget(homeDir, opts.target) }];
   }
   const detected = detectAgentHosts({ homeDir, existsSync: fs.existsSync });
   let hosts;
