@@ -27,10 +27,10 @@ jobs:
           tarball="$(npm pack --pack-destination "$pack_dir" --silent)"
           package="$pack_dir/$tarball"
           npx_home="$(mktemp -d)"
-          HOME="$npx_home" npx --yes --package "$package" heituzmpw -- --target agents --force --quiet
-          test -f "$npx_home/.agents/skills/MPW/SKILL.md"
-          test -f "$npx_home/.agents/skills/MPW/contracts/v1/image-production-handoff.schema.json"
+          HOME="$npx_home" npx --yes --package "$package" heituzmpw -- --target claude --force --quiet
+          test -f "$npx_home/.claude/skills/MPW/SKILL.md"
+          test -f "$npx_home/.claude/skills/MPW/contracts/v1/image-production-handoff.schema.json"
           bunx_home="$(mktemp -d)"
-          HOME="$bunx_home" bunx --package "$package" heituzmpw -- --target agents --force --quiet
-          test -f "$bunx_home/.agents/skills/MPW/SKILL.md"
-          test -f "$bunx_home/.agents/skills/MPW/contracts/v1/image-production-handoff.schema.json"
+          HOME="$bunx_home" bunx --package "$package" heituzmpw -- --target claude --force --quiet
+          test -f "$bunx_home/.claude/skills/MPW/SKILL.md"
+          test -f "$bunx_home/.claude/skills/MPW/contracts/v1/image-production-handoff.schema.json"

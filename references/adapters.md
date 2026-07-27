@@ -48,18 +48,11 @@
 
 ## Hermes
 
-- 설치/발견: 기본 installer target은 Hermes다. `npx --yes github:HeiTuz/MPW` 또는 `--target hermes`는 `~/.hermes/skills/prompt-writing/MPW`에 설치한다.
+- 설치/발견: `--target hermes`는 `~/.hermes/skills/prompt-writing/MPW`에 설치한다. 인자 없는 `npx --yes github:HeiTuz/MPW`의 기본 감지 대상은 Claude Code다.
 - 역할 매핑: Hermes skill invocation이 prime이다. Hermes에 planner/worker/reviewer skill 또는 agent lane이 있으면 core 역할에 매핑한다. 로컬 전용 경로나 동반 workflow 이름은 공개 core로 올리지 않는다.
 - 모델 선택 위치: Hermes runtime config. 이 저장소는 로컬 선택값이나 채널 선택값을 쓰지 않는다.
 - fallback: role lanes가 없으면 Hermes prime이 단일 실행 계약을 산출하고, critic 역할은 최종 self-check checklist로 축소한다.
 - 생성 실행 표면: 이 스킬은 IMAGE 컴파일을 끝낸 완성 프롬프트를 반환한다. 실제 생성은 사용자가 선택한 이미지·영상 도구가 담당하며, 비율·프리셋·미디어 참조 같은 구조화 옵션은 해당 도구 호출에 직접 전달한다. Hermes 런타임에 higgsfield MCP(mcp__higgsfield__*)가 연결돼 있으면 실행·QC·아티팩트는 설치가 공급한 로컬 실행 어댑터가 담당한다.
-
-## GJC
-
-- 설치/발견: `npx --yes github:HeiTuz/MPW --target gjc` 또는 `git clone <repo> ~/.gjc/agent/skills/MPW`.
-- 역할 매핑: active coding agent is prime. Built-in role agents map naturally: planner/architect → `planner`, worker/executor → `worker`, critic/verifier → `critic`. The prime/integrator remains responsible for state, joins, final verification, and completion claim.
-- 모델 선택 위치: GJC settings outside this repo. Do not hardcode backend IDs, local selector names, session lifecycle details, or workflow CLI verbs in public core prompts.
-- fallback: if role-agent routing is unavailable, run the shared core as one prime session and use explicit role sections in the generated prompt.
 
 ## 어댑터 작성 규칙
 
