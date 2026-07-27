@@ -114,9 +114,9 @@ bunx github:HeiTuz/MPW
 
 <br>
 
-- **감지 신호**: `~/.hermes`, `~/.claude`, `~/.codex` 같은 잘 알려진 스킬 디렉터리·CLI 설치 흔적만 봅니다. 비밀값이나 설정 파일 내용은 읽지 않습니다.
+- **감지 신호**: `~/.claude`, `~/.hermes`, `~/.codex` 같은 잘 알려진 스킬 디렉터리·CLI 설치 흔적만 봅니다. 비밀값이나 설정 파일 내용은 읽지 않습니다.
 - **대화형 터미널**: 감지된 대상을 보여주고 하나 또는 여러 개를 선택·확인합니다.
-- **CI·비대화형**: 절대 묻지 않습니다. 1개 감지 → 그대로 설치. 여러 개 감지 → Hermes 우선, Hermes가 없으면 `hermes > claude > codex` 우선순위의 첫 감지 대상. 0개 감지 → Hermes 위치에 설치(문서화된 기본값).
+- **CI·비대화형**: 절대 묻지 않습니다. 1개 감지 → 그대로 설치. 여러 개 감지 → `claude > hermes > codex` 우선순위의 첫 감지 대상. 0개 감지 → Claude Code 위치에 설치(문서화된 기본값).
 - 명시 `--target`/`--dest`는 항상 자동 감지를 이깁니다.
 
 </details>
@@ -125,13 +125,11 @@ bunx github:HeiTuz/MPW
 
 | 대상 | 설치 위치 | payload |
 |---|---|---|
-| `hermes` (기본·권장) | `~/.hermes/skills/prompt-writing/MPW` | 정본 Hermes-native 표면 |
-| `claude` | `~/.claude/skills/MPW` | **Claude Code용 마이그레이션 표면** |
-| `codex` / `gpt` | `~/.codex/skills/MPW` | **GPT/Codex용 마이그레이션 표면** |
-| `gjc` | `~/.gjc/agent/skills/MPW` | 정본 표면 |
-| `agents` | `~/.agents/skills/MPW` | 정본 표면 |
+| `claude` (기본값) | `~/.claude/skills/MPW` | 정본 트리 + Claude Code 진입 표면 |
+| `hermes` | `~/.hermes/skills/prompt-writing/MPW` | 정본 트리 그대로 — 오버레이 없음 |
+| `codex` / `gpt` | `~/.codex/skills/MPW` | 정본 트리 + GPT/Codex 진입 표면 |
 
-Hermes가 기본·선호 환경입니다. Claude Code와 Codex는 규칙 본문이 같고 호스트 통합 표면(발동·도구 명칭·frontmatter)만 마이그레이션된 변형을 받습니다 — 구조와 근거는 [agents/README.md](agents/README.md).
+자동 감지의 기본값은 Claude Code입니다. 어느 호스트로 설치하든 규칙 본문은 같고, 호스트 통합 표면(발동·도구 명칭·frontmatter)만 달라집니다 — 구조와 근거는 [agents/README.md](agents/README.md).
 
 <details>
 <summary><b>명시 설치 · 직접 설치</b></summary>
@@ -139,8 +137,8 @@ Hermes가 기본·선호 환경입니다. Claude Code와 Codex는 규칙 본문�
 <br>
 
 ```sh
-npx --yes github:HeiTuz/MPW -- --target hermes
 npx --yes github:HeiTuz/MPW -- --target claude
+npx --yes github:HeiTuz/MPW -- --target hermes
 npx --yes github:HeiTuz/MPW -- --target codex     # --target gpt 동일
 npx --yes github:HeiTuz/MPW -- --target all       # 감지된 전부에 설치
 npx --yes github:HeiTuz/MPW -- --dest /custom/skills/MPW
@@ -153,11 +151,9 @@ npx --yes github:HeiTuz/MPW -- --dest /custom/skills/MPW
 ```sh
 REPO=https://github.com/HeiTuz/MPW.git
 
-hermes skills install "$REPO" --category prompt-writing
-git clone "$REPO" ~/.codex/skills/MPW
 git clone "$REPO" ~/.claude/skills/MPW
-git clone "$REPO" ~/.gjc/agent/skills/MPW
-git clone "$REPO" ~/.agents/skills/MPW
+git clone "$REPO" ~/.codex/skills/MPW
+hermes skills install "$REPO" --category prompt-writing
 ```
 
 git clone은 정본 표면을 그대로 복사합니다. Claude·Codex용 마이그레이션 표면까지 적용하려면 installer를 쓰세요.

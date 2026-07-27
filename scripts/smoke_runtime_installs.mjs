@@ -166,13 +166,13 @@ for (const host of ["hermes", "claude", "codex"]) {
 const noDetectedHome = path.join(base, "auto-none");
 fs.mkdirSync(noDetectedHome, { recursive: true });
 run(["--force", "--quiet"], { ...process.env, HOME: noDetectedHome });
-assertInstalled(noDetectedHome, "hermes");
+assertInstalled(noDetectedHome, "claude");
 
 const multipleHome = path.join(base, "auto-multiple");
 for (const host of ["hermes", "claude", "codex"]) fs.mkdirSync(path.join(multipleHome, `.${host}`), { recursive: true });
 run(["--target", "auto", "--force", "--quiet"], { ...process.env, HOME: multipleHome });
-assertInstalled(multipleHome, "hermes");
-if (fs.existsSync(path.join(destination(multipleHome, "claude"), "SKILL.md"))) fail("non-interactive auto installed more than the preferred target");
+assertInstalled(multipleHome, "claude");
+if (fs.existsSync(path.join(destination(multipleHome, "hermes"), "SKILL.md"))) fail("non-interactive auto installed more than the preferred target");
 if (fs.existsSync(path.join(destination(multipleHome, "codex"), "SKILL.md"))) fail("non-interactive auto installed more than the preferred target");
 run(["--target", "all", "--force", "--quiet"], { ...process.env, HOME: multipleHome });
 for (const host of ["hermes", "claude", "codex"]) assertInstalled(multipleHome, host);

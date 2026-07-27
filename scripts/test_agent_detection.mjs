@@ -21,13 +21,13 @@ const home = path.join(os.tmpdir(), "agent-detection-home");
 assert.deepEqual(detectAgentHosts({ homeDir: home, existsSync: fakeExists(home, [".hermes"]) }), ["hermes"]);
 assert.deepEqual(detectAgentHosts({ homeDir: home, existsSync: fakeExists(home, [".claude", ".claude/skills"]) }), ["claude"]);
 assert.deepEqual(detectAgentHosts({ homeDir: home, existsSync: fakeExists(home, [".codex"]) }), ["codex"]);
-assert.deepEqual(detectAgentHosts({ homeDir: home, existsSync: fakeExists(home, [".codex", ".hermes", ".claude"]) }), ["hermes", "claude", "codex"]);
+assert.deepEqual(detectAgentHosts({ homeDir: home, existsSync: fakeExists(home, [".codex", ".hermes", ".claude"]) }), ["claude", "hermes", "codex"]);
 assert.deepEqual(detectAgentHosts({ homeDir: home, existsSync: () => false }), []);
 assert.deepEqual(detectAgentHosts({ homeDir: home, existsSync: () => false, cliSignals: { codex: true } }), ["codex"]);
 
 assert.deepEqual(deterministicAgentHosts("auto", ["codex", "claude"]), ["claude"]);
-assert.deepEqual(deterministicAgentHosts("auto", ["codex", "hermes", "claude"]), ["hermes"]);
-assert.deepEqual(deterministicAgentHosts("auto", []), ["hermes"]);
+assert.deepEqual(deterministicAgentHosts("auto", ["codex", "hermes", "claude"]), ["claude"]);
+assert.deepEqual(deterministicAgentHosts("auto", []), ["claude"]);
 assert.deepEqual(deterministicAgentHosts("all", ["codex", "hermes"]), ["hermes", "codex"]);
 assert.deepEqual(deterministicAgentHosts("gpt", []), ["codex"]);
 assert.deepEqual(parseInteractiveAgentHosts("claude,codex", ["hermes"]), ["claude", "codex"]);

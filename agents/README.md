@@ -20,7 +20,7 @@
 | `claude/` | Claude Code용 진입 표면(`SKILL.md`): Claude Code 스킬 발동 방식, Bash/Read/Write 도구 매핑, Task 하위 에이전트 역할 라우팅 노트. |
 | `codex/` | GPT/Codex용 진입 표면(`SKILL.md` + 설치본용 `AGENTS.md`): Codex skills 디렉터리 발견 방식, shell 도구 매핑, native subagent 역할 라우팅 노트. |
 
-`gjc`·`agents` 등 그 외 설치 target은 정본(Hermes-native) 표면을 그대로 받는다. `--target gpt`는 `codex` 오버레이와 동일하다.
+지원 설치 target은 `hermes`·`claude`·`codex` 셋뿐이다(`scripts/agent_targets.mjs`의 `AGENT_HOST_PRIORITY`). `--target gpt`는 `codex` 오버레이와 동일하다. 그 밖의 이름은 `Unsupported agent host`로 거절되며, 다른 위치에 넣으려면 `--dest`를 쓴다.
 
 ## 왜 `agents/<host>/`인가 — 관례 조사 근거 (2026-07 실측)
 
