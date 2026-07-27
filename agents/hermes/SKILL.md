@@ -7,13 +7,21 @@ metadata:
   category: prompt-writing
   locale: ko-KR
   doctrine: graph-first-delegation-contract
+  host_surface: hermes
+  canonical_source: "HeiTuz/MPW SKILL.md v2.24.0"
   updated_at: "2026-07-25"
   model_claims_reviewed_at: "2026-07-25"
   role_routing_reviewed_at: "2026-07-10"
   platform_roster_reviewed_at: "2026-07-25"
 ---
 
-# MPW — 디스패치 커널
+# MPW — 디스패치 커널 (Hermes 표면)
+
+> **호스트 통합 — Hermes.** 이 파일은 Hermes 설치본(`~/.hermes/skills/prompt-writing/MPW`)의 진입 표면이다. 규칙 본문은 정본 SKILL.md와 동일하며, 호스트 통합 표면(프런트매터·발동·도구 명칭)만 마이그레이션됐다.
+> - **발동**: Hermes가 skills 카탈로그에서 이 스킬을 로드하고 skill invocation이 prime이 된다.
+> - **도구 매핑**: 길이 실측(`wc -m`)·검증기(`node scripts/check_prompt.mjs`)·컴파일러(`python3 scripts/compile_*.py`)·references/ 확인은 전부 Hermes 셸 실행으로 처리한다.
+> - **역할 라우팅**: planner/worker/reviewer skill 또는 agent lane이 있으면 [references/adapters.md](references/adapters.md) §Hermes 매핑을 따르고, lane이 없으면 prime 단일 세션이 실행 계약을 산출한다.
+> - **생성 실행 표면**: higgsfield MCP(`mcp__higgsfield__*`)가 연결돼 있으면 실행·QC·아티팩트는 설치가 공급한 로컬 실행 어댑터가 담당한다.
 
 프롬프트는 지시문이 아니라 **위임 계약**이다. 실행자는 결과·경계·검증을 기준으로 자율적으로 일한다. 이 스킬은 단일 진입점이며 런타임별 호출 문법은 [references/adapters.md](references/adapters.md)를 따른다.
 

@@ -25,7 +25,8 @@ if (!completeAgentTree(root)) {
   });
   const canonical = fs.readFileSync(path.join(root, "SKILL.md"), "utf8");
   for (const host of ["hermes", "claude", "codex"]) fs.mkdirSync(path.join(distributionRoot, "agents", host), { recursive: true });
-  fs.writeFileSync(path.join(distributionRoot, "agents", "hermes", "README.md"), "Hermes uses the canonical entry point.\n");
+  fs.writeFileSync(path.join(distributionRoot, "agents", "hermes", "README.md"), "Hermes install note.\n");
+  fs.writeFileSync(path.join(distributionRoot, "agents", "hermes", "SKILL.md"), `${canonical}\n<!-- Hermes fixture integration surface -->\n`);
   fs.writeFileSync(path.join(distributionRoot, "agents", "claude", "SKILL.md"), `${canonical}\n<!-- Claude fixture integration surface -->\n`);
   fs.writeFileSync(path.join(distributionRoot, "agents", "codex", "SKILL.md"), `${canonical}\n<!-- Codex fixture integration surface -->\n`);
 }

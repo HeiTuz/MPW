@@ -160,7 +160,7 @@ function validateHostOverlay(sourceRoot, host) {
   if (!fs.existsSync(overlay) || !fs.statSync(overlay).isDirectory()) {
     throw new Error(`Install source is missing the ${normalized} agent overlay`);
   }
-  if (normalized !== "hermes" && !fs.existsSync(path.join(overlay, "SKILL.md"))) {
+  if (!fs.existsSync(path.join(overlay, "SKILL.md"))) {
     throw new Error(`Install source is missing agents/${normalized}/SKILL.md`);
   }
   const allowed = new Set(["AGENTS.md", "README.md", "SKILL.md"]);

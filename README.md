@@ -126,7 +126,7 @@ bunx github:HeiTuz/MPW
 | 대상 | 설치 위치 | payload |
 |---|---|---|
 | `claude` (기본값) | `~/.claude/skills/MPW` | 정본 트리 + Claude Code 진입 표면 |
-| `hermes` | `~/.hermes/skills/prompt-writing/MPW` | 정본 트리 그대로 — 오버레이 없음 |
+| `hermes` | `~/.hermes/skills/prompt-writing/MPW` | 정본 트리 + Hermes 진입 표면 |
 | `codex` / `gpt` | `~/.codex/skills/MPW` | 정본 트리 + GPT/Codex 진입 표면 |
 
 자동 감지의 기본값은 Claude Code입니다. 어느 호스트로 설치하든 규칙 본문은 같고, 호스트 통합 표면(발동·도구 명칭·frontmatter)만 달라집니다 — 구조와 근거는 [agents/README.md](agents/README.md).
@@ -156,7 +156,7 @@ git clone "$REPO" ~/.codex/skills/MPW
 hermes skills install "$REPO" --category prompt-writing
 ```
 
-git clone은 정본 표면을 그대로 복사합니다. Claude·Codex용 마이그레이션 표면까지 적용하려면 installer를 쓰세요.
+git clone은 호스트 중립인 정본 트리를 그대로 복사합니다. 호스트별 진입 표면까지 얹으려면 installer를 쓰세요.
 
 </details>
 

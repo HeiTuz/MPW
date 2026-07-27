@@ -8,6 +8,7 @@
 설치본 = 정본 allowlist 트리 + agents/<host>/ 오버레이 (같은 이름 파일은 오버레이가 대체)
 ```
 
+- 어느 호스트도 특권을 갖지 않는다 — 루트 `SKILL.md`는 호스트 중립 정본이고, 세 호스트 모두 각자의 진입 표면을 오버레이로 받는다.
 - 설치된 트리에는 `agents/` 폴더 자체가 들어가지 않는다 — 선택된 호스트의 오버레이만 적용되어, 설치본의 스킬 진입점은 `SKILL.md` 정확히 하나다.
 - 오버레이가 바꿀 수 있는 것은 **호스트 통합 표면**뿐이다: frontmatter, 발동/호출 안내, 도구 명칭 매핑, 진입 프레이밍. 스킬의 실제 규칙·동작은 정본과 동일해야 한다.
 - 설치 후에도 상대 참조(`references/`, `scripts/`, `contracts/`)는 전부 유효해야 한다.
@@ -16,7 +17,7 @@
 
 | 폴더 | 내용 |
 |---|---|
-| `hermes/` | 얇은 노트만. **정본 루트 payload가 곧 Hermes-native 표면**이므로 별도 마이그레이션이 없다. |
+| `hermes/` | Hermes용 진입 표면(`SKILL.md` + 설치본용 `README.md`): Hermes skills 카탈로그 발동 방식, 셸 도구 매핑, agent lane 역할 라우팅 노트. |
 | `claude/` | Claude Code용 진입 표면(`SKILL.md`): Claude Code 스킬 발동 방식, Bash/Read/Write 도구 매핑, Task 하위 에이전트 역할 라우팅 노트. |
 | `codex/` | GPT/Codex용 진입 표면(`SKILL.md` + 설치본용 `AGENTS.md`): Codex skills 디렉터리 발견 방식, shell 도구 매핑, native subagent 역할 라우팅 노트. |
 
