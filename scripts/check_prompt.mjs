@@ -203,10 +203,10 @@ function validateText(raw, opts = {}, rec = null, mode = "text") {
     if (p.length < 220) err(warnings, "W-SHORT-A", "프롬프트가 짧음 — 프로덕션 프롬프트는 구체 시각 명세가 더 필요.");
     if (!has(/(Scene\s*[:\n]|# ?\d*\.? ?Scene|한국|포스터|카드뉴스|도감|목업|아이콘|웹툰|만화|제품|패션|뷰티|인포그래픽)/)) err(errors, "E-CAT-LANG", "첫 절에 매체/카테고리(결과물 장르)가 드러나지 않음.");
     if (!has(/(Camera\s*[:\n]|# ?\d*\.? ?Camera|정면|톱다운|아이레벨|eye-level|로우앵글|클로즈업|와이드|중앙|레이아웃|컷|거터|읽힘)/)) err(errors, "E-CAM-LANG", "카메라·구도·레이아웃 언어가 없음.");
-    if (!has(/(Lighting\s*[:\n]|# ?\d*\.? ?Lighting|조명|키라이트|소프트박스|자연광|림라이트|그림자|컨택트 섀도|반사|flash|key light|fill|shadow|glow|ambient|tungsten)/i)) err(errors, "E-LIGHT-LANG", "명시적 조명 지시가 없음.");
+    if (!has(/(Lighting\s*[:\n]|# ?\d*\.? ?Lighting|조명|키라이트|소프트박스|자연광|창빛|아침빛|림라이트|그림자|컨택트 섀도|반사|flash|key light|fill|shadow|glow|ambient|tungsten|window light)/i)) err(errors, "E-LIGHT-LANG", "명시적 조명 지시가 없음.");
     if (!has(/(Texture(\/Medium)?\s*[:\n]|# ?\d*\.? ?Texture|재질|질감|광택|종이|실크|리넨|유리|포일|베벨|셀 쉐이딩|스크린톤|수채|잉킹|grain|matte|glossy|finish)/i)) err(errors, "E-TEX-LANG", "재질·질감·매체 디테일이 없음.");
   } else { // Format B — 콘텐츠 토큰 체크로 대체
-    if (!has(/(조명|키라이트|소프트박스|자연광|필라이트|림라이트|역광|그림자|광원|채광|정면광|측광|lighting|rim light|backlight|flash|key light|directional key|fill light|natural light|shadow|glow|specular|ambient light)/i)) err(errors, "E-LIGHT-LANG", "Format B 콘텐츠 토큰: 조명 어휘가 없음.");
+    if (!has(/(조명|키라이트|소프트박스|자연광|창빛|아침빛|필라이트|림라이트|역광|그림자|광원|채광|정면광|측광|lighting|rim light|backlight|flash|key light|directional key|fill light|natural light|window light|shadow|glow|specular|ambient light)/i)) err(errors, "E-LIGHT-LANG", "Format B 콘텐츠 토큰: 조명 어휘가 없음.");
     if (!has(/(재질|질감|텍스처|그레인|광택|매트|마감|texture|grain|finish)/i)) err(errors, "E-TEX-LANG", "Format B 콘텐츠 토큰: 질감 어휘가 없음.");
     if (hexCount < 3 || hexCount > 5) err(errors, "E-FMT-B-HEX", `Format B는 팔레트 HEX 3~5개 필수(현재 ${hexCount}개).`);
     if (p.length < 300 || p.length > 550) err(warnings, "W-LEN-B", `Format B 길이 ${p.length}자 — 300~550자 밴드 밖(타깃 350~450).`);
@@ -314,7 +314,8 @@ function validatePromo(rec, errors) {
   const driftSignals = [
     /(3D|three-dimensional).{0,20}(clay|클레이)/i,
     /(?:3\s*[~–-]\s*5|three to five).{0,20}(props?|소품)/i,
-    /(badge|배지|리본 밴드|스티커 칩|체크리스트 미니카드)/i,
+    // P12의 캐노니컬 마감 장치 "원형 씰 배지(circular seal badge)"는 카드 드리프트 신호가 아니다 — seal/씰 수식이 붙은 배지는 제외.
+    /((?<!seal[ -])badge|(?<!씰 )배지|리본 밴드|스티커 칩|체크리스트 미니카드)/i,
   ];
   if (driftSignals.filter((token) => token.test(prompt)).length >= 2)
     err(errors, "E-PROMO-CARD-DRIFT", "promo가 C7의 3D 히어로·소품·배지 밀도 문법으로 후퇴함.");

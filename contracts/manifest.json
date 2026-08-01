@@ -15,7 +15,7 @@
     "v1/fixtures/source-evidence-index.valid.json": "5614010b7d0aa795c96b91ff26a48df0dcce6d7cc6a3aa3692bcdc314d30792b",
     "v1/garden-recipe.schema.json": "93dbe3f295a95e50cb83a14fb7a6bc1abe9faef9042f3252bc2ed9626a768ed5",
     "v1/image-production-handoff.schema.json": "889fdc2f124a2b8e508c1a8fda19211d278625308fdf20b316d77f9fdcd6cc7c",
-    "v1/imggen2-production-record.schema.json": "a528e28da46eac7f0fcbb8b012551c960785a090e1fe8ccb97ec658b0b9ac748",
+    "v1/imggen2-production-record.schema.json": "9b105f20a9ff3be3e569b841f11e11ba3ab040c6247abf836a7dd140ef2e89a1",
     "v1/mpw-recompile-request.schema.json": "6906b0572fc57df8a917401c6efeb00b0b42a82125468cd6252c0f018adc9532",
     "v1/production-adapter-options.schema.json": "7b743a90e83f9e5c1a05b5ec9b06213d15d2001498ce2534b57ddc992c3f6d65",
     "v1/prompt-bundle.schema.json": "d5ad38249771b6154036c867a067a7b92a16a50e1eb5e8f89aea617e4cc51675",
