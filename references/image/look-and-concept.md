@@ -7,7 +7,7 @@
 | 단계 | 결정값 | 고정 규칙 |
 |---|---|---|
 | 1 | 피사체·목적 | 제품·인물·포스터·카드 등 산출물 종류를 먼저 확정한다. |
-| 2 | L1~L8 룩 프리셋 | 마감 톤 1개만 선택한다. 프리셋 혼합은 팔레트 충돌로 금지한다. |
+| 2 | L1~L9 룩 프리셋 | 마감 톤 1개만 선택한다. 프리셋 혼합은 팔레트 충돌로 금지한다. |
 | 3 | M/R/X/T 축 | 컨셉 다변화가 필요할 때 축 1개만 선택한다. |
 | 4 | HEX 팔레트 | 사조 HEX와 프리셋 HEX가 충돌하면 사조 HEX를 우선한다. |
 | 5 | 컴파일 | 텍스트·레이아웃·티어 규칙은 `typography.md`, jsonl·러너 규칙은 `production.md`를 참조한다. |
@@ -24,8 +24,9 @@
 | 레트로, 옛날 느낌, 다방, 국풍 | 오프셋 망점·바랜 종이·붓글씨가 핵심 | L6 코리안 레트로 인쇄 | 70s 유동 형태가 핵심이면 M9로 이동 |
 | 부드러운, 교육, 워크숍, 친근한 | 파스텔 카드·라운드 도형·균등광이 핵심 | L7 소프트 파스텔 | 고급 초대장 톤이면 L8로 이동 |
 | 시상식, 초대장, 연말, 골드 | 딥 컬러 필드·금박·엠보싱이 핵심 | L8 골드 포일 프리미엄 | 백화점 시즌 캠페인 톤이면 L1로 이동 |
+| 홍대 감성, 인디, 필름 감성, 힙한 | 플래시 스냅의 니어블랙 폴오프·리소 2도 형광·라이트리크가 핵심 | L9 인디 플래시 리소 | 오프셋 망점·붓글씨 인쇄물 톤이면 L6로, 정제된 필름 스틸 그레이드면 L2로 이동 |
 
-## 3. 룩 프리셋 8종 드롭인 블록
+## 3. 룩 프리셋 9종 드롭인 블록
 
 | 코드 | 성격 | 팔레트 | 드롭인 |
 |---|---|---|---|
@@ -37,6 +38,7 @@
 | L6 코리안 레트로 인쇄 | 70~90년대 한국 인쇄물. 오프셋 망점, 바랜 종이, 붓글씨 헤드라인. | `#E8DCC4` 바랜 크림 · `#B33A2B` 주홍 · `#274A78` 청람 | `vintage Korean offset-print poster, visible halftone dots and slight ink misregistration, aged cream paper #E8DCC4, vermilion #B33A2B and indigo-blue #274A78 spot inks, bold brush-stroke Korean headline, worn paper texture at the edges` |
 | L7 소프트 파스텔 | 따뜻한 파스텔 카드 틴트 + 라운드 도형. 교육·워크숍·커뮤니티 톤. | `#FFF9F2` 웜 화이트 · `#FFD9C7` 피치 · `#CDE8DE` 민트 · `#D9D2F0` 라벤더 | `warm white canvas #FFF9F2, rounded card shapes tinted in soft peach #FFD9C7, mint #CDE8DE and lavender #D9D2F0, flat friendly illustration style with simple geometric characters, even soft lighting, paper-smooth matte finish` |
 | L8 골드 포일 프리미엄 | 딥 컬러 필드 + 금박 모티프 + 엠보싱. 초대장·시상·연말 톤. | `#101A2E` 딥 네이비 또는 `#1A2E1E` 딥 그린 · `#C9A24B` 골드 포일 · `#F3EEE2` 크림 | `deep navy field #101A2E, embossed gold-foil motifs #C9A24B catching a soft raking light, cream type #F3EEE2, letterpress paper texture with debossed line ornaments, ceremonial premium finish` |
+| L9 인디 플래시 리소 | 인디 신 감성 — 35mm 플래시 스냅의 니어블랙 폴오프 + 리소 2도 그레인 + 필름 라이트리크. 거칠지만 절제된 인쇄 톤. 난해함은 버리고 시그니파이어만 남긴다. | `#0B0D12` 니어블랙 · `#E8C4A8` 플래시 웜스킨 · `#FF48A0` 리소 핑크 · `#2A48C4` 리소 블루 · `#E8DCC4` 바랜 크림 | `direct on-camera flash with deep near-black falloff, 35mm film grain and halation, a soft light leak bleeding from one corner, riso two-tone accents in fluorescent pink #FF48A0 and rich blue #2A48C4 over aged cream #E8DCC4, gritty analog indie-scene finish that still reads as composed` |
 
 ## 4. 죽은 단어 환원 표
 
@@ -150,5 +152,6 @@
 |---|---|
 | L5 | VOL.2 키비주얼·구조도에서 검증(2026-07-02, 한글 렌더 정확). |
 | L1~L4·L6~L8 | 어휘 단위는 기존 실측 범위(photo-vocab·C3·C11) 안이지만 프리셋 단위 실측은 미완. 첫 사용 시 2컷 변주로 검증 후 확정 권장. |
+| L9 | 프리셋 단위 실측 미완. 니어블랙 폴오프·리소 듀오톤·라이트리크 세 시그니처가 함께 있어야 톤이 성립한다 — 하나라도 빠지면 일반 필름 프리셋으로 퇴행한다. 첫 사용 시 2컷 변주로 검증 후 확정 권장. |
 | M·R·X·T 전 축 | 어휘 단위는 기존 실측 범위(photo-vocab·C3·C8·C11) 안이지만 축 단위 실측은 미완. 첫 사용 시 2컷 변주 검증 후 확정 권장. |
 | T3·T4 | 렌더 편차가 클 수 있어 후보 3컷 이상 권장. |

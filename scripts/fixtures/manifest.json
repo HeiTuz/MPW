@@ -203,7 +203,8 @@
       "codes": [
         "E-SIZE-EDGE",
         "E-SIZE-MULT",
-        "E-SIZE-RATIO"
+        "E-SIZE-RATIO",
+        "E-REC-CATEGORY"
       ]
     }
   },
@@ -220,20 +221,38 @@
   {
     "path": "fixtures/good/typography_poster.jsonl",
     "mode": "jsonl",
-    "expect": { "ok": true }
+    "expect": {
+      "ok": true
+    }
   },
   {
     "path": "fixtures/bad/typography_poster.jsonl",
     "mode": "jsonl",
     "expect": {
       "ok": false,
-      "codes": ["E-TP-PALETTE", "E-TP-PALETTE-RANGE", "E-TP-DUP-GUARD", "E-TEXT-QUOTE", "E-TP-LEGIBILITY", "E-TP-GRAFT", "E-TP-REPEATED-GUARDS", "E-TP-EXACT-GUARD", "E-TP-EXACT-PRIMARY", "E-TP-TEXTURE"]
+      "codes": [
+        "E-TP-PALETTE",
+        "E-TP-PALETTE-RANGE",
+        "E-TP-DUP-GUARD",
+        "E-TEXT-QUOTE",
+        "E-TP-LEGIBILITY",
+        "E-TP-GRAFT",
+        "E-TP-REPEATED-GUARDS",
+        "E-TP-EXACT-GUARD",
+        "E-TP-EXACT-PRIMARY",
+        "E-TP-TEXTURE",
+        "E-TP-SPECIMEN",
+        "E-TP-PATTERN"
+      ]
     }
   },
   {
     "path": "fixtures/good/s2_platform_long.txt",
     "mode": "text",
-    "flags": ["--surface", "s2"],
+    "flags": [
+      "--surface",
+      "s2"
+    ],
     "expect": {
       "ok": true
     }
@@ -241,7 +260,12 @@
   {
     "path": "fixtures/good/s2_platform_long.txt",
     "mode": "text",
-    "flags": ["--surface", "s2", "--engine", "higgsfield"],
+    "flags": [
+      "--surface",
+      "s2",
+      "--engine",
+      "higgsfield"
+    ],
     "expect": {
       "ok": true
     }
@@ -249,7 +273,12 @@
   {
     "path": "fixtures/good/s2_platform_long.txt",
     "mode": "text",
-    "flags": ["--surface", "s3", "--channel", "unbounded"],
+    "flags": [
+      "--surface",
+      "s3",
+      "--channel",
+      "unbounded"
+    ],
     "expect": {
       "ok": true
     }
@@ -259,16 +288,25 @@
     "mode": "text",
     "expect": {
       "ok": false,
-      "codes": ["E-OVERFLOW-2000"]
+      "codes": [
+        "E-OVERFLOW-2000"
+      ]
     }
   },
   {
     "path": "fixtures/bad/overflow_2000.txt",
     "mode": "text",
-    "flags": ["--surface", "s2", "--channel", "bounded"],
+    "flags": [
+      "--surface",
+      "s2",
+      "--channel",
+      "bounded"
+    ],
     "expect": {
       "ok": false,
-      "codes": ["E-OVERFLOW-2000"]
+      "codes": [
+        "E-OVERFLOW-2000"
+      ]
     }
   },
   {
@@ -276,16 +314,23 @@
     "mode": "jsonl",
     "expect": {
       "ok": false,
-      "codes": ["E-OVERFLOW-2000"]
+      "codes": [
+        "E-OVERFLOW-2000"
+      ]
     }
   },
   {
     "path": "fixtures/bad/midjourney_engine.txt",
     "mode": "text",
-    "flags": ["--engine", "midjourney"],
+    "flags": [
+      "--engine",
+      "midjourney"
+    ],
     "expect": {
       "ok": false,
-      "codes": ["E-ENGINE-SCOPE"]
+      "codes": [
+        "E-ENGINE-SCOPE"
+      ]
     }
   },
   {
@@ -293,7 +338,9 @@
     "mode": "jsonl",
     "expect": {
       "ok": false,
-      "codes": ["E-REC-FIELD"]
+      "codes": [
+        "E-REC-FIELD"
+      ]
     }
   },
   {
@@ -301,7 +348,71 @@
     "mode": "jsonl",
     "expect": {
       "ok": false,
-      "codes": ["E-REC-QUALITY"]
+      "codes": [
+        "E-REC-QUALITY"
+      ]
+    }
+  },
+  {
+    "path": "fixtures/good/promo_patterns_plate_bound.jsonl",
+    "mode": "jsonl",
+    "expect": {
+      "ok": true
+    }
+  },
+  {
+    "path": "fixtures/bad/promo_plate_bound_gates.jsonl",
+    "mode": "jsonl",
+    "expect": {
+      "ok": false,
+      "codes": [
+        "E-PROMO-EFFECT",
+        "E-PROMO-COLOR-LOCK",
+        "E-PROMO-TYPE-STRUCTURE",
+        "E-PROMO-KO-MASK-LEN",
+        "E-PROMO-PATTERN"
+      ]
+    }
+  },
+  {
+    "path": "fixtures/bad/rec_audit.jsonl",
+    "mode": "jsonl",
+    "expect": {
+      "ok": false,
+      "codes": [
+        "E-REC-CATEGORY",
+        "E-REC-TIER",
+        "E-REC-FORMAT",
+        "E-PATH-ESCAPE",
+        "E-QA-GATE"
+      ]
+    }
+  },
+  {
+    "path": "fixtures/bad/rec_empty.jsonl",
+    "mode": "jsonl",
+    "expect": {
+      "ok": false,
+      "codes": [
+        "E-REC-EMPTY"
+      ]
+    }
+  },
+  {
+    "path": "fixtures/good/w_neg_ko.txt",
+    "mode": "text",
+    "expect": {
+      "ok": true,
+      "warn_codes": [
+        "W-NEG-KO"
+      ]
+    }
+  },
+  {
+    "path": "fixtures/good/rec_qa_na.jsonl",
+    "mode": "jsonl",
+    "expect": {
+      "ok": true
     }
   }
 ]

@@ -13,8 +13,8 @@
 | 렌더 텍스트·레이아웃·내부 그리드·한글 정확도 레버 | [typography.md](typography.md) |
 | 화보 Format B·Tier-2 페어·패션 택소노미·포즈/조명/소재 어휘·한국 로컬리티·컨셉-콜리전 그래머·Soul 교차 | [editorial-fashion.md](editorial-fashion.md) (라우터에서 필요한 §의 파일만 로드) |
 | 무드→룩 프리셋·컨셉 변수 축·죽은 단어 환원 | [look-and-concept.md](look-and-concept.md) |
-| 정보성 C7 카드 vs 디자인 홍보물 분기·P1~P8 점진 로딩·promo 게이트 | [promo-router.md](promo-router.md) |
-| 글자 자체가 주제인 TP1~TP14 타이포 포스터 라우팅·레그빌리티·패턴 계약 | [typography-poster-router.md](typography-poster-router.md) → [typography-poster-patterns.md](typography-poster-patterns.md) |
+| 정보성 C7 카드 vs 디자인 홍보물 분기·P1~P12 점진 로딩·promo 게이트 | [promo-router.md](promo-router.md) |
+| 글자 자체가 주제인 TP1~TP17 타이포 포스터 라우팅·레그빌리티·패턴 계약 | [typography-poster-router.md](typography-poster-router.md) → [typography-poster-patterns.md](typography-poster-patterns.md) |
 | 의류 컴파일 규칙·입력 게이트 | [apparel-compiler.md](apparel-compiler.md) |
 | jsonl 스키마·배치/챕터·모델 팩트·검증기 에러 코드 | [production.md](production.md) |
 | 실사감(카메라·조명·불완전성)·현실감 실패 모드·현실감 게이트·실사 영상 증분 | [realism.md](realism.md) |
@@ -24,7 +24,7 @@
 | 단계 | 실행 | 판정 문장 |
 |---|---|---|
 | 1 | 거친 요청에서 빠진 카테고리·컷타입·피사체·스타일·구도·텍스트·AR을 추론해 채운다. 취향 디테일은 질문하지 않고 결정한다. 질문 대상은 정확한 한글 문구·브랜드명·민감 소재뿐이다. | 빈칸 때문에 멈추면 틀렸고, 결과를 바꾸는 하드라인만 질문하면 맞다. |
-| 2 | 카테고리/컷타입이 잡히면 `categories.md`의 C1~C12를 적용한다. 정보 전달 카드면 C7을 유지하고, 디자인 홍보물·판촉물·브랜드 포스터면 `promo-router.md`에서 P1~P8 중 하나를 고른 뒤 해당 상세 파일 하나만 읽는다. 무드 요청은 룩 L1~L8 중 1개를 색·빛·질감 권한으로 적용하고, 시안 다변화·양산 컨셉·차별화 요청은 기존 M/R/X/T1~T5·컬러 번역 중 축 1개로 변주한다. | promo가 C7 소품·배지 밀도로 후퇴하거나 P/L 팔레트가 둘이면 틀렸고, P 1개가 구조를 지배하고 팔레트 권한이 하나면 맞다. |
+| 2 | 카테고리/컷타입이 잡히면 `categories.md`의 C1~C12를 적용한다. 정보 전달 카드면 C7을 유지하고, 디자인 홍보물·판촉물·브랜드 포스터면 `promo-router.md`에서 P1~P12 중 하나를 고른 뒤 해당 상세 파일 하나만 읽는다. 무드 요청은 룩 L1~L9 중 1개를 색·빛·질감 권한으로 적용하고, 시안 다변화·양산 컨셉·차별화 요청은 기존 M/R/X/T1~T5·컬러 번역 중 축 1개로 변주한다. | promo가 C7 소품·배지 밀도로 후퇴하거나 P/L 팔레트가 둘이면 틀렸고, P 1개가 구조를 지배하고 팔레트 권한이 하나면 맞다. |
 | 3 | 아래 철칙 10개를 적용한다. AR 토큰은 표면이 정한다 — **S3 붙여넣기 표면일 때만** 끝에 `AR x:y` 토큰 하나를 두고, S1·S2에서는 비율이 파라미터이므로 본문에 AR을 쓰지 않는다(§5). | 앞브래킷이나 슬롯 토큰이 남으면 틀렸고, S3에서 끝 AR 하나만·S1·S2에서 본문 AR 0개면 맞다. |
 | 4 | 산출 전 레인 게이트 카드와 이 파일의 체크 표를 대조한다. 검증·린트·포맷터 실행은 리더 일괄 소관이다. | 도구 실행으로 책임을 넘기면 틀렸고, 문서 규칙으로 자가 대조하면 맞다. |
 | 5 | 생성 단계로 이어질 때는 컴파일된 프롬프트만 러너에 전달한다. 거친 원문은 전달하지 않는다. | 초안과 완성본이 함께 넘어가면 틀렸고, 완성 프롬프트 1개만 넘어가면 맞다. |

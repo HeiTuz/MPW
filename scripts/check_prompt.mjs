@@ -28,6 +28,14 @@ const REWRITE_MAP = {
   "no logo": "로고 없는 클린 마감", "no background": "단색 스튜디오 배경", "no blur": "엣지까지 또렷한 포커스",
   "no shadow": "균등광의 평면 조명", "without": "뺄 요소 대신 원하는 요소만 서술", "avoid": "피할 상태 대신 원하는 상태를 서술",
 };
+// promo P9~P12 확장 — 결속 대상이 피사체가 아니라 판면 골격인 패턴의 물리 구조 어휘(P1~P8 판정 불변, 조건부 인정).
+const PROMO_PLATE_BOUND = new Set(["P9", "P10", "P11", "P12"]);
+const TRIM_STRUCTURE = /(trim (?:edge|width)|재단선|touching both trim edges|cropped past|cut (?:off|through) by|clipped by|bleeding to all four edges|filling the panel width|판면 폭|baseline locked|dead flat on top|hard against the (?:top|bottom)|fixed (?:bottom|lower) band|마진에? (?:밀착|눌러|앵커)|하단 밴드)/i;
+// TP17 견본 시트 생명줄 — 매트릭스와 래더의 동시 존재
+const TP17_MATRIX = /(specimen|matrix|매트릭스|glyph set|글리프 세트|견본)/i;
+const TP17_LADDER = /(ladder|래더|굵기.{0,8}단계)/i;
+// 레코드 스키마 감사 게이트
+const CATEGORY_RE = /^C([1-9]|1[0-2])$/;
 // 에디토리얼 뷰티 마감 불변식 (2026-07 컨셉-콜리전 그래머 §15 반영)
 const GLOW_TOKENS = [/\bdewy\b/i, /\bluminous skin\b/i, /subsurface (?:glow|sheen|scatter)/i, /\bglass skin\b/i, /\bwet[- ]?look\b/i, /\bhigh[- ]?shine\b/i, /\bglistening skin\b/i];
 const MATTE_QUALIFIER = /(matte|무광|매트|비유광|semi[- ]?matte|restrained sheen)/i;
@@ -54,7 +62,7 @@ function detectFormat(p) {
   return "A";
 }
 
-function checkNegatives(p, tier, renderText, errors) {
+function checkNegatives(p, tier, renderText, errors, warnings) {
   if (/\bNegative\s*:/i.test(p)) err(errors, "E-NEG-SECTION", "`Negative:` 섹션 금지 — 전부 긍정형 서술로.");
   let scan = p.replace(/negative\s+space/gi, ""); // 디자인 여백 용어는 허용
   const alt = TAIL.map(esc).join("|");
@@ -84,6 +92,12 @@ function checkNegatives(p, tier, renderText, errors) {
     if (tier < 1) err(errors, "E-NEG-TIER", `티어 0에서 Tier-1 화이트리스트 문구 사용(${t1.join("; ")}) — --tier 1 선언 필요.`);
     else if (!renderText) err(errors, "E-NEG-TIER", "렌더 텍스트(따옴표 카피)가 없는데 Tier-1 문구 사용 — 렌더 텍스트가 실제로 있을 때만 유효.");
     for (const ph of t1) scan = scan.replace(new RegExp(esc(ph), "gi"), " ");
+  }
+  // 한국어 지시형 부정문 — 상태 서술형("텍스트 없음")은 긍정형으로 허용하고 지시형만 잡는다(경고).
+  const koNeg = scan.match(/[가-힣A-Za-z0-9 ]{0,12}(?:금지|하지 ?마|하지 ?않(?:는다|도록|게|아야)|없어야|없도록|제외하고|빼고)/g);
+  if (koNeg) {
+    const uniqKo = [...new Set(koNeg.map((s) => s.trim()))].slice(0, 3);
+    err(warnings, "W-NEG-KO", `한국어 지시형 부정문 감지(${uniqKo.join(" / ")}) — 장면 배제는 긍정형 재서술이 안전(예: "군중 제외하고" → "인물 한 명, 단독").`);
   }
   const neg = scan.match(/\b(?:no|without|avoid|exclude|never|free of|devoid of|do not|don't)\s+[A-Za-z][A-Za-z'-]*(?:\s+[A-Za-z'-]+)?/gi);
   if (neg) {
@@ -210,7 +224,7 @@ function validateText(raw, opts = {}, rec = null, mode = "text") {
   if ((renderText || has(/(텍스트|한글|타이틀|부제|라벨|말풍선|내레이션|SFX|카피|문구)/)) && !has(/(또렷|가독|한 번씩만|1~2개만|legible|appears once)/))
     err(warnings, "W-TEXT-GUARD", "텍스트가 있는데 가독성/반복 가드가 없음 (예: \"모든 텍스트는 한 번씩만, 또렷하게\").");
 
-  checkNegatives(p, tier, renderText, errors);
+  checkNegatives(p, tier, renderText, errors, warnings);
   checkEditorialFinish(p, errors, warnings);
 
   // ── 앞브래킷 / 슬롯 잔존 / SD 폐기 문법 (v1 유지) ──
@@ -267,13 +281,14 @@ function validatePromo(rec, errors) {
     ["P1", "mask"], ["P2", "extrusion"], ["P3", "occlusion"],
     ["P4", "interlock"], ["P5", "printed_meta_ui"], ["P6", "occlusion"],
     ["P7", "rotated_axis"], ["P8", "staging"],
+    ["P9", "trim_span"], ["P10", "margin_satellite"], ["P11", "flat_overlay"], ["P12", "anchor_band"],
   ]);
   if (!new Set(["C3", "C5"]).has(rec.category))
     err(errors, "E-PROMO-ROUTE", "디자인 promo_poster는 C3/C5 + P 패턴으로만 라우팅할 수 있음.");
   if (!patternEffects.has(rec.promo_pattern))
-    err(errors, "E-PROMO-PATTERN", "promo_poster는 promo_pattern P1~P8 중 정확히 1개가 필요.");
-  if (!/^L[1-8]$/.test(rec.look_preset ?? ""))
-    err(errors, "E-PROMO-LOOK", "promo_poster는 구현된 look_preset L1~L8 중 정확히 1개가 필요.");
+    err(errors, "E-PROMO-PATTERN", "promo_poster는 promo_pattern P1~P12 중 정확히 1개가 필요.");
+  if (!/^L[1-9]$/.test(rec.look_preset ?? ""))
+    err(errors, "E-PROMO-LOOK", "promo_poster는 구현된 look_preset L1~L9 중 정확히 1개가 필요.");
   if (patternEffects.has(rec.promo_pattern) && rec.promo_text_effect !== patternEffects.get(rec.promo_pattern))
     err(errors, "E-PROMO-EFFECT", `${rec.promo_pattern}의 promo_text_effect는 ${patternEffects.get(rec.promo_pattern)}여야 함.`);
   if (typeof rec.promo_subject !== "string" || !rec.promo_subject.trim() || !scene.includes(rec.promo_subject.trim()))
@@ -289,8 +304,8 @@ function validatePromo(rec, errors) {
     err(errors, "E-PROMO-COLOR-LOCK", `promo는 중복 제거한 HEX 2~3색 하드 락(현재 ${hexes.size}색).`);
 
   const physical = /(mask(?:ed|ing)?|마스킹|extrud(?:ed|ing)|압출|overlap(?:ping)?|오클루전|behind|뒤로|interlock(?:ing)?|break(?:ing)? (?:out|outside)|프레임 밖|rotat(?:ed|ing)|회전|printed (?:on|at)|인쇄된|emboss(?:ed|ing)|deboss(?:ed|ing)|지지 구조)/i;
-  if (!physical.test(scene))
-    err(errors, "E-PROMO-TYPE-STRUCTURE", "Scene에서 promo_subject와 마스크·압출·가림·회전·인쇄 구조가 함께 확인되지 않음.");
+  if (!(physical.test(scene) || (PROMO_PLATE_BOUND.has(rec.promo_pattern) && TRIM_STRUCTURE.test(scene))))
+    err(errors, "E-PROMO-TYPE-STRUCTURE", "Scene에서 promo_subject와 마스크·압출·가림·회전·인쇄(또는 P9~P12의 재단선 물림·밴드 고정) 구조가 함께 확인되지 않음.");
 
   const finishers = rec.finishing_devices;
   if (!Array.isArray(finishers) || finishers.length < 1 || finishers.length > 3 || finishers.some((value) => typeof value !== "string" || !value.trim()))
@@ -322,12 +337,16 @@ function validatePromo(rec, errors) {
 function validateTypographyPoster(rec, errors) {
   const isTp = typeof rec.tp_pattern === "string" || rec.cut_type === "typography_poster";
   if (!isTp) return;
-  const patterns = new Set(Array.from({ length: 14 }, (_, i) => `TP${i + 1}`));
-  if (!patterns.has(rec.tp_pattern)) err(errors, "E-TP-PATTERN", "typography_poster는 TP1~TP14 중 정확히 하나가 필요.");
-  if (!["exact_primary", "repeated_texture"].includes(rec.legibility_target))
-    err(errors, "E-TP-LEGIBILITY", "legibility_target은 exact_primary 또는 repeated_texture여야 함.");
+  const patterns = new Set(Array.from({ length: 17 }, (_, i) => `TP${i + 1}`));
+  if (!patterns.has(rec.tp_pattern)) err(errors, "E-TP-PATTERN", "typography_poster는 TP1~TP17 중 정확히 하나가 필요.");
+  if (!["exact_primary", "repeated_texture", "specimen_repeat"].includes(rec.legibility_target))
+    err(errors, "E-TP-LEGIBILITY", "legibility_target은 exact_primary·repeated_texture·specimen_repeat 중 하나여야 함.");
   if (rec.legibility_target === "repeated_texture" && !["TP2", "TP14"].includes(rec.tp_pattern))
     err(errors, "E-TP-LEGIBILITY", "repeated_texture는 반복/미세 텍스트 패턴 TP2 또는 TP14에서만 허용.");
+  if (rec.legibility_target === "specimen_repeat" && rec.tp_pattern !== "TP17")
+    err(errors, "E-TP-LEGIBILITY", "specimen_repeat는 반복 진열 패턴 TP17에서만 허용.");
+  if (rec.tp_pattern === "TP17" && rec.legibility_target !== "specimen_repeat")
+    err(errors, "E-TP-LEGIBILITY", "TP17은 legibility_target이 specimen_repeat여야 함 — 반복 진열 강제(E-TP-SPECIMEN)와 no duplicate text 강제(E-TP-EXACT-GUARD)는 양립 불가.");
   if (!Array.isArray(rec.palette_sources) || rec.palette_sources.length !== 1 || rec.palette_sources[0] !== "TP")
     err(errors, "E-TP-PALETTE", "TP 팔레트 권한은 TP 단일 소스여야 함.");
   if (!Array.isArray(rec.palette) || rec.palette.length < 2 || rec.palette.length > 4)
@@ -339,12 +358,14 @@ function validateTypographyPoster(rec, errors) {
   const prompt = typeof rec.full_prompt === "string" ? rec.full_prompt : "";
   if (rec.legibility_target === "exact_primary" && !/"[^"\n]*\S[^"\n]*"/.test(prompt))
     err(errors, "E-TP-EXACT-PRIMARY", "exact_primary는 full_prompt에 비어 있지 않은 큰따옴표 primary copy가 필요.");
-  if (rec.legibility_target === "repeated_texture" && /no duplicate text/i.test(prompt))
-    err(errors, "E-TP-DUP-GUARD", "repeated_texture TP2/TP14에는 no duplicate text를 쓰지 않음.");
+  if (["repeated_texture", "specimen_repeat"].includes(rec.legibility_target) && /no duplicate text/i.test(prompt))
+    err(errors, "E-TP-DUP-GUARD", "repeated_texture·specimen_repeat에는 no duplicate text를 쓰지 않음.");
   if (rec.legibility_target === "repeated_texture" && !/text-like texture|text-like micro|미세.*텍스처|반복.*텍스처/i.test(prompt))
     err(errors, "E-TP-TEXTURE", "repeated_texture는 반복부를 비판독 텍스처로 선언해야 함.");
-  if (rec.legibility_target === "repeated_texture" && (!/no invented glyphs/i.test(prompt) || !/no watermark/i.test(prompt)))
-    err(errors, "E-TP-REPEATED-GUARDS", "repeated_texture TP2/TP14에는 no invented glyphs와 no watermark 가드가 모두 필요.");
+  if (["repeated_texture", "specimen_repeat"].includes(rec.legibility_target) && (!/no invented glyphs/i.test(prompt) || !/no watermark/i.test(prompt)))
+    err(errors, "E-TP-REPEATED-GUARDS", "repeated_texture·specimen_repeat에는 no invented glyphs와 no watermark 가드가 모두 필요.");
+  if (rec.tp_pattern === "TP17" && (!TP17_MATRIX.test(prompt) || !TP17_LADDER.test(prompt)))
+    err(errors, "E-TP-SPECIMEN", "TP17은 글리프 매트릭스와 굵기·폭 래더가 프롬프트에 동시 선언되어야 함 — 하나만 남으면 견본 시트가 아니라 워드마크 한 컷.");
   if (rec.legibility_target === "exact_primary" && !/no duplicate text/i.test(prompt))
     err(errors, "E-TP-EXACT-GUARD", "exact_primary는 no duplicate text 가드가 필요.");
 }
@@ -361,6 +382,32 @@ function validateRecord(rec, ids, opts) {
       err(errors, "E-REC-QUALITY", 'quality "auto" 금지 — high/medium/low를 명시.');
     else
       err(errors, "E-REC-QUALITY", `quality ${JSON.stringify(rec.quality)}는 허용 목록 밖(허용: low, medium, high).`);
+  }
+  // 레코드 스키마 감사 게이트 — 열거 밖 값의 조용한 휴리스틱 폴백을 레코드 단위 실패로 승격(배치 크래시는 내지 않음).
+  if (typeof rec.category === "string" && rec.category !== "" && !CATEGORY_RE.test(rec.category))
+    err(errors, "E-REC-CATEGORY", `category ${JSON.stringify(rec.category)}는 C1~C12 밖.`);
+  if (rec.tier !== undefined && ![0, 1, 2].includes(rec.tier))
+    err(errors, "E-REC-TIER", `tier ${JSON.stringify(rec.tier)}는 0/1/2 밖.`);
+  if (rec.format !== undefined && rec.format !== "A" && rec.format !== "B")
+    err(errors, "E-REC-FORMAT", `format ${JSON.stringify(rec.format)}는 "A"/"B" 밖.`);
+  if (typeof rec.output_path === "string" && rec.output_path !== "" &&
+      (/^([A-Za-z]:[\\/]|[\\/]|~)/.test(rec.output_path) || rec.output_path.split(/[\\/]/).includes("..")))
+    err(errors, "E-PATH-ESCAPE", `output_path ${JSON.stringify(rec.output_path)} — 절대 경로·홈(~)·상위 디렉토리 탈출(..) 금지, 작업 루트 하위 상대 경로만.`);
+  if (rec.status === "approved") {
+    const qa = rec.qa;
+    if (!qa || typeof qa !== "object")
+      err(errors, "E-QA-GATE", "status approved인데 qa 축(goal_fit/text_accuracy/material_realism/layout)이 없음 — 합격선(축 평균 ≥4, 렌더 텍스트 컷은 text_accuracy ≥4) 검증 불가.");
+    else {
+      // 렌더 텍스트가 없는 컷은 text_accuracy: null(명시적 N/A)로 두고 축에서 제외한다 — 0점 강요는 점수 조작 유도다.
+      const textNA = qa.text_accuracy === null;
+      if (textNA && (Boolean(rec.korean_copy) || /"[^"]+"/.test(rec.full_prompt || "")))
+        err(errors, "E-QA-GATE", "렌더 텍스트가 있는 컷은 text_accuracy를 null(N/A)로 둘 수 없음 — 실측 점수를 적는다.");
+      const axes = textNA ? ["goal_fit", "material_realism", "layout"] : ["goal_fit", "text_accuracy", "material_realism", "layout"];
+      const vals = axes.map((k) => Number(qa[k]) || 0);
+      const avg = vals.reduce((a, b) => a + b, 0) / vals.length;
+      if (avg < 4 || (!textNA && (Number(qa.text_accuracy) || 0) < 4))
+        err(errors, "E-QA-GATE", `approved인데 합격선 미달 — qa 평균 ${avg.toFixed(2)}(≥4 필요)${textNA ? "" : `, text_accuracy ${qa.text_accuracy}(≥4 필요)`}.`);
+    }
   }
   // 표면/채널/엔진 컨텍스트 필드 — CLI 플래그와 같은 열거·타입 제약. 열거 밖 값은 조용한 수용도 배치 크래시도 아닌 레코드 단위 실패.
   if (rec.surface !== undefined && !VALID_SURFACES.has(rec.surface))
@@ -410,6 +457,8 @@ function runJsonl(content, opts) {
     }
     results.push({ line: i + 1, ...validateRecord(rec, ids, opts) });
   });
+  if (results.length === 0)
+    results.push({ line: 0, id: null, ok: false, errors: [{ code: "E-REC-EMPTY", msg: "jsonl 레코드 0건 — 빈 배치는 방출 실패로 처리." }], warnings: [] });
   const pass = results.filter((r) => r.ok).length;
   return { ok: pass === results.length, results, summary: { total: results.length, pass, fail: results.length - pass } };
 }
@@ -481,10 +530,12 @@ function runTest() { // fixtures/manifest.json 셀프테스트 — 경로는 스
     const mode = e.mode || "text";
     const res = mode === "jsonl" ? runJsonl(content, opts) : validateText(content, opts, null, "text");
     const codes = mode === "jsonl" ? res.results.flatMap((r) => r.errors.map((x) => x.code)) : res.errors.map((x) => x.code);
+    const wcodes = mode === "jsonl" ? res.results.flatMap((r) => r.warnings.map((x) => x.code)) : res.warnings.map((x) => x.code);
     const missing = (e.expect.codes || []).filter((c) => !codes.includes(c)); // expect.codes ⊆ 실코드
-    const pass = res.ok === e.expect.ok && missing.length === 0;
+    const missingWarn = (e.expect.warn_codes || []).filter((c) => !wcodes.includes(c)); // expect.warn_codes ⊆ 실경고
+    const pass = res.ok === e.expect.ok && missing.length === 0 && missingWarn.length === 0;
     if (!pass) fails++;
-    return [pass ? "PASS" : "FAIL", e.path, mode, pass ? "" : `ok=${res.ok}(기대 ${e.expect.ok})${missing.length ? ` 누락코드:${missing.join(",")}` : ""} 실코드:${[...new Set(codes)].join(",") || "-"}`];
+    return [pass ? "PASS" : "FAIL", e.path, mode, pass ? "" : `ok=${res.ok}(기대 ${e.expect.ok})${missing.length ? ` 누락코드:${missing.join(",")}` : ""}${missingWarn.length ? ` 누락경고:${missingWarn.join(",")}` : ""} 실코드:${[...new Set(codes)].join(",") || "-"}`];
   });
   const wp = Math.max(...rows.map((r) => r[1].length), 4);
   console.log(`RESULT  ${"PATH".padEnd(wp)}  MODE   DETAIL`);

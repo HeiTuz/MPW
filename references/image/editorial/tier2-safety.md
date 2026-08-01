@@ -2,6 +2,8 @@
 
 우선순위: [../lanes.md](../lanes.md) §레인 게이트 카드 > [../compiler.md](../compiler.md) 철칙 > 이 파일. 철칙 전문은 [../compiler.md](../compiler.md).
 
+> **정본 선언:** 이 문서 §2의 코드블록이 Tier-2 고정 문구(SAFETY_ASSERT·NEGATIVE_TAIL)의 **유일한 문서 정본**이다. 예외는 기계 사본 둘 — [../compiler.md](../compiler.md) §2 인라인 복사본과 `scripts/check_prompt.mjs` 상수 — 뿐이며 `scripts/lint.py`가 3자 byte 대조로 잠근다. 그 밖의 문서·예제는 전문을 싣지 않고 요약+포인터 또는 `[SAFETY_ASSERT]`·`[NEGATIVE_TAIL]` 슬롯 표기만 둔다.
+
 ## 2. Tier-2 컴플라이언스 레인 (동결)
 
 Tier-2는 **명시 선언 시에만** 활성화한다. 우선순위는 `--tier 2` 플래그 > jsonl `tier: 2` > jsonl `lane: "editorial"`다. **휴리스틱 승격 불가** — 검증기가 자동으로 켜주지 않는다. 아래 두 문구는 동결 스펙(SSOT)이다. **byte-for-byte 인용**하고 한 단어도 바꾸지 않는다.

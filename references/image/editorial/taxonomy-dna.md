@@ -4,7 +4,7 @@
 
 ## 4. 패션 스타일 택소노미 21종
 
-명명 규칙: 폴더 `NN_<snake>`, 스타일 ID `STY-NN`, 룩 ID `STY-NN-LMM`. 카탈로그 필드: ID / 슬러그 / 한글명 / 무드 한 줄 / 레퍼런스 인덱스. Tier-2 레인 필수 스타일은 `STY-15 boudoir_editorial`, `STY-17 resort_beach`다. 이 둘은 명시 선언된 Tier-2 컴플라이언스 레인에서만 작성한다.
+명명 규칙: 폴더 `NN_<snake>`, 스타일 ID `STY-NN`, 룩 ID `STY-NN-LMM`. (폴더 `NN_<snake>` 명명은 별도 룩북 프로젝트의 아카이브 규칙이다 — 이 레포에는 해당 폴더 트리가 없으며 스타일 ID `STY-NN`·룩 ID `STY-NN-LMM` 표기만 쓴다.) 카탈로그 필드: ID / 슬러그 / 한글명 / 무드 한 줄 / 레퍼런스 인덱스. Tier-2 레인 필수 스타일은 `STY-15 boudoir_editorial`, `STY-17 resort_beach`다. 이 둘은 명시 선언된 Tier-2 컴플라이언스 레인에서만 작성한다.
 
 | ID | slug | 한글명 | 패션 무드 판정문 | Tier |
 |---|---|---|---|---|

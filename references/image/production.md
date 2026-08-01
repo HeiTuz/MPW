@@ -62,7 +62,7 @@
 |---|---|---|
 | `id` | 고유키 `C{n}-{CUT}-{NNN}` | 필수, 중복 시 `E-REC-DUPID`. |
 | `category` | `C1` 등 | 필수. |
-| `cut_type` | 컷 타입 | 권장. |
+| `cut_type` | 컷 타입 | 권장. 단 홍보판촉물·타이포 포스터는 캐노니컬 `promo_poster`/`typography_poster`를 써야 P/TP 게이트가 진입한다 — 외부 배치를 흡수할 때는 자유 문자열 cut_type을 캐노니컬로 정규화하고 패턴 필드를 명시해서 들여온다(id 접두사로 추정하지 않는다). |
 | `title` | 제목 | 권장. |
 | `format` | `A` 또는 `B` | 생략 시 자동 판별. |
 | `tier` | `0`, `1`, `2` | 기본 0. |
@@ -72,14 +72,14 @@
 | `channel` | `bounded`·`unbounded` | 선택. 전달 채널 층. |
 | `channel_limit` | 양의 정수 | 선택. 런타임에서 실측한 채널 상한 주입(`bounded` 함의). |
 | `palette` | HEX 배열 | full_prompt 반영 누락 시 `W-PALETTE-MISS`. |
-| `promo_pattern` | `P1`~`P8` | `cut_type: promo_poster`일 때 필수. 선택 파일은 `promo-router.md` 정본. |
-| `tp_pattern` | `TP1`~`TP14` | `cut_type: typography_poster`일 때 필수. 라우팅·공통 계약은 `typography-poster-router.md`, 패턴별 관찰 시그니처·실패·재시도 계약은 `typography-poster-patterns.md` 정본. |
-| `legibility_target` | `exact_primary` 또는 `repeated_texture` | TP 타이포의 정확 카피/반복 텍스처 의미를 고정한다. TP2·TP14만 `repeated_texture`. |
+| `promo_pattern` | `P1`~`P12` | `cut_type: promo_poster`일 때 필수. 선택 파일은 `promo-router.md` 정본. |
+| `tp_pattern` | `TP1`~`TP17` | `cut_type: typography_poster`일 때 필수. 라우팅·공통 계약은 `typography-poster-router.md`, 패턴별 관찰 시그니처·실패·재시도 계약은 `typography-poster-patterns.md` 정본. |
+| `legibility_target` | `exact_primary`·`repeated_texture`·`specimen_repeat` | TP 타이포의 정확 카피/반복 텍스처/판독 유지 진열 의미를 고정한다. TP2·TP14만 `repeated_texture`, TP17만 `specimen_repeat`. |
 | `palette_sources` | TP 포스터는 `["TP"]` | 구조·팔레트 권한을 단일화한다. promo는 기존 P/L 규칙을 따른다. |
 | `material_graft` | 선택 문자열 | TP7 재질을 TP2/TP3 표면에 이식할 때만 사용하며 두 번째 구조 권한자가 될 수 없다. |
-| `look_preset` | `L1`~`L8` | promo에서 필수. L9는 구현 본문이 없어 금지. |
-| `promo_text_effect` | P별 canonical effect | P1 mask, P2 extrusion, P3/P6 occlusion, P4 interlock, P5 printed_meta_ui, P7 rotated_axis, P8 staging. |
-| `promo_subject` | 비어 있지 않은 문자열 | 타이포와 물리적으로 얽히는 주 피사체. `full_prompt`에 그대로 등장해야 한다. |
+| `look_preset` | `L1`~`L9` | promo에서 필수. [look-and-concept.md](look-and-concept.md) §3에 드롭인 본문이 있는 프리셋만 유효. |
+| `promo_text_effect` | P별 canonical effect | P1 mask, P2 extrusion, P3/P6 occlusion, P4 interlock, P5 printed_meta_ui, P7 rotated_axis, P8 staging. P9 trim_span, P10 margin_satellite, P11 flat_overlay, P12 anchor_band. |
+| `promo_subject` | 비어 있지 않은 문자열 | 타이포와 물리적으로 얽히는 주 피사체. 결속 대상이 피사체가 아니라 판면 골격인 P9~P12는 그 골격 서술(예: 여섯 칸 격자)을 적는다. `full_prompt`에 그대로 등장해야 한다. |
 | `finishing_devices` | 문자열 배열 1~3개 | 바코드·메타 행·크롭마크·에디션 번호·세로 라벨·스탬프·종이 물성 등 실제 선택한 장치만 기록. |
 | `palette_authority` | `P` 또는 `L` | promo에서 필수. |
 | `palette_sources` | `["P"]` 또는 `["L"]` | 권한자와 같은 단일 소스만 허용. |
@@ -92,7 +92,7 @@
 | `labels` | 렌더·분류 라벨 배열 | 선택. |
 | `korean_copy` | 한국어 카피 | 텍스트 검증 트리거. |
 | `status` | `draft`→`queued`→`generated`→`approved`/`rejected`→`retry` | 운영 상태. |
-| `qa` | `goal_fit`, `text_accuracy`, `material_realism`, `layout` | 합격선: 평균 ≥4 AND `text_accuracy ≥ 4`. |
+| `qa` | `goal_fit`, `text_accuracy`, `material_realism`, `layout` | 합격선: 축 평균 ≥4, 렌더 텍스트 컷은 `text_accuracy ≥ 4` 동시 충족. 렌더 텍스트가 없는 컷(예: C9 아이콘)은 `text_accuracy: null`(명시적 N/A)로 두고 축 평균에서 제외한다 — 0으로 적거나 임의로 4를 채우지 않는다. |
 | `output_path` | 저장 경로 | 필수. |
 | `teaching_point` | 20~80자 | 교육용일 때만 사용. |
 
@@ -139,10 +139,16 @@ AR 4:5
 
 ## 5. 완성 예시 — Format B
 
-Format B는 플랫 콤마형 단문 350~450자다. Tier 2 + lane editorial에서는 SAFETY_ASSERT가 피사체절 선두에 오고, NEGATIVE_TAIL이 `AR 2:3` 직전에 정확히 1회 온다.
+Format B는 플랫 콤마형 단문 350~450자다. Tier 2 + lane editorial에서는 SAFETY_ASSERT가 피사체절 선두에 오고, NEGATIVE_TAIL이 `AR 2:3` 직전에 정확히 1회 온다. 동결 문구의 유일한 문서 정본은 [editorial/tier2-safety.md](editorial/tier2-safety.md) §2다 — 아래 예시의 해당 구간은 그 정본의 치환 결과이며, 정본이 바뀌면 이 예시도 함께 갱신한다.
 
 ```json
 {"id":"C1-HWABO-001","category":"C1","cut_type":"editorial_solo","title":"아침 창가 라운지웨어","format":"B","tier":2,"lane":"editorial","palette":["#F7F4EC","#D9C7B8","#B76E79"],"ar":"2:3","size":"1024x1536","quality":"high","output_format":"webp","output_compression":82,"full_prompt":"adult Korean woman in her late 20s, 25+, original character, non-nude fashion editorial styling, fully opaque fabric, covered chest line, editorial upright pose, 갸름한 얼굴, 다크브라운 단발 헤어, 한국 남성지풍 클린 화보 컷, 창가의 아침빛 아래 커튼을 잡은 포즈, 크림 새틴 라운지웨어 셋업, 무릎 위 3/4 구도, soft window light, shallow DoF, 팔레트 #F7F4EC #D9C7B8 #B76E79, subtle film grain, no nudity, no nipple or genital exposure, no wardrobe malfunction, no extra people, no text, no watermark, AR 2:3","status":"draft","qa":{"goal_fit":0,"text_accuracy":0,"material_realism":0,"layout":0},"output_path":"out/C1-HWABO-001.webp"}
+```
+
+작성 단계에서는 동결 문구 자리를 슬롯 표기로 비워 둘 수 있다 — 방출 전에 정본 §2로 치환하며, 슬롯이 남은 채 방출하면 `E-SLOT-LEAK`다:
+
+```text
+[SAFETY_ASSERT], 갸름한 얼굴, …, subtle film grain, [NEGATIVE_TAIL], AR 2:3
 ```
 
 | 슬롯 순서 | 값 |
@@ -253,6 +259,12 @@ Reply only with the saved file path.
 | `E-REC-QUALITY` | `quality: "auto"` | `low`, `medium`, `high` 중 하나로 명시. |
 | `E-REC-JSON` | jsonl 라인 파싱 실패 | 해당 라인을 JSON 1객체로 수정. |
 | `E-REC-ARMATCH` | full_prompt 끝 AR과 record.ar 불일치 | 두 값을 일치. |
+| `E-REC-CATEGORY` | `category`가 C1~C12 밖 | C1~C12로 정정. |
+| `E-REC-TIER` | `tier`가 0/1/2 밖 | 0·1·2로 정정. |
+| `E-REC-FORMAT` | `format`이 A/B 밖 | A·B로 정정. |
+| `E-PATH-ESCAPE` | `output_path` 절대 경로·상위 탈출(`..`) | 작업 루트 하위 상대 경로로. |
+| `E-QA-GATE` | `approved`인데 qa 합격선 미달 | 실측 점수를 그대로 두고 컷을 `rejected`/`retry`로 되돌린다 — 점수를 고쳐 통과시키지 않는다. 렌더 텍스트 없는 컷은 `text_accuracy: null`(N/A)이 정경로다(§2 qa 행). |
+| `E-REC-EMPTY` | 빈 jsonl 배치 | 방출 실패 — 레코드를 채워 재검증. |
 
 ### 9.2 포맷·프롬프트 구조
 
@@ -274,14 +286,15 @@ Reply only with the saved file path.
 
 | 코드 | 조건 | 조치 |
 |---|---|---|
-| `E-TP-PATTERN` | TP1~TP14 밖이거나 패턴 누락 | TP 하나를 선택. |
-| `E-TP-LEGIBILITY` | 레그빌리티 값 누락 또는 TP2/TP14 밖의 `repeated_texture` | 허용 패턴과 목표를 정렬. |
+| `E-TP-PATTERN` | TP1~TP17 밖이거나 패턴 누락 | TP 하나를 선택. |
+| `E-TP-LEGIBILITY` | 레그빌리티 값 누락, TP2/TP14 밖의 `repeated_texture`, 또는 TP17 밖의 `specimen_repeat` | 허용 패턴과 목표를 정렬. |
 | `E-TP-PALETTE` | 팔레트 권한이 `["TP"]` 단일 소스가 아님 | TP 하나만 권한자로 기록. |
 | `E-TP-PALETTE-RANGE` | TP 팔레트가 HEX 2~4개 밖 | TP 우선 범위 2~4개로 수정. |
 | `E-TP-GRAFT` | TP7 표면 재질 형식·대상 위반 | `TP7 surface material: …`을 TP2/TP3에만 사용. |
-| `E-TP-DUP-GUARD` | 반복 텍스처에 `no duplicate text` 사용 | 반복부에서 해당 가드를 제거. |
-| `E-TP-TEXTURE` | 반복부의 텍스처 선언 누락 | 비판독 `text-like texture`로 선언. |
-| `E-TP-REPEATED-GUARDS` | 반복 텍스처의 잔여 가드 누락 | `no invented glyphs`와 `no watermark`를 모두 추가. |
+| `E-TP-DUP-GUARD` | 반복 텍스처 또는 판독 유지 진열(`specimen_repeat`)에 `no duplicate text` 사용 | 반복부에서 해당 가드를 제거. |
+| `E-TP-TEXTURE` | `repeated_texture` 반복부의 텍스처 선언 누락(`specimen_repeat`는 대상 아님 — 판독 유지 선언으로 대체) | 비판독 `text-like texture`로 선언. |
+| `E-TP-REPEATED-GUARDS` | 반복 텍스처·판독 유지 진열의 잔여 가드 누락 | `no invented glyphs`와 `no watermark`를 모두 추가. |
+| `E-TP-SPECIMEN` | TP17에 매트릭스·래더 동시 선언 누락 | 행수·단계 수를 수치로 선언해 복원. |
 | `E-TP-EXACT-PRIMARY` | exact primary의 따옴표 카피 누락 | 주 카피를 따옴표 안에 고정. |
 | `E-TP-EXACT-GUARD` | exact primary의 중복 방지 가드 누락 | `no duplicate text`를 추가. |
 
@@ -304,13 +317,13 @@ Reply only with the saved file path.
 | 코드 | 조건 | 조치 |
 |---|---|---|
 | `E-PROMO-ROUTE` | `promo_poster`가 C7로 라우팅됨 | C3/C5 + P 패턴으로 이동. |
-| `E-PROMO-PATTERN` | P1~P8 단일 선택 없음 | 라우터에서 P 하나 선택. |
-| `E-PROMO-LOOK` | L1~L8 단일 룩 없음 | 구현된 L 하나 선택. |
+| `E-PROMO-PATTERN` | P1~P12 단일 선택 없음 | 라우터에서 P 하나 선택. |
+| `E-PROMO-LOOK` | L1~L9 단일 룩 없음 | 구현된 L 하나 선택. |
 | `E-PROMO-EFFECT` | P와 `promo_text_effect`가 불일치 | P별 canonical effect로 정렬. |
 | `E-PROMO-SUBJECT` | `promo_subject`가 없거나 prompt에 없음 | 타이포와 얽히는 주 피사체를 명시. |
 | `E-PROMO-PALETTE-CONFLICT` | P/L 팔레트 권한이 둘이거나 메타 불일치 | 권한과 source를 하나로 축소. |
 | `E-PROMO-COLOR-LOCK` | 최종 HEX가 2~3색 밖 | 권한 팔레트만 남김. |
-| `E-PROMO-TYPE-STRUCTURE` | 타이포와 피사체의 물리 관계 없음 | 마스크·압출·가림·회전·인쇄 구조를 명시. |
+| `E-PROMO-TYPE-STRUCTURE` | 타이포와 피사체의 물리 관계 없음 | 마스크·압출·가림·회전·인쇄 구조를 명시. P9~P12는 재단선 물림·마진 고정·밴드 고정 등 판면 골격 결속을 같은 자격으로 인정한다 — 패턴에 맞는 결속을 쓰고 mask/extrusion을 억지로 넣지 않는다. |
 | `E-PROMO-FINISH` | 마감 장치가 1~3개 밖 | 허용 장치 1~3개만 유지. |
 | `E-PROMO-CARD-DRIFT` | C7 소품·배지 밀도로 후퇴 | 정보 장치를 걷고 위계·여백 긴장 복구. |
 | `E-PROMO-COPY` | 정확 카피가 1회가 아님 | `korean_copy`를 따옴표 안에 1회. |
