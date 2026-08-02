@@ -45,8 +45,8 @@ Source: final amended stage-1 review report commit `9e27b195bb2493677ab1c02fe20e
 No payload line was marked unrelated: all twelve ownership lines changed the transfer's ownership definition, install semantics, or enforcement.
 The later independent gardener review added four relevant authority lines: the design compiler-owner drift is **반영함** as item 12; image manifest/pending transaction defects are **반영함** in image commit `3aa197c4567dc65861418f317864f17a579462e8`; design URL secret persistence is **반영함** in design commit `41d196e031805e70e8374c53742eeb1fe8e57388`; migration residue under `~/src/MPW-release` is **무관함(금지된 비목표)**. No ownership payload line is silently omitted.
 Final gate hardening is included in the current source: copied MPW/ImgGen2 overlays now use exact payload and host-overlay parity, symlink farms require the complete approved member set and exact canonical targets, and dangling optional installs are reported. Hermes ImgGen2 was refreshed offline to the canonical version.
-Staging ownership is also fail-closed: image and design reserve digests before publication and retain unowned reply-only staging; cleanup cannot delete a path outside the inbox boundary. Commits: image `dcbaffb4ea5d3b824e7d95b31f0893f6147ae343`, design `30c50f322884ab1812d2f4213f793580bd35f62c`.
-Final terminal QA found one unresolved lifecycle blocker: reply-only staged bytes and reservation locks are retained indefinitely. The ownership transfer remains non-terminal until a lease/refcount/reaper protocol restores cleanup without reopening the publication race.
+Staging ownership is fail-closed and crash-recoverable: image and design reserve digests before publication, persist timestamped token registries atomically, reconcile stale unowned bytes with bounded leases, preserve manifest/live-pending owners, and keep the recovery marker until staged-byte deletion is durable. Final commits: image `62dae901bdc6f29aab1e5d9f3628c8f414867186`, design `7ee50ac95a2a5d961e2ad235820e172e648e2a54`.
+The final architect and executor QA cohort is clean; no ownership-transfer lifecycle blocker remains.
 
 ## Remaining risks
 
