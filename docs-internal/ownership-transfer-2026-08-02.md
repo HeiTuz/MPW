@@ -27,7 +27,7 @@ Codex is the canonical editor and local-commit owner for the six `~/HeiTuz/<name
 
 ## Handoff payload receipt
 
-Source: amended stage-1 review report commit `836aa15b551c84052ff031713b6e8c9208887c7b` in `~/HeiTuz/MPW/docs-internal/review-2026-08-02.md`.
+Source: final amended stage-1 review report commit `97d789679caa6250ae779c54af4a71864f042e42` in `~/HeiTuz/MPW/docs-internal/review-2026-08-02.md`.
 
 1. `[MPW] AGENTS.md:3-10` — **반영함**: MPW policy now names Codex's canonical edit/local-commit surface, consumer paths, copied Codex overlay, and release boundaries.
 2. `[MPW] AGENTS.md:43-59` — **반영함**: doctrine/install policy now distinguishes symlink consumers from the parity-checked Codex copy.
@@ -43,7 +43,7 @@ Source: amended stage-1 review report commit `836aa15b551c84052ff031713b6e8c9208
 12. `[design-reference-gardener] scripts/gardener_loop.py:253-266` — **반영함**: the canonical wire owner is now `MPW`; the paired test was updated and passed in design commit `90fb0c40be1ce2641c81f9c7012874b41ac9be7c`.
 
 No payload line was marked unrelated: all twelve ownership lines changed the transfer's ownership definition, install semantics, or enforcement.
-The later independent gardener review added three relevant ownership/authority lines: the design compiler-owner drift is **반영함** as item 12; the two concurrency/privacy defects are **무관함(수리 보류)** because they require separate transactional/privacy contract work outside this ownership-transfer scope; migration residue under `~/src/MPW-release` is **무관함(금지된 비목표)**. No ownership payload line is silently omitted.
+The later independent gardener review added four relevant authority lines: the design compiler-owner drift is **반영함** as item 12; image manifest/pending transaction defects are **반영함** in image commit `3aa197c4567dc65861418f317864f17a579462e8`; design URL secret persistence is **반영함** in design commit `41d196e031805e70e8374c53742eeb1fe8e57388`; migration residue under `~/src/MPW-release` is **무관함(금지된 비목표)**. No ownership payload line is silently omitted.
 
 ## Remaining risks
 
