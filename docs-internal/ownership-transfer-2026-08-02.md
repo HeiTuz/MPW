@@ -27,7 +27,7 @@ Codex is the canonical editor and local-commit owner for the six `~/HeiTuz/<name
 
 ## Handoff payload receipt
 
-Source: stage-1 review report commit `bd38973be4f1c43ae0590a27d2db9759c77ea3b3` in `~/HeiTuz/MPW/docs-internal/review-2026-08-02.md`.
+Source: amended stage-1 review report commit `836aa15b551c84052ff031713b6e8c9208887c7b` in `~/HeiTuz/MPW/docs-internal/review-2026-08-02.md`.
 
 1. `[MPW] AGENTS.md:3-10` — **반영함**: MPW policy now names Codex's canonical edit/local-commit surface, consumer paths, copied Codex overlay, and release boundaries.
 2. `[MPW] AGENTS.md:43-59` — **반영함**: doctrine/install policy now distinguishes symlink consumers from the parity-checked Codex copy.
@@ -40,8 +40,10 @@ Source: stage-1 review report commit `bd38973be4f1c43ae0590a27d2db9759c77ea3b3` 
 9. `[host] ~/CLAUDE.md:63-70` — **반영함**: added the six-tree ownership definition and action prohibitions.
 10. `[host] ~/AGENTS.md` — **반영함**: added the HeiTuz ownership boundary to the orchestration policy.
 11. `[doctrine] ~/.hermes/scripts/prompt_writing_doctrine_check.py:384-456` — **반영함**: symlink paths remain enforced; Codex MPW copied payloads pass only on canonical-source metadata and payload hash parity.
+12. `[design-reference-gardener] scripts/gardener_loop.py:253-266` — **반영함**: the canonical wire owner is now `MPW`; the paired test was updated and passed in design commit `90fb0c40be1ce2641c81f9c7012874b41ac9be7c`.
 
-No payload line was marked unrelated: all eleven lines changed the transfer's ownership definition, install semantics, or enforcement.
+No payload line was marked unrelated: all twelve ownership lines changed the transfer's ownership definition, install semantics, or enforcement.
+The later independent gardener review added three relevant ownership/authority lines: the design compiler-owner drift is **반영함** as item 12; the two concurrency/privacy defects are **무관함(수리 보류)** because they require separate transactional/privacy contract work outside this ownership-transfer scope; migration residue under `~/src/MPW-release` is **무관함(금지된 비목표)**. No ownership payload line is silently omitted.
 
 ## Remaining risks
 
