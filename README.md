@@ -129,7 +129,7 @@ bunx github:HeiTuz/MPW
 | `hermes` | `~/.hermes/skills/prompt-writing/MPW` | 정본 트리 + Hermes 진입 표면 |
 | `codex` / `gpt` | `~/.codex/skills/MPW` | 정본 트리 + GPT/Codex 진입 표면 |
 
-자동 감지의 기본값은 Claude Code입니다. 어느 호스트로 설치하든 규칙 본문은 같고, 호스트 통합 표면(발동·도구 명칭·frontmatter)만 달라집니다 — 구조와 근거는 [agents/README.md](agents/README.md).
+자동 감지의 기본값은 Claude Code입니다. 어느 호스트로 설치하든 규칙 본문은 같고, 호스트 통합 표면(발동·도구 명칭·frontmatter)만 달라집니다 — 구조와 근거는 [호스트 어댑터 안내](https://github.com/HeiTuz/MPW/blob/main/agents/README.md)에 있습니다.
 
 <details>
 <summary><b>명시 설치 · 직접 설치</b></summary>

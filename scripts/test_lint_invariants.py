@@ -160,6 +160,21 @@ class LintInvariantSmokeTests(unittest.TestCase):
         errors = []
         lint.check_runtime_names(texts, errors)
         self.assertTrue(any("[I1]" in error for error in errors), errors)
+
+    def test_i1_allows_installed_host_overlay_entrypoint(self):
+        texts = {name: "safe text" for name in lint.CORE_RUNTIME_NAME_FILES}
+        texts["SKILL.md"] = "---\nmetadata:\n  host_surface: codex\n---\nCodex host integration"
+        errors = []
+        lint.check_runtime_names(texts, errors)
+        self.assertEqual([], errors)
+
+    def test_i2_ignores_whitelist_sources_omitted_from_installed_payload(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            (root / "SKILL.md").write_text("safe\n", encoding="utf-8")
+            errors = []
+            lint.check_plaintext_paths(root, errors)
+        self.assertEqual([], errors)
     def test_i1_rejects_operator_address_in_image_core(self):
         texts = {name: "safe text" for name in lint.CORE_RUNTIME_NAME_FILES}
         texts["references/image/from-image.md"] = "이 사용자 기본값"

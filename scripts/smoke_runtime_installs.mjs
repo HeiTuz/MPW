@@ -135,6 +135,11 @@ for (const target of targets) {
   fs.mkdirSync(home, { recursive: true });
   run(["--target", target, "--force", "--quiet"], { ...process.env, HOME: home });
   const installed = assertInstalled(home, target);
+  runCommand("python3", [path.join(destination(home, target), "scripts", "lint.py")], destination(home, target), {
+    ...process.env,
+    HOME: home,
+    USERPROFILE: home,
+  });
 
   const hash = crypto.createHash("sha256")
     .update(sharedCore.map((relative) => `${relative}\0${installed[relative]}`).join("\0"))

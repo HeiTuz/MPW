@@ -39,6 +39,7 @@ FILES = ["SKILL.md", "references/image/from-image.md", "references/templates.md"
          "references/image/typography.md", "references/image/production.md",
          "references/image/realism.md", "references/image/seedream-5-pro.md",
          "references/image/seedream-character-reference-sheets.md", "references/image/seedance-2.md",
+         "references/image/seedance-2-5.md",
          "references/midjourney-character-sheets.md",
          "references/midjourney-identity.md"]
 SSOT = "references/image/editorial/tier2-safety.md"   # Tier-2 동결 문자열 정본 (§2 코드블록)
@@ -379,6 +380,11 @@ def check_runtime_names(texts, errors):
     """I1: runtime-specific names and operator address do not belong in core."""
     for f in CORE_RUNTIME_NAME_FILES:
         scan_text = texts[f]
+        # An installed host overlay replaces canonical SKILL.md and intentionally
+        # names its runtime. Source checkouts have no host_surface here and still
+        # receive the strict canonical scan; overlay bodies are checked by I14.
+        if f == "SKILL.md" and re.search(r"^  host_surface:\s*[^\n]+", scan_text, re.M):
+            continue
         if f == "references/model-playbooks.md":
             scan_text = scan_text.split("\n## 호환 노트", 1)[0]
         for pat in RUNTIME_NAME_PATTERNS:
@@ -450,12 +456,18 @@ def check_plaintext_paths(root, errors):
                     f"{source_name}:{line_of(text, match.start())}: [I2] router path pointer must be a Markdown link ({target})"
                 )
 
-    stale = PLAIN_PATH_WHITELIST - unresolved
+    # Installed payloads deliberately omit agents/. Only whitelist entries whose
+    # source document exists in the current tree can become stale here.
+    active_whitelist = {
+        key for key in PLAIN_PATH_WHITELIST
+        if (root / key[0]).is_file()
+    }
+    stale = active_whitelist - unresolved
     for source_name, target in sorted(stale):
         errors.append(
             f"{source_name}: [I2] plaintext path whitelist entry is stale ({target})"
         )
-    for source_name, target in sorted(unresolved - PLAIN_PATH_WHITELIST):
+    for source_name, target in sorted(unresolved - active_whitelist):
         errors.append(f"{source_name}: [I2] broken plaintext path pointer ({target})")
 
 
