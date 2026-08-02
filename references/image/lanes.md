@@ -16,7 +16,7 @@
 | 텍스트·구조 이미지 | Tier-0 긍정형 / 텍스트 렌더 Tier-1 / 명시 선언 시 Tier-2. 토큰·승격 정본: [compiler.md](compiler.md) §2 | S3는 끝 `AR x:y`, S1·S2는 파라미터 | 표면별([surfaces.md](surfaces.md)) | 장면 팔레트와 일치하는 HEX 3~5(팔레트 파라미터가 있는 모델은 파라미터 우선), 독립 컷 1행=1컷 |
 | 인물·사실감 이미지 | 긍정형 | 모델의 `aspect_ratios` 안에서 | 표면별 | 모델 id 결정([model-routing.md](model-routing.md)), Soul 계열은 4레이어 순서·카메라 1·렌즈 1·브랜드 앵커 ≤1+1 ([soul-v2-director.md](soul-v2-director.md)), 동일 인물은 `soul_id` |
 | COMPOSITE | 연산 금지 계약은 부정형 허용, 장면은 긍정형 | 입력과 같은 프레임 | 표면별 | 작업 재정의, 재조명 다이얼 1단, 접지 그림자·그레인 통일, 실패 조건 |
-| 영상 | 명사 나열, 부정문 금지 | 모델의 `aspect_ratios` 안에서 | 씬당(표면별) | 스토리보드, 씬당 지배 모션 1개, 씬 길이가 모델 `duration` 허용값과 일치, 비영어 대사 영어 지문 |
+| 영상 | 기본 명사형 배제·긍정형. **ModelArk direct Seedance 2.0의 [seedance-2.md](seedance-2.md) 공식 권장 예외만 허용** | 모델의 `aspect_ratios` 안에서 | 씬당(표면별) | 스토리보드, 씬당 지배 모션 1개, 씬 길이가 모델 `duration` 허용값과 일치, 비영어 대사 영어 지문 |
 | DESIGN 오버레이 | 실행 모드에 따름 | — | 표면별 | 방향 잠금, 시각 테제, 일반적 결과 회피, 뷰포트 검증 |
 | TP1–TP17 typography poster | TP 공통 긍정형 + TP2/TP14의 반복 텍스처 예외·TP17의 반복 진열 예외 | 라우터 표의 후보 AR | 표면별 | TP 하나의 구조 권한, TP 단일 팔레트 권한과 HEX 2~4(공통 3~5보다 우선), 관찰 시그니처·실패 조건·첫 재시도 델타 |
 | 이미지 입력 (레인 선행 게이트) | 선택된 레인의 정책을 따름 | 입력 프레임 또는 선택된 모델의 `aspect_ratios` 안에서 | 표면별 | 입력 이미지의 역할 선언(레퍼런스 / 편집 대상 / 시작·끝 프레임), 슬롯이 전달하는 것은 프롬프트에서 재묘사 금지. 판정과 레인 배정은 [from-image.md](from-image.md) |
@@ -134,7 +134,7 @@ This is a pixel-bound background replacement composite, not free image generatio
 | "컷이 세 번 바뀌고…" | `multi_shots` + `multi_prompt` |
 | "이 이미지로 시작해서 저 이미지로 끝나게" | `start_image` / `end_image` 미디어 롤 |
 
-네거티브는 이 플랫폼의 **이미지·영상 생성 모델에는** 파라미터가 없다(2026-07-25 로스터 전수 확인, 3D 계열 `tripo_3d` 제외). 배제는 `wall, frame` 같은 명사 나열로 본문에 쓰고 `no walls` 같은 부정문은 쓰지 않는다. `negative_prompt` 파라미터를 가진 다른 엔진에서는 그 파라미터를 쓴다.
+네거티브는 Higgsfield의 **이미지·영상 생성 모델에는** 파라미터가 없다(2026-07-25 로스터 전수 확인, 3D 계열 `tripo_3d` 제외). 기본 배제는 `wall, frame` 같은 명사 나열로 본문에 쓰고 `no walls` 같은 부정문은 쓰지 않는다. `negative_prompt` 파라미터를 가진 다른 엔진에서는 그 파라미터를 쓴다. 단, BytePlus ModelArk direct Seedance 2.0은 공식 가이드가 자막·로고·워터마크·중복 인물 실패를 교정하는 짧은 결과 제약을 권장하므로 [seedance-2.md](seedance-2.md) §공식 실패 제약 예외를 적용한다. 이 예외를 Higgsfield나 다른 영상 엔진으로 일반화하지 않는다.
 
 image-to-video에서는 입력 이미지를 재묘사하지 말고 변화·동작·오디오만 적는다. 본문은 화면 행동·환경·분위기·오디오에 집중한다.
 

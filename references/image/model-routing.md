@@ -103,7 +103,9 @@
 6. **네거티브와 길이는 §3이 정본이다.** 이 플랫폼의 이미지·영상 모델에 `negative_prompt`가 없다는 것은 플랫폼 사실이지 모든 엔진에 대한 일반 원칙이 아니다. 사실·산출 분기·예외를 여기서 되풀이하지 않는다.
 7. **엔진을 골랐으면 그 엔진의 표면 문법을 따른다.** 모델 선택(이 파일)과 선택된 엔진에 실제로 써넣는 문법은 다른 축이다. 아래 어댑터는 **플랫폼 파라미터 표면(S2)이 아니라 각 엔진 고유의 붙여넣기·진단 절차**를 소유하므로, S2 라우팅 결과와 충돌하지 않는다.
    - [grok-imagine.md](grok-imagine.md) — Grok 네이티브 붙여넣기(S3) 블록 문법·수위 경계·요청 분기. Higgsfield MCP 경유 Grok은 이 파일이 아니라 위 §1 라우팅 소관이다.
+   - [seedream-5-pro.md](seedream-5-pro.md) — BytePlus ModelArk direct Seedream 5 Pro의 자연어·다중 이미지·`<point>`/`<bbox>` 인터랙티브 편집 문법. Higgsfield `seedream_v5_pro`에는 런타임 기능 확인 없이 좌표·파라미터를 복사하지 않는다.
    - [seedream-character-reference-sheets.md](seedream-character-reference-sheets.md) — 3×3 identity 입력을 단일 베이스·1×4 전신 시트로 바꾸는 구도·체형·헤어 차폐 규칙.
+   - [seedance-2.md](seedance-2.md) — BytePlus ModelArk direct Seedance 2.0의 멀티모달 참조·편집·연장·트랙 연결 문법. Seedance 2.5에는 공식 API·프롬프트 계약 확인 전 자동 상속하지 않는다.
    - [midjourney-feed-diagnosis.md](midjourney-feed-diagnosis.md) — 연속 피드에서 프로필 스택·chaos·stylize·Variation 계보를 분리하는 진단·ablation 절차.
 
 ## 5. 스냅샷 신선도

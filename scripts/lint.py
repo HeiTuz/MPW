@@ -37,7 +37,9 @@ FILES = ["SKILL.md", "references/image/from-image.md", "references/templates.md"
          "references/image/editorial/photo-vocab.md", "references/image/editorial/scene-craft.md",
          "references/image/editorial/concept-collision.md", "references/image/look-and-concept.md",
          "references/image/typography.md", "references/image/production.md",
-         "references/image/realism.md", "references/midjourney-character-sheets.md",
+         "references/image/realism.md", "references/image/seedream-5-pro.md",
+         "references/image/seedream-character-reference-sheets.md", "references/image/seedance-2.md",
+         "references/midjourney-character-sheets.md",
          "references/midjourney-identity.md"]
 SSOT = "references/image/editorial/tier2-safety.md"   # Tier-2 동결 문자열 정본 (§2 코드블록)
 COMPILER = "references/image/compiler.md"
@@ -312,6 +314,35 @@ def check_prompt_graph_canon(texts, errors):
     owners = [name for name, text in texts.items() if "PromptGraphIR/v0" in text]
     if owners != [canonical]:
         errors.append(f"[I18] PromptGraphIR/v0 must be defined only in {canonical}; found {owners}")
+
+
+def check_seed_engine_boundaries(texts, errors):
+    """I19: direct/wrapper boundaries and the Seedance 2.5 gate stay explicit."""
+    required = {
+        "references/image/seedream-5-pro.md": (
+            "BytePlus ModelArk direct",
+            "Higgsfield의 `seedream_v5_pro`는 별도 S2 모델 id",
+        ),
+        "references/image/seedance-2.md": (
+            "BytePlus ModelArk direct",
+            "Higgsfield의 `seedance_2_0`·`seedance_2_0_mini`는 별도 S2 모델 id",
+            "Seedance 2.5는 이 문서의 별칭이 아니다",
+            "2.0 규칙, 길이, 미디어 상한을 자동 상속하지 않는다",
+            "실제 인물 얼굴이 포함된 참조 이미지·영상을 일반 URL/Base64 입력으로 직접 보내지 않는다",
+        ),
+        "references/image/lanes.md": (
+            "ModelArk direct Seedance 2.0의 [seedance-2.md](seedance-2.md) 공식 권장 예외만 허용",
+        ),
+        "references/image/surfaces.md": (
+            "Seedance 2.5 ModelArk 모델 id·API·프롬프트 계약",
+            "2.0 규칙 자동 상속 금지",
+        ),
+    }
+    for filename, markers in required.items():
+        text = texts.get(filename, "")
+        for marker in markers:
+            if marker not in text:
+                errors.append(f"{filename}: [I19] seed engine boundary marker missing: {marker}")
 
 
 def check_mj_flag_sync(root, errors):
@@ -706,6 +737,7 @@ def main():
             check_s2_parameter_redefinition(s, errors, f)
 
     check_prompt_graph_canon(stamp_texts, errors)
+    check_seed_engine_boundaries(stamp_texts, errors)
 
     check_contract_index_table(ROOT, errors)
     check_mj_flag_sync(ROOT, errors)

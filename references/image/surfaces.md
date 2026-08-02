@@ -30,7 +30,7 @@
 | 층 | 무엇이 정하나 | 값 |
 |---|---|---|
 | **전달 채널** | 산출물이 사용자에게 실제로 나가는 경로 | 메시지당 상한이 있는 메신저형 채널 = 그 채널의 상한(현행 메신저 배선 2000) / 에이전트 CLI·데스크톱 앱 = 실질 제약 없음 |
-| **타깃 엔진** | 프롬프트를 실제로 읽는 모델 | Midjourney = **단어 수** 40 권장·60 경고·80 초과 금지 / gpt-image 계열 = 32,000자 / Higgsfield 모델 = 미공개 **[미확인]** → 신호 밀도로 관리 |
+| **타깃 엔진** | 프롬프트를 실제로 읽는 모델 | Midjourney = **단어 수** 40 권장·60 경고·80 초과 금지 / gpt-image 계열 = 32,000자 / BytePlus ModelArk direct Seedream 5 Pro = 영어 600단어 미만 권장 / BytePlus ModelArk direct Seedance 2.0 = 1,000단어 미만 권장 / Higgsfield 모델 = 미공개 **[미확인]** → 신호 밀도로 관리 |
 | **기계 계약** | 스키마 필드 제약 | `prompt-bundle/v1` `text.maxLength: 2000` + `unicode_char_count ≤ 2000` |
 
 32,000자를 받는 엔진이라도 상한 있는 채널로 나가면 채널이 먼저 끊고, 채널이 무제한이라도 `prompt-bundle/v1`로 직렬화하면 스키마가 하드라인이다. 반대로 채널·계약이 모두 넉넉해도 미드저니로 가면 단어 대역이 가장 좁다.
@@ -152,6 +152,13 @@
 | S2 파라미터 축·모델 로스터 | Higgsfield MCP `models_explore(list)` 실행 | 2026-07-25 |
 | `prompt-bundle/v1` 2000 | `contracts/v1/prompt-bundle.schema.json` 직접 읽음 — `text.maxLength` / `unicode_char_count.maximum` | 2026-07-25 |
 | gpt-image 계열 32,000자 | OpenAI 이미지 생성 API 레퍼런스, 웹 확인 | 2026-07-25 |
+| BytePlus ModelArk direct Seedream 5 Pro 모델·길이 | 공식 [Image generation tutorial](https://docs.byteplus.com/en/docs/ModelArk/1824121)·API — `dola-seedream-5-0-pro-260628`, 영어 600단어 미만 권장, 1K/2K·PNG/JPEG. Higgsfield `seedream_v5_pro`와 별도 표면 | 2026-08-02 |
+| Seedream 5 Pro 인터랙티브 편집 문법 | 공식 [interactive editing guide](https://docs.byteplus.com/en/docs/ModelArk/2582775) — 이미지별 0–999 정규화 좌표, `<point>x y</point>`, `<bbox>x1 y1 x2 y2</bbox>`, 다중 대상 식별·보존 영역 표기 | 2026-08-02 |
+| BytePlus ModelArk direct Seedance 2.0 프롬프트 문법·길이 | 공식 [Seedance 2.0 series prompt guide](https://docs.byteplus.com/en/docs/ModelArk/2222480)와 [Video generation API](https://docs.byteplus.com/en/docs/modelark/1520757) — 멀티모달 참조·편집·연장·트랙 연결, 1,000단어 미만 권장 | 2026-08-02 |
+| Seedance 2.0 direct 입력 조합 | 공식 [Video generation API](https://docs.byteplus.com/en/docs/modelark/1520757) — reference 이미지 0–9, 영상 0–3, 오디오 0–3; 이미지·영상 중 최소 1개 필요; first/last-frame와 multimodal-reference 시나리오 직접 혼용 불가; 참조 영상 합계 15초 이하 | 2026-08-02 |
+| Seedance 2.0 direct 실인물 참조 입력 | 공식 [Video generation API](https://docs.byteplus.com/en/docs/modelark/1520757) — 실제 인물 얼굴이 든 이미지·영상의 일반 직접 업로드는 미지원; 신뢰된 원본 출력·프리셋 디지털 캐릭터·권리 확인 후 등록 자산 경로를 사용 | 2026-08-02 |
+| Seedance 2.0 direct 결과 제약 | 공식 [prompt guide](https://docs.byteplus.com/en/docs/ModelArk/2222480) — 불필요 자막·로고·워터마크·중복 인물 교정에 짧은 명시 제약 사용. 규칙 서술은 [seedance-2.md](seedance-2.md) §공식 실패 제약 예외 | 2026-08-02 |
+| Seedance 2.5 ModelArk 모델 id·API·프롬프트 계약 | 공식 [Seedream 5 Pro FAQ](https://ai.byteplus.com/en/activity/seedream5-0)에는 2.5 호환성이 언급되지만 현재 확인한 [ModelArk 모델 목록](https://docs.byteplus.com/en/docs/modelark/1159178)·Seedance 프롬프트/API 문서에는 2.5 계약이 없음 **[미확인]** — 2.0 규칙 자동 상속 금지 | 2026-08-02 |
 | Midjourney 단어 대역 40/60/80 | 커뮤니티(Prompt-FAQs 계열) 합의, 웹 확인. **공식 문서 근거 없음 [미확인]** — 실무 대역으로만 쓴다 | 2026-07-25 |
 | Midjourney 문자 하드 상한(6,000자설) | 공식 출처 없음 **[미확인]** — 실효 제약은 단어 대역이 훨씬 좁다 | 2026-07-25 |
 | Midjourney 문법·파라미터(`--no` 단일 명사·모더레이션 단어 단위 판독 / 무드보드 `--p` 참조·`--sw` 비호환·강도는 `--stylize` / `--sref` 텍스트 Best Practices) | 공식 문서·릴리스노트. **규칙 서술 정본은 [../midjourney-identity.md](../midjourney-identity.md) §5·§6·§7** | 2026-07-25 |

@@ -35,7 +35,9 @@ try {
   assert.equal(fs.existsSync(path.join(forwardedDest, "SKILL.md")), true, "forwarded -- arguments did not install");
 
   const packed = JSON.parse(run("npm", ["pack", "--dry-run", "--json"]));
-  const names = packed[0].files.map((file) => file.path);
+  const manifest = Array.isArray(packed) ? packed[0] : Object.values(packed)[0];
+  assert.ok(manifest && Array.isArray(manifest.files), "npm pack --json returned no package manifest");
+  const names = manifest.files.map((file) => file.path);
   const packageFiles = JSON.parse(fs.readFileSync(path.join(root, "package.json"), "utf8")).files;
   assert.equal(packageFiles.includes("agents/**"), true, "npm files allowlist omits agent overlays");
   if (fs.existsSync(path.join(root, "agents"))) {

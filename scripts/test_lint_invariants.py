@@ -97,6 +97,39 @@ class LintInvariantSmokeTests(unittest.TestCase):
         )
         self.assertTrue(any("[I18]" in error for error in errors), errors)
 
+    def test_i19_pins_seed_direct_wrapper_and_version_boundaries(self):
+        texts = {
+            "references/image/seedream-5-pro.md": (
+                "BytePlus ModelArk direct\n"
+                "Higgsfield의 `seedream_v5_pro`는 별도 S2 모델 id"
+            ),
+            "references/image/seedance-2.md": (
+                "BytePlus ModelArk direct\n"
+                "Higgsfield의 `seedance_2_0`·`seedance_2_0_mini`는 별도 S2 모델 id\n"
+                "Seedance 2.5는 이 문서의 별칭이 아니다\n"
+                "2.0 규칙, 길이, 미디어 상한을 자동 상속하지 않는다\n"
+                "실제 인물 얼굴이 포함된 참조 이미지·영상을 일반 URL/Base64 입력으로 직접 보내지 않는다"
+            ),
+            "references/image/lanes.md": (
+                "ModelArk direct Seedance 2.0의 [seedance-2.md](seedance-2.md) 공식 권장 예외만 허용"
+            ),
+            "references/image/surfaces.md": (
+                "Seedance 2.5 ModelArk 모델 id·API·프롬프트 계약\n"
+                "2.0 규칙 자동 상속 금지"
+            ),
+        }
+        errors = []
+        lint.check_seed_engine_boundaries(texts, errors)
+        self.assertEqual([], errors)
+
+        texts["references/image/seedance-2.md"] = texts["references/image/seedance-2.md"].replace(
+            "2.0 규칙, 길이, 미디어 상한을 자동 상속하지 않는다",
+            "",
+        )
+        errors = []
+        lint.check_seed_engine_boundaries(texts, errors)
+        self.assertTrue(any("[I19]" in error for error in errors), errors)
+
     def test_i16_rejects_mj_flag_drift(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
