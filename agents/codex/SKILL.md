@@ -61,6 +61,7 @@ metadata:
 | 단일 작업지시·시스템 프롬프트·자동화 잡 | **CONTRACT** |
 | 직무 실무 산출물 | **BUSINESS** |
 | 모델 적응, 퇴고, 리서치, 추출 | **MODEL** |
+| 슬라이드·발표 덱 | **BUSINESS** + 아웃라인 선행 → [slides.md](references/slides.md) |
 | 이미지·영상 생성 | **IMAGE** → [surfaces.md](references/image/surfaces.md) → [model-routing.md](references/image/model-routing.md) → [lanes.md](references/image/lanes.md) |
 | 레퍼런스·생성물 이미지가 입력 | **IMAGE** — 입력 판정 [from-image.md](references/image/from-image.md) 후 같은 순서 |
 | 피사체 보존 배경 교체 | **COMPOSITE** → 같은 순서 |
