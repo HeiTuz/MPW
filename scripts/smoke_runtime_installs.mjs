@@ -41,6 +41,7 @@ const required = [
   "references/image/lanes.md",
   "references/image/seedream-5-pro.md",
   "references/image/seedance-2.md",
+  "references/image/seedance-2-5.md",
 ];
 const sharedCore = required.filter((relative) => relative !== "SKILL.md");
 const adapterHeadings = {
@@ -116,7 +117,7 @@ function assertInstalled(home, target) {
   const installDestination = destination(home, target);
   const installed = Object.fromEntries(required.map((relative) => [relative, readInstalled(installDestination, relative)]));
   if (fs.existsSync(path.join(installDestination, "agents"))) fail(`${target}: agents/ leaked into installed payload`);
-  for (const relative of ["SKILL.md", "references/templates.md", "references/model-playbooks.md", "references/adapters.md", "references/image/lanes.md", "references/image/seedream-5-pro.md", "references/image/seedance-2.md"]) {
+  for (const relative of ["SKILL.md", "references/templates.md", "references/model-playbooks.md", "references/adapters.md", "references/image/lanes.md", "references/image/seedream-5-pro.md", "references/image/seedance-2.md", "references/image/seedance-2-5.md"]) {
     checkLinks(installDestination, relative);
   }
   const host = overlayHost(target);
@@ -156,6 +157,10 @@ for (const target of targets) {
   assertTerms(`${target}: Seedance direct boundary`, installed["references/image/seedance-2.md"], [
     "BytePlus ModelArk direct", "공식 실패 제약 예외", "Seedance 2.5는 이 문서의 별칭이 아니다",
     "2.0 규칙, 길이, 미디어 상한을 자동 상속하지 않는다", "실제 인물 얼굴",
+  ]);
+  assertTerms(`${target}: Dreamina Seedance 2.5 boundary`, installed["references/image/seedance-2-5.md"], [
+    "Dreamina 웹의 Seedance 2.5 UI", "ModelArk direct의 모델 id·API 요청 스키마를 증명하지 않으며",
+    "Seedance 2.0 direct 계약을 2.5로 상속시키지 않는다", "Higgsfield나 다른 래퍼",
   ]);
   if (adapterHeadings[target]) {
     const adapter = section(installed["references/adapters.md"], adapterHeadings[target]);

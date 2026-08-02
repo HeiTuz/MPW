@@ -110,12 +110,19 @@ class LintInvariantSmokeTests(unittest.TestCase):
                 "2.0 규칙, 길이, 미디어 상한을 자동 상속하지 않는다\n"
                 "실제 인물 얼굴이 포함된 참조 이미지·영상을 일반 URL/Base64 입력으로 직접 보내지 않는다"
             ),
+            "references/image/seedance-2-5.md": (
+                "Dreamina 웹의 Seedance 2.5 UI\n"
+                "BytePlus ModelArk direct의 모델 id·API 요청 스키마를 증명하지 않으며\n"
+                "Seedance 2.0 direct 계약을 2.5로 상속시키지 않는다\n"
+                "Higgsfield나 다른 래퍼"
+            ),
             "references/image/lanes.md": (
                 "ModelArk direct Seedance 2.0의 [seedance-2.md](seedance-2.md) 공식 권장 예외만 허용"
             ),
             "references/image/surfaces.md": (
-                "Seedance 2.5 ModelArk 모델 id·API·프롬프트 계약\n"
-                "2.0 규칙 자동 상속 금지"
+                "Dreamina 웹 Seedance 2.5 프롬프트 계약\n"
+                "Seedance 2.5 ModelArk 모델 id·API 요청 스키마\n"
+                "Dreamina UI·2.0 direct 값을 API로 자동 상속 금지"
             ),
         }
         errors = []
