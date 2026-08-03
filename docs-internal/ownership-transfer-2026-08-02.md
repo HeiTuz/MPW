@@ -1,5 +1,7 @@
 # Codex canonical-ownership transfer — 2026-08-02
 
+> **SUPERSEDED (2026-08-04)** — the *ownership definition* and *action matrix* below are replaced by [`ownership-amendment-2026-08-04.md`](ownership-amendment-2026-08-04.md): any agent may now edit and locally commit the canonical trees, Codex is the steward rather than the sole editor, and whoever edits must leave a handoff. Everything else in this document (install-model decision, doctrine parity design, handoff receipt, commit record) remains valid and is kept as the historical record.
+
 ## Operational definition
 
 Codex is the canonical editor and local-commit owner for the six `~/HeiTuz/<name>` source trees. Claude Code and Hermes are consumers: they may read and run installed skills, but they must not edit canonical trees, hand-edit install paths, bump versions, or push releases. A copied host overlay is a consumer artifact and is valid only when it carries canonical-source metadata and its non-overlay payload matches the source tree.
