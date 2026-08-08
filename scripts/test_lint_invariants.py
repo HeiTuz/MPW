@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Negative smoke coverage for lint.py documentation and contract invariants."""
 import importlib.util
+import json
 from pathlib import Path
 import tempfile
 import unittest
@@ -260,6 +261,28 @@ drifted rule\n"""
             errors = []
             lint.check_agent_skill_sync(root, canonical, errors)
         self.assertTrue(any("[I14] rule body drift" in error for error in errors), errors)
+
+    def test_i20_rejects_backup_artifact_in_published_directory(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            (root / "package.json").write_text(
+                json.dumps({"files": ["references/**", "!**/*.bak*"]}), encoding="utf-8"
+            )
+            (root / "references" / "image").mkdir(parents=True)
+            (root / "references" / "image" / "director.md").write_text("# canon\n", encoding="utf-8")
+            (root / "references" / "image" / "director.md.bak-measured-20260729").write_text("# stale\n", encoding="utf-8")
+            (root / "references" / "image" / "notes.md.orig").write_text("# stale\n", encoding="utf-8")
+            (root / "references" / "image" / "draft.md~").write_text("# stale\n", encoding="utf-8")
+            (root / "references" / "feedback.md").write_text("# canon\n", encoding="utf-8")
+            (root / "docs-internal").mkdir()
+            (root / "docs-internal" / "notes.md.bak-local").write_text("# private\n", encoding="utf-8")
+            errors = []
+            lint.check_distribution_artifacts(root, errors)
+        self.assertTrue(any("director.md.bak-measured-20260729" in error and "[I20]" in error for error in errors), errors)
+        self.assertTrue(any("notes.md.orig" in error for error in errors), errors)
+        self.assertTrue(any("draft.md~" in error for error in errors), errors)
+        self.assertFalse(any("feedback.md" in error for error in errors), errors)
+        self.assertFalse(any("docs-internal" in error for error in errors), errors)
 
 
 if __name__ == "__main__":

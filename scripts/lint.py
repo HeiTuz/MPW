@@ -21,6 +21,9 @@ Checks the skill's own hardlines against its files:
 - Tier-2 frozen strings byte-identical 3-way: editorial/tier2-safety.md §2 code blocks
   (SSOT) == compiler.md §2 inline copy == check_prompt.mjs SAFETY_ASSERT/TAIL constants;
   ANCHORS remains a containment guard for runtime anchor drift.
+- directories published wholesale by the package.json `files` manifest carry canon only:
+  backup/duplicate artifacts (*.bak, *.bak-<suffix>, *.orig, *.rej, *.save, *~) fail instead
+  of shipping a second stale copy of a canonical file
 
 Exit 0 on pass, 1 on any failure. No dependencies beyond PyYAML (optional:
 falls back to a minimal frontmatter parse when PyYAML is missing).
@@ -513,6 +516,45 @@ def check_links_and_orphans(root, errors):
         errors.append(f"{name}: [I2] orphan reference is not reachable from SKILL.md")
 
 
+ARTIFACT_SUFFIXES = re.compile(r"(?:\.bak(?:[-.][^/]*)?|\.orig|\.rej|\.save|~)$")
+
+
+def published_directories(root):
+    """Directories the npm `files` manifest ships wholesale (`dir/**` entries)."""
+    manifest = root / "package.json"
+    if not manifest.is_file():
+        return []
+    try:
+        entries = json.loads(manifest.read_text(encoding="utf-8")).get("files", [])
+    except (ValueError, OSError):
+        return []
+    directories = []
+    for entry in entries:
+        if not isinstance(entry, str) or entry.startswith("!") or not entry.endswith("/**"):
+            continue
+        candidate = root / entry[:-3]
+        if candidate.is_dir():
+            directories.append(candidate)
+    return directories
+
+
+def check_distribution_artifacts(root, errors):
+    """I20: an editor backup inside a published directory is a second, stale copy that ships."""
+    excluded = {"node_modules", "__pycache__"}
+    for base in published_directories(root):
+        for path in sorted(base.rglob("*")):
+            if not path.is_file():
+                continue
+            relative = path.relative_to(root)
+            if any(part.startswith(".") or part in excluded for part in relative.parts):
+                continue
+            if ARTIFACT_SUFFIXES.search(path.name):
+                errors.append(
+                    f"{relative.as_posix()}: [I20] backup/duplicate artifact in a published directory "
+                    "(delete it or keep it outside the repository)"
+                )
+
+
 def check_key_fill_ratios(root, errors):
     """I6: key:fill uses key-side:shadow-side notation; 1:n reverses its meaning."""
     pattern = re.compile(r"\bkey\s*:\s*fill\s+(\d+)\s*:\s*(\d+)\b", re.I)
@@ -800,6 +842,9 @@ def main():
     check_plaintext_paths(ROOT, errors)
     check_key_fill_ratios(ROOT, errors)
     check_agent_skill_sync(ROOT, skill, errors)
+
+    # I20 — published directories carry canon only, never backup/duplicate artifacts.
+    check_distribution_artifacts(ROOT, errors)
 
     # Tier-2 동결 문자열 3자 byte 대조
     check_frozen_strings(texts, errors)
