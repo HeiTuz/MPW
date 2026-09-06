@@ -41,17 +41,18 @@ node scripts/check_prompt.mjs --test  # references/image/ 또는 검증기 변�
 (cd scripts && suite_rc=0; for t in test_*.py; do [ "$t" = test_adapter_master_integration.py ] && continue; echo "--- $t"; python3 -m unittest "${t%.py}" || suite_rc=1; done; test "$suite_rc" -eq 0)  # repo-local 전수, 실패 누적
 ```
 
-운영자 전용 doctrine 검사는 이 레포 밖의 설치별 도구이며 공개 소비자의 필수 검증 단계가 아니다. 실행할 때는 검사기 경로를 `MPW_DOCTRINE_CHECKER`로 주입하고, exit code가 아니라 stdout이 비어 있는지를 합격 조건으로 판정한다:
+운영자 전용 doctrine 검사 정본은 이 레포의 `scripts/prompt_writing_doctrine_check.py`이며 공개 소비자의 필수 검증 단계가 아니다. finding이 있어도 exit 0이고, 기존 reminder state가 같은 알림을 억제할 수 있으므로 stdout이 비어 있다는 사실만으로 로스터가 신선하거나 런타임 검증을 마쳤다고 판정하지 않는다. 검수·릴리스 점검에는 새 전용 `--state` 경로를 써 최초 finding을 확인하고, 기본 자동화 reminder state는 보존한다:
 
 ```sh
-doctrine_output="$(python3 "$MPW_DOCTRINE_CHECKER")" && test -z "$doctrine_output"
+doctrine_audit_dir="$(mktemp -d)"
+python3 scripts/prompt_writing_doctrine_check.py --state "$doctrine_audit_dir/backlog.json"
 ```
 
 `test_adapter_master_integration.py`는 가드너·브리지와의 교차 배선을 검증한다. 이 테스트가 `setUpClass`에서 의존성 누락으로 죽으면 **통과가 아니라 무증상 실패**다 — 실제로 스킬 디렉터리 rename 이후 이 상태로 방치되어 `compiled_by` 불일치·API 드리프트 3건이 숨어 있었다(2026-07-25 수리). 스킵/에러를 green으로 읽지 않는다.
 
 위 repo-local 루프는 이 모듈만 명시적으로 제외한다. 교차계약은 아래 네 경로를 주입한 별도 명령이 필수이며, 두 명령의 결과를 합쳐 전체 검증으로 판정한다. 루프 마지막 모듈의 성공이 앞선 실패를 덮지 않도록 실패 상태를 누적한다.
 
-동반 레포 경로는 **환경변수로만** 주입한다(`IMAGE_REFERENCE_ADAPTER_ROOT`·`DESIGN_REFERENCE_ADAPTER_ROOT`·`HIGGSFIELD_BRIDGE_ROOT`·`PROMPT_KNOWLEDGE_ADAPTER_ROOT`). 자동 탐색은 없다 — 머신마다 다른 결과가 나오고 공개 배포물이 남의 홈 디렉터리 배치를 가정하게 되기 때문이다. 넷 중 하나라도 없으면 이 테스트는 **실패로 멈춘다**. `npm test`는 `MPW_ALLOW_MISSING_EXTERNAL_INTEGRATION=1`을 달고 이 단계를 부르므로 동반 레포가 없는 체크아웃에서도 그린이지만, 그때 교차 배선 5건은 **돌지 않은 것**이다. 교차 계약을 실제로 검증하려면 네 경로를 주입해 직접 부른다:
+동반 레포 경로는 **환경변수로만** 주입한다(`IMAGE_REFERENCE_ADAPTER_ROOT`·`DESIGN_REFERENCE_ADAPTER_ROOT`·`HIGGSFIELD_BRIDGE_ROOT`·`PROMPT_KNOWLEDGE_ADAPTER_ROOT`). 자동 탐색은 없다 — 머신마다 다른 결과가 나오고 공개 배포물이 남의 홈 디렉터리 배치를 가정하게 되기 때문이다. 넷 중 하나라도 없으면 이 테스트는 **실패로 멈춘다**. `npm test`는 `MPW_ALLOW_MISSING_EXTERNAL_INTEGRATION=1`을 달고 이 단계를 부르므로 동반 레포가 없는 체크아웃에서도 그린이지만, 그때 교차 배선 검증은 **돌지 않은 것**이다. 교차 계약을 실제로 검증하려면 네 경로를 주입해 직접 부른다:
 
 ```sh
 IMAGE_REFERENCE_ADAPTER_ROOT=<path> DESIGN_REFERENCE_ADAPTER_ROOT=<path> HIGGSFIELD_BRIDGE_ROOT=<path> \
@@ -63,17 +64,17 @@ prompt-knowledge 가드너는 loop 모듈이 없고 스킬 스크립트가 직�
 
 검증기(`check_prompt.mjs`)와 문서 규칙이 어긋나면 어느 쪽이 맞는지 판정하고 한쪽을 고쳐 정렬한다 — 괴리를 남기는 게 최악이다(2026-07 캘리브레이션에서 헤더형 감지·조명 토큰 괴리를 이렇게 잡았다).
 
-## 배포 게이트 — 세션 종료 전 필수
+## 배포 게이트 — 승인된 릴리스에 적용
 
-규칙·버전을 바꾼 세션은 아래를 통과해야 "배포 완료"다. 로컬 green은 배포가 아니다.
+릴리스를 요청·승인받은 세션은 아래를 통과해야 "배포 완료"다. 로컬 변경만 요청받았다면 해당 검증을 마친 뒤 로컬 완료·미배포 상태와 남은 릴리스 작업을 보고하고 종료한다. 로컬 검증 통과만으로 배포 완료를 주장하지 않는다.
 
 1. **롤백 폭탄 주의**: `imggen update`는 MPW를 GitHub에서 재설치한다. 푸시되지 않은 로컬 개선분은 업데이트 한 번에 통째로 구버전으로 덮인다. 2026-07-16에 v2.11~v2.13 세 릴리스분이 설치 트리에만 존재한 채 발견됐다 — 소비자 스킬의 fallback 관용 동작(가드너 사전 등) 때문에 겉으로는 멀쩡해 보여서 알아차리기 어렵다.
-2. **버전 일치 확인(필수)**: 종료 전에 원격 버전이 로컬 SKILL.md/package.json과 같은지 직접 확인한다:
+2. **버전 일치 확인(배포 완료 전)**: 승인된 배포를 완료로 보고하기 전에 원격 버전이 로컬 SKILL.md/package.json과 같은지 직접 확인한다:
    ```sh
    curl -s https://raw.githubusercontent.com/HeiTuz/MPW/main/package.json | python3 -c "import json,sys; print(json.load(sys.stdin)['version'])"
    ```
-   값이 다르면 미배포 상태이며 세션을 끝낼 수 없다.
-3. **업스트림 절차**: 설치 트리의 편집분을 이 저장소에 반영(설치 트리 루트 `README.md`는 hermes 오버레이 산출물이므로 루트로 복사 금지, `agents/` 오버레이 본문은 canonical SKILL.md와 재동기화 + frontmatter version/canonical_source 갱신) → `npm test` exit 0 → 영어 커밋 → push → CI green 확인.
+   값이 다르면 미배포 상태이며 배포 완료로 보고하지 않는다.
+3. **승인된 릴리스 절차**: 설치 트리의 편집분을 이 저장소에 반영(설치 트리 루트 `README.md`는 hermes 오버레이 산출물이므로 루트로 복사 금지, `agents/` 오버레이 본문은 canonical SKILL.md와 재동기화 + frontmatter version/canonical_source 갱신) → `npm test` exit 0 → 영어 커밋 → 승인받은 범위의 push → CI green 확인. 버전 범프·push 권한은 위 운영 소유권 규칙을 따른다.
 
 ## 작업 방식
 

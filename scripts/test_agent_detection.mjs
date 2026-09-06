@@ -93,6 +93,26 @@ try {
   );
   assert.equal(fs.readFileSync(path.join(preservedDestination, "marker.txt"), "utf8"), "preserved\n");
   assert.equal(fs.readdirSync(temp).some((entry) => entry.startsWith(".heituzmpw-stage-")), false);
+
+  // A symlinked parent must not bypass source-tree protection, even for a new leaf.
+  fs.mkdirSync(path.join(fixture, "scripts"));
+  for (const filename of ["install.mjs", "agent_targets.mjs"]) {
+    fs.copyFileSync(path.join(path.dirname(installer), filename), path.join(fixture, "scripts", filename));
+  }
+  fs.writeFileSync(path.join(fixture, "source-only.txt"), "must survive\n");
+  const alias = path.join(temp, "alias");
+  fs.symlinkSync(temp, alias);
+  const fixtureInstaller = path.join(fixture, "scripts", "install.mjs");
+  for (const dest of [path.join(alias, "source"), path.join(alias, "source", "new-install")]) {
+    const result = spawnSync(process.execPath, [fixtureInstaller, "--dest", dest, "--force", "--quiet"], { encoding: "utf8" });
+    assert.notEqual(result.status, 0, "installer accepted a source alias");
+    assert.match(result.stderr, /unsafe install destination/u);
+    assert.equal(fs.readFileSync(path.join(fixture, "source-only.txt"), "utf8"), "must survive\n");
+  }
+  const safeAliasDest = path.join(alias, "safe-installed");
+  const safeAlias = spawnSync(process.execPath, [fixtureInstaller, "--dest", safeAliasDest, "--quiet"], { encoding: "utf8" });
+  assert.equal(safeAlias.status, 0, safeAlias.stderr);
+  assert.equal(fs.readFileSync(path.join(safeAliasDest, "SKILL.md"), "utf8"), "canonical\n");
 } finally {
   fs.rmSync(temp, { recursive: true, force: true });
 }

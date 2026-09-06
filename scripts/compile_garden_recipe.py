@@ -6,7 +6,6 @@ import argparse
 import importlib.util
 import json
 import os
-import re
 import sys
 from pathlib import Path
 from typing import Any, Callable
@@ -19,7 +18,7 @@ class CompileError(ValueError):
     """A recipe cannot be compiled without violating the handoff contract."""
 
 
-def _load_contract_api() -> tuple[Callable[..., list[str]], Callable[[Any], str]]:
+def _load_contract_api() -> tuple[Callable[..., list[str]], Callable[[Any], str], Callable[..., list[str]]]:
     contract_root = Path(os.environ.get("MASTER_PROMPT_CONTRACT_ROOT", ROOT / "contracts"))
     validator_path = contract_root / "validate.py"
     if not validator_path.is_file():
@@ -31,7 +30,12 @@ def _load_contract_api() -> tuple[Callable[..., list[str]], Callable[[Any], str]
         raise CompileError(f"contract_validator_unloadable:{validator_path}")
     module = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(module)
-    return module.validate_document, module.canonical_hash
+    readiness = getattr(module, "recipe_readiness_errors", None)
+    if not callable(readiness):
+        raise CompileError(
+            f"contract_validator_incompatible:{validator_path}; sync authoritative contracts with recipe readiness validation"
+        )
+    return module.validate_document, module.canonical_hash, readiness
 
 
 def _strings(values: Any) -> list[str]:
@@ -59,15 +63,14 @@ def _qualified_tokens(recipe: dict[str, Any]) -> list[str]:
     return _render_tokens(recipe["qualified_tokens"])
 
 
-def _evidence_lines(recipe: dict[str, Any], *, include_palette: bool = True) -> list[str]:
+def _evidence_lines(recipe: dict[str, Any]) -> list[str]:
     labels = {
         "subject": "Subject",
         "camera": "Camera",
         "lighting": "Lighting",
         "layout": "Layout",
+        "palette": "Palette",
     }
-    if include_palette:
-        labels["palette"] = "Palette"
     lines: list[str] = []
     for axis, label in labels.items():
         values = _axis_values(recipe, axis)
@@ -104,40 +107,37 @@ def _positive_exclusion_line(recipe: dict[str, Any]) -> str:
         normalized = exclusion.casefold()
         if any(token in normalized for token in ("people", "person", "crowd")):
             translated.append("the frame contains only the locked subject count")
-        elif any(token in normalized for token in ("logo", "brand", "watermark")):
+        elif normalized == "do not add logos, brands, or watermarks.":
+            # The prompt-knowledge producer prohibits additions, not source marks.
+            translated.append(
+                "visible logos, branding, and watermarks match the source exactly, with only source-supported marks"
+            )
+        elif normalized in {
+            f"{modifier} {mark}"
+            for modifier in ("invented", "new", "additional", "extra")
+            for mark in ("logo", "logos", "brand mark", "brand marks")
+        }:
+            translated.append("visible logos and lettering match the source exactly, with only source-supported marks")
+        elif normalized in {"logo", "logos", "all logos", "brand", "brands", "branding", "all branding"}:
             translated.append("all visible surfaces have an unbranded clean finish")
+        elif normalized in {"watermark", "watermarks", "all watermarks"}:
+            translated.append("the finished image has a clean watermark-free finish")
         elif any(token in normalized for token in ("identity", "face drift")):
-            translated.append("the same fictional identity remains stable")
+            translated.append("the same source identity remains stable")
         else:
             raise CompileError(f"untranslatable_positive_exclusion:{exclusion}")
     return "Positive boundaries: " + "; ".join(translated) + "."
 
 
 def _render_higgsfield(recipe: dict[str, Any]) -> str:
-    anchors = (
-        "natural skin texture, visible pores, subtle film grain"
-        if recipe["category"] == "photo_editorial"
-        else "natural material texture, coherent contact shadows, subtle film grain"
-    )
     body_parts = [
         recipe["intended_use"]["goal"].strip(),
-        *[line.removesuffix(".") for line in _evidence_lines(recipe, include_palette=False)],
+        *[line.removesuffix(".") for line in _evidence_lines(recipe)],
         _lock_line(recipe).removesuffix("."),
         _positive_exclusion_line(recipe).removesuffix("."),
         _reference_line(recipe).removesuffix("."),
-        anchors,
     ]
     return ". ".join(body_parts) + "."
-
-
-def _palette_hex_values(recipe: dict[str, Any]) -> list[str]:
-    values: list[str] = []
-    for raw in _axis_values(recipe, "palette"):
-        for value in re.findall(r"#[0-9A-Fa-f]{6}\b", raw):
-            normalized = value.upper()
-            if normalized not in values:
-                values.append(normalized)
-    return values
 
 
 def _render_gpt_image(recipe: dict[str, Any]) -> str:
@@ -163,9 +163,7 @@ def _render_composite(recipe: dict[str, Any]) -> str:
         *_evidence_lines(recipe),
         _lock_line(recipe),
         _positive_exclusion_line(recipe),
-        "LIGHTING — dial B partial: exposure within ±0.3 stop, environment tint ≤0.2, "
-        "color-temperature shift ≤200K, skin undertone preservation ≥0.75.",
-        "INTEGRATION: match contact shadow to light direction; unify subject/background grain and depth cues.",
+        "INTEGRATION: adapt only generated background lighting and texture to the unchanged source subject.",
         _reference_line(recipe),
         "FINAL INTENT: immediate same-subject recognition outranks aesthetic improvement; "
         "the background is supporting context and the locked subject is absolute.",
@@ -232,20 +230,16 @@ def _variable_axes(recipe: dict[str, Any]) -> list[dict[str, Any]]:
 
 
 def compile_recipe(recipe: dict[str, Any]) -> dict[str, Any]:
-    validate_document, canonical_hash = _load_contract_api()
+    validate_document, canonical_hash, readiness_errors = _load_contract_api()
     errors = validate_document(recipe)
     if errors:
         raise CompileError("garden_recipe_validation_failed:" + " | ".join(errors))
     if recipe.get("schema_version") != "garden-recipe/v1":
         raise CompileError("garden_recipe_validation_failed:unsupported GardenRecipe version")
 
-    if recipe["intended_use"]["engine"] == "gpt-image-2":
-        palette = _palette_hex_values(recipe)
-        if not 3 <= len(palette) <= 5:
-            raise CompileError(
-                "lane_requirement_missing:gpt-image-2 requires 3-5 distinct observed #RRGGBB values; "
-                f"received {len(palette)}"
-            )
+    unresolved = readiness_errors(recipe)
+    if unresolved:
+        raise CompileError("garden_recipe_not_ready:" + " | ".join(unresolved))
     text = _render_prompt(recipe)
     count = len(text)
     if count > MAX_BLOCK_CHARS:

@@ -6,6 +6,7 @@ import os from "node:os";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { spawnSync } from "node:child_process";
+import { installPayload } from "./install.mjs";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const temp = fs.mkdtempSync(path.join(os.tmpdir(), "heituzmpw-installer-privacy-"));
@@ -26,6 +27,28 @@ function hasExcludedPath(dir) {
 }
 
 try {
+  // Local installs must omit the same backup artifacts as the published package.
+  const fixture = path.join(temp, "source");
+  fs.mkdirSync(path.join(fixture, "references"), { recursive: true });
+  fs.mkdirSync(path.join(fixture, "agents", "codex"), { recursive: true });
+  fs.writeFileSync(path.join(fixture, "SKILL.md"), "canonical entry\n");
+  fs.writeFileSync(path.join(fixture, "agents", "codex", "SKILL.md"), "host entry\n");
+  fs.writeFileSync(path.join(fixture, "agents", "codex", "SKILL.md.bak"), "private old entry\n");
+  const excluded = ["draft.md.bak", "draft.md.bak-20260905", "draft.md.bak.old", "draft.md.orig", "draft.md.rej", "draft.md.save", "draft.md~", "old.bak/private.md"];
+  for (const relative of excluded) {
+    const filename = path.join(fixture, "references", relative);
+    fs.mkdirSync(path.dirname(filename), { recursive: true });
+    fs.writeFileSync(filename, "private old draft\n");
+  }
+  fs.writeFileSync(path.join(fixture, "references", "backup-guide.md"), "public guidance\n");
+  const fixtureDest = path.join(temp, "fixture-installed");
+  installPayload({ sourceRoot: fixture, destination: fixtureDest, host: "codex" });
+  assert.equal(fs.readFileSync(path.join(fixtureDest, "SKILL.md"), "utf8"), "host entry\n");
+  for (const relative of excluded) {
+    assert.equal(fs.existsSync(path.join(fixtureDest, "references", relative)), false, `installer leaked ${relative}`);
+  }
+  assert.equal(fs.existsSync(path.join(fixtureDest, "references", "backup-guide.md")), true, "installer omitted a normal document");
+
   const installDest = path.join(temp, "installed");
   run(process.execPath, ["scripts/install.mjs", "--dest", installDest, "--force", "--quiet"]);
   assert.equal(hasExcludedPath(installDest), false, "installer copied excluded local state");

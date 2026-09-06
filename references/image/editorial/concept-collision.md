@@ -9,7 +9,7 @@ Format B([format-b.md](format-b.md) §1)의 특수형이다. **하나의 컨셉 
 **그래머 체인 (Format B 슬롯의 특수 배열, 재배열 금지):**
 
 ```text
-성인 가상 페르소나/정체성 앵커 → 헤어·뷰티 구체 → 컨셉 충돌(의상+소품으로 가시화) → 바디 포즈(가구/오브젝트 지오메트리 결속 또는 포착된 모션) → 배경 소재/색 → 빛 방향·그림자 거동 → 표정/시선 → 구도/네거티브 스페이스 → natural skin/매체 마감 → AR x:y
+사용자·참조의 정체성 앵커(새 가상 인물은 요청 시) → 헤어·뷰티 구체 → 컨셉 충돌(의상+소품으로 가시화) → 바디 포즈(가구/오브젝트 지오메트리 결속 또는 포착된 모션) → 배경 소재/색 → 빛 방향·그림자 거동 → 표정/시선 → 구도/네거티브 스페이스 → natural skin/매체 마감 → AR x:y
 ```
 
 - **컨셉은 서술하지 말고 증명한다.** `balletcore × office utility`라고 쓰는 것으로 끝내지 않는다 — 발레 플랫·튜튜형 미디 스커트(발레)와 테일러드 블레이저·클립보드·머그컵·스캐너(오피스)를 **동시에** 프레임에 둬야 충돌이 읽힌다. 소품이 컨셉의 증거다.
@@ -44,7 +44,7 @@ Format B([format-b.md](format-b.md) §1)의 특수형이다. **하나의 컨셉 
 
 | 앵커 | 자격화 규칙 |
 |---|---|
-| `Korean woman` / `East Asian woman` | 성인 가상 페르소나로. 관찰 가능한 해부/스타일/마감과 페어. **국적에서 피부색·얼굴형·체형 추론 금지**([tier2-safety.md](tier2-safety.md) §13, 검증기 `E-NAT-SKIN`) |
+| `Korean woman` / `East Asian woman` | 요청된 성인 인물을 보존하고 관찰 가능한 스타일·마감과 연결. **국적에서 피부색·얼굴형·체형 추론 금지**([tier2-safety.md](tier2-safety.md) §13, 검증기 `E-NAT-SKIN`) |
 | `chok-chok skin` / `aegyo-sal` | 로마자 유지 + 관찰 결과 병기: chok-chok → `hydrated dewy base`, aegyo-sal → `soft under-eye fullness` |
 | `glass skin translucency` | **controlled beauty term.** `soft subsurface glow, 유리·플라스틱 광택 아님`으로 자격화. 무자격 사용은 [tier2-safety.md](tier2-safety.md) §13의 `glass skin 과잉` |
 

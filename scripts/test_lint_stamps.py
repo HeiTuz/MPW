@@ -98,6 +98,23 @@ class NearMissTests(unittest.TestCase):
 
 
 class FrontmatterParserTests(unittest.TestCase):
+    def test_version_in_metadata_matches_legacy_version_and_package(self):
+        frontmatter = '''name: mpw
+metadata:
+  version: "2.28.0"
+  model_claims_reviewed_at: "2026-09-06"
+  role_routing_reviewed_at: "2026-09-06"
+'''
+        fallback_version, fallback = lint.parse_frontmatter(frontmatter, use_yaml=False)
+        yaml_version, yaml_metadata = lint.parse_frontmatter(frontmatter, use_yaml=True)
+        self.assertEqual(fallback_version, "2.28.0")
+        self.assertEqual(fallback_version, yaml_version)
+        self.assertEqual(fallback, yaml_metadata)
+        legacy = frontmatter.replace('  version: "2.28.0"\n', '')
+        for use_yaml in (False, True):
+            version, _ = lint.parse_frontmatter('version: 2.28.0\n' + legacy, use_yaml=use_yaml)
+            self.assertEqual(version, "2.28.0")
+
     def test_fallback_matches_pyyaml_for_review_fields(self):
         frontmatter = """version: 2.12.0
 metadata:

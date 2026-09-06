@@ -5,10 +5,12 @@ import contextlib
 import importlib.util
 import io
 import json
+import shutil
 import tempfile
 import unittest
-from datetime import timedelta
+from datetime import date, timedelta
 from pathlib import Path
+from unittest.mock import patch
 
 ROOT = Path(__file__).resolve().parents[1]
 SCRIPT = ROOT / "scripts" / "prompt_writing_doctrine_check.py"
@@ -49,8 +51,18 @@ class DoctrineRunnerTests(unittest.TestCase):
             state = temp / "state.json"
             garden = temp / "garden"
             garden.mkdir()
+            # A healthy fixture must not age with the real repository roster.
+            mpw = temp / "MPW"
+            shutil.copytree(ROOT / "contracts", mpw / "contracts")
+            roster = mpw / "references" / "image" / "model-routing.md"
+            roster.parent.mkdir(parents=True)
+            roster.write_text("<!-- roster-snapshot: 2026-07-25 -->\n", encoding="utf-8")
             out = io.StringIO()
-            with contextlib.redirect_stdout(out):
+            with (
+                patch.object(DOCTRINE, "MPW", mpw),
+                patch.object(DOCTRINE, "today", return_value=date(2026, 7, 26)),
+                contextlib.redirect_stdout(out),
+            ):
                 self.assertEqual(
                     0,
                     DOCTRINE.main(

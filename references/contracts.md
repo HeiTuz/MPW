@@ -39,6 +39,7 @@
 - `qualified_tokens`·`layout_tokens`의 각 토큰은 `origin`·`status`·`source_ref`로 노드 수준 provenance를 가질 수 있다. v1 기존 레코드 호환을 위해 선택이지만 **선언하면 완전해야 한다** — `origin`과 `status`는 함께 오고, `explicit`·`derived`는 `source_ref`로 근거 observation을 지목하며, `assumed`는 근거를 지목하지 않는다(지목하는 순간 관례값이 아니라 유도값이다). `status`에 `unresolved`는 없다. 미결 슬롯은 프롬프트에 실리는 토큰이 아니라 `unresolved_inputs` 소관이다.
 - `locks.identity`는 해당 사항이 없으면 빈 배열일 수 있다. `locks.subject`는 비어 있을 수 없다.
 - `intended_use`는 컴파일 목표의 mode/engine/goal만 나타낸다. 분석·저장 동작은 포함하지 않는다.
+- `unresolved_inputs`는 미결 입력을 보존한다. `required: true`가 남은 레코드는 구조적으로 저장·검증할 수 있지만, 컴파일과 `--recipe` 실행 준비 교차검증은 해당 슬롯을 명시해 거부한다.
 
 mode와 engine의 호환성은 다음과 같다. `frontend-agent`는 `DESIGN`에서만 허용하고, `gpt-image-2`·`higgsfield`·`generic-image`는 `IMAGE` 또는 `IMAGE_COMPOSITE`에서만 허용한다. 다른 조합은 `$.intended_use: incompatible_mode_engine`으로 거부한다.
 
@@ -48,11 +49,14 @@ mode와 engine의 호환성은 다음과 같다. `frontend-agent`는 `DESIGN`에
 
 `PromptBundle`의 실행 표면은 `handoff` 하나다. Higgsfield를 포함한 실행 adapter는 다른 Master 내부 상태나 adapter 저장소를 읽지 않고 이 객체만 소비한다. 엔진 선택은 `handoff.engine` 값이며, 엔진별 비공개 옵션을 새 key로 추가하지 않는다. 알 수 없는 handoff.protocol은 자유형 강등 없이 명시 거부한다(legacy `compiled_by`+`blocks` 형태 예외는 브리지 소관).
 
+`--recipe`로 원본을 제공하면 먼저 그 입력을 `garden-recipe/v1`으로 검증한다. 잘못된 형식·다른 계약·필수 미결 입력은 해시가 일치해도 실행 가능한 번들의 근거가 될 수 없다.
+
 각 `prompt_blocks[].unicode_char_count`는 JSON 문자열의 Unicode code point 수와 정확히 같아야 하고 2,000 이하여야 한다. 블록은 파일 경로나 외부 파일 읽기 지시 없이 자기완결이어야 한다. `--recipe` 교차 검증은 다음을 함께 증명한다.
 
 - `source_recipe.recipe_id`와 canonical JSON SHA-256 일치
 - `immutable_locks`의 identity/subject byte-for-byte 보존
 - intended mode/engine 보존
+- 필수 미결 입력이 없다는 실행 준비 상태
 
 ## MPWRecompileRequest v1
 

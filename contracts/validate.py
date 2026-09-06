@@ -24,6 +24,7 @@ SCHEMA_FILES = {
 # Legacy contracts whose wire discriminator is an integer instead of a contract key.
 # An integer is not a globally unique discriminator, so --schema stays the canonical path.
 WIRE_SCHEMA_ALIASES = {1: "apparel-handoff/v1"}
+_NO_RECIPE = object()
 # apparel-handoff and image-production-handoff carry filenames and relative paths by
 # design, so _privacy_errors is deliberately not attached to them: PATH_VALUE_RE would
 # reject conforming documents. Schema validation is the whole contract for those two.
@@ -352,8 +353,35 @@ def _token_provenance_errors(value: dict[str, Any], observed_ids: set[str]) -> l
     return errors
 
 
-def _bundle_semantic_errors(value: dict[str, Any], recipe: dict[str, Any] | None) -> list[str]:
+def recipe_readiness_errors(recipe: dict[str, Any], path: str = "$") -> list[str]:
+    """A stored recipe may be incomplete; an executable handoff may not be."""
+    unresolved = recipe.get("unresolved_inputs", [])
+    if not isinstance(unresolved, list):
+        return []  # Structural validation reports a malformed field separately.
+    errors: list[str] = []
+    for index, item in enumerate(unresolved):
+        if not isinstance(item, dict):
+            continue
+        # GardenRecipe v1 only admits required:true unresolved entries.
+        details = json.dumps(
+            {key: item.get(key) for key in ("code", "slot", "source_reference_id")},
+            ensure_ascii=False,
+            sort_keys=True,
+        )
+        errors.append(f"{path}.unresolved_inputs[{index}]: required_input_unresolved:{details}")
+    return errors
+
+
+def _bundle_semantic_errors(value: dict[str, Any], recipe: Any) -> list[str]:
     errors = _privacy_errors(value)
+    if recipe is not _NO_RECIPE:
+        source_schema = load_schema("garden-recipe/v1")
+        source_errors = _schema_errors(recipe, source_schema, source_schema, "$.source_recipe")
+        if source_errors:
+            return errors + source_errors
+        source_errors = _garden_semantic_errors(recipe)
+        if source_errors:
+            return errors + [error.replace("$", "$.source_recipe", 1) for error in source_errors]
     handoff = value.get("handoff", {})
     if isinstance(handoff, dict):
         block_ids: set[str] = set()
@@ -376,7 +404,8 @@ def _bundle_semantic_errors(value: dict[str, Any], recipe: dict[str, Any] | None
                 if FILE_DEPENDENCY_RE.search(text):
                     errors.append(f"$.handoff.prompt_blocks[{index}].text: external_file_dependency")
 
-    if recipe is not None:
+    if recipe is not _NO_RECIPE:
+        errors.extend(recipe_readiness_errors(recipe, "$.source_recipe"))
         if value.get("source_recipe", {}).get("recipe_id") != recipe.get("recipe_id"):
             errors.append("$.source_recipe.recipe_id: recipe_id_mismatch")
         expected_hash = canonical_hash(recipe)
@@ -525,7 +554,7 @@ def resolve_schema_key(value: dict[str, Any], schema_version: str | None = None)
 
 def validate_document(
     value: Any,
-    recipe: dict[str, Any] | None = None,
+    recipe: Any = _NO_RECIPE,
     schema_version: str | None = None,
 ) -> list[str]:
     if not isinstance(value, dict):
@@ -573,7 +602,7 @@ def main(argv: list[str] | None = None) -> int:
 
     try:
         value = load_json(args.document)
-        recipe = load_json(args.recipe) if args.recipe else None
+        recipe = load_json(args.recipe) if args.recipe else _NO_RECIPE
     except (OSError, json.JSONDecodeError) as exc:
         result = {"ok": False, "errors": [f"input_error:{exc}"]}
     else:

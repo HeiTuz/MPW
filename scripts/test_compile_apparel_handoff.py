@@ -5,6 +5,7 @@ import copy
 import importlib.util
 import json
 import os
+import subprocess
 import tempfile
 import unittest
 from pathlib import Path
@@ -87,6 +88,25 @@ class ApparelHandoffCompilerTests(unittest.TestCase):
     def test_compiler_output_passes_apparel_handoff_schema(self) -> None:
         result = compiler.compile_request(self.request)
         self.assertEqual([], contracts.validate_document(result, schema_version="apparel-handoff/v1"))
+
+    def test_generated_prompts_pass_compiled_tier_zero(self) -> None:
+        result = compiler.compile_request(self.request)
+        checker = ROOT / "scripts" / "check_prompt.mjs"
+        for output in result["outputs"]:
+            # The portable handoff owns geometry outside the prompt. Add only the
+            # compiled checker's required S3 tail so its Tier-0 language checks can
+            # exercise the exact generated body without changing the handoff.
+            validation_prompt = f'{output["prompt"]} AR 1:1'
+            checked = subprocess.run(
+                ["node", str(checker), "--profile", "compiled", "--tier", "0", "--surface", "s3"],
+                input=validation_prompt,
+                text=True,
+                capture_output=True,
+                check=False,
+            )
+            report = json.loads(checked.stdout)
+            self.assertEqual(0, checked.returncode, report)
+            self.assertTrue(report["ok"], report)
 
     def test_rejects_uppercase_output_extension(self) -> None:
         request = copy.deepcopy(self.request)

@@ -40,7 +40,7 @@ FILES = ["SKILL.md", "references/image/from-image.md", "references/templates.md"
          "references/image/editorial/photo-vocab.md", "references/image/editorial/scene-craft.md",
          "references/image/editorial/concept-collision.md", "references/image/look-and-concept.md",
          "references/image/typography.md", "references/image/production.md",
-         "references/image/realism.md", "references/image/seedream-5-pro.md",
+         "references/image/realism.md", "references/image/grok-imagine.md", "references/image/seedream-5-pro.md",
          "references/image/seedream-character-reference-sheets.md", "references/image/seedance-2.md",
          "references/image/seedance-2-5.md",
          "references/midjourney-character-sheets.md",
@@ -134,7 +134,7 @@ def parse_frontmatter(fm, use_yaml=True):
         else:
             parsed = yaml.safe_load(fm) or {}
             metadata = parsed.get("metadata") or {}
-            return parsed.get("version"), {
+            return parsed.get("version", metadata.get("version")), {
                 field: value.isoformat() if isinstance(value, date) else value
                 for field, value in metadata.items()
             }
@@ -145,13 +145,13 @@ def parse_frontmatter(fm, use_yaml=True):
     # metadata 블록: 들여쓴 항목 + 빈 줄 + 주석 줄까지 포함, 다음 최상위 키에서 종료 (PyYAML과 동일 범위)
     block = re.search(r"^metadata:\s*\n((?:^(?: {2}.*|[ \t]*(?:#.*)?)(?:\n|$))*)", fm, re.M)
     if block:
-        for field in REVIEW_STAMP_FIELDS:
+        for field in (*REVIEW_STAMP_FIELDS, "version"):
             stamp = re.search(rf"^ {{2}}{field}:\s*(?:\"([^\"\n]*)\"|'([^'\n]*)'|([^#\n]*))", block.group(1), re.M)
             if stamp:
                 value = next(g for g in stamp.groups() if g is not None).strip()
                 if value:
                     metadata[field] = value
-    return version, metadata
+    return version or metadata.get("version"), metadata
 
 
 def check_review_stamps(metadata, errors, today):
@@ -341,7 +341,7 @@ def check_seed_engine_boundaries(texts, errors):
             "Higgsfield나 다른 래퍼",
         ),
         "references/image/lanes.md": (
-            "ModelArk direct Seedance 2.0의 [seedance-2.md](seedance-2.md) 공식 권장 예외만 허용",
+            "ModelArk direct Seedance 2.0의 세부 규칙은 [seedance-2.md](seedance-2.md)를 따르며, Higgsfield나 2.5에 자동 상속하지 않는다",
         ),
         "references/image/surfaces.md": (
             "Dreamina 웹 Seedance 2.5 프롬프트 계약",

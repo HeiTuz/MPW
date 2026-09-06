@@ -17,9 +17,9 @@ Compile one self-contained `IMAGE` prompt per requested output. Each prompt is a
 1. the cut declaration — `ghost_cut` for a worn-shape garment with the wearer removed, `clean_product_cut` for a flat or laid product. Naming the cut is what separates a hollow garment holding its own shape from a flat cutout; leaving it implicit is the most common cause of the wrong one coming back;
 2. exact requested view, normalized color, and product description;
 3. source-supported construction, silhouette, proportions, material, trim, print, and visible details;
-4. complete removal of mannequin, hanger, stand, rod, cord, clip, hand, prop, and remnants;
-5. uniform `#FFFFFF` with no cast/contact shadow, halo, floor line, or gradient;
-6. source-only hidden-area reconstruction with no invented seam, lining, label, panel, button, print, embroidery, pocket, fastener, or hem;
+4. the garment alone, fully separated from mannequin, hanger, stand, rod, cord, clip, hand, prop, and remnants;
+5. a uniform `#FFFFFF` field with clean cutout edges, flat edge-to-edge tone, and shadow-free grounding;
+6. source-only hidden-area reconstruction that reproduces documented construction and leaves unsupported seams, lining, labels, panels, buttons, prints, embroidery, pockets, fasteners, and hems absent;
 7. coherent series canvas, occupancy, centerline, scale, and lighting, with the silhouette and the shoulder, neck, and hem anchors locked to the pilot.
 
 A prompt never contains a local path. If complete evidence cannot fit within 2,000 characters, return `self_contained_prompt_overflow`; do not drop a lock or move image instructions to another file.

@@ -2,7 +2,9 @@
 from __future__ import annotations
 
 import copy
+import contextlib
 import importlib.util
+import io
 import json
 import os
 import subprocess
@@ -50,9 +52,46 @@ class CompileGardenRecipeTests(unittest.TestCase):
         self.assertNotIn("UI에서 선택/업로드", text)
         self.assertNotIn("Exclude:", text)
         self.assertNotIn("\n", text)
-        self.assertNotIn("#C7B7A4", text)
-        self.assertIn("natural skin texture, visible pores, subtle film grain", text)
-        self.assertIn("unbranded clean finish", text)
+        # This handoff has no palette execution parameter, so the prompt carries it.
+        self.assertIn("Palette: #C7B7A4.", text)
+        self.assertIn("only source-supported marks", text)
+
+    def test_higgsfield_does_not_inject_unrequested_aesthetic_tokens(self) -> None:
+        for category in ("photo_editorial", "product_reference"):
+            with self.subTest(category=category):
+                recipe = copy.deepcopy(self.recipe)
+                recipe["category"] = category
+                text = self.compiler.compile_recipe(recipe)["handoff"]["prompt_blocks"][0]["text"]
+                for token in ("natural skin texture", "visible pores", "film grain", "natural material texture", "contact shadows"):
+                    self.assertNotIn(token, text)
+                requested = "Use visible pores, subtle film grain, and coherent contact shadows."
+                recipe["intended_use"]["goal"] += " " + requested
+                text = self.compiler.compile_recipe(recipe)["handoff"]["prompt_blocks"][0]["text"]
+                self.assertIn(requested, text)
+
+    def test_higgsfield_renderer_preserves_distinct_explicit_palettes(self) -> None:
+        palettes = (("#a1B2c3", "#445566"), ("#99AaBB", "#CcDdEe"))
+        prompts: list[str] = []
+        for values in palettes:
+            with self.subTest(palette=values):
+                recipe = copy.deepcopy(self.recipe)
+                recipe["intended_use"]["engine"] = "higgsfield"
+                evidence = recipe["observations"]["palette"]["items"][0]
+                recipe["observations"]["palette"]["items"] = [
+                    {**evidence, "observation_id": f"obs_palette_{index:02d}",
+                     "value": value, "basis": "user_supplied"}
+                    for index, value in enumerate(values, start=1)
+                ]
+                bundle = self.compiler.compile_recipe(recipe)
+                self.assertEqual([], self.contracts.validate_document(bundle, recipe))
+                block = bundle["handoff"]["prompt_blocks"][0]
+                text = block["text"]
+                self.assertIn(f"Palette: {'; '.join(values)}.", text)
+                for value in values:
+                    self.assertEqual(text.count(value), 1)
+                self.assertEqual(block["unicode_char_count"], len(text))
+                prompts.append(text)
+        self.assertNotEqual(prompts[0], prompts[1])
 
 
 
@@ -79,44 +118,76 @@ class CompileGardenRecipeTests(unittest.TestCase):
             "engine": "generic-image",
             "goal": "Replace only the background with a quiet studio environment.",
         }
+        pixel_lock = "every source subject pixel remains byte-for-byte unchanged"
+        recipe["locks"]["subject"].append(pixel_lock)
         bundle = self.compiler.compile_recipe(recipe)
         self.assertEqual([], self.contracts.validate_document(bundle, recipe))
         text = bundle["handoff"]["prompt_blocks"][0]["text"]
         self.assertIn("PIXEL-BOUND COMPOSITE", text)
         self.assertIn("locked photographic plate", text)
         self.assertIn("coordinates stay 1:1", text)
-        self.assertIn("dial B partial", text)
+        self.assertIn(recipe["intended_use"]["goal"], text)
+        self.assertIn(pixel_lock, text)
+        self.assertEqual(recipe["locks"], bundle["handoff"]["immutable_locks"])
+        for inserted_permission in ("dial B", "±0.3", "≤0.2", "≤200K", "≥0.75", "unify subject/background grain"):
+            self.assertNotIn(inserted_permission, text)
+        self.assertIn("adapt only generated background", text)
         self.assertIn("FINAL INTENT:", text)
         self.assertIn("FAIL if", text)
 
 
-    def test_gpt_image_renderer_requires_palette_gate_and_omits_ar(self) -> None:
+    def test_gpt_image_renderer_preserves_requested_palette_without_inventing_colors(self) -> None:
         for mode in ("IMAGE", "IMAGE_COMPOSITE"):
-            with self.subTest(mode=mode):
-                recipe = copy.deepcopy(self.recipe)
-                recipe["intended_use"]["engine"] = "gpt-image-2"
-                recipe["intended_use"]["mode"] = mode
-                with self.assertRaisesRegex(self.compiler.CompileError, "requires 3-5 distinct observed #RRGGBB"):
-                    self.compiler.compile_recipe(recipe)
-                recipe["observations"]["palette"]["items"][0]["value"] = "warm beige without a color token"
-                with self.assertRaisesRegex(self.compiler.CompileError, "received 0"):
-                    self.compiler.compile_recipe(recipe)
+            for palette in ("warm beige", "#C7B7A4", "#000000 #FFFFFF", "#111111 #222222 #333333 #444444 #555555 #666666"):
+                with self.subTest(mode=mode, palette=palette):
+                    recipe = copy.deepcopy(self.recipe)
+                    recipe["intended_use"].update(engine="gpt-image-2", mode=mode)
+                    recipe["observations"]["palette"]["items"][0]["value"] = palette
+                    bundle = self.compiler.compile_recipe(recipe)
+                    self.assertEqual([], self.contracts.validate_document(bundle, recipe))
+                    text = bundle["handoff"]["prompt_blocks"][0]["text"]
+                    self.assertIn(f"Palette: {palette}.", text)
+                    self.assertEqual(text.count("#"), palette.count("#"))
+                    self.assertNotIn("AR", text)
+                    self.assertNotIn("Exclude:", text)
 
+    def test_unresolved_required_inputs_block_compilation_with_actionable_reason(self) -> None:
         recipe = copy.deepcopy(self.recipe)
-        recipe["intended_use"]["engine"] = "gpt-image-2"
-        recipe["observations"]["palette"]["items"][0]["value"] = "#C7B7A4"
+        for code in ("exact_copy", "brand_text", "licensed_phrase", "missing_source_fact"):
+            recipe["unresolved_inputs"] = [{
+                "code": code,
+                "slot": "headline",
+                "source_reference_id": recipe["source"]["reference_id"],
+                "required": True,
+            }]
+            with self.subTest(code=code):
+                self.assertEqual([], self.contracts.validate_document(recipe))
+                with self.assertRaises(self.compiler.CompileError) as failure:
+                    self.compiler.compile_recipe(recipe)
+                message = str(failure.exception)
+                for detail in ("garden_recipe_not_ready", "required_input_unresolved", code, "headline", recipe["source"]["reference_id"]):
+                    self.assertIn(detail, message)
+        recipe["unresolved_inputs"] = []
+        self.assertEqual([], self.contracts.validate_document(self.compiler.compile_recipe(recipe), recipe))
 
-        palette = recipe["observations"]["palette"]["items"]
-        for index, value in ((2, "#2A2520"), (3, "#F2E9DD")):
-            item = copy.deepcopy(palette[0])
-            item["observation_id"] = f"obs_palette_0{index}"
-            item["value"] = value
-            palette.append(item)
-        bundle = self.compiler.compile_recipe(recipe)
-        self.assertEqual([], self.contracts.validate_document(bundle, recipe))
-        text = bundle["handoff"]["prompt_blocks"][0]["text"]
-        self.assertNotIn("AR", text)
-        self.assertNotIn("Exclude:", text)
+    def test_unresolved_cli_does_not_replace_an_existing_bundle(self) -> None:
+        recipe = copy.deepcopy(self.recipe)
+        recipe["unresolved_inputs"] = [{
+            "code": "exact_copy", "slot": "headline",
+            "source_reference_id": recipe["source"]["reference_id"], "required": True,
+        }]
+        with tempfile.TemporaryDirectory() as directory:
+            source = Path(directory) / "recipe.json"
+            output = Path(directory) / "bundle.json"
+            source.write_text(json.dumps(recipe), encoding="utf-8")
+            previous = json.dumps(self.compiler.compile_recipe(self.recipe), ensure_ascii=False)
+            output.write_text(previous, encoding="utf-8")
+            stderr = io.StringIO()
+            with contextlib.redirect_stderr(stderr):
+                result = self.compiler.main([str(source), "--output", str(output)])
+            self.assertEqual(result, 1)
+            self.assertIn("required_input_unresolved", stderr.getvalue())
+            self.assertEqual(output.read_text(encoding="utf-8"), previous)
 
     def test_mode_engine_compatibility_matrix(self) -> None:
         valid = (
@@ -192,10 +263,62 @@ class CompileGardenRecipeTests(unittest.TestCase):
             self.compiler.compile_recipe(recipe)
 
     def test_positive_lane_rejects_untranslatable_exclusion(self) -> None:
+        for exclusion in ("sentinel forbidden artifact", "logo composition variations"):
+            recipe = copy.deepcopy(self.recipe)
+            recipe["exclusions"] = [exclusion]
+            with self.assertRaisesRegex(self.compiler.CompileError, "untranslatable_positive_exclusion"):
+                self.compiler.compile_recipe(recipe)
+
+    def test_positive_exclusions_preserve_source_branding_and_identity(self) -> None:
         recipe = copy.deepcopy(self.recipe)
-        recipe["exclusions"] = ["sentinel forbidden artifact"]
-        with self.assertRaisesRegex(self.compiler.CompileError, "untranslatable_positive_exclusion"):
-            self.compiler.compile_recipe(recipe)
+        recipe["locks"] = {
+            "identity": ["preserve the original source identity"],
+            "subject": ["one supplied product bottle", "preserve the original ACME logo and lettering"],
+        }
+        for exclusion in ("invented logos", "new logos", "additional brand marks", "extra logos"):
+            with self.subTest(exclusion=exclusion):
+                recipe["exclusions"] = [exclusion, "identity drift"]
+                bundle = self.compiler.compile_recipe(recipe)
+                text = bundle["handoff"]["prompt_blocks"][0]["text"]
+                self.assertEqual(recipe["locks"], bundle["handoff"]["immutable_locks"])
+                self.assertEqual(recipe["exclusions"], bundle["handoff"]["negative_constraints"])
+                self.assertIn("preserve the original ACME logo and lettering", text)
+                self.assertIn("only source-supported marks", text)
+                self.assertIn("same source identity", text)
+                self.assertNotIn("unbranded", text)
+                self.assertNotIn("fictional", text)
+
+        recipe["locks"]["subject"] = ["one unbranded product bottle"]
+        recipe["exclusions"] = ["all logos"]
+        text = self.compiler.compile_recipe(recipe)["handoff"]["prompt_blocks"][0]["text"]
+        self.assertIn("all visible surfaces have an unbranded clean finish", text)
+
+    def test_prompt_knowledge_addition_ban_preserves_existing_source_marks(self) -> None:
+        recipe = copy.deepcopy(self.recipe)
+        recipe["locks"]["subject"] = [
+            "one supplied product bottle",
+            "preserve the original ACME logo, branding, and source watermark",
+        ]
+        recipe["exclusions"] = ["Do not add logos, brands, or watermarks."]
+        for mode, engine in (
+            ("IMAGE", "gpt-image-2"),
+            ("IMAGE", "higgsfield"),
+            ("IMAGE", "generic-image"),
+            ("IMAGE_COMPOSITE", "generic-image"),
+        ):
+            with self.subTest(mode=mode, engine=engine):
+                recipe["intended_use"].update(mode=mode, engine=engine)
+                bundle = self.compiler.compile_recipe(recipe)
+                self.assertEqual([], self.contracts.validate_document(bundle, recipe))
+                handoff = bundle["handoff"]
+                text = handoff["prompt_blocks"][0]["text"]
+                self.assertEqual(recipe["locks"], handoff["immutable_locks"])
+                self.assertEqual(recipe["exclusions"], handoff["negative_constraints"])
+                self.assertIn(recipe["locks"]["subject"][1], text)
+                self.assertIn("logos, branding, and watermarks match the source exactly", text)
+                self.assertIn("only source-supported marks", text)
+                self.assertNotIn("unbranded", text)
+                self.assertNotIn("watermark-free", text)
 
     def test_legacy_bridge_adapter_preserves_blocks(self) -> None:
         recipe = copy.deepcopy(self.recipe)
@@ -207,7 +330,7 @@ class CompileGardenRecipeTests(unittest.TestCase):
             [block["text"] for block in bundle["handoff"]["prompt_blocks"]],
             [block["text"] for block in legacy["blocks"]],
         )
-        self.assertIn("unbranded clean finish", legacy["blocks"][0]["text"])
+        self.assertIn("clean watermark-free finish", legacy["blocks"][0]["text"])
 
     def test_cli_emits_machine_readable_failure(self) -> None:
         with tempfile.TemporaryDirectory() as directory:

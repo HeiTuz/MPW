@@ -20,7 +20,7 @@
     "v1/production-adapter-options.schema.json": "7b743a90e83f9e5c1a05b5ec9b06213d15d2001498ce2534b57ddc992c3f6d65",
     "v1/prompt-bundle.schema.json": "d5ad38249771b6154036c867a067a7b92a16a50e1eb5e8f89aea617e4cc51675",
     "v1/source-evidence-index.schema.json": "0682e8faca5607a45bc955d8eadde62d1bb570c1f6f557525fba94c8fb1ca440",
-    "validate.py": "5a25c7e10589426fe0365480ce38f6a7d2b4aad46abaf80aa378faaa55ab72c6"
+    "validate.py": "14b4f9610cc96ead2bdd41e1317b3437eeecb4b2e899fce681b988882d0f2200"
   },
   "manifest_version": 1
 }

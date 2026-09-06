@@ -88,7 +88,7 @@ Video 1. When the falling leaf touches the ground, it bursts into golden particl
 
 ## 공식 실패 제약 예외
 
-영상 레인의 기본값은 긍정형·명사형 배제지만, **ModelArk direct Seedance 2.0 공식 가이드가 특정 실패를 교정하기 위해 권장하는 짧은 결과 제약은 허용한다.** 이 예외를 다른 엔진의 범용 네거티브 정책으로 확장하지 않는다.
+**ModelArk direct Seedance 2.0 공식 가이드는 특정 실패를 교정하는 짧은 결과 제약을 권장한다.** 아래 표현을 다른 엔진에 그대로 복사하지 않는다. 공통 배제 입력 판정은 [surfaces.md](surfaces.md) §4를 따른다.
 
 - 불필요한 자막: `Keep it subtitle-free. Avoid generating any text or subtitles.`
 - 로고·워터마크: `Do not generate logos or watermarks.`

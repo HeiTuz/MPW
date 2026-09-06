@@ -6,11 +6,13 @@
 
 **이 파일이 기술하는 `prompts.jsonl` 벌크 스키마는 레거시 벌크 러너 경로(S1-legacy)다.** 표면 판정은 [surfaces.md](surfaces.md)가 선행하며, 아래 값을 다른 표면으로 옮기지 않는다.
 
+GPT Image의 네이티브 자연어는 [surfaces.md](surfaces.md) §3.1과 `check_prompt.mjs --profile native`를 쓴다. 이 문서의 A/B·Tier·사이즈락은 네이티브 API 전체를 검증하지 않는다. 네이티브 프로필은 S2/S3의 본문 텍스트만 받으며 JSON/JSONL·S1·명시 Tier·`--api`와 혼용하지 않는다. 엔진 미지정 시 GPT Image를 쓰고, 길이·빈 입력·미치환 슬롯·다른 엔진 문법·정확 카피 중복을 검사한다. API 필드·참조·이미지 품질은 별도 검증 대상이다.
+
 | 표면 | 이 파일이 적용되나 | 정본 |
 |---|---|---|
 | S1 기계 계약(MPW→ImgGen2) | **아니오** — `ar` 5종·`size` 3종·`quality` 3종 | `contracts/v1/*.schema.json` + `contracts/validate.py` |
 | S1-legacy 벌크 jsonl | **예** — 아래 표 | 이 파일 §2 |
-| S2 플랫폼 파라미터 | **아니오** — 픽셀 개념 없음 | 모델 런타임 정의 |
+| S2 플랫폼 파라미터 | **아니오** — 해상도·품질·픽셀 필드는 모델별로 확인 | 현재 모델 상세 조회 도구와 호출 스키마 |
 | S3 붙여넣기 | **아니오** — 파라미터 없음 | [surfaces.md](surfaces.md) §3 |
 
 **두 S1 경로는 값 집합이 다르다.** 기계 계약에서 쓸 수 있는 값은 **`contracts/v1/*.schema.json`의 enum이 전부이며, 문서의 어떤 목록도 예시일 뿐 권위가 아니다.** 아래 S1-legacy 표의 값이 그 enum에 없으면 기계 계약 경로에서는 쓸 수 없고, 쓰면 `production_geometry_mismatch`로 거부된다(2026-07-25 확인 시점 기준 예시: 비율 `2:3`·`3:2`·`4:5`, 픽셀 `1792x1024`·`1024x1792`·`2048x2048`이 스키마에 없었다 — 이 예시가 최신이라고 가정하지 말고 스키마를 직접 읽어라). 아래 표를 근거로 기계 계약 값을 정하지 마라.
@@ -36,7 +38,11 @@
 
 ## 2. prompts.jsonl 스키마
 
+각 행은 JSON 객체여야 하며, 잘못된 행도 배치 전체를 중단하지 않고 행별 실패로 보고한다. approved의 QA는 0~5 범위의 숫자만 받고 문자열·범위 밖 점수는 거부한다. 렌더 카피가 있으면 따옴표 종류와 무관하게 text_accuracy를 N/A로 둘 수 없다.
+
 1줄이 1프롬프트 JSON이다. `full_prompt`는 러너가 그대로 소비한다. 프롬프트 끝에는 AR만 두고 앞 브래킷·`Negative:` 섹션을 두지 않는다.
+
+일반 본문은 [surfaces.md](surfaces.md) §0-1·§0-2의 짧은 자연어 기본형과 길이 계약을 따른다. 아래 상세 예제의 섹션 수·분량·팔레트를 채우기 위해 내용을 늘리지 않는다. 짧거나 팔레트가 없다는 이유만으로 결함으로 판정하지 않으며, 생성할 내용은 있어야 한다. 정확 카피·원본 보존 요구와 선택한 promo/TP·Tier-2 레인의 계약은 유지한다.
 
 ```jsonc
 {
@@ -71,7 +77,7 @@
 | `engine` | `gpt-image`·`higgsfield`·`midjourney`·`unknown` | 선택. 타깃 엔진 층. 열거 밖 값은 `E-REC-CONTEXT`. |
 | `channel` | `bounded`·`unbounded` | 선택. 전달 채널 층. |
 | `channel_limit` | 양의 정수 | 선택. 런타임에서 실측한 채널 상한 주입(`bounded` 함의). |
-| `palette` | HEX 배열 | full_prompt 반영 누락 시 `W-PALETTE-MISS`. |
+| `palette` | HEX 배열 | 일반 컷에서는 선택. 지정한 색의 full_prompt 반영 누락 시 `W-PALETTE-MISS`. promo/TP는 해당 팔레트 계약을 따른다. |
 | `promo_pattern` | `P1`~`P12` | `cut_type: promo_poster`일 때 필수. 선택 파일은 `promo-router.md` 정본. |
 | `tp_pattern` | `TP1`~`TP17` | `cut_type: typography_poster`일 때 필수. 라우팅·공통 계약은 `typography-poster-router.md`, 패턴별 관찰 시그니처·실패·재시도 계약은 `typography-poster-patterns.md` 정본. |
 | `legibility_target` | `exact_primary`·`repeated_texture`·`specimen_repeat` | TP 타이포의 정확 카피/반복 텍스처/판독 유지 진열 의미를 고정한다. TP2·TP14만 `repeated_texture`, TP17만 `specimen_repeat`. |
@@ -98,6 +104,8 @@
 
 ## 3. format/tier/lane 결정
 
+`format`의 `A`/`B` 값과 기존 자동 판별 휴리스틱은 호환을 위해 유지한다. 아래 판별 기준은 표현 형태를 분류하는 힌트다. A/B로 판별되도록 섹션이나 HEX를 추가할 필요는 없으며, 형식 분류 자체가 길이·팔레트·조명·카메라·질감의 품질 의무를 만들지 않는다.
+
 | 항목 | 값 | 결정 규칙 |
 |---|---|---|
 | Format A | 섹션형 프롬프트 | `Scene:`, `Camera:`, `Lighting:`, `Color grading:`, `Texture/Medium:`, `Text-in-image:` 중 3개 이상이면 A. |
@@ -114,7 +122,9 @@
 | 4 | 휴리스틱: 렌더 텍스트 → 1 |
 | 제한 | Tier-2는 휴리스틱 승격 불가 |
 
-## 4. 완성 예시 — Format A
+## 4. 상세 예시 — Format A
+
+여러 시각 축과 카피를 지정한 예시다. 일반 컷은 필요한 문장만 쓰며, 모든 섹션을 채우지 않는다.
 
 ### 4.1 컴파일 결과
 
@@ -139,10 +149,10 @@ AR 4:5
 
 ## 5. 완성 예시 — Format B
 
-Format B는 플랫 콤마형 단문 350~450자다. Tier 2 + lane editorial에서는 SAFETY_ASSERT가 피사체절 선두에 오고, NEGATIVE_TAIL이 `AR 2:3` 직전에 정확히 1회 온다. 동결 문구의 유일한 문서 정본은 [editorial/tier2-safety.md](editorial/tier2-safety.md) §2다 — 아래 예시의 해당 구간은 그 정본의 치환 결과이며, 정본이 바뀌면 이 예시도 함께 갱신한다.
+Format B는 라벨 섹션 없이 자연어 문장이나 콤마 절로 쓰며 별도 최소·목표 길이를 두지 않는다. 아래는 명시된 Tier 2 + lane editorial의 상세 예제다. 이 레인에서는 SAFETY_ASSERT가 피사체절 선두에 오고, NEGATIVE_TAIL이 `AR 2:3` 직전에 정확히 1회 온다. 동결 문구의 유일한 문서 정본은 [editorial/tier2-safety.md](editorial/tier2-safety.md) §2다 — 아래 예시의 해당 구간은 그 정본의 치환 결과이며, 정본이 바뀌면 이 예시도 함께 갱신한다.
 
 ```json
-{"id":"C1-HWABO-001","category":"C1","cut_type":"editorial_solo","title":"아침 창가 라운지웨어","format":"B","tier":2,"lane":"editorial","palette":["#F7F4EC","#D9C7B8","#B76E79"],"ar":"2:3","size":"1024x1536","quality":"high","output_format":"webp","output_compression":82,"full_prompt":"adult Korean woman in her late 20s, 25+, original character, non-nude fashion editorial styling, fully opaque fabric, covered chest line, editorial upright pose, 갸름한 얼굴, 다크브라운 단발 헤어, 한국 남성지풍 클린 화보 컷, 창가의 아침빛 아래 커튼을 잡은 포즈, 크림 새틴 라운지웨어 셋업, 무릎 위 3/4 구도, soft window light, shallow DoF, 팔레트 #F7F4EC #D9C7B8 #B76E79, subtle film grain, no nudity, no nipple or genital exposure, no wardrobe malfunction, no extra people, no text, no watermark, AR 2:3","status":"draft","qa":{"goal_fit":0,"text_accuracy":0,"material_realism":0,"layout":0},"output_path":"out/C1-HWABO-001.webp"}
+{"id":"C1-HWABO-001","category":"C1","cut_type":"editorial_solo","title":"아침 창가 라운지웨어","format":"B","tier":2,"lane":"editorial","palette":["#F7F4EC","#D9C7B8","#B76E79"],"ar":"2:3","size":"1024x1536","quality":"high","output_format":"webp","output_compression":82,"full_prompt":"adult subject, non-nude fashion editorial, fully opaque clothing, secure garment coverage, non-sexual presentation, 갸름한 얼굴, 다크브라운 단발 헤어, 한국 남성지풍 클린 화보 컷, 창가의 아침빛 아래 커튼을 잡은 포즈, 크림 새틴 라운지웨어 셋업, 무릎 위 3/4 구도, soft window light, shallow DoF, 팔레트 #F7F4EC #D9C7B8 #B76E79, subtle film grain, no nudity, no nipple or genital exposure, no wardrobe malfunction, no extra people, no text, no watermark, AR 2:3","status":"draft","qa":{"goal_fit":0,"text_accuracy":0,"material_realism":0,"layout":0},"output_path":"out/C1-HWABO-001.webp"}
 ```
 
 작성 단계에서는 동결 문구 자리를 슬롯 표기로 비워 둘 수 있다 — 방출 전에 정본 §2로 치환하며, 슬롯이 남은 채 방출하면 `E-SLOT-LEAK`다:
@@ -151,7 +161,9 @@ Format B는 플랫 콤마형 단문 350~450자다. Tier 2 + lane editorial에서
 [SAFETY_ASSERT], 갸름한 얼굴, …, subtle film grain, [NEGATIVE_TAIL], AR 2:3
 ```
 
-| 슬롯 순서 | 값 |
+아래 순서는 위 상세 예제의 구성이다. 일반 Format B에는 결과를 바꾸는 슬롯만 남기며, Tier-2의 페어·순서·위치 조건은 명시된 레인에서 그대로 적용한다.
+
+| 예제 순서 | 값 |
 |---|---|
 | 1 | 피사체(SAFETY_ASSERT) |
 | 2 | 얼굴 |
@@ -161,7 +173,7 @@ Format B는 플랫 콤마형 단문 350~450자다. Tier 2 + lane editorial에서
 | 6 | 의상 |
 | 7 | 구도 |
 | 8 | 조명 |
-| 9 | 팔레트 #HEX×3~5 |
+| 9 | 이 예제에서 선택한 팔레트 |
 | 10 | 질감 |
 | 11 | Tier-2 tail |
 | 12 | AR |
@@ -175,7 +187,7 @@ Format B는 플랫 콤마형 단문 350~450자다. Tier 2 + lane editorial에서
 
 ## 6. AUTHORING_GUIDE 8섹션 변형
 
-라이브러리·교육용에서 챕터 단위로 변수를 통제할 때 쓴다. 기본 6섹션과 별개 체계다. **§ 라벨은 작성 메타데이터다 — `full_prompt` 방출 전에 일반 헤더/문장으로 변환하며, 본문에 `§`가 남으면 검증기 W-SECTION-MARK 대상이다.**
+라이브러리·교육용에서 챕터 단위로 변수를 통제하는 상세 양식을 요청했을 때 쓴다. 위 Format A 예제와도 별개 체계이며 일반 프롬프트의 기본 골격이 아니다. **§ 라벨은 작성 메타데이터다 — `full_prompt` 방출 전에 일반 헤더/문장으로 변환하며, 본문에 `§`가 남으면 검증기 W-SECTION-MARK 대상이다.**
 
 | 섹션 | 이름 | 내용 |
 |---|---|---|
@@ -185,7 +197,7 @@ Format B는 플랫 콤마형 단문 350~450자다. Tier 2 + lane editorial에서
 | §4 | 맥락·환경 | 장소·시간·상황 |
 | §5 | 구도·공간 | 카메라·프레임·그리드 |
 | §6 | 빛·색·재질·매체 | 조명·HEX·질감·매체 |
-| §7 | 제약(영어 키워드 2~3) | 필요한 영어 제약 키워드 2~3개 |
+| §7 | 제약 | 실제 요청과 선택한 레인에 필요한 제약 |
 | §8 | 출력 | `{ar} · {size} · PNG` |
 
 | 운영 규칙 | 값 |
@@ -268,14 +280,12 @@ Reply only with the saved file path.
 
 ### 9.2 포맷·프롬프트 구조
 
+일반 A/B에서 장르·카메라·조명·질감 슬롯이나 HEX가 없다는 이유로 오류를 만들지 않는다. 형식용 토큰만 있고 생성할 내용이 없는 입력은 별도로 거절한다.
+
 | 코드 | 조건 | 조치 |
 |---|---|---|
 | `E-AR-END` | 끝에 `AR x:y` 없음 | 프롬프트 맨 끝에 AR 토큰 추가. |
-| `E-CAT-LANG` | 매체/카테고리 언어 없음 | 첫 절에 결과물 장르 추가. |
-| `E-CAM-LANG` | 카메라·구도·레이아웃 언어 없음 | 구도·레이아웃 토큰 추가. |
-| `E-LIGHT-LANG` | 조명 지시 없음 | 조명 토큰 추가. |
-| `E-TEX-LANG` | 재질·질감·매체 디테일 없음 | Texture/Medium 또는 질감 토큰 추가. |
-| `E-FMT-B-HEX` | Format B HEX 3~5개 범위 밖 | HEX 3~5개로 수정. |
+| `E-PROMPT-EMPTY` | 공백·AR·빈 섹션명·팔레트 값만 있고 생성할 내용이 없음 | 생성 대상·변경 요청 또는 실제 렌더 카피를 적는다. 따옴표 안의 실제 카피는 숫자·HEX·기호도 허용한다. |
 | `E-HEAD-BRACKET` | 앞머리 `[AR x:y SIZE wxh]` 브래킷 | size는 필드로 이동, 프롬프트 끝에는 AR만 남김. |
 | `E-SLOT-LEAK` | `[TITLE]`류 슬롯 잔존 | 실제 값으로 치환. |
 | `E-SD-VOCAB` | 폐기 품질태그 사용 | 결과 상태·카메라·질감 토큰으로 교체. |
@@ -310,7 +320,7 @@ Reply only with the saved file path.
 | `E-TIER2-DUP` | NEGATIVE_TAIL 2회 이상 | 정확히 1회만 남김. |
 | `E-TIER2-EXTRA` | tail 항목 추가·중복·순서 변경 | 캐노니컬 순서의 부분집합으로 수정. |
 | `E-TIER2-POS` | NEGATIVE_TAIL이 AR 직전이 아님 | AR 직전 마지막 절로 이동. |
-| `E-TIER2-PAIR` | tail 단독 사용 | SAFETY_ASSERT 앵커 3개 이상과 페어. |
+| `E-TIER2-PAIR` | tail 단독 사용 | 성별·민족·포즈를 바꾸지 않고 안전 앵커 3개 이상과 페어. |
 
 ### 9.5 promo 라우팅·게이트
 
@@ -327,29 +337,30 @@ Reply only with the saved file path.
 | `E-PROMO-FINISH` | 마감 장치가 1~3개 밖 | 허용 장치 1~3개만 유지. |
 | `E-PROMO-CARD-DRIFT` | C7 소품·배지 밀도로 후퇴 | 정보 장치를 걷고 위계·여백 긴장 복구. |
 | `E-PROMO-COPY` | 정확 카피가 1회가 아님 | `korean_copy`를 따옴표 안에 1회. |
-| `E-PROMO-KO-MASK-LEN` | 한글 마스킹·압출이 3음절 이상 | 2음절로 축소하거나 효과 변경. |
+| `E-PROMO-KO-MASK-LEN` | 한글 마스킹·압출이 3음절 이상 | 지정 카피를 보존하고 promo-router.md §4의 효과 충돌 절차 적용. 조절 가능한 새 카피만 2음절로 축소. |
 | `E-PROMO-METAUI` | P5가 실제 앱 화면으로 읽힘 | 인쇄된 메타 그래픽으로 재서술. |
 
 ### 9.6 길이·컨텍스트
 
 | 코드 | 조건 | 조치 |
 |---|---|---|
-| `E-OVERFLOW-2000` | 기계 계약(스키마) 또는 기본 채널 배선의 상한 초과 | 장식 → 중복 → 방법 설명 순으로 감량, 그래도 넘으면 컷 분리. |
+| `E-OVERFLOW-2000` | 기계 계약(스키마) 또는 기본 채널 배선의 상한 초과 | 장식 → 중복 → 방법 설명 순으로 감량. 필수 조건을 유지해도 넘으면 전달 경로·계약을 조정하며 한 컷을 임의로 분리하지 않는다. |
 | `E-OVERFLOW-LIMIT` | 기본 배선 밖 유한 상한(엔진 32,000 또는 실측 채널 값) 초과 | 같은 감량 절차. 메시지의 구속 층·상한을 확인. |
-| `E-ENGINE-SCOPE` | `--engine midjourney` 선언 | 이 검증기로 구조 판정 불가 — 미드저니 단어 대역은 surfaces.md §0-1 소관. 채널·계약 층 문자 판정은 함께 보고됨. |
+| `E-ENGINE-SCOPE` | compiled에 Midjourney 선언 또는 native에 GPT Image 외 엔진 선언 | 해당 엔진의 실제 규칙으로 검증. 채널·계약 문자 상한도 별도로 확인한다. |
+| `E-PROFILE-CONFLICT` | native와 JSONL·S1·명시 Tier·`--api` 또는 레코드 profile 혼용 | 기계 레코드는 compiled 계약, 네이티브 본문은 native 계약으로 구분한다. |
+| `E-NATIVE-INPUT` | native에 JSON 객체·배열 입력 | 본문 텍스트만 추출하고 전체 요청은 API·도구 스키마로 검증한다. |
 | `E-REC-CONTEXT` | 레코드 surface/engine/channel/channel_limit의 열거·타입 위반 | 허용 값으로 수정. |
 | `E-INPUT-FLAG` | CLI 플래그의 열거 밖 값 또는 미지 플래그 | 플래그 철자·값 수정. |
 | `W-LENGTH-UNGATED` | 세 층 모두 수치 상한 없음 | 신호 밀도로 관리(surfaces.md §0-1). |
 
 ### 9.7 워닝
 
+짧음이나 무팔레트 자체에는 경고를 붙이지 않는다. 길이는 [surfaces.md](surfaces.md) §0-1·§0-2에 따라 판정한다.
+
 | 코드 | 조건 | 조치 |
 |---|---|---|
-| `W-SHORT-A` | Format A 프롬프트가 짧음 | 시각 명세 보강. |
-| `W-LEN-B` | Format B 길이 300~550자 밴드 밖 | 350~450자 타깃으로 조정. |
-| `W-HEX-MISS` | HEX 팔레트 없음 | 장면 팔레트와 일치하는 HEX가 최종 3~5개가 되도록를 HEX로 추가. |
 | `W-TEXT-ROLE` | 따옴표 카피 2개 이상인데 롤 라벨 없음 | headline/subhead/caption 등 롤 추가. |
-| `W-TEXT-MIXLANG` | 한 따옴표 문자열 안 KO+EN 혼합 | 언어별 라벨 분리. |
+| `W-TEXT-MIXLANG` | 한 따옴표 문자열 안 KO+EN 혼합 | 사용자 지정 문구는 보존. 새 카피 설계일 때만 줄·롤 분리 고려. |
 | `W-TEXT-GUARD` | 텍스트가 있는데 가독성/반복 가드 없음 | 기본 가독 가드 추가. |
 | `W-SECTION-MARK` | 본문에 `§` 기호 사용 | 헤더 형식으로 변경. |
 | `W-FILLER` | 죽은 형용사 잔존 | 수치·몸 반응·구체 예시로 환원. |
@@ -369,11 +380,11 @@ Reply only with the saved file path.
 | 4 | size/ar | AR 매핑과 사이즈락 6종 일치 | 허용 size로 교체 |
 | 5 | quality | 텍스트 heavy는 `high`, `auto` 0개 | `quality` 수정 |
 | 6 | full_prompt 끝 | 전 행 `AR x:y`로 종료 | 끝 토큰 수정 |
-| 7 | 팔레트 | 핵심 HEX가 full_prompt에 반영 | 누락 HEX 추가 |
+| 7 | 지정한 팔레트 | record에 지정한 색과 선택한 전문 레인의 색 계약이 full_prompt에 반영 | 지정한 색만 복구. 팔레트가 필요 없는 일반 컷은 통과 |
 | 8 | 텍스트 | 따옴표·롤 라벨·가독 가드 적용 | `typography.md` 순서도 적용 |
 | 9 | 금지 구조 | 앞 브래킷·`Negative:`·슬롯 잔존 0개 | 긍정형 서술과 실제 값으로 교체 |
 | 10 | output_path | 저장 경로가 행별로 다름 | 경로 고유화 |
-| 11 | 투명 배경 | 생성 프롬프트에 투명 요구 0개 | 투명이 필요하면 후속 컷아웃 단계(`remove_background`)로 표기 |
+| 11 | 투명 배경 | 이 레거시 벌크 경로는 후속 컷아웃 명시 | 네이티브 알파 출력 지원 여부는 [surfaces.md](surfaces.md) §5로 별도 판정 |
 | 12 | QA 필드 | `goal_fit`, `text_accuracy`, `material_realism`, `layout` 존재 | 누락 필드 추가 |
 
 ## 11. AR↔size 매핑 (S1-legacy 벌크 한정)

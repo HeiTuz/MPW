@@ -39,6 +39,7 @@ const required = [
   "references/adapters.md",
   "references/image/compiler.md",
   "references/image/lanes.md",
+  "references/image/grok-imagine.md",
   "references/image/seedream-5-pro.md",
   "references/image/seedance-2.md",
   "references/image/seedance-2-5.md",
@@ -82,6 +83,8 @@ function checkLinks(destination, relative) {
   const dir = path.dirname(path.join(destination, relative));
   const links = [...text.matchAll(/\]\(([^)#][^)]+\.md)(?:#[^)]+)?\)/g)].map((match) => match[1]);
   for (const link of links) {
+    // 공식 문서의 .md URL은 설치본 내부 파일이 아니다.
+    if (/^https?:\/\//i.test(link)) continue;
     const target = path.resolve(dir, link);
     if (!target.startsWith(destination + path.sep)) fail(`${relative} link escapes install: ${link}`);
     if (!fs.existsSync(target)) fail(`${relative} missing link target: ${link}`);
@@ -117,7 +120,7 @@ function assertInstalled(home, target) {
   const installDestination = destination(home, target);
   const installed = Object.fromEntries(required.map((relative) => [relative, readInstalled(installDestination, relative)]));
   if (fs.existsSync(path.join(installDestination, "agents"))) fail(`${target}: agents/ leaked into installed payload`);
-  for (const relative of ["SKILL.md", "references/templates.md", "references/model-playbooks.md", "references/adapters.md", "references/image/lanes.md", "references/image/seedream-5-pro.md", "references/image/seedance-2.md", "references/image/seedance-2-5.md"]) {
+  for (const relative of ["SKILL.md", "references/templates.md", "references/model-playbooks.md", "references/adapters.md", "references/image/lanes.md", "references/image/grok-imagine.md", "references/image/seedream-5-pro.md", "references/image/seedance-2.md", "references/image/seedance-2-5.md"]) {
     checkLinks(installDestination, relative);
   }
   const host = overlayHost(target);

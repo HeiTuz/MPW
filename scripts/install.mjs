@@ -97,12 +97,16 @@ export const ALLOWED_INSTALL_ROOTS = new Set([
 
 const EXCLUDED_PARTS = new Set([".git", "node_modules", ".gjc", ".omx", "__pycache__", "docs-internal"]);
 
+function isLocalStatePart(part) {
+  return EXCLUDED_PARTS.has(part) || part.startsWith(".") ||
+    /(?:\.pyc|\.bak(?:[.-].*)?|\.orig|\.rej|\.save|~)$/u.test(part);
+}
+
 export function shouldSkip(rel) {
   const parts = rel.split(path.sep);
   if (!ALLOWED_INSTALL_ROOTS.has(parts[0])) return true;
   if (parts[0] === "agents") return true;
-  return parts.some((part) => EXCLUDED_PARTS.has(part) || part.startsWith(".")) ||
-    rel.endsWith(".pyc") ||
+  return parts.some(isLocalStatePart) ||
     rel === "package-lock.json" ||
     rel === "bun.lockb" ||
     rel === "bun.lock";
@@ -133,8 +137,7 @@ function copyCanonicalTree(current, destination, sourceRoot) {
 
 function overlayEntryIsSafe(relative) {
   const parts = relative.split(path.sep);
-  return !parts.some((part) => EXCLUDED_PARTS.has(part) || part.startsWith(".")) &&
-    !relative.endsWith(".pyc");
+  return !parts.some(isLocalStatePart);
 }
 
 function copyOverlayTree(current, destination, overlayRoot) {
@@ -222,14 +225,26 @@ async function chooseInteractiveHosts(detected) {
   }
 }
 
+function physicalPath(value) {
+  let existing = path.resolve(value);
+  const missing = [];
+  while (!fs.existsSync(existing)) {
+    missing.unshift(path.basename(existing));
+    const parent = path.dirname(existing);
+    if (parent === existing) break;
+    existing = parent;
+  }
+  return path.resolve(fs.realpathSync(existing), ...missing);
+}
+
 function pathsOverlap(left, right) {
-  const a = path.resolve(left);
-  const b = path.resolve(right);
+  const a = physicalPath(left);
+  const b = physicalPath(right);
   return a === b || a.startsWith(b + path.sep) || b.startsWith(a + path.sep);
 }
 
 function validateDestination(destination, homeDir, sourceRoot = root) {
-  const resolved = path.resolve(destination);
+  const resolved = physicalPath(destination);
   const filesystemRoot = path.parse(resolved).root;
   const protectedContainers = [
     ".hermes",
@@ -244,11 +259,11 @@ function validateDestination(destination, homeDir, sourceRoot = root) {
     path.join(".gjc", "agent", "skills"),
     ".agents",
     path.join(".agents", "skills"),
-  ].map((relative) => path.resolve(homeDir, relative));
+  ].map((relative) => physicalPath(path.resolve(homeDir, relative)));
   if (resolved === filesystemRoot || path.dirname(resolved) === filesystemRoot) {
     throw new Error(`Refusing unsafe install destination: ${resolved}`);
   }
-  if (resolved === path.resolve(homeDir) || protectedContainers.includes(resolved) || pathsOverlap(resolved, sourceRoot)) {
+  if (resolved === physicalPath(homeDir) || protectedContainers.includes(resolved) || pathsOverlap(resolved, sourceRoot)) {
     throw new Error(`Refusing unsafe install destination: ${resolved}`);
   }
 }

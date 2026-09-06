@@ -28,12 +28,15 @@ class CompileError(RuntimeError):
     """The request cannot produce a valid portable handoff."""
 
 
-def _text(value: Any, field: str, *, required: bool = False, limit: int | None = None) -> str | None:
+def _text(
+    value: Any, field: str, *, required: bool = False,
+    limit: int | None = None, preserve_whitespace: bool = False,
+) -> str | None:
     if value is None and not required:
         return None
     if not isinstance(value, str) or not value.strip():
         raise CompileError(f"{field} must be a non-empty string")
-    normalized = " ".join(value.split())
+    normalized = value if preserve_whitespace else " ".join(value.split())
     if limit is not None and len(normalized) > limit:
         raise CompileError(f"{field} exceeds {limit} characters")
     return normalized
@@ -101,9 +104,14 @@ def compile_request(request: Any) -> dict[str, Any]:
 
     clauses: list[str] = []
     for field in PROMPT_FIELDS:
-        value = _text(request.get(field), field, required=field == "subject")
+        exact_copy = field == "text"
+        value = _text(
+            request.get(field), field, required=field == "subject",
+            preserve_whitespace=exact_copy,
+        )
         if value:
-            clauses.append(f"{field.replace('_', ' ').title()}: {value}.")
+            suffix = "" if exact_copy else "."
+            clauses.append(f"{field.replace('_', ' ').title()}: {value}{suffix}")
     prompt = " ".join(clauses)
     if len(prompt) > MAX_PROMPT_CHARS:
         raise CompileError(f"prompt exceeds {MAX_PROMPT_CHARS} characters")

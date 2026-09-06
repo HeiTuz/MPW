@@ -76,12 +76,10 @@ class EditorialStructureTests(unittest.TestCase):
                 destination.parent.mkdir(parents=True, exist_ok=True)
                 destination.write_text(source.read_text(encoding="utf-8"), encoding="utf-8")
             for path in (ssot_path, compiler_path):
-                path.write_text(
-                    path.read_text(encoding="utf-8").replace(
-                        "fashion editorial styling", "fashion editorial style"
-                    ),
-                    encoding="utf-8",
-                )
+                source = path.read_text(encoding="utf-8")
+                mutated = source.replace("fully opaque clothing", "fully opaque garments")
+                self.assertNotEqual(source, mutated, "non-anchor mutation did not change the safety text")
+                path.write_text(mutated, encoding="utf-8")
             texts = {
                 lint.SSOT: ssot_path.read_text(encoding="utf-8"),
                 lint.COMPILER: compiler_path.read_text(encoding="utf-8"),

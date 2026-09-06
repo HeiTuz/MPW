@@ -414,5 +414,226 @@
     "expect": {
       "ok": true
     }
+  },
+  {
+    "path": "fixtures/good/short_flat_icon.txt",
+    "mode": "text",
+    "expect": {
+      "ok": true,
+      "absent_warn_codes": ["W-SHORT-A", "W-LEN-B", "W-HEX-MISS"]
+    }
+  },
+  {
+    "path": "fixtures/good/short_monochrome_portrait.txt",
+    "mode": "text",
+    "expect": {
+      "ok": true,
+      "absent_warn_codes": ["W-SHORT-A", "W-LEN-B", "W-HEX-MISS"]
+    }
+  },
+  {
+    "path": "fixtures/good/short_product_edit.txt",
+    "mode": "text",
+    "expect": {
+      "ok": true,
+      "absent_warn_codes": ["W-SHORT-A", "W-LEN-B", "W-HEX-MISS"]
+    }
+  },
+  {
+    "path": "fixtures/good/short_exact_copy.txt",
+    "mode": "text",
+    "expect": {
+      "ok": true,
+      "absent_warn_codes": ["W-SHORT-A", "W-LEN-B", "W-HEX-MISS"]
+    }
+  },
+  {
+    "path": "fixtures/good/short_literal_copy.txt",
+    "mode": "text",
+    "expect": {
+      "ok": true,
+      "absent_warn_codes": ["W-SHORT-A", "W-LEN-B", "W-HEX-MISS"]
+    }
+  },
+  {
+    "path": "fixtures/bad/empty_scene.txt",
+    "mode": "text",
+    "expect": {
+      "ok": false,
+      "codes": ["E-PROMPT-EMPTY"]
+    }
+  },
+  {
+    "path": "fixtures/bad/empty_labeled_scene.txt",
+    "mode": "text",
+    "expect": {
+      "ok": false,
+      "codes": ["E-PROMPT-EMPTY"]
+    }
+  },
+  {
+    "path": "fixtures/bad/short_missing_copy.txt",
+    "mode": "text",
+    "expect": {
+      "ok": false,
+      "codes": ["E-TEXT-QUOTE"]
+    }
+  },
+  {
+    "path": "fixtures/bad/short_duplicate_copy.txt",
+    "mode": "text",
+    "expect": {
+      "ok": false,
+      "codes": ["E-TEXT-DUP"]
+    }
+  },
+  {
+    "path": "fixtures/bad/short_missing_ar.txt",
+    "mode": "text",
+    "expect": {
+      "ok": false,
+      "codes": ["E-AR-END"]
+    }
+  },
+  {
+    "path": "fixtures/good/short_flat_icon.txt",
+    "mode": "text",
+    "flags": ["--channel-limit", "10"],
+    "expect": {
+      "ok": false,
+      "codes": ["E-OVERFLOW-LIMIT"]
+    }
+  },
+  {
+    "path": "fixtures/good/short_no_fear_copy.txt",
+    "mode": "text",
+    "expect": {
+      "ok": true,
+      "absent_warn_codes": ["W-SHORT-A", "W-LEN-B", "W-HEX-MISS"]
+    }
+  },
+  {
+    "path": "fixtures/good/short_4k_copy.txt",
+    "mode": "text",
+    "expect": {
+      "ok": true,
+      "absent_warn_codes": ["W-SHORT-A", "W-LEN-B", "W-HEX-MISS"]
+    }
+  },
+  {
+    "path": "fixtures/bad/no_fear_instruction.txt",
+    "mode": "text",
+    "expect": {
+      "ok": false,
+      "codes": ["E-NEG-001"]
+    }
+  },
+  {
+    "path": "fixtures/bad/no_fear_instruction.txt",
+    "mode": "text",
+    "flags": ["--tier", "2"],
+    "expect": {
+      "ok": false,
+      "codes": ["E-NEG-001"]
+    }
+  },
+  {
+    "path": "fixtures/bad/4k_instruction.txt",
+    "mode": "text",
+    "expect": {
+      "ok": false,
+      "codes": ["E-SD-VOCAB"]
+    }
+  },
+  {
+    "path": "fixtures/bad/duplicate_no_fear_copy.txt",
+    "mode": "text",
+    "expect": {
+      "ok": false,
+      "codes": ["E-TEXT-DUP"]
+    }
+  },
+  {
+    "path": "fixtures/good/exact_copy_instruction_symbols.txt",
+    "mode": "text",
+    "expect": {
+      "ok": true,
+      "absent_warn_codes": ["W-FILLER", "W-SECTION-MARK"]
+    }
+  },
+  {
+    "path": "fixtures/bad/instruction_symbols.txt",
+    "mode": "text",
+    "expect": {
+      "ok": false,
+      "codes": ["E-SLOT-LEAK", "E-WEIGHT", "E-MJ-FLAG", "E-NAT-SKIN"]
+    }
+  },
+  {
+    "path": "fixtures/bad/quoted_typography_guard.jsonl",
+    "mode": "jsonl",
+    "expect": {
+      "ok": false,
+      "codes": ["E-TP-EXACT-GUARD"]
+    }
+  },
+  {
+    "path": "fixtures/good/native_product_edit.txt",
+    "mode": "text",
+    "flags": ["--profile", "native", "--surface", "s3"],
+    "expect": {"ok": true, "absent_warn_codes": ["W-NEG-KO"]}
+  },
+  {
+    "path": "fixtures/good/native_product_edit.txt",
+    "mode": "text",
+    "flags": ["--profile", "native", "--surface", "s2"],
+    "expect": {"ok": true, "absent_warn_codes": ["W-LENGTH-UNGATED"]}
+  },
+  {
+    "path": "fixtures/good/native_product_edit.txt",
+    "mode": "text",
+    "expect": {"ok": false, "codes": ["E-AR-END", "E-NEG-001"]}
+  },
+  {
+    "path": "fixtures/good/native_exact_copy.txt",
+    "mode": "text",
+    "flags": ["--profile", "native"],
+    "expect": {"ok": true}
+  },
+  {
+    "path": "fixtures/bad/native_malformed_copy.txt",
+    "mode": "text",
+    "flags": ["--profile", "native"],
+    "expect": {"ok": false, "codes": ["E-TEXT-QUOTE"]}
+  },
+  {
+    "path": "fixtures/bad/short_duplicate_copy.txt",
+    "mode": "text",
+    "flags": ["--profile", "native"],
+    "expect": {"ok": false, "codes": ["E-TEXT-DUP"]}
+  },
+  {
+    "path": "fixtures/bad/empty_scene.txt",
+    "mode": "text",
+    "flags": ["--profile", "native"],
+    "expect": {"ok": false, "codes": ["E-PROMPT-EMPTY"]}
+  },
+  {
+    "path": "fixtures/bad/instruction_symbols.txt",
+    "mode": "text",
+    "flags": ["--profile", "native"],
+    "expect": {"ok": false, "codes": ["E-SLOT-LEAK", "E-WEIGHT", "E-MJ-FLAG"]}
+  },
+  {
+    "path": "fixtures/bad/native_api_body.json",
+    "mode": "text",
+    "flags": ["--profile", "native"],
+    "expect": {"ok": false, "codes": ["E-NATIVE-INPUT"]}
+  },
+  {
+    "path": "fixtures/good/records.jsonl",
+    "mode": "jsonl",
+    "flags": ["--profile", "native"],
+    "expect": {"ok": false, "codes": ["E-PROFILE-CONFLICT"]}
   }
 ]

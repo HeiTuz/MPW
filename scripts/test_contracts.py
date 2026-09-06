@@ -5,6 +5,7 @@ from __future__ import annotations
 import copy
 import json
 import shutil
+import subprocess
 import sys
 import tempfile
 import unittest
@@ -168,6 +169,58 @@ class PromptBundleTests(unittest.TestCase):
     def test_bundle_validates_against_recipe(self) -> None:
         self.assertEqual(self.bundle["source_recipe"]["recipe_hash"], canonical_hash(self.recipe))
         self.assertEqual(validate_document(self.bundle, self.recipe), [])
+
+    def test_storable_unresolved_recipe_is_not_an_executable_bundle(self) -> None:
+        self.recipe["unresolved_inputs"] = [{
+            "code": "exact_copy", "slot": "headline",
+            "source_reference_id": self.recipe["source"]["reference_id"], "required": True,
+        }]
+        self.assertEqual(validate_document(self.recipe), [])
+        self.bundle["source_recipe"]["recipe_hash"] = canonical_hash(self.recipe)
+        errors = validate_document(self.bundle, self.recipe)
+        self.assertEqual(len(errors), 1, errors)
+        for detail in ("$.source_recipe.unresolved_inputs[0]", "required_input_unresolved", "exact_copy", "headline", self.recipe["source"]["reference_id"]):
+            self.assertIn(detail, errors[0])
+
+        self.recipe["unresolved_inputs"] = []
+        self.bundle["source_recipe"]["recipe_hash"] = canonical_hash(self.recipe)
+        self.assertEqual(validate_document(self.bundle, self.recipe), [])
+
+    def test_bundle_checks_supplied_source_structure_before_semantics(self) -> None:
+        malformed = []
+        for field, value in (("unresolved_inputs", {}), ("inferences", None), ("observations", []), ("source", [])):
+            recipe = copy.deepcopy(self.recipe)
+            recipe[field] = value
+            malformed.append(recipe)
+        wrong_version = copy.deepcopy(self.recipe)
+        wrong_version["schema_version"] = "garden-recipe/v2"
+        malformed.append(wrong_version)
+        for source in (None, [], "not a recipe", 1, self.bundle, *malformed):
+            with self.subTest(source=source):
+                bundle = copy.deepcopy(self.bundle)
+                bundle["source_recipe"]["recipe_hash"] = canonical_hash(source)
+                errors = validate_document(bundle, source)
+                self.assertTrue(errors)
+                self.assertTrue(all(error.startswith("$.source_recipe") for error in errors), errors)
+
+        self.recipe["inferences"][0]["based_on"] = ["obs_unknown_1234"]
+        self.bundle["source_recipe"]["recipe_hash"] = canonical_hash(self.recipe)
+        errors = validate_document(self.bundle, self.recipe)
+        self.assertTrue(any("$.source_recipe.inferences[0].based_on: unknown_observation_id" in error for error in errors), errors)
+
+    def test_cli_distinguishes_null_source_from_omitted_recipe(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            bundle = Path(directory) / "bundle.json"
+            source = Path(directory) / "source.json"
+            bundle.write_text(json.dumps(self.bundle), encoding="utf-8")
+            source.write_text("null", encoding="utf-8")
+            result = subprocess.run(
+                [sys.executable, str(ROOT / "contracts" / "validate.py"), str(bundle), "--recipe", str(source), "--json"],
+                text=True, capture_output=True, check=False,
+            )
+            self.assertEqual(result.returncode, 1)
+            self.assertEqual(json.loads(result.stdout)["errors"], ["$.source_recipe: expected_type:object"])
+        self.assertEqual(validate_document(self.bundle), [])
 
     def test_unicode_count_uses_code_points_and_enforces_2000(self) -> None:
         block = self.bundle["handoff"]["prompt_blocks"][0]

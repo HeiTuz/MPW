@@ -214,6 +214,129 @@ const tests = [];
   tests.push({ name: "(q) 곡선따옴표 “” 카피 감지 (E-TEXT-QUOTE 오탐 없음 + E-TEXT-DUP 검출)", pass: noQuoteErr && dupCaught });
 }
 
+// native는 opt-in 텍스트 검사다. compiled 계약과 파라미터 검증의 우회로가 아니어야 한다.
+{
+  const prompt = readFileSync("scripts/fixtures/good/native_product_edit.txt", "utf8");
+  const invoke = (args = [], input = prompt) => {
+    const result = run(["--profile", "native", ...args], input);
+    return { ...JSON.parse(result.stdout), exitCode: result.exitCode };
+  };
+  const hasCode = (result, code) => !result.ok && result.exitCode !== 0 && result.errors.some((e) => e.code === code);
+  const native = invoke();
+  tests.push({ name: "native edit → AR/negative 오류 없이 텍스트 전용 결과 표시", pass:
+    native.ok && native.exitCode === 0 && native.profile === "native" && native.validation_scope === "prompt-text-only"
+    && native.format === null && native.tier === null
+    && ["api_parameters", "input_images", "semantic_fidelity", "render_quality"].every((scope) => native.not_checked.includes(scope)) });
+
+  const compiled = JSON.parse(run([], prompt).stdout);
+  tests.push({ name: "동일 native 입력의 기본 compiled → 기존 AR/Tier 계약 유지", pass:
+    !compiled.ok && compiled.profile === "compiled"
+    && ["E-AR-END", "E-NEG-001"].every((code) => compiled.errors.some((e) => e.code === code)) });
+
+  const conflictFlags = [
+    ["--tier", "0"], ["--tier", "1"], ["--tier", "2"], ["--api"],
+    ["--surface", "s1"], ["--jsonl", "scripts/fixtures/good/records.jsonl"],
+  ];
+  tests.push({ name: "native + tier 0/1/2·api·S1·jsonl → 명시 충돌 거부", pass:
+    conflictFlags.every((flags) => hasCode(invoke(flags), "E-PROFILE-CONFLICT")) });
+
+  tests.push({ name: "native + 다른 엔진 → E-ENGINE-SCOPE", pass:
+    ["higgsfield", "midjourney", "unknown"].every((engine) => hasCode(invoke(["--engine", engine]), "E-ENGINE-SCOPE")) });
+  tests.push({ name: "native 빈 입력·BOM/공백 입력 → E-PROMPT-EMPTY", pass:
+    ["", "\uFEFF \n\t"].every((input) => hasCode(invoke([], input), "E-PROMPT-EMPTY")) });
+
+  const record = JSON.parse(readFileSync("scripts/fixtures/good/records.jsonl", "utf8").split(/\r?\n/).find((line) => line.trim()));
+  const path = join(tmpDir, "native_record_bypass.jsonl");
+  writeFileSync(path, JSON.stringify({ ...record, profile: "native", full_prompt: prompt }));
+  const batch = JSON.parse(run(["--jsonl", path]).stdout);
+  tests.push({ name: "record.profile=native → compiled 계약을 유지하며 우회 거부", pass:
+    !batch.ok && batch.profile === "compiled"
+    && ["E-PROFILE-CONFLICT", "E-AR-END"].every((code) => batch.results[0].errors.some((e) => e.code === code)) });
+
+  tests.push({ name: "native JSON body·malformed JSON·jsonl·fenced JSON → 텍스트 검사로 통과 불가", pass:
+    ['{"prompt":"blue cup"}', '{"prompt":', '{"prompt":"cup"}\n{"prompt":"bowl"}', '```json\n{"prompt":"cup"}\n```']
+      .every((input) => hasCode(invoke([], input), "E-NATIVE-INPUT")) });
+
+  tests.push({ name: "native JSON body의 언어 없는·text·tilde 바깥 fence → 우회 거부", pass:
+    ['```\n{"model":"gpt-image-2","prompt":"cup"}\n```', '```text\n{"prompt":"cup"}\n```', '~~~\n{"prompt":"cup"}\n~~~', '```\n[{"prompt":"cup"}]\n```']
+      .every((input) => hasCode(invoke([], input), "E-NATIVE-INPUT"))
+    && invoke([], '```\nChange the background to blue.\n```').ok });
+
+  tests.push({ name: "native 숫자·boolean·중첩·빈 JSON 배열과 바깥 fence → 거부, 자연어 라벨·인용 카피 → 유지", pass:
+    ['[1, 2]', '[true]', '[[1, 2]]', '[]', '[null]', '```\n[1, 2]\n```', '~~~text\n[true]\n~~~', '```\n[[1, 2]]\n````']
+      .every((input) => hasCode(invoke([], input), "E-NATIVE-INPUT"))
+    && ['[Reference image] Change only the background to pale blue.', 'Create a poster reading “[1, 2]” exactly once, legibly.']
+      .every((input) => invoke([], input).ok) });
+
+  tests.push({ name: "native 미지·누락 profile 및 jsonl 값 → E-INPUT-FLAG", pass:
+    [["--profile", "unknown"], ["--profile"], ["--jsonl"], ["--jsonl", "--surface", "s3"]]
+      .every((flags) => hasCode(invoke(flags), "E-INPUT-FLAG")) });
+
+  const atEngineLimit = invoke(["--surface", "s2"], "x".repeat(32000));
+  const aboveEngineLimit = invoke(["--surface", "s2"], "x".repeat(32001));
+  tests.push({ name: "native S2 → GPT Image 32000자 경계 적용", pass:
+    atEngineLimit.ok && hasCode(aboveEngineLimit, "E-OVERFLOW-LIMIT")
+    && aboveEngineLimit.errors.some((e) => e.msg.includes("타깃 엔진")) });
+  tests.push({ name: "native S3 → 기본 채널·명시 채널 한도와 엔진 한도 유지", pass:
+    hasCode(invoke([], "x".repeat(2001)), "E-OVERFLOW-2000")
+    && invoke(["--channel-limit", "10"], "x".repeat(10)).ok
+    && hasCode(invoke(["--channel-limit", "10"], "x".repeat(11)), "E-OVERFLOW-LIMIT")
+    && hasCode(invoke(["--channel", "unbounded"], "x".repeat(32001)), "E-OVERFLOW-LIMIT") });
+
+  tests.push({ name: "native 부정형 가드 허용·새 타엔진 flag 거부", pass:
+    invoke([], "Keep the original logo. No watermark.").ok
+    && invoke([], "배경만 흰색으로 바꾸고 상품 로고를 보존한다. 그림자 추가 금지.").warnings.every((w) => w.code !== "W-NEG-KO")
+    && hasCode(invoke([], "A blue cup --oref image.png"), "E-MJ-FLAG") });
+
+  tests.push({ name: "native 구두점 뒤 타엔진 flag → 거부, 정확 인용 카피 → 보존", pass:
+    ["A portrait (--oref ref.png)", "A cup,--quality 2", "A cup;--weird 5", "A cup：--weird 5"]
+      .every((input) => hasCode(invoke([], input), "E-MJ-FLAG"))
+    && ['Create a poster headline "A portrait (--oref ref.png)".', 'Create a poster headline “A cup,--quality 2”.']
+      .every((input) => invoke([], input).ok) });
+
+  const watermark = JSON.parse(run([], "원본 상품과 로고를 보존한다. no   watermark. AR 1:1").stdout);
+  const hint = watermark.errors.find((e) => e.code === "E-NEG-001")?.hint ?? "";
+  tests.push({ name: "watermark 재작성 제안 → 원본 로고를 제거하지 않음", pass:
+    hint.includes("원본 로고는 보존") && !hint.includes("브랜드 없는") });
+}
+
+// JSONL must report per-row failures and validate approval scores without coercion.
+{
+  const base = { id: "audit", category: "C3", ar: "1:1", size: "1024x1024", quality: "high", full_prompt: "흰 배경 위 빨간 사과. AR 1:1", output_path: "out/audit.png" };
+  const invokeRecords = (rows) => {
+    const file = join(tmpDir, "audit-records.jsonl");
+    writeFileSync(file, rows.map((row) => JSON.stringify(row)).join("\n"));
+    return JSON.parse(run(["--jsonl", file]).stdout);
+  };
+  const mixed = invokeRecords([null, [], true, 17, base]);
+  tests.push({ name: "JSONL 잘못된 행도 뒤의 정상 행까지 검사", pass:
+    mixed.summary?.total === 5 && mixed.summary.pass === 1 && mixed.summary.fail === 4
+    && mixed.results.slice(0, 4).every((r) => r.errors.some((e) => e.code === "E-REC-OBJECT")) });
+  const approved = { ...base, status: "approved", qa: { goal_fit: 5, text_accuracy: 5, material_realism: 5, layout: 5 } };
+  tests.push({ name: "QA 점수 범위·타입 오류로 승인 통과 불가", pass:
+    [99, -1, "5", true, null].every((value) => {
+      const report = invokeRecords([{ ...approved, qa: { ...approved.qa, goal_fit: value } }]);
+      return !report.ok && report.results[0].errors.some((e) => e.code === "E-QA-GATE");
+    }) && invokeRecords([approved]).ok });
+  const textNA = { ...approved, qa: { ...approved.qa, text_accuracy: null } };
+  tests.push({ name: "따옴표 종류와 무관하게 렌더 카피에 QA N/A 불가", pass:
+    ['포스터에 "봄"을 또렷하게 렌더한다. AR 1:1', '포스터에 “봄”을 또렷하게 렌더한다. AR 1:1']
+      .every((full_prompt) => !invokeRecords([{ ...textNA, full_prompt }]).ok)
+    && invokeRecords([textNA]).ok });
+  tests.push({ name: "공백뿐인 필수 ID·경로는 거부", pass:
+    ["id", "output_path"].every((field) => !invokeRecords([{ ...base, [field]: "   " }]).ok) });
+}
+
+// Tier-2 must preserve the requested adult identity instead of imposing a demographic.
+{
+  const safety = "adult subject, non-nude fashion editorial, fully opaque clothing, secure garment coverage, non-sexual presentation";
+  const tail = "no nudity, no nipple or genital exposure, no wardrobe malfunction";
+  tests.push({ name: "Tier-2 안전 문구는 성별·민족·특정 나이·가상 인물을 강제하지 않음", pass:
+    ["a 60-year-old Italian man in a wool suit, preserve the reference identity and seated pose", "a 35-year-old Black woman in a coat, preserve the reference identity"]
+      .every((identity) => JSON.parse(run(["--tier", "2"], `${safety}, ${identity}, ${tail}, AR 2:3`).stdout).ok)
+    && !JSON.parse(run(["--tier", "2"], `portrait, ${tail}, AR 2:3`).stdout).ok });
+}
+
 // Print results
 console.log("표면/채널/엔진 컨텍스트 행동 테스트\n");
 let fails = 0;

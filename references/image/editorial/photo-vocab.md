@@ -4,7 +4,9 @@
 
 ## 7. 사진 어휘 풀 — 결과 기반 토큰
 
-판정문: gpt-image-2에는 카메라·조명 장비명을 그대로 박지 말고 **결과(빛·심도·질감·색)**로 환원해서 쓴다. 표현은 긍정형 기본 + 티어 화이트리스트다. 장면 배제 부정문은 0개, `no ~`는 Tier-1/Tier-2 캐노니컬 문구로만 쓴다. SD 품질태그·가중치 문법은 쓰지 않는다.
+요청 결과를 바꾸는 표현만 고른다. 슬롯·토큰 묶음 전체를 채우지 않는다. 길이·상세도: [../surfaces.md](../surfaces.md) §0-1·§0-2.
+
+gpt-image-2는 빛·심도·질감·색의 **결과**로 쓰되 사용자 지정 장비·시각 요구는 보존한다. 표현은 긍정형 기본 + 티어 화이트리스트다. 장면 배제 부정문은 0개, `no ~`는 Tier-1/Tier-2 캐노니컬 문구로만 쓴다. SD 품질태그·가중치 문법은 쓰지 않는다.
 
 ### 7.1 심도·렌즈 character·카메라 높이 (결과로)
 
@@ -14,7 +16,7 @@
 |---|---|
 | 광각 느낌 | `camera close to the subject, near features enlarged relative to far ones, wide field of view, mild edge stretch, deep focus front-to-back` |
 | 표준 | `natural perspective, proportions as the eye reads them, subject and setting in proportion` |
-| 중망원(인물 기본) | `camera stepped back, facial planes holding flattering proportion, background pushed back and softened` |
+| 중망원 느낌 | `camera stepped back, facial planes holding flattering proportion, background pushed back and softened` |
 | 망원/압축 | `distant camera position, compressed perspective, flattened planes, subject lifted from a soft background`. 더 밀면 `background collapsed into a flat plane directly behind the subject` |
 | 얕은 심도 | `shallow depth of field, eyes sharp with the shoulder line already falling off, background dissolved into creamy blur` |
 | 깊은 심도(룩북) | `garment surface sharp from collar to hem, fabric weave resolvable, background separated by luminance step, not by defocus`(블러 대신 톤 차이로 분리해야 옷의 정보가 남는다) |
@@ -22,7 +24,7 @@
 | 아나모픽 | `wide cinematic frame, horizontal flares, oval highlights` |
 | 가장자리 감쇠 | `sharp central microtexture, soft edge focus falloff`(중심부 미세결은 선명, 프레임 가장자리만 점진적으로 풀림) |
 
-**카메라 높이**가 전신 비율의 실제 지배 변수다. 앵글(§7.5)과 겹치지 않는 별개 축으로 명시한다.
+**카메라 높이**는 전신 비율에 영향을 준다. 비율이나 시점이 요청의 핵심일 때 앵글(§7.5)과 구분해 명시한다.
 
 | 축 | 결과 토큰 |
 |---|---|
@@ -32,7 +34,7 @@
 
 ### 7.2 조명 (방향·질·결과)
 
-**클램셸이 패션 에디토리얼·뷰티의 기본 셋업**이고, 지시가 없으면 여기서 출발한다. 광질을 가르는 건 장비가 아니라 **피사체에서 본 광원의 겉보기 크기**다 — 크고 가까우면 소프트, 작고 멀면 하드다.
+균일한 얼굴광에는 클램셸을 선택할 수 있지만 기본으로 추가하지 않는다. 광질을 가르는 건 장비가 아니라 **피사체에서 본 광원의 겉보기 크기**다 — 크고 가까우면 소프트, 작고 멀면 하드다.
 
 | 축 | 결과 토큰 |
 |---|---|
@@ -67,11 +69,11 @@
 
 ### 7.3 색·그레이딩 (HEX·켈빈·룩)
 
-**그레이딩은 스킨 외 영역에 걸고 스킨은 중립으로 남긴다**(휘도 마스크). teal & orange를 얼굴에 그대로 걸어 피부가 오렌지로 무너지는 게 가장 흔한 실패다.
+자연스러운 피부색 보존이 요구되면 **그레이딩은 스킨 외 영역에 걸고 스킨은 중립으로 남긴다**(휘도 마스크). teal & orange를 얼굴에 그대로 걸면 피부색이 변할 수 있다.
 
 | 축 | 규칙 |
 |---|---|
-| 팔레트 | 항상 HEX 3~5개 |
+| 팔레트 | 정확 색이나 색 관계가 필요할 때만 지정. 색상명으로 충분하면 HEX는 생략. 전문 레인은 해당 색 계약 준수. |
 | 색온도 | 켈빈 또는 `warm 3200K-feel` / `neutral` / `cool` |
 | 조화 | complementary / analogous / triadic |
 | 룩 | teal & orange, bleach bypass(저채도 고대비), desaturated muted, warm filmic roll-off |
@@ -80,7 +82,7 @@
 | 스킨 보호 — 틸 섀도 | `teal shift confined to the shadows and the background, skin midtones untouched` |
 | 필름 결과 | Portra 룩 = `warm skin, soft pastel midtones, gentle highlight roll-off`; Tri-X = `high-contrast monochrome, visible grain`; CineStill 800T = `tungsten night palette, soft red halation around highlights` |
 
-### 7.4 필름/매체 3파트
+### 7.4 필름/매체 3파트 — 상세 예시
 
 ```text
 [필름 emulation] — [스킨], [섀도], [하이라이트]. [매거진/매체] characteristic roll-off
@@ -88,7 +90,7 @@
 
 예: `Kodak Portra 400 emulation — warm luminous skin, soft green-leaning shadows, creamy highlights. Editorial magazine roll-off.`
 
-배치 순서는 철칙 10의 조합 공식을 따른다. 예: `Kodak Portra 400 film photography, soft window light from camera left, slightly overexposed highlights, warm creamy skin tones, fine film grain, low contrast, quiet romantic mood.`
+선택 예시: `Kodak Portra 400 film photography, soft window light from camera left, slightly overexposed highlights, warm creamy skin tones, fine film grain, low contrast, quiet romantic mood.`
 
 #### 필름 스톡 결과 사전 (단어 단독 금지 — 결과·장면과 병기)
 
@@ -134,7 +136,7 @@
 | 유도 | leading lines, 시선 궤적, 삼각 안정, 소품 위계 = `subordinate prop contrast, context props below hero`(소품을 히어로보다 낮은 대비로 두어 맥락은 주되 주 피사체를 가리지 않음) |
 | 샷 사이즈 | ECU(극클로즈업) → CU → MS(미디엄) → FS(전신) → EWS(원경) |
 | 앵글 | eye-level / low(우러름) / high(내려봄) / over-the-shoulder / dutch(기울임) |
-| 거리 | 카메라-피사체 거리를 m로 명시 |
+| 거리 | 구체 거리값이 주어졌거나 결과를 가를 때만 명시. 프레이밍으로 충분하면 수치를 만들지 않는다. |
 | 커버 크롭 | `upper-body fashion close-up, tilted head crop, clean cover portrait`(얼굴·주얼리·의상 일부만 크게 잘라 뷰티와 패션 정보를 동시에 압축) |
 | 커버 크롭 변주 | `gesture beauty crop`(손·주얼리가 얼굴 일부를 가림) / `asymmetric cover crop`(대각 축으로 밀어 비대칭) |
 | 풀블리드 매크로 | `full-frame surface macro, texture filling the frame edge to edge, the surface itself as subject`(용기·배경 없이 질감이 주제가 됨) |
@@ -153,7 +155,7 @@
 | 피부 실패조건 짝 | `skin undertone preserved under split lighting` — §7.2 색온도 분리 조명에서 피부톤이 죽지 않게 병기 |
 | 로고·워터마크 의도 | `clean, brand-free, copy-free finish` — 나머지 실패 축은 §7.9 |
 
-### 7.7 장르 즉시조합
+### 7.7 장르 즉시조합 예시
 
 | 장르 | 결과 토큰 묶음 |
 |---|---|
@@ -185,7 +187,7 @@
 
 ### 7.8 국문/영문 혼용 규칙
 
-정본은 [../compiler.md](../compiler.md) §7이다 — 장면 골격·무드·문화 부하 명사는 한국어, 기법 토큰(심도·조명·필름·포즈 술어)과 티어 고정 문구는 영어, 렌더 텍스트는 한 줄 한 언어. 이 파일의 어휘를 배치할 때 그 규칙을 따른다. 인물 신원은 고정 디테일로 쓰고, 실재 인물·상표 대신 가상 페르소나/브랜드를 쓴다.
+언어와 정확 카피는 [../compiler.md](../compiler.md) §6·§7, 인물·브랜드 보존은 철칙 8을 따른다. 이 사전의 영어 표현을 한국어와 중복해 넣지 않는다.
 
 ### 7.9 실패 지점 → 긍정형 재서술
 

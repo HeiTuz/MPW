@@ -108,19 +108,25 @@ def _seed(data: dict[str, Any], explicit: int | None) -> int:
     return int(hashlib.sha256(canonical.encode("utf-8")).hexdigest()[:12], 16)
 
 
-def _decode_variation(index: int) -> dict[str, str]:
+def _decode_variation(index: int, locks: dict[str, Any]) -> dict[str, str]:
     result: dict[str, str] = {}
     for name, choices in AXES.items():
-        result[name] = choices[index % len(choices)]
-        index //= len(choices)
+        if name in locks:
+            result[name] = str(locks[name])
+        else:
+            result[name] = choices[index % len(choices)]
+            index //= len(choices)
     return result
 
 
 def _prompt(data: dict[str, Any], axes: dict[str, str]) -> str:
     locks = data["locks"]
+    invariant_locks = {key: value for key, value in locks.items() if key not in AXES}
     lock_text = ""
-    if locks:
-        lock_text = " Preserve these invariants exactly: " + "; ".join(f"{key}={value}" for key, value in sorted(locks.items())) + "."
+    if invariant_locks:
+        lock_text = " Preserve these invariants exactly: " + "; ".join(
+            f"{key}={value}" for key, value in sorted(invariant_locks.items())
+        ) + "."
     style_text = f" Style direction: {data['style']}." if data["style"] else ""
     prompt = (
         f"Create one finished, standalone image from this concept: {data['concept']}."
@@ -128,7 +134,7 @@ def _prompt(data: dict[str, Any], axes: dict[str, str]) -> str:
         f" Lighting: {axes['lighting']}. Palette: {axes['palette']}."
         f" Material and finish: {axes['surface']}. Spatial rhythm: {axes['rhythm']}."
         f"{lock_text} Make the visual choice coherent rather than combining unrelated motifs."
-        " Keep the primary subject immediately readable, avoid generic stock-image polish, accidental text, watermarks, logos, and decorative UI frames."
+        " Preserve every requested content element and mark exactly, and do not introduce unrequested elements."
     )
     if len(prompt) > MAX_PROMPT_CHARS:
         raise ValueError(f"Compiled prompt exceeds {MAX_PROMPT_CHARS} characters; shorten concept/style/locks.")
@@ -136,18 +142,36 @@ def _prompt(data: dict[str, Any], axes: dict[str, str]) -> str:
 
 
 def compile_variations(request: dict[str, Any], count: int, seed: int | None = None) -> list[dict[str, Any]]:
-    if isinstance(count, bool) or not 1 <= count <= MAX_COUNT:
+    if isinstance(count, bool) or not isinstance(count, int) or not 1 <= count <= MAX_COUNT:
         raise ValueError(f"count must be between 1 and {MAX_COUNT}.")
+    if not isinstance(request, dict):
+        raise ValueError("request must be a dictionary.")
+    locks = request.get("locks")
+    if not isinstance(locks, dict) or any(
+        not isinstance(key, str) or not isinstance(value, (str, int, float, bool))
+        for key, value in locks.items()
+    ):
+        raise ValueError("request locks must be a dictionary.")
+    for field in ("concept", "style", "output_prefix"):
+        if not isinstance(request.get(field), str):
+            raise ValueError(f"request {field} must be a string.")
+    if not request["concept"].strip():
+        raise ValueError("request concept must be non-empty.")
     actual_seed = _seed(request, seed)
     total = 1
-    for choices in AXES.values():
-        total *= len(choices)
-    step = 7919  # odd, therefore coprime with the 8^6 variation space
+    for name, choices in AXES.items():
+        if name not in locks:
+            total *= len(choices)
+    if count > total:
+        raise ValueError(
+            f"count {count} exceeds the {total} unique variation combinations available with the requested axis locks."
+        )
+    step = 7919  # odd, therefore coprime with every remaining 8^n variation space
     offset = actual_seed % total
     width = max(3, len(str(count)))
     records: list[dict[str, Any]] = []
     for position in range(count):
-        axes = _decode_variation((offset + position * step) % total)
+        axes = _decode_variation((offset + position * step) % total, locks)
         number = position + 1
         records.append({
             "id": f"variation-{number:0{width}d}",
@@ -167,7 +191,15 @@ def compile_variations(request: dict[str, Any], count: int, seed: int | None = N
 
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description="Compile deterministic self-contained image prompt variations")
-    parser.add_argument("--request", required=True, type=Path)
+    parser.add_argument(
+        "--request",
+        required=True,
+        type=Path,
+        help=(
+            "request JSON; locks matching variation axes "
+            f"({', '.join(AXES)}) replace generated values for those axes"
+        ),
+    )
     parser.add_argument("--count", required=True, type=int)
     parser.add_argument("--output", required=True, type=Path)
     parser.add_argument("--seed", type=int)

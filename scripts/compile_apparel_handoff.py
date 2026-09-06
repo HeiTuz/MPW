@@ -118,10 +118,11 @@ def _render_prompt(output: dict[str, Any], valid_colors: set[str]) -> tuple[str,
         f"IMAGE. Create a {view} apparel product cut for color {color}. Product: {product}. "
         "Use only the complete attached original source inventory and validated Vision role map as evidence. "
         "Preserve visible construction, silhouette, proportions, material behavior, trim, print, and exact color."
-        f"{detail_clause} Remove mannequin, hanger, stand, rod, cord, clip, hand, prop, and all remnants. "
-        "Use uniform #FFFFFF with no cast/contact shadow, halo, floor line, or gradient. "
-        "Reconstruct only source-supported hidden areas; invent no seam, lining, label, panel, button, print, "
-        "embroidery, pocket, fastener, or hem. Keep the series canvas, occupancy, centerline, scale, and lighting coherent."
+        f"{detail_clause} Present the garment alone, fully separated from mannequin, hanger, stand, rod, cord, clip, "
+        "hand, prop, and remnants. Use a uniform #FFFFFF field with clean cutout edges, flat edge-to-edge tone, "
+        "and shadow-free grounding. Reconstruct hidden areas only from source evidence: reproduce documented "
+        "construction and leave unsupported seams, lining, labels, panels, buttons, prints, embroidery, pockets, "
+        "fasteners, and hems absent. Keep the series canvas, occupancy, centerline, scale, and lighting coherent."
     )
     if len(prompt) > MAX_PROMPT_CHARS:
         raise CompileError(f"self_contained_prompt_overflow:{output_id}:{len(prompt)}>{MAX_PROMPT_CHARS}")

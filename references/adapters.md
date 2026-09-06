@@ -33,7 +33,7 @@
 
 ## 이미지 생성 실행 옵션 (ImgGen2)
 
-IMAGE 컴파일을 마친 턴의 "다음" 목록 마지막 번호는, 아래 조건을 모두 만족하면 ImgGen2 실행 핸드오프다(옵션 규칙 정본은 SKILL.md §Output format).
+IMAGE 컴파일을 마친 턴의 "다음" 목록 마지막 번호는, 아래 조건을 모두 만족하면 ImgGen2 실행 핸드오프다(메뉴 적용 조건은 [templates.md](templates.md) §후속 선택).
 
 - **산출물 형태**: ImgGen2가 소비할 수 있는 형태다 — ① gpt-image 계열 타깃의 단일 완성 프롬프트(`scripts/compile_image_handoff.py`로 `image-production-handoff/v2` 컴파일) ② S1-legacy jsonl 레코드 배치([image/production.md](image/production.md) §2) ③ 이미 컴파일된 핸드오프 번들.
 - **러너 존재**: 같은 호스트에 ImgGen2 스킬이 설치돼 있다(통합 설치는 MPW와 나란히 설치한다). 없으면 옵션을 붙이지 않는다.
@@ -41,10 +41,21 @@ IMAGE 컴파일을 마친 턴의 "다음" 목록 마지막 번호는, 아래 조
 
 옵션을 고르면 ImgGen2 스킬을 호출해 핸드오프/레코드를 넘긴다 — 전송·배치·QC·재개 규칙은 ImgGen2 자체 SKILL.md가 정본이며 여기 복제하지 않는다. 옵션 문구는 한 줄로: `N. imggen2로 바로 생성 — 이 프롬프트(배치) 그대로 실행`. 프롬프트 페이로드(코드블록 안)에는 러너·엔진 이름을 넣지 않는다.
 
+## 이미지 생성 실행 옵션 (ima2)
+
+사용자가 ima2·Prompt Studio를 지정했거나 해당 실행 옵션을 고르면 설치된 `ima2` 스킬에 완성 프롬프트와 별도의 설정·참조 역할을 전달한다. 이때 위 ImgGen2 실행 옵션을 중복 제안하지 않는다. 일반 이미지 요청의 기본 실행 경로는 바꾸지 않는다.
+
+- **설치/발견**: 공식 `ima2-gen` 패키지와 로컬 `ima2` 스킬이 모두 필요하다. `ima2 --version`, `ima2 ping --json`, `ima2 models --kind image --json`으로 현재 설치·서버·모델 표면을 확인한다. 준비 상태는 실제 생성 품질의 증거가 아니다.
+- **역할 매핑**: MPW는 요청과 보존 조건을 작성하고, ima2는 생성·편집·후보 비교와 작업 기록을 담당한다. 실행용 모델·설정은 프롬프트 코드블록 밖에 둔다.
+- **모델 선택 위치**: 사용자 지정 또는 `ima2 defaults --json`의 명시적 경로를 사용한다. 완성 프롬프트는 지원되는 core 표면에서 `--mode direct --no-size-nudge`로 전달한다. Direct도 공급자 재작성을 완전히 차단한다고 보장하지 않으며, 참조·마스크·반환된 수정 프롬프트와 출력 검증은 ima2 스킬이 소유한다. (2026-09-06, ima2-gen 3.13.1 CLI 확인)
+- **미지원 경로**: 모델·인증·파라미터가 없으면 다른 공급자로 자동 전환하지 않는다. ima2 CLI는 MPW의 `image-production-handoff/v2`·S1 JSONL·의류 핸드오프를 직접 소비하지 않는다. 기계 계약은 기존 소비자를 유지하고, JSON을 이미지 프롬프트로 붙여 넣거나 필드를 누락해 변환하지 않는다.
+
+메뉴가 적용되는 턴에서 실행 옵션은 설치와 대상 표면이 확인됐을 때만 `N. ima2로 생성 — 이 프롬프트와 지정 설정으로 실행`으로 낸다. 상세 호출은 설치된 ima2 스킬과 현재 CLI 도움말을 따른다. 패키지 기준: [ima2-gen 3.13.1 core CLI](https://github.com/lidge-jun/ima2-gen/blob/d2afe6b2aa7d006e2cd9765aa632714f96435db2/bin/commands/gen.ts).
+
 
 ## Claude
 
-- 설치/발견: `npx --yes github:HeiTuz/MPW --target claude` 또는 `git clone <repo> ~/.claude/skills/MPW`.
+- 설치/발견: `npx --yes github:HeiTuz/MPW --target claude`. 소스에서 설치할 때는 스킬 검색 경로 밖의 체크아웃에서 `node scripts/install.mjs --target claude`를 실행한다([README.md](../README.md)).
 - 역할 매핑: 단일 Claude 세션이면 prime이 기본이다. 하위 에이전트나 task 기능이 있으면 planner는 read-only 조사, worker는 bounded edit/research, critic은 frozen artifact review로 보낸다.
 - 모델 선택 위치: Claude 앱/CLI/프로젝트 설정. 이 저장소에는 모델명이나 plan 이름을 쓰지 않는다.
 - fallback: per-role 모델 라우팅이 없으면 같은 세션에서 역할 헤더만 바꾼다. worker 결과는 prime이 다시 읽고 검증한다.

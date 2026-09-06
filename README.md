@@ -77,6 +77,8 @@ MPW는 역할과 경계를 정리해 여러 에이전트가 하나의 결과물�
 python3 scripts/compile_image_variations.py --request request.json --count 100 --output variations.jsonl --seed 42
 ```
 
+`locks`의 `composition`, `camera`, `lighting`, `palette`, `surface`, `rhythm`은 해당 축을 고정합니다. 남은 축만 변주하고, 만들 수 있는 고유 조합보다 큰 수량은 오류로 보고합니다.
+
 > 이 단계는 외부 호출이나 이미지 QC를 실행하지 않습니다. 생성·재개·최종 이미지 수집은 호환 이미지 실행기가 맡습니다.
 
 <br>
@@ -146,17 +148,15 @@ npx --yes github:HeiTuz/MPW -- --dest /custom/skills/MPW
 
 재설치는 `--force`, 조용한 설치는 `--quiet`. `--target auto`는 기본 동작인 자동 감지를 명시적으로 켭니다.
 
-직접 설치:
+소스에서 설치하려면 스킬 검색 경로 밖의 작업 디렉터리에서 체크아웃한 뒤 로컬 installer를 실행합니다:
 
 ```sh
-REPO=https://github.com/HeiTuz/MPW.git
-
-git clone "$REPO" ~/.claude/skills/MPW
-git clone "$REPO" ~/.codex/skills/MPW
-hermes skills install "$REPO" --category prompt-writing
+git clone https://github.com/HeiTuz/MPW.git ./MPW-source
+node ./MPW-source/scripts/install.mjs --target claude
+# Hermes는 --target hermes, GPT/Codex는 --target codex
 ```
 
-git clone은 호스트 중립인 정본 트리를 그대로 복사합니다. 호스트별 진입 표면까지 얹으려면 installer를 쓰세요.
+installer가 런타임 파일만 복사하고 선택한 호스트 오버레이를 적용합니다. 설치본에는 `agents/`가 들어가지 않아 스킬 진입점이 `SKILL.md` 하나로 유지됩니다.
 
 </details>
 

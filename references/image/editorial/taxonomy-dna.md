@@ -32,46 +32,50 @@
 
 ### 4.1 style_card 한 장 구조
 
-| 블록 | 필수 내용 |
+스타일 카드를 요청했을 때 참고할 항목이다. 결과를 구분하는 내용만 남기며 일반 이미지 프롬프트의 필수 슬롯으로 사용하지 않는다. 길이·상세도는 [../surfaces.md](../surfaces.md) §0-1·§0-2를 따른다.
+
+| 블록 | 선택 내용 |
 |---|---|
 | 정의 한 줄 | 해당 스타일이 다른 20종과 갈리는 기준 1문장 |
 | 무드보드 키워드 | 톤·조명·컬러·소재·헤어메이크업 |
-| 컬렉션 | 메인+보조 가상 브랜드. 실재 상표 금지 |
+| 컬렉션 | 사용자 지정 브랜드를 유지. 새 설정이 필요하고 지정되지 않았을 때만 가상 브랜드 |
 | 추천 페르소나 | P-NN 1순위·2순위 |
-| 카메라 디폴트 | 바디명보다 결과 기반 lens character, 거리 m, 샷 사이즈 |
-| 조명 디폴트 | L-NN, key:fill, 그림자·하이라이트 결과 |
-| 컬러 그레이딩 | 필름 시뮬 결과, HEX 3~5 |
-| 룩 리스트 | L01~L05 |
+| 카메라 방향 | 결과를 구분하는 lens character 또는 샷 사이즈. 거리값은 필요한 경우만 |
+| 조명 방향 | 조명이 스타일을 구분할 때 그림자·하이라이트 결과 |
+| 컬러 그레이딩 | 요청한 필름 반응·색 관계. 정확 색이 필요할 때만 HEX |
+| 룩 리스트 | 요청한 룩 범위 |
 | 셀렉트 기준 | 성공/실패 판정문 |
 | 꼭 들어갈 디테일 | 소재·마감·포즈·배경 중 해당 스타일 식별 요소 |
 ## 5. Persona DNA + Gold DNA
 
 ### 5.1 Persona DNA 고정 순서
 
-챕터 내 신원 드리프트 0을 목표로, 페르소나 블록은 8룩 전체에서 char-by-char 동일하게 반복한다.
+동일 가상 인물의 시리즈를 요청했을 때 쓰는 상세 참조 순서다. 선택한 신원 단서는 컷 간 유지하며, 원본 이미지가 신원을 정하면 보이는 정보를 보존하고 새 외모를 덧붙이지 않는다. 모든 컷에 아래 필드를 채우거나 정해진 줄 수를 맞출 필요는 없다.
 
 | 순서 | 필드 | 작성 규칙 |
 |---|---|---|
-| 1 | ethnicity+age | `20대 후반 한국 여성 모델`, Tier-2면 `adult Korean woman in her late 20s, 25+` |
+| 1 | ethnicity+age | 사용자·참조가 정한 인물 정보를 보존한다. 새 가상 인물을 요청했을 때만 필요한 설정을 제안하고, Tier-2 안전 문구는 [tier2-safety.md](tier2-safety.md) §2로 분리한다 |
 | 2 | hair | 길이·질감·스타일. 예: 낮게 묶은 로우 번, 짧은 웨이브 단발 |
 | 3 | eye | 쌍꺼풀·홍채색·눈매. 실존 인물 닮은꼴 금지 |
-| 4 | beauty mark | 점 보통 1개. 위치를 1곳으로 고정 |
+| 4 | beauty mark | 요청에 있거나 원본에서 확인된 경우만 위치 유지 |
 | 5 | lip finish | matte rose, sheer berry, satin nude 등 표면감 |
-| 6 | outfit | 가상 컬렉션, 소재, HEX, 핏/디테일 |
-| 7 | background | 배경 HEX, 소품 거리 m |
-| 8 | camera distance | 카메라-피사체 거리 m, 샷 사이즈 |
+| 6 | outfit | 원본 의상 또는 요청한 소재·핏/디테일. 브랜드·정확 색상은 필요한 경우만 |
+| 7 | background | 요청한 배경과 소품 관계. HEX·거리값은 결과를 가를 때만 |
+| 8 | camera distance | 필요한 샷 사이즈·프레이밍 또는 주어진 거리값 |
 
-### 5.2 Gold DNA — 367 골드 샘플 공통 규칙
+### 5.2 Gold DNA — 기존 367 골드 샘플의 상세 작성 관례
 
-| 축 | 공통 규칙 |
+기존 샘플의 관례를 기록한 참고표다. 이 표의 빈도·개수·블록을 새 프롬프트의 보편 의무로 옮기지 않는다. 아래 긴 조합도 요청 결과를 바꾸는 요소만 선택한다.
+
+| 축 | 기존 샘플의 관례 |
 |---|---|
-| 카메라 | 중형·필름 바디 선호. 렌즈 빈도 35>50>85>24mm. `Lens character:` 블록(초점거리·평면성·왜곡 적음·배경 분리) = 골드 100/100 필수 |
+| 카메라 | 중형·필름 바디 선호. 렌즈 빈도 35>50>85>24mm. 기존 기록에서 `Lens character:` 블록(초점거리·평면성·왜곡 적음·배경 분리)은 골드 100/100에 포함 |
 | 필름/컬러 | Portra·desaturated·teal&orange·CineStill 800T 빈출. Film 3파트 = `[필름] emulation — [스킨], [섀도], [하이라이트]. [매거진] roll-off` |
-| 조명 | 결과 어휘로 쓴다. `key:fill X:1` 비율 항상 명시(정본: [photo-vocab.md](photo-vocab.md) §7.2). neon/practical/golden hour/창광 |
-| 구도 | 카메라 거리 m 명시, rule of thirds, 포즈는 영문 표기(`contrapposto` 등), `Director signature:` 라인 = 골드 100/100 필수 |
+| 조명 | `key:fill X:1`과 결과 어휘를 함께 사용한 상세 관례([photo-vocab.md](photo-vocab.md) §7.2). neon/practical/golden hour/창광 |
+| 구도 | 카메라 거리 m, rule of thirds, 영문 포즈(`contrapposto` 등). 기존 기록에서 `Director signature:` 라인은 골드 100/100에 포함 |
 | 무드 | light+color+expression 트리플. 예: `melancholic — desaturated cool, low key, downcast` |
 | 페르소나 | ethnicity+age → hair → eye(쌍꺼풀·홍채색) → beauty mark(점 보통 1개) → lip finish → outfit(가상 브랜드+소재+HEX) → 배경 HEX → 카메라 거리 m. 4~7줄 |
 | 퀄리티 앵커 | 전부 긍정형: `eye-focus AF`, `natural skin texture, visible pores, subtle film grain`, `natural facial asymmetry, catchlights in both eyes, not perfectly identical`, 클로징 `The look must be unmistakable to a non-photographer viewer.`, `clean, brand-free, copy-free finish` |
 | 배경 | 솔리드 컬러는 HEX, 소품은 m 거리 명시 |
 
-v1→v2 업그레이드 7종: Lens character 블록 / Director signature 라인 / 클로징 명령문 / 페르소나 세분화(홍채·점·립피니시·쌍꺼풀) / Film 3파트 / 배경 HEX+소품 거리 / [format-b.md](format-b.md) §1 publication tier.
+기존 v1→v2 업그레이드 기록 7종: Lens character 블록 / Director signature 라인 / 클로징 명령문 / 페르소나 세분화(홍채·점·립피니시·쌍꺼풀) / Film 3파트 / 배경 HEX+소품 거리 / [format-b.md](format-b.md) §1 publication tier. 새 요청에 이 일곱 항목을 일괄 추가하지 않는다.

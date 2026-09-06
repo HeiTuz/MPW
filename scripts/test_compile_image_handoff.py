@@ -85,6 +85,24 @@ class CompileImageHandoffTests(unittest.TestCase):
         with self.assertRaisesRegex(MODULE.CompileError, "prompt exceeds"):
             MODULE.compile_request(request(subject="x" * 2000, scene="y"))
 
+    def test_exact_copy_preserves_whitespace_and_punctuation_in_saved_handoff(self):
+        exact_copy = 'Headline "A  B?!"\nSubtitle “봄\t여름”'
+        value = request(text=exact_copy, scene="  Pale\nstone  tabletop ")
+        result = MODULE.compile_request(value)
+        self.assertTrue(result["prompt"].endswith(f"Text: {exact_copy}"))
+        self.assertIn("Scene: Pale stone tabletop.", result["prompt"])
+        with tempfile.TemporaryDirectory() as directory:
+            source = Path(directory) / "request.json"
+            output = Path(directory) / "handoff.json"
+            source.write_text(json.dumps(value, ensure_ascii=False), encoding="utf-8")
+            self.assertEqual(MODULE.main([str(source), "--output", str(output)]), 0)
+            saved = json.loads(output.read_text(encoding="utf-8"))
+            self.assertEqual(saved["prompt"], result["prompt"])
+
+    def test_preserved_copy_whitespace_counts_toward_prompt_limit(self):
+        with self.assertRaisesRegex(MODULE.CompileError, "prompt exceeds"):
+            MODULE.compile_request(request(text='"A' + ' ' * 2000 + 'B"'))
+
     def test_fixture_matches_schema_shape(self):
         schema = json.loads((ROOT / "contracts/v1/image-production-handoff.schema.json").read_text())
         fixture = json.loads((ROOT / "contracts/v1/fixtures/image-production-handoff.valid.json").read_text())

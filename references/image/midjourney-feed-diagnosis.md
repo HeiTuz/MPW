@@ -2,37 +2,40 @@
 
 Use this when repeated Midjourney generations show distorted faces, anatomy, unstable identity, or unexplained “monster” results and the user asks to inspect the run history rather than one isolated grid.
 
+Model and reference compatibility follow [midjourney-identity.md](../midjourney-identity.md), checked against official documentation on 2026-09-05. V8 Edit references and V7 Omni runs are different paths; an identity failure alone is not a reason to switch versions.
+
 ## Read the feed as an experiment log
 
 Inspect several consecutive grids. Record per grid:
 
 - literal prompt;
-- `chaos`, `stylize`, aspect ratio, and mode;
+- actual model version, web/Discord surface, `chaos`, `stylize`, aspect ratio, and mode;
+- each attached image, its role and order, and the reference slot actually used;
 - every personalization/profile token;
-- fresh Imagine versus Variation;
+- fresh Imagine, Edit, or Variation, with its source image and parent result;
 - pose complexity, subject count, occlusion, mirrors, and surreal geometry;
 - repeated versus grid-local defects in face, neck, hands, limbs, garment boundaries, and identity.
 
-Do not blame vague prose by reflex. Find the parameter that covaries with failure across neighboring grids. A nearby low-chaos/simple-pose grid that stays stable is valuable counter-evidence.
+Do not blame vague prose by reflex. Identify settings that covary with failure and check counterexamples. A successful run with the same reference but a different slot or simpler pose can narrow the cause. Correlation across runs is a hypothesis, not causal proof.
 
 ## Profile-stack confounder
 
-Stacked personalization profiles may pull facial geometry, age, gender presentation, body proportions, styling, and editorial grammar in different directions. High `chaos` and high `stylize` amplify that conflict, especially with ballet, twisted poses, asymmetrical garments, clouds, or surreal scenes.
+Treat conflicting personalization profiles as one possible cause. Reference-role mix-ups, a defective parent image, model changes, pose complexity, and styling strength are competing explanations. Do not infer a profile failure merely from unusual anatomy.
 
 ## Minimum ablation matrix
 
-Hold the literal prompt and all other settings fixed:
+Use the smallest comparison supported by the observed failure. For a suspected profile conflict, hold model, prompt, source images, reference slots, and other settings fixed:
 
 - A — no personalization profile;
 - B — one primary profile;
 - C — current stacked profiles.
 
-Start with `chaos 0–8`, `stylize 50–100`, one unobstructed subject, and a simple pose **[미확인]**. Treat these as ablation starting bands, not engine limits; evidence status is registered in [surfaces.md](surfaces.md) §7. Compare anatomy, garment boundaries, four-candidate identity consistency, age/gender/ethnic drift, and prompt fidelity versus profile takeover.
+Keep the current accepted settings for this comparison. If pose or styling strength is the next suspect, change that axis separately; do not change several controls to a fixed recipe at once. Compare identity, anatomy, clothing, requested traits, and source preservation across the actual outputs. A requested age or presentation change is not itself drift.
 
-- C fails while A/B remain stable → profile stacking is primary.
-- All three fail → simplify pose/composition, then inspect prose.
-- Variations fail after a defective parent → restart from fresh Imagine; do not propagate the bad lineage.
+- C fails while A/B remain stable → profile stacking is a supported hypothesis; repeat only if the decision still needs evidence.
+- All three fail → inspect the shared reference path, source, and prompt before testing another axis.
+- Descendants inherit a parent's defect → restart from the last accepted source using its intended Imagine/Edit path.
 
 ## Reporting
 
-Lead with the strongest causal finding. Cite the observed parameter pattern and at least one counterexample. Separate direct visual evidence from inference. Recommend the smallest controlled comparison instead of generic negative-prompt clutter.
+Lead with the strongest observed finding and its counterexample. Separate direct visual evidence from inference. Keep any proposed prompt correction short and confined to the diagnosed cause. New generations require an execution request; feed inspection alone does not authorize an ablation batch.
