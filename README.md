@@ -14,7 +14,7 @@
 [![Install](https://img.shields.io/badge/install-30초-ffb000?style=for-the-badge&labelColor=0d1117)](#-30초면-붙습니다)
 
 ```sh
-npx --yes github:HeiTuz/MPW
+npx --yes --package github:HeiTuz/MPW heituzmpw
 ```
 
 </div>
@@ -106,9 +106,9 @@ python3 scripts/compile_image_variations.py --request request.json --count 100 -
 한 줄이면 설치기가 이 컴퓨터의 에이전트 환경을 자동 감지해 맞는 위치에 설치합니다.
 
 ```sh
-npx --yes github:HeiTuz/MPW
+npx --yes --package github:HeiTuz/MPW heituzmpw
 # 또는
-bunx github:HeiTuz/MPW
+bunx --package github:HeiTuz/MPW heituzmpw
 ```
 
 <details>
@@ -139,11 +139,11 @@ bunx github:HeiTuz/MPW
 <br>
 
 ```sh
-npx --yes github:HeiTuz/MPW -- --target claude
-npx --yes github:HeiTuz/MPW -- --target hermes
-npx --yes github:HeiTuz/MPW -- --target codex     # --target gpt 동일
-npx --yes github:HeiTuz/MPW -- --target all       # 감지된 전부에 설치
-npx --yes github:HeiTuz/MPW -- --dest /custom/skills/MPW
+npx --yes --package github:HeiTuz/MPW heituzmpw -- --target claude
+npx --yes --package github:HeiTuz/MPW heituzmpw -- --target hermes
+npx --yes --package github:HeiTuz/MPW heituzmpw -- --target codex     # --target gpt 동일
+npx --yes --package github:HeiTuz/MPW heituzmpw -- --target all       # 감지된 전부에 설치
+npx --yes --package github:HeiTuz/MPW heituzmpw -- --dest /custom/skills/MPW
 ```
 
 재설치는 `--force`, 조용한 설치는 `--quiet`. `--target auto`는 기본 동작인 자동 감지를 명시적으로 켭니다.
@@ -160,19 +160,29 @@ installer가 런타임 파일만 복사하고 선택한 호스트 오버레이�
 
 </details>
 
-### 🎨 이미지 제작까지 한 번에 붙일 때 (추천)
+### 🎨 통합 명령에서 필요한 스킬만 선택
+
+이미지 생성까지 필요하면 ImgGen2 통합 설치기를 사용하세요. 일반 터미널에서는 **ImgGen2만 / MPW만 / 둘 다** 중 하나를 선택합니다.
 
 ```sh
-npx --yes --package github:HeiTuz/ImgGen2 heituz-imggen2
-# 또는
-bunx --package github:HeiTuz/ImgGen2 heituz-imggen2
+npx --yes --package github:HeiTuz/ImgGen2 imggen-imggen2
 ```
 
-이 unified 설치는 공식 Codex CLI + ImgGen2 + MPW를 함께 세팅합니다. 같은 자동 감지를 쓰고 ImgGen2와 MPW는 항상 같은 호스트에 나란히 설치됩니다 — ImgGen2는 Hermes에, MPW는 다른 곳에 가는 어긋남이 없습니다. 이후에는 아래 한 줄로 둘 다 갱신합니다.
+선택을 명시하고 두 스킬을 같은 호스트에 설치할 수도 있습니다.
 
 ```sh
-imggen update
+# MPW만 Codex에 설치
+npx --yes --package github:HeiTuz/ImgGen2 imggen-imggen2 -- --component mpw --agent codex
+
+# MPW와 ImgGen2를 함께 설치
+npx --yes --package github:HeiTuz/ImgGen2 imggen-imggen2 -- --component all --agent codex
 ```
+
+통합 설치기의 `--agent`와 MPW 자체 설치기의 `--target`은 모두 호스트 선택입니다. 통합 설치기의 `--target`은 **ImgGen2 파일 경로**이므로 혼동하지 마세요. 비대화형 통합 명령에서 구성요소를 생략하면 ImgGen2만 설치합니다.
+
+MPW만 선택하면 ImgGen2·Codex CLI·QC 설정을 설치하지 않습니다. MPW 자체 설치 명령도 계속 독립적으로 사용할 수 있습니다. 설치된 MPW를 갱신하려면 위 MPW 명령에 `--force`를 추가하세요. ImgGen2 도우미가 있다면 `imggen update --component mpw`로 MPW만 갱신할 수도 있습니다.
+
+[통합 설치 옵션과 이미지 제작 사용법 →](https://github.com/HeiTuz/ImgGen2#설치)
 
 ---
 
@@ -212,7 +222,7 @@ imggen update
 <br>
 
 ```sh
-npx --yes github:HeiTuz/MPW
+npx --yes --package github:HeiTuz/MPW heituzmpw
 ```
 
 <br>
