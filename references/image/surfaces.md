@@ -53,12 +53,19 @@ JSON 형식 자체가 S1을 뜻하지 않는다. 플랫폼 호출 인자를 JSON
 
 **프롬프트 길이와 산출물 분량은 별개다.** 상세 보고서·긴 원문·정확 스키마·독립 컷별 계약이 필요한 요청은 그 요구를 유지한다. 사용자가 충분한 디테일을 줬으면 보존하고, 짧게 만들려고 요구를 삭제하거나 긴 입력을 요약본으로 대체하지 않는다. 실패를 확인한 뒤에는 실패 축만 보강하며 매번 전체 지시를 늘리지 않는다.
 
-## 1. S1 — 기계 핸드오프 (MPW → ImgGen2 계약 경로)
+## 1. S1 — 프로토콜별 기계 핸드오프
 
-**정본은 문서가 아니라 스키마다.** `contracts/v1/production-adapter-options.schema.json`, `contracts/v1/imggen2-production-record.schema.json`이 유일한 권위이며, 이 파일은 스키마 값을 복제하지 않는다. 값이 궁금하면 스키마를 읽는다.
+**S1은 전달 방식이며 단일 값역이 아니다.** 먼저 `schema_version`으로 프로토콜을 고르고, 해당 `contracts/v1/*.schema.json`과 의미 검증기를 정본으로 사용한다. 다른 프로토콜의 enum을 자동 상속하지 않는다.
 
-- 허용 `ar`·`size`·`quality`·`output_format`은 **스키마 enum이 전부**다. 문서 어딘가에서 본 비율·픽셀값이 스키마에 없으면 그 값은 쓸 수 없다.
-- `ar`↔`size` 매핑은 `contracts/validate.py`의 `GEOMETRY` 표가 판정한다. 불일치는 `production_geometry_mismatch`로 거부된다.
+- `production-adapter-options/v1`·`imggen2-production-record/v1`: 각 스키마의 `ar`·`size` 등 enum과 아래 GEOMETRY 검사.
+- `image-production-handoff/v2`: `image-production-handoff.schema.json`의 `aspect_ratio`·`image_size` 패턴과 출력 형식. 두 기하 필드가 함께 있으면 비율이 일치해야 한다.
+- `apparel-handoff/v1`: `apparel-handoff.schema.json`의 의류 출력 계약.
+- `prompt-bundle/v1`: `prompt-bundle.schema.json`의 블록·프로비넌스 계약.
+
+나머지 계약은 [../contracts.md](../contracts.md)의 인터페이스 목록에서 선택한다.
+
+- ImgGen2 production 계약의 허용 `ar`·`size`·`quality`·`output_format`은 **해당 스키마 enum이 전부**다. 문서 어딘가에서 본 비율·픽셀값이 스키마에 없으면 그 값은 쓸 수 없다.
+- 이 두 production 계약의 `ar`↔`size` 매핑은 `contracts/validate.py`의 `GEOMETRY` 표가 판정한다. 불일치는 `production_geometry_mismatch`로 거부된다.
 - 길이 계약: 스키마 필드 제약이 하드라인이다. `prompt-bundle/v1`의 블록은 `text.maxLength: 2000` + `unicode_char_count ≤ 2000`을 **계약으로** 갖는다(2026-07-25 스키마 직접 확인) — 같은 숫자지만 근거가 붙여넣기 UX가 아니라 스키마라는 점이 다르다. 다른 필드의 상한(경로 500 등)도 스키마가 정한다.
 - 컴파일 전 `python3 contracts/validate.py`로 실제 검증한다. 문서 대조로 갈음하지 않는다.
 

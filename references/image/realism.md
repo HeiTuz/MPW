@@ -83,4 +83,4 @@ compiler.md 발전표(피부·조명·필름 3행)와 **상보** — 그 3행은
 - **카메라 관성:** `handheld micro-jitter, natural inertia`, 급격한 불가능 점프 없음; 모션은 물리 동사(lanes.md §영상 공통 규칙).
 - **신체·접지 물리:** `weight shift before stepping, realistic foot contact, no sliding feet`; 배경 지오메트리 안정(벽·문틀 안 휘어짐).
 - **실패 교정:** 깜박임·얼굴 변형·미끄러짐 등 실제 관측한 실패만 보강한다. 제약의 문법과 입력 위치는 [surfaces.md](surfaces.md) §4를 따른다.
-- **엔진 메모:** Higgsfield 영상은 프리셋이 카메라 모션 흡수, Soul ID가 identity drift 완화(훈련). 프리셋·모션 세부 실사 효능 (미검증).
+- **참조 인물 유지:** 스틸의 정체성 기능을 영상에 자동 상속하지 않는다. 실제 영상 모델이 지원하는 입력 역할로 참조를 전달하고 결과의 얼굴·의상 연속성을 확인한다([soul-v2-director.md](soul-v2-director.md) §스틸을 영상으로 연결할 때).

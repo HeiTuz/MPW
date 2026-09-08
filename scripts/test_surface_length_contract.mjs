@@ -337,6 +337,20 @@ const tests = [];
     && !JSON.parse(run(["--tier", "2"], `portrait, ${tail}, AR 2:3`).stdout).ok });
 }
 
+// Persisted JSONL is the executed contract: CLI cannot replace its tier or hide bytes.
+{
+  const row = { id: "boundary", category: "C3", ar: "1:1", size: "1024x1024", quality: "high", tier: 0, full_prompt: "A blue cup. AR 1:1", output_path: "out/boundary.png" };
+  const file = join(tmpDir, "boundary.jsonl");
+  writeFileSync(file, JSON.stringify(row) + "\n");
+  const same = JSON.parse(run(["--tier", "0", "--jsonl", file]).stdout);
+  const conflict = JSON.parse(run(["--tier", "2", "--jsonl", file]).stdout);
+  tests.push({name: "persisted tier rejects conflicting CLI override", pass: same.ok && !conflict.ok && conflict.results[0].errors.some(e => e.code === "E-TIER-CONFLICT")});
+  row.full_prompt = "A blue cup. AR 1:1" + " ".repeat(2100);
+  writeFileSync(file, JSON.stringify(row) + "\n");
+  const long = JSON.parse(run(["--jsonl", file]).stdout);
+  tests.push({name: "raw JSONL prompt whitespace counts toward limit", pass: !long.ok && long.results[0].errors.some(e => e.code.includes("OVERFLOW"))});
+}
+
 // Print results
 console.log("표면/채널/엔진 컨텍스트 행동 테스트\n");
 let fails = 0;

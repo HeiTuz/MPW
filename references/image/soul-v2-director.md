@@ -1,6 +1,6 @@
 # Higgsfield Soul V2 — 프롬프트 디렉터 정본
 
-우선순위: [lanes.md](lanes.md) §레인 게이트 카드 > [compiler.md](compiler.md) 철칙 > 이 파일. 이 파일은 Soul V2 스틸·영상 **프롬프트 텍스트 설계**만 소유한다. 실행(모델 ID·CLI/MCP 파라미터·soul_id·크레딧·QC 루프)은 공식 higgsfield-* 스킬이 정본이다.
+우선순위: [lanes.md](lanes.md) §레인 게이트 카드 > [compiler.md](compiler.md) 철칙 > 이 파일. 이 파일은 Soul V2 스틸 **프롬프트 텍스트 설계**만 소유한다. 실행(모델 ID·CLI/MCP 파라미터·soul_id·크레딧·QC 루프)은 공식 higgsfield-* 스킬이 정본이다.
 
 ## 핵심 원칙
 
@@ -23,7 +23,7 @@
 | L1 피사체·의상·동작·구도 | 성인 연령대, 젠더 표현, (제공 시) 민족, 정확한 실루엣·색·소재·봉제 디테일, 포즈/동작, 방향, 샷 사이즈·카메라 앵글 | `[adult subject], [identity], [exact silhouette+materials], [construction], [pose], [orientation], [shot size+angle]` |
 | L2 미학·환경 | 에디토리얼 장르, 서브컬처/시대 영향, 브랜드 앵커(≤1+1), 로케이션·세트, 팔레트 | `[editorial direction], [primary brand language], [supporting aesthetic], [environment], [palette]` |
 | L3 조명·분위기·그림자 | 키라이트 방향·질, 필 수준, 림, 그림자 경도·깊이, 색온도, 대기 효과, 하이라이트 거동 | `[key light+direction], [fill/contrast], [shadow quality], [atmosphere], [highlight behavior]` |
-| L4 카메라·렌즈·모션·질감 | 결과를 가르는 심도·색 반응·소재 질감·영상 모션. 장비가 지정됐다면 바디·주 렌즈는 각각 최대 1개 | 필요한 `[DoF], [film/color], [texture]` / 영상은 요청한 `[camera move], [secondary motion]` |
+| L4 카메라·렌즈·모션·질감 | 결과를 가르는 심도·색 반응·소재 질감. 장비가 지정됐다면 바디·주 렌즈는 각각 최대 1개 | 필요한 `[DoF], [film/color], [texture]` |
 
 - 물리적으로 모순되는 조명을 섞지 않는다 (`soft overcast + hard noon sun + neon night` 금지).
 - 비율·품질·Color signature는 본문과 분리한다 ([lanes.md](lanes.md) §인물·사실감 이미지 레인, [surfaces.md](surfaces.md) §4). S1은 계약 필드, S2는 실제 호출 파라미터, S3는 UI 라벨 줄이 권한자다. 기본값은 설치가 공급하고, 없으면 [lanes.md](lanes.md) §이미지 슬롯 기본값 절차로 고른다.
@@ -78,16 +78,11 @@
 - 구도(클로즈업/체스트업/하프/스리쿼터/풀바디)를 항상 선언한다. 풀바디 요청이면 head-to-toe 가시성을 지킨다.
 - 로고·텍스트·액세서리·잠금장치·포켓·심·하드웨어를 발명하지 않는다. 제품 중심 컷에서는 의복 정확도 > 브랜드 스타일링.
 
-## 영상 모드
+## 스틸을 영상으로 연결할 때
 
-모션은 짧은 연속 이벤트 하나로 쓰고 4요소를 갖춘다: ① 피사체 모션 ② 카메라 모션 ③ 2차 물리 모션(원단·머리카락) ④ 연속성 보호.
+Soul 스틸을 시작 이미지 또는 외형 참조로 쓰려면 실제 영상 모델과 입력 역할을 별도로 선택한다. Soul의 `soul_id`나 스틸 작성 문법을 영상 모델의 기능으로 상속하지 않는다. 동작·카메라·음향은 [lanes.md](lanes.md) §영상 공통 규칙, 입력과 제약 전달은 [surfaces.md](surfaces.md)를 따른다.
 
-예: `model takes two slow steps toward camera, gaze shifting from left to lens, controlled handheld push-in, coat hem and loose hair moving in the crosswind, stable facial identity, unchanged garment construction, continuous anatomy throughout the shot`
-
-- 측정·관찰 가능한 동사만: `takes two slow steps, turns the head gradually, pivots ninety degrees, shifts weight onto the rear leg, slow clockwise orbit`. `moves beautifully, acts naturally, dynamic movement` 금지.
-- 클립당 지배 카메라 모션 1개·핵심 행동 1개는 레인 공통 규칙대로 유지한다.
-- 연속성 보호 대상: 얼굴 드리프트, 의복 변형, 색 변화, 액세서리 소실, 사지 추가·손가락 융합, 배경 워핑, 점프컷, 속도 요동, 원단 관통, 포즈 리셋. 네거티브 명사 나열은 **영상에서만** 허용된다 ([lanes.md](lanes.md) §영상 공통 규칙).
-- 럭셔리는 느리고 절제된 모션, 스트리트/Y2K는 핸드헬드 불완전성·플래시 노출 변화 허용, 액션은 방향·속도·트래킹을 명시.
+2026-09-08 공식 모델 조회에서 `soul_2`는 `output_type:image`로 확인했다. 영상 지원 여부는 선택한 영상 모델의 현재 계약으로 확인한다.
 
 ## 오류 예방 토큰
 

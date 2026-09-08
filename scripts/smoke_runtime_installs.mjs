@@ -39,6 +39,7 @@ const required = [
   "references/adapters.md",
   "references/image/compiler.md",
   "references/image/lanes.md",
+  "references/image/video-prompt-workflow.md",
   "references/image/grok-imagine.md",
   "references/image/seedream-5-pro.md",
   "references/image/seedance-2.md",
@@ -120,7 +121,7 @@ function assertInstalled(home, target) {
   const installDestination = destination(home, target);
   const installed = Object.fromEntries(required.map((relative) => [relative, readInstalled(installDestination, relative)]));
   if (fs.existsSync(path.join(installDestination, "agents"))) fail(`${target}: agents/ leaked into installed payload`);
-  for (const relative of ["SKILL.md", "references/templates.md", "references/model-playbooks.md", "references/adapters.md", "references/image/lanes.md", "references/image/grok-imagine.md", "references/image/seedream-5-pro.md", "references/image/seedance-2.md", "references/image/seedance-2-5.md"]) {
+  for (const relative of ["SKILL.md", "references/templates.md", "references/model-playbooks.md", "references/adapters.md", "references/image/lanes.md", "references/image/video-prompt-workflow.md", "references/image/grok-imagine.md", "references/image/seedream-5-pro.md", "references/image/seedance-2.md", "references/image/seedance-2-5.md"]) {
     checkLinks(installDestination, relative);
   }
   const host = overlayHost(target);
@@ -128,6 +129,16 @@ function assertInstalled(home, target) {
   if (overlaySkill && fs.existsSync(overlaySkill)) {
     if (installed["SKILL.md"] !== fs.readFileSync(overlaySkill, "utf8")) fail(`${target}: host overlay SKILL.md was not applied`);
     if (installed["SKILL.md"] === fs.readFileSync(path.join(distributionRoot, "SKILL.md"), "utf8")) fail(`${target}: adapted SKILL.md is byte-identical to canonical`);
+  }
+  if (host) {
+    const overlay = path.join(distributionRoot, "agents", host);
+    for (const filename of ["SKILL.md", "AGENTS.md", "README.md"]) {
+      const source = path.join(overlay, filename);
+      if (!fs.existsSync(source)) continue;
+      if (readInstalled(installDestination, filename) !== fs.readFileSync(source, "utf8")) {
+        fail(`${target}: host overlay ${filename} was not applied`);
+      }
+    }
   }
   return installed;
 }

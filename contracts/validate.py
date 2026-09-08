@@ -5,6 +5,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import math
 import re
 import sys
 from pathlib import Path
@@ -44,7 +45,7 @@ FORBIDDEN_KEYS = {
     "user_id",
 }
 PATH_VALUE_RE = re.compile(
-    r"(?:^|\s)(?:~/(?:[^\s]+)|/(?:Users|home|tmp|var|private|Volumes)/[^\s]+|[A-Za-z]:\\[^\s]+|file://[^\s]+|data:image/[^\s]+)",
+    r"(?<![\w/])(?:~/(?:[^\s]+)|/+(?:Users|home|tmp|var|private|Volumes)/[^\s]+|[A-Za-z]:\\[^\s]+|file://[^\s]+|data:image/[^\s]+)",
     re.IGNORECASE,
 )
 FILE_DEPENDENCY_RE = re.compile(
@@ -167,6 +168,8 @@ def _schema_errors(value: Any, schema: dict[str, Any], root_schema: dict[str, An
         if pattern and not re.search(pattern, value):
             errors.append(f"{path}: pattern_mismatch:{pattern}")
 
+    if isinstance(value, float) and not math.isfinite(value):
+        errors.append(f"{path}: non_finite_number")
     if isinstance(value, (int, float)) and not isinstance(value, bool):
         if "minimum" in schema and value < schema["minimum"]:
             errors.append(f"{path}: minimum:{schema['minimum']}")
@@ -505,6 +508,16 @@ def _image_handoff_semantic_errors(value: dict[str, Any]) -> list[str]:
         if path in seen_paths:
             errors.append(f"$.input_images[{index}].path: duplicate_input_path")
         seen_paths.add(path)
+    ratio, size = value.get("aspect_ratio"), value.get("image_size")
+    if isinstance(ratio, str) and isinstance(size, str) and re.fullmatch(r"[1-9][0-9]*:[1-9][0-9]*", ratio) and re.fullmatch(r"[1-9][0-9]{2,4}x[1-9][0-9]{2,4}", size):
+        try:
+            a, b = map(int, ratio.split(":"))
+            width, height = map(int, size.split("x"))
+        except ValueError:
+            errors.append("$.aspect_ratio: geometry_numeric_capacity_exceeded")
+        else:
+            if a * height != b * width:
+                errors.append("$.image_size: image_handoff_geometry_mismatch")
     return errors
 
 
@@ -585,7 +598,10 @@ def validate_document(
 
 
 def load_json(path: Path) -> Any:
-    return json.loads(path.read_text(encoding="utf-8"))
+    text = path.read_text(encoding="utf-8")
+    def reject_constant(value: str) -> Any:
+        raise json.JSONDecodeError(f"non_finite_number:{value}", text, 0)
+    return json.loads(text, parse_constant=reject_constant)
 
 
 def main(argv: list[str] | None = None) -> int:

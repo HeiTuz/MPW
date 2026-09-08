@@ -45,6 +45,7 @@ class ApparelHandoffCompilerTests(unittest.TestCase):
                     "id": "navy-front",
                     "filename": "navy-front.png",
                     "view": "front",
+                    "cut_type": "ghost_cut",
                     "color_identity": "navy blue",
                     "product_description": "crew-neck knit top",
                     "visible_details": ["ribbed neckline", "centered chest print"],
@@ -53,6 +54,7 @@ class ApparelHandoffCompilerTests(unittest.TestCase):
                     "id": "ivory-front",
                     "filename": "ivory-front.png",
                     "view": "front",
+                    "cut_type": "ghost_cut",
                     "color_identity": "ivory",
                     "product_description": "crew-neck knit top",
                     "visible_details": [],
@@ -62,6 +64,40 @@ class ApparelHandoffCompilerTests(unittest.TestCase):
 
     def tearDown(self) -> None:
         self.tmp.cleanup()
+
+    def test_cut_type_and_pilot_are_delivered(self):
+        self.request["pilot_source"] = "ivory-front.png"
+        self.request["requested_outputs"][1]["cut_type"] = "clean_product_cut"
+        outputs = compiler.compile_request(self.request)["outputs"]
+        self.assertIn("ghost_cut (worn-shape", outputs[0]["prompt"])
+        self.assertIn("clean_product_cut (flat or laid", outputs[1]["prompt"])
+        for item in outputs:
+            self.assertIn("source 3 as the pilot", item["prompt"])
+            self.assertIn("shoulder, neck, and hem anchors", item["prompt"])
+        self.assertIn("source 1 as the pilot", compiler.compile_request({k:v for k,v in self.request.items() if k != "pilot_source"})["outputs"][0]["prompt"])
+
+    def test_detail_and_back_cannot_own_pilot_anchors(self):
+        for source in ("detail.png", "navy-back.png"):
+            request = copy.deepcopy(self.request)
+            request["pilot_source"] = source
+            with self.assertRaisesRegex(compiler.CompileError, "color_front"):
+                compiler.compile_request(request)
+
+    def test_missing_cut_and_unknown_fields_fail(self):
+        for location in ("request", "output"):
+            request = copy.deepcopy(self.request)
+            target = request if location == "request" else request["requested_outputs"][0]
+            target["identity_lock"] = "KEEP RED LABEL"
+            with self.assertRaisesRegex(compiler.CompileError, "unsupported"):
+                compiler.compile_request(request)
+        request = copy.deepcopy(self.request)
+        del request["requested_outputs"][0]["cut_type"]
+        with self.assertRaisesRegex(compiler.CompileError, "cut_type"):
+            compiler.compile_request(request)
+        request = copy.deepcopy(self.request)
+        request["pilot_source"] = "unattached.png"
+        with self.assertRaisesRegex(compiler.CompileError, "pilot_source"):
+            compiler.compile_request(request)
 
     def test_compiles_complete_portable_handoff(self) -> None:
         result = compiler.compile_request(self.request)

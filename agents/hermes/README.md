@@ -1,6 +1,6 @@
 # MPW — Hermes 설치본
 
-이 디렉터리는 MPW의 Hermes 설치 payload다. **정본 루트 payload가 곧 Hermes-native 표면**이므로 이 오버레이는 이 노트 하나뿐이다 — 별도 마이그레이션 파일이 없다.
+이 디렉터리는 MPW의 Hermes 설치 payload다. 호스트 중립 정본 위에 Hermes용 `SKILL.md`·`AGENTS.md`·이 안내문 오버레이를 적용한다.
 
 - 스킬 진입점: `SKILL.md` (디스패치 커널)
 - 설치 위치: `~/.hermes/skills/prompt-writing/MPW`

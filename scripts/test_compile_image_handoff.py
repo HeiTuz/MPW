@@ -33,6 +33,15 @@ def request(**overrides):
 
 
 class CompileImageHandoffTests(unittest.TestCase):
+    def test_large_ratio_raises_contract_error(self):
+        with self.assertRaises(MODULE.CompileError):
+            MODULE.compile_request(request(aspect_ratio="9" * 5000 + ":1"))
+
+    def test_rejects_conflicting_geometry(self):
+        with self.assertRaisesRegex(MODULE.CompileError, "geometry_mismatch"):
+            MODULE.compile_request(request(aspect_ratio="16:9", image_size="1024x1280"))
+        self.assertEqual("1024x1280", MODULE.compile_request(request(aspect_ratio="8:10", image_size="1024x1280"))["image_size"])
+
     def test_emits_shared_portable_contract(self):
         result = MODULE.compile_request(request())
         self.assertEqual(result["schema_version"], "image-production-handoff/v2")

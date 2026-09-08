@@ -212,6 +212,9 @@ function validateText(raw, opts = {}, rec = null, mode = "text") {
   const quotes = quotesOf(p);
   const instructionText = instructionTextOf(p);
   const renderText = quotes.length > 0 || /Text-in-image\s*:/.test(p) || !!(rec && rec.korean_copy);
+  if (rec && [0, 1, 2].includes(rec.tier) && opts.tier !== undefined && opts.tier !== rec.tier) {
+    err(errors, "E-TIER-CONFLICT", "CLI tier conflicts with the persisted record tier.");
+  }
   const tier = native ? null : [0, 1, 2].includes(opts.tier) ? opts.tier // Tier-2는 명시 선언만 — 휴리스틱 승격 불가
     : rec && [0, 1, 2].includes(rec.tier) ? rec.tier
     : rec && rec.lane === "editorial" ? 2 : renderText ? 1 : 0;
@@ -219,7 +222,7 @@ function validateText(raw, opts = {}, rec = null, mode = "text") {
   // 길이 구속 컨텍스트 판정 — 미드저니 포함 모든 엔진에서 채널·계약 층이 산다 (§0-1: 어느 층도 다른 층을 대체하지 않는다)
   // native 자체가 GPT Image 전용 선택이다. S2 기본 unknown을 다른 엔진 지원으로 오해하지 않게 한다.
   const lengthCtx = resolveLengthContext(native ? { ...opts, engine: opts.engine ?? "gpt-image" } : opts, rec, mode);
-  checkLength(p, lengthCtx, errors, warnings);
+  checkLength(raw.replace(/^\uFEFF/, ""), lengthCtx, errors, warnings);
 
   if (native && lengthCtx.engine !== "gpt-image") {
     err(errors, "E-ENGINE-SCOPE", "native 프로필은 gpt-image 자연어 텍스트만 검사합니다. 다른 엔진의 문법·한도는 해당 엔진 검증을 사용하세요.");

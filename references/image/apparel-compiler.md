@@ -6,7 +6,9 @@ Use this reference when a validated Vision role map describes apparel sources an
 
 Vision analysis owns pixel observations, role labels, occlusion maps, source-evidence coverage, and explicit color identities. The prompt compiler alone authors final generation prompts. An execution adapter consumes the compiled handoff without rewriting product facts.
 
-The portable request format is `apparel-compile-request/v1`. It contains a product-folder identifier, source-folder location, complete source basename inventory, `vision_role_map`, and complete `requested_outputs` inventory. Every role-map source must occur in the inventory and every inventory source must exist. Filenames are identifiers, never color evidence.
+The portable request format is `apparel-compile-request/v1`. It contains a product-folder identifier, source-folder location, complete source basename inventory, `vision_role_map`, and complete `requested_outputs` inventory. Each requested output requires `cut_type: ghost_cut | clean_product_cut`; missing cut type is rejected rather than guessed. Existing requests must supply it. Optional `pilot_source` selects a `color_front` basename in the validated role map; otherwise the first `color_front` record is the pilot. The compiler refers to its 1-based position in the preserved source inventory, so consumers must retain attachment order. Request/output keys outside the supported fields are rejected.
+
+Every role-map source must occur in the inventory and every inventory source must exist. Filenames are identifiers, never color evidence.
 
 Count colors only from records whose `role` is exactly `color_front`. Each such record requires `color_identity`; normalize it with Unicode NFKC, collapsed whitespace, and case folding, then count unique normalized values. Back and detail records do not add colors. Zero unique front colors is `blocked`; no default count is allowed.
 
@@ -26,7 +28,7 @@ A prompt never contains a local path. If complete evidence cannot fit within 2,0
 
 ## Pilot, references, and evidence floor
 
-The main-color front is the pilot unless the validated role map names another. Every other output inherits the pilot's canvas, occupancy, centerline, silhouette, and anchors — that inheritance is what makes the family coherent rather than six unrelated cutouts.
+The explicitly selected `color_front` pilot_source, or the first validated `color_front` when omitted, supplies the pilot reference. Detail and back records cannot establish all front silhouette anchors. Every other output inherits the pilot's canvas, occupancy, centerline, silhouette, and anchors — that inheritance is what makes the family coherent rather than six unrelated cutouts.
 
 When several sources compete for the same output, order them: the authority for that view first, then construction or back, then fabric and detail, then whichever remaining source covers the largest critical occlusion. Keep the count small enough that each reference has a stated job; a reference nobody can name a job for is noise that pulls the result toward the wrong garment.
 
@@ -40,6 +42,6 @@ Report compiler completion as compiled prompts, never as generation progress —
 
 ## Portable handoff
 
-`scripts/compile_apparel_handoff.py` emits the contract defined by `contracts/v1/apparel-handoff.schema.json`. The handoff preserves the complete `sources`, the contract-defined `vision_role_map` fields (`file`, `role`, and optional `color_identity`), normalized front-color identities, `unique_color_count`, folder master, QC contract, complete output inventory, and each output's ID, filename, and final prompt. Unknown role-map fields are rejected rather than forwarded.
+`scripts/compile_apparel_handoff.py` emits the contract defined by `contracts/v1/apparel-handoff.schema.json`. The handoff preserves the complete `sources`, the contract-defined `vision_role_map` fields (`file`, `role`, and optional `color_identity`), normalized front-color identities, `unique_color_count`, folder master, QC contract, complete output inventory, and each output's ID, filename, and final prompt. Unknown request, output, and role-map fields are rejected rather than forwarded. Compile-request `requested_outputs[]` fields are `id`, `filename`, `view`, `color_identity`, `product_description`, optional `visible_details`, and required `cut_type`. Preservation details belong in `visible_details`; unsupported identity-lock keys are not silently ignored.
 
 The handoff is sufficient for a network-free consumer to prepare isolated candidate tasks. Unknown versions, missing sources, missing front identities, zero colors, duplicate output ownership, or an overlong prompt fail closed. Runtime-specific installation and consumer routing belong only in `references/adapters.md`.

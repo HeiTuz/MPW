@@ -31,10 +31,10 @@ falls back to a minimal frontmatter parse when PyYAML is missing).
 import calendar, json, re, sys, unicodedata, pathlib
 from datetime import date
 
-ROOT = pathlib.Path(__file__).resolve().parent.parent
+ROOT = pathlib.Path(__file__).absolute().parent.parent
 FILES = ["SKILL.md", "references/image/from-image.md", "references/templates.md", "references/model-playbooks.md", "references/adapters.md",
          "references/prompt-graph.md", "references/image/surfaces.md", "references/image/model-routing.md",
-         "references/image/lanes.md", "references/image/compiler.md", "references/image/categories.md",
+         "references/image/lanes.md", "references/image/video-prompt-workflow.md", "references/image/compiler.md", "references/image/categories.md",
          "references/image/editorial-fashion.md", "references/image/editorial/format-b.md",
          "references/image/editorial/tier2-safety.md", "references/image/editorial/taxonomy-dna.md",
          "references/image/editorial/photo-vocab.md", "references/image/editorial/scene-craft.md",

@@ -97,7 +97,14 @@ def _validate_role_map(raw: Any, sources: list[str]) -> tuple[list[dict[str, Any
     return normalized_map, unique_front_colors
 
 
-def _render_prompt(output: dict[str, Any], valid_colors: set[str]) -> tuple[str, str, str]:
+def _render_prompt(output: dict[str, Any], valid_colors: set[str], pilot_index: int) -> tuple[str, str, str]:
+    unknown = set(output) - {"id", "filename", "view", "color_identity", "product_description", "visible_details", "cut_type"}
+    if unknown:
+        raise CompileError(f"unsupported output fields: {', '.join(sorted(unknown))}")
+    cut_type = output.get("cut_type")
+    if cut_type not in {"ghost_cut", "clean_product_cut"}:
+        raise CompileError("cut_type must be ghost_cut or clean_product_cut; no implicit default")
+    cut_description = "worn-shape garment with the wearer removed" if cut_type == "ghost_cut" else "flat or laid product"
     output_id = _basename(output.get("id"), "requested_outputs[].id")
     filename = _basename(output.get("filename"), "requested_outputs[].filename")
     if not OUTPUT_NAME.fullmatch(filename):
@@ -115,14 +122,16 @@ def _render_prompt(output: dict[str, Any], valid_colors: set[str]) -> tuple[str,
     detail_text = "; ".join(" ".join(item.split()) for item in details)
     detail_clause = f" Preserve these source-visible details exactly: {detail_text}." if detail_text else ""
     prompt = (
-        f"IMAGE. Create a {view} apparel product cut for color {color}. Product: {product}. "
+        f"IMAGE. Create a {view} {cut_type} ({cut_description}) for color {color}. Product: {product}. "
         "Use only the complete attached original source inventory and validated Vision role map as evidence. "
         "Preserve visible construction, silhouette, proportions, material behavior, trim, print, and exact color."
         f"{detail_clause} Present the garment alone, fully separated from mannequin, hanger, stand, rod, cord, clip, "
         "hand, prop, and remnants. Use a uniform #FFFFFF field with clean cutout edges, flat edge-to-edge tone, "
         "and shadow-free grounding. Reconstruct hidden areas only from source evidence: reproduce documented "
         "construction and leave unsupported seams, lining, labels, panels, buttons, prints, embroidery, pockets, "
-        "fasteners, and hems absent. Keep the series canvas, occupancy, centerline, scale, and lighting coherent."
+        "fasteners, and hems absent. Keep the series canvas, occupancy, centerline, scale, and lighting coherent. "
+        f"Use attached source {pilot_index} as the pilot reference for silhouette and shoulder, neck, and hem anchors, "
+        "preserving the requested view and source-supported geometry."
     )
     if len(prompt) > MAX_PROMPT_CHARS:
         raise CompileError(f"self_contained_prompt_overflow:{output_id}:{len(prompt)}>{MAX_PROMPT_CHARS}")
@@ -132,9 +141,16 @@ def _render_prompt(output: dict[str, Any], valid_colors: set[str]) -> tuple[str,
 def compile_request(request: Any) -> dict[str, Any]:
     if not isinstance(request, dict) or request.get("schema_version") != REQUEST_VERSION:
         raise CompileError(f"schema_version must be {REQUEST_VERSION}")
+    unknown = set(request) - {"schema_version", "folder_id", "source_folder", "sources", "vision_role_map", "requested_outputs", "pilot_source"}
+    if unknown:
+        raise CompileError(f"unsupported request fields: {', '.join(sorted(unknown))}")
     folder_id = _basename(request.get("folder_id"), "folder_id")
     source_folder, sources = _validate_sources(request)
     role_map, colors = _validate_role_map(request.get("vision_role_map"), sources)
+    pilot = request.get("pilot_source", next(row["file"] for row in role_map if row["role"] == "color_front"))
+    if not isinstance(pilot, str) or pilot not in {row["file"] for row in role_map if row["role"] == "color_front"}:
+        raise CompileError("pilot_source must identify a color_front source in the validated role map")
+    pilot_index = sources.index(pilot) + 1
     requested = request.get("requested_outputs")
     if not isinstance(requested, list) or not requested:
         raise CompileError("requested_outputs must be a non-empty complete inventory")
@@ -144,7 +160,7 @@ def compile_request(request: Any) -> dict[str, Any]:
     for item in requested:
         if not isinstance(item, dict):
             raise CompileError("each requested output must be an object")
-        output_id, filename, prompt = _render_prompt(item, set(colors))
+        output_id, filename, prompt = _render_prompt(item, set(colors), pilot_index)
         if output_id in ids or filename in filenames:
             raise CompileError(f"duplicate output id or filename: {output_id}/{filename}")
         ids.add(output_id)

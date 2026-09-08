@@ -2,13 +2,12 @@
 
 이 레포는 **MPW 스킬의 정본이자 유일한 실제 트리**다(2026-07-25 구조 전환). 하네스는 여기를 소비만 한다:
 
-- `~/.claude/skills/MPW` — 런타임 멤버(SKILL.md·references·contracts·scripts·examples·package.json·LICENSE·README.md·AGENTS.md) 심링크
-- `~/.hermes/skills/prompt-writing/MPW` — 동일
+- `~/.claude/skills/MPW`·`~/.hermes/skills/prompt-writing/MPW`·`~/.codex/skills/MPW` — installer가 정본 런타임 파일을 복사한 뒤 호스트 오버레이를 적용한 소비 산출물
 
-**레포 루트를 통째로 심링크하지 않는다.** `agents/`는 installer 오버레이 원본이고 설치본에는 들어간 적이 없는데, 루트를 심링크하면 호스트 인덱서가 `agents/claude/SKILL.md`·`agents/codex/SKILL.md`를 활성 스킬로 잡아 **같은 이름의 MPW가 3개**가 된다((2026-07 실측), 2026-07-25 확인). 런타임 멤버만 링크해 기존 배포 표면을 그대로 재현한다. 최상위 런타임 파일을 새로 추가하면 양쪽 링크도 추가해야 하며, 빠뜨리면 아래 §검증 루틴의 운영자 전용 doctrine 검사가 주간으로 잡는다.
+**레포 루트를 통째로 심링크하지 않는다.** `agents/`는 installer 오버레이 원본이고 설치본에는 들어간 적이 없는데, 루트를 심링크하면 호스트 인덱서가 `agents/claude/SKILL.md`·`agents/codex/SKILL.md`를 활성 스킬로 잡아 **같은 이름의 MPW가 3개**가 된다((2026-07 실측), 2026-07-25 확인). 기존 멤버 심링크 설치도 installer로 재생성한다. 정본 변경 뒤 세 호스트를 재생성하고 진입 파일까지 포함한 전체 payload 패리티를 검사한다. 공통 references 일치만으로 호스트 통합이 일치한다고 판정하지 않는다.
 
 편집은 여기서 한다 — 설치 경로에서 편집하지 않는다. 그게 v2.11~v2.13이 사라진 원인이었다. 공개 배포(`github:HeiTuz/MPW`)는 푸시 이후에만 유효하다.
-운영 소유권(2026-08-04 개정 — 2026-08-02 정의를 대체): **어느 에이전트든(Claude Code·Codex·Hermes) 이 트리를 직접 편집하고 로컬 커밋할 수 있다.** Codex는 편집 독점자가 아니라 주 관리자(steward)로서 정합성 점검·설치본 재생성·doctrine 패리티·릴리스 준비를 맡는다. **편집한 에이전트는 `~/handoffs/<repo>-<주제>-<타임스탬프>.md`에 핸드오프를 남긴다**(무엇을 왜 / 건드린 파일 / 커밋 해시 / 설치본 재생성 필요 여부 / 검증한 것과 안 한 것 / 남은 작업). 편집 후 로컬 커밋까지 하거나 미커밋임을 핸드오프에 명시한다. 원격 push는 별도 승인 없이는 하지 않는다. Codex App 주간 doctrine runner의 정본도 `scripts/prompt_writing_doctrine_check.py`이며, 기본 reminder 상태는 `~/.codex/state/prompt-writing-doctrine/backlog.json`이고 `MPW_DOCTRINE_STATE` 또는 `--state`로만 바꾼다. 실행 결과와 알림은 Codex App가 처리하며 Telegram/Hermes relay를 두지 않는다. `~/.claude/skills/MPW`·`~/.hermes/skills/prompt-writing/MPW`는 설치본이며, **설치 경로에서 직접 편집하지 않는다 — 편집은 어느 에이전트든 이 정본 트리에서 한다.** Codex 설치본(`~/.codex/skills/MPW`)은 `agents/codex/` 오버레이가 적용된 복사 소비 산출물이다. 정본 변경 뒤 설치본을 재생성하고 doctrine 패리티 검사를 통과시킨다. 버전 범프와 릴리스 push는 정본 커밋·검증을 끝낸 뒤 별도 릴리스 승인으로만 수행한다.
+운영 소유권(2026-08-04 개정 — 2026-08-02 정의를 대체): **어느 에이전트든(Claude Code·Codex·Hermes) 이 트리를 직접 편집하고 로컬 커밋할 수 있다.** Codex는 편집 독점자가 아니라 주 관리자(steward)로서 정합성 점검·설치본 재생성·doctrine 패리티·릴리스 준비를 맡는다. **편집한 에이전트는 `~/handoffs/<repo>-<주제>-<타임스탬프>.md`에 핸드오프를 남긴다**(무엇을 왜 / 건드린 파일 / 커밋 해시 / 설치본 재생성 필요 여부 / 검증한 것과 안 한 것 / 남은 작업). 편집 후 로컬 커밋까지 하거나 미커밋임을 핸드오프에 명시한다. 원격 push는 별도 승인 없이는 하지 않는다. Codex App 주간 doctrine runner의 정본도 `scripts/prompt_writing_doctrine_check.py`이며, 기본 reminder 상태는 `~/.codex/state/prompt-writing-doctrine/backlog.json`이고 `MPW_DOCTRINE_STATE` 또는 `--state`로만 바꾼다. 실행 결과와 알림은 Codex App가 처리하며 Telegram/Hermes relay를 두지 않는다. `~/.claude/skills/MPW`·`~/.hermes/skills/prompt-writing/MPW`는 설치본이며, **설치 경로에서 직접 편집하지 않는다 — 편집은 어느 에이전트든 이 정본 트리에서 한다.** Codex 설치본(`~/.codex/skills/MPW`)은 `agents/codex/` 오버레이가 적용된 복사 소비 산출물이다. 정본 변경 뒤 세 호스트 설치본을 재생성하고 전체 payload 패리티와 doctrine 검사를 통과시킨다. 버전 범프와 릴리스 push는 정본 커밋·검증을 끝낸 뒤 별도 릴리스 승인으로만 수행한다.
 
 ## 하드라인 (위반 = 완료 아님)
 

@@ -14,6 +14,17 @@ SPEC.loader.exec_module(lint)
 
 
 class LintInvariantSmokeTests(unittest.TestCase):
+    def test_symlinked_script_uses_invoked_payload_root(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp) / "installed"
+            root.mkdir()
+            (root / "scripts").symlink_to(LINT_PATH.parent.resolve(), target_is_directory=True)
+            spec = importlib.util.spec_from_file_location("linked_lint", root / "scripts/lint.py")
+            module = importlib.util.module_from_spec(spec)
+            spec.loader.exec_module(module)
+            self.assertEqual(root, module.ROOT)
+
+
     def test_i0_rejects_universal_2000_character_rule(self):
         for sentence in (
             "모든 프롬프트는 2000자 이하로 작성한다.",

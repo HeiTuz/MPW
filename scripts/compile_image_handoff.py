@@ -134,6 +134,14 @@ def compile_request(request: Any) -> dict[str, Any]:
             if not pattern.fullmatch(value):
                 raise CompileError(f"{field} has an invalid format")
             handoff[field] = value
+    if "aspect_ratio" in handoff and "image_size" in handoff:
+        try:
+            a, b = map(int, handoff["aspect_ratio"].split(":"))
+            width, height = map(int, handoff["image_size"].split("x"))
+        except ValueError as exc:
+            raise CompileError("geometry_numeric_capacity_exceeded") from exc
+        if a * height != b * width:
+            raise CompileError("image_handoff_geometry_mismatch")
     metadata = request.get("metadata")
     if metadata is not None:
         if not isinstance(metadata, dict) or any(

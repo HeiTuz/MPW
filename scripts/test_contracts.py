@@ -47,6 +47,50 @@ def _schema_errors_top(value, schema):
     """루트 스키마와 문서가 같은 최상위 호출 — 합성 스키마 검사용."""
     return _schema_errors(value, schema, schema, "$")
 
+class AuditBoundaryTests(unittest.TestCase):
+    def test_private_paths_with_punctuation(self):
+        for text in ("//Users/example/private.png", "(//home/user/private.png)", "///Volumes/private.png", "(/Users/example/private.png)", "[image](file:///tmp/image.png)", "(data:image/png;base64,AAAA)", "path=~/private.png", "C:\\private.png"):
+            value = fixture("garden-recipe.image.valid.json")
+            value["intended_use"]["goal"] = text
+            self.assertTrue(any("forbidden_path_or_embedded_original" in e for e in validate_document(value)), text)
+        for text in ("https://example.org/Users/help", "a portrait in a public gallery", "the data:image label describes a format"):
+            value = fixture("garden-recipe.image.valid.json")
+            value["intended_use"]["goal"] = text
+            self.assertEqual([], validate_document(value), text)
+
+    def test_nonfinite_numbers_rejected_programmatically_and_cli(self):
+        for number in (float("nan"), float("inf"), float("-inf")):
+            value = fixture("garden-recipe.image.valid.json")
+            value["confidence"] = number
+            self.assertTrue(any("non_finite_number" in e for e in validate_document(value)))
+            with tempfile.TemporaryDirectory() as tmp:
+                path = Path(tmp) / "bad.json"
+                path.write_text(json.dumps(value))
+                result = subprocess.run([sys.executable, str(ROOT / "contracts/validate.py"), str(path), "--json"], capture_output=True, text=True)
+                self.assertEqual(1, result.returncode)
+                self.assertFalse(json.loads(result.stdout)["ok"])
+
+    def test_large_ratio_fails_without_unhandled_conversion(self):
+        value = fixture("image-production-handoff.valid.json")
+        value["aspect_ratio"] = "9" * 5000 + ":1"
+        self.assertTrue(validate_document(value))
+        with tempfile.TemporaryDirectory() as tmp:
+            path = Path(tmp) / "large.json"
+            path.write_text(json.dumps(value))
+            result = subprocess.run([sys.executable, str(ROOT / "contracts/validate.py"), str(path), "--json"], capture_output=True, text=True)
+            self.assertEqual(1, result.returncode)
+            self.assertFalse(json.loads(result.stdout)["ok"])
+
+    def test_handoff_geometry_cross_check(self):
+        value = fixture("image-production-handoff.valid.json")
+        value["aspect_ratio"] = "16:9"
+        self.assertIn("$.image_size: image_handoff_geometry_mismatch", validate_document(value))
+        value["aspect_ratio"] = "8:10"
+        self.assertEqual([], validate_document(value))
+        del value["image_size"]
+        self.assertEqual([], validate_document(value))
+
+
 class SchemaFixtureTests(unittest.TestCase):
     def test_schema_documents_are_draft_2020_12(self) -> None:
         ids = []
