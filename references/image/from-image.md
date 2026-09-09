@@ -377,13 +377,13 @@ ref-01 | I8 렌더 텍스트 | unreadable 0.9 | 좌상단에 4~6글자 상당 �
 
 관찰 레코드는 하나이고, `feeds` 엣지도 하나이고, 컴파일만 타깃 수만큼 생긴다([prompt-graph.md](../prompt-graph.md) §5). 타깃마다 레코드를 다시 만들지 않는다.
 
-**타깃 기본값:** 이 레인에서 타깃이 지정되지 않으면 **gpt-image-2**로 컴파일한다. 목적축이 명시되면 [model-routing.md](model-routing.md)가 이긴다. **Higgsfield는 모델 id로 지정되어 들어온다**(`soul_2`·`nano_banana_pro`·`seedream_v5_pro` 등) — 그 지정 자체가 라우팅 결정이므로 다시 라우팅하지 않는다.
+**타깃 기본값:** [model-routing.md](model-routing.md) §4의 표면별 기본값을 따른다. 직접 API의 GPT Image 2.5 선택과 S1의 기존 engine enum을 구분한다. **Higgsfield는 모델 id로 지정되어 들어온다**(`soul_2`·`nano_banana_pro`·`seedream_v5_pro` 등) — 그 지정 자체가 라우팅 결정이므로 다시 라우팅하지 않는다.
 
 ### 6.1 타깃 대조표
 
-| 축 | **gpt-image-2** (기본) | **Higgsfield 모델 id** | **Midjourney** |
+| 축 | **GPT Image** (표면별 모델 선택) | **Higgsfield 모델 id** | **Midjourney** |
 |---|---|---|---|
-| 표면 | S1 스키마 / S2 `gpt_image_2` / S3 | S2 | S3 |
+| 표면 | S1 스키마 / S2 직접 API / S3 | S2 (`gpt_image_2` 포함) | S3 |
 | 길이 | [surfaces.md](surfaces.md) §0-1·§0-2의 실제 상한과 간결성 기준 | 같은 정본의 플랫폼·채널·계약 판정 | 같은 정본의 Midjourney 간결성 기준 |
 | 배제·보존 제약 | 네이티브 자연어 / 명시 compiled Tier를 구분 | 별도 필드 없음. 필요한 자연어 제약은 명시 | `--no` 인라인과 Edit 지시를 목적에 맞게 사용 |
 | 비율 | S1은 스키마 enum, S2는 실제 모델 정의 | `aspect_ratios` 또는 모델별 대체 필드. 빈 배열만으로 모든 비율 제어를 포기하지 않는다 | `--ar 정수:정수` (소수점 불가) |
@@ -398,11 +398,11 @@ ref-01 | I8 렌더 텍스트 | unreadable 0.9 | 좌상단에 4~6글자 상당 �
 
 배제·보존 조건은 [surfaces.md](surfaces.md) §4의 실제 입력 형식을 따른다. MPW 컴파일 형식의 `Negative:` 섹션은 [compiler.md](compiler.md) §2 소관이다.
 
-### 6.3 gpt-image-2
+### 6.3 GPT Image
 
 - 내용은 신호 밀도로 다듬고 실제 채널·엔진·기계 계약 상한도 확인한다. 관찰 레코드를 쓴다고 분량이 저절로 통제된다고 가정하지 않는다.
 - S1 기계 핸드오프로 나가면 `ar`·`size`·`quality`는 **스키마 enum이 전부**이고 `python3 contracts/validate.py`를 실제로 통과해야 한다.
-- S2(Higgsfield의 `gpt_image_2`)로 나가면 비율·해상도가 그 모델의 런타임 정의를 따른다. 파라미터로 되는 축은 산문에 중복하지 않는다.
+- GPT Image 2.5의 직접 API 설정은 [surfaces.md](surfaces.md) §4.3, 참조·누적 편집은 §3.2를 따른다. Higgsfield `gpt_image_2`는 아래 §6.4의 별도 래퍼이며 2.5 선택자로 바꾸지 않는다.
 
 ### 6.4 Higgsfield 모델 id
 

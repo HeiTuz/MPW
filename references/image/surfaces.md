@@ -100,6 +100,18 @@ JSON 형식 자체가 S1을 뜻하지 않는다. 플랫폼 호출 인자를 JSON
 
 `check_prompt.mjs`의 기본 `compiled` 프로필은 기존 MPW 형식용이다. **직접 GPT Image API·UI의 네이티브 자연어**에는 `--profile native --engine gpt-image`와 실제 `--surface`·`--channel`을 명시한다. 네이티브 검사는 영어 부정형 편집 제약을 허용하고 끝 AR를 요구하지 않는다. JSONL·명시 Tier 계약을 우회하는 옵션이 아니며 API 필드, 참조 전달, 픽셀 보존, 생성 품질을 검증하지 않는다. Higgsfield 래퍼의 길이·요청 계약을 대신하지 않으며 S2 전체 요청은 현재 도구·API 스키마로 별도 확인한다.
 
+### 3.2 GPT Image 2.5 — 참조와 누적 편집
+
+새 생성은 용도·주체·구도·눈에 보이는 스타일·필수 조건을 짧은 완결본으로 쓴다. 복잡한 배치만 구획을 나누며, 2.5라는 이유로 고정 템플릿이나 긴 태그 묶음을 붙이지 않는다. 아래는 공식 프롬프팅 가이드를 반영한 작성 기준이며 생성 품질 실측 결과는 아니다(근거는 §7).
+
+- **참조 역할:** 이미지별 번호와 용도(편집 베이스·인물/제품·의상·배경·스타일·스케치)를 지정한다. 스케치의 배치만 쓸지 선화까지 남길지 밝히고, 스타일 참조가 제품 형상까지 바꾸지 않게 한다.
+- **부분 편집:** 바꿀 대상·위치·변경점과 보존할 핵심을 함께 적는다. 예: 배경 교체라면 인물·포즈·크롭·제품 라벨 중 실제로 유지해야 할 것만 잠근다. 요청하지 않은 전면 재디자인으로 넓히지 않는다.
+- **누적 편집:** 직전 승인 이미지를 다음 입력으로 연결하고 이번 변경만 요청한다. 이전에 승인된 변경과 핵심 보존 조건을 유지한다. 독립적인 여러 컷은 각각 원본에서 시작한다. 실패한 중간본을 다음 기준으로 삼지 않는다.
+- **정확한 글자:** 카피를 따옴표로 묶고 위치·위계·출현 횟수를 지정한다. 한글 철자·작은 라벨·불필요한 추가 문구를 결과에서 확인한다. 도해·역사 장면은 사실관계도 별도로 확인한다.
+- **검수:** 변경 부위뿐 아니라 얼굴·제품 형상·구도·색·기존 카피의 불필요한 변화도 비교한다. 반복 편집의 일관성 향상은 픽셀 보존 보증이 아니다. 픽셀 동일성이 필수라면 허용된 합성 경로를 사용하고 생성과 합성을 구분한다.
+
+이미지 위 댓글과 Sketch는 해당 UI에서 제공하는 입력 기능이다. 지원이 없는 도구에 댓글 좌표·스케치 전용 필드를 만들지 말고 실제 참조 이미지와 위치 설명으로 전달한다. 필수 참조를 연결할 수 없으면 그 한계를 밝힌다.
+
 ## 4. 파라미터 우선 규칙 (S1·S2 공통)
 
 **파라미터로 표현되는 축은 산문에 중복 기술하지 않는다.** 파라미터와 산문이 어긋나면 결과가 흔들린다. 설정과 지시문을 구분하는 원칙은 [../model-playbooks.md](../model-playbooks.md) §공통 적응 규칙과 같다.
@@ -166,6 +178,16 @@ JSON 형식 자체가 S1을 뜻하지 않는다. 플랫폼 호출 인자를 JSON
 
 Grok 전용 공통 prompt 문자 상한·최적 단어수는 확인한 가이드에 제시되지 않았다 **[미확인]**. §0-1의 실제 채널·기계 계약 상한을 적용하고, 알려지지 않은 숫자를 강제하지 않는다. 자연어 작성은 [grok-imagine.md](grok-imagine.md), 근거는 §7을 따른다.
 
+### 4.3 GPT Image 2.5 — 직접 API와 호스트 도구의 경계
+
+**2026-09-09 공식 API·프롬프팅 문서 확인.** 아래 값은 OpenAI 직접 API 계약이다. S1 스키마·Higgsfield 래퍼·구독 이미지 도구가 자동으로 같은 옵션을 받는다는 뜻은 아니다.
+
+- Images API의 `model`은 `gpt-image-2.5-flare` 또는 `gpt-image-2.5-sunburst`다. Responses API는 상위 대화 모델과 이미지 도구의 `model`을 분리한다. `gpt-image-2.5`라는 단축 id를 추정하지 않는다.
+- `quality`: `auto`(기본)·`low`·`medium`·`high`·`xhigh`·`max`. 모델을 먼저 고르고 필요한 품질에 못 미칠 때 한 단계씩 비교한다. `max`를 보편 기본값으로 만들지 않는다.
+- `size`: `auto` 또는 `WIDTHxHEIGHT`. 양 변은 16의 배수, 각 변 최대 3840px, 긴 변/짧은 변 최대 3, 총 655,360–8,294,400픽셀. 총 3,686,400픽셀 초과는 실험적이다. UI·구독 도구에 픽셀 설정이 없으면 요구를 자연어로 전달하고 실제 출력 치수를 확인한다.
+- 투명 출력은 `background: transparent`와 PNG/WebP를 함께 지정하고 디코딩한 알파·모발·유리·가장자리를 확인한다. 체크무늬 배경이나 PNG 확장자만으로 투명을 판정하지 않는다. 압축 옵션은 JPEG/WebP에만 쓴다.
+- 구형 모델의 `input_fidelity` 등은 2.5에 자동 복사하지 않는다. 실제 도구가 노출하지 않는 모델·품질·크기 선택을 지시문만으로 강제했다고 보고하지 않는다. S1의 기존 engine·quality enum을 2.5 API 선택자로 해석하거나 스키마 밖 값을 끼워 넣지 않는다.
+
 ## 5. 네이티브 출력과 후처리
 
 원하는 출력을 선택한 모델·표면이 직접 지원하면 그 기능을 쓴다. 지원하지 않는 경우에 배경 제거·아웃페인트·업스케일·리프레임·립싱크를 **후속 단계로 명시**한다.
@@ -210,6 +232,9 @@ Grok 전용 공통 prompt 문자 상한·최적 단어수는 확인한 가이드
 | Soul HEX 색상 입력 | Higgsfield 공식 [Soul 2.0](https://higgsfield.ai/soul-intro), [사용 안내](https://www.higgsfield.company/creator-hub/help-center/ai-models/how-do-i-use-soul-to-generate-images): Color Transfer의 참조 이미지 대표 팔레트 추출·기본 팔레트 선택. Soul 2.0·Soul Cinema 지원. 본문 코드 해석·추출 알고리즘·API 필드는 이 자료로 확정하지 않음 | 2026-09-06 |
 | FLUX.2 본문 HEX | BFL 공식 [prompting guide](https://docs.bfl.ai/guides/prompting_guide_flux2): HEX 색상 지정과 물체별 연결을 안내. 생성 파일의 픽셀 일치 여부는 별도 검증 대상 | 2026-09-06 |
 | GPT Image 네이티브 편집·이어쓰기 | OpenAI [image prompting guide](https://developers.openai.com/cookbook/examples/multimodal/image-gen-models-prompting-guide): 변경점·보존·추가 금지를 직접 명시하고 필요한 참조를 연결. 짧은 변경 지시가 가능하다는 근거이며 픽셀 동일성 보증은 아님 | 2026-09-05 |
+| GPT Image 2.5 모델 선택·편집·이전 결과 입력 | OpenAI [Image prompting](https://developers.openai.com/api/docs/guides/image-prompting), GPT Image 2.5 탭: Flare/Sunburst 비교, 참조 역할, 한 축씩 편집, 원치 않은 변화 검수. §3.2·model-routing의 선택 기준 근거 | 2026-09-09 |
+| GPT Image 2.5 직접 API 설정 | OpenAI [Image generation](https://developers.openai.com/api/docs/guides/image-generation), Overview·Customize Image Output: 두 모델 id, Responses 도구 model, quality·size·투명 출력. §4.3 소관이며 래퍼 지원 확인은 아님 | 2026-09-09 |
+| Images 2.5 댓글·Sketch | OpenAI [출시 발표](https://openai.com/index/introducing-chatgpt-images-2-5/): UI 입력 기능과 참조·누적 편집 개선. 개별 호스트의 옵션이나 실제 생성 모델 증명은 아님 | 2026-09-09 |
 | gpt-image-2 직접 API 알파·입력 충실도·마스크 | OpenAI [image generation guide](https://developers.openai.com/api/docs/guides/image-generation): 투명 배경은 preview, PNG/WebP; `input_fidelity` 생략; 마스크는 정확한 경계 보증이 아닌 가이드. 예제와 충돌 시 API 필드 정의 우선 | 2026-09-05 |
 | Higgsfield gpt_image_2 직접 API와의 차이 | 현행 `models_get(gpt_image_2)`의 `parameters`에 `resolution`·`quality`만 있고 `background`·`input_fidelity` 없음. 직접 API 필드를 복사하지 않음 | 2026-09-05 |
 | BytePlus ModelArk direct Seedream 5 Pro 모델·길이 | 공식 [Image generation tutorial](https://docs.byteplus.com/en/docs/ModelArk/1824121)·API — `dola-seedream-5-0-pro-260628`, 영어 600단어 미만 권장, 1K/2K·PNG/JPEG. Higgsfield `seedream_v5_pro`와 별도 표면 | 2026-08-02 |

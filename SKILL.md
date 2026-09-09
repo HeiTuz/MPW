@@ -7,8 +7,8 @@ metadata:
   category: prompt-writing
   locale: ko-KR
   doctrine: graph-first-delegation-contract
-  updated_at: "2026-09-07"
-  model_claims_reviewed_at: "2026-09-07"
+  updated_at: "2026-09-09"
+  model_claims_reviewed_at: "2026-09-09"
   role_routing_reviewed_at: "2026-09-05"
   platform_roster_reviewed_at: "2026-09-06"
 ---
@@ -40,7 +40,7 @@ metadata:
 | Grok·그록·xAI 대상 | 산출물로 구분: 대화·리서치·추출은 **MODEL** + [model-playbooks.md](references/model-playbooks.md) §Grok 텍스트·리서치, 이미지·영상은 **IMAGE** + [grok-imagine.md](references/image/grok-imagine.md) |
 | 직전 프롬프트의 지정 축만 수정 | **MODEL-델타** → [templates.md](references/templates.md) §MODEL |
 | 슬라이드·발표 덱 | **BUSINESS** + [slides.md](references/slides.md); 새 다중 슬라이드 덱·흐름 재구성에만 아웃라인 선행 |
-| 이미지·영상 생성 프롬프트 | **IMAGE** → [surfaces.md](references/image/surfaces.md)에서 표면·네이티브/컴파일 형식 판정 → [model-routing.md](references/image/model-routing.md) → [lanes.md](references/image/lanes.md) |
+| 이미지·영상 생성 프롬프트 | **IMAGE** → [surfaces.md](references/image/surfaces.md)에서 표면·네이티브/컴파일 형식 판정 → [model-routing.md](references/image/model-routing.md) → [lanes.md](references/image/lanes.md); GPT Image 2.5는 surfaces §3.2·§4.3 |
 | 레퍼런스·생성물 이미지를 프롬프트에 반영 | **IMAGE** → [from-image.md](references/image/from-image.md)로 입력 판정 후 위 순서 |
 | 피사체 보존 배경 교체 프롬프트 | **COMPOSITE** → IMAGE와 같은 순서 |
 | UI·페이지·컴포넌트 제작 프롬프트 | 해당 모드 + [templates.md](references/templates.md) §DESIGN 오버레이 |
