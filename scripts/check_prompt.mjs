@@ -519,6 +519,19 @@ function runJsonl(content, opts) {
   return { ok: pass === results.length, profile: "compiled", results, summary: { total: results.length, pass, fail: results.length - pass } };
 }
 
+function uniqueCodes(codes) {
+  return [...new Set(codes)];
+}
+
+function compareExpectedCodes(actualCodes, expectedCodes = []) {
+  const actual = uniqueCodes(actualCodes);
+  const expected = uniqueCodes(expectedCodes);
+  return {
+    missing: expected.filter((code) => !actual.includes(code)),
+    unexpected: actual.filter((code) => !expected.includes(code)),
+  };
+}
+
 function parseFlags(flags) {
   const o = { profile: "compiled", api: false, tier: undefined, surface: undefined, engine: undefined, channel: undefined, channelLimit: undefined, file: null, jsonlPath: null, test: false };
 
@@ -597,7 +610,8 @@ function parseFlags(flags) {
 }
 
 function runTest() { // fixtures/manifest.json 셀프테스트 — 경로는 스크립트 기준(import.meta.url)
-  const entries = JSON.parse(readFileSync(resolve(SCRIPT_DIR, "fixtures/manifest.json"), "utf8"));
+  const manifestPath = process.env.MPW_PROMPT_MANIFEST || resolve(SCRIPT_DIR, "fixtures/manifest.json");
+  const entries = JSON.parse(readFileSync(manifestPath, "utf8"));
   let fails = 0;
   const rows = entries.map((e) => {
     const opts = parseFlags(e.flags || []);
@@ -606,13 +620,20 @@ function runTest() { // fixtures/manifest.json 셀프테스트 — 경로는 스
     const res = mode === "jsonl" ? runJsonl(content, opts) : validateText(content, opts, null, "text");
     const codes = mode === "jsonl" ? res.results.flatMap((r) => r.errors.map((x) => x.code)) : res.errors.map((x) => x.code);
     const wcodes = mode === "jsonl" ? res.results.flatMap((r) => r.warnings.map((x) => x.code)) : res.warnings.map((x) => x.code);
-    const missing = (e.expect.codes || []).filter((c) => !codes.includes(c)); // expect.codes ⊆ 실코드
+    const { missing, unexpected } = compareExpectedCodes(codes, e.expect.codes || []);
     const missingWarn = (e.expect.warn_codes || []).filter((c) => !wcodes.includes(c)); // expect.warn_codes ⊆ 실경고
     const unexpectedWarn = (e.expect.absent_warn_codes || []).filter((c) => wcodes.includes(c));
-    const pass = res.ok === e.expect.ok && missing.length === 0 && missingWarn.length === 0 && unexpectedWarn.length === 0;
+    const pass = res.ok === e.expect.ok && missing.length === 0 && unexpected.length === 0 && missingWarn.length === 0 && unexpectedWarn.length === 0;
     if (!pass) fails++;
-    return [pass ? "PASS" : "FAIL", e.path, mode, pass ? "" : `ok=${res.ok}(기대 ${e.expect.ok})${missing.length ? ` 누락코드:${missing.join(",")}` : ""}${missingWarn.length ? ` 누락경고:${missingWarn.join(",")}` : ""}${unexpectedWarn.length ? ` 금지경고:${unexpectedWarn.join(",")}` : ""} 실코드:${[...new Set(codes)].join(",") || "-"}`];
+    return [pass ? "PASS" : "FAIL", e.path, mode, pass ? "" : `ok=${res.ok}(기대 ${e.expect.ok})${missing.length ? ` 누락코드:${missing.join(",")}` : ""}${unexpected.length ? ` 미선언코드:${unexpected.join(",")}` : ""}${missingWarn.length ? ` 누락경고:${missingWarn.join(",")}` : ""}${unexpectedWarn.length ? ` 금지경고:${unexpectedWarn.join(",")}` : ""} 실코드:${uniqueCodes(codes).join(",") || "-"}`];
   });
+  // 이 가드는 manifest 기대치가 다시 부분집합 비교로 약화되는 회귀를 잡는다.
+  // 실제 fixture의 오류를 일부러 틀리게 선언한 경우 미선언코드로 실패해야 한다.
+  const undeclaredGuard = compareExpectedCodes(["E-DECLARED", "E-UNDECLARED"], ["E-DECLARED"]);
+  if (undeclaredGuard.unexpected.length !== 1 || undeclaredGuard.unexpected[0] !== "E-UNDECLARED") {
+    fails++;
+    rows.push(["FAIL", "<manifest-exact-code-self-check>", "test", "미선언 오류 코드를 거부하지 않음"]);
+  }
   const wp = Math.max(...rows.map((r) => r[1].length), 4);
   console.log(`RESULT  ${"PATH".padEnd(wp)}  MODE   DETAIL`);
   for (const r of rows) console.log(`${r[0].padEnd(6)}  ${r[1].padEnd(wp)}  ${r[2].padEnd(5)}  ${r[3]}`);

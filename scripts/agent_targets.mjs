@@ -49,5 +49,5 @@ export function parseInteractiveAgentHosts(answer, detectedHosts) {
 
 export function formatDetectedHosts(detectedHosts) {
   const detected = orderedUniqueHosts(detectedHosts || []);
-  return detected.length ? detected.join(", ") : "none (Hermes fallback)";
+  return detected.length ? detected.join(", ") : `none (${AGENT_HOST_PRIORITY[0]} fallback)`;
 }

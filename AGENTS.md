@@ -29,13 +29,13 @@
 4. **모델·엔진 주장은 스탬프와 함께** — 근거 없는 모델 능력/플래그 서술 금지. 검증된 주장엔 날짜 스탬프(예: (YYYY-MM 실측)), 스탬프 6개월 경과 시 재검증 후 갱신. 플랫폼 로스터(`model-routing.md`)는 더 짧다: 30일 이내는 그대로, 30~90일은 파라미터를 런타임 확인, 90일 초과는 목록부터 다시 뜬다. **모델이 사라졌다고 결론내기 전에 목록 페이지네이션을 끝까지 따라간다** — 2026-07-21에 이 확인을 빠뜨려 "Seedream 계열 전체 소멸"로 오판한 전례가 있다.
 4-1. **파라미터를 산문 규칙으로 승격하지 않는다** — 실행자가 레버로 갖는 축(비율·해상도·품질·길이·오디오·팔레트 배열·프리셋·장르)은 어휘·철칙이 아니라 `surfaces.md` §4 소관이다. 가드너 제안이 이 축의 후보를 올려도 반려한다.
 5. **런타임 고유명은 `references/adapters.md`에만** — 코어 파일(SKILL.md·templates.md·image/*)에 특정 에이전트 제품명을 다시 들이지 않는다. 모델·엔진명(gpt-image-2, Higgsfield 등)은 허용.
-6. **엔진 표면 문서에 자동 반영 경로는 없다** — `references/image/{grok-imagine,seedream-character-reference-sheets,midjourney-feed-diagnosis}.md`는 엔진별 붙여넣기 문법·시트 변환·피드 진단을 담는다. 이 트리는 자동 수집기가 제자리에서 패치하는 대상이 아니다. 새 엔진 관측은 **검토된 패치 제안 → 사용자 승인 → 정본 릴리스** 경로로만 들어온다. 관측 결과를 직접 커밋하지 말고 제안으로 올린다.
+6. **자동 수집은 편집 권한이 아니다** — 엔진 관측 수집기는 근거와 패치 제안을 남긴다. 사용자가 해당 스킬 수정·점검을 요청했다면 그 범위에서 공식 근거를 확인해 정본을 수정·검증·로컬 커밋한다. 같은 수정에 재승인을 요구하지 않는다. 버전 범프·원격 push는 별도 릴리스 권한을 따른다.
 6-1. **인물 동일성과 운영자 취향은 이 레포가 보유하지 않는다** — 실존 인물을 관측해 만든 얼굴 기하·identity lock, 그리고 특정 운영자의 실루엣·팔레트 기본값은 여기에 두지 않는다(초상·퍼블리시티, 그리고 취향은 보편 규칙이 아니라는 두 이유). 이 트리의 문서는 **축과 절차**를 적고 구체 토큰 세트는 각 설치가 공급한다. `references/**`는 배포 파일 목록에 글롭으로 포함되므로, 여기 넣는 순간 옵트인 게이트 없이 공개된다.
 
 ## 검증 루틴 (변경 후 필수)
 
 ```sh
-python3 scripts/lint.py               # 항상 — 라벨 실측·2000자·정본 단일성·유사문자
+python3 scripts/lint.py               # 항상 — 예시 라벨·표면 계약·정본 단일성·유사문자
 node scripts/check_prompt.mjs --test  # references/image/ 또는 검증기 변경 시 — fixture 전수(S1-legacy·S3 소관, 표면·채널·엔진 컨텍스트 플래그 포함, S2 권위 아님)
 (cd scripts && suite_rc=0; for t in test_*.py; do [ "$t" = test_adapter_master_integration.py ] && continue; echo "--- $t"; python3 -m unittest "${t%.py}" || suite_rc=1; done; test "$suite_rc" -eq 0)  # repo-local 전수, 실패 누적
 ```
@@ -73,7 +73,7 @@ prompt-knowledge 가드너는 loop 모듈이 없고 스킬 스크립트가 직�
    curl -s https://raw.githubusercontent.com/HeiTuz/MPW/main/package.json | python3 -c "import json,sys; print(json.load(sys.stdin)['version'])"
    ```
    값이 다르면 미배포 상태이며 배포 완료로 보고하지 않는다.
-3. **승인된 릴리스 절차**: 설치 트리의 편집분을 이 저장소에 반영(설치 트리 루트 `README.md`는 hermes 오버레이 산출물이므로 루트로 복사 금지, `agents/` 오버레이 본문은 canonical SKILL.md와 재동기화 + frontmatter version/canonical_source 갱신) → `npm test` exit 0 → 영어 커밋 → 승인받은 범위의 push → CI green 확인. 버전 범프·push 권한은 위 운영 소유권 규칙을 따른다.
+3. **승인된 릴리스 절차**: 이 저장소의 변경을 검토하고 `agents/` 오버레이 본문과 frontmatter를 동기화 → 필수 로컬·교차 검증 → 영어 커밋 → 승인받은 범위의 push → CI와 원격 버전 확인. 정본에서 설치본을 재생성한다. 설치본의 예상 밖 변경이 발견되면 먼저 출처와 의도를 확인하며, 설치본을 통째로 역복사하지 않는다. 버전 범프·push 권한은 위 운영 소유권 규칙을 따른다.
 
 ## 작업 방식
 

@@ -231,8 +231,9 @@ Grok 전용 공통 prompt 문자 상한·최적 단어수는 확인한 가이드
 경계 둘. **플랫폼 로스터 스냅샷 날짜와 그 신선도 등급**은 [model-routing.md](model-routing.md) §5의 기계 마커가 소유하고, **Midjourney 문법·파라미터의 규칙 서술**은 [../midjourney-identity.md](../midjourney-identity.md)가 소유한다. 이 표는 그 사실들의 근거·확인일만 기록하고 규칙 문장을 복제하지 않는다.
 
 | 항목 | 근거 | 확인일 |
-| Genjutsu 웹 기능·프롬프트·입력 수치 불일치 | 공식 [제품 안내와 예시](https://higgsfield.ai/genjutsu), [사용 가이드](https://higgsfield.ai/blog/higgsfield-genjutsu). 기능 선택·짧은 지시 근거. 입력 수치 차이는 §4.4에 기록; API·실제 생성은 미검증 | 2026-09-11 |
 |---|---|---|
+| Midjourney 기본 버전 | 공식 [Version](https://docs.midjourney.com/hc/en-us/articles/32199405667853-Version): 기본 V8.2와 적용일 2026-07-24 재확인. 다른 파라미터 전체를 재검증한 것은 아님 | 2026-09-11 |
+| Genjutsu 웹 기능·프롬프트·입력 수치 불일치 | 공식 [제품 안내와 예시](https://higgsfield.ai/genjutsu), [사용 가이드](https://higgsfield.ai/blog/higgsfield-genjutsu). 기능 선택·짧은 지시 근거. 입력 수치 차이는 §4.4에 기록; API·실제 생성은 미검증 | 2026-09-11 |
 | S1 enum(ar·size·quality) | `contracts/v1/*.schema.json` 직접 읽음 | 2026-07-25 |
 | S2 파라미터 축·모델 로스터 | Higgsfield MCP `models_list(limit:100)` 전체 95개·`has_more:false`; Soul 2.0·GPT Image 2·Recraft V4.1 `models_get` 교차 확인 | 2026-09-06 |
 | `prompt-bundle/v1` 2000 | `contracts/v1/prompt-bundle.schema.json` 직접 읽음 — `text.maxLength` / `unicode_char_count.maximum` | 2026-07-25 |

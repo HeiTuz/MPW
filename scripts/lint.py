@@ -831,7 +831,7 @@ def main():
     if skill.count("게이트 필요성 테스트** —") != 1:
         errors.append("gate necessity test must be defined exactly once in SKILL.md")
     tm = texts.get("references/templates.md", "")
-    if tm.count("질문이 정당한 유일 목록 (정본)") != 1:
+    if tm.count("추론 불가 슬롯 — 질문이 필요한 기준 (정본)") != 1:
         errors.append("non-inferable slot canon must appear exactly once in templates.md")
 
     # I1 — host names remain in adapters and host overlays, not the core.

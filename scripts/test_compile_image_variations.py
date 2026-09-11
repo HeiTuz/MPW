@@ -117,6 +117,11 @@ class ImageVariationCompilerTests(unittest.TestCase):
             MODULE.compile_variations(self.request(), "2")
         with self.assertRaisesRegex(ValueError, "request locks"):
             MODULE.compile_variations({"concept": "x", "style": "", "output_prefix": "images"}, 1)
+        for prefix in ("../escape", "/tmp/images", "C:\\images", "images/../escape"):
+            with self.subTest(prefix=prefix):
+                request = {"concept": "x", "style": "", "locks": {}, "output_prefix": prefix}
+                with self.assertRaisesRegex(ValueError, "portable relative path"):
+                    MODULE.compile_variations(request, 1)
         with tempfile.TemporaryDirectory() as tmp:
             request = Path(tmp) / "bad.json"
             request.write_text(json.dumps({"concept": "x", "output_prefix": "../escape"}), encoding="utf-8")

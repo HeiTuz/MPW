@@ -98,10 +98,10 @@ class OutputProfessionalismTest(unittest.TestCase):
             if entry_id in {"new-write", "coding-agent", "system-prompt"}:
                 self.assertRegex(payload["expected"], completion_criteria, entry_id)
 
-    def test_image_expected_passes_the_prompt_validator(self):
+    def test_image_expected_passes_native_prompt_validator(self):
         image = next(payload["expected"]["image"] for entry_id, payload in self.entries if entry_id == "image-video")
         result = subprocess.run(
-            ["node", "scripts/check_prompt.mjs"],
+            ["node", "scripts/check_prompt.mjs", "--profile", "native", "--surface", "s3"],
             cwd=ROOT,
             input=image,
             text=True,
@@ -111,34 +111,16 @@ class OutputProfessionalismTest(unittest.TestCase):
         self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
         report = json.loads(result.stdout)
         self.assertTrue(report["ok"])
-        warning_codes = {warning["code"] for warning in report.get("warnings", [])}
-        self.assertNotIn("W-HEX-MISS", warning_codes, "image golden must carry a scene-matched HEX palette")
 
-    def test_video_expected_obeys_scene_invariants(self):
+    def test_video_expected_preserves_subject_and_motion_without_engine_template(self):
         video = next(payload["expected"]["video"] for entry_id, payload in self.entries if entry_id == "image-video")
-        boundaries = list(re.finditer(r"(?m)^씬\s+\d+\s*$", video))
-        self.assertTrue(boundaries, "video requires named scenes")
-        negative_lines = []
-        for index, boundary in enumerate(boundaries):
-            scene = video[boundary.end():boundaries[index + 1].start() if index + 1 < len(boundaries) else len(video)]
-            self.assertEqual(len(re.findall(r"(?m)^카메라 모션:\s*.+$", scene)), 1, "each scene needs one camera motion")
-            self.assertRegex(
-                scene,
-                r'(?m)^Dialogue - .+?: \(.+? in Korean\) "[^"\n]+"$',
-                "Korean dialogue needs the canonical English cue form",
-            )
-            negative_lines.extend(re.findall(r"(?m)^네거티브:\s*(.+)$", scene))
-            prose = re.sub(r"(?m)^네거티브:.*$", "", scene)
-            self.assertNotRegex(prose, r"없이|없는|없음|없다|않|하지 마|금지|제외", "scene prose must stay positive-form")
-            self.assertNotRegex(prose, r"(?i)\bno\b|\bwithout\b", "scene prose must stay positive-form")
-        self.assertTrue(negative_lines, "video golden must prove the noun-list negative form")
-        for tokens in negative_lines:
-            items = [token.strip() for token in tokens.split(",")]
-            self.assertTrue(all(items), "negative list needs comma-separated noun tokens")
-            for token in items:
-                self.assertRegex(token, r"^[0-9A-Za-z가-힣·\- ]+$", f"negative token must be a bare noun: {token}")
-                self.assertNotRegex(token, r"없|않|금지|아니", f"negative token must not negate: {token}")
-                self.assertNotRegex(token, r"(?i)\bno\b|\bwithout\b", f"negative token must not negate: {token}")
+        self.assertTrue(video.strip(), "video golden must contain a prompt")
+        self.assertRegex(video, r"도서관|책|library|books", "video must preserve the requested subject")
+        self.assertRegex(video, r"움직|이동|move|camera|카메라", "video must specify a visible movement")
+        self.assertNotRegex(video, r"(?m)^씬\s+\d+\s*$", "generic video prompt must not require named scenes")
+        self.assertNotRegex(video, r"(?m)^카메라 모션:", "generic video prompt must not require a template label")
+        self.assertNotRegex(video, r"(?m)^Dialogue\s+-", "generic video prompt must not invent a dialogue format")
+        self.assertNotRegex(video, r"(?m)^네거티브:", "generic video prompt must not invent an inline negative field")
 
     def test_generic_docs_do_not_leak_image_lane_terms(self):
         for path in (ROOT / "SKILL.md", ROOT / "references" / "templates.md"):

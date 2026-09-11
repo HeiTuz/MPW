@@ -157,6 +157,10 @@ def compile_variations(request: dict[str, Any], count: int, seed: int | None = N
             raise ValueError(f"request {field} must be a string.")
     if not request["concept"].strip():
         raise ValueError("request concept must be non-empty.")
+    prefix = request["output_prefix"].strip()
+    posix_prefix = PurePosixPath(prefix)
+    if not prefix or posix_prefix.is_absolute() or ".." in posix_prefix.parts or "\\" in prefix or ":" in prefix:
+        raise ValueError("request output_prefix must be a portable relative path without traversal.")
     actual_seed = _seed(request, seed)
     total = 1
     for name, choices in AXES.items():
@@ -176,7 +180,7 @@ def compile_variations(request: dict[str, Any], count: int, seed: int | None = N
         records.append({
             "id": f"variation-{number:0{width}d}",
             "full_prompt": _prompt(request, axes),
-            "output_path": f"{request['output_prefix']}/{number:0{width}d}.png",
+            "output_path": f"{posix_prefix.as_posix()}/{number:0{width}d}.png",
             "qc_required": False,
             "metadata": {
                 "mpw_compiled": True,

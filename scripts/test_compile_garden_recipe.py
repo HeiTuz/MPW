@@ -332,7 +332,7 @@ class CompileGardenRecipeTests(unittest.TestCase):
         )
         self.assertIn("clean watermark-free finish", legacy["blocks"][0]["text"])
 
-    def test_cli_emits_machine_readable_failure(self) -> None:
+    def test_cli_reports_a_prefixed_failure_on_stderr(self) -> None:
         with tempfile.TemporaryDirectory() as directory:
             path = Path(directory) / "legacy.json"
             path.write_text('{"prompt":"raw"}', encoding="utf-8")

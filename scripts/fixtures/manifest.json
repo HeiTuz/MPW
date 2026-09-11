@@ -66,6 +66,7 @@
         "E-SD-VOCAB",
         "E-WEIGHT",
         "E-MJ-FLAG",
+        "E-NEG-TIER",
         "E-NEG-001"
       ]
     }
@@ -171,6 +172,7 @@
         "E-PROMO-EFFECT",
         "E-PROMO-SUBJECT",
         "E-PROMO-FINISH",
+        "E-PROMO-COPY",
         "E-PROMO-PALETTE-CONFLICT",
         "E-PROMO-KO-MASK-LEN",
         "E-PROMO-METAUI"
@@ -204,7 +206,9 @@
         "E-SIZE-EDGE",
         "E-SIZE-MULT",
         "E-SIZE-RATIO",
-        "E-REC-CATEGORY"
+        "E-REC-CATEGORY",
+        "E-AR-ENUM",
+        "E-SIZE-AR"
       ]
     }
   },
@@ -242,7 +246,8 @@
         "E-TP-EXACT-PRIMARY",
         "E-TP-TEXTURE",
         "E-TP-SPECIMEN",
-        "E-TP-PATTERN"
+        "E-TP-PATTERN",
+        "E-NEG-TIER"
       ]
     }
   },

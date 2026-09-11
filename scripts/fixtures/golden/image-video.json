@@ -1,7 +1,7 @@
 {
-  "input": "지역 도서관 여름 독서 프로그램을 알리는 이미지와 짧은 영상용 프롬프트를 만들어줘.",
+  "input": "지역 도서관 여름 독서 프로그램을 알리는 이미지와 짧은 영상용 프롬프트를 영어 자연어로 만들어줘.",
   "expected": {
-    "image": "Scene: 한국 지역 도서관의 여름 독서 프로그램 포스터, 창가 독서 테이블과 책 더미, 상단에 제목 \"여름 책산책\"을 한 번만 또렷하게 배치, 모든 텍스트는 한 번씩만 읽기 쉽게.\nCamera: 아이레벨 정면 구도, 제목과 책상이 중앙 축을 이루는 세로 포스터 레이아웃.\nLighting: 창으로 들어오는 부드러운 자연광과 책상 위 균일한 보조광, 종이 가장자리에 은은한 그림자.\nColor grading: 따뜻한 크림·세이지 팔레트 #F6EBD8 #A8C3A0 #6B4F2A, 낮은 대비의 여름 오후 톤.\nTexture/Medium: 따뜻한 무광 인쇄 종이 질감, 책 표지의 미세한 결, 읽기 쉬운 한글 타이포그래피.\nAR 3:4",
-    "video": "씬 1\n도서관 창가의 책 더미와 프로그램 안내판을 보여준다.\n카메라 모션: 안내판에서 책상으로 천천히 내려간다.\nDialogue - Narrator: (warm in Korean) \"이번 여름, 책과 산책하세요.\"\n네거티브: text overlay, watermark\n\n씬 2\n어린이와 보호자가 독서 기록 카드를 함께 살핀다.\n카메라 모션: 인물의 손에서 카드 전체로 부드럽게 뒤로 이동한다.\nDialogue - Narrator: (gentle in Korean) \"가까운 도서관에서 만나요.\"\n네거티브: caption text, logo"
+    "image": "A summer reading program poster for a local library, with a window-side reading table and stacked books, composed as a calm vertical print design in warm cream and sage tones with soft natural window light.",
+    "video": "A library window with a stack of books and a summer reading sign. The camera gently moves from the sign toward the books as sunlight shifts across the table, ending on the open book with continuous motion and a calm welcoming mood."
   }
 }

@@ -125,13 +125,14 @@ class ApparelHandoffCompilerTests(unittest.TestCase):
         result = compiler.compile_request(self.request)
         self.assertEqual([], contracts.validate_document(result, schema_version="apparel-handoff/v1"))
 
-    def test_generated_prompts_pass_compiled_tier_zero(self) -> None:
+    def test_generated_prompt_body_has_no_language_errors_when_wrapped_for_checker(self) -> None:
         result = compiler.compile_request(self.request)
         checker = ROOT / "scripts" / "check_prompt.mjs"
         for output in result["outputs"]:
-            # The portable handoff owns geometry outside the prompt. Add only the
-            # compiled checker's required S3 tail so its Tier-0 language checks can
-            # exercise the exact generated body without changing the handoff.
+            # The portable handoff owns geometry outside the prompt, so the emitted
+            # body is not itself a compiled S3 prompt. Add only the checker tail to
+            # exercise language checks on the body; this does not validate the S1
+            # handoff contract or claim that AR belongs in the saved prompt.
             validation_prompt = f'{output["prompt"]} AR 1:1'
             checked = subprocess.run(
                 ["node", str(checker), "--profile", "compiled", "--tier", "0", "--surface", "s3"],
