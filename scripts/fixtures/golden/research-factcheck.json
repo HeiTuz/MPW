@@ -1,4 +1,4 @@
 {
   "input": "국내 전기요금 인상률 기사 내용을 사실 확인해줘.",
-  "expected": "기사의 전기요금 인상률 주장과 적용 시점을 공식 고시·공공기관 발표로 대조하라. 먼저 결론을 한 문단으로 제시하고, 이어 주장별로 기사 문장·확인 결과·출처 URL·확인 날짜를 표로 정리한다. 완료 기준: 모든 수치에 1차 출처가 연결되고 상충하는 자료는 함께 표시되며 확인할 수 없는 항목은 사유와 함께 미확인으로 남긴다."
+  "expected": "Cross-check the article's claims about the electricity rate increase and its effective date against official notices and public institution announcements. Present the conclusion first in one paragraph, then organize each claim in a table with the article sentence, verification result, source URL, and verification date. Definition of Done: every figure is linked to a primary source, conflicting materials are shown together, and unverifiable items remain marked as unverified with the reason."
 }

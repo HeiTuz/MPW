@@ -1,4 +1,4 @@
 {
   "input": "아래 공지문을 더 분명하고 친절하게 고쳐줘: 다음 주 시스템 점검이 있습니다.",
-  "expected": "아래 공지문을 직원이 한 번 읽고 일정과 행동을 알 수 있게 고쳐라. 점검 일시·영향 범위·사용자가 할 일을 앞문장에 배치하고, 추측성 표현은 제거한다. 완료 기준: 제목과 본문 2문단으로 구성되며 원문의 사실 범위를 넓히지 않는다.\n\n원문: 다음 주 시스템 점검이 있습니다."
+  "expected": "Revise the announcement below so that an employee knows the schedule and what to do after reading it once. Keep the announcement text in Korean. Put the maintenance time, scope of impact, and required user actions in the opening sentence, and remove speculative wording. Definition of Done: structure it with one title and two body paragraphs, without expanding the factual scope of the original.\n\nOriginal: 다음 주 시스템 점검이 있습니다."
 }

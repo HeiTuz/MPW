@@ -1,4 +1,4 @@
 {
   "input": "신규 입사자를 위한 비밀번호 관리 안내문을 작성해줘.",
-  "expected": "신규 입사자가 첫날 바로 따를 수 있는 비밀번호 관리 안내문을 작성하라. 사내 계정마다 서로 다른 긴 암호를 쓰고 승인된 관리 도구에만 보관하는 방법을 3단계로 설명한다. 완료 기준: 제목 1개, 실행 단계 3개, 분실·의심 상황의 신고 경로가 포함되고 각 문장은 80자 이하다."
+  "expected": "Write password management guidance that a new employee can follow immediately on their first day. Explain in 3 steps how to use a different long password for each company account and store passwords only in an approved management tool. Definition of Done: include 1 title, 3 action steps, and a reporting path for lost or suspected compromised passwords, with each sentence no longer than 80 characters."
 }

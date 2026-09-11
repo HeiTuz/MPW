@@ -91,7 +91,7 @@ class OutputProfessionalismTest(unittest.TestCase):
 
     def test_execution_goldens_have_judgeable_completion_criteria(self):
         completion_criteria = re.compile(
-            r"완료 기준|## 완료|완료 조건|Definition of Done|\bDoD\b|반환 형식",
+            r"완료 기준|## 완료|완료 조건|Definition of Done|Completion criteria|\bDoD\b|반환 형식|Response format",
             re.IGNORECASE,
         )
         for entry_id, payload in self.entries:
