@@ -40,6 +40,8 @@
 
 ## 2. 영상 — 목적축 라우팅
 
+**Genjutsu 지정 요청:** [higgsfield-genjutsu.md](higgsfield-genjutsu.md)에서 Motion Transfer·Object Swap을 판정한다(2026-09-11 공식 안내 확인). 웹 기능명이며 아래 런타임 로스터에 확인된 API 모델 ID를 추가한 것이 아니다. 실행 ID·입력 조합은 현재 표면에서 확인한다.
+
 | 목적 | 1순위 | 대안 | 결정 파라미터 |
 |---|---|---|---|
 | 최고급 시네마틱 | `veo3_1` | `cinematic_studio_3_0`, `kling3_0` | `quality: basic/high/ultra`, `variant`, `duration: 4/6/8` |
@@ -97,6 +99,7 @@
 5. **영상 길이는 임의 값이 아니다.** 열거값(`5/10`, `4/8/12`, `6/10`)인 모델과 범위(`3~15`, `4~15`)인 모델이 섞여 있다. 스토리보드의 씬 길이를 모델 제약에 맞춘다.
 6. **네거티브와 길이는 §3이 정본이다.** 이 플랫폼의 이미지·영상 모델에 `negative_prompt`가 없다는 것은 플랫폼 사실이지 모든 엔진에 대한 일반 원칙이 아니다. 사실·산출 분기·예외를 여기서 되풀이하지 않는다.
 7. **엔진을 골랐으면 그 엔진의 표면 문법을 따른다.** 모델 선택(이 파일)과 실제로 써넣는 문법은 다른 축이다. 아래 어댑터의 적용 표면을 확인하고, 파라미터는 [surfaces.md](surfaces.md)와 해당 표면의 실제 계약을 따른다.
+   - [higgsfield-genjutsu.md](higgsfield-genjutsu.md) — Genjutsu 기존 영상의 Motion Transfer·Object Swap. 짧은 변경 지시와 참조 대응을 작성한다.
    - [grok-imagine.md](grok-imagine.md) — Grok 이미지·영상 자연어 작성. Imagine UI·대화형 이미지 도구·직접 API·래퍼 경계를 구분한다. Higgsfield 모델 선택은 위 §1·§2, 대화·리서치용 Grok은 [../model-playbooks.md](../model-playbooks.md) 소관이다.
    - [../midjourney-identity.md](../midjourney-identity.md) — 일반 Image Prompt·V8 Edit Model·V7 Omni의 입력 역할과 문법. 지정 버전을 유지하며 목적에 맞는 참조 기능을 선택한다.
    - [seedream-5-pro.md](seedream-5-pro.md) — BytePlus ModelArk direct Seedream 5 Pro의 자연어·다중 이미지·`<point>`/`<bbox>` 인터랙티브 편집 문법. Higgsfield `seedream_v5_pro`에는 런타임 기능 확인 없이 좌표·파라미터를 복사하지 않는다.

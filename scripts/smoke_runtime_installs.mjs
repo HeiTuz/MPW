@@ -44,6 +44,7 @@ const required = [
   "references/image/seedream-5-pro.md",
   "references/image/seedance-2.md",
   "references/image/seedance-2-5.md",
+  "references/image/higgsfield-genjutsu.md",
 ];
 const sharedCore = required.filter((relative) => relative !== "SKILL.md");
 const adapterHeadings = {
@@ -120,6 +121,7 @@ function assertTerms(name, text, terms) {
 function assertInstalled(home, target) {
   const installDestination = destination(home, target);
   const installed = Object.fromEntries(required.map((relative) => [relative, readInstalled(installDestination, relative)]));
+  checkLinks(installDestination, "references/image/higgsfield-genjutsu.md");
   if (fs.existsSync(path.join(installDestination, "agents"))) fail(`${target}: agents/ leaked into installed payload`);
   for (const relative of ["SKILL.md", "references/templates.md", "references/model-playbooks.md", "references/adapters.md", "references/image/lanes.md", "references/image/video-prompt-workflow.md", "references/image/grok-imagine.md", "references/image/seedream-5-pro.md", "references/image/seedance-2.md", "references/image/seedance-2-5.md"]) {
     checkLinks(installDestination, relative);

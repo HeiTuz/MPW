@@ -10,7 +10,7 @@ metadata:
   host_surface: hermes
   canonical_source: "HeiTuz/MPW SKILL.md v2.28.2"
   updated_at: "2026-09-11"
-  model_claims_reviewed_at: "2026-09-09"
+  model_claims_reviewed_at: "2026-09-11"
   role_routing_reviewed_at: "2026-09-05"
   platform_roster_reviewed_at: "2026-09-06"
 ---

@@ -8,7 +8,7 @@ metadata:
   locale: ko-KR
   doctrine: graph-first-delegation-contract
   updated_at: "2026-09-11"
-  model_claims_reviewed_at: "2026-09-09"
+  model_claims_reviewed_at: "2026-09-11"
   role_routing_reviewed_at: "2026-09-05"
   platform_roster_reviewed_at: "2026-09-06"
 ---
