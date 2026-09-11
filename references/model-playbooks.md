@@ -8,10 +8,10 @@
 
 | 역할 | 권한 | 대표 작업 | 최소 capability |
 |---|---|---|---|
-| `prime` / integrator | 결과 소유, 결정, 상태, 통합, 최종 검증, 완료 claim | 전체 goal, 다중 레인 통합, release 판정 | balanced/agentic 기본; 고위험·광역 통합만 strongest-reasoning/high-risk |
-| `planner` / architect | 읽기 전용 범위 파악, 옵션, 의존성, 위험, 수용 기준 설계 | 사전 조사, 경계 설계, acceptance matrix | bounded fact map은 fast/read-only; 아키텍처·고위험 판단은 strongest-reasoning/high-risk |
-| `worker` / executor | 명시 목표와 acceptance가 있는 bounded slice 실행 | 파일 1~5개 구현, 자료 조사, fixture 작성 | 기계적 변환은 fast/read-only; 쓰기·도구 실행은 balanced/agentic |
-| `critic` / verifier | frozen artifact와 같은 계약을 독립 검토 | code review, prompt review, release gate | bounded review는 balanced/agentic; release·보안·광역 검토는 strongest-reasoning/high-risk |
+| `prime` / integrator | 결과 소유, 결정, 상태, 통합, 최종 검증, 완료 claim | 전체 goal, 다중 레인 통합, release 판정 | 계약에 필요한 capability; 고위험·광역 통합은 strongest-reasoning/high-risk |
+| `planner` / architect | 읽기 전용 범위 파악, 옵션, 의존성, 위험, 수용 기준 설계 | 사전 조사, 경계 설계, acceptance matrix | 사실 확인은 fast/read-only; 아키텍처·고위험 판단은 strongest-reasoning/high-risk |
+| `worker` / executor | 명시 목표와 acceptance가 있는 bounded slice 실행 | 파일 구현, 자료 조사, fixture 작성 | 작업에 맞는 capability; 쓰기·도구 실행은 해당 런타임의 agentic 권한으로 수행 |
+| `critic` / verifier | frozen artifact와 같은 계약을 독립 검토 | code review, prompt review, release gate | 검토 범위에 맞는 capability; release·보안·광역 검토는 strongest-reasoning/high-risk |
 
 라우팅 원칙:
 
@@ -99,7 +99,7 @@ Join gate: 실제 배정한 worker 산출물과 요청된 planner/critic/verifie
 - 리서치/팩트체크: 출처 투명성·불확실성·모순 처리·시점 확인.
 - Grounded/RAG: 허용 근거가 제공 자료만인지 검색까지인지 정하고, 없는 정보·상충·추론의 처리 방식을 명시한다. 자료에 없는 사실을 지식으로 메우지 않는다. 날짜가 답을 바꿀 때만 확인된 현재 시점·자료 기준일을 넣으며, 모델의 knowledge cutoff나 연도를 임의 주입하지 않는다.
 - 추출: [templates.md](templates.md) §추출의 소비자 스키마·결측 계약을 따른다.
-- 에이전트: 허가된 작업 지속, 독립 읽기 병렬화, 빈 결과 복구, 완료 증거. 검증 범위는 실제 변경과 필수 검사에 맞추며, 통과 뒤 추가 검사는 새 실패·수정·미해결 우려가 있을 때만 한다. 긴 작업의 상태 처리는 §컨텍스트 운용을 따른다.
+- 에이전트: 허가된 작업 지속, 가능한 런타임에서의 독립 읽기 병렬화, 빈 결과 복구, 완료 증거. 검증 범위는 실제 변경과 필수 검사에 맞추며, 통과 뒤 추가 검사는 새 실패·수정·미해결 우려가 있을 때만 한다. 긴 작업의 상태 처리는 §컨텍스트 운용을 따른다.
 - 영상: 입력 모드·장면·대사·배제 조건은 [image/lanes.md](image/lanes.md) §영상 공통 규칙을 따른다. 이 파일엔 중복 서술하지 않는다.
 - 슬라이드: 정본은 [slides.md](slides.md)의 아웃라인 선행 계약·컷 규칙이다. 이 파일엔 중복 서술하지 않는다. 슬라이드 이미지는 [image/lanes.md](image/lanes.md) §이미지 슬롯 기본값을 따른다.
 
