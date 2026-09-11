@@ -3,13 +3,13 @@ name: mpw
 description: "프롬프트를 새로 작성하거나 검토·퇴고하고, 대상 모델·도구에 맞게 변환한다. 작업지시·시스템·자동화·팀 작업·업무·디자인·이미지·영상 프롬프트에 사용한다. '프롬프트 만들어줘/검토해줘/다듬어줘', 기존 프롬프트의 부분 수정에 발동한다. 실제 코드 구현·이미지 생성·문서 제작만 요청한 경우에는 해당 실행 스킬을 쓴다."
 license: MIT
 metadata:
-  version: "2.28.1"
+  version: "2.28.2"
   category: prompt-writing
   locale: ko-KR
   doctrine: graph-first-delegation-contract
   host_surface: claude
-  canonical_source: "HeiTuz/MPW SKILL.md v2.28.1"
-  updated_at: "2026-09-09"
+  canonical_source: "HeiTuz/MPW SKILL.md v2.28.2"
+  updated_at: "2026-09-11"
   model_claims_reviewed_at: "2026-09-09"
   platform_roster_reviewed_at: "2026-09-06"
   role_routing_reviewed_at: "2026-09-05"

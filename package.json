@@ -1,6 +1,6 @@
 {
   "name": "heituzmpw",
-  "version": "2.28.1",
+  "version": "2.28.2",
   "description": "Runtime-agnostic prompt-writing agent skill installer.",
   "license": "MIT",
   "type": "module",
