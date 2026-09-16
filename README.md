@@ -178,6 +178,16 @@ claude plugin install mpw@heituz --scope user   # 세션 안에서는 /plugin in
 
 `plugins/mpw/`는 정본에서 생성한 산출물입니다(`npm run build:plugin`). 직접 편집하지 말고 정본을 고친 뒤 다시 생성하세요. `npm test`가 커밋된 산출물과 생성 결과의 일치를 검사합니다. 같은 머신에 `~/.codex/skills/MPW`·`~/.claude/skills/MPW` 독립 설치본이 함께 있으면 스킬 목록에 MPW가 두 번 보이므로, 한쪽만 쓰려면 플러그인(`[plugins."mpw@heituz"] enabled`, `claude plugin disable mpw@heituz`) 또는 독립 설치본(`[[skills.config]]`)을 끕니다.
 
+### 💬 웹 ChatGPT에서는 커스텀 GPT로
+
+로컬·저장소 마켓플레이스는 웹·모바일 ChatGPT에 보이지 않습니다(워크스페이스 게시나 공개 제출이 필요). 심사 없이 바로 쓰려면 정본에서 **커스텀 GPT 번들**을 만들어 GPT 빌더에 넣습니다.
+
+```sh
+npm run build:gpt      # build/gpt-bundle/ 생성 (gitignored)
+```
+
+생성된 `instructions.txt`를 GPT의 Instructions에 붙여넣고, 같은 폴더의 지식 파일 15개(인덱스 파일 + 정본 묶음 14개)를 Knowledge에 업로드합니다. 각 지식 파일은 정본 references를 `=== FILE: <경로> ===` 구분자로 묶은 것이라 SKILL.md의 상대 경로 참조가 인덱스를 통해 풀립니다. 셸이 없는 표면이므로 검증기·컴파일러는 돌지 않고 규칙만 적용하며, 실측·검사를 수행했다고 주장하지 않도록 지침에 적혀 있습니다. 정본을 고치면 번들을 다시 만들어 파일을 교체하세요.
+
 ### 🎨 통합 명령에서 필요한 스킬만 선택
 
 이미지 생성까지 필요하면 ImgGen2 통합 설치기를 사용하세요. 일반 터미널에서는 **ImgGen2만 / MPW만 / 둘 다** 중 하나를 선택합니다.

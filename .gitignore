@@ -6,3 +6,4 @@ __pycache__/
 
 .gjc/
 docs-internal/
+build/

@@ -401,7 +401,7 @@ def check_runtime_names(texts, errors):
 def markdown_files(root):
     """Repository-owned Markdown only; hidden caches and local session traces are not documentation."""
     # plugins/ is the generated ChatGPT/Codex plugin artifact; its payload is a copy of the canonical tree.
-    excluded = {"node_modules", "docs-internal", "__pycache__", "plugins"}
+    excluded = {"node_modules", "docs-internal", "__pycache__", "plugins", "build"}
     return sorted(
         path for path in root.rglob("*.md")
         if not any(part.startswith(".") or part in excluded for part in path.relative_to(root).parts)
@@ -432,7 +432,7 @@ def link_base(root, source):
 def check_plaintext_paths(root, errors):
     """I2: path-like prose/code pointers resolve; routers use graph-visible links."""
     files = markdown_files(root)
-    repository_files = [path for path in root.rglob("*") if path.is_file() and path.relative_to(root).parts[0] != "plugins"]
+    repository_files = [path for path in root.rglob("*") if path.is_file() and path.relative_to(root).parts[0] not in {"plugins", "build"}]
     unresolved = set()
     for source in files:
         source_name = source.relative_to(root).as_posix()

@@ -3,7 +3,7 @@
 이 레포는 **MPW 스킬의 정본이자 유일한 실제 트리**다(2026-07-25 구조 전환). 하네스는 여기를 소비만 한다:
 
 - `~/.claude/skills/MPW`·`~/.hermes/skills/prompt-writing/MPW`·`~/.codex/skills/MPW` — installer가 정본 런타임 파일을 복사한 뒤 호스트 오버레이를 적용한 소비 산출물
-- `plugins/mpw/`, `.agents/plugins/marketplace.json`, `.claude-plugin/marketplace.json` — `node scripts/build_plugin.mjs`가 정본에서 생성한 ChatGPT·Codex·Claude Code 플러그인 패키지(`agents/plugin` 오버레이 적용). 커밋되는 생성 산출물이며 직접 편집하지 않는다. 정본 변경 뒤 재생성하고 `node scripts/build_plugin.mjs --check`(npm test 포함)로 패리티를 확인한다. 로컬 설치·검증은 `codex plugin marketplace add <체크아웃>` → `codex plugin add mpw@heituz`, Claude Code는 `claude plugin marketplace add <체크아웃>` → `claude plugin install mpw@heituz`
+- `plugins/mpw/`, `.agents/plugins/marketplace.json`, `.claude-plugin/marketplace.json` — `node scripts/build_plugin.mjs`가 정본에서 생성한 ChatGPT·Codex·Claude Code 플러그인 패키지(`agents/plugin` 오버레이 적용). 커밋되는 생성 산출물이며 직접 편집하지 않는다. 정본 변경 뒤 재생성하고 `node scripts/build_plugin.mjs --check`(npm test 포함)로 패리티를 확인한다. 웹 ChatGPT용 커스텀 GPT 번들은 `node scripts/build_gpt_bundle.mjs`가 `build/gpt-bundle/`(gitignored)에 만들며 저장소에 커밋하지 않는다. 로컬 설치·검증은 `codex plugin marketplace add <체크아웃>` → `codex plugin add mpw@heituz`, Claude Code는 `claude plugin marketplace add <체크아웃>` → `claude plugin install mpw@heituz`
 
 **레포 루트를 통째로 심링크하지 않는다.** `agents/`는 installer 오버레이 원본이고 설치본에는 들어간 적이 없는데, 루트를 심링크하면 호스트 인덱서가 `agents/claude/SKILL.md`·`agents/codex/SKILL.md`를 활성 스킬로 잡아 **같은 이름의 MPW가 3개**가 된다((2026-07 실측), 2026-07-25 확인). 기존 멤버 심링크 설치도 installer로 재생성한다. 정본 변경 뒤 세 호스트를 재생성하고 진입 파일까지 포함한 전체 payload 패리티를 검사한다. 공통 references 일치만으로 호스트 통합이 일치한다고 판정하지 않는다.
 
