@@ -7,4 +7,4 @@
 - 역할 매핑·호출 문법: [references/adapters.md](references/adapters.md) §Hermes
 - 정본·문서: https://github.com/HeiTuz/MPW
 
-이 트리는 설치 산출물이다. 수정은 정본 저장소에서 하고 installer로 재설치한다(`npx --yes github:HeiTuz/MPW -- --target hermes --force`).
+이 트리는 설치 산출물이다. 수정은 정본 저장소에서 하고 installer로 재설치한다(`npx --yes --allow-git=all --package github:HeiTuz/MPW heituzmpw -- --target hermes --force`).

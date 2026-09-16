@@ -31,8 +31,8 @@ function usage(exitCode = 0) {
   out(`MPW installer
 
 Usage:
-  npx --yes github:HeiTuz/MPW
-  bunx github:HeiTuz/MPW --target codex
+  npx --yes --allow-git=all --package github:HeiTuz/MPW heituzmpw
+  bunx --package github:HeiTuz/MPW heituzmpw -- --target codex
   node scripts/install.mjs --target all
   node scripts/install.mjs --dest /custom/skills/MPW
 

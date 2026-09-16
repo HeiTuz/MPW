@@ -55,21 +55,21 @@ IMAGE 컴파일을 마친 턴의 "다음" 목록 마지막 번호는, 아래 조
 
 ## Claude
 
-- 설치/발견: `npx --yes github:HeiTuz/MPW --target claude`. 소스에서 설치할 때는 스킬 검색 경로 밖의 체크아웃에서 `node scripts/install.mjs --target claude`를 실행한다([README.md](../README.md)).
+- 설치/발견: `npx --yes --allow-git=all --package github:HeiTuz/MPW heituzmpw -- --target claude`. 소스에서 설치할 때는 스킬 검색 경로 밖의 체크아웃에서 `node scripts/install.mjs --target claude`를 실행한다([README.md](../README.md)).
 - 역할 매핑: 단일 Claude 세션이면 prime이 기본이다. 하위 에이전트나 task 기능이 있으면 planner는 read-only 조사, worker는 bounded edit/research, critic은 frozen artifact review로 보낸다.
 - 모델 선택 위치: Claude 앱/CLI/프로젝트 설정. 이 저장소에는 모델명이나 plan 이름을 쓰지 않는다.
 - fallback: per-role 모델 라우팅이 없으면 같은 세션에서 역할 헤더만 바꾼다. worker 결과는 prime이 다시 읽고 검증한다.
 
 ## GPT/Codex
 
-- 설치/발견: `npx --yes github:HeiTuz/MPW --target codex` 또는 `--target gpt`; 둘 다 `~/.codex/skills/MPW`에 설치한다.
+- 설치/발견: `npx --yes --allow-git=all --package github:HeiTuz/MPW heituzmpw -- --target codex` 또는 `--target gpt`; 둘 다 `~/.codex/skills/MPW`에 설치한다.
 - 역할 매핑: Codex coding surface는 prime으로 운용한다. native subagent가 있으면 planner=read-only planning/research, worker=bounded implementation, critic=independent verifier로 할당한다.
 - 모델 선택 위치: Codex profile, model picker, CLI config, or API caller configuration. 공개 routing vocabulary는 fast/read-only, balanced/agentic, strongest-reasoning/high-risk만 쓴다.
 - fallback: subagent/per-role model routing이 없으면 prime 단일 세션이 topology-first intake, decomposition, implementation, and surface-matched verification을 순서대로 수행한다.
 
 ## Hermes
 
-- 설치/발견: `--target hermes`는 `~/.hermes/skills/prompt-writing/MPW`에 설치한다. 인자 없는 `npx --yes github:HeiTuz/MPW`의 기본 감지 대상은 Claude Code다.
+- 설치/발견: `--target hermes`는 `~/.hermes/skills/prompt-writing/MPW`에 설치한다. 인자 없는 `npx --yes --allow-git=all --package github:HeiTuz/MPW heituzmpw`의 기본 감지 대상은 Claude Code다. `--allow-git=all`은 npm 12의 git 패키지 기본 차단(`allow-git=none`)을 명령 단위로 여는 플래그다.
 - 역할 매핑: Hermes skill invocation이 prime이다. Hermes에 planner/worker/reviewer skill 또는 agent lane이 있으면 core 역할에 매핑한다. 로컬 전용 경로나 동반 workflow 이름은 공개 core로 올리지 않는다.
 - 모델 선택 위치: Hermes runtime config. 이 저장소는 로컬 선택값이나 채널 선택값을 쓰지 않는다.
 - fallback: role lanes가 없으면 Hermes prime이 단일 실행 계약을 산출하고, critic 역할은 최종 self-check checklist로 축소한다.
