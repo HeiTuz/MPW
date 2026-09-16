@@ -56,7 +56,7 @@ metadata:
 |---|---|
 | 자율 루프 지시문, goal | **GOAL** → [templates.md](references/templates.md) §GOAL |
 | 멀티에이전트·독립 워커 작업지시 | **TEAM** → [templates.md](references/templates.md) §TEAM + [model-playbooks.md](references/model-playbooks.md) |
-| 단일 작업지시·시스템 프롬프트·자동화 잡 | **CONTRACT** → [templates.md](references/templates.md) §CONTRACT |
+| 단일 작업지시·시스템 프롬프트·자동화 잡 | **CONTRACT** → [templates.md](references/templates.md) §CONTRACT; API·앱 통합은 같은 파일 §메시지 역할과 배치 |
 | 직무 업무 | **BUSINESS** → [templates.md](references/templates.md) §BUSINESS |
 | 퇴고·모델 적응·리서치·추출 | **MODEL** → [templates.md](references/templates.md) §MODEL; 모델 적응은 [model-playbooks.md](references/model-playbooks.md) |
 | Grok·그록·xAI 대상 | 산출물로 구분: 대화·리서치·추출은 **MODEL** + [model-playbooks.md](references/model-playbooks.md) §Grok 텍스트·리서치, 이미지·영상은 **IMAGE** + [grok-imagine.md](references/image/grok-imagine.md) |
