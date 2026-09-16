@@ -1,7 +1,8 @@
 #!/usr/bin/env node
 // Build the ChatGPT/Codex plugin package from the canonical MPW tree.
-// Output: plugins/mpw/ (portable plugin.json + .codex-plugin compatibility manifest + skills/mpw payload)
-// and the repo marketplace at .agents/plugins/marketplace.json.
+// Output: plugins/mpw/ (portable plugin.json + .codex-plugin and .claude-plugin manifests + skills/mpw payload),
+// the ChatGPT/Codex repo marketplace at .agents/plugins/marketplace.json, and the Claude Code marketplace
+// at .claude-plugin/marketplace.json. Both marketplaces point at the same plugin directory.
 // "--check" rebuilds into a temporary directory and fails when the committed artifact differs.
 import fs from "node:fs";
 import os from "node:os";
@@ -29,17 +30,20 @@ const INTERFACE = {
   brandColor: "#1F2937",
 };
 
+const AUTHOR = { name: "HeiTuz", url: "https://github.com/HeiTuz" };
+const KEYWORDS = ["prompt", "prompt-writing", "delegation", "image-prompt", "korean"];
+
 function portableManifest() {
   return {
     $schema: "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
     name: PLUGIN_NAME,
     version: pkg.version,
     description: INTERFACE.shortDescription,
-    author: { name: "HeiTuz", url: "https://github.com/HeiTuz" },
+    author: AUTHOR,
     homepage: "https://github.com/HeiTuz/MPW",
     repository: "https://github.com/HeiTuz/MPW",
     license: pkg.license || "MIT",
-    keywords: ["prompt", "prompt-writing", "delegation", "image-prompt", "korean"],
+    keywords: KEYWORDS,
     extensions: { "com.openai": { interface: INTERFACE } },
   };
 }
@@ -49,13 +53,45 @@ function compatibilityManifest() {
     name: PLUGIN_NAME,
     version: pkg.version,
     description: INTERFACE.shortDescription,
-    author: { name: "HeiTuz", url: "https://github.com/HeiTuz" },
+    author: AUTHOR,
     homepage: "https://github.com/HeiTuz/MPW",
     repository: "https://github.com/HeiTuz/MPW",
     license: pkg.license || "MIT",
-    keywords: ["prompt", "prompt-writing", "delegation", "image-prompt", "korean"],
+    keywords: KEYWORDS,
     skills: "./skills/",
     interface: INTERFACE,
+  };
+}
+
+function claudeManifest() {
+  return {
+    name: PLUGIN_NAME,
+    displayName: INTERFACE.displayName,
+    version: pkg.version,
+    description: INTERFACE.shortDescription,
+    author: AUTHOR,
+    homepage: "https://github.com/HeiTuz/MPW",
+    repository: "https://github.com/HeiTuz/MPW",
+    license: pkg.license || "MIT",
+    keywords: KEYWORDS,
+    skills: "./skills/",
+  };
+}
+
+function claudeMarketplace() {
+  return {
+    name: MARKETPLACE_NAME,
+    owner: AUTHOR,
+    metadata: { description: "HeiTuz prompt and image-generation skills", version: pkg.version },
+    plugins: [
+      {
+        name: PLUGIN_NAME,
+        source: "./plugins/mpw",
+        description: INTERFACE.shortDescription,
+        version: pkg.version,
+        category: "productivity",
+      },
+    ],
   };
 }
 
@@ -85,7 +121,9 @@ export function buildPlugin(destinationRoot, { sourceRoot = root } = {}) {
   installPayload({ sourceRoot, destination: path.join(pluginDir, "skills", PLUGIN_NAME), host: "plugin" });
   writeJson(path.join(pluginDir, "plugin.json"), portableManifest());
   writeJson(path.join(pluginDir, ".codex-plugin", "plugin.json"), compatibilityManifest());
+  writeJson(path.join(pluginDir, ".claude-plugin", "plugin.json"), claudeManifest());
   writeJson(path.join(destinationRoot, ".agents", "plugins", "marketplace.json"), marketplace());
+  writeJson(path.join(destinationRoot, ".claude-plugin", "marketplace.json"), claudeMarketplace());
   return pluginDir;
 }
 
@@ -104,7 +142,7 @@ function listFiles(base) {
 
 export function diffPluginTrees(expectedRoot, actualRoot) {
   const problems = [];
-  for (const rel of ["plugins/mpw", ".agents/plugins/marketplace.json"]) {
+  for (const rel of ["plugins/mpw", ".agents/plugins/marketplace.json", ".claude-plugin/marketplace.json"]) {
     const a = path.join(expectedRoot, rel);
     const b = path.join(actualRoot, rel);
     const isFile = fs.existsSync(a) && fs.statSync(a).isFile();
@@ -132,18 +170,17 @@ async function main(argv = process.argv.slice(2)) {
         for (const p of problems.slice(0, 20)) console.error("  " + p);
         return 1;
       }
-      console.log("OK — plugins/mpw and .agents/plugins/marketplace.json match the canonical build (" + listFiles(path.join(root, "plugins", PLUGIN_NAME)).length + " files)");
+      console.log("OK — plugins/mpw and both marketplace files match the canonical build (" + listFiles(path.join(root, "plugins", PLUGIN_NAME)).length + " files)");
       return 0;
     } finally {
       fs.rmSync(temp, { recursive: true, force: true });
     }
   }
   const dir = buildPlugin(root);
-  console.log("Built " + path.relative(root, dir) + " (" + listFiles(dir).length + " files) and .agents/plugins/marketplace.json");
+  console.log("Built " + path.relative(root, dir) + " (" + listFiles(dir).length + " files), .agents/plugins/marketplace.json and .claude-plugin/marketplace.json");
   return 0;
 }
 
 if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
   process.exitCode = await main();
 }
-

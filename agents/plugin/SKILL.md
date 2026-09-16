@@ -3,24 +3,24 @@ name: mpw
 description: "프롬프트를 새로 작성하거나 검토·퇴고하고, 대상 모델·도구에 맞게 변환한다. 작업지시·시스템·자동화·팀 작업·업무·디자인·이미지·영상 프롬프트에 사용한다. '프롬프트 만들어줘/검토해줘/다듬어줘', 기존 프롬프트의 부분 수정에 발동한다. 실제 코드 구현·이미지 생성·문서 제작만 요청한 경우에는 해당 실행 스킬을 쓴다."
 license: MIT
 metadata:
-  version: "2.29.1"
+  version: "2.30.0"
   category: prompt-writing
   locale: ko-KR
   doctrine: graph-first-delegation-contract
   host_surface: plugin
-  canonical_source: "HeiTuz/MPW SKILL.md v2.29.1"
+  canonical_source: "HeiTuz/MPW SKILL.md v2.30.0"
   updated_at: "2026-09-16"
   model_claims_reviewed_at: "2026-09-16"
   platform_roster_reviewed_at: "2026-09-06"
   role_routing_reviewed_at: "2026-09-05"
 ---
 
-# MPW — 디스패치 커널 (ChatGPT·Codex 플러그인 표면)
+# MPW — 디스패치 커널 (플러그인 표면)
 
-> **호스트 통합 — ChatGPT·Codex 플러그인.** 이 파일은 플러그인 payload(`plugins/mpw/skills/mpw`, `node scripts/build_plugin.mjs`로 생성)의 진입 표면이다. 규칙 본문은 정본 SKILL.md와 동일하며, 호스트 통합 표면(프런트매터·발동·도구 명칭)만 마이그레이션됐다.
-> - **발동**: ChatGPT(Chat·Work)와 Codex가 설치된 플러그인의 스킬 목록에서 이 SKILL.md를 발견해 로드한다. `@mpw`(ChatGPT) 또는 `$mpw`(Codex)로 명시 호출할 수 있다.
-> - **도구 매핑**: 셸이 있는 표면(Codex, ChatGPT Work)에서는 길이 실측(`wc -m`)·검증기(`node scripts/check_prompt.mjs`)·컴파일러(`python3 scripts/compile_*.py`)를 그대로 실행한다. 셸이 없는 대화 표면(ChatGPT Chat·모바일)에서는 references/ 규칙만 적용하고, 실측·검사를 수행했다고 주장하지 않으며 필요한 검증을 후속 단계로 밝힌다.
-> - **역할 라우팅**: 단일 세션이면 prime으로 운용한다. 하위 에이전트가 가능하면 [references/adapters.md](references/adapters.md) §GPT/Codex 매핑(planner=read-only planning, worker=bounded implementation, critic=independent verifier)을 따른다.
+> **호스트 통합 — 플러그인(ChatGPT·Codex·Claude Code).** 이 파일은 플러그인 payload(`plugins/mpw/skills/mpw`, `node scripts/build_plugin.mjs`로 생성)의 진입 표면이다. 규칙 본문은 정본 SKILL.md와 동일하며, 호스트 통합 표면(프런트매터·발동·도구 명칭)만 마이그레이션됐다.
+> - **발동**: 플러그인 호스트가 설치된 플러그인의 스킬 목록에서 이 SKILL.md를 발견해 로드한다. 명시 호출은 `@mpw`(ChatGPT), `$mpw`(Codex), `/mpw:mpw`(Claude Code)다.
+> - **도구 매핑**: 셸이 있는 표면(Codex·Claude Code·ChatGPT Work)에서는 길이 실측(`wc -m`)·검증기(`node scripts/check_prompt.mjs`)·컴파일러(`python3 scripts/compile_*.py`)를 그대로 실행한다. 셸이 없는 대화 표면(ChatGPT Chat·모바일)에서는 references/ 규칙만 적용하고, 실측·검사를 수행했다고 주장하지 않으며 필요한 검증을 후속 단계로 밝힌다.
+> - **역할 라우팅**: 단일 세션이면 prime으로 운용한다. 하위 에이전트가 가능하면 [references/adapters.md](references/adapters.md)의 해당 호스트 절(§GPT/Codex 또는 §Claude: planner=read-only planning, worker=bounded implementation, critic=independent verifier)을 따른다.
 
 사용자의 목표·맥락·제약·완료 기준을 실행자가 바로 쓸 수 있는 프롬프트로 만든다. 작업지시는 **위임 계약**으로 작성하고, 방법은 결과에 필요한 만큼만 정한다.
 

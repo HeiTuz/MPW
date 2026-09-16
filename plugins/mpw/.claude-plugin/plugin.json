@@ -1,0 +1,21 @@
+{
+  "name": "mpw",
+  "displayName": "MPW — Prompt Writer",
+  "version": "2.30.0",
+  "description": "프롬프트 작성·검토·모델 적응 스킬 (HeiTuz MPW)",
+  "author": {
+    "name": "HeiTuz",
+    "url": "https://github.com/HeiTuz"
+  },
+  "homepage": "https://github.com/HeiTuz/MPW",
+  "repository": "https://github.com/HeiTuz/MPW",
+  "license": "MIT",
+  "keywords": [
+    "prompt",
+    "prompt-writing",
+    "delegation",
+    "image-prompt",
+    "korean"
+  ],
+  "skills": "./skills/"
+}

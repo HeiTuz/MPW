@@ -165,13 +165,18 @@ installer가 런타임 파일만 복사하고 선택한 호스트 오버레이�
 같은 스킬을 **플러그인**으로도 설치할 수 있습니다. 플러그인은 ChatGPT(Chat·Work)와 Codex가 공유하는 형식이라, 셸이 없는 ChatGPT 대화에서도 `@mpw`로 규칙을 불러 쓸 수 있습니다. 이 저장소는 `.agents/plugins/marketplace.json`으로 `heituz` 마켓플레이스를, `plugins/mpw/`로 플러그인 패키지를 제공합니다.
 
 ```sh
+# Codex CLI · ChatGPT 데스크톱 앱(Codex)
 codex plugin marketplace add HeiTuz/MPW      # 또는 로컬 체크아웃 경로
 codex plugin add mpw@heituz
+
+# Claude Code
+claude plugin marketplace add HeiTuz/MPW
+claude plugin install mpw@heituz --scope user   # 세션 안에서는 /plugin install mpw@heituz
 ```
 
-설치 후 새 세션을 시작하면 Codex에서는 `$mpw`, ChatGPT 데스크톱 앱의 **Plugins → HeiTuz**에서 설치한 뒤 Chat·Work에서는 `@mpw`로 호출합니다. 웹·모바일 ChatGPT에는 워크스페이스 게시(관리자) 또는 공개 디렉터리 제출을 거친 플러그인만 보입니다. 셸이 없는 표면에서는 검증기·컴파일러를 실행하지 않고 규칙만 적용하며, 스킬이 실측·검사를 수행했다고 주장하지 않습니다.
+설치 후 새 세션을 시작하면 Codex에서는 `$mpw`, Claude Code에서는 `/mpw:mpw`, ChatGPT 데스크톱 앱의 **Plugins → HeiTuz**에서 설치한 뒤 Chat·Work에서는 `@mpw`로 호출합니다. 저장소에는 ChatGPT·Codex용 `.agents/plugins/marketplace.json`과 Claude Code용 `.claude-plugin/marketplace.json`이 함께 있고 둘 다 같은 `plugins/mpw/`를 가리킵니다. 웹·모바일 ChatGPT에는 워크스페이스 게시(관리자) 또는 공개 디렉터리 제출을 거친 플러그인만 보입니다. 셸이 없는 표면에서는 검증기·컴파일러를 실행하지 않고 규칙만 적용하며, 스킬이 실측·검사를 수행했다고 주장하지 않습니다.
 
-`plugins/mpw/`는 정본에서 생성한 산출물입니다(`npm run build:plugin`). 직접 편집하지 말고 정본을 고친 뒤 다시 생성하세요. `npm test`가 커밋된 산출물과 생성 결과의 일치를 검사합니다. 같은 머신에 `~/.codex/skills/MPW` 독립 설치본이 함께 있으면 Codex 스킬 목록에 `mpw`가 두 번 보이므로, 한쪽만 쓰려면 `~/.codex/config.toml`의 `[plugins."mpw@heituz"] enabled` 또는 `[[skills.config]]`로 끕니다.
+`plugins/mpw/`는 정본에서 생성한 산출물입니다(`npm run build:plugin`). 직접 편집하지 말고 정본을 고친 뒤 다시 생성하세요. `npm test`가 커밋된 산출물과 생성 결과의 일치를 검사합니다. 같은 머신에 `~/.codex/skills/MPW`·`~/.claude/skills/MPW` 독립 설치본이 함께 있으면 스킬 목록에 MPW가 두 번 보이므로, 한쪽만 쓰려면 플러그인(`[plugins."mpw@heituz"] enabled`, `claude plugin disable mpw@heituz`) 또는 독립 설치본(`[[skills.config]]`)을 끕니다.
 
 ### 🎨 통합 명령에서 필요한 스킬만 선택
 
