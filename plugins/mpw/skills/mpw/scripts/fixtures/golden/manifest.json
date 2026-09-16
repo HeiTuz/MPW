@@ -1,0 +1,10 @@
+[
+  {"id": "new-write", "file": "new-write.json"},
+  {"id": "revision", "file": "revision.json"},
+  {"id": "delta", "file": "delta.json"},
+  {"id": "system-prompt", "file": "system-prompt.json"},
+  {"id": "research-factcheck", "file": "research-factcheck.json"},
+  {"id": "coding-agent", "file": "coding-agent.json"},
+  {"id": "business", "file": "business.json"},
+  {"id": "image-video", "file": "image-video.json"}
+]

@@ -1,0 +1,4 @@
+{
+  "input": "방금 준 프롬프트에서 로그 경로만 ~/logs/ingest.log 로 바꿔줘. 기준 원문: \"매일 09:00에 ~/data/*.csv 를 파싱해 요약을 ~/logs/daily.log 에 기록하라. 완료 기준: 처리 파일 수가 로그에 남는다.\"",
+  "expected": "매일 09:00에 ~/data/*.csv 를 파싱해 요약을 ~/logs/ingest.log 에 기록하라. 완료 기준: 처리 파일 수가 로그에 남는다.\n\n변경 노트: 로그 경로 ~/logs/daily.log → ~/logs/ingest.log. 그 외 문구는 기준 원문 그대로 보존."
+}

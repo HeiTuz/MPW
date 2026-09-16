@@ -1,0 +1,4 @@
+{
+  "input": "아래 공지문을 더 분명하고 친절하게 고쳐줘: 다음 주 시스템 점검이 있습니다.",
+  "expected": "Revise the announcement below so that an employee knows the schedule and what to do after reading it once. Keep the announcement text in Korean. Put the maintenance time, scope of impact, and required user actions in the opening sentence, and remove speculative wording. Definition of Done: structure it with one title and two body paragraphs, without expanding the factual scope of the original.\n\nOriginal: 다음 주 시스템 점검이 있습니다."
+}

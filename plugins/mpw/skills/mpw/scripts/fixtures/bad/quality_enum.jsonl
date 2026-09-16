@@ -1,0 +1,5 @@
+{"id":"BAD-QUALITY-ULTRA","category":"C9","ar":"1:1","size":"1024x1024","quality":"ultra","full_prompt":"3D 앱 아이콘, 정면 중앙 정렬, 매트 클레이 렌더 질감. AR 1:1","output_path":"out/bad-quality-ultra.png"}
+{"id":"BAD-QUALITY-HD","category":"C9","ar":"1:1","size":"1024x1024","quality":"hd","full_prompt":"3D 앱 아이콘, 정면 중앙 정렬, 매트 클레이 렌더 질감. AR 1:1","output_path":"out/bad-quality-hd.png"}
+{"id":"BAD-QUALITY-HIGH-CASE","category":"C9","ar":"1:1","size":"1024x1024","quality":"HIGH","full_prompt":"3D 앱 아이콘, 정면 중앙 정렬, 매트 클레이 렌더 질감. AR 1:1","output_path":"out/bad-quality-high-case.png"}
+{"id":"BAD-QUALITY-STANDARD","category":"C9","ar":"1:1","size":"1024x1024","quality":"standard","full_prompt":"3D 앱 아이콘, 정면 중앙 정렬, 매트 클레이 렌더 질감. AR 1:1","output_path":"out/bad-quality-standard.png"}
+{"id":"BAD-QUALITY-AUTO-SPACE","category":"C9","ar":"1:1","size":"1024x1024","quality":"auto ","full_prompt":"3D 앱 아이콘, 정면 중앙 정렬, 매트 클레이 렌더 질감. AR 1:1","output_path":"out/bad-quality-auto-space.png"}

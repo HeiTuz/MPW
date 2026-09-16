@@ -1,0 +1,1 @@
+{"id":"quoted-guard","category":"C3","ar":"1:1","size":"1024x1024","quality":"high","output_path":"quoted-guard.png","tp_pattern":"TP1","legibility_target":"exact_primary","palette_sources":["TP"],"palette":["#000000","#FFFFFF"],"full_prompt":"타이포그래피 포스터 중앙 타이틀 \"no duplicate text\"를 또렷하게 인쇄한다. 배경 #FFFFFF, 글자 #000000. AR 1:1"}

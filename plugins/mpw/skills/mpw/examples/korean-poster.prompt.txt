@@ -1,0 +1,13 @@
+# 1. Scene
+봄밤 야시장 포스터. 어두운 남색 하늘 아래 줄지어 켜진 주황 알전구, 김이 오르는 포장마차 실루엣, 화면 하단 1/3은 타이포를 위한 정돈된 여백.
+# 2. Camera
+로우앵글 광각 느낌, 알전구 줄이 소실점으로 모이는 깊은 원근.
+# 3. Lighting
+warm tungsten bulbs as primary glow, soft ambient dusk fill, long soft-edged shadows.
+# 4. Color grading
+deep navy #16213E, warm amber #E8963C, lantern red #C0392B, cream #F4E8D0.
+# 5. Texture
+matte print poster finish, subtle paper grain.
+# 6. Text-in-image
+headline "봄밤 야시장" — 상단 중앙, 두꺼운 붓글씨풍 한글, 크림색. subhead "4.19 SAT 6PM" — 헤드라인 아래, 가는 산세리프, 앰버색. All text appears once, perfectly legible — no duplicate text, no extra words, no invented glyphs, no watermark.
+AR 2:3

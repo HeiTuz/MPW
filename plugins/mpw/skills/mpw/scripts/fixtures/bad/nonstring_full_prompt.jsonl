@@ -1,0 +1,5 @@
+{"id":"BAD-PROMPT-NUMBER","category":"C9","ar":"1:1","size":"1024x1024","quality":"high","full_prompt":123,"output_path":"out/bad-prompt-number.png"}
+{"id":"BAD-PROMPT-ARRAY","category":"C9","ar":"1:1","size":"1024x1024","quality":"high","full_prompt":["AR 1:1"],"output_path":"out/bad-prompt-array.png"}
+{"id":"BAD-PROMPT-OBJECT","category":"C9","ar":"1:1","size":"1024x1024","quality":"high","full_prompt":{"text":"AR 1:1"},"output_path":"out/bad-prompt-object.png"}
+{"id":"BAD-PROMPT-BOOL","category":"C9","ar":"1:1","size":"1024x1024","quality":"high","full_prompt":true,"output_path":"out/bad-prompt-bool.png"}
+{"id":"BAD-PROMPT-ZERO","category":"C9","ar":"1:1","size":"1024x1024","quality":"high","full_prompt":0,"output_path":"out/bad-prompt-zero.png"}

@@ -1,0 +1,6 @@
+Scene:
+Camera:
+Lighting:
+Color grading: #111111 #FFFFFF #888888
+Texture/Medium:
+AR 1:1
