@@ -44,7 +44,7 @@ FILES = ["SKILL.md", "references/image/from-image.md", "references/templates.md"
          "references/image/editorial/photo-vocab.md", "references/image/editorial/scene-craft.md",
          "references/image/editorial/concept-collision.md", "references/image/look-and-concept.md",
          "references/image/typography.md", "references/image/production.md",
-         "references/image/realism.md", "references/image/grok-imagine.md", "references/image/seedream-5-pro.md",
+         "references/image/realism.md", "references/image/grok-imagine.md", "references/image/flux.md", "references/image/seedream-5-pro.md",
          "references/image/seedream-character-reference-sheets.md", "references/image/seedance-2.md",
          "references/image/seedance-2-5.md", "references/image/higgsfield-genjutsu.md",
          "references/midjourney-character-sheets.md",
