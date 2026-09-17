@@ -411,7 +411,7 @@ def check_runtime_names(texts, errors):
 
 def markdown_files(root):
     """Repository-owned Markdown only; hidden caches and local session traces are not documentation."""
-    # build/ holds the gitignored Custom GPT bundle, a copy of the canonical tree.
+    # build/ is a gitignored scratch output directory.
     excluded = {"node_modules", "docs-internal", "__pycache__", "build"}
     return sorted(
         path for path in root.rglob("*.md")
