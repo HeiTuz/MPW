@@ -3,7 +3,7 @@
 # 카테고리 패턴 — C1~C12
 
 철칙: `compiler.md`. 이 파일은 철칙 전문을 반복하지 않는다. 표현은 긍정형 기본 + 티어 화이트리스트만 쓴다. 장면 배제는 "텍스트 없음"·"여백"처럼 원하는 상태로 쓰고, 텍스트 렌더 가드와 화보 컴플라이언스 페어는 `compiler.md`의 티어 규칙을 따른다.
-이 파일의 `기본 AR`은 표면 판정 이후의 후보다. S1 기계 계약은 `contracts/v1/*.schema.json`의 enum, S2는 모델의 `aspect_ratios`, S1-legacy는 [production.md](production.md) §2가 최종 판정한다([surfaces.md](surfaces.md) §1·§2).
+이 파일의 `기본 AR`은 표면 판정 이후의 후보다. S1 기계 계약은 `contracts/v1/*.schema.json`의 enum, S2는 모델의 `aspect_ratios`, S1-legacy는 [production.md](production.md) §2가 최종 판정한다([surface-contracts.md](surface-contracts.md) §1·§2).
 카테고리의 상세 항목은 요청에 필요한 것만 고른다. 정확 카피·원본·수량이 지정됐으면 그대로 유지하며, 자유 작성·문구 길이·밀도 예시는 작성자가 새 내용을 설계하는 경우에만 참고한다.
 
 ## 공통 시각 DNA — 선택 예시

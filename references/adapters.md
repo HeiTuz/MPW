@@ -8,7 +8,7 @@
 
 ## 전달 채널 상한
 
-채널별 상한 값은 이 문서에도 적지 않는다 — 각 런타임 배선(예: Hermes 채널 설정)에서 읽는다. 코어 파일(SKILL.md·references/templates.md·references/image/* 전체)은 채널을 익명으로만 지칭한다("상한 있는 메신저형 채널", "에이전트 CLI 무제한 표면").
+채널별 상한 값은 이 문서에도 적지 않는다 — 각 런타임 배선(예: Hermes 채널 설정)에서 읽는다. 코어 파일(SKILL.md·references/templates/*·references/image/* 전체)은 채널을 익명으로만 지칭한다("상한 있는 메신저형 채널", "에이전트 CLI 무제한 표면").
 
 ## 기계 계약 인덱스
 
@@ -33,7 +33,7 @@
 
 ## 이미지 생성 실행 옵션 (ImgGen2)
 
-IMAGE 컴파일을 마친 턴의 "다음" 목록 마지막 번호는, 아래 조건을 모두 만족하면 ImgGen2 실행 핸드오프다(메뉴 적용 조건은 [templates.md](templates.md) §후속 선택).
+IMAGE 컴파일을 마친 턴의 "다음" 목록 마지막 번호는, 아래 조건을 모두 만족하면 ImgGen2 실행 핸드오프다(메뉴 적용 조건은 [common.md](templates/common.md) §후속 선택).
 
 - **산출물 형태**: ImgGen2가 소비할 수 있는 형태다 — ① gpt-image 계열 타깃의 단일 완성 프롬프트(`scripts/compile_image_handoff.py`로 `image-production-handoff/v2` 컴파일) ② S1-legacy jsonl 레코드 배치([image/production.md](image/production.md) §2) ③ 이미 컴파일된 핸드오프 번들.
 - **러너 존재**: 같은 호스트에 ImgGen2 스킬이 설치돼 있다(통합 설치는 MPW와 나란히 설치한다). 없으면 옵션을 붙이지 않는다.

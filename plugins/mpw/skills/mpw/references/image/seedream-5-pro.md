@@ -2,7 +2,7 @@
 
 ## 적용 경계
 
-이 문서는 **BytePlus ModelArk direct의 `dola-seedream-5-0-pro-*`** 또는 같은 인터랙티브 문법을 실제로 제공하는 Seedream 5 Pro 표면에만 적용한다. Higgsfield의 `seedream_v5_pro`는 별도 S2 모델 id다. 이름이 비슷하다는 이유로 ModelArk의 모델 id·해상도·좌표 문법을 복사하지 말고, 그 플랫폼의 런타임 정의가 해당 기능을 노출할 때만 사용한다. 외부 사실과 확인일은 [surfaces.md](surfaces.md) §7이 정본이다.
+이 문서는 **BytePlus ModelArk direct의 `dola-seedream-5-0-pro-*`** 또는 같은 인터랙티브 문법을 실제로 제공하는 Seedream 5 Pro 표면에만 적용한다. Higgsfield의 `seedream_v5_pro`는 별도 S2 모델 id다. 이름이 비슷하다는 이유로 ModelArk의 모델 id·해상도·좌표 문법을 복사하지 말고, 그 플랫폼의 런타임 정의가 해당 기능을 노출할 때만 사용한다. 외부 사실과 확인일은 [surface-evidence.md](surface-evidence.md) §7이 정본이다.
 
 캐릭터 베이스·1×4 턴어라운드에는 이 문서 위에 [seedream-character-reference-sheets.md](seedream-character-reference-sheets.md)를 추가 적용한다.
 
@@ -58,7 +58,7 @@ Use the subject from Image 2 <bbox>118 331 933 871</bbox> to replace the subject
 
 ## 표면·길이 게이트
 
-- ModelArk direct의 권장 프롬프트 길이와 모델 파라미터는 [surfaces.md](surfaces.md) §0-1·§7을 따른다.
+- ModelArk direct의 권장 프롬프트 길이와 모델 파라미터는 [surfaces.md](surfaces.md) §0-1과 [surface-evidence.md](surface-evidence.md) §7을 따른다.
 - 해상도·출력 형식·프롬프트 최적화 모드는 API 파라미터다. 산문에 반복하지 않는다.
 - `dola-seedream-5-0-pro-*`와 Higgsfield `seedream_v5_pro`의 파라미터를 상호 복사하지 않는다.
 - 위치 지정 UI나 API가 좌표 토큰을 지원하지 않으면 일반 자연어 편집으로 강등하고, 좌표가 강제된다고 주장하지 않는다.

@@ -123,7 +123,8 @@ class OutputProfessionalismTest(unittest.TestCase):
         self.assertNotRegex(video, r"(?m)^네거티브:", "generic video prompt must not invent an inline negative field")
 
     def test_generic_docs_do_not_leak_image_lane_terms(self):
-        for path in (ROOT / "SKILL.md", ROOT / "references" / "templates.md"):
+        for path in [ROOT / "SKILL.md", ROOT / "references" / "templates.md",
+                     *sorted((ROOT / "references" / "templates").glob("*.md"))]:
             body = without_frontmatter(path.read_text(encoding="utf-8"))
             for line_number, line in enumerate(body.splitlines(), start=1):
                 if "references/image/" in line:

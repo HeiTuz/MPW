@@ -2,7 +2,7 @@
 
 ## 적용 경계
 
-이 문서는 **BytePlus ModelArk direct의 Dreamina Seedance 2.0 series** 프롬프트 문법을 정본으로 삼는다. Higgsfield의 `seedance_2_0`·`seedance_2_0_mini`는 별도 S2 모델 id이므로, 미디어 롤·파라미터·입력 상한은 그 런타임 정의를 우선한다. 공식 문법의 적용 가능성이 확인되지 않은 래퍼에 ModelArk 파라미터를 복사하지 않는다. 외부 사실과 확인일은 [surfaces.md](surfaces.md) §7이 정본이다.
+이 문서는 **BytePlus ModelArk direct의 Dreamina Seedance 2.0 series** 프롬프트 문법을 정본으로 삼는다. Higgsfield의 `seedance_2_0`·`seedance_2_0_mini`는 별도 S2 모델 id이므로, 미디어 롤·파라미터·입력 상한은 그 런타임 정의를 우선한다. 공식 문법의 적용 가능성이 확인되지 않은 래퍼에 ModelArk 파라미터를 복사하지 않는다. 외부 사실과 확인일은 [surface-evidence.md](surface-evidence.md) §7이 정본이다.
 
 **Seedance 2.5는 이 문서의 별칭이 아니다.** 공식 ModelArk 모델 id·API·프롬프트 계약이 확인되기 전에는 2.0 규칙, 길이, 미디어 상한을 자동 상속하지 않는다.
 
@@ -88,7 +88,7 @@ Video 1. When the falling leaf touches the ground, it bursts into golden particl
 
 ## 공식 실패 제약 예외
 
-**ModelArk direct Seedance 2.0 공식 가이드는 특정 실패를 교정하는 짧은 결과 제약을 권장한다.** 아래 표현을 다른 엔진에 그대로 복사하지 않는다. 공통 배제 입력 판정은 [surfaces.md](surfaces.md) §4를 따른다.
+**ModelArk direct Seedance 2.0 공식 가이드는 특정 실패를 교정하는 짧은 결과 제약을 권장한다.** 아래 표현을 다른 엔진에 그대로 복사하지 않는다. 공통 배제 입력 판정은 [surface-contracts.md](surface-contracts.md) §4를 따른다.
 
 - 불필요한 자막: `Keep it subtitle-free. Avoid generating any text or subtitles.`
 - 로고·워터마크: `Do not generate logos or watermarks.`
@@ -99,7 +99,7 @@ Video 1. When the falling leaf touches the ground, it bursts into golden particl
 
 ## 표면·입력 게이트
 
-ModelArk direct에서는 아래 조합을 프롬프트 작성 전에 확인한다. 값과 확인일의 정본은 [surfaces.md](surfaces.md) §7이다.
+ModelArk direct에서는 아래 조합을 프롬프트 작성 전에 확인한다. 값과 확인일의 정본은 [surface-evidence.md](surface-evidence.md) §7이다.
 
 - 멀티모달 reference와 strict first/last-frame 모드는 API 시나리오가 다르다. 직접 혼용하지 않는다.
 - 오디오만 단독 입력하지 않는다. 참조 이미지 또는 영상이 최소 하나 필요하다.

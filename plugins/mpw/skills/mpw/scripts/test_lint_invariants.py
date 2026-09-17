@@ -131,7 +131,7 @@ class LintInvariantSmokeTests(unittest.TestCase):
             "references/image/lanes.md": (
                 "ModelArk direct Seedance 2.0의 세부 규칙은 [seedance-2.md](seedance-2.md)를 따르며, Higgsfield나 2.5에 자동 상속하지 않는다"
             ),
-            "references/image/surfaces.md": (
+            "references/image/surface-evidence.md": (
                 "Dreamina 웹 Seedance 2.5 프롬프트 계약\n"
                 "Seedance 2.5 ModelArk 모델 id·API 요청 스키마\n"
                 "Dreamina UI·2.0 direct 값을 API로 자동 상속 금지"

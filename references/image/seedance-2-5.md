@@ -1,6 +1,6 @@
 # Dreamina Seedance 2.5 붙여넣기 어댑터
 
-이 문서는 **Dreamina 웹의 Seedance 2.5 UI**에서 멀티레퍼런스 생성·장편 생성·영상 편집·연장·키프레임·스토리보드·클레이 렌더러 프롬프트를 조립하는 S3 어댑터다. 외부 사실과 확인일은 [surfaces.md](surfaces.md) §7이 정본이다.
+이 문서는 **Dreamina 웹의 Seedance 2.5 UI**에서 멀티레퍼런스 생성·장편 생성·영상 편집·연장·키프레임·스토리보드·클레이 렌더러 프롬프트를 조립하는 S3 어댑터다. 외부 사실과 확인일은 [surface-evidence.md](surface-evidence.md) §7이 정본이다.
 
 **경계부터 잠근다.** 이 문서는 BytePlus ModelArk direct의 모델 id·API 요청 스키마를 증명하지 않으며, [seedance-2.md](seedance-2.md)의 Seedance 2.0 direct 계약을 2.5로 상속시키지 않는다. Higgsfield나 다른 래퍼의 `medias.roles`·파라미터에도 이 UI 값을 복사하지 않는다. Dreamina에서 비율·해상도·duration·모드를 고를 수 있으면 그 값은 UI 레버가 권한자이고 프롬프트 산문에 중복하지 않는다.
 

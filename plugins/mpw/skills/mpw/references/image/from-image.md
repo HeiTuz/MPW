@@ -11,7 +11,7 @@
 | 길이·비율·해상도·품질·파라미터 | [surfaces.md](surfaces.md) |
 | 축별 단일 권한·엣지 판정·체인 | [../prompt-graph.md](../prompt-graph.md) |
 | 목적축 → 모델 후보 | [model-routing.md](model-routing.md) |
-| 네이티브 제약 / MPW 컴파일 티어 | [surfaces.md](surfaces.md) §3.1·§4 / [compiler.md](compiler.md) §2 |
+| 네이티브 제약 / MPW 컴파일 티어 | [surface-contracts.md](surface-contracts.md) §3.1·§4 / [compiler.md](compiler.md) §2 |
 | 레인 게이트 카드·이미지 슬롯 기본값 | [lanes.md](lanes.md) |
 | 의상 관찰 스키마·파생물 | 설치가 공급한다. 없으면 §3 관찰 레코드로 직접 작성한다 |
 | 비전 반환형 타입 안전 | 설치가 공급한다. 없으면 §2 절차로 반환형을 판정한다 |
@@ -244,7 +244,7 @@ ref-01 | I8 렌더 텍스트 | unreadable 0.9 | 좌상단에 4~6글자 상당 �
 
 축 목록은 §3.3과 같다. 감도 = S1~S4, 정체 = I1~I9.
 
-**팔레트의 특수 처리:** 레퍼런스에서 가져오는 것은 **관계**(채도 대역, 명도 스프레드, 60/30/10 비중, 색상환 간격)이고, **HEX 값 자체는 그 관계를 만족하는 새 값으로 재생성한다.** D1(자기 자산)만 예외다. 반면 조명 수치(키:그림자 2:1, 5600K)는 물리 설정이지 정체가 아니므로 그대로 가져와도 된다. 실행자가 팔레트 파라미터를 가지면 그쪽이 권한자이고 재생성된 HEX는 산문에 중복하지 않는다([surfaces.md](surfaces.md) §4).
+**팔레트의 특수 처리:** 레퍼런스에서 가져오는 것은 **관계**(채도 대역, 명도 스프레드, 60/30/10 비중, 색상환 간격)이고, **HEX 값 자체는 그 관계를 만족하는 새 값으로 재생성한다.** D1(자기 자산)만 예외다. 반면 조명 수치(키:그림자 2:1, 5600K)는 물리 설정이지 정체가 아니므로 그대로 가져와도 된다. 실행자가 팔레트 파라미터를 가지면 그쪽이 권한자이고 재생성된 HEX는 산문에 중복하지 않는다([surface-contracts.md](surface-contracts.md) §4).
 
 ### 5.3 사용자 5축(스타일·의상·컬러·포즈·헤어)과의 대응
 
@@ -396,13 +396,13 @@ ref-01 | I8 렌더 텍스트 | unreadable 0.9 | 좌상단에 4~6글자 상당 �
 
 복사 한 번으로 끝나야 한다. **네거티브도 그 블록 안에 있다.** 다중 컷일 때만 컷당 1블록으로 나눈다(리프 하나 = 블록 하나).
 
-배제·보존 조건은 [surfaces.md](surfaces.md) §4의 실제 입력 형식을 따른다. MPW 컴파일 형식의 `Negative:` 섹션은 [compiler.md](compiler.md) §2 소관이다.
+배제·보존 조건은 [surface-contracts.md](surface-contracts.md) §4의 실제 입력 형식을 따른다. MPW 컴파일 형식의 `Negative:` 섹션은 [compiler.md](compiler.md) §2 소관이다.
 
 ### 6.3 GPT Image
 
 - 내용은 신호 밀도로 다듬고 실제 채널·엔진·기계 계약 상한도 확인한다. 관찰 레코드를 쓴다고 분량이 저절로 통제된다고 가정하지 않는다.
 - S1 기계 핸드오프로 나가면 `ar`·`size`·`quality`는 **스키마 enum이 전부**이고 `python3 contracts/validate.py`를 실제로 통과해야 한다.
-- GPT Image 2.5의 직접 API 설정은 [surfaces.md](surfaces.md) §4.3, 참조·누적 편집은 §3.2를 따른다. Higgsfield `gpt_image_2`는 아래 §6.4의 별도 래퍼이며 2.5 선택자로 바꾸지 않는다.
+- GPT Image 2.5의 직접 API 설정은 [surface-contracts.md](surface-contracts.md) §4.3, 참조·누적 편집은 §3.2를 따른다. Higgsfield `gpt_image_2`는 아래 §6.4의 별도 래퍼이며 2.5 선택자로 바꾸지 않는다.
 
 ### 6.4 Higgsfield 모델 id
 
@@ -481,9 +481,9 @@ ref-01 | I8 렌더 텍스트 | unreadable 0.9 | 좌상단에 4~6글자 상당 �
 
 ---
 
-## 8. 근거·신선도 — 정본은 surfaces.md §7
+## 8. 근거·신선도 — 정본은 surface-evidence.md §7
 
-이 파일이 쓰는 외부 사실(Higgsfield 런타임 프로브 결과, `negative_prompt` 부재, gpt-image 길이 상한, Midjourney 문법·단어 대역, 복제 회피 판례)의 **근거와 확인일은 전부 [surfaces.md](surfaces.md) §7 재검증 표로 이관됐다. 여기서 다시 스탬프하지 않는다.**
+이 파일이 쓰는 외부 사실(Higgsfield 런타임 프로브 결과, `negative_prompt` 부재, gpt-image 길이 상한, Midjourney 문법·단어 대역, 복제 회피 판례)의 **근거와 확인일은 전부 [surface-evidence.md](surface-evidence.md) §7 재검증 표로 이관됐다. 여기서 다시 스탬프하지 않는다.**
 
 Midjourney 문법·파라미터의 **규칙 서술** 정본은 [../midjourney-identity.md](../midjourney-identity.md)다 — §5 `--no`, §6 레퍼런스 슬롯·`--sref`, §7 무드보드. 이 파일은 from-image 레인이 쓰는 레버만 다룬다.
 
@@ -491,6 +491,6 @@ Higgsfield 항목은 플랫폼이 모델을 추가·제거하면 즉시 낡는�
 
 ### 8.1 [미확인] — 단정하지 말 것
 
-이 레인이 단정하지 않는 항목의 **자격 표시([미확인])와 근거 상태는 [surfaces.md](surfaces.md) §7 표가 정본이다.** Midjourney V8 계열 미확인 항목도, Higgsfield 롤의 의미적 동작 차이도, `max` 미선언 모델의 레퍼런스 장수 상한도 전부 §7의 해당 행을 본다 — **여기서 목록·개수를 복제하지 않는다.** 각 항목이 왜 [미확인]인지(값 없음 / 문서 간 충돌 / 커뮤니티 단일 출처)와 규칙 서술의 소유 파일은 그 행이 직접 적는다.
+이 레인이 단정하지 않는 항목의 **자격 표시([미확인])와 근거 상태는 [surface-evidence.md](surface-evidence.md) §7 표가 정본이다.** Midjourney V8 계열 미확인 항목도, Higgsfield 롤의 의미적 동작 차이도, `max` 미선언 모델의 레퍼런스 장수 상한도 전부 §7의 해당 행을 본다 — **여기서 목록·개수를 복제하지 않는다.** 각 항목이 왜 [미확인]인지(값 없음 / 문서 간 충돌 / 커뮤니티 단일 출처)와 규칙 서술의 소유 파일은 그 행이 직접 적는다.
 
 **§7 표로 이관하지 않는 항목이 하나 있다.** §5의 축 개수 임계값과 D1/D2/D3 명칭은 외부 사실이 아니라 이 파일의 **운영 설계값**이다 — 실산출물로 캘리브레이션이 필요하며 §7 표의 대상이 아니다. 경계는 하나다: 외부 사실 = 우리가 만들지 않은 사실.

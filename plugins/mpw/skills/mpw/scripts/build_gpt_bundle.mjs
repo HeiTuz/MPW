@@ -15,12 +15,14 @@ const MAX_INSTRUCTIONS = 8000;
 
 const GROUPS = [
   ["mpw-01-SKILL.md", ["SKILL.md"]],
-  ["mpw-02-templates.md", ["references/templates.md"]],
+  ["mpw-02-templates.md", ["references/templates.md", "references/templates/common.md", "references/templates/delegation.md",
+    "references/templates/contract.md", "references/templates/goal.md", "references/templates/team.md",
+    "references/templates/business.md", "references/templates/model.md", "references/templates/design.md"]],
   ["mpw-03-core-playbooks.md", ["references/model-playbooks.md", "references/prompt-graph.md", "references/adapters.md"]],
   ["mpw-04-core-contracts.md", ["references/contracts.md", "references/garden-recipe-compiler.md", "references/research.md", "references/slides.md",
     "references/midjourney-identity.md", "references/midjourney-character-sheets.md",
     "references/image-reference-editing-prompt-pitfalls.md", "references/image-reference-wardrobe-preservation-pitfall.md"]],
-  ["mpw-05-image-surfaces.md", ["references/image/surfaces.md"]],
+  ["mpw-05-image-surfaces.md", ["references/image/surfaces.md", "references/image/surface-contracts.md", "references/image/surface-evidence.md"]],
   ["mpw-06-image-routing-lanes.md", ["references/image/model-routing.md", "references/image/lanes.md"]],
   ["mpw-07-image-compiler-categories.md", ["references/image/compiler.md", "references/image/categories.md"]],
   ["mpw-08-image-production-from-image.md", ["references/image/production.md", "references/image/from-image.md", "references/image/image-production-handoff.md"]],

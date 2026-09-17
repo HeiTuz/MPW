@@ -8,7 +8,7 @@
 
 **발동 대상:** 실사 서브레인 — 인물·화보·제품·음식·라이프스타일 스틸·배경합성·실사 영상. 판정: categories.md photoreal 열. **면제:** 비실사(일러스트·타이포·아이콘 C9·만화 C10·인포그래픽 C6·카드뉴스 C7·덱 C12·타이포 아트).
 
-**네거티브 정책:** 아래 현실감 처방은 원하는 화면 상태를 중심으로 쓴다. 네이티브 입력의 보존·배제 제약과 전용 필드 분기는 [surfaces.md](surfaces.md) §4를 따른다. 명시된 MPW 컴파일 형식의 Tier 정책은 [compiler.md](compiler.md) §2를 유지하며 모든 모델에 일반화하지 않는다.
+**네거티브 정책:** 아래 현실감 처방은 원하는 화면 상태를 중심으로 쓴다. 네이티브 입력의 보존·배제 제약과 전용 필드 분기는 [surface-contracts.md](surface-contracts.md) §4를 따른다. 명시된 MPW 컴파일 형식의 Tier 정책은 [compiler.md](compiler.md) §2를 유지하며 모든 모델에 일반화하지 않는다.
 
 ## 1. 현실감 실패 모드 → 긍정형 처방
 
@@ -82,5 +82,5 @@ compiler.md 발전표(피부·조명·필름 3행)와 **상보** — 그 3행은
 - **모션 블러 물리성:** 블러 방향=이동 방향, 정지 배경은 카메라 무브 없으면 샤프.
 - **카메라 관성:** `handheld micro-jitter, natural inertia`, 급격한 불가능 점프 없음; 모션은 물리 동사(lanes.md §영상 공통 규칙).
 - **신체·접지 물리:** `weight shift before stepping, realistic foot contact, no sliding feet`; 배경 지오메트리 안정(벽·문틀 안 휘어짐).
-- **실패 교정:** 깜박임·얼굴 변형·미끄러짐 등 실제 관측한 실패만 보강한다. 제약의 문법과 입력 위치는 [surfaces.md](surfaces.md) §4를 따른다.
+- **실패 교정:** 깜박임·얼굴 변형·미끄러짐 등 실제 관측한 실패만 보강한다. 제약의 문법과 입력 위치는 [surface-contracts.md](surface-contracts.md) §4를 따른다.
 - **참조 인물 유지:** 스틸의 정체성 기능을 영상에 자동 상속하지 않는다. 실제 영상 모델이 지원하는 입력 역할로 참조를 전달하고 결과의 얼굴·의상 연속성을 확인한다([soul-v2-director.md](soul-v2-director.md) §스틸을 영상으로 연결할 때).

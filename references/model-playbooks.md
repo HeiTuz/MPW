@@ -90,8 +90,8 @@ Join gate: 실제 배정한 worker 산출물과 요청된 planner/critic/verifie
 - **지시문 길이·최종 답변 길이·추론 강도는 별개다.** 짧은 프롬프트나 답변을 위해 강도를 자동 변경하지 않는다. 기존 모델·설정을 유지하고 계약을 먼저 고친다. 설정 조정이 범위에 포함될 때만 실제 지원값으로 품질·비용·지연을 비교한다. 호출 문법은 [adapters.md](adapters.md)에서 확인한다.
 - 내부 추론을 이미 하는 모델에 단계별 사고 공개·"더 깊게 생각해" 반복을 붙이지 않는다. 필요한 결론·근거·검증 결과를 요구한다.
 - **모델 유형에 따라 지시의 입도를 바꾼다.** 내부 추론 모델에는 목표·성공 기준·실제 제약을 짧고 직접적으로 주고 방법은 맡기며, 기준을 충족할 때까지 반복하도록 요구한다. 추론 없이 지시를 따르는 모델에는 필요한 논리·절차·자료를 프롬프트 안에 명시한다. 같은 계열의 다른 스냅샷도 결과가 달라질 수 있으므로, 프로덕션 프롬프트는 스냅샷을 고정하고 평가 케이스로 변화를 잰다. 유형 판정은 실제 선택된 모델의 문서로 하고, 이름만으로 추정하지 않는다.
-- API·시스템 프롬프트의 메시지 역할 분리·구획 순서·캐시 친화 배치·코드 관리는 [templates.md](templates.md) §메시지 역할과 배치가 정본이다.
-- 역할·예시·부정문은 요구를 명확히 하는 만큼만 둔다. 작성 기준은 [templates.md](templates.md) §범용 조립 규칙, 구조화 출력·결측값은 같은 파일 §추출이 정본이다.
+- API·시스템 프롬프트의 메시지 역할 분리·구획 순서·캐시 친화 배치·코드 관리는 [contract.md](templates/contract.md) §메시지 역할과 배치가 정본이다.
+- 역할·예시·부정문은 요구를 명확히 하는 만큼만 둔다. 작성 기준은 [common.md](templates/common.md) §범용 조립 규칙, 구조화 출력·결측값은 [model.md](templates/model.md) §추출이 정본이다.
 
 ## 목적 블록 (토큰 값어치 할 때만)
 
@@ -100,7 +100,7 @@ Join gate: 실제 배정한 worker 산출물과 요청된 planner/critic/verifie
 - 코딩: 기존 패턴·테스트·스코프 경계·무관 리팩토링 금지. 에이전트형 코딩 지시에는 역할·작업 흐름, 실제 도구 호출 예시 1개, 변경 후 테스트와 패치 적용 결과의 실제 확인(도구가 성공을 보고해도 파일로 검증), 코드·경로·식별자의 마크다운 표기 규약 중 실패를 막는 것만 넣는다. 리뷰/평가: 커버리지와 필터링 분리 — 전 이슈를 신뢰도·심각도와 함께 보고, 필터링은 다운스트림("high만 보고" 생성 지시는 recall 붕괴).
 - 리서치/팩트체크: 출처 투명성·불확실성·모순 처리·시점 확인.
 - Grounded/RAG: 허용 근거가 제공 자료만인지 검색까지인지 정하고, 없는 정보·상충·추론의 처리 방식을 명시한다. 자료에 없는 사실을 지식으로 메우지 않는다. 날짜가 답을 바꿀 때만 확인된 현재 시점·자료 기준일을 넣으며, 모델의 knowledge cutoff나 연도를 임의 주입하지 않는다.
-- 추출: [templates.md](templates.md) §추출의 소비자 스키마·결측 계약을 따른다.
+- 추출: [model.md](templates/model.md) §추출의 소비자 스키마·결측 계약을 따른다.
 - 에이전트: 허가된 작업 지속(요청을 하위 작업으로 분해해 전부 끝낸 뒤 턴 종료), 가능한 런타임에서의 독립 읽기 병렬화, 빈 결과 복구, 완료 증거. 도구 호출 이유 설명은 결과를 바꾸는 주요 단계에만 요구하고, 단계가 많으면 TODO·루브릭으로 진행을 추적하게 한다. 검증 범위는 실제 변경과 필수 검사에 맞추며, 통과 뒤 추가 검사는 새 실패·수정·미해결 우려가 있을 때만 한다. 긴 작업의 상태 처리는 §컨텍스트 운용을 따른다.
 - 영상: 입력 모드·장면·대사·배제 조건은 [image/lanes.md](image/lanes.md) §영상 공통 규칙을 따른다. 이 파일엔 중복 서술하지 않는다.
 - 슬라이드: 정본은 [slides.md](slides.md)의 아웃라인 선행 계약·컷 규칙이다. 이 파일엔 중복 서술하지 않는다. 슬라이드 이미지는 [image/lanes.md](image/lanes.md) §이미지 슬롯 기본값을 따른다.
@@ -118,7 +118,7 @@ Join gate: 실제 배정한 worker 산출물과 요청된 planner/critic/verifie
 - **리서치 범위를 구체화한다.** 질문·비교 축·자료 기간·필요한 근거와 출력 형태 중 결과를 가르는 것만 쓴다. 큰 조사는 첫 결과에서 부족한 축을 후속 질문으로 좁힌다. 일반 대화에 조사 절차를 덧붙이지 않는다. [공식 리서치 사용례](https://x.ai/grok/use-cases/research-synthesis), [Multi Agent prompting guide](https://docs.x.ai/developers/model-capabilities/text/multi-agent#prompting-guide).
 - **검색 요청과 도구 설정을 구분한다.** Chat에는 필요한 웹·X 자료를 자연어로 요청한다. API에는 실제 연결된 `web_search`·`x_search`의 지원 필터를 사용한다. 도메인 필터와 X 계정·날짜 필터를 서로 복사하지 않으며, 검색하지 못한 부분은 미확인으로 남긴다. X 반응은 사실 확인 자료와 구분한다. [Web Search](https://docs.x.ai/developers/tools/web-search), [X Search](https://docs.x.ai/developers/tools/x-search).
 - **주장별 근거를 요구한다.** 검색 중 수집된 `citations` URL 목록에는 최종 답변에 쓰지 않은 자료도 포함된다. 중요한 주장 옆의 출처와 내용 일치를 확인하고 합의·충돌·추론을 구분한다. 인라인 인용 설정만으로 인용 완비를 보장하지 않는다. [Citations](https://docs.x.ai/developers/tools/citations).
-- **기계 출력은 소비자 스키마가 정한다.** 직접 API의 지원 스키마를 쓰되 필드 생략·`null`·결측을 구분한다. 자연어의 `JSON만` 지시를 구조 보장으로 표현하지 않는다. best-effort 제약과 사실 정확성은 소비자에서 검증한다. [Structured Outputs](https://docs.x.ai/developers/model-capabilities/text/structured-outputs); 결측 정책은 [templates.md](templates.md) §추출.
+- **기계 출력은 소비자 스키마가 정한다.** 직접 API의 지원 스키마를 쓰되 필드 생략·`null`·결측을 구분한다. 자연어의 `JSON만` 지시를 구조 보장으로 표현하지 않는다. best-effort 제약과 사실 정확성은 소비자에서 검증한다. [Structured Outputs](https://docs.x.ai/developers/model-capabilities/text/structured-outputs); 결측 정책은 [model.md](templates/model.md) §추출.
 - **추론 설정을 자동 이식하지 않는다.** 공통 적응 규칙대로 출력 길이와 추론을 분리한다. 직접 API에서 일반 reasoning 모델의 effort는 깊이를, Multi Agent 변형은 참여 수를 제어하므로 모델·표면을 확인한다. `깊게 생각해`·사고 과정 공개 요구나 고정 effort를 프롬프트에 덧붙이지 않는다. [Reasoning](https://docs.x.ai/developers/model-capabilities/text/reasoning).
 
 인용이 필요한 API 인계에만 설정 차이를 확인한다: 현재 직접 Responses API는 인라인 인용 기본 활성, xAI Python SDK의 gRPC chat은 opt-in이다. 웹 UI·래퍼에 같은 설정을 복사하지 않는다. 이 절의 확인일은 문서 기준이며 계정 가용성·실제 Grok 응답 품질을 검증한 날짜가 아니다.
@@ -135,8 +135,8 @@ Join gate: 실제 배정한 worker 산출물과 요청된 planner/critic/verifie
 
 아래는 확인일의 OpenAI 공식 문서를 MPW 작성 정책으로 옮긴 것이다. 직접 API 계약이며 다른 공급자·래퍼·대화 UI에 같은 값을 복사하지 않는다. [Prompting](https://developers.openai.com/api/docs/guides/prompting), [Prompt engineering](https://developers.openai.com/api/docs/guides/prompt-engineering), [Prompt caching](https://developers.openai.com/api/docs/guides/prompt-caching), [Reasoning best practices](https://developers.openai.com/api/docs/guides/reasoning-best-practices).
 
-- **권한 사슬.** `instructions` 파라미터와 developer 메시지가 `input`의 user 메시지보다 우선한다. 톤·역할·규칙·정답 예시는 상위에, 과제별 세부·자료는 user에 둔다. 문서가 제시한 developer 메시지 구획 순서는 Identity → Instructions → Examples → Context이며, Context는 요청마다 달라지므로 끝에 둔다. 규칙 서술은 [templates.md](templates.md) §메시지 역할과 배치.
+- **권한 사슬.** `instructions` 파라미터와 developer 메시지가 `input`의 user 메시지보다 우선한다. 톤·역할·규칙·정답 예시는 상위에, 과제별 세부·자료는 user에 둔다. 문서가 제시한 developer 메시지 구획 순서는 Identity → Instructions → Examples → Context이며, Context는 요청마다 달라지므로 끝에 둔다. 규칙 서술은 [contract.md](templates/contract.md) §메시지 역할과 배치.
 - **추론 모델.** 짧고 직접적인 지시, 사고 과정 요구 금지, 구분자(Markdown·XML·섹션 제목) 사용, zero-shot 먼저, 제약과 최종 목표의 구체화. 문서는 추론 모델을 목표만 주면 되는 선임, 일반 GPT 모델을 명시 지시가 필요한 신입에 비유한다. API의 추론 모델이 기본으로 Markdown을 생략하는 경우 developer 메시지 첫 줄의 `Formatting re-enabled`로 다시 켠다고 안내한다 — 실제 선택 모델에서 확인 후 쓴다.
 - **프롬프트 캐시.** 안정된 지시·도구 정의·참고 자료를 접두부에 두고 타임스탬프·사용자별 값은 뒤로 보낸다. 이전 턴은 덧붙이기만 하며 요약·압축·절단은 접두부를 바꿔 재사용을 끊는다. 도구는 정의·순서·스키마를 유지하고 `tool_choice: none`·`allowed_tools`로 사용 여부만 바꾼다. 확인일 기준 GPT-5.6 이상은 최소 캐시 길이 1,024토큰, 쓰기 1.25×·읽기 0.1× 요율, implicit/explicit 모드와 요청당 최대 4개 브레이크포인트, 상위 `instructions`에는 explicit 브레이크포인트를 둘 수 없음. GPT-6 계열은 `configuration_update` 항목으로 접두부를 유지한 채 추론 강도를 바꾼다. 값은 모델·시점에 따라 달라지므로 인계 전에 현재 문서로 재확인한다.
 - **프롬프트는 코드다.** 재사용 프롬프트 객체(`v1/prompts`, 프롬프트 ID·버전)는 2026-06-03부터 비권장, 2026-11-30 종료 예정이다. 새 작업은 코드 모듈·타입 있는 인자·fixture와 평가·배포 절차로 관리하고, 기존 프롬프트 ID 호출은 [이행 가이드](https://developers.openai.com/api/docs/guides/prompting/migrate-from-prompt-object)를 따른다.
-- **에이전트·코딩·프런트엔드.** 문서의 에이전트 권장은 완전 해결까지 지속·주요 단계의 도구 호출 전 설명·TODO 추적, 코딩 권장은 역할·도구 사용 예시·테스트 요구·마크다운 규약이며 §목적 블록에 반영했다. 프런트엔드 신규 앱에는 Tailwind CSS·shadcn/ui·Radix Themes, Lucide·Material Symbols·Heroicons, Motion을 권장하지만, 기존 코드베이스는 프로젝트 스택이 우선이며 [templates.md](templates.md) §DESIGN 오버레이의 조건을 따른다.
+- **에이전트·코딩·프런트엔드.** 문서의 에이전트 권장은 완전 해결까지 지속·주요 단계의 도구 호출 전 설명·TODO 추적, 코딩 권장은 역할·도구 사용 예시·테스트 요구·마크다운 규약이며 §목적 블록에 반영했다. 프런트엔드 신규 앱에는 Tailwind CSS·shadcn/ui·Radix Themes, Lucide·Material Symbols·Heroicons, Motion을 권장하지만, 기존 코드베이스는 프로젝트 스택이 우선이며 [design.md](templates/design.md)의 조건을 따른다.

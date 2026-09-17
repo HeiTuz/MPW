@@ -1,6 +1,6 @@
 # Higgsfield Genjutsu — 기존 영상 변환 프롬프트
 
-**2026-09-11 공식 안내 확인.** Genjutsu·겐주츠·겐쥬츠를 지정한 기존 영상 변환에 적용한다. 신규 T2V·I2V 연출 문법으로 바꾸지 않는다. 입력 한도·표면·미확인 기능과 공식 근거는 [surfaces.md](surfaces.md) §4.4·§7이 정본이다. 실제 생성 비교는 하지 않았다.
+**2026-09-11 공식 안내 확인.** Genjutsu·겐주츠·겐쥬츠를 지정한 기존 영상 변환에 적용한다. 신규 T2V·I2V 연출 문법으로 바꾸지 않는다. 입력 한도·표면·미확인 기능과 공식 근거는 [surface-contracts.md](surface-contracts.md) §4.4와 [surface-evidence.md](surface-evidence.md) §7이 정본이다. 실제 생성 비교는 하지 않았다.
 
 ## 목적에 맞는 기능
 

@@ -33,7 +33,11 @@ from datetime import date
 
 ROOT = pathlib.Path(__file__).absolute().parent.parent
 FILES = ["SKILL.md", "references/image/from-image.md", "references/templates.md", "references/model-playbooks.md", "references/adapters.md",
-         "references/prompt-graph.md", "references/image/surfaces.md", "references/image/model-routing.md",
+         "references/templates/common.md", "references/templates/delegation.md", "references/templates/contract.md",
+         "references/templates/goal.md", "references/templates/team.md", "references/templates/business.md",
+         "references/templates/model.md", "references/templates/design.md",
+         "references/prompt-graph.md", "references/image/surfaces.md", "references/image/surface-contracts.md",
+         "references/image/surface-evidence.md", "references/image/model-routing.md",
          "references/image/lanes.md", "references/image/video-prompt-workflow.md", "references/image/compiler.md", "references/image/categories.md",
          "references/image/editorial-fashion.md", "references/image/editorial/format-b.md",
          "references/image/editorial/tier2-safety.md", "references/image/editorial/taxonomy-dna.md",
@@ -80,6 +84,10 @@ CORE_RUNTIME_NAME_FILES = (
     "references/model-playbooks.md",
     *(
         path.relative_to(ROOT).as_posix()
+        for path in sorted((ROOT / "references" / "templates").rglob("*.md"))
+    ),
+    *(
+        path.relative_to(ROOT).as_posix()
         for path in sorted((ROOT / "references" / "image").rglob("*.md"))
     ),
 )
@@ -88,15 +96,17 @@ CORE_RUNTIME_NAME_FILES = (
 PLAIN_PATH_WHITELIST = {
     ("agents/README.md", "CLAUDE.md"),
     ("agents/README.md", "INSTALL_FOR_AGENTS.md"),
-    ("references/templates.md", "summary.md"),
-    ("references/templates.md", "sales.md"),
+    ("references/templates/common.md", "summary.md"),
+    ("references/templates/common.md", "sales.md"),
 }
 # These operational references are deliberately not dispatched from the compact
 # SKILL.md kernel. Keep exceptions explicit: a deleted or newly reachable file
 # must not silently remain here.
 # 고아 레퍼런스 화이트리스트 — 도달 불가능하지만 공개 문서 목적인 파일들만 기록.
 # 현재 비어있음: 모든 문서가 도달 가능해야 함(장기 미사용은 git 청소 대상).
-ORPHAN_REFERENCE_WHITELIST = set()
+# templates.md는 외부 소비자(prompt-knowledge-gardener 등)가 참조하는 호환 인덱스로
+# 의도적으로 커널 링크 그래프 밖에 둔다.
+ORPHAN_REFERENCE_WHITELIST = {"references/templates.md"}
 
 
 def fail(msgs):
@@ -344,7 +354,7 @@ def check_seed_engine_boundaries(texts, errors):
         "references/image/lanes.md": (
             "ModelArk direct Seedance 2.0의 세부 규칙은 [seedance-2.md](seedance-2.md)를 따르며, Higgsfield나 2.5에 자동 상속하지 않는다",
         ),
-        "references/image/surfaces.md": (
+        "references/image/surface-evidence.md": (
             "Dreamina 웹 Seedance 2.5 프롬프트 계약",
             "Seedance 2.5 ModelArk 모델 id·API 요청 스키마",
             "Dreamina UI·2.0 direct 값을 API로 자동 상속 금지",
@@ -783,10 +793,14 @@ def main():
         except Exception as e:
             errors.append(f"package.json version check failed: {e}")
 
-    # I0 — templates, SKILL, and references/** (except surfaces.md) may describe a surface-specific 2000-character contract,
-    # never a universal prompt constant.
+    # I0 — templates, SKILL, and references/** (except the surface-contract files) may describe
+    # a surface-specific 2000-character contract, never a universal prompt constant.
     check_targets = ["references/templates.md", "SKILL.md"]
-    check_targets += [f for f in texts.keys() if f.startswith("references/") and f != "references/image/surfaces.md"]
+    check_targets += [f for f in texts.keys() if f.startswith("references/") and f not in {
+        "references/image/surfaces.md",
+        "references/image/surface-contracts.md",
+        "references/image/surface-evidence.md",
+    }]
     for f in check_targets:
         if f in texts:
             check_universal_2000_regression(texts[f], errors, f)
@@ -795,6 +809,8 @@ def main():
     for f, s in stamp_texts.items():
         if f.startswith("references/") and f not in {
             "references/image/surfaces.md",
+            "references/image/surface-contracts.md",
+            "references/image/surface-evidence.md",
             "references/image/model-routing.md",
         }:
             check_s2_parameter_redefinition(s, errors, f)
@@ -830,11 +846,14 @@ def main():
             errors.append(f"{f}: lookalike letters {bad}")
 
     # canonical single definitions
-    if skill.count("게이트 필요성 테스트** —") != 1:
-        errors.append("gate necessity test must be defined exactly once in SKILL.md")
-    tm = texts.get("references/templates.md", "")
+    delegation = texts.get("references/templates/delegation.md", "")
+    if delegation.count("게이트 필요성 테스트** —") != 1:
+        errors.append("gate necessity test must be defined exactly once in references/templates/delegation.md")
+    if skill.count("게이트 필요성 테스트** —") != 0:
+        errors.append("gate necessity test must not be defined in SKILL.md (delegation.md owns it)")
+    tm = texts.get("references/templates/common.md", "")
     if tm.count("추론 불가 슬롯 — 질문이 필요한 기준 (정본)") != 1:
-        errors.append("non-inferable slot canon must appear exactly once in templates.md")
+        errors.append("non-inferable slot canon must appear exactly once in references/templates/common.md")
 
     # I1 — host names remain in adapters and host overlays, not the core.
     check_runtime_names(runtime_texts, errors)

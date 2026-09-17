@@ -35,6 +35,16 @@ const targets = ["claude", "gpt", "codex", "hermes"];
 const required = [
   "SKILL.md",
   "references/templates.md",
+  "references/templates/common.md",
+  "references/templates/delegation.md",
+  "references/templates/contract.md",
+  "references/templates/goal.md",
+  "references/templates/team.md",
+  "references/templates/business.md",
+  "references/templates/model.md",
+  "references/templates/design.md",
+  "references/image/surface-contracts.md",
+  "references/image/surface-evidence.md",
   "references/model-playbooks.md",
   "references/adapters.md",
   "references/image/compiler.md",
@@ -123,7 +133,7 @@ function assertInstalled(home, target) {
   const installed = Object.fromEntries(required.map((relative) => [relative, readInstalled(installDestination, relative)]));
   checkLinks(installDestination, "references/image/higgsfield-genjutsu.md");
   if (fs.existsSync(path.join(installDestination, "agents"))) fail(`${target}: agents/ leaked into installed payload`);
-  for (const relative of ["SKILL.md", "references/templates.md", "references/model-playbooks.md", "references/adapters.md", "references/image/lanes.md", "references/image/video-prompt-workflow.md", "references/image/grok-imagine.md", "references/image/seedream-5-pro.md", "references/image/seedance-2.md", "references/image/seedance-2-5.md"]) {
+  for (const relative of ["SKILL.md", "references/templates.md", "references/templates/common.md", "references/templates/contract.md", "references/templates/team.md", "references/image/surface-contracts.md", "references/image/surface-evidence.md", "references/model-playbooks.md", "references/adapters.md", "references/image/lanes.md", "references/image/video-prompt-workflow.md", "references/image/grok-imagine.md", "references/image/seedream-5-pro.md", "references/image/seedance-2.md", "references/image/seedance-2-5.md"]) {
     checkLinks(installDestination, relative);
   }
   const host = overlayHost(target);
@@ -169,7 +179,7 @@ for (const target of targets) {
   assertTerms(`${target}: decomposition canon`, installed["references/model-playbooks.md"], [
     "Topology-first intake", "Validation-coupled decomposition", "Join gate", "Blocker classification",
   ]);
-  assertTerms(`${target}: team insertion block`, installed["references/templates.md"], [
+  assertTerms(`${target}: team insertion block`, installed["references/templates/team.md"], [
     "model-playbooks.md", "작업 방식: prime", "frozen artifact", "human-only blocker",
   ]);
   assertTerms(`${target}: Seedream direct boundary`, installed["references/image/seedream-5-pro.md"], [

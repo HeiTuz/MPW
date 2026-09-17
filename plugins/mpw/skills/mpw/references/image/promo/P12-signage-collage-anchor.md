@@ -12,4 +12,4 @@
 
 **실패 판정:** 앵커가 위성 캡션 크기로 내려앉아 위계가 평평해지면 실패다. `at a fixed lower band` 단독은 '가장자리 배치'로 약하게 해석되므로, 밴드의 위치와 점유 폭을 결과로 못 박는다(`fills the full panel width inside a fixed bottom band, its baseline locked to the bottom margin of every panel`).
 
-**카피 안전:** 앵커 한글은 2~4음절 — 초압축 슬랩은 받침 있는 글자에서 획이 서로 붙는다. 정확도가 최우선이면 고밀도 정사각 사이즈로 승급한다(size는 실행 파라미터 — 표면 상한 정본은 surfaces.md §4, S1-legacy 레코드 필드는 production.md §2 소관). 위성 캡션은 모노스페이스 소자로 앵커의 1/8 이하 크기. `promo_text_effect: anchor_band`. 끝 토큰 `AR 4:5`.
+**카피 안전:** 앵커 한글은 2~4음절 — 초압축 슬랩은 받침 있는 글자에서 획이 서로 붙는다. 정확도가 최우선이면 고밀도 정사각 사이즈로 승급한다(size는 실행 파라미터 — 표면 상한 정본은 surface-contracts.md §4, S1-legacy 레코드 필드는 production.md §2 소관). 위성 캡션은 모노스페이스 소자로 앵커의 1/8 이하 크기. `promo_text_effect: anchor_band`. 끝 토큰 `AR 4:5`.

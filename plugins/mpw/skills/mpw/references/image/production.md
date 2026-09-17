@@ -6,14 +6,14 @@
 
 **이 파일이 기술하는 `prompts.jsonl` 벌크 스키마는 레거시 벌크 러너 경로(S1-legacy)다.** 표면 판정은 [surfaces.md](surfaces.md)가 선행하며, 아래 값을 다른 표면으로 옮기지 않는다.
 
-GPT Image의 네이티브 자연어는 [surfaces.md](surfaces.md) §3.1과 `check_prompt.mjs --profile native`를 쓴다. 이 문서의 A/B·Tier·사이즈락은 네이티브 API 전체를 검증하지 않는다. 네이티브 프로필은 S2/S3의 본문 텍스트만 받으며 JSON/JSONL·S1·명시 Tier·`--api`와 혼용하지 않는다. 엔진 미지정 시 GPT Image를 쓰고, 길이·빈 입력·미치환 슬롯·다른 엔진 문법·정확 카피 중복을 검사한다. API 필드·참조·이미지 품질은 별도 검증 대상이다.
+GPT Image의 네이티브 자연어는 [surface-contracts.md](surface-contracts.md) §3.1과 `check_prompt.mjs --profile native`를 쓴다. 이 문서의 A/B·Tier·사이즈락은 네이티브 API 전체를 검증하지 않는다. 네이티브 프로필은 S2/S3의 본문 텍스트만 받으며 JSON/JSONL·S1·명시 Tier·`--api`와 혼용하지 않는다. 엔진 미지정 시 GPT Image를 쓰고, 길이·빈 입력·미치환 슬롯·다른 엔진 문법·정확 카피 중복을 검사한다. API 필드·참조·이미지 품질은 별도 검증 대상이다.
 
 | 표면 | 이 파일이 적용되나 | 정본 |
 |---|---|---|
 | S1 기계 계약(MPW→ImgGen2) | **아니오** — `ar` 5종·`size` 3종·`quality` 3종 | `contracts/v1/*.schema.json` + `contracts/validate.py` |
 | S1-legacy 벌크 jsonl | **예** — 아래 표 | 이 파일 §2 |
 | S2 플랫폼 파라미터 | **아니오** — 해상도·품질·픽셀 필드는 모델별로 확인 | 현재 모델 상세 조회 도구와 호출 스키마 |
-| S3 붙여넣기 | **아니오** — 파라미터 없음 | [surfaces.md](surfaces.md) §3 |
+| S3 붙여넣기 | **아니오** — 파라미터 없음 | [surface-contracts.md](surface-contracts.md) §3 |
 
 **두 S1 경로는 값 집합이 다르다.** 기계 계약에서 쓸 수 있는 값은 **`contracts/v1/*.schema.json`의 enum이 전부이며, 문서의 어떤 목록도 예시일 뿐 권위가 아니다.** 아래 S1-legacy 표의 값이 그 enum에 없으면 기계 계약 경로에서는 쓸 수 없고, 쓰면 `production_geometry_mismatch`로 거부된다(2026-07-25 확인 시점 기준 예시: 비율 `2:3`·`3:2`·`4:5`, 픽셀 `1792x1024`·`1024x1792`·`2048x2048`이 스키마에 없었다 — 이 예시가 최신이라고 가정하지 말고 스키마를 직접 읽어라). 아래 표를 근거로 기계 계약 값을 정하지 마라.
 
@@ -384,7 +384,7 @@ Reply only with the saved file path.
 | 8 | 텍스트 | 따옴표·롤 라벨·가독 가드 적용 | `typography.md` 순서도 적용 |
 | 9 | 금지 구조 | 앞 브래킷·`Negative:`·슬롯 잔존 0개 | 긍정형 서술과 실제 값으로 교체 |
 | 10 | output_path | 저장 경로가 행별로 다름 | 경로 고유화 |
-| 11 | 투명 배경 | 이 레거시 벌크 경로는 후속 컷아웃 명시 | 네이티브 알파 출력 지원 여부는 [surfaces.md](surfaces.md) §5로 별도 판정 |
+| 11 | 투명 배경 | 이 레거시 벌크 경로는 후속 컷아웃 명시 | 네이티브 알파 출력 지원 여부는 [surface-contracts.md](surface-contracts.md) §5로 별도 판정 |
 | 12 | QA 필드 | `goal_fit`, `text_accuracy`, `material_realism`, `layout` 존재 | 누락 필드 추가 |
 
 ## 11. AR↔size 매핑 (S1-legacy 벌크 한정)

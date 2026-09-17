@@ -47,7 +47,7 @@ MPW에 흩어진 권한 문장들(§4)이 실은 이 그래프다 — 이 파일
 2. **의미가 같은 값은 하나로 접되 provenance는 모두 보존한다.** 같은 값이 사용자와 스키마 양쪽에서 왔다고 한 근거를 버리지 않는다.
 3. **비슷하지만 별개인 값은 합치지 않는다.** 조명 방향과 조명 질, 얼굴 정체성과 의복 구조처럼 독립적으로 실패할 수 있는 값은 별도 슬롯이다.
 4. **같은 축의 경쟁 값은 `authority`로 승자를 정한다**(§4). 지는 값은 기록만 남기고 직렬화하지 않는다.
-5. **`derives`로 채울 수 있는 빈 슬롯을 먼저 채운다.** 남은 `unresolved` 중 결과·하드라인을 바꾸는 것만 질문 후보이며, 질문이 정당한 유일 목록은 [templates.md](templates.md) §슬롯 자동 채움이 소유한다.
+5. **`derives`로 채울 수 있는 빈 슬롯을 먼저 채운다.** 남은 `unresolved` 중 결과·하드라인을 바꾸는 것만 질문 후보이며, 질문이 정당한 유일 목록은 [common.md](templates/common.md) §슬롯 자동 채움이 소유한다.
 
 ### 3-3. Validate/Assemble — 구조 검증과 조립
 
@@ -55,7 +55,7 @@ MPW에 흩어진 권한 문장들(§4)이 실은 이 그래프다 — 이 파일
 
 ### 3-4. Serialize — ARTIFACT별 최소 closure
 
-각 ARTIFACT에서 거꾸로 올라가 그 산출에 실제로 필요한 `requires`·`authority`·`derives`·EVIDENCE 조상만 포함한다. 형제 ARTIFACT 전용 슬롯, `authority`에서 진 값, `excludes`로 제거한 값, 내부 진단은 내보내지 않는다. 채움 순서대로 쓰되 실행 표면이 파라미터를 갖는 축은 산문에서 뺀다([image/surfaces.md](image/surfaces.md) §4). **리프 하나 = 블록 하나**이며 리프가 둘이면 블록도 둘이다.
+각 ARTIFACT에서 거꾸로 올라가 그 산출에 실제로 필요한 `requires`·`authority`·`derives`·EVIDENCE 조상만 포함한다. 형제 ARTIFACT 전용 슬롯, `authority`에서 진 값, `excludes`로 제거한 값, 내부 진단은 내보내지 않는다. 채움 순서대로 쓰되 실행 표면이 파라미터를 갖는 축은 산문에서 뺀다([surface-contracts.md](image/surface-contracts.md) §4). **리프 하나 = 블록 하나**이며 리프가 둘이면 블록도 둘이다.
 
 ### 3-5. Evaluate — 산출 전 최종 판정
 
