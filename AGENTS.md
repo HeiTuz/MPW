@@ -20,6 +20,7 @@
    - 레인별 게이트(필수 요소·네거티브 정책): `references/image/lanes.md` §레인 게이트 카드
    - 이미지 슬롯 기본값: `references/image/lanes.md` §이미지 슬롯 기본값
    - 추론 불가 슬롯 목록: `references/templates.md` §슬롯 자동 채움
+   - 프롬프트 언어 결정 규칙: `references/templates.md` §수신자·채널 적응 — SKILL.md와 오버레이는 요약+포인터만 둔다
    - S1 기계 계약 값(ar·size·quality enum): **문서가 아니라 `contracts/v1/*.schema.json`**. 문서는 스키마 값을 복제하지 않는다
    - S1-legacy 벌크 jsonl 스키마: `references/image/production.md` §2
    - 영상 규칙: `references/image/lanes.md` §영상 공통 규칙
