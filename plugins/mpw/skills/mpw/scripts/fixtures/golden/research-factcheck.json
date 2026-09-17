@@ -1,4 +1,0 @@
-{
-  "input": "국내 전기요금 인상률 기사 내용을 사실 확인해줘.",
-  "expected": "Cross-check the article's claims about the electricity rate increase and its effective date against official notices and public institution announcements. Present the conclusion first in one paragraph, then organize each claim in a table with the article sentence, verification result, source URL, and verification date. Definition of Done: every figure is linked to a primary source, conflicting materials are shown together, and unverifiable items remain marked as unverified with the reason."
-}

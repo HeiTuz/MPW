@@ -1,4 +1,0 @@
-{
-  "input": "로그인 실패 횟수 제한 기능을 구현하는 코딩 에이전트 프롬프트를 만들어줘.",
-  "expected": "Implement a feature that limits authentication attempts for 15 minutes when 5 login failures accumulate for the same account. First inspect the existing authentication flow and error response format, then cover failure accumulation, reset on success, and lockout expiration with tests. Definition of Done: automated tests for the boundary values of 4 failures, 5 failures, and expiration pass, and the completion report records the changed files, validation performed, and remaining risks."
-}

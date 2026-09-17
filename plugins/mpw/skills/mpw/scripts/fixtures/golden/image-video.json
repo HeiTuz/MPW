@@ -1,7 +1,0 @@
-{
-  "input": "지역 도서관 여름 독서 프로그램을 알리는 이미지와 짧은 영상용 프롬프트를 영어 자연어로 만들어줘.",
-  "expected": {
-    "image": "A summer reading program poster for a local library, with a window-side reading table and stacked books, composed as a calm vertical print design in warm cream and sage tones with soft natural window light.",
-    "video": "A library window with a stack of books and a summer reading sign. The camera gently moves from the sign toward the books as sunlight shifts across the table, ending on the open book with continuous motion and a calm welcoming mood."
-  }
-}
