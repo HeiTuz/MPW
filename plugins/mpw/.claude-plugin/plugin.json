@@ -1,7 +1,7 @@
 {
   "name": "mpw",
   "displayName": "MPW — Prompt Writer",
-  "version": "2.30.1",
+  "version": "2.31.0",
   "description": "프롬프트 작성·검토·모델 적응 스킬 (HeiTuz MPW)",
   "author": {
     "name": "HeiTuz",

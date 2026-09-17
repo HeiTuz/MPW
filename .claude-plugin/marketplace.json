@@ -6,14 +6,14 @@
   },
   "metadata": {
     "description": "HeiTuz prompt and image-generation skills",
-    "version": "2.30.1"
+    "version": "2.31.0"
   },
   "plugins": [
     {
       "name": "mpw",
       "source": "./plugins/mpw",
       "description": "프롬프트 작성·검토·모델 적응 스킬 (HeiTuz MPW)",
-      "version": "2.30.1",
+      "version": "2.31.0",
       "category": "productivity"
     }
   ]
