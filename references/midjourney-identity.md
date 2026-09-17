@@ -117,3 +117,31 @@ Edit 프롬프트는 **참조별 역할 → 바꿀 부분 → 보존 조건**만
 - V8 Edit는 관점 변경을 지원하므로 같은 원본을 바탕으로 요청 각도를 지시할 수 있다. V7 요청은 §2의 Omni 경로를 유지한다.
 - 한 시트의 뷰가 흔들리면 먼저 해당 레이아웃·참조 연결을 수정한다. 독립 잡이 필요한 경우 이유를 밝히며, 한 장 요청을 고정 10컷 배치로 바꾸지 않는다.
 - 생성 실행이 요청된 경우 현재 모델·참조 슬롯·결과 라벨을 확인하고, 실제 출력의 동일성을 비교한다. 프롬프트 작성만으로 이 검증을 끝냈다고 보고하지 않는다.
+
+## 12. 관측된 외부 예시 (재서술)
+
+주간 인테이크로 수집된 공개 Midjourney 프롬프트를 MPW 형식으로 재서술했다. 원문 복사가 아니며 품질 실측이 아닌 관측 스탬프를 단다. 실존 인물·작품명·상표 유도 요소와 구버전 고정값은 제외했고, 버전 플래그는 사용자 지정에 따른다.
+
+왜곡 배제를 `--no`로 지정한 인테리어 (관측 2026-09, 출처 1건):
+
+```text
+living room, Scandinavian minimalism, oiled oak floor, whitewashed walls, pale oak credenza, low linen sofa, wool rug, greenery in a clay pot, soft north-facing daylight, camera at chest height, 24mm perspective, straight verticals, balanced exposure, a lived-in book stack and throw blanket --no fisheye, warped windows, floating furniture --ar 3:2
+```
+
+피부 질감 보존을 `--no`로 지정한 에디토리얼 인물 (관측 2026-09, 출처 1건):
+
+```text
+woman in her late 20s with freckles and natural auburn hair, looking off camera with a slight smile, rooftop at golden hour, bokeh city lights, 85mm f/1.8, warm backlight, editorial portrait, documentary feel --ar 4:5 --raw --no plastic skin
+```
+
+정면 대칭 구도의 파스텔 인테리어 (관측 2026-09, 출처 1건 — 실존 인물·작품명 제거 후 재서술):
+
+```text
+a perfectly symmetrical film-still composition of a grand hotel lobby in pastel pink and mint green with geometric Art Deco details, a concierge in a pressed uniform standing centered at the front desk, frontal camera angle, flat lighting, every object placed with obsessive precision, 35mm film grain, centered one-point perspective --ar 16:9 --s 350
+```
+
+명암 대비의 흑백 누아르 (관측 2026-09, 출처 1건 — 실존 인물·연대 지정 제거 후 재서술):
+
+```text
+film noir scene, a detective in a fedora and trench coat standing in a dimly lit office, hard shadows from venetian blinds cutting across the walls and floor, cigarette smoke curling through a single shaft of light, wet street visible through the window, black and white high contrast photography, dramatic chiaroscuro lighting, shot on 35mm film with classic noir grain --ar 239:100 --no color
+```

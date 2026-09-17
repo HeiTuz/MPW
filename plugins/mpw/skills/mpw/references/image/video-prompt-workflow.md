@@ -186,6 +186,44 @@ The curtain beside the seated person gently lifts toward the window, then drifts
 
 예를 들어 외관은 좋지만 물체를 내려놓지 않았다면 이 샷의 필수 사건은 실패다. 실패 구간을 기록하면 다음 수정에서 접촉 전 자세를 바꿀지, 동작 문장을 바꿀지 비교할 수 있다. 이 검수표는 선택 가능한 적용 예이며 생성 실행 권한을 부여하지 않는다.
 
+## 관측된 외부 작성 패턴 (재서술)
+
+주간 인테이크로 수집된 공개 영상 프롬프트에서 반복된 패턴을 MPW 형식으로 재서술했다. 원문 복사가 아니며 품질 실측이 아닌 관측 스탬프를 단다. 실존 인물·상표 유도 요소는 제외했다. 어느 패턴도 의무 슬롯이 아니며, [lanes.md](lanes.md) §영상 공통 규칙을 대체하지 않는다.
+
+- **현장음·효과음을 라벨 행으로 분리** (관측 2026-09, 출처 3건): 본문 끝에 `ambient:` 또는 `Audio:` 행을 두어 장면 묘사와 소리 요청을 나눈다. 화자·대사·현장음을 구분하는 기존 규칙의 한 표기다.
+- **카메라·조명·오디오·그레이드 라벨 블록** (관측 2026-09, 출처 2건): 단일 샷을 `Camera:`·`Lighting:`·`Audio:`·`Color grade:` 라벨 행으로 나눠 적는다. 분리가 필요한 축만 쓰고 라벨을 채우기 위한 내용을 만들지 않는다.
+- **사건을 계기로 카메라를 움직이기** (관측 2026-09, 출처 1건): 정적 유지 뒤 특정 사건이 일어나면 천천히 push-in처럼 카메라 움직임의 계기를 화면 속 사건에 연결한다.
+- **재질·신체의 물리 응답을 별도로 점검** (관측 2026-09, 출처 1건): 피부의 빛 산란·접촉 변형(발이 바닥을 누름)·표정 근육처럼 물리 응답을 장면 묘사와 분리해 확인한다. 실사 증분은 [realism.md](realism.md) §6과 상보한다.
+- **변환·제작 과정의 시간 압축** (관측 2026-09, 출처 1건): 제작·변환 과정을 한 클립에 넣을 때 단계 순서와 각 단계의 결과 상태를 명시하고 중간 과정을 압축한다.
+
+재서술한 관측 예시:
+
+```text
+Interior shot of a woman watching rain through a large window, seen from behind her shoulder. City lights reflect on the glass. Static medium shot, low warm ambient light, deep blue and amber palette. Quiet, contemplative pace.
+ambient: steady rain on glass, distant traffic
+```
+
+```text
+A ceramic mug rotates slowly on a walnut table as steam rises. Macro orbit, shallow depth of field, morning side-light.
+Audio: soft room tone, a faint pour at the start.
+```
+
+```text
+Wide locked-off shot of a rain-slicked empty street at night. Neon signs reflect in standing puddles; a lone figure in a dark coat walks away down the center.
+Camera: tripod at eye level, wide lens, slight underexposure.
+Lighting: practical neon only, deep shadows between pools of color.
+Audio: light rain, distant traffic, a low transformer hum.
+Color grade: teal and orange with deep blacks.
+```
+
+```text
+A quiet convenience store late at night under flickering fluorescent lights. A tired cashier looks up as a black cat jumps onto the counter, walks across the register, and knocks a receipt roll to the floor. Hold a static wide shot until the cat lands, then slowly push in as the cashier reacts.
+```
+
+```text
+A tired office worker rubs his temples in front of a bulky 1980s computer in a cluttered office late at night. Harsh fluorescent overhead light mixed with the green glow of a monochrome monitor. Slightly grainy retro color-film look.
+```
+
 ## 근거와 적용 한계
 
 ### Prompt What 제작 기록 검토 (2026-09-11)
