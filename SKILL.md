@@ -53,7 +53,7 @@ metadata:
 | REVIEW | 이 파일만. 모드 규칙이 판정 근거면 대상의 브랜치 파일 하나를 추가한다 |
 | CHAIN·다중 산출물 | [prompt-graph.md](references/prompt-graph.md) §5의 `feeds` 계약과 의존 순서 |
 
-자율 루프는 GOAL을 우선하고, 독립 산출물이 여럿이면 산출물별로 블록을 나눈다. 모델·도구가 정해져 있으면 유지한다. Grok·xAI 대상은 산출물로 갈라진다 — 텍스트·리서치는 MODEL + model-playbooks.md §Grok, 이미지·영상은 IMAGE + [grok-imagine.md](references/image/grok-imagine.md). FLUX·FLUX.2·flux_kontext 대상은 IMAGE + [flux.md](references/image/flux.md)를 추가한다. 에디토리얼·패션 표면은 lanes.md 판정 뒤에만 editorial/ 파일을 연다. 런타임 호출 문법이 필요할 때만 [adapters.md](references/adapters.md)를 읽는다. GardenRecipe·PromptBundle은 [garden-recipe-compiler.md](references/garden-recipe-compiler.md), 공유 스키마는 [contracts.md](references/contracts.md), Midjourney 문법은 [midjourney-identity.md](references/midjourney-identity.md), 캐릭터 시트는 [midjourney-character-sheets.md](references/midjourney-character-sheets.md)를 읽는다.
+자율 루프는 GOAL을 우선하고, 독립 산출물이 여럿이면 산출물별로 블록을 나눈다. 모델·도구가 정해져 있으면 유지한다. Grok·xAI 대상은 산출물로 갈라진다 — 텍스트·리서치는 MODEL + model-playbooks.md §Grok, 이미지·영상은 IMAGE + [grok-imagine.md](references/image/grok-imagine.md). MiniMax H3 대상은 VIDEO + [minimax-h3.md](references/image/minimax-h3.md)를 추가한다. FLUX·FLUX.2·flux_kontext 대상은 IMAGE + [flux.md](references/image/flux.md)를 추가한다. 에디토리얼·패션 표면은 lanes.md 판정 뒤에만 editorial/ 파일을 연다. 런타임 호출 문법이 필요할 때만 [adapters.md](references/adapters.md)를 읽는다. GardenRecipe·PromptBundle은 [garden-recipe-compiler.md](references/garden-recipe-compiler.md), 공유 스키마는 [contracts.md](references/contracts.md), Midjourney 문법은 [midjourney-identity.md](references/midjourney-identity.md), 캐릭터 시트는 [midjourney-character-sheets.md](references/midjourney-character-sheets.md)를 읽는다.
 
 ## 작성 모델이 바뀌어도 유지할 판단
 

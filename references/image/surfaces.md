@@ -29,7 +29,7 @@ JSON 형식 자체가 S1을 뜻하지 않는다. 플랫폼 호출 인자를 JSON
 | 층 | 무엇이 정하나 | 값 |
 |---|---|---|
 | **전달 채널** | 산출물이 사용자에게 실제로 나가는 경로 | 메시지당 상한이 있는 메신저형 채널 = 그 채널의 상한(현행 메신저 배선 2000) / 에이전트 CLI·데스크톱 앱 = 실질 제약 없음 |
-| **타깃 엔진** | 프롬프트를 실제로 읽는 모델 | Midjourney = 짧고 명확한 서술 권장, 공식 단어수 경계 미제시 / gpt-image 계열 = 32,000자 / BytePlus ModelArk direct Seedream 5 Pro = 영어 600단어 미만 권장 / BytePlus ModelArk direct Seedance 2.0 = 1,000단어 미만 권장 / Higgsfield 모델 = 미공개 **[미확인]** → 신호 밀도로 관리 |
+| **타깃 엔진** | 프롬프트를 실제로 읽는 모델 | Midjourney = 짧고 명확한 서술 권장, 공식 단어수 경계 미제시 / gpt-image 계열 = 32,000자 / BytePlus ModelArk direct Seedream 5 Pro = 영어 600단어 미만 권장 / BytePlus ModelArk direct Seedance 2.0 = 1,000단어 미만 권장 / MiniMax H3 공식 API 직결 = 7,000자(`content[]` 텍스트 파트 상한) / Higgsfield 모델 = 미공개 **[미확인]** → 신호 밀도로 관리 |
 | **기계 계약** | 스키마 필드 제약 | `prompt-bundle/v1` `text.maxLength: 2000` + `unicode_char_count ≤ 2000` |
 
 32,000자를 받는 엔진이라도 상한 있는 채널로 나가면 채널이 먼저 끊고, 채널이 무제한이라도 `prompt-bundle/v1`로 직렬화하면 스키마가 하드라인이다. 상한은 채워야 할 목표 분량이 아니다.

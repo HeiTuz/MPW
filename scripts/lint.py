@@ -47,6 +47,7 @@ FILES = ["SKILL.md", "references/image/from-image.md", "references/templates.md"
          "references/image/realism.md", "references/image/grok-imagine.md", "references/image/flux.md", "references/image/seedream-5-pro.md",
          "references/image/seedream-character-reference-sheets.md", "references/image/seedance-2.md",
          "references/image/seedance-2-5.md", "references/image/higgsfield-genjutsu.md",
+         "references/image/minimax-h3.md",
          "references/midjourney-character-sheets.md",
          "references/midjourney-identity.md"]
 SSOT = "references/image/editorial/tier2-safety.md"   # Tier-2 동결 문자열 정본 (§2 코드블록)

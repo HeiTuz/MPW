@@ -46,12 +46,12 @@
 |---|---|---|---|
 | 최고급 시네마틱 | `veo3_1` | `cinematic_studio_3_0`, `kling3_0` | `quality: basic/high/ultra`, `variant`, `duration: 4/6/8` |
 | 장르 제어·다중 샷 | `cinematic_studio_video_v2` | `kling3_0` | `genre`, `multi_shots`, `cfg_scale`, `speedramp`, `mode` |
-| 레퍼런스 기반 아이덴티티 유지 | `seedance_2_0` | `seedance_2_0_mini`, `gemini_omni` | `image_references`/`video_references`/`audio_references`, `mode`, `resolution` |
+| 레퍼런스 기반 아이덴티티 유지 | `seedance_2_0` | `seedance_2_0_mini`, `gemini_omni`, `minimax_h3` | `image_references`/`video_references`/`audio_references`, `mode`, `resolution` |
 | 참조 기반 편집·연장 | `seedance_2_5` | — | `mode: omni_reference/video_edit/video_extension`, `extension_mode`, `duration: 4~30` |
 | 제품·멀티 SKU 커머스 | `seedance_2_0` | `marketing_studio_video` | `product_ids`(MS), `generate_audio` |
 | 물리·표정 자연스러움 | `minimax_hailuo` | `kling2_6` | `variant`, `duration: 6/10`, `resolution` |
-| 오디오 동기·캐릭터 일관 | `wan2_7` | `kling3_0`, `seedance_2_0` | `duration: 2~15`, `resolution` |
-| 시작·끝 프레임 지정 | `seedance_2_0`, `minimax_hailuo`, `kling3_0`, `wan2_7` | `veo3_1_lite` | `start_image` / `end_image` 롤 |
+| 오디오 동기·캐릭터 일관 | `wan2_7` | `kling3_0`, `seedance_2_0`, `minimax_h3` | `duration: 2~15`, `resolution` |
+| 시작·끝 프레임 지정 | `seedance_2_0`, `minimax_hailuo`, `kling3_0`, `wan2_7` | `veo3_1_lite`, `minimax_h3`, `minimax_h3_max` | `start_image` / `end_image` 롤 |
 | 빠르고 싼 배치 | `veo3_1_lite` | `kling3_0_turbo`, `seedance_2_0_mini` | `generate_audio: false` |
 | 실험적·스타일라이즈 | `wan2_6` | `grok_video` | `quality`, `duration: 5/10/15` |
 | 프리셋 바이럴 템플릿(i2v) | `higgsfield_preset` | — | `preset_id`(**필수**, 현재 프리셋 조회 도구) |
