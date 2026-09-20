@@ -158,7 +158,7 @@ def _render_composite(recipe: dict[str, Any]) -> str:
         "The source is a locked photographic plate defining the final canvas; subject pixels are read-only "
         "and only background pixels may be generated.",
         "FRAME LOCK: output dimensions and aspect ratio equal the input exactly; coordinates stay 1:1. "
-        "Do not crop, zoom, pan, reframe, recenter, resample, warp, or redistribute margins.",
+        "Preserve the source crop, zoom, pan, framing, center, pixel sampling, geometry, and margins exactly.",
         f"BACKGROUND ONLY: {recipe['intended_use']['goal'].strip()}",
         *_evidence_lines(recipe),
         _lock_line(recipe),

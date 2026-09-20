@@ -1,6 +1,7 @@
 import importlib.util
 import json
 from pathlib import Path
+import subprocess
 import tempfile
 import unittest
 
@@ -37,6 +38,22 @@ class ImageVariationCompilerTests(unittest.TestCase):
         self.assertNotEqual(row["full_prompt"], "a blue cup")
         self.assertIn("Composition:", row["full_prompt"])
         self.assertFalse(row["metadata"]["ideation_batch"])
+
+    def test_default_axis_choices_pass_compiled_negative_gate(self):
+        request = {"concept": "a blue cup", "style": "", "locks": {}, "output_prefix": "images"}
+        for index in range(8):
+            with self.subTest(index=index):
+                # Select each default choice on every axis across eight seeds.
+                seed = sum(index * 8 ** position for position in range(len(MODULE.AXES)))
+                prompt = MODULE.compile_variations(request, 1, seed)[0]["full_prompt"]
+                result = subprocess.run(
+                    ["node", str(ROOT / "scripts/check_prompt.mjs"),
+                     "--profile", "compiled", "--surface", "s1"],
+                    input=prompt, capture_output=True, text=True, check=False, timeout=10,
+                )
+                report = json.loads(result.stdout)
+                # Variation records do not carry legacy trailing AR syntax.
+                self.assertNotIn("E-NEG-001", [error["code"] for error in report["errors"]], report)
 
     def test_known_axis_locks_replace_random_axis_instructions(self):
         request = self.request()

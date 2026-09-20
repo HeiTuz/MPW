@@ -20,7 +20,7 @@ AXES: dict[str, tuple[str, ...]] = {
         "layered depth using foreground, subject plane, and distant field",
         "diagonal movement crossing an otherwise quiet frame",
         "wide environmental composition with a small visual protagonist",
-        "compressed collage-like framing without literal borders",
+        "compressed collage-like framing with seamless borderless edges",
         "top-weighted composition with open breathing room below",
     ),
     "camera": (
@@ -134,7 +134,7 @@ def _prompt(data: dict[str, Any], axes: dict[str, str]) -> str:
         f" Lighting: {axes['lighting']}. Palette: {axes['palette']}."
         f" Material and finish: {axes['surface']}. Spatial rhythm: {axes['rhythm']}."
         f"{lock_text} Make the visual choice coherent rather than combining unrelated motifs."
-        " Preserve every requested content element and mark exactly, and do not introduce unrequested elements."
+        " Preserve every requested content element and mark exactly; the depicted content is limited to the requested set."
     )
     if len(prompt) > MAX_PROMPT_CHARS:
         raise ValueError(f"Compiled prompt exceeds {MAX_PROMPT_CHARS} characters; shorten concept/style/locks.")

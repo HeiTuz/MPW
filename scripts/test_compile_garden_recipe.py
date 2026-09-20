@@ -135,6 +135,25 @@ class CompileGardenRecipeTests(unittest.TestCase):
         self.assertIn("FINAL INTENT:", text)
         self.assertIn("FAIL if", text)
 
+    def test_image_renderers_pass_compiled_negative_gate(self) -> None:
+        for mode in ("IMAGE", "IMAGE_COMPOSITE"):
+            for engine in ("generic-image", "gpt-image-2", "higgsfield"):
+                with self.subTest(mode=mode, engine=engine):
+                    recipe = copy.deepcopy(self.recipe)
+                    recipe["intended_use"].update(mode=mode, engine=engine)
+                    bundle = self.compiler.compile_recipe(recipe)
+                    self.assertEqual([], self.contracts.validate_document(bundle, recipe))
+                    result = subprocess.run(
+                        ["node", str(ROOT / "scripts/check_prompt.mjs"),
+                         "--profile", "compiled", "--surface", "s1"],
+                        input=bundle["handoff"]["prompt_blocks"][0]["text"],
+                        capture_output=True, text=True, check=False, timeout=10,
+                    )
+                    report = json.loads(result.stdout)
+                    # This checker also enforces legacy AR syntax, outside the
+                    # PromptBundle contract. Exercise its negative gate only.
+                    self.assertNotIn("E-NEG-001", [error["code"] for error in report["errors"]], report)
+
 
     def test_gpt_image_renderer_preserves_requested_palette_without_inventing_colors(self) -> None:
         for mode in ("IMAGE", "IMAGE_COMPOSITE"):
