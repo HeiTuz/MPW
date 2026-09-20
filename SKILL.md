@@ -50,6 +50,7 @@ metadata:
 | 리서치·추출·연속 처리 | [model.md](references/templates/model.md); 출처 판정은 [research.md](references/research.md), 실행 단위 사이 입력·출력이 얽히면 [prompt-graph.md](references/prompt-graph.md) §5 |
 | 업무 고유 형식 | [business.md](references/templates/business.md); 덱은 [slides.md](references/slides.md), UI는 [design.md](references/templates/design.md) |
 | 이미지·영상의 문법·파라미터·길이 제한 | [surfaces.md](references/image/surfaces.md) → [surface-contracts.md](references/image/surface-contracts.md)의 해당 표면만. 대상 미정의 자연어 초안에는 API 조회·모델 선정을 요구하지 않는다 |
+| GPT Image 2.5 네이티브 생성 브리프 | [surface-contracts.md](references/image/surface-contracts.md) §3.2. 단순 얼굴·제품·장면은 짧은 완결 문단, 복잡한 상호의존만 필요한 자연어 구획 |
 | 참조 이미지의 역할·관찰이 필요함 | [from-image.md](references/image/from-image.md) §1. 원본 편집은 변경·보존 조건으로 바로 작성; 상세 관찰·취향 변주는 요청될 때만 |
 | 합성·전문 이미지·영상 연출 | [lanes.md](references/image/lanes.md)의 해당 절만. 엔진별 문법 위치는 [model-routing.md](references/image/model-routing.md) §4의 링크에서 찾는다. 모델 추천 요청도 이 파일에서 시작한다 |
 | 특정 텍스트 모델 적응·팀의 역할 배분 | [model-playbooks.md](references/model-playbooks.md). 실제 호출 배선이 필요할 때만 [adapters.md](references/adapters.md) |

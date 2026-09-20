@@ -246,5 +246,105 @@
       "창작 선택을 금지하거나 선택을 모두 사용자에게 되묻는다",
       "실제 생성 품질을 검증했다고 주장한다"
     ]
+  },
+  {
+    "id": "native-brief-simple-korean-adult-face",
+    "letter": "A",
+    "request": "GPT Image 2.5에 붙여넣을 영어 이미지 프롬프트만 써줘. 한국인 성인 여성의 얼굴이 정면을 보는 사진이면 돼. 다른 설명은 필요 없어.",
+    "expected": [
+      "영어 네이티브 생성 프롬프트를 바로 제공한다",
+      "한국인 성인 여성의 정면 얼굴을 빠짐없이 보존한다",
+      "짧은 완결 문단 하나로 쓴다"
+    ],
+    "forbidden": [
+      "SHOT·SUBJECT·FACE·WARDROBE·SCENE·LIGHT·REALISM·CONSTRAINTS 같은 고정 헤딩을 강제한다",
+      "요청하지 않은 카메라·렌즈·필름·네거티브·모공·잔머리 보편 토큰을 덧붙인다",
+      "MPW 컴파일 형식·Tier·끝 AR·JSON 계약을 적용한다",
+      "실제 이미지를 생성했거나 생성할 수 있다고 가장한다"
+    ]
+  },
+  {
+    "id": "native-brief-flash-mirror-selfie",
+    "letter": "B",
+    "request": "GPT Image 2.5용 영어 프로덕션 브리프를 써줘. 한 장이다. 밤에 좁은 타일 화장실에서 한국인 성인 여성이 거울 셀카를 찍는다. 오른손은 눈높이에서 폰을 들고, 왼손은 세면대 가장자리를 잡는다. 흰 슬리브리스와 낮은 청바지, 실버 후프 귀걸이. 폰 플래시가 거울에 직접 터져 타일 줄눈과 크롬 수도꼭지에 하드 하이라이트가 생긴다. 피부는 플래시 아래 자연스러운 유분과 모공이 보이고, 앞머리는 젖은 가닥이 볼에 붙는다. 청바지 데님 능직과 세면대 세라믹, 손이 잡힌 크롬의 반사와 플래시 색온도가 한 장면으로 맞아야 한다. 화장실이 넓어 보이거나 창문이 생기면 안 되고, 워터마크·로고·추가 글자는 빼. 헤딩은 서로 얽힌 축을 읽기 쉽게 나눌 때만 쓰고, 한 블록으로 줘.",
+    "expected": [
+      "샷·포즈·의상·공간·플래시 빛·요청된 피부/머리/재질/그립/반사/색온도 정합을 모두 보존한다",
+      "촬영·포즈·의상·공간·조명·사실성·제약의 관계를 필요한 이름 있는 섹션으로 나누고 한 컷을 한 블록으로 유지한다",
+      "요청된 배제만 짧고 관련 있게 쓴다"
+    ],
+    "forbidden": [
+      "고정 8칸 스키마를 빈칸까지 채운다",
+      "요청하지 않은 보편 리얼리즘·네거티브 토큰을 덧붙인다",
+      "한 컷을 여러 블록이나 여러 샷으로 나눈다",
+      "컴파일 A/B·Tier·끝 AR를 붙인다"
+    ]
+  },
+  {
+    "id": "native-brief-user-headers",
+    "letter": "C",
+    "request": "아래 헤딩 구조와 순서를 유지한 채 GPT Image 2.5용 영어 프롬프트로 완성해줘. 헤딩 이름과 위치를 바꾸지 마. 한 블록이다.\nWARDROBE\n검은 울 코트와 흰 머플러\nSCENE\n늦은 오후 서울 골목, 젖은 아스팔트\nFACE\n한국인 성인 남성, 짧은 머리, 무표정",
+    "expected": [
+      "사용자가 준 WARDROBE·SCENE·FACE 헤딩 이름과 순서를 유지한다",
+      "코트, 머플러, 늦은 오후 서울 골목, 젖은 아스팔트, 성인 남성, 짧은 머리, 무표정을 보존한다",
+      "한 블록으로 납품한다"
+    ],
+    "forbidden": [
+      "SHOT·SUBJECT·LIGHT·REALISM 등 사용자가 주지 않은 헤딩을 앞에 끼워 재배열한다",
+      "헤딩을 없애고 다른 템플릿으로 바꾼다",
+      "카메라·네거티브 보편 목록을 추가한다"
+    ]
+  },
+  {
+    "id": "native-brief-separate-api-settings",
+    "letter": "D",
+    "request": "GPT Image 2.5 직접 API에 넣을 영어 프롬프트와 설정만 구분해 줘. 유리 향수병 하나의 제품 컷아웃. 품질은 high, 크기는 1024x1536, 배경은 투명, 모델은 품질 우선. 프롬프트 본문에 모델 id·quality·size·background를 넣지 마.",
+    "expected": [
+      "유리 향수병 하나의 제품 컷아웃을 영어 프롬프트로 쓴다",
+      "model·quality·size·background는 프롬프트 밖 설정으로 분리한다",
+      "모델 id는 gpt-image-2.5-sunburst 또는 gpt-image-2.5-flare만 쓰고 단축 id를 만들지 않는다"
+    ],
+    "forbidden": [
+      "gpt-image-2.5 같은 단축 id를 만들어 본문이나 설정에 넣는다",
+      "quality·size·background 값을 프롬프트 문장 안에 반복한다",
+      "S1 스키마 enum을 2.5 선택자로 끼워 넣는다"
+    ]
+  },
+  {
+    "id": "native-brief-cli-boundaries",
+    "letter": "E",
+    "request": "네이티브 GPT Image 검사와 컴파일 검사의 경계를 확인한다. 이 사례는 작성 산문이 아니라 check_prompt.mjs CLI 프로브다.",
+    "expected": [
+      "--profile native --engine gpt-image는 텍스트 전용 네이티브 검사다",
+      "native와 --jsonl·--tier·--api·--surface s1은 충돌한다"
+    ],
+    "forbidden": [
+      "native 프로필을 compiled JSONL·Tier 우회로로 쓴다"
+    ]
+  },
+  {
+    "id": "native-brief-other-engines-unchanged",
+    "letter": "F",
+    "request": "아래 네 요청을 각각 독립된 프롬프트로 써줘. GPT Image 2.5 섹션 템플릿을 다른 엔진에 복사하지 마.\n1) Midjourney: 빨간 우산과 젖은 골목, 세로. 해당 엔진 문법만.\n2) Grok Imagine UI: 같은 빨간 우산 골목을 대화형으로. UI 설정은 본문 밖에.\n3) Seedream: 같은 장면을 Seedream 규칙으로.\n4) 영상: 고정 카메라로 우산이 바람에 살짝 흔들리는 3초 안팎의 한 장면. 해당 영상 레인 규칙만.",
+    "expected": [
+      "네 결과를 서로 참조 없이 각각 완결한다",
+      "Midjourney·Grok·Seedream·영상 각각의 기존 문법·설정 경계를 따른다"
+    ],
+    "forbidden": [
+      "GPT Image 2.5 고정 헤딩 템플릿을 네 엔진에 동일하게 적용한다",
+      "다른 엔진에 flare/sunburst·native 2.5 섹션을 이식한다",
+      "영상 요청을 이미지 한 장으로 바꾼다"
+    ]
+  },
+  {
+    "id": "native-brief-sparse-product-no-template",
+    "letter": "G",
+    "request": "GPT Image 2.5용 영어 프롬프트만. 흰 배경, 빨간 머그컵 하나. 끝.",
+    "expected": [
+      "흰 배경과 빨간 머그컵 하나를 영어 한 완결 단위로 쓴다"
+    ],
+    "forbidden": [
+      "SHOT SUBJECT FACE WARDROBE SCENE LIGHT REALISM CONSTRAINTS 템플릿을 빈칸으로라도 강제한다",
+      "요청하지 않은 리얼리즘·네거티브·카메라 토큰을 채운다"
+    ]
   }
 ]
