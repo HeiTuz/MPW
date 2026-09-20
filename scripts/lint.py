@@ -97,8 +97,6 @@ CORE_RUNTIME_NAME_FILES = (
 PLAIN_PATH_WHITELIST = {
     ("agents/README.md", "CLAUDE.md"),
     ("agents/README.md", "INSTALL_FOR_AGENTS.md"),
-    ("references/templates/common.md", "summary.md"),
-    ("references/templates/common.md", "sales.md"),
 }
 # These operational references are deliberately not dispatched from the compact
 # SKILL.md kernel. Keep exceptions explicit: a deleted or newly reachable file

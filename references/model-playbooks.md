@@ -15,7 +15,7 @@
 
 라우팅 원칙:
 
-1. **권한을 만족하는 가장 낮은 capability**를 쓴다. 역할은 권한이고 capability는 난이도다. 특정 역할을 특정 강도에 영구 고정하지 않는다.
+1. **권한·작업 적합성·도구 지원·관측된 성공률·지연·사용 한도**로 고른다. 역할은 책임 범위이며 모델의 고정 서열이 아니다. 사용자가 지정한 모델과 런타임의 고정 역할 설정을 우선한다.
 2. `prime`은 상태·결정·통합·최종 claim을 소유한다. worker가 "완료"를 주장해도 prime이 같은 표면으로 검증하기 전에는 완료가 아니다.
 3. `planner`와 `critic`은 기본 read-only다. 둘 다 쓰는 경우 같은 frozen artifact와 같은 계약을 보게 하고, 둘 다 돌아온 뒤 prime이 결론을 합친다.
 4. `worker`는 target, scope, acceptance, non-goals가 명시된 slice만 받는다. 누락된 acceptance를 worker에게 추론시키지 않는다.
