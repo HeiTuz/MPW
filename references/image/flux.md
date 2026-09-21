@@ -13,8 +13,8 @@
 
 ## 관측 패턴 (재서술)
 
-- **제품 스틸은 조명·카피 공간·금지를 짧게 분리** (관측 2026-09, 출처 2건): 조명의 방향과 성격, 비워 둘 영역, 넣지 않을 요소를 한두 문장으로 끊어 적는다.
-- **매체·광원 대비를 결과 어휘로** (관측 2026-09, 출처 2건): 필름 스톡 이름과 렌즈 수치 대신 매체 특성(medium-format clarity, fine grain)과 광원 대비(overcast daylight + warm tungsten)를 쓴다.
+- **제품 스틸은 조명·카피 공간·금지를 짧게 분리** (관측 2026-09, 출처 4건): 조명의 방향과 성격, 비워 둘 영역, 넣지 않을 요소를 한두 문장으로 끊어 적는다.
+- **매체·광원 대비를 결과 어휘로** (관측 2026-09, 출처 3건): 필름 스톡 이름과 렌즈 수치 대신 매체 특성(medium-format clarity, fine grain)과 광원 대비(overcast daylight + warm tungsten)를 쓴다.
 - **글리프 렌더는 구성 방식부터 잠근다** (관측 2026-09, 출처 1건): 화면 전체가 글리프로 구성된다는 사실과 글리프 종류를 먼저 쓰고 배경·스캔라인·발광을 뒤에 붙인다.
 
 ## 관측된 외부 예시 (재서술)
@@ -49,6 +49,24 @@ Close-up portrait of an elderly fisherman with weathered skin, pale eyes, and wh
 
 ```text
 Portrait of a woman with long wavy hair built entirely from glowing green terminal glyphs — hash marks, digits, code fragments — on solid black, with CRT scanlines and phosphor glow. High contrast, sharp glyph edges.
+```
+
+야경 — 수면 반사 (관측 2026-09, 출처 1건):
+
+```text
+Bioluminescent waves on a night beach, long-exposure look, electric-blue glow in the surf, stars reflected on wet sand under a dark sky.
+```
+
+무드 장면 — 비 오는 네온 거리 (관측 2026-09, 출처 1건):
+
+```text
+Rain-slicked city street at night, neon signs reflected on wet asphalt, a lone pedestrian with an umbrella, deep atmospheric perspective, moody cinematic register.
+```
+
+인테리어 — 채광 중심 (관측 2026-09, 출처 1건):
+
+```text
+Minimalist Japandi living room interior, natural wood and linen, a large window with diffused daylight, unoccupied, architecture-photography register.
 ```
 
 ## 적용 한계

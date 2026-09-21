@@ -145,3 +145,21 @@ a perfectly symmetrical film-still composition of a grand hotel lobby in pastel 
 ```text
 film noir scene, a detective in a fedora and trench coat standing in a dimly lit office, hard shadows from venetian blinds cutting across the walls and floor, cigarette smoke curling through a single shaft of light, wet street visible through the window, black and white high contrast photography, dramatic chiaroscuro lighting, shot on 35mm film with classic noir grain --ar 239:100 --no color
 ```
+
+선택적 디테일의 액션 키 비주얼 (관측 2026-09, 출처 1건):
+
+```text
+dynamic anime key visual of a swordswoman mid-strike, deep crimson robe breaking into jagged painterly shards, highest detail on face, hands and blade while the rest dissolves into abstract motion streaks, near-empty pale background, strong diagonal composition, localized motion blur, cold overexposed light with a single vivid crimson accent --ar 2:3 --stylize 300
+```
+
+정지 피사체와 군중 모션블러의 대비 (관측 2026-09, 출처 1건 — 품질 매직 토큰·장비 수치 제거 후 재서술):
+
+```text
+street portrait of a man standing perfectly still in a crowded crosswalk, sharp focus on his face and coat, the crowd around him streaked with motion blur, shallow depth of field, muted urban palette, soft bokeh, filmic grade --ar 4:5
+```
+
+시리즈 일관성 — 고정 스타일 블록과 슬라이드 번호 (관측 2026-09, 출처 1건): 같은 스타일 서술 블록을 유지하고 피사체·동작과 슬라이드 번호만 바꾼다. 캐릭터·스타일 고정은 §6의 참조 플래그로 연결한다.
+
+```text
+flat-design infographic illustration, woman in a coral blazer holding a piggy bank, clean white background, minimal geometric shapes, coral and navy palette, consistent line weight, editorial style, slide 3 of a finance tips series --ar 9:16 --style raw
+```

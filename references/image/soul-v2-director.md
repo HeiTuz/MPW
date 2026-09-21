@@ -196,6 +196,22 @@ Soul 스틸을 시작 이미지 또는 외형 참조로 쓰려면 실제 영상 
 
 원저자의 136건 분석·129건 빈도는 **외부 보고**이며 MPW가 원자료 전량이나 생성 효과를 재현 검증한 수치가 아니다. 한 계정의 사용 빈도를 모델의 필수 문법으로 승격하지 않는다. 원본의 고정 장문 길이·뷰티/메이크업 의무·피스 수·기본 6장·영한 이중 출력·HEX 필수·본문 부정문 정책은 도입하지 않았다. 프리셋 목록·참조 표기·학습 시간·비용은 현행 실행 표면에서 확인한다. MIT 대상이 아닌 [골든 프롬프트 원문](https://github.com/promptwhat/promptwhat-soul2-skill/blob/24c1e6e051d80546b5aff8c9fb771576849b01aa/soul2-prompt-public/golden-prompts.md)은 복제하지 않는다.
 
+## 관측된 외부 예시 (재서술)
+
+주간 인테이크로 수집된 공개 Soul 계열 프롬프트를 MPW 형식으로 재서술했다. 원문 복사가 아니며 품질 실측이 아닌 관측 스탬프다. 장비명·품질 매직 토큰은 제외했다.
+
+뷰티 클로즈업 — 손에 턱을 얹은 포즈 (관측 2026-09, 출처 1건):
+
+```text
+close-up beauty portrait of a young woman with long dark brown hair and wispy bangs, one eye winking, chin resting on the back of her hand, soft natural makeup with glossy nude-pink lips, bare shoulders, neutral cream studio backdrop, soft diffused lighting, shallow depth of field, warm muted tones
+```
+
+차 안 패션 인물 — 측면 골든광 (관측 2026-09, 출처 1건):
+
+```text
+fashion portrait of a young woman in the back seat of a car, slightly low angle, colorful chunky-knit halter top with horizontal stripes, strong golden sunlight through the side window, deep shadows on the far side of her face, dark leather interior, blurred buildings outside, shallow depth of field, warm filmic grade
+```
+
 ## 최종 체크
 
 요청한 피사체·의복·포즈·구도·카피·출력 수를 보존했는가, 선택한 빛·재질·연속성 조건이 모순되지 않는가, 비요청 장비·장식·정체성을 추가하지 않았는가를 확인한다. 브랜드 앵커를 사용했다면 ≤1+1을 지킨다. 빠진 슬롯 수를 품질 결함으로 세지 않는다.

@@ -195,6 +195,7 @@ The curtain beside the seated person gently lifts toward the window, then drifts
 - **사건을 계기로 카메라를 움직이기** (관측 2026-09, 출처 1건): 정적 유지 뒤 특정 사건이 일어나면 천천히 push-in처럼 카메라 움직임의 계기를 화면 속 사건에 연결한다.
 - **재질·신체의 물리 응답을 별도로 점검** (관측 2026-09, 출처 1건): 피부의 빛 산란·접촉 변형(발이 바닥을 누름)·표정 근육처럼 물리 응답을 장면 묘사와 분리해 확인한다. 실사 증분은 [realism.md](realism.md) §6과 상보한다.
 - **변환·제작 과정의 시간 압축** (관측 2026-09, 출처 1건): 제작·변환 과정을 한 클립에 넣을 때 단계 순서와 각 단계의 결과 상태를 명시하고 중간 과정을 압축한다.
+- **카메라 이동을 첫 문장에 두는 무브-퍼스트 구조** (관측 2026-09, 출처 2건): 샷 종류와 카메라 이동·높이를 첫 문장에 선언하고 피사체·조명·팔레트를 뒤에 둔다. 고정 촬영도 `camera locked`처럼 명시한다.
 
 재서술한 관측 예시:
 
@@ -222,6 +223,14 @@ A quiet convenience store late at night under flickering fluorescent lights. A t
 
 ```text
 A tired office worker rubs his temples in front of a bulky 1980s computer in a cluttered office late at night. Harsh fluorescent overhead light mixed with the green glow of a monochrome monitor. Slightly grainy retro color-film look.
+```
+
+```text
+Low tracking shot gliding at waist height through a dense bamboo forest, stalks passing on both sides of the frame. Dappled sunlight, a light breeze moving the leaves, green and gold palette.
+```
+
+```text
+Aurora over a still lake at night. Green and violet bands shift slowly across a starry sky, mirrored in the water. Wide lens, camera locked off for the full duration.
 ```
 
 ## 근거와 적용 한계
