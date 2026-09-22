@@ -100,7 +100,7 @@ non_diegetic_music: ...
 
 ## 시간과 카메라
 
-- 서술의 시간 예산은 요청한 영상 길이와 맞춘다. 공식 지침은 묘사된 타임라인을 요청 길이(4–15초)에 맞추라고 지시한다.
+- 서술의 시간 예산은 요청한 영상 길이와 맞춘다. 공식 지침은 묘사된 타임라인을 요청 길이(4–15초)에 맞추라고 지시한다. 실제로 요청할 수 있는 길이는 표면마다 다르므로 [surface-evidence.md](surface-evidence.md) §7을 따른다.
 - 첫 샷 `[Shot 1]`에는 타임스탬프를 붙이지 않는다. 이후 샷은 `[Shot N] At MM:SS.mmm, ...`으로 컷 시점을 표기한다. 일반 전환은 `the camera cuts to`·`the shot cuts to` 등으로 쓰고, 명시 요청이 있을 때만 cross-dissolve·fade·wipe를 쓴다. 컷은 새 정보(피사체·공간·상태·시점·시간)를 도입할 때만 쓰고, 거리·각도만 바뀌면 카메라 모션으로 처리한다.
 - 카메라 모션은 `motion type + amplitude + speed` 세 축으로, 샷 안의 자연어 동작으로 쓴다. 어휘: `Zoom In/Out`, `Push In/Pull Out`, `Pan Left/Right`, `Truck Left/Right`, `Tilt Up/Down`, `Pedestal Up/Down`, `Arc Shot`, `Tracking Shot`, `Static Shot`, `Shake Slightly/Strongly`, `POV`, `Roll Clockwise/Counterclockwise` + 의미 있을 때만 `with small/large amplitude`·`at slow/fast speed`. 문장 끝에 라벨을 쌓지 않는다.
 - 모드별 권장 구조: I2VA = 첫 프레임 앵커 → 동작 시작 → 연속 전개 → 결과·반응. FL2VA = 첫 프레임 상태 → 관측 가능한 중간 변화 → 차이의 점진적 축소 → 끝 프레임 상태, 단일 샷을 기본으로 한다. L2VA = 그럴듯한 이전 상태 → 명시적 행동·전환 경로 → 마지막 샷의 점진적 수렴 → 끝 프레임 도달.
@@ -176,7 +176,7 @@ N/A
 
 - 라벨형 구조는 공식 지침의 재서술 형식이며 API의 강제 입력 스키마가 아니다 — `content[]`의 `text` 하나가 필수 요건이고 자유 문장도 받는다.
 - 표면별 값이 다르다. 공식 API(`MiniMax-H3`·`MiniMax-H3-Max`)와 Higgsfield 래퍼(`minimax_h3`·`minimax_h3_max`)는 해상도·duration·지원 모드·참조 롤이 서로 다르다. 값과 확인일, Higgsfield 경유 참조 조합 실측은 [surface-evidence.md](surface-evidence.md) §7의 MiniMax H3 API 표면·Higgsfield 로스터·참조 실측 행이 정본이며 여기서 다시 적지 않는다.
-- 출력은 24fps·32kHz 스테레오 오디오 동시 생성(2026-09-18 확인). 오픈웨이트 배포 변형은 H3-Base-FL2VA(텍스트+첫/끝 프레임)·H3-Base-Ref2VA(참조) 두 계열이고, H3-Context-IR(입력 해석·구조화)과 H3-Regenerate-2K(2K 재생성)는 호스팅 구성 요소다.
+- 출력은 영상과 오디오를 함께 생성한다(프레임레이트·샘플레이트는 [surface-evidence.md](surface-evidence.md) §7). 오픈웨이트 배포 변형은 H3-Base-FL2VA(텍스트+첫/끝 프레임)·H3-Base-Ref2VA(참조) 두 계열이고, H3-Context-IR(입력 해석·구조화)과 H3-Regenerate-2K(2K 재생성)는 호스팅 구성 요소다.
 - "작성 가이드는 따옴표 대사를 쓴다"는 서드파티 보고가 있었으나, 현행 공식 지침은 대사를 `<d>[Language] 원문</d>`으로 문서화한다(2026-09-18 원문 확인). 큰따옴표는 화면 표기 텍스트용이다.
 - 사용 제약: 오픈웨이트 라이선스는 EU·영국·한국·미국을 제외 지역으로 두고 해당 지역의 자체 호스팅은 별도 라이선스 신청이 필요하며, 공식 클라우드 API는 전 세계에서 쓸 수 있다(2026-09-18 확인). 프롬프트 작성과 별개의 배포 제약이다.
 - 위 예시는 구조에 맞춰 새로 쓴 것이며 생성 품질·지시 준수를 실측하지 않았다. 실패 모드는 서드파티 관측이고, 모델·표면이 갱신되면 다시 판정한다.

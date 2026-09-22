@@ -33,7 +33,6 @@ if (!completeAgentTree(root)) {
 const installer = path.join(distributionRoot, "scripts", "install.mjs");
 const targets = ["claude", "gpt", "codex", "hermes"];
 const required = [
-  "references/image/ghost-character-reference-sheet.md",
   "SKILL.md",
   "references/templates.md",
   "references/templates/common.md",
@@ -56,6 +55,7 @@ const required = [
   "references/image/seedance-2.md",
   "references/image/seedance-2-5.md",
   "references/image/higgsfield-genjutsu.md",
+  "references/image/ghost-character-reference-sheet.md",
 ];
 const sharedCore = required.filter((relative) => relative !== "SKILL.md");
 const adapterHeadings = {
