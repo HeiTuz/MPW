@@ -32,7 +32,7 @@ import calendar, json, re, sys, unicodedata, pathlib
 from datetime import date
 
 ROOT = pathlib.Path(__file__).absolute().parent.parent
-FILES = ["SKILL.md", "references/image/from-image.md", "references/templates.md", "references/model-playbooks.md", "references/adapters.md",
+FILES = ["references/image/ghost-character-reference-sheet.md", "SKILL.md", "references/image/from-image.md", "references/templates.md", "references/model-playbooks.md", "references/adapters.md",
          "references/templates/common.md", "references/templates/delegation.md", "references/templates/contract.md",
          "references/templates/goal.md", "references/templates/team.md", "references/templates/business.md",
          "references/templates/model.md", "references/templates/design.md",

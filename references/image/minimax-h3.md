@@ -175,7 +175,7 @@ N/A
 ## 적용 한계
 
 - 라벨형 구조는 공식 지침의 재서술 형식이며 API의 강제 입력 스키마가 아니다 — `content[]`의 `text` 하나가 필수 요건이고 자유 문장도 받는다.
-- 표면별 값이 다르다. 공식 API에서 `MiniMax-H3`는 768P/2K·4–15초, `MiniMax-H3-Max`는 480P/768P·5–15초(`prompt_expansion_mode` 옵션 있음). Higgsfield 로스터의 `minimax_h3`는 `2K` 단일·4–15초, `minimax_h3_max`는 480p/768p·5–15초로 노출된다(2026-09-18 런타임 확인). 공식 문서는 `MiniMax-H3-Max`가 T2V·I2V·Reference Generation을 지원한다고 밝힌다(2026-09-18 가이드 확인). Higgsfield 래퍼의 `minimax_h3_max`는 모델 상세가 `minimax_h3`와 같은 롤 목록을 노출한다. **Higgsfield 경유 실측 — 이미지 참조 2장이 `image_references`로 매핑돼 생성에 성공했고, 결과가 프롬프트의 배치대로 재현됐다**(2026-09 실측)(1344×768·24fps·5.17초·AAC 오디오). 영상·오디오 참조 조합도 Higgsfield 경유 실측에서 생성에 성공했다(`video_references`·`audio_references` 매핑) (2026-09 실측).
+- 표면별 값이 다르다. 공식 API(`MiniMax-H3`·`MiniMax-H3-Max`)와 Higgsfield 래퍼(`minimax_h3`·`minimax_h3_max`)는 해상도·duration·지원 모드·참조 롤이 서로 다르다. 값과 확인일, Higgsfield 경유 참조 조합 실측은 [surface-evidence.md](surface-evidence.md) §7의 MiniMax H3 API 표면·Higgsfield 로스터·참조 실측 행이 정본이며 여기서 다시 적지 않는다.
 - 출력은 24fps·32kHz 스테레오 오디오 동시 생성(2026-09-18 확인). 오픈웨이트 배포 변형은 H3-Base-FL2VA(텍스트+첫/끝 프레임)·H3-Base-Ref2VA(참조) 두 계열이고, H3-Context-IR(입력 해석·구조화)과 H3-Regenerate-2K(2K 재생성)는 호스팅 구성 요소다.
 - "작성 가이드는 따옴표 대사를 쓴다"는 서드파티 보고가 있었으나, 현행 공식 지침은 대사를 `<d>[Language] 원문</d>`으로 문서화한다(2026-09-18 원문 확인). 큰따옴표는 화면 표기 텍스트용이다.
 - 사용 제약: 오픈웨이트 라이선스는 EU·영국·한국·미국을 제외 지역으로 두고 해당 지역의 자체 호스팅은 별도 라이선스 신청이 필요하며, 공식 클라우드 API는 전 세계에서 쓸 수 있다(2026-09-18 확인). 프롬프트 작성과 별개의 배포 제약이다.
