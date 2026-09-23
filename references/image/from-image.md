@@ -259,7 +259,7 @@ ref-01 | I8 렌더 텍스트 | unreadable 0.9 | 좌상단에 4~6글자 상당 �
 
 관찰 레코드는 하나이고, `feeds` 엣지도 하나이고, 컴파일만 타깃 수만큼 생긴다([prompt-graph.md](../prompt-graph.md) §5). 타깃마다 레코드를 다시 만들지 않는다.
 
-**타깃 기본값:** 실행 경로·모델 선택이 필요한 요청에서만 [model-routing.md](model-routing.md) §4의 표면별 기본값을 따른다. 대상 미정의 문안만 필요하면 모델을 고르지 않는다. 직접 API의 GPT Image 2.5 선택과 S1의 기존 engine enum을 구분한다. **Higgsfield는 모델 id로 지정되어 들어온다**(`soul_2`·`nano_banana_pro`·`seedream_v5_pro` 등) — 그 지정 자체가 라우팅 결정이므로 다시 라우팅하지 않는다.
+**타깃 기본값:** 실행 경로·모델 선택이 필요한 요청에서만 [model-routing.md](model-routing.md) §4의 표면별 기본값을 따른다. 대상 미정의 이미지 문안은 [surfaces.md](surfaces.md) §0의 기본 작성 경로를 따른다. 직접 API의 GPT Image 2.5 선택과 S1의 기존 engine enum을 구분한다. **Higgsfield는 모델 id로 지정되어 들어온다**(`soul_2`·`nano_banana_pro`·`seedream_v5_pro` 등) — 그 지정 자체가 라우팅 결정이므로 다시 라우팅하지 않는다.
 
 ### 6.1 타깃 대조표
 

@@ -42,7 +42,7 @@ metadata:
 - **결과와 고정 조건:** 대상, 입력 역할, 정확 문구, 수량, 변경·보존 범위, 출력 형식. 조건이 프롬프트 응답에 적용되는지, 만들어질 결과물에 적용되는지도 구분한다. 이미 있는 조건은 다시 묻지 않는다.
 - **창작 가능한 부분:** 사용자가 기획·연출을 맡겼다면 목적에 맞는 구체적 선택을 한다. 지정 축만 고치는 작업에서는 새 스타일·수치·절차를 추가하지 않는다. 창작 선택을 사용자 요구나 확인된 사실로 표현하지 않는다.
 - **빈칸과 충돌:** 대화와 제공 자료로 해결하고, 결과에 영향 없는 빈칸은 생략한다. 정확성·범위·권한을 바꾸는 미결 사항만 묻는다. 나중에 입력을 넣어 쓸 템플릿은 입력 위치와 역할을 표시하면 된다. 지금 필요하지 않은 자료를 요구하지 않는다.
-- **수신 환경:** 접근 가능한 자료와 실제로 주어진 도구만 전제한다. 이미 제공된 입력은 수신자에게 전달하고 빈 자리표시자로 바꾸지 않는다. 재사용 템플릿을 요청한 경우에만 가변 입력으로 분리한다. 대상 미정이면 일반 자연어로 작성하며 모델·플랫폼을 임의로 고르지 않는다. 지원 여부가 필요한 문법·필드만 현재 계약에서 확인한다.
+- **수신 환경:** 접근 가능한 자료와 실제로 주어진 도구만 전제한다. 이미 제공된 입력은 수신자에게 전달하고 빈 자리표시자로 바꾸지 않는다. 재사용 템플릿을 요청한 경우에만 가변 입력으로 분리한다. 이미지 생성·편집 프롬프트의 대상이 미정이면 [surfaces.md](references/image/surfaces.md) §0의 기본 작성 경로를 따른다. 그 외 대상 미정 요청은 일반 자연어로 작성하며 모델·플랫폼을 임의로 고르지 않는다. 지원 여부가 필요한 문법·필드만 현재 계약에서 확인한다.
 
 언어는 **명시 지정 → 재사용·부분 수정의 원문 → 새 이미지·영상 생성 모델 프롬프트는 영어 → 나머지는 수신자·작업 언어(불명이면 요청 언어)** 순이다. HyperFrames 제작 에이전트에게 주는 작업 지시는 생성 모델 입력과 구별해 수신자·작업 언어로 쓴다. 정확 카피·대사·코드·경로와 최종 산출물의 언어는 보존한다. 설명과 질문은 대화 언어로 쓴다. 세부 예시는 [common.md](references/templates/common.md) §프롬프트 언어 결정에 있다.
 
@@ -57,7 +57,7 @@ metadata:
 | 리서치·추출·연속 처리 | [model.md](references/templates/model.md); 출처 판정은 [research.md](references/research.md), 실행 단위 사이 입력·출력이 얽히면 [prompt-graph.md](references/prompt-graph.md) §5 |
 | 업무 고유 형식 | [business.md](references/templates/business.md); 덱은 [slides.md](references/slides.md), UI는 [design.md](references/templates/design.md) |
 | 이미지·영상의 문법·파라미터·길이 제한 | [surfaces.md](references/image/surfaces.md) → [surface-contracts.md](references/image/surface-contracts.md)의 해당 표면만. 대상 미정의 자연어 초안에는 API 조회·모델 선정을 요구하지 않는다 |
-| GPT Image 2.5 네이티브 생성 브리프 | [surface-contracts.md](references/image/surface-contracts.md) §3.2. 단순 얼굴·제품·장면은 짧은 완결 문단, 복잡한 상호의존만 필요한 자연어 구획 |
+| 대상 미정 이미지 문안 또는 GPT Image 2.5 네이티브 브리프 | [surface-contracts.md](references/image/surface-contracts.md) §3.2를 읽고 공식 작성 기준을 적용한다. 웹용 경계는 웹 문안에만 적용하며, 이미 읽은 규칙은 재사용한다 |
 | 캐릭터시트·고스트 캐릭터 레퍼런스 프롬프트 | 양식 선택은 [ghost-character-reference-sheet.md](references/image/ghost-character-reference-sheet.md) §1 |
 | 참조 이미지의 역할·관찰이 필요함 | [from-image.md](references/image/from-image.md) §1. 원본 편집은 변경·보존 조건으로 바로 작성; 상세 관찰·취향 변주는 요청될 때만 |
 | 합성·전문 이미지·영상 연출 | [lanes.md](references/image/lanes.md)의 해당 절만. 엔진별 문법 위치는 [model-routing.md](references/image/model-routing.md) §4의 링크에서 찾는다. 모델 추천 요청도 이 파일에서 시작한다 |
