@@ -27,6 +27,10 @@
 | `mpw-recompile-request/v1` | `mpw-recompile-request.schema.json` | MPW 스크립트 없음(외부 생산) | `contracts/validate.py` | 전용 문서 없음 — 스키마와 [contracts.md](contracts.md) 인터페이스 표 |
 | `source-evidence-index/v1` | `source-evidence-index.schema.json` | MPW 스크립트 없음(외부 생산) | `contracts/validate.py` | 전용 문서 없음 — 스키마와 [contracts.md](contracts.md) 인터페이스 표 |
 
+## 실행 배선의 적용 범위
+
+아래 생성·소비자 호출은 사용자가 실행까지 요청하거나 실행 옵션을 선택한 경우에 현재 호스트 세션이 수행한다. 문안 작성만 요청하면 완성 프롬프트에서 멈추고 설치·연결 확인·생성 호출을 실행하지 않는다. 실행과 QC는 선택한 도구의 스킬·현재 계약을 따른다. 옵션 목록 자체도 [common.md](templates/common.md) §후속 선택이 허용할 때만 낸다.
+
 ## 의류 핸드오프 소비자
 
 스키마·생성 명령·규칙 정본은 위 인덱스 표에 있다. 이 절은 런타임 소비 배선만 기록한다. 런타임은 네트워크 호출 없이 핸드오프 파일을 읽어 후보 작업을 준비한다. Hermes 설치에서는 `ImgGen2`가 소비자이며, 핸드오프의 `unique_color_count`와 검증된 `vision_role_map`을 다시 확인한 뒤 동일한 전체 인벤토리를 가진 격리 작업을 만든다. 알 수 없는 버전이나 불일치는 자유형 프롬프트로 강등하지 않고 거부한다.
@@ -58,22 +62,21 @@ IMAGE 컴파일을 마친 턴의 "다음" 목록 마지막 번호는, 아래 조
 - 설치/발견: `npx --yes --allow-git=all --package github:HeiTuz/MPW heituzmpw -- --target claude`. 소스에서 설치할 때는 스킬 검색 경로 밖의 체크아웃에서 `node scripts/install.mjs --target claude`를 실행한다([README.md](../README.md)).
 - 역할 매핑: 단일 Claude 세션이면 prime이 기본이다. 하위 에이전트나 task 기능이 있으면 planner는 read-only 조사, worker는 bounded edit/research, critic은 frozen artifact review로 보낸다.
 - 모델 선택 위치: Claude 앱/CLI/프로젝트 설정. 이 저장소에는 모델명이나 plan 이름을 쓰지 않는다.
-- fallback: per-role 모델 라우팅이 없으면 같은 세션에서 역할 헤더만 바꾼다. worker 결과는 prime이 다시 읽고 검증한다.
+- fallback: [model-playbooks.md](model-playbooks.md) §역할·권한 라우팅의 단일 모델 경로를 따른다.
 
 ## GPT/Codex
 
 - 설치/발견: `npx --yes --allow-git=all --package github:HeiTuz/MPW heituzmpw -- --target codex` 또는 `--target gpt`; 둘 다 `~/.codex/skills/MPW`에 설치한다.
 - 역할 매핑: Codex coding surface는 prime으로 운용한다. native subagent가 있으면 planner=read-only planning/research, worker=bounded implementation, critic=independent verifier로 할당한다.
 - 모델 선택 위치: Codex profile, model picker, CLI config, or API caller configuration. 공개 routing vocabulary는 fast/read-only, balanced/agentic, strongest-reasoning/high-risk만 쓴다.
-- fallback: subagent/per-role model routing이 없으면 prime 단일 세션이 topology-first intake, decomposition, implementation, and surface-matched verification을 순서대로 수행한다.
+- fallback: [model-playbooks.md](model-playbooks.md) §역할·권한 라우팅의 단일 모델 경로를 따른다.
 
 ## Hermes
 
 - 설치/발견: `--target hermes`는 `~/.hermes/skills/prompt-writing/MPW`에 설치한다. 인자 없는 `npx --yes --allow-git=all --package github:HeiTuz/MPW heituzmpw`의 기본 감지 대상은 Claude Code다. `--allow-git=all`은 npm 12의 git 패키지 기본 차단(`allow-git=none`)을 명령 단위로 여는 플래그다.
 - 역할 매핑: Hermes skill invocation이 prime이다. Hermes에 planner/worker/reviewer skill 또는 agent lane이 있으면 core 역할에 매핑한다. 로컬 전용 경로나 동반 workflow 이름은 공개 core로 올리지 않는다.
 - 모델 선택 위치: Hermes runtime config. 이 저장소는 로컬 선택값이나 채널 선택값을 쓰지 않는다.
-- fallback: role lanes가 없으면 Hermes prime이 단일 실행 계약을 산출하고, critic 역할은 최종 self-check checklist로 축소한다.
-- 생성 실행 표면: 이 스킬은 IMAGE 컴파일을 끝낸 완성 프롬프트를 반환한다. 실제 생성은 사용자가 선택한 이미지·영상 도구가 담당하며, 비율·프리셋·미디어 참조 같은 구조화 옵션은 해당 도구 호출에 직접 전달한다. Hermes 런타임에 higgsfield MCP(mcp__higgsfield__*)가 연결돼 있으면 실행·QC·아티팩트는 설치가 공급한 로컬 실행 어댑터가 담당한다.
+- fallback: [model-playbooks.md](model-playbooks.md) §역할·권한 라우팅의 단일 모델 경로를 따른다.
 
 ## 어댑터 작성 규칙
 

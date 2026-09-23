@@ -1,6 +1,6 @@
 # Image reference editing prompt pitfalls
 
-Use this when the user provides multiple images and asks for image edit / composite / generation prompts.
+Use this when multiple image references create a real ambiguity about which image controls which property. The examples below describe one pose-transfer case; their objects, pose, lighting, and wording are not defaults for other requests. Input-role rules live in [from-image.md](image/from-image.md).
 
 ## Source-priority lock
 
@@ -16,11 +16,11 @@ Why: if the prompt says "composite image 1 into image 2" or treats the scene ref
 
 ## Single-block output
 
-For a single image edit, output one paste-ready code block. Merge main instruction, pose/composition, prop replacement, tone/lighting, and constraints into that one block. Do not split "main prompt" and "negative prompt" unless the user explicitly asks for separate fields.
+For a single image edit, keep the requested conditions in one self-contained prompt. Use only the relevant axes, not every axis in this example. Packaging follows [SKILL.md](../SKILL.md) §Output format; separate negative fields or inline syntax follow the actual surface in [surface-contracts.md](image/surface-contracts.md) §4.
 
 ## Pose/composition specificity
 
-For reference-pose transfer, describe the geometry, not only the mood:
+For reference-pose transfer, describe the observed geometry relevant to the requested transfer, not only the mood. Example details for the tower-perching case (use only when supported by the actual request/reference):
 
 - vertical full-body composition
 - subject placed in the upper third
@@ -34,7 +34,7 @@ For reference-pose transfer, describe the geometry, not only the mood:
 - slightly low camera to make the tower feel tall
 - clean white negative space around the object
 
-These details prevent the model from defaulting to a floor-standing fashion pose.
+In this example, those details distinguish the intended perched pose from standing on the floor; they are not a guarantee of generated pose accuracy.
 
 ## Prop replacement without leakage
 
@@ -44,11 +44,11 @@ If replacing a chair/object tower with another material, explicitly replace the 
 Replace the entire chair tower with a sculptural tower made only of loose denim jeans. Build base, middle, and top from layered blue denim... every visible part is denim fabric.
 ```
 
-Then add compact constraints: `no chairs or chair parts, no hidden chair silhouettes`.
+Keep the material boundary specific to the replacement. For natural-language surfaces, prefer the positive whole-structure instruction above; express any necessary exclusion using the surface contract rather than appending a stock negative list.
 
 ## Tone reference extraction
 
-When the user adds a tone/mood reference, extract observable rendering traits and insert them as a dedicated `Tone and lighting:` paragraph. Example for early-2000s magazine scan mood:
+When the user adds a tone/mood reference, extract its relevant observable rendering traits. A dedicated paragraph is optional and must respect any existing user format. Example for early-2000s magazine scan mood:
 
 ```text
 Tone and lighting: early-2000s glossy magazine scan, warm cream-white background, direct soft frontal flash with warm top fill, gentle falloff shadows, slightly overexposed whites, low-to-medium contrast, warm beige skin highlights, muted indigo denim, faint yellow cast, subtle film grain, soft halation, printed editorial texture, not digital-clean.

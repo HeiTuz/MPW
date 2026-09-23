@@ -19,7 +19,7 @@
 2. `prime`은 상태·결정·통합·최종 claim을 소유한다. worker가 "완료"를 주장해도 prime이 같은 표면으로 검증하기 전에는 완료가 아니다.
 3. `planner`와 `critic`은 기본 read-only다. 둘 다 쓰는 경우 같은 frozen artifact와 같은 계약을 보게 하고, 둘 다 돌아온 뒤 prime이 결론을 합친다.
 4. `worker`는 target, scope, acceptance, non-goals가 명시된 slice만 받는다. 누락된 acceptance를 worker에게 추론시키지 않는다.
-5. per-role routing이 없는 런타임은 같은 모델에 역할 헤더만 붙인다. 역할 권한은 유지하고 모델명 고정은 하지 않는다.
+5. per-role routing이 없으면 가능한 작업을 같은 모델에서 역할별로 순차 수행하고 권한·검증 범위를 유지한다. 같은 세션의 역할 전환이나 자기 검수를 독립 검토로 보고하지 않는다. 별도 검토자가 필수인 요청에서 지원이 없으면 그 미충족 조건을 명시한다. 모델명 고정이나 가상의 에이전트 호출로 대신하지 않는다.
 
 ## 컨텍스트 운용
 
@@ -140,3 +140,14 @@ Join gate: 실제 배정한 worker 산출물과 요청된 planner/critic/verifie
 - **프롬프트 캐시.** 안정된 지시·도구 정의·참고 자료를 접두부에 두고 타임스탬프·사용자별 값은 뒤로 보낸다. 이전 턴은 덧붙이기만 하며 요약·압축·절단은 접두부를 바꿔 재사용을 끊는다. 도구는 정의·순서·스키마를 유지하고 `tool_choice: none`·`allowed_tools`로 사용 여부만 바꾼다. 확인일 기준 GPT-5.6 이상은 최소 캐시 길이 1,024토큰, 쓰기 1.25×·읽기 0.1× 요율, implicit/explicit 모드와 요청당 최대 4개 브레이크포인트, 상위 `instructions`에는 explicit 브레이크포인트를 둘 수 없음. GPT-6 계열은 `configuration_update` 항목으로 접두부를 유지한 채 추론 강도를 바꾼다. 값은 모델·시점에 따라 달라지므로 인계 전에 현재 문서로 재확인한다.
 - **프롬프트는 코드다.** 재사용 프롬프트 객체(`v1/prompts`, 프롬프트 ID·버전)는 2026-06-03부터 비권장, 2026-11-30 종료 예정이다. 새 작업은 코드 모듈·타입 있는 인자·fixture와 평가·배포 절차로 관리하고, 기존 프롬프트 ID 호출은 [이행 가이드](https://developers.openai.com/api/docs/guides/prompting/migrate-from-prompt-object)를 따른다.
 - **에이전트·코딩·프런트엔드.** 문서의 에이전트 권장은 완전 해결까지 지속·주요 단계의 도구 호출 전 설명·TODO 추적, 코딩 권장은 역할·도구 사용 예시·테스트 요구·마크다운 규약이며 §목적 블록에 반영했다. 프런트엔드 신규 앱에는 Tailwind CSS·shadcn/ui·Radix Themes, Lucide·Material Symbols·Heroicons, Motion을 권장하지만, 기존 코드베이스는 프로젝트 스택이 우선이며 [design.md](templates/design.md)의 조건을 따른다.
+
+
+### 2026-09-24 — 형식 준수와 제공사별 적용 범위
+
+실제 작성 응답의 형식 오류를 줄이기 위해 공식 문서를 대조했다. 아래는 문서 권고이며 모든 모델의 성능 보증이나 설정 변경 허가가 아니다. 공통 작성 절차는 [common.md](templates/common.md) §형식이 자주 어긋나는 요청을 따른다.
+
+- **OpenAI:** 추론 모델에는 명확한 목표·제약과 구분자를 먼저 쓰고, 예시 없이 시작해 필요한 형식 경계에만 일치하는 예시를 추가한다. 사고 과정 공개를 요구하지 않는다. API의 `Formatting re-enabled` 안내를 모든 호스트·모델의 상용구로 넣지 않는다. [추론 모델 공식 가이드](https://developers.openai.com/api/docs/guides/reasoning-best-practices).
+- **GPT-6 공유 스킬:** 공식 가이드의 행동 보정 예시는 Astra에서 관측된 것이므로 Sol·Luna에 적용할 때도 같은 작업으로 평가한다. 공유 스킬에서 Astra에 맞춘 간소화를 이유로 다른 작성 모델에 필요한 형식·보존 계약까지 지우지 않는다. 모델별 절차는 필요할 때만 붙이고 완료 조건은 유지한다. [GPT-6 가이드](https://developers.openai.com/api/docs/guides/latest-model#prompting-best-practices), [공유 스킬 재검토 안내](https://developers.openai.com/blog/rethinking-skills-and-prompts-for-gpt-6-astra).
+- **Anthropic:** 원하는 출력 형태를 명시하고, 실제 과제와 닮은 다양한 예시 및 지시·입력 경계를 사용한다. 프롬프트의 서식도 답변 서식에 영향을 줄 수 있으므로 형식 예시가 출력 계약과 맞는지 확인한다. 문서의 3–5개 예시 권고를 타사 모델·단순 요청의 의무로 만들지 않는다. [공식 프롬프팅 가이드](https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices).
+- **Gemini:** 명확한 과제·제약, 일관된 구분자, 핵심 형식 지시의 앞쪽 배치와 긴 자료 뒤 구체 질문을 권고한다. few-shot 예시의 서식·공백·구분을 일관되게 유지하고 개수는 평가로 조정한다. 특정 모델용 날짜·지식 기준일 예시는 다른 모델에 복사하지 않는다. [공식 프롬프트 설계](https://ai.google.dev/gemini-api/docs/prompting-strategies).
+- **DeepSeek 직접 API:** JSON Output은 `response_format: {"type":"json_object"}`와 프롬프트 안 JSON 요구·형식 예시를 함께 사용하는 계약이다. 출력 토큰 부족에 따른 잘림과 문서에 명시된 빈 content 가능성을 검사한다. 이를 스키마 강제나 일반 채팅 UI 지원으로 설명하지 않는다. [JSON Output](https://api-docs.deepseek.com/guides/json_mode).

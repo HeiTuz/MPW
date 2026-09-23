@@ -1,4 +1,4 @@
 {
   "input": "다음 분기 고객 이탈을 줄이기 위한 사업 제안서 프롬프트를 만들어줘.",
-  "expected": "Write a proposal to reduce customer churn next quarter for executive decision-making. Present one recommendation and its expected effects in the first paragraph, then connect the supporting data, implementation cost, responsible organization, and measurement metrics. Definition of Done: include 1 recommendation, the basis for calculating the cost and expected effects, a method for measuring monthly churn, and the decisions required for approval."
+  "expected": "다음 분기의 고객 이탈을 줄이기 위한 사업 제안서를 작성하라. 제공된 고객 이탈 자료에서 원인을 검토하고, 근거가 있는 개선안과 필요한 실행 자원·비용·효과 측정 방법을 연결하라. 없는 자료나 기대 효과 수치를 만들지 말고, 확인된 사실과 제안의 가정 및 의사결정에 필요한 추가 정보를 구분하라."
 }

@@ -1,4 +1,4 @@
 {
   "input": "로그인 실패 횟수 제한 기능을 구현하는 코딩 에이전트 프롬프트를 만들어줘.",
-  "expected": "Implement a feature that limits authentication attempts for 15 minutes when 5 login failures accumulate for the same account. First inspect the existing authentication flow and error response format, then cover failure accumulation, reset on success, and lockout expiration with tests. Definition of Done: automated tests for the boundary values of 4 failures, 5 failures, and expiration pass, and the completion report records the changed files, validation performed, and remaining risks."
+  "expected": "기존 인증 흐름과 설정된 보안 정책을 확인한 뒤 로그인 실패 횟수 제한 기능을 구현하라. 제한 기준이 없으면 횟수·제한 시간·집계 대상·해제 조건을 임의로 고정하지 말고 먼저 확인하라. 기존 오류 응답 형식을 유지하고 무관한 리팩터링은 하지 않는다. 완료 기준: 확정된 정책의 임계값 직전·도달·해제 경계 테스트를 통과하고 변경 파일, 실제 검증 결과, 남은 한계를 보고한다."
 }
