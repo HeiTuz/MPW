@@ -45,7 +45,7 @@ metadata:
 - **빈칸과 충돌:** 대화와 제공 자료로 해결하고, 결과에 영향 없는 빈칸은 생략한다. 정확성·범위·권한을 바꾸는 미결 사항만 묻는다. 나중에 입력을 넣어 쓸 템플릿은 입력 위치와 역할을 표시하면 된다. 지금 필요하지 않은 자료를 요구하지 않는다.
 - **수신 환경:** 접근 가능한 자료와 실제로 주어진 도구만 전제한다. 이미 제공된 입력은 수신자에게 전달하고 빈 자리표시자로 바꾸지 않는다. 재사용 템플릿을 요청한 경우에만 가변 입력으로 분리한다. 대상 미정이면 일반 자연어로 작성하며 모델·플랫폼을 임의로 고르지 않는다. 지원 여부가 필요한 문법·필드만 현재 계약에서 확인한다.
 
-언어는 **명시 지정 → 재사용·부분 수정의 원문 → 새 이미지·영상 프롬프트는 영어 → 나머지는 수신자·작업 언어(불명이면 요청 언어)** 순이다. 정확 카피·대사·코드·경로와 최종 산출물의 언어는 보존한다. 설명과 질문은 대화 언어로 쓴다. 세부 예시는 [common.md](references/templates/common.md) §프롬프트 언어 결정에 있다.
+언어는 **명시 지정 → 재사용·부분 수정의 원문 → 새 이미지·영상 생성 모델 프롬프트는 영어 → 나머지는 수신자·작업 언어(불명이면 요청 언어)** 순이다. HyperFrames 제작 에이전트에게 주는 작업 지시는 생성 모델 입력과 구별해 수신자·작업 언어로 쓴다. 정확 카피·대사·코드·경로와 최종 산출물의 언어는 보존한다. 설명과 질문은 대화 언어로 쓴다. 세부 예시는 [common.md](references/templates/common.md) §프롬프트 언어 결정에 있다.
 
 ## 필요한 자료만 읽는다
 
@@ -62,6 +62,7 @@ metadata:
 | 캐릭터시트·고스트 캐릭터 레퍼런스 프롬프트 | 양식 선택은 [ghost-character-reference-sheet.md](references/image/ghost-character-reference-sheet.md) §1 |
 | 참조 이미지의 역할·관찰이 필요함 | [from-image.md](references/image/from-image.md) §1. 원본 편집은 변경·보존 조건으로 바로 작성; 상세 관찰·취향 변주는 요청될 때만 |
 | 합성·전문 이미지·영상 연출 | [lanes.md](references/image/lanes.md)의 해당 절만. 엔진별 문법 위치는 [model-routing.md](references/image/model-routing.md) §4의 링크에서 찾는다. 모델 추천 요청도 이 파일에서 시작한다 |
+| HyperFrames 프로젝트를 만드는 에이전트에게 줄 제작·수정 지시 | [hyperframes-prompting.md](references/hyperframes-prompting.md). 영상 생성 모델의 단일 클립 프롬프트와 구별한다 |
 | 특정 텍스트 모델 적응·팀의 역할 배분 | [model-playbooks.md](references/model-playbooks.md). 실제 호출 배선이 필요할 때만 [adapters.md](references/adapters.md) |
 | 명시된 MPW 기계 형식 | [contracts.md](references/contracts.md), GardenRecipe·PromptBundle은 [garden-recipe-compiler.md](references/garden-recipe-compiler.md). 자연어 초안에는 컴파일 형식을 강제하지 않는다 |
 
