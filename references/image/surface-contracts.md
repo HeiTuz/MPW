@@ -51,13 +51,25 @@
 
 새 생성은 용도·주체·구도·눈에 보이는 스타일·필수 조건을 짧은 완결본으로 쓴다. 짧은 문장·서술 문단·JSON형 구조·지시문·태그는 모두 같은 의도를 전달할 수 있으므로 읽고 고치기 쉬운 형식을 고르고, 특수 문법이 결과를 보장한다고 보지 않는다. 2.5라는 이유로 고정 템플릿이나 긴 태그 묶음을 붙이지 않는다. 네이티브 생성 브리프는 MPW 컴파일 형식·Tier·JSON 계약이 아니다. 아래는 [공식 프롬프팅 가이드](https://developers.openai.com/api/docs/guides/image-prompting?model=gpt-image-2.5)(2026-09-23 재확인)를 반영한 작성 기준이며 생성 품질 실측 결과는 아니다.
 
-**ChatGPT 웹에 붙여넣을 때.** 기본 경로의 적용 범위·우선순위는 [surfaces.md](surfaces.md) §0을 따른다. 완성본은 자연어 블록으로 납품한다. API의 `model`·`quality`·`size`·`background` 필드나 Sunburst/Flare 선택 지시를 웹 프롬프트에 넣지 않는다. 사용자가 요구한 비율·투명 배경은 자연어에 남긴다. 실제 UI 설정으로 별도 전달한 값만 본문에서 생략하고, 픽셀 치수는 요청 조건이지 출력 보증으로 쓰지 않는다. 웹의 실제 모델·설정 적용 여부를 문안만으로 확정하지 않는다.
+**ChatGPT 웹에 붙여넣을 때.** 기본 경로의 적용 범위·우선순위는 [surfaces.md](surfaces.md) §0을 따른다. 완성본은 자연어 블록으로 납품한다. API의 `model`·`quality`·`size`·`background` 필드나 Sunburst/Flare 선택 지시를 웹 프롬프트에 넣지 않는다. 사용자가 요구한 비율·투명 배경은 자연어에 남긴다. 실제 UI 설정으로 별도 전달한 값만 본문에서 생략하고, 픽셀 치수는 요청 조건이지 출력 보증으로 쓰지 않는다. High 추론을 요청했다면 해당 웹 UI에서 선택 가능한 경우에만 본문 밖 설정으로 안내한다. 이를 프롬프트 문구나 이미지 품질 보증으로 취급하지 않는다. 웹의 실제 모델·설정 적용 여부를 문안만으로 확정하지 않는다.
 
 편집 입력은 웹에 첨부할 이미지의 번호·역할로 연결하고 로컬 파일 경로를 첨부 대신 쓰지 않는다. 현재 대화의 선택된 결과를 고칠 때는 그 이미지를 기준으로 변경점을 쓴다. 다른 대화에 붙여넣을 독립 프롬프트라면 필요한 이미지를 다시 첨부하도록 블록 밖에 짧게 안내한다. 국소 수정은 대상의 위치도 명시한다. 영역 선택은 선택 사항이며 경계 밖 보존을 보장하지 않는다([웹 공식 안내](https://help.openai.com/en/articles/11084440), 2026-09-23 확인).
 
 **복잡도에 따른 점진적 확장.** 아래 구조 선택은 새 문안에 적용한다. 기준 원문의 후속 수정은 [common.md](../templates/common.md) §기준 원문과 누적 수정을 따른다. 단순한 얼굴·제품·장면은 짧은 완결 문단 하나로 쓴다. 언어는 공통 언어 결정 규칙을 따른다(새 이미지 프롬프트는 영어 기본, 명시 언어·원문 보존 우선). 헤딩·빈 섹션·장황한 카메라 수치·반복 네거티브 꼬리를 자동으로 붙이지 않는다. 사용자가 상세 촬영 브리프를 제공했거나 촬영·포즈·의상·공간·빛·재질·제약의 관계를 한 문단에 합치면 누락·충돌·수정 오류 위험이 커질 때는 필요한 섹션형 네이티브 프로덕션 브리프로 승급한다. 예를 들어 플래시 거울 셀피에서 손의 그립, 의상 재질, 반사와 광원 정합을 함께 지정했다면 한 문단으로 읽을 수 있다는 이유만으로 평탄화하지 않는다.
 
 **구획 선택.** SHOT, SUBJECT, FACE & EXPRESSION, WARDROBE, SCENE, LIGHT & COLOR, REALISM, CONSTRAINTS 또는 NEGATIVE는 MPW의 설명형 헤딩 후보일 뿐 공식 필수 헤딩이나 고정 스키마가 아니다. 실제 조건이 있는 섹션만 쓰고 필요하면 합치거나 다른 이름을 쓴다. 사용자가 준 헤딩 이름·순서·정보 배치는 특별한 충돌이 없으면 보존한다. 한 컷은 길이·섹션 수 때문에 여러 컷으로 나누지 않으며, 사용자 지정 형식이 없으면 하나의 복사 가능한 블록으로 낸다. 섹션 수가 많다고 품질이 높아지는 것은 아니다. 네이티브/compiled 경계는 §3.1, API 설정 분리는 §4.3을 따른다.
+
+**복잡한 원본 사진 리터칭.** 여러 국소 수정과 보존 조건이 서로 가깝다면 같은 자연어 프롬프트 안에서 `EDIT TARGETS`(실제 수정할 위치와 화면에서 확인할 목표 상태) → `PRESERVE`(원본에서 유지할 요소) → `EXCLUDE`(범위 밖 변형 금지)처럼 구분한다. 이는 웹의 별도 네거티브 입력란이나 필수 헤딩을 뜻하지 않는다. 뒷면 청바지의 엉덩이·뒷주머니 주변, 자켓 몸판 안쪽·팔 겹침처럼 빠뜨리기 쉬운 영역은 앞쪽 수정 섹션에 위치와 주름이 정돈된 결과를 각각 적는다. 얼굴 내부 디테일·의상 구조·원본 컷 범위·청바지 밑위는 보존 축으로 두고, 요청된 다리 라인 미세 조정은 바꿀 위치와 허용 폭을 수정 축에 한정해 보존 지시와 충돌하지 않게 한다. 금지문 분리만으로 생성 성공을 설명하거나 보증하지 않는다. 아래는 작성 패턴 예시이며 특정 편집 결과의 인과 검증이 아니다.
+
+```text
+Edit the attached photo as the source image.
+
+EDIT TARGETS: Tidy the visible creases across the back of the jeans at the seat and around the visible back pockets, leaving believable denim texture and natural tension folds. Smooth the distracting bunching on the inner jacket body panel and where the sleeve overlaps it, so those areas read cleanly without flattening the garment. Refine the leg line only slightly from knee to ankle; keep the hips, waist and jeans rise in place.
+
+PRESERVE: Keep the person's facial features and inner facial details, identity, pose, jacket and jeans construction, seams, pocket placement, original lighting and the full original crop. Preserve the jeans rise and the garment's natural fit.
+
+EXCLUDE: Do not redraw the face, change the jacket or jeans design, move the pockets, shorten the rise, reshape the hips or crop out any part of the original shot. Do not turn the fabric into an unnaturally smooth surface.
+```
 
 **요청된 사실성과 제약.** 복잡한 실사 브리프에서 요청한 경우에만 피부 결, 모발 가닥별 반사, 직물별 광택 차이, 손가락과 물체의 그립, 그림자·반사·플레어와 광원의 정합을 화면에서 확인 가능한 조건으로 구체화한다. 거울·유리·플래시·반사·손·휴대전화가 등장하면 이미 서술한 반사 기하·광원 방향·신체 접촉이 서로 모순되지 않는지 검수한다. 이런 세부를 모든 실사 프롬프트의 의무 토큰으로 추가하지 않는다. 배제는 요청과 관련된 것만 남긴다. 원하는 외형은 긍정형으로 쓰되, 변경 금지·추가 금지처럼 범위를 잠그는 직접적인 부정문은 유지한다. 이를 긍정형으로 바꾸느라 보존 조건을 흐리지 않는다.
 
