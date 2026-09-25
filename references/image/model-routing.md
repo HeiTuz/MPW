@@ -117,9 +117,9 @@
    - [seedream-5-pro.md](seedream-5-pro.md) — BytePlus ModelArk direct Seedream 5 Pro의 자연어·다중 이미지·`<point>`/`<bbox>` 인터랙티브 편집 문법. Higgsfield `seedream_v5_pro`에는 런타임 기능 확인 없이 좌표·파라미터를 복사하지 않는다.
    - [seedream-character-reference-sheets.md](seedream-character-reference-sheets.md) — 3×3 identity 입력을 단일 베이스·1×4 전신 시트로 바꾸는 구도·체형·헤어 차폐 규칙.
    - [seedance-2.md](seedance-2.md) — BytePlus ModelArk direct Seedance 2.0의 멀티모달 참조·편집·연장·트랙 연결 문법. 2.5 규칙을 자동 상속하지 않는다.
-   - [minimax-h3.md](minimax-h3.md) — MiniMax H3 공식 API 직결의 모드별 고정 지시문·라벨 섹션(`integrated_multimodal_description`·`overall_soundscape`·`non_diegetic_music`, Ref2VA 여섯 섹션)·`<d>[Language]` 대사·샷 타임코드 문법. 이 엔진을 골랐으면 일반 영상 규칙의 "고정 구조를 강제하지 않는다"보다 이 형식이 우선한다. Higgsfield `minimax_h3` 래퍼의 필드 대응은 런타임 정의로 확인한다.
    - [seedance-2-5.md](seedance-2-5.md) — Dreamina 웹 Seedance 2.5의 멀티레퍼런스·장편·편집·연장·키프레임·스토리보드·클레이 렌더러 붙여넣기 문법. ModelArk API 계약이 아니다.
-   - Higgsfield `seedance_2_0`·`seedance_2_5`: 위 두 Seedance 문서는 ModelArk·Dreamina 표면 계약이라 래퍼에 그대로 옮기지 않는다. 래퍼 전용 프롬프트 문법은 공식 확인 전 **[미확인]**이다 — 참조는 런타임 정의의 미디어 롤 순서대로 자연어 역할 문장으로 연결하고, Dreamina `@Image N`·대괄호 블록이나 ModelArk 전용 좌표·파라미터는 넣지 않는다.
+   - [minimax-h3.md](minimax-h3.md) — MiniMax H3 공식 API 직결의 모드별 고정 지시문·라벨 섹션·`<d>[Language]` 대사·샷 타임코드 문법. 영상 공통 규칙과의 우선순위는 [lanes.md](lanes.md) §영상 공통 규칙을 따른다. Higgsfield `minimax_h3` 래퍼의 필드 대응은 런타임 정의로 확인한다.
+   - Higgsfield `seedance_2_0`·`seedance_2_5` (2026-09-25 문서 대조): 위 두 Seedance 문서는 ModelArk·Dreamina 표면 계약이다. 래퍼 전용 프롬프트 문법은 확인된 근거가 없으므로 **[미확인]**이며, Dreamina `@Image N`·대괄호 블록이나 ModelArk 전용 좌표·파라미터를 래퍼 프롬프트로 옮기지 않는다. 참조 전달은 런타임 정의의 미디어 롤을 따른다.
    - [midjourney-feed-diagnosis.md](midjourney-feed-diagnosis.md) — 연속 피드에서 프로필 스택·chaos·stylize·Variation 계보를 분리하는 진단·ablation 절차.
 
 ## 5. 스냅샷 신선도

@@ -179,7 +179,7 @@ Panel 3: reaction shot, warm rim light, 말풍선 "왔구나"
 | S1 기계 계약 | 스키마가 제공하는 `size`·`quality` 축에서 목적을 만족하는 값. 구체 enum·매핑은 `contracts/v1/*.schema.json`과 `contracts/validate.py` |
 | S1-legacy 벌크 | 벌크 러너가 제공하는 size·quality 값 안에서 올린다. 구체 값은 [production.md](production.md) §2 |
 | S2 플랫폼 파라미터 | 선택 모델의 런타임 정의가 실제로 제공하는 `resolution`·`quality`·`mode` 축만 사용하고, 없는 축이나 픽셀 size를 만들지 않는다 |
-| S3 붙여넣기 | UI에 해상도·품질 설정이 있으면 라벨 줄로 고지하고 본문에는 쓰지 않는다. 설정이 없는 대화형 표면(예: ChatGPT 웹)은 라벨 줄을 만들지 않고 필요한 가독성 조건만 본문에 남긴다([surface-contracts.md](surface-contracts.md) §3.2) |
+| S3 붙여넣기 | UI에 해상도·품질 설정이 있으면 라벨 줄로 고지하고 본문에는 쓰지 않는다. 설정이 없는 대화형 표면은 라벨 줄을 만들지 않고 필요한 가독성 조건만 본문에 남긴다([surface-contracts.md](surface-contracts.md) §3.2) |
 
 | 텍스트량 | 품질 축 | 해상도 축 |
 |---|---|---|

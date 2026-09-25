@@ -255,10 +255,21 @@ function validateText(raw, opts = {}, rec = null, mode = "text") {
   if ((/Text-in-image\s*:/.test(p) || !!(rec && rec.korean_copy)) && quotes.length === 0)
     err(errors, "E-TEXT-QUOTE", "Text-in-image/korean_copy가 있는데 따옴표 카피가 0개 — 렌더 카피는 따옴표로 고정.");
   const dup = [...new Set(quotes.filter((q, i) => quotes.indexOf(q) !== i))];
-  // native 편집은 보존 대상 카피를 잠그려고 같은 문자열을 다시 인용할 수 있다(surface-contracts.md §3.2 부분 편집). 보존 문맥이면 경고로 낮춘다.
-  const preserveCtx = native && /\b(?:keep|preserve|unchanged|leave|do not (?:change|alter|edit)|don't (?:change|alter|edit)|must stay|exactly as)\b|유지|보존|그대로|바꾸지|변경하지/i.test(instructionText);
-  if (dup.length) err(preserveCtx ? warnings : errors, preserveCtx ? "W-TEXT-DUP" : "E-TEXT-DUP", `동일 따옴표 카피 2회 이상(${dup.join(" / ")}) — ${preserveCtx ? "보존 잠금 재인용이면 무시, 렌더 중복이면 한 번만." : "모든 카피는 한 번씩만."}`);
-  if (quotes.length >= 2 && !has(/(상단|하단|중앙|좌측|우측|타이틀|부제|서브|라벨|캡션|헤드|말풍선|SFX|headline|subhead|callout|billing|caption|centered|upper|lower|label|title|tagline|top|bottom)/i)) err(warnings, "W-TEXT-ROLE", "따옴표 카피 2개 이상인데 롤 라벨(타이틀/부제/위치)이 없음.");
+  // native 편집은 보존 대상 카피를 잠그려고 같은 문자열을 다시 인용할 수 있다(surface-contracts.md §3.2 부분 편집).
+  // 편집 신호가 있고, 첫 인용 뒤의 모든 재인용이 보존 동사가 있는 문장 안에 있을 때만 경고로 낮춘다.
+  const PRESERVE_RE = /\b(?:keep|keeps|preserve|unchanged|do not (?:change|alter|edit)|don't (?:change|alter|edit)|must stay|exactly as)\b|유지|보존|바꾸지|변경하지/i;
+  const EDIT_RE = /\b(?:image \d|base image|original|replace|edit)\b|원본|편집|교체/i;
+  const sentenceAt = (idx) => {
+    const start = Math.max(p.lastIndexOf(".", idx - 1), p.lastIndexOf("\n", idx - 1), p.lastIndexOf(";", idx - 1)) + 1;
+    const ends = [".", "\n", ";"].map((c) => p.indexOf(c, idx + 1)).filter((i) => i >= 0);
+    return instructionTextOf(p.slice(start, ends.length ? Math.min(...ends) : p.length));
+  };
+  const lockOnly = native && dup.length > 0 && EDIT_RE.test(instructionText) && dup.every((copy) => {
+    const hits = [...p.matchAll(RENDER_COPY_RE)].filter((m) => (m[1] ?? m[2]).replace(/\s+/g, " ").trim() === copy);
+    return hits.slice(1).every((m) => PRESERVE_RE.test(sentenceAt(m.index)));
+  });
+  if (dup.length) err(lockOnly ? warnings : errors, lockOnly ? "W-TEXT-DUP" : "E-TEXT-DUP", `동일 따옴표 카피 2회 이상(${dup.join(" / ")}) — ${lockOnly ? "편집 보존 잠금의 재인용으로 판정. 렌더 중복이면 한 번만." : "모든 카피는 한 번씩만."}`);
+  if (quotes.length >= 2 && !/(상단|하단|중앙|좌측|우측|타이틀|부제|서브|라벨|캡션|헤드|말풍선|SFX)|\b(?:headlines?|subheads?|callouts?|billing|captions?|centered|upper|lower|labels?|labeled|titles?|subtitles?|taglines?|top|bottom)\b/i.test(instructionText)) err(warnings, "W-TEXT-ROLE", "따옴표 카피 2개 이상인데 롤 라벨(타이틀/부제/위치)이 없음.");
   const mix = quotes.find((q) => /[가-힣]/.test(q) && /[A-Za-z]/.test(q));
   if (mix) err(warnings, "W-TEXT-MIXLANG", `한 따옴표 문자열 안 KO+EN 혼합: "${mix}" — 사용자 지정 혼합 문구는 보존하고, 새 카피를 설계할 때만 줄·롤 분리를 고려하세요.`);
   if ((renderText || has(/(텍스트|한글|타이틀|부제|라벨|말풍선|내레이션|SFX|카피|문구)/)) && !has(/(또렷|가독|한 번씩만|1~2개만|legible|appears once|exactly once|only once|one time|no (?:other|additional|extra) (?:text|words|copy|lettering))/i))

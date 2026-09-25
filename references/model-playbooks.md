@@ -128,21 +128,8 @@ Join gate: 실제 배정한 worker 산출물과 요청된 planner/critic/verifie
 아래는 확인일의 공급자 지침을 MPW에 적용한 작성 정책이다. 실제 선택된 모델에 해당하는 보정만 쓴다. 계정 가용성·모델 우열·실측 성능 보증이나 공통 API 설정표가 아니다.
 
 - **OpenAI GPT-6 Astra / GPT-5.6**: Astra에서 불필요한 확인·긴 형식·과검증이 나타나면 이미 허가된 범위의 지속, 원하는 문체, 필요한 검증 폭을 짧게 명시한다. GPT-5.6은 기존에 효과가 있던 지침·예시·도구 설명에서 중복을 한 묶음씩 덜어 같은 사례로 비교한다. 짧은 답에서도 필수 사실·근거는 보존한다. [Astra 가이드](https://developers.openai.com/api/docs/guides/latest-model#prompting-best-practices), [GPT-5.6 가이드](https://developers.openai.com/api/docs/guides/latest-model?model=gpt-5.6#prompting-best-practices).
-- **Claude Fable 5.1 / Opus 5**: Fable 5.1의 긴 도구 작업에서 진행이 보이지 않으면 먼저 런타임의 표시 경로를 확인하고, 필요한 경우 진행 보고와 전체 결과 보고를 명시한다(진행 보고를 짧게 하라는 제한은 붙이지 않는다 — 2026-09-25 노트). 과밀한 문장은 직접적인 표현·문단으로 풀되 필요한 표·목록까지 금지하지 않는다. Opus 5의 답변 길이는 추론 강도와 따로 지시하고, 모든 작업에 검증·검토자를 덧붙이던 관성은 제거한다. 요청된 검사와 완료 증거는 유지한다. [Fable 5.1 가이드](https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/prompting-claude-fable-5-1), [Opus 5 가이드](https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/prompting-claude-opus-5).
+- **Claude Fable 5.1 / Opus 5**: Fable 5.1의 긴 도구 작업에서 진행이 보이지 않으면 먼저 런타임의 표시 경로를 확인하고, 필요한 경우 짧은 진행 보고와 전체 결과 보고를 명시한다. 과밀한 문장은 직접적인 표현·문단으로 풀되 필요한 표·목록까지 금지하지 않는다. Opus 5의 답변 길이는 추론 강도와 따로 지시하고, 모든 작업에 검증·검토자를 덧붙이던 관성은 제거한다. 요청된 검사와 완료 증거는 유지한다. [Fable 5.1 가이드](https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/prompting-claude-fable-5-1), [Opus 5 가이드](https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/prompting-claude-opus-5).
 - **Gemini 3 계열**: 직접적인 과제·제약을 쓰고, 긴 자료 뒤에 질문을 둔다. 자세한 납품물이 필요하면 필요한 상세 범위를 명시한다. 문서의 특정 Flash용 날짜·cutoff 예시를 다른 모델에 복제하지 않는다. 구조화 출력도 값의 정확성은 소비자에서 검증한다. [프롬프트 전략](https://ai.google.dev/gemini-api/docs/prompting-strategies#gemini-3), [구조화 출력](https://ai.google.dev/gemini-api/docs/structured-output#best-practices).
-
-### 2026-09-25 — Claude 공식 가이드 재대조
-
-**2026-09-25 공식 문서 확인.** [Best practices](https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices), [Fable 5.1](https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/prompting-claude-fable-5-1), [Opus 5.5](https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/prompting-claude-opus-5-5), [Opus 5](https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/prompting-claude-opus-5). 과거 개별 페이지(XML 태그·멀티샷·긴 컨텍스트·시스템 프롬프트·prefill)는 Best practices의 절로 통합됐다. 실제 선택된 Claude 모델에 해당하는 보정만 쓰며, 응답 품질을 실측한 날짜가 아니다.
-
-- **긴 자료는 위, 질문은 끝.** 긴 문서·입력을 질문·지시·예시보다 위에 두고 질문을 끝에 둔다. 문서마다 태그로 감싸고 출처 같은 메타데이터를 하위 태그로 둔다. 긴 문서 과제는 관련 부분을 먼저 인용하게 하면 초점이 잡힌다. 다른 공급자의 상위 지시 구획 순서를 Claude 프롬프트에 복사하지 않는다.
-- **이유·대안·예시.** 규칙에 이유를 한 줄 붙이면 경계 사례로 일반화한다. 금지 대신 할 일을 쓴다. 형식·톤을 잡는 예시는 `<example>` 태그로 지시와 구분하고 서로 다르게 만들며, 공식 권장 수는 3–5개다. 프롬프트의 Markdown을 줄이면 출력의 Markdown도 준다.
-- **prefill 이전.** 최신 모델에 마지막 assistant 턴 prefill을 보내면 400 오류다. 형식 강제는 구조화 출력, 분류는 enum 필드를 가진 도구나 구조화 출력, 서두 생략은 "Respond directly without preamble" 같은 지시, 이어쓰기는 user 메시지로 옮긴다. Fable 5.1·Opus 5.5는 강제 tool choice도 거부하므로 `auto` + strict tool use로 바꾼다.
-- **사고 과정 출력 요구 금지.** Fable 5.1·Opus 5.5·Fable 5에서 응답 본문에 내부 추론을 쓰게 하는 지시는 `reasoning_extraction` 거절로 끝날 수 있고 서버 폴백도 재시도하지 않는다. 이행 시 "생각을 보여줘"·"단계별로 추론을 적어라"류를 지우고, 가시성은 thinking 블록 표시 설정으로 얻는다. Opus 5.5 채팅 시스템 프롬프트의 "답하기 전에 신중히 생각하라"도 제거 후보다.
-- **추론량은 effort가 먼저.** Opus 5.5는 생각을 줄이려면 프롬프트보다 effort를 먼저 낮추라고 안내한다(기본 `medium`, Opus 5는 `high`). effort 이름은 모델 간 같은 양이 아니므로 모델을 바꾸면 기존 값을 옮기지 말고 평가로 다시 스윕한다. 반대로 Opus 5의 **답변 길이**는 effort로 줄지 않으므로 간결 지시를 프롬프트에 쓰고, 긴 시스템 프롬프트에는 끝부분에 짧은 리마인더를 둔다.
-- **이력은 덧붙이기만.** Fable 5.1·Opus 5.5에서 이전 메시지·`system`·`tools`를 고쳐 쓰거나 이전 턴을 제자리 요약하면 이후 thinking 블록이 무효화돼 오류가 난다. 세션 중 새 지시는 대화 중 system 메시지로, 도구 변경은 전용 추가·제거 블록으로 보낸다. 무인 실행용 지속 문단처럼 시스템 프롬프트에 넣을 보강은 세션 첫 요청부터 넣는다.
-- **Fable 5.1 진행 보고·병렬 호출.** 도구 연쇄 중 사용자용 업데이트가 줄어든다. 먼저 클라이언트가 진행 업데이트를 받는지 확인하고, "결과는 최종 응답에 모아라"류 억제 문구를 지운 뒤, 필요하면 언제·무엇을 보고할지 한 줄로 요구한다. 긴 에이전트 루프의 병렬 호출 지시는 도구 결과 뒤 턴 한정 system 메시지로 매 턴 새로 붙인다. 긴 비동기 작업에서 "다음엔 …하겠다"로 멈추면 공식 "Finish the whole task" 문단을 첫 문장 그대로 쓴다.
-- **붙여넣은 외부 텍스트 표시.** Opus 5.5는 사용자 본인 문장과 다른 곳에서 붙여넣은 텍스트를 구분해 주면 그 안의 지시에 덜 끌려간다. 붙여넣은 블록마다 같은 짧은 무작위 id를 가진 여닫는 태그로 감싸고, 시스템 프롬프트에 그 태그의 의미를 설명한다.
 
 ### 2026-09-16 — OpenAI 프롬프팅·캐싱 문서 대조
 
@@ -153,3 +140,16 @@ Join gate: 실제 배정한 worker 산출물과 요청된 planner/critic/verifie
 - **프롬프트 캐시.** 안정된 지시·도구 정의·참고 자료를 접두부에 두고 타임스탬프·사용자별 값은 뒤로 보낸다. 이전 턴은 덧붙이기만 하며 요약·압축·절단은 접두부를 바꿔 재사용을 끊는다. 도구는 정의·순서·스키마를 유지하고 `tool_choice: none`·`allowed_tools`로 사용 여부만 바꾼다. 확인일 기준 GPT-5.6 이상은 최소 캐시 길이 1,024토큰, 쓰기 1.25×·읽기 0.1× 요율, implicit/explicit 모드와 요청당 최대 4개 브레이크포인트, 상위 `instructions`에는 explicit 브레이크포인트를 둘 수 없음. GPT-6 계열은 `configuration_update` 항목으로 접두부를 유지한 채 추론 강도를 바꾼다. 값은 모델·시점에 따라 달라지므로 인계 전에 현재 문서로 재확인한다.
 - **프롬프트는 코드다.** 재사용 프롬프트 객체(`v1/prompts`, 프롬프트 ID·버전)는 2026-06-03부터 비권장, 2026-11-30 종료 예정이다. 새 작업은 코드 모듈·타입 있는 인자·fixture와 평가·배포 절차로 관리하고, 기존 프롬프트 ID 호출은 [이행 가이드](https://developers.openai.com/api/docs/guides/prompting/migrate-from-prompt-object)를 따른다.
 - **에이전트·코딩·프런트엔드.** 문서의 에이전트 권장은 완전 해결까지 지속·주요 단계의 도구 호출 전 설명·TODO 추적, 코딩 권장은 역할·도구 사용 예시·테스트 요구·마크다운 규약이며 §목적 블록에 반영했다. 프런트엔드 신규 앱에는 Tailwind CSS·shadcn/ui·Radix Themes, Lucide·Material Symbols·Heroicons, Motion을 권장하지만, 기존 코드베이스는 프로젝트 스택이 우선이며 [design.md](templates/design.md)의 조건을 따른다.
+
+### 2026-09-25 — Claude 공식 가이드 재대조
+
+**2026-09-25 공식 문서 확인.** [Best practices](https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices), [Fable 5.1](https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/prompting-claude-fable-5-1), [Opus 5.5](https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/prompting-claude-opus-5-5), [Opus 5](https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/prompting-claude-opus-5). 과거 개별 페이지(XML 태그·멀티샷·긴 컨텍스트·시스템 프롬프트·prefill)는 Best practices의 절로 통합됐다. 실제 선택된 Claude 모델에 해당하는 보정만 쓰며, 응답 품질을 실측한 날짜가 아니다.
+
+- **긴 자료는 위, 질문은 끝.** 긴 문서·입력을 질문·지시·예시보다 위에 두고 질문을 끝에 둔다. 문서마다 태그로 감싸고 출처 같은 메타데이터를 하위 태그로 둔다. 긴 문서 과제는 관련 부분을 먼저 인용하게 하면 초점이 잡힌다. 다른 공급자의 상위 지시 구획 순서를 Claude 프롬프트에 복사하지 않는다.
+- **예시·서식.** 이유·대안·예시 작성의 일반 규칙은 [common.md](templates/common.md) §범용 조립 규칙이다. Claude 문서의 추가 사항만: 예시는 `<example>` 태그로 감싸고 공식 권장 수는 3–5개, 프롬프트의 Markdown을 줄이면 출력의 Markdown도 준다.
+- **prefill 이전.** 최신 모델에 마지막 assistant 턴 prefill을 보내면 400 오류다. 형식 강제는 구조화 출력, 분류는 enum 필드를 가진 도구나 구조화 출력, 서두 생략은 "Respond directly without preamble" 같은 지시, 이어쓰기는 user 메시지로 옮긴다. Fable 5.1·Opus 5.5는 강제 tool choice도 거부하므로 `auto` + strict tool use로 바꾼다.
+- **사고 과정 출력 요구 금지.** Fable 5.1·Opus 5.5·Fable 5에서 응답 본문에 내부 추론을 쓰게 하는 지시는 `reasoning_extraction` 거절로 끝날 수 있고 서버 폴백도 재시도하지 않는다. 이행 시 "생각을 보여줘"·"단계별로 추론을 적어라"류를 지우고, 가시성은 thinking 블록 표시 설정으로 얻는다. Opus 5.5 채팅 시스템 프롬프트의 "답하기 전에 신중히 생각하라"도 제거 후보다.
+- **추론량은 effort가 먼저.** Opus 5.5는 생각을 줄이려면 프롬프트보다 effort를 먼저 낮추라고 안내한다(기본 `medium`, Opus 5는 `high`). effort 이름은 모델 간 같은 양이 아니므로 모델을 바꾸면 기존 값을 옮기지 말고 평가로 다시 스윕한다. 반대로 Opus 5의 **답변 길이**는 effort로 줄지 않으므로 간결 지시를 프롬프트에 쓰고, 긴 시스템 프롬프트에는 끝부분에 짧은 리마인더를 둔다.
+- **이력은 덧붙이기만.** Fable 5.1·Opus 5.5에서 이전 메시지·`system`·`tools`를 고쳐 쓰거나 이전 턴을 제자리 요약하면 이후 thinking 블록이 무효화돼 오류가 난다. 세션 중 새 지시는 대화 중 system 메시지로, 도구 변경은 전용 추가·제거 블록으로 보낸다. 무인 실행용 지속 문단처럼 시스템 프롬프트에 넣을 보강은 세션 첫 요청부터 넣는다.
+- **Fable 5.1 진행 보고·병렬 호출.** 도구 연쇄 중 사용자용 업데이트가 줄어든다(2026-09-05 노트의 "짧은 진행 보고" 표현을 이 항목이 대체한다 — 진행 텍스트를 짧게 하라는 제한은 지운다). 먼저 클라이언트가 진행 업데이트를 받는지 확인하고, "결과는 최종 응답에 모아라"류 억제 문구를 지운 뒤, 필요하면 언제·무엇을 보고할지 한 줄로 요구한다. 긴 에이전트 루프의 병렬 호출 지시는 도구 결과 뒤 턴 한정 system 메시지로 매 턴 새로 붙인다. 긴 비동기 작업에서 "다음엔 …하겠다"로 멈추면 공식 "Finish the whole task" 문단을 첫 문장 그대로 쓴다.
+- **붙여넣은 외부 텍스트 표시.** Opus 5.5는 사용자 본인 문장과 다른 곳에서 붙여넣은 텍스트를 구분해 주면 그 안의 지시에 덜 끌려간다. 붙여넣은 블록마다 같은 짧은 무작위 id를 가진 여닫는 태그로 감싸고, 시스템 프롬프트에 그 태그의 의미를 설명한다.

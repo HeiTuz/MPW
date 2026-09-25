@@ -130,7 +130,7 @@
 |---|---|---|
 | **S1 기계 계약** | `ar` + `size` + `quality`, 값은 **스키마 enum이 전부** | `contracts/v1/*.schema.json`, 매핑은 `contracts/validate.py`의 `GEOMETRY` |
 | **S2 플랫폼 파라미터** | 모델별 `aspect_ratio`·`resolution`/`quality`·픽셀 필드 정의를 확인. 없는 축은 만들지 않음 | 현재 모델 상세 조회 도구와 실제 호출 스키마 |
-| **컴파일 S3 붙여넣기** | 끝에 `AR x:y` 토큰 하나. 픽셀·품질은 사용자가 UI에서 고름. 네이티브 자연어는 요구 비율을 문장으로 남긴다(§3.1·§3.2) | — |
+| **컴파일 S3 붙여넣기** | 끝에 `AR x:y` 토큰 하나. 픽셀·품질은 사용자가 UI에서 고름. 네이티브 자연어의 비율 전달은 [surface-contracts.md](surface-contracts.md) §3.2 | — |
 
 - **S1에서 스키마 밖 값을 쓰지 않는다.** 문서 어딘가에서 본 비율·픽셀값이 스키마 enum에 없으면 그 값은 쓸 수 없고, 쓰면 `production_geometry_mismatch`로 거부된다. 컴파일 전 `python3 contracts/validate.py`로 실제 검증한다.
 - **`auto` 금지는 S1 한정 규칙이다.** S2에서는 `auto`가 여러 모델의 유효한 `aspect_ratios` 값이며 `image_auto` 모델도 있다.
