@@ -1,0 +1,1 @@
+Using image 1 as the base, replace only the background with a pale concrete wall. Keep the bottle, its label "NOVA", the crop and the lighting unchanged. The label "NOVA" must stay exactly as it is; add no other text.

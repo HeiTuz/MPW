@@ -94,7 +94,7 @@ T2V로 바꾸면 책상·공간·빛 등 이미지가 맡던 조건 중 실제 �
 목표: 오디오 지원 모드에서 Mina가 말한 뒤 사진의 한 부분을 가리킨다. 화자와 참조 인물이 연결되어 있고, 사용자가 대사·현장음을 요청한 상황이다.
 
 ```text
-Mina looks at the print and says: 이 부분을 봐주세요. After speaking, she points to its lower corner. Audio: quiet room tone and a soft rustle of paper as her hand moves.
+Mina looks at the print and says in Korean: 이 부분을 봐주세요. After speaking, she points to its lower corner. Audio: quiet room tone and a soft rustle of paper as her hand moves.
 ```
 
 대사 문법은 해당 표면에 맞춘다. 검수에서는 말한 인물·정확한 대사·가리키는 시점을 각각 확인한다. 위 예문은 한국어 발음이나 입 모양의 품질을 실측한 결과가 아니다.
@@ -195,7 +195,7 @@ The curtain beside the seated person gently lifts toward the window, then drifts
 
 ## 관측된 외부 작성 패턴 (재서술)
 
-주간 인테이크로 수집된 공개 영상 프롬프트에서 반복된 패턴을 MPW 형식으로 재서술했다. 원문 복사가 아니며 품질 실측이 아닌 관측 스탬프를 단다. 실존 인물·상표 유도 요소는 제외했다. 어느 패턴도 의무 슬롯이 아니며, [lanes.md](lanes.md) §영상 공통 규칙을 대체하지 않는다.
+주간 인테이크로 수집된 공개 영상 프롬프트에서 반복된 패턴을 MPW 형식으로 재서술했다. 원문 복사가 아니며 품질 실측이 아닌 관측 스탬프를 단다. 실존 인물·상표 유도 요소는 제외했다. 어느 패턴도 의무 슬롯이 아니며, [lanes.md](lanes.md) §영상 공통 규칙을 대체하지 않는다. 대상 엔진이 정해지지 않은 일반 산문용 참고이며, 엔진을 골랐으면 [model-routing.md](model-routing.md) §4 규칙 7의 엔진 가이드가 라벨 블록·문장 순서를 정한다(예: Seedance는 주체·행동을 먼저, Grok은 라벨 블록 대신 한 문단, MiniMax H3는 고정 섹션).
 
 - **현장음·효과음을 라벨 행으로 분리** (관측 2026-09, 출처 3건): 본문 끝에 `ambient:` 또는 `Audio:` 행을 두어 장면 묘사와 소리 요청을 나눈다. 화자·대사·현장음을 구분하는 기존 규칙의 한 표기다.
 - **카메라·조명·오디오·그레이드 라벨 블록** (관측 2026-09, 출처 2건): 단일 샷을 `Camera:`·`Lighting:`·`Audio:`·`Color grade:` 라벨 행으로 나눠 적는다. 분리가 필요한 축만 쓰고 라벨을 채우기 위한 내용을 만들지 않는다.

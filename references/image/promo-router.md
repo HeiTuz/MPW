@@ -32,7 +32,7 @@
 
 신호가 복수 P에 동시에 매칭되면 §1 분기와 §5 경계 판정이 먼저고, 그걸로도 못 가르면 요청의 신호를 더 구체적으로 설명하는 행을 택한다 — 행 번호 순서는 우선순위가 아니다.
 
-**공통 각주:** 위 `기본 AR`은 표면 판정 이후의 후보다. S1 기계 계약은 `contracts/v1/*.schema.json`의 enum, S2는 모델의 `aspect_ratios`, S1-legacy는 [production.md](production.md) §2가 최종 판정한다([surface-contracts.md](surface-contracts.md) §1·§2). 각 P 파일의 끝 토큰 AR 표기는 S3 붙여넣기·S1-legacy 벌크(jsonl, E-AR-END 필수) 표면 한정이다 — S1 기계 계약·S2 플랫폼에서는 비율이 파라미터이므로 본문 AR을 두지 않는다(정본: [compiler.md](compiler.md) 철칙 1·§5).
+**공통 각주:** 위 `기본 AR`은 표면 판정 이후의 후보다. S1 기계 계약은 `contracts/v1/*.schema.json`의 enum, S2는 모델의 `aspect_ratios`, S1-legacy는 [production.md](production.md) §2가 최종 판정한다([surface-contracts.md](surface-contracts.md) §1·§2). 각 P 파일의 끝 토큰 AR 표기는 컴파일 형식의 S3 붙여넣기·S1-legacy 벌크(jsonl, E-AR-END 필수) 표면 한정이다 — S1 기계 계약·S2 플랫폼에서는 비율이 파라미터이므로 본문 AR을 두지 않는다(정본: [compiler.md](compiler.md) 철칙 1·§5).
 
 ## 3. P/L 권한 계약
 

@@ -8,7 +8,7 @@ metadata:
   locale: ko-KR
   doctrine: intent-first-progressive-disclosure
   updated_at: "2026-09-23"
-  model_claims_reviewed_at: "2026-09-16"
+  model_claims_reviewed_at: "2026-09-25"
   role_routing_reviewed_at: "2026-09-05"
   platform_roster_reviewed_at: "2026-09-06"
 ---

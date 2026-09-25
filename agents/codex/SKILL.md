@@ -10,7 +10,7 @@ metadata:
   host_surface: codex
   canonical_source: "HeiTuz/MPW SKILL.md v2.33.5"
   updated_at: "2026-09-23"
-  model_claims_reviewed_at: "2026-09-16"
+  model_claims_reviewed_at: "2026-09-25"
   platform_roster_reviewed_at: "2026-09-06"
   role_routing_reviewed_at: "2026-09-05"
 ---

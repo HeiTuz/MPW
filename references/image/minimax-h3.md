@@ -138,14 +138,14 @@ I2VA — 첫 프레임 앵커에서 전개:
 ```text
 For the target video, at 0.00 seconds into the target video, <Picture 1> (from [Shot 1]) is fully referenced.
 
-integrated_multimodal_description: [Shot 1] Live-action, cinematic, the cyclist shown in <Picture 1> keeps her waiting position at the crosswalk, preserving her rain jacket, helmet, and the wet street layout. The camera trucks left with small amplitude at slow speed as the signal turns green and she pushes off, tires hissing on the wet asphalt. She glances back once and (S1) says: <d>[English] Clear on the right!</d>
+integrated_multimodal_description: [Shot 1] Live-action, cinematic, the cyclist shown in <Picture 1> keeps her waiting position at the crosswalk, preserving her rain jacket, helmet, and the wet street layout. The camera trucks left with small amplitude at slow speed as the signal turns green and she pushes off, tires hissing on the wet asphalt. She glances back once and, in a bright, clipped voice, (S1) says: <d>[English] Clear on the right!</d>
 
 overall_soundscape: Rain eases to a drizzle over a soft traffic hum; a pedestrian signal beeps twice and tires hiss on wet pavement.
 
 non_diegetic_music: A sparse marimba pulse at a moderate tempo that fades under the street ambience by the end.
 ```
 
-Ref2VA — 인물·소품·음색 참조:
+Ref2VA — 인물·소품·음색 참조 (섹션 구조 예시. `detailed_description`은 축약본이며 실제 생성 과업은 위 공식 권장 분량을 따른다):
 
 ```text
 subject_definitions:

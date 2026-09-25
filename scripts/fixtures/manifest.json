@@ -618,6 +618,12 @@
     "expect": {"ok": false, "codes": ["E-TEXT-DUP"]}
   },
   {
+    "path": "fixtures/good/native_edit_copy_lock.txt",
+    "mode": "text",
+    "flags": ["--profile", "native", "--surface", "s3", "--channel", "unbounded"],
+    "expect": {"ok": true}
+  },
+  {
     "path": "fixtures/bad/empty_scene.txt",
     "mode": "text",
     "flags": ["--profile", "native"],

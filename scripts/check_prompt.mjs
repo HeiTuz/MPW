@@ -255,11 +255,13 @@ function validateText(raw, opts = {}, rec = null, mode = "text") {
   if ((/Text-in-image\s*:/.test(p) || !!(rec && rec.korean_copy)) && quotes.length === 0)
     err(errors, "E-TEXT-QUOTE", "Text-in-image/korean_copy가 있는데 따옴표 카피가 0개 — 렌더 카피는 따옴표로 고정.");
   const dup = [...new Set(quotes.filter((q, i) => quotes.indexOf(q) !== i))];
-  if (dup.length) err(errors, "E-TEXT-DUP", `동일 따옴표 카피 2회 이상(${dup.join(" / ")}) — 모든 카피는 한 번씩만.`);
-  if (quotes.length >= 2 && !has(/(상단|하단|중앙|좌측|우측|타이틀|부제|서브|라벨|캡션|헤드|말풍선|SFX|headline|subhead|callout|billing|caption|centered|upper|lower)/i)) err(warnings, "W-TEXT-ROLE", "따옴표 카피 2개 이상인데 롤 라벨(타이틀/부제/위치)이 없음.");
+  // native 편집은 보존 대상 카피를 잠그려고 같은 문자열을 다시 인용할 수 있다(surface-contracts.md §3.2 부분 편집). 보존 문맥이면 경고로 낮춘다.
+  const preserveCtx = native && /\b(?:keep|preserve|unchanged|leave|do not (?:change|alter|edit)|don't (?:change|alter|edit)|must stay|exactly as)\b|유지|보존|그대로|바꾸지|변경하지/i.test(instructionText);
+  if (dup.length) err(preserveCtx ? warnings : errors, preserveCtx ? "W-TEXT-DUP" : "E-TEXT-DUP", `동일 따옴표 카피 2회 이상(${dup.join(" / ")}) — ${preserveCtx ? "보존 잠금 재인용이면 무시, 렌더 중복이면 한 번만." : "모든 카피는 한 번씩만."}`);
+  if (quotes.length >= 2 && !has(/(상단|하단|중앙|좌측|우측|타이틀|부제|서브|라벨|캡션|헤드|말풍선|SFX|headline|subhead|callout|billing|caption|centered|upper|lower|label|title|tagline|top|bottom)/i)) err(warnings, "W-TEXT-ROLE", "따옴표 카피 2개 이상인데 롤 라벨(타이틀/부제/위치)이 없음.");
   const mix = quotes.find((q) => /[가-힣]/.test(q) && /[A-Za-z]/.test(q));
   if (mix) err(warnings, "W-TEXT-MIXLANG", `한 따옴표 문자열 안 KO+EN 혼합: "${mix}" — 사용자 지정 혼합 문구는 보존하고, 새 카피를 설계할 때만 줄·롤 분리를 고려하세요.`);
-  if ((renderText || has(/(텍스트|한글|타이틀|부제|라벨|말풍선|내레이션|SFX|카피|문구)/)) && !has(/(또렷|가독|한 번씩만|1~2개만|legible|appears once)/))
+  if ((renderText || has(/(텍스트|한글|타이틀|부제|라벨|말풍선|내레이션|SFX|카피|문구)/)) && !has(/(또렷|가독|한 번씩만|1~2개만|legible|appears once|exactly once|only once|one time|no (?:other|additional|extra) (?:text|words|copy|lettering))/i))
     err(warnings, "W-TEXT-GUARD", "텍스트가 있는데 가독성/반복 가드가 없음 (예: \"모든 텍스트는 한 번씩만, 또렷하게\").");
 
   if (!native) {

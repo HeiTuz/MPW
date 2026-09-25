@@ -6,7 +6,7 @@
 
 **이 파일이 기술하는 `prompts.jsonl` 벌크 스키마는 레거시 벌크 러너 경로(S1-legacy)다.** 표면 판정은 [surfaces.md](surfaces.md)가 선행하며, 아래 값을 다른 표면으로 옮기지 않는다.
 
-GPT Image의 네이티브 자연어는 [surface-contracts.md](surface-contracts.md) §3.1과 `check_prompt.mjs --profile native`를 쓴다. 이 문서의 A/B·Tier·사이즈락은 네이티브 API 전체를 검증하지 않는다. 네이티브 프로필은 S2/S3의 본문 텍스트만 받으며 JSON/JSONL·S1·명시 Tier·`--api`와 혼용하지 않는다. 엔진 미지정 시 GPT Image를 쓰고, 길이·빈 입력·미치환 슬롯·다른 엔진 문법·정확 카피 중복을 검사한다. API 필드·참조·이미지 품질은 별도 검증 대상이다.
+GPT Image의 네이티브 자연어는 [surface-contracts.md](surface-contracts.md) §3.1과 `check_prompt.mjs --profile native`를 쓴다. 이 문서의 A/B·Tier·사이즈락은 네이티브 API 전체를 검증하지 않는다. 네이티브 프로필은 S2/S3의 본문 텍스트만 받으며 JSON/JSONL·S1·명시 Tier·`--api`와 혼용하지 않는다. 엔진 미지정 시 GPT Image를 쓰고, 길이·빈 입력·미치환 슬롯·다른 엔진 문법·정확 카피 중복을 검사한다(편집에서 보존할 카피를 잠그려는 재인용은 경고로 낮춘다). API 필드·참조·이미지 품질은 별도 검증 대상이다.
 
 | 표면 | 이 파일이 적용되나 | 정본 |
 |---|---|---|

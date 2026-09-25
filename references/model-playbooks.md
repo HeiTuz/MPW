@@ -87,7 +87,7 @@ Join gate: 실제 배정한 worker 산출물과 요청된 planner/critic/verifie
 ## 공통 적응 규칙
 
 - 짧은 요청은 결과·제약을 앞에 둔다. 긴 자료는 지시와 구분하고, 자료 뒤에 실제 질문을 둔다. 같은 지시를 앞뒤에 통째로 복제하지 않는다.
-- **지시문 길이·최종 답변 길이·추론 강도는 별개다.** 짧은 프롬프트나 답변을 위해 강도를 자동 변경하지 않는다. 기존 모델·설정을 유지하고 계약을 먼저 고친다. 설정 조정이 범위에 포함될 때만 실제 지원값으로 품질·비용·지연을 비교한다. 호출 문법은 [adapters.md](adapters.md)에서 확인한다.
+- **지시문 길이·최종 답변 길이·추론 강도는 별개다.** 짧은 프롬프트나 답변을 위해 강도를 자동 변경하지 않는다. 기존 모델·설정을 유지하고 계약을 먼저 고친다. 단, 선택된 모델의 dated note가 추론량 조절을 설정부터 하라고 정하면 그 노트를 따른다. 설정 조정이 범위에 포함될 때만 실제 지원값으로 품질·비용·지연을 비교한다. 호출 문법은 [adapters.md](adapters.md)에서 확인한다.
 - 내부 추론을 이미 하는 모델에 단계별 사고 공개·"더 깊게 생각해" 반복을 붙이지 않는다. 필요한 결론·근거·검증 결과를 요구한다.
 - **모델 유형에 따라 지시의 입도를 바꾼다.** 내부 추론 모델에는 목표·성공 기준·실제 제약을 짧고 직접적으로 주고 방법은 맡기며, 기준을 충족할 때까지 반복하도록 요구한다. 추론 없이 지시를 따르는 모델에는 필요한 논리·절차·자료를 프롬프트 안에 명시한다. 같은 계열의 다른 스냅샷도 결과가 달라질 수 있으므로, 프로덕션 프롬프트는 스냅샷을 고정하고 평가 케이스로 변화를 잰다. 유형 판정은 실제 선택된 모델의 문서로 하고, 이름만으로 추정하지 않는다.
 - API·시스템 프롬프트의 메시지 역할 분리·구획 순서·캐시 친화 배치·코드 관리는 [contract.md](templates/contract.md) §메시지 역할과 배치가 정본이다.
@@ -101,7 +101,7 @@ Join gate: 실제 배정한 worker 산출물과 요청된 planner/critic/verifie
 - 리서치/팩트체크: 출처 투명성·불확실성·모순 처리·시점 확인.
 - Grounded/RAG: 허용 근거가 제공 자료만인지 검색까지인지 정하고, 없는 정보·상충·추론의 처리 방식을 명시한다. 자료에 없는 사실을 지식으로 메우지 않는다. 날짜가 답을 바꿀 때만 확인된 현재 시점·자료 기준일을 넣으며, 모델의 knowledge cutoff나 연도를 임의 주입하지 않는다.
 - 추출: [model.md](templates/model.md) §추출의 소비자 스키마·결측 계약을 따른다.
-- 에이전트: 허가된 작업 지속(요청을 하위 작업으로 분해해 전부 끝낸 뒤 턴 종료), 가능한 런타임에서의 독립 읽기 병렬화, 빈 결과 복구, 완료 증거. 도구 호출 이유 설명은 결과를 바꾸는 주요 단계에만 요구하고, 단계가 많으면 TODO·루브릭으로 진행을 추적하게 한다. 검증 범위는 실제 변경과 필수 검사에 맞추며, 통과 뒤 추가 검사는 새 실패·수정·미해결 우려가 있을 때만 한다. 긴 작업의 상태 처리는 §컨텍스트 운용을 따른다.
+- 에이전트: 허가된 작업 지속(요청을 하위 작업으로 분해해 전부 끝낸 뒤 턴 종료), 가능한 런타임에서의 독립 읽기 병렬화, 빈 결과 복구, 완료 증거. 도구 호출 이유 설명의 빈도는 모델 기본 성향에 맞춘다 — 과하게 말하는 모델은 주요 단계로 줄이고, 도구 연쇄 중 조용해지는 모델은 dated note대로 진행 보고를 요구하며 억제 문구를 지운다. 단계가 많으면 TODO·루브릭으로 진행을 추적하게 한다. 검증 범위는 실제 변경과 필수 검사에 맞추며, 통과 뒤 추가 검사는 새 실패·수정·미해결 우려가 있을 때만 한다. 긴 작업의 상태 처리는 §컨텍스트 운용을 따른다.
 - 영상: 입력 모드·장면·대사·배제 조건은 [image/lanes.md](image/lanes.md) §영상 공통 규칙을 따른다. 이 파일엔 중복 서술하지 않는다.
 - 슬라이드: 정본은 [slides.md](slides.md)의 아웃라인 선행 계약·컷 규칙이다. 이 파일엔 중복 서술하지 않는다. 슬라이드 이미지는 [image/lanes.md](image/lanes.md) §이미지 슬롯 기본값을 따른다.
 
@@ -128,8 +128,21 @@ Join gate: 실제 배정한 worker 산출물과 요청된 planner/critic/verifie
 아래는 확인일의 공급자 지침을 MPW에 적용한 작성 정책이다. 실제 선택된 모델에 해당하는 보정만 쓴다. 계정 가용성·모델 우열·실측 성능 보증이나 공통 API 설정표가 아니다.
 
 - **OpenAI GPT-6 Astra / GPT-5.6**: Astra에서 불필요한 확인·긴 형식·과검증이 나타나면 이미 허가된 범위의 지속, 원하는 문체, 필요한 검증 폭을 짧게 명시한다. GPT-5.6은 기존에 효과가 있던 지침·예시·도구 설명에서 중복을 한 묶음씩 덜어 같은 사례로 비교한다. 짧은 답에서도 필수 사실·근거는 보존한다. [Astra 가이드](https://developers.openai.com/api/docs/guides/latest-model#prompting-best-practices), [GPT-5.6 가이드](https://developers.openai.com/api/docs/guides/latest-model?model=gpt-5.6#prompting-best-practices).
-- **Claude Fable 5.1 / Opus 5**: Fable 5.1의 긴 도구 작업에서 진행이 보이지 않으면 먼저 런타임의 표시 경로를 확인하고, 필요한 경우 짧은 진행 보고와 전체 결과 보고를 명시한다. 과밀한 문장은 직접적인 표현·문단으로 풀되 필요한 표·목록까지 금지하지 않는다. Opus 5의 답변 길이는 추론 강도와 따로 지시하고, 모든 작업에 검증·검토자를 덧붙이던 관성은 제거한다. 요청된 검사와 완료 증거는 유지한다. [Fable 5.1 가이드](https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/prompting-claude-fable-5-1), [Opus 5 가이드](https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/prompting-claude-opus-5).
+- **Claude Fable 5.1 / Opus 5**: Fable 5.1의 긴 도구 작업에서 진행이 보이지 않으면 먼저 런타임의 표시 경로를 확인하고, 필요한 경우 진행 보고와 전체 결과 보고를 명시한다(진행 보고를 짧게 하라는 제한은 붙이지 않는다 — 2026-09-25 노트). 과밀한 문장은 직접적인 표현·문단으로 풀되 필요한 표·목록까지 금지하지 않는다. Opus 5의 답변 길이는 추론 강도와 따로 지시하고, 모든 작업에 검증·검토자를 덧붙이던 관성은 제거한다. 요청된 검사와 완료 증거는 유지한다. [Fable 5.1 가이드](https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/prompting-claude-fable-5-1), [Opus 5 가이드](https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/prompting-claude-opus-5).
 - **Gemini 3 계열**: 직접적인 과제·제약을 쓰고, 긴 자료 뒤에 질문을 둔다. 자세한 납품물이 필요하면 필요한 상세 범위를 명시한다. 문서의 특정 Flash용 날짜·cutoff 예시를 다른 모델에 복제하지 않는다. 구조화 출력도 값의 정확성은 소비자에서 검증한다. [프롬프트 전략](https://ai.google.dev/gemini-api/docs/prompting-strategies#gemini-3), [구조화 출력](https://ai.google.dev/gemini-api/docs/structured-output#best-practices).
+
+### 2026-09-25 — Claude 공식 가이드 재대조
+
+**2026-09-25 공식 문서 확인.** [Best practices](https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices), [Fable 5.1](https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/prompting-claude-fable-5-1), [Opus 5.5](https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/prompting-claude-opus-5-5), [Opus 5](https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/prompting-claude-opus-5). 과거 개별 페이지(XML 태그·멀티샷·긴 컨텍스트·시스템 프롬프트·prefill)는 Best practices의 절로 통합됐다. 실제 선택된 Claude 모델에 해당하는 보정만 쓰며, 응답 품질을 실측한 날짜가 아니다.
+
+- **긴 자료는 위, 질문은 끝.** 긴 문서·입력을 질문·지시·예시보다 위에 두고 질문을 끝에 둔다. 문서마다 태그로 감싸고 출처 같은 메타데이터를 하위 태그로 둔다. 긴 문서 과제는 관련 부분을 먼저 인용하게 하면 초점이 잡힌다. 다른 공급자의 상위 지시 구획 순서를 Claude 프롬프트에 복사하지 않는다.
+- **이유·대안·예시.** 규칙에 이유를 한 줄 붙이면 경계 사례로 일반화한다. 금지 대신 할 일을 쓴다. 형식·톤을 잡는 예시는 `<example>` 태그로 지시와 구분하고 서로 다르게 만들며, 공식 권장 수는 3–5개다. 프롬프트의 Markdown을 줄이면 출력의 Markdown도 준다.
+- **prefill 이전.** 최신 모델에 마지막 assistant 턴 prefill을 보내면 400 오류다. 형식 강제는 구조화 출력, 분류는 enum 필드를 가진 도구나 구조화 출력, 서두 생략은 "Respond directly without preamble" 같은 지시, 이어쓰기는 user 메시지로 옮긴다. Fable 5.1·Opus 5.5는 강제 tool choice도 거부하므로 `auto` + strict tool use로 바꾼다.
+- **사고 과정 출력 요구 금지.** Fable 5.1·Opus 5.5·Fable 5에서 응답 본문에 내부 추론을 쓰게 하는 지시는 `reasoning_extraction` 거절로 끝날 수 있고 서버 폴백도 재시도하지 않는다. 이행 시 "생각을 보여줘"·"단계별로 추론을 적어라"류를 지우고, 가시성은 thinking 블록 표시 설정으로 얻는다. Opus 5.5 채팅 시스템 프롬프트의 "답하기 전에 신중히 생각하라"도 제거 후보다.
+- **추론량은 effort가 먼저.** Opus 5.5는 생각을 줄이려면 프롬프트보다 effort를 먼저 낮추라고 안내한다(기본 `medium`, Opus 5는 `high`). effort 이름은 모델 간 같은 양이 아니므로 모델을 바꾸면 기존 값을 옮기지 말고 평가로 다시 스윕한다. 반대로 Opus 5의 **답변 길이**는 effort로 줄지 않으므로 간결 지시를 프롬프트에 쓰고, 긴 시스템 프롬프트에는 끝부분에 짧은 리마인더를 둔다.
+- **이력은 덧붙이기만.** Fable 5.1·Opus 5.5에서 이전 메시지·`system`·`tools`를 고쳐 쓰거나 이전 턴을 제자리 요약하면 이후 thinking 블록이 무효화돼 오류가 난다. 세션 중 새 지시는 대화 중 system 메시지로, 도구 변경은 전용 추가·제거 블록으로 보낸다. 무인 실행용 지속 문단처럼 시스템 프롬프트에 넣을 보강은 세션 첫 요청부터 넣는다.
+- **Fable 5.1 진행 보고·병렬 호출.** 도구 연쇄 중 사용자용 업데이트가 줄어든다. 먼저 클라이언트가 진행 업데이트를 받는지 확인하고, "결과는 최종 응답에 모아라"류 억제 문구를 지운 뒤, 필요하면 언제·무엇을 보고할지 한 줄로 요구한다. 긴 에이전트 루프의 병렬 호출 지시는 도구 결과 뒤 턴 한정 system 메시지로 매 턴 새로 붙인다. 긴 비동기 작업에서 "다음엔 …하겠다"로 멈추면 공식 "Finish the whole task" 문단을 첫 문장 그대로 쓴다.
+- **붙여넣은 외부 텍스트 표시.** Opus 5.5는 사용자 본인 문장과 다른 곳에서 붙여넣은 텍스트를 구분해 주면 그 안의 지시에 덜 끌려간다. 붙여넣은 블록마다 같은 짧은 무작위 id를 가진 여닫는 태그로 감싸고, 시스템 프롬프트에 그 태그의 의미를 설명한다.
 
 ### 2026-09-16 — OpenAI 프롬프팅·캐싱 문서 대조
 
