@@ -54,6 +54,7 @@ const required = [
   "references/image/seedream-5-pro.md",
   "references/image/seedance-2.md",
   "references/image/seedance-2-5.md",
+  "references/image/minimax-h3.md",
   "references/image/higgsfield-genjutsu.md",
   "references/image/ghost-character-reference-sheet.md",
 ];

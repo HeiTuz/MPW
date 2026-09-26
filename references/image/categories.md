@@ -217,7 +217,7 @@ C7은 팁·요약·캐러셀 같은 **정보성 후킹** 전용이다. 제품·�
 |---|---|
 | 컷타입 | `teaser_keyart` · `character_one_sheet` · `ensemble_montage` · `vista_wide` · `poster_2x3` |
 | 기본 AR | `16:9`, `3:2`, 포스터는 `2:3` (픽셀값은 표면별: [surfaces.md](surfaces.md) S1 기계 계약→스키마 enum, S1-legacy→production.md §11 사이즈락 6종 안에서, S2→모델 정의, S3→UI 라벨) |
-| 언어·구조 | 사용자 언어를 유지한다. 영문이 필요한 표면만 영어로 변환하며, 포맷 A의 선택 라벨은 [compiler.md](compiler.md) §3을 따른다. |
+| 언어·구조 | 프롬프트 언어는 [common.md](../templates/common.md) §프롬프트 언어 결정을 따르고 정확 카피는 원문 언어로 보존한다. 포맷 A의 선택 라벨은 [compiler.md](compiler.md) §3을 따른다. |
 | 필수 공간 | 타이틀 트리트먼트용 negative space 확보(상단 밴드 또는 중앙 여백을 Scene에 명시), billing-block 대비 하단 1/8 클린 밴드 |
 | 타이틀 렌더 | 실제로 렌더할 때는 롤 블록(headline/billing) 적용, Tier-1 결합 공식 1회 |
 | 캐릭터 구성 | 단독 인물 원시트일 때만 contrapposto·rim 분리를 요청하거나 결과를 가르는 경우에 명시한다. 앙상블 몽타주는 크기 위계(주연 대형·조연 중형·배경 비스타)를 명시한다. |

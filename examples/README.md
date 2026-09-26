@@ -1,6 +1,6 @@
 # Examples — 캘리브레이션 3컷 (2026-07 실측)
 
-이 스킬의 이미지 컴파일 계층 규칙만으로 컴파일한 프롬프트와 실제 생성 결과다. 각 프롬프트는 `scripts/check_prompt.mjs` 검증 통과(ok:true) 후 생성했다. 원본 해상도 대신 축소 JPEG를 커밋한다.
+이 스킬의 이미지 컴파일 계층 규칙만으로 컴파일한 프롬프트와 실제 생성 결과다. **적용 범위: MPW 컴파일 형식(당시 gpt-image-2 대상)의 회귀 기준선이다.** 대상 미정 이미지 문안의 기본 경로인 GPT Image 2.5 네이티브 자연어(영어 기본, 끝 `AR` 없음, 요청 없는 피부 결 토큰 없음)의 기준은 [surface-contracts.md](../references/image/surface-contracts.md) §3.2와 `check_prompt.mjs --profile native`다 — 이 예시들을 네이티브 문안의 틀로 복사하지 않는다. 각 프롬프트는 `scripts/check_prompt.mjs` 검증 통과(ok:true) 후 생성했다. 원본 해상도 대신 축소 JPEG를 커밋한다.
 
 | 예시 | 검증한 규칙 | 프롬프트 | 결과 | 판정 |
 |---|---|---|---|---|
@@ -18,4 +18,4 @@
 - [한글 포스터 짧은 버전](korean-poster.compact.prompt.txt)
 - [창가 니트 짧은 버전](knit-daylight.compact.prompt.txt)
 
-명시된 팔레트는 보존했지만, 새 요청에 팔레트가 없으면 같은 HEX 개수를 채우지 않는다. 기본 작성은 [compiler.md](../references/image/compiler.md) §3, 길이 판정은 [surfaces.md](../references/image/surfaces.md) §0-2를 따른다.
+명시된 팔레트는 보존했지만, 새 요청에 팔레트가 없으면 같은 HEX 개수를 채우지 않는다. 컴파일 형식의 작성은 [compiler.md](../references/image/compiler.md) §3, 길이 판정은 [surfaces.md](../references/image/surfaces.md) §0-2를 따른다.

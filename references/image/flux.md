@@ -7,13 +7,13 @@
 ## 작성 원칙
 
 - **결과 어휘로 환원한다.** 장비·렌즈·필름 스톡·EXIF 나열은 결과를 기술하는 어휘로 바꾼다(`Fujifilm GFX 100S, 110mm` 대신 `medium-format clarity, shallow depth of field`). 카메라·필름 어휘 사전은 [editorial/photo-vocab.md](editorial/photo-vocab.md)가 정본이다.
-- **색은 본문 HEX로.** 색과 적용 대상의 연결 규칙은 [surface-contracts.md](surface-contracts.md) §7을 따른다.
+- **색은 본문 HEX로.** 색과 적용 대상의 연결 규칙은 [surface-contracts.md](surface-contracts.md) §4.1을 따른다.
 - **짧은 완결 산문이 기본.** `Camera:`·`Lighting:` 같은 라벨 행은 분리가 실제로 도움이 될 때만 쓰고, 라벨을 채우기 위한 내용을 만들지 않는다.
 - 산출물 언어는 [../templates/common.md](../templates/common.md) §프롬프트 언어 결정을 따른다.
 
 ## 관측 패턴 (재서술)
 
-- **제품 스틸은 조명·카피 공간·금지를 짧게 분리** (관측 2026-09, 출처 4건): 조명의 방향과 성격, 비워 둘 영역, 넣지 않을 요소를 한두 문장으로 끊어 적는다.
+- **제품 스틸은 조명·카피 공간·금지를 짧게 분리** (관측 2026-09, 출처 4건): 조명의 방향과 성격, 비워 둘 영역, 빼려는 요소를 대신할 원하는 상태(`unbranded`, `clean surface`)를 한두 문장으로 끊어 적는다. 제외 명사 나열은 쓰지 않는다([surface-contracts.md](surface-contracts.md) §4).
 - **매체·광원 대비를 결과 어휘로** (관측 2026-09, 출처 3건): 필름 스톡 이름과 렌즈 수치 대신 매체 특성(medium-format clarity, fine grain)과 광원 대비(overcast daylight + warm tungsten)를 쓴다.
 - **글리프 렌더는 구성 방식부터 잠근다** (관측 2026-09, 출처 1건): 화면 전체가 글리프로 구성된다는 사실과 글리프 종류를 먼저 쓰고 배경·스캔라인·발광을 뒤에 붙인다.
 
@@ -24,7 +24,7 @@
 제품 스틸 — 최소 라벨과 카피 공간 (관측 2026-09, 출처 1건):
 
 ```text
-Matte charcoal pour-over kettle on a warm concrete counter. Soft key from the left, cool rim light. Empty upper frame for copy, no logos.
+Matte charcoal pour-over kettle on a warm concrete counter. Soft key from the left, cool rim light. Empty upper frame for copy, clean unbranded surfaces.
 ```
 
 제품 스틸 — 단일 스포트라이트 (관측 2026-09, 출처 1건):

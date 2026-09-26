@@ -7,8 +7,8 @@ metadata:
   category: prompt-writing
   locale: ko-KR
   doctrine: intent-first-progressive-disclosure
-  updated_at: "2026-09-24"
-  model_claims_reviewed_at: "2026-09-16"
+  updated_at: "2026-09-26"
+  model_claims_reviewed_at: "2026-09-25"
   role_routing_reviewed_at: "2026-09-05"
   platform_roster_reviewed_at: "2026-09-06"
 ---

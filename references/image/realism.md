@@ -17,11 +17,11 @@ compiler.md 발전표(피부·조명·필름 3행)와 **상보** — 그 3행은
 | 증상 | 근본 원인 | 긍정형 처방 토큰 | 엔진 메모 |
 |---|---|---|---|
 | 플라스틱 피부·과매끈 | 미화 형용사, 결 토큰 부재 | `natural skin texture, visible pores, fine vellus hair, subtle tonal variation, under-eye texture, unretouched`(정본 철칙 7) | 공통. Higgsfield는 `flawless/porcelain/glass skin` 회피 + 같은 결 토큰 병기 |
-| 균일·무방향 조명 | 광원 방향·비율 미지정 | 단일 key 방향 1개(`soft light from camera left`) + `key:fill 2:1` + 그림자 거동(정본 editorial/photo-vocab.md §7.2·editorial/scene-craft.md §10) | 공통 |
+| 균일·무방향 조명 | 광원 방향·비율 미지정 | 단일 key 방향 1개(`soft light from camera left`) + `key:fill 2:1` + 그림자 거동(정본 editorial/photo-vocab.md §7.2·editorial/scene-craft.md §10) | gpt-image 계열. Soul은 광원 위치·수치 대신 관용 조명 명칭(`Paramount lighting` 등, [soul-v2-director.md](soul-v2-director.md) §실측 법칙 1) |
 | 물리 불가 그림자·반사·캐치라이트 | 그림자·반사·catchlight 방향이 광원과 불일치, 다중 그림자·부유 | 그림자·specular·catchlight 방향=key 1개로 고정, `contact/grounding shadow` 명시, 반사 내용=주변 지오메트리 일치 | 공통. 배경합성은 §4 |
-| 과포화·HDR·글로시 AI 룩 | 채도·로컬 대비 과다, 광고식 과선명 | `muted/desaturated`(글로벌 −8~−12), `gentle highlight roll-off, lifted blacks`, 필름 룩 병기. 다큐 레지스터면 `raw photo, taken on a real camera, available light, unposed feel, mundane environment`로 낮춤(시네마틱 키아트 목적이면 유지) | gpt-image-2 HEX+켈빈 억제 / Higgsfield 저채도·필름 프리셋. 레지스터 토큰 개별 효능 (미검증) |
+| 과포화·HDR·글로시 AI 룩 | 채도·로컬 대비 과다, 광고식 과선명 | `muted/desaturated`(글로벌 −8~−12), `gentle highlight roll-off, lifted blacks`, 필름 룩 병기. 다큐 레지스터면 `candid snapshot taken on a real camera, available light, unposed feel, mundane environment`로 낮춤(`raw photo`는 compiled 검증기의 SD 폐기 어휘 `E-SD-VOCAB`라 쓰지 않는다)(시네마틱 키아트 목적이면 유지) | gpt-image-2 HEX+켈빈 억제 / Higgsfield 저채도·필름 프리셋. 레지스터 토큰 개별 효능 (미검증) |
 | 비현실적 완벽 대칭·정돈 | 대칭 얼굴·정중 구도·stock pose | `natural facial asymmetry, catchlights in both eyes, not perfectly identical`, off-center `rule of thirds`, `candid/unposed, in-between moment`, 한쪽에만 잔머리 | 텍스트·구조 레인은 긍정형 토큰 / Soul ID는 실사 학습이 대칭 완화 — 훈련이 담당(정본 lanes.md §인물·사실감 이미지 레인) |
-| 배경 인물·소품 붕괴 | 배경 군중·텍스트 세밀 지정 | 배경 인물=`distant motion-blur silhouettes, no identifiable faces`, 소품 수 축소+거리 m, 간판=`abstract light shapes, no readable text`, 배경=`follows perspective, consistent vanishing point`(전부 긍정형 재서술) | 공통 |
+| 배경 인물·소품 붕괴 | 배경 군중·텍스트 세밀 지정 | 배경 인물=`distant motion-blur silhouettes, faces too far away to identify`, 소품 수 축소+거리 m, 간판=`unlettered abstract light shapes`, 배경=`follows perspective, consistent vanishing point`(전부 긍정형 재서술) | 공통 |
 | 렌즈 물리 부재 | 심도·왜곡·플레어·압축이 초점거리와 불일치 | 한 컷 한 렌즈 character 통일: 얕은 심도면 배경 일관 blur+보케, 광각이면 `mild edge stretch`, 망원이면 `compressed perspective, flattened planes`, 플레어·비네트는 광원 방향 일치(정본 editorial/photo-vocab.md §7.1) | 공통. 바디명 대신 결과·mm character(철칙 4, 세컨드 패스도 바디명 저신뢰로 수렴) |
 | 재질 광택 획일화 | 모든 소재 같은 광택·micro texture 부재 | 소재별 빛 반응 차등(정본 editorial/scene-craft.md §9): 레더 hard highlight 단절 / 스웨이드 흡수 / 실크 흐르는 하이라이트 / 유리 `fingerprints, soft reflection` / 금속 `anisotropic highlights` | 공통. 제품·실내 컷에 특히 |
 | 합성 광원·색온도·그레인·원근 불일치 | 피사체-배경 통합 미흡 | §4 배경합성 정합 참조 | COMPOSITE 전용 |
@@ -80,7 +80,7 @@ compiler.md 발전표(피부·조명·필름 3행)와 **상보** — 그 3행은
 
 - **시간 일관성:** 프레임 간 정체성·의상·텍스처·조명 유지; 조명은 피사체·카메라가 움직일 때만 이동.
 - **모션 블러 물리성:** 블러 방향=이동 방향, 정지 배경은 카메라 무브 없으면 샤프.
-- **카메라 관성:** `handheld micro-jitter, natural inertia`, 급격한 불가능 점프 없음; 모션은 물리 동사(lanes.md §영상 공통 규칙).
-- **신체·접지 물리:** `weight shift before stepping, realistic foot contact, no sliding feet`; 배경 지오메트리 안정(벽·문틀 안 휘어짐).
+- **카메라 관성:** 핸드헬드를 요청했거나 장면이 요구할 때만 `handheld micro-jitter, natural inertia`; 정지 카메라 요청에는 카메라 모션을 더하지 않는다. 카메라 동작 어휘는 선택한 엔진 가이드가 정하면 그것을 따른다.
+- **신체·접지 물리:** `weight shift before stepping, feet planted firmly with each step`; 배경 지오메트리 안정(벽·문틀 안 휘어짐).
 - **실패 교정:** 깜박임·얼굴 변형·미끄러짐 등 실제 관측한 실패만 보강한다. 제약의 문법과 입력 위치는 [surface-contracts.md](surface-contracts.md) §4를 따른다.
 - **참조 인물 유지:** 스틸의 정체성 기능을 영상에 자동 상속하지 않는다. 실제 영상 모델이 지원하는 입력 역할로 참조를 전달하고 결과의 얼굴·의상 연속성을 확인한다([soul-v2-director.md](soul-v2-director.md) §스틸을 영상으로 연결할 때).

@@ -122,16 +122,16 @@ Edit 프롬프트는 **참조별 역할 → 바꿀 부분 → 보존 조건**만
 
 주간 인테이크로 수집된 공개 Midjourney 프롬프트를 MPW 형식으로 재서술했다. 원문 복사가 아니며 품질 실측이 아닌 관측 스탬프를 단다. 실존 인물·작품명·상표 유도 요소와 구버전 고정값은 제외했고, 버전 플래그는 사용자 지정에 따른다.
 
-왜곡 배제를 `--no`로 지정한 인테리어 (관측 2026-09, 출처 1건):
+왜곡 배제를 `--no` 단일 명사와 본문의 원하는 상태로 나눈 인테리어 (관측 2026-09, 출처 1건 — §5 단어 단위 해석에 맞춰 재서술):
 
 ```text
-living room, Scandinavian minimalism, oiled oak floor, whitewashed walls, pale oak credenza, low linen sofa, wool rug, greenery in a clay pot, soft north-facing daylight, camera at chest height, 24mm perspective, straight verticals, balanced exposure, a lived-in book stack and throw blanket --no fisheye, warped windows, floating furniture --ar 3:2
+living room, Scandinavian minimalism, oiled oak floor, whitewashed walls, pale oak credenza, low linen sofa, wool rug, greenery in a clay pot, soft north-facing daylight, camera at chest height, 24mm perspective, straight verticals, straight window frames, furniture resting firmly on the floor, balanced exposure, a lived-in book stack and throw blanket --no fisheye --ar 3:2
 ```
 
-피부 질감 보존을 `--no`로 지정한 에디토리얼 인물 (관측 2026-09, 출처 1건):
+피부 질감을 본문의 원하는 상태로 옮긴 에디토리얼 인물 (관측 2026-09, 출처 1건 — 원문의 `--no plastic skin`은 단어 단위로 읽혀 `skin`까지 배제하므로 재서술):
 
 ```text
-woman in her late 20s with freckles and natural auburn hair, looking off camera with a slight smile, rooftop at golden hour, bokeh city lights, 85mm f/1.8, warm backlight, editorial portrait, documentary feel --ar 4:5 --raw --no plastic skin
+woman in her late 20s with freckles and natural auburn hair, looking off camera with a slight smile, rooftop at golden hour, bokeh city lights, 85mm f/1.8, warm backlight, natural skin texture with visible pores, editorial portrait, documentary feel --ar 4:5 --raw
 ```
 
 정면 대칭 구도의 파스텔 인테리어 (관측 2026-09, 출처 1건 — 실존 인물·작품명 제거 후 재서술):

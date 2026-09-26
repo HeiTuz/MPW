@@ -96,7 +96,7 @@
 2. **문서 가이드의 Flare 조건.** 요청이나 문맥이 속도·지연 우선, 대량 반복·초안·시안 단계, 또는 이미 검증된 GPT Image 2 품질로 충분하다는 조건을 밝히면 `gpt-image-2.5-flare`부터 비교한다. 결과가 요구에 못 미치면 같은 프롬프트·입력·품질로 `gpt-image-2.5-sunburst`를 시험한다.
 3. **기본값.** 그 외 모든 GPT Image 생성·편집은 `gpt-image-2.5-sunburst`다. 정확 텍스트·인물과 제품 보존·복잡한 편집·브랜드 디테일처럼 품질이 요구인 작업은 이 분기에 남는다. 사용자가 지연·비용 절감을 요청할 때만 같은 프롬프트·입력으로 Flare를 시험해 품질이 유지되고 지연이 줄 때 바꾸고, 그렇지 않으면 Sunburst를 유지한다.
 
-첫 비교는 프롬프트·참조·크기·공통 품질 설정을 고정하고, 품질을 충족한 뒤 속도를 비교한다. 빠른 모델이 더 싸거나 모든 컷에서 일정 비율로 빨라진다고 단정하지 않는다. 자연어 작성은 [surface-contracts.md](surface-contracts.md) §3.2, API 설정은 §4.3을 따른다. 공식 근거·확인일은 같은 파일 §7에 있다.
+첫 비교는 프롬프트·참조·크기·공통 품질 설정을 고정하고, 품질을 충족한 뒤 속도를 비교한다. 빠른 모델이 더 싸거나 모든 컷에서 일정 비율로 빨라진다고 단정하지 않는다. 자연어 작성은 [surface-contracts.md](surface-contracts.md) §3.2, API 설정은 §4.3을 따른다. 공식 근거·확인일은 [surface-evidence.md](surface-evidence.md) §7에 있다.
 
 기존 워크플로를 옮길 때는 공식 이행 절차를 따른다. 대표 프롬프트·참조(어려운 편집·정확 텍스트·얼굴·제품 형상·투명 자산 포함)와 현재 모델·설정·결과를 기준선으로 저장한 뒤 후보를 고르고, 지시 준수·정체성과 제품 보존·텍스트 정확도·원치 않은 변화·투명도를 전체 결과로 비교한다. 반복 실행으로 일관성을 보고, 편집 워크플로는 단계별과 전체 시퀀스를 모두 시험한다. 품질이 통과한 뒤 지연을 비교하고, 프롬프트를 고쳐 쓰기 전에 품질 단계부터 하나씩 조정하며 일반·느린 응답·실패·재시도·승인 이미지당 비용을 측정한다. 가격은 현재 가격표로 확인하고 빠른 모델이 더 싸다고 가정하지 않는다. 전환은 워크플로 단위로 소량부터 넓히고, 이전 모델은 지원되는 동안 롤백용으로 남긴다. `gpt-image-1`(2026-10-23)·`gpt-image-1.5`(2026-12-01)는 종료 예정이므로 구형 설정을 복사하지 않고 후보 모델이 지원하는 설정으로 다시 시험한다.
 
@@ -118,6 +118,8 @@
    - [seedream-character-reference-sheets.md](seedream-character-reference-sheets.md) — 3×3 identity 입력을 단일 베이스·1×4 전신 시트로 바꾸는 구도·체형·헤어 차폐 규칙.
    - [seedance-2.md](seedance-2.md) — BytePlus ModelArk direct Seedance 2.0의 멀티모달 참조·편집·연장·트랙 연결 문법. 2.5 규칙을 자동 상속하지 않는다.
    - [seedance-2-5.md](seedance-2-5.md) — Dreamina 웹 Seedance 2.5의 멀티레퍼런스·장편·편집·연장·키프레임·스토리보드·클레이 렌더러 붙여넣기 문법. ModelArk API 계약이 아니다.
+   - [minimax-h3.md](minimax-h3.md) — MiniMax H3 공식 API 직결의 모드별 고정 지시문·라벨 섹션·`<d>[Language]` 대사·샷 타임코드 문법. 영상 공통 규칙과의 우선순위는 [lanes.md](lanes.md) §영상 공통 규칙을 따른다. Higgsfield `minimax_h3` 래퍼의 필드 대응은 런타임 정의로 확인한다.
+   - Higgsfield `seedance_2_0`·`seedance_2_5` (2026-09-25 문서 대조): 위 두 Seedance 문서는 ModelArk·Dreamina 표면 계약이다. 래퍼 전용 프롬프트 문법은 확인된 근거가 없으므로 **[미확인]**이며, Dreamina `@Image N`·대괄호 블록이나 ModelArk 전용 좌표·파라미터를 래퍼 프롬프트로 옮기지 않는다. 참조 전달은 런타임 정의의 미디어 롤을 따른다.
    - [midjourney-feed-diagnosis.md](midjourney-feed-diagnosis.md) — 연속 피드에서 프로필 스택·chaos·stylize·Variation 계보를 분리하는 진단·ablation 절차.
 
 ## 5. 스냅샷 신선도

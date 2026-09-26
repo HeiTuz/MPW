@@ -104,7 +104,7 @@ S1-legacy jsonl 레코드로 쓸 때([../production.md](../production.md) §2):
 
 | 요청 요소 | Format B 변환 | Soul 변환 |
 |---|---|---|
-| 비율 | S3에서만 끝 토큰, 그 밖의 표면은 [../compiler.md](../compiler.md) §4의 파라미터 규칙 | `[프리셋: Flash Editorial · 비율 2:3 — UI에서 선택]` 라벨 |
+| 비율 | MPW 컴파일 형식의 S3에서만 끝 토큰(네이티브는 [../surface-contracts.md](../surface-contracts.md) §3.2), 그 밖의 표면은 [../compiler.md](../compiler.md) §4의 파라미터 규칙 | `[프리셋: Flash Editorial · 비율 2:3 — UI에서 선택]` 라벨 |
 | 장르 | 요청한 장르를 구분할 때만 짧게 명시 | 실제 프리셋이 전달하지 않은 장르 조건만 본문에 |
 | 안전 | Tier-2면 assert 첫 절 + tail AR 직전 | 긍정형 안전 스타일링 문장. 고정 tail을 본문에 억지 삽입하지 않음 |
 | 조명 | 필요한 경우 `부드러운 창가 자연광이 왼쪽에서...` 같은 결과 절 | L3 골격: `direct on-camera flash, rapid highlight falloff, dense background shadow` 식 키라이트 방향·경도 명시 |
@@ -117,7 +117,7 @@ Soul 스틸의 상세 예시 ([../soul-v2-director.md](../soul-v2-director.md) �
 
 ```text
 [프리셋: Flash Editorial · 비율 2:3 | Color signature: cool urban night reference 1장 — UI에서 선택/업로드]
-late-20s Korean woman, 짧은 웨이브 단발, 무광 블랙 레더 재킷에 실버 이어커프, 밤의 도심 주차장 콘크리트 기둥 앞에 단독으로 서서 카메라를 정면으로 응시, three-quarter 구도 아이레벨, Y2K street snap 무드, 어두운 콘크리트와 소듐등 톤 배경, direct on-camera flash 특유의 강한 정면광과 rapid highlight falloff, 뒤로 짙게 떨어지는 dense shadow, Contax G2, 35mm lens, Fujifilm Superia 400 color response, cracked patent leather reflections, natural skin texture, visible pores, subtle film grain.
+late-20s Korean woman, 짧은 웨이브 단발, 무광 블랙 레더 재킷에 실버 이어커프, 밤의 도심 주차장 콘크리트 기둥 앞에 단독으로 서서 카메라를 정면으로 응시, three-quarter 구도 아이레벨, Y2K street snap 무드, 어두운 콘크리트와 소듐등 톤 배경, direct on-camera flash 특유의 강한 정면광과 rapid highlight falloff, 뒤로 짙게 떨어지는 dense shadow, Contax G2, 35mm lens, cool green film-like color cast with uneven grain, cracked patent leather reflections, natural skin texture, visible pores.
 ```
 ## 14. 작성 체크리스트
 
