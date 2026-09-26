@@ -109,7 +109,17 @@ python3 scripts/compile_image_variations.py --request request.json --count 100 -
 bunx --package github:HeiTuz/MPW heituzmpw
 ```
 
-Bun이 없으면 [공식 설치기](https://bun.com/docs/installation)로 최신 안정판을 설치한 뒤 실행합니다. macOS/Linux는 `curl -fsSL https://bun.com/install | bash`, Windows는 `powershell -c "irm bun.sh/install.ps1|iex"`입니다.
+Bun이 없는 새 환경에서는 아래 명령이 [공식 설치기](https://bun.com/docs/installation)로 최신 안정판을 설치하고 곧바로 MPW를 설치합니다. 이미 Bun이 있으면 그대로 사용합니다.
+
+```sh
+bun_cmd="$(command -v bun || true)"; if [ -z "$bun_cmd" ]; then curl -fsSL https://bun.com/install | bash; bun_cmd="${BUN_INSTALL:-$HOME/.bun}/bin/bun"; fi; "$bun_cmd" x --package github:HeiTuz/MPW heituzmpw
+```
+
+Windows PowerShell:
+
+```powershell
+$bun = (Get-Command bun -ErrorAction SilentlyContinue).Source; if (!$bun) { irm https://bun.com/install.ps1 | iex; $root = if ($env:BUN_INSTALL) { $env:BUN_INSTALL } else { "$HOME\.bun" }; $bun = Join-Path $root 'bin\bun.exe' }; & $bun x --package github:HeiTuz/MPW heituzmpw
+```
 
 <details>
 <summary><b>자동 감지가 하는 일</b></summary>
