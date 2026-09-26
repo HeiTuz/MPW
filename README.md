@@ -107,9 +107,9 @@ python3 scripts/compile_image_variations.py --request request.json --count 100 -
 
 ```sh
 bunx --package github:HeiTuz/MPW heituzmpw
-# Node/npm 대안
-npx --yes --allow-git=all --package github:HeiTuz/MPW heituzmpw
 ```
+
+Bun이 없으면 [공식 설치기](https://bun.com/docs/installation)로 최신 안정판을 설치한 뒤 실행합니다. macOS/Linux는 `curl -fsSL https://bun.com/install | bash`, Windows는 `powershell -c "irm bun.sh/install.ps1|iex"`입니다.
 
 <details>
 <summary><b>자동 감지가 하는 일</b></summary>
