@@ -1,0 +1,1 @@
+Edit the original flyer with the price tag "7,500원" at the bottom, legible and exactly once. Replace the beige border with a thin green rule. Preserve "7,500원" unchanged.

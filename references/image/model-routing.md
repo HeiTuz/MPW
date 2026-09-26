@@ -1,0 +1,144 @@
+# 모델 라우팅 — 목적축 → 후보 모델 (S2 플랫폼 표면)
+
+**이 파일은 후보를 좁히는 용도다. 파라미터의 정본이 아니다.** 후보 순서는 작업 목적별 작성 지침이며 성능 실측 순위가 아니다. 실제 파라미터·비율·미디어 롤은 현재 모델 상세 조회가 이긴다. 표면 판정은 [surfaces.md](surfaces.md)가 선행한다.
+
+"Higgsfield"는 엔진 하나가 아니라 여러 공급자의 모델을 호스팅하는 **플랫폼**이다. "Higgsfield로 간다"는 라우팅 결정이 아니며, 목적축에서 **모델 id**까지 내려가야 결정이 끝난다.
+
+## 1. 이미지 — 목적축 라우팅
+
+| 목적 | 1순위 | 대안 | 결정 파라미터 |
+|---|---|---|---|
+| 정확한 텍스트 렌더·타이포·로고 배치 | `openai_hazel` ⚠️비율제약 | `nano_banana_pro`, `gpt_image_2`; `gpt_image_2_5`는 재조회 후보 **[미확인]** | `quality`(hazel) / `resolution`(기존 대안); 2.5는 `variant`·`quality`·`resolution`·`background` 재조회 |
+| 다이어그램·인포그래픽·도해 | `nano_banana_pro` | `openai_hazel`, `gpt_image_2` | `resolution: 2k~4k` |
+| 벡터 로고·아이콘·플랫 브랜드 자산 | `recraft_v4_1` | — | `model_type: vector`/`utility_vector`, `colors[]`, `background_color` |
+| 제품컷·목업(깨끗·정면·예측가능) | `recraft_v4_1` `model_type: utility` | `marketing_studio_image` | `background_color`, `resolution` |
+| 인물 사실감·UGC·패션 에디토리얼 | `soul_2` (=`soul_v2`) | `nano_banana_2`, `seedream_v5_pro` | `quality: 1.5k/2k`, `soul_id` |
+| 동일 인물 시리즈 | `soul_2` + `soul_id` | `soul_cast`(시네마틱 아이덴티티) | `soul_id` |
+| 시네마 스틸·컨셉아트 | `soul_cinematic` | `cinematic_studio_2_5` | `quality` / `resolution: 4k` |
+| 지시 기반 편집·변형 | `seedream_v5_pro` | `seedream_v5_lite`, `flux_kontext`, `openai_hazel`; `gpt_image_2_5`는 재조회 후보 **[미확인]** | `resolution`(기존 대안); 2.5는 `variant`·`quality`·`resolution`·`background` 재조회 |
+| 스타일 전이·컨텍스트 편집 | `flux_kontext` | `seedream_v5_pro` | — |
+| 프롬프트 준수 정밀도 | `flux_2` | `nano_banana_pro` | `variant: pro/flex/max`, `resolution` |
+| 초고해상(4K 이상) | `seedream_v4_5` (`quality: high` ~6K) | `nano_banana_2/pro`, `gpt_image_2`, `cinematic_studio_2_5` (4k); `gpt_image_2_5`는 재조회 후보 **[미확인]** | `quality` / `resolution`; 2.5는 `variant`·`quality`·`resolution`·`background` 재조회 |
+| 광각·와이드 비율(21:9 등) | `kling_omni_image` | `nano_banana_*`, `seedream_v5_pro`, `recraft_v4_1` | `aspect_ratios` 배열 확인 |
+| 표현적·고대비 크리에이티브 | `grok_image` | `grok_image_2_0`, `flux_2` | `mode`(grok_image) / `quality`(grok_image_2_0) |
+| 빠르고 싼 시안 스윕 | `z_image` | `nano_banana`, `nano_banana_2_lite` | `thinking: MINIMAL/HIGH`(lite) |
+| DTC 광고 크리에이티브 | `ms_image` | `marketing_studio_image` | `style_id`(**필수**), `brand_kit_id`, `product_ids` |
+| 게임 스프라이트 시트 | `autosprite` | — | `kind`, `frame_count`, `frame_size`, `video_tier` |
+| 모델 선택이 실제로 무의미할 때 | `image_auto` | — | 없음 |
+
+**⚠️비율제약 — `openai_hazel`은 요구 비율을 못 낼 수 있다.** `aspect_ratios`가 `1:1`·`3:2`·`2:3`·`auto` 4종뿐이다(2026-09-06 런타임 확인). `4:5`·`9:16`·`16:9` 요청에는 이 모델의 당시 목록에 해당 비율이 없었다.
+
+- 정사각·세로 `2:3`·가로 `3:2`면 `openai_hazel` 그대로 간다(텍스트 렌더 축의 1순위는 유지).
+- **다른 세로/와이드 비율이 필요하면** 해당 비율을 선언한 대안을 현재 정의에서 확인한다. `nano_banana_pro`는 과거 조회에서 `4:5`·`9:16`·`16:9`를 지원했고, `gpt_image_2_5`는 새 카탈로그 전수 확인 전까지 후보 자격이 **[미확인]**이다.
+- `gpt_image_2`는 `16:9`·`9:16`·`21:9`를 지원하지만 `4:5`는 없다(2026-09-06 런타임 확인). 요구 비율이 맞을 때 대안으로 쓴다.
+
+**표 전체에 적용:** 1순위는 목적축 기준이며 비율을 보장하지 않는다. 레인이 비율을 요구하면 후보를 고른 뒤 그 모델의 `aspect_ratios`를 반드시 대조하고, 없으면 대안 열로 내려간다(§4 규칙 4).
+
+**후처리·확장용**: `image_background_remover`, `outpaint`, `flux_2_pro_outpaint`, `topaz_image`, `topaz_image_generative`, `bytedance_image_upscale`.
+
+**네거티브 지원과 길이 상한은 이 표에 없다 — §3을 본다.** 당시 조회된 후보의 필드 부재를 현재 전체 카탈로그의 증명으로 사용하지 않는다.
+
+## 2. 영상 — 목적축 라우팅
+
+**Genjutsu 지정 요청:** [higgsfield-genjutsu.md](higgsfield-genjutsu.md)에서 Motion Transfer·Object Swap을 판정한다(2026-09-11 공식 안내 확인). 웹 기능명이며 아래 런타임 로스터에 확인된 API 모델 ID를 추가한 것이 아니다. 실행 ID·입력 조합은 현재 표면에서 확인한다.
+
+| 목적 | 1순위 | 대안 | 결정 파라미터 |
+|---|---|---|---|
+| 최고급 시네마틱 | `veo3_1` | `cinematic_studio_3_0`, `kling3_0` | `quality: basic/high/ultra`, `variant`, `duration: 4/6/8` |
+| 장르 제어·다중 샷 | `cinematic_studio_video_v2` | `kling3_0` | `genre`, `multi_shots`, `cfg_scale`, `speedramp`, `mode` |
+| 레퍼런스 기반 아이덴티티 유지 | `seedance_2_0` | `seedance_2_0_mini`, `gemini_omni`, `minimax_h3` | `image_references`/`video_references`/`audio_references`, `mode`, `resolution` |
+| 참조 기반 편집·연장 | `seedance_2_5` | — | `mode: omni_reference/video_edit/video_extension`, `extension_mode`, `duration: 4~30` |
+| 제품·멀티 SKU 커머스 | `seedance_2_0` | `marketing_studio_video` | `product_ids`(MS), `generate_audio` |
+| 물리·표정 자연스러움 | `minimax_hailuo` | `kling2_6` | `variant`, `duration: 6/10`, `resolution` |
+| 오디오 동기·캐릭터 일관 | `wan2_7` | `kling3_0`, `seedance_2_0`, `minimax_h3` | `duration: 2~15`, `resolution` |
+| 시작·끝 프레임 지정 | `seedance_2_0`, `minimax_hailuo`, `kling3_0`, `wan2_7` | `veo3_1_lite`, `minimax_h3`, `minimax_h3_max` | `start_image` / `end_image` 롤 |
+| 빠르고 싼 배치 | `veo3_1_lite` | `kling3_0_turbo`, `seedance_2_0_mini` | `generate_audio: false` |
+| 실험적·스타일라이즈 | `wan2_6` | `grok_video` | `quality`, `duration: 5/10/15` |
+| 프리셋 바이럴 템플릿(i2v) | `higgsfield_preset` | — | `preset_id`(**필수**, 현재 프리셋 조회 도구) |
+| 마케팅 UGC·릴스 | `marketing_studio_video` | — | `mode`(프리셋 slug), `hook_id`/`setting_id`; 추가 참조 필드는 현재 도구 정의 확인 |
+| 유튜브 → 숏폼 클립 | `clipify` | — | `clips_num`, `clip_aspect`, 자막 파라미터 |
+
+**후처리 전용**: `video_background_remover`/`sam_3_video`, `topaz_video`, `bytedance_video_upscale`, `video_upscale`, `video_deflicker`, `sync_so`(립싱크), `reframe`.
+
+**네거티브 지원과 길이 상한은 이 표에 없다 — §3을 본다.** 영상의 제외 필드도 선택 모델의 현재 정의를 확인한다.
+
+## 3. 네거티브·길이 — 엔진 쪽 사실
+
+**길이 판정의 정본은 [surfaces.md](surfaces.md)다.** 이 표는 표면 계약이 아니라 **엔진·모델이 자기 쪽에서 거는 상한**만 기록한다. 실제 상한은 세 층에서 온다 — 전달 채널 / 타깃 엔진 / 기계 계약 — 그리고 **가장 좁은 것이 이긴다.** 상한 있는 메신저형 채널로 나가면 엔진이 32,000자를 받아도 채널이 이긴다. 전역 2,000자 하드라인은 없다. 구체 배선과 값은 [adapters.md](../adapters.md)·런타임 소관이다. **이 절의 값에 대한 근거·확인일 정본은 [surface-evidence.md](surface-evidence.md) §7이다 — 여기서 다시 스탬프하지 않는다.**
+
+| 엔진·모델군 | 별도 네거티브 필드·문법 | 길이 상한(엔진 쪽) |
+|---|---|---|
+| 2026-09-06 Higgsfield 이미지 목록 | 당시 목록에는 없음 | 당시 정의에 상한 없음 / 현재 백엔드 상한 **[미확인]** → 현행 정의 확인 |
+| 2026-09-06 Higgsfield 영상 목록 | 당시 목록에는 없음 | 당시 정의에 상한 없음 / 현재 백엔드 상한 **[미확인]** → 현행 정의 확인 |
+| `gpt_image_2` (Higgsfield 경유) | 없음 | 런타임 정의에 상한 없음(전수 확인) / 백엔드 실제 상한 미공개 **[미확인]** → 신호 밀도 |
+| gpt-image 계열 (OpenAI API 직결) | 네거티브 필드 없음 | 32,000자 |
+| Midjourney (붙여넣기 + `--` 플래그) | `--no` 인라인 | [surfaces.md](surfaces.md) §0-1·§0-2의 간결성 기준 |
+| `tripo_3d` (3D 축, 아래 각주) | `negative_prompt` 파라미터 있음 | 런타임 정의에 상한 없음 |
+
+과거 전수 확인의 방법과 모델 수는 [surface-evidence.md](surface-evidence.md) §7의 해당 행에 있다. 지금 선택한 모델의 필드는 현재 커넥터에서 다시 확인한다.
+
+**필드 부재는 자연어 부정문 금지를 뜻하지 않는다.** 산출 형태·자연어 보존 제약·별도 제외 입력란의 구분은 [surface-contracts.md](surface-contracts.md) §3.1·§4만 따른다. 별도 필드 내용을 일반 프롬프트 끝에 붙이지 않는다.
+
+**Midjourney의 길이·간결성 판정은 [surfaces.md](surfaces.md) §0-1·§0-2가 정본이다.** 이 표는 모델 로스터의 날짜를 갱신하거나 확인되지 않은 수치 경계를 만들지 않는다.
+
+**3D·오디오 축은 이 파일의 범위 밖이다.** §1·§2 목적축 표는 이미지·영상만 다룬다. `tripo_3d`는 현재 로스터에서 `negative_prompt`를 갖는 예외라 명시한다. 다른 출력 유형의 라우팅이 필요하면 현재 목록부터 조회한다. 전수 조회 범위는 [surface-evidence.md](surface-evidence.md) §7에 있다.
+
+## 4. 라우팅 규칙
+
+**적용 범위:** 모델 추천·선택이나 특정 실행 형식 변환에 사용하는 절이다. 대상 미정의 이미지 프롬프트 작성은 [surfaces.md](surfaces.md) §0의 기본 작성 경로를 따른다. 문안만 작성할 때는 아래 API 모델 분기를 실행하지 않는다. 아래 기본값은 이미 해당 모델 계열·표면을 선택한 경우에만 적용하며, 새 유료 실행·비교 실험을 시작할 권한이 아니다.
+
+
+**0. 실행 경로가 필요한 요청의 기본값.** 실제 이미지 실행·모델 추천·기계 핸드오프가 요청됐고 타깃이 없을 때만 설치의 기본 이미지 경로를 확인한다. 그 경로가 GPT Image이고 모델을 고를 수 있는 표면(OpenAI 직접 API, 모델 선택이 있는 UI, S3 라벨 줄)이면 아래 분기를 적용하고, 기본 생성 모델은 `gpt-image-2.5-sunburst`다. Higgsfield 경로에서는 현재 연결된 카탈로그와 생성 도구가 실제로 지원하는 ID·선택 파라미터를 확인한다. `gpt_image_2_5`의 현재 가용성과 기본 variant는 카탈로그 전수 재조회 전까지 **[미확인]**이며, 직접 API의 Flare/Sunburst ID를 래퍼에 복사하지 않는다. 모델 선택을 노출하지 않는 대화형·구독 이미지 도구는 호스트 선택을 따르고, 기본 모델을 본문 지시로 강제하거나 적용됐다고 보고하지 않는다. S1 `engine`은 스키마 enum 값 그대로이며 2.5 id를 끼워 넣지 않는다. §1 목적축 표는 Higgsfield 후보를 좁히는 도구이며 다른 표면에 이식하지 않는다.
+
+**GPT Image 모델 분기 (2026-09-16 적용; 공식 문서 2026-09-09 확인·2026-09-16 재확인).** 모델 선택이 필요한 요청에서만 순서대로 판정하고 처음 일치한 곳에서 멈춘다. 아래 비교·시험은 승인된 생성 평가에서만 실행하며, 문안 작성·추천만 요청됐으면 후보와 판단 근거까지만 제공한다. 결정한 모델은 프롬프트 본문이 아니라 S2 `model` 파라미터 또는 S3 라벨 줄로 전달하고, 어느 분기가 적용됐는지 한 줄로 밝힌다.
+
+분기 A. **지정 모델.** 사용자·요청·상위 워크플로가 모델 id를 지정하면 그대로 쓴다(`gpt-image-2`, `gpt-image-2.5-flare` 등 정확한 id). 지정을 기본값으로 덮지 않는다.
+분기 B. **문서 가이드의 Flare 조건.** 요청이나 문맥이 속도·지연 우선, 대량 반복·초안·시안 단계, 또는 이미 검증된 GPT Image 2 품질로 충분하다는 조건을 밝히면 `gpt-image-2.5-flare`부터 비교한다. 결과가 요구에 못 미치면 같은 프롬프트·입력·품질로 `gpt-image-2.5-sunburst`를 시험한다.
+분기 C. **기본값.** 그 외 모든 GPT Image 생성·편집은 `gpt-image-2.5-sunburst`다. 정확 텍스트·인물과 제품 보존·복잡한 편집·브랜드 디테일처럼 품질이 요구인 작업은 이 분기에 남는다. 사용자가 지연·비용 절감을 요청할 때만 같은 프롬프트·입력으로 Flare를 시험해 품질이 유지되고 지연이 줄 때 바꾸고, 그렇지 않으면 Sunburst를 유지한다.
+
+첫 비교는 프롬프트·참조·크기·공통 품질 설정을 고정하고, 품질을 충족한 뒤 속도를 비교한다. 빠른 모델이 더 싸거나 모든 컷에서 일정 비율로 빨라진다고 단정하지 않는다. 자연어 작성은 [surface-contracts.md](surface-contracts.md) §3.2, API 설정은 §4.3을 따른다. 공식 근거·확인일은 [surface-evidence.md](surface-evidence.md) §7에 있다.
+
+기존 워크플로 이행 절차는 [surface-contracts.md](surface-contracts.md) §4.3을 따른다.
+
+- **Higgsfield는 모델 id로 지정되어 들어온다.** `soul_2`·`nano_banana_pro`·`seedream_v5_pro` 같은 id가 요청에 이미 있으면 그 자체가 라우팅 결정이다. §1·§2 표를 건너뛰고 현재 모델 상세 조회로 직행한다.
+- **Midjourney는 이 로스터에 없다.** 붙여넣기 입력창 + `--` 플래그를 쓰는 별도 표면이며, 사용자가 명시적으로 요청했을 때만 간다. 미지정 요청이 Midjourney로 흘러가지 않는다.
+
+1. **사용자가 모델을 지정하면 그대로 쓴다.** 지정이 없을 때만 이 표를 쓴다.
+2. **여러 목적도 요청된 한 컷 안에서 함께 충족한다.** "정확한 한글 카피 + 인물 사실감"이면 두 조건을 지원하는 후보를 고른다. 컷 분리는 사용자가 원하거나, 한 컷으로 충족할 수 없는 제약을 설명하고 변경에 동의한 경우에만 한다.
+3. **모델을 바꾸면 달라지는 문법·파라미터만 조정한다.** 유효한 장면·카피·보존 조건은 유지한다. Soul 전용 구성은 [soul-v2-director.md](soul-v2-director.md)를 참고하되 필요한 축만 쓴다.
+4. **지원 비율·해상도와 입력 조합을 확인하고 사용자 요구를 보존한다.** 개별 필드가 유효해도 모드·참조 롤·길이·해상도 조합이 지원된다는 뜻은 아니다. 요청 비율이 없으면 지원하는 후보를 고른다. 모델과 비율이 모두 고정돼 충돌하면 필요한 선택만 묻고 임의로 바꾸지 않는다. **`aspect_ratios`가 빈 배열이면** 그 필드를 넘기지 않고 모델별 입력·기본값을 확인한다([surface-contracts.md](surface-contracts.md) §2). 빈 배열만으로 부적합하다고 단정하지 않는다.
+5. **영상 길이는 임의 값이 아니다.** 열거값(`5/10`, `4/8/12`, `6/10`)인 모델과 범위(`3~15`, `4~15`)인 모델이 섞여 있다. 스토리보드의 씬 길이를 모델 제약에 맞춘다.
+6. **네거티브와 길이는 §3이 정본이다.** 이 플랫폼의 이미지·영상 모델에 `negative_prompt`가 없다는 것은 플랫폼 사실이지 모든 엔진에 대한 일반 원칙이 아니다. 사실·산출 분기·예외를 여기서 되풀이하지 않는다.
+7. **엔진을 골랐으면 그 엔진의 표면 문법을 따른다.** 모델 선택과 작성 문법은 다른 축이다. 적용 표면에 맞는 어댑터는 §6에서 찾는다.
+
+## 5. 스냅샷 신선도
+
+이 절이 소유하는 것은 **로스터 스냅샷 날짜와 그 신선도 등급**뿐이다. 개별 외부 사실의 근거·확인일은 [surface-evidence.md](surface-evidence.md) §7이 정본이다.
+
+<!-- roster-snapshot: 2026-09-06 -->
+<!-- 위 마커가 신선도 검사의 유일한 기계 앵커다. 로스터를 다시 뜨면 이 날짜만 고치면 되고,
+     아래 산문은 자유롭게 써도 검사에 영향을 주지 않는다. 마커가 없으면 검사가 loud하게 실패한다. -->
+
+이 표는 **2026-09-06** 당시 커넥터의 전체 목록(`has_more:false`)과 주요 후보 상세 조회에 근거한다. 현재 연결된 커넥터에서는 목록을 끝 페이지까지 다시 받지 못했으므로 이후 추가·제거와 `gpt_image_2_5`의 현재 가용성은 **[미확인]**이다. 도구 이름은 커넥터별로 다를 수 있으며 실제 목록·상세 조회 기능을 확인한다. 날짜 마커는 전수 페이지네이션과 주요 후보 상세 확인을 마칠 때만 갱신한다.
+
+- 30일 이내: 그대로 후보 선택에 쓴다.
+- 30~90일: 후보 선택에는 쓰되, 파라미터는 반드시 현재 모델 상세 조회로 확인한다.
+- 90일 초과: 표를 근거로 단정하지 않는다. 목록부터 다시 뜬다.
+
+과거 오판 기록: 2026-07-21에 "Seedream 계열 전체 소멸"로 결론냈으나 실제로는 `list` 페이지네이션 미진행에 따른 오판이었다. **모델이 사라졌다고 결론내기 전에 `has_more`를 끝까지 따라간다.**
+
+## 6. 엔진별 문법 어댑터
+
+모델 선택 후 해당 어댑터의 적용 표면을 확인하고, 파라미터는 [surfaces.md](surfaces.md)와 실제 호출 계약을 따른다.
+
+- [flux.md](flux.md) — FLUX·FLUX.2·Kontext의 지정 표면별 자연어·편집 문법.
+- [higgsfield-genjutsu.md](higgsfield-genjutsu.md) — Genjutsu 기존 영상의 Motion Transfer·Object Swap. 짧은 변경 지시와 참조 대응을 작성한다.
+- [grok-imagine.md](grok-imagine.md) — Grok 이미지·영상 자연어 작성. Imagine UI·대화형 이미지 도구·직접 API·래퍼 경계를 구분한다. Higgsfield 모델 선택은 위 §1·§2, 대화·리서치용 Grok은 [../model-playbooks.md](../model-playbooks.md) 소관이다.
+- [../midjourney-identity.md](../midjourney-identity.md) — 일반 Image Prompt·V8 Edit Model·V7 Omni의 입력 역할과 문법. 지정 버전을 유지하며 목적에 맞는 참조 기능을 선택한다.
+- [seedream-5-pro.md](seedream-5-pro.md) — BytePlus ModelArk direct Seedream 5 Pro의 자연어·다중 이미지·`<point>`/`<bbox>` 인터랙티브 편집 문법. Higgsfield `seedream_v5_pro`에는 런타임 기능 확인 없이 좌표·파라미터를 복사하지 않는다.
+- [seedream-character-reference-sheets.md](seedream-character-reference-sheets.md) — 3×3 identity 입력을 단일 베이스·1×4 전신 시트로 바꾸는 구도·체형·헤어 차폐 규칙.
+- [seedance-2.md](seedance-2.md) — BytePlus ModelArk direct Seedance 2.0의 멀티모달 참조·편집·연장·트랙 연결 문법. 2.5 규칙을 자동 상속하지 않는다.
+- [seedance-2-5.md](seedance-2-5.md) — Dreamina 웹 Seedance 2.5의 멀티레퍼런스·장편·편집·연장·키프레임·스토리보드·클레이 렌더러 붙여넣기 문법. ModelArk API 계약이 아니다.
+- [minimax-h3.md](minimax-h3.md) — MiniMax H3 공식 API 직결의 모드별 고정 지시문·라벨 섹션·`<d>[Language]` 대사·샷 타임코드 문법. 영상 공통 규칙과의 우선순위는 [lanes.md](lanes.md) §영상 공통 규칙을 따른다. Higgsfield `minimax_h3` 래퍼의 필드 대응은 런타임 정의로 확인한다.
+- Higgsfield `seedance_2_0`·`seedance_2_5` (2026-09-25 문서 대조): 위 두 Seedance 문서는 ModelArk·Dreamina 표면 계약이다. 래퍼 전용 프롬프트 문법은 확인된 근거가 없으므로 **[미확인]**이며, Dreamina `@Image N`·대괄호 블록이나 ModelArk 전용 좌표·파라미터를 래퍼 프롬프트로 옮기지 않는다. 참조 전달은 런타임 정의의 미디어 롤을 따른다.
+- [midjourney-feed-diagnosis.md](midjourney-feed-diagnosis.md) — 연속 피드에서 프로필 스택·chaos·stylize·Variation 계보를 분리하는 진단·ablation 절차.

@@ -1,0 +1,3 @@
+~~~json
+{"prompt":"Photograph hiking boots beside a trail map.","count":1}
+~~~

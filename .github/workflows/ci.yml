@@ -1,0 +1,32 @@
+name: ci
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  self-lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: '22' }
+      - uses: oven-sh/setup-bun@v2
+      # The companion repositories are absent from an isolated checkout, so the npm
+      # test script carries the named opt-out for the external integration stage.
+      # Do not re-add it here: if that opt-out is ever dropped without configuring
+      # the four root variables, this job must fail loudly rather than skip quietly.
+      - name: full network-free test suite
+        run: npm test
+      - name: exact-tree npx and bunx forwarded-argument smoke
+        shell: bash
+        run: |
+          pack_dir="$(mktemp -d)"
+          tarball="$(npm pack --pack-destination "$pack_dir" --silent)"
+          package="$pack_dir/$tarball"
+          npx_home="$(mktemp -d)"
+          HOME="$npx_home" npx --yes --package "$package" heituzmpw -- --target claude --force --quiet
+          test -f "$npx_home/.claude/skills/MPW/SKILL.md"
+          test -f "$npx_home/.claude/skills/MPW/contracts/v1/image-production-handoff.schema.json"
+          bunx_home="$(mktemp -d)"
+          HOME="$bunx_home" bunx --package "$package" heituzmpw -- --target claude --force --quiet
+          test -f "$bunx_home/.claude/skills/MPW/SKILL.md"
+          test -f "$bunx_home/.claude/skills/MPW/contracts/v1/image-production-handoff.schema.json"

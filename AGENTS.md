@@ -1,0 +1,87 @@
+# AGENTS.md — 이 레포에서 일하는 에이전트 규칙
+
+이 레포는 **MPW 스킬의 정본이자 유일한 실제 트리**다(2026-07-25 구조 전환). 하네스는 여기를 소비만 한다:
+
+- `~/.claude/skills/MPW`·`~/.hermes/skills/prompt-writing/MPW`·`~/.codex/skills/MPW` — installer가 정본 런타임 파일을 복사한 뒤 호스트 오버레이를 적용한 소비 산출물
+- 배포 형식은 스킬 하나다(2026-09-17 플러그인 패키징·커스텀 GPT 번들 철회: `plugins/mpw/`·marketplace.json·`agents/plugin`·`build_plugin.mjs`·`build_gpt_bundle.mjs` 제거).
+
+**레포 루트를 통째로 심링크하지 않는다.** `agents/`는 installer 오버레이 원본이고 설치본에는 들어간 적이 없는데, 루트를 심링크하면 호스트 인덱서가 `agents/claude/SKILL.md`·`agents/codex/SKILL.md`를 활성 스킬로 잡아 **같은 이름의 MPW가 3개**가 된다((2026-07 실측), 2026-07-25 확인). 기존 멤버 심링크 설치도 installer로 재생성한다. 정본 변경 뒤 세 호스트를 재생성하고 진입 파일까지 포함한 전체 payload 패리티를 검사한다. 공통 references 일치만으로 호스트 통합이 일치한다고 판정하지 않는다.
+
+편집은 여기서 한다 — 설치 경로에서 편집하지 않는다. 그게 v2.11~v2.13이 사라진 원인이었다. 공개 배포(`github:HeiTuz/MPW`)는 푸시 이후에만 유효하다.
+운영 소유권(2026-08-04 개정 — 2026-08-02 정의를 대체): **어느 에이전트든(Claude Code·Codex·Hermes) 이 트리를 직접 편집하고 로컬 커밋할 수 있다.** Codex는 편집 독점자가 아니라 주 관리자(steward)로서 정합성 점검·설치본 재생성·doctrine 패리티·릴리스 준비를 맡는다. **편집한 에이전트는 `~/handoffs/<repo>-<주제>-<타임스탬프>.md`에 핸드오프를 남긴다**(무엇을 왜 / 건드린 파일 / 커밋 해시 / 설치본 재생성 필요 여부 / 검증한 것과 안 한 것 / 남은 작업). 편집 후 로컬 커밋까지 하거나 미커밋임을 핸드오프에 명시한다. 원격 push는 별도 승인 없이는 하지 않는다. Codex App 주간 doctrine runner의 정본도 `scripts/prompt_writing_doctrine_check.py`이며, 기본 reminder 상태는 `~/.codex/state/prompt-writing-doctrine/backlog.json`이고 `MPW_DOCTRINE_STATE` 또는 `--state`로만 바꾼다. 실행 결과와 알림은 Codex App가 처리하며 Telegram/Hermes relay를 두지 않는다. `~/.claude/skills/MPW`·`~/.hermes/skills/prompt-writing/MPW`는 설치본이며, **설치 경로에서 직접 편집하지 않는다 — 편집은 어느 에이전트든 이 정본 트리에서 한다.** Codex 설치본(`~/.codex/skills/MPW`)은 `agents/codex/` 오버레이가 적용된 복사 소비 산출물이다. 정본 변경 뒤 세 호스트 설치본을 재생성하고 전체 payload 패리티와 doctrine 검사를 통과시킨다. 버전 범프와 릴리스 push는 정본 커밋·검증을 끝낸 뒤 별도 릴리스 승인으로만 수행한다.
+
+## 하드라인 (위반 = 완료 아님)
+
+1. **정본 단일성** — 규칙은 한 곳에서 1회 정의, 다른 파일은 참조만. 같은 규칙을 두 파일에 다시 쓰면 드리프트가 시작된다. 현재 정본 배치:
+   - 조립 구조(의존 순서·축별 단일 권한·배제·체인): `references/prompt-graph.md`
+   - **실행 표면(S1/S2/S3)과 길이·비율·해상도·파라미터 소관: `references/image/surfaces.md`** — 다른 파일의 사이즈·길이 문장이 이 파일과 충돌하면 이 파일이 이긴다
+   - 목적축 → 모델 후보 라우팅(플랫폼 로스터 dated snapshot): `references/image/model-routing.md`
+   - 이미지 조립 원칙: `references/image/compiler.md`
+   - 텍스트·구조 이미지 결정: `references/image/text-structure.md`
+   - 레인별 게이트(필수 요소·네거티브 정책): `references/image/lanes.md` §레인 게이트 카드
+   - 이미지 슬롯 기본값: `references/image/lanes.md` §이미지 슬롯 기본값
+   - 추론 불가 슬롯 목록: `references/templates/common.md` §슬롯 자동 채움
+   - 프롬프트 언어 결정 규칙: `references/templates/common.md` §수신자·채널 적응 — SKILL.md와 오버레이는 요약+포인터만 둔다
+   - S1 기계 계약 값(ar·size·quality enum): **문서가 아니라 `contracts/v1/*.schema.json`**. 문서는 스키마 값을 복제하지 않는다
+   - 대량 생성 인계·검증기 코드표: `references/image/production.md`
+   - 영상 규칙: `references/image/lanes.md` §영상 공통 규칙
+   - 계약 갱신·미러 sync 절차: `references/contracts.md`
+2. **사용자 결과 기준** — 사용자 요구·정확 문자열·수량·부분 수정 경계를 보존하고, **길이 상한·측정 요청·수치 보고가 있으면 어림짐작이 아니라 실측**한다. 위임 6요소·그래프·레인 카드는 필요할 때만 쓰는 작성 도구이며 기존 구조 자체를 보존할 의무는 없다. 기계 소비자 계약은 실제 사용처와 함께 변경·검증한다. 독립 프롬프트는 자기완결로 만들고 사용자 지정 출력 형식을 우선한다. (지켜야 할 것은 *실측*이지 특정 숫자가 아니다 — 상한은 채널·타깃·계약 중 가장 좁은 것이 준다.)
+2-1. **길이·비율·해상도를 보편 상수로 되돌리지 않는다.** 이들은 표면의 속성이다. "모든 프롬프트는 2000자", "size는 6종" 같은 무조건 문장을 다시 들이면 하류 스키마와 어긋난다 — 실제로 기계 계약(`ar` 5종·`size` 3종)과 문서(8종·6종)가 어긋난 채 방치된 전례가 있다.
+3. **예시 라벨 = 실측** — `(N자 실측)` 라벨은 뒤따르는 ```text 블록의 실제 문자수와 정확히 일치해야 한다. 예시를 고치면 라벨을 재계산한다. "약 N자" 표기 금지.
+4. **모델·엔진 주장은 스탬프와 함께** — 근거 없는 모델 능력/플래그 서술 금지. 검증된 주장엔 날짜 스탬프(예: (YYYY-MM 실측)), 스탬프 6개월 경과 시 재검증 후 갱신. 플랫폼 로스터(`model-routing.md`)는 더 짧다: 30일 이내는 그대로, 30~90일은 파라미터를 런타임 확인, 90일 초과는 목록부터 다시 뜬다. **모델이 사라졌다고 결론내기 전에 목록 페이지네이션을 끝까지 따라간다** — 2026-07-21에 이 확인을 빠뜨려 "Seedream 계열 전체 소멸"로 오판한 전례가 있다.
+4-1. **파라미터를 산문 규칙으로 승격하지 않는다** — 실행자가 레버로 갖는 축(비율·해상도·품질·길이·오디오·팔레트 배열·프리셋·장르)은 어휘 규칙이 아니라 `surface-contracts.md` §4 소관이다. 가드너 제안이 이 축의 후보를 올려도 반려한다.
+5. **런타임 고유명은 `references/adapters.md`에만** — 코어 파일(SKILL.md·templates/*·image/*)에 특정 에이전트 제품명을 다시 들이지 않는다. 모델·엔진명(gpt-image-2, Higgsfield 등)은 허용.
+6. **자동 수집은 편집 권한이 아니다** — 엔진 관측 수집기는 근거와 패치 제안을 남긴다. 사용자가 해당 스킬 수정·점검을 요청했다면 그 범위에서 공식 근거를 확인해 정본을 수정·검증·로컬 커밋한다. 같은 수정에 재승인을 요구하지 않는다. 버전 범프·원격 push는 별도 릴리스 권한을 따른다.
+6-1. **인물 동일성과 운영자 취향은 이 레포가 보유하지 않는다** — 실존 인물을 관측해 만든 얼굴 기하·identity lock, 그리고 특정 운영자의 실루엣·팔레트 기본값은 여기에 두지 않는다(초상·퍼블리시티, 그리고 취향은 보편 규칙이 아니라는 두 이유). 이 트리의 문서는 **축과 절차**를 적고 구체 토큰 세트는 각 설치가 공급한다. `references/**`는 배포 파일 목록에 글롭으로 포함되므로, 여기 넣는 순간 옵트인 게이트 없이 공개된다.
+
+## 검증 루틴 (변경 후 필수)
+
+```sh
+npm test  # 문서 lint, Python·Node 회귀, 검증기 하네스, 설치 smoke
+node scripts/check_install_parity.mjs  # 정본 변경 뒤 세 호스트 payload 일치
+```
+
+운영자 전용 doctrine 검사 정본은 이 레포의 `scripts/prompt_writing_doctrine_check.py`이며 공개 소비자의 필수 검증 단계가 아니다. finding이 있어도 exit 0이고, 기존 reminder state가 같은 알림을 억제할 수 있으므로 stdout이 비어 있다는 사실만으로 로스터가 신선하거나 런타임 검증을 마쳤다고 판정하지 않는다. 검수·릴리스 점검에는 새 전용 `--state` 경로를 써 최초 finding을 확인하고, 기본 자동화 reminder state는 보존한다:
+
+```sh
+doctrine_audit_dir="$(mktemp -d)"
+python3 scripts/prompt_writing_doctrine_check.py --state "$doctrine_audit_dir/backlog.json"
+```
+
+`test_adapter_master_integration.py`는 가드너·브리지와의 교차 배선을 검증한다. 이 테스트가 `setUpClass`에서 의존성 누락으로 죽으면 **통과가 아니라 무증상 실패**다 — 실제로 스킬 디렉터리 rename 이후 이 상태로 방치되어 `compiled_by` 불일치·API 드리프트 3건이 숨어 있었다(2026-07-25 수리). 스킵/에러를 green으로 읽지 않는다.
+
+repo-local 스위트의 교차계약은 동반 레포 경로가 없으면 NOT RUN으로 표시한다. 교차계약은 아래 네 경로를 주입한 별도 명령이 필수이며, 두 명령의 결과를 합쳐 전체 검증으로 판정한다. 테스트 러너는 앞선 실패를 끝까지 누적한다.
+
+동반 레포 경로는 **환경변수로만** 주입한다(`IMAGE_REFERENCE_ADAPTER_ROOT`·`DESIGN_REFERENCE_ADAPTER_ROOT`·`HIGGSFIELD_BRIDGE_ROOT`·`PROMPT_KNOWLEDGE_ADAPTER_ROOT`). 자동 탐색은 없다 — 머신마다 다른 결과가 나오고 공개 배포물이 남의 홈 디렉터리 배치를 가정하게 되기 때문이다. 넷 중 하나라도 없으면 이 테스트는 **실패로 멈춘다**. `npm test`의 `MPW_ALLOW_MISSING_EXTERNAL_INTEGRATION=1` 예외는 네 경로를 모두 생략했을 때만 유효하다. 일부만 설정하거나 설정한 경로의 필수 파일이 없으면 실패한다. 네 경로가 없는 체크아웃에서는 그린일 수 있지만, 그때 교차 배선 검증은 **돌지 않은 것**이다. 교차 계약을 실제로 검증하려면 네 경로를 주입해 직접 부른다:
+
+```sh
+IMAGE_REFERENCE_ADAPTER_ROOT=<path> DESIGN_REFERENCE_ADAPTER_ROOT=<path> HIGGSFIELD_BRIDGE_ROOT=<path> \
+PROMPT_KNOWLEDGE_ADAPTER_ROOT=<path> \
+  python3 scripts/test_adapter_master_integration.py
+```
+
+prompt-knowledge 가드너는 loop 모듈이 없고 스킬 스크립트가 직접 레시피를 조립한다. 계약 미러만 들고 검증에서 빠져 있던 사각지대였다(2026-07-27 편입).
+
+검증기(`check_prompt.mjs`)와 문서 규칙이 어긋나면 어느 쪽이 맞는지 판정하고 한쪽을 고쳐 정렬한다 — 괴리를 남기는 게 최악이다(2026-07 캘리브레이션에서 헤더형 감지·조명 토큰 괴리를 이렇게 잡았다).
+
+## 배포 게이트 — 승인된 릴리스에 적용
+
+릴리스를 요청·승인받은 세션은 아래를 통과해야 "배포 완료"다. 로컬 변경만 요청받았다면 해당 검증을 마친 뒤 로컬 완료·미배포 상태와 남은 릴리스 작업을 보고하고 종료한다. 로컬 검증 통과만으로 배포 완료를 주장하지 않는다.
+
+1. **롤백 폭탄 주의**: `imggen update`는 MPW를 GitHub에서 재설치한다. 푸시되지 않은 로컬 개선분은 업데이트 한 번에 통째로 구버전으로 덮인다. 2026-07-16에 v2.11~v2.13 세 릴리스분이 설치 트리에만 존재한 채 발견됐다 — 소비자 스킬의 fallback 관용 동작(가드너 사전 등) 때문에 겉으로는 멀쩡해 보여서 알아차리기 어렵다.
+2. **버전 일치 확인(배포 완료 전)**: 승인된 배포를 완료로 보고하기 전에 원격 버전이 로컬 SKILL.md/package.json과 같은지 직접 확인한다:
+   ```sh
+   curl -s https://raw.githubusercontent.com/HeiTuz/MPW/main/package.json | python3 -c "import json,sys; print(json.load(sys.stdin)['version'])"
+   ```
+   값이 다르면 미배포 상태이며 배포 완료로 보고하지 않는다.
+3. **승인된 릴리스 절차**: 이 저장소의 변경을 검토하고 `agents/` 오버레이 본문과 frontmatter를 동기화 → 필수 로컬·교차 검증 → 영어 커밋 → 승인받은 범위의 push → CI와 원격 버전 확인. 정본에서 설치본을 재생성한다. 설치본의 예상 밖 변경이 발견되면 먼저 출처와 의도를 확인하며, 설치본을 통째로 역복사하지 않는다. 버전 범프·push 권한은 위 운영 소유권 규칙을 따른다.
+
+## 작업 방식
+
+- 규칙 신설·변경 전에 해당 정본 파일을 먼저 읽는다. `SKILL.md`는 디스패치 커널 — 상세를 넣지 말고 references로 내린다(커널 비대화 금지).
+- 큰 규칙 변경(레인 정책·모드 라우팅·게이트)은 반영 후 architect류 read-only 리뷰 1회를 거치고, 발견을 수정한 뒤 완료 처리한다.
+- 이미지 어휘 추가는 가능하면 실측 캘리브레이션(실제 생성 대조)으로 뒷받침하고 `(YYYY-MM 실측)` 스탬프를 단다. `examples/`의 텍스트 요청 3종은 검증기로 다시 확인한다. 텍스트 검사 통과를 생성 품질 검증으로 보고하지 않는다.
+- 커밋 메시지는 영어, 변경 요지+검증 결과 포함. 관련 없는 리팩토링 금지.
+
+- 동반 레포의 MPW 포인터를 바꾸면 교차계약에서 경로 해석과 사전 8개 절의 파싱을 확인한다. 이행용 구 경로는 파일·대상 쌍으로만 허용하고 오래된 예외는 제거한다.
