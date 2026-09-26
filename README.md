@@ -14,7 +14,7 @@
 [![Install](https://img.shields.io/badge/install-30초-ffb000?style=for-the-badge&labelColor=0d1117)](#-30초면-붙습니다)
 
 ```sh
-npx --yes --allow-git=all --package github:HeiTuz/MPW heituzmpw
+bunx --package github:HeiTuz/MPW heituzmpw
 ```
 
 </div>
@@ -106,9 +106,9 @@ python3 scripts/compile_image_variations.py --request request.json --count 100 -
 한 줄이면 설치기가 이 컴퓨터의 에이전트 환경을 자동 감지해 맞는 위치에 설치합니다.
 
 ```sh
-npx --yes --allow-git=all --package github:HeiTuz/MPW heituzmpw
-# 또는
 bunx --package github:HeiTuz/MPW heituzmpw
+# Node/npm 대안
+npx --yes --allow-git=all --package github:HeiTuz/MPW heituzmpw
 ```
 
 <details>
@@ -139,11 +139,11 @@ bunx --package github:HeiTuz/MPW heituzmpw
 <br>
 
 ```sh
-npx --yes --allow-git=all --package github:HeiTuz/MPW heituzmpw -- --target claude
-npx --yes --allow-git=all --package github:HeiTuz/MPW heituzmpw -- --target hermes
-npx --yes --allow-git=all --package github:HeiTuz/MPW heituzmpw -- --target codex     # --target gpt 동일
-npx --yes --allow-git=all --package github:HeiTuz/MPW heituzmpw -- --target all       # 감지된 전부에 설치
-npx --yes --allow-git=all --package github:HeiTuz/MPW heituzmpw -- --dest /custom/skills/MPW
+bunx --package github:HeiTuz/MPW heituzmpw -- --target claude
+bunx --package github:HeiTuz/MPW heituzmpw -- --target hermes
+bunx --package github:HeiTuz/MPW heituzmpw -- --target codex     # --target gpt 동일
+bunx --package github:HeiTuz/MPW heituzmpw -- --target all       # 감지된 전부에 설치
+bunx --package github:HeiTuz/MPW heituzmpw -- --dest /custom/skills/MPW
 ```
 
 재설치는 `--force`, 조용한 설치는 `--quiet`. `--target auto`는 기본 동작인 자동 감지를 명시적으로 켭니다.
