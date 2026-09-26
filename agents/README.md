@@ -23,6 +23,8 @@
 
 지원 설치 target은 `hermes`·`claude`·`codex` 셋뿐이다(`scripts/agent_targets.mjs`의 `AGENT_HOST_PRIORITY`). `--target gpt`는 `codex` 오버레이와 동일하다. 그 밖의 이름은 `Unsupported agent host`로 거절되며, 다른 위치에 넣으려면 `--dest`를 쓴다.
 
+Grok Bot은 위 파일 복사형 installer의 대상이 아니다. 계정에 저장하는 비공개 스킬의 재설치 문안과 검증 절차는 [Grok Bot 설치 문안](https://github.com/HeiTuz/MPW/blob/main/agents/grok-bot/private-skill.md)에 둔다.
+
 ## 왜 `agents/<host>/`인가 — 관례 조사 근거 (2026-07 실측)
 
 공개 멀티에이전트 스킬/설치 저장소 5종을 조사한 결과, 더 강한 공개 관례는 없었다:

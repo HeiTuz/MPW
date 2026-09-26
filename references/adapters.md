@@ -78,6 +78,13 @@ IMAGE 컴파일을 마친 턴의 "다음" 목록 마지막 번호는, 아래 조
 - 모델 선택 위치: Hermes runtime config. 이 저장소는 로컬 선택값이나 채널 선택값을 쓰지 않는다.
 - fallback: [model-playbooks.md](model-playbooks.md) §역할·권한 라우팅의 단일 모델 경로를 따른다.
 
+## Grok Bot
+
+- 설치/로드: Grok Bot 앱의 계정 공유 비공개 스킬 `mpw`로 저장한다. 이 저장소의 `install.mjs`와 Grok Build CLI 플러그인 경로는 사용하지 않는다. 재설치 문안과 검증은 [Grok Bot 설치 문안](https://github.com/HeiTuz/MPW/blob/main/agents/grok-bot/private-skill.md)에 있다.
+- 역할 매핑: 한 Bot의 프롬프트 작성은 prime이다. 다른 Bot으로 나누는 작업은 현재 Grok Bot에서 제공되는 위임 기능과 사용자 요청 범위가 있을 때만 한다.
+- 모델 선택 위치: Grok Bot 계정이 제공하는 런타임 설정. 이 저장소는 Grok Bot 모델을 지정하지 않는다.
+- fallback: 별도 역할 실행이 없으면 [model-playbooks.md](model-playbooks.md) §역할·권한 라우팅의 단일 모델 경로를 따른다.
+
 ## 어댑터 작성 규칙
 
 아키타입당 4항목만 기록한다: ① 설치/로드 방법 ② 역할 매핑 ③ 실제 모델 선택 위치 ④ per-role routing unavailable fallback. 코어 규칙을 복사하지 않는다. 코어와 충돌하는 어댑터 문장은 무효다.

@@ -143,6 +143,8 @@ $bun = (Get-Command bun -ErrorAction SilentlyContinue).Source; if (!$bun) { irm 
 
 자동 감지의 기본값은 Claude Code입니다. 어느 호스트로 설치하든 규칙 본문은 같고, 호스트 통합 표면(발동·도구 명칭·frontmatter)만 달라집니다 — 구조와 근거는 [호스트 어댑터 안내](https://github.com/HeiTuz/MPW/blob/main/agents/README.md)에 있습니다.
 
+Grok Bot 데스크톱 앱은 위 installer 대상이 아닙니다. 앱의 계정 공유 비공개 스킬로 연결하는 방법은 [Grok Bot 설치 문안](https://github.com/HeiTuz/MPW/blob/main/agents/grok-bot/private-skill.md)을 참고하세요.
+
 <details>
 <summary><b>명시 설치 · 직접 설치</b></summary>
 
