@@ -248,7 +248,7 @@ function validateText(raw, opts = {}, rec = null, mode = "text") {
     return { ok: false, profile, format, tier, errors, warnings };
   }
 
-  if (!native && !/AR\s+\d+\s*:\s*\d+$/i.test(p)) err(errors, "E-AR-END", "끝에 `AR 3:4` 형태의 종횡비 토큰이 없음(반드시 프롬프트 맨 끝).");
+  if (!native && !/AR\s+\d+\s*:\s*\d+$/i.test(p)) err(errors, "E-AR-END", "끝에 `AR 3:4` 형태의 종횡비 토큰이 없음(반드시 프롬프트 맨 끝)." + (!opts.profileExplicit ? " MPW 컴파일 형식이 아니라 GPT Image 네이티브 자연어라면 `--profile native --surface <s2|s3> --channel <bounded|unbounded>`로 검사하세요(surface-contracts.md §3.1)." : ""));
   if (!hasPromptContent(p)) err(errors, "E-PROMPT-EMPTY", "AR·빈 섹션명·색상값 외에 피사체, 편집 지시 또는 렌더 카피가 필요합니다.");
 
   // ── 텍스트 프로토콜 ──
@@ -559,6 +559,7 @@ function parseFlags(flags) {
         process.exit(1);
       }
       o.profile = val;
+      o.profileExplicit = true;
     }
     else if (a === "--tier") {
       const val = flags[++i];

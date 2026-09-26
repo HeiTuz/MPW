@@ -127,20 +127,9 @@
 
 단일 클립은 요청한 움직임과 필요한 오디오를 빠짐없이 간결하게 쓴다. 고정된 길이·작성 순서를 성공 공식으로 강제하지 않는다. 필요한 외형·관계·연속 동작은 보존하며, 길이 판정은 [surfaces.md](surfaces.md) §0-1·0-2를 따른다. 정지 카메라 요청에 카메라 모션을 추가하지 않는다. 시간 순서나 샷 전환이 중요한 경우에만 스토리보드로 나누고, 각 클립의 행동을 실행 가능한 범위로 정리한다. SFX·앰비언스는 필요할 때만 넣는다. 단, 선택한 엔진의 공식 형식이 구조·사운드 섹션을 요구하면(예: [minimax-h3.md](minimax-h3.md)) 그 형식을 따른다.
 
-대사의 원문과 언어는 보존하되 엔진별 형식을 따른다. **Google Cloud의 Veo 작성 권고에서는 따옴표가 화면 자막으로 읽힐 수 있어** `The speaker says in Korean: 안녕하세요.`처럼 쓴다. Veo 3.1의 장면 프롬프트 지원 언어는 영어이며, 발화 언어와 구분한다. 이를 모든 영상 모델의 영어·따옴표 의무로 일반화하지 않는다. 출처는 [surface-evidence.md](surface-evidence.md) §7이다.
+대사의 원문과 언어는 보존하되 엔진별 형식을 따른다. **Google Cloud 표면의 Veo 작성 권고에서는 따옴표가 화면 자막으로 읽힐 수 있어** `The speaker says in Korean: 안녕하세요.`처럼 쓴다. 같은 Google의 DeepMind Veo 예시는 따옴표 대사를 포함하므로([video-prompt-workflow.md](video-prompt-workflow.md) §기존 공식 문서 근거) 콜론 형식은 Cloud 권고를 따르는 표면의 기본값이며 Veo 전체의 필수 문법이 아니다. Higgsfield `veo3_1` 같은 래퍼는 해당 표면 기준을 확인하기 전까지 콜론 형식을 안전한 기본값으로 쓴다. Veo 3.1의 장면 프롬프트 지원 언어는 영어이며, 발화 언어와 구분한다. 이를 모든 영상 모델의 영어·따옴표 의무로 일반화하지 않는다. 출처는 [surface-evidence.md](surface-evidence.md) §7이다.
 
-**파라미터로 실제 전달되는 것은 프롬프트에 중복하지 않는다**([surface-contracts.md](surface-contracts.md) §4). 아래는 해당 파라미터가 실제 제공될 때의 대응 예다. 필드가 없는 모델에 임의 파라미터를 만들지 않는다. 그런 표면에서 지원하는 카메라·속도·소리 요청은 자연어로 전달한다.
-
-| 산문에 쓰기 쉬운 것 | 실제 파라미터 |
-|---|---|
-| "5초 클립으로" | `duration` — **모델별 열거값 또는 범위**. 스토리보드 씬 길이를 여기에 맞춘다 |
-| "슬로우모션으로" | `speedramp` / `slow_motion` |
-| "느와르 톤으로" | `genre` — **옵션 목록이 모델마다 다르다.** 예: `cinematic_studio_video_v2`엔 `noir`가 아예 없고 `cinematic_studio_3_0`엔 있다(2026-07-25 런타임 확인). 특정 목록을 외워 쓰지 말고 그 모델의 enum을 확인한다 |
-| "무음으로" / "소리 넣어줘" | `generate_audio` / `sound` |
-| "1080p로" | `resolution` / `mode` / `quality` |
-| "지시를 정확히 따라라" | `cfg_scale` |
-| "컷이 세 번 바뀌고…" | `multi_shots` + `multi_prompt` |
-| "이 이미지로 시작해서 저 이미지로 끝나게" | `start_image` / `end_image` 미디어 롤 |
+**파라미터로 실제 전달되는 것은 프롬프트에 중복하지 않는다.** 길이·속도·장르·오디오 on/off·해상도·프롬프트 준수·멀티샷·시작/끝 프레임의 축별 대응은 [surface-contracts.md](surface-contracts.md) §4 표가 정본이다. 스토리보드 씬 길이는 모델의 `duration` 허용값에 맞추고, `genre`처럼 모델마다 옵션이 다른 필드는 그 모델의 현재 정의를 확인한다. 필드가 없는 모델에 임의 파라미터를 만들지 않는다. 그런 표면에서 지원하는 카메라·속도·소리 요청은 자연어로 전달한다.
 
 배제 조건은 [surface-contracts.md](surface-contracts.md) §4에 따라 보낸다. Veo의 제외 명사 목록은 별도 `negativePrompt` 입력란용이며 일반 프롬프트에 섞지 않는다. 별도 필드가 없는 표면에서는 원하는 상태와 필요한 짧은 제약으로 쓴다. ModelArk direct Seedance 2.0의 세부 규칙은 [seedance-2.md](seedance-2.md)를 따르며, Higgsfield나 2.5에 자동 상속하지 않는다.
 
