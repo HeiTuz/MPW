@@ -4,6 +4,7 @@
 // section-scoped reading path stays usable when headings are renamed.
 import assert from "node:assert/strict";
 import fs from "node:fs";
+import os from "node:os";
 import path from "node:path";
 import { spawnSync } from "node:child_process";
 import { fileURLToPath } from "node:url";
@@ -50,6 +51,16 @@ assert.deepEqual(cli.stdout.match(/^==> .*$/gm).map((line) => line.split(" (L")[
 ]);
 const missing = spawnSync(process.execPath, [path.join(root, "scripts", "read_refs.mjs"), "references/image/surfaces.md#no-such-section"], { encoding: "utf8" });
 assert.equal(missing.status, 1);
+
+// Installs can sit behind symlinks (macOS /tmp, linked skill dirs); the CLI
+// must still run instead of exiting 0 with no output.
+const linkDir = fs.mkdtempSync(path.join(os.tmpdir(), "mpw-read-refs-"));
+const linkPath = path.join(linkDir, "read_refs.mjs");
+fs.symlinkSync(path.join(root, "scripts", "read_refs.mjs"), linkPath);
+const viaLink = spawnSync(process.execPath, [linkPath, "references/image/surfaces.md#0"], { encoding: "utf8" });
+fs.rmSync(linkDir, { recursive: true, force: true });
+assert.equal(viaLink.status, 0, viaLink.stderr);
+assert.match(viaLink.stdout, /^==> references\/image\/surfaces\.md §0/m, "symlinked CLI printed nothing");
 
 // SKILL.md pointers: the text after "§" must start with a heading's number
 // (e.g. "3.2", "0-1") or its full title.
