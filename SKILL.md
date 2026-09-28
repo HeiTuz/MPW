@@ -49,7 +49,15 @@ metadata:
 
 ## 필요한 자료만 읽는다
 
-**이 파일과 요청만으로 완성할 수 있으면 바로 쓴다. 단, 아래에서 요청에 해당하는 형식·표면 규칙은 먼저 확인한다.** 아래는 전체 순차 필독 목록이 아니라 선택 안내다. 이미 대상 모델이 정해졌으면 후보 탐색을 생략하고, 부분 수정은 바뀌는 조건의 자료만 읽는다. § 절이 적힌 자료는 그 절만 읽고, 필요한 파일·절은 한 번에 모아 읽는다: `node scripts/read_refs.mjs references/image/surfaces.md#0 references/image/surface-contracts.md#3.2` (`#A,B` 여러 절, `#A~B` 범위, `#` 없으면 파일 전체, `--toc` 제목 목록, 경로는 스킬 폴더 기준).
+**이 파일과 요청만으로 완성할 수 있으면 바로 쓴다. 단, 아래에서 요청에 해당하는 형식·표면 규칙은 먼저 확인한다.** 아래는 전체 순차 필독 목록이 아니라 선택 안내다. 이미 대상 모델이 정해졌으면 후보 탐색을 생략하고, 부분 수정은 바뀌는 조건의 자료만 읽는다. § 절이 적힌 자료는 그 절만 읽고, 필요한 파일·절은 `node scripts/read_refs.mjs`로 한 번에 모아 읽는다(`#A,B` 여러 절, `#A~B` 범위, `#` 없으면 파일 전체, `--toc` 제목 목록, 경로는 스킬 폴더 기준, Node가 없으면 `bun`). 새 작성·전면 개선의 흔한 요청은 아래 묶음으로 시작하고, 다른 판단이 더 필요할 때만 그 아래 표에서 추가한다. 부분 수정은 바뀌는 조건의 절만 고른다.
+
+| 요청 | `node scripts/read_refs.mjs` 뒤에 붙일 인자 |
+|---|---|
+| 대상 미정·GPT Image 새 이미지 | `references/image/surfaces.md#0 references/image/surface-contracts.md#3.2` (도해·슬라이드·UI·만화·로고는 `#3.2,3.4`) |
+| 대상 미정·GPT Image 원본 편집 | `references/image/surfaces.md#0 references/image/surface-contracts.md#3.2,3.3` (도해·슬라이드·UI·만화·로고는 `#3.2,3.3,3.4`) |
+| 영상 생성 | `references/image/surfaces.md#0 "references/image/lanes.md#영상 공통 규칙"` |
+| 실행 작업·자동화 지시 | `references/templates/delegation.md` |
+| 텍스트 모델 적응·변환 | `"references/model-playbooks.md#공통 적응 규칙,공급자 색인"` 뒤 색인이 가리키는 대상 공급자의 날짜 절을 `"references/model-playbooks.md#2026-09-25"`처럼 이어 읽는다 |
 
 | 필요한 판단 | 읽을 자료 |
 |---|---|

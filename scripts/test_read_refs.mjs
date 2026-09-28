@@ -92,4 +92,30 @@ for (const line of skill.split("\n")) {
 }
 assert.ok(checked >= 10, "expected SKILL.md section pointers, found " + checked);
 assert.deepEqual(failures, [], "unresolved SKILL.md section pointers");
-console.log("read_refs: section extraction ok; " + checked + " SKILL.md section pointers resolve");
+
+// Ready-made read_refs argument bundles in SKILL.md tables must all resolve.
+function shellWords(text) {
+  return [...text.matchAll(/"([^"]*)"|(\S+)/g)].map((match) => match[1] ?? match[2]);
+}
+const bundleFailures = [];
+let bundles = 0;
+for (const line of skill.split("\n")) {
+  if (!line.startsWith("|")) continue;
+  for (const code of line.matchAll(/`([^`]*references\/[^`]*)`/g)) {
+    bundles += 1;
+    for (const word of shellWords(code[1])) {
+      const [file, specs] = word.split("#");
+      const full = path.join(root, file);
+      if (!fs.existsSync(full)) {
+        bundleFailures.push(word);
+        continue;
+      }
+      for (const spec of (specs ?? "").split(",").filter(Boolean)) {
+        if (extractSection(fs.readFileSync(full, "utf8"), spec).error) bundleFailures.push(word);
+      }
+    }
+  }
+}
+assert.ok(bundles >= 5, "expected read_refs bundles in SKILL.md, found " + bundles);
+assert.deepEqual(bundleFailures, [], "unresolved read_refs bundles in SKILL.md");
+console.log("read_refs: section extraction ok; " + checked + " SKILL.md section pointers and " + bundles + " bundles resolve");
