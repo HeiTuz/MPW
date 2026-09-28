@@ -19,7 +19,7 @@ metadata:
 
 > **호스트 통합 — Hermes.** 이 파일은 Hermes 설치본(`~/.hermes/skills/prompt-writing/MPW`)의 진입 표면이다. 규칙 본문은 정본 SKILL.md와 동일하며, 호스트 통합 표면(프런트매터·발동·도구 명칭)만 마이그레이션됐다.
 > - **발동**: Hermes가 skills 카탈로그에서 이 스킬을 로드하고 skill invocation이 prime이 된다.
-> - **도구 매핑**: 길이 실측(`wc -m`)·검증기(`node scripts/check_prompt.mjs`)·컴파일러(`python3 scripts/compile_*.py`)·references/ 확인은 전부 Hermes 셸 실행으로 처리한다.
+> - **도구 매핑**: 길이 실측(`wc -m`)·검증기(`node scripts/check_prompt.mjs`)·컴파일러(`python3 scripts/compile_*.py`)·references/ 확인(여러 절은 `node scripts/read_refs.mjs`로 한 번에)은 전부 Hermes 셸 실행으로 처리한다.
 > - **역할 라우팅**: planner/worker/reviewer skill 또는 agent lane이 있으면 [references/adapters.md](references/adapters.md) §Hermes 매핑을 따르고, lane이 없으면 prime 단일 세션이 실행 계약을 산출한다.
 > - **생성 실행 표면**: higgsfield MCP(`mcp__higgsfield__*`)가 연결돼 있으면 실행·QC·아티팩트는 설치가 공급한 로컬 실행 어댑터가 담당한다.
 
@@ -57,7 +57,7 @@ metadata:
 
 ## 필요한 자료만 읽는다
 
-**이 파일과 요청만으로 완성할 수 있으면 바로 쓴다. 단, 아래에서 요청에 해당하는 형식·표면 규칙은 먼저 확인한다.** 아래는 전체 순차 필독 목록이 아니라 선택 안내다. 이미 대상 모델이 정해졌으면 후보 탐색을 생략하고, 부분 수정은 바뀌는 조건의 자료만 읽는다.
+**이 파일과 요청만으로 완성할 수 있으면 바로 쓴다. 단, 아래에서 요청에 해당하는 형식·표면 규칙은 먼저 확인한다.** 아래는 전체 순차 필독 목록이 아니라 선택 안내다. 이미 대상 모델이 정해졌으면 후보 탐색을 생략하고, 부분 수정은 바뀌는 조건의 자료만 읽는다. § 절이 적힌 자료는 그 절만 읽고, 필요한 파일·절은 한 번에 모아 읽는다: `node scripts/read_refs.mjs references/image/surfaces.md#0 references/image/surface-contracts.md#3.2` (`#A,B` 여러 절, `#A~B` 범위, `#` 없으면 파일 전체, `--toc` 제목 목록, 경로는 스킬 폴더 기준).
 
 | 필요한 판단 | 읽을 자료 |
 |---|---|
@@ -75,7 +75,7 @@ metadata:
 | 텍스트 모델 적응·변환·팀 역할 | [model-playbooks.md](references/model-playbooks.md): 모델 적응·변환은 §공통 적응 규칙과 §공급자 색인의 해당 노트만, 팀 역할은 §역할·권한 라우팅~§Surface-matched evidence. 실제 호출 배선만 [adapters.md](references/adapters.md) |
 | 명시된 MPW 기계 형식 | [contracts.md](references/contracts.md), GardenRecipe·PromptBundle은 [garden-recipe-compiler.md](references/garden-recipe-compiler.md). 자연어 초안에는 컴파일 형식을 강제하지 않는다 |
 
-자료가 길면 해당 제목을 찾아 필요한 절부터 읽는다. 예시의 숫자·도구·취향은 기본 요구가 아니다.
+절이 적히지 않은 긴 자료는 `--toc`로 제목을 보고 필요한 절만 읽는다. 예시의 숫자·도구·취향은 기본 요구가 아니다.
 
 ## 작성과 검수
 
