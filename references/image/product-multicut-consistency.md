@@ -14,7 +14,7 @@ First distinguish new cut generation from editing supplied originals. For one-re
 
 ## White-background studio default
 
-When the request specifies pure white + frontal lighting, state: seamless pure-white `#FFFFFF` background without props, gradient, or environmental depth; soft even frontal light. Preserve a requested shadowless finish; add a faint contact shadow only when the desired staging calls for it.
+When the request specifies pure white + frontal lighting, state: seamless pure-white background without props, gradient, or environmental depth; soft even frontal light. Keep the color as the name the user gave and do not invent a HEX code ([surface-contracts.md](surface-contracts.md) §4.1). Preserve a requested shadowless finish; add a faint contact shadow only when the desired staging calls for it.
 
 ## Delivery and QC
 

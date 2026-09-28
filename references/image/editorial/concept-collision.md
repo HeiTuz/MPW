@@ -26,7 +26,7 @@
 
 ### 제어구 보존
 
-아래 두 구는 장비 나열도, 상표 흉내도 아니다. 넓게 학습된 사진 제어어이므로 [photo-results.md](photo-results.md) §필름·매체 결과와 [../compiler.md](../compiler.md) §스타일은 화면 결과로의 병기 원칙으로 **남긴다**.
+아래 두 구는 장비 나열도, 상표 흉내도 아니다. 넓게 학습된 사진 제어어이므로 [photo-results.md](photo-results.md) §필름·매체 결과와 [../compiler.md](../compiler.md) §스타일은 화면 결과로의 병기 원칙으로 **남긴다**. 단 Soul 계열 대상이면 이 두 구를 쓰지 않고 오른쪽 열의 관찰만 쓴다([../soul-v2-director.md](../soul-v2-director.md) §실측 법칙 3).
 
 | 제어구 | 같이 적을 관찰 |
 |---|---|
@@ -54,7 +54,7 @@
 ## 예시
 
 ```text
-20대 후반 East Asian woman 한 사람. chok-chok skin을 hydrated dewy base로, aegyo-sal은 눈밑 부드러운 볼륨으로 적는다. 슬릭백 번. 서류철과 머그컵이 실에 멈춰 있고, 회색 테일러드 블레이저 아래 새틴 발레 플랫이 보인다. 리본을 맨 나무 의자에 기대 한쪽 다리를 뻗는다. 크림 심리스 바닥. soft high-key strobe, near-shadowless 5500K. 무표정의 aloof gaze. 인물을 한쪽으로 밀고 여백을 남긴다. glass skin translucency는 유리 아닌 soft subsurface glow이며 T존은 매트. pores vary across the face, fine irregular grain over midtones. Portra film tonality. medium-format clarity, clean tonal separation.
+One East Asian woman in her late twenties, her chok-chok skin reading as a hydrated dewy base and her aegyo-sal as soft fullness under the eyes, hair in a sleek slicked-back bun. A file folder and a mug hang motionless on threads beside her. She wears a grey tailored blazer with satin ballet flats and leans against a ribbon-tied wooden chair with one leg stretched out on a seamless cream floor. Soft high-key strobe, near-shadowless, 5500K. Her gaze is aloof and her face expressionless. She is placed at one side of the frame with generous empty space beside her. Glass skin translucency stays a soft subsurface glow with a matte T-zone; pores vary across the face, fine irregular grain over the midtones. Portra film tonality. Medium-format clarity, clean tonal separation.
 ```
 
-실측: 470자. 빼기 문장 없음. 끝 비율 토큰 없음.
+실측: 778자. 빼기 문장 없음. 끝 비율 토큰 없음. Soul 계열 대상이면 위 제어구 보존 절의 예외에 따라 마지막 두 제어구를 오른쪽 열의 관찰로 바꾼다.

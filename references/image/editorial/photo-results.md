@@ -4,7 +4,7 @@
 
 요청을 가르는 화면 결과만 고른다. 표 전체를 채우지 않는다. 길이·상세도는 [../surfaces.md](../surfaces.md) §0-1·§0-2.
 
-빛·거리·결·색은 보이는 상태로 적는다. 사용자가 장비나 특정 시각을 지정했으면 그대로 둔다. 배제는 원하는 상태로 쓴다. 품질 태그와 가중치 문법은 쓰지 않는다.
+빛·거리·결·색은 보이는 상태로 적는다. 사용자가 장비나 특정 시각을 지정했으면 그대로 둔다. 배제는 원하는 상태로 쓴다. 품질 태그와 가중치 문법은 쓰지 않는다. Soul 계열 대상이면 필름 스톡·조명 장비 이름(Portra, Pro 400H, 옥타박스, 클램셸 등)을 빼고 발색·빛의 결과만 쓴다([../soul-v2-director.md](../soul-v2-director.md) §실측 법칙 3).
 
 ## 심도·원근
 <!-- dict:depth_lens -->
@@ -86,7 +86,7 @@
 
 ## 필름·매체 결과
 
-한 컷에 매체 이름 하나. 이름만 쓰지 말고 피부·그림자·하이라이트 거동을 같이 적는다.
+한 컷에 매체 이름 하나. 이름만 쓰지 말고 피부·그림자·하이라이트 거동을 같이 적는다. Soul 계열 대상은 스톡명을 빼고 결과 묘사만 쓴다([../soul-v2-director.md](../soul-v2-director.md) §실측 법칙 3).
 
 ### 필름 스톡 결과
 <!-- dict:film_stock -->
@@ -193,7 +193,7 @@
 
 ### 축별 재서술
 
-배제는 원하는 상태로 되돌린다. 가운데 열은 대조용이며 프롬프트에 옮기지 않는다.
+배제는 원하는 상태로 되돌린다. 가운데 열은 대조용이며 프롬프트에 옮기지 않는다. 이 표는 관측된 실패 축에만 적용한다. 결함이 관측되지 않은 새 프롬프트에는 붙이지 않는다.
 
 | 축 | 부정형(옮기지 않음) | 긍정형 재서술 |
 |---|---|---|
@@ -205,8 +205,8 @@
 | 패턴 정합 | mismatched pattern | `stripe alignment continuous across the side seam, pattern scale identical on every panel` |
 | 의상 좌우 | asymmetric sleeves | `both sleeves ending at the same point on the wrist, placket straight down the centre front with evenly spaced buttons` |
 | 신발·액세서리 | floating feet, broken chain | `both shoes symmetric with even sole thickness, both soles in full contact with the ground, one continuous chain with uniform link size, earrings matching as a pair` |
-| 얼굴·눈 | deformed iris | `both irises circular and equal in diameter, matching catchlight in each eye, iris corneal reflex aligned symmetrically` |
-| 신체 계수·비례 | extra limbs | `two arms and two legs, each traceable to one shoulder or hip joint, proportion around seven and a half heads` |
+| 얼굴·눈(홍채 변형이 관측될 때만) | deformed iris | `both irises circular and equal in diameter, a catchlight in each eye set consistently with the key light` |
+| 신체 계수·비례 | extra limbs | `two arms and two legs, each traceable to one shoulder or hip joint, body proportions as specified by the user or kept from the source image` |
 | 머리카락 경계 | melted hair | `hair strands separating cleanly against the background, flyaway strands at the crown` |
 | 브랜드·문자 | logos, background text | `solid unmarked fabric face, clean brand-free finish, background surfaces plain, signage kept out of frame` |
 | 장면 정합 | inconsistent shadows | `all cast shadows falling in the same direction from a single key camera left` |

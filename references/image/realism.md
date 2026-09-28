@@ -16,11 +16,11 @@
 
 | 증상 | 근본 원인 | 긍정형 처방 토큰 | 엔진 메모 |
 |---|---|---|---|
-| 플라스틱 피부·과매끈 | 미화 형용사, 결 토큰 부재 | `pores vary in size across the face, fine cheek hairs remain visible, local skin tones differ, texture continues below the eyes`(신규 생성의 과매끈 실패에만. 원본 편집에는 추가하지 않는다 — [compiler.md](compiler.md) §피부·재질) | 공통. Higgsfield는 `flawless/porcelain/glass skin` 회피 + 같은 결 토큰 병기 |
+| 플라스틱 피부·과매끈 | 미화 형용사, 결 토큰 부재 | `pores vary in size across the face, fine cheek hairs remain visible, local skin tones differ, texture continues below the eyes`(신규 생성의 과매끈 실패에만. 원본 편집에는 추가하지 않는다 — [compiler.md](compiler.md) §피부·재질) | 공통. Higgsfield는 `flawless/porcelain/glass skin` 회피 + 같은 결 토큰 병기(관측 메모 — 도입 2026-07, 검증된 규칙 아님) |
 | 균일·무방향 조명 | 광원 방향·비율 미지정 | 단일 key 방향 1개(`soft light from camera left`) + `key:fill 2:1` + 그림자 거동(정본 [editorial/photo-results.md](editorial/photo-results.md) §빛·[editorial/scene-craft.md](editorial/scene-craft.md) §조명 레시피) | gpt-image 계열. Soul은 광원 위치·수치 대신 관용 조명 명칭(`Paramount lighting` 등, [soul-v2-director.md](soul-v2-director.md) §실측 법칙 1) |
 | 물리 불가 그림자·반사·캐치라이트 | 그림자·반사·catchlight 방향이 광원과 불일치, 다중 그림자·부유 | 그림자·specular·catchlight 방향=key 1개로 고정, `contact/grounding shadow` 명시, 반사 내용=주변 지오메트리 일치 | 공통. 배경합성은 §4 |
-| 과포화·HDR·글로시 인공 룩 | 채도·로컬 대비 과다, 광고식 과선명 | `muted/desaturated`(글로벌 −8~−12), `gentle highlight roll-off, lifted blacks`, 필름 룩 병기. 다큐 레지스터면 `an everyday moment under the light already present, relaxed movement, ordinary surroundings`로 낮춤(`raw photo`는 품질 태그라 쓰지 않는다)(시네마틱 키아트 목적이면 유지) | gpt-image-2는 불필요한 색코드·켈빈을 넣지 않음 / Higgsfield 저채도·필름 프리셋. 레지스터 토큰 개별 효능 (미검증) |
-| 비현실적 완벽 대칭·정돈 | 대칭 얼굴·정중 구도·stock pose | `natural facial asymmetry, catchlights in both eyes, not perfectly identical`, off-center `rule of thirds`, `candid/unposed, in-between moment`, 한쪽에만 잔머리 | 텍스트·구조 레인은 긍정형 토큰 / Soul ID는 실사 학습이 대칭 완화 — 훈련이 담당(정본 lanes.md §인물·사실감 이미지 레인) |
+| 과포화·HDR·글로시 인공 룩 | 채도·로컬 대비 과다, 광고식 과선명 | `muted/desaturated`(글로벌 −8~−12), `gentle highlight roll-off, lifted blacks`, 필름 룩 병기. 다큐 레지스터면 `an everyday moment under the light already present, relaxed movement, ordinary surroundings`로 낮춤(`raw photo`는 품질 태그라 쓰지 않는다)(시네마틱 키아트 목적이면 유지) | gpt-image-2 작성에서는 사용자·브랜드가 주지 않은 색코드·켈빈을 넣지 않는다([surface-contracts.md](surface-contracts.md) §4.1, 작성 선택이며 엔진 반응 검증 아님) / Higgsfield 저채도·필름 프리셋은 관측 메모(도입 2026-07, 검증된 규칙 아님). 레지스터 토큰 개별 효능 (미검증) |
+| 비현실적 완벽 대칭·정돈 | 대칭 얼굴·정중 구도·stock pose | `natural facial asymmetry, catchlights in both eyes, not perfectly identical`, off-center `rule of thirds`, `candid/unposed, in-between moment`, 한쪽에만 잔머리 | 텍스트·구조 레인은 긍정형 토큰 / Soul ID 사용 시 얼굴 서술은 soul_id가 권위이므로 얼굴 비대칭 토큰을 얹지 않는다([soul-v2-director.md](soul-v2-director.md) §4레이어 참조 순서). "실사 학습이 대칭을 완화한다"는 관측 메모다(도입 2026-07, 검증된 규칙 아님) |
 | 배경 인물·소품 붕괴 | 배경 군중·텍스트 세밀 지정 | 배경 인물=`distant motion-blur silhouettes, faces too far away to identify`, 소품 수 축소+거리 m, 간판=`unlettered abstract light shapes`, 배경=`follows perspective, consistent vanishing point`(전부 긍정형 재서술) | 공통 |
 | 렌즈 물리 부재 | 심도·왜곡·플레어·압축이 초점거리와 불일치 | 한 컷 한 렌즈 character 통일: 얕은 심도면 배경 일관 blur+보케, 광각이면 `mild edge stretch`, 망원이면 `compressed perspective, flattened planes`, 플레어·비네트는 광원 방향 일치(정본 [editorial/photo-results.md](editorial/photo-results.md) §심도·원근) | 공통. 바디명 대신 결과·거리 성격([compiler.md](compiler.md) §결과로 쓴다, 세컨드 패스도 바디명 저신뢰로 수렴) |
 | 재질 광택 획일화 | 모든 소재 같은 광택·micro texture 부재 | 소재별 빛 반응 차등(정본 [editorial/scene-craft.md](editorial/scene-craft.md) §소재·질감): 레더 hard highlight 단절 / 스웨이드 흡수 / 실크 흐르는 하이라이트 / 유리 `fingerprints, soft reflection` / 금속 `anisotropic highlights` | 공통. 제품·실내 컷에 특히 |
@@ -69,6 +69,8 @@
 - **바닥 재질 반응:** 접지부가 바닥에 눌림(카펫 압입·젖은 바닥), 접지 그림자가 바닥 결·거칠기 따름; 습식 반사는 피사체 바로 아래 수직·표면 거칠기로 흐림.
 
 ## 5. 엔진별 실사 레버 (검증 스탬프 주의 — AGENTS.md)
+
+이 절은 작성 선택이며 엔진 반응을 검증했다는 주장이 아니다(스탬프 없음).
 
 - **gpt-image-2:** 관측한 과포화·평면성 실패에 해당 색·빛 조건만 보강한다. 수치 추가만으로 품질이 오른다고 보장하지 않는다. 배제 형식은 [compiler.md](compiler.md) §제외 조건의 형식과 [surface-contracts.md](surface-contracts.md) §4를 따른다.
 - **인물·사실감 레인:** 프리셋이 실제로 전달한 조건은 반복하지 않는다. 프리셋별 세부 실사 메커니즘은 미검증이며 단정하지 않는다. 정본은 lanes.md §인물·사실감 이미지 레인이다.

@@ -1,6 +1,7 @@
+import fs from "node:fs";
 import { readFile, readdir, stat } from "node:fs/promises";
 import { dirname, isAbsolute, relative, resolve, sep } from "node:path";
-import { fileURLToPath, pathToFileURL } from "node:url";
+import { fileURLToPath } from "node:url";
 
 export const CODE_REGISTRY = Object.freeze({
   flag: { code: "input/flag", severity: { native: "error", assembled: "error" }, intent: "Accept only coherent documented arguments." },
@@ -525,7 +526,16 @@ export async function runHarness(casesPath = process.env.MPW_PROMPT_CHECK_CASES 
   return { ok: !harnessFailed && passed === cases.length, passed, total: cases.length, uncovered };
 }
 
-if (process.argv[1] && pathToFileURL(resolve(process.argv[1])).href === import.meta.url) {
+function isMainModule() {
+  if (!process.argv[1]) return false;
+  try {
+    return fs.realpathSync(process.argv[1]) === fs.realpathSync(fileURLToPath(import.meta.url));
+  } catch {
+    return resolve(process.argv[1]) === fileURLToPath(import.meta.url);
+  }
+}
+
+if (isMainModule()) {
   const args = process.argv.slice(2);
   if (args.length === 1 && args[0] === "--test") {
     const result = await runHarness();

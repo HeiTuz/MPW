@@ -22,7 +22,7 @@ Higgsfield 로스터의 `minimax_h3`·`minimax_h3_max` 또는 공식 MiniMax H3 
 
 ## 라벨 섹션 구조
 
-기본 모드(T2VA·I2VA·FL2VA·L2VA)는 세 필드를 이 순서로 쓴다:
+사용자가 공식 형식을 원하거나 구조·사운드 분리가 필요할 때 기본 모드(T2VA·I2VA·FL2VA·L2VA)에 권장하는 세 필드의 순서는 다음과 같다:
 
 ```text
 integrated_multimodal_description: ...

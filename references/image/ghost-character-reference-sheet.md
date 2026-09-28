@@ -57,7 +57,7 @@ CENTER 추정의 최소 입력은 의상 근거 + 정면 신체 기준(또는 Ca
 UNAVAILABLE 패널은 해당 패널 본문 전체를 `Leave the [LEFT/CENTER/RIGHT] zone entirely empty, showing only the same flat neutral gray background, with no figure, outline, icon or placeholder.`로 교체한다. 다른 패널은 이동하지 않는다. 후면 추정 규칙은 실제 추정 영역이 있는 경우에만 조립한다.
 
 ```text
-Create ONE wide landscape character reference sheet. Reference authority: <<SOURCE_MAP>>.
+Create ONE character reference sheet<<SHEET_ASPECT>>. Reference authority: <<SOURCE_MAP>>.
 
 <<MEDIUM>>, continuous flat neutral mid-gray background, soft even lighting. Three equal-width zones with clear gray margins: LEFT front identity-blocked figure; CENTER rear figure; RIGHT identity bust. The sheet holds only these three figures on the plain background. Preserve original garment markings. No redesign or beautification.
 
@@ -70,7 +70,7 @@ RIGHT: Chest-up bust from <<IDENTITY_SOURCE>>. <<IDENTITY_VIEW>>. Preserve facia
 Only source-supported regions, except specified plain rear continuation. Never extend cropped sources into unseen limbs or shoes. Keep unavailable zones empty gray, without outlines/placeholders; never move other panels into them.
 ```
 
-`REAR_FACE_VISIBILITY`는 추정 후면이면 `No face, cheek, jaw or eye is visible.`, 실제 후면이면 `Preserve only any minor contour actually visible in the rear source; reveal no additional facial features.`로 쓴다. 원문에서 금지한 해부·공포를 유도하는 머리 제거 표현 대신 LEFT의 보이는 경계와 보존 의류를 긍정형으로 기술한다.
+`SHEET_ASPECT`는 비율 레버가 없는 붙여넣기 표면에서만 `, wide landscape`로 채우고, 3:2(미지원이면 16:9)를 레버로 전달하면 비워 둔다(§1). `REAR_FACE_VISIBILITY`는 추정 후면이면 `No face, cheek, jaw or eye is visible.`, 실제 후면이면 `Preserve only any minor contour actually visible in the rear source; reveal no additional facial features.`로 쓴다. 원문에서 금지한 해부·공포를 유도하는 머리 제거 표현 대신 LEFT의 보이는 경계와 보존 의류를 긍정형으로 기술한다.
 
 길이 상한이 있는 채널([surfaces.md](surfaces.md) §0-1)에서 넘치면 슬롯 안의 반복 서술과 보조 금지문부터 줄인다. 패널 배치, LEFT 경계, 참조 권한(`SOURCE_MAP`), UNAVAILABLE 처리는 줄이지 않는다.
 

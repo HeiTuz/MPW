@@ -10,7 +10,7 @@ metadata:
   host_surface: hermes
   canonical_source: "HeiTuz/MPW SKILL.md v2.34.1"
   updated_at: "2026-09-29"
-  model_claims_reviewed_at: "2026-09-27"
+  model_claims_reviewed_at: "2026-09-29"
   role_routing_reviewed_at: "2026-09-05"
   platform_roster_reviewed_at: "2026-09-06"
 ---
@@ -76,6 +76,7 @@ metadata:
 | 이미지·영상의 문법·파라미터·길이 제한 | [surfaces.md](references/image/surfaces.md) → [surface-contracts.md](references/image/surface-contracts.md)의 해당 표면만. 대상 미정의 자연어 초안에는 API 조회·모델 선정을 요구하지 않는다 |
 | 대상 미정 이미지 또는 GPT Image 2.5 문안 | [surface-contracts.md](references/image/surface-contracts.md) §3.2. 원본 편집은 §3.3, 도해·슬라이드·UI·만화·로고는 §3.4도 읽는다. 웹용 경계는 웹 문안에만 적용한다 |
 | 캐릭터시트·고스트 캐릭터 레퍼런스 프롬프트 | 양식 선택은 [ghost-character-reference-sheet.md](references/image/ghost-character-reference-sheet.md) §1 |
+| 원본별 편집이 아닌 제품 사진 여러 컷의 새 생성 | [product-multicut-consistency.md](references/image/product-multicut-consistency.md) |
 | 참조 이미지의 역할·관찰이 필요함 | [from-image.md](references/image/from-image.md) §1. 원본 편집은 변경·보존 조건으로 바로 작성; 상세 관찰·취향 변주는 요청될 때만 |
 | 합성·전문 이미지·영상 연출 | [lanes.md](references/image/lanes.md)의 해당 절만. 영상은 §영상 공통 규칙 |
 | 지정 엔진 문법·모델 추천 | [model-routing.md](references/image/model-routing.md): 지정 엔진은 §6에서 바로 찾고, 모델 추천만 §1·§2와 §4를 읽는다 |

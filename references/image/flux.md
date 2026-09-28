@@ -1,13 +1,13 @@
 # FLUX (Black Forest Labs) — 생성·편집 프롬프트
 
-`FLUX` / `FLUX.2` / `flux_kontext`가 지정됐을 때 읽는다. 모델 후보와 변형(`pro`/`flex`/`max`)·해상도 같은 실행 레버는 [model-routing.md](model-routing.md)와 [surfaces.md](surfaces.md) §4 소관이며 여기서 다시 정의하지 않는다. 입력 이미지가 있으면 [from-image.md](from-image.md)의 입력 역할·보존 규칙을 먼저 적용한다. 외부 사실과 확인일은 [surface-evidence.md](surface-evidence.md) §7이 정본이다.
+`FLUX` / `FLUX.2` / `flux_kontext`가 지정됐을 때 읽는다. 모델 후보와 변형(`pro`/`flex`/`max`)·해상도 같은 실행 레버는 [model-routing.md](model-routing.md)와 [surface-contracts.md](surface-contracts.md) §4 소관이며 여기서 다시 정의하지 않는다. 입력 이미지가 있으면 [from-image.md](from-image.md)의 입력 역할·보존 규칙을 먼저 적용한다. 외부 사실과 확인일은 [surface-evidence.md](surface-evidence.md) §7이 정본이다.
 
-**경계.** FLUX.2 생성과 `flux_kontext` 계열 지시 기반 편집은 같은 문법이 아니다. Midjourney `--` 플래그, Dreamina·Seedance의 `@Image`·`[Scene]` 블록, Grok의 `--ar` 금지 규칙을 이 엔진에 그대로 옮기지 않는다. 이 문서는 보낼 문장 작성만 다루며 API 요청 스키마나 모델 성능을 보증하지 않는다.
+**경계.** FLUX.2 생성과 `flux_kontext` 계열 지시 기반 편집은 같은 문법이 아니다(관측 메모 — 도입 2026-09, 검증된 규칙 아님. `flux_kontext`의 편집 후보 분류는 [model-routing.md](model-routing.md) 로스터를 따른다). Midjourney `--` 플래그, Dreamina·Seedance의 `@Image`·`[Scene]` 블록, Grok의 `--ar` 금지 규칙을 이 엔진에 그대로 옮기지 않는다. 이 문서는 보낼 문장 작성만 다루며 API 요청 스키마나 모델 성능을 보증하지 않는다.
 
 ## 작성 원칙
 
 - **결과 어휘로 환원한다.** 장비·렌즈·필름 스톡·EXIF 나열은 결과를 기술하는 어휘로 바꾼다(`Fujifilm GFX 100S, 110mm` 대신 `medium-format clarity, shallow depth of field`). 카메라·필름 결과 어휘는 [editorial/photo-results.md](editorial/photo-results.md)가 정본이다.
-- **색은 본문 HEX로.** 색과 적용 대상의 연결 규칙은 [surface-contracts.md](surface-contracts.md) §4.1을 따른다.
+- **색명은 색명대로 쓴다.** 사용자·브랜드가 색 코드를 줬거나 배색 기획을 맡긴 경우에만 본문 HEX를 쓰고 색마다 적용 대상과 잇는다. 색명만 받았으면 HEX를 새로 만들지 않는다([surface-contracts.md](surface-contracts.md) §4.1).
 - **짧은 완결 산문이 기본.** `Camera:`·`Lighting:` 같은 라벨 행은 분리가 실제로 도움이 될 때만 쓰고, 라벨을 채우기 위한 내용을 만들지 않는다.
 - 산출물 언어는 [../templates/common.md](../templates/common.md) §프롬프트 언어 결정을 따른다.
 

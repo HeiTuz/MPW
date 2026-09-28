@@ -59,7 +59,7 @@
 
 ### 3-4. Serialize — ARTIFACT별 최소 closure
 
-각 ARTIFACT에서 거꾸로 올라가 그 산출에 실제로 필요한 `requires`·`authority`·`derives`·EVIDENCE 조상만 포함한다. 형제 ARTIFACT 전용 슬롯, `authority`에서 진 값, `excludes`로 제거한 값, 내부 진단은 내보내지 않는다. 채움 순서대로 쓰되 실행 표면이 파라미터를 갖는 축은 산문에서 뺀다([surface-contracts.md](image/surface-contracts.md) §4). **리프 하나 = 독립 실행 단위 하나**다. 단위마다 자기완결로 조립하되, 코드블록·배열·표 등 실제 포장은 [SKILL.md](../SKILL.md) §Output format과 사용자 지정 형식을 따른다.
+각 ARTIFACT에서 거꾸로 올라가 그 산출에 실제로 필요한 `requires`·`authority`·`derives`·EVIDENCE 조상만 포함한다. 형제 ARTIFACT 전용 슬롯, `authority`에서 진 값, `excludes`로 제거한 값, 내부 진단은 내보내지 않는다. 채움 순서대로 쓰되 실제 파라미터로 따로 전달한 값만 산문에서 생략하고, 전달하지 않은 조건은 각 리프 본문에 남긴다([SKILL.md](../SKILL.md) §작성과 검수, [surface-contracts.md](image/surface-contracts.md) §4). **리프 하나 = 독립 실행 단위 하나**다. 단위마다 자기완결로 조립하되, 코드블록·배열·표 등 실제 포장은 [SKILL.md](../SKILL.md) §Output format과 사용자 지정 형식을 따른다.
 
 ### 3-5. Evaluate — 산출 전 최종 판정
 

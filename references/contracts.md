@@ -9,7 +9,7 @@
 1. `MPW/contracts/`에서 스키마·검증기·fixture를 함께 변경한다.
 2. `python3 scripts/sync_contracts.py --write-manifest`로 manifest SHA-256을 재생성하고 `python3 scripts/test_contracts.py`를 통과한다.
 3. `python3 scripts/sync_contracts.py --sync --dest <contract-mirror>`로 각 독립 소스·가드너 미러에 동기화한다.
-4. 각 스킬의 기존 설치 절차로 소스 전체를 설치본에 배포한다. 정본에서 설치본으로 역복사하지 않는다.
+4. 각 스킬의 기존 설치 절차로 소스 전체를 설치본에 배포한다. 설치본에서 정본으로 역복사하지 않는다.
 5. 정본 레포에서 `python3 scripts/sync_contracts.py --dest <contract-mirror> ...`로 모든 미러에 drift가 없음을 확인한다.
 
 스키마 major가 다른 payload는 자동 승격하지 않는다. 기존 analysis JSON을 GardenRecipe로 바꾸는 adapter는 각 adapter 소관이고, 컴파일·PromptBundle 생성은 Master 소관이다. 이 문서는 분석 필드나 컴파일 규칙을 복제하지 않는다.

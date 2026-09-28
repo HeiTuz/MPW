@@ -22,8 +22,8 @@
 | `prompt-bundle/v1` | `prompt-bundle.schema.json` | `scripts/compile_garden_recipe.py` | `contracts/validate.py` (`--recipe` 교차검증) | [garden-recipe-compiler.md](garden-recipe-compiler.md) · [contracts.md](contracts.md) §PromptBundle v1 |
 | `image-production-handoff/v2` | `image-production-handoff.schema.json` | `scripts/compile_image_handoff.py` | `contracts/validate.py` · 보조 경로: 컴파일러 게이트 + `scripts/test_compile_image_handoff.py` | [image/image-production-handoff.md](image/image-production-handoff.md) |
 | apparel-handoff (`schema_version: 1`) | `apparel-handoff.schema.json` | `scripts/compile_apparel_handoff.py` | `contracts/validate.py` (정수 discriminator라 `--schema apparel-handoff/v1`이 canonical path) · 보조 경로: 컴파일러 게이트 + `scripts/test_compile_apparel_handoff.py` | [image/apparel-compiler.md](image/apparel-compiler.md) · 런타임 소비는 아래 §의류 핸드오프 소비자 |
-| `production-adapter-options/v1` | `production-adapter-options.schema.json` | MPW 스크립트 없음(외부 생산) | `contracts/validate.py` | 스키마가 정본 · 표면 판정 [image/surfaces.md](image/surfaces.md) §S1 |
-| `imggen2-production-record/v1` | `imggen2-production-record.schema.json` | MPW 스크립트 없음(외부 생산) | `contracts/validate.py` | 스키마가 정본 · 표면 판정 [image/surfaces.md](image/surfaces.md) §S1 |
+| `production-adapter-options/v1` | `production-adapter-options.schema.json` | MPW 스크립트 없음(외부 생산) | `contracts/validate.py` | 스키마가 정본 · 표면 판정 [image/surfaces.md](image/surfaces.md) §0 · 기계 계약 상세 [image/surface-contracts.md](image/surface-contracts.md) §1 |
+| `imggen2-production-record/v1` | `imggen2-production-record.schema.json` | MPW 스크립트 없음(외부 생산) | `contracts/validate.py` | 스키마가 정본 · 표면 판정 [image/surfaces.md](image/surfaces.md) §0 · 기계 계약 상세 [image/surface-contracts.md](image/surface-contracts.md) §1 |
 | `mpw-recompile-request/v1` | `mpw-recompile-request.schema.json` | MPW 스크립트 없음(외부 생산) | `contracts/validate.py` | 전용 문서 없음 — 스키마와 [contracts.md](contracts.md) 인터페이스 표 |
 | `source-evidence-index/v1` | `source-evidence-index.schema.json` | MPW 스크립트 없음(외부 생산) | `contracts/validate.py` | 전용 문서 없음 — 스키마와 [contracts.md](contracts.md) 인터페이스 표 |
 
