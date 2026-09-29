@@ -68,7 +68,7 @@ function slug(value) {
 }
 
 function installedSkill() {
-  const location = path.join(os.homedir(), ".codex/skills/MPW");
+  const location = path.join(process.env.CODEX_HOME || path.join(os.homedir(), ".codex"), "skills/MPW");
   try {
     const actual = fs.realpathSync(location);
     const skill = fs.readFileSync(path.join(actual, "SKILL.md"), "utf8");
@@ -205,7 +205,7 @@ async function main() {
     }
     if (response) fs.writeFileSync(path.join(folder, "response.txt"), response);
     const logs = ["stdout.log", "stderr.log"].map((name) => { try { return fs.readFileSync(path.join(folder, name), "utf8"); } catch { return ""; } }).join("\n");
-    const criteriaAccess = /fixtures\/behavioral|semantic_checks|reviews-selected\.json/.test(logs);
+    const criteriaAccess = /fixtures\/behavioral|skill_behavior_cases|semantic_checks|reviews-selected\.json/.test(logs);
     let reason = null;
     if (result.timedOut) reason = `timeout after ${options.timeout}s`;
     else if (result.error) reason = result.error;

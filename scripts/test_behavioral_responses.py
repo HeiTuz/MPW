@@ -46,6 +46,15 @@ class BehavioralResponseCheckerTests(unittest.TestCase):
         self.assertEqual("failed", report["results"][0]["status"])
         self.assertTrue(report["results"][0]["errors"])
 
+    def test_exact_match_ignores_only_trailing_whitespace(self):
+        cases = {"cases": [{"id": "exact", "expected": "a  b"}]}
+        review = [{"id": "exact", "verdict": "pass", "reason": "reviewed"}]
+        for response, status in (("a  b\n\n", "passed"), ("a  b \t\n", "passed"),
+                                 ("\na  b", "failed"), (" a  b", "failed"), ("a b\n", "failed")):
+            with self.subTest(response=response):
+                result = self.run_checker(cases, [{"id": "exact", "response": response}], reviews=review)
+                self.assertEqual(status, self.report(result)["results"][0]["status"])
+
     def test_missing_response_is_not_run(self):
         result = self.run_checker([{"id": "a", "expected": "x"}], [])
         report = self.report(result)

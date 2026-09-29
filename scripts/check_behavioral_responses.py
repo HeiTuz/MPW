@@ -240,7 +240,9 @@ def check_case(case: dict[str, Any], response_record: dict[str, Any] | None,
     if not response.strip():
         errors.append("response is empty")
     expected = case.get("expected")
-    if isinstance(expected, str) and response != expected:
+    # Trailing whitespace at the very end of a chat reply is invisible to the reader and
+    # varies by host, so it is ignored. Leading and interior whitespace must still match.
+    if isinstance(expected, str) and response.rstrip() != expected.rstrip():
         errors.append("response does not exactly equal expected string")
     errors.extend(check_format(response, case.get("_format")))
     if "preserved_strings" in case:
