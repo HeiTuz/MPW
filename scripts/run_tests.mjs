@@ -24,11 +24,6 @@ steps.push({
   command: process.execPath,
   args: [path.join("scripts", "check_prompt.mjs"), "--test"],
 });
-steps.push({
-  name: "smoke_runtime_installs.mjs",
-  command: process.execPath,
-  args: [path.join("scripts", "smoke_runtime_installs.mjs")],
-});
 
 const failed = [];
 for (const step of steps) {

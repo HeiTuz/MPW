@@ -16,17 +16,18 @@ jobs:
       # the four root variables, this job must fail loudly rather than skip quietly.
       - name: full network-free test suite
         run: npm test
-      - name: exact-tree npx and bunx forwarded-argument smoke
+      - name: plugin build validates and packed CLI copies the payload
         shell: bash
         run: |
+          node scripts/build_plugin.mjs --check
           pack_dir="$(mktemp -d)"
           tarball="$(npm pack --pack-destination "$pack_dir" --silent)"
           package="$pack_dir/$tarball"
           npx_home="$(mktemp -d)"
-          HOME="$npx_home" npx --yes --package "$package" heituzmpw -- --target claude --force --quiet
-          test -f "$npx_home/.claude/skills/MPW/SKILL.md"
-          test -f "$npx_home/.claude/skills/MPW/contracts/v1/image-production-handoff.schema.json"
+          HOME="$npx_home" npx --yes --package "$package" heituzmpw -- --dest "$npx_home/skills/MPW" --force --quiet
+          test -f "$npx_home/skills/MPW/SKILL.md"
+          grep -q 'host_surface: plugin' "$npx_home/skills/MPW/SKILL.md"
           bunx_home="$(mktemp -d)"
-          HOME="$bunx_home" bunx --package "$package" heituzmpw -- --target claude --force --quiet
-          test -f "$bunx_home/.claude/skills/MPW/SKILL.md"
-          test -f "$bunx_home/.claude/skills/MPW/contracts/v1/image-production-handoff.schema.json"
+          HOME="$bunx_home" bunx --package "$package" heituzmpw -- --dest "$bunx_home/skills/MPW" --force --quiet
+          test -f "$bunx_home/skills/MPW/contracts/v1/image-production-handoff.schema.json"
+          HOME="$bunx_home" bunx --package "$package" heituzmpw | grep -q 'mpw@heituz'

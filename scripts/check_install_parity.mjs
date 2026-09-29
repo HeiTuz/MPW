@@ -1,18 +1,22 @@
 #!/usr/bin/env node
+// Compare installed mpw@heituz plugin caches with a fresh build of this tree.
+//
+//   node scripts/check_install_parity.mjs [--target all|codex|claude] [--json] [--out <file>]
+//                                         [--home <dir>] [--codex-home <dir>] [--claude-home <dir>]
+//                                         [--changed-since <rev>]
+// Exit codes: 0 all match, 1 mismatch, 2 not installed / unreadable / bad arguments.
 import crypto from "node:crypto";
 import fs from "node:fs";
 import os from "node:os";
 import path from "node:path";
 import { spawnSync } from "node:child_process";
 import { fileURLToPath } from "node:url";
-import {
-  destinationForTarget,
-  installPayload,
-  shouldSkip,
-} from "./install.mjs";
+import { buildPlugin, PLUGIN_NAME } from "./build_plugin.mjs";
+import { shouldSkip } from "./install.mjs";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
-const HOSTS = ["claude", "codex", "hermes"];
+const HOSTS = ["codex", "claude"];
+export const MARKETPLACE = "heituz";
 
 function sha256File(file) {
   return crypto.createHash("sha256").update(fs.readFileSync(file)).digest("hex");
@@ -23,10 +27,10 @@ function walkRel(dir) {
   function rec(current, rel) {
     if (!fs.existsSync(current)) return;
     for (const entry of fs.readdirSync(current, { withFileTypes: true })) {
-      const nextRel = rel ? `${rel}/${entry.name}` : entry.name;
+      const nextRel = rel ? rel + "/" + entry.name : entry.name;
       const full = path.join(current, entry.name);
       if (entry.isDirectory()) rec(full, nextRel);
-      else out.push(nextRel.split(path.sep).join("/"));
+      else out.push(nextRel);
     }
   }
   rec(dir, "");
@@ -35,9 +39,7 @@ function walkRel(dir) {
 
 function treeHashes(dir) {
   const files = {};
-  for (const rel of walkRel(dir)) {
-    files[rel] = sha256File(path.join(dir, ...rel.split("/")));
-  }
+  for (const rel of walkRel(dir)) files[rel] = sha256File(path.join(dir, ...rel.split("/")));
   return files;
 }
 
@@ -46,152 +48,93 @@ export function compareTrees(expectedDir, actualDir) {
   const actual = treeHashes(actualDir);
   const missing = Object.keys(expected).filter((key) => !(key in actual)).sort();
   const extra = Object.keys(actual).filter((key) => !(key in expected)).sort();
-  const changed = Object.keys(expected)
-    .filter((key) => key in actual && expected[key] !== actual[key])
-    .sort();
-  return {
-    files: Object.keys(expected).length,
-    missing,
-    extra,
-    changed,
-    mismatch: changed,
-  };
+  const changed = Object.keys(expected).filter((key) => key in actual && expected[key] !== actual[key]).sort();
+  return { files: Object.keys(expected).length, missing, extra, changed };
+}
+
+function versionKey(value) {
+  return value.split(/[.+-]/u).map((part) => (/^\d+$/u.test(part) ? part.padStart(8, "0") : part)).join(".");
+}
+
+// Codex keeps plugin caches under <CODEX_HOME>/plugins/cache/<marketplace>/<plugin>/<version>.
+export function codexPluginRoot(codexHome) {
+  const base = path.join(codexHome, "plugins", "cache", MARKETPLACE, PLUGIN_NAME);
+  if (!fs.existsSync(base)) return null;
+  const versions = fs.readdirSync(base, { withFileTypes: true }).filter((entry) => entry.isDirectory()).map((entry) => entry.name);
+  if (!versions.length) return null;
+  versions.sort((a, b) => versionKey(a).localeCompare(versionKey(b)));
+  return path.join(base, versions[versions.length - 1]);
+}
+
+// Claude Code records the active cache in <CLAUDE_HOME>/plugins/installed_plugins.json.
+export function claudePluginRoot(claudeHome) {
+  const registry = path.join(claudeHome, "plugins", "installed_plugins.json");
+  if (!fs.existsSync(registry)) return null;
+  const entries = JSON.parse(fs.readFileSync(registry, "utf8")).plugins?.[PLUGIN_NAME + "@" + MARKETPLACE];
+  const entry = Array.isArray(entries) ? entries.find((item) => item.scope === "user") || entries[0] : null;
+  return entry?.installPath && fs.existsSync(entry.installPath) ? entry.installPath : null;
 }
 
 export function runtimePayloadChangedSince(rev, sourceRoot = root) {
-  const listed = spawnSync("git", ["diff", "--name-only", `${rev}..HEAD`], {
-    cwd: sourceRoot,
-    encoding: "utf8",
-  });
-  if (listed.status !== 0) {
-    throw new Error(listed.stderr || listed.stdout || `git diff failed for ${rev}`);
-  }
+  const listed = spawnSync("git", ["diff", "--name-only", rev + "..HEAD"], { cwd: sourceRoot, encoding: "utf8" });
+  if (listed.status !== 0) throw new Error(listed.stderr || listed.stdout || "git diff failed for " + rev);
   return listed.stdout.split("\n").filter(Boolean).filter((rel) => {
     if (!shouldSkip(rel)) return true;
-    return /^agents\/(claude|codex|hermes)\/(SKILL|AGENTS|README)\.md$/.test(rel);
+    return /^agents\/plugin\/(SKILL|AGENTS|README)\.md$/u.test(rel) || rel === "assets/plugin-icon.png";
   });
 }
 
 export function untrackedShipped(sourceRoot = root) {
-  const listed = spawnSync("git", ["ls-files", "-z", "--others", "--exclude-standard"], {
-    cwd: sourceRoot,
-    encoding: "utf8",
-  });
+  const listed = spawnSync("git", ["ls-files", "-z", "--others", "--exclude-standard"], { cwd: sourceRoot, encoding: "utf8" });
   if (listed.status !== 0) return [];
   return listed.stdout.split("\0").filter(Boolean).filter((rel) => !shouldSkip(rel));
 }
 
 function parseArgs(argv) {
-  const opts = {
-    home: os.homedir(),
-    target: "all",
-    json: false,
-    dests: {},
-    changedSince: null,
-    out: null,
-  };
+  const home = os.homedir();
+  const opts = { target: "all", json: false, out: null, changedSince: null, home, codexHome: null, claudeHome: null };
+  const takes = { "--target": "target", "--out": "out", "--changed-since": "changedSince", "--home": "home", "--codex-home": "codexHome", "--claude-home": "claudeHome" };
   for (let i = 0; i < argv.length; i += 1) {
     const argument = argv[i];
-    if (argument === "--json") {
-      opts.json = true;
+    if (argument === "--json") { opts.json = true; continue; }
+    const [flag, inline] = argument.includes("=") ? [argument.slice(0, argument.indexOf("=")), argument.slice(argument.indexOf("=") + 1)] : [argument, null];
+    if (flag in takes) {
+      const value = inline ?? argv[++i];
+      if (!value) throw new Error("missing " + flag + " value");
+      opts[takes[flag]] = value;
       continue;
     }
-    if (argument === "--home") {
-      if (!argv[i + 1]) throw new Error("missing --home value");
-      opts.home = argv[++i];
-      continue;
-    }
-    if (argument.startsWith("--home=")) {
-      opts.home = argument.slice("--home=".length);
-      continue;
-    }
-    if (argument === "--target") {
-      if (!argv[i + 1]) throw new Error("missing --target value");
-      opts.target = argv[++i];
-      continue;
-    }
-    if (argument.startsWith("--target=")) {
-      opts.target = argument.slice("--target=".length);
-      continue;
-    }
-    if (argument === "--dest") {
-      if (!argv[i + 1]) throw new Error("`--dest` needs host=path");
-      const spec = argv[++i];
-      const eq = spec.indexOf("=");
-      if (eq < 1) throw new Error("`--dest` needs host=path");
-      opts.dests[spec.slice(0, eq)] = spec.slice(eq + 1);
-      continue;
-    }
-    if (argument.startsWith("--dest=")) {
-      const spec = argument.slice("--dest=".length);
-      const eq = spec.indexOf("=");
-      if (eq < 1) throw new Error("`--dest` needs host=path");
-      opts.dests[spec.slice(0, eq)] = spec.slice(eq + 1);
-      continue;
-    }
-    if (argument === "--changed-since") {
-      if (!argv[i + 1]) throw new Error("missing --changed-since value");
-      opts.changedSince = argv[++i];
-      continue;
-    }
-    if (argument.startsWith("--changed-since=")) {
-      opts.changedSince = argument.slice("--changed-since=".length);
-      continue;
-    }
-    if (argument === "--out") {
-      if (!argv[i + 1]) throw new Error("missing --out value");
-      opts.out = argv[++i];
-      continue;
-    }
-    throw new Error(`unknown flag: ${argument}`);
+    throw new Error("unknown flag: " + argument);
   }
-  const normalized = String(opts.target || "all").toLowerCase();
-  if (normalized === "all") opts.hosts = HOSTS.slice();
-  else if (normalized === "gpt") opts.hosts = ["codex"];
-  else if (HOSTS.includes(normalized)) opts.hosts = [normalized];
-  else throw new Error(`unknown target: ${opts.target}`);
-  for (const [host, destination] of Object.entries(opts.dests)) {
-    if (!HOSTS.includes(host) || !destination) throw new Error("--dest requires a supported host and nonempty path");
-  }
+  const target = String(opts.target).toLowerCase();
+  if (target === "all") opts.hosts = HOSTS.slice();
+  else if (target === "gpt") opts.hosts = ["codex"];
+  else if (HOSTS.includes(target)) opts.hosts = [target];
+  else throw new Error("unknown target: " + opts.target);
+  opts.codexHome ||= process.env.CODEX_HOME || path.join(opts.home, ".codex");
+  opts.claudeHome ||= path.join(opts.home, ".claude");
   return opts;
 }
 
-function reportHost(home, host, destOverride, sourceRoot) {
-  const destination = destOverride || destinationForTarget(home, host);
-  if (!fs.existsSync(destination)) {
-    return { host, destination, status: "not_installed", files: 0, missing: [], extra: [], changed: [], mismatch: [] };
-  }
-  let actualStat;
+export function checkInstallParity({ hosts = HOSTS, codexHome, claudeHome, sourceRoot = root } = {}) {
+  const expectedRoot = fs.mkdtempSync(path.join(os.tmpdir(), "mpw-parity-"));
   try {
-    actualStat = fs.statSync(destination);
-  } catch (error) {
-    return { host, destination, status: "unreadable", error: String(error.message || error), files: 0, missing: [], extra: [], changed: [], mismatch: [] };
-  }
-  if (!actualStat.isDirectory()) {
-    return { host, destination, status: "unreadable", error: "destination is not a directory", files: 0, missing: [], extra: [], changed: [], mismatch: [] };
-  }
-  const expectedRoot = fs.mkdtempSync(path.join(os.tmpdir(), `mpw-parity-${host}-`));
-  try {
-    installPayload({ sourceRoot, destination: expectedRoot, host });
-    const diff = compareTrees(expectedRoot, destination);
-    const status = (diff.missing.length || diff.extra.length || diff.changed.length) ? "mismatch" : "match";
-    return { host, destination, status, ...diff };
-  } catch (error) {
-    if (!(error instanceof Error) || !("code" in error)) throw error;
-    return { host, destination, status: "unreadable", error: error.message, files: 0, missing: [], extra: [], changed: [], mismatch: [] };
+    const expected = buildPlugin(expectedRoot, { sourceRoot });
+    return hosts.map((host) => {
+      let destination = null;
+      try {
+        destination = host === "codex" ? codexPluginRoot(codexHome) : claudePluginRoot(claudeHome);
+      } catch (error) {
+        return { host, destination, status: "unreadable", error: String(error.message || error), files: 0, missing: [], extra: [], changed: [] };
+      }
+      if (!destination) return { host, destination, status: "not_installed", files: 0, missing: [], extra: [], changed: [] };
+      const diff = compareTrees(expected, destination);
+      const status = diff.missing.length || diff.extra.length || diff.changed.length ? "mismatch" : "match";
+      return { host, destination, status, ...diff };
+    });
   } finally {
     fs.rmSync(expectedRoot, { recursive: true, force: true });
   }
-}
-
-export function checkInstallParity(options = {}) {
-  const opts = {
-    home: options.home || os.homedir(),
-    hosts: options.hosts || HOSTS,
-    dests: options.dests || {},
-    sourceRoot: options.sourceRoot || root,
-  };
-  return opts.hosts.map((host) => reportHost(opts.home, host, opts.dests[host], opts.sourceRoot));
 }
 
 function main(argv = process.argv.slice(2)) {
@@ -202,12 +145,7 @@ function main(argv = process.argv.slice(2)) {
     console.error(error.message || error);
     process.exit(2);
   }
-  const hosts = checkInstallParity({
-    home: opts.home,
-    hosts: opts.hosts,
-    dests: opts.dests,
-    sourceRoot: root,
-  });
+  const hosts = checkInstallParity({ hosts: opts.hosts, codexHome: opts.codexHome, claudeHome: opts.claudeHome });
   const shipped = untrackedShipped(root);
   let payloadChanged = [];
   if (opts.changedSince) {
@@ -218,31 +156,20 @@ function main(argv = process.argv.slice(2)) {
       process.exit(2);
     }
   }
-  const report = {
-    hosts,
-    untracked_shipped: shipped,
-    runtime_payload_changed: payloadChanged,
-  };
+  const report = { hosts, untracked_shipped: shipped, runtime_payload_changed: payloadChanged };
   const text = JSON.stringify(report, null, 2);
-  if (opts.json || opts.out) {
-    if (opts.out) fs.writeFileSync(opts.out, `${text}\n`);
-    if (opts.json) console.log(text);
-  } else {
+  if (opts.out) fs.writeFileSync(opts.out, text + "\n");
+  if (opts.json) console.log(text);
+  if (!opts.json) {
     for (const host of hosts) {
       const delta = [...host.missing, ...host.extra, ...host.changed];
-      console.log(`${host.host}\t${host.status}\t${host.destination}\t${delta.length ? delta.join(",") : "-"}`);
+      console.log(host.host + "\t" + host.status + "\t" + (host.destination || "-") + "\t" + (delta.length ? delta.join(",") : "-"));
     }
-    if (shipped.length) {
-      console.warn(`untracked_shipped\t${shipped.join(",")}`);
-    }
-    if (opts.changedSince) {
-      console.log(`runtime_payload_changed\t${payloadChanged.length ? payloadChanged.join(",") : "no"}`);
-    }
+    if (shipped.length) console.warn("untracked_shipped\t" + shipped.join(","));
+    if (opts.changedSince) console.log("runtime_payload_changed\t" + (payloadChanged.length ? payloadChanged.join(",") : "no"));
   }
-  const unread = hosts.some((host) => host.status === "not_installed" || host.status === "unreadable");
-  const mismatch = hosts.some((host) => host.status === "mismatch");
-  if (unread) process.exit(2);
-  if (mismatch) process.exit(1);
+  if (hosts.some((host) => host.status === "not_installed" || host.status === "unreadable")) process.exit(2);
+  if (hosts.some((host) => host.status === "mismatch")) process.exit(1);
   process.exit(0);
 }
 
@@ -255,6 +182,4 @@ function isMainModule() {
   }
 }
 
-if (isMainModule()) {
-  main();
-}
+if (isMainModule()) main();

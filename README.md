@@ -103,100 +103,61 @@ python3 scripts/compile_image_variations.py --request request.json --count 100 -
 
 ## 🚀 30초면 붙습니다
 
-한 줄이면 설치기가 이 컴퓨터의 에이전트 환경을 자동 감지해 맞는 위치에 설치합니다.
+MPW는 HeiTuz 마켓플레이스의 플러그인 `mpw@heituz`로 설치합니다. 마켓플레이스를 한 번 추가해 두면 앞으로 나오는 HeiTuz 스킬도 같은 곳에서 설치할 수 있습니다.
+
+**Codex**
 
 ```sh
-bunx --package github:HeiTuz/MPW heituzmpw
+codex plugin marketplace add HeiTuz/heituz-plugins
+codex plugin add mpw@heituz
 ```
 
-Bun이 없는 새 환경에서는 아래 명령이 [공식 설치기](https://bun.com/docs/installation)로 최신 안정판을 설치하고 곧바로 MPW를 설치합니다. 이미 Bun이 있으면 그대로 사용합니다.
+**Claude Code**
 
 ```sh
-bun_cmd="$(command -v bun || true)"; if [ -z "$bun_cmd" ]; then curl -fsSL https://bun.com/install | bash; bun_cmd="${BUN_INSTALL:-$HOME/.bun}/bin/bun"; fi; "$bun_cmd" x --package github:HeiTuz/MPW heituzmpw
+claude plugin marketplace add HeiTuz/heituz-plugins
+claude plugin install mpw@heituz
 ```
 
-Windows PowerShell:
+**ChatGPT (워크스페이스)**: 관리자가 Workspace settings → Plugins → Add → Import marketplace에 `https://github.com/HeiTuz/heituz-plugins`를 넣으면 워크스페이스 플러그인 목록에 올라옵니다.
 
-```powershell
-$bun = (Get-Command bun -ErrorAction SilentlyContinue).Source; if (!$bun) { irm https://bun.com/install.ps1 | iex; $root = if ($env:BUN_INSTALL) { $env:BUN_INSTALL } else { "$HOME\.bun" }; $bun = Join-Path $root 'bin\bun.exe' }; & $bun x --package github:HeiTuz/MPW heituzmpw
+설치한 뒤 새 세션을 열면 적용됩니다. "프롬프트 만들어줘"처럼 요청하면 자동으로 발동하고, 직접 부를 때는 Codex `$mpw:mpw`, Claude Code `/mpw:mpw`, ChatGPT `@mpw`를 씁니다.
+
+업데이트는 마켓플레이스를 새로 고친 뒤 받습니다.
+
+```sh
+codex plugin marketplace upgrade heituz && codex plugin add mpw@heituz
+claude plugin marketplace update heituz && claude plugin update mpw@heituz
 ```
 
 <details>
-<summary><b>자동 감지가 하는 일</b></summary>
+<summary><b>다른 에이전트 · 스킬 폴더로 직접 설치</b></summary>
 
 <br>
 
-- **감지 신호**: `~/.claude`, `~/.hermes`, `~/.codex` 같은 잘 알려진 스킬 디렉터리·CLI 설치 흔적만 봅니다. 비밀값이나 설정 파일 내용은 읽지 않습니다.
-- **대화형 터미널**: 감지된 대상을 보여주고 하나 또는 여러 개를 선택·확인합니다.
-- **CI·비대화형**: 절대 묻지 않습니다. 1개 감지 → 그대로 설치. 여러 개 감지 → `claude > hermes > codex` 우선순위의 첫 감지 대상. 0개 감지 → Claude Code 위치에 설치(문서화된 기본값).
-- 명시 `--target`/`--dest`는 항상 자동 감지를 이깁니다.
-
-</details>
-
-### 어디에, 어떤 payload가 설치되나
-
-| 대상 | 설치 위치 | payload |
-|---|---|---|
-| `claude` (기본값) | `~/.claude/skills/MPW` | 정본 트리 + Claude Code 진입 표면 |
-| `hermes` | `~/.hermes/skills/prompt-writing/MPW` | 정본 트리 + Hermes 진입 표면 |
-| `codex` / `gpt` | `~/.codex/skills/MPW` | 정본 트리 + GPT/Codex 진입 표면 |
-
-자동 감지의 기본값은 Claude Code입니다. 어느 호스트로 설치하든 규칙 본문은 같고, 호스트 통합 표면(발동·도구 명칭·frontmatter)만 달라집니다 — 구조와 근거는 [호스트 어댑터 안내](https://github.com/HeiTuz/MPW/blob/main/agents/README.md)에 있습니다.
-
-Grok Bot 데스크톱 앱은 위 installer 대상이 아닙니다. 앱의 계정 공유 비공개 스킬로 연결하는 방법은 [Grok Bot 설치 문안](https://github.com/HeiTuz/MPW/blob/main/agents/grok-bot/private-skill.md)을 참고하세요.
-
-<details>
-<summary><b>명시 설치 · 직접 설치</b></summary>
-
-<br>
+플러그인을 지원하지 않는 에이전트에는 같은 스킬 payload를 원하는 폴더로 복사할 수 있습니다.
 
 ```sh
-bunx --package github:HeiTuz/MPW heituzmpw -- --target claude
-bunx --package github:HeiTuz/MPW heituzmpw -- --target hermes
-bunx --package github:HeiTuz/MPW heituzmpw -- --target codex     # --target gpt 동일
-bunx --package github:HeiTuz/MPW heituzmpw -- --target all       # 감지된 전부에 설치
 bunx --package github:HeiTuz/MPW heituzmpw -- --dest /custom/skills/MPW
 ```
 
-재설치는 `--force`, 조용한 설치는 `--quiet`. `--target auto`는 기본 동작인 자동 감지를 명시적으로 켭니다.
-
-소스에서 설치하려면 스킬 검색 경로 밖의 작업 디렉터리에서 체크아웃한 뒤 로컬 installer를 실행합니다:
-
-```sh
-git clone https://github.com/HeiTuz/MPW.git ./MPW-source
-node ./MPW-source/scripts/install.mjs --target claude
-# Hermes는 --target hermes, GPT/Codex는 --target codex
-```
-
-installer가 런타임 파일만 복사하고 선택한 호스트 오버레이를 적용합니다. 설치본에는 `agents/`가 들어가지 않아 스킬 진입점이 `SKILL.md` 하나로 유지됩니다.
+재설치는 `--force`, 조용한 설치는 `--quiet`입니다. 소스 체크아웃에서는 `node scripts/install.mjs --dest <path>`, 플러그인 폴더 자체는 `node scripts/build_plugin.mjs --out <dir>`로 만듭니다.
 
 </details>
 
-### 🎨 통합 명령에서 필요한 스킬만 선택
+<details>
+<summary><b>2.x에서 옮겨오기</b></summary>
 
-이미지 생성까지 필요하면 ImgGen2 통합 설치기를 사용하세요. 일반 터미널에서는 **ImgGen2만 / MPW만 / 둘 다** 중 하나를 선택합니다.
+<br>
 
-```sh
-npx --yes --allow-git=all --package github:HeiTuz/ImgGen2 imggen-imggen2
-```
+3.0.0부터 호스트별 스킬 설치(`--target claude|codex|gpt|hermes|all`)와 Hermes·Grok Bot 지원이 없어졌습니다. `--target`은 경고만 남기고 무시됩니다. 플러그인을 설치한 뒤 예전 설치본(`~/.codex/skills/MPW`, `~/.claude/skills/MPW`, `~/.hermes/skills/prompt-writing/MPW`)을 지우세요. 둘 다 있으면 MPW가 두 번 보입니다.
 
-선택을 명시하고 두 스킬을 같은 호스트에 설치할 수도 있습니다.
+</details>
 
-```sh
-# MPW만 Codex에 설치
-npx --yes --allow-git=all --package github:HeiTuz/ImgGen2 imggen-imggen2 -- --component mpw --agent codex
-
-# MPW와 ImgGen2를 함께 설치
-npx --yes --allow-git=all --package github:HeiTuz/ImgGen2 imggen-imggen2 -- --component all --agent codex
-```
-
-통합 설치기의 `--agent`와 MPW 자체 설치기의 `--target`은 모두 호스트 선택입니다. 통합 설치기의 `--target`은 **ImgGen2 파일 경로**이므로 혼동하지 마세요. 비대화형 통합 명령에서 구성요소를 생략하면 ImgGen2만 설치합니다.
-
-MPW만 선택하면 ImgGen2·Codex CLI·QC 설정을 설치하지 않습니다. MPW 자체 설치 명령도 계속 독립적으로 사용할 수 있습니다. 설치된 MPW를 갱신하려면 위 MPW 명령에 `--force`를 추가하세요. ImgGen2 도우미가 있다면 `imggen update --component mpw`로 MPW만 갱신할 수도 있습니다.
-
-[통합 설치 옵션과 이미지 제작 사용법 →](https://github.com/HeiTuz/ImgGen2#설치)
+이미지 생성까지 필요하면 [ImgGen2](https://github.com/HeiTuz/ImgGen2#설치)를 함께 설치하세요.
 
 ---
+
 
 ## 이미지 문서·검증기 이행
 

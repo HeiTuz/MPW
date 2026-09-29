@@ -216,10 +216,7 @@ def core_runtime_name_files(root):
 CORE_RUNTIME_NAME_FILES = core_runtime_name_files(ROOT)
 # External/conceptual filenames used as examples, not package pointers. A resolved
 # path or removed mention makes its entry stale and therefore fails.
-PLAIN_PATH_WHITELIST = {
-    ("agents/README.md", "CLAUDE.md"),
-    ("agents/README.md", "INSTALL_FOR_AGENTS.md"),
-}
+PLAIN_PATH_WHITELIST = set()
 # These operational references are deliberately not dispatched from the compact
 # SKILL.md kernel. Keep exceptions explicit: a deleted or newly reachable file
 # must not silently remain here.

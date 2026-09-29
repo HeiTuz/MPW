@@ -4,12 +4,12 @@
 
 `contracts/`는 이 인터페이스의 유일한 편집 정본이다. 독립 설치를 위해 가드너 스킬(`prompt-knowledge-gardener`·`design-reference-gardener`·`image-reference-gardener`)은 동일한 상대 경로 `contracts/`에 바이트 동일 미러를 포함할 수 있지만, 미러에서 계약을 편집하지 않는다 — 미러 로컬 수정은 동일 릴리스 ID 아래 스키마 포크를 만든다(2026-07-16에 실제로 발견·해소된 사고 유형). `contracts/manifest.json`의 SHA-256 목록이 릴리스 provenance다.
 
-소스 레포가 편집 권한을 가진다. `~/.hermes/skills/...` 같은 설치본은 배포 산출물이며 직접 수정하지 않는다. 설치본 전용 변경이 발견되면 먼저 해당 소스 레포로 분리·검토한 뒤 배포한다. 계약 갱신 순서는 다음과 같다.
+소스 레포가 편집 권한을 가진다. 플러그인 캐시 같은 설치본은 배포 산출물이며 직접 수정하지 않는다. 설치본 전용 변경이 발견되면 먼저 해당 소스 레포로 분리·검토한 뒤 배포한다. 계약 갱신 순서는 다음과 같다.
 
 1. `MPW/contracts/`에서 스키마·검증기·fixture를 함께 변경한다.
 2. `python3 scripts/sync_contracts.py --write-manifest`로 manifest SHA-256을 재생성하고 `python3 scripts/test_contracts.py`를 통과한다.
 3. `python3 scripts/sync_contracts.py --sync --dest <contract-mirror>`로 각 독립 소스·가드너 미러에 동기화한다.
-4. 각 스킬의 기존 설치 절차로 소스 전체를 설치본에 배포한다. 설치본에서 정본으로 역복사하지 않는다.
+4. 각 스킬의 기존 릴리스 절차(MPW는 플러그인 릴리스)로 소스 전체를 설치본에 배포한다. 설치본에서 정본으로 역복사하지 않는다.
 5. 정본 레포에서 `python3 scripts/sync_contracts.py --dest <contract-mirror> ...`로 모든 미러에 drift가 없음을 확인한다.
 
 스키마 major가 다른 payload는 자동 승격하지 않는다. 기존 analysis JSON을 GardenRecipe로 바꾸는 adapter는 각 adapter 소관이고, 컴파일·PromptBundle 생성은 Master 소관이다. 이 문서는 분석 필드나 컴파일 규칙을 복제하지 않는다.

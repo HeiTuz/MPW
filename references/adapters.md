@@ -8,7 +8,7 @@
 
 ## 전달 채널 상한
 
-채널별 상한 값은 이 문서에도 적지 않는다 — 각 런타임 배선(예: Hermes 채널 설정)에서 읽는다. 코어 파일(SKILL.md·references/templates/*·references/image/* 전체)은 채널을 익명으로만 지칭한다("상한 있는 메신저형 채널", "에이전트 CLI 무제한 표면").
+채널별 상한 값은 이 문서에도 적지 않는다 — 각 런타임 배선(예: 메신저 채널 설정)에서 읽는다. 코어 파일(SKILL.md·references/templates/*·references/image/* 전체)은 채널을 익명으로만 지칭한다("상한 있는 메신저형 채널", "에이전트 CLI 무제한 표면").
 
 ## 기계 계약 인덱스
 
@@ -33,14 +33,14 @@
 
 ## 의류 핸드오프 소비자
 
-스키마·생성 명령·규칙 정본은 위 인덱스 표에 있다. 이 절은 런타임 소비 배선만 기록한다. 런타임은 네트워크 호출 없이 핸드오프 파일을 읽어 후보 작업을 준비한다. Hermes 설치에서는 `ImgGen2`가 소비자이며, 핸드오프의 `unique_color_count`와 검증된 `vision_role_map`을 다시 확인한 뒤 동일한 전체 인벤토리를 가진 격리 작업을 만든다. 알 수 없는 버전이나 불일치는 자유형 프롬프트로 강등하지 않고 거부한다.
+스키마·생성 명령·규칙 정본은 위 인덱스 표에 있다. 이 절은 런타임 소비 배선만 기록한다. 런타임은 네트워크 호출 없이 핸드오프 파일을 읽어 후보 작업을 준비한다. 이미지 생성 실행에서는 `ImgGen2`가 소비자이며, 핸드오프의 `unique_color_count`와 검증된 `vision_role_map`을 다시 확인한 뒤 동일한 전체 인벤토리를 가진 격리 작업을 만든다. 알 수 없는 버전이나 불일치는 자유형 프롬프트로 강등하지 않고 거부한다.
 
 ## 이미지 생성 실행 옵션 (ImgGen2)
 
 IMAGE 컴파일을 마친 턴의 "다음" 목록 마지막 번호는, 아래 조건을 모두 만족하면 ImgGen2 실행 핸드오프다(메뉴 적용 조건은 [common.md](templates/common.md) §후속 선택).
 
 - **산출물 형태**: ImgGen2가 소비할 수 있는 형태다 — ① gpt-image 계열 타깃의 단일 완성 프롬프트(`scripts/compile_image_handoff.py`로 `image-production-handoff/v2` 컴파일) ② 소비자 계약에 맞춘 매니페스트 배치([image/production.md](image/production.md) §인계 경로) ③ 이미 컴파일된 핸드오프 번들.
-- **러너 존재**: 같은 호스트에 ImgGen2 스킬이 설치돼 있다(통합 설치는 MPW와 나란히 설치한다). 없으면 옵션을 붙이지 않는다.
+- **러너 존재**: 같은 호스트에 ImgGen2 스킬이 설치돼 있다. 없으면 옵션을 붙이지 않는다.
 - **전용 실행 경로 없음**: 미드저니 붙여넣기(S3), Higgsfield MCP 연결 런타임, 사용자가 이미 지정한 다른 실행 도구가 있으면 그 경로가 우선이고 이 옵션은 뺀다.
 
 옵션을 고르면 ImgGen2 스킬을 호출해 핸드오프/레코드를 넘긴다 — 전송·배치·QC·재개 규칙은 ImgGen2 자체 SKILL.md가 정본이며 여기 복제하지 않는다. 옵션 문구는 한 줄로: `N. imggen2로 바로 생성 — 이 프롬프트(배치) 그대로 실행`. 프롬프트 페이로드(코드블록 안)에는 러너·엔진 이름을 넣지 않는다.
@@ -57,34 +57,31 @@ IMAGE 컴파일을 마친 턴의 "다음" 목록 마지막 번호는, 아래 조
 메뉴가 적용되는 턴에서 실행 옵션은 설치와 대상 표면이 확인됐을 때만 `N. ima2로 생성 — 이 프롬프트와 지정 설정으로 실행`으로 낸다. 상세 호출은 설치된 ima2 스킬과 현재 CLI 도움말을 따른다. 패키지 기준: [ima2-gen 3.13.1 core CLI](https://github.com/lidge-jun/ima2-gen/blob/d2afe6b2aa7d006e2cd9765aa632714f96435db2/bin/commands/gen.ts).
 
 
-## Claude
+## 플러그인 호스트
 
-- 설치/발견: `npx --yes --allow-git=all --package github:HeiTuz/MPW heituzmpw -- --target claude`. 소스에서 설치할 때는 스킬 검색 경로 밖의 체크아웃에서 `node scripts/install.mjs --target claude`를 실행한다([README.md](../README.md)).
-- 역할 매핑: 단일 Claude 세션이면 prime이 기본이다. 하위 에이전트나 task 기능이 있으면 planner는 read-only 조사, worker는 bounded edit/research, critic은 frozen artifact review로 보낸다.
-- 모델 선택 위치: Claude 앱/CLI/프로젝트 설정. 이 저장소에는 모델명이나 plan 이름을 쓰지 않는다.
-- fallback: [model-playbooks.md](model-playbooks.md) §역할·권한 라우팅의 단일 모델 경로를 따른다.
+MPW는 HeiTuz 마켓플레이스 플러그인 `mpw@heituz`로 배포한다. 카탈로그는 https://github.com/HeiTuz/heituz-plugins 이고, 본체는 이 저장소 `dist` 브랜치의 `plugins/mpw`다. 설치본은 호스트의 플러그인 캐시이며 직접 편집하지 않는다. 호스트 밖에서 스킬 폴더가 필요하면 `bunx --package github:HeiTuz/MPW heituzmpw -- --dest <path>`로 같은 payload를 복사한다. 설치된 MPW를 경로로 읽는 동반 도구는 `MPW_ROOT` → Codex 캐시 → Claude Code 캐시 순으로 찾는다.
 
-## GPT/Codex
+### Codex
 
-- 설치/발견: `npx --yes --allow-git=all --package github:HeiTuz/MPW heituzmpw -- --target codex` 또는 `--target gpt`; 둘 다 `~/.codex/skills/MPW`에 설치한다.
+- 설치/발견: `codex plugin marketplace add HeiTuz/heituz-plugins` 후 `codex plugin add mpw@heituz`. 캐시는 `<CODEX_HOME>/plugins/cache/heituz/mpw/<버전>`이며 명시 호출은 `$mpw:mpw`다(플러그인 스킬은 `<플러그인>:<스킬>` 이름으로 등록된다).
 - 이미지 생성 러너: Codex 실행은 `--sandbox workspace-write`를 사용해 작업공간에만 쓰기를 허용한다.
 - 역할 매핑: Codex coding surface는 prime으로 운용한다. native subagent가 있으면 planner=read-only planning/research, worker=bounded implementation, critic=independent verifier로 할당한다.
 - 모델 선택 위치: Codex profile, model picker, CLI config, or API caller configuration. 공개 routing vocabulary는 fast/read-only, balanced/agentic, strongest-reasoning/high-risk만 쓴다.
 - fallback: [model-playbooks.md](model-playbooks.md) §역할·권한 라우팅의 단일 모델 경로를 따른다.
 
-## Hermes
+### Claude Code
 
-- 설치/발견: `--target hermes`는 `~/.hermes/skills/prompt-writing/MPW`에 설치한다. 인자 없는 `npx --yes --allow-git=all --package github:HeiTuz/MPW heituzmpw`의 기본 감지 대상은 Claude Code다. `--allow-git=all`은 npm 12의 git 패키지 기본 차단(`allow-git=none`)을 명령 단위로 여는 플래그다.
-- 역할 매핑: Hermes skill invocation이 prime이다. Hermes에 planner/worker/reviewer skill 또는 agent lane이 있으면 core 역할에 매핑한다. 로컬 전용 경로나 동반 workflow 이름은 공개 core로 올리지 않는다.
-- 모델 선택 위치: Hermes runtime config. 이 저장소는 로컬 선택값이나 채널 선택값을 쓰지 않는다.
+- 설치/발견: `claude plugin marketplace add HeiTuz/heituz-plugins` 후 `claude plugin install mpw@heituz`. 활성 캐시는 `~/.claude/plugins/installed_plugins.json`의 `installPath`이며 명시 호출은 `/mpw:mpw`다.
+- 역할 매핑: 단일 Claude 세션이면 prime이 기본이다. 하위 에이전트나 task 기능이 있으면 planner는 read-only 조사, worker는 bounded edit/research, critic은 frozen artifact review로 보낸다.
+- 모델 선택 위치: Claude 앱/CLI/프로젝트 설정. 이 저장소에는 모델명이나 plan 이름을 쓰지 않는다.
 - fallback: [model-playbooks.md](model-playbooks.md) §역할·권한 라우팅의 단일 모델 경로를 따른다.
 
-## Grok Bot
+### ChatGPT
 
-- 설치/로드: Grok Bot 앱의 계정 공유 비공개 스킬 `mpw`로 저장한다. 이 저장소의 `install.mjs`와 Grok Build CLI 플러그인 경로는 사용하지 않는다. 재설치 문안과 검증은 [Grok Bot 설치 문안](https://github.com/HeiTuz/MPW/blob/main/agents/grok-bot/private-skill.md)에 있다.
-- 역할 매핑: 한 Bot의 프롬프트 작성은 prime이다. 다른 Bot으로 나누는 작업은 현재 Grok Bot에서 제공되는 위임 기능과 사용자 요청 범위가 있을 때만 한다.
-- 모델 선택 위치: Grok Bot 계정이 제공하는 런타임 설정. 이 저장소는 Grok Bot 모델을 지정하지 않는다.
-- fallback: 별도 역할 실행이 없으면 [model-playbooks.md](model-playbooks.md) §역할·권한 라우팅의 단일 모델 경로를 따른다.
+- 설치/발견: 워크스페이스 관리자가 Workspace settings → Plugins → Import marketplace에 카탈로그 저장소 URL을 넣는다. 대화에서 `@mpw`로 호출한다. 셸이 없는 대화 표면이면 SKILL.md 호스트 통합 블록의 무셸 경로를 따른다.
+- 역할 매핑: 단일 대화는 prime이다. 별도 에이전트 실행이 제공될 때만 core 역할로 나눈다.
+- 모델 선택 위치: ChatGPT 모델 선택기와 워크스페이스 설정. 이 저장소는 모델을 지정하지 않는다.
+- fallback: [model-playbooks.md](model-playbooks.md) §역할·권한 라우팅의 단일 모델 경로를 따른다.
 
 ## 어댑터 작성 규칙
 

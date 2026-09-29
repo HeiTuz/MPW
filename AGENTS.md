@@ -1,14 +1,15 @@
 # AGENTS.md — 이 레포에서 일하는 에이전트 규칙
 
-이 레포는 **MPW 스킬의 정본이자 유일한 실제 트리**다(2026-07-25 구조 전환). 하네스는 여기를 소비만 한다:
+이 레포는 **MPW 스킬의 정본이자 유일한 실제 트리**다(2026-07-25 구조 전환). 배포 형식은 **플러그인 하나**다(2026-09-30 v3.0.0 전환):
 
-- `~/.claude/skills/MPW`·`~/.hermes/skills/prompt-writing/MPW`·`~/.codex/skills/MPW` — installer가 정본 런타임 파일을 복사한 뒤 호스트 오버레이를 적용한 소비 산출물
-- 배포 형식은 스킬 하나다(2026-09-17 플러그인 패키징·커스텀 GPT 번들 철회: `plugins/mpw/`·marketplace.json·`agents/plugin`·`build_plugin.mjs`·`build_gpt_bundle.mjs` 제거).
+- `scripts/build_plugin.mjs`가 정본 allowlist 트리에 `agents/plugin/` 오버레이를 적용해 `plugins/mpw/`(`.codex-plugin`·`.claude-plugin` 매니페스트 + `skills/mpw` payload)를 만든다. 이 산출물은 `main`에 커밋하지 않는다 — `scripts/release_plugin.mjs`가 `dist` 브랜치에 커밋하고 `mpw-plugin-v<버전>` 태그를 단다.
+- 공개 카탈로그는 별도 저장소 https://github.com/HeiTuz/heituz-plugins (마켓플레이스 `heituz`, 설치명 `mpw@heituz`)다. 카탈로그 항목은 `git-subdir`로 `dist` 태그를 고정한다. 설치본은 Codex·Claude Code의 플러그인 캐시다.
+- 2026-09-17 철회(v2.32.0)의 원인이던 두 문제 — 스킬 설치본과 플러그인이 함께 보이는 중복, `main`에 쌓이는 복사본 — 를 막으려고 호스트별 스킬 설치 대상(claude·codex·hermes)과 Grok Bot 비공개 스킬 지원을 제거했다. `heituzmpw` CLI는 `--dest` 복사와 플러그인 설치 안내만 남는다.
 
-**레포 루트를 통째로 심링크하지 않는다.** `agents/`는 installer 오버레이 원본이고 설치본에는 들어간 적이 없는데, 루트를 심링크하면 호스트 인덱서가 `agents/claude/SKILL.md`·`agents/codex/SKILL.md`를 활성 스킬로 잡아 **같은 이름의 MPW가 3개**가 된다((2026-07 실측), 2026-07-25 확인). 기존 멤버 심링크 설치도 installer로 재생성한다. 정본 변경 뒤 세 호스트를 재생성하고 진입 파일까지 포함한 전체 payload 패리티를 검사한다. 공통 references 일치만으로 호스트 통합이 일치한다고 판정하지 않는다.
+**레포 루트를 스킬·플러그인 검색 경로에 심링크하지 않는다.** 루트에는 `SKILL.md`와 `agents/plugin/SKILL.md`가 함께 있어 호스트 인덱서가 같은 이름의 MPW를 둘로 잡는다(2026-07 실측 사례는 오버레이 셋에서 MPW 3개). 로컬 확인은 빌드 산출물이나 플러그인 캐시로 한다. 공통 references 일치만으로 호스트 통합이 일치한다고 판정하지 않는다 — 진입 파일까지 포함한 전체 payload를 비교한다.
 
-편집은 여기서 한다 — 설치 경로에서 편집하지 않는다. 그게 v2.11~v2.13이 사라진 원인이었다. 공개 배포(`github:HeiTuz/MPW`)는 푸시 이후에만 유효하다.
-운영 소유권(2026-08-04 개정 — 2026-08-02 정의를 대체): **어느 에이전트든(Claude Code·Codex·Hermes) 이 트리를 직접 편집하고 로컬 커밋할 수 있다.** Codex는 편집 독점자가 아니라 주 관리자(steward)로서 정합성 점검·설치본 재생성·doctrine 패리티·릴리스 준비를 맡는다. **편집한 에이전트는 `~/handoffs/<repo>-<주제>-<타임스탬프>.md`에 핸드오프를 남긴다**(무엇을 왜 / 건드린 파일 / 커밋 해시 / 설치본 재생성 필요 여부 / 검증한 것과 안 한 것 / 남은 작업). 편집 후 로컬 커밋까지 하거나 미커밋임을 핸드오프에 명시한다. 원격 push는 별도 승인 없이는 하지 않는다. Codex App 주간 doctrine runner의 정본도 `scripts/prompt_writing_doctrine_check.py`이며, 기본 reminder 상태는 `~/.codex/state/prompt-writing-doctrine/backlog.json`이고 `MPW_DOCTRINE_STATE` 또는 `--state`로만 바꾼다. 실행 결과와 알림은 Codex App가 처리하며 Telegram/Hermes relay를 두지 않는다. `~/.claude/skills/MPW`·`~/.hermes/skills/prompt-writing/MPW`는 설치본이며, **설치 경로에서 직접 편집하지 않는다 — 편집은 어느 에이전트든 이 정본 트리에서 한다.** Codex 설치본(`~/.codex/skills/MPW`)은 `agents/codex/` 오버레이가 적용된 복사 소비 산출물이다. 정본 변경 뒤 세 호스트 설치본을 재생성하고 전체 payload 패리티와 doctrine 검사를 통과시킨다. 버전 범프와 릴리스 push는 정본 커밋·검증을 끝낸 뒤 별도 릴리스 승인으로만 수행한다.
+편집은 여기서 한다 — 설치 경로나 플러그인 캐시에서 편집하지 않는다. 그게 v2.11~v2.13이 사라진 원인이었다. 공개 배포는 `main`·`dist` 태그 push와 카탈로그 ref 갱신 이후에만 유효하다.
+운영 소유권(2026-08-04 개정 — 2026-08-02 정의를 대체): **어느 에이전트든 이 트리를 직접 편집하고 로컬 커밋할 수 있다.** Codex는 편집 독점자가 아니라 주 관리자(steward)로서 정합성 점검·플러그인 빌드 검증·doctrine 패리티·릴리스 준비를 맡는다. **편집한 에이전트는 `~/handoffs/<repo>-<주제>-<타임스탬프>.md`에 핸드오프를 남긴다**(무엇을 왜 / 건드린 파일 / 커밋 해시 / 플러그인 릴리스 필요 여부 / 검증한 것과 안 한 것 / 남은 작업). 편집 후 로컬 커밋까지 하거나 미커밋임을 핸드오프에 명시한다. 원격 push는 별도 승인 없이는 하지 않는다. Codex App 주간 doctrine runner의 정본도 `scripts/prompt_writing_doctrine_check.py`이며, 기본 reminder 상태는 `~/.codex/state/prompt-writing-doctrine/backlog.json`이고 `MPW_DOCTRINE_STATE` 또는 `--state`로만 바꾼다. 실행 결과와 알림은 Codex App가 처리하며 메신저 relay를 두지 않는다. 정본 변경 뒤 `npm test`(플러그인 빌드 검사 포함)와 doctrine 검사를 통과시키고, 릴리스 뒤 `node scripts/check_install_parity.mjs`로 설치된 플러그인 캐시를 확인한다. 버전 범프와 릴리스 push는 정본 커밋·검증을 끝낸 뒤 별도 릴리스 승인으로만 수행한다.
 
 ## 하드라인 (위반 = 완료 아님)
 
@@ -38,8 +39,8 @@
 ## 검증 루틴 (변경 후 필수)
 
 ```sh
-npm test  # 문서 lint, Python·Node 회귀, 검증기 하네스, 설치 smoke
-node scripts/check_install_parity.mjs  # 정본 변경 뒤 세 호스트 payload 일치
+npm test  # 문서 lint, Python·Node 회귀, 검증기 하네스, 플러그인 빌드 검사
+node scripts/check_install_parity.mjs  # 릴리스 뒤 Codex·Claude 플러그인 캐시와 새 빌드 일치
 ```
 
 운영자 전용 doctrine 검사 정본은 이 레포의 `scripts/prompt_writing_doctrine_check.py`이며 공개 소비자의 필수 검증 단계가 아니다. finding이 있어도 exit 0이고, 기존 reminder state가 같은 알림을 억제할 수 있으므로 stdout이 비어 있다는 사실만으로 로스터가 신선하거나 런타임 검증을 마쳤다고 판정하지 않는다. 검수·릴리스 점검에는 새 전용 `--state` 경로를 써 최초 finding을 확인하고, 기본 자동화 reminder state는 보존한다:
@@ -69,13 +70,13 @@ prompt-knowledge 가드너는 loop 모듈이 없고 스킬 스크립트가 직�
 
 릴리스를 요청·승인받은 세션은 아래를 통과해야 "배포 완료"다. 로컬 변경만 요청받았다면 해당 검증을 마친 뒤 로컬 완료·미배포 상태와 남은 릴리스 작업을 보고하고 종료한다. 로컬 검증 통과만으로 배포 완료를 주장하지 않는다.
 
-1. **롤백 폭탄 주의**: `imggen update`는 MPW를 GitHub에서 재설치한다. 푸시되지 않은 로컬 개선분은 업데이트 한 번에 통째로 구버전으로 덮인다. 2026-07-16에 v2.11~v2.13 세 릴리스분이 설치 트리에만 존재한 채 발견됐다 — 소비자 스킬의 fallback 관용 동작(가드너 사전 등) 때문에 겉으로는 멀쩡해 보여서 알아차리기 어렵다.
+1. **롤백 폭탄 주의**: 플러그인 설치·업그레이드는 카탈로그가 고정한 `dist` 태그를 GitHub에서 받는다. 푸시되지 않은 로컬 개선분은 재설치 한 번에 통째로 구버전으로 덮인다. 2026-07-16에 v2.11~v2.13 세 릴리스분이 설치 트리에만 존재한 채 발견됐다 — 소비자 스킬의 fallback 관용 동작(가드너 사전 등) 때문에 겉으로는 멀쩡해 보여서 알아차리기 어렵다.
 2. **버전 일치 확인(배포 완료 전)**: 승인된 배포를 완료로 보고하기 전에 원격 버전이 로컬 SKILL.md/package.json과 같은지 직접 확인한다:
    ```sh
    curl -s https://raw.githubusercontent.com/HeiTuz/MPW/main/package.json | python3 -c "import json,sys; print(json.load(sys.stdin)['version'])"
    ```
    값이 다르면 미배포 상태이며 배포 완료로 보고하지 않는다.
-3. **승인된 릴리스 절차**: 이 저장소의 변경을 검토하고 `agents/` 오버레이 본문과 frontmatter를 동기화 → 필수 로컬·교차 검증 → 영어 커밋 → 승인받은 범위의 push → CI와 원격 버전 확인. 정본에서 설치본을 재생성한다. 설치본의 예상 밖 변경이 발견되면 먼저 출처와 의도를 확인하며, 설치본을 통째로 역복사하지 않는다. 버전 범프·push 권한은 위 운영 소유권 규칙을 따른다.
+3. **승인된 릴리스 절차**: 이 저장소의 변경을 검토하고 `agents/plugin/SKILL.md` 본문과 frontmatter를 정본에 동기화 → 필수 로컬·교차 검증 → 영어 커밋 → `v<버전>` 태그 → 승인받은 범위의 `main` push → `node scripts/release_plugin.mjs --push`(`dist` 커밋과 `mpw-plugin-v<버전>` 태그) → 카탈로그 저장소에서 `node scripts/bump.mjs mpw mpw-plugin-v<버전>` 후 push → CI·원격 버전·설치 캐시 확인. 설치본의 예상 밖 변경이 발견되면 먼저 출처와 의도를 확인하며, 설치본을 통째로 역복사하지 않는다. 버전 범프·push 권한은 위 운영 소유권 규칙을 따른다.
 
 ## 작업 방식
 

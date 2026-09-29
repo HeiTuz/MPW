@@ -30,10 +30,10 @@ try {
   // Local installs must omit the same backup artifacts as the published package.
   const fixture = path.join(temp, "source");
   fs.mkdirSync(path.join(fixture, "references"), { recursive: true });
-  fs.mkdirSync(path.join(fixture, "agents", "codex"), { recursive: true });
+  fs.mkdirSync(path.join(fixture, "agents", "plugin"), { recursive: true });
   fs.writeFileSync(path.join(fixture, "SKILL.md"), "canonical entry\n");
-  fs.writeFileSync(path.join(fixture, "agents", "codex", "SKILL.md"), "host entry\n");
-  fs.writeFileSync(path.join(fixture, "agents", "codex", "SKILL.md.bak"), "private old entry\n");
+  fs.writeFileSync(path.join(fixture, "agents", "plugin", "SKILL.md"), "host entry\n");
+  fs.writeFileSync(path.join(fixture, "agents", "plugin", "SKILL.md.bak"), "private old entry\n");
   const excluded = ["draft.md.bak", "draft.md.bak-20260905", "draft.md.bak.old", "draft.md.orig", "draft.md.rej", "draft.md.save", "draft.md~", "old.bak/private.md"];
   for (const relative of excluded) {
     const filename = path.join(fixture, "references", relative);
@@ -42,7 +42,7 @@ try {
   }
   fs.writeFileSync(path.join(fixture, "references", "backup-guide.md"), "public guidance\n");
   const fixtureDest = path.join(temp, "fixture-installed");
-  installPayload({ sourceRoot: fixture, destination: fixtureDest, host: "codex" });
+  installPayload({ sourceRoot: fixture, destination: fixtureDest });
   assert.equal(fs.readFileSync(path.join(fixtureDest, "SKILL.md"), "utf8"), "host entry\n");
   for (const relative of excluded) {
     assert.equal(fs.existsSync(path.join(fixtureDest, "references", relative)), false, `installer leaked ${relative}`);
@@ -69,7 +69,7 @@ try {
   assert.equal(names.some((name) => /(^|\/)\.[^/]+|(^|\/)(?:docs-internal|__pycache__)(?:\/|$)|\.pyc$/u.test(name)), false,
     "npm package includes excluded local state");
 
-  const allowedHomeUsers = new Set(["example", "private", "person", "operator", "user", "help", "box"]);
+  const allowedHomeUsers = new Set(["example", "private", "person", "operator", "user", "help"]);
   const homeUser = /(?:Users|home)\/([A-Za-z0-9_.-]+)/g;
   const textSuffix = /\.(?:md|mjs|js|py|json|txt)$/;
   const seenUsers = new Set();

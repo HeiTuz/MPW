@@ -4,6 +4,7 @@ import os from "node:os";
 import path from "node:path";
 import { spawn, spawnSync } from "node:child_process";
 import { fileURLToPath } from "node:url";
+import { codexPluginRoot } from "./check_install_parity.mjs";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const defaultCases = path.join(root, "scripts/fixtures/behavioral/cases.json");
@@ -68,7 +69,9 @@ function slug(value) {
 }
 
 function installedSkill() {
-  const location = path.join(process.env.CODEX_HOME || path.join(os.homedir(), ".codex"), "skills/MPW");
+  const codexHome = process.env.CODEX_HOME || path.join(os.homedir(), ".codex");
+  const pluginRoot = codexPluginRoot(codexHome);
+  const location = pluginRoot ? path.join(pluginRoot, "skills", "mpw") : path.join(codexHome, "plugins", "cache", "heituz", "mpw");
   try {
     const actual = fs.realpathSync(location);
     const skill = fs.readFileSync(path.join(actual, "SKILL.md"), "utf8");

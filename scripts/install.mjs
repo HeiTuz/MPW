@@ -1,54 +1,51 @@
 #!/usr/bin/env node
+// MPW skill payload builder and legacy CLI entry point.
+//
+// Since v3.0.0 MPW ships as the plugin mpw@heituz from the HeiTuz marketplace
+// (https://github.com/HeiTuz/heituz-plugins). This module keeps two jobs:
+//   1. installPayload(): materialize the plugin skill payload (canonical tree + agents/plugin overlay).
+//      scripts/build_plugin.mjs and scripts/check_install_parity.mjs build on it.
+//   2. The heituzmpw CLI: "--dest <path>" copies that payload into an explicit directory.
+//      Host targets (--target claude|codex|gpt|hermes|all|auto) were removed; without --dest the CLI
+//      prints plugin install guidance and exits 0 so older callers do not break.
 import fs from "node:fs";
 import os from "node:os";
 import path from "node:path";
-import readline from "node:readline/promises";
 import { fileURLToPath } from "node:url";
-import {
-  AGENT_HOST_PRIORITY,
-  detectAgentHosts,
-  deterministicAgentHosts,
-  formatDetectedHosts,
-  normalizeAgentHost,
-  parseInteractiveAgentHosts,
-} from "./agent_targets.mjs";
 
 const here = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(here, "..");
-const skillName = "MPW";
-const knownTargets = new Set(["auto", "all", "hermes", "claude", "codex", "gpt"]);
+export const PAYLOAD_HOST = "plugin";
 
-export function destinationForTarget(homeDir, target) {
-  const normalized = normalizeAgentHost(target);
-  if (normalized === "hermes") return path.join(homeDir, ".hermes", "skills", "prompt-writing", skillName);
-  if (normalized === "claude") return path.join(homeDir, ".claude", "skills", skillName);
-  if (normalized === "codex") return path.join(homeDir, ".codex", "skills", skillName);
-  throw new Error(`Unknown target: ${target}`);
-}
+export const PLUGIN_GUIDANCE = [
+  "MPW is distributed as the plugin mpw@heituz (https://github.com/HeiTuz/heituz-plugins).",
+  "  Codex:       codex plugin marketplace add HeiTuz/heituz-plugins && codex plugin add mpw@heituz",
+  "  Claude Code: claude plugin marketplace add HeiTuz/heituz-plugins && claude plugin install mpw@heituz",
+  "  ChatGPT:     workspace admins import https://github.com/HeiTuz/heituz-plugins under Workspace settings > Plugins",
+  "To copy the skill folder into another location, pass --dest <path>.",
+].join("\n");
 
 function usage(exitCode = 0) {
   const out = exitCode === 0 ? console.log : console.error;
-  out(`MPW installer
+  out(`MPW skill payload installer
+
+${PLUGIN_GUIDANCE}
 
 Usage:
-  npx --yes --allow-git=all --package github:HeiTuz/MPW heituzmpw
-  bunx --package github:HeiTuz/MPW heituzmpw -- --target codex
-  node scripts/install.mjs --target all
+  bunx --package github:HeiTuz/MPW heituzmpw -- --dest /custom/skills/MPW
   node scripts/install.mjs --dest /custom/skills/MPW
 
 Options:
-  --target <auto|all|claude|hermes|codex|gpt>
-                                              Auto-detect by default, or install to a known target.
-  --dest <path>                               Install to an explicit directory.
-  --force                                     Replace an existing destination.
-  --quiet                                     Print only errors.
-  -h, --help                                  Show this help.
+  --dest <path>   Copy the plugin skill payload into an explicit directory.
+  --force         Replace an existing destination.
+  --quiet         Print only errors.
+  -h, --help      Show this help.
 `);
   process.exit(exitCode);
 }
 
 export function parseArgs(argv) {
-  const opts = { target: "auto", targetExplicit: false, dest: null, force: false, quiet: false };
+  const opts = { dest: null, force: false, quiet: false, legacyTarget: null };
   for (let i = 0; i < argv.length; i += 1) {
     const argument = argv[i];
     if (argument === "-h" || argument === "--help") usage(0);
@@ -57,13 +54,11 @@ export function parseArgs(argv) {
     if (argument === "--quiet") { opts.quiet = true; continue; }
     if (argument === "--target") {
       if (!argv[i + 1]) usage(2);
-      opts.target = argv[++i];
-      opts.targetExplicit = true;
+      opts.legacyTarget = argv[++i];
       continue;
     }
     if (argument.startsWith("--target=")) {
-      opts.target = argument.slice("--target=".length);
-      opts.targetExplicit = true;
+      opts.legacyTarget = argument.slice("--target=".length);
       continue;
     }
     if (argument === "--dest") {
@@ -76,11 +71,6 @@ export function parseArgs(argv) {
       continue;
     }
     console.error(`Unknown argument: ${argument}`);
-    usage(2);
-  }
-  opts.target = String(opts.target || "").toLowerCase();
-  if (!knownTargets.has(opts.target)) {
-    console.error(`Unknown target: ${opts.target}`);
     usage(2);
   }
   return opts;
@@ -157,19 +147,18 @@ function copyOverlayTree(current, destination, overlayRoot) {
   }
 }
 
-function validateHostOverlay(sourceRoot, host) {
-  const normalized = normalizeAgentHost(host);
-  const overlay = path.join(sourceRoot, "agents", normalized);
+function validateOverlay(sourceRoot, host) {
+  const overlay = path.join(sourceRoot, "agents", host);
   if (!fs.existsSync(overlay) || !fs.statSync(overlay).isDirectory()) {
-    throw new Error(`Install source is missing the ${normalized} agent overlay`);
+    throw new Error(`Install source is missing the ${host} overlay`);
   }
   if (!fs.existsSync(path.join(overlay, "SKILL.md"))) {
-    throw new Error(`Install source is missing agents/${normalized}/SKILL.md`);
+    throw new Error(`Install source is missing agents/${host}/SKILL.md`);
   }
   const allowed = new Set(["AGENTS.md", "README.md", "SKILL.md"]);
   for (const entry of fs.readdirSync(overlay)) {
     if (!overlayEntryIsSafe(entry)) continue;
-    if (!allowed.has(entry)) throw new Error(`Unsupported ${normalized} overlay entry: ${entry}`);
+    if (!allowed.has(entry)) throw new Error(`Unsupported ${host} overlay entry: ${entry}`);
   }
   return overlay;
 }
@@ -184,10 +173,11 @@ function countSkillEntries(directory) {
   return count;
 }
 
-export function installPayload({ sourceRoot = root, destination, host = null }) {
+// host=null copies only the canonical tree (tests use this); the default applies agents/plugin.
+export function installPayload({ sourceRoot = root, destination, host = PAYLOAD_HOST }) {
   fs.mkdirSync(destination, { recursive: true });
   copyCanonicalTree(sourceRoot, destination, sourceRoot);
-  const overlay = host ? validateHostOverlay(sourceRoot, host) : null;
+  const overlay = host ? validateOverlay(sourceRoot, host) : null;
   if (overlay) copyOverlayTree(overlay, destination, overlay);
   if (fs.existsSync(path.join(destination, "agents"))) {
     throw new Error(`Install verification failed: agents/ must not appear in ${destination}`);
@@ -204,25 +194,6 @@ function expandDestination(value, homeDir) {
   if (value === "~") return homeDir;
   if (value.startsWith("~/") || value.startsWith("~\\")) return path.join(homeDir, value.slice(2));
   return value;
-}
-
-function inferHostFromDestination(homeDir, destination) {
-  for (const host of AGENT_HOST_PRIORITY) {
-    if (path.normalize(destination) === path.normalize(destinationForTarget(homeDir, host))) return host;
-  }
-  return null;
-}
-
-async function chooseInteractiveHosts(detected) {
-  console.log(`Detected agent environments: ${formatDetectedHosts(detected)}`);
-  const recommended = deterministicAgentHosts("auto", detected)[0];
-  const prompt = `Install target(s) [${recommended}] (comma-separated ${AGENT_HOST_PRIORITY.join(", ")}; all = every detected): `;
-  const terminal = readline.createInterface({ input: process.stdin, output: process.stdout });
-  try {
-    return parseInteractiveAgentHosts(await terminal.question(prompt), detected);
-  } finally {
-    terminal.close();
-  }
 }
 
 function physicalPath(value) {
@@ -243,22 +214,15 @@ function pathsOverlap(left, right) {
   return a === b || a.startsWith(b + path.sep) || b.startsWith(a + path.sep);
 }
 
-function validateDestination(destination, homeDir, sourceRoot = root) {
+export function validateDestination(destination, homeDir, sourceRoot = root) {
   const resolved = physicalPath(destination);
   const filesystemRoot = path.parse(resolved).root;
   const protectedContainers = [
-    ".hermes",
-    path.join(".hermes", "skills"),
-    path.join(".hermes", "skills", "prompt-writing"),
-    ".claude",
-    path.join(".claude", "skills"),
-    ".codex",
-    path.join(".codex", "skills"),
-    ".gjc",
-    path.join(".gjc", "agent"),
-    path.join(".gjc", "agent", "skills"),
-    ".agents",
-    path.join(".agents", "skills"),
+    ".claude", path.join(".claude", "skills"), path.join(".claude", "plugins"),
+    ".codex", path.join(".codex", "skills"), path.join(".codex", "plugins"),
+    ".agents", path.join(".agents", "skills"), path.join(".agents", "plugins"),
+    ".hermes", path.join(".hermes", "skills"),
+    ".gjc", path.join(".gjc", "agent"), path.join(".gjc", "agent", "skills"),
   ].map((relative) => physicalPath(path.resolve(homeDir, relative)));
   if (resolved === filesystemRoot || path.dirname(resolved) === filesystemRoot) {
     throw new Error(`Refusing unsafe install destination: ${resolved}`);
@@ -268,94 +232,45 @@ function validateDestination(destination, homeDir, sourceRoot = root) {
   }
 }
 
-async function resolvePlans(opts, homeDir) {
-  if (opts.dest) {
-    if (opts.targetExplicit && opts.target === "all") {
-      throw new Error("--target all cannot be combined with --dest; omit --dest to use host-specific locations");
-    }
-    const destination = path.resolve(expandDestination(opts.dest, homeDir));
-    const explicitHost = opts.targetExplicit && !["auto", "all"].includes(opts.target)
-      ? normalizeAgentHost(opts.target)
-      : inferHostFromDestination(homeDir, destination);
-    return [{ host: explicitHost, destination }];
+export function installToDestination(destination, { sourceRoot = root, force = false, homeDir = os.homedir() } = {}) {
+  validateDestination(destination, homeDir, sourceRoot);
+  if (fs.existsSync(destination) && !isEmptyDir(destination) && !force) {
+    throw new Error(`Destination already exists and is not empty: ${destination}\nUse --force to replace it.`);
   }
-  const detected = detectAgentHosts({ homeDir, existsSync: fs.existsSync });
-  let hosts;
-  const interactive = opts.target === "auto" && process.stdin.isTTY && process.stdout.isTTY && !process.env.CI;
-  if (interactive) hosts = await chooseInteractiveHosts(detected);
-  else hosts = deterministicAgentHosts(opts.target, detected);
-  return hosts.map((host) => ({ host, destination: destinationForTarget(homeDir, host) }));
-}
-
-function prepareDestinations(plans, force, homeDir) {
-  for (let index = 0; index < plans.length; index += 1) {
-    validateDestination(plans[index].destination, homeDir);
-    for (let other = index + 1; other < plans.length; other += 1) {
-      if (pathsOverlap(plans[index].destination, plans[other].destination)) {
-        throw new Error("Install destinations must not overlap");
-      }
-    }
-  }
-  for (const { destination } of plans) {
-    if (!fs.existsSync(destination) || isEmptyDir(destination)) continue;
-    if (!force) {
-      throw new Error(`Destination already exists and is not empty: ${destination}\nUse --force to replace it, or pass --dest to install elsewhere.`);
-    }
-  }
-}
-
-export function installPlansTransaction(plans, { sourceRoot = root } = {}) {
-  const staged = [];
+  const parent = path.dirname(destination);
+  fs.mkdirSync(parent, { recursive: true });
+  const stageRoot = fs.mkdtempSync(path.join(parent, ".heituzmpw-stage-"));
+  const payload = path.join(stageRoot, "payload");
+  const backup = `${destination}.heituzmpw-backup-${process.pid}-${Date.now()}`;
   try {
-    for (const plan of plans) {
-      const parent = path.dirname(plan.destination);
-      fs.mkdirSync(parent, { recursive: true });
-      const stageRoot = fs.mkdtempSync(path.join(parent, ".heituzmpw-stage-"));
-      const payload = path.join(stageRoot, "payload");
-      staged.push({ ...plan, stageRoot, payload });
-      installPayload({ sourceRoot, destination: payload, host: plan.host });
-    }
-
-    const applied = [];
+    installPayload({ sourceRoot, destination: payload });
+    const hadDestination = fs.existsSync(destination);
+    if (hadDestination) fs.renameSync(destination, backup);
     try {
-      for (let index = 0; index < staged.length; index += 1) {
-        const item = staged[index];
-        const backup = `${item.destination}.heituzmpw-backup-${process.pid}-${Date.now()}-${index}`;
-        const hadDestination = fs.existsSync(item.destination);
-        if (hadDestination) fs.renameSync(item.destination, backup);
-        try {
-          fs.renameSync(item.payload, item.destination);
-        } catch (error) {
-          if (hadDestination) fs.renameSync(backup, item.destination);
-          throw error;
-        }
-        applied.push({ destination: item.destination, backup: hadDestination ? backup : null });
-      }
+      fs.renameSync(payload, destination);
     } catch (error) {
-      for (const item of applied.reverse()) {
-        fs.rmSync(item.destination, { recursive: true, force: true });
-        if (item.backup && fs.existsSync(item.backup)) fs.renameSync(item.backup, item.destination);
-      }
+      if (hadDestination) fs.renameSync(backup, destination);
       throw error;
     }
-    for (const item of applied) {
-      if (item.backup) fs.rmSync(item.backup, { recursive: true, force: true });
-    }
+    if (hadDestination) fs.rmSync(backup, { recursive: true, force: true });
   } finally {
-    for (const item of staged) fs.rmSync(item.stageRoot, { recursive: true, force: true });
+    fs.rmSync(stageRoot, { recursive: true, force: true });
   }
 }
 
 export async function main(argv = process.argv.slice(2)) {
   const opts = parseArgs(argv);
   const homeDir = os.homedir();
-  const plans = await resolvePlans(opts, homeDir);
-  prepareDestinations(plans, opts.force, homeDir);
-  installPlansTransaction(plans);
-  for (const plan of plans) {
-    if (!opts.quiet) console.log(`Installed ${skillName} (${plan.host || opts.target}) -> ${plan.destination}`);
+  if (opts.legacyTarget && !opts.quiet) {
+    console.warn(`MPW installer: --target ${opts.legacyTarget} is no longer supported; host skill installs were replaced by the mpw@heituz plugin.`);
   }
-  if (!opts.quiet) console.log('Verify by asking your agent: "프롬프트 만들어줘"');
+  if (!opts.dest) {
+    console.log(PLUGIN_GUIDANCE);
+    return;
+  }
+  const destination = path.resolve(expandDestination(opts.dest, homeDir));
+  installToDestination(destination, { force: opts.force, homeDir });
+  if (!opts.quiet) console.log(`Installed MPW skill payload -> ${destination}`);
 }
 
 function isMainModule() {

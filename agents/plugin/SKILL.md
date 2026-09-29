@@ -3,24 +3,24 @@ name: mpw
 description: "프롬프트를 새로 작성하거나 검토·퇴고하고, 대상 모델·도구에 맞게 변환한다. 작업지시·시스템·자동화·팀 작업·업무·디자인·이미지·영상 프롬프트에 사용한다. '프롬프트 만들어줘/검토해줘/다듬어줘', 기존 프롬프트의 부분 수정에 발동한다. 실제 코드 구현·이미지 생성·문서 제작만 요청한 경우에는 해당 실행 스킬을 쓴다."
 license: MIT
 metadata:
-  version: "2.35.3"
+  version: "3.0.0"
   category: prompt-writing
   locale: ko-KR
   doctrine: intent-first-progressive-disclosure
-  host_surface: codex
-  canonical_source: "HeiTuz/MPW SKILL.md v2.35.3"
-  updated_at: "2026-09-29"
+  host_surface: plugin
+  canonical_source: "HeiTuz/MPW SKILL.md v3.0.0"
+  updated_at: "2026-09-30"
   model_claims_reviewed_at: "2026-09-29"
   platform_roster_reviewed_at: "2026-09-06"
   role_routing_reviewed_at: "2026-09-05"
 ---
 
-# MPW — 디스패치 커널 (GPT/Codex 표면)
+# MPW — 디스패치 커널 (플러그인 표면)
 
-> **호스트 통합 — GPT/Codex.** 이 파일은 Codex 설치본(`~/.codex/skills/MPW`, `--target codex`와 `--target gpt` 동일)의 진입 표면이다. 규칙 본문은 정본 SKILL.md와 동일하며, 호스트 통합 표면(프런트매터·발동·도구 명칭)만 마이그레이션됐다.
-> - **발동**: Codex가 skills 디렉터리에서 이 SKILL.md를 발견해 로드한다. 이 디렉터리의 AGENTS.md는 설치본 안내 표면이다 — 리포지토리 기여 규칙이 아니다.
-> - **도구 매핑**: 길이 실측(`wc -m`)·검증기(`node scripts/check_prompt.mjs`)·컴파일러(`python3 scripts/compile_*.py`)·references/ 확인(여러 절은 `node scripts/read_refs.mjs`로 한 번에)은 전부 Codex shell로 실행한다.
-> - **역할 라우팅**: Codex coding surface는 prime으로 운용한다. native subagent가 가능하면 [references/adapters.md](references/adapters.md) §GPT/Codex의 역할 매핑을 따른다.
+> **호스트 통합 — 플러그인(Codex·Claude Code·ChatGPT).** 이 파일은 HeiTuz 마켓플레이스 플러그인 `mpw@heituz`의 스킬 진입 표면이다(`node scripts/build_plugin.mjs`가 `plugins/mpw/skills/mpw`로 생성). 규칙 본문은 정본 SKILL.md와 동일하며, 호스트 통합 표면(프런트매터·발동·도구 명칭)만 마이그레이션됐다.
+> - **발동**: 호스트가 설치된 플러그인의 스킬 목록에서 이 SKILL.md를 로드한다. 명시 호출은 Codex `$mpw:mpw`, Claude Code `/mpw:mpw`, ChatGPT `@mpw`다.
+> - **도구 매핑**: 셸이 있는 표면에서는 길이 실측(`wc -m`)·검증기(`node scripts/check_prompt.mjs`)·컴파일러(`python3 scripts/compile_*.py`)·references/ 확인(여러 절은 `node scripts/read_refs.mjs`로 한 번에)을 셸로 실행한다. 셸이 없는 대화 표면에서는 references/ 규칙만 적용하고, 실측·검사를 수행했다고 주장하지 않으며 필요한 검증을 후속 단계로 밝힌다.
+> - **역할 라우팅**: 단일 세션이면 prime으로 운용한다. 하위 에이전트가 있으면 [references/adapters.md](references/adapters.md) §플러그인 호스트의 역할 매핑을 따른다.
 
 사용자의 요청을 수신자가 바로 쓸 수 있는 프롬프트로 만든다. **요청한 결과를 충분히 전달하는 것이 기준**이며, 위임 계약·그래프·모델 선택·검사 절차는 필요한 작업에만 쓴다.
 
