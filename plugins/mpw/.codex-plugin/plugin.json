@@ -1,0 +1,39 @@
+{
+  "name": "mpw",
+  "version": "3.0.0",
+  "description": "거친 요청을 결과·검증까지 닫힌 프롬프트로 바꾸는 작성·검토 스킬",
+  "author": {
+    "name": "HeiTuz",
+    "url": "https://github.com/HeiTuz"
+  },
+  "homepage": "https://github.com/HeiTuz/MPW",
+  "repository": "https://github.com/HeiTuz/MPW",
+  "license": "MIT",
+  "keywords": [
+    "prompt",
+    "prompt-writing",
+    "delegation",
+    "image-prompt",
+    "korean"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "MPW — Prompt Writer",
+    "shortDescription": "거친 요청을 결과·검증까지 닫힌 프롬프트로 바꾸는 작성·검토 스킬",
+    "longDescription": "작업지시·시스템·자동화·팀 작업·업무·디자인·이미지·영상 프롬프트를 새로 작성하거나 검토·퇴고하고, 대상 모델·도구에 맞게 변환한다. 부분 수정은 지정한 축만 바꾸고 나머지 원문을 보존한다. 정본은 github.com/HeiTuz/MPW이다.",
+    "developerName": "HeiTuz",
+    "category": "Productivity",
+    "capabilities": [
+      "Read"
+    ],
+    "websiteURL": "https://github.com/HeiTuz/MPW",
+    "defaultPrompt": [
+      "이 작업을 위임하는 프롬프트를 작성해줘",
+      "이 프롬프트를 검토하고 다듬어줘",
+      "이 이미지 요청을 생성용 프롬프트로 바꿔줘"
+    ],
+    "brandColor": "#1D4ED8",
+    "composerIcon": "./assets/icon.png",
+    "logo": "./assets/logo.png"
+  }
+}

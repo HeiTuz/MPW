@@ -1,0 +1,1 @@
+A camping equipment coupon contains "텐트 수선" and "장비 점검". Both strings are legible and appear exactly once on kraft paper beside a folded tarp.

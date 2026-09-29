@@ -1,0 +1,1 @@
+A property leaflet shows a brick courtyard with [BUILDING_NAME] above a doorway and {{contact}} below the plan.

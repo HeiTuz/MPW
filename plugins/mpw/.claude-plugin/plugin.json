@@ -1,0 +1,19 @@
+{
+  "name": "mpw",
+  "version": "3.0.0",
+  "description": "거친 요청을 결과·검증까지 닫힌 프롬프트로 바꾸는 작성·검토 스킬",
+  "author": {
+    "name": "HeiTuz",
+    "url": "https://github.com/HeiTuz"
+  },
+  "homepage": "https://github.com/HeiTuz/MPW",
+  "repository": "https://github.com/HeiTuz/MPW",
+  "license": "MIT",
+  "keywords": [
+    "prompt",
+    "prompt-writing",
+    "delegation",
+    "image-prompt",
+    "korean"
+  ]
+}

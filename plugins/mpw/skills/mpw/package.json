@@ -1,0 +1,55 @@
+{
+  "name": "heituzmpw",
+  "version": "3.0.0",
+  "description": "MPW prompt-writing skill: plugin build, release tooling, and skill payload installer.",
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "heituzmpw": "scripts/install.mjs",
+    "heituzmpw-install": "scripts/install.mjs"
+  },
+  "files": [
+    "AGENTS.md",
+    "LICENSE",
+    "README.md",
+    "SKILL.md",
+    "agents/**",
+    "assets/plugin-icon.png",
+    "contracts/**",
+    "examples/**",
+    "references/**",
+    "scripts/**",
+    "!contracts/**/__pycache__/**",
+    "!contracts/**/*.pyc",
+    "!scripts/**/__pycache__/**",
+    "!scripts/**/*.pyc",
+    "!**/.gjc/**",
+    "!**/.omx/**",
+    "!**/__pycache__/**",
+    "!**/*.pyc",
+    "!**/*.bak",
+    "!**/*.bak-*",
+    "!**/*.bak.*",
+    "!**/*.orig",
+    "!**/*.rej",
+    "!**/*.save",
+    "!**/*~",
+    "!**/.*"
+  ],
+  "scripts": {
+    "lint": "python3 scripts/lint.py",
+    "test": "python3 scripts/lint.py && node scripts/run_tests.mjs",
+    "check:installs": "node scripts/check_install_parity.mjs",
+    "test:apparel": "python3 scripts/test_compile_apparel_handoff.py",
+    "test:contracts": "python3 scripts/test_contracts.py",
+    "test:garden": "python3 scripts/test_compile_garden_recipe.py",
+    "test:handoff": "python3 scripts/test_compile_image_handoff.py",
+    "test:promo": "python3 scripts/test_promo_contract.py",
+    "smoke:install": "node scripts/install.mjs --dest /tmp/MPW-install-smoke --force --quiet",
+    "build:plugin": "node scripts/build_plugin.mjs",
+    "release:plugin": "node scripts/release_plugin.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
