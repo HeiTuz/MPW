@@ -66,7 +66,7 @@ Create a vertical editorial fashion photo for a winter outerwear campaign.
 
 SHOT: Full-length, eye-level framing with the subject slightly left of center, walking toward the camera mid-stride on a quiet Seoul side street at blue hour after light snowfall.
 
-SUBJECT: The model, relaxed and confident, one hand in her coat pocket, looking just past the lens.
+SUBJECT: The model, relaxed and confident, one hand in a coat pocket, looking just past the lens.
 
 WARDROBE: A charcoal wool double-breasted coat with a soft brushed surface, notched lapels and dark horn buttons, worn over a black knit and straight black trousers.
 

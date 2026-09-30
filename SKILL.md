@@ -54,7 +54,7 @@ metadata:
 | 요청 | `node scripts/read_refs.mjs` 뒤에 붙일 인자 |
 |---|---|
 | 대상 미정·GPT Image 새 이미지 | `references/image/surfaces.md#0 references/image/surface-contracts.md#3.2` (도해·슬라이드·UI·만화·로고는 `#3.2,3.4`) |
-| 인물·셀피·패션 화보 새 이미지 | `references/image/surfaces.md#0 references/image/surface-contracts.md#3.2 references/image/editorial/portrait-brief.md` |
+| 대상 미정·GPT Image 인물·셀피·패션 화보 새 이미지 | `references/image/surfaces.md#0 references/image/surface-contracts.md#3.2 references/image/editorial/portrait-brief.md` |
 | 대상 미정·GPT Image 원본 편집 | `references/image/surfaces.md#0 references/image/surface-contracts.md#3.2,3.3` (도해·슬라이드·UI·만화·로고는 `#3.2,3.3,3.4`) |
 | 영상 생성 | `references/image/surfaces.md#0 "references/image/lanes.md#영상 공통 규칙"` |
 | 실행 작업·자동화 지시 | `references/templates/delegation.md` |

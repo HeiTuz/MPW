@@ -1,6 +1,6 @@
 Create a vertical fashion campaign photo for an autumn trench coat using the attached images: image 1 is the model, image 2 is the coat.
 
-MODEL: Keep the person from image 1, including facial features, proportions, skin tone and hairline. Hair pulled back loosely, a calm expression, gaze just past the lens.
+MODEL: The person from image 1 with hair pulled back loosely, a calm expression and gaze just past the lens.
 
 WARDROBE: The trench coat from image 2, belted and open at the collar over a cream knit and dark straight trousers. The cotton gabardine shows a fine diagonal twill and a soft matte surface.
 
@@ -8,4 +8,4 @@ SHOT AND POSE: Full length from hip height as the model walks across a pale ston
 
 LIGHT: Late-afternoon sun low from camera right lays long shadows on the stone and rakes across the twill; open shade keeps the face evenly lit.
 
-CONSTRAINTS: Keep the coat from image 2 unchanged in color, double-breasted button layout, epaulettes, storm flap, belt buckle, cuff straps and topstitching. Add no logos or text that are not on the coat in image 2.
+CONSTRAINTS: Keep the facial features, proportions, skin tone and hairline of the person in image 1. Keep the coat from image 2 unchanged in color, double-breasted button layout, epaulettes, storm flap, belt buckle, cuff straps and topstitching. Add no logos or text that are not on the coat in image 2.
