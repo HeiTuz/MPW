@@ -66,7 +66,7 @@ Create a vertical editorial fashion photo for a winter outerwear campaign.
 
 SHOT: Full-length, eye-level framing with the subject slightly left of center, walking toward the camera mid-stride on a quiet Seoul side street at blue hour after light snowfall.
 
-SUBJECT: A woman in her late twenties, relaxed and confident, one hand in her coat pocket, looking just past the lens.
+SUBJECT: The model, relaxed and confident, one hand in a coat pocket, looking just past the lens.
 
 WARDROBE: A charcoal wool double-breasted coat with a soft brushed surface, notched lapels and dark horn buttons, worn over a black knit and straight black trousers.
 
@@ -85,6 +85,7 @@ CONSTRAINTS: Keep the coat charcoal with visible wool texture rather than a glos
 - **검수:** 변경 부위뿐 아니라 얼굴·제품 형상·구도·색·기존 카피의 불필요한 변화도 비교한다. 도해는 라벨과 관계의 정확성, 투명 자산은 실제 알파 채널 여부를 확인한다. 반복 편집의 일관성 향상은 픽셀 보존 보증이 아니다. 픽셀 동일성이 필수라면 허용된 합성 경로를 사용하고 생성과 합성을 구분한다. 이 검수와 결과 대조·재시도·누락 컷 관리는 실행자의 일이다. 이미지 모델에 붙여넣을 블록에는 수정 대상·목표 상태·보존 조건만 쓰고, 검수 절차는 수신자가 작업 에이전트이면 그 작업 지시에, 사람이 붙여넣으면 블록 밖 안내에 둔다.
 
 원본 사진의 여러 국소 리터칭·편집 패턴은 §3.3, 도해·슬라이드·UI·만화·역사·로고 용도는 §3.4에서 필요한 경우에만 읽는다.
+새 인물 이미지의 인물 설정·참조 분기·장르 골격은 [editorial/portrait-brief.md](editorial/portrait-brief.md)를 따른다.
 
 ### 3.3 GPT Image 2.5 — 원본 편집·리터칭·누적 편집
 
