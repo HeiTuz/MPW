@@ -55,20 +55,22 @@
 
 편집 입력은 웹에 첨부할 이미지의 번호·역할로 연결하고 로컬 파일 경로를 첨부 대신 쓰지 않는다. 현재 대화의 선택된 결과를 고칠 때는 그 이미지를 기준으로 변경점을 쓴다. 다른 대화에 붙여넣을 독립 프롬프트라면 필요한 이미지를 다시 첨부하도록 블록 밖에 짧게 안내한다. 국소 수정은 대상의 위치도 명시한다. 영역 선택은 선택 사항이며 경계 밖 보존을 보장하지 않는다([웹 공식 안내](https://help.openai.com/en/articles/11084440), 2026-09-23 확인).
 
-**구조 선택 — 조건이 많으면 이름 붙인 구획이 기본.** 아래 구조 선택은 새 문안에 적용한다. 기준 원문의 후속 수정은 [common.md](../templates/common.md) §기준 원문과 누적 수정을 따른다. 새 생성 문안은 요청에 다음 중 하나라도 있으면 아래 구획형으로 쓴다: 장면·피사체·구도·빛·재질 가운데 두 축 이상을 사용자가 지정함, 이미지 안에 정확히 넣을 글자가 있음, 보존·배제 조건이 있음, 참조 이미지에 역할을 지정함, 사용자가 상세 촬영 브리프를 줌. 요청이 피사체와 조건 한두 개만 준 단순 장면은 한 문단으로 쓰고, MPW가 보완한 연출은 이 판정에 넣지 않는다. 한 문단으로 읽힌다는 이유로 구획형 조건을 평탄화하지 않는다. 예를 들어 플래시 거울 셀피에서 손의 그립, 의상 재질, 반사와 광원 정합을 함께 지정했다면 구획형으로 쓴다. 짧게 만드는 것 자체가 목표는 아니다. 새 작성에서는 사용자의 목적과 지정 조건에 맞는 표정·배경·조명·구도·재질을 구체적으로 보완한다. 명시되지 않았다는 이유만으로 유용한 연출을 생략하지 않는다. 보완은 지정된 스타일·정체성·정확 카피와 충돌하지 않아야 하며, 부분 수정이나 원문 보존 요청에는 이 창작 기본값을 적용하지 않는다. 언어는 공통 언어 결정 규칙을 따른다(새 이미지 프롬프트는 영어 기본, 명시 언어·원문 보존 우선). 장면과 무관한 카메라 수치·반복 네거티브 꼬리는 붙이지 않는다.
+**구조 선택 — 조건이 많으면 제목 붙인 구획이 기본.** 아래 구조 선택은 새 문안에 적용한다. 기준 원문의 후속 수정은 [common.md](../templates/common.md) §기준 원문과 누적 수정을 따른다. 새 생성 문안은 요청에 다음 중 하나라도 있으면 제목 붙인 구획으로 나눠 쓴다: 장면·피사체·구도·빛·재질 가운데 두 축 이상을 사용자가 지정함, 이미지 안에 정확히 넣을 글자가 있음, 보존·배제 조건이 있음, 참조 이미지에 역할을 지정함, 사용자가 상세 촬영 브리프를 줌. 요청이 피사체와 조건 한두 개만 준 단순 장면은 한 문단으로 쓰고, MPW가 보완한 연출은 이 판정에 넣지 않는다. 한 문단으로 읽힌다는 이유로 구획형 조건을 평탄화하지 않는다. 예를 들어 플래시 거울 셀피에서 손의 그립, 의상 재질, 반사와 광원 정합을 함께 지정했다면 구획형으로 쓴다. 짧게 만드는 것 자체가 목표는 아니다. 새 작성에서는 사용자의 목적과 지정 조건에 맞는 표정·배경·조명·구도·재질을 구체적으로 보완한다. 명시되지 않았다는 이유만으로 유용한 연출을 생략하지 않는다. 보완은 지정된 스타일·정체성·정확 카피와 충돌하지 않아야 하며, 부분 수정이나 원문 보존 요청에는 이 창작 기본값을 적용하지 않는다. 언어는 공통 언어 결정 규칙을 따른다(새 이미지 프롬프트는 영어 기본, 명시 언어·원문 보존 우선). 장면과 무관한 카메라 수치·반복 네거티브 꼬리는 붙이지 않는다.
 
-**구획 이름과 순서.** 기본 헤딩은 공식 가이드의 카테고리를 따른 `SCENE`(배경·환경·시간·분위기) → `SUBJECT`(주 피사체·행동·포즈·표정·의상·재질) → `DETAILS`(구도·시점·빛·색·매체, 정확한 글자와 위치) → `CONSTRAINTS`(바뀌면 안 되는 요소와 요청 관련 배제)다. 산출물·용도는 구획 앞 첫 줄에 한 문장으로 쓴다. 각 헤딩은 줄 첫머리에 `SCENE:`처럼 대문자와 콜론으로 쓰고, 구획 사이에 빈 줄을 둔다. 한 구획이 길어지면 `WARDROBE`, `LIGHT & COLOR`, `TEXT`처럼 세부 헤딩으로 나눌 수 있다. 조건이 없는 구획은 쓰지 않는다. 배제는 `NEGATIVE`·`EXCLUDE` 대신 `CONSTRAINTS` 구획에 문장으로 쓴다. 사용자가 준 헤딩 이름·순서·정보 배치는 특별한 충돌이 없으면 보존한다. 한 컷은 길이·구획 수 때문에 여러 컷으로 나누지 않으며, 사용자 지정 형식이 없으면 하나의 복사 가능한 블록으로 낸다. 네이티브/조립 형식 경계는 §3.1, API 설정 분리는 §4.3을 따른다.
+**구획 이름과 순서.** 공식 가이드는 복잡한 요청을 장면 → 피사체 → 세부 → 제약의 흐름으로 정리하고 구획에 제목을 붙이라고 권한다. 이 흐름은 정보 순서의 기준이며 네 제목을 그대로 쓰라는 고정 양식이 아니다. 구획의 수와 제목은 요청 내용에 맞춘다. 예를 들어 인물 화보는 `SHOT`·`SUBJECT`·`WARDROBE`·`LIGHT`·`CONSTRAINTS`, 포스터는 `LAYOUT`·`TEXT`·`IMAGE`·`STYLE`, 제품 컷은 `PRODUCT`·`SET`·`LIGHT`·`CONSTRAINTS`처럼 조건이 몰리는 축에 제목을 준다. 조건이 적은 축은 인접 구획에 합치고, 조건이 없는 구획은 만들지 않는다. 산출물·용도는 구획 앞 첫 줄에 한 문장으로 쓴다. 제목은 줄 첫머리에 `LIGHT:`처럼 대문자와 콜론으로 쓰고, 구획 사이에 빈 줄을 둔다. 배제·보존은 `NEGATIVE`·`EXCLUDE` 대신 `CONSTRAINTS`(원본 편집이면 §3.3의 `PRESERVE`) 같은 구획에 문장으로 쓴다. 사용자가 준 헤딩 이름·순서·정보 배치는 특별한 충돌이 없으면 보존한다. 한 컷은 길이·구획 수 때문에 여러 컷으로 나누지 않으며, 사용자 지정 형식이 없으면 하나의 복사 가능한 블록으로 낸다. 네이티브/조립 형식 경계는 §3.1, API 설정 분리는 §4.3을 따른다.
 
-아래는 구획형 작성 패턴 예시이며 생성 품질의 실측 결과가 아니다.
+아래는 인물 화보의 구획 예시이며 생성 품질의 실측 결과가 아니다. 제목은 이 요청에 맞춘 것이고 다른 요청에 그대로 복사하지 않는다.
 
 ```text
 Create a vertical editorial fashion photo for a winter outerwear campaign.
 
-SCENE: A quiet Seoul side street at blue hour after light snowfall, wet asphalt reflecting warm shop-window light, a few blurred pedestrians far in the background.
+SHOT: Full-length, eye-level framing with the subject slightly left of center, walking toward the camera mid-stride on a quiet Seoul side street at blue hour after light snowfall.
 
-SUBJECT: A woman in her late twenties walking toward the camera mid-stride, one hand in the pocket of a charcoal wool double-breasted coat, relaxed and confident, looking just past the lens. The coat shows a soft brushed wool surface, notched lapels and dark horn buttons.
+SUBJECT: A woman in her late twenties, relaxed and confident, one hand in her coat pocket, looking just past the lens.
 
-DETAILS: Full-length framing at eye level with the subject slightly left of center. Cool dusk ambient light, warm window light from camera right as the key, a gentle rim along the coat shoulders. Natural color with fine film grain.
+WARDROBE: A charcoal wool double-breasted coat with a soft brushed surface, notched lapels and dark horn buttons, worn over a black knit and straight black trousers.
+
+LIGHT: Cool dusk ambient light, warm shop-window light from camera right as the key, a gentle rim along the coat shoulders, wet asphalt reflecting the window glow. Natural color with fine film grain.
 
 CONSTRAINTS: Keep the coat charcoal with visible wool texture rather than a glossy synthetic look. Add no text, logos or watermarks.
 ```
