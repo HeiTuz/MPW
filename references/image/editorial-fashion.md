@@ -10,6 +10,7 @@
 
 | 주제 | 파일 |
 |---|---|
+| 새 인물 이미지의 인물 설정·참조 분기·축별 패턴·장르 골격 | [editorial/portrait-brief.md](editorial/portrait-brief.md) |
 | 빛·심도·필름·구도·재질 결과 | [editorial/photo-results.md](editorial/photo-results.md) |
 | 포즈·소재·조명·시즌 장소 | [editorial/scene-craft.md](editorial/scene-craft.md) |
 | 장소·인물 단서와 국적 추론 금지 | [editorial/locality.md](editorial/locality.md) |
@@ -20,6 +21,8 @@
 ## 인물 스틸 기본
 
 라벨 칸을 채우지 말고, 결과를 가르는 절만 문장으로 적는다. 사람·옷·소품·자세·배경·빛·시선·마감을 한 화면의 인과로 잇는다. 자세는 균형과 실루엣이 읽히게 쓰고, 방향이 중요하면 뷰어 기준 `camera left`/`camera right`를 쓴다.
+
+새 인물 이미지는 [editorial/portrait-brief.md](editorial/portrait-brief.md)의 인물 설정과 참조 분기를 먼저 적용한다. 나이·외모·의상에 기본값을 두지 않고, 참조가 없으면 보존 문구를 넣지 않는다.
 
 원본 편집이면 새 모공·잔머리·그레인을 끼워 넣지 않는다([compiler.md](compiler.md) §피부·재질). 새로 그리는 실사에서만, 과매끈이 관측됐을 때 [realism.md](realism.md) §1을 본다.
 
