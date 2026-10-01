@@ -126,11 +126,11 @@ claude plugin install mpw@heituz
 업데이트는 `mpw update` 한 줄입니다. 설치된 Codex·Claude Code를 찾아 heituz 마켓플레이스를 새로 고치고 `mpw@heituz`를 최신 버전으로 받은 뒤, 갱신 전후 버전을 보여 줍니다. 한쪽만 갱신하려면 `--codex`나 `--claude`를, 실행할 명령만 보려면 `--dry-run`을 붙입니다. 설치된 버전은 `mpw version`으로 확인합니다.
 
 ```sh
-npm install -g github:HeiTuz/MPW   # mpw 명령 설치 (한 번만)
+npm install -g --allow-git=all github:HeiTuz/MPW   # mpw 명령 설치 (한 번만)
 mpw update
 ```
 
-전역 설치 없이 `bunx --package github:HeiTuz/MPW mpw update`로 실행해도 됩니다. `mpw` 명령이 하는 일은 호스트별로 아래 두 줄을 실행하는 것과 같습니다.
+npm 12부터는 GitHub에서 받는 설치를 기본으로 막으므로 `--allow-git=all`이 필요합니다. 전역 설치 없이 `bunx --package github:HeiTuz/MPW mpw update`로 실행해도 됩니다. `mpw` 명령이 하는 일은 호스트별로 아래 두 줄을 실행하는 것과 같습니다.
 
 ```sh
 codex plugin marketplace upgrade heituz && codex plugin add mpw@heituz
