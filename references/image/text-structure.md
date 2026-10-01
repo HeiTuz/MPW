@@ -61,6 +61,15 @@
 
 무드나 사조 이름이 필요하다면 그 이름이 화면에서 만드는 차이를 한두 가지로 적는다. 예를 들어 차분한 장면은 낮은 대비와 넓은 빈 공간 중 실제 의도에 맞는 결과를 고른다. 이름만으로 팔레트, 렌즈와 소재가 한꺼번에 정해진다고 가정하지 않는다. 사용자 지정 매체와 상표는 보존한다. 느낌만 다른 새 시안이라고 하면서 기존 구조의 색 이름만 바꾸지 않는다.
 
+사진이 아닌 매체를 고를 때도 이름 대신 손으로 만든 흔적이 화면에 어떻게 남는지 적는다. 결과를 가르는 행 하나만 고른다 (관측 2026-10, 출처 1건).
+
+| 매체 | 화면 결과 문구 |
+|---|---|
+| 크로스 스티치·자수 | `tiny visible cross stitches on ivory linen, slightly uneven handmade thread, lettering embroidered in a soft serif` |
+| 투톤 하프톤 포스터 | `two-colour print, tones built from fine halftone dots, the face's shading carried inside the bold letterforms` |
+| 구아슈·마커 손그림 | `flat gouache and marker illustration, thick slightly wobbly contours, visible brush texture, hand-brushed capital lettering` |
+| 단색 수채 포스터 | `monochrome watercolour washes with fine ink linework, soft splatter in the foliage, large clean white margins` |
+
 ## 점검
 
 결과마다 먼저 핵심 글자와 숫자가 정확한지, 구조의 순서와 화살표가 맞는지, 글자와 이미지의 앞뒤가 일관적인지 살핀다. 그다음 반복이 정보인지 무늬인지, 원본 피사체와 브랜드가 보존됐는지, 시리즈 공통 요소와 컷별 차이가 요청대로인지 확인한다. 실제 이미지를 만들지 않았다면 이 항목은 문안의 검토 기준일 뿐 렌더 품질의 통과 증거가 아니다.
