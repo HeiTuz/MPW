@@ -68,7 +68,7 @@ MPW는 HeiTuz 마켓플레이스 플러그인 `mpw@heituz`로 배포한다. 카�
 - 역할 매핑: Codex coding surface는 prime으로 운용한다. native subagent가 있으면 planner=read-only planning/research, worker=bounded implementation, critic=independent verifier로 할당한다.
 - 모델 선택 위치: Codex profile, model picker, CLI config, or API caller configuration. 공개 routing vocabulary는 fast/read-only, balanced/agentic, strongest-reasoning/high-risk만 쓴다.
 - fallback: [model-playbooks.md](model-playbooks.md) §역할·권한 라우팅의 단일 모델 경로를 따른다.
-- 선택형 질문 도구: 이미지 프롬프트 인터뷰([image/prompt-interview.md](image/prompt-interview.md))는 세션에 노출된 `request_user_input` 계열 도구로 묻는다. Plan 모드의 `request_user_input`은 응답을 기다리고, Default 모드에 `request_user_input_async`가 있으면 그것을 쓴다. 문항 3개 이하, 문항당 선택지 2~3개, 추천안은 맨 앞에 두고 라벨 끝에 `(Recommended)`를 붙이며, 자유 답 칸은 도구가 자동으로 붙이므로 '기타'를 만들지 않는다. 두 도구 모두 없는 실행(예: `codex exec`)이면 번호 목록으로 묻는다.
+- 선택형 질문 도구 (2026-10 도구 계약 확인): 이미지 프롬프트 인터뷰([image/prompt-interview.md](image/prompt-interview.md))는 현재 모드의 질문 도구로 묻는다. Plan 모드의 `request_user_input`은 답을 기다려 결과로 돌려준다. 문항 1~3개, 문항당 선택지 2~3개, 추천안은 맨 앞에 두고 라벨 끝에 `(Recommended)`를 붙이며 자유 답 칸은 도구가 붙인다. Default 모드의 `request_user_input_async`는 **즉시 반환되고 답은 나중에 새 사용자 메시지로 온다.** 질문 객체는 `title`과 선택지 문자열 `options`이고, 맨 앞 선택지가 미리 선택돼 보여도 자동 제출되지 않는다. 호출한 뒤 최종 응답을 보내 턴을 끝내지 않는다. 답과 무관한 작업만 진행하고, 답이 없으면 새 입력이 오면 일찍 깨는 대기 도구(`clock.sleep`, 30초 단위)로 기다린다. 그런 대기 도구가 세션에 없으면 비동기 상자를 띄우지 않고 번호 목록으로 묻고 그 메시지로 턴을 마친다. 깨어나면 새 메시지를 확인하고, 미응답이면 같은 질문을 다시 띄우지 않고 다시 기다린다. 답과 무관한 메시지에 깨어났으면 그 메시지를 처리한 뒤 계속 기다린다. 약 10분이 지나도 답이 없으면 인터뷰 규칙대로 질문을 본문에 남기고 멈춘다. `wait`처럼 실행 중인 셀을 기다리는 도구나 셸 sleep은 새 입력에 깨지 않으므로 쓰지 않는다. 질문 도구가 없으면(예: `codex exec`) 번호 목록으로 묻고 그 메시지로 턴을 마친다.
 
 ### Claude Code
 
@@ -76,7 +76,7 @@ MPW는 HeiTuz 마켓플레이스 플러그인 `mpw@heituz`로 배포한다. 카�
 - 역할 매핑: 단일 Claude 세션이면 prime이 기본이다. 하위 에이전트나 task 기능이 있으면 planner는 read-only 조사, worker는 bounded edit/research, critic은 frozen artifact review로 보낸다.
 - 모델 선택 위치: Claude 앱/CLI/프로젝트 설정. 이 저장소에는 모델명이나 plan 이름을 쓰지 않는다.
 - fallback: [model-playbooks.md](model-playbooks.md) §역할·권한 라우팅의 단일 모델 경로를 따른다.
-- 선택형 질문 도구: 이미지 프롬프트 인터뷰는 `AskUserQuestion`으로 묻는다. 한 번에 문항 4개 이하, 문항당 선택지 2~4개이며 자유 답 칸은 도구가 붙인다. 도구가 노출되지 않는 비대화형 실행이면 번호 목록으로 묻는다.
+- 선택형 질문 도구 (2026-10 공식 문서 확인): 이미지 프롬프트 인터뷰는 `AskUserQuestion`으로 묻는다. 답할 때까지 실행이 멈추고 답이 도구 결과로 돌아오므로 별도 대기는 필요 없다. 한 번에 문항 4개 이하, 문항당 선택지 2~4개이며 인터뷰의 더 좁은 상한을 따르고, 자유 답 칸은 도구가 붙인다. 결과에 실제 답이 있는지 확인한 뒤 이어간다. `askUserQuestionTimeout`을 켠 환경에서 시간이 지나 돌아오면 그때까지 고른 선택지가 함께 제출되므로 그 답은 살리고, 답하지 않은 문항만 다시 띄우거나 본문에 남기고 멈춘다. 시간 경과·빈 응답·오류 자체를 선택이나 위임으로 보고 최종 프롬프트로 넘어가지 않는다. 도구가 없는 비대화형 실행이면 번호 목록으로 묻는다.
 
 ### ChatGPT
 
