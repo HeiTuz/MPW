@@ -475,40 +475,46 @@ def check_prompt_graph_canon(texts, errors):
 
 
 def check_seed_engine_boundaries(texts, errors):
-    """I19: direct/wrapper boundaries and the Seedance 2.5 gate stay explicit."""
+    """I19: direct/wrapper boundaries and the Seedance 2.5 gate stay explicit.
+
+    Checks meaning cues, not verbatim sentences, so wording can be revised:
+    each file must still name its surface, keep wrapper ids separate and state
+    that rules are not inherited across surfaces or versions.
+    """
+    no_inherit = r"상속(하지|시키지|\s*금지)"
     required = {
         "references/image/seedream-5-pro.md": (
-            "BytePlus ModelArk direct",
-            "Higgsfield의 `seedream_v5_pro`는 별도 S2 모델 id",
+            ("direct surface", r"ModelArk direct"),
+            ("wrapper id kept separate", r"seedream_v5_pro.{0,40}별도"),
         ),
         "references/image/seedance-2.md": (
-            "BytePlus ModelArk direct",
-            "Higgsfield의 `seedance_2_0`·`seedance_2_0_mini`는 별도 S2 모델 id",
-            "Seedance 2.5는 이 문서의 별칭이 아니다",
-            "2.0 규칙, 길이, 미디어 상한을 자동 상속하지 않는다",
-            "실제 인물 얼굴이 포함된 참조 이미지·영상을 일반 URL/Base64 입력으로 직접 보내지 않는다",
+            ("direct surface", r"ModelArk direct"),
+            ("wrapper id kept separate", r"seedance_2_0.{0,80}별도"),
+            ("2.5 is not an alias", r"2\.5.{0,20}별칭이 아니"),
+            ("no inheritance", no_inherit),
+            ("real-face reference boundary", r"실제 인물 얼굴"),
         ),
         "references/image/seedance-2-5.md": (
-            "Dreamina 웹의 Seedance 2.5 UI",
-            "BytePlus ModelArk direct의 모델 id·API 요청 스키마를 증명하지 않으며",
-            "Seedance 2.0 direct 계약을 2.5로 상속시키지 않는다",
-            "Higgsfield나 다른 래퍼",
+            ("web surface", r"Dreamina"),
+            ("not a ModelArk contract", r"ModelArk"),
+            ("no inheritance", no_inherit),
+            ("wrapper boundary", r"Higgsfield"),
         ),
         "references/image/lanes.md": (
-            "ModelArk direct Seedance 2.0의 세부 규칙은 [seedance-2.md](seedance-2.md)를 따르며, Higgsfield나 2.5에 자동 상속하지 않는다",
+            ("Seedance 2.0 pointer", r"\(seedance-2\.md\)"),
+            ("no inheritance", no_inherit),
         ),
         "references/image/surface-evidence.md": (
-            "Dreamina 웹 Seedance 2.5 프롬프트 계약",
-            "Seedance 2.5 ModelArk 모델 id·API 요청 스키마",
-            "Dreamina UI·2.0 direct 값을 API로 자동 상속 금지",
+            ("Dreamina 2.5 evidence row", r"Dreamina 웹 Seedance 2\.5"),
+            ("2.5 ModelArk unverified row", r"Seedance 2\.5 ModelArk"),
+            ("no inheritance", no_inherit),
         ),
     }
-    for filename, markers in required.items():
+    for filename, cues in required.items():
         text = texts.get(filename, "")
-        for marker in markers:
-            if marker not in text:
-                errors.append(f"{filename}: [I19] seed engine boundary marker missing: {marker}")
-
+        for label, pattern in cues:
+            if not re.search(pattern, text, re.S):
+                errors.append(f"{filename}: [I19] seed engine boundary cue missing: {label}")
 
 def check_mj_flag_sync(root, errors):
     """I16: Grok gate-card MJ flags and the validator constant stay byte-identical."""

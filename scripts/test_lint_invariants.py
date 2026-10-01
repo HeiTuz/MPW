@@ -142,13 +142,20 @@ class LintInvariantSmokeTests(unittest.TestCase):
         lint.check_seed_engine_boundaries(texts, errors)
         self.assertEqual([], errors)
 
-        texts["references/image/seedance-2.md"] = texts["references/image/seedance-2.md"].replace(
+        reworded = dict(texts)
+        reworded["references/image/seedance-2.md"] = reworded["references/image/seedance-2.md"].replace(
             "2.0 규칙, 길이, 미디어 상한을 자동 상속하지 않는다",
-            "",
+            "길이와 미디어 상한을 포함한 2.0 규칙은 2.5로 상속시키지 않는다",
         )
         errors = []
+        lint.check_seed_engine_boundaries(reworded, errors)
+        self.assertEqual([], errors)
+
+        for phrase in ("2.0 규칙, 길이, 미디어 상한을 자동 상속하지 않는다",):
+            texts["references/image/seedance-2.md"] = texts["references/image/seedance-2.md"].replace(phrase, "")
+        errors = []
         lint.check_seed_engine_boundaries(texts, errors)
-        self.assertTrue(any("[I19]" in error for error in errors), errors)
+        self.assertTrue(any("[I19]" in error and "no inheritance" in error for error in errors), errors)
 
     def test_i16_rejects_mj_flag_drift(self):
         with tempfile.TemporaryDirectory() as directory:
