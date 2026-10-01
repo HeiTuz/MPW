@@ -52,6 +52,9 @@
 | 보조 | `cool edge rim isolating the contour`, `warm practical spill`, `window glow arriving from camera left`, `upward bounce opening the jaw shadow` |
 | 시간광 | 해질 무렵의 따뜻한 낮은 광 / 블루아워의 찬 기운 / 한낮 톱라이트 = `short dense nose shadow, shadowed eye sockets` |
 | 색온도 분리 | `split color-temperature lighting, warm key on skin, cool background wash`(인물이 앞으로 분리되고 공간이 깊어진다) / 변주 `cool key on subject, warm tungsten practical background` |
+| 화면광 단독 | `phone screen as the only light, cool glow rising onto the fingers and lower face, room falling dark` (관측 2026-10, 출처 1건) |
+| 플래시·실내광 균형 | `on-camera flash as key, room ambient about a stop under, background keeping its own color` (관측 2026-10, 출처 1건) |
+| 금속 소품 반사점 | `rings and clasps answering the key with small separate glints` (관측 2026-10, 출처 1건) |
 | 하이키 스튜디오 | `high-key white studio, large negative space, clean editorial margins`(흰 바탕과 긴 여백이 실루엣을 앞으로 민다) |
 
 ### 캐치라이트

@@ -131,6 +131,8 @@
 
 모델 선택 후 해당 어댑터의 적용 표면을 확인하고, 파라미터는 [surfaces.md](surfaces.md)와 실제 호출 계약을 따른다.
 
+- [gpt-image-2-5.md](gpt-image-2-5.md) — **기본 엔진.** GPT Image 2.5 규칙이 있는 절을 상황별로 가리키는 진입점. 대상 미정 이미지 문안도 여기서 시작한다.
+- [nano-banana.md](nano-banana.md) — Google Gemini 이미지의 서술형 작성 구조, 참조 역할, 편집·글자의 엔진 고유 방식, 촬영 용어 엔진 예외와 한계. 모델은 지정이 없으면 Nano Banana 2(`gemini-3.1-flash-image`), 복잡한 지시·정확한 글자·4K는 Pro(`gemini-3-pro-image`), 속도·비용 우선은 2 Lite(`gemini-3.1-flash-lite-image`), 대량 저지연 1024px는 Nano Banana(`gemini-2.5-flash-image`). 확인일은 [surface-evidence.md](surface-evidence.md) §7.
 - [flux.md](flux.md) — FLUX·FLUX.2·Kontext의 지정 표면별 자연어·편집 문법.
 - [higgsfield-genjutsu.md](higgsfield-genjutsu.md) — Genjutsu 기존 영상의 Motion Transfer·Object Swap. 짧은 변경 지시와 참조 대응을 작성한다.
 - [grok-imagine.md](grok-imagine.md) — Grok 이미지·영상 자연어 작성. Imagine UI·대화형 이미지 도구·직접 API·래퍼 경계를 구분한다. Higgsfield 모델 선택은 위 §1·§2, 대화·리서치용 Grok은 [../model-playbooks.md](../model-playbooks.md) 소관이다.

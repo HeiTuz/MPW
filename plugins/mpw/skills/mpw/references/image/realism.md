@@ -34,7 +34,7 @@
 | 축 | 압축 토큰 | 정본 교차 |
 |---|---|---|
 | 피부 | `visible pores, fine vellus hair, subtle tonal variation, under-eye texture, slight redness at nose/ears` | [editorial/photo-results.md](editorial/photo-results.md) §재질·마감 |
-| 헤어 | `flyaway strands, 잔머리 몇 가닥, uneven parting` | [editorial/locality.md](editorial/locality.md) |
+| 헤어 | `flyaway strands, 잔머리 몇 가닥, uneven parting`, 끝 처리는 `cut ends separating strand by strand, each tip with a natural arc` (관측 2026-10, 출처 1건) | [editorial/locality.md](editorial/locality.md) |
 | 직물 | `natural creases, fold shadows, slight tension where a hand grips` | [editorial/scene-craft.md](editorial/scene-craft.md) §소재·질감 |
 | 소품·생활감 | `lived-in props, slight wear, asymmetric placement, dust/fingerprints on surfaces` | [editorial/locality.md](editorial/locality.md) §로컬리티 매트릭스 리얼리티 축 |
 | 노출 | `minor exposure unevenness, slightly blown highlight, lifted black` | [editorial/photo-results.md](editorial/photo-results.md) §필름·매체 결과 |

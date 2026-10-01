@@ -2,7 +2,7 @@
 
 `Grok` / `그록` / `xAI`가 지정되고 **산출물이 이미지·영상일 때** 읽는다. 대화·리서치·추출용 프롬프트는 [../model-playbooks.md](../model-playbooks.md) §Grok 텍스트·리서치를 따른다. 이름만으로 이미지 생성이나 OAuth 실행을 선택하지 않는다.
 
-먼저 [surface-contracts.md](surface-contracts.md) §4.2에서 **Imagine UI·대화형 이미지 도구·직접 API·래퍼**를 구분한다. 여기서는 그 표면에 보낼 자연어만 작성한다. 실행·참조 업로드·장수 처리는 [../adapters.md](../adapters.md)의 현재 실행 어댑터 소관이다. 공식 근거·확인일은 [surface-evidence.md](surface-evidence.md) §7에 있다.
+먼저 [surface-contracts.md](surface-contracts.md) §4.2에서 **Imagine UI·대화형 이미지 도구·직접 API·래퍼**를 구분한다. 여기서는 그 표면에 보낼 자연어만 작성한다. 실행·참조 업로드·장수 처리는 [../adapters.md](../adapters.md)의 현재 실행 어댑터 소관이다. 공식 근거·확인일은 [surface-evidence.md](surface-evidence.md) §7에 있다. 2026-10-02 기준 직접 API 모델은 이미지 `grok-imagine-image-2.0`, 영상 `grok-imagine-video-1.5`이며 xAI는 별도의 프롬프트 작성 가이드를 두지 않는다.
 
 ## 게이트 카드
 
