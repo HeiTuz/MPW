@@ -123,7 +123,14 @@ claude plugin install mpw@heituz
 
 설치한 뒤 새 세션을 열면 적용됩니다. "프롬프트 만들어줘"처럼 요청하면 자동으로 발동하고, 직접 부를 때는 Codex `$mpw:mpw`, Claude Code `/mpw:mpw`, ChatGPT `@mpw`를 씁니다.
 
-업데이트는 마켓플레이스를 새로 고친 뒤 받습니다.
+업데이트는 `mpw update` 한 줄입니다. 설치된 Codex·Claude Code를 찾아 heituz 마켓플레이스를 새로 고치고 `mpw@heituz`를 최신 버전으로 받은 뒤, 갱신 전후 버전을 보여 줍니다. 한쪽만 갱신하려면 `--codex`나 `--claude`를, 실행할 명령만 보려면 `--dry-run`을 붙입니다. 설치된 버전은 `mpw version`으로 확인합니다.
+
+```sh
+npm install -g github:HeiTuz/MPW   # mpw 명령 설치 (한 번만)
+mpw update
+```
+
+전역 설치 없이 `bunx --package github:HeiTuz/MPW mpw update`로 실행해도 됩니다. `mpw` 명령이 하는 일은 호스트별로 아래 두 줄을 실행하는 것과 같습니다.
 
 ```sh
 codex plugin marketplace upgrade heituz && codex plugin add mpw@heituz
