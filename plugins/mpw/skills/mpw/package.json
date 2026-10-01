@@ -1,10 +1,11 @@
 {
   "name": "heituzmpw",
-  "version": "3.2.2",
+  "version": "3.3.0",
   "description": "MPW prompt-writing skill: plugin build, release tooling, and skill payload installer.",
   "license": "MIT",
   "type": "module",
   "bin": {
+    "mpw": "scripts/mpw.mjs",
     "heituzmpw": "scripts/install.mjs",
     "heituzmpw-install": "scripts/install.mjs"
   },

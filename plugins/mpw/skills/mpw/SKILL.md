@@ -3,12 +3,12 @@ name: mpw
 description: "프롬프트를 새로 작성하거나 검토·퇴고하고, 대상 모델·도구에 맞게 변환한다. 작업지시·시스템·자동화·팀 작업·업무·디자인·이미지·영상 프롬프트에 사용한다. '프롬프트 만들어줘/검토해줘/다듬어줘', 기존 프롬프트의 부분 수정에 발동한다. 실제 코드 구현·이미지 생성·문서 제작만 요청한 경우에는 해당 실행 스킬을 쓴다."
 license: MIT
 metadata:
-  version: "3.2.2"
+  version: "3.3.0"
   category: prompt-writing
   locale: ko-KR
   doctrine: intent-first-progressive-disclosure
   host_surface: plugin
-  canonical_source: "HeiTuz/MPW SKILL.md v3.2.2"
+  canonical_source: "HeiTuz/MPW SKILL.md v3.3.0"
   updated_at: "2026-10-02"
   model_claims_reviewed_at: "2026-10-02"
   platform_roster_reviewed_at: "2026-09-06"
@@ -66,6 +66,7 @@ metadata:
 | 영상 생성 | `references/image/surfaces.md#0 "references/image/lanes.md#영상 공통 규칙"` |
 | 실행 작업·자동화 지시 | `references/templates/delegation.md` |
 | 텍스트 모델 적응·변환 | `"references/model-playbooks.md#공통 적응 규칙,공급자 색인"` 뒤 색인이 가리키는 대상 공급자의 날짜 절을 `"references/model-playbooks.md#2026-09-25"`처럼 이어 읽는다 |
+| 이미지·영상 프롬프트의 엔진 간 변환 | `references/image/prompt-conversion.md` 뒤 [model-routing.md](references/image/model-routing.md) §6에서 대상 엔진 어댑터의 해당 절만 이어 읽는다 |
 
 | 필요한 판단 | 읽을 자료 |
 |---|---|
