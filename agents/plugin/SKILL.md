@@ -66,6 +66,7 @@ metadata:
 | 영상 생성 | `references/image/surfaces.md#0 "references/image/lanes.md#영상 공통 규칙"` |
 | 실행 작업·자동화 지시 | `references/templates/delegation.md` |
 | 텍스트 모델 적응·변환 | `"references/model-playbooks.md#공통 적응 규칙,공급자 색인"` 뒤 색인이 가리키는 대상 공급자의 날짜 절을 `"references/model-playbooks.md#2026-09-25"`처럼 이어 읽는다 |
+| 이미지·영상 프롬프트의 엔진 간 변환 | `references/image/prompt-conversion.md` 뒤 [model-routing.md](references/image/model-routing.md) §6에서 대상 엔진 어댑터의 해당 절만 이어 읽는다 |
 
 | 필요한 판단 | 읽을 자료 |
 |---|---|
