@@ -68,6 +68,7 @@ MPW는 HeiTuz 마켓플레이스 플러그인 `mpw@heituz`로 배포한다. 카�
 - 역할 매핑: Codex coding surface는 prime으로 운용한다. native subagent가 있으면 planner=read-only planning/research, worker=bounded implementation, critic=independent verifier로 할당한다.
 - 모델 선택 위치: Codex profile, model picker, CLI config, or API caller configuration. 공개 routing vocabulary는 fast/read-only, balanced/agentic, strongest-reasoning/high-risk만 쓴다.
 - fallback: [model-playbooks.md](model-playbooks.md) §역할·권한 라우팅의 단일 모델 경로를 따른다.
+- 선택형 질문 도구: 이미지 프롬프트 인터뷰([image/prompt-interview.md](image/prompt-interview.md))는 세션에 노출된 `request_user_input` 계열 도구로 묻는다. Plan 모드의 `request_user_input`은 응답을 기다리고, Default 모드에 `request_user_input_async`가 있으면 그것을 쓴다. 문항 3개 이하, 문항당 선택지 2~3개, 추천안은 맨 앞에 두고 라벨 끝에 `(Recommended)`를 붙이며, 자유 답 칸은 도구가 자동으로 붙이므로 '기타'를 만들지 않는다. 두 도구 모두 없는 실행(예: `codex exec`)이면 번호 목록으로 묻는다.
 
 ### Claude Code
 
@@ -75,6 +76,7 @@ MPW는 HeiTuz 마켓플레이스 플러그인 `mpw@heituz`로 배포한다. 카�
 - 역할 매핑: 단일 Claude 세션이면 prime이 기본이다. 하위 에이전트나 task 기능이 있으면 planner는 read-only 조사, worker는 bounded edit/research, critic은 frozen artifact review로 보낸다.
 - 모델 선택 위치: Claude 앱/CLI/프로젝트 설정. 이 저장소에는 모델명이나 plan 이름을 쓰지 않는다.
 - fallback: [model-playbooks.md](model-playbooks.md) §역할·권한 라우팅의 단일 모델 경로를 따른다.
+- 선택형 질문 도구: 이미지 프롬프트 인터뷰는 `AskUserQuestion`으로 묻는다. 한 번에 문항 4개 이하, 문항당 선택지 2~4개이며 자유 답 칸은 도구가 붙인다. 도구가 노출되지 않는 비대화형 실행이면 번호 목록으로 묻는다.
 
 ### ChatGPT
 
@@ -82,6 +84,7 @@ MPW는 HeiTuz 마켓플레이스 플러그인 `mpw@heituz`로 배포한다. 카�
 - 역할 매핑: 단일 대화는 prime이다. 별도 에이전트 실행이 제공될 때만 core 역할로 나눈다.
 - 모델 선택 위치: ChatGPT 모델 선택기와 워크스페이스 설정. 이 저장소는 모델을 지정하지 않는다.
 - fallback: [model-playbooks.md](model-playbooks.md) §역할·권한 라우팅의 단일 모델 경로를 따른다.
+- 선택형 질문 도구: 대화 표면에 선택형 질문 기능이 노출되면 그것을 쓰고, 없으면 번호 목록으로 묻는다.
 
 ## 어댑터 작성 규칙
 
