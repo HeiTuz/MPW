@@ -21,6 +21,16 @@
 
 감정의 평가어 대신 무게가 실린 발, 어깨의 기울기와 시선의 도착점을 적는다. 카메라를 응시해도 자세가 긴장돼야 하는 것은 아니다.
 
+### 무게·접점 단서 (관측 2026-10, 출처 1건)
+
+위 표에서 자세 축을 고른 뒤 몸이 어디에 무게를 싣고 무엇에 닿는지 한 줄을 더하면 자세에 물리적 이유가 생긴다. 결과를 가르는 단서 하나만 쓴다.
+
+| 단서 | 결과 문구 | 화면에서 읽히는 것 |
+|---|---|---|
+| 한쪽 다리 지지 | `weight settled onto the straight standing leg, the other heel eased off the floor` | 골반 높이 차, 밑단과 팬츠 브레이크의 좌우 차이 |
+| 팔꿈치 지지 | `elbow braced on the thigh, head inclining toward the open palm` | 앉은 자세의 하중, 소매 접힘과 무릎 위 원단 눌림 |
+| 머리카락 접촉 | `fingertips threaded loosely into the strands near the temple` | 손이 얼굴 옆에 머무는 이유, 손목 각도와 헤어 결 |
+
 ## 소재·질감
 
 소재는 촉감 형용이 아니라 빛이 표면에서 어떻게 움직이는지로 쓴다. 의류 종류와 착용 형태를 먼저 정하고, 소재의 빛 반응과 지정 색·세부 구조를 연결한다.
@@ -39,6 +49,8 @@
 | 오간자 organza | 얇은 층 사이로 빛이 통과하고 겹친 구역은 어두워진다 | 비노출을 요청했다면 불투명 이너를 보존하고, 그 위 얇은 레이어의 윤곽과 겹침을 적는다 |
 | 벨벳 velvet | 빛 방향에 따라 깊은 암부와 부드러운 하이라이트가 갈린다 | 딥네이비 벨벳 블레이저, plush shadow, 낮은 광택 |
 | 테크 패브릭 tech fabric | 물방울·코팅 표면에 작은 specular가 생긴다 | 그레이 테크 파카, 코팅 표면, crisp fold |
+| 테리 terry | 루프 파일이 빛을 잘게 흩고 그림자가 보송하게 남는다 (관측 2026-10, 출처 1건) | 화이트 테리 로브, `looped pile texture`, 도톰한 칼라 볼륨 |
+| 페이턴트·비닐 patent·vinyl | 곡면을 따라 길고 액체 같은 반사가 미끄러지고 반사 경계가 또렷하다 (관측 2026-10, 출처 1건) | 블랙 페이턴트 플랫폼 힐, `liquid reflections skating along the curve`, 단단한 형태 |
 
 ## 조명 레시피
 
