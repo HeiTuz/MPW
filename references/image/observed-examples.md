@@ -46,6 +46,12 @@ street portrait of a man standing perfectly still in a crowded crosswalk, sharp 
 flat-design infographic illustration, woman in a coral blazer holding a piggy bank, clean white background, minimal geometric shapes, coral and navy palette, consistent line weight, editorial style, slide 3 of a finance tips series --ar 9:16 --style raw
 ```
 
+모자 챙 그늘로 얼굴 빛을 나눈 한낮 시장 인물 (관측 2026-10, 출처 1건):
+
+```text
+editorial portrait in a busy open-air citrus market at noon, a woman in a long cream raw-linen dress with tonal floral embroidery, a wide straw hat brim throwing shade across her brow and eyes while sun lands on her lips and shoulders, a curl of orange peel in her hand beside crates of lemons, stallholders talking in the soft background, pale limestone facades under a high clear sky, warm natural light, saturated produce colors --ar 9:16 --raw
+```
+
 ## FLUX
 
 짧은 조명과 빈 카피 공간을 지정한 제품 (관측 2026-09, 출처 1건):

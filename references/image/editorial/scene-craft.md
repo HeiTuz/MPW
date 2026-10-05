@@ -21,15 +21,18 @@
 
 감정의 평가어 대신 무게가 실린 발, 어깨의 기울기와 시선의 도착점을 적는다. 카메라를 응시해도 자세가 긴장돼야 하는 것은 아니다.
 
-### 무게·접점 단서 (관측 2026-10, 출처 1건)
+### 무게·접점 단서 (관측 2026-10)
 
 위 표에서 자세 축을 고른 뒤 몸이 어디에 무게를 싣고 무엇에 닿는지 한 줄을 더하면 자세에 물리적 이유가 생긴다. 결과를 가르는 단서 하나만 쓴다.
 
 | 단서 | 결과 문구 | 화면에서 읽히는 것 |
 |---|---|---|
-| 한쪽 다리 지지 | `weight settled onto the straight standing leg, the other heel eased off the floor` | 골반 높이 차, 밑단과 팬츠 브레이크의 좌우 차이 |
-| 팔꿈치 지지 | `elbow braced on the thigh, head inclining toward the open palm` | 앉은 자세의 하중, 소매 접힘과 무릎 위 원단 눌림 |
-| 머리카락 접촉 | `fingertips threaded loosely into the strands near the temple` | 손이 얼굴 옆에 머무는 이유, 손목 각도와 헤어 결 |
+| 한쪽 다리 지지 | `weight settled onto the straight standing leg, the other heel eased off the floor` | 골반 높이 차, 밑단과 팬츠 브레이크의 좌우 차이 (출처 1건) |
+| 팔꿈치 지지 | `elbow braced on the thigh, head inclining toward the open palm` | 앉은 자세의 하중, 소매 접힘과 무릎 위 원단 눌림 (출처 1건) |
+| 머리카락 접촉 | `fingertips threaded loosely into the strands near the temple` | 손이 얼굴 옆에 머무는 이유, 손목 각도와 헤어 결 (출처 1건) |
+| 무릎 지지 | `kneeling on both knees, torso held upright over the hips, one hand lifted toward the chin` | 무릎이 닿은 바닥면, 허벅지 위 원단 장력, 직립한 상체와 허리선 (출처 1건) |
+| 낮게 웅크림 | `crouched low with the knees drawn close, forearms over the knees, hands reaching toward what is in front` | 접힌 허리와 바닥 가까이 내려온 밑단, 발목과 신발 윤곽, 낮아진 시선 높이 (출처 2건) |
+| 뒤로 짚은 손바닥 | `both palms braced back on a waist-high ledge, hips resting against it, shoulders easing open` | 열린 어깨와 칼라, 손목 각도, 손바닥이 닿은 난간 재질 (출처 1건) |
 
 ## 소재·질감
 
@@ -51,6 +54,8 @@
 | 테크 패브릭 tech fabric | 물방울·코팅 표면에 작은 specular가 생긴다 | 그레이 테크 파카, 코팅 표면, crisp fold |
 | 테리 terry | 루프 파일이 빛을 잘게 흩고 그림자가 보송하게 남는다 (관측 2026-10, 출처 1건) | 화이트 테리 로브, `looped pile texture`, 도톰한 칼라 볼륨 |
 | 페이턴트·비닐 patent·vinyl | 곡면을 따라 길고 액체 같은 반사가 미끄러지고 반사 경계가 또렷하다 (관측 2026-10, 출처 1건) | 블랙 페이턴트 플랫폼 힐, `liquid reflections skating along the curve`, 단단한 형태 |
+| 시퀸 sequin | 작은 원판마다 키를 따로 받아 경계가 분명한 점광이 흩어지고, 몸이 움직이면 반짝이는 자리가 옮겨 간다 (관측 2026-10, 출처 2건) | 샴페인 시퀸 탑, `each sequin catching the key as its own crisp point`, 불투명 안감 위 고른 원판 결 |
+| 페이크 퍼 faux fur | 긴 털끝이 빛을 받아 윤곽이 부드럽게 번지고 털 사이 깊은 곳은 어둡게 가라앉는다 (관측 2026-10, 출처 1건) | 오버사이즈 페이크 퍼 재킷, `long pile with lit tips softening the outline`, 부푼 칼라 볼륨 |
 
 ## 조명 레시피
 
@@ -65,6 +70,7 @@
 | 네온 혼합 | `practical neon glow`, 피부와 의상 가장자리에 컬러 분리 | 한쪽 rim은 cyan, 반대쪽 fill은 magenta/orange, 젖은 표면에 color streak | 밤 골목 |
 | low key split | `low key split light, key:fill 8:1`, 얼굴 반쪽만 읽힌다 | 암부가 깊고 의상 윤곽은 rim으로 분리, 하이라이트 면적 작음 | 로우키 드라마 |
 | clamshell beauty | `clamshell soft light, key:fill 1:1`, 눈 밑 그림자 완화 | 위아래 균등광, 피부 결은 유지하고 하이라이트는 부드럽게 퍼짐 | 뷰티 클로즈업 |
+| 낮은 불빛 | `low firelight from below the frame, warm flicker on the palms and the underside of the face` | 턱과 코 밑이 위로 밝아지고 눈두덩 위는 어두워짐, 손바닥과 소매 끝만 주황으로 뜨고 뒤 하늘은 찬 해질녘 색으로 남음 (관측 2026-10, 출처 1건) | 겨울 저녁 야외 |
 
 ## 시즌·로케이션 무드
 
