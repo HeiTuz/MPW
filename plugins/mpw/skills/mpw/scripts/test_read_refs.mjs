@@ -37,6 +37,7 @@ assert.equal(extractSection(sample, "0-1").body, "## 0-1. Other\nother");
 assert.equal(extractSection(sample, "Named section").body, "## Named section\nnamed");
 assert.equal(extractSection(sample, "3.2~0-1").body, "### 3.2 Second child\ntwo\n## 0-1. Other\nother");
 assert.ok(extractSection(sample, "9").error, "headings inside fences are ignored");
+assert.equal(extractSection(sample, "Named-section").body, "## Named section\nnamed", "hyphens match spaces in titled keys");
 
 const cli = spawnSync(process.execPath, [
   path.join(root, "scripts", "read_refs.mjs"),

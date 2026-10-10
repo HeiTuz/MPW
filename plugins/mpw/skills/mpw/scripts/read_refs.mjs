@@ -43,6 +43,14 @@ export const BUNDLES = {
   video: ["references/image/surfaces.md#0", "references/image/lanes.md#영상 공통 규칙"],
   // 실행 작업·자동화 지시.
   delegation: ["references/templates/delegation.md"],
+  // 팀 작업 지시: 위임 계약 + TEAM 골격 + 역할·권한 라우팅.
+  team: [
+    "references/templates/delegation.md",
+    "references/templates/team.md",
+    "references/model-playbooks.md#역할·권한 라우팅~Surface-matched evidence",
+  ],
+  // 리서치·추출·분류·목록 처리.
+  research: ["references/templates/model.md", "references/research.md"],
   // 텍스트 모델 적응·변환. 색인이 가리키는 공급자의 날짜 절을 덧붙인다.
   "text-model-adapt": ["references/model-playbooks.md#공통 적응 규칙,공급자 색인"],
   // 이미지·영상 프롬프트의 엔진 간 변환. §6 색인이 가리키는 엔진 어댑터 절을 덧붙인다.
@@ -67,7 +75,14 @@ export function parseHeadings(text) {
   return { lines, headings };
 }
 
+// Keys match case-insensitively; hyphens and spaces are interchangeable so an
+// anchor-style "역할·권한-라우팅" still finds "역할·권한 라우팅". Numbered keys
+// ("0-1", "3.2") are matched on the raw title before this normalization.
 function normalize(value) {
+  return value.replace(/^§/, "").replace(/`/g, "").trim().toLowerCase().replace(/[-\s]+/g, " ");
+}
+
+function rawKey(value) {
   return value.replace(/^§/, "").replace(/`/g, "").trim().toLowerCase();
 }
 
@@ -78,13 +93,14 @@ function numberedKeyMatches(title, key) {
   return new RegExp(`^${escaped}(?:\\.(?![0-9])|\\s|$)`).test(title);
 }
 
-export function findHeading(headings, rawKey) {
-  const key = normalize(rawKey);
+export function findHeading(headings, rawKeyInput) {
+  const numbered = rawKey(rawKeyInput);
+  if (/^[0-9]+(?:[.-][0-9]+)*$/.test(numbered)) {
+    return headings.findIndex((heading) => numberedKeyMatches(rawKey(heading.title), numbered));
+  }
+  const key = normalize(rawKeyInput);
   if (!key) return -1;
   const titles = headings.map((heading) => normalize(heading.title));
-  if (/^[0-9]+(?:[.-][0-9]+)*$/.test(key)) {
-    return titles.findIndex((title) => numberedKeyMatches(title, key));
-  }
   const tests = [
     (title) => title === key,
     (title) => title.startsWith(key),
