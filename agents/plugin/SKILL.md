@@ -3,12 +3,12 @@ name: mpw
 description: "프롬프트를 새로 작성하거나 검토·퇴고하고, 대상 모델·도구에 맞게 변환한다. 작업지시·시스템·자동화·팀 작업·업무·디자인·이미지·영상 프롬프트에 사용한다. '프롬프트 만들어줘/검토해줘/다듬어줘', 기존 프롬프트의 부분 수정에 발동한다. 실제 코드 구현·이미지 생성·문서 제작만 요청한 경우에는 해당 실행 스킬을 쓴다."
 license: MIT
 metadata:
-  version: "3.3.6"
+  version: "3.3.7"
   category: prompt-writing
   locale: ko-KR
   doctrine: intent-first-progressive-disclosure
   host_surface: plugin
-  canonical_source: "HeiTuz/MPW SKILL.md v3.3.6"
+  canonical_source: "HeiTuz/MPW SKILL.md v3.3.7"
   updated_at: "2026-10-10"
   model_claims_reviewed_at: "2026-10-02"
   platform_roster_reviewed_at: "2026-10-10"
@@ -71,6 +71,7 @@ metadata:
 | 필요한 판단 | 읽을 자료 |
 |---|---|
 | 텍스트 구조·질문·수신자 적응이 복잡함 | [common.md](references/templates/common.md) |
+| 사진 연출의 `/키워드` 선택·조합·후속 변경 | [common.md](references/templates/common.md) §사진 연출의 슬래시 키워드 |
 | 사용자가 이미지 프롬프트를 인터뷰·질문 진행으로 만들자고 명시함 | [prompt-interview.md](references/image/prompt-interview.md). 명시 요청이 없으면 열지 않는다 |
 | 실행 작업·시스템·자동화용 프롬프트 | [delegation.md](references/templates/delegation.md). 응답형 시스템·도구 정의는 [contract.md](references/templates/contract.md), 장기 실행은 [goal.md](references/templates/goal.md), 팀 작업은 [team.md](references/templates/team.md) |
 | 리서치·추출·분류·목록 처리 | [model.md](references/templates/model.md); 출처 판정은 [research.md](references/research.md), 실행 단위 사이 입력·출력이 얽히면 [prompt-graph.md](references/prompt-graph.md) §5 |
@@ -93,6 +94,8 @@ metadata:
 결과와 핵심 조건을 앞에 쓴다. 단순 요청은 자연어 문장만으로 충분하다. 역할극·고정 헤딩·체크리스트·후속 메뉴·여러 버전을 자동으로 붙이지 않는다. 길이는 필요한 내용에 맞춘다. 줄일 때는 중복과 부연을 줄이고, 요청한 범위와 세부를 버리지 않는다.
 
 이미지 생성은 화면에 보여야 할 피사체·행동·관계·시각 조건을, 편집은 변경점·입력 역할·보존 조건을 쓴다. 영상은 누가 무엇을 어떻게 움직이는지와 필요한 시간 순서·소리를 쓴다. 정확 카피·대사는 원문 그대로 대상에 연결한다. 입력이 이미 전달하는 외형을 장황하게 되풀이하지 않는다. 빼고 싶은 요소는 원하는 상태로 쓰고, 제외 명사 나열은 인라인 배제 문법·별도 필드가 있는 표면에서만 쓴다([surface-contracts.md](references/image/surface-contracts.md) §4). 점·가르마처럼 좌우가 있는 특징은 인물 본인 기준으로 쓴다([from-image.md](references/image/from-image.md) §3.3). 색 이름만 받은 조건은 색 이름 그대로 쓰고, 여러 컷의 톤을 맞추려는 목적이어도 HEX 코드를 새로 만들어 넣지 않는다. 정확한 색 값이 필요해 보이면 블록 밖에서 사용자의 기준 색을 묻거나 제안한다([surface-contracts.md](references/image/surface-contracts.md) §4.1).
+
+사진 연출·빠른 스타일 변주에는 [common.md](references/templates/common.md) §사진 연출의 슬래시 키워드에 따라 `/키워드` 조합도 적극 활용한다.
 
 출력 직전 **요청 대비 누락·추가·모순**을 확인한다. 요청한 행동과 산출물 수, 응답 형식, 언어, 정확 문자열, 변경·보존 범위가 모두 맞는지 대조하고 틀린 부분을 고친 뒤 낸다. 이 검수 목록을 답변에 자동으로 출력하지 않는다. 부분 수정 밖의 문구와 정확 문자열은 문자 그대로 대조한다. 독립적으로 사용할 여러 프롬프트는 각각 필요한 공통 조건을 포함한다. 한 컷의 여러 요구를 임의로 별도 컷으로 나누지 않는다.
 
