@@ -17,6 +17,7 @@ Checks the skill's own hardlines against its files:
 - no Cyrillic/Greek lookalike letters
 - canonical rules defined exactly once (gate necessity test, non-inferable slot list)
 - package.json version matches SKILL.md frontmatter version
+- agents/plugin/SKILL.md body (after its host-integration block) is byte-identical to SKILL.md body
 - runtime/model names and operator-specific address stay out of core prompt files except image/video engine names
 - documentation scan for labels, example caps, approximate lengths, lookalikes, and I0
   covers SKILL.md plus every references/** Markdown file; FILES is the required-existence list
@@ -281,6 +282,38 @@ def parse_frontmatter(fm, use_yaml=True):
                 if value:
                     metadata[field] = value
     return version or metadata.get("version"), metadata
+
+
+def skill_body(text, overlay=False):
+    """Body after frontmatter and the H1; the overlay also drops its leading host-integration blockquote."""
+    m = re.match(r"---\n.*?\n---\n", text, re.S)
+    body = text[m.end():] if m else text
+    lines = body.split("\n")
+    while lines and not lines[0].startswith("# "):
+        lines.pop(0)
+    if lines:
+        lines.pop(0)
+    if overlay:
+        while lines and (not lines[0].strip() or lines[0].startswith(">")):
+            lines.pop(0)
+    return "\n".join(lines).strip()
+
+
+def check_plugin_skill_sync(root, errors):
+    """The plugin overlay carries the canonical SKILL.md body verbatim; only its host block differs."""
+    canonical = root / "SKILL.md"
+    overlay = root / "agents" / "plugin" / "SKILL.md"
+    if not overlay.is_file():
+        errors.append("agents/plugin/SKILL.md: missing plugin overlay")
+        return
+    a = skill_body(canonical.read_text(encoding="utf-8"))
+    b = skill_body(overlay.read_text(encoding="utf-8"), overlay=True)
+    if a != b:
+        a_lines, b_lines = a.split("\n"), b.split("\n")
+        first = next((i for i, (x, y) in enumerate(zip(a_lines, b_lines)) if x != y), min(len(a_lines), len(b_lines)))
+        errors.append(
+            f"agents/plugin/SKILL.md: body diverges from SKILL.md at body line {first + 1} — resync the overlay after editing the kernel"
+        )
 
 
 def check_review_stamps(metadata, errors, today):
@@ -1011,6 +1044,8 @@ def main():
         if not skill_version:
             errors.append("frontmatter: version missing")
         check_review_stamps(metadata, errors, today)
+
+        check_plugin_skill_sync(ROOT, errors)
 
         try:
             pkg_version = json.loads((ROOT / "package.json").read_text(encoding="utf-8")).get("version")

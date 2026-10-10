@@ -33,6 +33,7 @@
   {"case":"kitchen exclusion chain","input":"fail/phrasing-kitchen-exclusions.txt","args":["--profile","assembled"],"expect":{"ok":false,"errors":["phrasing/exclusion-list"],"warnings_exclude":["phrasing/negation"]}},
   {"case":"lake quality pile","input":"fail/phrasing-lake-tags.txt","args":["--profile","assembled"],"expect":{"ok":false,"errors":["phrasing/quality-tag"]}},
   {"case":"portrait artificial texture","input":"fail/portrait-id-texture.txt","args":["--profile","assembled"],"expect":{"ok":false,"errors":["portrait/skin-token"]}},
+  {"case":"portrait flash skin repeat","input":"fail/portrait-flash-skin-repeat.txt","args":["--profile","assembled"],"expect":{"ok":false,"errors":["portrait/skin-repeat"]}},
   {"case":"portrait fixed skin color","input":"fail/portrait-fixed-color.txt","args":["--profile","assembled"],"expect":{"ok":false,"errors":["portrait/nationality-skin"]}},
   {"case":"cabin unsupported grammar","input":"fail/input-cabin-engine.txt","args":["--profile","assembled","--engine","midjourney"],"expect":{"ok":false,"errors":["input/engine-scope"]}},
   {"case":"mural native engine restriction","input":"fail/input-mural-engine.txt","args":["--engine","higgsfield"],"expect":{"ok":false,"errors":["input/engine-scope"]}},
