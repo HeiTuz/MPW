@@ -8,7 +8,7 @@ import os from "node:os";
 import path from "node:path";
 import { spawnSync } from "node:child_process";
 import { fileURLToPath } from "node:url";
-import { extractSection, parseHeadings } from "./read_refs.mjs";
+import { BUNDLES, expandBundles, extractSection, parseHeadings, readTargets } from "./read_refs.mjs";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 
@@ -104,16 +104,41 @@ for (const line of skill.split("\n")) {
 assert.ok(checked >= 10, "expected SKILL.md section pointers, found " + checked);
 assert.deepEqual(failures, [], "unresolved SKILL.md section pointers");
 
-// Ready-made read_refs argument bundles in SKILL.md tables must all resolve.
+// Named bundles: BUNDLES is the only definition. Every bundle must resolve, every
+// bundle name in SKILL.md tables must exist, and every bundle must be named in
+// SKILL.md so dead bundles do not accumulate. Extra read_refs arguments written
+// in table rows must still resolve.
 function shellWords(text) {
   return [...text.matchAll(/"([^"]*)"|(\S+)/g)].map((match) => match[1] ?? match[2]);
 }
+for (const [name, targets] of Object.entries(BUNDLES)) {
+  assert.match(name, /^[a-z0-9-]+$/, "bundle names stay shell-safe: " + name);
+  const result = readTargets(targets);
+  assert.equal(result.error, undefined, "bundle " + name + " does not resolve: " + result.error);
+  assert.ok(result.text.length > 100, "bundle " + name + " is empty");
+}
+assert.deepEqual(expandBundles(["--bundle", "video", "a.md#1", "--bundle=delegation"]).targets, [
+  ...BUNDLES.video,
+  "a.md#1",
+  ...BUNDLES.delegation,
+]);
+assert.deepEqual(expandBundles(["--bundle", "nope"]).unknown, ["nope"]);
+
 const bundleFailures = [];
-let bundles = 0;
+const namedInSkill = new Set();
+let bundleTable = false;
 for (const line of skill.split("\n")) {
   if (!line.startsWith("|")) continue;
+  if (line.includes("--bundle")) bundleTable = true;
+  else if (line.startsWith("|---")) continue;
+  else if (!line.includes("`")) bundleTable = false;
+  if (bundleTable) {
+    for (const code of line.matchAll(/`([a-z0-9-]+)`/g)) {
+      if (!Object.hasOwn(BUNDLES, code[1])) bundleFailures.push("unknown bundle name " + code[1]);
+      else namedInSkill.add(code[1]);
+    }
+  }
   for (const code of line.matchAll(/`([^`]*references\/[^`]*)`/g)) {
-    bundles += 1;
     for (const word of shellWords(code[1])) {
       const [file, specs] = word.split("#");
       const full = path.join(root, file);
@@ -127,6 +152,21 @@ for (const line of skill.split("\n")) {
     }
   }
 }
-assert.ok(bundles >= 5, "expected read_refs bundles in SKILL.md, found " + bundles);
-assert.deepEqual(bundleFailures, [], "unresolved read_refs bundles in SKILL.md");
-console.log("read_refs: section extraction ok; " + checked + " SKILL.md section pointers and " + bundles + " bundles resolve");
+assert.deepEqual(bundleFailures, [], "unresolved read_refs bundles or arguments in SKILL.md");
+assert.deepEqual([...namedInSkill].sort(), Object.keys(BUNDLES).sort(), "SKILL.md must name every bundle exactly");
+
+const viaBundle = spawnSync(process.execPath, [path.join(root, "scripts", "read_refs.mjs"), "--bundle", "gpt-image-edit", "references/image/from-image.md#1"], { encoding: "utf8" });
+assert.equal(viaBundle.status, 0, viaBundle.stderr);
+assert.deepEqual(viaBundle.stdout.match(/^==> .*$/gm).map((line) => line.split(" (L")[0]), [
+  "==> references/image/surfaces.md §0",
+  "==> references/image/surface-contracts.md §3.2",
+  "==> references/image/surface-contracts.md §3.3",
+  "==> references/image/from-image.md §1",
+]);
+const unknownBundle = spawnSync(process.execPath, [path.join(root, "scripts", "read_refs.mjs"), "--bundle", "nope"], { encoding: "utf8" });
+assert.equal(unknownBundle.status, 2);
+assert.match(unknownBundle.stderr, /unknown bundle: nope/);
+const listing = spawnSync(process.execPath, [path.join(root, "scripts", "read_refs.mjs"), "--bundles"], { encoding: "utf8" });
+assert.equal(listing.status, 0, listing.stderr);
+for (const name of Object.keys(BUNDLES)) assert.match(listing.stdout, new RegExp("^" + name + "  \\(\\d+ chars\\)$", "m"));
+console.log("read_refs: section extraction ok; " + checked + " SKILL.md section pointers and " + Object.keys(BUNDLES).length + " named bundles resolve");
