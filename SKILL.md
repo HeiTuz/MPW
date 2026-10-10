@@ -3,7 +3,7 @@ name: mpw
 description: "프롬프트를 새로 작성하거나 검토·퇴고하고, 대상 모델·도구에 맞게 변환한다. 작업지시·시스템·자동화·팀 작업·업무·디자인·이미지·영상 프롬프트에 사용한다. '프롬프트 만들어줘/검토해줘/다듬어줘', 기존 프롬프트의 부분 수정에 발동한다. 실제 코드 구현·이미지 생성·문서 제작만 요청한 경우에는 해당 실행 스킬을 쓴다. 이 파일과 선택한 참고 절은 출력 상한을 줄이지 말고 한 번에 온전히 읽는다."
 license: MIT
 metadata:
-  version: "3.3.10"
+  version: "3.3.11"
   category: prompt-writing
   locale: ko-KR
   doctrine: intent-first-progressive-disclosure
@@ -48,11 +48,13 @@ metadata:
 | 대상 미정·GPT Image 인물·셀피·패션 화보 새 이미지 | `gpt-image-portrait` |
 | 대상 미정·GPT Image 원본 편집 | `gpt-image-edit` (도해·슬라이드·UI·만화·로고는 `gpt-image-edit-structured`). 참조 사진의 역할·관찰이 필요하면 `references/image/from-image.md#1`을 덧붙인다 |
 | 영상 생성 | `video` |
-| 실행 작업·자동화 지시 | `delegation`. 응답형 시스템·도구 정의는 [contract.md](references/templates/contract.md), 장기 실행은 [goal.md](references/templates/goal.md), 팀 작업은 [team.md](references/templates/team.md) |
+| 실행 작업·자동화 지시 | `delegation`. 응답형 시스템·도구 정의는 [contract.md](references/templates/contract.md), 장기 실행은 [goal.md](references/templates/goal.md) |
+| 여러 에이전트의 팀 작업 지시 | `team` ([team.md](references/templates/team.md) 골격과 역할 라우팅 포함) |
+| 리서치·추출·분류·목록 처리 | `research` |
 | 텍스트 모델 적응·변환 | `text-model-adapt` 뒤에 색인이 가리키는 공급자의 날짜 절(예: `"references/model-playbooks.md#2026-09-25"`) |
 | 이미지·영상 프롬프트의 엔진 간 변환 | `image-prompt-conversion` 뒤에 [model-routing.md](references/image/model-routing.md) §6 색인이 가리키는 엔진 어댑터 절 |
 
-묶음 표에 없는 판단(리서치·업무 형식·지정 엔진 문법·참조 이미지·캐릭터시트·합성 연출·HyperFrames 지시·팀 역할·기계 형식)은 [reading-map.md](references/reading-map.md)의 표에서 자료를 고른다. 절이 적히지 않은 긴 자료는 `--toc`로 제목을 보고 필요한 절만 읽는다.
+묶음 표에 없는 판단(업무 형식·지정 엔진 문법·참조 이미지·캐릭터시트·합성 연출·HyperFrames 지시·호출 배선·기계 형식)은 [reading-map.md](references/reading-map.md)의 표에서 자료를 고른다. 절이 적히지 않은 긴 자료는 `--toc`로 제목을 보고 필요한 절만 읽는다.
 
 ## 작성과 검수
 
