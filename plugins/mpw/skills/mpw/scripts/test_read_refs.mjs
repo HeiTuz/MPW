@@ -135,6 +135,21 @@ assert.deepEqual(expandBundles(["--bundle", "video", "a.md#1", "--bundle=delegat
 assert.deepEqual(expandBundles(["--bundle", "nope"]).unknown, ["nope"]);
 
 const bundleFailures = [];
+// reading-map.md rows carry copy-ready read_refs arguments; they must resolve too.
+for (const line of fs.readFileSync(path.join(root, "references", "reading-map.md"), "utf8").split("\n")) {
+  if (!line.startsWith("|")) continue;
+  for (const code of line.matchAll(/`([^`]*references\/[^`]*)`/g)) {
+    for (const word of shellWords(code[1])) {
+      if (word.startsWith("--")) continue;
+      const [file, specs] = word.split("#");
+      const full = path.join(root, file);
+      if (!fs.existsSync(full)) { bundleFailures.push("reading-map: " + word); continue; }
+      for (const spec of (specs ?? "").split(",").filter(Boolean)) {
+        if (extractSection(fs.readFileSync(full, "utf8"), spec).error) bundleFailures.push("reading-map: " + word);
+      }
+    }
+  }
+}
 const namedInSkill = new Set();
 let bundleTable = false;
 for (const line of skill.split("\n")) {
