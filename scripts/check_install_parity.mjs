@@ -5,6 +5,7 @@
 //                                         [--home <dir>] [--codex-home <dir>] [--claude-home <dir>]
 //                                         [--changed-since <rev>]
 // Exit codes: 0 all match, 1 mismatch, 2 not installed / unreadable / bad arguments.
+// Host runtime lock files (.in_use/) are reported under "runtime" and never count as a mismatch.
 import crypto from "node:crypto";
 import fs from "node:fs";
 import os from "node:os";
@@ -43,13 +44,19 @@ function treeHashes(dir) {
   return files;
 }
 
+// Host runtime bookkeeping inside an installed cache (Claude Code's .in_use/<pid> lock files) is not payload.
+export function isHostRuntimeEntry(rel) {
+  return /^\.in_use(?:\/|$)/u.test(rel);
+}
+
 export function compareTrees(expectedDir, actualDir) {
   const expected = treeHashes(expectedDir);
   const actual = treeHashes(actualDir);
   const missing = Object.keys(expected).filter((key) => !(key in actual)).sort();
-  const extra = Object.keys(actual).filter((key) => !(key in expected)).sort();
+  const runtime = Object.keys(actual).filter((key) => !(key in expected) && isHostRuntimeEntry(key)).sort();
+  const extra = Object.keys(actual).filter((key) => !(key in expected) && !isHostRuntimeEntry(key)).sort();
   const changed = Object.keys(expected).filter((key) => key in actual && expected[key] !== actual[key]).sort();
-  return { files: Object.keys(expected).length, missing, extra, changed };
+  return { files: Object.keys(expected).length, missing, extra, changed, runtime };
 }
 
 function versionKey(value) {
@@ -163,7 +170,7 @@ function main(argv = process.argv.slice(2)) {
   if (!opts.json) {
     for (const host of hosts) {
       const delta = [...host.missing, ...host.extra, ...host.changed];
-      console.log(host.host + "\t" + host.status + "\t" + (host.destination || "-") + "\t" + (delta.length ? delta.join(",") : "-"));
+      console.log(host.host + "\t" + host.status + "\t" + (host.destination || "-") + "\t" + (delta.length ? delta.join(",") : "-") + (host.runtime?.length ? "\truntime:" + host.runtime.join(",") : ""));
     }
     if (shipped.length) console.warn("untracked_shipped\t" + shipped.join(","));
     if (opts.changedSince) console.log("runtime_payload_changed\t" + (payloadChanged.length ? payloadChanged.join(",") : "no"));

@@ -3,7 +3,7 @@ name: mpw
 description: "프롬프트를 새로 작성하거나 검토·퇴고하고, 대상 모델·도구에 맞게 변환한다. 작업지시·시스템·자동화·팀 작업·업무·디자인·이미지·영상 프롬프트에 사용한다. '프롬프트 만들어줘/검토해줘/다듬어줘', 기존 프롬프트의 부분 수정에 발동한다. 실제 코드 구현·이미지 생성·문서 제작만 요청한 경우에는 해당 실행 스킬을 쓴다."
 license: MIT
 metadata:
-  version: "3.3.4"
+  version: "3.3.5"
   category: prompt-writing
   locale: ko-KR
   doctrine: intent-first-progressive-disclosure
@@ -54,7 +54,7 @@ metadata:
 | 요청 | `node scripts/read_refs.mjs` 뒤에 붙일 인자 |
 |---|---|
 | 대상 미정·GPT Image 새 이미지 | `references/image/surfaces.md#0 references/image/surface-contracts.md#3.2` (도해·슬라이드·UI·만화·로고는 `#3.2,3.4`) |
-| 대상 미정·GPT Image 인물·셀피·패션 화보 새 이미지 | `references/image/surfaces.md#0 references/image/surface-contracts.md#3.2 references/image/editorial/portrait-brief.md` |
+| 대상 미정·GPT Image 인물·셀피·패션 화보 새 이미지 | `references/image/surfaces.md#0 references/image/surface-contracts.md#3.2 references/image/editorial/portrait-brief.md "references/image/compiler.md#피부·재질"` |
 | 대상 미정·GPT Image 원본 편집 | `references/image/surfaces.md#0 references/image/surface-contracts.md#3.2,3.3` (도해·슬라이드·UI·만화·로고는 `#3.2,3.3,3.4`) |
 | 영상 생성 | `references/image/surfaces.md#0 "references/image/lanes.md#영상 공통 규칙"` |
 | 실행 작업·자동화 지시 | `references/templates/delegation.md` |

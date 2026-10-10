@@ -79,6 +79,7 @@ manifest 검사는 한 행에 하나의 객체를 받는다. 필수 텍스트는
 | `portrait/skin-token` | 오류, assembled | 조합이 금지된 피부 질감 토큰 |
 | `portrait/nationality-skin` | 오류, assembled | 국적·인종으로 피부색을 고정 |
 | `portrait/glow-stack` | 경고, assembled | 매트 한정 없이 광택 표현이 과도하게 겹침 |
+| `portrait/skin-repeat` | native 경고, assembled 오류 | 피부 표면 질감 조건이 둘 이상의 구획·문단에 반복됨 |
 | `manifest/parse` | 오류, manifest | JSON 행 파싱 실패 |
 | `manifest/not-object` | 오류, manifest | 행이 객체가 아님 |
 | `manifest/empty` | 오류, manifest | 매니페스트에 행이 없음 |

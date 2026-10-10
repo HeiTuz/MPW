@@ -33,6 +33,7 @@ export const CODE_REGISTRY = Object.freeze({
   skinToken: { code: "portrait/skin-token", severity: { native: null, assembled: "error" }, intent: "Describe skin observations rather than synthetic texture tokens." },
   skinColor: { code: "portrait/nationality-skin", severity: { native: null, assembled: "error" }, intent: "Avoid assigning stereotyped fixed skin colors." },
   glow: { code: "portrait/glow-stack", severity: { native: null, assembled: "warning" }, intent: "Balance multiple distinct shine effects with matte regions." },
+  skinRepeat: { code: "portrait/skin-repeat", severity: { native: "warning", assembled: "error" }, intent: "State skin surface texture once instead of repeating it across sections." },
   parse: { code: "manifest/parse", severity: { native: "error", assembled: "error" }, intent: "Report invalid JSON without losing subsequent rows." },
   notObject: { code: "manifest/not-object", severity: { native: "error", assembled: "error" }, intent: "Require an object for each manifest row." },
   manifestEmpty: { code: "manifest/empty", severity: { native: "error", assembled: "error" }, intent: "Require a nonblank manifest row." },
@@ -301,6 +302,13 @@ function inspectPhrasing(result, instruction) {
     "Evaluative wording", "Specify the light, material or composition that creates the desired appearance.");
 }
 
+function inspectSkinRepeat(result, instruction) {
+  const skinTexture = /\b(?:skin[ -](?:texture|detail|pores?|grain)|fine skin detail|(?:visible|natural|open)\s+pores|pores?\s+(?:vary|visible|remain)|vellus\s+hair|(?:naturally\s+)?textured\s+skin|skin\s+remains\s+(?:naturally\s+)?textured|airbrushed)\b|피부\s*(?:결|질감|모공)|모공|잔털/iu;
+  const blocks = instruction.split(/\r?\n(?=[A-Z][A-Z0-9 &/,'’-]{1,40}:|\s*\r?\n)/u).map((block) => block.trim()).filter(Boolean);
+  const hits = blocks.filter((block) => skinTexture.test(block));
+  if (hits.length >= 2) emit(result, CODE_REGISTRY.skinRepeat, `Skin surface texture appears in ${hits.length} separate sections.`, { hint: "Keep one texture statement with its area and degree; move preservation to CONSTRAINTS once." });
+}
+
 function inspectPortrait(result, instruction) {
   evidence(result, CODE_REGISTRY.skinToken,
     snippets(/\bmicro[ -]?(?:skin(?:[ -]?texture)?|pores?|texture)\b|\b(?:realistic[ -]?)?skin(?:[ -]?texture)?[ -]?ai\b|마이크로\s*(?:피부\s*)?(?:질감|피부결)|(?:사실적(?:인)?\s*)?피부(?:\s*(?:질감|결))?\s*AI/giu, instruction),
@@ -343,6 +351,7 @@ export function checkText(input, options = {}) {
   inspectCopy(result, quotes, instruction);
   inspectSyntax(result, instruction);
   inspectPhrasing(result, instruction);
+  inspectSkinRepeat(result, instruction);
   if (result.profile === "assembled") inspectPortrait(result, instruction);
   return result;
 }
