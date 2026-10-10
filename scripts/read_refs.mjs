@@ -6,16 +6,48 @@
 //   node scripts/read_refs.mjs "references/templates/common.md#기준 원문과 누적 수정"
 //   node scripts/read_refs.mjs "references/model-playbooks.md#역할·권한 라우팅~Surface-matched evidence"
 //   node scripts/read_refs.mjs --toc references/image/lanes.md
+//   node scripts/read_refs.mjs --bundle gpt-image-portrait references/image/from-image.md#1
+//   node scripts/read_refs.mjs --bundles
 //
 // A section runs from its heading to the next heading of the same or higher
 // level. "#A,B" reads several sections, "#A~B" reads from A through the end of B,
 // and a path without "#" prints the whole file. Relative paths resolve against
 // the skill root first, then the current directory.
+//
+// "--bundle <name>" expands to the ready-made target list below, so the common
+// starting sets in SKILL.md need no hand-copied, shell-quoted arguments. Extra
+// targets after a bundle are read in order. "--bundles" lists every bundle with
+// its targets and current character count. BUNDLES is the only definition of
+// these sets; SKILL.md refers to them by name.
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
 const skillRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
+
+export const BUNDLES = {
+  // 대상 미정·GPT Image 새 이미지. 도해·슬라이드·UI·만화·로고는 -structured.
+  "gpt-image-new": ["references/image/surfaces.md#0", "references/image/surface-contracts.md#3.2"],
+  "gpt-image-new-structured": ["references/image/surfaces.md#0", "references/image/surface-contracts.md#3.2,3.4"],
+  // 대상 미정·GPT Image 인물·셀피·패션 화보 새 이미지.
+  "gpt-image-portrait": [
+    "references/image/surfaces.md#0",
+    "references/image/surface-contracts.md#3.2",
+    "references/image/editorial/portrait-brief.md",
+    "references/image/compiler.md#피부·재질",
+  ],
+  // 대상 미정·GPT Image 원본 편집. 참조 사진의 역할·관찰이 필요하면 from-image.md#1을 덧붙인다.
+  "gpt-image-edit": ["references/image/surfaces.md#0", "references/image/surface-contracts.md#3.2,3.3"],
+  "gpt-image-edit-structured": ["references/image/surfaces.md#0", "references/image/surface-contracts.md#3.2,3.3,3.4"],
+  // 영상 생성.
+  video: ["references/image/surfaces.md#0", "references/image/lanes.md#영상 공통 규칙"],
+  // 실행 작업·자동화 지시.
+  delegation: ["references/templates/delegation.md"],
+  // 텍스트 모델 적응·변환. 색인이 가리키는 공급자의 날짜 절을 덧붙인다.
+  "text-model-adapt": ["references/model-playbooks.md#공통 적응 규칙,공급자 색인"],
+  // 이미지·영상 프롬프트의 엔진 간 변환. §6 색인이 가리키는 엔진 어댑터 절을 덧붙인다.
+  "image-prompt-conversion": ["references/image/prompt-conversion.md", "references/image/model-routing.md#6"],
+};
 
 export function parseHeadings(text) {
   const lines = text.split("\n");
@@ -103,11 +135,78 @@ function tableOfContents(text) {
     .join("\n");
 }
 
+// Expand "--bundle <name>" / "--bundle=<name>" in place, keeping other targets in order.
+export function expandBundles(argv) {
+  const targets = [];
+  const unknown = [];
+  for (let index = 0; index < argv.length; index += 1) {
+    const arg = argv[index];
+    let name = null;
+    if (arg === "--bundle") {
+      index += 1;
+      name = argv[index] ?? "";
+    } else if (arg.startsWith("--bundle=")) {
+      name = arg.slice("--bundle=".length);
+    }
+    if (name === null) {
+      targets.push(arg);
+      continue;
+    }
+    if (Object.hasOwn(BUNDLES, name)) targets.push(...BUNDLES[name]);
+    else unknown.push(name);
+  }
+  return { targets, unknown };
+}
+
+// Read every target of one bundle; returns the printed text or the first error.
+export function readTargets(targets, read = (file) => fs.readFileSync(resolvePath(file), "utf8")) {
+  const chunks = [];
+  for (const target of targets) {
+    const hash = target.indexOf("#");
+    const file = hash === -1 ? target : target.slice(0, hash);
+    const specs = hash === -1 ? [] : target.slice(hash + 1).split(",").filter((spec) => spec.trim());
+    let text;
+    try {
+      text = read(file);
+    } catch {
+      return { error: `cannot read ${file}` };
+    }
+    if (specs.length === 0) {
+      chunks.push(`==> ${file}\n${text.replace(/\s+$/, "")}\n`);
+      continue;
+    }
+    for (const spec of specs) {
+      const section = extractSection(text, spec);
+      if (section.error) return { error: `${file}: ${section.error}` };
+      chunks.push(`==> ${file} §${spec.trim()} (L${section.from}-${section.to})\n${section.body}\n`);
+    }
+  }
+  return { text: chunks.join("\n") };
+}
+
+function listBundles() {
+  return Object.entries(BUNDLES)
+    .map(([name, targets]) => {
+      const result = readTargets(targets);
+      const size = result.error ? `error: ${result.error}` : `${[...result.text].length} chars`;
+      return `${name}  (${size})\n${targets.map((target) => `  ${target}`).join("\n")}`;
+    })
+    .join("\n");
+}
+
 function main(argv) {
+  if (argv.includes("--bundles")) {
+    console.log(listBundles());
+    return 0;
+  }
   const toc = argv.includes("--toc");
-  const targets = argv.filter((arg) => arg !== "--toc");
+  const { targets, unknown } = expandBundles(argv.filter((arg) => arg !== "--toc"));
+  if (unknown.length) {
+    console.error(`read_refs: unknown bundle: ${unknown.join(", ")} (available: ${Object.keys(BUNDLES).join(", ")})`);
+    return 2;
+  }
   if (targets.length === 0) {
-    console.error("usage: read_refs.mjs [--toc] <file>[#section[,section|~section]] ...");
+    console.error("usage: read_refs.mjs [--toc] [--bundle <name>] <file>[#section[,section|~section]] ...  |  --bundles");
     return 2;
   }
   let failed = 0;

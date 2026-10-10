@@ -14,7 +14,7 @@ MPW(프롬프트 작성 스킬)의 **정본이자 유일한 실제 트리**다. 
 - `agents/plugin/` — 플러그인 표면 오버레이. `agents/plugin/SKILL.md`는 정본 `SKILL.md`와 본문이 같고 frontmatter(`host_surface: plugin`, `canonical_source`)와 상단 호스트 통합 블록만 다르다. **정본 `SKILL.md`를 고치면 이 파일 본문도 동기화해야 한다.**
 - `scripts/compile_*.py` — 이미지 핸드오프·변형·의류·가드너 레시피 컴파일러(계약 스키마 소비자).
 - `scripts/check_prompt.mjs` — 완성 프롬프트 검증기. 문서 규칙과 어긋나면 어느 쪽이 맞는지 판정해 한쪽을 고친다.
-- `scripts/read_refs.mjs` — references 파일·절을 모아 읽는 도구(`#A,B`, `#A~B`, `--toc`). 스킬 런타임도 이걸 쓴다.
+- `scripts/read_refs.mjs` — references 파일·절을 모아 읽는 도구(`#A,B`, `#A~B`, `--toc`, `--bundle 이름`·`--bundles`; 묶음 정의는 이 스크립트의 `BUNDLES` 한 곳). 스킬 런타임도 이걸 쓴다.
 - `docs-internal/` — 운영자 전용, gitignore 대상(배포 안 됨).
 
 빌드 흐름: `scripts/build_plugin.mjs`가 정본 allowlist 트리에 `agents/plugin/` 오버레이를 덮어 `plugins/mpw/`를 만든다. 이 산출물은 `main`에 커밋하지 않고, `scripts/release_plugin.mjs`가 `dist` 브랜치에 커밋하고 `mpw-plugin-v<버전>` 태그를 단다. 공개 카탈로그는 별도 저장소 `HeiTuz/heituz-plugins`다.

@@ -3,13 +3,13 @@ name: mpw
 description: "프롬프트를 새로 작성하거나 검토·퇴고하고, 대상 모델·도구에 맞게 변환한다. 작업지시·시스템·자동화·팀 작업·업무·디자인·이미지·영상 프롬프트에 사용한다. '프롬프트 만들어줘/검토해줘/다듬어줘', 기존 프롬프트의 부분 수정에 발동한다. 실제 코드 구현·이미지 생성·문서 제작만 요청한 경우에는 해당 실행 스킬을 쓴다."
 license: MIT
 metadata:
-  version: "3.3.7"
+  version: "3.3.8"
   category: prompt-writing
   locale: ko-KR
   doctrine: intent-first-progressive-disclosure
   host_surface: plugin
-  canonical_source: "HeiTuz/MPW SKILL.md v3.3.7"
-  updated_at: "2026-10-10"
+  canonical_source: "HeiTuz/MPW SKILL.md v3.3.8"
+  updated_at: "2026-10-11"
   model_claims_reviewed_at: "2026-10-02"
   platform_roster_reviewed_at: "2026-10-10"
   role_routing_reviewed_at: "2026-09-05"
@@ -56,17 +56,17 @@ metadata:
 
 ## 필요한 자료만 읽는다
 
-**이 파일과 요청만으로 완성할 수 있으면 바로 쓴다. 단, 아래에서 요청에 해당하는 형식·표면 규칙은 먼저 확인한다.** 아래는 전체 순차 필독 목록이 아니라 선택 안내다. 이미 대상 모델이 정해졌으면 후보 탐색을 생략하고, 부분 수정은 바뀌는 조건의 자료만 읽는다. § 절이 적힌 자료는 그 절만 읽고, 필요한 파일·절은 `node scripts/read_refs.mjs`로 한 번에 모아 읽는다(`#A,B` 여러 절, `#A~B` 범위, `#` 없으면 파일 전체, `--toc` 제목 목록, 경로는 스킬 폴더 기준, Node가 없으면 `bun`). 새 작성·전면 개선의 흔한 요청은 아래 묶음으로 시작하고, 다른 판단이 더 필요할 때만 그 아래 표에서 추가한다. 부분 수정은 바뀌는 조건의 절만 고른다.
+**이 파일과 요청만으로 완성할 수 있으면 바로 쓴다. 단, 아래에서 요청에 해당하는 형식·표면 규칙은 먼저 확인한다.** 아래는 전체 순차 필독 목록이 아니라 선택 안내다. 이미 대상 모델이 정해졌으면 후보 탐색을 생략하고, 부분 수정은 바뀌는 조건의 자료만 읽는다. § 절이 적힌 자료는 그 절만 읽고, 필요한 파일·절은 `node scripts/read_refs.mjs`로 한 번에 모아 읽는다(`#A,B` 여러 절, `#A~B` 범위, `#` 없으면 파일 전체, `--toc` 제목 목록, `--bundle 이름`은 아래 표의 묶음, `--bundles`는 묶음 목록과 글자 수, 경로는 스킬 폴더 기준, Node가 없으면 `bun`). 새 작성·전면 개선의 흔한 요청은 아래 묶음으로 시작하고, 묶음 뒤에 파일·절 인자를 덧붙일 수 있다. 다른 판단이 더 필요할 때만 그 아래 표에서 추가한다. 부분 수정은 바뀌는 조건의 절만 고른다. 출력이 도구의 출력 상한을 넘으면 `head`로 잘라 읽지 않고 두 번에 나눠 읽는다.
 
-| 요청 | `node scripts/read_refs.mjs` 뒤에 붙일 인자 |
+| 요청 | `node scripts/read_refs.mjs --bundle` 뒤에 붙일 묶음 이름 |
 |---|---|
-| 대상 미정·GPT Image 새 이미지 | `references/image/surfaces.md#0 references/image/surface-contracts.md#3.2` (도해·슬라이드·UI·만화·로고는 `#3.2,3.4`) |
-| 대상 미정·GPT Image 인물·셀피·패션 화보 새 이미지 | `references/image/surfaces.md#0 references/image/surface-contracts.md#3.2 references/image/editorial/portrait-brief.md "references/image/compiler.md#피부·재질"` |
-| 대상 미정·GPT Image 원본 편집 | `references/image/surfaces.md#0 references/image/surface-contracts.md#3.2,3.3` (도해·슬라이드·UI·만화·로고는 `#3.2,3.3,3.4`) |
-| 영상 생성 | `references/image/surfaces.md#0 "references/image/lanes.md#영상 공통 규칙"` |
-| 실행 작업·자동화 지시 | `references/templates/delegation.md` |
-| 텍스트 모델 적응·변환 | `"references/model-playbooks.md#공통 적응 규칙,공급자 색인"` 뒤 색인이 가리키는 대상 공급자의 날짜 절을 `"references/model-playbooks.md#2026-09-25"`처럼 이어 읽는다 |
-| 이미지·영상 프롬프트의 엔진 간 변환 | `references/image/prompt-conversion.md` 뒤 [model-routing.md](references/image/model-routing.md) §6에서 대상 엔진 어댑터의 해당 절만 이어 읽는다 |
+| 대상 미정·GPT Image 새 이미지 | `gpt-image-new` (도해·슬라이드·UI·만화·로고는 `gpt-image-new-structured`) |
+| 대상 미정·GPT Image 인물·셀피·패션 화보 새 이미지 | `gpt-image-portrait` |
+| 대상 미정·GPT Image 원본 편집 | `gpt-image-edit` (도해·슬라이드·UI·만화·로고는 `gpt-image-edit-structured`). 참조 사진의 역할·관찰이 필요하면 `references/image/from-image.md#1`을 뒤에 덧붙인다 |
+| 영상 생성 | `video` |
+| 실행 작업·자동화 지시 | `delegation` |
+| 텍스트 모델 적응·변환 | `text-model-adapt` 뒤에 색인이 가리키는 대상 공급자의 날짜 절을 `"references/model-playbooks.md#2026-09-25"`처럼 이어 읽는다 |
+| 이미지·영상 프롬프트의 엔진 간 변환 | `image-prompt-conversion` 뒤에 [model-routing.md](references/image/model-routing.md) §6 색인이 가리키는 대상 엔진 어댑터 파일의 해당 절만 이어 읽는다 |
 
 | 필요한 판단 | 읽을 자료 |
 |---|---|

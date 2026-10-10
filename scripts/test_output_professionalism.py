@@ -127,7 +127,9 @@ class OutputProfessionalismTest(unittest.TestCase):
                      *sorted((ROOT / "references" / "templates").glob("*.md"))]:
             body = without_frontmatter(path.read_text(encoding="utf-8"))
             for line_number, line in enumerate(body.splitlines(), start=1):
-                if "references/image/" in line:
+                # Image-lane routing rows point at references/image/ paths or at the
+                # gpt-image-* read_refs bundles that expand to them.
+                if "references/image/" in line or "`gpt-image-" in line:
                     continue
                 self.assertFalse(has_denylisted_term(line), f"{path.relative_to(ROOT)}:{line_number}: {line}")
 
