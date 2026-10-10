@@ -49,6 +49,8 @@ export const BUNDLES = {
     "references/templates/team.md",
     "references/model-playbooks.md#역할·권한 라우팅~Surface-matched evidence",
   ],
+  // 묶음 밖의 판단: 읽기 지도 표를 읽고 그 행의 절만 이어 읽는다.
+  map: ["references/reading-map.md"],
   // 리서치·추출·분류·목록 처리.
   research: ["references/templates/model.md", "references/research.md"],
   // 텍스트 모델 적응·변환. 색인이 가리키는 공급자의 날짜 절을 덧붙인다.
