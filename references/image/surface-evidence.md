@@ -13,7 +13,7 @@
 | Midjourney 기본 버전 | 공식 [Version](https://docs.midjourney.com/hc/en-us/articles/32199405667853-Version): 기본 V8.2(2026-07-24부터), V8.1은 2026-06-10~07-23 기본. [Prompt Basics](https://docs.midjourney.com/hc/en-us/articles/32023408776205-Prompt-Basics): 짧고 분명하게, 수량은 숫자로, 제외는 `--no`. 다른 파라미터 전체를 재검증한 것은 아님 | 2026-10-02 |
 | Genjutsu 웹 기능·프롬프트·입력 수치 불일치 | 공식 [제품 안내와 예시](https://higgsfield.ai/genjutsu), [사용 가이드](https://higgsfield.ai/blog/higgsfield-genjutsu). 기능 선택·짧은 지시 근거. 입력 수치 차이는 §4.4에 기록; API·실제 생성은 미검증 | 2026-09-11 |
 | S1 enum(ar·size·quality) | `contracts/v1/*.schema.json` 직접 읽음 | 2026-07-25 |
-| S2 파라미터 축·모델 로스터 | 다른 커넥터에서 Higgsfield MCP `models_list(limit:100)` 전체 95개·`has_more:false`; Soul 2.0·GPT Image 2·Recraft V4.1 `models_get` 교차 확인. 현재 연결된 카탈로그의 재조회 결과가 아님 | 2026-09-06 |
+| S2 파라미터 축·모델 로스터 | 현재 연결된 Higgsfield 커넥터 `models_list(limit:100)` 2페이지 전체 127개·`has_more:false`; §1·§2 후보 35종과 영상 길이 범위 15종 `models_get` 교차 확인(2026-09-06 조회는 다른 커넥터 95개였음) | 2026-10-10 |
 | `prompt-bundle/v1` 2000 | `contracts/v1/prompt-bundle.schema.json` 직접 읽음 — `text.maxLength` / `unicode_char_count.maximum` | 2026-07-25 |
 | gpt-image 계열(gpt-image-2·2.5 포함) 32,000자 | OpenAI [Images API 레퍼런스](https://developers.openai.com/api/reference/resources/images) `images/generations`의 prompt 설명: "32000 characters for the GPT image models". 같은 엔드포인트의 model enum에 2.5 Flare·Sunburst가 포함됨. 편집의 독립 길이 보증이 아니라 생성 엔드포인트의 상한 | 2026-09-26 |
 | Soul 웹·MCP 색상 경계 | 현행 `models_get(soul_2)`에는 `quality`·`soul_id`만 있으며 `models_list`의 Soul Cinema도 동일. 두 모델에 `colors`·Color Transfer 전용 필드가 노출되지 않음. 웹 Soul HEX를 API 파라미터로 임의 변환하지 않음 | 2026-09-06 |
@@ -64,10 +64,10 @@
 | Midjourney `--sw` 수치 조절표 | **커뮤니티 단일 출처뿐** **[미확인]** — 규범으로 쓰지 않는다. 규칙 서술은 [../midjourney-identity.md](../midjourney-identity.md) §6 | 2026-07-25 |
 | Midjourney `--stylize` 에디토리얼 권장 대역 | **커뮤니티 단일·소수 출처뿐** **[미확인]** — 고정 시작 대역을 쓰지 않고 현재 설정에서 한 축씩 비교. 파라미터 범위는 [../midjourney-identity.md](../midjourney-identity.md) §3 소관 | 2026-07-25 |
 | Midjourney 스타일 참조별 가중치 | 공식 [Style Reference](https://docs.midjourney.com/hc/en-us/articles/32180011136653-Style-Reference)에 Discord `--sref URL1::2 URL2::1` 표기. 일반 본문의 Multi-Prompt `::` 비지원과 혼동해 전면 차단하지 않음 | 2026-09-05 |
-| Higgsfield 이미지·영상 전 모델에 `negative_prompt` 없음(3D `tripo_3d`만 예외) | `models_list` 전체 종료 확인: 이미지 33·영상 39·오디오 6·3D 17, 후처리 포함. 모든 `parameters` 검사 | 2026-09-06 |
-| Higgsfield 모델 길이 상한 | 다른 커넥터의 전체 카탈로그에 `prompt` 상한 미선언; 당시 생성·비용 조회 도구의 `prompt`에도 상한 없음. 백엔드 실제 상한은 미공개 **[미확인]** | 2026-09-05 |
+| Higgsfield 이미지·영상 전 모델에 `negative_prompt` 없음(3D `tripo_3d`만 예외) | `models_list` 전체 종료 확인: 이미지 45·영상 57·오디오 8·3D 17, 후처리 포함. 모든 `parameters` 이름 검사(2026-09-06에는 33·39·6·17) | 2026-10-10 |
+| Higgsfield 모델 길이 상한 | 현재 커넥터 전체 카탈로그 127개의 `parameters`에 길이 상한 필드 없음(2026-10-10 재확인); 생성·비용 조회 도구의 `prompt`에도 상한 없음. 백엔드 실제 상한은 미공개 **[미확인]** | 2026-10-10 |
 | Higgsfield 호출 롤·비용 조회·비율 보정 | 다른 커넥터의 생성·`estimate_image_cost`·`estimate_video_cost` 도구 정의 확인. 당시 canonical 롤을 백엔드 롤로 매핑하고 보정은 `adjustments`로 반환. 현재 커넥터에 자동 적용하지 않음 | 2026-09-05 |
-| Higgsfield 커넥터 차이·2.5 후보 | 2026-09-27 감사에서 다른 커넥터의 `models_explore get gpt_image_2_5`와 `generate_image` 도구 설명에 `variant`·`quality`·`resolution`·`background`, `get_cost:true`의 비제출 비용 조회를 기록했다. 이 작업 환경에는 카탈로그 조회 도구가 없어 목록의 끝 페이지와 현재 모델 상세를 재확인하지 못함. 현재 가용성·기본값·롤은 **[미확인]** | 2026-09-26 |
+| Higgsfield `gpt_image_2_5` 가용성·파라미터 | 현재 커넥터 `models_get(gpt_image_2_5)`: `variant` flare/sunburst(기본 flare), `quality` low/medium/high/xhigh/max(기본 low), `resolution` 1k/2k/4k(기본 1k), `background` auto/opaque/transparent, 비율 15종(`4:5`·`9:16`·`21:9` 포함), 미디어 롤은 `medias` 단일. 롤의 의미적 차이는 여전히 서술 없음 | 2026-10-10 |
 | Higgsfield `image` 롤과 `image_references` 롤의 **의미적 동작 차이** | 런타임 description에 서술이 없다 **[미확인]** — 롤 이름으로 동작 차이를 설명하지 않는다 | 2026-07-25 |
 | `max` 미선언 모델의 레퍼런스 장수 상한 | 프리플라이트 통과 ≠ 생성 성공. 백엔드 상한 **[미확인]** | 2026-07-25 |
 | Grok Imagine UI 지원 비율 목록 | 직접 API의 [비율 표](https://docs.x.ai/developers/model-capabilities/images/generation#aspect-ratio)는 확인했으나 현재 로그인 UI의 전체 선택지는 미관측 **[미확인]** — API 목록을 UI 목록으로 간주하지 않음 | 2026-09-07 |
