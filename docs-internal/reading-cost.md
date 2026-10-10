@@ -2,6 +2,10 @@
 
 측정 단위: UTF-8 코드포인트(문자 수, `wc -m`). 읽기 순서의 정본은 `SKILL.md` §필요한 자료만 읽는다의 묶음 표와 `scripts/read_refs.mjs`의 `BUNDLES`다. 이 파일은 실측 기록일 뿐 규칙을 소유하지 않는다.
 
+## 2026-10-11 — 커널 축소(3.3.10)
+
+새 세션 실측에서 에이전트가 커널을 `max_output_tokens` 3,000~4,000으로 읽어 묶음 표가 잘리는 일이 반복돼 커널을 줄였다. 정본 `SKILL.md` 4,864자 / o200k 2,449토큰, 플러그인 오버레이 5,350자 / 2,666토큰(Codex 집계는 o200k보다 약 6% 높게 관측됨). 두 판단 표의 중복 행(실행·변환·GPT Image 행)을 묶음 표로 합치고, 긴 꼬리 판단 표는 `references/reading-map.md`(1,661자 / 691토큰)로, '쓰기 전에 정할 것'과 답변 형식 세부는 `references/templates/common.md`로 내렸다. frontmatter description과 본문 첫 줄에 전체 읽기 규칙을 두어 커널이 잘리기 전에 보이게 했다. 묶음 글자 수는 위 3.3.8 표와 같다.
+
 ## 2026-10-11 — 이름 묶음(3.3.8)
 
 커널 `SKILL.md` 8,749자. 묶음 글자 수는 `node scripts/read_refs.mjs --bundles` 출력이며, 합계 = 커널 + 묶음. 묶음 뒤에 덧붙이는 절(예: `references/image/from-image.md#1` 2,125자, 공급자 날짜 절, 엔진 어댑터 절)은 포함하지 않았다.

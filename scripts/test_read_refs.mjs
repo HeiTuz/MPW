@@ -62,8 +62,8 @@ fs.rmSync(linkDir, { recursive: true, force: true });
 assert.equal(viaLink.status, 0, viaLink.stderr);
 assert.match(viaLink.stdout, /^==> references\/image\/surfaces\.md §0/m, "symlinked CLI printed nothing");
 
-// SKILL.md pointers: the text after "§" must start with a heading's number
-// (e.g. "3.2", "0-1") or its full title.
+// SKILL.md and reading-map.md pointers: the text after "§" must start with a
+// heading's number (e.g. "3.2", "0-1") or its full title.
 function headingKeys(file) {
   const { headings } = parseHeadings(fs.readFileSync(file, "utf8"));
   return headings.map((heading) => {
@@ -84,25 +84,34 @@ function pointerResolves(keys, candidate) {
   });
 }
 
-const skill = fs.readFileSync(path.join(root, "SKILL.md"), "utf8");
 const failures = [];
 let checked = 0;
-for (const line of skill.split("\n")) {
-  const links = [...line.matchAll(/\]\((references\/[^)#]+\.md)\)/g)];
-  links.forEach((link, index) => {
-    const start = link.index + link[0].length;
-    const end = index + 1 < links.length ? links[index + 1].index : line.length;
-    const tail = line.slice(start, end);
-    const keys = headingKeys(path.join(root, link[1]));
-    for (const match of tail.matchAll(/§/g)) {
-      const candidate = tail.slice(match.index + 1);
-      checked += 1;
-      if (!pointerResolves(keys, candidate)) failures.push(link[1] + " §" + candidate.slice(0, 40));
-    }
-  });
+for (const file of ["SKILL.md", "references/reading-map.md"]) {
+  const text = fs.readFileSync(path.join(root, file), "utf8");
+  const base = path.dirname(path.join(root, file));
+  for (const line of text.split("\n")) {
+    const links = [...line.matchAll(/\]\(([^)#\s]+\.md)\)/g)];
+    links.forEach((link, index) => {
+      const start = link.index + link[0].length;
+      const end = index + 1 < links.length ? links[index + 1].index : line.length;
+      const tail = line.slice(start, end);
+      const target = path.resolve(base, link[1]);
+      if (!fs.existsSync(target)) {
+        failures.push(file + " -> " + link[1] + " (missing)");
+        return;
+      }
+      const keys = headingKeys(target);
+      for (const match of tail.matchAll(/§/g)) {
+        const candidate = tail.slice(match.index + 1);
+        checked += 1;
+        if (!pointerResolves(keys, candidate)) failures.push(file + ": " + link[1] + " §" + candidate.slice(0, 40));
+      }
+    });
+  }
 }
-assert.ok(checked >= 10, "expected SKILL.md section pointers, found " + checked);
-assert.deepEqual(failures, [], "unresolved SKILL.md section pointers");
+assert.ok(checked >= 15, "expected section pointers in SKILL.md and reading-map.md, found " + checked);
+assert.deepEqual(failures, [], "unresolved section pointers");
+const skill = fs.readFileSync(path.join(root, "SKILL.md"), "utf8");
 
 // Named bundles: BUNDLES is the only definition. Every bundle must resolve, every
 // bundle name in SKILL.md tables must exist, and every bundle must be named in
@@ -169,4 +178,4 @@ assert.match(unknownBundle.stderr, /unknown bundle: nope/);
 const listing = spawnSync(process.execPath, [path.join(root, "scripts", "read_refs.mjs"), "--bundles"], { encoding: "utf8" });
 assert.equal(listing.status, 0, listing.stderr);
 for (const name of Object.keys(BUNDLES)) assert.match(listing.stdout, new RegExp("^" + name + "  \\(\\d+ chars\\)$", "m"));
-console.log("read_refs: section extraction ok; " + checked + " SKILL.md section pointers and " + Object.keys(BUNDLES).length + " named bundles resolve");
+console.log("read_refs: section extraction ok; " + checked + " section pointers and " + Object.keys(BUNDLES).length + " named bundles resolve");
