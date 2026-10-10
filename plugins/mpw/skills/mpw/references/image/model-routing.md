@@ -8,29 +8,29 @@
 
 | 목적 | 1순위 | 대안 | 결정 파라미터 |
 |---|---|---|---|
-| 정확한 텍스트 렌더·타이포·로고 배치 | `openai_hazel` ⚠️비율제약 | `nano_banana_pro`, `gpt_image_2`; `gpt_image_2_5`는 재조회 후보 **[미확인]** | `quality`(hazel) / `resolution`(기존 대안); 2.5는 `variant`·`quality`·`resolution`·`background` 재조회 |
+| 정확한 텍스트 렌더·타이포·로고 배치 | `openai_hazel` ⚠️비율제약 | `gpt_image_2_5`(비율 15종·4K), `nano_banana_pro`, `ideogram_4_5`(타이포 태그, 품질 실측 없음), `gpt_image_2` | `quality`(hazel) / 2.5는 `variant: flare/sunburst`·`quality: low~max`·`resolution: 1k/2k/4k`·`background` / `resolution`(나머지) |
 | 다이어그램·인포그래픽·도해 | `nano_banana_pro` | `openai_hazel`, `gpt_image_2` | `resolution: 2k~4k` |
 | 벡터 로고·아이콘·플랫 브랜드 자산 | `recraft_v4_1` | — | `model_type: vector`/`utility_vector`, `colors[]`, `background_color` |
 | 제품컷·목업(깨끗·정면·예측가능) | `recraft_v4_1` `model_type: utility` | `marketing_studio_image` | `background_color`, `resolution` |
-| 인물 사실감·UGC·패션 에디토리얼 | `soul_2` (=`soul_v2`) | `nano_banana_2`, `seedream_v5_pro` | `quality: 1.5k/2k`, `soul_id` |
+| 인물 사실감·UGC·패션 에디토리얼 | `soul_2` (=`soul_v2`) | `nano_banana_2_1`, `nano_banana_2`, `seedream_v5_pro` | `quality: 1.5k/2k`, `soul_id` |
 | 동일 인물 시리즈 | `soul_2` + `soul_id` | `soul_cast`(시네마틱 아이덴티티) | `soul_id` |
 | 시네마 스틸·컨셉아트 | `soul_cinematic` | `cinematic_studio_2_5` | `quality` / `resolution: 4k` |
-| 지시 기반 편집·변형 | `seedream_v5_pro` | `seedream_v5_lite`, `flux_kontext`, `openai_hazel`; `gpt_image_2_5`는 재조회 후보 **[미확인]** | `resolution`(기존 대안); 2.5는 `variant`·`quality`·`resolution`·`background` 재조회 |
+| 지시 기반 편집·변형 | `seedream_v5_pro` | `gpt_image_2_5`, `seedream_5_0_flash`(빠른 편집), `seedream_v5_lite`, `flux_kontext`, `openai_hazel` | `resolution`; 2.5는 `variant`·`quality`·`resolution`·`background` |
 | 스타일 전이·컨텍스트 편집 | `flux_kontext` | `seedream_v5_pro` | — |
-| 프롬프트 준수 정밀도 | `flux_2` | `nano_banana_pro` | `variant: pro/flex/max`, `resolution` |
-| 초고해상(4K 이상) | `seedream_v4_5` (`quality: high` ~6K) | `nano_banana_2/pro`, `gpt_image_2`, `cinematic_studio_2_5` (4k); `gpt_image_2_5`는 재조회 후보 **[미확인]** | `quality` / `resolution`; 2.5는 `variant`·`quality`·`resolution`·`background` 재조회 |
-| 광각·와이드 비율(21:9 등) | `kling_omni_image` | `nano_banana_*`, `seedream_v5_pro`, `recraft_v4_1` | `aspect_ratios` 배열 확인 |
+| 프롬프트 준수 정밀도 | `flux_2` | `flux_3_image`(다중 참조·4K·비율 15종), `nano_banana_pro` | `variant: pro/flex/max`, `resolution` |
+| 초고해상(4K 이상) | `seedream_v4_5` (`quality: high` ~6K) | `gpt_image_2_5`, `nano_banana_2_1/pro`, `flux_3_image`, `gpt_image_2`, `cinematic_studio_2_5` (모두 `resolution: 4k`) | `quality` / `resolution` |
+| 광각·와이드 비율(21:9 등) | `kling_omni_image` | `gpt_image_2_5`, `flux_3_image`(2:1·21:9), `ideogram_4_5`(22:9·3:1까지), `nano_banana_*`, `seedream_v5_pro` | `aspect_ratios` 배열 확인 |
 | 표현적·고대비 크리에이티브 | `grok_image` | `grok_image_2_0`, `flux_2` | `mode`(grok_image) / `quality`(grok_image_2_0) |
 | 빠르고 싼 시안 스윕 | `z_image` | `nano_banana`, `nano_banana_2_lite` | `thinking: MINIMAL/HIGH`(lite) |
 | DTC 광고 크리에이티브 | `ms_image` | `marketing_studio_image` | `style_id`(**필수**), `brand_kit_id`, `product_ids` |
 | 게임 스프라이트 시트 | `autosprite` | — | `kind`, `frame_count`, `frame_size`, `video_tier` |
 | 모델 선택이 실제로 무의미할 때 | `image_auto` | — | 없음 |
 
-**⚠️비율제약 — `openai_hazel`은 요구 비율을 못 낼 수 있다.** `aspect_ratios`가 `1:1`·`3:2`·`2:3`·`auto` 4종뿐이다(2026-09-06 런타임 확인). `4:5`·`9:16`·`16:9` 요청에는 이 모델의 당시 목록에 해당 비율이 없었다.
+**⚠️비율제약 — `openai_hazel`은 요구 비율을 못 낼 수 있다.** `aspect_ratios`가 `1:1`·`3:2`·`2:3`·`auto` 4종뿐이다(2026-09-06 런타임 확인, 2026-10-10 재확인 동일). `4:5`·`9:16`·`16:9` 요청에는 이 모델의 당시 목록에 해당 비율이 없었다.
 
 - 정사각·세로 `2:3`·가로 `3:2`면 `openai_hazel` 그대로 간다(텍스트 렌더 축의 1순위는 유지).
-- **다른 세로/와이드 비율이 필요하면** 해당 비율을 선언한 대안을 현재 정의에서 확인한다. `nano_banana_pro`는 과거 조회에서 `4:5`·`9:16`·`16:9`를 지원했고, `gpt_image_2_5`는 새 카탈로그 전수 확인 전까지 후보 자격이 **[미확인]**이다.
-- `gpt_image_2`는 `16:9`·`9:16`·`21:9`를 지원하지만 `4:5`는 없다(2026-09-06 런타임 확인). 요구 비율이 맞을 때 대안으로 쓴다.
+- **다른 세로/와이드 비율이 필요하면** 해당 비율을 선언한 대안을 현재 정의에서 확인한다. `gpt_image_2_5`는 `4:5`·`5:4`·`9:16`·`16:9`·`21:9`·`27:16`·`16:27`·`9:8`·`8:9`를 포함한 15종을, `nano_banana_pro`는 `4:5`·`9:16`·`16:9`·`21:9`를 지원한다(2026-10-10 런타임 확인).
+- `gpt_image_2`는 `16:9`·`9:16`·`21:9`·`4:3`·`3:4`를 지원하지만 `4:5`는 없다(2026-10-10 런타임 확인). 요구 비율이 맞을 때 대안으로 쓴다.
 
 **표 전체에 적용:** 1순위는 목적축 기준이며 비율을 보장하지 않는다. 레인이 비율을 요구하면 후보를 고른 뒤 그 모델의 `aspect_ratios`를 반드시 대조하고, 없으면 대안 열로 내려간다(§4 규칙 4).
 
@@ -40,20 +40,20 @@
 
 ## 2. 영상 — 목적축 라우팅
 
-**Genjutsu 지정 요청:** [higgsfield-genjutsu.md](higgsfield-genjutsu.md)에서 Motion Transfer·Object Swap을 판정한다(2026-09-11 공식 안내 확인). 웹 기능명이며 아래 런타임 로스터에 확인된 API 모델 ID를 추가한 것이 아니다. 실행 ID·입력 조합은 현재 표면에서 확인한다.
+**Genjutsu 지정 요청:** [higgsfield-genjutsu.md](higgsfield-genjutsu.md)에서 Motion Transfer·Object Swap을 판정한다(2026-09-11 공식 안내 확인). 런타임 ID는 `hf_mult_motion_control`(모션 전이)·`hf_mult_replace_object`(객체 교체)이며 둘 다 `resolution: 480p/720p/1080p`만 노출하고 `aspect_ratios`는 빈 배열이다(2026-10-10 런타임 확인). 참조 입력 조합은 현재 표면에서 확인한다.
 
 | 목적 | 1순위 | 대안 | 결정 파라미터 |
 |---|---|---|---|
-| 최고급 시네마틱 | `veo3_1` | `cinematic_studio_3_0`, `kling3_0` | `quality: basic/high/ultra`, `variant`, `duration: 4/6/8` |
+| 최고급 시네마틱 | `veo3_1` | `cinematic_studio_video_4_0`(감독 파라미터·4~30초·참조/편집/연장 모드), `cinematic_studio_3_0`, `kling3_0` | `quality: basic/high/ultra`, `variant: veo-3-1-preview/veo-3-1-fast`, `duration: 4/6/8` |
 | 장르 제어·다중 샷 | `cinematic_studio_video_v2` | `kling3_0` | `genre`, `multi_shots`, `cfg_scale`, `speedramp`, `mode` |
 | 레퍼런스 기반 아이덴티티 유지 | `seedance_2_0` | `seedance_2_0_mini`, `gemini_omni`, `minimax_h3` | `image_references`/`video_references`/`audio_references`, `mode`, `resolution` |
 | 참조 기반 편집·연장 | `seedance_2_5` | — | `mode: omni_reference/video_edit/video_extension`, `extension_mode`, `duration: 4~30` |
 | 제품·멀티 SKU 커머스 | `seedance_2_0` | `marketing_studio_video` | `product_ids`(MS), `generate_audio` |
 | 물리·표정 자연스러움 | `minimax_hailuo` | `kling2_6` | `variant`, `duration: 6/10`, `resolution` |
-| 오디오 동기·캐릭터 일관 | `wan2_7` | `kling3_0`, `seedance_2_0`, `minimax_h3` | `duration: 2~15`, `resolution` |
-| 시작·끝 프레임 지정 | `seedance_2_0`, `minimax_hailuo`, `kling3_0`, `wan2_7` | `veo3_1_lite`, `minimax_h3`, `minimax_h3_max` | `start_image` / `end_image` 롤 |
+| 오디오 동기·캐릭터 일관 | `wan2_7` | `wan3_0`(2~30초 또는 `-1` 자동 길이·`enable_thinking`), `kling3_0`, `seedance_2_0`, `minimax_h3` | `duration: 2~15`, `resolution` |
+| 시작·끝 프레임 지정 | `seedance_2_0`, `minimax_hailuo`, `kling3_0`, `wan2_7` | `kling_o3_flf`, `flux_3_video`(5~20초), `veo3_1_lite`, `minimax_h3`, `minimax_h3_max` | `start_image` / `end_image` 롤 |
 | 빠르고 싼 배치 | `veo3_1_lite` | `kling3_0_turbo`, `seedance_2_0_mini` | `generate_audio: false` |
-| 실험적·스타일라이즈 | `wan2_6` | `grok_video` | `quality`, `duration: 5/10/15` |
+| 실험적·스타일라이즈 | `wan2_6` | `grok_video`(1~15초), `grok_video_v15` | `quality`, `duration: 5/10/15` |
 | 프리셋 바이럴 템플릿(i2v) | `higgsfield_preset` | — | `preset_id`(**필수**, 현재 프리셋 조회 도구) |
 | 마케팅 UGC·릴스 | `marketing_studio_video` | — | `mode`(프리셋 slug), `hook_id`/`setting_id`; 추가 참조 필드는 현재 도구 정의 확인 |
 | 유튜브 → 숏폼 클립 | `clipify` | — | `clips_num`, `clip_aspect`, 자막 파라미터 |
@@ -68,8 +68,8 @@
 
 | 엔진·모델군 | 별도 네거티브 필드·문법 | 길이 상한(엔진 쪽) |
 |---|---|---|
-| 2026-09-06 Higgsfield 이미지 목록 | 당시 목록에는 없음 | 당시 정의에 상한 없음 / 현재 백엔드 상한 **[미확인]** → 현행 정의 확인 |
-| 2026-09-06 Higgsfield 영상 목록 | 당시 목록에는 없음 | 당시 정의에 상한 없음 / 현재 백엔드 상한 **[미확인]** → 현행 정의 확인 |
+| 2026-10-10 Higgsfield 이미지 목록 | 당시 목록에는 없음 | 당시 정의에 상한 없음 / 현재 백엔드 상한 **[미확인]** → 현행 정의 확인 |
+| 2026-10-10 Higgsfield 영상 목록 | 당시 목록에는 없음 | 당시 정의에 상한 없음 / 현재 백엔드 상한 **[미확인]** → 현행 정의 확인 |
 | `gpt_image_2` (Higgsfield 경유) | 없음 | 런타임 정의에 상한 없음(전수 확인) / 백엔드 실제 상한 미공개 **[미확인]** → 신호 밀도 |
 | gpt-image 계열 (OpenAI API 직결) | 네거티브 필드 없음 | 32,000자 |
 | Midjourney (붙여넣기 + `--` 플래그) | `--no` 인라인 | [surfaces.md](surfaces.md) §0-1·§0-2의 간결성 기준 |
@@ -88,7 +88,7 @@
 **적용 범위:** 모델 추천·선택이나 특정 실행 형식 변환에 사용하는 절이다. 대상 미정의 이미지 프롬프트 작성은 [surfaces.md](surfaces.md) §0의 기본 작성 경로를 따른다. 문안만 작성할 때는 아래 API 모델 분기를 실행하지 않는다. 아래 기본값은 이미 해당 모델 계열·표면을 선택한 경우에만 적용하며, 새 유료 실행·비교 실험을 시작할 권한이 아니다.
 
 
-**0. 실행 경로가 필요한 요청의 기본값.** 실제 이미지 실행·모델 추천·기계 핸드오프가 요청됐고 타깃이 없을 때만 설치의 기본 이미지 경로를 확인한다. 그 경로가 GPT Image이고 모델을 고를 수 있는 표면(OpenAI 직접 API, 모델 선택이 있는 UI, S3 라벨 줄)이면 아래 분기를 적용하고, 기본 생성 모델은 `gpt-image-2.5-sunburst`다. Higgsfield 경로에서는 현재 연결된 카탈로그와 생성 도구가 실제로 지원하는 ID·선택 파라미터를 확인한다. `gpt_image_2_5`의 현재 가용성과 기본 variant는 카탈로그 전수 재조회 전까지 **[미확인]**이며, 직접 API의 Flare/Sunburst ID를 래퍼에 복사하지 않는다. 모델 선택을 노출하지 않는 대화형·구독 이미지 도구는 호스트 선택을 따르고, 기본 모델을 본문 지시로 강제하거나 적용됐다고 보고하지 않는다. S1 `engine`은 스키마 enum 값 그대로이며 2.5 id를 끼워 넣지 않는다. §1 목적축 표는 Higgsfield 후보를 좁히는 도구이며 다른 표면에 이식하지 않는다.
+**0. 실행 경로가 필요한 요청의 기본값.** 실제 이미지 실행·모델 추천·기계 핸드오프가 요청됐고 타깃이 없을 때만 설치의 기본 이미지 경로를 확인한다. 그 경로가 GPT Image이고 모델을 고를 수 있는 표면(OpenAI 직접 API, 모델 선택이 있는 UI, S3 라벨 줄)이면 아래 분기를 적용하고, 기본 생성 모델은 `gpt-image-2.5-sunburst`다. Higgsfield 경로에서는 현재 연결된 카탈로그와 생성 도구가 실제로 지원하는 ID·선택 파라미터를 확인한다. `gpt_image_2_5`는 `variant: flare/sunburst`(플랫폼 기본 `flare`)·`quality: low/medium/high/xhigh/max`(기본 `low`)·`resolution: 1k/2k/4k`·`background: auto/opaque/transparent`를 받는다(2026-10-10 런타임 확인). 이 설치의 Sunburst 기본값을 쓰려면 `variant: sunburst`를 명시하며, 직접 API의 Flare/Sunburst 모델 ID를 래퍼에 복사하지 않는다. 모델 선택을 노출하지 않는 대화형·구독 이미지 도구는 호스트 선택을 따르고, 기본 모델을 본문 지시로 강제하거나 적용됐다고 보고하지 않는다. S1 `engine`은 스키마 enum 값 그대로이며 2.5 id를 끼워 넣지 않는다. §1 목적축 표는 Higgsfield 후보를 좁히는 도구이며 다른 표면에 이식하지 않는다.
 
 **GPT Image 모델 분기 (2026-09-16 적용; 공식 문서 2026-09-09 확인·2026-09-16 재확인·2026-09-29 선택 문장 재확인).** 모델 선택이 필요한 요청에서만 순서대로 판정하고 처음 일치한 곳에서 멈춘다. 아래 비교·시험은 승인된 생성 평가에서만 실행하며, 문안 작성·추천만 요청됐으면 후보와 판단 근거까지만 제공한다. 결정한 모델은 프롬프트 본문이 아니라 S2 `model` 파라미터 또는 S3 라벨 줄로 전달하고, 어느 분기가 적용됐는지 한 줄로 밝힌다. 공식 가이드는 편집 정밀도가 가장 중요한 작업에 Sunburst, 빠른 일상 생성에 Flare를 권한다. 조건이 드러나지 않은 요청을 Sunburst로 시작하는 분기 C는 이 설치의 사용자 지정 기본값이며 공식 권장값이 아니다.
 
@@ -107,7 +107,7 @@
 2. **여러 목적도 요청된 한 컷 안에서 함께 충족한다.** "정확한 한글 카피 + 인물 사실감"이면 두 조건을 지원하는 후보를 고른다. 컷 분리는 사용자가 원하거나, 한 컷으로 충족할 수 없는 제약을 설명하고 변경에 동의한 경우에만 한다.
 3. **모델을 바꾸면 달라지는 문법·파라미터만 조정한다.** 유효한 장면·카피·보존 조건은 유지한다. Soul 전용 구성은 [soul-v2-director.md](soul-v2-director.md)를 참고하되 필요한 축만 쓴다.
 4. **지원 비율·해상도와 입력 조합을 확인하고 사용자 요구를 보존한다.** 개별 필드가 유효해도 모드·참조 롤·길이·해상도 조합이 지원된다는 뜻은 아니다. 요청 비율이 없으면 지원하는 후보를 고른다. 모델과 비율이 모두 고정돼 충돌하면 필요한 선택만 묻고 임의로 바꾸지 않는다. **`aspect_ratios`가 빈 배열이면** 그 필드를 넘기지 않고 모델별 입력·기본값을 확인한다([surface-contracts.md](surface-contracts.md) §2). 빈 배열만으로 부적합하다고 단정하지 않는다.
-5. **영상 길이는 임의 값이 아니다.** 열거값(`5/10`, `4/8/12`, `6/10`)인 모델과 범위(`3~15`, `4~15`)인 모델이 섞여 있다. 스토리보드의 씬 길이를 모델 제약에 맞춘다.
+5. **영상 길이는 임의 값이 아니다.** 열거값(`veo3_1`·`veo3_1_lite` 4/6/8, `wan2_6` 5/10/15, `minimax_hailuo` 6/10)인 모델과 범위(`kling3_0`·`kling3_0_turbo`·`kling_o3_flf` 3~15, `seedance_2_0`·`seedance_2_0_mini`·`minimax_h3` 4~15, `seedance_2_5`·`cinematic_studio_video_4_0` 4~30, `wan2_7` 2~15, `grok_video` 1~15, `wan3_0` 2~30 또는 `-1` 자동, `cinematic_studio_video_v2` 3~12)인 모델이 섞여 있다(2026-10-10 런타임 확인). 스토리보드의 씬 길이를 모델 제약에 맞춘다.
 6. **네거티브와 길이는 §3이 정본이다.** 이 플랫폼의 이미지·영상 모델에 `negative_prompt`가 없다는 것은 플랫폼 사실이지 모든 엔진에 대한 일반 원칙이 아니다. 사실·산출 분기·예외를 여기서 되풀이하지 않는다.
 7. **엔진을 골랐으면 그 엔진의 표면 문법을 따른다.** 모델 선택과 작성 문법은 다른 축이다. 적용 표면에 맞는 어댑터는 §6에서 찾는다.
 
@@ -115,11 +115,11 @@
 
 이 절이 소유하는 것은 **로스터 스냅샷 날짜와 그 신선도 등급**뿐이다. 개별 외부 사실의 근거·확인일은 [surface-evidence.md](surface-evidence.md) §7이 정본이다.
 
-<!-- roster-snapshot: 2026-09-06 -->
+<!-- roster-snapshot: 2026-10-10 -->
 <!-- 위 마커가 신선도 검사의 유일한 기계 앵커다. 로스터를 다시 뜨면 이 날짜만 고치면 되고,
      아래 산문은 자유롭게 써도 검사에 영향을 주지 않는다. 마커가 없으면 검사가 loud하게 실패한다. -->
 
-이 표는 **2026-09-06** 당시 커넥터의 전체 목록(`has_more:false`)과 주요 후보 상세 조회에 근거한다. 현재 연결된 커넥터에서는 목록을 끝 페이지까지 다시 받지 못했으므로 이후 추가·제거와 `gpt_image_2_5`의 현재 가용성은 **[미확인]**이다. 도구 이름은 커넥터별로 다를 수 있으며 실제 목록·상세 조회 기능을 확인한다. 날짜 마커는 전수 페이지네이션과 주요 후보 상세 확인을 마칠 때만 갱신한다.
+이 표는 **2026-10-10** 현재 연결된 Higgsfield 커넥터의 `models_list`(limit 100, 2페이지, `has_more:false`, 127개 = 이미지 45·영상 57·오디오 8·3D 17)와 §1·§2 후보 및 새 후보의 `models_get` 상세 조회에 근거한다. 2026-09-06 표의 61개 ID는 전부 남아 있고, 새 ID는 대안 열에만 추가했으며 1순위는 성능 실측 없이 바꾸지 않았다. 도구 이름은 커넥터별로 다를 수 있으며 실제 목록·상세 조회 기능을 확인한다. 날짜 마커는 전수 페이지네이션과 주요 후보 상세 확인을 마칠 때만 갱신한다.
 
 - 30일 이내: 그대로 후보 선택에 쓴다.
 - 30~90일: 후보 선택에는 쓰되, 파라미터는 반드시 현재 모델 상세 조회로 확인한다.
