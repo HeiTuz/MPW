@@ -33,6 +33,7 @@
 | 무릎 지지 | `kneeling on both knees, torso held upright over the hips, one hand lifted toward the chin` | 무릎이 닿은 바닥면, 허벅지 위 원단 장력, 직립한 상체와 허리선 (출처 1건) |
 | 낮게 웅크림 | `crouched low with the knees drawn close, forearms over the knees, hands reaching toward what is in front` | 접힌 허리와 바닥 가까이 내려온 밑단, 발목과 신발 윤곽, 낮아진 시선 높이 (출처 2건) |
 | 뒤로 짚은 손바닥 | `both palms braced back on a waist-high ledge, hips resting against it, shoulders easing open` | 열린 어깨와 칼라, 손목 각도, 손바닥이 닿은 난간 재질 (출처 1건) |
+| 데크 위 한 발 지지 | `one shoe planted on the deck beneath a bent knee, the other leg lifted behind` | 신발과 발판의 접점, 굽힌 지지 무릎, 뒤로 든 반대 다리. 스케이트 자세를 요청했을 때 쓰는 관측 예시이며 이동 속도나 동작의 정확성을 입증하지 않는다 (관측 2026-10, 출처 1건) |
 
 ## 소재·질감
 
@@ -85,3 +86,11 @@
 | 밤 / 네온 골목·주차장 | 코팅 표면, 실용 네온 | 네온과 젖은 반사가 색 대비를 만든다 | 남색·시안·마젠타 |
 | 흐린 날 / 루프톱·광장 | 패턴 판독용 오버캐스트 | 흐린 하늘이 소재와 패턴의 실제 색을 드러낸다 | 스톤·슬레이트·잉크 |
 | 실내 / 호텔 라운지 | 광택 소재, 낮은 실용광 | 낮은 실용광이 광택 소재와 재단선을 읽게 한다 | 다크우드·브라스·크림 |
+
+### 생활 장면의 진행 상태 (관측 2026-10, 출처 1건)
+
+일상 스냅에서 행동이 진행 중임을 보여야 할 때는 소품 이름뿐 아니라 사용 상태와 인물과의 위치를 쓴다. 지정된 깨끗한 제품 컷이나 원본 보존 편집에 생활 흔적을 추가하지 않는다. 아래는 관측 장면의 재서술이며 특정 문구의 생성 효과를 검증한 처방은 아니다.
+
+| 장면 단서 | 결과 문구 | 관측 화면 |
+|---|---|---|
+| 식사 도중 | `a partly cleared plate close to the lens, small sauce traces along its inner rim, the diner seated beyond it` | 전경 접시의 남은 음식과 사용 흔적, 그 뒤 인물의 거리 관계. 음식 광고용 정물보다 식사 중 잠깐 찍은 상황을 묘사한다 |

@@ -69,6 +69,7 @@
 | 투톤 하프톤 포스터 | `two-colour print, tones built from fine halftone dots, the face's shading carried inside the bold letterforms` |
 | 구아슈·마커 손그림 | `flat gouache and marker illustration, thick slightly wobbly contours, visible brush texture, hand-brushed capital lettering` |
 | 단색 수채 포스터 | `monochrome watercolour washes with fine ink linework, soft splatter in the foliage, large clean white margins` |
+| 수채 색층·종이 틈 | `layered washes forming small speckled patches, flecks of paper white left within the painted shapes` — 형태 안의 작은 흰 틈과 색면의 잔점을 묘사하는 선택 어휘 (관측 2026-10, 출처 1건; 재서술 문구의 생성 효과는 미검증) |
 
 ## 점검
 
