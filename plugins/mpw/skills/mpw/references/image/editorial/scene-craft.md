@@ -14,7 +14,7 @@
 | 앉아서 | `seated upright, direct eye contact`, 무릎 각도 정돈 | `eyes lowered to hands`, 손끝은 원단 위 | `three-quarter seated, gaze beyond frame` | 스커트·팬츠 주름, 니트 짜임, 허리선 |
 | 기대서 | `leaning against wall, calm front gaze`, 한쪽 어깨만 벽에 접촉 | `averted gaze`, 벽 그림자가 턱선 아래로 떨어짐 | `profile lean, looking past camera` | 재킷 구조, 소매 길이, 직물 눌림 |
 | 걷는 중 | `mid-step, confident silhouette`, 카메라와 눈맞춤 | `candid stride, eyes to ground line` | `walking past camera, gaze to street` | 코트 플레어, 밑단 움직임, 신발 윤곽 |
-| 회전/제스처 | `subtle contrapposto`, `relaxed neutral hips`, `balanced shoulders` | `hand adjusts cuff, eyes lowered` | `over-the-shoulder, gaze off frame` | 커프스, 칼라, 백 실루엣 |
+| 회전/제스처 | `subtle contrapposto`, `relaxed neutral hips`, `balanced shoulders`. 몸과 얼굴의 방향을 나누면 작은 회전만으로 응시가 걸린다: `body held in profile, only the chin turned toward the lens`, `back turned away, face left toward the lens over the shoulder` (관측 2026-10, 출처 1건) | `hand adjusts cuff, eyes lowered` | `over-the-shoulder, gaze off frame` | 커프스, 칼라, 백 실루엣 |
 | 전환 중 | `in-between motion moment, captured transitional gesture`, 완성된 자세가 아니라 동작이 이어지는 순간이라 스톡 포즈 느낌이 지워진다 | `mid-turn, eyes trailing the movement`, 시선이 동작을 한 박자 늦게 따라간다 | `unfinished turn, gaze leading off frame`, 몸보다 시선이 먼저 프레임 밖으로 나간다 | 밑단 관성, 소매 접힘 변화, 어깨선 비틀림 |
 | 손-동작 접점 | `visible hand contact, object interaction cue`, 손이 실제로 접촉해 직물·손목·시선에 물리적 이유가 생긴다 | `hand adjusts cuff, eyes lowered`(이 축의 구체 사례), 시선이 손끝을 따라 내려간다 | `hands engaged, gaze follows the contact point off frame` | 커프스 눌림, 손목 노출, 직물 장력 |
 | 자연 시선 타깃 | `gaze returns to lens between actions`, 응시는 동작 사이 한 박자로만 쓴다 | `natural gaze target, candid attention shift`, 카메라 대신 행동 대상·다음 움직임을 봐 포즈감이 줄어든다 | `eyeline anchored beyond frame edge`, 프레임 밖 대상이 시선 높이를 정한다 | 목선 각도, 턱선 그림자, 칼라 열림 |
@@ -33,6 +33,9 @@
 | 무릎 지지 | `kneeling on both knees, torso held upright over the hips, one hand lifted toward the chin` | 무릎이 닿은 바닥면, 허벅지 위 원단 장력, 직립한 상체와 허리선 (출처 1건) |
 | 낮게 웅크림 | `crouched low with the knees drawn close, forearms over the knees, hands reaching toward what is in front` | 접힌 허리와 바닥 가까이 내려온 밑단, 발목과 신발 윤곽, 낮아진 시선 높이 (출처 2건) |
 | 뒤로 짚은 손바닥 | `both palms braced back on a waist-high ledge, hips resting against it, shoulders easing open` | 열린 어깨와 칼라, 손목 각도, 손바닥이 닿은 난간 재질 (출처 1건) |
+| 데크 위 한 발 지지 | `one shoe planted on the deck beneath a bent knee, the other leg lifted behind` | 신발과 발판의 접점, 굽힌 지지 무릎, 뒤로 든 반대 다리. 스케이트 자세를 요청했을 때 쓰는 관측 예시이며 이동 속도나 동작의 정확성을 입증하지 않는다 (관측 2026-10, 출처 1건) |
+| 등 맞대고 앉음 | `seated back to back on a low ledge, spines braced against each other, faces turned apart` | 맞닿은 등판과 어깨 높이 차, 서로의 무게를 받는 두 사람의 앉은 자세, 겹치지 않는 얼굴 방향 (출처 1건) |
+| 가는 끈 집기 | `fingertips lightly pinching a thin cord, the cord hidden for a moment between the fingers and reappearing below the hand, the tassel hanging straight down` | 손가락이 끈 앞에 오는 앞뒤 관계, 손 아래로 끊김 없이 이어지는 끈, 중력 방향으로 늘어진 장식 (출처 1건) |
 
 ## 소재·질감
 
@@ -56,6 +59,7 @@
 | 페이턴트·비닐 patent·vinyl | 곡면을 따라 길고 액체 같은 반사가 미끄러지고 반사 경계가 또렷하다 (관측 2026-10, 출처 1건) | 블랙 페이턴트 플랫폼 힐, `liquid reflections skating along the curve`, 단단한 형태 |
 | 시퀸 sequin | 작은 원판마다 키를 따로 받아 경계가 분명한 점광이 흩어지고, 몸이 움직이면 반짝이는 자리가 옮겨 간다 (관측 2026-10, 출처 2건) | 샴페인 시퀸 탑, `each sequin catching the key as its own crisp point`, 불투명 안감 위 고른 원판 결 |
 | 페이크 퍼 faux fur | 긴 털끝이 빛을 받아 윤곽이 부드럽게 번지고 털 사이 깊은 곳은 어둡게 가라앉는다 (관측 2026-10, 출처 1건) | 오버사이즈 페이크 퍼 재킷, `long pile with lit tips softening the outline`, 부푼 칼라 볼륨 |
+| 홀로그램 글리터 holographic glitter | 플래시를 받으면 플레이크마다 각도에 따라 초록·라임·파랑으로 다른 색이 튀고, 빛이 빗나간 자리는 은회색으로 가라앉는다 (관측 2026-10, 출처 1건) | 실버 홀로그램 글리터 탑, `each glitter flake returning a different hue as the flash hits`, 어두운 배경 앞 단일 플래시 |
 
 ## 조명 레시피
 
@@ -71,6 +75,9 @@
 | low key split | `low key split light, key:fill 8:1`, 얼굴 반쪽만 읽힌다 | 암부가 깊고 의상 윤곽은 rim으로 분리, 하이라이트 면적 작음 | 로우키 드라마 |
 | clamshell beauty | `clamshell soft light, key:fill 1:1`, 눈 밑 그림자 완화 | 위아래 균등광, 피부 결은 유지하고 하이라이트는 부드럽게 퍼짐 | 뷰티 클로즈업 |
 | 낮은 불빛 | `low firelight from below the frame, warm flicker on the palms and the underside of the face` | 턱과 코 밑이 위로 밝아지고 눈두덩 위는 어두워짐, 손바닥과 소매 끝만 주황으로 뜨고 뒤 하늘은 찬 해질녘 색으로 남음 (관측 2026-10, 출처 1건) | 겨울 저녁 야외 |
+| 커튼 역광 실루엣 | `low sun behind sheer curtains, the sheers glowing like lanterns, the face held in shadow` | 얼굴은 깊은 그늘에 이목구비만 희미하게 남고 머리카락·어깨·허리 가장자리에 호박색 rim이 그어짐, 커튼 직조는 rim을 받은 곳에서만 보임 (관측 2026-10, 출처 1건) | 해 질 녘 실내 실루엣 |
+| 젖은 모래 반사광 | `cold twilight sky as the only source, wet sand bouncing a faint second fill upward` | 그림자 경계가 없고 턱·쇄골 아래가 아래쪽에서 살짝 열림, 하이라이트가 낮게 눌린 청회색 화면 (관측 2026-10, 출처 1건) | 해 질 녘 빈 해변 |
+| 수관 사이 부분광 | `sun breaking through the canopy as one warm patch across the cheek and eyes, the rest of the face in soft shade` | 볼과 눈 위에만 따뜻한 빛 조각이 앉고 나머지 얼굴은 부드러운 그늘, 뒤의 잎은 둥근 금빛 보케 (관측 2026-10, 출처 1건) | 가을 나무 아래 근접 인물 |
 
 ## 시즌·로케이션 무드
 
@@ -85,3 +92,11 @@
 | 밤 / 네온 골목·주차장 | 코팅 표면, 실용 네온 | 네온과 젖은 반사가 색 대비를 만든다 | 남색·시안·마젠타 |
 | 흐린 날 / 루프톱·광장 | 패턴 판독용 오버캐스트 | 흐린 하늘이 소재와 패턴의 실제 색을 드러낸다 | 스톤·슬레이트·잉크 |
 | 실내 / 호텔 라운지 | 광택 소재, 낮은 실용광 | 낮은 실용광이 광택 소재와 재단선을 읽게 한다 | 다크우드·브라스·크림 |
+
+### 생활 장면의 진행 상태 (관측 2026-10, 출처 1건)
+
+일상 스냅에서 행동이 진행 중임을 보여야 할 때는 소품 이름뿐 아니라 사용 상태와 인물과의 위치를 쓴다. 지정된 깨끗한 제품 컷이나 원본 보존 편집에 생활 흔적을 추가하지 않는다. 아래는 관측 장면의 재서술이며 특정 문구의 생성 효과를 검증한 처방은 아니다.
+
+| 장면 단서 | 결과 문구 | 관측 화면 |
+|---|---|---|
+| 식사 도중 | `a partly cleared plate close to the lens, small sauce traces along its inner rim, the diner seated beyond it` | 전경 접시의 남은 음식과 사용 흔적, 그 뒤 인물의 거리 관계. 음식 광고용 정물보다 식사 중 잠깐 찍은 상황을 묘사한다 |

@@ -8,6 +8,8 @@
 2. **품질어는 결과에 연결한다.** [compiler.md](compiler.md) §결과로 쓴다를 따른다. Soul에서는 결과를 설명하지 않는 품질어만으로 장면을 채우지 않는다. 필요한 경우 `visible skin pores, controlled specular highlights, dry wool fibers, dense silk sheen, fine halation, compressed flash shadows, low-saturation tungsten palette, coarse 35mm grain, soft highlight roll-off`처럼 보이는 특성을 쓴다.
 3. **모든 토큰은 결과를 바꿔야 한다.** 결과에 보이지 않는 단어는 삭제한다.
 
+짧게 쓰는 원칙은 **Soul V2에만 적용**하며, 다른 생성 모델에 "짧을수록 좋다"는 공통 규칙으로 옮기지 않는다.
+
 ## 지시 우선순위 (충돌 시 위가 이긴다)
 
 1. 정체성 보존 → 2. 제품 디자인·의복 구조 → 3. 요구된 동작·포즈 → 4. 카메라 앵글·크롭 → 5. 배경·로케이션 → 6. 미학 방향 → 7. 조명 → 8. 카메라·필름 처리 → 9. 장식 디테일.
