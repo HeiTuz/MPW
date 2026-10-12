@@ -9,7 +9,7 @@
 ## 심도·원근
 <!-- dict:depth_lens -->
 
-원근이 찌그러지는 이유는 초점거리 숫자가 아니라 **카메라와 피사체 사이 거리**다. `85mm`보다 "물러서서 얼굴 면이 납작해졌다"가 원인에 가깝고, 바디명을 모르는 모델에도 전달된다. 장비 나열 대신 결과로 적는 근거는 [../compiler.md](../compiler.md) §결과로 쓴다.
+원근을 가르는 것은 초점거리 숫자가 아니라 **카메라와 피사체 사이 거리**다. `85mm` 대신 "물러서서 얼굴 면이 납작해졌다"처럼 결과로 쓴다([../compiler.md](../compiler.md) §결과로 쓴다).
 
 | 축 | 결과 토큰 |
 |---|---|
@@ -34,7 +34,7 @@
 ## 빛
 <!-- dict:lighting -->
 
-얼굴을 고르게 비우는 클램셸은 선택할 수 있으나 기본값으로 넣지 않는다. 광질을 가르는 것은 장비 상표가 아니라 **피사체가 보는 광원의 겉보기 크기**다. 크고 가까우면 부드럽고, 작고 멀면 딱딱하다.
+클램셸은 기본값이 아니다. 광질은 장비 상표가 아니라 **피사체가 보는 광원의 겉보기 크기**로 갈린다. 크고 가까우면 부드럽고, 작고 멀면 딱딱하다.
 
 | 축 | 결과 토큰 |
 |---|---|
@@ -47,7 +47,7 @@
 | 질 — 중간 | `moderately defined shadow edge, form modelled with a soft terminus` |
 | 질 — 하드 | `small distant source, crisp shadow edge with a hard terminus, small bright specular highlight, texture strongly raked` |
 | 질 — 레이킹 | `low-angle soft light, gentle relief shadows`(낮은 측면의 넓은 연질광이 돌출부만 밝히고 홈에는 완만한 그늘) |
-| 비율 | 표기는 **키측:그림자측**, 배수가 곧 스톱이다. `1:1` 평탄(0스톱) / `2:1` 자연·그림자 디테일 유지(1스톱) / `4:1` 드라마틱(2스톱) / `8:1` 로우키·암부 near-black(3스톱). 숫자만 쓰지 않는다 — `key:fill 4:1, pronounced shadow side, shadow detail thinning`처럼 결과와 같이 적는다([../compiler.md](../compiler.md) §스타일은 화면 결과로) |
+| 비율 | 표기는 **키측:그림자측**, 배수가 곧 스톱이다. `1:1` 평탄(0스톱) / `2:1` 자연·그림자 디테일 유지(1스톱) / `4:1` 드라마틱(2스톱) / `8:1` 로우키·암부 near-black(3스톱). 숫자만 쓰지 않는다 — `key:fill 4:1, pronounced shadow side, shadow detail thinning`처럼 결과와 같이 적는다 |
 | 룩북 기본광 | `large soft key with a broad white bounce filling the shadow side, low overall contrast, every shadow still holding the seam and the fold`(옷이 주인공이므로 반사판으로 대비를 낮춘다) |
 | 보조 | `cool edge rim isolating the contour`, `warm practical spill`, `window glow arriving from camera left`, `upward bounce opening the jaw shadow` |
 | 시간광 | 해질 무렵의 따뜻한 낮은 광 / 블루아워의 찬 기운 / 한낮 톱라이트 = `short dense nose shadow, shadowed eye sockets` |
@@ -59,7 +59,7 @@
 
 ### 캐치라이트
 
-각막에 찍힌 하이라이트 모양이 모디파이어 형태다. 클로즈업에서 값이 싸다.
+각막의 하이라이트 모양이 모디파이어 형태다.
 
 | 소스 | 결과 토큰 |
 |---|---|
@@ -74,22 +74,20 @@
 
 ## 색
 
-자연스러운 피부색을 지켜야 하면 보정은 피부 밖 영역에 걸고 피부는 본래 톤에 둔다.
-
 | 축 | 규칙 |
 |---|---|
-| 팔레트 | 정확 색이나 색 관계가 필요할 때만 지정. 색 이름으로 되면 코드값은 생략. 전문 레인은 그 레인의 색 계약을 따른다. |
+| 팔레트 | 정확 색·색 관계가 필요할 때만 지정하고 색 이름으로 되면 코드값은 생략. 전문 레인은 그 레인의 색 계약을 따른다. |
 | 색온도 | 켈빈 숫자 또는 `warm-3200 feel` / `neutral white` / `cool bias` |
 | 조화 | 반대색 / 이웃색 / 세 점 삼각 |
 | 룩 | 청록-주황 분리, 블리치 바이패스 대비, 채도 낮춘 뮤트, 하이라이트가 따뜻하게 꺾임 |
 | 스킨 보호 기본 | `warm grade applied to background and negative space, skin left neutral and true to its own undertone` |
 | 스킨 보호 — 저채도 | `desaturated overall palette with skin retaining natural warmth and blood tone` |
 | 스킨 보호 — 틸 섀도 | `teal shift confined to the shadows and the background, skin midtones untouched` |
-| 필름 결과 | Portra = 따뜻한 피부, 옅은 파스텔 중간톤, 하이라이트가 천천히 꺾임; Tri-X = 강한 흑백 대비와 보이는 입자; CineStill 800T = 텅스텐 밤 팔레트, 밝은 가장자리의 붉은 번짐 |
+| 필름 결과 | 스톡별 결과는 아래 §필름 스톡 결과. Tri-X = 강한 흑백 대비와 보이는 입자; CineStill 800T = 텅스텐 밤 팔레트, 밝은 가장자리의 붉은 번짐 |
 
 ## 필름·매체 결과
 
-한 컷에 매체 이름 하나. 이름만 쓰지 말고 피부·그림자·하이라이트 거동을 같이 적는다. Soul 계열 대상은 스톡명을 빼고 결과 묘사만 쓴다([../soul-v2-director.md](../soul-v2-director.md) §실측 법칙 3).
+한 컷에 매체 이름 하나. 이름만 쓰지 말고 피부·그림자·하이라이트 거동을 같이 적는다. Soul 계열은 맨 위 원칙대로 스톡명을 뺀다.
 
 ### 필름 스톡 결과
 <!-- dict:film_stock -->
@@ -116,6 +114,7 @@
 | Soft focus | 초점을 부드럽게 풀어 회상적·로맨틱 | `soft focus, dreamy blur, gentle lens softness` |
 | Vignetting | 가장자리를 어둡게 해 시선을 중앙으로 | `subtle vignetting, center-focused composition` |
 | Film grain | 필름 특유의 질감과 아날로그 분위기 | `fine film grain, visible analog texture` |
+| Handheld low-light blur | 저조도 손떨림으로 하이라이트가 짧게 끌림 (관측 2026-10, 출처 1건) | `slight handheld motion blur in low light, highlights trailing in short streaks` |
 
 ### 감성 묶음
 <!-- dict:emotional_preset -->
@@ -139,10 +138,14 @@
 | 유도 | 시선을 끄는 선, 눈길 궤적, 삼각으로 앉힌 안정, 소품 위계 = `prop contrast kept below the hero`(소품은 주인공보다 대비를 낮춰 맥락만 주고 가리지 않음) |
 | 샷 사이즈 | 아주 가까운 얼굴 → 얼굴 → 허리 위 → 발끝까지 → 먼 전경 |
 | 앵글 | 눈높이 / 아래에서 올려봄 / 위에서 내려봄 / 어깨 너머 / 기울인 프레임 |
-| 거리 | 거리를 숫자로 적을지는 그 숫자가 화면을 가를 때만. 프레이밍으로 충분하면 만들지 않는다. |
+| 거리 | 숫자 거리는 화면을 가를 때만 적는다. |
 | 커버 크롭 | `upper-body fashion close-up, tilted head crop, clean cover portrait`(얼굴·주얼리·의상 일부만 크게 잘라 뷰티와 패션 정보를 동시에 압축) |
 | 커버 크롭 변주 | `gesture beauty crop`(손·주얼리가 얼굴 일부를 가림) / `asymmetric cover crop`(대각 축으로 밀어 비대칭) |
 | 풀블리드 매크로 | `full-frame surface macro, texture filling the frame edge to edge, the surface itself as subject`(용기·배경 없이 질감이 주제가 됨) |
+| 전경 가림 | `soft out-of-focus shoulder, strap or passing crowd crossing the near edge, partly veiling the face` (관측 2026-10, 출처 3건) |
+| 근경 팔·손 | `one arm reaching toward the lens from the frame edge, the near hand enlarged` (관측 2026-10, 출처 2건) |
+| 부분 얼굴 크롭 | `one eye or one mouth corner centered, the rest of the face cut by the frame` (관측 2026-10, 출처 1건) |
+| 대각 리딩 라인 | `diagonal rail from the near corner, figure small mid-frame, near and far ground both reading` (관측 2026-10, 출처 1건) |
 
 ## 재질·마감
 <!-- dict:material_finish -->
@@ -157,7 +160,7 @@
 | 피부 — 꿀광 | `inner honey glow, warm luminous skin, subtle cheek highlight` |
 | 피부 — 부분 매트 | `matte T-zone, controlled forehead shine, balanced dewy finish` |
 | 피부 실패조건 짝 | `skin undertone preserved under split lighting` — 색온도가 갈린 조명에서 피부톤이 죽지 않게 같이 적는다 |
-| 로고·워터마크 의도 | `clean, brand-free, copy-free finish` — 나머지 실패 축은 [실패 축의 결과형 재서술](#실패-축의-결과형-재서술) |
+| 로고·워터마크 의도 | `clean, brand-free, copy-free finish` — 나머지는 [§실패 축](#실패-축의-결과형-재서술) |
 
 ## 장르 조합
 <!-- dict:genre_combo -->
@@ -175,7 +178,7 @@
 
 ### 화보와 갈리는 축
 
-룩북은 명료·정확·반복, 화보는 서사다. 룩북은 담백한 배경·같은 앵글·고른 빛(화보는 장소가 내용), 스타일링을 줄여 구조·원단·디테일을 남김(화보는 겹침으로 긴장을 만듦), 컷마다 셋업을 고정(화보는 달라도 됨). 판매 컷과 화보 사이에 선다. 브랜드 이름 대신 아래 형식 특성으로 쓴다.
+룩북은 명료·반복, 화보는 서사다. 룩북은 담백한 배경·고른 빛·컷마다 고정한 셋업과 줄인 스타일링으로 구조·원단·디테일을 남긴다(화보는 장소와 겹침이 내용이다). 브랜드 이름 대신 아래 형식 특성으로 쓴다.
 
 | 축 | 결과 토큰 |
 |---|---|
@@ -194,9 +197,7 @@
 
 ## 실패 축의 결과형 재서술
 
-### 축별 재서술
-
-배제는 원하는 상태로 되돌린다. 가운데 열은 대조용이며 프롬프트에 옮기지 않는다. 이 표는 관측된 실패 축에만 적용한다. 결함이 관측되지 않은 새 프롬프트에는 붙이지 않는다.
+가운데 열은 대조용이며 프롬프트에 옮기지 않는다. 관측된 실패 축에만 쓰고, 결함이 없는 새 프롬프트에는 붙이지 않는다.
 
 | 축 | 부정형(옮기지 않음) | 긍정형 재서술 |
 |---|---|---|
