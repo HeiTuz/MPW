@@ -16,18 +16,18 @@
 | 광각 느낌 | `subject near the lens, nearer forms larger than distant ones, frame taking in a broad field, edges gently pulled, focus holding front through rear` |
 | 표준 | `perspective matching everyday seeing, body and room staying in scale` |
 | 중망원 느낌 | `camera stepped back, facial planes holding flattering proportion, background pushed back and softened` |
-| 망원/압축 | `camera far back, depth squeezed, planes stacked, figure lifted off a softened rear field`. 더 밀면 `rear field flattened into one plane right behind the figure` |
+| 망원/압축 | `camera far back, depth squeezed, planes stacked, figure lifted off a softened rear field`; 더 밀면 `rear field flattened right behind the figure` |
 | 얕은 심도 | `shallow depth of field, eyes sharp with the shoulder line already falling off, background dissolved into creamy blur` |
-| 깊은 심도(룩북) | `garment surface sharp from collar to hem, fabric weave resolvable, background separated by luminance step, not by defocus`(흐림 대신 밝기 차로 나눠야 옷 정보가 남는다) |
+| 깊은 심도(룩북) | `garment surface sharp collar to hem, weave resolvable, background separated by luminance step, not defocus`(밝기 차로 옷 정보를 남긴다) |
 | 빈티지 보케 | `blur traces curve near the frame edges; the focused subject keeps a mellow tonal transition` |
 | 아나모픽 | `broad cinema frame, streaks running sideways, oval glints` |
-| 가장자리 감쇠 | `sharp central microtexture, soft edge focus falloff`(가운데 미세결은 또렷하고 가장자리만 천천히 풀림) |
+| 가장자리 감쇠 | `sharp central microtexture, soft edge focus falloff` |
 
 전신 비율이 핵심일 때만 카메라 높이를 각도와 나눠 적는다.
 
 | 축 | 결과 토큰 |
 |---|---|
-| 전신 표준 | `camera at the subject's waist-to-chest height, leg length rendered true, hip-to-hem line reading full`. 눈높이에서 내려보면 `lower body foreshortened, legs reading shorter`가 되므로 룩북에선 피한다 |
+| 전신 표준 | `camera at the subject's waist-to-chest height, leg length rendered true, hip-to-hem line full`; 눈높이 내려보기는 `lower body foreshortened`라 룩북에선 피한다 |
 | 로우앵글 | `camera below waist height looking up, subject monumental, hemline dominant, ceiling or sky entering the frame` |
 | 상반신·뷰티 | `camera at the subject's eye height, facial verticals staying parallel` |
 
@@ -40,7 +40,7 @@
 |---|---|
 | 패턴 — clamshell | `light from above angled down and a second source from below angled up, shadows under the eyes and jaw filled in, skin glowing evenly, twin catchlights stacked in each eye` |
 | 패턴 — Rembrandt | `key from 45° above, triangle of light on the shadow-side cheek, eye on the shadow side still catching a highlight` |
-| 패턴 — butterfly·loop | `key placed high and directly in front, small symmetric shadow under the nose, cheekbones defined by even falloff` / 키를 축에서 살짝 돌리면 `nose shadow looping onto the cheek, mild asymmetry` |
+| 패턴 — butterfly·loop | `key high and directly front, small symmetric shadow under the nose, cheekbones defined by even falloff` / 키를 살짝 돌리면 `nose shadow looping onto the cheek` |
 | 패턴 — split | `light striking one side of the face only, vertical division down the nose bridge, far side falling to near-black` |
 | 패턴 — 뷰티디시 키 | `crisper shadow edge than a softbox, clearly defined round catchlight, skin texture retaining micro-contrast` |
 | 질 — 소프트 | `soft diffuse key, shadow edge transitioning gradually, gentle gradient across the face`. 극단은 `very large source close to the subject, light wrapping continuously around the cheek` |
@@ -153,6 +153,7 @@
 | 축 | 결과 토큰 |
 |---|---|
 | 표면 반응 | `butter-matte face`, `wet specks on high points`, `light traveling under the surface`, `thick paste with built ridges and metal sheen`(두꺼운 도포면·뭉친 가장자리), `tiny aerated pits, whipped matte density`(미세 기공·저광택), `limestone pitting, chalky dry plane`(균열·구멍 있는 흰 석회암 면), `crochet-raffia handwork`(수공예 질감) |
+| 젖은 유리 앞 | `shoot through rain-beaded glass: foreground droplets crisp with tiny refractions, water threading down the pane in thin lines, reflections staying coherent with the glass, the figure sharp beyond it` (관측 2026-10, 출처 1건) |
 | 마감 | `faint analog grain`, `soft corner darkening`, `red bloom on bright rims`, `unmarked clean finish` |
 | 피부 | `pores readable, vellus hair present, grain kept faint`, 얼굴 미세결, 약한 톤 기복 |
 | 피부 — 촉촉 | `hydrated skin base, moisture-rich finish, dewy but natural skin` |

@@ -36,6 +36,9 @@
 | 데크 위 한 발 지지 | `one shoe planted on the deck beneath a bent knee, the other leg lifted behind` | 신발과 발판의 접점, 굽힌 지지 무릎, 뒤로 든 반대 다리. 스케이트 자세를 요청했을 때 쓰는 관측 예시이며 이동 속도나 동작의 정확성을 입증하지 않는다 (관측 2026-10, 출처 1건) |
 | 등 맞대고 앉음 | `seated back to back on a low ledge, spines braced against each other, faces turned apart` | 맞닿은 등판과 어깨 높이 차, 서로의 무게를 받는 두 사람의 앉은 자세, 겹치지 않는 얼굴 방향 (출처 1건) |
 | 가는 끈 집기 | `fingertips lightly pinching a thin cord, the cord hidden for a moment between the fingers and reappearing below the hand, the tassel hanging straight down` | 손가락이 끈 앞에 오는 앞뒤 관계, 손 아래로 끊김 없이 이어지는 끈, 중력 방향으로 늘어진 장식 (출처 1건) |
+| 목 옆에 둔 손 | `one hand resting lightly beside the neck, wrist continuing the line toward the jaw` | 얼굴·손목·목선이 이어지는 근접 자세, 손이 닿은 위치와 칼라의 간격 (출처 1건) |
+| 앞에서 교차한 다리 | `one leg crossing in front of the other, torso upright and shoulders at ease` | 겹치는 다리의 앞뒤, 교차점 주변의 밑단과 신발 위치 (출처 1건) |
+| 거울 앞 입술 손질 | `applicator touching the lower lip, the other hand holding a compact near the lower frame edge` | 입술과 도구의 접점, 아래쪽 손에 받쳐진 소품, 거울을 향한 얼굴 방향 (출처 1건) |
 
 ## 소재·질감
 
