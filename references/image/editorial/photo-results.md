@@ -153,8 +153,8 @@
 | 축 | 결과 토큰 |
 |---|---|
 | 표면 반응 | `butter-matte face`, `wet specks on high points`, `light traveling under the surface`, `thick paste with built ridges and metal sheen`(두꺼운 도포면·뭉친 가장자리), `tiny aerated pits, whipped matte density`(미세 기공·저광택), `limestone pitting, chalky dry plane`(균열·구멍 있는 흰 석회암 면), `crochet-raffia handwork`(수공예 질감) |
-| 젖은 유리 앞 | `shoot through rain-beaded glass: foreground droplets crisp with tiny refractions, water threading down the pane in thin lines, reflections staying coherent with the glass, the figure sharp beyond it` (관측 2026-10, 출처 1건) |
-| 마감 | `faint analog grain`, `soft corner darkening`, `red bloom on bright rims`, `unmarked clean finish` |
+| 젖은 유리 앞 | `rain-beaded glass before a sharp figure: crisp refracting drops, thin downward water trails, reflections coherent with the pane` (관측 2026-10, 출처 1건) |
+| 마감 | `faint analog grain`, `soft corner darkening`, `red bloom on bright rims`, `unmarked clean finish`, `white dust flecks and fine scratches over dark planes` (관측 2026-10, 출처 1건) |
 | 피부 | `pores readable, vellus hair present, grain kept faint`, 얼굴 미세결, 약한 톤 기복 |
 | 피부 — 촉촉 | `hydrated skin base, moisture-rich finish, dewy but natural skin` |
 | 피부 — 유리알 투명 | `translucent skin clarity, visible texture, non-plastic glow`(반투명하되 모공은 유지) |
