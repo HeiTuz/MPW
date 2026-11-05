@@ -93,12 +93,13 @@
 **GPT Image 모델 분기 (2026-09-16 적용; 공식 문서 2026-09-09 확인·2026-09-16 재확인·2026-09-29 선택 문장 재확인).** 모델 선택이 필요한 요청에서만 순서대로 판정하고 처음 일치한 곳에서 멈춘다. 아래 비교·시험은 승인된 생성 평가에서만 실행하며, 문안 작성·추천만 요청됐으면 후보와 판단 근거까지만 제공한다. 결정한 모델은 프롬프트 본문이 아니라 S2 `model` 파라미터 또는 S3 라벨 줄로 전달하고, 어느 분기가 적용됐는지 한 줄로 밝힌다. 공식 가이드는 편집 정밀도가 가장 중요한 작업에 Sunburst, 빠른 일상 생성에 Flare를 권한다. 조건이 드러나지 않은 요청을 Sunburst로 시작하는 분기 C는 이 설치의 사용자 지정 기본값이며 공식 권장값이 아니다.
 
 분기 A. **지정 모델.** 사용자·요청·상위 워크플로가 모델 id를 지정하면 그대로 쓴다(`gpt-image-2`, `gpt-image-2.5-flare` 등 정확한 id). 지정을 기본값으로 덮지 않는다.
+분기 A-2. **2.6 계열 지정(2026-11-05 공식 가이드 확인).** 정확한 변형 없이 GPT Image 2.6을 명시한 경우에만 적용한다. 기존 2.5 이행은 같은 변형부터 비교하고, 새 작업의 속도 우선은 `gpt-image-2.6-flare`, 세부·레이아웃·편집 정밀도 우선은 `gpt-image-2.6-sunburst`를 후보로 고른다. 우선순위 미지정이면 이 설치의 Sunburst 선호를 같은 세대에 적용한다. 2.6 요청을 아래 2.5 기본 분기로 되돌리지 않으며, 2.6 미지정 요청의 기존 기본값도 바꾸지 않는다. 지원되지 않는 표면에서는 모델을 바꿨다고 주장하지 말고 해당 표면의 지원을 확인한다. 설정·이행은 [surface-contracts.md](surface-contracts.md) §4.5를 따른다.
 분기 B. **Flare 조건.** 요청이나 문맥이 속도·지연 우선, 대량 반복·초안·시안 단계, 또는 이미 검증된 GPT Image 2 품질로 충분하다는 조건을 밝히면 `gpt-image-2.5-flare`부터 비교한다. 속도 우선과 GPT Image 2 충족은 공식 이행 절차의 Flare 시작 조건이고, 대량 반복·초안은 이 설치가 속도 우선으로 분류한 경우다. 결과가 요구에 못 미치면 같은 프롬프트·입력·품질로 `gpt-image-2.5-sunburst`를 시험한다.
 분기 C. **사용자 지정 기본값(2026-09-16).** 그 외 모든 GPT Image 생성·편집은 `gpt-image-2.5-sunburst`다. 정확 텍스트·인물과 제품 보존·복잡한 편집·브랜드 디테일처럼 품질이 요구인 작업은 이 분기에 남는다. 사용자가 지연·비용 절감을 요청할 때만 같은 프롬프트·입력으로 Flare를 시험해 품질이 유지되고 지연이 줄 때 바꾸고, 그렇지 않으면 Sunburst를 유지한다.
 
-첫 비교는 프롬프트·참조·크기·공통 품질 설정을 고정하고, 품질을 충족한 뒤 속도를 비교한다. 빠른 모델이 더 싸거나 모든 컷에서 일정 비율로 빨라진다고 단정하지 않는다. 자연어 작성은 [surface-contracts.md](surface-contracts.md) §3.2, API 설정은 §4.3을 따른다. 공식 근거·확인일은 [surface-evidence.md](surface-evidence.md) §7에 있다.
+첫 비교는 프롬프트·참조·크기·공통 품질 설정을 고정하고, 품질을 충족한 뒤 속도를 비교한다. 빠른 모델이 더 싸거나 모든 컷에서 일정 비율로 빨라진다고 단정하지 않는다. 자연어 작성은 [surface-contracts.md](surface-contracts.md) §3.2, API 설정은 같은 문서의 2.5 §4.3·2.6 §4.5를 따른다. 공식 근거·확인일은 [surface-evidence.md](surface-evidence.md) §7에 있다.
 
-기존 워크플로 이행 절차는 [surface-contracts.md](surface-contracts.md) §4.3을 따른다.
+기존 워크플로 이행 절차는 [surface-contracts.md](surface-contracts.md)의 2.5 §4.3·2.6 §4.5를 따른다.
 
 - **Higgsfield는 모델 id로 지정되어 들어온다.** `soul_2`·`nano_banana_pro`·`seedream_v5_pro` 같은 id가 요청에 이미 있으면 그 자체가 라우팅 결정이다. §1·§2 표를 건너뛰고 현재 모델 상세 조회로 직행한다.
 - **Midjourney는 이 로스터에 없다.** 붙여넣기 입력창 + `--` 플래그를 쓰는 별도 표면이며, 사용자가 명시적으로 요청했을 때만 간다. 미지정 요청이 Midjourney로 흘러가지 않는다.
@@ -132,6 +133,7 @@
 모델 선택 후 해당 어댑터의 적용 표면을 확인하고, 파라미터는 [surfaces.md](surfaces.md)와 실제 호출 계약을 따른다.
 
 - [gpt-image-2-5.md](gpt-image-2-5.md) — **기본 엔진.** GPT Image 2.5 규칙이 있는 절을 상황별로 가리키는 진입점. 대상 미정 이미지 문안도 여기서 시작한다.
+- [gpt-image-2-6.md](gpt-image-2-6.md) — GPT Image 2.6을 명시한 요청의 공통 문안·직접 API 설정 진입점. 기존 2.5 기본값이나 Higgsfield 로스터를 바꾸지 않는다.
 - [nano-banana.md](nano-banana.md) — Google Gemini 이미지의 서술형 작성 구조, 참조 역할, 편집·글자의 엔진 고유 방식, 촬영 용어 엔진 예외와 한계. 모델은 지정이 없으면 Nano Banana 2(`gemini-3.1-flash-image`), 복잡한 지시·정확한 글자·4K는 Pro(`gemini-3-pro-image`), 속도·비용 우선은 2 Lite(`gemini-3.1-flash-lite-image`), 대량 저지연 1024px는 Nano Banana(`gemini-2.5-flash-image`). 확인일은 [surface-evidence.md](surface-evidence.md) §7.
 - [flux.md](flux.md) — FLUX·FLUX.2·Kontext의 지정 표면별 자연어·편집 문법.
 - [higgsfield-genjutsu.md](higgsfield-genjutsu.md) — Genjutsu 기존 영상의 Motion Transfer·Object Swap. 짧은 변경 지시와 참조 대응을 작성한다.
