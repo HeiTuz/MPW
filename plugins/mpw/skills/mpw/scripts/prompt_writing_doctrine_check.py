@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
-"""Weekly no-agent doctrine check for canonical HeiTuz checkouts.
+"""Weekly no-agent doctrine check for the canonical MPW checkout.
 
-Healthy runs are silent and always exit zero so a finding is a human work item,
-not a failed cron lane.  Proposal exports are read as a backlog only; this
-runner never edits, applies, or archives them.
+Healthy core runs are silent and findings exit zero so they are human work
+items, not a failed cron lane. Unsupported companion checks require explicit
+--legacy-integrations opt-in. Proposal exports are read as a backlog only;
+this runner never edits, applies, or archives them.
 """
 from __future__ import annotations
 
@@ -21,6 +22,7 @@ from pathlib import Path
 MPW = Path(__file__).resolve().parents[1]
 CANONICAL_ROOT = MPW.parent
 DEFAULT_STATE = Path.home() / ".codex" / "state" / "prompt-writing-doctrine" / "backlog.json"
+# Only consulted by the explicit, unsupported legacy diagnostic mode.
 DEFAULT_GARDEN_ROOTS = {
     "image": Path.home() / ".codex" / "image-reference-garden",
     "design": Path.home() / ".codex" / "design-reference-garden",
@@ -163,7 +165,7 @@ def check_dictionary_reachable(canonical_root: Path) -> list[str]:
     gardener = canonical_root / "image-reference-gardener"
     script = gardener / "scripts/image_reference_garden.py"
     if not script.is_file():
-        return []
+        return [f"- legacy dictionary check NOT RUN: missing {script}"]
     try:
         scripts_dir = str(script.parent)
         sys.path.insert(0, scripts_dir)
@@ -182,14 +184,16 @@ def check_dictionary_reachable(canonical_root: Path) -> list[str]:
 
 
 def check_contract_mirrors(mpw: Path, canonical_root: Path) -> list[str]:
-    destinations = [canonical_root / name for name in ("image-reference-gardener", "design-reference-gardener", "prompt-knowledge-gardener") if (canonical_root / name).is_dir()]
+    roots = [canonical_root / name for name in ("image-reference-gardener", "design-reference-gardener", "prompt-knowledge-gardener")]
+    destinations = [root for root in roots if root.is_dir()]
+    lines = [f"- legacy contract mirror check NOT RUN: missing {root}" for root in roots if not root.is_dir()]
     if not destinations:
-        return []
+        return lines
     proc = subprocess.run([sys.executable, str(mpw / "scripts/sync_contracts.py"), *sum((["--dest", str(dest)] for dest in destinations), [])], capture_output=True, text=True, check=False, timeout=60)
     if proc.returncode == 0:
-        return []
+        return lines
     detail = (proc.stdout + "\n" + proc.stderr).strip().splitlines()[:8]
-    return ["- contract mirrors drifted from MPW/contracts — rerun scripts/sync_contracts.py --sync:", *[f"  {line}" for line in detail]]
+    return [*lines, "- legacy contract mirrors drifted from MPW/contracts — inspect before any explicit scripts/sync_contracts.py --sync:", *[f"  {line}" for line in detail]]
 
 
 def check_backlog(previous: dict, roots: dict[str, Path], now: date) -> tuple[list[str], dict]:
@@ -198,6 +202,7 @@ def check_backlog(previous: dict, roots: dict[str, Path], now: date) -> tuple[li
     for name, root in roots.items():
         exports = root / "exports"
         if not exports.is_dir():
+            lines.append(f"- legacy {name} backlog check NOT RUN: missing {exports}")
             continue
         try:
             proposals = [path for path in exports.glob("*.md") if path.is_file()]
@@ -240,33 +245,43 @@ def parse_garden_roots(values: list[str] | None) -> dict[str, Path]:
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--state", help="Reminder state path (default: MPW_DOCTRINE_STATE or ~/.codex/state/prompt-writing-doctrine/backlog.json)")
-    parser.add_argument("--canonical-root", default=str(CANONICAL_ROOT), help="Canonical HeiTuz checkout root for sibling checks")
-    parser.add_argument("--garden-root", action="append", help="Backlog root override as NAME=PATH; repeatable")
+    parser.add_argument("--legacy-integrations", action="store_true", help="Opt into unsupported companion dictionary, mirror, and backlog diagnostics; not a compatibility or release gate")
+    parser.add_argument("--canonical-root", help="Legacy sibling checkout root (requires --legacy-integrations)")
+    parser.add_argument("--garden-root", action="append", help="Legacy backlog root override as NAME=PATH; repeatable (requires --legacy-integrations)")
     args = parser.parse_args(argv)
+    if not args.legacy_integrations and (args.canonical_root is not None or args.garden_root):
+        parser.error("--canonical-root and --garden-root require --legacy-integrations")
     state = Path(args.state or os.environ.get("MPW_DOCTRINE_STATE") or DEFAULT_STATE).expanduser().resolve()
-    canonical_root = Path(args.canonical_root).expanduser().resolve()
     if not MPW.is_dir():
         print(f"prompt-writing doctrine check FAILED: canonical MPW checkout missing at {MPW}")
         return 0
     previous, roster = read_state(state)
     now = today()
     lines: list[str] = []
-    for check in (
+    checks = [
         lambda: check_roster_age(MPW, roster, now),
         lambda: check_contract_drift(MPW),
-        lambda: check_dictionary_reachable(canonical_root),
-        lambda: check_contract_mirrors(MPW, canonical_root),
-    ):
+    ]
+    if args.legacy_integrations:
+        canonical_root = Path(args.canonical_root or CANONICAL_ROOT).expanduser().resolve()
+        lines.append("- legacy integration diagnostics enabled: unsupported, not a full compatibility check or release gate.")
+        checks.extend((
+            lambda: check_dictionary_reachable(canonical_root),
+            lambda: check_contract_mirrors(MPW, canonical_root),
+        ))
+    for check in checks:
         try:
             lines.extend(check())
         except Exception as exc:  # noqa: BLE001 - all findings must remain reportable
             lines.append(f"- doctrine check errored: {exc}")
-    try:
-        backlog_lines, next_roots = check_backlog(previous, parse_garden_roots(args.garden_root), now)
-        lines.extend(backlog_lines)
-    except Exception as exc:  # noqa: BLE001
-        next_roots = previous
-        lines.append(f"- check_backlog errored: {exc}")
+    # Preserve legacy reminder state without reading companion files by default.
+    next_roots = previous
+    if args.legacy_integrations:
+        try:
+            backlog_lines, next_roots = check_backlog(previous, parse_garden_roots(args.garden_root), now)
+            lines.extend(backlog_lines)
+        except Exception as exc:  # noqa: BLE001
+            lines.append(f"- check_backlog errored: {exc}")
     error = write_state(state, next_roots, roster)
     if error:
         lines.append(error)

@@ -13,7 +13,6 @@ function listed(prefix, suffix) {
 
 const steps = [];
 for (const name of listed("test_", ".py")) {
-  if (name === "test_adapter_master_integration.py") continue;
   steps.push({ name, command: "python3", args: [path.join("scripts", name)] });
 }
 for (const name of listed("test_", ".mjs")) {
@@ -25,6 +24,9 @@ steps.push({
   args: [path.join("scripts", "check_prompt.mjs"), "--test"],
 });
 
+// This suite covers the supported MPW tree. Historical external diagnostics
+// live in tools/legacy and are intentionally outside scripts/ discovery.
+console.log("Supported MPW suite (legacy external integrations excluded)");
 const failed = [];
 for (const step of steps) {
   console.log(`--- ${step.name}`);
@@ -32,22 +34,6 @@ for (const step of steps) {
   if ((result.status ?? 1) !== 0) failed.push(step.name);
 }
 
-console.log("--- test_adapter_master_integration.py");
-const integrationEnv = {
-  ...process.env,
-  MPW_ALLOW_MISSING_EXTERNAL_INTEGRATION: process.env.MPW_ALLOW_MISSING_EXTERNAL_INTEGRATION || "1",
-};
-const integration = spawnSync("python3", ["scripts/test_adapter_master_integration.py"], {
-  cwd: root,
-  encoding: "utf8",
-  env: integrationEnv,
-});
-if (integration.stdout) process.stdout.write(integration.stdout);
-if (integration.stderr) process.stderr.write(integration.stderr);
-const notRun = /EXTERNAL INTEGRATION NOT RUN/.test(`${integration.stdout}\n${integration.stderr}`);
-if ((integration.status ?? 1) !== 0) failed.push("test_adapter_master_integration.py");
-
 console.log(failed.length ? "FAIL" : "PASS");
 console.log(`summary failed=${failed.length}${failed.length ? ` (${failed.join(", ")})` : ""}`);
-if (notRun) console.log("external integration NOT RUN");
 process.exit(failed.length ? 1 : 0);
