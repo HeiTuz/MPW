@@ -1,16 +1,26 @@
 # GardenRecipe · PromptBundle 공유 계약
 
+## 지원 범위 (2026-11-05)
+
+MPW가 유지보수하고 릴리스에서 검증하는 범위는 이 저장소의 프롬프트 규칙, `contracts/` 스키마·검증기·fixture, `scripts/compile_*.py` 컴파일러, 프롬프트 검사기와 플러그인 빌드·설치 도구다. `npm test`는 이 범위를 네트워크 없이 검증한다. 실제 작성 모델·이미지 생성 품질이나 외부 실행기의 호환성을 증명하지는 않는다.
+
+다음 네 과거 동반 프로젝트의 별도 구현과 종단 간 연동은 지원 대상에서 제외한다: `image-reference-gardener`(image adapter), `design-reference-gardener`(design adapter), `higgsfield-prompt-bridge`, `prompt-knowledge-gardener`. 현재 지원 검증에 사용할 정본 소스가 확보되지 않았으며, 해당 구현을 테스트한 것으로 간주하지 않는다. 이 프로젝트의 설치·미러 동기화·호환성은 MPW 릴리스 필수 조건이 아니다. 소스 체크아웃의 `tools/legacy/`에는 수동 진단용 과거 하네스만 보존하며, 일반 테스트와 npm·플러그인 배포에는 포함하지 않는다. 다시 공식 지원하려면 접근 가능한 소스·책임 주체·고정된 검증 입력과 CI를 먼저 갖춘다.
+
+**내부 계약은 그대로 유지한다.** GardenRecipe·PromptBundle, 기존 producer enum, `handoff.engine`의 `higgsfield`를 포함한 값, 계약 manifest와 컴파일 결과는 이 지원 범위 정리 때문에 바꾸지 않는다. 기존 producer enum은 provenance 제약이므로 새 생산자가 과거 이름을 사칭해서는 안 된다. 과거 레코드는 현재 스키마로 검증하고 컴파일할 수 있지만, 그것이 과거 외부 adapter의 실행 성공을 보장하지는 않는다. Higgsfield 모델 프롬프트 지침, 현재 커넥터의 실행 표면, ImgGen2 핸드오프도 이 네 프로젝트와 별개이며 제거하지 않는다. 실제 실행은 선택한 소비자의 현재 계약을 확인한다.
+
+외부 소비자가 계약을 미러링하는 경우 아래 동기화 도구를 선택적으로 쓸 수 있다. MPW가 그 소비자의 구현까지 배포·검증한다는 뜻은 아니다.
+
 ## 정본과 배포
 
-`contracts/`는 이 인터페이스의 유일한 편집 정본이다. 독립 설치를 위해 가드너 스킬(`prompt-knowledge-gardener`·`design-reference-gardener`·`image-reference-gardener`)은 동일한 상대 경로 `contracts/`에 바이트 동일 미러를 포함할 수 있지만, 미러에서 계약을 편집하지 않는다 — 미러 로컬 수정은 동일 릴리스 ID 아래 스키마 포크를 만든다(2026-07-16에 실제로 발견·해소된 사고 유형). `contracts/manifest.json`의 SHA-256 목록이 릴리스 provenance다.
+`contracts/`는 이 인터페이스의 유일한 편집 정본이다. 독립 소비자는 동일한 상대 경로 `contracts/`에 바이트 동일 미러를 포함할 수 있지만, 미러에서 계약을 편집하지 않는다 — 미러 로컬 수정은 동일 릴리스 ID 아래 스키마 포크를 만든다(2026-07-16에 실제로 발견·해소된 사고 유형). `contracts/manifest.json`의 SHA-256 목록이 릴리스 provenance다.
 
 소스 레포가 편집 권한을 가진다. 플러그인 캐시 같은 설치본은 배포 산출물이며 직접 수정하지 않는다. 설치본 전용 변경이 발견되면 먼저 해당 소스 레포로 분리·검토한 뒤 배포한다. 계약 갱신 순서는 다음과 같다.
 
 1. `MPW/contracts/`에서 스키마·검증기·fixture를 함께 변경한다.
 2. `python3 scripts/sync_contracts.py --write-manifest`로 manifest SHA-256을 재생성하고 `python3 scripts/test_contracts.py`를 통과한다.
-3. `python3 scripts/sync_contracts.py --sync --dest <contract-mirror>`로 각 독립 소스·가드너 미러에 동기화한다.
+3. 미러를 유지하는 소비자만 `python3 scripts/sync_contracts.py --sync --dest <contract-mirror>`로 해당 독립 소스에 동기화한다.
 4. 각 스킬의 기존 릴리스 절차(MPW는 플러그인 릴리스)로 소스 전체를 설치본에 배포한다. 설치본에서 정본으로 역복사하지 않는다.
-5. 정본 레포에서 `python3 scripts/sync_contracts.py --dest <contract-mirror> ...`로 모든 미러에 drift가 없음을 확인한다.
+5. 미러를 유지하는 소비자만 정본 레포에서 `python3 scripts/sync_contracts.py --dest <contract-mirror> ...`로 해당 미러의 drift를 확인한다.
 
 스키마 major가 다른 payload는 자동 승격하지 않는다. 기존 analysis JSON을 GardenRecipe로 바꾸는 adapter는 각 adapter 소관이고, 컴파일·PromptBundle 생성은 Master 소관이다. 이 문서는 분석 필드나 컴파일 규칙을 복제하지 않는다.
 
@@ -47,7 +57,7 @@ mode와 engine의 호환성은 다음과 같다. `frontend-agent`는 `DESIGN`에
 
 정본 스키마: `contracts/v1/prompt-bundle.schema.json`.
 
-`PromptBundle`의 실행 표면은 `handoff` 하나다. Higgsfield를 포함한 실행 adapter는 다른 Master 내부 상태나 adapter 저장소를 읽지 않고 이 객체만 소비한다. 엔진 선택은 `handoff.engine` 값이며, 엔진별 비공개 옵션을 새 key로 추가하지 않는다. 알 수 없는 handoff.protocol은 자유형 강등 없이 명시 거부한다(legacy `compiled_by`+`blocks` 형태 예외는 브리지 소관).
+`PromptBundle`의 실행 표면은 `handoff` 하나다. Higgsfield를 포함한 실행 adapter는 다른 Master 내부 상태나 adapter 저장소를 읽지 않고 이 객체만 소비한다. 엔진 선택은 `handoff.engine` 값이며, 엔진별 비공개 옵션을 새 key로 추가하지 않는다. 알 수 없는 handoff.protocol은 자유형 강등 없이 명시 거부한다(legacy `compiled_by`+`blocks` 변환은 이 계약이 보장하지 않으며, 이를 쓰는 외부 소비자의 책임이다).
 
 `--recipe`로 원본을 제공하면 먼저 그 입력을 `garden-recipe/v1`으로 검증한다. 잘못된 형식·다른 계약·필수 미결 입력은 해시가 일치해도 실행 가능한 번들의 근거가 될 수 없다.
 

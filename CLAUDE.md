@@ -10,7 +10,7 @@ MPW(프롬프트 작성 스킬)의 **정본이자 유일한 실제 트리**다. 
 
 - `SKILL.md` — 디스패치 커널. 요청 판정·읽을 자료 안내만 두고 상세는 `references/`로 내린다(커널 비대화 금지).
 - `references/` — 규칙 본문. 축별 정본 배치는 `AGENTS.md` 하드라인 1번 목록이 정한다(예: 실행 표면 S1/S2/S3는 `references/image/surfaces.md`, 조립 구조는 `references/prompt-graph.md`, 런타임 제품명은 `references/adapters.md`에만).
-- `contracts/v1/*.schema.json` — S1 기계 계약 값(ar·size·quality enum)의 정본. 문서는 이 값을 복제하지 않는다. 동반 레포 미러 갱신은 `references/contracts.md` 절차와 `scripts/sync_contracts.py`.
+- `contracts/v1/*.schema.json` — S1 기계 계약 값(ar·size·quality enum)의 정본. 문서는 이 값을 복제하지 않는다. 선택적 외부 소비자 미러 갱신은 `references/contracts.md` 절차와 `scripts/sync_contracts.py`.
 - `agents/plugin/` — 플러그인 표면 오버레이. `agents/plugin/SKILL.md`는 정본 `SKILL.md`와 본문이 같고 frontmatter(`host_surface: plugin`, `canonical_source`)와 상단 호스트 통합 블록만 다르다. **정본 `SKILL.md`를 고치면 이 파일 본문도 동기화해야 한다.**
 - `scripts/compile_*.py` — 이미지 핸드오프·변형·의류·가드너 레시피 컴파일러(계약 스키마 소비자).
 - `scripts/check_prompt.mjs` — 완성 프롬프트 검증기. 문서 규칙과 어긋나면 어느 쪽이 맞는지 판정해 한쪽을 고친다.
@@ -24,7 +24,7 @@ MPW(프롬프트 작성 스킬)의 **정본이자 유일한 실제 트리**다. 
 ## 명령
 
 ```sh
-npm test                      # lint.py → scripts/test_*.py, test_*.mjs 전부 → check_prompt.mjs --test → 교차 통합(경로 없으면 NOT RUN)
+npm test                      # lint.py → scripts/test_*.py, test_*.mjs 전부 → check_prompt.mjs --test (현재 지원 범위)
 npm run lint                  # python3 scripts/lint.py — 실측 라벨·2000자 상한·frontmatter 스탬프 등 하드라인 검사
 python3 scripts/test_contracts.py        # 단일 테스트: 해당 파일을 직접 실행 (Python)
 node scripts/test_examples.mjs           # 단일 테스트: 해당 파일을 직접 실행 (Node)
@@ -35,17 +35,9 @@ node scripts/check_install_parity.mjs    # 릴리스 뒤 Codex·Claude 플러그
 
 `scripts/run_tests.mjs`는 `scripts/` 안의 `test_` 접두 파일을 자동 수집하므로 새 테스트는 이름 규칙만 맞추면 스위트에 들어간다. 실패는 끝까지 누적해 마지막에 요약한다.
 
-교차계약(`scripts/test_adapter_master_integration.py`)은 네 동반 레포 경로를 **환경변수로만** 받는다. `npm test`에서 "external integration NOT RUN"이 찍히면 green이어도 교차 배선은 검증되지 않은 것이다. 이 머신에서는:
+지원 범위와 과거 외부 연동 지원 종료는 `references/contracts.md` §지원 범위가 정본이다. 과거 교차진단은 `tools/legacy/README.md`를 따라 수동 실행하며 일반 테스트·배포에는 포함하지 않는다.
 
-```sh
-IMAGE_REFERENCE_ADAPTER_ROOT=~/HeiTuz/image-reference-gardener \
-DESIGN_REFERENCE_ADAPTER_ROOT=~/HeiTuz/design-reference-gardener \
-HIGGSFIELD_BRIDGE_ROOT=~/HeiTuz/higgsfield-prompt-bridge \
-PROMPT_KNOWLEDGE_ADAPTER_ROOT=~/HeiTuz/prompt-knowledge-gardener \
-  python3 scripts/test_adapter_master_integration.py
-```
-
-doctrine 검사는 기본 reminder state를 건드리지 않도록 새 `--state`로 돌린다(빈 stdout을 "문제 없음"으로 읽지 않는다):
+기본 doctrine 검사는 MPW 로스터·스키마·길이 계약을 점검한다. 기본 reminder state를 건드리지 않도록 새 `--state`로 돌리고 finding을 읽는다. 빈 stdout을 외부 연동·실제 생성 품질의 증거로 읽지 않는다. 과거 외부 진단은 `--legacy-integrations`로 명시적으로 분리한다:
 
 ```sh
 python3 scripts/prompt_writing_doctrine_check.py --state "$(mktemp -d)/backlog.json"

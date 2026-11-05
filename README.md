@@ -166,6 +166,10 @@ bunx --package github:HeiTuz/MPW heituzmpw -- --dest /custom/skills/MPW
 ---
 
 
+## 지원 범위 변경 (2026-11-05)
+
+과거 네 동반 프로젝트의 외부 연동 지원을 종료하고, MPW 자체의 프롬프트·스키마·컴파일러·플러그인 검증을 릴리스 기준으로 정리했습니다. 기존 계약과 핸드오프는 유지합니다. 지원 종료 대상, 유지되는 기능과 수동 진단 경로는 [계약 문서의 지원 범위](references/contracts.md#지원-범위-2026-11-05)를 확인하세요. 외부 연동을 테스트한 것으로 처리한 변경은 아닙니다.
+
 ## 이미지 문서·검증기 이행
 
 이미지 문안은 기본 `native` 프로필로 검사하며, MPW 조립 산출물에는 `--profile assembled`를 명시합니다. 종료 코드와 진단 코드표는 [production.md](references/image/production.md) §검증기가 소유합니다. 이전 옵션은 별칭 없이 제거되어 `input/flag`로 거절됩니다.

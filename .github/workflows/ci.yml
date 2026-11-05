@@ -10,12 +10,12 @@ jobs:
       - uses: actions/setup-node@v4
         with: { node-version: '22' }
       - uses: oven-sh/setup-bun@v2
-      # The companion repositories are absent from an isolated checkout, so the npm
-      # test script carries the named opt-out for the external integration stage.
-      # Do not re-add it here: if that opt-out is ever dropped without configuring
-      # the four root variables, this job must fail loudly rather than skip quietly.
-      - name: full network-free test suite
+      # The supported MPW suite is self-contained. Retired external integrations
+      # are manual diagnostics under tools/legacy, not release prerequisites.
+      - name: supported network-free test suite
         run: npm test
+      - name: legacy diagnostic fails closed without external sources
+        run: python3 tools/legacy/test_adapter_master_integration.py ExternalDependencyPolicyTests
       - name: plugin build validates and packed CLI copies the payload
         shell: bash
         run: |

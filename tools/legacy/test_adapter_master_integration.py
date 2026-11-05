@@ -1,5 +1,11 @@
 #!/usr/bin/env python3
-"""Cross-repository contract and closed-loop integration verification."""
+"""Unsupported legacy cross-repository diagnostic, not an MPW release gate.
+
+Requires all four original external repositories. This historical harness is
+retained for manual investigation only, is not distributed with the plugin,
+and makes no compatibility promise for the retired integrations. Missing
+sources are always errors; the former opt-out variable is no longer honored.
+"""
 from __future__ import annotations
 
 import importlib.util
@@ -13,7 +19,7 @@ from pathlib import Path
 from typing import Any
 from unittest.mock import patch
 
-MASTER_ROOT = Path(__file__).resolve().parents[1]
+MASTER_ROOT = Path(__file__).resolve().parents[2]
 
 
 def skill_root(env_name: str) -> Path:
@@ -42,7 +48,6 @@ PROMPT_KNOWLEDGE_ROOT = skill_root("PROMPT_KNOWLEDGE_ADAPTER_ROOT")
 PROMPT_KNOWLEDGE_SCRIPT = "scripts/prompt_knowledge_garden.py"
 CONTRACT_ROOT = Path(os.environ.get("MASTER_PROMPT_CONTRACT_ROOT", MASTER_ROOT / "contracts"))
 COMPILER_ROOT = Path(os.environ.get("MASTER_PROMPT_COMPILER_ROOT", MASTER_ROOT))
-EXTERNAL_INTEGRATION_OPT_OUT = "MPW_ALLOW_MISSING_EXTERNAL_INTEGRATION"
 # Intended pre-wash companion paths. Each pair must still appear until WU-D
 # rewrites the companion; unused pairs fail as stale.
 COMPANION_POINTER_ALLOWLIST: set[tuple[str, str]] = {
@@ -68,41 +73,21 @@ EXTERNAL_ROOT_ENV = (
 )
 
 
-def configured_external_roots() -> dict[str, str]:
-    return {name: os.environ[name] for name in EXTERNAL_ROOT_ENV if os.environ.get(name)}
-
-
 def external_dependencies_available() -> bool:
-    configured = configured_external_roots()
-    missing = [path for path in external_dependency_paths() if not path.is_file()]
-    if configured:
-        broken = []
-        mapping = {
-            "IMAGE_REFERENCE_ADAPTER_ROOT": loop_path(IMAGE_ROOT),
-            "DESIGN_REFERENCE_ADAPTER_ROOT": loop_path(DESIGN_ROOT),
-            "HIGGSFIELD_BRIDGE_ROOT": BRIDGE_ROOT / "scripts/higgsfield_job.py",
-            "PROMPT_KNOWLEDGE_ADAPTER_ROOT": PROMPT_KNOWLEDGE_ROOT / PROMPT_KNOWLEDGE_SCRIPT,
-        }
-        for name in configured:
-            candidate = mapping[name]
-            if not candidate.is_file():
-                broken.append(str(candidate))
-        if broken or missing:
-            raise RuntimeError(
-                "external integration dependencies missing; partial root configuration "
-                "cannot opt out: " + ", ".join(broken or [str(path) for path in missing])
-            )
-        return True
-    if not missing:
-        return True
-    if os.environ.get(EXTERNAL_INTEGRATION_OPT_OUT) == "1":
-        print("EXTERNAL INTEGRATION NOT RUN (opt-out)", file=sys.stderr)
-        return False
-    raise RuntimeError(
-        "external integration dependencies missing; configure the four root "
-        f"environment variables or set {EXTERNAL_INTEGRATION_OPT_OUT}=1 to opt out: "
-        + ", ".join(str(path) for path in missing)
-    )
+    """Require every explicitly configured legacy source, without an opt-out."""
+    unconfigured = [name for name in EXTERNAL_ROOT_ENV if not os.environ.get(name)]
+    missing = [str(path) for path in external_dependency_paths() if not path.is_file()]
+    if unconfigured or missing:
+        details = []
+        if unconfigured:
+            details.append("unset root variables: " + ", ".join(unconfigured))
+        if missing:
+            details.append("missing files: " + ", ".join(missing))
+        raise RuntimeError(
+            "unsupported legacy external integration dependencies missing; "
+            "configure all four root environment variables. " + "; ".join(details)
+        )
+    return True
 
 
 def load_module(name: str, path: Path) -> Any:
@@ -117,8 +102,7 @@ def load_module(name: str, path: Path) -> Any:
 class AdapterMasterIntegrationTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls) -> None:
-        if not external_dependencies_available():
-            raise unittest.SkipTest("external integration explicitly opted out")
+        external_dependencies_available()
         required = [
             CONTRACT_ROOT / "validate.py",
             CONTRACT_ROOT / "v1/fixtures/garden-recipe.image.valid.json",
@@ -330,46 +314,69 @@ class AdapterMasterIntegrationTests(unittest.TestCase):
 
 
 class ExternalDependencyPolicyTests(unittest.TestCase):
-    def test_missing_roots_fail_without_explicit_opt_out(self) -> None:
-        env = os.environ.copy()
-        nonexistent = MASTER_ROOT / ".dependency-policy-test-missing"
-        env.update({
-            "IMAGE_REFERENCE_ADAPTER_ROOT": str(nonexistent / "image"),
-            "DESIGN_REFERENCE_ADAPTER_ROOT": str(nonexistent / "design"),
-            "HIGGSFIELD_BRIDGE_ROOT": str(nonexistent / "bridge"),
-        })
-        env.pop(EXTERNAL_INTEGRATION_OPT_OUT, None)
-        result = subprocess.run(
-            [sys.executable, __file__, "--dependency-check-only"],
-            env=env,
-            capture_output=True,
-            text=True,
-            check=False,
-        )
-        self.assertNotEqual(0, result.returncode, result.stdout + result.stderr)
-        self.assertIn("external integration dependencies missing", result.stderr)
+    """Boundary checks need no external sources and make no compatibility claim."""
 
-    def test_partial_root_cannot_opt_out(self) -> None:
+    def dependency_check(
+        self, overrides: dict[str, str], args: tuple[str, ...] = ("--dependency-check-only",)
+    ) -> subprocess.CompletedProcess:
         env = os.environ.copy()
-        env.update({
-            "IMAGE_REFERENCE_ADAPTER_ROOT": str(MASTER_ROOT / ".dependency-policy-test-missing" / "image"),
-            EXTERNAL_INTEGRATION_OPT_OUT: "1",
-        })
-        env.pop("DESIGN_REFERENCE_ADAPTER_ROOT", None)
-        env.pop("HIGGSFIELD_BRIDGE_ROOT", None)
-        env.pop("PROMPT_KNOWLEDGE_ADAPTER_ROOT", None)
-        result = subprocess.run(
-            [sys.executable, __file__, "--dependency-check-only"],
-            env=env,
-            capture_output=True,
-            text=True,
-            check=False,
+        for name in (*EXTERNAL_ROOT_ENV, "MPW_ALLOW_MISSING_EXTERNAL_INTEGRATION"):
+            env.pop(name, None)
+        env.update(overrides)
+        return subprocess.run(
+            [sys.executable, __file__, *args],
+            env=env, capture_output=True, text=True, check=False,
         )
+
+    def assert_missing_dependencies(self, result: subprocess.CompletedProcess) -> None:
         self.assertNotEqual(0, result.returncode, result.stdout + result.stderr)
-        self.assertIn("partial root configuration", result.stderr)
+        self.assertIn("UNSUPPORTED LEGACY DIAGNOSTIC", result.stderr)
+        self.assertIn("external integration dependencies missing", result.stderr)
+        self.assertNotIn("NOT RUN", result.stdout + result.stderr)
+
+    def test_missing_roots_fail(self) -> None:
+        result = self.dependency_check({})
+        self.assert_missing_dependencies(result)
+        for name in EXTERNAL_ROOT_ENV:
+            self.assertIn(name, result.stderr)
+
+    def test_relocated_harness_resolves_authoritative_core(self) -> None:
+        self.assertTrue((MASTER_ROOT / "contracts/validate.py").is_file())
+        self.assertTrue((MASTER_ROOT / "scripts/compile_garden_recipe.py").is_file())
+
+    def test_integration_setup_cannot_turn_missing_roots_into_a_skip(self) -> None:
+        result = self.dependency_check(
+            {"MPW_ALLOW_MISSING_EXTERNAL_INTEGRATION": "1"}, ("AdapterMasterIntegrationTests",)
+        )
+        self.assert_missing_dependencies(result)
+        self.assertIn("FAILED (errors=1)", result.stderr)
+        self.assertNotIn("skipped", result.stderr)
+
+    def test_old_opt_out_does_not_suppress_missing_roots(self) -> None:
+        result = self.dependency_check({"MPW_ALLOW_MISSING_EXTERNAL_INTEGRATION": "1"})
+        self.assert_missing_dependencies(result)
+
+    def test_partial_roots_fail_even_with_old_opt_out(self) -> None:
+        result = self.dependency_check({
+            "IMAGE_REFERENCE_ADAPTER_ROOT": str(MASTER_ROOT / ".dependency-policy-test-missing" / "image"),
+            "MPW_ALLOW_MISSING_EXTERNAL_INTEGRATION": "1",
+        })
+        self.assert_missing_dependencies(result)
+        self.assertIn("unset root variables:", result.stderr)
+        self.assertIn("missing files:", result.stderr)
+
+    def test_all_configured_but_missing_sources_fail(self) -> None:
+        result = self.dependency_check({
+            name: str(MASTER_ROOT / ".dependency-policy-test-missing" / name)
+            for name in EXTERNAL_ROOT_ENV
+        })
+        self.assert_missing_dependencies(result)
+        self.assertNotIn("unset root variables:", result.stderr)
+        self.assertIn("missing files:", result.stderr)
 
 
 if __name__ == "__main__":
+    print("UNSUPPORTED LEGACY DIAGNOSTIC: not part of MPW compatibility or release validation", file=sys.stderr)
     if "--dependency-check-only" in sys.argv:
         external_dependencies_available()
         sys.exit(0)

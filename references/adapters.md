@@ -14,6 +14,8 @@
 
 이 표는 배선 포인터다. 각 계약의 불변식·생산자 → 소비자 경계·실패 방식은 [contracts.md](contracts.md) 인터페이스 표가 정본이며 여기서 반복하지 않는다. 이 표는 스키마 파일·MPW 생성 명령·검증 경로·규칙 정본 문서의 위치만 준다.
 
+외부 구현의 지원 범위는 [contracts.md](contracts.md) §지원 범위를 따른다. 계약을 보존한다는 사실만으로 특정 외부 실행기의 호환성을 보증하지 않는다.
+
 계약 목록의 정본은 `contracts/manifest.json`이고 각 계약의 valid fixture는 `contracts/v1/fixtures/`에 있다. 계약이 추가되면 이 표에 행을 추가한다.
 
 | 계약 | 스키마 (`contracts/v1/`) | MPW 생성 명령 | 검증 경로 | 규칙 정본 |

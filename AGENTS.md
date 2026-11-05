@@ -11,7 +11,7 @@
 편집은 여기서 한다 — 설치 경로나 플러그인 캐시에서 편집하지 않는다. 그게 v2.11~v2.13이 사라진 원인이었다. 공개 배포는 `main`·`dist` 태그 push와 카탈로그 ref 갱신 이후에만 유효하다.
 운영 소유권(2026-08-04 개정 — 2026-08-02 정의를 대체): **어느 에이전트든 이 트리를 직접 편집하고 로컬 커밋할 수 있다.** Codex는 편집 독점자가 아니라 주 관리자(steward)로서 정합성 점검·플러그인 빌드 검증·doctrine 패리티·릴리스 준비를 맡는다. **편집한 에이전트는 `~/handoffs/<repo>-<주제>-<타임스탬프>.md`에 핸드오프를 남긴다**(무엇을 왜 / 건드린 파일 / 커밋 해시 / 플러그인 릴리스 필요 여부 / 검증한 것과 안 한 것 / 남은 작업). 편집 후 로컬 커밋까지 하거나 미커밋임을 핸드오프에 명시한다. 원격 push는 별도 승인 없이는 하지 않는다. Codex App 주간 doctrine runner의 정본도 `scripts/prompt_writing_doctrine_check.py`이며, 기본 reminder 상태는 `~/.codex/state/prompt-writing-doctrine/backlog.json`이고 `MPW_DOCTRINE_STATE` 또는 `--state`로만 바꾼다. 실행 결과와 알림은 Codex App가 처리하며 메신저 relay를 두지 않는다. 정본 변경 뒤 `npm test`(플러그인 빌드 검사 포함)와 doctrine 검사를 통과시키고, 릴리스 뒤 `node scripts/check_install_parity.mjs`로 설치된 플러그인 캐시를 확인한다. 버전 범프와 릴리스 push는 정본 커밋·검증을 끝낸 뒤 별도 릴리스 승인으로만 수행한다.
 
-**상시 릴리스 승인 예외(2026-10-04 사용자 지시).** Codex App 예약 `MPW · 주간 코드 개선`(id `mpw`)은 승인된 릴리스로 본다. 그 실행이 정본 커밋을 만들고 아래 검증 루틴의 `npm test`, 새 `--state` 경로의 doctrine 검사, 네 동반 레포 경로를 주입한 교차 통합 테스트를 모두 통과했을 때만 패치 버전을 올리고 §배포 게이트 3번 절차를 끝까지 수행한다. 검사가 하나라도 실패하거나 NOT RUN이면, 또는 작업 트리에 다른 작업자의 미커밋 변경이 있거나 `main`이 `origin/main`보다 뒤처지거나 갈라졌으면 릴리스하지 않고 로컬 커밋 상태로 보고한다. 이미 있는 태그를 지우거나 덮어쓰지 않고 force push하지 않는다. 다른 에이전트·세션의 릴리스는 이 예외에 포함되지 않는다.
+**상시 릴리스 승인 예외(2026-10-04 사용자 지시).** Codex App 예약 `MPW · 주간 코드 개선`(id `mpw`)은 승인된 릴리스로 본다. 그 실행이 정본 커밋을 만들고 아래 검증 루틴의 `npm test`와 새 `--state` 경로의 기본 doctrine 검사를 모두 통과했을 때만 패치 버전을 올리고 §배포 게이트 3번 절차를 끝까지 수행한다. 검사가 하나라도 실패하거나 NOT RUN이면, 또는 작업 트리에 다른 작업자의 미커밋 변경이 있거나 `main`이 `origin/main`보다 뒤처지거나 갈라졌으면 릴리스하지 않고 로컬 커밋 상태로 보고한다. 이미 있는 태그를 지우거나 덮어쓰지 않고 force push하지 않는다. 다른 에이전트·세션의 릴리스는 이 예외에 포함되지 않는다.
 
 ## 하드라인 (위반 = 완료 아님)
 
@@ -52,19 +52,11 @@ doctrine_audit_dir="$(mktemp -d)"
 python3 scripts/prompt_writing_doctrine_check.py --state "$doctrine_audit_dir/backlog.json"
 ```
 
-`test_adapter_master_integration.py`는 가드너·브리지와의 교차 배선을 검증한다. 이 테스트가 `setUpClass`에서 의존성 누락으로 죽으면 **통과가 아니라 무증상 실패**다 — 실제로 스킬 디렉터리 rename 이후 이 상태로 방치되어 `compiled_by` 불일치·API 드리프트 3건이 숨어 있었다(2026-07-25 수리). 스킵/에러를 green으로 읽지 않는다.
+현재 지원 범위와 과거 외부 연동의 지원 종료는 `references/contracts.md` §지원 범위가 정본이다. **릴리스 게이트는 지원 범위의 `npm test`와 새 상태의 기본 doctrine 검사다.** `npm test`는 모든 repo-local Python·Node 회귀와 프롬프트 하네스·플러그인 빌드 검사를 실행하고 실패를 끝까지 누적한다. 지원 범위의 실패·스킵·미실행을 통과로 보고하지 않는다.
 
-repo-local 스위트의 교차계약은 동반 레포 경로가 없으면 NOT RUN으로 표시한다. 교차계약은 아래 네 경로를 주입한 별도 명령이 필수이며, 두 명령의 결과를 합쳐 전체 검증으로 판정한다. 테스트 러너는 앞선 실패를 끝까지 누적한다.
+`tools/legacy/test_adapter_master_integration.py`는 과거 외부 구현을 조사할 때만 직접 실행하는 미지원 진단 하네스다. 일반 테스트와 배포 payload에서 제외하며 필수 소스가 없으면 실패한다. 실제 외부 연동을 검증했다고 주장하려면 해당 소스와 직접 실행 결과가 있어야 한다. 과거 필수 교차검증 규칙은 2026-11-05 지원 범위 정리로 대체되었으며, 이를 통과 처리하거나 가짜 adapter로 대신하지 않는다.
 
-동반 레포 경로는 **환경변수로만** 주입한다(`IMAGE_REFERENCE_ADAPTER_ROOT`·`DESIGN_REFERENCE_ADAPTER_ROOT`·`HIGGSFIELD_BRIDGE_ROOT`·`PROMPT_KNOWLEDGE_ADAPTER_ROOT`). 자동 탐색은 없다 — 머신마다 다른 결과가 나오고 공개 배포물이 남의 홈 디렉터리 배치를 가정하게 되기 때문이다. 넷 중 하나라도 없으면 이 테스트는 **실패로 멈춘다**. `npm test`의 `MPW_ALLOW_MISSING_EXTERNAL_INTEGRATION=1` 예외는 네 경로를 모두 생략했을 때만 유효하다. 일부만 설정하거나 설정한 경로의 필수 파일이 없으면 실패한다. 네 경로가 없는 체크아웃에서는 그린일 수 있지만, 그때 교차 배선 검증은 **돌지 않은 것**이다. 교차 계약을 실제로 검증하려면 네 경로를 주입해 직접 부른다:
-
-```sh
-IMAGE_REFERENCE_ADAPTER_ROOT=<path> DESIGN_REFERENCE_ADAPTER_ROOT=<path> HIGGSFIELD_BRIDGE_ROOT=<path> \
-PROMPT_KNOWLEDGE_ADAPTER_ROOT=<path> \
-  python3 scripts/test_adapter_master_integration.py
-```
-
-prompt-knowledge 가드너는 loop 모듈이 없고 스킬 스크립트가 직접 레시피를 조립한다. 계약 미러만 들고 검증에서 빠져 있던 사각지대였다(2026-07-27 편입).
+기본 doctrine 검사는 MPW의 로스터·스키마·길이 계약만 점검한다. 과거 sibling·가드너 backlog 진단은 `--legacy-integrations`를 명시한 별도 조사이며 릴리스 필수 검증이 아니다. 기존 `--canonical-root`·`--garden-root` 호출도 `--legacy-integrations`를 함께 명시해야 한다. 기본 reminder state와 다른 작업자의 파일을 보존한다.
 
 검증기(`check_prompt.mjs`)와 문서 규칙이 어긋나면 어느 쪽이 맞는지 판정하고 한쪽을 고쳐 정렬한다 — 괴리를 남기는 게 최악이다(2026-07 캘리브레이션에서 헤더형 감지·조명 토큰 괴리를 이렇게 잡았다).
 
@@ -78,7 +70,7 @@ prompt-knowledge 가드너는 loop 모듈이 없고 스킬 스크립트가 직�
    curl -s https://raw.githubusercontent.com/HeiTuz/MPW/main/package.json | python3 -c "import json,sys; print(json.load(sys.stdin)['version'])"
    ```
    값이 다르면 미배포 상태이며 배포 완료로 보고하지 않는다.
-3. **승인된 릴리스 절차**: 이 저장소의 변경을 검토하고 `agents/plugin/SKILL.md` 본문과 frontmatter를 정본에 동기화 → 필수 로컬·교차 검증 → 영어 커밋 → `v<버전>` 태그 → 승인받은 범위의 `main` push → `node scripts/release_plugin.mjs --push`(`dist` 커밋과 `mpw-plugin-v<버전>` 태그) → 카탈로그 저장소에서 `node scripts/bump.mjs mpw mpw-plugin-v<버전>` 후 push → CI·원격 버전·설치 캐시 확인. 설치본의 예상 밖 변경이 발견되면 먼저 출처와 의도를 확인하며, 설치본을 통째로 역복사하지 않는다. 버전 범프·push 권한은 위 운영 소유권 규칙을 따른다.
+3. **승인된 릴리스 절차**: 이 저장소의 변경을 검토하고 `agents/plugin/SKILL.md` 본문과 frontmatter를 정본에 동기화 → 위 지원 범위의 필수 검증 → 영어 커밋 → `v<버전>` 태그 → 승인받은 범위의 `main` push → `node scripts/release_plugin.mjs --push`(`dist` 커밋과 `mpw-plugin-v<버전>` 태그) → 카탈로그 저장소에서 `node scripts/bump.mjs mpw mpw-plugin-v<버전>` 후 push → CI·원격 버전·설치 캐시 확인. 설치본의 예상 밖 변경이 발견되면 먼저 출처와 의도를 확인하며, 설치본을 통째로 역복사하지 않는다. 버전 범프·push 권한은 위 운영 소유권 규칙을 따른다.
 
 ## 작업 방식
 
@@ -87,4 +79,4 @@ prompt-knowledge 가드너는 loop 모듈이 없고 스킬 스크립트가 직�
 - 이미지 어휘 추가는 가능하면 실측 캘리브레이션(실제 생성 대조)으로 뒷받침하고 `(YYYY-MM 실측)` 스탬프를 단다. `examples/`의 텍스트 요청 3종은 검증기로 다시 확인한다. 텍스트 검사 통과를 생성 품질 검증으로 보고하지 않는다.
 - 커밋 메시지는 영어, 변경 요지+검증 결과 포함. 관련 없는 리팩토링 금지.
 
-- 동반 레포의 MPW 포인터를 바꾸면 교차계약에서 경로 해석과 사전 8개 절의 파싱을 확인한다. 이행용 구 경로는 파일·대상 쌍으로만 허용하고 오래된 예외는 제거한다.
+- 외부 소비자의 MPW 포인터 변경까지 별도로 맡았다면 해당 소비자의 실제 소스로 경로·파싱을 검증한다. MPW 내부 테스트를 외부 소비자 검증으로 대신하지 않는다.

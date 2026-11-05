@@ -69,7 +69,7 @@ try {
   assert.equal(names.some((name) => /(^|\/)\.[^/]+|(^|\/)(?:docs-internal|__pycache__)(?:\/|$)|\.pyc$/u.test(name)), false,
     "npm package includes excluded local state");
 
-  const allowedHomeUsers = new Set(["example", "private", "person", "operator", "user", "help"]);
+  const allowedHomeUsers = new Set(["example", "person", "operator", "user", "help"]);
   const homeUser = /(?:Users|home)\/([A-Za-z0-9_.-]+)/g;
   const textSuffix = /\.(?:md|mjs|js|py|json|txt)$/;
   const seenUsers = new Set();
