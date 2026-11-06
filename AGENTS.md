@@ -4,7 +4,7 @@
 
 - `scripts/build_plugin.mjs`가 정본 allowlist 트리에 `agents/plugin/` 오버레이를 적용해 `plugins/mpw/`(`.codex-plugin`·`.claude-plugin` 매니페스트 + `skills/mpw` payload)를 만든다. 이 산출물은 `main`에 커밋하지 않는다 — `scripts/release_plugin.mjs`가 `dist` 브랜치에 커밋하고 `mpw-plugin-v<버전>` 태그를 단다.
 - 공개 카탈로그는 별도 저장소 https://github.com/HeiTuz/heituz-plugins (마켓플레이스 `heituz`, 설치명 `mpw@heituz`)다. 카탈로그 항목은 `git-subdir`로 `dist` 태그를 고정한다. 설치본은 Codex·Claude Code의 플러그인 캐시다.
-- 2026-09-17 철회(v2.32.0)의 원인이던 두 문제 — 스킬 설치본과 플러그인이 함께 보이는 중복, `main`에 쌓이는 복사본 — 를 막으려고 호스트별 스킬 설치 대상(claude·codex·hermes)과 Grok Bot 비공개 스킬 지원을 제거했다. `heituzmpw` CLI는 `--dest` 복사와 플러그인 설치 안내만 남는다.
+- 2026-09-17 철회(v2.32.0)의 원인이던 두 문제 — 스킬 설치본과 플러그인이 함께 보이는 중복, `main`에 쌓이는 복사본 — 를 막으려고 호스트별 스킬 설치 대상(claude·codex·hermes)과 Grok Bot의 기존 비공개 스킬 설치 지원을 제거했다. 2026-11-06 추가한 수동 텍스트 전달 도구는 이 자동 설치 경로를 복원하지 않는다. `heituzmpw` CLI는 `--dest` 복사와 플러그인 설치 안내만 남는다.
 
 **레포 루트를 스킬·플러그인 검색 경로에 심링크하지 않는다.** 루트에는 `SKILL.md`와 `agents/plugin/SKILL.md`가 함께 있어 호스트 인덱서가 같은 이름의 MPW를 둘로 잡는다(2026-07 실측 사례는 오버레이 셋에서 MPW 3개). 로컬 확인은 빌드 산출물이나 플러그인 캐시로 한다. 공통 references 일치만으로 호스트 통합이 일치한다고 판정하지 않는다 — 진입 파일까지 포함한 전체 payload를 비교한다.
 

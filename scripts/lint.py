@@ -217,7 +217,11 @@ def core_runtime_name_files(root):
 CORE_RUNTIME_NAME_FILES = core_runtime_name_files(ROOT)
 # External/conceptual filenames used as examples, not package pointers. A resolved
 # path or removed mention makes its entry stale and therefore fails.
-PLAIN_PATH_WHITELIST = set()
+PLAIN_PATH_WHITELIST = {
+    # Generated export artifact, deliberately absent from the canonical tree.
+    ("README.md", "HANDOFF.md"),
+    ("references/adapters.md", "HANDOFF.md"),
+}
 # These operational references are deliberately not dispatched from the compact
 # SKILL.md kernel. Keep exceptions explicit: a deleted or newly reachable file
 # must not silently remain here.
