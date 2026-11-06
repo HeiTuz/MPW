@@ -2,6 +2,8 @@
 
 ## 지원 범위 (2026-11-05)
 
+2026-11-06 추가: 수동 텍스트 전달 내보내기의 원문·의존 파일·해시와 실패 경로는 repo-local 회귀 범위다. 호스트 저장·발견·실제 호출은 별도 검증이며 NOT RUN 상태를 로컬 테스트 통과로 바꾸지 않는다. 전달 배선은 [adapters.md](adapters.md)에 둔다.
+
 MPW가 유지보수하고 릴리스에서 검증하는 범위는 이 저장소의 프롬프트 규칙, `contracts/` 스키마·검증기·fixture, `scripts/compile_*.py` 컴파일러, 프롬프트 검사기와 플러그인 빌드·설치 도구다. `npm test`는 이 범위를 네트워크 없이 검증한다. 실제 작성 모델·이미지 생성 품질이나 외부 실행기의 호환성을 증명하지는 않는다.
 
 다음 네 과거 동반 프로젝트의 별도 구현과 종단 간 연동은 지원 대상에서 제외한다: `image-reference-gardener`(image adapter), `design-reference-gardener`(design adapter), `higgsfield-prompt-bridge`, `prompt-knowledge-gardener`. 현재 지원 검증에 사용할 정본 소스가 확보되지 않았으며, 해당 구현을 테스트한 것으로 간주하지 않는다. 이 프로젝트의 설치·미러 동기화·호환성은 MPW 릴리스 필수 조건이 아니다. 소스 체크아웃의 `tools/legacy/`에는 수동 진단용 과거 하네스만 보존하며, 일반 테스트와 npm·플러그인 배포에는 포함하지 않는다. 다시 공식 지원하려면 접근 가능한 소스·책임 주체·고정된 검증 입력과 CI를 먼저 갖춘다.
