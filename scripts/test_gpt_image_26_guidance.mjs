@@ -42,7 +42,21 @@ for (const text of ['`complexity`', '`quality`', '`input_fidelity`', '`reasoning
 assert.match(api, /두 모델 모두 생략 시 `high`/);
 assert.match(api, /S1 스키마·웹 UI·Higgsfield에 같은 기능이 있다고 가정하지 않는다/);
 assert.match(api, /편집 출력이나 래스터 편집 입력으로 SVG를 쓰지 않는다/);
-assert.match(api, /GIF.*편집 출력은 지원하지 않는다/);
+// Reproduce the same GIF handoff cases against the current documentation:
+// generation and still-reference editing, limits, incompatible mask, and access.
+const gif = api.split('\n').find((line) => line.startsWith('- **GIF:**'));
+assert.ok(gif, 'GIF settings must be reachable through the 2.6 API section');
+assert.match(gif, /`\/v1\/images\/generations`.*`\/v1\/images\/edits`/);
+assert.match(gif, /정지 참조.*편집 엔드포인트/);
+assert.match(gif, /GIF preview 접근 권한/);
+assert.match(gif, /`frame_count`는 2–16\(기본 9\)/);
+assert.doesNotMatch(gif, /2–64|편집 출력은 지원하지 않는다|생성 엔드포인트.*전용/);
+assert.match(gif, /`frame_duration_ms`.*기본 200ms.*10ms 단위 반올림/);
+assert.match(gif, /가이드.*API 레퍼런스.*단일 하드 상한으로 일반화하지 않는다/);
+assert.match(gif, /확인하기 전 실행하지 않는다/);
+assert.match(gif, /스트리밍·부분 이미지·`mask`·압축/);
+assert.match(gif, /다른 출력 형식에는 보내지 않는다/);
+assert.match(gif, /총 픽셀 예산/);
 assert.match(api, /원본 위에 평탄화하지 않는다/);
 assert.match(api, /`mask`·`prompt_rewriter`와 함께 쓰지 않는다/);
 assert.match(extractSection(contracts, '5').body, /GPT Image 2\.6 생성은 §4\.5/);
@@ -65,4 +79,4 @@ for (const prompt of [
   const result = checkText(prompt, { profile: 'native', surface: 's2', engine: 'gpt-image' });
   assert.equal(result.ok, true, JSON.stringify(result));
 }
-console.log('GPT Image 2.6 guidance: dispatch, preserved defaults, API boundaries, S1 compatibility, and 3 prose regressions pass');
+console.log('GPT Image 2.6 guidance: dispatch, preserved defaults, GIF endpoints/limits/access/mask boundaries, S1 compatibility, and 3 prose regressions pass');

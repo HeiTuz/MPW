@@ -97,6 +97,27 @@ MPW는 HeiTuz 마켓플레이스 플러그인 `mpw@heituz`로 배포한다. 카�
 
 근거: [Skills and routines](https://docs.x.ai/grok-bot/skills-routines-and-automations), [Files and results](https://docs.x.ai/grok-bot/files-and-results), [Approvals, security, and privacy](https://docs.x.ai/grok-bot/approvals-security-and-privacy). 문서 기반 전달 경로이며 실제 계정에서 저장·호출·권한 경계 검증은 **NOT RUN**이다. 로컬 회귀는 정본 포함·해시·실패 경로만 검증하며 모델의 행동을 입증하지 않는다.
 
+## 텍스트 API 이행 (2026-11-09 공식 문서 확인)
+
+이 절은 사용자가 지정한 직접 API 이행·설정 인계에만 적용한다. 문안 작성만으로 모델·설정을 바꾸거나 API를 호출하지 않는다. 문서 계약 대조이며 실제 요청·모델 품질 검증은 **NOT RUN**이다.
+
+### Sonnet 5.5 JSON
+
+- 계산 등 추론이 필요한 JSON 과제에는 `thinking: {"type": "adaptive"}`를 사용하고, 짧은 문안 보정은 [model-playbooks.md](model-playbooks.md) §2026-11-09를 따른다. 도구 없는 `between_tools` 요청에서는 응답 전 추론을 하지 않으므로 그 문안의 효과가 없다. `xhigh`·`max`와 `between_tools` 조합은 400 오류다. 이 조건을 다른 Claude 모델에 이식하지 않는다.
+- `stop_reason: "max_tokens"`이면 보이는 JSON이 파싱돼도 실패로 판정한다. 생각과 답변에 필요한 토큰을 함께 잡되 한 번에 쓸 예산을 넘기지 않고, 재시도도 승인된 예산·실행 범위 안에서만 한다. 형식 통과와 값 정확성 검증은 [model.md](templates/model.md) §추출·분류를 따른다.
+
+근거: [JSON 추론 과제](https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/prompting-claude-sonnet-5-5#reasoning-tasks-with-json-output), [up-front thinking 없는 실행](https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/prompting-claude-sonnet-5-5#running-without-up-front-thinking).
+
+### Gemini 4 Argon
+
+Google Cloud의 **Gemini Enterprise Agent Platform**에서 Gemini 3.1 Pro를 Gemini 4 Argon으로 이행할 때의 설정이다. 다른 엔드포인트·중개 서비스·대화 UI에 일반화하지 않는다.
+
+- `thinking_budget`와 `thinking_level: "MINIMAL"`은 400 오류다. `thinking_level`의 지원값 `LOW`·`MEDIUM`·`HIGH` 중 작업에 맞는 값을 확인한다. 기존 프롬프트의 길이를 이유로 강도를 자동 선택하지 않는다.
+- `temperature`·`top_p`·`top_k`는 사용자 지정값의 효과가 없으므로 제거한다. 출력 형식은 소비자 스키마로 정하며, 낮은 temperature를 결정성 보장으로 설명하지 않는다.
+- 명시적 캐시의 `cached_content`는 미지원이므로 참조를 제거한다. MPW의 원문 보존 계약에 따라 캐시 원문을 기존 권한 안에서 읽어 새 요청에 보존하고, 원문을 읽을 수 없으면 입력 누락으로 이행을 중단한다. 반복되는 고정 자료는 접두부에 둔다. 이를 다른 모델의 캐시 계약에 이식하지 않는다.
+
+근거: [Get started with Gemini 4](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/start/get-started-with-gemini-4?hl=en) §Sampling parameters·§Migrate from Gemini 3.1 Pro. 페이지 갱신일은 2026-11-07이며 각 동작의 최초 도입일을 뜻하는 것은 아니다. 이행 시 현재 모델·엔드포인트 문서를 다시 확인한다.
+
 ## 어댑터 작성 규칙
 
 아키타입당 4항목만 기록한다: ① 설치/로드 방법 ② 역할 매핑 ③ 실제 모델 선택 위치 ④ per-role routing unavailable fallback. 코어 규칙을 복사하지 않는다. 코어와 충돌하는 어댑터 문장은 무효다.
