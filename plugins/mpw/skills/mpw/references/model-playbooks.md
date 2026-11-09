@@ -111,8 +111,8 @@ Join gate: 실제 배정한 worker 산출물과 요청된 planner/critic/verifie
 | 공급자 | 날짜 절과 찾을 항목 |
 |---|---|
 | OpenAI | 09-05 Astra/GPT-5.6, 09-16 권한·캐시, 09-24 추론·공유 스킬, 09-27 상세도·도구, 11-05 GPT-6 위임·평가 |
-| Anthropic | 09-05 문체, 09-24 서식, 09-25 이행·진행, 09-27 Opus/Fable 보강 |
-| Google | 09-05·09-24 Gemini, 09-27 API 이행 |
+| Anthropic | 09-05 문체, 09-24 서식, 09-25 이행·진행, 09-27 Opus/Fable 보강, 11-09 Sonnet JSON |
+| Google | 09-05·09-24 Gemini, 09-27 API 이행, 11-09 Gemini 4 Argon |
 | xAI | Grok 텍스트·리서치 |
 | DeepSeek | 09-24 JSON Output |
 
@@ -190,3 +190,11 @@ Join gate: 실제 배정한 worker 산출물과 요청된 planner/critic/verifie
 
 - **위임 빈도·가독성.** 다중 에이전트 환경에서 Astra의 위임이 부족하면, 독립 작업의 병렬화가 시간을 줄이거나 품질을 높일 때 위임하도록 시점·범위를 조정한다. 에이전트 간 메시지와 최종 보고는 사람이 읽을 수 있는 문장으로 쓰고 단어·숫자 사이의 정상적인 공백을 유지한다. 이는 해당 하네스에서 평가할 보정이며 모든 모델·작업의 의무 위임 규칙이 아니다. [위임 안내](https://developers.openai.com/api/docs/guides/latest-model#subagent-delegation).
 - **검증 범위.** 필수 검사와 통과 뒤 재검증 기준은 [delegation.md](templates/delegation.md) §도메인별 추가 조건을 따른다. [검증 안내](https://developers.openai.com/api/docs/guides/latest-model#testing-and-verification).
+
+
+### 2026-11-09 — Sonnet JSON·Gemini 4 이행
+
+**2026-11-09 공식 문서 확인.** 아래는 지정 모델·표면에서 평가할 보정이며, 문서 확인일이 기능 도입일이나 응답 품질 실측일은 아니다. 기존 모델·설정과 사용자 출력 계약을 자동 변경하지 않는다.
+
+- **Sonnet 5.5 JSON 추론 과제.** 계산·규칙 적용·순위 판정을 JSON으로 반환할 때, 공식 가이드는 지원되는 네이티브 구조화 출력과 내부 추론을 활용하도록 안내한다. 해당 과제에서는 system 끝에 `Think the problem through before you answer.`를 한 번 넣는 보정을 평가할 수 있다. 내부 추론 공개·단계별 사고 본문은 요구하지 않는다. 단순 추출이나 다른 Claude 모델에 자동 적용하지 않는다. 설정 전제와 잘린 응답 판정은 [adapters.md](adapters.md) §Sonnet 5.5 JSON을 따른다. [공식 JSON 추론 안내](https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/prompting-claude-sonnet-5-5#reasoning-tasks-with-json-output).
+- **Gemini 4 Argon API 이행.** 이전 모델의 설정을 이름만 바꿔 옮기지 않는다. Google Cloud 표면의 비호환 설정과 제거 대상은 [adapters.md](adapters.md) §Gemini 4 Argon이 정본이다. 프롬프트의 요구·근거·출력 계약은 유지하며, API 이행 지침을 자연어 프롬프트의 상용구로 넣지 않는다.
