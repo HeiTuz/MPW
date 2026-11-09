@@ -11,7 +11,9 @@
 //
 // A section runs from its heading to the next heading of the same or higher
 // level. "#A,B" reads several sections, "#A~B" reads from A through the end of B,
-// and a path without "#" prints the whole file. Relative paths resolve against
+// and a path without "#" prints the whole file. Repeated/overlapping requests
+// emit each source line once, in first-request order, with source line ranges
+// on any remaining fragments. Relative paths resolve against
 // the skill root first, then the current directory.
 //
 // "--bundle <name>" expands to the ready-made target list below, so the common
@@ -37,8 +39,8 @@ export const BUNDLES = {
     "references/image/compiler.md#피부·재질",
   ],
   // 대상 미정·GPT Image 원본 편집. 참조 사진의 역할·관찰이 필요하면 from-image.md#1을 덧붙인다.
-  "gpt-image-edit": ["references/image/surfaces.md#0", "references/image/surface-contracts.md#3.2,3.3"],
-  "gpt-image-edit-structured": ["references/image/surfaces.md#0", "references/image/surface-contracts.md#3.2,3.3,3.4"],
+  "gpt-image-edit": ["references/image/surfaces.md#0", "references/image/surface-contracts.md#3.2.1,3.2.3,3.3"],
+  "gpt-image-edit-structured": ["references/image/surfaces.md#0", "references/image/surface-contracts.md#3.2.1,3.2.3,3.3,3.4"],
   // 영상 생성.
   video: ["references/image/surfaces.md#0", "references/image/lanes.md#영상 공통 규칙"],
   // 실행 작업·자동화 지시.
@@ -51,8 +53,10 @@ export const BUNDLES = {
   ],
   // 묶음 밖의 판단: 읽기 지도 표를 읽고 그 행의 절만 이어 읽는다.
   map: ["references/reading-map.md"],
-  // 리서치·추출·분류·목록 처리.
-  research: ["references/templates/model.md", "references/research.md"],
+  // 요청한 판단에만 읽기 범위를 맞춘다. 목록 처리는 필요한 묶음에 덧붙인다.
+  research: ["references/templates/model.md#리서치", "references/research.md"],
+  extraction: ["references/templates/model.md#추출·분류"],
+  batch: ["references/templates/model.md#목록·일괄 처리"],
   // 텍스트 모델 적응·변환. 색인이 가리키는 공급자의 날짜 절을 덧붙인다.
   "text-model-adapt": ["references/model-playbooks.md#공통 적응 규칙,공급자 색인"],
   // 이미지·영상 프롬프트의 엔진 간 변환. §6 색인이 가리키는 엔진 어댑터 절을 덧붙인다.
@@ -121,8 +125,7 @@ function sectionEnd(headings, index, lineCount) {
   return next ? next.line : lineCount;
 }
 
-export function extractSection(text, spec) {
-  const { lines, headings } = parseHeadings(text);
+function sectionRange({ lines, headings }, spec) {
   const [startKey, endKey] = spec.split("~");
   const startIndex = findHeading(headings, startKey);
   if (startIndex === -1) return { error: `section not found: §${startKey.trim()}` };
@@ -134,7 +137,14 @@ export function extractSection(text, spec) {
   }
   const from = headings[startIndex].line;
   const to = sectionEnd(headings, endIndex, lines.length);
-  return { from: from + 1, to, body: lines.slice(from, to).join("\n").replace(/\s+$/, "") };
+  return { from: from + 1, to };
+}
+
+export function extractSection(text, spec) {
+  const parsed = parseHeadings(text);
+  const section = sectionRange(parsed, spec);
+  if (section.error) return section;
+  return { ...section, body: parsed.lines.slice(section.from - 1, section.to).join("\n").replace(/\s+$/, "") };
 }
 
 function resolvePath(file) {
@@ -176,28 +186,72 @@ export function expandBundles(argv) {
   return { targets, unknown };
 }
 
-// Read every target of one bundle; returns the printed text or the first error.
-export function readTargets(targets, read = (file) => fs.readFileSync(resolvePath(file), "utf8")) {
-  const chunks = [];
+const readSource = (file) => fs.readFileSync(resolvePath(file), "utf8");
+
+// One stream powers both the fail-fast API and the CLI's continue-on-error
+// behavior. Cache parsing and source coverage for this call only. With the
+// filesystem reader, aliases/symlinks share coverage; injected readers retain
+// their own filename namespace.
+function* targetChunks(targets, read, toc = false) {
+  const sources = new Map();
   for (const target of targets) {
     const hash = target.indexOf("#");
     const file = hash === -1 ? target : target.slice(0, hash);
     const specs = hash === -1 ? [] : target.slice(hash + 1).split(",").filter((spec) => spec.trim());
-    let text;
+    let source;
     try {
-      text = read(file);
+      const key = read === readSource ? fs.realpathSync(resolvePath(file)) : file;
+      if (!sources.has(key)) {
+        try {
+          const text = read(file);
+          const parsed = parseHeadings(text);
+          sources.set(key, { text, ...parsed, seen: new Uint8Array(parsed.lines.length) });
+        } catch {
+          sources.set(key, { error: `cannot read ${file}` });
+        }
+      }
+      source = sources.get(key);
     } catch {
-      return { error: `cannot read ${file}` };
+      source = { error: `cannot read ${file}` };
     }
-    if (specs.length === 0) {
-      chunks.push(`==> ${file}\n${text.replace(/\s+$/, "")}\n`);
+    if (source.error) {
+      yield { error: source.error };
       continue;
     }
-    for (const spec of specs) {
-      const section = extractSection(text, spec);
-      if (section.error) return { error: `${file}: ${section.error}` };
-      chunks.push(`==> ${file} §${spec.trim()} (L${section.from}-${section.to})\n${section.body}\n`);
+    if (toc) {
+      if (!source.tocPrinted) yield { chunk: `==> ${file} (toc)\n${tableOfContents(source.text)}\n` };
+      source.tocPrinted = true;
+      continue;
     }
+    for (const spec of specs.length ? specs : [null]) {
+      const section = spec === null ? { from: 1, to: source.lines.length } : sectionRange(source, spec);
+      if (section.error) {
+        yield { error: `${file}: ${section.error}`, toc: tableOfContents(source.text) };
+        continue;
+      }
+      // Subtract earlier selections rather than merging/reordering requests.
+      // A child requested before its parent therefore keeps its original place.
+      let line = section.from - 1;
+      while (line < section.to) {
+        if (source.seen[line]) { line += 1; continue; }
+        const start = line;
+        while (line < section.to && !source.seen[line]) source.seen[line++] = 1;
+        const body = source.lines.slice(start, line).join("\n").replace(/\s+$/, "");
+        const fullFile = spec === null && start === 0 && line === source.lines.length;
+        const label = spec === null ? "" : ` §${spec.trim()}`;
+        const range = fullFile ? "" : ` (L${start + 1}-${line})`;
+        yield { chunk: `==> ${file}${label}${range}\n${body}\n` };
+      }
+    }
+  }
+}
+
+// Read targets with shared source/coverage caches; return text or the first error.
+export function readTargets(targets, read = readSource) {
+  const chunks = [];
+  for (const result of targetChunks(targets, read)) {
+    if (result.error) return { error: result.error };
+    chunks.push(result.chunk);
   }
   return { text: chunks.join("\n") };
 }
@@ -228,35 +282,13 @@ function main(argv) {
     return 2;
   }
   let failed = 0;
-  for (const target of targets) {
-    const hash = target.indexOf("#");
-    const file = hash === -1 ? target : target.slice(0, hash);
-    const specs = hash === -1 ? [] : target.slice(hash + 1).split(",").filter((spec) => spec.trim());
-    let text;
-    try {
-      text = fs.readFileSync(resolvePath(file), "utf8");
-    } catch {
-      console.error(`read_refs: cannot read ${file}`);
+  for (const result of targetChunks(targets, readSource, toc)) {
+    if (result.error) {
+      console.error(`read_refs: ${result.error}`);
+      if (result.toc) console.error(result.toc);
       failed += 1;
-      continue;
-    }
-    if (toc) {
-      console.log(`==> ${file} (toc)\n${tableOfContents(text)}\n`);
-      continue;
-    }
-    if (specs.length === 0) {
-      console.log(`==> ${file}\n${text.replace(/\s+$/, "")}\n`);
-      continue;
-    }
-    for (const spec of specs) {
-      const section = extractSection(text, spec);
-      if (section.error) {
-        console.error(`read_refs: ${file}: ${section.error}`);
-        console.error(tableOfContents(text));
-        failed += 1;
-        continue;
-      }
-      console.log(`==> ${file} §${spec.trim()} (L${section.from}-${section.to})\n${section.body}\n`);
+    } else {
+      console.log(result.chunk);
     }
   }
   return failed ? 1 : 0;

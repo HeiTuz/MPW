@@ -3,7 +3,7 @@ name: mpw
 description: "프롬프트를 새로 작성하거나 검토·퇴고하고, 대상 모델·도구에 맞게 변환한다. 작업지시·시스템·자동화·팀 작업·업무·디자인·이미지·영상 프롬프트에 사용한다. '프롬프트 만들어줘/검토해줘/다듬어줘', 기존 프롬프트의 부분 수정에 발동한다. 실제 코드 구현·이미지 생성·문서 제작만 요청한 경우에는 해당 실행 스킬을 쓴다. 이 파일과 선택한 참고 절은 출력 상한을 줄이지 말고 한 번에 온전히 읽는다."
 license: MIT
 metadata:
-  version: "3.4.2"
+  version: "3.4.3"
   category: prompt-writing
   locale: ko-KR
   doctrine: intent-first-progressive-disclosure
@@ -40,7 +40,7 @@ metadata:
 
 ## 필요한 자료만 읽는다
 
-**이 파일과 요청만으로 완성할 수 있으면 바로 쓴다. 단, 요청에 해당하는 형식·표면 규칙은 먼저 확인한다.** 대상 모델이 정해졌으면 후보 탐색을 생략하고, 부분 수정은 바뀌는 조건의 절만 읽는다. 파일·절은 `node scripts/read_refs.mjs`로 모아 읽는다(`#A,B` 여러 절, `#A~B` 범위, `--toc` 제목 목록, `--bundle 이름`은 아래 묶음, `--bundles`는 묶음 목록, 경로는 스킬 폴더 기준, Node가 없으면 `bun`). 묶음 뒤에 인자를 덧붙일 수 있고, 출력이 상한을 넘으면 두 번에 나눠 읽는다.
+**이 파일과 요청만으로 완성할 수 있으면 바로 쓴다. 단, 요청에 해당하는 형식·표면 규칙은 먼저 확인한다.** 단순 문안·그대로 재출력·제공 자료의 단순 추출에 묶음을 자동으로 붙이지 않는다. 대상 모델이 정해졌으면 후보 탐색을 생략하고, 부분 수정은 바뀌는 조건의 절만 읽는다. 이미 읽은 절은 바뀌거나 누락·잘림이 있을 때만 다시 읽고, 링크만으로 연결 문서를 전부 펼치지 않는다. 파일·절은 `node scripts/read_refs.mjs`로 모아 읽는다(`#A,B` 여러 절, `#A~B` 범위, `--toc` 제목 목록, `--bundle 이름`은 아래 묶음, `--bundles`는 묶음 목록, 경로는 스킬 폴더 기준, Node가 없으면 `bun`). 묶음 뒤에 인자를 덧붙일 수 있고, 출력이 상한을 넘으면 두 번에 나눠 읽는다.
 
 | 요청 | `node scripts/read_refs.mjs --bundle` 뒤에 붙일 묶음 이름 |
 |---|---|
@@ -48,9 +48,11 @@ metadata:
 | 대상 미정·GPT Image 인물·셀피·패션 화보 새 이미지 | `gpt-image-portrait` |
 | 대상 미정·GPT Image 원본 편집 | `gpt-image-edit` (도해·슬라이드·UI·만화·로고는 `gpt-image-edit-structured`). 참조 사진의 역할·관찰이 필요하면 `references/image/from-image.md#1`을 덧붙인다 |
 | 영상 생성 | `video` |
-| 실행 작업·자동화 지시 | `delegation`. 응답형 시스템·도구 정의는 [contract.md](references/templates/contract.md), 장기 실행은 [goal.md](references/templates/goal.md) |
+| 실행 작업·자동화·코딩 지시 | `delegation`. 응답형 시스템·도구 정의는 [contract.md](references/templates/contract.md), 장기 실행은 [goal.md](references/templates/goal.md) |
 | 여러 에이전트의 팀 작업 지시 | `team` ([team.md](references/templates/team.md) 골격과 역할 라우팅 포함) |
-| 리서치·추출·분류·목록 처리 | `research` |
+| 외부 조사·리서치·팩트체크 | `research` |
+| 추출·분류의 스키마·결측값·라벨 경계 판단 | `extraction` |
+| 여러 항목·페이지의 처리 범위와 누락 대조 | 필요한 묶음에 `batch`를 추가 |
 | 그 밖의 판단(업무 형식·지정 엔진 문법·참조 이미지·캐릭터시트·합성 연출·HyperFrames 지시·호출 배선·기계 형식) | `map` ([reading-map.md](references/reading-map.md) 표). 해당 행의 인자를 그대로 이어 실행하고 파일 전체를 열지 않는다 |
 | 텍스트 모델 적응·변환 | `text-model-adapt` 뒤에 색인이 가리키는 공급자의 날짜 절(예: `"references/model-playbooks.md#2026-09-25"`) |
 | 이미지·영상 프롬프트의 엔진 간 변환 | `image-prompt-conversion` 뒤에 [model-routing.md](references/image/model-routing.md) §6 색인이 가리키는 엔진 어댑터 절 |
