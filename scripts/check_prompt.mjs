@@ -312,7 +312,7 @@ function inspectNoise(result, instruction) {
   const hits = instruction.split(/(?<=[.?!。])\s+|\r?\n/u).filter((sentence) => !negated.test(sentence))
     .flatMap((sentence) => snippets(trigger, sentence)).map((hit) => hit.toLowerCase());
   evidence(result, CODE_REGISTRY.noise, [...new Set(hits)], "Grain-inducing vocabulary",
-    "Keep it only if the user asked for that look; otherwise name the visible detail or tone instead.");
+    "Not a deletion order: report it to the user, and keep it if that look was requested. In new prompts name the visible detail or tone instead.");
 }
 
 function inspectSkinRepeat(result, instruction) {

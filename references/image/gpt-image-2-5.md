@@ -10,7 +10,7 @@ MPW의 이미지 프롬프트 기본 대상이다. 사용자가 모델·도구�
 | 인물·셀피·패션 화보 | [editorial/portrait-brief.md](editorial/portrait-brief.md), 레인 진입은 [editorial-fashion.md](editorial-fashion.md) |
 | 포즈·빛·재질·장소 표현 | [editorial/scene-craft.md](editorial/scene-craft.md), [editorial/photo-results.md](editorial/photo-results.md), [editorial/locality.md](editorial/locality.md), [editorial/concept-collision.md](editorial/concept-collision.md) |
 | 실사 인공물 티 줄이기 | [realism.md](realism.md) |
-| 화면 노이즈(입자·자글거림) 유발 어휘 정리와 처방 | [surface-contracts.md](surface-contracts.md) §3.2.4 |
+| 화면 노이즈(입자·비늘 무늬·뭉침) 유발 어휘, 잔머리 같은 미세 구조, 낀 결과의 처리 순서 | [surface-contracts.md](surface-contracts.md) §3.2.4 |
 | 직접 API와 호스트 도구의 경계·설정 | [surface-contracts.md](surface-contracts.md) §4.3, 길이·비율·해상도는 [surfaces.md](surfaces.md) |
 | 모델 선택·이전 모델 종료 | [model-routing.md](model-routing.md) §4 |
 | 인터뷰로 함께 정하기 | [prompt-interview.md](prompt-interview.md) |
