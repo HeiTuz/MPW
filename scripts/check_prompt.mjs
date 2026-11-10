@@ -30,6 +30,7 @@ export const CODE_REGISTRY = Object.freeze({
   koNegation: { code: "phrasing/ko-negation", severity: { native: null, assembled: "warning" }, intent: "Distinguish Korean prohibitions from descriptions of absence." },
   quality: { code: "phrasing/quality-tag", severity: { native: null, assembled: "error" }, intent: "Replace generic model quality tags with observable details." },
   vague: { code: "phrasing/vague-adjective", severity: { native: "warning", assembled: "warning" }, intent: "Ground evaluative adjectives in visible choices." },
+  noise: { code: "phrasing/noise-trigger", severity: { native: "warning", assembled: "warning" }, intent: "Flag vocabulary reported to induce screen-wide grain on GPT Image." },
   skinToken: { code: "portrait/skin-token", severity: { native: null, assembled: "error" }, intent: "Describe skin observations rather than synthetic texture tokens." },
   skinColor: { code: "portrait/nationality-skin", severity: { native: null, assembled: "error" }, intent: "Avoid assigning stereotyped fixed skin colors." },
   glow: { code: "portrait/glow-stack", severity: { native: null, assembled: "warning" }, intent: "Balance multiple distinct shine effects with matte regions." },
@@ -302,6 +303,18 @@ function inspectPhrasing(result, instruction) {
     "Evaluative wording", "Specify the light, material or composition that creates the desired appearance.");
 }
 
+// surface-contracts.md §3.2.4: high-confidence rows only. Broad mood words and
+// sentences that negate or remove grain are left alone.
+function inspectNoise(result, instruction) {
+  if (result.engine !== "gpt-image") return;
+  const negated = /\b(?:no|not|never|without|avoid|free\s+of|remove|reduce|denoise|don['’]t)\b|없이|없는|없게|없도록|제거|금지|빼고|않/iu;
+  const trigger = /(?<![\p{L}\p{N}_])(?:film[ -]grain|grainy|gritty|(?:analog|heavy|coarse|visible)\s+grain|iso\s+noise|noise\s+texture|(?:ultra|hyper|extremely|insanely)[ -]+detailed|micro[ -]?details?|8k|(?:dust|floating|tiny)\s+particles|paper\s+grain|canvas\s+texture|rough\s+texture)(?![\p{L}\p{N}_])|필름\s*그레인|입자감|거친\s*(?:입자|질감)|초고화질|극세밀/giu;
+  const hits = instruction.split(/(?<=[.?!。])\s+|\r?\n/u).filter((sentence) => !negated.test(sentence))
+    .flatMap((sentence) => snippets(trigger, sentence)).map((hit) => hit.toLowerCase());
+  evidence(result, CODE_REGISTRY.noise, [...new Set(hits)], "Grain-inducing vocabulary",
+    "Keep it only if the user asked for that look; otherwise name the visible detail or tone instead.");
+}
+
 function inspectSkinRepeat(result, instruction) {
   const skinTexture = /\b(?:skin[ -](?:texture|detail|pores?|grain)|fine skin detail|(?:visible|natural|open)\s+pores|pores?\s+(?:vary|visible|remain)|vellus\s+hair|(?:naturally\s+)?textured\s+skin|skin\s+remains\s+(?:naturally\s+)?textured|airbrushed)\b|피부\s*(?:결|질감|모공)|모공|잔털/iu;
   const blocks = instruction.split(/\r?\n(?=[A-Z][A-Z0-9 &/,'’-]{1,40}:|\s*\r?\n)/u).map((block) => block.trim()).filter(Boolean);
@@ -351,6 +364,7 @@ export function checkText(input, options = {}) {
   inspectCopy(result, quotes, instruction);
   inspectSyntax(result, instruction);
   inspectPhrasing(result, instruction);
+  inspectNoise(result, instruction);
   inspectSkinRepeat(result, instruction);
   if (result.profile === "assembled") inspectPortrait(result, instruction);
   return result;
