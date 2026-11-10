@@ -30,6 +30,7 @@ export const CODE_REGISTRY = Object.freeze({
   koNegation: { code: "phrasing/ko-negation", severity: { native: null, assembled: "warning" }, intent: "Distinguish Korean prohibitions from descriptions of absence." },
   quality: { code: "phrasing/quality-tag", severity: { native: null, assembled: "error" }, intent: "Replace generic model quality tags with observable details." },
   vague: { code: "phrasing/vague-adjective", severity: { native: "warning", assembled: "warning" }, intent: "Ground evaluative adjectives in visible choices." },
+  noise: { code: "phrasing/noise-trigger", severity: { native: "warning", assembled: "warning" }, intent: "Flag vocabulary reported to induce screen-wide grain on GPT Image." },
   skinToken: { code: "portrait/skin-token", severity: { native: null, assembled: "error" }, intent: "Describe skin observations rather than synthetic texture tokens." },
   skinColor: { code: "portrait/nationality-skin", severity: { native: null, assembled: "error" }, intent: "Avoid assigning stereotyped fixed skin colors." },
   glow: { code: "portrait/glow-stack", severity: { native: null, assembled: "warning" }, intent: "Balance multiple distinct shine effects with matte regions." },
@@ -302,6 +303,40 @@ function inspectPhrasing(result, instruction) {
     "Evaluative wording", "Specify the light, material or composition that creates the desired appearance.");
 }
 
+// surface-contracts.md §3.2.4; the checked subset is listed in production.md.
+// Negation is scoped to the hit: an English negator before it in the same
+// comma clause, a Korean or trailing negator after it, or a negated list that
+// the clause continues. A sentence that only excludes grain is left alone.
+const NOISE_TRIGGER = /(?<![\p{L}\p{N}_])(?:film[ -]grain|grainy|gritty|(?:analog|heavy|coarse|visible)\s+grain|iso\s+noise|noise\s+texture|(?:ultra|hyper|extremely|insanely)[ -]*detailed|micro[ -]?details?|intricate\s+details?|8k|(?:dust|floating|tiny)\s+particles|paper\s+grain|canvas\s+texture|rough\s+texture)(?![\p{L}\p{N}_])|필름\s*그레인|입자감|거친\s*(?:입자|질감)|초고화질|극세밀/giu;
+const NOISE_NEGATOR = "(?:no|not|never|without|avoid\\w*|zero|nothing|free\\s+of|remov\\w*|reduc\\w*|denois\\w*|don['’]t)";
+const NOISE_BEFORE = new RegExp(`(?<![\\p{L}\\p{N}_])${NOISE_NEGATOR}(?![\\p{L}\\p{N}_])`, "iu");
+const NOISE_OPENS = new RegExp(`^\\s*(?:[A-Z][A-Z0-9 &/'’-]{1,40}:\\s*)?(?:do\\s+)?${NOISE_NEGATOR}(?![\\p{L}\\p{N}_])`, "u");
+const NOISE_AFTER = /^[\s-]*(?:free|removed|eliminated)(?![\p{L}\p{N}_])|없이|없는|없게|없도록|없애|제거|금지|빼고|않/iu;
+
+function inspectNoise(result, instruction) {
+  if (result.engine !== "gpt-image") return;
+  const hits = [];
+  for (const segment of instruction.split(/(?<=[.?!。;])\s+|\r?\n/u)) {
+    const clauses = segment.split(",").map((text) => ({
+      text,
+      found: [...text.matchAll(NOISE_TRIGGER)].map((match) => ({
+        word: match[0].trim().toLowerCase(),
+        negated: NOISE_BEFORE.test(text.slice(0, match.index)) || NOISE_AFTER.test(text.slice(match.index + match[0].length)),
+      })),
+    }));
+    let carried = new RegExp(NOISE_OPENS.source, "iu").test(clauses[0].text);
+    clauses.forEach((clause, index) => {
+      // A bare list item is negated when a later item of the same list is.
+      const listed = clause.found.length === 1 && clause.text.trim().length <= clause.found[0].word.length + 6
+        && clauses.slice(index + 1).some((later) => later.found.some((hit) => hit.negated));
+      for (const hit of clause.found) if (!hit.negated && !carried && !listed) hits.push(hit.word);
+      if (clause.found.some((hit) => hit.negated)) carried = true;
+    });
+  }
+  evidence(result, CODE_REGISTRY.noise, hits, "Grain-inducing vocabulary",
+    "Not a deletion order: report it to the user, and keep it if that look was requested. In new prompts name the visible detail or tone instead.");
+}
+
 function inspectSkinRepeat(result, instruction) {
   const skinTexture = /\b(?:skin[ -](?:texture|detail|pores?|grain)|fine skin detail|(?:visible|natural|open)\s+pores|pores?\s+(?:vary|visible|remain)|vellus\s+hair|(?:naturally\s+)?textured\s+skin|skin\s+remains\s+(?:naturally\s+)?textured|airbrushed)\b|피부\s*(?:결|질감|모공)|모공|잔털/iu;
   const blocks = instruction.split(/\r?\n(?=[A-Z][A-Z0-9 &/,'’-]{1,40}:|\s*\r?\n)/u).map((block) => block.trim()).filter(Boolean);
@@ -351,6 +386,7 @@ export function checkText(input, options = {}) {
   inspectCopy(result, quotes, instruction);
   inspectSyntax(result, instruction);
   inspectPhrasing(result, instruction);
+  inspectNoise(result, instruction);
   inspectSkinRepeat(result, instruction);
   if (result.profile === "assembled") inspectPortrait(result, instruction);
   return result;

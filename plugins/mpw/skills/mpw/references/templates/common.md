@@ -84,7 +84,7 @@ API 시스템 지시와 요청별 입력이 나뉘면 [contract.md](contract.md)
 | 렌즈 표현 | `/fisheye` | 가장자리 왜곡의 의도를 읽되, 실제 렌즈 설정을 실행했다고 쓰지 않는다 |
 | 조명 | `/nighttimeflash`, `/windowlight` | 광원 방향·배경과의 밝기 관계를 장면에 맞춘다 |
 | 화면 구성 | `/flatlay`, `/negativespace` | 카메라 시점과 여백 배치가 기존 크롭·제품 보존 조건에 맞는지 확인한다 |
-| 매체 질감 | `/35mmfilmgrain` | [compiler.md](../image/compiler.md) §피부·재질을 따른다 |
+| 매체 질감 | `/35mmfilmgrain` | [compiler.md](../image/compiler.md) §피부·재질을 따른다. GPT Image 대상의 입자 표현은 [surface-contracts.md](../image/surface-contracts.md) §3.2.4 |
 
 **납품 방식:** 조합 자체를 원하면 슬래시 표기를 유지한다. 완성 프롬프트에는 짧은 키워드 조합과 필요한 장면·보존 조건을 함께 쓸 수 있다. 같은 의미를 장문으로 다시 반복하지 않는다. 자연어만 요청했거나 대상이 전용 문법을 요구하면 의도를 그 형식으로 풀어 쓴다. 입력 사진·장면 맥락이 충분하고 사용자가 키워드만 원하면 키워드만 낸다. 출력 형식과 원문 언어는 기존 계약을 따른다.
 
