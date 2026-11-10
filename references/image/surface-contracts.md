@@ -74,7 +74,7 @@ SUBJECT: The model, relaxed and confident, one hand in a coat pocket, looking ju
 
 WARDROBE: A charcoal wool double-breasted coat with a soft brushed surface, notched lapels and dark horn buttons, worn over a black knit and straight black trousers.
 
-LIGHT: Cool dusk ambient light, warm shop-window light from camera right as the key, a gentle rim along the coat shoulders, wet asphalt reflecting the window glow. Natural color with fine film grain.
+LIGHT: Cool dusk ambient light, warm shop-window light from camera right as the key, a gentle rim along the coat shoulders, wet asphalt reflecting the window glow. Natural color with soft contrast and gently rolled-off highlights.
 
 CONSTRAINTS: Keep the coat charcoal with visible wool texture rather than a glossy synthetic look. Add no text, logos or watermarks.
 ```
