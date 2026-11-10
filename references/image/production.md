@@ -77,7 +77,7 @@ manifest 검사는 한 행에 하나의 객체를 받는다. 필수 텍스트는
 | `phrasing/ko-negation` | 경고, assembled | 한국어 지시형 부정문을 긍정형 결과로 바꿀 수 있음 |
 | `phrasing/quality-tag` | 오류, assembled | 품질 태그 사용 |
 | `phrasing/vague-adjective` | 경고, 공통 | 결과를 판정하기 어려운 평가형 수식어 |
-| `phrasing/noise-trigger` | 경고, 공통(gpt-image 엔진) | 부정·제거 문장 밖에 화면 노이즈 유발 어휘(입자·과잉 세부·부유 입자·거친 표면)가 있음. 삭제 지시가 아니라 알림 후보. 판정 기준은 [surface-contracts.md](surface-contracts.md) §3.2.4 |
+| `phrasing/noise-trigger` | 경고, 공통(gpt-image 엔진) | 부정·제거 구문 밖에 [surface-contracts.md](surface-contracts.md) §3.2.4 표의 어휘가 있음. 입자·매체와 과잉 세부 행 전체, 부유 입자 행의 `particles` 계열, 거친 표면 행의 `paper grain`·`canvas texture`·`rough texture`·거친 질감만 본다. 사물로도 흔히 쓰는 `sparkles`·`glitter`·`textured background`와 한국어 먼지·종이 질감은 보지 않는다. 삭제 지시가 아니라 알림 후보 |
 | `portrait/skin-token` | 오류, assembled | 조합이 금지된 피부 질감 토큰 |
 | `portrait/nationality-skin` | 오류, assembled | 국적·인종으로 피부색을 고정 |
 | `portrait/glow-stack` | 경고, assembled | 매트 한정 없이 광택 표현이 과도하게 겹침 |

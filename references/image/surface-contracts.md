@@ -65,7 +65,7 @@
 
 **언어.** 공통 언어 결정 규칙을 따른다(새 이미지 프롬프트는 영어 기본, 명시 언어·원문 보존 우선).
 
-**구획 이름과 순서.** 공식 가이드는 복잡한 요청을 장면 → 피사체 → 세부 → 제약의 흐름으로 정리하고 구획에 제목을 붙이라고 권한다(2026-11-10 원문 재확인). 이 흐름은 정보 순서의 기준이며 네 제목을 그대로 쓰라는 고정 양식이 아니다. 구획의 수와 제목은 요청 내용에 맞춘다. 예를 들어 인물 화보는 `SHOT`·`SUBJECT`·`WARDROBE`·`LIGHT`·`CONSTRAINTS`, 포스터는 `LAYOUT`·`TEXT`·`IMAGE`·`STYLE`, 제품 컷은 `PRODUCT`·`SET`·`LIGHT`·`CONSTRAINTS`처럼 조건이 몰리는 축에 제목을 준다. 조건이 적은 축은 인접 구획에 합치고, 조건이 없는 구획은 만들지 않는다. 산출물·용도는 구획 앞 첫 줄에 한 문장으로 쓴다. 제목은 줄 첫머리에 `LIGHT:`처럼 대문자와 콜론으로 쓰고, 구획 사이에 빈 줄을 둔다. 대문자 표기는 MPW의 표기 선택이다. 공식 예시는 `Constraints:`처럼 제목만 한 줄에 두고 아래에 문장이나 목록을 쓰며, 어느 쪽도 결과를 보장하는 문법이 아니다. 배제·보존은 `NEGATIVE`·`EXCLUDE` 대신 `CONSTRAINTS`(원본 편집이면 §3.3의 `PRESERVE`) 같은 구획에 문장으로 쓴다. 원치 않는 글자·로고·워터마크의 배제는 공식 가이드가 명시하라고 권하는 항목이므로, 글자나 상표가 끼어들 수 있는 장면에서는 한 문장으로 둔다. 사용자가 준 헤딩 이름·순서·정보 배치는 특별한 충돌이 없으면 보존한다. 한 컷은 길이·구획 수 때문에 여러 컷으로 나누지 않으며, 사용자 지정 형식이 없으면 하나의 복사 가능한 블록으로 낸다. 네이티브/조립 형식 경계는 §3.1, API 설정 분리는 2.5는 §4.3, 2.6은 §4.5를 따른다.
+**구획 이름과 순서.** 공식 가이드는 복잡한 요청을 장면 → 피사체 → 세부 → 제약의 흐름으로 정리하고 구획에 제목을 붙이라고 권한다(2026-11-10 원문 재확인). 이 흐름은 정보 순서의 기준이며 네 제목을 그대로 쓰라는 고정 양식이 아니다. 구획의 수와 제목은 요청 내용에 맞춘다. 예를 들어 인물 화보는 `SHOT`·`SUBJECT`·`WARDROBE`·`LIGHT`·`CONSTRAINTS`, 포스터는 `LAYOUT`·`TEXT`·`IMAGE`·`STYLE`, 제품 컷은 `PRODUCT`·`SET`·`LIGHT`·`CONSTRAINTS`처럼 조건이 몰리는 축에 제목을 준다. 조건이 적은 축은 인접 구획에 합치고, 조건이 없는 구획은 만들지 않는다. 산출물·용도는 구획 앞 첫 줄에 한 문장으로 쓴다. 제목은 줄 첫머리에 `LIGHT:`처럼 대문자와 콜론으로 쓰고, 구획 사이에 빈 줄을 둔다. 대문자 표기는 MPW의 표기 선택이다. 공식 예시는 `Constraints:`처럼 제목만 한 줄에 두고 아래에 문장이나 목록을 쓰며, 어느 쪽도 결과를 보장하는 문법이 아니다. 배제·보존은 `NEGATIVE`·`EXCLUDE` 대신 `CONSTRAINTS`(원본 편집이면 §3.3의 `PRESERVE`) 같은 구획에 문장으로 쓴다. 원치 않는 글자·로고·워터마크는 공식 가이드가 배제 대상으로 예시하는 항목이다. 장면에 실제로 있는 위험만 한 문장으로 쓰고(상점가의 간판 글자, 의류의 로고), 일반 금지어를 관성으로 나열하지 않는다([editorial/portrait-brief.md](editorial/portrait-brief.md) §축별 작성 패턴). 사용자가 준 헤딩 이름·순서·정보 배치는 특별한 충돌이 없으면 보존한다. 한 컷은 길이·구획 수 때문에 여러 컷으로 나누지 않으며, 사용자 지정 형식이 없으면 하나의 복사 가능한 블록으로 낸다. 네이티브/조립 형식 경계는 §3.1, API 설정 분리는 2.5는 §4.3, 2.6은 §4.5를 따른다.
 
 아래는 인물 화보의 구획 예시이며 생성 품질의 실측 결과가 아니다. 제목은 이 요청에 맞춘 것이고 다른 요청에 그대로 복사하지 않는다.
 
@@ -80,7 +80,7 @@ WARDROBE: A charcoal wool double-breasted coat with a soft brushed surface, notc
 
 LIGHT: Cool dusk ambient light, warm shop-window light from camera right as the key, a gentle rim along the coat shoulders, wet asphalt reflecting the window glow. Natural color with soft contrast and gently rolled-off highlights.
 
-CONSTRAINTS: Keep the coat charcoal with visible wool texture rather than a glossy synthetic look. Add no text, logos or watermarks.
+CONSTRAINTS: Keep the coat charcoal with visible wool texture rather than a glossy synthetic look. Keep shop signage unreadable and add no text or logos.
 ```
 
 새 인물 이미지의 인물 설정·참조 분기·장르 골격은 [editorial/portrait-brief.md](editorial/portrait-brief.md)를 따른다.
@@ -101,37 +101,38 @@ CONSTRAINTS: Keep the coat charcoal with visible wool texture rather than a glos
 
 #### 3.2.4 화면 노이즈 — 유발 어휘와 처리 순서
 
-GPT Image 2 계열에는 요청하지 않은 미세 입자·자글거림·타일형 반복 무늬가 화면 전체나 넓은 평면(하늘·단색 배경·피부·평면색 일러스트)에 깔리는 실패가 보고되어 있다. 2.5·2.6에서는 나아졌다는 보고와 일부 프롬프트에 남는다는 보고가 엇갈리고, 확인한 범위에 공식 수정 발표는 없다. 공식 프롬프팅 가이드와 Cookbook은 이 현상을 다루지 않으며, 필름 그레인·매크로 디테일 같은 품질 단서를 필요할 때만 겨냥해 쓰라고 한다(공식 실사 예시는 35mm 필름 사진에 `subtle film grain`을 쓴다). 아래는 2026-11에 모은 커뮤니티 보고에 따른 작성 기준이며 MPW가 직접 생성해 검증한 결과가 아니다(근거와 한계는 [surface-evidence.md](surface-evidence.md) §7). 문안이 낮출 수 있는 것은 유발 가능성이고 노이즈 제거를 보증하지 않는다.
+GPT Image 2 계열에는 요청하지 않은 미세 입자·자글거림·타일형 반복 무늬가 화면 전체나 넓은 평면(하늘·단색 배경·피부·평면색 일러스트)에 깔리는 실패가 보고되어 있다. 2.5·2.6에서는 나아졌다는 보고와 일부 프롬프트에 남는다는 보고가 엇갈리고, OpenAI의 공식 수정 발표는 확인하지 못했다. 공식 프롬프팅 가이드와 Cookbook은 이 현상을 다루지 않는다. Cookbook(gpt-image-2 기준)은 필름 그레인·매크로 디테일 같은 품질 단서를 필요할 때만 겨냥해 쓰라고 하고, 두 문서의 실사 예시는 35mm 필름 사진에 `subtle film grain`을 쓴다. 아래는 2026-11에 모은 커뮤니티 보고에 따른 작성 기준이며 MPW가 직접 생성해 검증한 결과가 아니다(근거와 한계는 [surface-evidence.md](surface-evidence.md) §7). 문안이 낮출 수 있는 것은 유발 가능성이고 노이즈 제거를 보증하지 않는다.
 
-**새 문안에 넣지 않을 어휘.** 사용자가 그 외형을 요청했거나 요청한 매체(필름 사진·수채화처럼 그 입자가 외형의 일부인 것)가 필요로 할 때만 아래 어휘를 쓴다. 그 밖의 새 문안에는 넣지 않고 오른쪽 방식으로 쓴다. 여러 출처가 겹치는 축만 표에 둔다.
+**새 문안에 넣지 않을 어휘.** 입자·매체, 부유 입자, 거친 표면 행은 사용자가 그 외형이나 그 외형을 가진 매체를 요청했을 때만 쓴다. 과잉 세부 행은 품질 태그이므로 요청과 무관하게 새 문안에 넣지 않고 보여야 할 세부로 풀어 쓴다([editorial/portrait-brief.md](editorial/portrait-brief.md) §줄이거나 빼는 것과 같은 판정).
 
-| 축 | 유발 어휘 | 바꿔 쓰기 |
-|---|---|---|
-| 입자·매체 | `film grain`, `grainy`, `gritty`, `analog grain`, `ISO noise`, `noise texture`, 필름 그레인·입자감·거친 입자 | 필름 감성은 색의 온도·대비·하이라이트가 풀리는 정도로 적는다 |
-| 과잉 세부 | `ultra-detailed`, `hyper-detailed`, `micro details`, `intricate details`, `8K`, 초고화질·극세밀 | 세부가 보여야 할 대상을 이름으로 지정한다(`the wool weave stays readable on the coat`) |
-| 부유 입자 | `dust particles`, `floating particles`, `tiny particles`, `sparkles`, `glitter`, 먼지·반짝이 입자 | 필요하면 위치와 양을 한정한다(`a few dust motes inside the window beam only`) |
-| 거친 표면 | `paper grain`, `canvas texture`, `rough texture`, `textured background`, 종이·캔버스 질감 | 그 질감이 필요한 물체 하나에만 붙이고 배경은 고른 톤으로 적는다 |
-| 피부 미세결 | 여러 번 반복한 `visible pores`·`skin texture`, 프레이밍보다 과한 매크로 결 | [compiler.md](compiler.md) §피부·재질에 따라 한 번, 부위·정도와 함께 쓴다 |
+| 축 | 유발 어휘 | 바꿔 쓰기 | 출처 |
+|---|---|---|---|
+| 입자·매체 | `film grain`, `grainy`, `gritty`, `analog`·`heavy`·`coarse`·`visible grain`, `ISO noise`, `noise texture`, 필름 그레인·입자감·거친 입자 | MPW가 고른 필름 감성은 색의 온도·대비·하이라이트가 풀리는 정도로 적는다 | 2건 |
+| 과잉 세부 | `ultra-detailed`, `hyper-detailed`, `extremely`·`insanely detailed`, `micro details`, `intricate details`, `8K`, 초고화질·극세밀 | 세부가 보여야 할 대상을 이름으로 지정한다(`the wool weave stays readable on the coat`) | 2건 |
+| 부유 입자 | `dust particles`, `floating particles`, `tiny particles`, `sparkles`, `glitter`, 먼지·반짝이 입자 | 필요하면 위치와 양을 한정한다(`a few dust motes inside the window beam only`) | 1건 |
+| 거친 표면 | `paper grain`, `canvas texture`, `rough texture`, `textured background`, 종이·캔버스 질감·거친 질감 | 그 질감이 필요한 물체 하나에만 붙이고 배경은 고른 톤으로 적는다 | 1건 |
 
-축이 겹칠수록 위험하다고 보고된다(예: `ultra-detailed` + `film grain`). `sharp focus`·`tack sharp`와 넓은 무드어(`cinematic`, `film look`, `moody`, `raw photo`)는 출처가 하나씩이고 서로 엇갈리는 미검증 참고다. 이 어휘만으로 문안을 바꾸거나 경고하지 않으며, 화면 결과로 풀어 쓰는 일반 원칙([compiler.md](compiler.md) §스타일은 화면 결과로)만 적용한다.
+축이 겹칠수록 위험하다고 보고된다(예: `ultra-detailed` + `film grain`). 피부 미세결의 반복과 프레이밍보다 과한 매크로 결은 이 표가 아니라 [compiler.md](compiler.md) §피부·재질과 `portrait/skin-repeat`가 맡는다. `sharp focus`·`tack sharp`와 넓은 무드어(`cinematic`, `film look`, `moody`, `raw photo`)는 출처가 하나씩이고 서로 엇갈리는 미검증 참고다. 이 어휘만으로 문안을 바꾸거나 경고하지 않으며, 화면 결과로 풀어 쓰는 일반 원칙([compiler.md](compiler.md) §스타일은 화면 결과로)만 적용한다.
 
-**기존 문안은 지우지 않고 알린다.** 기준 원문의 수정은 [common.md](../templates/common.md) §기준 원문과 누적 수정의 보존을 그대로 따른다. 지정 축 밖에 위 표의 어휘가 있으면 문안은 두고 블록 밖 한 줄로 후보와 바꿔 쓰기를 알린다. 사용자가 정리를 요청했거나 노이즈를 문제로 말했을 때 걷어 낸다. 같은 문안에서 어휘 유무만 바꾼 생성 대조가 있기 전에는 이 표를 삭제 규칙으로 올리지 않는다. 필름 그레인·종이 질감·빛 속 먼지처럼 의도된 입자는 정리 요청에서도 보존하고, 한 곳에 한 번 방향어(`fine`, `faint`, `moderate`)와 적용 범위로 쓴다.
+**필름 매체 요청의 판정.** 사용자가 필름 매체나 에뮬레이션을 요청했으면(필름 사진·필름톤·35mm·스톡명·`/35mmfilmgrain`) 입자는 그 외형의 일부다. 방향어(`subtle`, `fine`)를 붙여 한 번만 쓰고 나머지는 색·대비·하이라이트로 적는다. MPW가 처방이나 연출로 고른 필름 룩([realism.md](realism.md) §1 등)에는 입자 어휘를 넣지 않는다. [editorial/photo-results.md](editorial/photo-results.md)와 [editorial/locality.md](editorial/locality.md)의 필름 토큰에 든 입자 표현도 GPT Image 대상에서는 이 판정을 따른다.
+
+**기존 문안은 지우지 않고 알린다.** 기준 원문의 수정은 [common.md](../templates/common.md) §기준 원문과 누적 수정의 보존을 그대로 따른다. 수정 요청 범위 밖에 위 표의 어휘가 있으면 문안은 두고, 블록 밖 한 줄로 해당 어휘와 바꿔 쓰기를 사실로만 알린다. 선택지를 묻지 않으며, [SKILL.md](../../SKILL.md) §Output format이 블록 밖 설명을 막는 요청(‘프롬프트만’·‘설명 없이’·지정 양식)에서는 알리지 않는다. 사용자가 정리를 요청했거나 노이즈를 문제로 말했을 때 걷어 낸다. 같은 문안에서 어휘 유무만 바꾼 생성 대조가 있기 전에는 이 표를 삭제 규칙으로 올리지 않는다. 사용자가 원한 입자(필름 그레인·종이 질감·빛 속 먼지)는 정리 요청에서도 남기고, 뺄지는 사용자가 정한다.
 
 **미세 반복 구조(잔머리·머리카락·잎·직물 올).** 가닥 단위 정밀도를 넓은 영역에 요구하면 덩어리 무늬로 뭉치기 쉽다(추정, 생성 대조 없음). 정밀도 대신 위치·양·빛·상태를 한정한다.
 
 - 위치는 한두 곳(이마선·관자놀이·가르마·귀 뒤), 양은 몇 가닥으로 적고 한쪽에만 둘 수 있다.
 - 가닥이 읽히도록 빛이 닿는 쪽에 두고, 붙었는지·떴는지·날리는지 하나만 정한다.
 - 나머지 영역의 상태를 함께 적어 번지지 않게 한다. 예: `A few loose flyaway strands lift from her right temple and the part line, catching the window light from behind; the rest of her hair stays smooth and tucked behind the ear.`
-- `every single strand`·`individual hair strands`처럼 전체에 가닥 정밀도를 요구하는 표현은 쓰지 않는다. 가닥을 그릴 크기가 안 되는 프레이밍(전신·원경)에서는 윤곽의 흐트러짐 정도로 낮춘다.
+- 머리 전체에 가닥 정밀도를 요구하는 표현(`every single strand`, `individual hair strands`)은 뭉침이 보였을 때 먼저 줄일 후보다. 끝 처리처럼 좁은 부위의 가닥 서술([realism.md](realism.md) §2 헤어)과 §3.2.3의 가닥별 반사는 그대로 쓸 수 있다. 가닥을 그릴 크기가 안 되는 프레이밍(전신·원경)에서는 윤곽의 흐트러짐 정도로 낮춘다.
 - 한 번만 쓰고 다른 구획에서 비슷한 말로 반복하지 않는다. 잔머리를 실사 보강용 기본 문구로 넣지 않는 조건은 [compiler.md](compiler.md) §피부·재질 그대로다.
 
-**비늘·입자가 낀 결과의 처리 순서.** 문안 조정은 마지막 수단이다. 1–4는 이미지 블록이 아니라 블록 밖 안내나 작업 지시에 둔다.
+**비늘·입자가 낀 결과의 처리 순서.** 문안 조정은 마지막 수단이다. 1–3은 이미지 블록이 아니라 블록 밖 안내나 작업 지시에 두고, 4는 별도의 후속 편집 지시로 낸다.
 
-1. **재생성:** 같은 문안에서도 무늬가 나왔다 안 나왔다 한다는 보고가 있다. 한 장을 고치기 전에 여러 장을 뽑아 고른다.
-2. **누적 차단:** 무늬가 낀 결과를 다음 생성·편집의 입력으로 쓰지 않는다. 한 대화에서 생성·편집이 이어질수록 누적된다는 보고가 있으므로 새 대화에서 원래 문안으로 다시 생성하고, 편집은 깨끗한 원본에서 시작한다.
-3. **후처리:** 결과를 살려야 하면 크게 뽑아 줄이기, 약한 외부 디노이즈, 다른 모델의 낮은 강도 재렌더를 후속 단계로 명시한다(§5). 효과 순위는 추정이다. 영상 모델로 넘기면 입자가 증폭된다는 보고가 있어 인계 전에 원본 크기로 확인한다.
+1. **재생성:** 같은 문안에서도 무늬가 나왔다 안 나왔다 한다는 보고가 있다(출처 1건). 한 장을 고치기 전에 여러 장을 뽑아 고른다.
+2. **누적 차단:** 무늬가 낀 결과를 다음 생성·편집의 입력으로 쓰지 않는다. 한 대화에서 생성·편집이 이어질수록 누적된다는 보고가 있고, 이 누적은 출시 직후 고쳐졌다는 제3자 분석도 있으나 공식 확인은 없다. 재발하면 새 대화에서 원래 문안으로 다시 생성하고, 편집은 깨끗한 원본에서 시작한다.
+3. **후처리:** 결과를 살려야 하면 출력의 축소 리샘플링, 약한 외부 디노이즈, 다른 모델의 낮은 강도 재렌더를 후속 단계로 명시한다(§5). 이 셋의 효과와 순위는 MPW의 추정이다. 영상 모델로 넘기면 입자가 증폭된다는 보고가 있어 인계 전에 원본 크기로 확인한다.
 4. **모델 안 디노이즈 편집:** `Remove the noise and grain from this image. Keep every line, edge and detail unchanged.` 또는 디노이즈를 강하게 걸라는 지시. 일부 복구된다는 보고와 효과가 없다는 보고가 함께 있으므로 한 번만 시도한다.
-5. **문안:** 위 표의 어휘를 걷어 내고, 무늬가 끼는 넓은 면(피부·옷·단색 배경)을 원하는 상태로 한 문장 적는다. 예: `Smooth, even tones across the sky, wall and skin, with clean gradients and natural sharpness.` 그래도 보였다면 그 실패에 맞춘 짧은 제약 한 문장을 더한다. 예: `No film grain, speckled noise or gritty texture.` 금지어 묶음을 예방용 기본 문안으로 붙이지 않는다([compiler.md](compiler.md) §제외 조건의 형식).
+5. **문안:** 위 표의 어휘 가운데 사용자가 원한 질감 조건이 아닌 것을 걷어 내고, 무늬가 낀 넓은 면(하늘·벽·단색 배경)을 원하는 상태로 한 문장 적는다. 예: `Smooth, even tones across the sky and wall, with clean gradients and natural sharpness.` 피부와 옷감은 [compiler.md](compiler.md) §피부·재질의 질감 조건을 그대로 두고 매끈한 면으로 바꾸지 않는다. 그래도 보였다면 그 실패에 맞춘 짧은 제약 한 문장을 더한다. 예: `No film grain, speckled noise or gritty texture.` 금지어 묶음을 예방용 기본 문안으로 붙이지 않는다([compiler.md](compiler.md) §제외 조건의 형식).
 
 품질·크기 설정은 §4 소관이며, 설정을 올리면 무늬가 사라진다는 근거는 확인하지 못했다.
 
