@@ -83,6 +83,25 @@ function installedSkill() {
   }
 }
 
+// Reuse the checker's schema before any runner can spend time or money.
+// Validate the full review file before --ids filtering, including duplicate ids.
+function preflightInputs(options) {
+  const program = [
+    "import sys",
+    "from pathlib import Path",
+    "sys.path.insert(0, sys.argv[1])",
+    "from check_behavioral_responses import InputError, load_cases, load_records",
+    "try:",
+    "    cases = load_cases(Path(sys.argv[2]))",
+    "    if sys.argv[3]: load_records(Path(sys.argv[3]), 'reviews', {case['id'] for case in cases})",
+    "except InputError as error:",
+    "    print(f'input error: {error}', file=sys.stderr)",
+    "    sys.exit(2)",
+  ].join("\n");
+  const result = spawnSync("python3", ["-B", "-c", program, path.dirname(checker), options.cases, options.reviews ?? ""], { encoding: "utf8" });
+  if (result.error || result.status !== 0) throw new Error(result.error?.message ?? (result.stderr.trim() || "input preflight failed"));
+}
+
 function loadCases(file, ids) {
   const source = JSON.parse(fs.readFileSync(file, "utf8"));
   const cases = Array.isArray(source) ? source : source.cases;
@@ -159,6 +178,7 @@ async function pool(items, concurrency, worker) {
 
 async function main() {
   const options = parseArgs(process.argv.slice(2));
+  preflightInputs(options);
   const { known, cases } = loadCases(options.cases, options.ids);
   const reviews = options.reviews ? selectedReviews(options.reviews, known, new Set(cases.map((item) => item.id))) : null;
   const slugs = options.models.map(slug);

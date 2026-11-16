@@ -84,6 +84,30 @@ class CompileImageHandoffTests(unittest.TestCase):
         with self.assertRaisesRegex(MODULE.CompileError, "traversal"):
             MODULE.compile_request(request(input_images=[{"path": "../cup.png", "role": "reference"}]))
 
+    def test_reference_and_output_names_are_identifiers_not_prose(self):
+        paths = ["assets/front  view.png", "assets/front view.png"]
+        value = request(input_images=[{"path": p, "role": "source"} for p in paths],
+                        output={"filename": "catalog  front.png"})
+        result = MODULE.compile_request(value)
+        self.assertEqual(paths, [item["path"] for item in result["input_images"]])
+        self.assertEqual(value["output"], result["output"])
+        with tempfile.TemporaryDirectory() as directory:
+            source = Path(directory) / "request.json"
+            output = Path(directory) / "handoff.json"
+            source.write_text(json.dumps(value), encoding="utf-8")
+            self.assertEqual(MODULE.main([str(source), "--output", str(output)]), 0)
+            self.assertEqual(json.loads(output.read_text()), result)
+
+    def test_rejects_empty_and_dot_path_segments_before_normalization(self):
+        for path in ("assets//cup.png", "assets/./cup.png", "./cup.png", "assets/"):
+            with self.subTest(path=path), self.assertRaisesRegex(MODULE.CompileError, "traversal or empty"):
+                MODULE.compile_request(request(input_images=[{"path": path, "role": "source"}]))
+
+    def test_rejects_url_whitespace_instead_of_rewriting_the_reference(self):
+        for path in ("https://example.com/front  view.png", "https://exam\nple.com/cup.png"):
+            with self.subTest(path=path), self.assertRaisesRegex(MODULE.CompileError, "HTTPS URL"):
+                MODULE.compile_request(request(input_images=[{"path": path, "role": "source"}]))
+
     def test_accepts_public_https_reference(self):
         result = MODULE.compile_request(request(input_images=[{
             "path": "https://example.com/assets/cup.png", "role": "reference"

@@ -68,13 +68,18 @@ export function parseHeadings(text) {
   const headings = [];
   let fence = null;
   lines.forEach((line, index) => {
-    const fenceMatch = line.match(/^\s*(```|~~~)/);
-    if (fenceMatch) {
-      if (fence === null) fence = fenceMatch[1];
-      else if (fenceMatch[1] === fence) fence = null;
+    // Parse CRLF like LF without rewriting the returned source lines/body.
+    line = line.replace(/\r$/, "");
+    const fenceMatch = line.match(/^ {0,3}(`{3,}|~{3,})(.*)$/);
+    if (fence !== null) {
+      if (fenceMatch && fenceMatch[1][0] === fence[0] &&
+          fenceMatch[1].length >= fence.length && /^[ \t]*$/.test(fenceMatch[2])) fence = null;
       return;
     }
-    if (fence !== null) return;
+    if (fenceMatch && !(fenceMatch[1][0] === "`" && fenceMatch[2].includes("`"))) {
+      fence = fenceMatch[1];
+      return;
+    }
     const match = line.match(/^(#{1,6})\s+(.*?)\s*#*\s*$/);
     if (match) headings.push({ level: match[1].length, title: match[2], line: index });
   });

@@ -72,6 +72,18 @@ class BehavioralResponseCheckerTests(unittest.TestCase):
                 self.assertEqual(2, result.returncode)
                 self.assertTrue(result.stderr)
 
+    def test_context_rejects_non_strings_but_accepts_empty_and_verbatim_text(self):
+        for context in (None, False, 0, [], ["source"], {"source": "original"}):
+            with self.subTest(context=context):
+                result = self.run_checker([{"id": "a", "context": context}], [])
+                self.assertEqual(2, result.returncode)
+                self.assertIn("context must be a string", result.stderr)
+        for context in ("", " \t", "원문:\n a  b\r\n끝"):
+            with self.subTest(context=context):
+                result = self.run_checker([{"id": "a", "context": context, "expected": "x"}],
+                                          [{"id": "a", "response": "x"}])
+                self.assertEqual("needs_review", self.report(result)["results"][0]["status"])
+
     def test_non_string_response_is_input_error(self):
         result = self.run_checker([{"id": "a"}], [{"id": "a", "response": 4}])
         self.assertEqual(2, result.returncode)

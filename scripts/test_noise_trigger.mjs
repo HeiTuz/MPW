@@ -7,6 +7,10 @@ const CODE = "phrasing/noise-trigger";
 const flagged = (text, options) => checkText(text, options).warnings.find((item) => item.code === CODE)?.evidence ?? [];
 
 const warn = [
+  ["No text, add film grain.", ["film grain"]],
+  ["No film grain, add floating particles in the sunbeam.", ["floating particles"]],
+  ["No film grain, but use rough texture on the wall.", ["rough texture"]],
+  ["CONSTRAINTS: No film grain, keep intricate details on the dial.", ["intricate details"]],
   ["An ultra-detailed 8k portrait with film grain, no text, no watermark.", ["ultra-detailed", "8k", "film grain"]],
   ["LIGHT: Kodak Portra look with film grain, no flash.", ["film grain"]],
   ["LIGHT: soft window light, no flash, fine film grain.", ["film grain"]],

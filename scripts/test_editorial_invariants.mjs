@@ -42,34 +42,34 @@ test("all five editorial control phrases coexist without diagnostics", () => {
 
 for (const [name, input, code] of [
   [
-    "micro prefix rejects fabricated skin texture",
+    "micro prefix flags skin vocabulary for review",
     "An astronomer at a workbench has micro skin texture under a soft key light.",
     "portrait/skin-token",
   ],
   [
-    "AI suffix rejects fabricated skin texture",
+    "AI suffix flags skin vocabulary for review",
     "An astronomer at a workbench has realistic skin AI under a soft key light.",
     "portrait/skin-token",
   ],
   [
-    "English skin color shorthand fails independently",
+    "English skin color shorthand warns independently",
     "An East Asian woman at an observatory workbench has yellow undertone skin.",
     "portrait/nationality-skin",
   ],
   [
-    "Korean skin color shorthand fails independently",
+    "Korean skin color shorthand warns independently",
     "관측대 작업대에 앉은 동아시아 여성의 노란 피부를 부드러운 키 라이트로 비춘다.",
     "portrait/nationality-skin",
   ],
 ]) {
-  test(name, () => check(input, { errors: [code] }));
+  test(name, () => check(input, { warnings: [code] }));
 }
 
-test("matte and soft light do not hide either portrait error", () => {
+test("matte and soft light do not hide either portrait review signal", () => {
   check(
     "관측대 작업대의 동아시아 여성. 노란 피부와 yellow undertone skin, " +
     "micro skin texture와 realistic skin AI를 지정한다. 부드러운 키 라이트와 매트 마감.",
-    { errors: ["portrait/skin-token", "portrait/nationality-skin"] },
+    { warnings: ["portrait/skin-token", "portrait/nationality-skin"] },
   );
 });
 
@@ -110,13 +110,11 @@ const instructionWords =
 test("unquoted copy vocabulary activates the corresponding instruction checks", () => {
   check(instructionWords, {
     errors: [
-      "portrait/skin-token",
-      "portrait/nationality-skin",
       "phrasing/quality-tag",
       "syntax/placeholder",
       "syntax/foreign-flag",
     ],
-    warnings: ["portrait/glow-stack"],
+    warnings: ["portrait/skin-token", "portrait/nationality-skin", "portrait/glow-stack"],
   });
 });
 

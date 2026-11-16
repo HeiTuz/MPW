@@ -23,6 +23,8 @@ Optional prompt fields are `action`, `scene`, `composition`, `lighting`, `style`
 
 `input_images` entries contain only `path` and `role`. The array accepts at most 20 entries, and each path may occur only once regardless of role. Paths must be relative to the handoff bundle or public HTTPS URLs. Absolute paths, home-directory shortcuts, credentials in URLs, and traversal are rejected. Bundle relative assets beside the JSON when moving it between machines.
 
+Reference paths and output filenames are identifiers: preserve their characters, including repeated spaces in local basenames. Reject malformed references rather than rewriting them as prose; URLs must encode spaces, and relative paths must not contain empty or dot segments.
+
 ## Execute
 
 A compatible executor reads the handoff, resolves relative inputs from the handoff bundle, uses `operation` to select generation or edit behavior, and writes the requested output filename. The executor may map `aspect_ratio` and `image_size` to its supported controls, but must reject unsupported required behavior rather than silently changing the request.
