@@ -8,6 +8,7 @@ GPT Image 2.6을 지정한 생성·편집·API 요청에 사용한다. 대상 �
 | 화면 노이즈(입자·비늘 무늬·뭉침) 유발 어휘, 잔머리 같은 미세 구조, 낀 결과의 처리 순서 | [surface-contracts.md](surface-contracts.md) §3.2.4 |
 | 모델 선택·2.5에서 이행 | [model-routing.md](model-routing.md) §4, [surface-contracts.md](surface-contracts.md) §4.5 |
 | 직접 API의 complexity·SVG·GIF·markup | [surface-contracts.md](surface-contracts.md) §4.5 |
-| 웹 UI·Higgsfield·S1 계약으로 전달 | [surfaces.md](surfaces.md) §0, [surface-contracts.md](surface-contracts.md)의 해당 표면만 |
+| Higgsfield의 명시적 2.6 요청 | [surface-contracts.md](surface-contracts.md) §4.6 |
+| 웹 UI·S1 계약으로 전달 | [surfaces.md](surfaces.md) §0, [surface-contracts.md](surface-contracts.md)의 해당 표면만 |
 
 공식 근거와 확인일은 [surface-evidence.md](surface-evidence.md) §7에 있다. 실제 생성 없이 품질·지연 향상을 검증했다고 하지 않는다.
