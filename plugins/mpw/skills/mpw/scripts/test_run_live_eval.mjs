@@ -14,8 +14,8 @@ try {
   const fake = path.join(temporary, "fake-runner.mjs");
   const calls = path.join(temporary, "calls.txt");
   fs.writeFileSync(cases, JSON.stringify({ cases: [
-    { id: "exact", request: "EXACT", expected: "answer", format: { kind: "plain" } },
-    { id: "semantic", request: "SEMANTIC", semantic_checks: ["review needed"], format: { kind: "plain" } },
+    { id: "exact", request: "EXACT", context: "", expected: "answer", format: { kind: "plain" } },
+    { id: "semantic", request: "SEMANTIC", context: "원문:\n a  b\r\n끝", semantic_checks: ["review needed"], format: { kind: "plain" } },
     { id: "missing", request: "EMPTY", format: { kind: "plain" } },
     { id: "failed", request: "FAIL", format: { kind: "plain" } },
   ] }));
@@ -35,9 +35,41 @@ try {
     { encoding: "utf8", env: { ...process.env, MPW_FAKE_CALLS: calls } });
   }
 
+  // Invalid checker inputs must never launch the model, even if --ids would
+  // later filter out an invalid review. Reuse the real Python schema.
+  const validCases = fs.readFileSync(cases, "utf8");
+  const validReviews = fs.readFileSync(reviews, "utf8");
+  const invalidInputs = [
+    { cases: [{ id: "exact", request: "EXACT", formt: { kind: "plain" } }] },
+    { cases: [{ id: "exact", request: "EXACT", format: { kind: "code_blocks", count: "1" } }] },
+    { reviews: [{ id: "exact", verdict: "maybe", reason: "checked" }] },
+    { reviews: [{ id: "exact", verdict: "pass", reason: "" }] },
+    { reviews: [{ id: "exact", verdict: "pass", reason: "checked" }, { id: "exact", verdict: "pass", reason: "duplicate" }] },
+    { reviews: [{ id: "semantic", verdict: "invalid", reason: "not selected" }] },
+    ...[null, false, 0, [], ["source"], { source: "Important original text" }].map(context => ({
+      // Even an unselected malformed context must fail before any runner launch.
+      cases: [{ id: "exact", request: "EXACT" }, { id: "semantic", request: "SEMANTIC", context }],
+    })),
+  ];
+  for (const [index, invalid] of invalidInputs.entries()) {
+    fs.writeFileSync(cases, invalid.cases ? JSON.stringify(invalid.cases) : validCases);
+    fs.writeFileSync(reviews, invalid.reviews ? JSON.stringify(invalid.reviews) : validReviews);
+    const out = path.join(temporary, `invalid-${index}`);
+    const rejected = run(["--ids", "exact"], out);
+    assert.equal(rejected.status, 2, rejected.stderr + rejected.stdout);
+    assert.match(rejected.stderr, /input error:/);
+    assert.equal(fs.existsSync(calls), false, "invalid input launched the runner");
+    assert.equal(fs.existsSync(out), false, "invalid input created output artifacts");
+  }
+  fs.writeFileSync(cases, validCases);
+  fs.writeFileSync(reviews, validReviews);
+
   const complete = path.join(temporary, "complete");
   const first = run(["--ids", "exact,semantic"], complete);
   assert.equal(first.status, 3, first.stderr + first.stdout);
+  assert.equal(fs.readFileSync(path.join(complete, "test-model", "1-exact", "prompt.txt"), "utf8"), "EXACT");
+  assert.equal(fs.readFileSync(path.join(complete, "test-model", "2-semantic", "prompt.txt"), "utf8"),
+    "SEMANTIC\n\n원문:\n a  b\r\n끝");
   assert.deepEqual(JSON.parse(fs.readFileSync(path.join(complete, "responses-test-model.json"), "utf8")).map((item) => item.id), ["exact", "semantic"]);
   const firstReport = JSON.parse(fs.readFileSync(path.join(complete, "check-test-model.json"), "utf8"));
   assert.deepEqual(firstReport.results.map((item) => item.status), ["passed", "needs_review"]);

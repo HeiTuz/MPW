@@ -37,7 +37,7 @@
 
 ## 시리즈·룩북
 
-같은 옷의 여러 컷은 높이·거리·키 위치·흰 밸런스를 고정하고 한 축만 바꾼다. 룩북 판독 축은 [editorial/photo-results.md](editorial/photo-results.md) §룩북 감도, 시리즈 운영은 [production.md](production.md) §시리즈 운영.
+동일 셋업의 비교 룩북을 요청했다면 높이·거리·키 위치·흰 밸런스를 고정하는 방식이 유용하다. 장면·시점·빛의 변화를 요청한 시리즈에는 이 셋업이나 한 축 변경을 강제하지 않는다. 요청별 유지·변경 축은 [production.md](production.md) §시리즈 운영을 따른다. 룩북 판독 축은 [editorial/photo-results.md](editorial/photo-results.md) §룩북 감도.
 
 ## 점검
 

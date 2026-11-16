@@ -43,17 +43,18 @@ def _text(
 
 
 def _portable_reference(value: Any, field: str) -> str:
-    reference = _text(value, field, required=True, limit=1024)
+    reference = _text(value, field, required=True, limit=1024, preserve_whitespace=True)
     assert reference is not None
     parsed = urlparse(reference)
     if parsed.scheme:
-        if parsed.scheme != "https" or not parsed.netloc or parsed.username or parsed.password:
+        if (parsed.scheme != "https" or not parsed.netloc or parsed.username or parsed.password
+                or any(char.isspace() for char in reference)):
             raise CompileError(f"{field} must be a relative path or public HTTPS URL")
         return reference
     if "\\" in reference or reference.startswith(("/", "~")):
         raise CompileError(f"{field} must be a portable relative path")
     path = PurePosixPath(reference)
-    if path.is_absolute() or any(part in {"", ".", ".."} for part in path.parts):
+    if path.is_absolute() or any(part in {"", ".", ".."} for part in reference.split("/")):
         raise CompileError(f"{field} must not contain traversal or empty segments")
     return reference
 
@@ -80,7 +81,7 @@ def _compile_inputs(raw: Any) -> list[dict[str, str]]:
 def _compile_output(raw: Any) -> dict[str, str]:
     if not isinstance(raw, dict) or set(raw) != {"filename"}:
         raise CompileError("output must contain only filename")
-    filename = _text(raw["filename"], "output.filename", required=True, limit=255)
+    filename = _text(raw["filename"], "output.filename", required=True, limit=255, preserve_whitespace=True)
     if filename is None or not OUTPUT_NAME.fullmatch(filename):
         raise CompileError("output.filename must be one PNG, JPEG, or WebP basename")
     return {"filename": filename}

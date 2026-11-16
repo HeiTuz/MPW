@@ -47,7 +47,7 @@
 | 질 — 중간 | `moderately defined shadow edge, form modelled with a soft terminus` |
 | 질 — 하드 | `small distant source, crisp shadow edge with a hard terminus, small bright specular highlight, texture strongly raked` |
 | 질 — 레이킹 | `low-angle soft light, gentle relief shadows`(낮은 측면의 넓은 연질광이 돌출부만 밝히고 홈에는 완만한 그늘) |
-| 비율 | 표기는 **키측:그림자측**, 배수가 곧 스톱이다. `1:1` 평탄(0스톱) / `2:1` 자연·그림자 디테일 유지(1스톱) / `4:1` 드라마틱(2스톱) / `8:1` 로우키·암부 near-black(3스톱). 숫자만 쓰지 않는다 — `key:fill 4:1, pronounced shadow side, shadow detail thinning`처럼 결과와 같이 적는다 |
+| 비율 | **키측:그림자측 밝기 비율**. 2배 차이가 1스톱: `1:1` 0 / `2:1` 1 / `4:1` 2 / `8:1` 3스톱. 숫자와 원하는 결과를 함께 쓴다: `lit side four times as bright as shadow side, readable shadow detail`. 광원 자체의 `key:fill` 비율과 키측:그림자측 밝기 비율을 같은 값으로 취급하지 않는다 |
 | 룩북 기본광 | `large soft key with a broad white bounce filling the shadow side, low overall contrast, every shadow still holding the seam and the fold`(옷이 주인공이므로 반사판으로 대비를 낮춘다) |
 | 보조 | `cool edge rim isolating the contour`, `warm practical spill`, `window glow arriving from camera left`, `upward bounce opening the jaw shadow` |
 | 시간광 | 해질 무렵의 따뜻한 낮은 광 / 블루아워의 찬 기운 / 한낮 톱라이트 = `short dense nose shadow, shadowed eye sockets` |

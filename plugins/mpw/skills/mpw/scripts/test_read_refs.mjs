@@ -39,6 +39,21 @@ assert.equal(extractSection(sample, "3.2~0-1").body, "### 3.2 Second child\ntwo\
 assert.ok(extractSection(sample, "9").error, "headings inside fences are ignored");
 assert.equal(extractSection(sample, "Named-section").body, "## Named section\nnamed", "hyphens match spaces in titled keys");
 
+// Nested fence examples must stay opaque, including a shorter or annotated
+// apparent closer. CommonMark allows a longer same-marker closing fence.
+for (const marker of ["`", "~"]) {
+  const fenced = ["## Real", marker.repeat(4) + "markdown", marker.repeat(3),
+    "## Fake", marker.repeat(4) + "not-a-closer", "## Also fake",
+    marker.repeat(5), "## Next", "end"].join("\n");
+  assert.deepEqual(parseHeadings(fenced).headings.map(h => h.title), ["Real", "Next"]);
+  assert.equal(extractSection(fenced, "Real").body, fenced.split("\n").slice(0, 7).join("\n"));
+  assert.ok(extractSection(fenced, "Fake").error);
+  const crlf = fenced.replace(/\n/g, "\r\n");
+  assert.deepEqual(parseHeadings(crlf).headings.map(h => h.title), ["Real", "Next"]);
+  assert.equal(extractSection(crlf, "Real").body, crlf.split("\n").slice(0, 7).join("\n").trimEnd());
+  assert.ok(extractSection(crlf, "Fake").error);
+}
+
 // Overlap is deduplicated by source line, not text value, and requests keep
 // their first-occurrence order. The repeated fence lines must both survive.
 function expectedCoverage(targets, read) {

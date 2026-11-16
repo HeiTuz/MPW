@@ -4,7 +4,7 @@
 
 이 문서는 다중 컷의 제작 인계, 시리즈 운용, 텍스트 프롬프트 검증 경계를 설명한다. 이미지 표면과 파라미터는 [surfaces.md](surfaces.md), S1 기계 계약은 [계약 색인](../../contracts/manifest.json)과 `contracts/validate.py`가 정본이다. 두 계약을 혼용하지 않는다.
 
-사용자에게 바로 전달할 네이티브 이미지 문안은 GPT Image 2.5의 자연어 계약을 따른다. MPW 조립 형식·전문 레인·기계 레코드를 요청한 경우에만 해당 계약을 적용한다. 네이티브 문안은 API 본문이나 기계 레코드가 아니며, 프롬프트 검증은 모델 호출·파라미터·참조 전달·렌더 결과를 증명하지 않는다.
+사용자에게 바로 전달할 네이티브 이미지 문안은 [surfaces.md](surfaces.md) §0의 우선순위로 대상 엔진·표면을 정한 뒤 그 계약을 따른다. GPT Image 기본값은 엔진이 미지정일 때만 적용하며 명시된 다른 엔진을 바꾸지 않는다. MPW 조립 형식·전문 레인·기계 레코드를 요청한 경우에만 해당 계약을 적용한다. 네이티브 문안은 API 본문이나 기계 레코드가 아니며, 프롬프트 검증은 모델 호출·파라미터·참조 전달·렌더 결과를 증명하지 않는다.
 
 ## 인계 경로
 
@@ -14,7 +14,7 @@
 4. 배치 manifest는 활성 소비자 계약에 맞춰 검증한다. 프롬프트 필드 호환, 파일 경로, 참조, 실행 소유권, QC는 각각의 소비자가 소유하며 텍스트 검증으로 대신하지 않는다.
 5. 초회 샘플은 해당 소비자의 pilot/QC 경로로 확인한 뒤, 승인된 범위에서만 나머지 컷을 진행한다. 결과 파일, 매니페스트, QC 기록을 서로 연결하고 실제 확인한 상태만 보고한다.
 
-배치 크기는 소비자가 선언한 상한을 넘기지 않는다. 프로젝트별 러너에는 작업공간 쓰기만 허용하는 샌드박스를 적용한다. 호출에 붙이는 실행 지시는 다음과 같다.
+배치 크기는 소비자가 선언한 상한을 넘기지 않는다. 프로젝트별 러너에는 작업공간 쓰기만 허용하는 샌드박스를 적용한다. 아래는 실행 에이전트에 전달하는 지시이며 이미지 모델용 프롬프트 본문에는 붙이지 않는다([surface-contracts.md](surface-contracts.md) §3.2.3).
 
 ```text
 Produce one image from the preceding brief through the authorized generation surface.
@@ -71,17 +71,17 @@ manifest 검사는 한 행에 하나의 객체를 받는다. 필수 텍스트는
 | `syntax/weight` | 오류, 공통 | 어댑터 가중치 문법 |
 | `syntax/foreign-flag` | 오류, 공통 | assembled의 금지 플래그 또는 native 인용 밖 플래그 |
 | `syntax/section-sign` | 경고, 공통 | 지시 텍스트에 섹션 기호가 남음 |
-| `syntax/ratio-token` | 경고, 공통 | 본문 끝에 비율 토큰이 붙음 |
+| `syntax/ratio-token` | 경고, 공통 | 본문 끝에 구형 비율 토큰이 붙음. native/S3의 자연어 `Aspect ratio`·`비율` 지시는 제외 |
 | `phrasing/exclusion-list` | native 경고, assembled 오류 | 제외 구획 라벨 또는 부정 항목의 나열 |
 | `phrasing/negation` | 경고, assembled | 영어 부정문을 원하는 결과 상태로 바꿀 수 있음 |
 | `phrasing/ko-negation` | 경고, assembled | 한국어 지시형 부정문을 긍정형 결과로 바꿀 수 있음 |
 | `phrasing/quality-tag` | 오류, assembled | 품질 태그 사용 |
 | `phrasing/vague-adjective` | 경고, 공통 | 결과를 판정하기 어려운 평가형 수식어 |
 | `phrasing/noise-trigger` | 경고, 공통(gpt-image 엔진) | 부정·제거 구문 밖에 [surface-contracts.md](surface-contracts.md) §3.2.4 표의 어휘가 있음. 입자·매체와 과잉 세부 행 전체, 부유 입자 행의 `particles` 계열, 거친 표면 행의 `paper grain`·`canvas texture`·`rough texture`·거친 질감만 본다. 사물로도 흔히 쓰는 `sparkles`·`glitter`·`textured background`와 한국어 먼지·종이 질감은 보지 않는다. 삭제 지시가 아니라 알림 후보 |
-| `portrait/skin-token` | 오류, assembled | 조합이 금지된 피부 질감 토큰 |
-| `portrait/nationality-skin` | 오류, assembled | 국적·인종으로 피부색을 고정 |
-| `portrait/glow-stack` | 경고, assembled | 매트 한정 없이 광택 표현이 과도하게 겹침 |
-| `portrait/skin-repeat` | native 경고, assembled 오류 | 피부 표면 질감 조건이 둘 이상의 구획·문단에 반복됨 |
+| `portrait/skin-token` | 경고, assembled | 피부 어휘의 의도를 검토하되 요청 질감·부위·부분 수정 범위를 보존 |
+| `portrait/nationality-skin` | 경고, assembled | 색의 출처를 확인하며 요청 캐릭터색을 보존; 어휘만으로 국적 추론을 단정하지 않음 |
+| `portrait/glow-stack` | 경고, assembled | 광택 어휘 중첩 검토 휴리스틱이며 실패 예측이나 매트 강제 아님 |
+| `portrait/skin-repeat` | 경고 | 여러 구획의 피부 질감 표현을 검토하되 서로 다른 부위·부분 수정 조건을 보존 |
 | `manifest/parse` | 오류, manifest | JSON 행 파싱 실패 |
 | `manifest/not-object` | 오류, manifest | 행이 객체가 아님 |
 | `manifest/empty` | 오류, manifest | 매니페스트에 행이 없음 |

@@ -31,10 +31,10 @@ export const CODE_REGISTRY = Object.freeze({
   quality: { code: "phrasing/quality-tag", severity: { native: null, assembled: "error" }, intent: "Replace generic model quality tags with observable details." },
   vague: { code: "phrasing/vague-adjective", severity: { native: "warning", assembled: "warning" }, intent: "Ground evaluative adjectives in visible choices." },
   noise: { code: "phrasing/noise-trigger", severity: { native: "warning", assembled: "warning" }, intent: "Flag vocabulary reported to induce screen-wide grain on GPT Image." },
-  skinToken: { code: "portrait/skin-token", severity: { native: null, assembled: "error" }, intent: "Describe skin observations rather than synthetic texture tokens." },
-  skinColor: { code: "portrait/nationality-skin", severity: { native: null, assembled: "error" }, intent: "Avoid assigning stereotyped fixed skin colors." },
-  glow: { code: "portrait/glow-stack", severity: { native: null, assembled: "warning" }, intent: "Balance multiple distinct shine effects with matte regions." },
-  skinRepeat: { code: "portrait/skin-repeat", severity: { native: "warning", assembled: "error" }, intent: "State skin surface texture once instead of repeating it across sections." },
+  skinToken: { code: "portrait/skin-token", severity: { native: null, assembled: "warning" }, intent: "Review ambiguous skin vocabulary without replacing requested texture." },
+  skinColor: { code: "portrait/nationality-skin", severity: { native: null, assembled: "warning" }, intent: "Review color provenance without inferring nationality or discarding requested character color." },
+  glow: { code: "portrait/glow-stack", severity: { native: null, assembled: "warning" }, intent: "Review possible overlap in shine descriptions; lexical counts do not predict image failure." },
+  skinRepeat: { code: "portrait/skin-repeat", severity: { native: "warning", assembled: "warning" }, intent: "Review possible repetition while preserving distinct areas and partial-edit conditions." },
   parse: { code: "manifest/parse", severity: { native: "error", assembled: "error" }, intent: "Report invalid JSON without losing subsequent rows." },
   notObject: { code: "manifest/not-object", severity: { native: "error", assembled: "error" }, intent: "Require an object for each manifest row." },
   manifestEmpty: { code: "manifest/empty", severity: { native: "error", assembled: "error" }, intent: "Require a nonblank manifest row." },
@@ -267,7 +267,12 @@ function inspectSyntax(result, instruction) {
   evidence(result, CODE_REGISTRY.foreignFlag, flags, "Unsupported flags in instructions",
     "Pass supported parameters separately, outside the image prompt.");
   if (instruction.includes("§")) emit(result, CODE_REGISTRY.sectionSign, "A document section sign is present; describe the instruction directly instead.");
-  if (/(?:\b(?:ar|aspect\s+ratio)|비율)\s*[:：=]?\s*\d+\s*:\s*\d+\s*$/iu.test(instruction)) {
+  // S3 has no evidence that the requested ratio was delivered via a UI setting.
+  // Keep natural-language ratio labels there; only legacy AR tokens are suspect.
+  const ratioToken = result.profile === "native" && result.surface === "s3"
+    ? /\bar\s*[:：=]?\s*\d+\s*:\s*\d+\s*$/iu
+    : /(?:\b(?:ar|aspect\s+ratio)|비율)\s*[:：=]?\s*\d+\s*:\s*\d+\s*$/iu;
+  if (ratioToken.test(instruction)) {
     emit(result, CODE_REGISTRY.ratioToken, "A ratio token ends the prompt.", { hint: "Move it to parameters, UI settings, or a separate label line; see surface-contracts.md §4." });
   }
 }
@@ -326,6 +331,9 @@ function inspectNoise(result, instruction) {
     }));
     let carried = new RegExp(NOISE_OPENS.source, "iu").test(clauses[0].text);
     clauses.forEach((clause, index) => {
+      // A new affirmative instruction is not another item in a negated list.
+      // Keep this lexical boundary narrow; it does not judge the requested look.
+      if (/^\s*(?:(?:and|but|then|however)\s+)?(?:add|use|include|introduce|apply|show|render|create|make|keep|give|place|retain|preserve)\b/iu.test(clause.text)) carried = false;
       // A bare list item is negated when a later item of the same list is.
       const listed = clause.found.length === 1 && clause.text.trim().length <= clause.found[0].word.length + 6
         && clauses.slice(index + 1).some((later) => later.found.some((hit) => hit.negated));
@@ -333,7 +341,7 @@ function inspectNoise(result, instruction) {
       if (clause.found.some((hit) => hit.negated)) carried = true;
     });
   }
-  evidence(result, CODE_REGISTRY.noise, hits, "Grain-inducing vocabulary",
+  evidence(result, CODE_REGISTRY.noise, hits, "Reported vocabulary to review, not a verified grain prediction",
     "Not a deletion order: report it to the user, and keep it if that look was requested. In new prompts name the visible detail or tone instead.");
 }
 
@@ -341,23 +349,23 @@ function inspectSkinRepeat(result, instruction) {
   const skinTexture = /\b(?:skin[ -](?:texture|detail|pores?|grain)|fine skin detail|(?:visible|natural|open)\s+pores|pores?\s+(?:vary|visible|remain)|vellus\s+hair|(?:naturally\s+)?textured\s+skin|skin\s+remains\s+(?:naturally\s+)?textured|airbrushed)\b|피부\s*(?:결|질감|모공)|모공|잔털/iu;
   const blocks = instruction.split(/\r?\n(?=[A-Z][A-Z0-9 &/,'’-]{1,40}:|\s*\r?\n)/u).map((block) => block.trim()).filter(Boolean);
   const hits = blocks.filter((block) => skinTexture.test(block));
-  if (hits.length >= 2) emit(result, CODE_REGISTRY.skinRepeat, `Skin surface texture appears in ${hits.length} separate sections.`, { hint: "Keep one texture statement with its area and degree; move preservation to CONSTRAINTS once." });
+  if (hits.length >= 2) emit(result, CODE_REGISTRY.skinRepeat, `Skin surface texture appears in ${hits.length} separate sections.`, { hint: "Check whether these sections repeat the same condition or describe distinct areas. Preserve requested texture, color, area, degree and partial-edit scope; consolidate only redundant wording without forcing a heading." });
 }
 
 function inspectPortrait(result, instruction) {
   evidence(result, CODE_REGISTRY.skinToken,
     snippets(/\bmicro[ -]?(?:skin(?:[ -]?texture)?|pores?|texture)\b|\b(?:realistic[ -]?)?skin(?:[ -]?texture)?[ -]?ai\b|마이크로\s*(?:피부\s*)?(?:질감|피부결)|(?:사실적(?:인)?\s*)?피부(?:\s*(?:질감|결))?\s*AI/giu, instruction),
-    "Synthetic skin tokens", "Describe visible pores, fine facial hair and natural texture.");
+    "Skin vocabulary to review, not proof of a defect", "Confirm the intended area and texture. Preserve requested texture, color and partial-edit scope; clarify only ambiguity, without automatically adding pores or fine facial hair.");
   evidence(result, CODE_REGISTRY.skinColor,
     snippets(/\byellow(?:ish)?(?:[ -]+undertone)?[ -]+skin\b|(?:노란|누런|황색)\s*피부/giu, instruction),
-    "Fixed skin color shorthand", "Describe observed hydration or blush rather than assigning a nationality a color.");
+    "Skin color wording to review, not evidence of nationality inference", "Check whether the color is user-specified, observed or inferred from nationality. Preserve requested character color, area, texture and partial-edit scope; correct only unsupported inference, not the color word alone.");
   const shine = [
     /\bdewy\b/iu, /\bluminous\s+skin\b/iu, /\bglass\s+skin\b/iu,
     /\bsubsurface\s+(?:glow|sheen|scatter)\b/iu, /\bwet[ -]look\b/iu,
     /\bhigh[ -]shine\b/iu, /\bglossy\s+skin\b/iu, /\bglistening\s+skin\b/iu,
   ].filter((pattern) => pattern.test(instruction));
   const matte = /\b(?:(?:semi|soft)[ -])?matte\b|무광|매트|반무광|\b(?:restrained|controlled)\s+sheen\b/iu;
-  if (shine.length >= 4 && !matte.test(instruction)) emit(result, CODE_REGISTRY.glow, `${shine.length} distinct skin shine effects have no matte qualifier.`, { hint: "Choose one main sheen and place matte regions deliberately." });
+  if (shine.length >= 4 && !matte.test(instruction)) emit(result, CODE_REGISTRY.glow, `${shine.length} distinct shine terms trigger a review heuristic, not a prediction of image failure.`, { hint: "Check whether finishes conflict on the same area. Preserve requested sheen, color, texture and partial-edit scope; do not automatically add matte regions or remove gloss terms." });
 }
 
 export function checkText(input, options = {}) {

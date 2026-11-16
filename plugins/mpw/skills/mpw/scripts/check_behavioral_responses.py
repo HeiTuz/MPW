@@ -85,6 +85,8 @@ def load_cases(path: Path) -> list[dict[str, Any]]:
         if case_id in seen:
             raise InputError(f"duplicate case id {case_id!r}")
         seen.add(case_id)
+        if "context" in case and not isinstance(case["context"], str):
+            raise InputError(f"case {case_id!r} context must be a string")
         if "expected" in case:
             expected = case["expected"]
             if isinstance(expected, list):

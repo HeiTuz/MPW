@@ -49,9 +49,9 @@
 
 ### 글로우 적층 제한
 
-`dewy`·`luminous skin`·`subsurface glow/sheen`·`wet-look`·`glass skin`·`high-shine`을 네 개 이상 쌓으면 피부가 유리처럼 뭉갠다. **주 광택 하나**를 고르고, 필요하면 `매트한 T존`·`semi-matte cheek`·`restrained sheen`으로 대비한다.
+`dewy`·`luminous skin`·`subsurface glow/sheen`·`wet-look`·`glass skin`·`high-shine`은 개수만으로 효과나 실패를 판정하지 않는다. 요청한 부위·정도를 보존하고 같은 부위의 서로 충돌하는 마감만 정리한다. 부위별 광택 대비는 선택 가능한 연출이며 생성 효과를 검증한 처방이 아니다.
 
-`micro skin texture AI`·`skin texture AI`는 `pores vary in size across the face, fine cheek hairs remain visible`로 고친다. 국적에 붙인 피부색은 버리고 관찰(hydrated base, flushed cheeks)로 쓴다.
+피부 표현을 다듬을 때는 [../compiler.md](../compiler.md) §피부·재질의 적용·보존 조건을 따른다. 모호한 질감 표현을 모공·잔털로 일괄 치환하지 않는다. 국적에서 피부색을 추론하지 않으며, 사용자가 지정한 피부색·질감과 기준 원문의 수정 범위를 보존한다.
 
 ## 예시
 

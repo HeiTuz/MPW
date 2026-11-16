@@ -42,6 +42,16 @@ function run(casesPath) {
   });
 }
 
+// Native web prompts keep requested ratios unless a setting actually carries
+// them. Legacy AR suffixes and other profiles retain their existing warning.
+const ratioWarning = (text, options = {}) => checkText(text, options).warnings.some(w => w.code === "syntax/ratio-token");
+for (const suffix of ["Aspect ratio: 4:5", "비율: 4:5"]) {
+  assert.equal(ratioWarning("A simple poster. " + suffix), false);
+  assert.equal(ratioWarning("A simple poster. " + suffix, { surface: "s2" }), true);
+  assert.equal(ratioWarning("A simple poster. " + suffix, { profile: "assembled" }), true);
+}
+assert.equal(ratioWarning("A simple poster. AR 4:5"), true);
+
 let scenarios = 0;
 const temp = await mkdtemp(resolve(tmpdir(), "mpw-prompt-cases-"));
 try {
