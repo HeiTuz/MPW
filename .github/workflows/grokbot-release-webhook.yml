@@ -1,0 +1,30 @@
+name: Notify Grok Bot on release
+
+on:
+  release:
+    types: [published]
+
+permissions: {}
+
+jobs:
+  notify:
+    if: startsWith(github.event.release.tag_name, 'v') && !github.event.release.prerelease && !github.event.release.draft
+    runs-on: ubuntu-latest
+    steps:
+      - name: Call Grok Bot webhook
+        env:
+          WEBHOOK_URL: ${{ secrets.GROKBOT_MPW_WEBHOOK_URL }}
+          WEBHOOK_AUTH: ${{ secrets.GROKBOT_MPW_WEBHOOK_AUTH }}
+          TAG: ${{ github.event.release.tag_name }}
+          RELEASE_URL: ${{ github.event.release.html_url }}
+        run: |
+          if [ -z "$WEBHOOK_URL" ] || [ -z "$WEBHOOK_AUTH" ]; then
+            echo "Grok Bot webhook secrets are not set; skipping."
+            exit 0
+          fi
+          payload=$(jq -n --arg repo "$GITHUB_REPOSITORY" --arg tag "$TAG" --arg url "$RELEASE_URL" \
+            '{event:"release.published", repo:$repo, tag:$tag, url:$url}')
+          curl -fsS -X POST "$WEBHOOK_URL" \
+            -H "Authorization: $WEBHOOK_AUTH" \
+            -H "Content-Type: application/json" \
+            -d "$payload"
