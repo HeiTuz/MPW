@@ -224,6 +224,7 @@ class BehavioralResponseCheckerTests(unittest.TestCase):
             empty.write_text("[]", encoding="utf-8")
             for relative in (
                 Path("scripts/fixtures/behavioral/cases.json"),
+                Path("scripts/fixtures/behavioral/image-planning.json"),
                 Path("scripts/fixtures/skill_behavior_cases.json"),
             ):
                 with self.subTest(relative=str(relative)):
