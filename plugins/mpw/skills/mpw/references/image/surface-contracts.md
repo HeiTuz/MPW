@@ -299,6 +299,15 @@ Grok 전용 공통 prompt 문자 상한·최적 단어수는 확인한 가이드
 
 근거·조회 범위는 [surface-evidence.md](surface-evidence.md) §7, 모델 발견 기록은 [model-routing.md](model-routing.md) §5를 따른다.
 
+### 4.7 Seedream 5.5 — ModelArk 직접 API
+
+BytePlus 글로벌은 `dola-seedream-5-5-261028`, Volcengine 중국 Ark는 `doubao-seedream-5-5-261028`을 쓴다. UI·Higgsfield 등 래퍼는 실제 모델 ID와 필드를 확인한다. 기존 Seedream 5 Pro, 미지정 이미지 경로와 S1 계약은 유지한다. 자연어는 [seedream-5-5.md](seedream-5-5.md), 근거는 [surface-evidence.md](surface-evidence.md) §7을 따른다.
+
+- **생성과 편집:** 크기 프리셋은 `1K`·`1.5K`·`2K`다. 다중 참조는 최대 10장이다. 여러 차례 이어 편집할 때만 직전 결과를 다음 `image`로 넣는다. 투명 출력이 필요 없는 누적 편집에는 공식 가이드가 RGB 입력과 `background: opaque`를 권장한다.
+- **RGBA:** 텍스트 생성·참조 이미지 편집에서 `background: transparent`와 `output_format: png`를 함께 사용한다. 입력에 알파 채널이 없어도 된다. `jpeg`와 투명 출력은 함께 쓸 수 없다.
+- **레이어 분리:** 한 장을 입력하고 `layer_decomposition: true`로 설정한다. `layer_decomposition_options.max_images`는 바탕 한 장을 포함한 출력 상한 2–100(기본 30)이다. 상한이 실제 파일 수를 보장하지 않는다. `background`는 생략하며, `output_format`은 바탕에만 적용되고 분리된 레이어는 PNG다.
+- **OCR:** 레이어 분리에서 일반 텍스트에 `layer_decomposition_options.text_recognition: true`를 사용할 수 있다. 응답의 `data[].text_recognition`은 해당 레이어의 텍스트·위치·근사 스타일이다. 손글씨·장식 글꼴의 OCR이나 원본 폰트 복원을 전제로 인계하지 않는다.
+
 ## 5. 네이티브 출력과 후처리
 
 원하는 출력을 선택한 모델·표면이 직접 지원하면 그 기능을 쓴다. 지원하지 않는 경우에 배경 제거·아웃페인트·업스케일·리프레임·립싱크를 **후속 단계로 명시**한다.
