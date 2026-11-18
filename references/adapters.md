@@ -126,11 +126,24 @@ MPW는 HeiTuz 마켓플레이스 플러그인 `mpw@heituz`로 배포한다. 카�
 
 공개 전에는 실제 포함될 정체성·설명·스킬·루틴을 검토하고 API 키·내부 URL·고객 자료를 제거한다. 예전 가이드의 자동 익명화 설명만으로 안전하다고 판정하지 않는다. 현재 [Bot 공유 문서](https://docs.x.ai/grok-bot/bots)의 공개 범위와 팀 정책을 확인하며, 공유 템플릿 복사와 원래 Team Bot에 합류하는 것을 구분한다. 문안만 작성한 상태에서 게시·수신자 설치·의존성 준비가 끝났다고 보고하지 않는다.
 
-## 텍스트 API 이행 (2026-11-09 공식 문서 확인)
+## 텍스트 API 이행
 
 이 절은 사용자가 지정한 직접 API 이행·설정 인계에만 적용한다. 문안 작성만으로 모델·설정을 바꾸거나 API를 호출하지 않는다. 문서 계약 대조이며 실제 요청·모델 품질 검증은 **NOT RUN**이다.
 
+### OpenAI GPT-6.2 Astra·Sol
+
+**2026-11-18 공식 문서 확인.** 직접 API 모델 ID는 `gpt-6.2-astra`, `gpt-6.2-sol`이다. 두 모델은 Responses와 Chat Completions를 지원하며 도구 호출은 Responses에서 사용한다.
+
+- 추론 강도는 Responses의 `reasoning.effort`, Chat Completions의 `reasoning_effort`로 지정한다. 공식 이행 출발값은 신규 통합 `medium`, 기존 `none`·`minimal` 이행은 `low`다. 선택 가능한 실제 설정을 호스트에서 확인하고, 작업의 품질·지연·비용으로 조정한다.
+- Chat Completions 이행에서 `temperature`, `top_p`, `logprobs`, `top_logprobs`를 제거한다. Responses에서는 `temperature`, `top_p`, `top_logprobs`와 `include`의 `message.output_text.logprobs`를 제거한다.
+- GPT-5.5 이하에서 이행할 때는 `prompt_cache_retention`을 `prompt_cache_options.ttl: "30m"`으로 바꾼다. 여러 턴에서는 고정 접두부를 유지하고 새 지시·자료를 뒤에 추가한다. 접두부 수정, 모델 다운그레이드, 최종 사용자 또는 조직 변경 시 API가 해당 추론 항목을 버린다. 여러 턴 사이에 추론 강도를 바꿀 때는 Responses의 요청 수준 `reasoning.effort`를 유지하고 `configuration_update`를 입력 끝에 추가한다. [접두부 유지 가이드](https://developers.openai.com/api/docs/guides/keep-prefix-unchanged).
+- Responses의 `max_output_tokens`는 내부 추론과 화면에 보이는 답변이 함께 쓰는 예산이다. `status: "incomplete"`와 `incomplete_details.reason: "max_output_tokens"`를 확인하고 잘린 답변은 완료로 판정하지 않는다. `usage.output_tokens_details.reasoning_tokens`를 포함해 실측하고, 한도 조정·재시도는 승인된 예산 안에서 한다.
+
+근거: [GPT-6.2 이행 가이드](https://developers.openai.com/api/docs/guides/latest-model#migration-quickstart), [Astra](https://developers.openai.com/api/docs/models/gpt-6.2-astra), [Sol](https://developers.openai.com/api/docs/models/gpt-6.2-sol), [추론 토큰과 잘림 처리](https://developers.openai.com/api/docs/guides/reasoning#allocating-space-for-reasoning).
+
 ### Sonnet 5.5 JSON
+
+**2026-11-09 공식 문서 확인.**
 
 - 계산 등 추론이 필요한 JSON 과제에는 `thinking: {"type": "adaptive"}`를 사용하고, 짧은 문안 보정은 [model-playbooks.md](model-playbooks.md) §2026-11-09를 따른다. 도구 없는 `between_tools` 요청에서는 응답 전 추론을 하지 않으므로 그 문안의 효과가 없다. `xhigh`·`max`와 `between_tools` 조합은 400 오류다. 이 조건을 다른 Claude 모델에 이식하지 않는다.
 - `stop_reason: "max_tokens"`이면 보이는 JSON이 파싱돼도 실패로 판정한다. 생각과 답변에 필요한 토큰을 함께 잡되 한 번에 쓸 예산을 넘기지 않고, 재시도도 승인된 예산·실행 범위 안에서만 한다. 형식 통과와 값 정확성 검증은 [model.md](templates/model.md) §추출·분류를 따른다.

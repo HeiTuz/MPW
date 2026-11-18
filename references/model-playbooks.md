@@ -110,7 +110,7 @@ Join gate: 실제 배정한 worker 산출물과 요청된 planner/critic/verifie
 
 | 공급자 | 날짜 절과 찾을 항목 |
 |---|---|
-| OpenAI | 09-05 Astra/GPT-5.6, 09-16 권한·캐시, 09-24 추론·공유 스킬, 09-27 상세도·도구, 11-05 GPT-6 위임·평가 |
+| OpenAI | 11-18 GPT-6.2 Astra·Sol, 11-05 이전 GPT-6 위임, 09-05 GPT-6 Astra/GPT-5.6, 09-16 권한·캐시, 09-24 추론·공유 스킬, 09-27 상세도·도구 |
 | Anthropic | 09-05 문체, 09-24 서식, 09-25 이행·진행, 09-27 Opus/Fable 보강, 11-09 Sonnet JSON |
 | Google | 09-05·09-24 Gemini, 09-27 API 이행, 11-09 Gemini 4 Argon |
 | xAI | Grok 텍스트·리서치 |
@@ -141,7 +141,7 @@ Join gate: 실제 배정한 worker 산출물과 요청된 planner/critic/verifie
 
 - **권한 사슬.** `instructions`와 developer 메시지의 우선순위 및 역할별 배치는 [contract.md](templates/contract.md) §메시지 역할과 배치를 따른다. 직접 API의 developer 메시지 구획 예시는 Identity → Instructions → Examples → Context이며 다른 공급자에 이식하지 않는다.
 - **추론 모델.** 실제 모델에서 확인한 뒤 필요하면 developer 메시지 첫 줄의 `Formatting re-enabled`를 쓴다. 목표·제약·예시와 사고 과정에 관한 공통 작성 규칙은 §공통 적응 규칙과 2026-09-24 OpenAI 항목을 따른다.
-- **프롬프트 캐시.** 고정 접두부·이력·도구 정의의 배치는 [contract.md](templates/contract.md) §메시지 역할과 배치를 따른다. 확인일 기준 GPT-5.6 이상은 최소 캐시 길이 1,024토큰, 쓰기 1.25×·읽기 0.1× 요율, implicit/explicit 모드와 요청당 최대 4개 브레이크포인트, 상위 `instructions`에는 explicit 브레이크포인트를 둘 수 없음. GPT-6 계열은 `configuration_update` 항목으로 접두부를 유지한 채 추론 강도를 바꾼다. 값은 모델·시점에 따라 달라지므로 인계 전에 현재 문서로 재확인한다. OpenAI에서는 tools 배열의 프리픽스를 고정하고 `tool_choice: none` 또는 `tool_choice`의 `allowed_tools` 모드로 호출 허용 범위만 바꿀 수 있다. [함수 호출 제어](https://developers.openai.com/api/docs/guides/function-calling) 참조.
+- **프롬프트 캐시.** 고정 접두부·이력·도구 정의의 배치는 [contract.md](templates/contract.md) §메시지 역할과 배치를 따른다. 최소 길이·요율·지원 모드는 대상 모델의 [캐시 문서](https://developers.openai.com/api/docs/guides/prompt-caching#summary-of-model-differences)에서 확인한다. GPT-6.2의 호출 설정과 이력 보존은 [adapters.md](adapters.md) §OpenAI GPT-6.2를 따른다. OpenAI에서는 tools 배열의 프리픽스를 고정하고 `tool_choice: none` 또는 `tool_choice`의 `allowed_tools` 모드로 호출 허용 범위만 바꿀 수 있다. [함수 호출 제어](https://developers.openai.com/api/docs/guides/function-calling) 참조.
 - **프롬프트는 코드다.** 재사용 프롬프트 객체(`v1/prompts`, 프롬프트 ID·버전)는 2026-06-03부터 비권장, 2026-11-30 종료 예정이다. 새 작업은 코드 모듈·타입 있는 인자·fixture와 평가·배포 절차로 관리하고, 기존 프롬프트 ID 호출은 [이행 가이드](https://developers.openai.com/api/docs/guides/prompting/migrate-from-prompt-object)를 따른다.
 - **에이전트·코딩·프런트엔드.** 문서의 에이전트 권장은 완전 해결까지 지속·주요 단계의 도구 호출 전 설명·TODO 추적, 코딩 권장은 역할·도구 사용 예시·테스트 요구·마크다운 규약이며 [delegation.md](templates/delegation.md) §도메인별 추가 조건을 따른다. 프런트엔드 신규 앱에는 Tailwind CSS·shadcn/ui·Radix Themes, Lucide·Material Symbols·Heroicons, Motion을 권장하지만, 기존 코드베이스는 프로젝트 스택이 우선이며 [design.md](templates/design.md)의 조건을 따른다.
 
@@ -151,7 +151,7 @@ Join gate: 실제 배정한 worker 산출물과 요청된 planner/critic/verifie
 실제 작성 응답의 형식 오류를 줄이기 위해 공식 문서를 대조했다. 아래는 문서 권고이며 모든 모델의 성능 보증이나 설정 변경 허가가 아니다. 공통 작성 절차는 [common.md](templates/common.md) §형식이 자주 어긋나는 요청을 따른다.
 
 - **OpenAI:** 추론 모델에는 명확한 목표·제약과 구분자를 먼저 쓰고, 예시 없이 시작해 필요한 형식 경계에만 일치하는 예시를 추가한다. 사고 과정 공개를 요구하지 않는다. API의 `Formatting re-enabled` 안내를 모든 호스트·모델의 상용구로 넣지 않는다. [추론 모델 공식 가이드](https://developers.openai.com/api/docs/guides/reasoning-best-practices).
-- **GPT-6 공유 스킬:** 공식 가이드의 행동 보정 예시는 Astra에서 관측된 것이므로 실제 선택한 GPT-6 모델과 작업으로 평가한다(2026-11-05 재확인). 공유 스킬에서 Astra에 맞춘 간소화를 이유로 다른 작성 모델에 필요한 형식·보존 계약까지 지우지 않는다. 모델별 절차는 필요할 때만 붙이고 완료 조건은 유지한다. [GPT-6 가이드](https://developers.openai.com/api/docs/guides/latest-model#prompting-best-practices), [공유 스킬 재검토 안내](https://developers.openai.com/blog/rethinking-skills-and-prompts-for-gpt-6-astra).
+- **GPT-6 공유 스킬:** Astra에 맞춰 간소화하더라도 다른 작성 모델에 필요한 형식·보존 계약은 유지한다. 모델별 절차는 필요할 때만 붙이고 실제 선택한 모델·작업에서 평가한다. GPT-6.2는 §2026-11-18을 따른다. [공유 스킬 재검토 안내](https://developers.openai.com/blog/rethinking-skills-and-prompts-for-gpt-6-astra).
 - **Anthropic:** 원하는 출력 형태를 명시하고, 실제 과제와 닮은 다양한 예시 및 지시·입력 경계를 사용한다. 프롬프트의 서식도 답변 서식에 영향을 줄 수 있으므로 형식 예시가 출력 계약과 맞는지 확인한다. 문서의 3–5개 예시 권고를 타사 모델·단순 요청의 의무로 만들지 않는다. [공식 프롬프팅 가이드](https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices).
 - **Gemini:** 명확한 과제·제약, 일관된 구분자, 핵심 형식 지시의 앞쪽 배치와 긴 자료 뒤 구체 질문을 권고한다. few-shot 예시의 서식·공백·구분을 일관되게 유지하고 개수는 평가로 조정한다. 자세한 납품물이 필요하면 상세 범위를 적고, 구조화 출력의 값 정확성은 소비자에서 검사한다(두 항목은 2026-09-05 확인). 특정 모델용 날짜·지식 기준일 예시는 다른 모델에 복사하지 않는다. [공식 프롬프트 설계](https://ai.google.dev/gemini-api/docs/prompting-strategies), [구조화 출력](https://ai.google.dev/gemini-api/docs/structured-output#best-practices).
 - **DeepSeek 직접 API:** JSON Output은 `response_format: {"type":"json_object"}`와 프롬프트 안 JSON 요구·형식 예시를 함께 사용하는 계약이다. 출력 토큰 부족에 따른 잘림과 문서에 명시된 빈 content 가능성을 검사한다. 이를 스키마 강제나 일반 채팅 UI 지원으로 설명하지 않는다. [JSON Output](https://api-docs.deepseek.com/guides/json_mode).
@@ -184,12 +184,19 @@ Join gate: 실제 배정한 worker 산출물과 요청된 planner/critic/verifie
 - **Opus 5.5 프런트엔드 기본값.** 방향 없는 요청에서 막연한 회피 지시만으로 기본 스타일이 사라지지 않는다. 사용자에게 필요한 디자인 방향을 정할 때는 [design.md](templates/design.md)의 구체 패턴 절차를 따르고 첫 결과에서 대체 패턴을 확인한다. [프런트엔드 가이드](https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/prompting-claude-opus-5-5#frontend-design-defaults).
 - **도구 설명.** 정의·반환 계약의 공통 기준은 [contract.md](templates/contract.md) §도구 정의 문안이다. Anthropic의 `input_examples`는 도구의 `input_schema`를 통과해야 하며 잘못된 예시는 400 오류다. 서버 도구에는 지원되지 않고, client toolsets의 지원 범위도 구분한다. 같은 문서는 도구마다 설명을 최소 3–4문장으로 상세히 쓰도록 권고한다. OpenAI는 턴 시작 시 함수 수를 20개 미만으로 유지하는 것을 출발점으로 제안하며, 도구가 많으면 tool search로 필요한 정의를 지연 로드할 수 있다. 이는 해당 공급자 문서의 권고이며 보편 기준이 아니다. [Anthropic 도구 정의·예시](https://platform.claude.com/docs/en/agents-and-tools/tool-use/implement-tool-use), [OpenAI 함수 정의](https://developers.openai.com/api/docs/guides/function-calling), [OpenAI tool search](https://developers.openai.com/api/docs/guides/tools-tool-search).
 
-### 2026-11-05 — GPT-6 위임·검증 재대조
 
-**2026-11-05 공식 문서 확인.** [최신 모델 가이드](https://developers.openai.com/api/docs/guides/latest-model#prompting-best-practices)의 보정 예시는 Astra 관찰에 근거한다. 현재 안내에는 GPT-6.1 Sol·Terra도 있으므로 §2026-09-24의 평가 범위는 실제 선택한 GPT-6 모델과 작업이다. 모델 기본값·호스트 권한을 바꾸는 지시가 아니다.
+### 2026-11-05 — 이전 GPT-6 위임·검증
 
-- **위임 빈도·가독성.** 다중 에이전트 환경에서 Astra의 위임이 부족하면, 독립 작업의 병렬화가 시간을 줄이거나 품질을 높일 때 위임하도록 시점·범위를 조정한다. 에이전트 간 메시지와 최종 보고는 사람이 읽을 수 있는 문장으로 쓰고 단어·숫자 사이의 정상적인 공백을 유지한다. 이는 해당 하네스에서 평가할 보정이며 모든 모델·작업의 의무 위임 규칙이 아니다. [위임 안내](https://developers.openai.com/api/docs/guides/latest-model#subagent-delegation).
-- **검증 범위.** 필수 검사와 통과 뒤 재검증 기준은 [delegation.md](templates/delegation.md) §도메인별 추가 조건을 따른다. [검증 안내](https://developers.openai.com/api/docs/guides/latest-model#testing-and-verification).
+**2026-11-05 공식 문서 확인.** 이전 GPT-6 Astra에서 위임이 부족했던 다중 에이전트 작업에 해당한다. 독립 작업을 나눌 때 시간이 줄거나 품질이 높아지는지 보고, 에이전트 간 메시지와 최종 보고는 사람이 읽을 수 있는 문장과 일반적인 공백으로 쓰도록 한다. 실제 선택한 모델과 하네스에서 평가한다. 필수 검사·재검증 기준은 [delegation.md](templates/delegation.md)에 있다. GPT-6.2는 §2026-11-18을 따른다.
+
+### 2026-11-18 — GPT-6.2 Astra·Sol
+
+**2026-11-18 공식 문서 확인.** [최신 모델 가이드](https://developers.openai.com/api/docs/guides/latest-model#prompting-best-practices)는 두 모델에 적용할 출발점을 제시한다. 기본 문체와 초기 확인 요청은 Astra 사례로 설명하므로 Sol에서도 같은 보정이 필요한지는 따로 평가한다.
+
+- **모델 선택.** 공식 가이드는 특히 까다로운 작업에 Astra, 비용을 줄여 복잡한 작업을 처리할 때 Sol을 제안한다. MPW에서는 모델 선택까지 요청받았을 때만 후보로 비교한다. 지정 모델·호스트 기본값·도구 권한을 유지하며 모델명만으로 위임을 켜지 않는다.
+- **문체와 최종 보고.** Astra 이행 시 ‘간결하게’가 겹치면 덜어내고 대상 독자, 필수 사실·근거, 명시된 길이·형식과 정확 문구를 보존한다. 장기 작업의 최종 보고는 §컨텍스트 운용을 따른다. 내부 약어는 독자가 이해할 표현으로 풀고, 요구된 경우에만 진행 보고의 세부를 포함한다.
+- **실행과 검증.** 실행 프롬프트에 결과·판정 증거·실제 승인 경계가 빠졌을 때 [delegation.md](templates/delegation.md)에서 필요한 조건만 가져온다. 프런트엔드의 의도한 이미지·타이포그래피·검증은 [design.md](templates/design.md)를 따른다. 답변 생성이나 부분 수정에 실행 절차를 자동 추가하지 않는다.
+- **평가와 설정 인계.** 같은 입력·출력 계약과 도구 조건에서 변경 전후를 비교한다. 단순 작성은 형식·원문 보존, 장기 실행은 완료·검증 증거와 승인 경계를 먼저 본다. 사용량·지연은 실행 기록에서 비교하고, 응답을 얻지 못한 케이스는 미실행으로 남긴다. 직접 API 이행이 요청됐을 때만 [adapters.md](adapters.md) §OpenAI GPT-6.2를 추가로 읽는다.
 
 
 ### 2026-11-09 — Sonnet JSON·Gemini 4 이행
