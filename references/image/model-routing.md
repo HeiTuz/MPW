@@ -142,6 +142,7 @@
 - [grok-imagine.md](grok-imagine.md) — Grok 이미지·영상 자연어 작성. Imagine UI·대화형 이미지 도구·직접 API·래퍼 경계를 구분한다. Higgsfield 모델 선택은 위 §1·§2, 대화·리서치용 Grok은 [../model-playbooks.md](../model-playbooks.md) 소관이다.
 - [../midjourney-identity.md](../midjourney-identity.md) — 일반 Image Prompt·V8 Edit Model·V7 Omni의 입력 역할과 문법. 지정 버전을 유지하며 목적에 맞는 참조 기능을 선택한다.
 - [seedream-5-pro.md](seedream-5-pro.md) — BytePlus ModelArk direct Seedream 5 Pro의 자연어·다중 이미지·`<point>`/`<bbox>` 인터랙티브 편집 문법. Higgsfield `seedream_v5_pro`에는 런타임 기능 확인 없이 좌표·파라미터를 복사하지 않는다.
+- [seedream-5-5.md](seedream-5-5.md) — Seedream 5.5 지정 시에만 쓰는 자연어·누적 편집·투명 자산·레이어 문법. 직접 API 설정은 [surface-contracts.md](surface-contracts.md) §4.7을 따른다.
 - [seedream-character-reference-sheets.md](seedream-character-reference-sheets.md) — 3×3 identity 입력을 단일 베이스·1×4 전신 시트로 바꾸는 구도·체형·헤어 차폐 규칙.
 - [seedance-2.md](seedance-2.md) — BytePlus ModelArk direct Seedance 2.0의 멀티모달 참조·편집·연장·트랙 연결 문법. 2.5 규칙을 자동 상속하지 않는다.
 - [seedance-2-5.md](seedance-2-5.md) — Dreamina 웹 Seedance 2.5의 멀티레퍼런스·장편·편집·연장·키프레임·스토리보드·클레이 렌더러 붙여넣기 문법. ModelArk API 계약이 아니다.
