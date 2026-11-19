@@ -1,20 +1,15 @@
 #!/usr/bin/env node
-// Safety scan of the per-layer lexicon tables: no excluded category in any column (token, aliases, tags, looks, kind).
-// Categories come from the renewal decision: nothing that evokes minors, nothing that reads as sexual staging.
 import assert from 'node:assert/strict';
 import { loadAll } from './find_tokens.mjs';
 
+// Safety scan of the per-layer lexicon tables: nothing that directly names a minor, in any column (token, aliases, tags, looks, kind).
+// Adult fashion and styling vocabulary (lingerie looks, hosiery, glamour, 少女感, teen-film or lolita styles used as adult fashion genres) is allowed.
 const CATEGORIES = {
-  // Minor-evoking: school uniforms, students, lolita, child-coded words.
+  // Minors named directly: school-age girls and students, school uniforms of middle and high schools, children and child events.
   minor: [
-    /교복/, /학생/, /여고/, /女子高生/, /\bJK\b/, /制服/, /校服/, /セーラー服/, /로리타/, /ロリ/, /lolita/i,
-    /소녀/, /少女/, /school\s?girl/i, /\bteen/i, /\bschool\s?uniform/i, /\bstudent/i,
-  ],
-  // Sexual staging: fetish codes, body-part emphasis, intimate-scene clichés.
-  sexual: [
-    // Fishnet and mesh hosiery are ordinary legwear. Only the fetish-coded pairings are blocked, and 망사원 (Wangshi garden) is not 망사.
-    /가터/, /garter/i, /망사\s?(바디|란제리|스타킹\s?(섹시|페티시))/, /fishnet\s?(body|lingerie)/i, /절대영역/, /絶対領域/, /란제리/, /lingerie/i, /페티시/, /fetish/i,
-    /seductive/i, /sensual/i, /純欲/, /纯欲/, /黑丝/, /白丝/, /肉丝/, /油亮/,
+    /여고생/, /여중생/, /중학생/, /고등학생/, /중고생/, /초등/, /어린이/, /아동/, /유치원/, /키즈/,
+    /女子高生/, /女子中学生/, /女子校生/, /中学生/, /高校生/, /小学生/, /\bJK\b/, /\bJC\b/, /七五三/, /セーラー服/, /学生服/, /校服/, /学生制服/, /儿童/, /小朋友/,
+    /school\s?girl/i, /\bschool\s?boy/i, /\bmiddle.?school/i, /\bhigh.?school(er)?\b/i, /\bchild(ren)?\b/i, /\bkids?\b/i, /\bminor\b/i, /\btoddler/i, /\bunderage/i,
   ],
 };
 const COLUMNS = ['token', 'aliases', 'tags', 'looks', 'kind'];

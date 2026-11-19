@@ -9,7 +9,7 @@ Outfit 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다.
 | Asics Gel-Kayano | 아식스 젤 카야노; 젤카야노; 젤 카야노; Gel Kayano; Asics | KR, JP | 활동적; 사계절; 도심; 애슬레저 | A silver-and-white running sneaker with a stacked gel midsole, layered mesh overlays and bold curved side stripes. | brand |
 | Balenciaga Track | 발렌시아가 트랙; 발렌시아가 트랙 스니커즈; Track sneaker | KR, FR | 스트릿; 사계절; 도심; 청키 | A chunky runner with a sculpted multi-layer rubber sole and many textured mesh and nylon panels. | brand |
 | Balenciaga Triple S | 발렌시아가 트리플 에스; 트리플S; 트리플 에스; Triple S | KR, FR | 미래적; 사계절; 도심; 청키 | An oversized chunky sneaker with a thick triple-stacked sole and distressed grey mesh and suede panels. | brand |
-| Converse Chuck 70 | 컨버스 척70; 척70; 척 70; Chuck 70; Converse 1970s | KR, US | 캐주얼; 사계절; 도심; 스트릿 | An off-white high-top canvas sneaker with a glossy cream rubber toe cap, thick vulcanized sole and visible double stitching. | brand |
+| Converse Chuck 70 | 컨버스 척70; 척70; 척 70; Chuck 70; Converse 1970s; 컨버스 70 | KR, US | 캐주얼; 사계절; 도심; 스트릿 | An off-white high-top canvas sneaker with a glossy cream rubber toe cap, thick vulcanized sole and visible double stitching. | brand |
 | GORE-TEX | 고어텍스; 고어텍스 자켓; ゴアテックス; Gore Tex; GORETEX | KR, US | 아웃도어; 비 오는 날; 방수; 기능성; 고프코어 | A matte waterproof shell with taped seams and sealed zippers, rain beading into round drops on the surface. | brand |
 | New Balance 990v5 | 뉴발란스 990; 뉴발 990; 뉴발란스 990v5; NB 990v5 | KR, US | 편안함; 사계절; 동네 산책; 대드 슈즈 | A grey suede-and-mesh dad sneaker with a thick cushioned midsole and layered suede overlays. | brand |
 | Nike Air Force 1 | 나이키 에어포스 1; 에어포스; 에어포스원; AF1; Air Force One | KR, US | 스트릿; 사계절; 도심; 화이트 스니커즈 | A chunky all-white leather low sneaker with a thick cupsole, perforated toe box and creases across the vamp. | brand |
@@ -19,10 +19,11 @@ Outfit 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다.
 | UGG | 어그; 어그 부츠; UGG boots | KR, US | 포근함; 겨울; 일상; 홈웨어 | A sand-colored sheepskin boot with a rounded toe, visible stitched seams and a fluffy fleece cuff. | brand |
 | Vans | 반스; 반스 올드스쿨; Vans Old Skool | KR, US | 캐주얼; 사계절; 스케이트; 스트릿 | A low-top canvas-and-suede sneaker with a flat vulcanized waffle sole and a curved side stripe. | brand |
 | Vibram | 비브람; 비브람 솔; 비브람 밑창; Vibram sole | KR | 튼튼함; 사계절; 아웃도어; 등산 | A deep-lugged black rubber outsole with chunky grip blocks that stick out past the edge of the boot. | brand |
+| YKK | 와이케이케이; YKK 지퍼; YKK zipper | KR, JP | 기능적; 사계절; 디테일; 지퍼 | A slim brushed-metal zipper with neat interlocking teeth and a flat pull tab running down a seam. | brand |
 | 레드 솔 힐 | 레드솔 힐; 레드솔; 红底鞋; red sole heel; red-soled pump | KR | 하이힐; 저녁; 럭셔리; 우아함 | A glossy pointed stiletto pump whose lacquered red underside flashes when the heel lifts. | item |
 | 골지 롱원피스 | 골지 원피스; 골지 롱 원피스; 니트 롱원피스; ribbed knit maxi dress | KR | 미니멀; 가을겨울; 실내; 홈웨어 | A ribbed-knit straight maxi dress whose vertical ribs stretch lightly over the body and fall in long lines to the ankle. | look |
 | 금장 블레이저 | 금장 버튼 블레이저; 금단추 블레이저; gold button blazer; 네이비 블레이저 | KR | 단정함; 가을; 프레피; 클래식 | A navy double-breasted wool blazer with shiny brass buttons and sharp padded shoulders. | look |
-| 남친 셔츠 | 남친셔츠; 오버핏 남친 셔츠; 남친핏 셔츠; 보이프렌드 셔츠; boyfriend shirt | KR | 편안함; 사계절; 캐주얼; 미니멀 | An oversized cotton shirt with dropped shoulders and rolled sleeves that hangs loose and long from the shoulders. | look |
+| 남친 셔츠 | 남친셔츠; 오버핏 남친 셔츠; 남친핏 셔츠; 보이프렌드 셔츠; boyfriend shirt; chemise boyfriend | KR | 편안함; 사계절; 캐주얼; 미니멀 | An oversized cotton shirt with dropped shoulders and rolled sleeves that hangs loose and long from the shoulders. | look |
 | 데님 오버롤 | 멜빵바지; 데님 멜빵; 오버롤; denim overalls | KR | 캐주얼; 봄가을; 워크웨어; 데님 | Washed light-blue denim dungarees with adjustable buckle straps and a bib pocket. | look |
 | 데미지 니트 | 데미지 스웨터; 디스트로이드 니트; distressed knit | KR | 어두움; 가을겨울; 공연장; 그런지 | A heavy sweater with pulled threads, a ragged hem and open holes that show the layer underneath. | look |
 | 라이트 윈드브레이커 | 경량 바람막이; 서머 바람막이; lightweight windbreaker | KR | 가벼움; 여름 저녁; 강변; 스포티 | An ultra-thin ripstop shell with a faint sheen, so light that it ripples and lifts in a breeze. | look |
@@ -49,7 +50,7 @@ Outfit 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다.
 | 코듀로이 | 골덴; 코르덴; 코듀로이 수트; corduroy | KR | 빈티지; 가을겨울; 서재; 다크 아카데미아 | Wide-wale corduroy with distinct parallel ribs whose velvety pile shifts shade in side light. | look |
 | 타탄체크 | 타탄 체크; 타탄; tartan; tartan check | KR | 로맨틱; 가을겨울; 프레피; 클래식 | A wool tartan with crossing bands of color and a crisp woven twill texture. | look |
 | 트위드 자켓 | 트위드 재킷; 샤넬 재킷; 샤넬 트위드; tweed jacket | KR | 우아함; 봄가을; 레스토랑; 올드머니 | A boxy collarless bouclé tweed jacket with frayed braided trim and gold buttons catching soft light. | look |
-| 블레이저 원피스 | 블레이저 드레스; 재킷 원피스; 체크 블레이저 원피스; blazer dress | KR | 단정함; 봄; 오피스; 프레피 | A tailored blazer-cut dress with a cinched waist and buttons down the front in matte suiting wool. | look |
+| 블레이저 원피스 | 블레이저 드레스; 재킷 원피스; 체크 블레이저 원피스; 파스텔 체크 블레이저 원피스; blazer dress | KR | 단정함; 봄; 오피스; 프레피 | A tailored blazer-cut dress with a cinched waist and buttons down the front in matte suiting wool. | look |
 | 패딩 슬리퍼 | 빵 슬리퍼; 빵슬리퍼; 면빵 슬리퍼; padded slippers | KR | 포근함; 겨울; 실내; 홈웨어 | Quilted puffy slippers shaped like fat bread loaves with a glossy nylon surface and thick rounded toe. | look |
 | 퍼 카라 코트 | 퍼 카라 울 코트; 퍼카라 코트; 모피 카라 코트; fur collar coat | KR | 고급; 겨울; 호텔; 올드머니 | A thick felted wool coat with a plush faux-fur collar that frames the face in a soft halo. | look |
 | 퍼 트리밍 | 퍼 트리밍 자켓; 퍼 장식; 퍼 트림; fur trim | KR | 포근함; 겨울; 스키 리조트; 럭셔리 | Soft faux-fur edging along a collar and cuffs, its fibres fluffing and glowing at the tips in backlight. | look |
@@ -57,7 +58,7 @@ Outfit 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다.
 | 홀로그램 원피스 | 홀로그램; 홀로그래픽 원피스; 레인보우 홀로; holographic dress | KR | 화려함; 여름 밤; 페스티벌; 사이버 | A short dress in iridescent holographic film that shifts between pink, cyan and gold as the viewing angle changes. | look |
 | 한복 | 한복 저고리; 치마저고리; 저고리; hanbok; 韩服; 韓服 | KR | 전통; 한국; 저고리; 치마; 곡선; 한옥 | A short wrapped-front jacket with long sleeves worn over a high-waisted full skirt that flares from just under the chest, with a ribbon tie at the chest. | look |
 | 생활한복 | 개량한복; 모던 한복; 데일리 한복; 일상 한복; modern hanbok | KR | 전통; 일상; 편안함; 개량; 한옥 | Hanbok-cut tops and wide trousers in everyday cotton or linen, with a wrap front, loose sleeves and an easy straight drape. | look |
-| 아이돌 무대의상 | 무대의상; 무대 의상; 스테이지 의상; 打歌服; idol stage outfit | KR | 무대; 반짝임; 코디; 퍼포먼스 | A coordinated stage outfit with structured shoulders, metallic or sequined trim and matching pieces that read clearly under bright stage lights. | look |
+| 아이돌 무대의상 | 무대의상; 무대 의상; 스테이지 의상; 打歌服; idol stage outfit; 타가복; idol stage costume; K-POP 스테이지 | KR | 무대; 반짝임; 코디; 퍼포먼스 | A coordinated stage outfit with structured shoulders, metallic or sequined trim and matching pieces that read clearly under bright stage lights. | look |
 
 ## CN
 
@@ -95,7 +96,7 @@ Outfit 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다.
 | 烟草棕 | 토바코 브라운; 담배색; tobacco brown | CN | 갈색; 따뜻한 톤; 가을; 클래식 | A warm dark brown with a golden-amber undertone. | item |
 | 燕麦色 | 오트밀 컬러; 오트밀색; 오트밀; oatmeal | CN | 베이지; 중성 톤; 가을; 니트 | A soft warm light beige-grey with a woolly look. | item |
 | 琵琶袖 | 비파 소매; 비파소매; pipa sleeve | CN | 명나라; 소매; 전통; 우아함 | A sleeve that swells at the forearm and narrows sharply at the cuff, like the body of a lute. | item |
-| 盘扣 | 매듭단추; 차이나 매듭단추; 판커우; 立领盘扣; frog button; Chinese knot button | CN | 매듭; 수공예; 전통; 디테일 | Small knotted cloth buttons on loops closing a collar or placket, casting tiny raised shadows. | item |
+| 盘扣 | 매듭단추; 차이나 매듭단추; 판커우; 立领盘扣; frog button; Chinese knot button; 红丝绒盘扣 | CN | 매듭; 수공예; 전통; 디테일 | Small knotted cloth buttons on loops closing a collar or placket, casting tiny raised shadows. | item |
 | 盘扣衬衫 | 매듭단추 셔츠; 프로그 버튼 셔츠; frog-button shirt | CN | 셔츠; 스탠드 칼라; 단정함; 봄가을 | A relaxed shirt with a stand collar fastened with knotted cloth buttons. | item |
 | 立领 | 스탠드 칼라; 차이나 칼라; 입령; mandarin collar; stand collar | CN | 단정함; 전통; 실크; 셔츠 | A narrow upright band collar that stands against the neck without folding over. | item |
 | 竹节棉 | 슬럽 코튼; 슬러브 면; slub cotton | CN | 면; 캐주얼; 결감; 여름 | Cotton with irregular thick-and-thin yarn that gives the face a lightly bumpy texture. | item |
@@ -106,7 +107,7 @@ Outfit 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다.
 | 老土布 | 토포; 수직 면직물; 손베틀 무명; handwoven homespun cloth | CN | 수직; 거침; 전통 직물; 내추럴 | Coarse handwoven cotton with visible thick weft and an uneven, irregular grain. | item |
 | 胭脂红 | 연지색; 연지홍; 카민; carmine; rouge red | CN | 붉은색; 전통색; 강렬함; 실크 | A deep cool red with a slight pink cast and rich depth in the shadows. | item |
 | 茧型 | 코쿤 실루엣; 코쿤핏; cocoon silhouette | CN | 코쿤; 오버사이즈; 테일러링; 미니멀 | A rounded shape with a broad middle and a narrowed hem that curves around the body like a cocoon. | item |
-| 茶人服 | 茶人衫; 차인복; 다인복; 티 마스터 웨어; tea wear | CN | 차 문화; 린넨; 차분함; 전통 | Loose slant-front linen-cotton tops and wide trousers in earthy tones that hang in soft, slightly wrinkled folds. | item |
+| 茶人服 | 茶人衫; 차인복; 다인복; 티 마스터 웨어; tea wear; 斜襟茶人衫 | CN | 차 문화; 린넨; 차분함; 전통 | Loose slant-front linen-cotton tops and wide trousers in earthy tones that hang in soft, slightly wrinkled folds. | item |
 | 草木染 | 초목염; 식물 염색; 천연 염색; plant dye | CN | 식물 염색; 자연색; 수공예; 은은함 | Fabric dyed with plant pigments, with uneven soft color and a slight tonal drift across the surface. | item |
 | 蓝靛 | 쪽염색; 인디고; 람전; indigo dye | CN | 인디고; 염색; 전통; 수공예 | Deep blue cloth with uneven dye depth and faint pale streaks where the dye took less. | item |
 | 藕粉 | 연근 핑크; 더스티 핑크; lotus-root pink | CN | 파스텔; 연분홍; 봄; 부드러움 | A muted greyish pink with a soft dusty finish. | item |
@@ -115,7 +116,7 @@ Outfit 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다.
 | 连帽斗篷 | 후드 망토; 후드 케이프; hooded cape | CN | 케이프; 후드; 겨울; 클래식 | A loose cape with a hood that falls from the shoulders in large soft folds. | item |
 | 醋酸缎面 | 아세테이트 새틴; 아세테이트; acetate satin | CN | 새틴; 드레이프; 광택; 저녁 | A heavy satin with a deep liquid gloss and a fluid hang that moves slowly. | item |
 | 金丝绒 | 벨루어; 실크 벨벳; velours; lustrous velvet | CN | 벨벳; 광택; 저녁; 복고 | A short-pile velvet with a liquid sheen that shifts tone along the folds. | item |
-| 长衫 | 장삼; 창산; 对襟长衫; long robe; changshan | CN | 전통; 롱 기장; 남녀 공용; 차분함 | A long straight robe that falls to the shin, with side slits that swing as the wearer moves. | item |
+| 长衫 | 장삼; 창산; 对襟长衫; long robe; changshan; 真丝对襟长衫; 실크 장삼 | CN | 전통; 롱 기장; 남녀 공용; 차분함 | A long straight robe that falls to the shin, with side slits that swing as the wearer moves. | item |
 | 青瓷绿 | 청자색; 셀라돈 그린; celadon green | CN | 옅은 초록; 도자기; 봄여름; 우아함 | A soft grey-green with a glassy depth like glazed porcelain. | item |
 | 香云纱 | 향운사; 광둥 흑견; gambiered Canton silk; xiangyunsha | CN | 전통 직물; 광둥; 여름; 검정 | A black-brown silk with a slightly stiff, crinkled, waxy-glossy face that rustles when it moves. | item |
 | 马面裙 | 马面; 마면군; 마면치마; 마몐췬; horse-face skirt; mamianqun | CN | 치마; 플리츠; 명나라; 전통 | A long skirt with flat front and back panels and pleated sides, the stiff panel standing smooth while the side pleats fall in sharp folds. | item |
@@ -125,6 +126,7 @@ Outfit 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다.
 | 新中式衬衫 | 신중식 셔츠; 新中式真丝衬衫; 改良真丝; 改良中式衬衫; new Chinese style shirt | CN | 신중식; 실크; 현대; 우아함 | A silk shirt with a stand collar and knot buttons cut in a modern relaxed shape, a soft sheen running along the folds. | look |
 | 苏绣 | 쑤슈; 쑤저우 자수; 수저우 자수; Suzhou embroidery | CN | 자수; 전통; 비단; 수공예 | Very fine silk-thread embroidery in smooth short stitches, giving flowers and birds a soft sheen and gradual color shading. | look |
 | 真丝双绉 | 双绉; 쌍추; 실크 크레이프; 크레이프 드 신; silk crepe de chine | CN | 실크; 소재; 드레이프; 광택 | A lightweight silk with a fine pebbled grain and a soft matte sheen that drapes in loose, fluid folds. | item |
+| 尖头漆皮高跟鞋 | 漆皮尖头高跟; patent pointed pump; 에나멜 뾰족 구두; 红底鞋 | CN | 에나멜; 뾰족 구두; 광택; 정장; 빨간 밑창 | A pointed-toe pump in patent leather with a mirror-like shine, its glossy toe cap catching a clear, bright reflection. | item |
 
 ## JP
 
@@ -211,7 +213,7 @@ Outfit 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다.
 | 金魚柄 | 금붕어 무늬; 킨교 무늬; goldfish pattern; 金鱼纹 | JP | 여름; 레트로; 와후쿠; 유카타 | Red and black goldfish with trailing fins swimming among water ripples printed on light cotton. | item |
 | 墨絵 | 스미에; 수묵화풍; 수묵 프린트; sumi-e; ink wash; 水墨写意 | JP | 와후쿠; 먹; 여백; 고요함 | Black ink brush strokes printed on pale cloth with wide empty spaces and gradations of grey. | item |
 | 千鳥格子 | 치도리 격자; 치도리; 하운드투스; 하운즈투스; houndstooth; 千鸟格 | JP | 체크; 클래식; 울; 겨울 | A small broken-check weave in two contrasting tones that forms sharp jagged points. | look |
-| 古着 | 후루기; 빈티지 옷; 구제; 구제 옷; vintage clothing; 古着系; 구제 패션 | JP | 빈티지; 레이어드; 캐주얼; 스트리트 | Second-hand garments with softened fabric, faded dye, stretched hems and visible wear along seams and cuffs. | look |
+| 古着 | 후루기; 빈티지 옷; 구제; 구제 옷; vintage clothing; 古着系; 구제 패션; 구제 룩; 빈티지; Shimokitazawa Vintage; ふるぎ; 古着风 | JP | 빈티지; 레이어드; 캐주얼; 스트리트 | Second-hand garments with softened fabric, faded dye, stretched hems and visible wear along seams and cuffs. | look |
 | ヨウジヤマモト | 요지 야마모토; 요지; Yohji Yamamoto; 山本耀司 | JP | 블랙; 와이드; 해체주의; 아방가르드 | Long loose black layers cut asymmetric, with wide trousers and draped hems that hide the body's outline. | person-style |
 | 浴衣 | 유카타; 유까따; 유카타 차림; yukata; 浴衣姿 | JP | 여름; 축제; 전통; 면 | A light cotton summer kimono with a wrapped front closed by a wide sash tied at the back, printed with large seasonal patterns. | look |
 | 水玉 | 미즈타마; 물방울 무늬; 도트 무늬; 폴카 도트; polka dot | JP | 도트; 패턴; 레트로; 경쾌함 | Evenly spaced round dots printed across fabric, bold and large or small and tight, repeating in a regular grid. | look |
@@ -220,11 +222,11 @@ Outfit 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다.
 
 | 토큰 | 별칭 | 문화권 | 태그 | 화면에 보이는 모습 | 종류 |
 |---|---|---|---|---|---|
-| Dr. Martens | 닥터마틴; 닥터 마틴; 닥마; ドクターマーチン; 马丁靴; Doc Martens | US | 펑크; 그런지; 스트리트; 부츠 | Heavy leather lace-up boots with thick air-cushioned soles, yellow welt stitching and a glossy toe. | brand |
+| Dr. Martens | 닥터마틴; 닥터 마틴; 닥마; ドクターマーチン; 马丁靴; Doc Martens; 마틴 부츠; Dr. Martens boots | US | 펑크; 그런지; 스트리트; 부츠 | Heavy leather lace-up boots with thick air-cushioned soles, yellow welt stitching and a glossy toe. | brand |
 | Juicy Velour | 쥬시 벨루어; 쥬시 쿠튀르 벨루어; 쥬시 트레이닝복; Juicy Couture | US | Y2K; 핑크; 벨루어; 캐주얼 | A matching velour zip hoodie and track pants with a plush nap that catches light unevenly. | brand |
-| Argyle | 아가일; 아가일 니트; 아가일 가디건; 아가일 패턴; argyle knit; アーガイル; 菱格纹针织 | US | 니트; 다이아몬드 무늬; 클래식; 가을 | A diamond lattice knitted in two or three colors and crossed by thin diagonal lines. | item |
+| Argyle | 아가일; 아가일 니트; 아가일 가디건; 아가일 패턴; argyle knit; アーガイル; 菱格纹针织; 다이아몬드 체크 니트 | US | 니트; 다이아몬드 무늬; 클래식; 가을 | A diamond lattice knitted in two or three colors and crossed by thin diagonal lines. | item |
 | Baby Tee | 베이비 티; 베이비티; 크롭 티; Y2K 티셔츠; fitted tee | US | 짧은 기장; Y2K; 여름; 캐주얼 | A short, snug cotton tee with a small neckline that ends at the waist. | item |
-| Boho Maxi Skirt | 보헤미안 치마; 보헤미안 스커트; 티어드 롱스커트; boho maxi skirt | US | 보헤미안; 페스티벌; 여름; 동세 | A long tiered cotton skirt with printed patterns that flares wide when it moves. | item |
+| Boho Maxi Skirt | 보헤미안 치마; 보헤미안 스커트; 티어드 롱스커트; boho maxi skirt; Bohemian skirt; 보호 스커트 | US | 보헤미안; 페스티벌; 여름; 동세 | A long tiered cotton skirt with printed patterns that flares wide when it moves. | item |
 | Camel Coat | 캐멀 코트; 카멜 코트; 캐시미어 코트; camel cashmere coat | US | 올드머니; 가을겨울; 클래식; 미니멀 | A long camel-colored wool or cashmere coat with a soft drape and a lightly brushed surface. | item |
 | Chainmail Top | 체인메일 탑; 메탈 탑; 체인 탑; metal mesh top | US | 금속; 반짝임; 페스티벌; 밤 | A top made of small linked metal discs that shimmers and hangs in fluid folds. | item |
 | Chiffon Maxi | 쉬폰 맥시; 시폰 롱원피스; 쉬폰 원피스; chiffon dress | US | 쉬폰; 꽃무늬; 보헤미안; 여름 | A long floral chiffon dress in sheer light layers that float in the wind. | item |
@@ -235,7 +237,10 @@ Outfit 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다.
 | Fringe Kimono | 프린지 기모노; 기모노 카디건; 기모노 가디건; kimono duster | US | 술 장식; 시스루; 보헤미안; 페스티벌 | A long sheer wide-sleeved layer with embroidered trim and fringe at the hem that drifts open. | item |
 | Fringe Top | 프린지 탑; 술 장식 탑; tassel fringe top | US | 보헤미안; 페스티벌; 동세; 여름 | Strips of suede or cotton hanging from a top that swing with each movement. | item |
 | Fringe Vest | 프린지 베스트; 프린지 조끼; 술 장식 조끼 | US | 스웨이드; 술 장식; 페스티벌; 사막; 웨스턴 | A suede vest with long hanging fringe that sways and fans out with each step. | item |
+| Henley | 헨리넥; 헨리넥 티; 헨리 셔츠; henley shirt | US | 캐주얼; 사계절; 미니멀; 니트 | A collarless knit top with a round neck and a short buttoned placket, its fabric showing fine soft ribs. | item |
+| Hacking Jacket | 해킹 재킷; 헌트 클럽 트위드; 트위드 승마 재킷; Hunt Club Tweed | US | 승마; 가을; 클래식; 트위드 | A fitted tweed riding jacket with a nipped waist, slanted flap pockets and a muted brown-green herringbone weave. | item |
 | Riding Boots | 승마 부츠; 라이딩 부츠; 가죽 승마 부츠; riding boots | US | 승마; 클래식; 가죽; 가을 | Tall burnished leather boots that reach the knee, soft creases at the ankle and a warm satin finish. | item |
+| Heritage Leather | 헤리티지 레더; 헤리티지 가죽; 승마 가죽 소품; heritage leather goods | US | 승마; 클래식; 가죽; 올드머니 | Burnished brown leather boots, belts and bags with soft creasing and a warm satin patina. | look |
 | Lace Slip Dress | 레이스 슬립 드레스; 레이스 원피스; 레이스 드레스; lace dress | US | 레이스; 시스루; 밤; 로맨틱 | A thin-strapped dress covered in floral lace whose open pattern shows a plain lining underneath. | item |
 | Leather Shacket | 가죽 셔츠 재킷; 레더 셔켓; 가죽 셔츠; leather shirt jacket | US | 가죽; 빈티지; 가을; 스트리트 | A shirt-cut leather jacket with a camp collar and flap pockets, creased and softly worn. | item |
 | Leather Trench | 가죽 트렌치; 레더 트렌치; 가죽 롱코트; leather coat | US | 가죽; 검정; 롱코트; 도시 | A long leather coat with a matte washed surface that swings open at the knee. | item |
@@ -265,6 +270,7 @@ Outfit 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다.
 | Tweed Pleated Skirt | 트위드 플리츠 스커트; 트위드 스커트; pleated tweed | US | 프레피; 가을; 클래식; 트위드 | A pleated skirt in coarse tweed with visible flecks of yarn. | item |
 | Velvet Slit Gown | 벨벳 슬릿 드레스; 벨벳 롱 드레스; slit evening gown | US | 재즈; 저녁; 벨벳; 우아함 | A long velvet gown with a high side slit that opens with each stride. | item |
 | Birkenstock | 버켄스탁; 버켄스톡; 비르켄슈톡 | US | 슬리퍼; 샌들; 코르크; 편안함 | Flat sandals with a molded cork footbed, wide buckled straps and a thick, softly curved sole. | brand |
+| Ferrari Red | 페라리 레드; 페라리; 레이싱 레드; racing red | US | 레드; 레이싱; 스포티; 가죽; 스트라이프 | A saturated glossy racing-car red with white side stripes, bright against black accents. | brand |
 
 ## FR
 
@@ -275,14 +281,14 @@ Outfit 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다.
 | Blouson mouton retourné | 무스탕 재킷; 시어링 재킷; 양털 숏 재킷; shearling jacket | FR | 겨울; 캐주얼; 파리; 코지 | A short suede jacket lined with cream sheepskin that folds out at the collar and cuffs, its rough pile catching light along the edges. | item |
 | Broderie anglaise | 브로더리 앙글레즈; 아일렛 레이스; 펀칭 레이스; eyelet lace; eyelet blouse | FR | 여름; 전원; 로맨틱; 레이스 | White cotton with cut-out eyelet embroidery whose small holes let light through. | item |
 | Caban marin | 카방; 피코트; 피 코트; pea coat | FR | 겨울; 해양풍; 클래식; 항구 | A double-breasted navy peacoat in dense wool with big dark buttons and a broad collar turned up. | item |
-| Talons kitten | 키튼 힐; 키튼힐; 캣힐; kitten heel | FR | 클래식; 저녁; 단정함; 구두 | A pump with a pointed toe and a low slim heel tapering to a narrow point. | item |
+| Talons kitten | 키튼 힐; 키튼힐; 캣힐; kitten heel; Chat heel; 캣힐 펌프스 | FR | 클래식; 저녁; 단정함; 구두 | A pump with a pointed toe and a low slim heel tapering to a narrow point. | item |
 | Chemise de nuit | 나이트가운; 긴 잠옷 원피스; 슈미즈 드 뉘; nightgown | FR | 빈티지; 실내; 린넨; 홈웨어 | A long loose cotton nightgown with a square neck and a ruffled hem, falling in soft vertical folds. | item |
 | Chemise lavallière | 라발리에르 블라우스; 보우 블라우스; 리본 타이 블라우스; pussy-bow blouse | FR | 클래식; 가을; 오피스; 파리 | A silk blouse with a long soft neck ribbon tied in a loose bow, the drape falling in liquid folds. | item |
 | Double gaze | 더블 거즈; 이중 거즈; double gauze | FR | 봄여름; 실내; 가벼움; 내추럴 | A double-layer cotton gauze with a crinkled soft surface that billows loosely. | item |
 | Gros pull mohair | 모헤어 스웨터; 모헤어 니트; 오버핏 니트; mohair sweater | FR | 겨울; 실내; 코지; 보송함 | A chunky mohair sweater with long fibres standing off the surface in a visible haze. | item |
-| Jean évasé | 플레어 진; 부츠컷; 부츠컷 청바지; flared jeans; 微喇牛仔裤; jean flare | FR | 복고; 데님; 70년대; 캐주얼 | Denim that fits the thigh and flares from the knee into a long sweeping hem over the shoe. | item |
+| Jean évasé | 플레어 진; 부츠컷; 부츠컷 청바지; flared jeans; 微喇牛仔裤; jean flare; 워싱 플레어 진; 생지 플레어; jean flare délavé | FR | 복고; 데님; 70년대; 캐주얼 | Denim that fits the thigh and flares from the knee into a long sweeping hem over the shoe. | item |
 | Kimono court | 키모노 가운; 짧은 실크 가운; 실크 키모노; silk kimono robe | FR | 아침; 실내; 미니멀; 고급 | A short satin wrap robe with wide sleeves tied at the waist, the glossy fabric carrying a long highlight. | item |
-| Marinière | 마리니에르; 브르통 스트라이프; 보더 티셔츠; 스트라이프 티; breton stripe shirt | FR | 프렌치 시크; 클래식; 파리; 해양풍 | A boat-neck cotton top knitted in even horizontal navy-and-cream stripes with a matte surface. | item |
+| Marinière | 마리니에르; 브르통 스트라이프; 보더 티셔츠; 스트라이프 티; breton stripe shirt; 브르통 마리니에르; 오버사이즈 마리니에르; marinière rouge | FR | 프렌치 시크; 클래식; 파리; 해양풍 | A boat-neck cotton top knitted in even horizontal navy-and-cream stripes with a matte surface. | item |
 | Pantalon à pinces | 핀턱 팬츠; 투턱 팬츠; 주름 슬랙스; pleated trousers | FR | 가을; 클래식; 테일러링; 아카데미아 | Wool trousers with double front pleats, a straight leg and a clean break over the shoe. | item |
 | Pantalon à pont | 세일러 팬츠; 팡탈롱 아 퐁; sailor trousers | FR | 70년대; 여름; 해양풍; 마린 | High-waisted flares with a wide front drop panel closed by two rows of buttons, in stiff twill holding a sharp crease. | item |
 | Pantalon carotte | 캐럿 팬츠; 당근 핏 바지; 테이퍼드 팬츠; carrot trousers | FR | 봄가을; 클래식; 캐주얼; 테일러링 | High-waisted trousers full at the hip and tapered to the ankle, the front pleats opening with each step. | item |
@@ -294,13 +300,18 @@ Outfit 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다.
 | Robe bustier | 뷔스티에 드레스; 튜브탑 드레스; 튜브탑 롱 드레스; strapless bustier dress | FR | 미니멀; 저녁; 모노크롬; 우아함 | A strapless gown with a straight structured top edge and a long straight skirt. | item |
 | Robe cache-cœur | 카슈쾨르 원피스; 카슈쿨 원피스; 크로스오버 원피스; cache-coeur dress | FR | 70년대; 여름; 보헤미안; 남프랑스 | A dress whose bodice panels cross over the chest and fasten at the waist. | item |
 | Robe caraco | 캐미솔 원피스; 슬립 원피스; 캐미 원피스; camisole slip dress | FR | 미니멀; 봄가을; 실크; 파리 | A thin-strap bias-cut dress in matte silk with a straight neckline, skimming the body with a sheen along each fold. | item |
-| Robe chemisier | 셔츠 원피스; 셔츠 드레스; 셔츠원피스; shirt dress | FR | 클래식; 봄; 전원; 파리 | A shirt dress with a pointed collar and a row of buttons down the front, belted at the waist in a soft knot. | item |
+| Caraco côtelé | 리브 캐미솔; 골지 나시; 골지 캐미솔; ribbed cami | FR | 여름; 미니멀; 캐주얼; 리브 | A narrow-strap camisole top in stretchy ribbed cotton with fine vertical lines. | item |
+| Robe chemisier | 셔츠 원피스; 셔츠 드레스; 셔츠원피스; shirt dress; 텐셀 셔츠 원피스 | FR | 클래식; 봄; 전원; 파리 | A shirt dress with a pointed collar and a row of buttons down the front, belted at the waist in a soft knot. | item |
 | Robe de thé | 티 드레스; 티 원피스; 로브 드 테; tea dress | FR | 로맨틱; 봄여름; 빈티지; 플로럴 | A mid-calf printed dress in light crepe with a fitted bodice, button front and loose skirt that sways at the shin. | item |
+| Robe de soirée | 이브닝 드레스; 실크 이브닝 드레스; 롱 이브닝 드레스; evening gown | FR | 저녁; 고급; 오페라; 우아함 | A floor-length silk satin evening dress with a high sheen that pools into dark reflections in the folds. | item |
 | Robe dos nu | 오픈백 드레스; 백리스 드레스; 등 파인 원피스; open-back dress | FR | 여름; 저녁; 골든아워; 리비에라 | A long satin dress cut open at the back, its fabric shining in long highlights down the skirt. | item |
-| Robe smockée | 스모킹 원피스; 셔링 원피스; 스퀘어넥 개더 원피스; smocked dress | FR | 봄여름; 피크닉; 전원; 로맨틱 | A dress with a stitched smocked bodice that pulls the cotton into small even ripples above a loose skirt. | item |
+| Robe smockée | 스모킹 원피스; 셔링 원피스; 스퀘어넥 개더 원피스; smocked dress; robe froncée | FR | 봄여름; 피크닉; 전원; 로맨틱 | A dress with a stitched smocked bodice that pulls the cotton into small even ripples above a loose skirt. | item |
 | Robe portefeuille | 랩 원피스; 랩 드레스; 로브 포르트푀유; wrap dress | FR | 로맨틱; 봄여름; 빈티지; 파리 | A wrap dress with a crossover bodice and a tie at the side waist, the overlapping skirt moving on every step. | item |
 | Robe pull | 스웨터 원피스; 니트 원피스; 울 니트 원피스; knit dress | FR | 가을겨울; 미니멀; 파리; 니트 | A short wool jumper dress with a close rib and a high neck, the matte fibres lying flat. | item |
 | Trench classique | 트렌치 코트; 트렌치코트; 파리지앵 트렌치; 베이지 트렌치; trench coat | FR | 봄가을; 비 오는 날; 파리; 클래식 | A light khaki cotton-gabardine trench with a belted waist and storm flap, swinging loosely at the knee. | item |
 | Tweed chevron | 헤링본 트위드; 헤링본; 트위드 쉐브론; herringbone tweed | FR | 가을겨울; 클래식; 아카데미아; 트위드 | A wool tweed woven in a ridged herringbone in flecked tones, its rough nubbed surface fuzzing at the edges. | item |
 | Tweed pied-de-poule | 하운즈투스 트위드; 피에드풀; 하운드투스 트위드; houndstooth tweed | FR | 가을; 빈티지; 모드; 체크 | A houndstooth tweed whose broken two-tone check seems to vibrate slightly at a distance. | item |
+| Veste universitaire | 유니버시티 재킷; 학자풍 재킷; 3버튼 울 재킷; academic jacket | FR | 가을; 클래식; 학구파; 트래드 | A charcoal herringbone three-button wool jacket with natural shoulders and slim lapels, the weave running in fine diagonal lines. | look |
 | Petite robe noire | 리틀 블랙 드레스; 쁘띠 로브 누아; LBD; 블랙 원피스; little black dress | FR | 클래식; 저녁; 미니멀; 블랙 | A short black dress in matte crepe with a clean neckline and fitted waist, a plain dark shape against its surroundings. | look |
+| Voilette de deuil | 검은 베일; veiled mourning; haute couture mourning; 망사 모자 | FR | 애도; 묘지; 비; 엄숙 | Black mesh veil over the eyes under a small hat, face composed and still in soft rain. | look |
+| Chaussures semelle rouge | 루부탱; 레드솔; red sole pumps; 빨간 밑창 구두; 크리스찬 루부탱; Louboutin | FR | 저녁; 하이힐; 명품; 빨강 | Black patent pointed pumps with a glossy surface and a flat, bright red sole flashing when the heel lifts. | brand |
