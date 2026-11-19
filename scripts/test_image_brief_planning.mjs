@@ -69,10 +69,10 @@ assert.equal(headingSets.size, examples.filter(t => /^[A-Z][A-Z ]+:/m.test(t)).l
 
 // Review ceilings for reference-loading cost, not output length or API caps.
 // Measured after C2 (image-brief routing): new 10364, portrait 19835 after C3,
-// edit 12163 UTF-8 bytes (edit still carries surface-contracts §3.3 until C4).
+// edit 10337 UTF-8 bytes after C4 (surface-contracts §3.3 slimmed).
 assert.ok(sizes['gpt-image-new'].utf8_bytes <= 10500);
 assert.ok(sizes['gpt-image-portrait'].utf8_bytes <= 20000);
-assert.ok(sizes['gpt-image-edit'].utf8_bytes <= 12300);
+assert.ok(sizes['gpt-image-edit'].utf8_bytes <= 11000);
 
 const scenarios = JSON.parse(read('scripts/fixtures/behavioral/image-planning.json')).cases;
 assert.deepEqual(scenarios.map(c => c.id), [

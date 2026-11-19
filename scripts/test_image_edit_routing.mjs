@@ -23,10 +23,14 @@ for (const child of [web, common]) assert.ok(whole.includes(child), 'Whole §3.2
 for (const phrase of ['웹 프롬프트에 넣지 않는다', '로컬 파일 경로를 첨부 대신 쓰지 않는다', '경계 밖 보존을 보장하지 않는다']) {
   assert.ok(web.includes(phrase), `Missing web/input boundary: ${phrase}`);
 }
-for (const phrase of ['**사실성과 제약.**', '**눈에 보이는 세부:**', '**참조 역할:**', '**부분 편집:**', '**누적 편집:**', '**정확한 글자:**', '**검수:**', '픽셀 보존 보증이 아니다', '실제 알파 채널', '검수 절차는 수신자가 작업 에이전트이면']) {
+for (const phrase of ['**사실성과 제약.**', '**눈에 보이는 세부:**', '**정확한 글자:**', '**검수:**', '픽셀 보존 보증이 아니다', '실제 알파 채널', '검수 절차는 수신자가 작업 에이전트이면']) {
   assert.ok(common.includes(phrase), `Missing shared rule: ${phrase}`);
 }
 assert.match(edit, /§3\.2\.1.*§3\.2\.3/);
+assert.match(edit, /image-brief\.md/, '§3.3 points to the edit writing rules');
+assert.match(common, /image-brief\.md/, '§3.2.3 points to the reference/edit rules');
+assert.ok(!edit.includes('EXCLUDE:'), '§3.3 keeps no EXCLUDE example');
+assert.ok(Buffer.byteLength(generation) < 1200, '§3.2.2 stays a short rationale section');
 const defaults = extractSection(surfaces, '0').body;
 assert.match(defaults, /image-brief\.md.*새 생성이면 §1~§3·§5/);
 assert.match(defaults, /원본 편집이면 §1·§4·§5/);

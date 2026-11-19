@@ -55,48 +55,16 @@
 
 편집 입력은 웹에 첨부할 이미지의 번호·역할로 연결하고 로컬 파일 경로를 첨부 대신 쓰지 않는다. 현재 대화의 선택된 결과를 고칠 때는 그 이미지를 기준으로 변경점을 쓴다. 다른 대화에 붙여넣을 독립 프롬프트라면 필요한 이미지를 다시 첨부하도록 블록 밖에 짧게 안내한다. 국소 수정은 대상의 위치도 명시한다. 영역 선택은 선택 사항이며 경계 밖 보존을 보장하지 않는다([웹 공식 안내](https://help.openai.com/en/articles/11084440), 2026-09-23 확인).
 
-#### 3.2.2 새 생성 구성과 예시
+#### 3.2.2 새 생성 구성의 근거
 
-새 생성은 용도·주체·구도·눈에 보이는 스타일·필수 조건을 전달하는 완결본으로 쓴다. [공식 프롬프팅 가이드](https://developers.openai.com/api/docs/guides/image-prompting)의 2.5·2.6 공통 원칙은 여러 문안 형식을 허용하고 복잡한 요청에는 이름 붙인 구획을 권한다(2026-11-15 확인). 아래는 이를 반영한 MPW 작성 정책이며 생성 품질 실측이 아니다. 네이티브 브리프를 MPW 조립 형식이나 JSON 계약으로 바꾸지 않는다. 기본 대상은 [surfaces.md](surfaces.md) §0, 2.6 API 설정은 §4.5를 따른다.
-
-**구조 선택 — 독립적으로 관리할 조건을 나눈다.** 새 문안에서 구도·행동·빛·재질의 상세 조건, 여러 카피의 위치·위계, 서로 다른 참조 역할을 따로 찾고 수정해야 하면 제목 붙인 구획을 쓴다. 예를 들어 거울 셀피의 손 그립·의상 재질·반사 기하를 지정한 상세 브리프는 한 문단으로 평탄화하지 않는다. 반대로 단순 장면은 짧은 보존·배제 조건이 있어도 한 문단으로 쓴다. 글자나 참조가 있다는 이유만으로 구획 수를 늘리지 않으며, MPW가 보완한 연출로 헤딩을 채우지 않는다. 기준 원문의 후속 수정은 [common.md](../templates/common.md) §기준 원문과 누적 수정을 따른다.
-
-**기획과 연출 보완.** 먼저 이 이미지에서 무엇이 읽혀야 하는지 정하고, 구도·행동·배경·빛이 그 결과를 함께 만들게 한다. 제품 윤곽이 핵심이면 가장자리와 배경의 분리를, 기다리는 순간이면 시선의 도착점과 멈춘 동작을 연결하는 식이다. 사용자 조건·참조에서 가져올 범위·바꿔도 되는 축을 구분한 뒤, 맡겨진 축에서만 장면을 구체적으로 선택한다. 참조의 스타일이 피사체 형상을 덮거나 새 연출이 정확 카피·보존 조건을 바꾸지 않게 한다(입력 역할은 §3.2.3). 명시되지 않았다는 이유로 유용한 연출을 생략하지 않되, 짧은 요청마다 소품·조명·질감을 모두 추가하지 않는다. 부분 수정이나 원문 보존 요청에는 이 창작 기본값을 적용하지 않는다.
-
-**어휘는 관계를 만든다.** 형용사·장비명 목록 대신 어느 대상의 어디에서 무엇이 보이는지 쓴다. 빛은 표면에 닿아 생기는 반사·그림자와, 행동은 손이 닿는 사물·시선·주변 공간과 연결한다. 예를 들어 무광 용기의 넓은 밝은 면과 금속 테두리의 가는 반사선처럼 재질의 차이를 보이는 결과로 구분한다. 이 관계가 이미 한 문장에 있으면 조명·재질 구획에서 다시 풀어 쓰지 않는다. 새 문장은 목적이나 관계를 더 분명히 할 때만 남기며, 장면과 무관한 수치·품질 태그·반복 네거티브 꼬리는 붙이지 않는다. 이는 공개 사례의 구조를 선별해 적용한 작성 정책이지 특정 어휘의 생성 효과 검증이 아니다([관측 범위](observed-examples.md#공개-라이브러리의-기획-패턴)).
-
-**언어.** [common.md](../templates/common.md) §프롬프트 언어 결정을 따른다.
-
-**구획 이름과 순서.** 공식 가이드의 장면 → 피사체 → 세부 → 제약은 정보 순서이지 고정 양식이 아니다(2026-11-15 원문 재확인). 첫 줄에 산출물·용도를 쓰고, 이후 조건의 책임에 맞게 묶는다: `SHOT`은 카메라와 화면 안 위치, `ACTION`은 주체와 사물의 관계, `LIGHT AND MATERIAL`은 빛에 드러나는 표면, `TEXT`는 정확 카피와 위치처럼 정한다. 이는 선택 예시이며 기본 헤딩 세트가 아니다. 서로 떨어뜨리면 관계가 흐려지는 조건은 한 구획에 두고, 독립적으로 수정할 조건만 나눈다. 같은 사실은 한 곳에 두며 조건 없는 구획은 만들지 않는다. 제목은 줄 첫머리의 `LIGHT:`처럼 대문자·콜론, 구획 사이는 빈 줄로 쓴다. 이는 MPW 표기 선택이며 공식 예시의 `Constraints:`와 마찬가지로 성능 보장 문법이 아니다.
-
-보존·배제는 `CONSTRAINTS`(원본 편집은 §3.3)처럼 필요한 구획에 문장으로 쓴다. 새 생성에 `NEGATIVE`·`EXCLUDE` 목록을 붙이지 않는다. 원치 않는 글자·로고·워터마크도 해당 장면의 실제 위험만 적고 일반 금지어는 나열하지 않는다. 사용자 헤딩·순서·정보 배치는 특별한 충돌이 없으면 보존한다. 한 컷은 하나의 복사 가능한 블록으로 내며 길이나 구획 수 때문에 나누지 않는다. 사용자 지정 형식, §3.1의 네이티브/조립 경계, §4.3·§4.5의 API 설정 분리는 그대로 따른다.
-
-아래는 인물 화보의 구획 예시이며 생성 품질의 실측 결과가 아니다. 제목은 이 요청에 맞춘 것이고 다른 요청에 그대로 복사하지 않는다.
-
-```text
-Create a vertical editorial fashion photo for a winter outerwear campaign.
-
-SHOT: Full-length, eye-level framing with the subject slightly left of center, walking toward the camera mid-stride on a quiet Seoul side street at blue hour after light snowfall.
-
-SUBJECT: The model, relaxed and confident, one hand in a coat pocket, looking just past the lens.
-
-WARDROBE: A charcoal wool double-breasted coat with a soft brushed surface, notched lapels and dark horn buttons, worn over a black knit and straight black trousers.
-
-LIGHT: Cool dusk ambient light, warm shop-window light from camera right as the key, a gentle rim along the coat shoulders, wet asphalt reflecting the window glow. Natural color with soft contrast and gently rolled-off highlights.
-
-CONSTRAINTS: Keep the coat charcoal with visible wool texture rather than a glossy synthetic look. Keep shop signage unreadable and add no text or logos.
-```
-
-새 인물 이미지의 인물 설정·참조 분기·장르 골격은 [editorial/portrait-brief.md](editorial/portrait-brief.md)를 따른다.
+새 생성 문안의 작성 규칙(정보 조건·구획 문턱·예시)은 [image-brief.md](image-brief.md) §2·§3이 소유한다. 이 절은 그 근거만 둔다. [공식 프롬프팅 가이드](https://developers.openai.com/api/docs/guides/image-prompting)의 2.5·2.6 공통 원칙은 여러 문안 형식을 허용하고 복잡한 요청에는 이름 붙인 구획을 권한다(2026-11-15 확인). 구획 제목의 대문자·콜론 표기는 MPW 표기 선택이며 공식 예시의 `Constraints:`처럼 성능 보장 문법이 아니다(2026-11-15 원문 재확인, [surface-evidence.md](surface-evidence.md) §7). 공개 사례에서 구조를 고른 범위는 [observed-examples.md](observed-examples.md#공개-라이브러리의-기획-패턴)에 있다. 이는 MPW 작성 정책이며 생성 품질 실측이 아니다. 기본 대상은 [surfaces.md](surfaces.md) §0, 2.6 API 설정은 §4.5를 따른다.
 
 #### 3.2.3 공통 입력·보존·텍스트·검수
 
 **사실성과 제약.** 피부·재질의 적용과 원문 정리 검수는 [compiler.md](compiler.md) §피부·재질을 따른다. 실사 목표와 장면에 필요한 경우 피부 결, 모발 가닥별 반사, 직물별 광택 차이, 손가락과 물체의 그립, 그림자·반사·플레어와 광원의 정합을 화면에서 확인 가능한 조건으로 구체화한다. 거울·유리·플래시·반사·손·휴대전화가 등장하면 이미 서술한 반사 기하·광원 방향·신체 접촉이 서로 모순되지 않는지 검수한다. 이런 세부를 모든 실사 프롬프트의 의무 토큰으로 추가하지 않는다. 배제는 요청과 관련된 것만 남긴다. 원하는 외형은 긍정형으로 쓰되, 변경 금지·추가 금지처럼 범위를 잠그는 직접적인 부정문은 유지한다. 이를 긍정형으로 바꾸느라 보존 조건을 흐리지 않는다.
 
 - **눈에 보이는 세부:** 재질·빛·색·매체는 요청됐거나 장면이 달라지는 것만 이름으로 적는다. `photorealistic`·`real photograph`·렌즈 mm는 요청되거나 그 외형이 장면 조건일 때만 쓴다. 모공·잔머리 토큰의 적용 조건은 [compiler.md](compiler.md) §피부·재질 하나를 따른다. 카메라·렌즈 사양은 외형 단서이지 물리 재현 보증이 아니다. 광각·시네마틱·저조도·비·네온 장면은 분위기 단어 대신 규모·대기·색을 적는다. 인물의 프레이밍·시선·사물 상호작용은 요청을 보존하면서 새 장면의 목적에 맞게 구체화한다.
-- **참조 역할:** 이미지별 번호와 용도(편집 베이스·인물/제품·의상·배경·스타일·스케치)를 지정한다. 스케치의 배치만 쓸지 선화까지 남길지 밝히고, 스타일 참조가 제품 형상까지 바꾸지 않게 한다.
-- **부분 편집:** 바꿀 대상·위치·변경점과 보존할 핵심을 함께 적는다. 예: 배경 교체라면 인물·포즈·크롭·제품 라벨 중 실제로 유지해야 할 것만 잠근다. 요청하지 않은 전면 재디자인으로 넓히지 않는다.
-- **누적 편집:** 직전 승인 이미지를 다음 입력으로 연결하고 이번 변경만 요청한다. 이전에 승인된 변경과 핵심 보존 조건을 유지한다. 독립적인 여러 컷은 각각 원본에서 시작한다. 실패한 중간본을 다음 기준으로 삼지 않는다.
+- **참조 역할·부분 편집·누적 편집:** 작성 규칙은 [image-brief.md](image-brief.md) §1·§4를 따른다.
 - **화면 노이즈:** 입자·비늘 무늬·뭉침이 문제이거나 입자·과잉 세부·잔머리 같은 미세 구조를 다루면 §3.2.4를 읽는다.
 - **정확한 글자:** 카피를 따옴표로 묶고 위치·위계·출현 횟수를 지정한다. 낯선 라틴 문자 단어·브랜드명은 필요하면 낱자로 철자를 적고(한글은 하이픈이 글자로 렌더되는 경우가 있으므로 낱자 풀어쓰기를 하지 않는다 — [text-structure.md](text-structure.md) §이미지 안의 글자), 추가 문구 금지를 함께 쓴다. 한글 철자·작은 라벨·불필요한 추가 문구를 결과에서 확인한다. 작은 글자·밀집 정보·여러 서체의 품질 단계 비교는 §4.3 설정을 실제로 제공하는 표면에서만 적용한다. 도해·역사 장면은 사실관계도 별도로 확인한다.
 - **검수:** 변경 부위뿐 아니라 얼굴·제품 형상·구도·색·기존 카피의 불필요한 변화도 비교한다. 도해는 라벨과 관계의 정확성, 투명 자산은 실제 알파 채널 여부를 확인한다. 반복 편집의 일관성 향상은 픽셀 보존 보증이 아니다. 픽셀 동일성이 필수라면 허용된 합성 경로를 사용하고 생성과 합성을 구분한다. 이 검수와 결과 대조·재시도·누락 컷 관리는 실행자의 일이다. 이미지 모델에 붙여넣을 블록에는 수정 대상·목표 상태·보존 조건만 쓰고, 검수 절차는 수신자가 작업 에이전트이면 그 작업 지시에, 사람이 붙여넣으면 블록 밖 안내에 둔다.
@@ -142,21 +110,9 @@ GPT Image 2 계열에는 요청하지 않은 미세 입자·자글거림·타일
 
 ### 3.3 GPT Image 2.5·2.6 — 원본 편집·리터칭·누적 편집
 
-웹 전달·편집 입력은 §3.2.1, 공통 입력·보존·정확한 글자·검수는 §3.2.3을 함께 따른다. 새 생성 구성·예시(§3.2.2)는 원본 편집에 읽지 않는다.
+편집 작성 규칙(세 요소·구획 문턱·여러 곳 수정)은 [image-brief.md](image-brief.md) §1·§4를 따른다. 웹 전달·편집 입력은 §3.2.1, 공통 입력·보존·정확한 글자·검수는 §3.2.3을 함께 따른다. 새 생성 구성의 근거(§3.2.2)는 원본 편집에 읽지 않는다.
 
 원본 인물 사진의 명시적 랜덤 요청에는 [portrait-variations.md](editorial/portrait-variations.md) §명시적 랜덤 요청을 읽는다.
-
-**복잡한 원본 사진 리터칭.** 여러 국소 수정과 보존 조건이 서로 가깝다면 같은 자연어 프롬프트 안에서 `EDIT TARGETS`(실제 수정할 위치와 화면에서 확인할 목표 상태) → `PRESERVE`(원본에서 유지할 요소) → `EXCLUDE`(범위 밖 변형 금지)처럼 구분한다. 이는 웹의 별도 네거티브 입력란이나 필수 헤딩을 뜻하지 않는다. 뒷면 청바지의 엉덩이·뒷주머니 주변, 자켓 몸판 안쪽·팔 겹침처럼 빠뜨리기 쉬운 영역은 앞쪽 수정 섹션에 위치와 주름이 정돈된 결과를 각각 적는다. 사용자가 바꾸라고 한 축은 보존 목록에 넣지 않고, 수정 축의 위치와 허용 폭을 보존 조건과 겹치지 않게 적는다. 아래 예시는 다리 라인만 미세 조정하는 요청이라 얼굴 내부 디테일·의상 구조·원본 컷 범위·청바지 밑위를 보존 축에 두었다. 밑위를 줄이라는 요청이면 밑위는 수정 축으로 옮기고 보존·배제 문장에서 뺀다. 금지문 분리만으로 생성 성공을 설명하거나 보증하지 않는다. 아래는 작성 패턴 예시이며 특정 편집 결과의 인과 검증이 아니다.
-
-```text
-Edit the attached photo as the source image.
-
-EDIT TARGETS: Tidy the visible creases across the back of the jeans at the seat and around the visible back pockets, leaving believable denim texture and natural tension folds. Smooth the distracting bunching on the inner jacket body panel and where the sleeve overlaps it, so those areas read cleanly without flattening the garment. Refine the leg line only slightly from knee to ankle; keep the hips, waist and jeans rise in place.
-
-PRESERVE: Keep the person's facial features and inner facial details, identity, pose, jacket and jeans construction, seams, pocket placement, original lighting and the full original crop. Preserve the jeans rise and the garment's natural fit.
-
-EXCLUDE: Do not redraw the face, change the jacket or jeans design, move the pockets, shorten the rise, reshape the hips or crop out any part of the original shot. Do not turn the fabric into an unnaturally smooth surface.
-```
 
 **편집 패턴 — 공식 예시의 지시 핵심.** 직접 API에서 마스크를 쓰는 국소 편집은 §5의 마스크 조건을, 2.6의 markup 입력은 §4.5를 따른다. 웹 편집은 §3.2.1의 위치 설명·선택 영역 안내를 따른다.
 
@@ -168,6 +124,7 @@ EXCLUDE: Do not redraw the face, change the jacket or jeans design, move the poc
 | 인물 유지·의상 교체 | 얼굴·피부톤·체형·포즈·정체성 고정을 명시하고 의상만 교체. 조명·그림자·색온도를 원본에 맞춘다. 제품·오브젝트를 유지하는 편집도 같은 패턴 |
 | 참조 결합 | 이미지 번호로 무엇을 어디로 옮기는지 적고 조명·구도 일치와 나머지 변경 금지를 함께 쓴다 |
 | 오브젝트 제거·교체 | 대상을 이름으로 지정하고 `ONLY`로 범위를 잠근다. 카메라 각·조명·바닥 그림자·주변 오브젝트 보존 |
+| 여러 국소 수정 | 뒷주머니·몸판 안쪽처럼 빠지기 쉬운 영역은 위치별로 각각 적는다. 바꿀 축(예: 밑위)은 지킬 것에서 빼고, 금지는 `PRESERVE:` 안의 `Do not` 문장으로 쓴다 |
 | 스케치 → 실사 | 레이아웃·비례·원근 보존, 재질·조명은 스케치 의도에 맞게 선택, 새 요소·텍스트 추가 금지 |
 | 투명 컷아웃 | 프롬프트에서 고립·중앙 배치·깨끗한 알파 가장자리·배경/그림자 금지를 요구하고 파일 설정은 2.5 §4.3·2.6 §4.5. 후속 편집마다 투명 유지를 반복 |
 | 장면 삽입 | 보존할 얼굴 특징·비례, 프레이밍·시선·상호작용을 지정. 실사 목표면 시네마틱 조명·그레이딩 배제를 명시 |
