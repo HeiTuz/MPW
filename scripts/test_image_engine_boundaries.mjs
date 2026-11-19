@@ -54,7 +54,7 @@ const cases = [
   { args: [`${image}lanes.md#이미지 슬롯 기본값`], expected: defaults },
   { args: [`${image}ghost-character-reference-sheet.md#1,5`], expected: sheet },
 ];
-const planning = section(`${image}surface-contracts.md`, '3.2.2');
+const planning = section(`${image}image-brief.md`, '3');
 for (const { args, expected } of cases) {
   const result = spawnSync(process.execPath, ['scripts/read_refs.mjs', ...args], {
     cwd: root, encoding: 'utf8', maxBuffer: 2 * 1024 * 1024,
