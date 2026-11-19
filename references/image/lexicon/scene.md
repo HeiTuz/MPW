@@ -358,7 +358,7 @@ Scene 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다. 
 | ヒカリエ | 히카리에; Hikarie; 涩谷天廊; 空中コリドー; 공중 회랑 | JP | 유리; 미래; 공중; 도시; 투시 | A glass bridge corridor suspended high in a tower, floor-to-ceiling panes and a city grid below. | place |
 | フィッティングルーム | 피팅룸; 試着室; fitting room; 탈의실 | JP | 의류; 실내; 거울; 쇼핑 | Small changing booth with a full-length mirror, soft overhead light, a curtain edge and clothes hanging from wall hooks, floor carpet or marble reflecting the legs. | place |
 | ブラックボックス | 블랙박스; black box; 全黑暗室; 現代アート; 현대미술 | JP | 어두움; 단일 광원; 절제; 전시; 현대미술 | A fully black exhibition room with one narrow beam of light picking out a single object against deep shadow. | place |
-| プリクラ | 푸리쿠라; purikura; 大头贴; Y2K; 천년대; 渋谷109; 시부야 109 | JP | 천년대; 핑크; 밝음; 걸; 사진부스 | A sticker-photo booth glowing with pink fluorescent edges, frames of glitter and star decals and a flat overexposed flash. | place |
+| プリクラ | 푸리쿠라; purikura; 大头贴; Y2K; 천년대; 渋谷109; 시부야 109; 프리쿠라 | JP | 천년대; 핑크; 밝음; 걸; 사진부스 | A sticker-photo booth glowing with pink fluorescent edges, frames of glitter and star decals and a flat overexposed flash. | place |
 | ミヤシタパーク | 미야시타 파크; Miyashita Park; 宫下公园; 屋上公園 | JP | 스케이트; 옥상; 잔디; 현대; 도시 | A rooftop park of artificial turf and concrete skate features above a shopping strip, open sky overhead. | place |
 | モノレール | Monorail; 모노레일; 치바 모노레일; 千葉; Chiba | JP | 치바; 열차; 오후; 먼지 | A suspended monorail car with golden afternoon shafts of light revealing floating dust in the air. | place |
 | ラーメン屋 | Ramen Shop; 라멘집; 라멘 가게; ラーメン屋カウンター; ramen counter | JP | 식당; 김; 카운터; 도쿄; 밤 | A narrow ramen counter with rising white steam, glossy bowls and bright overhead light. | place |

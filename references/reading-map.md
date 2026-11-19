@@ -12,6 +12,7 @@
 | 캐릭터시트·고스트 캐릭터 레퍼런스 | 양식 선택은 [ghost-character-reference-sheet.md](image/ghost-character-reference-sheet.md) §1 |
 | 원본별 편집이 아닌 제품 사진 여러 컷의 새 생성 | [product-multicut-consistency.md](image/product-multicut-consistency.md) |
 | 인물 사진 시리즈의 지정 축 비교·프리셋 조합 또는 명시적 인물·패션 랜덤 요청 | [portrait-variations.md](image/editorial/portrait-variations.md). 난수 선택은 §명시적 랜덤 요청, 형식과 참조 문법은 선택한 엔진을 따른다 |
+| 이미지 층에 쓸 문화권 룩 토큰이 필요함(묶음 없이 토큰만 고칠 때) | [layer-lexicon.md](image/layer-lexicon.md) 색인과 `node scripts/find_tokens.mjs --q "단서,단서"`. 쓰는 법은 [image-brief.md](image/image-brief.md)의 토큰 찾기 절 |
 | 합성·전문 이미지·영상 연출 | [lanes.md](image/lanes.md)의 해당 절만 |
 | HyperFrames 프로젝트를 만드는 에이전트에게 줄 제작·수정 지시 | [hyperframes-prompting.md](hyperframes-prompting.md). 영상 생성 모델의 단일 클립 프롬프트와 구별한다 |
 | 실제 호출 배선 | [adapters.md](adapters.md) |

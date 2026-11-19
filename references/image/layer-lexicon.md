@@ -5,7 +5,7 @@
 ## 사용법
 
 1. 층을 정하고 아래 층 표에서 그 층 파일을 연다. 인물 층(Person)은 표가 없고 기본 인물은 [image-brief.md](image-brief.md) §5-1을 따른다.
-2. 찾는 말(토큰, 한글 음차, 태그, 영어 단어)로 한 줄을 찾는다. `grep -n "신중식" references/image/lexicon/*.md`처럼 파일 전체를 검색하면 별칭 칸의 한글 음차까지 걸린다. 문화권 절만 읽을 때는 `node scripts/read_refs.mjs references/image/lexicon/pose.md#KR`.
+2. 검색: `node scripts/find_tokens.mjs --q "신중식,찻집" --layers outfit,scene --limit 6`. 한글 음차·태그·영어 단어도 된다. `--culture KR`로 좁히고 `--random 1`로 층마다 하나 뽑는다. 못 돌리면 `grep -n "신중식" references/image/lexicon/*.md`나 `node scripts/read_refs.mjs references/image/lexicon/pose.md#KR`로 읽는다.
 3. 표의 열은 토큰, 별칭, 문화권, 태그, 화면에 보이는 모습, 종류다. 토큰은 원어 그대로 프롬프트에 쓰고, 그 뒤에 "화면에 보이는 모습"을 바탕으로 장면에 맞게 영어 문장을 새로 쓴다. 색·위치·수량은 장면에 맞게 바꾸고, 문장을 통째로 되풀이하지 않는다.
 4. 표는 열린 예시다. 한 프롬프트에 몇 개를 넣으라는 할당이 없고, 장면에 맞는 것만 쓴다. 표에 없어도 그 문화권에서 그 뜻으로 실제로 쓰인다고 확실히 알면 쓸 수 있다. 뜻을 모르면 지어내지 않고 영어로 푼다.
 5. 사용자가 한글 음차로 말하면(신중식, 코모레비) 표의 원어 표기(新中式, 木漏れ日)로 쓴다.

@@ -124,7 +124,7 @@ for (const [layer, slug] of Object.entries(LAYER_FILES)) {
 }
 
 // Review ceilings for reference-loading cost, not output length or API caps.
-// Measured at the layer renewal: new 48150, portrait 77245, edit 16246 UTF-8 bytes; edit re-measured at 17898 after the identity/Korean-layer notes;
+// Measured after the lexicon became an index plus find_tokens: new 49979, portrait 56147, edit 17937 UTF-8 bytes;
 // ceilings are about 10% above the measurement.
 assert.ok(sizes['gpt-image-new'].utf8_bytes <= 52800);
 assert.ok(sizes['gpt-image-portrait'].utf8_bytes <= 85000);

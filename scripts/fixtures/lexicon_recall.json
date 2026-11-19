@@ -1,0 +1,308 @@
+{
+  "note": "Each case: a Korean user request, the query terms a writer would pull from it, and tokens that must appear in `find_tokens.mjs --q <terms>` (default limit 6 per layer, all layers). Expected tokens exist in references/image/lexicon.",
+  "limit": 6,
+  "min_mean_recall": 0.8,
+  "cases": [
+    {
+      "request": "신중식 느낌 찻집 화보",
+      "q": [
+        "신중식",
+        "찻집",
+        "화보"
+      ],
+      "expect": [
+        "新中式",
+        "茶舍",
+        "老茶馆",
+        "茶室雅集",
+        "建盏"
+      ]
+    },
+    {
+      "request": "일본 여름 자판기 스냅",
+      "q": [
+        "자판기",
+        "여름",
+        "일본",
+        "스냅"
+      ],
+      "expect": [
+        "自販機",
+        "風鈴",
+        "スナップ",
+        "자판기 앞 야간 스냅",
+        "写ルンです"
+      ]
+    },
+    {
+      "request": "성수동 카페 거울 셀카 CCD",
+      "q": [
+        "성수동",
+        "카페",
+        "거울 셀카",
+        "CCD"
+      ],
+      "expect": [
+        "성수동",
+        "거울 셀카",
+        "千禧CCD",
+        "CCD 카메라",
+        "Y2K CCD"
+      ]
+    },
+    {
+      "request": "왕가위 영화 같은 홍콩 밤거리",
+      "q": [
+        "왕가위",
+        "홍콩",
+        "밤거리",
+        "네온"
+      ],
+      "expect": [
+        "王家卫",
+        "港风",
+        "九龙霓虹",
+        "霓虹灯牌",
+        "抽帧"
+      ]
+    },
+    {
+      "request": "프렌치 시크 파리 카페",
+      "q": [
+        "프렌치 시크",
+        "파리",
+        "카페"
+      ],
+      "expect": [
+        "Terrasse de Café",
+        "Café de Flore",
+        "Café littéraire",
+        "Cool girl parisienne",
+        "Nonchalance parisienne",
+        "Marinière"
+      ]
+    },
+    {
+      "request": "캘리포니아 골든아워 클린걸",
+      "q": [
+        "캘리포니아",
+        "골든아워",
+        "클린걸"
+      ],
+      "expect": [
+        "Golden Hour",
+        "Clean Girl",
+        "California Beach Waves",
+        "Malibu",
+        "Pacific Coast Highway",
+        "Kodak Portra 400"
+      ]
+    },
+    {
+      "request": "숲속 코모레비 원피스 사진",
+      "q": [
+        "코모레비",
+        "숲",
+        "원피스"
+      ],
+      "expect": [
+        "木漏れ日",
+        "森ガール",
+        "Dappled Sunlight",
+        "나뭇잎 사이 햇살"
+      ]
+    },
+    {
+      "request": "북촌 한옥 골목 화보",
+      "q": [
+        "북촌",
+        "한옥"
+      ],
+      "expect": [
+        "북촌 한옥",
+        "북촌 한옥 룩",
+        "북촌 한옥마을",
+        "Hanok Courtyard Open Sky"
+      ]
+    },
+    {
+      "request": "도쿄 시부야 밤 플래시 스냅",
+      "q": [
+        "도쿄",
+        "시부야",
+        "밤",
+        "플래시"
+      ],
+      "expect": [
+        "渋谷",
+        "渋谷スクランブル交差点",
+        "ストロボ直焚き",
+        "東京ノワール"
+      ]
+    },
+    {
+      "request": "뉴욕 지하철 스트리트 룩",
+      "q": [
+        "뉴욕",
+        "지하철",
+        "스트리트"
+      ],
+      "expect": [
+        "NYC Street Style",
+        "Subway Door Lean",
+        "MetroCard",
+        "SoHo",
+        "Downtown Girl"
+      ]
+    },
+    {
+      "request": "올드머니 프레피 룩북",
+      "q": [
+        "올드머니",
+        "프레피"
+      ],
+      "expect": [
+        "올드머니 룩",
+        "프레피 룩",
+        "老钱风",
+        "Old Money",
+        "New England Prep"
+      ]
+    },
+    {
+      "request": "쇼와 레트로 일본 감성",
+      "q": [
+        "쇼와 레트로",
+        "일본"
+      ],
+      "expect": [
+        "昭和レトロ",
+        "和モダン",
+        "和室",
+        "居酒屋",
+        "喫茶店"
+      ]
+    },
+    {
+      "request": "상하이 와이탄 밤 치파오 화보",
+      "q": [
+        "와이탄",
+        "치파오",
+        "상하이"
+      ],
+      "expect": [
+        "外滩",
+        "旗袍",
+        "改良旗袍",
+        "老上海法租界",
+        "民国海派名媛"
+      ]
+    },
+    {
+      "request": "한푸 입고 쑤저우 정원에서",
+      "q": [
+        "한푸",
+        "정원",
+        "쑤저우"
+      ],
+      "expect": [
+        "汉服",
+        "苏州园林",
+        "拙政园",
+        "江南园林",
+        "明制"
+      ]
+    },
+    {
+      "request": "비 오는 날 파리 센강 다리 우산",
+      "q": [
+        "센강",
+        "우산",
+        "비",
+        "파리"
+      ],
+      "expect": [
+        "Pont des Arts",
+        "Pont Neuf",
+        "撑伞回眸",
+        "Trench classique",
+        "Bouquinistes"
+      ]
+    },
+    {
+      "request": "일본 여름 축제 유카타 불꽃놀이",
+      "q": [
+        "유카타",
+        "불꽃놀이",
+        "여름 축제"
+      ],
+      "expect": [
+        "浴衣",
+        "花火大会",
+        "線香花火",
+        "浴衣アレンジ"
+      ]
+    },
+    {
+      "request": "한강 노을 피크닉",
+      "q": [
+        "한강",
+        "피크닉",
+        "노을"
+      ],
+      "expect": [
+        "한강",
+        "한강 피크닉",
+        "한강 노을 억새풀",
+        "Golden Hour",
+        "라탄 피크닉 바구니"
+      ]
+    },
+    {
+      "request": "누벨바그 고다르 흑백 시네마",
+      "q": [
+        "누벨바그",
+        "고다르",
+        "흑백"
+      ],
+      "expect": [
+        "Nouvelle Vague",
+        "Jean-Luc Godard",
+        "Godard",
+        "Jean Seberg",
+        "흑백 필름 그레인"
+      ]
+    },
+    {
+      "request": "사막 웨스턴 로드트립",
+      "q": [
+        "웨스턴",
+        "사막",
+        "로드트립"
+      ],
+      "expect": [
+        "Western",
+        "Route 66 Mojave",
+        "Joshua Tree",
+        "Death Valley",
+        "Fringe Vest"
+      ]
+    },
+    {
+      "request": "하라주쿠 Y2K 프리쿠라 감성",
+      "q": [
+        "하라주쿠",
+        "Y2K",
+        "프리쿠라"
+      ],
+      "expect": [
+        "原宿",
+        "プリクラ",
+        "Y2K",
+        "Y2K Digicam",
+        "Baby Tee",
+        "ギャル"
+      ]
+    }
+  ]
+}
