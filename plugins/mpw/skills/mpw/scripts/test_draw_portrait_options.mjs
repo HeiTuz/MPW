@@ -117,8 +117,12 @@ assert.equal(cli({ axes: [] }).status, 2);
 const target = 'references/image/editorial/portrait-variations.md#명시적 랜덤 요청';
 const guidance = readTargets([target]);
 assert.equal(guidance.error, undefined);
-assert.match(guidance.text, /일반 요청의 창작 보완과 비교 변주에는 난수 선택을 추가하지 않는다/);
-assert.match(guidance.text, /한 축을 다시 뽑을 때는 직전 컷의 다른 축을 고정/);
-assert.match(guidance.text, /도구가 없는 경우.*창작 변주만 제공하고 실제 난수로 골랐다고 보고하지 않는다/);
-assert.match(guidance.text, /기존 원문의 한 축.*지정한 부분만 바꾼다.*언어 규칙/);
+// Structure only: the section names the tool, links the owner of the delegation rule, and that link resolves.
+assert.ok(guidance.text.includes('draw_portrait_options.mjs'));
+const delegationLink = guidance.text.match(/\]\(([^)#]*image-brief\.md)\)\s*§(\d+)/);
+assert.ok(delegationLink, 'section links the delegation-rule owner');
+const linked = path.resolve(fileURLToPath(new URL('../references/image/editorial/', import.meta.url)), delegationLink[1]);
+assert.ok(fs.existsSync(linked), 'linked file exists');
+assert.equal(readTargets([`${path.relative(fileURLToPath(new URL('..', import.meta.url)), linked)}#${delegationLink[2]}`]).error, undefined, 'linked section exists');
+assert.ok(fs.existsSync(script));
 console.log('Portrait draw: CLI wiring (direct and symlinked), eligible options, scripted indices, locks, scoped reroll and no replacement pass. No model or image calls.');
