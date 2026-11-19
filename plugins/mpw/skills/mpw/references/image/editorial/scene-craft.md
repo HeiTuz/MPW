@@ -40,6 +40,19 @@
 | 앞에서 교차한 다리 | `one leg crossing in front of the other, torso upright and shoulders at ease` | 겹치는 다리의 앞뒤, 교차점 주변의 밑단과 신발 위치 (출처 1건) |
 | 거울 앞 입술 손질 | `applicator touching the lower lip, the other hand holding a compact near the lower frame edge` | 입술과 도구의 접점, 아래쪽 손에 받쳐진 소품, 거울을 향한 얼굴 방향 (출처 1건) |
 
+### 포즈 단서 예시 (생성 대조 없음)
+
+위 표와 같은 쓰임의 열린 예시다. 관측 표가 아니므로 출처 표기가 없다. 장면에 맞는 다른 표현을 써도 된다.
+
+| 단서 | 결과 문구 | 화면에서 읽히는 것 |
+|---|---|---|
+| 1인칭 시점 | `seen from the viewer's own eye level, the subject looking down toward the lens` | 보는 사람과 인물의 거리, 내려다보는 시선 |
+| 렌즈 쪽으로 든 손바닥 | `one palm raised close to the lens, soft and out of focus, the face sharp behind it` | 근경의 흐린 손, 초점 경계 |
+| 턱 괴기 | `chin resting on one hand, the elbow braced on the table` | 팔꿈치 지지점, 기울어진 얼굴 각도 |
+| 소매로 덮은 손 | `sleeves pulled down over the hands, only the fingertips showing` | 소매 끝의 장력, 일부만 보이는 손가락 |
+| 무릎 끌어안기 | `knees drawn up and hugged to the chest, hem and ankles in view` | 접힌 다리, 드러나는 밑단과 발목 |
+| 난간에 팔 얹기 | `forearms folded on a railing, the torso leaning forward over it` | 앞으로 기운 상체, 난간과의 접점 |
+
 ## 소재·질감
 
 소재는 촉감 형용이 아니라 빛이 표면에서 어떻게 움직이는지로 쓴다. 의류 종류와 착용 형태를 먼저 정하고, 소재의 빛 반응과 지정 색·세부 구조를 연결한다.
@@ -95,6 +108,18 @@
 | 밤 / 네온 골목·주차장 | 코팅 표면, 실용 네온 | 네온과 젖은 반사가 색 대비를 만든다 | 남색·시안·마젠타 |
 | 흐린 날 / 루프톱·광장 | 패턴 판독용 오버캐스트 | 흐린 하늘이 소재와 패턴의 실제 색을 드러낸다 | 스톤·슬레이트·잉크 |
 | 실내 / 호텔 라운지 | 광택 소재, 낮은 실용광 | 낮은 실용광이 광택 소재와 재단선을 읽게 한다 | 다크우드·브라스·크림 |
+
+### 일상 공간 단서 (생성 대조 없음)
+
+장소를 이름이 아니라 화면에 보이는 것으로 적는 열린 예시다. 실명 랜드마크와 체인점 이름은 쓰지 않는다.
+
+| 공간 | 결과 문구 | 화면에서 읽히는 것 |
+|---|---|---|
+| 지하철 객실 | `inside a subway car, steel grab handles overhead, seat reflections, a dark window` | 스테인리스 손잡이, 좌석 반사, 어두운 창 |
+| 버스 창가 자리 | `seated at a bus window, the window frame boxing the face, low side sun` | 창틀 프레이밍, 유리 반사, 낮은 옆 햇빛 |
+| 육교 | `on a pedestrian overpass, the railing leading lines, traffic streaming below` | 난간이 만드는 리딩 라인, 아래로 흐르는 차량 |
+| 블라인드 그림자 | `parallel stripes of blind shadow across the face and the wall` | 얼굴과 벽에 떨어지는 평행한 그림자 띠 |
+| 김 서린 욕실 거울 | `a steamed-up mirror, a hand-wiped patch showing a blurred reflection` | 흐린 반사와 손으로 닦은 자리 |
 
 ### 생활 장면의 진행 상태 (관측 2026-10, 출처 1건)
 

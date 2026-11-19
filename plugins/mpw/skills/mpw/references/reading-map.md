@@ -11,6 +11,7 @@
 | 참조 이미지의 역할·관찰이 필요함 | [from-image.md](image/from-image.md) §1. 원본 편집은 변경·보존 조건으로 바로 작성하고 상세 관찰·취향 변주는 요청될 때만 |
 | 캐릭터시트·고스트 캐릭터 레퍼런스 | 양식 선택은 [ghost-character-reference-sheet.md](image/ghost-character-reference-sheet.md) §1 |
 | 원본별 편집이 아닌 제품 사진 여러 컷의 새 생성 | [product-multicut-consistency.md](image/product-multicut-consistency.md) |
+| 인물 사진 시리즈의 지정 축 비교·프리셋 조합 또는 명시적 인물·패션 랜덤 요청 | [portrait-variations.md](image/editorial/portrait-variations.md). 난수 선택은 §명시적 랜덤 요청, 형식과 참조 문법은 선택한 엔진을 따른다 |
 | 합성·전문 이미지·영상 연출 | [lanes.md](image/lanes.md)의 해당 절만 |
 | HyperFrames 프로젝트를 만드는 에이전트에게 줄 제작·수정 지시 | [hyperframes-prompting.md](hyperframes-prompting.md). 영상 생성 모델의 단일 클립 프롬프트와 구별한다 |
 | 실제 호출 배선 | [adapters.md](adapters.md) |

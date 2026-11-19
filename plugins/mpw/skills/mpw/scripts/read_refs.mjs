@@ -28,19 +28,19 @@ import { fileURLToPath } from "node:url";
 const skillRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 
 export const BUNDLES = {
-  // 대상 미정·GPT Image 새 이미지. 도해·슬라이드·UI·만화·로고는 -structured.
-  "gpt-image-new": ["references/image/surfaces.md#0", "references/image/surface-contracts.md#3.2"],
-  "gpt-image-new-structured": ["references/image/surfaces.md#0", "references/image/surface-contracts.md#3.2,3.4"],
+  // 대상 미정·GPT Image 새 이미지. 작성 규칙은 image-brief.md(§1·§2·§3·§5·§6). 도해·슬라이드·UI·만화·로고는 -structured.
+  "gpt-image-new": ["references/image/surfaces.md#0", "references/image/image-brief.md#1,2,3,5,6"],
+  "gpt-image-new-structured": ["references/image/surfaces.md#0", "references/image/image-brief.md#1,2,3,5,6", "references/image/surface-contracts.md#3.4"],
   // 대상 미정·GPT Image 인물·셀피·패션 화보 새 이미지.
   "gpt-image-portrait": [
     "references/image/surfaces.md#0",
-    "references/image/surface-contracts.md#3.2",
+    "references/image/image-brief.md#1,2,3,5,6",
     "references/image/editorial/portrait-brief.md",
     "references/image/compiler.md#피부·재질",
   ],
-  // 대상 미정·GPT Image 원본 편집. 참조 사진의 역할·관찰이 필요하면 from-image.md#1을 덧붙인다.
-  "gpt-image-edit": ["references/image/surfaces.md#0", "references/image/surface-contracts.md#3.2.1,3.2.3,3.3"],
-  "gpt-image-edit-structured": ["references/image/surfaces.md#0", "references/image/surface-contracts.md#3.2.1,3.2.3,3.3,3.4"],
+  // 대상 미정·GPT Image 원본 편집(image-brief §1·§4·§5·§6 + 편집 패턴 §3.3). 참조 사진의 역할·관찰이 필요하면 from-image.md#1을 덧붙인다.
+  "gpt-image-edit": ["references/image/surfaces.md#0", "references/image/image-brief.md#1,4,5,6", "references/image/surface-contracts.md#3.3"],
+  "gpt-image-edit-structured": ["references/image/surfaces.md#0", "references/image/image-brief.md#1,4,5,6", "references/image/surface-contracts.md#3.3,3.4"],
   // 영상 생성.
   video: ["references/image/surfaces.md#0", "references/image/lanes.md#영상 공통 규칙"],
   // 실행 작업·자동화 지시.

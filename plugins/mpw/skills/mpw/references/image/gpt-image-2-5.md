@@ -4,7 +4,7 @@ MPW의 이미지 프롬프트 기본 대상이다. 사용자가 모델·도구�
 
 | 상황 | 읽을 곳 |
 |---|---|
-| 새 이미지 문안의 형식·구획·판정 | [surface-contracts.md](surface-contracts.md) §3.2 |
+| 새 이미지 문안의 형식·구획·판정 | [image-brief.md](image-brief.md) §2·§3, 근거는 [surface-contracts.md](surface-contracts.md) §3.2 |
 | 원본 편집·리터칭·누적 편집 | [surface-contracts.md](surface-contracts.md) §3.3 |
 | 도해·슬라이드·UI·만화·로고 같은 용도별 단서 | [surface-contracts.md](surface-contracts.md) §3.4, 글자·구조는 [text-structure.md](text-structure.md) |
 | 인물·셀피·패션 화보 | [editorial/portrait-brief.md](editorial/portrait-brief.md), 레인 진입은 [editorial-fashion.md](editorial-fashion.md) |

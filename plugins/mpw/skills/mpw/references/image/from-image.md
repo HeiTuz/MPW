@@ -284,7 +284,7 @@ ref-01 | I8 렌더 텍스트 | unreadable 0.9 | 좌상단에 4~6글자 상당 �
 
 - 내용은 신호 밀도로 다듬고 실제 채널·엔진·기계 계약 상한도 확인한다. 관찰 레코드를 쓴다고 분량이 저절로 통제된다고 가정하지 않는다.
 - S1 기계 핸드오프로 나가면 `ar`·`size`·`quality`는 **스키마 enum이 전부**이고 `python3 contracts/validate.py`를 실제로 통과해야 한다.
-- GPT Image 2.5의 직접 API 설정은 [surface-contracts.md](surface-contracts.md) §4.3, 참조·누적 편집은 §3.2·§3.3을 따른다. Higgsfield의 GPT Image 모델 가용성은 [model-routing.md](model-routing.md) §5의 현재 조회 상태와 아래 §6.4의 호출 계약을 확인하며 직접 API 선택자로 바꾸지 않는다.
+- GPT Image 2.5의 직접 API 설정은 [surface-contracts.md](surface-contracts.md) §4.3, 참조·누적 편집은 [image-brief.md](image-brief.md) §1·§4와 §3.3을 따른다. Higgsfield의 GPT Image 모델 가용성은 [model-routing.md](model-routing.md) §5의 현재 조회 상태와 아래 §6.4의 호출 계약을 확인하며 직접 API 선택자로 바꾸지 않는다.
 
 ### 6.4 Higgsfield 모델 id
 

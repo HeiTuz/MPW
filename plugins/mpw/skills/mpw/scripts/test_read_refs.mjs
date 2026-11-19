@@ -298,8 +298,10 @@ const viaBundle = spawnSync(process.execPath, [path.join(root, "scripts", "read_
 assert.equal(viaBundle.status, 0, viaBundle.stderr);
 assert.deepEqual(viaBundle.stdout.match(/^==> .*$/gm).map((line) => line.split(" (L")[0]), [
   "==> references/image/surfaces.md §0",
-  "==> references/image/surface-contracts.md §3.2.1",
-  "==> references/image/surface-contracts.md §3.2.3",
+  "==> references/image/image-brief.md §1",
+  "==> references/image/image-brief.md §4",
+  "==> references/image/image-brief.md §5",
+  "==> references/image/image-brief.md §6",
   "==> references/image/surface-contracts.md §3.3",
   "==> references/image/from-image.md §1",
 ]);

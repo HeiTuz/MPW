@@ -3,13 +3,13 @@ name: mpw
 description: "프롬프트를 새로 작성하거나 검토·퇴고하고, 대상 모델·도구에 맞게 변환한다. 작업지시·시스템·자동화·팀 작업·업무·디자인·이미지·영상 프롬프트에 사용한다. '프롬프트 만들어줘/검토해줘/다듬어줘', 기존 프롬프트의 부분 수정에 발동한다. 실제 코드 구현·이미지 생성·문서 제작만 요청한 경우에는 해당 실행 스킬을 쓴다. 이 파일과 선택한 참고 절은 출력 상한을 줄이지 말고 한 번에 온전히 읽는다."
 license: MIT
 metadata:
-  version: "3.4.9"
+  version: "3.5.0"
   category: prompt-writing
   locale: ko-KR
   doctrine: intent-first-progressive-disclosure
   host_surface: plugin
-  canonical_source: "HeiTuz/MPW SKILL.md v3.4.9"
-  updated_at: "2026-11-18"
+  canonical_source: "HeiTuz/MPW SKILL.md v3.5.0"
+  updated_at: "2026-11-19"
   model_claims_reviewed_at: "2026-10-02"
   platform_roster_reviewed_at: "2026-10-10"
   role_routing_reviewed_at: "2026-09-05"
@@ -40,7 +40,7 @@ metadata:
 
 대상, 입력 역할, 정확 문구, 수량, 변경·보존 범위, 출력 형식을 먼저 확정하고 이미 있는 조건은 다시 묻지 않는다. 기획·연출을 맡긴 축은 구체적으로 선택하되 지정 축만 고치는 작업에 새 요소를 넣지 않는다. 정확성·범위·권한을 바꾸는 미결 사항과 양립 불가한 필수 조건만 묻는다. 제공된 입력은 자리표시자로 바꾸지 않는다. 세부는 [common.md](references/templates/common.md) §쓰기 전에 정할 것. 이미지 생성·편집의 대상이 미정이면 [surfaces.md](references/image/surfaces.md) §0의 기본 경로를, 인터뷰 진행은 명시 요청한 이미지 프롬프트에서만 [prompt-interview.md](references/image/prompt-interview.md)를 따른다.
 
-언어는 **명시 지정 → 기존 프롬프트의 원문 → 새 이미지·영상 생성 모델 프롬프트는 영어 → 수신자·작업 언어(불명이면 요청 언어)** 순이다. HyperFrames 제작 에이전트 지시는 수신자·작업 언어로 쓴다. 정확 카피·대사·코드·경로와 산출물의 언어는 보존하고 설명·질문은 대화 언어로 쓴다([common.md](references/templates/common.md) §프롬프트 언어 결정).
+언어는 [common.md](references/templates/common.md) §프롬프트 언어 결정이 정본이다. 명시 언어·원문·실제 엔진 제약이 우선이다. 새 이미지 문안은 영어·한국어·일본어·중국어 표현을 골라 조합한다. 새 영상은 영어, 제작 에이전트 지시는 작업 언어가 기본이다. 정확 카피·대사·코드·경로는 보존하고 설명은 대화 언어로 쓴다.
 
 ## 필요한 자료만 읽는다
 

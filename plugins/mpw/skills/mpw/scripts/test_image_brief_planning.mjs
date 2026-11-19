@@ -3,26 +3,23 @@
 // quality need separate runs; bytes below are not model token measurements.
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
+import { checkText } from './check_prompt.mjs';
 import { BUNDLES, extractSection, readTargets } from './read_refs.mjs';
 
 const read = file => fs.readFileSync(new URL(`../${file}`, import.meta.url), 'utf8');
 const contracts = read('references/image/surface-contracts.md');
-const planning = extractSection(contracts, '3.2.2').body;
-for (const rule of [
-  '무엇이 읽혀야 하는지', '맡겨진 축에서만',
-  '어느 대상의 어디에서 무엇이 보이는지',
-  '서로 떨어뜨리면 관계가 흐려지는 조건은 한 구획에',
-  '독립적으로 수정할 조건만 나눈다',
-  '단순 장면은 짧은 보존·배제 조건이 있어도 한 문단',
-  '사용자 헤딩·순서·정보 배치',
-  '부분 수정이나 원문 보존 요청에는 이 창작 기본값을 적용하지 않는다',
-  '특정 어휘의 생성 효과 검증이 아니다',
-]) assert.ok(planning.includes(rule), `Missing planning boundary: ${rule}`);
-assert.doesNotMatch(planning, /다음 중 하나라도 있으면/);
-assert.match(planning, /선택 예시이며 기본 헤딩 세트가 아니다/);
-assert.match(planning, /observed-examples\.md#공개-라이브러리의-기획-패턴/);
-assert.match(extractSection(read('references/image/surfaces.md'), '0-2').body,
-  /기획·구획 선택은 .*§3\.2\.2/);
+const brief = read('references/image/image-brief.md');
+const sec = id => {
+  const r = extractSection(brief, id);
+  assert.equal(r.error, undefined, `image-brief §${id}`);
+  return r.body;
+};
+const [s1, s2, s3, s4, s5, s6] = ['1', '2', '3', '4', '5', '6'].map(sec);
+const legacyPlanning = extractSection(contracts, '3.2.2').body;
+const legacyNoise = extractSection(contracts, '3.2.4').body;
+const surfaceDefaults = extractSection(read('references/image/surfaces.md'), '0').body;
+assert.match(extractSection(read('references/image/surfaces.md'), '0-2').body, /image-brief\.md/);
+assert.match(surfaceDefaults, /image-brief\.md/);
 
 const evidence = extractSection(read('references/image/observed-examples.md'), '공개 라이브러리의 기획 패턴');
 assert.equal(evidence.error, undefined);
@@ -32,21 +29,50 @@ assert.match(evidence.body, /의미를 정독하거나 결과 이미지를 대�
 assert.match(evidence.body, /원문 프롬프트·이미지 모음은 재배포하지 않는다/);
 
 const sizes = {};
+const expectedSections = {
+  'gpt-image-new': [s1, s2, s3, s5, s6],
+  'gpt-image-new-structured': [s1, s2, s3, s5, s6],
+  'gpt-image-portrait': [s1, s2, s3, s5, s6],
+  'gpt-image-edit': [s1, s4, s5, s6],
+  'gpt-image-edit-structured': [s1, s4, s5, s6],
+};
 for (const [name, targets] of Object.entries(BUNDLES)) {
   const result = readTargets(targets);
   assert.equal(result.error, undefined, name);
-  const isNewImage = ['gpt-image-new', 'gpt-image-new-structured', 'gpt-image-portrait'].includes(name);
-  assert.equal(result.text.includes(planning), isNewImage, `${name}: planning routing changed`);
   assert.ok(!result.text.includes(evidence.body), `${name}: observation corpus should not be auto-loaded`);
-  if (isNewImage || name.startsWith('gpt-image-edit')) {
-    sizes[name] = { utf8_bytes: Buffer.byteLength(result.text), codepoints: [...result.text].length };
+  if (!name.startsWith('gpt-image')) continue;
+  for (const id of ['1', '2', '3', '4', '5', '6']) {
+    const wanted = expectedSections[name].includes(sec(id));
+    assert.equal(result.text.includes(sec(id)), wanted, `${name}: image-brief §${id} routing`);
   }
+  assert.ok(!result.text.includes(legacyPlanning), `${name}: §3.2.2 body must not be bundled`);
+  assert.ok(!result.text.includes(legacyNoise), `${name}: §3.2.4 body must not be bundled`);
+  sizes[name] = { utf8_bytes: Buffer.byteLength(result.text), codepoints: [...result.text].length };
 }
+
+// Every ```text example in image-brief passes the native checker, and the
+// examples differ in shape: distinct heading sets, no SHOT/SUBJECT-style
+// skeleton, no negative-list labels.
+const examples = [...brief.matchAll(/```text\n([\s\S]*?)\n```/g)].map(m => m[1]);
+assert.ok(examples.length >= 4, 'image-brief keeps its shape examples');
+const headingSets = new Set();
+for (const text of examples) {
+  const result = checkText(text, { profile: 'native', surface: 's3', engine: 'gpt-image' });
+  assert.deepEqual([result.errors.length, result.warnings.length], [0, 0], JSON.stringify(result));
+  const heads = [...text.matchAll(/^([A-Z][A-Z ]+):/gm)].map(m => m[1]);
+  if (heads.length) headingSets.add(heads.join('|'));
+  const skeleton = ['SHOT', 'SUBJECT', 'WARDROBE', 'LIGHT', 'CONSTRAINTS'].filter(h => heads.includes(h));
+  assert.ok(skeleton.length < 3, 'example reuses the fixed skeleton');
+  assert.doesNotMatch(text, /^(EXCLUDE|NEGATIVE|AVOID)\b/m);
+}
+assert.equal(headingSets.size, examples.filter(t => /^[A-Z][A-Z ]+:/m.test(t)).length, 'each sectioned example uses a different heading set');
+
 // Review ceilings for reference-loading cost, not output length or API caps.
-// Baseline 3.4.5: new 23353, portrait 35733, edit 13415 UTF-8 bytes.
-assert.ok(sizes['gpt-image-new'].utf8_bytes <= 24000);
-assert.ok(sizes['gpt-image-portrait'].utf8_bytes <= 36500);
-assert.ok(sizes['gpt-image-edit'].utf8_bytes <= 14000);
+// Measured after review fixes: new 11872, portrait 21343, edit 11556 UTF-8 bytes;
+// ceilings are about 10% above the measurement.
+assert.ok(sizes['gpt-image-new'].utf8_bytes <= 13100);
+assert.ok(sizes['gpt-image-portrait'].utf8_bytes <= 23500);
+assert.ok(sizes['gpt-image-edit'].utf8_bytes <= 12700);
 
 const scenarios = JSON.parse(read('scripts/fixtures/behavioral/image-planning.json')).cases;
 assert.deepEqual(scenarios.map(c => c.id), [

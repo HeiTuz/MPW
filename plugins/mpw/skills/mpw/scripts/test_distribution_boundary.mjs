@@ -30,7 +30,8 @@ function assertNoLegacy(files, label) {
 }
 
 try {
-  const [manifest] = JSON.parse(run("npm", ["pack", "--json", "--pack-destination", temporary]));
+  const packed = JSON.parse(run("npm", ["pack", "--json", "--pack-destination", temporary]));
+  const manifest = Array.isArray(packed) ? packed[0] : Object.values(packed)[0]; // npm 12 keys the object by package name
   assertNoLegacy(manifest.files.map((file) => file.path), "npm archive");
   run("tar", ["-xzf", path.join(temporary, manifest.filename), "-C", temporary]);
   const packedRoot = path.join(temporary, "package");
