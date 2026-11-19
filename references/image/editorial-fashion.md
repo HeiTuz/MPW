@@ -10,7 +10,7 @@
 
 | 주제 | 파일 |
 |---|---|
-| 새 인물 이미지의 인물 설정·참조 분기·축별 패턴·장르 골격 | [editorial/portrait-brief.md](editorial/portrait-brief.md) |
+| 새 인물 이미지의 인물 설정 경계·참조 분기·장르 결정 축 | [editorial/portrait-brief.md](editorial/portrait-brief.md) |
 | 인물 시리즈의 비교 변주·프리셋 조합 또는 명시적 랜덤 요청 | [editorial/portrait-variations.md](editorial/portrait-variations.md) |
 | 빛·심도·필름·구도·재질 결과 | [editorial/photo-results.md](editorial/photo-results.md) |
 | 포즈·소재·조명·시즌 장소 | [editorial/scene-craft.md](editorial/scene-craft.md) |
