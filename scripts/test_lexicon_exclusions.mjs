@@ -12,7 +12,8 @@ const CATEGORIES = {
   ],
   // Sexual staging: fetish codes, body-part emphasis, intimate-scene clichés.
   sexual: [
-    /가터/, /garter/i, /망사/, /fishnet/i, /절대영역/, /絶対領域/, /란제리/, /lingerie/i, /페티시/, /fetish/i,
+    // Fishnet and mesh hosiery are ordinary legwear. Only the fetish-coded pairings are blocked, and 망사원 (Wangshi garden) is not 망사.
+    /가터/, /garter/i, /망사\s?(바디|란제리|스타킹\s?(섹시|페티시))/, /fishnet\s?(body|lingerie)/i, /절대영역/, /絶対領域/, /란제리/, /lingerie/i, /페티시/, /fetish/i,
     /seductive/i, /sensual/i, /純欲/, /纯欲/, /黑丝/, /白丝/, /肉丝/, /油亮/,
   ],
 };

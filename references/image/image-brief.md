@@ -314,9 +314,9 @@ The attached image is the identity reference for this person. Keep her facial id
 
 ## Hair and makeup
 低发髻 — Dark hair is combed smoothly back from the face and coiled into a small flat bun low at the nape, leaving the neck and ears bare.
-玉簪挽发 — A slim pale-green jade hairpin passes through the bun and catches a narrow highlight along its length.
+发簪 — A slim pale-green jade hairpin passes through the bun and catches a narrow highlight along its length.
 平直眉 — The brows are filled in soft gray-brown along a level, straight line with a slightly longer tail.
-半哑光 — A semi-matte base: the face looks smooth and soft, with a faint satin glow only on the cheekbones and the bridge of the nose.
+无粉感底妆 — A powder-free base: the face looks smooth and soft, with a faint satin glow only on the cheekbones and the bridge of the nose.
 豆沙唇 — A dusty rose-brown lip color with a soft powdery finish and no gloss.
 
 ## Expression
@@ -331,29 +331,29 @@ head angle — Her face turns three-quarters to the camera's right with the chin
 香云纱 — The silk has a faintly crinkled surface and a dark brown sheen where it folds at the elbows and waist.
 
 ## Props and nails
-紫砂 — A small unglazed reddish-brown clay teapot with a fine, dry, sandy-looking surface sits on the table beside her right hand.
+紫砂壶 — A small unglazed reddish-brown clay teapot with a fine, dry, sandy-looking surface sits on the table beside her right hand.
 teacup — She holds a small white porcelain cup with both hands at chest height, pale green tea inside and a thin line of steam rising from it.
-冰透 — Short rounded nails in a sheer nude-pink gloss that lets the natural nail show through.
+冰透美甲 — Short rounded nails in a sheer nude-pink gloss that lets the natural nail show through.
 
 ## Pose
 seated lean — She sits upright on a low wooden stool, forearms resting on the edge of a dark wooden table and her weight tipped slightly forward.
 shoulders — Shoulders level and relaxed, elbows close to the body, both hands around the cup.
 
 ## Style
-新中式静奢 — Quiet modern Chinese luxury: a restrained palette of black, ivory and celadon, heavy matte fabrics and almost no ornament.
-清冷 — A cool, still mood with a composed face and no warm color cast anywhere in the frame.
+静奢风 — Quiet modern Chinese luxury: a restrained palette of black, ivory and celadon, heavy matte fabrics and almost no ornament.
+清冷感 — A cool, still mood with a composed face and no warm color cast anywhere in the frame.
 
 ## Scene
-茶寮 — A small wood-paneled tearoom with a low dark table, a paper-shaded lamp off to one side and a single branch of white plum in a celadon vase.
+茶室 — A small wood-paneled tearoom with a low dark table, a paper-shaded lamp off to one side and a single branch of white plum in a celadon vase.
 漏窗 — Behind her, a white plaster wall holds a round window filled with a carved stone lattice, with green bamboo leaves showing through the openings.
 
 ## Light
-漏窗光影 — Late-morning sun comes through the lattice window behind her left shoulder and lays a pattern of small diamond shapes across the table, her shoulder and one sleeve.
+几何光影 — Late-morning sun comes through the lattice window behind her left shoulder and lays a pattern of small diamond shapes across the table, her shoulder and one sleeve.
 wall bounce — Daylight reflected off the white plaster fills her face softly, so the shadows stay gray-brown instead of black.
 steam — The backlight catches the steam above the cup as a pale, glowing curl.
 
 ## Optics
-柔焦漫射 — A gentle soft-focus diffusion puts a faint halo around the brightest lattice openings while her face stays clear.
+黑柔滤镜 — A gentle diffusion filter puts a faint halo around the brightest lattice openings while her face stays clear.
 muted color — Low-contrast color with slightly lifted blacks and a cool celadon tone in the shadows.
 
 ## Camera

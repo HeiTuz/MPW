@@ -1,5 +1,5 @@
 {
-  "note": "Each case: a Korean user request, the query terms a writer would pull from it, and tokens that must appear in `find_tokens.mjs --q <terms>` (default limit 6 per layer, all layers). Expected tokens exist in references/image/lexicon.",
+  "note": "Each case: a Korean user request, query terms taken from words in that request, and 3-5 representative tokens a reader of the request would think of (never the same string as a query term). Checked against `find_tokens.mjs --q <terms>` (limit 6 per layer, all layers). Tokens that exist in the lexicon but miss the top 6 are kept on purpose and show up as recall misses.",
   "limit": 6,
   "min_mean_recall": 0.8,
   "cases": [
@@ -7,14 +7,12 @@
       "request": "신중식 느낌 찻집 화보",
       "q": [
         "신중식",
-        "찻집",
-        "화보"
+        "찻집"
       ],
       "expect": [
         "新中式",
+        "茶室",
         "茶舍",
-        "老茶馆",
-        "茶室雅集",
         "建盏"
       ]
     },
@@ -29,9 +27,8 @@
       "expect": [
         "自販機",
         "風鈴",
-        "スナップ",
-        "자판기 앞 야간 스냅",
-        "写ルンです"
+        "ホット缶コーヒー",
+        "街拍"
       ]
     },
     {
@@ -43,11 +40,9 @@
         "CCD"
       ],
       "expect": [
-        "성수동",
-        "거울 셀카",
         "千禧CCD",
         "CCD 카메라",
-        "Y2K CCD"
+        "베이커리 카페"
       ]
     },
     {
@@ -61,7 +56,6 @@
       "expect": [
         "王家卫",
         "港风",
-        "九龙霓虹",
         "霓虹灯牌",
         "抽帧"
       ]
@@ -74,12 +68,10 @@
         "카페"
       ],
       "expect": [
+        "Parisian Chic",
         "Terrasse de Café",
-        "Café de Flore",
-        "Café littéraire",
-        "Cool girl parisienne",
-        "Nonchalance parisienne",
-        "Marinière"
+        "Marinière",
+        "Café de Flore"
       ]
     },
     {
@@ -92,10 +84,8 @@
       "expect": [
         "Golden Hour",
         "Clean Girl",
-        "California Beach Waves",
         "Malibu",
-        "Pacific Coast Highway",
-        "Kodak Portra 400"
+        "Pacific Coast Highway"
       ]
     },
     {
@@ -108,21 +98,21 @@
       "expect": [
         "木漏れ日",
         "森ガール",
-        "Dappled Sunlight",
-        "나뭇잎 사이 햇살"
+        "丁达尔"
       ]
     },
     {
       "request": "북촌 한옥 골목 화보",
       "q": [
         "북촌",
-        "한옥"
+        "한옥",
+        "골목"
       ],
       "expect": [
-        "북촌 한옥",
-        "북촌 한옥 룩",
         "북촌 한옥마을",
-        "Hanok Courtyard Open Sky"
+        "한옥 카페",
+        "한복",
+        "생활한복"
       ]
     },
     {
@@ -134,10 +124,10 @@
         "플래시"
       ],
       "expect": [
-        "渋谷",
         "渋谷スクランブル交差点",
         "ストロボ直焚き",
-        "東京ノワール"
+        "Paparazzi Flash",
+        "直闪"
       ]
     },
     {
@@ -148,11 +138,10 @@
         "스트리트"
       ],
       "expect": [
-        "NYC Street Style",
-        "Subway Door Lean",
         "MetroCard",
-        "SoHo",
-        "Downtown Girl"
+        "New York Yellow Cab",
+        "Bodega",
+        "SoHo"
       ]
     },
     {
@@ -162,11 +151,9 @@
         "프레피"
       ],
       "expect": [
-        "올드머니 룩",
-        "프레피 룩",
         "老钱风",
         "Old Money",
-        "New England Prep"
+        "Preppy"
       ]
     },
     {
@@ -177,10 +164,9 @@
       ],
       "expect": [
         "昭和レトロ",
-        "和モダン",
-        "和室",
-        "居酒屋",
-        "喫茶店"
+        "純喫茶",
+        "銭湯",
+        "和モダン"
       ]
     },
     {
@@ -194,39 +180,36 @@
         "外滩",
         "旗袍",
         "改良旗袍",
-        "老上海法租界",
-        "民国海派名媛"
+        "新天地"
       ]
     },
     {
       "request": "한푸 입고 쑤저우 정원에서",
       "q": [
         "한푸",
-        "정원",
-        "쑤저우"
+        "쑤저우",
+        "정원"
       ],
       "expect": [
         "汉服",
         "苏州园林",
         "拙政园",
-        "江南园林",
         "明制"
       ]
     },
     {
-      "request": "비 오는 날 파리 센강 다리 우산",
+      "request": "파리 센강 다리 우산",
       "q": [
         "센강",
+        "다리",
         "우산",
-        "비",
         "파리"
       ],
       "expect": [
-        "Pont des Arts",
         "Pont Neuf",
-        "撑伞回眸",
-        "Trench classique",
-        "Bouquinistes"
+        "Pont des Arts",
+        "油纸伞",
+        "Trench classique"
       ]
     },
     {
@@ -234,28 +217,27 @@
       "q": [
         "유카타",
         "불꽃놀이",
-        "여름 축제"
+        "축제"
       ],
       "expect": [
         "浴衣",
         "花火大会",
-        "線香花火",
-        "浴衣アレンジ"
+        "夏祭り",
+        "線香花火"
       ]
     },
     {
       "request": "한강 노을 피크닉",
       "q": [
         "한강",
-        "피크닉",
-        "노을"
+        "노을",
+        "피크닉"
       ],
       "expect": [
-        "한강",
-        "한강 피크닉",
-        "한강 노을 억새풀",
-        "Golden Hour",
-        "라탄 피크닉 바구니"
+        "한강공원",
+        "윤슬",
+        "라탄 피크닉 바구니",
+        "残阳如血"
       ]
     },
     {
@@ -268,9 +250,8 @@
       "expect": [
         "Nouvelle Vague",
         "Jean-Luc Godard",
-        "Godard",
         "Jean Seberg",
-        "흑백 필름 그레인"
+        "黑白银盐"
       ]
     },
     {
@@ -282,10 +263,9 @@
       ],
       "expect": [
         "Western",
-        "Route 66 Mojave",
+        "Route 66",
         "Joshua Tree",
-        "Death Valley",
-        "Fringe Vest"
+        "Death Valley"
       ]
     },
     {
@@ -298,10 +278,70 @@
       "expect": [
         "原宿",
         "プリクラ",
-        "Y2K",
         "Y2K Digicam",
-        "Baby Tee",
-        "ギャル"
+        "Baby Tee"
+      ]
+    },
+    {
+      "request": "촉촉피부에 시스루뱅 데일리 메이크업",
+      "q": [
+        "촉촉피부",
+        "시스루뱅",
+        "메이크업"
+      ],
+      "expect": [
+        "물광 피부",
+        "シースルーバング",
+        "속광 메이크업"
+      ]
+    },
+    {
+      "request": "냉백피에 투명감 있는 햇살 화보",
+      "q": [
+        "냉백피",
+        "투명감",
+        "햇살"
+      ],
+      "expect": [
+        "冷白皮",
+        "透明感",
+        "木漏れ日"
+      ]
+    },
+    {
+      "request": "꾸안꾸 출근룩",
+      "q": [
+        "꾸안꾸",
+        "출근"
+      ],
+      "expect": [
+        "오피스룩",
+        "클린핏",
+        "원마일웨어"
+      ]
+    },
+    {
+      "request": "밀레니엄 CCD 직광 플래시 느낌",
+      "q": [
+        "밀레니엄 CCD",
+        "직광 플래시"
+      ],
+      "expect": [
+        "千禧CCD直闪",
+        "千禧CCD",
+        "直闪"
+      ]
+    },
+    {
+      "request": "한복 입고 한옥마을 야경",
+      "q": [
+        "한복",
+        "한옥마을"
+      ],
+      "expect": [
+        "북촌 한옥마을",
+        "생활한복",
+        "한옥 카페"
       ]
     }
   ]

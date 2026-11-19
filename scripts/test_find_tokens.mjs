@@ -29,11 +29,11 @@ for (const { slug, rows } of loadAll()) {
 // Hangul transliterations and other aliases find the original-language token.
 const aliasCases = [
   ['신중식', '新中式'], ['코모레비', '木漏れ日'], ['자판기', '自販機'], ['왕가위', '王家卫'],
-  ['프리쿠라', 'プリクラ'], ['유카타', '浴衣'], ['고다르', 'Godard'], ['치파오', '旗袍'],
+  ['프리쿠라', 'プリクラ'], ['유카타', '浴衣'], ['한복', '한복'], ['냉백피', '冷白皮'], ['투명감', '透明感'], ['시오케이', '塩系'], ['고다르', 'Jean-Luc Godard'], ['치파오', '旗袍'],
 ];
 for (const [query, token] of aliasCases) assert.ok(tokensOf([query]).includes(token), `${query} -> ${token}`);
-// Spacing, hyphen and middle-dot variants match: the query without the space finds the spaced token.
-for (const [query, token] of [['시스루뱅', '시스루 뱅'], ['시스루 뱅', '시스루 뱅'], ['seethroughbangs', 'See-Through Bangs']]) {
+// Spacing, hyphen and middle-dot variants match: the spaced query finds the unspaced token, and an unspaced query finds the hyphenated alias.
+for (const [query, token] of [['시스루 뱅', '시스루뱅'], ['시스루뱅', 'see-through bangs'], ['seethroughbangs', 'see-through bangs']]) {
   const found = search({ terms: [query] }).flatMap((l) => l.matches.flatMap((m) => [m.token, ...m.aliases]));
   assert.ok(found.includes(token), `${query} -> ${token}`);
 }
@@ -75,7 +75,7 @@ assert.equal(run(['--q', 'x', '--culture', 'ZZ']).status, 2);
 assert.equal(run([]).status, 2);
 
 // --random: an injected picker makes the draw deterministic (index 0 each time: first match, then the last one).
-const results = search({ terms: ['카페'], layers: ['scene', 'expression'], culture: 'KR' });
+const results = search({ terms: ['고요'], layers: ['scene', 'expression'], culture: 'KR' });
 const drawn = drawRandom(results, 2, () => 0);
 for (let i = 0; i < results.length; i++) {
   const m = results[i].matches;
@@ -83,7 +83,7 @@ for (let i = 0; i < results.length; i++) {
   assert.deepEqual(drawn[i].matches.map((x) => x.token), [m[0].token, m.at(-1).token]);
 }
 assert.deepEqual(drawRandom(search({ terms: [nonsense], layers: ['scene'] }), 2, () => 0)[0].matches, []);
-out = run(['--q', '카페', '--layers', 'scene,expression', '--random', '2', '--json']);
+out = run(['--q', '고요', '--layers', 'scene,expression', '--random', '2', '--json']);
 for (const rows of Object.values(JSON.parse(out.stdout).layers)) assert.equal(rows.length, 2);
 
 // The CLI runs through a symlink (installs can sit behind one).
@@ -101,6 +101,7 @@ try {
 // Recall fixture: Korean requests, their query terms, and tokens that must come back.
 const fx = JSON.parse(fs.readFileSync(path.join(scripts, 'fixtures', 'lexicon_recall.json'), 'utf8'));
 assert.ok(fx.cases.length >= 20);
+for (const c of fx.cases) for (const t of c.expect) assert.ok(!c.q.includes(t), `identity expectation: ${c.request} -> ${t}`);
 const lexiconTokens = new Set(loadAll().flatMap((l) => l.rows.map((r) => r.token)));
 const misses = [];
 let sum = 0;

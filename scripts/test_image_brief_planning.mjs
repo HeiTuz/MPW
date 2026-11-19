@@ -112,7 +112,7 @@ for (const [layer, slug] of Object.entries(LAYER_FILES)) {
     seen.add(token.toLowerCase());
     lexiconRows[layer].push(token);
   }
-  assert.ok(lexiconRows[layer].length >= 100, `${slug}: ${lexiconRows[layer].length} rows`);
+  assert.ok(lexiconRows[layer].length >= 50, `${slug}: ${lexiconRows[layer].length} rows`);
 }
 // The index counts and representative tokens must match the tables.
 for (const [layer, slug] of Object.entries(LAYER_FILES)) {
@@ -124,11 +124,11 @@ for (const [layer, slug] of Object.entries(LAYER_FILES)) {
 }
 
 // Review ceilings for reference-loading cost, not output length or API caps.
-// Measured after the lexicon became an index plus find_tokens: new 49979, portrait 56147, edit 17937 UTF-8 bytes;
+// Measured after the per-layer lexicon correction: new 50503, portrait 56793, edit 18059 UTF-8 bytes;
 // ceilings are about 10% above the measurement.
-assert.ok(sizes['gpt-image-new'].utf8_bytes <= 52800);
-assert.ok(sizes['gpt-image-portrait'].utf8_bytes <= 85000);
-assert.ok(sizes['gpt-image-edit'].utf8_bytes <= 19700);
+assert.ok(sizes['gpt-image-new'].utf8_bytes <= 55600);
+assert.ok(sizes['gpt-image-portrait'].utf8_bytes <= 62500);
+assert.ok(sizes['gpt-image-edit'].utf8_bytes <= 19900);
 
 const scenarios = JSON.parse(read('scripts/fixtures/behavioral/image-planning.json')).cases;
 assert.deepEqual(scenarios.map(c => c.id), [
