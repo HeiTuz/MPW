@@ -4,7 +4,7 @@
 
 공개 인물 프롬프트 모음 1,823건을 검수해 뽑은 작성 패턴이며 생성 품질 실측이 아니다. 원문 문장을 템플릿으로 복사하지 않는다.
 
-인물 시리즈의 지정 축을 비교하거나 프리셋을 조합해 달라는 요청에는 [portrait-variations.md](portrait-variations.md)를 읽는다.
+인물 시리즈의 지정 축 비교나 프리셋 조합, 명시적 랜덤 요청에는 [portrait-variations.md](portrait-variations.md)를 읽는다.
 
 ## 인물 설정은 요청에서 온다
 

@@ -12,11 +12,11 @@ function textFor(...targets) {
   return result.text;
 }
 
-assert.match(textFor(...BUNDLES.map), /지정한 축의 비교 변주나 프리셋 조합.*portrait-variations\.md/);
-assert.match(textFor(...BUNDLES['gpt-image-portrait']), /지정 축을 비교하거나 프리셋을 조합해 달라는 요청.*portrait-variations\.md/);
+assert.match(textFor(...BUNDLES.map), /지정 축 비교·프리셋 조합 또는 명시적 인물·패션 랜덤 요청.*portrait-variations\.md/);
+assert.match(textFor(...BUNDLES['gpt-image-portrait']), /지정 축 비교나 프리셋 조합, 명시적 랜덤 요청.*portrait-variations\.md/);
 for (const route of ['gpt-image-new', 'gpt-image-portrait', 'gpt-image-edit', 'video']) {
   assert.ok(!BUNDLES[route].some(target => target.startsWith(variationPath)), route);
-  assert.doesNotMatch(textFor(...BUNDLES[route]), /# 인물 시리즈의 축별 변주/, route);
+  assert.doesNotMatch(textFor(...BUNDLES[route]), /# 인물 시리즈의 축별 변주|draw_portrait_options\.mjs/, route);
 }
 
 const guidance = textFor(variationPath);
