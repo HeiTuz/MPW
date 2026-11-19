@@ -106,7 +106,7 @@ class DoctrineRunnerTests(unittest.TestCase):
 
     def test_legacy_opt_in_runs_each_diagnostic_and_preserves_findings(self) -> None:
         with tempfile.TemporaryDirectory() as directory:
-            temp = Path(directory)
+            temp = Path(directory).resolve()  # main() resolves --canonical-root; /var may symlink to /private/var
             state = temp / "state.json"
             roots = {"image": temp / "garden"}
             out = io.StringIO()

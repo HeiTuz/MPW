@@ -142,6 +142,7 @@ export function main(args = process.argv.slice(2)) {
   console.log(`Exported ${manifest.files.length} canonical sources; ${manifest.handoff.bytes} bytes. Host: NOT RUN.`);
 }
 
-if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
+// import.meta.url is the physical path; argv[1] keeps symlinks (e.g. macOS /var -> /private/var).
+if (process.argv[1] && fs.realpathSync(process.argv[1]) === fs.realpathSync(fileURLToPath(import.meta.url))) {
   try { main(); } catch (error) { console.error('export_grok_bot: ' + error.message); process.exitCode = 1; }
 }

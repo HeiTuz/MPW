@@ -148,7 +148,8 @@ try {
   check('actual npm package exports the same handoff outside the checkout', () => {
     const packed = spawnSync('npm', ['pack', '--ignore-scripts', '--pack-destination', temp, '--json'], { cwd: root, encoding: 'utf8', env: { ...process.env, npm_config_cache: path.join(temp, 'npm-cache') } });
     assert.equal(packed.status, 0, packed.stderr);
-    const archive = JSON.parse(packed.stdout)[0].filename;
+    const manifests = JSON.parse(packed.stdout);
+    const archive = (Array.isArray(manifests) ? manifests[0] : Object.values(manifests)[0]).filename;
     const unpacked = path.join(temp, 'unpacked');
     fs.mkdirSync(unpacked);
     const tar = spawnSync('tar', ['-xzf', path.join(temp, archive), '-C', unpacked], { encoding: 'utf8' });
