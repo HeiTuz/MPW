@@ -28,9 +28,9 @@ import { fileURLToPath } from "node:url";
 const skillRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 
 export const BUNDLES = {
-  // 대상 미정·GPT Image 새 이미지. 작성 규칙은 image-brief.md(§1~§7·§9·§10)와 층별 사전의 공통 층. 도해·슬라이드·UI·만화·로고는 -structured.
-  "gpt-image-new": ["references/image/surfaces.md#0", "references/image/image-brief.md#1,2,3,4,5,6,7,9,10", "references/image/layer-lexicon.md#사용법,Optics,Scene,Light"],
-  "gpt-image-new-structured": ["references/image/surfaces.md#0", "references/image/image-brief.md#1,2,3,4,5,6,7,9,10", "references/image/layer-lexicon.md#사용법,Optics,Scene,Light", "references/image/surface-contracts.md#3.4"],
+  // 대상 미정·GPT Image 새 이미지. 작성 규칙은 image-brief.md(§1~§7·§9·§10)와 층별 사전 색인. 도해·슬라이드·UI·만화·로고는 -structured.
+  "gpt-image-new": ["references/image/surfaces.md#0", "references/image/image-brief.md#1,2,3,4,5,6,7,9,10", "references/image/layer-lexicon.md"],
+  "gpt-image-new-structured": ["references/image/surfaces.md#0", "references/image/image-brief.md#1,2,3,4,5,6,7,9,10", "references/image/layer-lexicon.md", "references/image/surface-contracts.md#3.4"],
   // 대상 미정·GPT Image 인물·셀피·패션 화보 새 이미지. 인물 층 사전 전체를 읽는다.
   "gpt-image-portrait": [
     "references/image/surfaces.md#0",

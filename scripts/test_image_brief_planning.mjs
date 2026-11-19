@@ -83,14 +83,44 @@ for (const text of examples) {
 }
 assert.ok(examples.some(t => /^The person in the attached image\b/.test(t)), 'one example shows the model-identity case');
 
-// Lexicon: one section per layer, 12-25 table rows each (Person excepted), known language codes.
-const lexicon = read('references/image/layer-lexicon.md');
-for (const name of ['Person', 'Optics', 'Pose', 'Outfit', 'Legwear', 'Style', 'Hair and makeup', 'Expression', 'Props and nails', 'Scene', 'Light']) {
-  const r = extractSection(lexicon, name);
-  assert.equal(r.error, undefined, `layer-lexicon section ${name}`);
-  const rows = r.body.split('\n').filter(line => /^\| /.test(line) && !/^\| (토큰|---)/.test(line));
-  if (name !== 'Person') assert.ok(rows.length >= 12 && rows.length <= 25, `${name}: ${rows.length} rows`);
-  for (const row of rows) assert.match(row.split('|')[2].trim(), /^(ko|zh|ja|en)$/, `${name}: language column in ${row.slice(0, 40)}`);
+// Lexicon: per-layer tables (references/image/lexicon/*.md), one row per token, plus the small index.
+const LAYER_FILES = {
+  Optics: 'optics', Light: 'light', Pose: 'pose', Outfit: 'outfit', Legwear: 'legwear', Style: 'style',
+  'Hair and makeup': 'hair-makeup', Expression: 'expression', 'Props and nails': 'props-nails', Scene: 'scene',
+};
+const splitRow = line => line.replace(/^\| | \|$/g, '').split(/(?<!\\) \| /);
+const index = read('references/image/layer-lexicon.md');
+assert.ok(Buffer.byteLength(index) <= 10240, `lexicon index is ${Buffer.byteLength(index)} bytes`);
+const lexiconRows = {};
+for (const [layer, slug] of Object.entries(LAYER_FILES)) {
+  const text = read(`references/image/lexicon/${slug}.md`);
+  const seen = new Set();
+  lexiconRows[layer] = [];
+  let section = null;
+  for (const line of text.split('\n')) {
+    if (/^## /.test(line)) { section = line.slice(3).trim(); assert.ok(['KR', 'CN', 'JP', 'US', 'FR'].includes(section), `${slug}: culture section ${section}`); continue; }
+    if (!/^\| /.test(line) || /^\| (토큰|---)/.test(line)) continue;
+    assert.ok(section, `${slug}: row before a culture section`);
+    const cells = splitRow(line);
+    assert.equal(cells.length, 6, `${slug}: 6 columns in ${line.slice(0, 40)}`);
+    const [token, , culture, , looks, kind] = cells;
+    assert.ok(token && !/[.。?？]$/.test(token), `${slug}: token ${token}`);
+    assert.ok(culture.split(', ').every(c => ['KR', 'CN', 'JP', 'US', 'FR'].includes(c)) && culture.split(', ').includes(section), `${slug}: culture ${culture} in ${section}`);
+    assert.ok(looks.length >= 12, `${slug}: looks column for ${token}`);
+    assert.match(kind, /^(look|place|item|gear|brand|person-style)$/, `${slug}: kind for ${token}`);
+    assert.ok(!seen.has(token.toLowerCase()), `${slug}: duplicate token ${token}`);
+    seen.add(token.toLowerCase());
+    lexiconRows[layer].push(token);
+  }
+  assert.ok(lexiconRows[layer].length >= 100, `${slug}: ${lexiconRows[layer].length} rows`);
+}
+// The index counts and representative tokens must match the tables.
+for (const [layer, slug] of Object.entries(LAYER_FILES)) {
+  assert.ok(new RegExp(`\\| ${layer} \\| \\[lexicon/${slug}\\.md\\]\\(lexicon/${slug}\\.md\\) \\| ${lexiconRows[layer].length} \\|`).test(index), `index row count for ${layer}`);
+  const part = index.split(`### ${layer}\n`)[1]?.split('\n###')[0] ?? '';
+  const featured = part.split('\n').filter(l => l.includes(' — ')).map(l => l.split(' — ')[0]);
+  assert.ok(featured.length >= 10, `index featured tokens for ${layer}`);
+  for (const token of featured) assert.ok(lexiconRows[layer].includes(token), `index token ${token} is in ${slug}.md`);
 }
 
 // Review ceilings for reference-loading cost, not output length or API caps.

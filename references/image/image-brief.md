@@ -34,7 +34,7 @@
 - 뼈대는 영어다. 위치, 수량, 방향, 관계, 빛, 크기는 영어 문장으로 쓴다.
 - 한국어·중국어·일본어 단어는 그 문화권의 룩을 한 단어로 정확히 가리킬 때만 토큰 자리에 원어 표기 그대로 쓴다(꾸안꾸, 촉촉피부, 시스루뱅, 冷白皮, 千禧CCD直闪, 新中式, 木漏れ日, 透明感). 영어로 옮기면 길어지거나 흐려지는 자리다.
 - 토큰 뒤 문장은 번역이 아니라 그 토큰이 화면에 만드는 결과다.
-- 쓸 수 있는 원어 토큰은 [layer-lexicon.md](layer-lexicon.md)에 있는 것과, 그 문화권에서 그 뜻으로 실제로 쓰인다고 확실히 아는 것뿐이다. 뜻을 모르거나 실제로 쓰이는지 모르면 지어내지 않고 영어 토큰과 영어 문장으로 쓴다.
+- 쓸 수 있는 원어 토큰은 [layer-lexicon.md](layer-lexicon.md)가 가리키는 층별 표(`lexicon/`)에 있는 것과, 그 문화권에서 그 뜻으로 실제로 쓰인다고 확실히 아는 것뿐이다. 뜻을 모르거나 실제로 쓰이는지 모르면 지어내지 않고 영어 토큰과 영어 문장으로 쓴다.
 - 사용자가 한글 음차로 말해도 사전의 원어 표기로 쓴다: 신중식 → 新中式, 코모레비 → 木漏れ日, 시오케이 → 塩系. 사전에 없고 뜻도 모르면 영어로 풀고, 어떻게 풀었는지 블록 밖에 한 줄로 알린다.
 - 사용자가 준 룩 이름은 토큰 자리에 그대로 둔다. 그냥 설명하는 말(그림자 부드럽게, 물결 그림자)은 영어 토큰으로 옮기고 문장으로 푼다.
 - 쓰지 않는 경우: 일반 명사를 외국어로 바꾸기(自動販売機, 窓), 같은 뜻을 두 언어로 한 번 더, 여러 언어를 고루 채우려는 것, 문화권과 상관없는 장면(흰 배경 제품, 해변의 강아지)에 억지로 넣기.
@@ -107,7 +107,7 @@
 ### 비워 둔 층
 
 - 비워 둔 층은 이미지의 목적과 이미 정해진 층에 맞게 구체적으로 지어 채운다. 화면에 보이는 층은 비워 두지 않는다.
-- 고르는 순서: ① 사용자가 준 룩·장소·문화권과 맞는 것 ② [layer-lexicon.md](layer-lexicon.md)의 그 층 행 ③ 그 장면에서 자연스러운 것.
+- 고르는 순서: ① 사용자가 준 룩·장소·문화권과 맞는 것 ② [layer-lexicon.md](layer-lexicon.md)가 가리키는 그 층 표의 행 ③ 그 장면에서 자연스러운 것.
 - 층끼리 맞춘다. 밤이면 Light와 Optics가 같은 밤이고, 비가 오면 Outfit의 원단이 젖고, Style의 팔레트가 Outfit과 Scene의 색과 같다.
 - 사용자 말과 지어 채운 것이 부딪치면 사용자 말이 이긴다.
 
@@ -170,7 +170,7 @@
    `The person in the attached image, taking only their face and overall impression from it (not its pose, head angle, gaze, expression, hair, makeup, jewelry, clothing, background or lighting), <무엇을, 어떤 사진으로>.`
 2. 둘째 층은 `## Identity Reference`다. 사용자가 준 아이덴티티 문단(저장된 문단)이 있으면 글자 하나 바꾸지 않고 그대로 넣는다. 없으면 이 문단을 쓴다.
    `The attached image is the identity reference for this person. Keep their facial identity so they read as the same person in a new photograph; their hair, makeup, expression, pose, clothing, light and camera come from the layers below.`
-3. `## Person` 층은 쓰지 않는다. 얼굴형, 골격, 눈·코·입의 모양, 쌍꺼풀, 피부색, 주근깨, 나이, 민족, 체형도 어느 층에도 쓰지 않는다. 사전의 Person 행은 이 경우 모두 쓰지 않는다.
+3. `## Person` 층은 쓰지 않는다. 얼굴형, 골격, 눈·코·입의 모양, 쌍꺼풀, 피부색, 주근깨, 나이, 민족, 체형도 어느 층에도 쓰지 않는다.
 4. Hair and makeup과 Expression은 다른 층과 똑같이 2~5줄로 풍부하게 쓴다. 경계: 화장과 스타일링으로 만든 것(블러셔, 립 색과 마감, 아이라인, 눈 밑 펄 하이라이트, 눈썹을 채운 모양, 헤어 커트와 색)은 쓰고, 타고난 생김새(애교살의 볼록함 자체, 입술 두께, 눈매)는 쓰지 않는다. 눈빛 반사(캐치라이트)는 Light에 쓴다.
 5. 고개 각도와 시선은 첨부 사진과 다르게 정해 Expression이나 Pose에 쓴다.
 6. 나머지 층(Outfit, Legwear, Props and nails, Pose, Style, Scene, Light, Optics, Camera)은 §3·§4대로 쓴다.
