@@ -2,29 +2,47 @@ A color studio headshot of one adult professional for a company team page, frame
 
 ## Person
 default adult — A 22-year-old adult East Asian woman with a small face, clean defined bone structure and a crisp jawline.
-build — A slender build with level shoulders and a long neck.
+build — A slender build with level shoulders and a long neck; she sits tall without looking stiff.
 skin tone — Light skin with a cool undertone.
 
 ## Hair and makeup
-neat hair — Dark hair falls straight to the shoulders with a soft side part, and the ends sit smoothly without stray strands.
-촉촉피부 — A thin dewy base leaves a soft sheen on the cheekbones and nose bridge while fine skin texture still shows, lightly retouched.
-natural color — A sheer rose lip tint and a soft peach blush fading into the cheeks, with groomed natural brows.
+neat hair — Dark hair falls straight to the shoulders with a soft side part, and the ends sit smoothly against the shoulders without stray strands.
+tucked side — The hair on the left side is tucked behind the ear, so the earlobe, a small pearl stud and the line of the jaw are clear.
+촉촉피부 — A thin dewy base leaves a soft sheen on the cheekbones and the bridge of the nose while fine skin texture still shows, lightly retouched so nothing looks plastic.
+natural color — A sheer rose lip tint with a soft edge and a soft peach blush that fades into the cheeks with no visible border; the brows are groomed along their natural line.
 
 ## Expression
-closed smile — A small closed-mouth smile with relaxed eyelids and brows, looking directly into the lens.
-catchlight — Each eye holds one small bright catchlight from the main light.
+closed smile — A small closed-mouth smile: the corners of the lips lift slightly, the lids stay relaxed and the brows level, so the face reads friendly and calm.
+direct gaze — Her eyes look straight into the lens, and the lids sit just below the top of the irises.
+catchlight — Each eye holds one small bright catchlight from the main light, placed at the upper left of the pupil.
 
 ## Outfit
-plain clothing — A plain muted gray-blue knit top with a clean round neckline and no logos or patterns, so the face leads.
+knit top — A plain muted gray-blue fine-gauge knit top with a clean round neckline that sits flat against the collarbones; the knit has a soft matte surface and shows only small, even ripples at the shoulders.
+no marks — The top has no logos or patterns, so the face leads and the color stays quiet against the warm backdrop.
+jewelry — Small pearl stud earrings are the only accessory, each with one soft highlight on its curve.
 
 ## Pose
-quarter turn — The shoulders turn a quarter away from the camera and the face returns toward the lens, with the shoulders relaxed.
+quarter turn — The shoulders turn a quarter away from the camera and the face returns toward the lens, with the shoulders relaxed and level.
+chin — The chin is lowered a few degrees and the head tilts very slightly toward the lower shoulder, which softens the jawline.
+
+## Style
+corporate clean — A tidy, current professional look: a restrained palette, smooth lines and nothing that dates the photo.
+palette — Warm gray, muted blue-gray, soft rose and the dark brown of the hair, all low in saturation.
+
+## Scene
+paper backdrop — A seamless warm gray paper backdrop fills the frame behind her, smooth and free of creases.
+backdrop falloff — The paper falls off a little darker behind the shoulders and stays lighter behind the head, so her outline separates cleanly.
 
 ## Light
-key light — One large soft light from camera left and slightly above casts a gentle shadow across the far cheek.
-fill — A dim fill keeps the shadow side readable, and the shadow edge stays soft.
-backdrop falloff — The warm gray paper backdrop falls off a little darker behind the shoulders, so the outline separates cleanly.
+key light — One large soft light from camera left and slightly above lights the near side of the face and casts a gentle shadow across the far cheek.
+fill — A dim fill from camera right keeps the shadow side readable, and the shadow edge stays soft and slow.
+hair light — A small light from behind and above on the right puts a thin bright edge along the hair and the shoulder.
+
+## Optics
+clean digital color — Natural, accurate color with gently lifted shadows; the knit stays blue-gray and the skin keeps its cool, even tone.
+highlights — Highlights on the forehead and the nose bridge roll off smoothly instead of clipping to white.
+sharpness — Modern digital sharpness with a clean, noise-free backdrop and no visible grain.
 
 ## Camera
-head and shoulders — The camera is at eye level, with the face slightly left of center and a little space above the head.
-focus — The eyes are sharp, and the shoulders soften very slightly.
+head and shoulders — The camera is at eye level about two meters away with a short telephoto lens, so the face is not stretched; the face sits slightly left of center with a little space above the head.
+focus — The eyes are sharp, the ears and the shoulders soften very slightly, and the backdrop is smooth.

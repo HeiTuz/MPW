@@ -32,6 +32,11 @@ const aliasCases = [
   ['프리쿠라', 'プリクラ'], ['유카타', '浴衣'], ['고다르', 'Godard'], ['치파오', '旗袍'],
 ];
 for (const [query, token] of aliasCases) assert.ok(tokensOf([query]).includes(token), `${query} -> ${token}`);
+// Spacing, hyphen and middle-dot variants match: the query without the space finds the spaced token.
+for (const [query, token] of [['시스루뱅', '시스루 뱅'], ['시스루 뱅', '시스루 뱅'], ['seethroughbangs', 'See-Through Bangs']]) {
+  const found = search({ terms: [query] }).flatMap((l) => l.matches.flatMap((m) => [m.token, ...m.aliases]));
+  assert.ok(found.includes(token), `${query} -> ${token}`);
+}
 // Width and case do not matter.
 assert.ok(tokensOf(['ＣＣＤ 카메라']).includes('CCD 카메라') && tokensOf(['kodak portra 400']).includes('Kodak Portra 400'));
 

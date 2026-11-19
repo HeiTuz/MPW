@@ -20,7 +20,7 @@
    - **실행 표면(S1/S2/S3)과 길이·비율·해상도·파라미터 소관: `references/image/surfaces.md`** — 다른 파일의 사이즈·길이 문장이 이 파일과 충돌하면 이 파일이 이긴다
    - 목적축 → 모델 후보 라우팅(플랫폼 로스터 dated snapshot): `references/image/model-routing.md`
    - 이미지 조립 원칙: `references/image/compiler.md`
-   - 이미지 자연어 작성 규칙(층 모양·채우기·기본 인물·모델 아이덴티티·편집·예시): `references/image/image-brief.md`(층별 토큰 사전: 색인 `references/image/layer-lexicon.md`, 층별 표 `references/image/lexicon/`, 재생성 `scripts/build_lexicon.mjs`). 인물 설정의 정본은 image-brief §5, 이미지 언어 세부의 정본은 image-brief §2, 노출은 editorial-fashion §노출 수위. common §프롬프트 언어 결정은 요약+포인터다.
+   - 이미지 자연어 작성 규칙(층 모양·채우기·기본 인물·모델 아이덴티티·편집·예시): `references/image/image-brief.md`(층별 토큰 사전: 색인 `references/image/layer-lexicon.md`, 층별 표 `references/image/lexicon/`가 사전의 정본이다. 표를 직접 고치고 추출·재생성 도구는 없다. 검색은 `scripts/find_tokens.mjs`). 인물 설정의 정본은 image-brief §5, 이미지 언어 세부의 정본은 image-brief §2, 노출은 editorial-fashion §노출 수위. common §프롬프트 언어 결정은 요약+포인터다.
    - 텍스트·구조 이미지 결정: `references/image/text-structure.md`
    - 레인별 게이트(필수 요소·네거티브 정책): `references/image/lanes.md` §레인 게이트 카드
    - 이미지 슬롯 기본값: `references/image/lanes.md` §이미지 슬롯 기본값

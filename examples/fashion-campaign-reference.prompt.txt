@@ -1,32 +1,62 @@
 The person in the attached image, taking only her face and overall impression from it (not its pose, head angle, gaze, expression, hair, makeup, jewelry, clothing, background or lighting), photographed in a vertical fashion campaign photo for an autumn trench coat.
 
 ## Identity Reference
-The attached image is the identity reference for this person. Keep her facial identity so she reads as the same person in a new photograph; her hair, makeup, expression, pose, clothing, light and camera come from the layers below. Image 1 is the model and image 2 is the trench coat.
+The attached image is the identity reference for this person. Keep her facial identity so she reads as the same person in a new photograph; her hair, makeup, expression, pose, clothing, light and camera come from the layers below.
+
+## Attachments
+image 1 — Image 1 is the model photo and gives only the face.
+image 2 — Image 2 is the trench coat product photo and gives the coat's color, cut and details.
 
 ## Hair and makeup
-loose updo — Her hair is pulled back loosely, with a few soft strands falling at the temples.
-natural makeup — A sheer base with a soft matte finish and a muted rose lip color.
+loose updo — Her dark hair is pulled back loosely into a low twist, with a few soft strands falling at the temples and one longer strand moving in the wind.
+natural makeup — A sheer, soft matte base with a faint satin glow only on the cheekbones, and a muted rose lip color with a soft powdery edge.
+brows and eyes — The brows are brushed up and filled in a soft brown-gray; a thin brown liner and a single coat of mascara define the lashes without making the eyes heavy.
+blush — A diffuse dusty-rose blush sits high on the cheeks and fades out with no visible edge.
 
 ## Expression
-calm gaze — A calm expression with relaxed eyelids and a closed mouth, her gaze just past the lens.
+calm gaze — A calm expression with relaxed eyelids and a closed mouth, her gaze just past the lens to the left.
+head angle — The head turns slightly toward her shoulder with the chin level, an angle that differs from the attached photo.
 
 ## Outfit
 trench coat — The trench coat from image 2, belted and open at the collar, in cotton gabardine with a fine diagonal twill and a soft matte surface.
-under layers — A cream knit under the coat and dark straight trousers.
+under layers — A cream fine-gauge knit under the coat with a plain neckline, and dark straight wool trousers that fall to the ankle.
 coat details — The coat keeps its color, double-breasted button layout, epaulettes, storm flap, belt buckle and cuff straps exactly as in image 2.
+shoes and bag — Black leather loafers with a low heel, and a small structured black leather bag carried in the left hand.
+
+## Legwear
+ankle socks — Thin black cotton socks show for a few centimeters between the trouser hem and the loafers, with a soft matte weave and no pattern.
+
+## Props and nails
+bag — The black bag has a smooth leather surface with a single soft highlight along its top edge; its handle sits in the left hand.
+short nails — Short rounded nails in a soft sheer beige gloss that catches one small highlight each.
 
 ## Pose
 mid-stride — She walks across the plaza mid-stride, with the back hem and belt ends swinging with the step so the coat's length and flare read clearly.
+arms — The right arm swings loose, with the hand half closed, and the left carries the bag close to the hip.
+posture — The shoulders stay level and the chest open, and the front foot lands heel first with the toes pointing slightly out.
+
+## Style
+quiet luxury — An understated autumn look: structured outerwear, clean tonal layers and plain pieces that read as well made rather than loud.
+palette — Stone beige, cream, charcoal and black, warmed only by the late sun on the stone.
 
 ## Scene
-stone plaza — A pale stone plaza with a smooth honed surface that stretches to the edges of the frame.
+stone plaza — A pale stone plaza with a smooth honed surface stretches to the edges of the frame, with fine joint lines and a few fallen leaves.
+background — A low, plain cream building with tall windows stands far back on the left and stays pale and out of focus.
 
 ## Light
-late afternoon sun — Late-afternoon sun low from camera right lays long shadows on the stone and rakes across the twill.
-open shade — Open shade keeps her face evenly lit.
+late afternoon sun — Late-afternoon sun low from camera right lays long shadows on the stone and rakes across the twill so the diagonal weave shows.
+open shade — Open shade from her own body keeps her face evenly lit and the shadow side of the coat readable.
+bounce — Warm light bounced from the stone fills the underside of the coat and the lower edge of the belt.
+
+## Optics
+clean digital color — Natural color with gently lifted shadows; the coat stays a true stone beige and highlights on the twill roll off smoothly instead of clipping.
+white balance — A slightly warm daylight white balance keeps the cream knit neutral and the stone a soft pale gray.
+sharpness — Modern crisp rendering with a smooth, noise-free sky and plaza and no visible grain.
 
 ## Camera
-full length — A full-length vertical frame shot from hip height, with the whole coat visible.
+full length — A full-length vertical frame shot from hip height, with the whole coat visible from the shoulders to the hem and her shoes inside the frame.
+lens — A moderate telephoto view about five meters away keeps the proportions natural and the plaza lines straight.
+focus — She is sharp from hair to loafers, and the building far behind softens gradually.
 
 ## Keep
 coat — The coat from image 2 stays unchanged in color, button layout and topstitching, and no logos or text appear that are not on the coat in image 2.

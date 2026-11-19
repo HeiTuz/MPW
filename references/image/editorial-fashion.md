@@ -22,7 +22,7 @@
 
 ## 인물 스틸 기본
 
-라벨 칸을 채우지 말고, 결과를 가르는 절만 문장으로 적는다. 사람·옷·소품·자세·배경·빛·시선·마감을 한 화면의 인과로 잇는다. 자세는 균형과 실루엣이 읽히게 쓰고, 방향이 중요하면 뷰어 기준 `camera left`/`camera right`를 쓴다.
+GPT Image 새 이미지가 아닌 인물 문안은 라벨 칸을 채우지 말고, 결과를 가르는 절만 문장으로 적는다(GPT Image 새 이미지는 [image-brief.md](image-brief.md) §3의 층을 모두 쓴다). 사람·옷·소품·자세·배경·빛·시선·마감을 한 화면의 인과로 잇는다. 자세는 균형과 실루엣이 읽히게 쓰고, 방향이 중요하면 뷰어 기준 `camera left`/`camera right`를 쓴다.
 
 새 인물 이미지는 [editorial/portrait-brief.md](editorial/portrait-brief.md)의 인물 설정과 참조 분기를 먼저 적용한다. 인물 설정과 모델 아이덴티티는 [image-brief.md](image-brief.md) §5가 정본이다.
 

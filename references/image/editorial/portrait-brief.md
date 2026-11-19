@@ -1,6 +1,6 @@
 # 인물 이미지 브리프
 
-작성 규칙(층 모양·채우기·기본 인물·모델 아이덴티티)은 [../image-brief.md](../image-brief.md)가 정본이다. 이 파일은 참조 분기·장르 결정 축·검수만 다룬다. 우선순위는 [../lanes.md](../lanes.md) §레인 게이트 카드 > [../compiler.md](../compiler.md) §원칙 > [../editorial-fashion.md](../editorial-fashion.md) > 이 파일이며, 원본 편집은 [../surface-contracts.md](../surface-contracts.md) §3.3이 소유한다. 다른 엔진을 지정했으면 인물 설정·참조 분기·검수만 적용하고 형식과 참조 문법은 그 엔진 문서를 따른다.
+작성 규칙(층 모양·채우기·기본 인물·모델 아이덴티티)은 [../image-brief.md](../image-brief.md)가 정본이다. 이 파일은 참조 분기·장르 결정 축·검수만 다룬다. 우선순위는 [../lanes.md](../lanes.md) §레인 게이트 카드 > GPT Image 새 이미지의 [../image-brief.md](../image-brief.md) > [../compiler.md](../compiler.md) §원칙(GPT Image 새 이미지에는 적용하지 않는다) > [../editorial-fashion.md](../editorial-fashion.md) > 이 파일이며, 원본 편집은 [../surface-contracts.md](../surface-contracts.md) §3.3이 소유한다. 다른 엔진을 지정했으면 인물 설정·참조 분기·검수만 적용하고 형식과 참조 문법은 그 엔진 문서를 따른다.
 
 공개 인물 프롬프트 모음 1,823건을 검수해 뽑은 작성 패턴이며 생성 품질 실측이 아니다. 원문 문장을 템플릿으로 복사하지 않는다.
 

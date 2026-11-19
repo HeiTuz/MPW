@@ -147,6 +147,7 @@ function measure(text, result, options) {
   } else if (options.channel === "bounded") {
     layers.push({ kind: "channel", limit: 2000, assumed: false });
   } else if (options.channel === undefined && result.surface === "s3") {
+    // Assumed ChatGPT-web paste cap (surfaces.md §0-1). It applies to every S3 prompt (image, video, text), not only images.
     layers.push({ kind: "channel", limit: 10000, assumed: true });
   }
   if (result.engine === "gpt-image") layers.push({ kind: "engine", limit: 32000, assumed: false });

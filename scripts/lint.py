@@ -916,6 +916,14 @@ def check_example_lengths(filename, text, errors):
             errors.append(f"{filename}: text block #{i} is {actual} chars (> {limit})")
 
 
+def check_examples_dir_lengths(root, errors):
+    """examples/*.prompt.txt are ChatGPT-web paste blocks: same 10000 cap as image-brief.md."""
+    for path in sorted((root / "examples").glob("*.prompt.txt")):
+        actual = measured_len(path.read_text(encoding="utf-8"))
+        if actual > 10000:
+            errors.append(f"examples/{path.name}: {actual} chars (> 10000)")
+
+
 def extract_validator_codes(text):
     return {code for code in VALIDATOR_CODE_RE.findall(text) if code not in HARNESS_CODES}
 
@@ -1107,6 +1115,7 @@ def main():
     # example blocks at or under 2000 characters, except files listed in EXAMPLE_LIMITS
     for f, s in texts.items():
         check_example_lengths(f, s, errors)
+    check_examples_dir_lengths(ROOT, errors)
 
     # no approximate labels
     for f, s in texts.items():

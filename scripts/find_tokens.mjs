@@ -14,6 +14,8 @@ export const CULTURES = ['KR', 'CN', 'JP', 'US', 'FR'];
 const COLS = 6;
 
 const norm = (s) => s.normalize('NFKC').toLowerCase();
+// Spacing variants match too: "시스루뱅" finds "시스루 뱅" (spaces, hyphens and middle dots are dropped on both sides).
+const squash = (s) => norm(s).replace(/[\s\-\u2010-\u2015\u00b7\u30fb]+/g, '');
 const splitRow = (line) => line.replace(/^\| | \|$/g, '').split(/(?<!\\) \| /).map((c) => c.replace(/\\\|/g, '|'));
 const list = (cell) => cell.split(';').map((s) => s.trim()).filter(Boolean);
 
@@ -40,14 +42,16 @@ export const loadAll = (dir = LEXICON_DIR) => SLUGS.map((slug) => loadLayer(slug
 function scoreRow(row, terms) {
   let total = 0;
   for (const q of terms) {
-    const token = norm(row.token);
-    const aliases = row.aliases.map(norm);
+    const sq = squash(q);
+    const token = norm(row.token), sToken = squash(row.token);
+    const aliases = row.aliases.map(norm), sAliases = row.aliases.map(squash);
+    const hit = (plain, squashed, test) => test(plain, q) || (sq && test(squashed, sq));
     let best = 0;
-    if (token === q) best = 100;
-    else if (aliases.includes(q)) best = 90;
-    else if (token.includes(q)) best = 60;
-    else if (aliases.some((a) => a.includes(q))) best = 50;
-    else if (row.tags.some((t) => norm(t).includes(q))) best = 30;
+    if (hit(token, sToken, (a, b) => a === b)) best = 100;
+    else if (aliases.some((a, i) => hit(a, sAliases[i], (x, y) => x === y))) best = 90;
+    else if (hit(token, sToken, (a, b) => a.includes(b))) best = 60;
+    else if (aliases.some((a, i) => hit(a, sAliases[i], (x, y) => x.includes(y)))) best = 50;
+    else if (row.tags.some((t) => hit(norm(t), squash(t), (a, b) => a.includes(b)))) best = 30;
     else if (row.culture.some((c) => c.toLowerCase() === q)) best = 20;
     else if (q.length >= 2 && norm(row.looks).includes(q)) best = 10;
     total += best;

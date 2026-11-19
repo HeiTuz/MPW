@@ -6,28 +6,50 @@ build — A sturdy, slim build with level shoulders, standing relaxed.
 skin tone — Light skin with a warm undertone, slightly reddened across the cheeks from outdoor work.
 
 ## Hair and makeup
-tied hair — Gray-streaked dark hair is tied back loosely at the nape, with a few short strands escaping at the temples.
-bare skin — No visible makeup, so the skin shows fine lines and a natural matte finish with a little sheen at the forehead.
+tied hair — Gray-streaked dark hair is tied back loosely at the nape, with a few short strands escaping at the temples and catching the light.
+bare skin — No visible makeup: the skin shows fine lines at the eyes and a natural matte finish with a little sheen at the forehead.
+brows — The brows are untouched, slightly uneven, dark with a few gray hairs near the tails.
+lips — The lips carry their own color, a dry pale rose with a small crease at the center.
 
 ## Expression
 thoughtful gaze — Her eyes look toward the open greenhouse door with the eyelids relaxed and the brow smooth.
 unposed — Her mouth rests nearly closed and the face stays unposed, as if she did not notice the camera.
+small tension — A faint line between the brows shows she is thinking about something outside the frame.
 
 ## Outfit
 canvas apron — A worn canvas apron shows ordinary soil marks and creases from use, tied over a faded cotton work shirt with the sleeves rolled to the elbows.
+shirt — The faded blue-green cotton shirt has a soft, thinned surface; the collar lies a little open, and the rolled cuffs sit above the elbows in thick, uneven folds.
+pockets — The apron's front pocket holds a folded pair of pruning gloves and the handle of a small trowel, pulling the fabric down on that side.
+
+## Props and nails
+bench hand — The resting hand is broad and capable, with short clean nails, a thin line of soil in the creases of the knuckles and a faint tan line at the wrist.
+watch — A plain steel watch with a scratched crystal sits on the other wrist and catches one small point of light.
 
 ## Pose
 hand on bench — One hand rests on the edge of a waist-high wooden bench, her weight tilted slightly toward it.
-turn — Her shoulders face the plants while her head turns toward the door.
+turn — Her shoulders face the plants while her head turns toward the door, so the neck shows a soft diagonal line.
+stance — The other arm hangs loose at her side with the fingers relaxed, and her weight rests a little more on the right leg.
+
+## Style
+working realism — An unstyled, honest look: clothing chosen for work, aged by use, with nothing arranged for the camera.
+palette — Faded blue-green, earth brown, muted canvas beige and the fresh green of the plants, kept soft and slightly cool.
 
 ## Scene
-tomato rows — Orderly rows of young tomato plants on the bench lead softly into the background.
-glass roof — Damp glass panels and a thin metal frame rise behind her, with a small door open at the far end.
+tomato rows — Orderly rows of young tomato plants on the bench lead softly into the background, each with a thin string trellis and a few yellow flowers.
+glass roof — Damp glass panels and a thin white metal frame rise behind her, with a small door open at the far end.
+bench surface — The wooden bench is gray with old water stains, and small clay pots and a metal watering can sit at its far end.
 
 ## Light
-late afternoon — Low afternoon light passes through damp glass and gives the metal frame soft, gentle reflections.
-face light — The light falls evenly on her face and the resting hand, and the shadows stay soft.
+late afternoon — Low afternoon light passes through damp glass and gives the metal frame soft, gentle reflections; the light is warm yellow and a little hazy from the humid air.
+face light — The light falls evenly on her face and the resting hand from the open door side, and the shadows stay soft and low in contrast.
+leaf glow — The edges of the nearest leaves glow pale green where the light passes through them.
+
+## Optics
+documentary color — Natural, slightly muted color with softly rolled highlights on the wet glass and no hard clipping.
+film-like softness — A gentle, low-contrast rendering like a slow color negative, with fine grain only in the darker shadows under the bench.
+glass haze — A faint veil of haze lifts the blacks slightly in the far background, where the light passes through the damp roof.
 
 ## Camera
-waist-up — The camera is at eye level about two meters away, framing her from the waist up.
+waist-up — The camera is at eye level about two meters away, framing her from the waist up with the open door at the upper right.
+lens — A moderate 50mm view keeps the proportions natural and the bench lines straight.
 focus — Her face and hand are in clear focus, and the leaves behind her soften gradually.
