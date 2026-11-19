@@ -44,6 +44,7 @@ FILES = [
     "references/adapters.md",
     "references/image/surfaces.md",
     "references/image/surface-contracts.md",
+    "references/image/image-brief.md",
     "references/image/model-routing.md",
     "references/image/compiler.md",
     "references/image/text-structure.md",
