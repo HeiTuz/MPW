@@ -19,6 +19,9 @@ for (const route of ['gpt-image-new', 'gpt-image-portrait', 'gpt-image-edit', 'v
   assert.doesNotMatch(textFor(...BUNDLES[route]), /# 인물 시리즈의 축별 변주|draw_portrait_options\.mjs/, route);
 }
 
+// The edit route only points to the random-request section; it must not load the body.
+assert.ok(textFor(...BUNDLES['gpt-image-edit']).includes('editorial/portrait-variations.md'), 'edit route pointer');
+
 const guidance = textFor(variationPath);
 assert.match(guidance, /기준 원문 한 편.*§기준 원문과 누적 수정/);
 assert.match(guidance, /포즈만 바꿀 때는 프레임을 유지.*색감만 바꿀 때는 조명 방향을 유지/);

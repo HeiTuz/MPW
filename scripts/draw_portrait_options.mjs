@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 // Internal authoring helper. Read one JSON request from stdin; emit choices only.
 import { randomInt } from 'node:crypto';
-import { readFileSync } from 'node:fs';
+import { readFileSync, realpathSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -55,7 +55,17 @@ export function drawPortraitOptions(request, pickIndex = randomInt) {
   return { status: 'selected', choices };
 }
 
-if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
+// Installs can sit behind symlinks; compare real paths so the CLI still runs.
+function isMainModule() {
+  if (!process.argv[1]) return false;
+  try {
+    return realpathSync(process.argv[1]) === realpathSync(fileURLToPath(import.meta.url));
+  } catch {
+    return resolve(process.argv[1]) === fileURLToPath(import.meta.url);
+  }
+}
+
+if (isMainModule()) {
   try {
     const result = drawPortraitOptions(JSON.parse(readFileSync(0, 'utf8')));
     console.log(JSON.stringify(result));
