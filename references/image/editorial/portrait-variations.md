@@ -14,9 +14,9 @@
 
 ## 명시적 랜덤 요청
 
-“랜덤 인물 프롬프트 하나”처럼 전반을 맡기면 [image-brief.md](../image-brief.md) §3의 기본 층을 모두 채운다. 인물 자체도 지어 채우는 것이라 Person 층에 성별·성인 나이대·문화권을 정해 쓴다(§5-1). 사용자가 아무것도 정하지 않으면 성별은 여성, 나이는 20~35세 안의 한 값, 문화권은 룩 단서가 가리키는 곳이고 단서가 없으면 동아시아다. “이 조건에서 조명만 랜덤 3개”는 조명만 뽑고 기존 장면·포즈·의상·인물·참조 역할을 각 컷에 유지한다. 한 축을 다시 뽑을 때는 직전 컷의 다른 축을 고정하고 교체할 후보에서 현재 값과 같은 세트의 다른 컷이 이미 쓴 값을 뺀다. 수량이 없으면 하나다. 룩 단서(문화권·장소·시대)가 있는 랜덤은 [image-brief.md](../image-brief.md) §4 '토큰 찾기'의 `--random`으로 층마다 뽑는다. 랜덤을 요청하지 않은 일반 요청과 비교 변주에는 난수 선택을 추가하지 않는다. 랜덤이 아닌 새 이미지 요청에서 맡긴 축은 [image-brief.md](../image-brief.md) §4를 따른다.
+“랜덤 인물 프롬프트 하나”처럼 전반을 맡기면 [image-brief.md](../image-brief.md) §3의 기본 층을 모두 채운다. 인물 자체도 지어 채우는 것이라 `## Identity Reference` 조건절의 인물에 성별·20세 이상의 나이대·문화권을 정해 쓴다([image-brief.md](../image-brief.md) §5). 사용자가 아무것도 정하지 않으면 성별은 여성, 나이는 20~35세 안의 한 값, 문화권은 룩 단서가 가리키는 곳이고 단서가 없으면 동아시아다. “이 조건에서 조명만 랜덤 3개”는 조명만 뽑고 기존 장면·포즈·의상·인물·참조 역할을 각 컷에 유지한다. 한 축을 다시 뽑을 때는 직전 컷의 다른 축을 고정하고 교체할 후보에서 현재 값과 같은 세트의 다른 컷이 이미 쓴 값을 뺀다. 수량이 없으면 하나다. 룩 단서(문화권·장소·시대)가 있는 랜덤은 [image-brief.md](../image-brief.md) §4 '토큰 찾기'의 `--random`으로 층마다 뽑는다. 랜덤을 요청하지 않은 일반 요청과 비교 변주에는 난수 선택을 추가하지 않는다. 랜덤이 아닌 새 이미지 요청에서 맡긴 축은 [image-brief.md](../image-brief.md) §4를 따른다.
 
-각 후보를 요청에 맞게 새로 쓰고, 장면·시간대·광원·포즈의 물리적 적합성과 사용자 제한을 먼저 대조한다. 두 축 이상을 뽑으면 각각을 독립적으로 뽑기보다 함께 쓸 수 있는 조합을 후보로 만든다. 전체를 맡긴 요청도 축을 따로따로 뽑지 않고 먼저 장면 분위기를 하나 정한 뒤 그 안에서 조합 후보를 만든다. 야간 실내라면 작은 램프의 반사광·천장에 튕긴 플래시처럼 가능한 조명을 검토한다. 한낮 햇빛이나 없는 창의 빛을 끼워 넣어 장면을 바꾸지 않는다. 인물과 의상 참조는 위의 보존 규칙을 따른다. 렌더 카피와 언어는 원래 계약을 유지한다. 모든 후보 인물은 성인이다. Person 층에 `adult`와 20세 이상의 나이대(또는 숫자 나이)를 쓰고, 나이를 비우거나 20세 미만으로 쓰지 않는다. 성적 연출 어휘는 후보에 넣지 않고, 로고·상표 글자는 그리지 않는다(브랜드명은 룩을 가리키는 토큰으로 쓸 수 있다). 비교 변주에서는 고정한 인물 층을 컷마다 같은 말로 유지하고, 인물 외모 축은 요청이 없으면 바꾸지 않는다.
+각 후보를 요청에 맞게 새로 쓰고, 장면·시간대·광원·포즈의 물리적 적합성과 사용자 제한을 먼저 대조한다. 두 축 이상을 뽑으면 각각을 독립적으로 뽑기보다 함께 쓸 수 있는 조합을 후보로 만든다. 전체를 맡긴 요청도 축을 따로따로 뽑지 않고 먼저 장면 분위기를 하나 정한 뒤 그 안에서 조합 후보를 만든다. 야간 실내라면 작은 램프의 반사광·천장에 튕긴 플래시처럼 가능한 조명을 검토한다. 한낮 햇빛이나 없는 창의 빛을 끼워 넣어 장면을 바꾸지 않는다. 인물과 의상 참조는 위의 보존 규칙을 따른다. 렌더 카피와 언어는 원래 계약을 유지한다. 지어 채우는 후보 인물은 조건절에 20세 이상의 나이를 쓴다. 로고·상표 글자는 그리지 않는다(브랜드명은 룩을 가리키는 토큰으로 쓸 수 있다). 비교 변주에서는 고정한 인물 층을 컷마다 같은 말로 유지하고, 인물 외모 축은 요청이 없으면 바꾸지 않는다.
 
 - **난수 도구가 있는 경우:** `node scripts/draw_portrait_options.mjs`에 JSON을 표준입력으로 전달한다. `axes`는 허용된 축 이름 배열, `fixed`는 고정 축과 확인된 맥락, `options`는 후보 배열이다. 각 후보의 `changes`는 허용된 축만 모두 담고, `requires`는 있을 때만 해당 후보에 필요한 `fixed`의 값과 같은 문자열을 담는다. 필요하면 `count`를 보낸다. 축 이름(`axes` 항목과 `fixed`·`changes`·`requires`의 키)은 `^[a-z][a-z0-9_-]*$` 형식의 영문 소문자 식별자이고 값만 자유 문자열이다. 내부 표기 예시는 `axes: ["lighting"]`, `fixed: {"place":"indoors","time":"night"}`, `changes: {"lighting":"천장에 튕긴 플래시"}`, `requires: {"place":"indoors"}`다. 축 이름은 바뀌는 시각 정보의 이름으로 짓는다(예: `lighting`, `optics`, `color_grade`, `pose`, `framing`, `expression`, `wardrobe`, `legwear`, `hair_makeup`, `props`, `nails`, `setting`). 목록에 없는 축도 같은 형식으로 만든다. 원본 문장 전체나 정확 카피는 도구로 옮길 필요가 없다.
 - **결과 적용:** 도구는 범위와 맥락이 맞는 후보에서 같은 문자열 조합을 한 번만 뽑는다. 같은 뜻의 후보는 도구 호출 전에 하나로 합친다. `status`가 `selected`일 때 `choices`의 선택만 문안에 적용한다. `locked_axes`, `no_eligible_options`, `insufficient_options`면 고정 조건을 풀거나 임의 후보로 채우지 않는다. 막힌 이유나 가능한 수를 밝히고 필요하면 사용자가 선택하게 한다.
@@ -26,17 +26,15 @@
 
 ## 작성 예시
 
-[common.md](../../templates/common.md) §프롬프트 언어 결정에 따른다. 아래는 참조 없이 Optics 층만 달리하는 두 컷을 기본 방식과 한국어 지정 방식으로 보여 준다. 성별과 외모 지정이 없으니 [image-brief.md](../image-brief.md) §5-1의 기본 인물을 쓰고, 인물 기본 층(§3)을 모두 갖춘다. 두 컷은 Optics 층(한국어 지정 문안은 광학 층)만 다르고 나머지 층은 글자 그대로 같다. 직광 플래시는 카메라가 만드는 빛이라 Light가 아니라 Optics에 둔다. 허리 위 구도라 Legwear 층은 뺐다. 납품에는 해당 방식만 적용하며 컷 수와 양식은 요청을 따른다.
+[common.md](../../templates/common.md) §프롬프트 언어 결정에 따른다. 아래는 참조 없이 Optics 층만 달리하는 두 컷을 기본 방식과 한국어 지정 방식으로 보여 준다. 성별과 외모 지정이 없으니 [image-brief.md](../image-brief.md) §5의 기본 인물을 조건절에 쓴다. 두 컷은 Optics 층(한국어 지정 문안은 광학 층)만 다르고 나머지 층은 글자 그대로 같다. 직광 플래시는 카메라가 만드는 빛이라 Light가 아니라 Optics에 둔다. 허리 위 구도라 Legwear 층은 뺐다. 납품에는 해당 방식만 적용하며 컷 수와 양식은 요청을 따른다.
 
 ### 다국어 기본 문안
 
 ```text
-A waist-up portrait of one adult woman standing at a workbench in front of a plain gray wall, wearing a navy canvas jacket and holding a closed notebook, for a studio profile page.
+A waist-up studio profile portrait of a woman standing at a workbench in front of a plain gray wall, in a navy canvas jacket and holding a closed notebook.
 
-## Person
-default adult — A 22-year-old adult East Asian woman with a small face, clean defined bone structure and a crisp jawline.
-build — A slender build with level shoulders and a long neck.
-skin tone — Light skin with a cool undertone.
+## Identity Reference
+If a model reference is provided, the woman in this photo is that model: take only the face shape and facial features from it, adapting them naturally to this scene's expression, angle and light. Hair, makeup and everything else follow this prompt. If none is provided, she is a 22-year-old East Asian woman with a small face and a slender build.
 
 ## Hair and makeup
 straight bob — Dark brown hair cut to the jaw with a soft side part, one side tucked behind the ear so the jawline shows.
@@ -80,12 +78,10 @@ focus — The face and the notebook are sharp, and the bench edge in the foregro
 ```
 
 ```text
-A waist-up portrait of one adult woman standing at a workbench in front of a plain gray wall, wearing a navy canvas jacket and holding a closed notebook, for a studio profile page.
+A waist-up studio profile portrait of a woman standing at a workbench in front of a plain gray wall, in a navy canvas jacket and holding a closed notebook.
 
-## Person
-default adult — A 22-year-old adult East Asian woman with a small face, clean defined bone structure and a crisp jawline.
-build — A slender build with level shoulders and a long neck.
-skin tone — Light skin with a cool undertone.
+## Identity Reference
+If a model reference is provided, the woman in this photo is that model: take only the face shape and facial features from it, adapting them naturally to this scene's expression, angle and light. Hair, makeup and everything else follow this prompt. If none is provided, she is a 22-year-old East Asian woman with a small face and a slender build.
 
 ## Hair and makeup
 straight bob — Dark brown hair cut to the jaw with a soft side part, one side tucked behind the ear so the jawline shows.

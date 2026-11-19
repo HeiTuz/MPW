@@ -1,9 +1,7 @@
-A color studio headshot of one adult professional for a company team page, framed head and shoulders in front of a warm gray backdrop.
+A color studio headshot of a woman in a muted gray-blue knit top for a company team page, framed head and shoulders in front of a warm gray backdrop.
 
-## Person
-default adult — A 22-year-old adult East Asian woman with a small face, clean defined bone structure and a crisp jawline.
-build — A slender build with level shoulders and a long neck; she sits tall without looking stiff.
-skin tone — Light skin with a cool undertone.
+## Identity Reference
+If a model reference is provided, the woman in this photo is that model: take only the face shape and facial features from it, adapting them naturally to this scene's expression, angle and light. Hair, makeup and everything else follow this prompt. If none is provided, she is a 22-year-old East Asian woman with a small face and a slender build.
 
 ## Hair and makeup
 neat hair — Dark hair falls straight to the shoulders with a soft side part, and the ends sit smoothly against the shoulders without stray strands.

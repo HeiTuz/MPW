@@ -1,8 +1,7 @@
-A casual front-camera phone selfie of one adult man in his thirties in his home kitchen on a weekday morning, holding a mug of coffee.
+A casual front-camera phone selfie of a man in his home kitchen on a weekday morning, holding a mug of coffee.
 
-## Person
-adult man — An adult man in his thirties with a relaxed, slightly sleepy face.
-build — An average build with soft shoulders, wearing his weekday morning ease.
+## Identity Reference
+If a model reference is provided, the man in this photo is that model: take only the face shape and facial features from it, adapting them naturally to this scene's expression, angle and light. Hair, makeup and everything else follow this prompt. If none is provided, he is a man in his thirties with a relaxed, slightly sleepy face and an average build.
 
 ## Hair and makeup
 flat hair — His hair is still a little flat from sleep, with one section pressed to the side.

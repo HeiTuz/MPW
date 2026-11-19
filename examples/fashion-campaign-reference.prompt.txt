@@ -1,10 +1,10 @@
-The person in the attached image, taking only her face and overall impression from it (not its pose, head angle, gaze, expression, hair, makeup, jewelry, clothing, background or lighting), photographed in a vertical fashion campaign photo for an autumn trench coat.
+A vertical autumn fashion campaign photo of a woman walking across a stone plaza in a belted stone-beige trench coat.
 
 ## Identity Reference
-The attached image is the identity reference for this person. Keep her facial identity so she reads as the same person in a new photograph; her hair, makeup, expression, pose, clothing, light and camera come from the layers below.
+If a model reference is provided, the woman in this photo is that model: take only the face shape and facial features from it, adapting them naturally to this scene's expression, angle and light. Hair, makeup and everything else follow this prompt. If none is provided, she is a 22-year-old East Asian woman with a small face and a slender build.
 
 ## Attachments
-image 1 — Image 1 is the model photo and gives only the face.
+image 1 — Image 1 is the model photo and gives only the face shape and facial features.
 image 2 — Image 2 is the trench coat product photo and gives the coat's color, cut and details.
 
 ## Hair and makeup
@@ -15,7 +15,7 @@ blush — A diffuse dusty-rose blush sits high on the cheeks and fades out with 
 
 ## Expression
 calm gaze — A calm expression with relaxed eyelids and a closed mouth, her gaze just past the lens to the left.
-head angle — The head turns slightly toward her shoulder with the chin level, an angle that differs from the attached photo.
+head angle — The head turns slightly toward her shoulder with the chin level while she looks past the lens.
 
 ## Outfit
 trench coat — The trench coat from image 2, belted and open at the collar, in cotton gabardine with a fine diagonal twill and a soft matte surface.

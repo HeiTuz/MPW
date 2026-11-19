@@ -74,14 +74,14 @@ for (const text of examples) {
   headingSets.add(key);
   const result = checkText(text, { profile: 'native', surface: 's3', engine: 'gpt-image' });
   assert.deepEqual([result.errors.length, result.warnings.length], [0, 0], JSON.stringify(result));
-  if (/^The person in the attached image\b/.test(text) || text.includes('## Identity Reference')) {
-    assert.match(lines[0], /^The person in the attached image\b/, 'identity anchor first line');
-    assert.ok(text.includes('## Identity Reference'));
+  assert.ok(!/^The person in the attached image\b/.test(lines[0]), 'first line names the photo, not an identity anchor');
+  assert.ok(!heads.includes('Person'), 'no Person layer');
+  if (text.includes('## Identity Reference')) {
+    assert.equal(heads[0], 'Identity Reference', 'Identity Reference is the first layer');
     assert.ok(heads.includes('Hair and makeup') && heads.includes('Expression'), 'identity keeps hair/makeup and expression layers');
-    assert.ok(!heads.includes('Person'), 'identity example has no Person layer');
   }
 }
-assert.ok(examples.some(t => /^The person in the attached image\b/.test(t)), 'one example shows the model-identity case');
+assert.ok(examples.some(t => t.includes('## Identity Reference')), 'a person example shows the identity section');
 
 // Lexicon: per-layer tables (references/image/lexicon/*.md), one row per token, plus the small index.
 const LAYER_FILES = {
