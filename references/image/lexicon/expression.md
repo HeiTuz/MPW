@@ -77,6 +77,19 @@ Expression 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이
 | 하품 눈물 | 하품 후 눈물 글썽; 눈가 촉촉함; 哈欠后泪光; post-yawn tears; Sunlit Yawn Tear | KR | 나른함; 아침; 촉촉함; 캔디드 | A thin film of moisture lines the lower lids after a yawn and catches a bright point of light, the lids still heavy. | look |
 | 한 방울 눈물 | 한 방울 눈물 주르륵; 눈물 한 줄기; 一滴泪; single tear; Une seule larme | KR | 슬픔; 시네마틱; 고요; 눈물 | A single tear slides down one cheek leaving a bright wet line while the eyes stay steady and the face still. | look |
 | 헤드폰 끼고 음미 | 음악에 취한 표정; 헤드폰 감상; 戴耳机闭目; eyes shut savoring music | KR | 음악; 고요; 몰입; 평온 | Headphones sit over the ears, the eyes closed and the lips loose, the head swaying slightly with the music. | look |
+| 입술 살짝 깨물기 | 咬下唇; Restrained Lip-Bite Chill; 입술 깨물기; 안쪽 입술 깨물기; lip bite | KR | 절제; 비; 카페; 조명 낮음; 내성적 | The upper teeth press the inner edge of the lower lip, flattening it into a slightly paler line while the eyes stay calm and the jaw stays still. | look |
+| 졸린 눈 | 惺忪睡眼; Sleepy Half-Open Morning Eyes; 잠 덜 깬 눈; 막 일어난 눈; 반쯤 뜬 눈 | KR | 아침; 침실; 나른함; 이불; 부드러움 | Lids sit half open and a little puffy, the gaze unfocused, lashes clumped lightly, and the face pressed softly against rumpled white bedding. | look |
+| 살짝 벌어진 입술 | 微张嘴唇; Parted Lips Micro-Gap Breath; 입술 살짝 벌림; 숨결 입술 | KR | 오후; 야외; 바람; 고요; 자연스러움 | The lips part by a few millimeters with the teeth just visible, the lower lip catching a soft highlight and the cheeks relaxed as if mid-breath. | look |
+| 무릎에 턱 괴기 | 下巴搁膝; Chin-on-Knees Vulnerable Gaze; 무릎 안고 앉기; 무릎에 턱; 웅크려 앉기 | KR | 비; 실내; 창가; 아늑함; 고요 | Knees are pulled to the chest with the chin resting on them and arms wrapped around the shins, the gaze drifting toward a rainy window with soft gray light on one cheek. | look |
+| 손가락 살짝 물기 | 咬指尖; Absent-Minded Finger Tap-Bite; 손끝 물기; 생각에 잠긴 손가락 | KR | 서점; 몰입; 습관; 실내; 차분함 | A fingertip rests against the lower teeth while the eyes read something off-frame, the brow slightly drawn in quiet thought. | look |
+| 신발끈 묶는 집중 | 系鞋带; Tying Shoelaces Everyday Focus; 신발끈 묶기; 끈 묶는 순간; lace-up moment | KR | 일상; 공원; 스냅; 자연스러움; 스포티 | One foot rests on a stone step, head bowed and hair falling forward, fingers working the laces while the face shows plain concentration. | look |
+| 하늘 올려다보기 | 仰望; Looking Up at Vast Architecture; 올려다보는 눈; 건축 올려다보기; looking up | KR | 밤; 건축; 광장; 경외; 곡면 | Chin raised and neck extended, eyes wide and tracing up a tall curved structure, the underside of the jaw lit by overhead light. | look |
+| 입술 안쪽 깨물기 | 咬唇心机; Enigmatic Lip-Bite Calculation; 계산된 입술 깨물기; 의미심장한 미소; calculating lip bite | KR | 호텔; 야경; 심리전; 고급; 의미심장 | The inner lip is lightly bitten while the eyes stay still and the brows barely move, city lights behind the glass reflected in the pupils. | look |
+| 나른한 손짓 | 慵懒撩发; Languid Hair-Tuck Fatal Allure; 머리 넘기기; 나른한 머리 쓸기; languid hair tuck | KR | 밤; 라운지; 보라빛; 나른함; 머리카락 | A hand pauses mid-motion with fingers hovering beside the hair as it is tucked behind the ear, eyelids heavy and purple light sliding across the cheek. | look |
+| 清纯微欲感 | 청순 섹시; 청순한 관능; 순욕 | KR | 청순; 무드; 눈빛; 관능; 계열:순욕 | Lips lightly closed around a clear drinking straw and eyes raised to the lens with an innocent, faintly playful look. | look |
+| 上抬眼神 | 올려다보는 눈빛; 위로 올려 뜬 눈 | KR | 눈빛; 시선; 표정; 카메라 응시 | Eyes lifted upward toward the camera with the chin slightly lowered. | look |
+| 慵懒斜视 | 나른한 곁눈질; 게슴츠레 곁눈 | KR | 눈빛; 나른함; 표정; 셀카 | Heavy-lidded eyes glancing sideways toward a mirror reflection, relaxed face. | look |
+| 嘟嘟唇 | 오리입; 볼 눌러 뾰로통 | KR | 표정; 귀여움; 장난; 손동작 | Both palms pressing the cheeks inward so the cheeks bulge and the lips pout. | look |
 
 ## CN
 
@@ -126,6 +139,19 @@ Expression 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이
 | 凝望落花 | 落花; 垂首凝望落花; 낙화 응시; 떨어진 꽃 바라보기; contemplating fallen blossoms | CN | 애수; 봄; 꽃; 고요 | The head bows toward a few fallen petals, the mouth soft and the eyes unfocused in quiet melancholy. | look |
 | 蔑视审判 | 微眯双眼; 경멸의 심판; 눈을 가늘게 뜸; judging squint | CN | 경멸; 냉정함; 평가; 차가움 | The eyes narrow slightly and the chin rises a notch while the mouth stays closed, like a cold verdict. | look |
 | 防卫本能 | 呼吸一窒; 下颌紧收; 방어 본능; 숨을 삼킴; instinctive guard | CN | 긴장; 경계; 방어; 정적 | The breath holds, the chin tucks and the jaw tightens over a stiff neck, a quiet bracing reflex. | look |
+| 微蹙眉头 | 微压眉心; 살짝 찌푸린 미간; 미간 압박; slight brow furrow; commanding frown | CN | 위압; 권위; 회의실; 낮; 대여주계열 | Brows draw slightly together over the nose bridge with a faint vertical crease, the eyes steady and the mouth set. | look |
+| 单侧挑眉 | 挑眉; 한쪽 눈썹 올리기; 눈썹 한쪽 치켜올림; one raised eyebrow; arched brow | CN | 장난기; 교활함; 서재; 낮; 대여주계열 | One brow arches higher than the other while the eyes glint and the mouth stays almost neutral, a calculating, playful look. | look |
+| 闭目冥思 | 双目微阖; 눈 감고 명상; 명상하는 얼굴; eyes-closed meditation; serene closed eyes | CN | 고요; 명상; 고찰; 아침; 동양여백계열 | Both lids rest closed with the lashes flat, brow smooth and mouth relaxed, as if listening to a distant bell. | look |
+| 剑眉星目 | 剑眉; 검미성목; 칼날 같은 눈썹; sword brows bright eyes; sharp brows clear eyes | CN | 선명함; 위압; 복도; 낮; 대여주계열 | Straight, tapered brows over clear dark eyes with a steady, direct stare that reads as sharp and precise. | look |
+| 下颌线 | 如刃下颌线; 利落折角侧颜; 칼 같은 턱선; razor jawline; sharp mandible line | CN | 선명함; 차가움; 콘크리트; 낮; 청랭계열 | Profile with a clean angular jaw, a hard slanted light edge along it and an ice-cold glance. | look |
+| 面无表情 | 无形威压; 무표정; 무표정한 위압; deadpan face; blank intimidating stare | CN | 위압; 냉정함; 살롱; 밤; 대여주계열 | Smooth, expressionless face with direct level eyes that carry quiet pressure. | look |
+| 柳叶眉 | 微蹙柳叶细眉; 버들잎 눈썹; 가는 눈썹; willow-leaf brows; thin curved brows | CN | 애수; 고전; 정원; 저녁; 동양여백계열 | Thin brows that curve gently like willow leaves, drawn slightly together in a quiet sigh. | look |
+| 双唇微张 | 心悸凝固; 被戳中心事; 입술이 벌어짐; 경직; lips parted in shock; frozen gasp | CN | 충격; 긴장; 살롱; 밤; 대여주계열 | A narrow gap between still lips and fixed eyes in a stunned freeze. | look |
+| 轻咬下唇 | 아랫입술 깨물기; 입술 살짝 깨물기 | CN | 입술; 표정; 억누른 감정; 디테일 | Upper teeth lightly pressing the lower lip, lips slightly pressed, with a faint tension in the jaw. | look |
+| 风情万种 | 요염한 분위기; 농염한 매력 | CN | 분위기; 성숙; 화보; 표정 | A mature, self-assured look with half-lidded eyes, a slight head tilt and loosely styled hair across the shoulder. | look |
+| 脉脉含情 | 그윽한 눈빛; 정감 어린 시선 | CN | 시선; 그윽함; 고전미; 표정 | A soft, steady gaze held a beat longer than usual, eyes warmed by candle-colored light. | look |
+| 眼波流转 | 눈빛이 흐르는; 눈동자 굴리기 | CN | 시선; 눈동자; 표정; 생동감 | Eyes shifting from one side to the other with bright catchlights, creating a lively, fluid glance. | look |
+| 慵懒出神 | 나른한 멍때림; 나른한 표정 | CN | 나른함; 멍한 표정; 오후; 표정 | A relaxed, drowsy expression with eyes unfocused, head resting on a hand in soft afternoon light. | look |
 
 ## JP
 
@@ -183,6 +209,25 @@ Expression 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이
 | 透明人間を見る視線 | 토메이닌겐오 미루 시센; 투명인간 보듯; 꿰뚫고 지나가는 시선; looking through | JP | 무관심; 공허; 냉정; 허공 | The gaze goes through the lens to a point behind it, expressionless and unseeing. | look |
 | 鏡の中の視線 | 카가미노 나카노 시센; 거울 속 자기 응시; mirror gaze | JP | 고독; 내성; 거울; 고요 | The eyes settle on a reflected face just off-axis from the lens, still and appraising. | look |
 | ペーソス | 페이소스; pathos; sunset melancholy | JP | 황혼; 쓸쓸함; 노을; 여운 | Low golden light, tired relaxed face and a faint closed-mouth smile. | look |
+| いただきます | 잇다다키마스; 잘 먹겠습니다; itadakimasu; 我要开动了 | JP | 식사; 귀여움; 식당; 일상 | Palms pressed together at chest height, elbows loose, eyes closed into crescents with a satisfied smile. | look |
+| 目が合う | 눈 마주침; 시선 마주침; eye contact; 对视 | JP | 설렘; 산책; 시선; 저녁 | Head turning 45 degrees mid-step, gaze meeting the lens, brief widening of the eyes and a soft quiet smile. | look |
+| 自然平視 | 시젠 헤이시; 자연스러운 정면 시선; level natural gaze; direct gaze | JP | 담백; 정면; 일상; 차분 | The gaze runs straight into the lens without tilt, the face relaxed so the lids rest at an even half-open line. | look |
+| 無垢な静寂 | 무쿠나 세이자쿠; 고요한 무표정; pure innocent stillness; zen equanimity | JP | 고요; 무표정; 선(禪); 차분 | A completely neutral face: brows level, lips closed without tension, eyes fixed and unblinking in a calm line. | look |
+| 無邪気な振り返り | 무자키나 후리카에리; 무심히 돌아보는 눈빛; candid backward glance; friend POV glance | JP | 캔디드; 친구 시점; 일상; 가벼움 | A quick unposed glance over the shoulder, mid-turn, with hair still moving and an unguarded half-smile. | look |
+| 睫毛の影 | 마츠게노 카게; 속눈썹 그림자; eyelash shadow | JP | 섬세; 측광; 클로즈업; 우아 | Long lashes throw fine parallel shadows onto the lower lid and cheek under a raised light. | look |
+| 下唇を噛む | 시타쿠치비루오 카무; 아랫입술 깨물기; biting lower lip; lower lip bite | JP | 긴장; 수줍음; 디테일; 조심스러움 | Front teeth lightly press the lower lip, brows lift a little, giving a nervous restrained look. | look |
+| 目をこする | 메오 코스루; 눈 비비기; eye rub; waking yawn | JP | 아침; 졸림; 하품; 침실 | A fist or knuckle rubs one eye as the mouth opens in a soft yawn, face puffy from sleep. | look |
+| 半開き唇 | 한비라키 쿠치비루; 살짝 벌린 입술; parted lips; slightly open lips | JP | 속삭임; 입술; 조용함; 물애(物哀) | Lips parted by a thin gap, jaw relaxed, as if about to speak softly. | look |
+| 吐息 | 토이키; 숨결 한숨; sigh; sighing exhale | JP | 한숨; 나른함; 입술; 독백 | Lips open slightly in a slow exhale, chest softening and eyes half closed. | look |
+| 耳打ち | 미미우치; 귓속말; whisper; whispered secret | JP | 귓속말; 측면; 친밀; 속삭임 | Face in side profile with lips close to another ear, eyes sliding sideways toward it. | look |
+| 結び口 | 무스비구치; 꾹 다문 입; closed pursed lips; suppressed smile | JP | 입꼬리; 참음; 보조개; 장난 | Lips pressed in a tight smiling line with faint dimples forming at the cheeks. | look |
+| 絶景 | 젯케이; 절경 감탄; breathtaking wonder; stunned by view | JP | 감탄; 풍경; 눈 반짝; 여행 | Eyes wide with highlights full of scenery, lips parted in awe. | look |
+| 夕涼み | 유스즈미; 저녁 바람 쐬기; evening cool; porch sunset breeze | JP | 저녁; 바람; 여유; 여름 | Reclined or side-lying with eyes half shut in the cooling air, body relaxed. | look |
+| 童心 | 동심; 童心未泯; childlike joy | JP | 웃음; 천진; 밝음; 자유 | Wide open laughing expression with head tilted back and relaxed shoulders, bright carefree mood. | look |
+| 逃げ出す | 도망; 逃课; playing hooky mood | JP | 자유; 반항; 바람; 청춘; 아동·학생 | Head tilted back with eyes on the horizon and loose hair whipped by wind, carefree defiant mood. | look |
+| 上目遣い | 올려다보는 눈빛; 上目线; upturned gaze | JP | 시선; 올려보기; 표정; 애교 | Chin lowered with eyes looking up toward the lens from under the lashes, slightly widened eyes. | look |
+| 寝起き | 막 일어난 모습; 晨起; just woke up; 막 일어난; 잠 깬 직후; 寝起きすっぴん | JP | 아침; 졸림; 하품; 자연스러움; 기상; 민낯; 편안함 | A relaxed just-woken look with bare, unmade-up skin, slightly tousled hair and a soft sleepy expression. | look |
+| 無防備 | 무방비; 毫无防备; unguarded relaxed look | JP | 표정; 힘 뺀; 자연스러움; 휴식 | Slack unposed expression with eyes half closed and mouth slightly open, loose relaxed shoulders. | look |
 
 ## US
 
@@ -237,6 +282,12 @@ Expression 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이
 | Windswept Coastal Laugh | 바닷바람 웃음; 머리카락 휘날리는 웃음; 海风大笑 | US | 자유; 야외; 웃음; 바람 | The mouth opens in a laugh while long strands of hair stream sideways across the cheek in the wind. | look |
 | Americana Radiance | 아메리카나 래디언스; Genuine Joy; 미국식 환한 무드; Sunny Girl; California Pop; 캘리포니아 팝 | US | 밝음; 활기; 낮; 미국; 명랑 | Open, high-energy joy that reads in the whole face: bright eyes, lifted cheeks, warm skin tones under direct daylight. | look |
 | Coachella Sass | 코첼라 새스; Festival Rocker; 페스티벌 록커; Rock-and-Roll Rebellious; 록앤롤 반항 | US | 페스티벌; 록; 반항; 여름; 장난 | Festival-field rebel attitude: playful dare in the eyes, dusty afternoon sun, loose messy hair. | look |
+| Biting Lower Lip Smile | 입술 깨물고 웃기; Lip Bite Smile; 咬唇憋笑; 입술 깨물며 참는 웃음 | US | 장난; 수줍음; 실내; 캔디드; 명랑 | Front teeth press lightly on the lower lip while the cheeks tighten and the eyes sparkle, a grin held in. | look |
+| Peaked Cap Shadow | 모자 그림자 눈썹; 压低鸭舌帽; Cap Brim Shadow; Skater Cool; 스케이터 쿨; Downtown Mystery | US | 스케이터; 그림자; 스트리트; 미스터리; 도시 | Cap brim pulled low so a band of shadow crosses the eyes and one brow shows sharply beneath it. | look |
+| Surfer Head-Toss | 서퍼 머리 털기; 冲浪板甩头; Water Droplet Squint; California Surfer Girl; 캘리포니아 서퍼걸 | US | 서핑; 바다; 물방울; 활기; 여름 | Wet hair whipping up and out, droplets frozen in the air, eyes squinting against spray. | look |
+| Over-the-Shoulder Glance | 어깨 너머 시선; 越过肩头; Accidental Eye Catch; NYC Candid; 뉴욕 캔디드 | US | 캔디드; 도시; 낮; 뉴욕; 우연 | Looking back over a companion's shoulder, eyes meeting the lens for just a moment. | look |
+| Pizza Slice Bite | 피자 한입; 咬一口披萨; NYC Pizza Slice; NYC Foodie; 뉴욕 푸디 | US | 뉴욕; 음식; 스트리트; 낮; 명랑 | A cheesy slice held up with a bite taken, eyes sliding sideways over it with a grin. | look |
+| Taxi Backseat Gaze | 택시 뒷좌석 시선; 出租车后座; Melancholy City Lights; Luminous Solitude; Americana Nocturne | US | 밤; 도시; 멜랑콜리; 혼자; 네온 | Seated in a taxi back seat, streaks of passing city lights sliding over the face and window glass. | look |
 
 ## FR
 
@@ -289,3 +340,23 @@ Expression 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이
 | Retrait hautain | 차갑게 돌아섬; 돌아선 거리두기; turned-away glance | FR | 거리두기; 냉랭; 도도; 뒷모습 | The body half turns away while the face glances back over a shoulder with the lower lids slightly lifted, shutting the other out. | look |
 | Souffler sur sa frange | 앞머리 후 불기; fringe blow | FR | 짜증; 귀여움; 더위; 장난기 | The cheeks puff and a breath blows the fringe up off the forehead while the eyes roll to the ceiling. | look |
 | Sourire cruel | 냉혹한 미소; cold triumph | FR | 냉혹; 승리; 정적; 차가움 | The mouth lifts by half a millimetre while the eyes stay completely cold and clear. | look |
+| Amélie Poulain | 아멜리; 아멜리 푸생; Amélie look; Montmartre quirk | FR | 엉뚱; 몽마르트; 레트로; 영화 | Mischievous half-smile and wide bright eyes under warm red-green toned light, with a quirky storybook Montmartre feel. | person-style |
+| Bras croisés | 팔짱 낀 도도함; sovereign defiance; untouchable chic | FR | 도도; 광장; 찬바람; 당당 | Arms folded across the chest with one brow arched, weight on one leg and the chin lifted. | look |
+| Voilette de deuil | 검은 베일; veiled mourning; haute couture mourning; 망사 모자 | FR | 애도; 묘지; 비; 엄숙 | Black mesh veil over the eyes under a small hat, face composed and still in soft rain. | look |
+| Regard par-dessus l'épaule | 어깨 너머 돌아보기; over-the-shoulder look; Godard freeze-frame | FR | 회고; 대로; 갑작스러움; 영화 | Head snaps round over the shoulder with pupils tight and eyes wide, caught mid-motion in a freeze-frame. | look |
+| Index sur l'arc de cupidon | 입술 중앙에 손가락; 큐피드 보우 터치; finger on cupid's bow | FR | 손가락; 입술; 생각; 오페라; 어두운 분위기 | One slender index fingertip rests on the center of the upper lip, pressing the lip peak slightly inward while the lower lip parts and the eyes narrow toward a distant point. | look |
+| Machination séduisante | 유혹적인 계략; 음모 꾸미는 표정; scheming allure | FR | 계략; 눈가늘게; 손가락; 붉은 커튼; 오페라 박스 | Narrowed eyes fixed on an unseen point, a fingertip at the lips, deep red velvet drapes behind in low theatrical light. | look |
+| Seductive Machination | 유혹적 음모; 세덕티브 머시네이션; scheming seduction | FR | 음모; 오페라; 붉은 벨벳; 눈매; 손가락 | A calculating half-lidded look with a fingertip pressed to the upper lip, set in a dim opera box with heavy dark red curtains. | look |
+| Dangerous Calculation | 위험한 계산; 차가운 계산 눈빛; cold calculation gaze | FR | 냉정; 계산; 눈가늘게; 어둠; 오페라 | Cool narrowed eyes with an unreadable half-smile, lips slightly parted under a fingertip, in shadowed theatrical lighting. | look |
+| French Sensual Awakening | 프렌치 센슈얼 어웨이크닝; 관능적인 아침 눈; sensual morning look | FR | 아침; 침실; 반쯤 뜬 눈; 침대; 자연광 | Heavy lids and slightly parted lips with soft moist eyes, rumbled bedding and pale morning light on the pillow in a cream-grey paneled room. | look |
+| Innocent Coquetry | 이노센트 코케트리; 순진한 교태; 입술 깨무는 애교 | FR | 애교; 입술 깨물기; 호기심; 광장; 오후 | A bright upward glance with the upper teeth just touching a plump pink lower lip, eyebrows slightly raised in a playful curious look. | look |
+| Mordre la lèvre inférieure | 아랫입술 깨물기; 입술 깨무는 표정; biting lower lip | FR | 입술; 깨물기; 호기심; 귀여움; 클로즈업 | Upper front teeth lightly pressing the inner edge of the lower lip, leaving it flushed and full, with bright upturned eyes. | look |
+| French Flirtatious Oeillade | 프렌치 플러티셔스 외야드; 프랑스식 곁눈 유혹; flirty side glance | FR | 곁눈질; 플러팅; 술집; 빨간 벨벳; 재즈 | Face turned square to camera while the eyes slide far to one side, white and dark brown iris in sharp contrast, lips full and slightly parted. | look |
+| Flirt à la française | 프렌치 플러팅; 프랑스식 플러팅; French flirt | FR | 플러팅; 시선; 비스트로; 빨간 벨벳; 재즈 | A sidelong glance and softly pouting parted lips in a dim bistro corner booth of dark red velvet. | look |
+| Regard en coin séducteur | 유혹하는 곁눈; 섹시한 곁눈질; seductive sidelong look | FR | 곁눈; 유혹; 입술; 비스트로; 어두운 조명 | Eyes turned hard to one side with a faint pull at the lip corners, a teasing look in low warm bar light. | look |
+| Seductive Pout | 유혹적 입술 삐죽; 섹시한 뾰로통; sultry pout | FR | 삐죽; 입술; 도톰한 입술; 무심; 버티 | Slightly lifted upper lip and a full forward-tipped lower lip with the lips lightly parted and lids lowered. | look |
+| Dangerous Magnetism | 위험한 자성; 치명적 매력; dangerous allure | FR | 치명; 누아르; 암흑; 붉은 립; 재즈클럽 | A steady dark gaze with black-obsidian pupils and heavy lash shadow, deep red lips, in a dim jazz club with red velvet curtains. | look |
+| Feline French Seduction | 고양이 같은 유혹; 캣아이 유혹; feline allure | FR | 고양이눈; 유혹; 턱괴기; 카펫; 우아함 | Eyes narrowed into slim cat-like slits, lips softly pursed with a hand propping the chin, leaning on a Persian rug in close-up. | look |
+| Predatory Sophistication | 포식자의 세련미; 도발적인 세련됨; predatory elegance | FR | 고양이; 도발; 세련; 턱괴기; 근접 | A lazily poised face with narrow, watchful eyes and a faint half-smile, one hand under the chin, close crop. | look |
+| Hypnotic French Seduction | 최면 같은 유혹; 와인잔 너머 시선; glass-rim gaze | FR | 와인잔; 시선; 호텔; 살롱; 밤 | A crystal wine glass raised to hide the nose and mouth, only large deep-brown eyes looking over the rim at the camera, lips close to the glass. | look |
+| Contrôle hypnotique | 최면 같은 장악; 와인잔 뒤 시선; hypnotic control | FR | 와인잔; 눈빛; 살롱; 밤; 붉은 와인 | Half the face hidden behind a stemmed glass with deep red wine refracting light, steady eyes in a candlelit salon. | look |

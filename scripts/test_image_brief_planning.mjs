@@ -124,11 +124,11 @@ for (const [layer, slug] of Object.entries(LAYER_FILES)) {
 }
 
 // Review ceilings for reference-loading cost, not output length or API caps.
-// Measured after the lexicon restoration: new 51114, portrait 57720, edit 18694 UTF-8 bytes;
+// Measured after the full lexicon merge: new 51655, portrait 58261, edit 18996 UTF-8 bytes;
 // ceilings are about 10% above the measurement.
-assert.ok(sizes['gpt-image-new'].utf8_bytes <= 56200);
-assert.ok(sizes['gpt-image-portrait'].utf8_bytes <= 63500);
-assert.ok(sizes['gpt-image-edit'].utf8_bytes <= 20600);
+assert.ok(sizes['gpt-image-new'].utf8_bytes <= 56800);
+assert.ok(sizes['gpt-image-portrait'].utf8_bytes <= 64100);
+assert.ok(sizes['gpt-image-edit'].utf8_bytes <= 20900);
 
 const scenarios = JSON.parse(read('scripts/fixtures/behavioral/image-planning.json')).cases;
 assert.deepEqual(scenarios.map(c => c.id), [

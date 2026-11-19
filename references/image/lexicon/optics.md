@@ -13,6 +13,14 @@ Optics 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다.
 | 폴라로이드 라이트 리크 | 폴라로이드 빛샘; 폴라로이드 누광; Polaroid light leak; 拍立得漏光 | KR | 인스턴트; 빛샘; 따뜻함; 레트로 | Red-orange light leaks wash over the edges of an instant print, with soft contrast and a thick white border. | look |
 | 홀로그램 프리즘 | 프리즘 필터; 프리즘 렌즈; prism filter; 棱镜滤镜 | KR | 프리즘; 무지개빛; 플레어; 실험적 | A prism held at the lens throws rainbow-edged refractions and doubled, iridescent flares across part of the frame. | look |
 | 흑백 필름 그레인 | 흑백 그레인; 고감도 흑백 필름; B&W film grain; high ISO grain; 黑白颗粒 | KR | 흑백; 거친 입자; 고대비; 야간 | Coarse silver grain over monochrome with deep blacks and bright clipped highlights, giving a gritty high-contrast texture. | look |
+| 胶片颗粒 | 필름 그레인; grain; 细腻颗粒 | KR | 필름; 질감; 빈티지; 저조도 | Fine, even film grain across dark areas and midtones. | look |
+| 柔焦 | 소프트 포커스; soft focus; 몽글 포커스; 柔化 | KR | 몽환; 화사함; 부드러움; 창가 | Slightly diffused sharpness, with edges and highlights glowing softly. | look |
+| 冷调 | 쿨톤; cool tone; 차가운 톤; 冷白色调 | KR | 쿨; 차가움; 미니멀; 청량 | The whole palette leans cold blue-white with a slightly pale and quiet mood. | look |
+| 低饱和 | 로우 새츄레이션; 저채도; desaturated; 低饱和微青 | KR | 미니멀; 무채색; 차분함; 콘크리트 | Color purity is pulled back to near grey with pale pink-white and a faint olive cast. | look |
+| 奶油色 | 크림 톤; cream tone; 奶油白; 크림색 벽 | KR | 프렌치; 따뜻함; 화이트; 몰딩 | Soft cream-white walls reflect light repeatedly into a smooth, fine, warm white. | look |
+| 光斑虚化 | 보케; bokeh; 원형 보케; 车流光斑 | KR | 야간; 도시; 고속도로; 135mm | Distant lights turn into big round overlapping discs behind the subject. | look |
+| 长曝光 | 장노출; light trails; 라이트 트레일; 光轨 | KR | 야경; 택시; 잔상; 네온 | A long exposure stretches red tail lights and blue signs into dream-like light streaks. | look |
+| Slow-Sync Flash Party Blur | 슬로우 싱크로 플래시; 후막 싱크 파티; 슬로우셔터 플래시 | KR | 잔상; 파티; 플래시; 광궤적 | Sharp flash-lit subject against streaked colored light trails from a long shutter exposure. | look |
 
 ## CN
 
@@ -45,6 +53,13 @@ Optics 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다.
 | 宣砚留芳 | 선연유방; 벼루 흑백; 따뜻한 흑백; ink stone monochrome; warm black-and-white | CN | 흑백; 따뜻함; 먹빛; 윤기 | Warm monochrome with glossy graphite blacks and finely stepped mid-greys, like the sheen of a polished ink stone. | look |
 | 松烟玄黑 | 송연현흑; 송연 먹빛; 로우키 먹빛; pine soot black; low-key ink black | CN | 흑백; 로우키; 깊은 그림자; 먹빛 | A low-key frame whose pure-black shadows still hold fine graphite steps, with highlights kept small and restrained. | look |
 | 玻璃窗倒影 | 유리창 이중 반사; 双重倒影; window double reflection; glass reflection overlay | CN | 도시; 새벽 안개; 고층; 몽환 | A tall window shows the figure overlapped with a ghost reflection and the misty skyline outside, the two layers equal in strength. | look |
+| 慢门 | 슬로우 셔터; 장노출 번짐; long shutter; slow shutter | CN | 움직임; 번짐; 야경; 군중; 정지 | Moving crowds and lights smear into ghostly streaks while the main subject stays crisp. | look |
+| 超广角畸变 | 초광각 왜곡; 광각 왜곡; wide-angle distortion; ultra-wide distortion | CN | 초광각; 왜곡; 클로즈업; 가장자리; 늘어남 | An ultra-wide lens held close that stretches the edges and gives a slight barrel curve. | look |
+| 石膏质感 | 석고 질감; plaster tone; 석고상 느낌 | CN | 차가운; 무광; 조각; 부드러운; 회색 | Cool, matte skin and soft grey shadows that look like a classical plaster bust. | look |
+| 微距特写 | 매크로; 접사; macro close-up; macro; 매크로 클로즈업; 大眼特写 | CN | 접사; 눈; 질감; 얕은; 심도; 뷰티; 클로즈업; 디테일; 플래시 | Extreme close focus at about life size with razor-thin depth, showing fine texture of lashes and iris. | look |
+| 长焦压缩 | 망원 압축; telephoto compression; 공간 압축 | CN | 망원; 압축; 겹친; 산; 평면; 두루마리 | A long telephoto that stacks foreground and distant buildings into one flat scroll-like plane. | look |
+| 王家卫 | 왕가위; Wong Kar-wai; Wong Kar Wai; 왕가위 영화 | CN | 홍콩; 영화적; 네온; 몽환; 복고 | Smeared neon colour and step-printed motion blur, with saturated red and green light and heavy grain. | person-style |
+| 车流光轨 | 라이트 트레일; light trails; long exposure; 长曝光 | CN | 야경; 도시; 장노출; 움직임 | Headlights and tail lights stretch into smooth coloured streaks along the road, while still buildings stay sharp. | look |
 
 ## JP
 
@@ -199,6 +214,19 @@ Optics 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다.
 | Nikon SB-5000 | 니콘 SB-5000; 니콘 스피드라이트; ニコン SB-5000; SB5000 | JP | 플래시; 외장 플래시; 무선; 바운스 | A hot-shoe flash on a Nikon body that fires clean, even light of neutral color whether it is aimed direct or bounced. | gear |
 | 光跡 | 코지; 광적; 라이트 트레일; ライトトレイル; 光の軌跡 | JP | 장노출; 야경; 빛줄기; 움직임 | Moving lights stretch into long glowing lines across a long exposure while the fixed parts of the scene stay still. | look |
 | 東京ストリート | Tokyo Street Documentary; 도쿄 스트리트 다큐; 도쿄 거리 스냅; 東京ストリートスナップ | JP | 도쿄; 거리; 다큐; 일상; 스냅 | Unposed street-documentary framing in natural daylight, with muted film colour and a slightly grainy, observational distance. | look |
+| ローアングル | 로우앵글; 아래에서 촬영; low angle; 低机位; 仰拍 | JP | 각도; 다리 길이; 거리; 스트리트 | Camera held about 15 cm above the ground tilted upward, stretching the legs and foreshortening the face smaller against the sky or ceiling. | look |
+| ハイアングル | 하이앵글; 위에서 촬영; high angle; 俯拍; 俯角 | JP | 각도; 귀여움; 얼굴 작게; 셀카 | Camera 30 cm above the head tilted down 45 degrees, pushing the forehead closer to the lens, shrinking the chin and widening upturned eyes. | look |
+| フィルムカメラ | 필름 카메라; 필카; film camera; 胶片相机 | JP | 필름; 문예; 클래식; 소품 | Manual 35mm rangefinder raised to the face with the metal body hiding one eye and the round viewfinder window pressed to the brow. | gear |
+| キャノン パワーショット G2 | PowerShot G2; 파워샷 G2; Canon G2; 캐논 G2; CCD | JP | Y2K; CCD; 따뜻한 흰색; 도자기 피부 | Early-2000s CCD color with warm white balance, porcelain-pale skin and slightly clipped highlights. | brand |
+| サイバーショット DSC | Cyber-shot DSC; 소니 사이버샷; Sony Cyber-shot | JP | Y2K; 푸른 톤; CCD; 차가움 | Cool blue-cast CCD rendering with sharp edges and cyber-Y2K compact-camera color. | brand |
+| エクシリム EX-S1 | EXILIM EX-S1; 엑슬림; 카시오 엑슬림; Casio Exilim; EX-S1 | JP | Y2K; 카드형; 셀카; 저화질 | Credit-card thin camera low-fi frame with soft detail, washed colors and casual Y2K selfie feel. | brand |
+| ワイコン | Fish-Eye Wide Converter; 어안 와이드 컨버터; death lens; 데스 렌즈; Century Optics; 0.3x fisheye; fisheye | JP | 어안; 왜곡; 무지개 색수차; 캠코더 | Strong barrel distortion with rainbow chromatic aberration and flare at the frame edges. | gear |
+| ドリームコア | Dreamcore; 드림코어; 몽환 코어; dreamcore 감성 | JP | 몽환; 저화질; 빛 번짐; 추억 | A hazy, overexposed, low-resolution frame with bloom around lights and a nostalgic faded feel. | look |
+| 手ぶれ | Handheld Jitter; 손떨림; 핸드헬드; 手持ち; breathing shake; 자연스러운 흔들림 | JP | 핸드헬드; 흔들림; 걷기; 바다 | Gentle handheld sway with natural breathing movement and slightly shifting framing. | look |
+| 望遠ズーム | Telephoto Zoom; 망원 줌; 망원 압축; telephoto compression; 20x zoom | JP | 압축; 노을; 거리감; 캠코더 | Long-lens compression stacking distant layers closely with washed-out warm backlit color. | look |
+| 長時間露光 | 장노출; long exposure; 长曝光; slow shutter; 光軌跡 | JP | 밤; 광궤적; 삼각대; 도로; 움직임 | A slow shutter that turns moving lights into smooth glowing streaks while fixed buildings stay sharp. | gear |
+| Sony Cyber-shot DSC compact | 소니 사이버샷 컴팩트; 索尼Cyber-shot | JP | Y2K; 디카; 쿨톤; CCD | A cool CCD look with blue-white highlights, cyan-tinted shadows, slightly boosted saturation and sharp hard-edged contrast. | gear |
+| Olympus mju mini Digital | 올림푸스 뮤; mju-mini; 奥林巴斯mu mini | JP | Y2K; 디카; 야간; 네온 | Direct flash locks onto the face while magenta and deep blue ambient lights stay low and smeared behind. | gear |
 
 ## US
 
@@ -314,6 +342,22 @@ Optics 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다.
 | Godox V1 | 고독스 V1; 고독스; Godox 플래시; 고독스 브이원 | US | 플래시; 스트로보; 부드러움; 온카메라 | A round-head on-camera flash that throws soft, even light with a gentle fall-off across a face rather than a hard edge. | gear |
 | Profoto A10 | 프로포토; 프로포토 A10; Profoto flash; 프로포토 에이텐 | US | 플래시; 스튜디오; 오프카메라; 부드러움 | A compact round-head flash that gives smooth, even light with soft shadow edges and a clean catchlight in the eyes. | gear |
 | Multi-Flash Ghosting | 다중 플래시; 多重闪光灯重影; Paparazzi Flashes | US | 파파라치; 레드카펫; 밤 | Several side flashes overlap, leaving faint extra shadows and ghost edges around a sharply lit subject. | look |
+| フィッシュアイ | 피시아이; 어안렌즈; fisheye; 鱼眼 | US | 왜곡; 광각; 필름; 도시 | Ultra-wide lens warp that bulges the center, bends straight edges into arcs and pulls limbs outward at the frame borders. | gear |
+| Telephoto Compression | long lens compression; compressed perspective; 망원 압축; 망원 렌즈; 원근 압축 | US | 원근; 도로; 길; 선 | A long lens squeezes distance so legs and road lines stack into tall parallel verticals. | gear |
+| Long Exposure Trail | light trail; sparkler trail; 장노출 궤적; 빛 궤적; 장노출 | US | 밤; 불꽃; 궤적; 동세 | A slow shutter draws a continuous glowing line through the dark behind the moving light. | gear |
+| Low Angle | low-angle shot; low angle view; 로우 앵글; 낮은 앵글; 아래에서 위로 | US | 낮은 시점; 동세; 도로; 몰입 | The camera sits near ground level looking slightly up so the road and her height stretch out. | look |
+| Soft Glow Bloom | 블룸; 柔焦高光泛光; High Glow; 글로우 블룸; Bloom | US | 부드러움; 역광; 몽환 | Bright highlights spill softly into the surrounding shadows, wrapping edges in a hazy glow. | look |
+| Bokeh Circles | 보케 서클; 원형 보케; 虚化弥散圆; Smooth Bokeh Fall-off; 焦外光斑 | US | 몽환; 야경; 대구경 | Out-of-focus lights turn into smooth round discs of color that melt softly into the background. | look |
+| 双重曝光 | Double Exposure; 다중 노출; 더블 익스포저; Multiple Exposure; 이중 노출; double exposure | US | 몽환; 실루엣; 예술; 필름; 밤; 차 안; 합성; 계열:영화 같은 | Two exposures overlap in the same frame, so a dark leafy silhouette lies over the face and clothing like a transparent layer. | look |
+| Black and White High-Contrast Flash | 흑백 고대비 플래시; 黑白高反差硬闪; B&W Flash | US | 흑백; 록; 야간; 거침 | A hard flash on black-and-white film gives chalk-white highlights, coarse grain and ink-black shadows. | look |
+| Square 6x6 Frame | 6x6; 정사각 포맷; 方形构图; Square Format | US | 중형; 정사각; 클래식 | A square frame with balanced, centered composition and a quiet formal feel. | look |
+| Amber Corneal Reflection | 호박색 홍채 반사; 琥珀色瞳孔; Shifting Amber Iris; Pacific Golden Hour; 퍼시픽 골든아워 | US | 석양; 클로즈업; 눈; 골든아워; 따뜻함 | Setting sun reflects as an amber crescent across the iris while the pupil narrows to a small dark disc. | look |
+| Paparazzi Direct Flash Catchlight | 파파라치 플래시 캐치라이트; 机顶直闪眼神光; Direct Flash Catchlight; 직사 플래시 눈빛; Raw Nightlife | US | 밤; 플래시; 클럽; 눈빛; 도시 | On-camera flash leaves a single hard white dot at the center of each pupil, with flat bright skin and a black background. | look |
+| Dual Specular Catchlight | 이중 하이라이트 눈빛; 双点高光; Marine Optics; Pacific Waves Reflection; Crystalline Eyes | US | 바다; 낮; 눈빛; 해안; 맑음 | Two small bright points of reflected sea glitter sit in each iris, eyes looking clear and wet. | look |
+| Neon Tube Ring Catchlight | 네온 링 캐치라이트; 霓虹灯管环形眼神光; Neon Mystique; Motel Night; 모텔 네온 | US | 밤; 네온; 모텔; 시네마틱; 눈빛 | A ring-shaped reflection of a neon tube glows in each eye, pink and blue light spilling on the face. | look |
+| Golden Sunset Arc Catchlight | 석양 아크 캐치라이트; 金色落日弧形光斑; Endless Horizon; Road Trip Freedom; Desert Road Gaze | US | 석양; 사막; 로드트립; 눈빛; 자유 | A curved arc of warm orange sunlight shines across each iris with the road disappearing in the distance. | look |
+| Headlight Pupil Constriction | 헤드라이트 동공; 车前大灯瞳孔; Wild Roadway Gaze; High Stakes; 헤드라이트 눈빛 | US | 밤; 도로; 강렬함; 드라마; 누아르 | Two bright headlight beams from the front shrink the pupils to pinpoints and white out the cheeks. | look |
+| Desert Amber Iris | 사막 호박색 홍채; 仙人掌荒漠; Sunbaked Soul; Americana Western; 웨스턴 사막 | US | 사막; 웨스턴; 낮; 강렬함; 눈빛 | Hard desert sun makes the iris glow translucent amber with fine radial fibres visible. | look |
 
 ## FR
 
@@ -327,3 +371,29 @@ Optics 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다.
 | Waist-Level Viewfinder | 웨이스트 레벨; 허리 높이 파인더; 웨이스트 레벨 파인더; 腰平取景 | FR | 낮은 시점; 올려다봄; 이안리플렉스; 정사각 | The camera is held at belly height looking slightly up, giving the subject a calm, quietly monumental stance. | look |
 | Cartier-Bresson | 앙리 카르티에 브레송; 카르티에브레송; Henri Cartier-Bresson | FR | 흑백; 스트리트; 기하학; 구도 | Black-and-white silver-gelatin street frames with fine grain, normal-lens perspective and strict geometric composition. | person-style |
 | Overexposed Highlights | 과노출; 하이라이트 날림; 过曝; 밝게 날린 빛 | FR | 과노출; 밝음; 여름; 아침 | Bright areas push to paper-white with softly bleeding edges while midtones stay airy. | look |
+| 粗颗粒 | 굵은 입자; 거친 필름 입자; coarse grain; 조립자; Coarse Grain | FR | 거친 입자; 필름; 다큐; 야간 | Large, uneven grain across the whole frame that roughens edges and adds a raw, tactile surface. | look |
+| Teal Shadows | 틸 섀도; 청록 암부; 暗部青; teal and warm; 청록 그림자 | FR | 청록 암부; 따뜻한 하이라이트; 영화 색감; 야간 | Dark areas lean cool teal-grey while highlights stay creamy and warm. | look |
+| High-Contrast Black and White | 하이 콘트라스트 흑백; 고대비 흑백; 高反差黑白; 강한 흑백 | FR | 흑백; 고대비; 깊은 흑색; 극적 | Deep black shadows, bright clean whites and a firm middle grey ramp. | look |
+| Soft Glow | 소프트 글로우; 소프트 포커스 광륜; 柔光; Glow; 블룸; 소프트 필터 | FR | 부드러운 빛; 몽환; 하이라이트 번짐; 새벽 | Highlights spread a gentle luminous halo into surrounding shadow, softening edges and outlines. | look |
+| Amber Warm Grade | 호박색 톤; 앰버 톤; 琥珀色; 따뜻한 황금빛 톤; honey tones | FR | 호박색; 가을; 노을; 따뜻함 | The whole frame bathed in amber-honey warmth, from fallen leaves to highlights and wood. | look |
+| Muted Low-Saturation | 저채도; 뮤트톤; 디새추레이트; 低饱和; desaturated | FR | 저채도; 차분함; 베이지 그레이; 중립 | Colors pulled back to soft greys, beiges and faded greens with gently lowered contrast. | look |
+| Cool Grey Tone | 쿨 그레이; 청회색; 冷灰; cold grey; 차가운 회색 | FR | 쿨톤; 흐린 날; 청회색; 도시 | Palette of pale grey with a trace of blue, restrained contrast and clean cold whites. | look |
+| Film Vignette | 필름 비네팅; 비네트; 암부 모서리; 暗角; Vignette | FR | 비네팅; 필름; 가장자리; 집중 | Corners fall gently darker, pulling attention to the centre of the frame. | look |
+| Lens Flare | 렌즈 플레어; 플레어; 耀斑; 역광 플레어 | FR | 역광; 빛 번짐; 대비 저하; 노을 | Soft veils and streaks of light spreading from a bright source across the frame, lowering contrast near it. | look |
+| 6x6 Square Frame | 6×6; 정방형 프레임; 1:1 정방형; 중형 필름 정방형; 120 필름; Square Format | FR | 정방형; 중형 필름; 중앙 구도; 차분함 | Square 1:1 composition with the subject centered or lightly offset and calm, balanced margins. | look |
+| Cool White Balance | 쿨 화이트 밸런스; 차가운 화이트; 冷白; 쿨톤 화이트 | FR | 쿨톤; 맑은 피부; 투명함; 하이키 | Whites sit slightly cold and clean, giving skin a pale porcelain-like clarity without warm yellow. | look |
+| 3:4 Upright Frame | 3:4 세로; 3:4 프레임; 세로 프레임; 3:4 portrait | FR | 세로 구도; 3:4; 인물; 필름 | Upright frame with the subject slightly off-center and open space above and around. | look |
+| 重叠曝光 | 다중 노출; 이중 노출; double exposure; 겹친 노출 | FR | 다중 노출; 몽환; 저녁; 중첩 | Two images seem overprinted: a face faintly layered with street or sky shapes in semi-transparent overlap. | look |
+| 1/1000s Shutter | 고속 셔터; 1/1000초; 高速快门; 모션 프리즈; 동작 정지 | FR | 고속 셔터; 바람; 움직임; 정지 | Coat hem and hair frozen mid-gust with crisp edges while the background stays perfectly still. | look |
+| Catchlight | 캐치라이트; 눈동자 반사광; 눈빛 하이라이트; eye catchlight; 眼神光; 눈동자 빛 | FR | 눈빛; 광택; 반사; 클로즈업; 눈; 플래시; 인물 | Small bright reflections sit in the dark of the pupil and show the shape of the light source. | look |
+| Lumière du ciel gris | 흐린 하늘 캐치라이트; overcast catchlight; diffuse sky catchlight | FR | 흐림; 중립; 낮; 광장 | A soft crescent of pale sky glows at the top edge of each iris under even overcast light with no shadows. | look |
+| Fenêtres haussmanniennes | 오스만 창틀 반사; Haussmann window catchlight; window frame reflection | FR | 클래식; 창가; 아침; 기하학 | Tall paned window shapes appear as small gridded reflections in the iris, light falling from one side. | look |
+| Double reflet de vitrine | 이중 반사; double reflection; street reflection | FR | 유리; 거리; 오후; 이중노출 | Street scenery and passers-by mirror faintly in the pupils, layered with window glass reflections. | look |
+| Iris d'ambre | 호박빛 홍채; amber iris; golden hour catchlight | FR | 황혼; 따뜻함; 언덕; 호박색 | Low golden side light passes through the iris and turns it translucent amber, with warm edges on the face. | look |
+| Point lumineux de Vermeer | 페르메이르 하이라이트; Vermeer catchlight; single highlight | FR | 명암; 바로크; 어둠; 미술관 | A single pinpoint highlight glints in a dark room, soft window light from one side and deep shadow behind. | person-style |
+| Bougie | 촛불 반사; candle catchlight; bistro candlelight | FR | 촛불; 밤; 와인; 로맨틱 | Two tiny wavering flame points shine in each eye, warm light flickering across the wine glass and cheek. | look |
+| Vaguelettes de la Seine | 물결 반사; water glint catchlight; Seine glints | FR | 물결; 정오; 다리; 반짝임 | Rippling reflections from river water dance in the pupils and across the underside of the chin. | look |
+| Lumière mouchetée | 나뭇잎 그림자 빛; dappled light; olive shade light | FR | 프로방스; 여름; 나무그늘; 얼룩빛 | Sunlight breaks through leaves into moving small spots on the face and in the eyes. | look |
+| Reflet de pluie | 빗줄기 반사; rain window reflection; rainy catchlight | FR | 비; 창가; 가을; 우울 | Streaks of rain on glass cast thin vertical lines of light that slide across the eyes and cheek. | look |
+| Reflet de parapluie | 은색 반사우산; silver umbrella catchlight; 16mm film lighting | FR | 영화; 필름; 누벨바그; 반사판 | A wide, round, silvery catchlight of a bounce umbrella sits in each eye with grainy 16mm film texture. | gear |
+| 16mm | 16mm 필름; 16미리; 16mm film; Super 16 | FR | 필름; 누벨바그; 입자; 영화 | Visible coarse grain, softened highlights and slightly muted contrast of 16mm film stock. | gear |

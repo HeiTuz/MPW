@@ -15,6 +15,7 @@ const COLS = 6;
 
 const norm = (s) => s.normalize('NFKC').toLowerCase();
 // Spacing variants match too: "시스루뱅" finds "시스루 뱅" (spaces, hyphens and middle dots are dropped on both sides).
+// The squashed form never matches inside a word: it must equal a whole token or alias, or be its start (so "한복" does not hit "젖은 듯한 복고 컬").
 const squash = (s) => norm(s).replace(/[\s\-\u2010-\u2015\u00b7\u30fb]+/g, '');
 const splitRow = (line) => line.replace(/^\| | \|$/g, '').split(/(?<!\\) \| /).map((c) => c.replace(/\\\|/g, '|'));
 const list = (cell) => cell.split(';').map((s) => s.trim()).filter(Boolean);
@@ -38,6 +39,8 @@ export function loadLayer(slug, dir = LEXICON_DIR) {
 
 export const loadAll = (dir = LEXICON_DIR) => SLUGS.map((slug) => loadLayer(slug, dir));
 
+const same = (a, b) => a === b;
+const partial = (a, b) => a.includes(b);
 // Per query term: token/alias exact 100/90, partial 60/50, tag 30, culture code 20, looks 10. A row scores the sum over terms.
 function scoreRow(row, terms) {
   let total = 0;
@@ -45,13 +48,13 @@ function scoreRow(row, terms) {
     const sq = squash(q);
     const token = norm(row.token), sToken = squash(row.token);
     const aliases = row.aliases.map(norm), sAliases = row.aliases.map(squash);
-    const hit = (plain, squashed, test) => test(plain, q) || (sq && test(squashed, sq));
+    const hit = (plain, squashed, test) => test(plain, q) || (sq && (test === partial ? squashed.startsWith(sq) : test(squashed, sq)));
     let best = 0;
-    if (hit(token, sToken, (a, b) => a === b)) best = 100;
-    else if (aliases.some((a, i) => hit(a, sAliases[i], (x, y) => x === y))) best = 90;
-    else if (hit(token, sToken, (a, b) => a.includes(b))) best = 60;
-    else if (aliases.some((a, i) => hit(a, sAliases[i], (x, y) => x.includes(y)))) best = 50;
-    else if (row.tags.some((t) => hit(norm(t), squash(t), (a, b) => a.includes(b)))) best = 30;
+    if (hit(token, sToken, same)) best = 100;
+    else if (aliases.some((a, i) => hit(a, sAliases[i], same))) best = 90;
+    else if (hit(token, sToken, partial)) best = 60;
+    else if (aliases.some((a, i) => hit(a, sAliases[i], partial))) best = 50;
+    else if (row.tags.some((t) => hit(norm(t), squash(t), partial))) best = 30;
     else if (row.culture.some((c) => c.toLowerCase() === q)) best = 20;
     else if (q.length >= 2 && norm(row.looks).includes(q)) best = 10;
     total += best;
@@ -73,8 +76,11 @@ export function search({ terms, layers = SLUGS, culture = null, dir = LEXICON_DI
 }
 
 // Random picks reuse draw_portrait_options so the draw works the same way (crypto.randomInt unless a picker is injected).
+// Rows tagged MINOR_TAG (children and students) are never drawn at random; a direct search still returns them.
+export const MINOR_TAG = '아동·학생';
 export function drawRandom(results, count, pickIndex = randomInt) {
-  return results.map((layer) => {
+  return results.map((full) => {
+    const layer = { ...full, matches: full.matches.filter((m) => !m.tags.includes(MINOR_TAG)) };
     const n = Math.min(count, layer.matches.length);
     if (n === 0) return { ...layer, matches: [] };
     const byToken = new Map(layer.matches.map((m) => [m.token, m]));

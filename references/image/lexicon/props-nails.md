@@ -42,6 +42,35 @@ Props and nails 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토�
 | 보온병 | 화이트 보온병; 보온 텀블러; 미니멀 보온병; 水筒; 스이토; thermos; white flask; 保温杯 | KR | 미니멀; 일상; 보온; 캠핑; 소풍 | A slim insulated flask with a powder-coated or brushed steel body and a small loop handle on the cap, the bright metal rim catching a clean highlight. | item |
 | 긱시크 안경 | 긱시크; 검은 뿔테; 평광 안경; geek chic glasses; 极客眼镜 | KR | 지적; 미니멀; 안경; 도시; 검정 | Slim rectangular black-framed glasses with clear lenses that show faint reflections of the room and thin edges that catch a narrow highlight. | look |
 | 미니 진주 네일 | 화이트 젤 & 미니 진주; 진주 파츠 네일; 진주 포인트 네일; pearl accent nails; 珍珠点缀美甲 | KR | 네일; 우윳빛; 진주; 봄; 청순 | Nails in a milky translucent white gel with a single tiny pearl set near the cuticle, glossy and slightly see-through. | look |
+| 헤어핀 | Pearl Hairpin; 复古珍珠发夹; 진주 핀; 펄 헤어핀; 헤어핀 스타일링 | KR | 클래식; 단정; 레트로; 우아; 실내 | Small pearl pin sliding the side hair back behind the ear, with a soft round shine against the dark hair. | item |
+| 페이스 쥬얼 | Face Gems; 面部水钻贴; 페이스 젬; 얼굴 보석; 페이스 스톤 | KR | 몽환; 에디토리얼; 반짝; 아트; 글램 | Small gems stuck in a line or drop around the eye that glitter against the skin. | item |
+| 头戴式耳机 | 헤드폰; 빈티지 헤드폰; over-ear headphones | KR | 몰입; 저녁; 실내; 소품; 계열:레트로 | Silver over-ear headphones with cushioned pads sitting over the ears, cord or band reflecting soft room light. | item |
+| 无线耳机 | 무선 이어폰; 에어팟; wireless earbud | KR | 미니멀; 실내; 소품; 손; 계열:일상 | One white in-ear earbud pinched between thumb and index finger and hovering at the ear opening. | item |
+| 托特包 | 토트백; 큰 가방; tote bag | KR | 출근길; 낮; 거리; 소품; 계열:데일리 | A large leather tote hanging from a raised shoulder, the strap pressed by a hand to stop it sliding. | item |
+| 滑板 | 스케이트보드; 스케이트 파크; skateboard | KR | 활기; 오후; 공원; 소품; 계열:스트릿 | A matte-grip skateboard under both feet sideways, knees bent and arms outstretched for balance. | item |
+| 비니 | Beanie; 비니 모자; 니트 비니 | KR | 캐주얼; 가을겨울; 지하철역; 스트릿 계열 | Slim ribbed-knit beanie pulled just above the eyebrows in charcoal, wool texture standing out at close range. | item |
+| 초커 | Choker; 초커 목걸이 | KR | 화려함; 사계절; 무대; 아이돌 계열 | Thin black velvet or crystal choker sitting snug at the base of the throat, sparkling under stage lights. | item |
+| Iced Americano Condensation Cup | 아이스 아메리카노 컵; 결로 컵; condensation cup | KR | 여름; 청량; 카페; 음료 | A clear PET cup beaded all over with tiny cold droplets that catch the light as separate bright points, with ice cubes showing their facets through the wall. | item |
+| Kraft Sleeve Hot Latte Paper Cup | 크래프트 슬리브 컵; 컵 슬리브; kraft sleeve | KR | 가을; 겨울; 카페; 따뜻함 | A white paper cup with a double-layer corrugated kraft sleeve, its brown ridged paper soaking up warm side light. | item |
+| 샴페인 플루트 | 샴페인 잔; 샴페인 플룻; champagne flute; 香槟高脚杯 | KR | 파티; 밤; 축하; 연말; 금빛 | A tall narrow stemmed glass of pale gold champagne with a thin stream of bubbles rising from the base to the surface, and a bright highlight line running the length of the glass. | item |
+| 빈티지 메탈 시계 | 빈티지 스퀘어 시계; 스퀘어 메탈 시계; vintage square watch; 小方表; 은색 시계 | KR | 복고; 미니멀; 은색; 손목; 액세서리 | A very slim square-faced silver watch on a fine metal bracelet, its small crystal glass reflecting a thin white line of light. | item |
+| 한 송이 튤립 | 튤립 한 송이; 흰 튤립; single tulip; 白郁金香; 꽃다발 | KR | 봄; 꽃; 흰색; 미니멀; 선물 | A single white tulip wrapped in a frosted translucent paper sleeve, the soft petals glowing and the wrapping paper crinkling with a faint sheen. | item |
+| 심플 실버 링 귀걸이 | 실버 링 귀걸이; 얇은 후프; dainty hoops; 细耳圈; 미니 후프 | KR | 액세서리; 은색; 미니멀; 귀걸이; 일상 | Ultra-fine silver hoop earrings that swing a little and catch a tiny point of light on the curve. | item |
+| 빈티지 가죽 시계 | 가죽 스트랩 시계; 코냑 시계; leather strap watch; 复古皮带手表; 빈티지 시계 | KR | 복고; 갈색; 손목; 액세서리; 차분함 | A small round metal-dial watch on a thin cognac leather strap, with visible grain and faint wear on the leather. | item |
+| 솔리테어 다이아 목걸이 | 솔리테어 목걸이; 단석 목걸이; solitaire diamond necklace; 单钻项链; 다이아 목걸이 | KR | 액세서리; 보석; 미니멀; 고급; 은색 | An ultra-fine white-gold chain resting on the collarbone with one small diamond that throws tiny sparkling points of light. | item |
+| 가죽 다이어리 | 다이어리; 만년필; fountain pen; 手账; 민트 다이어리 | KR | 문구; 민트; 다이어리; 클래식; 금색 | A mint green leather-bound journal lying open next to a gold-nibbed fountain pen, the nib throwing a small bright highlight. | item |
+| Binggrae Banana Milk Jar | 빙그레 바나나우유 단지; banana milk jar | KR | 복고; 여름; 편의점; 노랑 | A rounded pale-yellow plastic jar of banana milk with a foil lid, glowing soft yellow against window light. | item |
+| 진주 앵클릿 | 담수진주 발목 장식; pearl ankle charm; 珍珠吊坠 | KR | 진주; 발목; 장식; 화이트; 우아한 | Two small freshwater pearls hanging on short strands at the back of the ankle, catching a soft round highlight. | item |
+| 고양이 머리띠 | 캣 이어 머리띠; Cat Ear Headband; 猫咪发箍; 고양이 귀 머리띠; 놀이공원 머리띠 | KR | 놀이공원; 귀여움; 소품; 발랄; 캐주얼 | A hairband with two small cat ears standing up from the top of the head. | item |
+| 平光金丝镜 | 무도수 금테 안경; 금속 테 안경; 얇은 금테 안경 | KR | 안경; 금테; 지적인 무드; 소품; 도서관 | Thin gold metal-frame glasses with clear lenses, hands adjusting both temples at the nose bridge. | item |
+| 热纸杯 | 따뜻한 종이컵; 종이컵 두 손으로 잡기 | KR | 카페; 겨울; 소품; 따뜻함 | Both palms wrapped around a hot paper cup with steam rising in front of the face. | item |
+| 草莓蛋糕 | 딸기 케이크; 딸기 생크림 케이크 | KR | 디저트; 카페; 소품; 음식 | A slice of strawberry cream cake on a plate being cut with a small silver fork. | item |
+| 银叉 | 은색 포크; 디저트 포크 | KR | 디저트; 소품; 식기 | A small polished silver dessert fork held in one hand. | item |
+| 牛角面包 | 크루아상; 갓 구운 크루아상 | KR | 베이커리; 음식; 소품; 카페 | A freshly baked, golden, flaky croissant pinched between two fingers. | item |
+| 唇含吸管 | 빨대 물기; 빨대 입에 물고 | KR | 카페; 소품; 눈빛; 데이트 | A clear plastic straw held lightly between the lips. | item |
+| 电动牙刷 | 전동 칫솔 | KR | 욕실; 소품; 일상 | An electric toothbrush held in the mouth during a morning wash-up. | item |
+| 사선 스트라이프 넥타이 | 스트라이프 타이; diagonal stripe tie; 교복 넥타이 | KR | 넥타이; 교복; 스트라이프; 소품; 아동·학생 | A narrow burgundy and navy diagonal-striped necktie knotted at a white shirt collar. | item |
+| 멀티포켓 백팩 | 학생 백팩; 책가방; multi-pocket backpack | KR | 백팩; 책가방; 학생; 기능성; 아동·학생 | A grey nylon backpack with several zip pockets and padded shoulder straps. | item |
 
 ## CN
 
@@ -122,6 +151,21 @@ Props and nails 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토�
 | 纯银水滴吊坠 | 水滴吊坠; 银吊坠; silver teardrop pendant; 은 물방울 펜던트 | CN | 은; 물방울; 장식; 차가운 광택; 파티 | A small silver teardrop that hangs from a thin chain at the garment edge, giving a cool point of reflection against dark fabric. | item |
 | 羊脂白玉水滴扣 | 白玉水滴扣; 玉扣; jade drop button; 옥 물방울 단추 | CN | 백옥; 옥; 단추; 우아함; 양지옥 | A small, smooth drop of white jade used as a fastener, glossy, milky, and warm to the eye against dark silk. | item |
 | 青铜古扣 | 复古金属扣; 可拆卸; 청동 고리; bronze clasp | CN | 청동; 금속; 전위; 해체주의; 무광 | A dull bronze metal clasp with a worn, aged surface, joining the stocking edge to a detachable strap. | item |
+| 尖头漆皮高跟鞋 | 漆皮尖头高跟; patent pointed pump; 에나멜 뾰족 구두; 红底鞋 | CN | 에나멜; 뾰족 구두; 광택; 정장; 빨간 밑창 | A pointed-toe pump in patent leather with a mirror-like shine, its glossy toe cap catching a clear, bright reflection. | item |
+| 玛丽珍鞋 | 玛丽珍; Mary Jane shoes; 메리제인 구두; 漆皮玛丽珍 | CN | 메리제인; 스트랩; 레트로; 광택; 파티 | A rounded-toe shoe with a single ankle strap, in glossy black leather that picks up a soft sheen along the toe. | item |
+| 穆勒鞋 | 平底穆勒; mule flats; 뮬 플랫; 백리스 슈즈; 뮬; mule; soft-sole mule | CN | 뮬; 플랫; 실내; 차분함; 봄여름; 신발; 블랙; 미니멀; 슬립온; 도시 | A flat, backless slip-on shoe in soft leather or satin, leaving the heel and top of the foot bare. | item |
+| 切尔西靴 | 切尔西短靴; Chelsea boots; 첼시 부츠; 踝靴 | CN | 부츠; 발목; 가죽; 겨울; 도시 | A smooth leather ankle boot with an elastic side panel and a flat, clean line with no laces. | item |
+| 马丁靴 | Dr. Martens; 马丁短靴; 닥터 마틴; lace-up boots | CN | 워커; 검정; 끈 부츠; 펑크; 하이스트리트 | Chunky black lace-up boots with a thick sole, in scuffed leather with yellow stitching along the welt. | brand |
+| 乐福鞋 | 厚底乐福; loafers; 로퍼; 厚底乐福鞋 | CN | 로퍼; 두꺼운 밑창; 하이스트리트; 가죽; 캐주얼 | A slip-on leather shoe with a thick, lugged sole and a low, rounded toe, shining dully on the toe cap. | item |
+| 螺子黛 | 라쯔다이; 黛眉; dai brow pencil; blue-black brow pigment | CN | 규방; 눈썹; 고전; 화장 | A dark blue-gray brow pigment block used for a thin arched brow line, soft and matt on the skin. | item |
+| 紫檀 | 자단; 红木; rosewood; redwood furniture | CN | 저택; 가구; 어두운 나무; 중후함 | Heavy dark red-brown hardwood furniture with a deep, glossy grain and sharp carved edges. | item |
+| 绿罩银行灯 | 뱅커스 램프; green banker lamp; 황동 탁상등 | CN | 복고; 탁상등; 서재; 노란빛; 고전 | A green glass shade over a brass stand that pours one pool of warm light on the desk. | item |
+| 素圈戒指 | 白玉素圈; 羊脂玉素圈; 소권 반지; plain jade band ring; jade band ring; 极简白玉戒指 | CN | 미니멀; 담백한; 손; 전통; 동양 | A thick plain jade band with no carving, smooth inside and out, resting on a finger and glowing softly where light grazes the rounded surface. | item |
+| 蛋面戒指 | 蛋面翡翠戒指; 起荧光; 달걀형 반지; 카보숑 반지; cabochon ring; oval cabochon jade ring; 翡翠蛋面 | CN | 화려한; 손; 보석; 고급; 사계절 | A ring set with a smooth dome-shaped jade stone whose glowing surface shows a soft bright band of light that moves as the hand turns. | item |
+| 马鞍戒指 | 翡翠马鞍戒; 马鞍戒; 안장 반지; 말안장 반지; saddle ring; saddle jade ring; 中性戒指 | CN | 강렬한; 중성적; 손; 모던; 보석 | A wide saddle-shaped jade ring with a raised arched top, its polished green surface reflecting one broad highlight across the dome. | item |
+| 哑光美甲 | 哑光甲; 磨砂美甲; 무광 네일; 매트 네일; matte nails; matte nail finish; 全哑光 | CN | 차분한; 매트; 손; 모던; 고급 | Nails coated in a flat, velvety finish that gives off no sheen, the colour looking soft and deep with only a faint glow along the free edge. | look |
+| 延长甲 | 延长美甲; 水光延长甲; 연장 네일; 젤 연장; extension nails; nail extensions; 长甲 | CN | 길고; 손; 세련된; 반짝이는; 모던 | Long, evenly shaped nail extensions with a smooth arched curve and clean tapered ends, all five of equal length. | look |
+| 法式美甲 | 朱砂红法式; 金边红甲; 新中式法式; 프렌치 네일; 프렌치 팁; French nails; French tip nails; gold edge nails; 누드톤 프렌치 네일 | CN | 우아한; 붉은; 금색; 손; 새로운 중국풍; 우아함; 실내; 네일; 계열:디테일 | A neat French manicure where the nail tip is picked out in a thin red line edged with a fine gold line, against a clear glossy base. | look |
 
 ## JP
 
@@ -238,6 +282,46 @@ Props and nails 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토�
 | 通勤自転車 | 통근 자전거; 자전거; 마마챠리; ママチャリ; commuter bicycle; 通勤单车 | JP | 자전거; 크림색; 일상; 거리 | A cream-coloured city bicycle with a front basket, a silver straight handlebar and a chain guard. | item |
 | 二層グラデーション | 이층 그라데이션; 분층 그라데이션; 투톤 음료; two-layer drink; 分层渐变 | JP | 청량; 여름; 카페; 음료 | Two liquids sit in a sharp horizontal split inside a clear cup, the darker layer meeting the paler one, light passing through and throwing a coloured caustic. | look |
 | メタルリング | 메탈 링; metal ring; 金属环扣; ring hardware | JP | 메탈; 링; 펑크; 디테일; 블랙; 악세서리 | Silver ring and buckle hardware on straps, with small bright highlights along the curved metal edges. | item |
+| ビーニー | 비니; 니트 비니; beanie; knit beanie; 毛糸帽; ニット帽; knit cap; 毛线冷帽 | JP | 스트리트; 겨울; 니트; 모자; 캠핑; 따뜻함 | A thick coarse-knit fuzzy wool cap pulled down on the crown with a ribbed fold. | item |
+| 金箔 | 킨파쿠; 금박; gold leaf; gold foil flakes; 金箔ヘア | JP | 일본; 전통; 금빛; 장식 | Irregular flakes of real gold leaf dotted at the hairline and behind the ear, flashing with each tilt of light. | item |
+| ドライフラワーアップ | 드라이 플라워 업; 건조화 헤어; dried flower updo; dried flowers hair; 干花盘发 | JP | 꽃; 내추럴; 올림머리; 축제 | Hydrangea, baby's breath and gold-dusted wheat tucked along one side of a layered low bun. | item |
+| 手すり | 난간; handrail; 扶手 | JP | 금속; 계단; 차가움; 도시 | Cold polished metal rail reflecting a thin strip of light, gripped lightly by a hand sliding along it. | item |
+| トートバッグ | 토트백; 에코백; tote bag; 帆布包 | JP | 캔버스; 캐주얼; 일상; 소품 | Plain canvas tote with soft folds, strap slipping off the shoulder so the shoulder lifts to hold it. | item |
+| ヘッドホン | 헤드폰; 헤드셋; headphones; 头戴式耳机 | JP | 음악; 금속; 스트리트; 소품 | Silver metal over-ear headphones with large rounded cups pressed against the hair, band across the crown. | item |
+| ヘアゴム | 머리끈; hair tie; 发绳 | JP | 헤어; 일상; 검정; 소품 | Thin black elastic hair tie held in the teeth while both hands gather the hair at the nape. | item |
+| 紙袋 | 종이봉투; paper bag; 纸袋 | JP | 빵집; 산책; 가벼움; 소품 | Kraft paper bag swinging from one hand, creased and warm-toned, holding fresh baked bread. | item |
+| 暖簾 | 노렌; noren curtain; 暖帘; noren; shop curtain | JP | 전통; 남색; 입구; 가게; 천 | Split indigo linen curtain hung above a doorway, pushed aside by a raised hand so the wearer ducks beneath it. | item |
+| マグカップ | 머그컵; mug; 马克杯 | JP | 따뜻함; 겨울; 실내; 소품 | Heavy white ceramic mug wrapped in both palms, steam curling above it toward the nose. | item |
+| ストロー | 빨대; straw; 吸管 | JP | 음료; 귀여움; 카페; 소품 | Thin transparent straw held between the lips, cheeks slightly hollowed from the sip. | item |
+| アイスコーヒー | 아이스 커피; 아이스 아메리카노; iced coffee; 冰咖啡 | JP | 여름; 카페; 얼음; 음료 | Tall glass of dark iced coffee with clear cubes and a wet, frosted outer surface. | item |
+| アイスクリーム | 아이스크림; ice cream; 冰淇淋 | JP | 여름; 디저트; 바다; 소품 | Vanilla cone beginning to melt in strong sunlight, drips sliding along the cone edge. | item |
+| スケートボード | 스케이트보드; skateboard; 滑板 | JP | 스트리트; 데크; 그립테이프; 소품 | Longboard with a worn matte deck and black grip tape, small scratches along the rim. | item |
+| ヤマハ SR400 | 야마하 SR400; SR400; Yamaha SR400; 雅马哈 SR400 | JP | 바이크; 레트로; 금속; 밤 | Single-cylinder retro motorcycle with a round headlamp, teardrop tank in deep green, chrome fenders and a flat seat. | brand |
+| ホンダ CB400SS | 혼다 CB400SS; CB400SS; Honda CB400SS; 本田 CB400SS | JP | 바이크; 클래식; 금속; 밤 | Classic single-cylinder roadster with a round chrome headlamp, slim tank and spoked wheels. | brand |
+| 羽毛布団 | 오리털 이불; duvet; 羽绒被 | JP | 겨울; 아침; 포근함; 소품 | Thick white fluffy duvet wrapping the whole body from head to floor, leaving only a small face visible. | item |
+| 扇風機 | 선풍기; electric fan; 风扇; 센푸키; fan breeze | JP | 여름; 레트로; 바람; 실내; 나른함 | A small electric fan blows hair back from a lifted face, with jaw and throat lit from the side. | item |
+| 竹簾 | Sudare; 스다레; 대나무 발; bamboo blind | JP | 여름; 그늘; 일본식 | A bamboo blind casting thin striped shadows and filtered natural light into a quiet room. | item |
+| ブランコ | Swing; 그네; 공원 그네 | JP | 황혼; 빈 공원; 쓸쓸함 | An empty swing moving slightly in a quiet dusk park under a cool-warm sky. | item |
+| 黒縁メガネ | 검은 테 안경; 뿔테 안경; black frame glasses; 黑框眼镜; 丸メガネ; 원형 안경 | JP | 지적; 문화; 캐주얼; 복고 | Thin black frame glasses with clear lenses that reflect small window highlights at the lens corners. | item |
+| チェーンバッグ | 체인백; chain bag; chain shoulder bag; 菱格链条包; キルティングバッグ | JP | 클래식; 블랙; 가죽; 우아함 | A black quilted leather bag with diamond stitching and a gold chain strap, the leather taking a glossy highlight along each ridge. | item |
+| キャップ | 야구모자; 캡; baseball cap; 刺绣棒球帽; ベースボールキャップ | JP | 캐주얼; 스포티; 네이비; 자수 | A navy embroidered baseball cap with a curved brim shading the upper face. | item |
+| バケットハット | 버킷햇; 벙거지; bucket hat; 渔夫帽; バケハ | JP | 캐주얼; 아웃도어; 여름; 코듀로이 | A soft round-brimmed hat in nylon or corduroy with a short drooping brim. | item |
+| ベレー帽 | 베레모; beret; 贝雷帽 | JP | 가을; 클래식; 울; 예술 | A flat round wool hat, tilted to one side, with soft felt nap. | item |
+| ストローハット | 밀짚모자; straw hat; 草编帽; 麦わら帽子 | JP | 여름; 바다; 햇빛; 내추럴 | A wide-brimmed flat-crowned straw hat casting a round shadow on the face and shoulders. | item |
+| メッセンジャーバッグ | 메신저백; messenger bag; 邮差包; キャンバストート | JP | 스트리트; 캔버스; 캐주얼; 데일리 | A large canvas messenger bag slung across the body with a wide strap and a buckled flap. | item |
+| ホット自販機の缶コーヒー | vending machine hot canned coffee; 자판기 캔커피; 핫 캔커피; 暖柜热罐咖啡 | JP | 겨울; 따뜻함; 길거리; 음료 | A slightly dented black aluminum can still warm from a vending machine, with a satin black body, small steam of breath beside it and fingertips pink from the cold. | item |
+| 水玉 | polka dot; 미즈타마; 물방울 무늬; 波点 | JP | 레트로; 귀여움; 패턴; 유리 | Evenly spaced round white dots printed across a glass or fabric surface, each dot crisp against a translucent or solid ground. | look |
+| 花火 | hanabi; 하나비; 불꽃; 烟花 | JP | 여름; 밤; 축제; 불 | Bright gold sparks and soft smoke lit against a deep blue night. | item |
+| ホットカフェラテ | hot latte; 핫 라테; 따뜻한 라테; 热拿铁 | JP | 카페; 따뜻함; 컵; 음료 | A lidded paper cup warm in both hands with a thin line of steam from the sip hole. | item |
+| 傘立て | 우산꽂이; umbrella stand; 伞架; ビニール傘; 비닐우산; clear umbrella | JP | 비; 장마; 편의점; 투명; 물아 | A shop-front stand packed with clear vinyl umbrellas whose droplets and ribs catch cool grey light. | item |
+| 学生鞄 | 학생 가방; 교복 가방; school bag; 学生包 | JP | 가방; 교복; 가죽; 통학; 아동·학생 | A stiff black leather or navy canvas school bag with a flat body and metal clasp, carried by the handle or over one shoulder. | item |
+| 明治おいしい牛乳 | Meiji Oishii milk; 메이지 우유; 메이지 오이시이 규뉴; 明治美味牛奶 | JP | 우유팩; 편의점; 일본 브랜드; 아침 | A small 200ml gable-top carton printed in deep blue and white blocks, one corner of the folded top pushed open into a triangular spout with a drop of white milk at the tip. | brand |
+| 屋根型パック | gable-top carton; 지붕형 종이팩; 박공 팩; 屋形纸盒 | JP | 종이팩; 우유; 포장; 미니 | A coated-paper carton with a peaked gable top sealed in pressed folds, matte food-grade surface and a faint silver foil layer visible at the opening. | item |
+| 三角開口 | triangular spout; 삼각 개봉구; 삼각 주둥이; 三角开口 | JP | 개봉구; 종이팩; 디테일; 클로즈업 | The folded top of a milk carton is pushed open into a clean isosceles-triangle pouring spout, with a single white drop hanging from its edge. | look |
+| 細ストローで飲む牛乳パック | milk carton with thin straw; 얇은 빨대 우유팩; 우유팩 빨대; 插吸管喝牛奶 | JP | 우유팩; 빨대; 두 손; 일상 | Both hands cup the sides of a small carton so the walls dent slightly, a thin straw in the spout or the rim lifted close to the lips. | look |
+| 純白リネン | 순백 리넨; 흰 린넨; white linen bedding; 純白シーツ | JP | 침구; 린넨; 흰색; 주름; 소재 | Bright white linen sheets and duvet with fine natural wrinkles and a matte cotton texture. | item |
+| クレープ | 크레이프; 일본식 크레페; Harajuku crepe; 크레페 | JP | 디저트; 크레페; 하라주쿠; 간식; 핑크 | A hand-held paper cone crepe stuffed with whipped cream, fruit and sauce. | item |
+| ケロリン桶 | 케로린 통; 케로린 오케; Kerorin bucket; 黄色い桶 | JP | 센토; 노란 통; 욕실소품; 레트로; 로고 | A bright yellow plastic wash basin printed with a bold white brand logo, stacked beside bathhouse stools. | item |
 
 ## US
 
@@ -303,6 +387,45 @@ Props and nails 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토�
 | chain crossbody bag | 체인 크로스백; 체인 백; 메탈 체인 백; chain bag | US | 하이스트리트; 가을; 체인; 가방 | A small quilted bag hung on a gold chain strap worn across the body, glinting along its links. | item |
 | Fringe Folding Fan | 프린지 팬; 술 장식 부채; 보헤미안 부채; bohemian fan; fringe fan | US | 보헤미안; 페스티벌; 여름; 질감 | A folding fan with a woven ribbed face and a fringe of cotton tassels swinging along its lower edge. | item |
 | Vanilla Matte Nails | 바닐라 매트 네일; 밀크 매트 네일; 숏 스퀘어 네일; matte vanilla nails; milky matte nails | US | 미니멀; 밀키; 차분한; 네일 | Short square nails in an opaque creamy vanilla with a velvety matte finish that absorbs highlights and keeps edges soft. | look |
+| leather gloves | 가죽 장갑 | US | 상류층; 가을; 미국 | Fitted black leather gloves with stitched seams at the knuckles. | item |
+| Y-bar silver stack rings | 실버 링 겹쳐 끼기; silver jewellery stack; 다크 실버 장신구 | US | 펑크; 가죽; 미국 | Chunky silver rings and chain bracelets stacked tight on the fingers and wrist. | item |
+| Face Gems | 페이스 젬; 얼굴 보석; 페이스 스톤; adhesive face gems; rhinestone face gems | US | Y2K; 보석; 페스티벌; 글리터; 소품 | Small adhesive rhinestones placed along the eye corners and cheekbones, each one flashing a small bright point. | item |
+| Mustang | Ford Mustang; muscle car; 머스탱; 포드 머스탱; 야생마 | US | 머슬카; 사막; 빈티지; 붉은색 | A red long-hood coupe with a rounded fender, chrome trim and bumper that catches the sun on its curved front wing. | brand |
+| Skateboard | maple deck; skate deck; 스케이트보드; 보드; 스케이트 덱 | US | 거리; 해변; 청춘; 스포츠 | A maple deck with grip tape, worn graphic underside and yellow wheels, tail slightly scuffed. | item |
+| Surfboard | longboard; 서프보드; 서핑보드; 롱보드; 冲浪板 | US | 해변; 서핑; 바다; 수직; 물보라 | A tall glossy board with a rounded nose and a center stripe, standing upright and dripping with seawater. | item |
+| Chrome Jukebox | jukebox; music box machine; 주크박스; 크롬 주크박스; 점보 박스 | US | 50년대; 네온; 다이너; 크롬 | A glass-domed machine with chrome trim and lit color tubes, glowing rainbow light onto her sleeve. | item |
+| Sparkler | sparkler stick; hand firework; 스파클러; 손불꽃; 냉불꽃 | US | 밤; 불꽃; 빛 궤적; 축제 | A thin wire that throws white sparks in a spinning halo and leaves a bright line in a long exposure. | item |
+| Lifeguard Tower | lifeguard stand; beach tower; 라이프가드 타워; 구조대 탑; 해변 감시탑 | US | 해변; 여름; 파랑; 높은 곳 | A blue wooden tower on stilts with a porch rail and a number plate in white, set against clear sky. | place |
+| Convertible | open top car; cabriolet; 오픈카; 컨버터블; 지붕 없는 차 | US | 로드트립; 해안; 바람; 여름 | A low open-top car with leather seats and a chrome windshield frame, hair blowing in the airflow. | item |
+| Vintage Pickup | pickup truck; old pickup; 빈티지 픽업; 픽업트럭; 트럭 | US | 시골; 밀밭; 서부; 금속 | A rounded faded-paint pickup with a rusty tailgate and wide fenders, parked in dry grass. | item |
+| Cat-Eye Sunglasses | 캣아이 선글라스; 猫眼墨镜; White Cat-Eye Sunglasses | US | 90년대; 휴양; 글래머 | Upswept white frames with dark lenses reflecting pool and sky. | item |
+| VW T2 Camper | 폭스바겐 T2; 大众T2露营车; Volkswagen Bus | US | 캠핑; 히피; 공도 | A classic yellow Volkswagen van with open rear doors and warm wood-and-cloth interior. | item |
+| Vintage Convertible | 빈티지 오픈카; 复古敞篷车; Convertible Car | US | 공도; 거울 반사; 석양 | Open-top car with chrome mirror and window glass catching low gold sun. | item |
+| Baseball Glove | 야구 글러브; 棒球手套; 야구 글러브와 공; leather baseball glove; sandlot; 샌드랏; baseball | US | 야구; 가죽; 여름; 노스탤지어; 구장 | A worn tan leather mitt with rough laces holding a white ball with red stitching, creased deeply in the pocket. | item |
+| Ukulele | 우쿨렐레; 乌克丽丽 | US | 캠핑; 어쿠스틱; 여름 | A small wooden four-string instrument strummed in warm interior light. | item |
+| Dr. Martens | 닥터마틴; 닥터 마틴; 마틴 부츠; Dr Martens | US | 부츠; 펑크; 검정; 노란 스티칭; 스트리트 | Lace-up eight-eyelet boots with a contrast yellow welt stitch, scuffed smooth leather and a thick air-cushioned sole. | brand |
+| Baseball Cap | 볼캡; 야구 모자; 베이스볼 캡; cap | US | 캐주얼; 스포티; 모자; 캠퍼스; 스트리트 | A curved-brim cotton cap with a plain crown, shading the upper face. | item |
+| Cowboy Hat | 카우보이 모자; 웨스턴 모자; 스텟슨; Stetson | US | 웨스턴; 챙; 페스티벌; 사막; 빈티지 | A wide-brimmed felt hat with a pinched crown, shading the upper face and casting a soft shadow. | item |
+| Straw Bag | 라탄 가방; 밀짚 가방; 짚 가방; 라탄백; woven straw bag | US | 여름; 라탄; 자연; 휴양; 페스티벌 | A hand-woven straw tote with a rounded body and rope handles, with a golden tan surface. | item |
+| Birkenstock | 버켄스탁; 버킨스탁; birken; 勃肯 | US | 슬리퍼; 코르크; 편안함; 캐주얼; 스웨이드 | A contoured cork footbed with suede upper straps, in a soft taupe colour, set on a thick sole. | brand |
+| GORE-TEX | 고어텍스; 방수 소재; gore tex | US | 방수; 아웃도어; 기능성; 비; 재킷 | A waterproof breathable shell that beads water on its surface, with sealed seams and a slightly crisp texture. | brand |
+| Ferrari Red | 페라리 레드; 페라리; 레이싱 레드; racing red | US | 레드; 레이싱; 스포티; 가죽; 스트라이프 | A saturated glossy racing-car red with white side stripes, bright against black accents. | brand |
+| Red Velvet Nails | 레드 벨벳 네일; 빨간 네일; 빨간 롱 네일; red coffin nails; coffin nails; 관 모양 네일; 크림슨 네일 | US | 클래식; 붉은; 글램; 네일 | Long coffin-shaped nails in a deep saturated crimson lacquer, mirror glossy with a long bright highlight along each nail. | look |
+| Picnic Basket | 피크닉 바구니; 피크닉 바스켓; wicker picnic basket; gingham picnic; 깅엄 피크닉; 도시락 바구니 | US | 공원; 봄; 낮; 피크닉 | A woven wicker basket with a red-and-white gingham lining, set on a green lawn in warm dappled sunlight. | item |
+| Vinyl LP | 바이닐; LP판; LP; 엘피; 黑胶唱片; vinyl record; kraft sleeve; 12-inch vinyl | US | 오디오; 복고; 실내; 음악 | A black 12-inch record with fine concentric grooves catching a thin curved line of light, half-slid from its kraft paper sleeve. | item |
+| Leather duffle | 가죽 더플백; 레더 위켄더; weekender duffle; 더플 백; 위켄더백; heritage travel bag | US | 여행; 가죽; 주말; 로드트립 | A full-grain leather weekender with worn brown creases, brass zips and a shoulder strap, patinaed and slightly scuffed. | item |
+| Pilates Reformer | 필라테스 리포머; 리포머 베드 | US | 운동; 스튜디오; 웰니스 | A long wooden-framed carriage bed with spring bars and padded headrest, one hand resting on the spring handle between sets. | item |
+| Airstream | 에어스트림; 에어스트림 캠퍼; Airstream camper | US | 캠핑; 사막; 복고; 노마드 | A rounded, polished aluminum travel trailer reflecting the desert sky with a retro riveted shell. | brand |
+| Prada Marfa | 프라다 마파; 프라다 마르파 | US | 현대미술; 사막; 텍사스 | A free-standing fake boutique with glass windows and an empty roadside field, a stark sculpture in the dust. | brand |
+| Chesterfield | 체스터필드; 체스터필드 소파 | US | 가죽; 클래식; 서재 | A deep tufted leather sofa with rolled arms and a worn, glossy brown finish. | item |
+| Soundboard Glamour | 사운드보드 글래머; 믹싱 콘솔 | US | 스튜디오; 밤; 록 | A glowing mixing console with rows of sliders, faders and indicator lights. | item |
+| Retro Cruiser | 레트로 크루저; 빈티지 컨버터블 | US | 드라이브; 복고; 도로 | A chrome-bumpered open-top car with long glossy body panels and white-wall tires. | item |
+| Sub Pop | 서브 팝; 서브팝 레코드 | US | 음반; 그런지; 90년대 | A basement record shop with stacked vinyl crates, band posters and fluorescent light. | brand |
+| Freight Elevator | 화물 엘리베이터; 프레이트 엘리베이터 | US | 공업; 철; 콘크리트 | An open steel-cage lift with thick cables, gate bars and harsh overhead light. | item |
+| Airboat | 에어보트; 공기 추진선 | US | 습지; 모험; 플로리다 | A flat-bottom boat with a tall cage-guarded propeller fan raised at the back. | item |
+| Cuban Cigar Factory | 쿠바 시가 공방; 시가 롤러 | US | 쿠바; 공방; 연기 | A wood worktable with golden-brown tobacco leaves and a hand-rolled cigar, hazy with smoke. | item |
+| 메탈 그로밋 | 아일릿; 금속 아일릿; Metallic Grommets; 金属气眼 | US | 그로밋; 금속; 디테일; 스타킹; 펑크 | Small round silver metal rings set into fabric in a regular line, catching sharp points of light. | item |
+| 리브드 탑 커프 | 리브드 탑; 罗纹压边; ribbed top cuff | US | 리브; 상단; 양말; 밴드; 마감 | A tight ribbed knit band at the top edge of a sock, holding its shape without a visible fold. | item |
 
 ## FR
 
@@ -366,3 +489,45 @@ Props and nails 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토�
 | Sac à main en cuir | 가죽 핸드백; 수공 가죽 백; 식물성 가죽 백; leather handbag; 사크 아 맹 | FR | 클래식; 가을; 빈티지; 가죽 | A hand-stitched vegetable-tanned leather handbag in warm brown, with a matte patina that deepens along the edges. | item |
 | soucoupe en porcelaine | 도자기 받침; 커피 소서; 소서; porcelain saucer; coffee saucer; 수쿠프 | FR | 카페; 도자기; 흰색; 소품 | A white porcelain coffee saucer with a thin glazed rim holding a small bright highlight. | item |
 | stylo plume à piston | 피스톤 만년필; 만년필; 잉크 만년필; piston fountain pen; 펜 오 피스통 | FR | 편지; 글쓰기; 빈티지; 서재 | A black piston-fill fountain pen with a gold nib, its glossy resin barrel reflecting a long highlight above cream letter paper. | item |
+| Chaussures semelle rouge | 루부탱; 레드솔; red sole pumps; 빨간 밑창 구두; 크리스찬 루부탱; Louboutin | FR | 저녁; 하이힐; 명품; 빨강 | Black patent pointed pumps with a glossy surface and a flat, bright red sole flashing when the heel lifts. | brand |
+| tasse d'expresso | espresso cup; 에스프레소 잔; demi tasse; expresso; 타스 데스프레소; expresso cup; demitasse; 데미타스 | FR | 카페; 소품; 아침; 프랑스; 오후; 파리 테라스; 클래식 | A thick-walled round-lipped white porcelain demitasse half full of dark espresso topped with a reddish-brown crema, glossy highlight along the rim, with a small engraved silver spoon on the saucer. | item |
+| mocassin | loafer; 모카신; 로퍼; 슬리퍼처럼 신기 | FR | 신발; 느슨함; 카페; 캐주얼 | A leather loafer hangs from the toe tip of the crossed top foot, heel slipped off and ankle loose, with the sole facing the camera. | item |
+| croissant | 크루아상; 크로와상; warm croissant; viennoiserie; 可颂; 牛角面包 | FR | 아침; 빵; 파리; 간식; 빵집; 황금빛; 프랑스 빵 | A golden laminated croissant with a flaky glossy crust and a fine crumb scatter at the break. | item |
+| parapluie noir | black umbrella; 검은 우산; umbrella | FR | 비; 우산; 거리; 가을 | A black canopy umbrella held over the head with rain dripping off the spoke tips. | item |
+| hortensias | hydrangea; 수국; 하이드랑제아 | FR | 꽃; 봄; 꽃집; 분홍 | Rounded pink and white hydrangea heads made of many small petals, full and soft. | item |
+| figue | fig; 무화과; figue fraîche | FR | 과일; 피크닉; 여름; 소품 | A ripe purple fig split open to show pink seeds and glossy flesh in the fingers. | item |
+| guitare | guitar; 기타; acoustic guitar | FR | 음악; 실내; 보헤미안; 소품 | A worn acoustic guitar resting on the lap with its glossy body catching a bright window sheen. | item |
+| Verre de bordeaux | red wine glass; 보르도 와인잔; 와인 한 잔; wine | FR | 와인; 저녁; 실내; 고독 | A stemmed glass with a little dark red wine that glows ruby at the edges against lamp light. | item |
+| crayon de bois | pencil hairpin; 연필로 머리 올리기; wooden pencil bun | FR | 올림머리; 연필; 학자; 즉흥 | A plain wooden pencil pushed through a twisted bun holding it up with the hair coiling round it. | item |
+| élastique noir | black hair tie; 검은 머리끈; hair elastic | FR | 머리끈; 포니테일; 생활감; 소품 | A thin black hair tie held in the teeth while both hands gather the ponytail at the nape. | item |
+| Baguette | 바게트; 法棍; 프랑스 바게트 | FR | 빵집; 아침; 황금빛; 프랑스 빵 | Long crusty loaf with a golden scored crust and a pale airy inside. | item |
+| Foxed Antique Mirror | 낡은 거울; 水银镜; 구리 거울; 앤티크 거울; gilded mirror | FR | 앤티크; 거울; 얼룩; 이중 반사 | Old mirror with spotted silvering and ornate gold frame, doubling the room in soft hazy layers. | item |
+| Gilded Window Lettering | 금박 글씨 유리문; 金箔字; 유리문 금색 글자 | FR | 금박; 유리문; 고풍; 레터링 | Hand-painted gold letters on a glass door glinting softly against the street reflection. | item |
+| Citroën DS | 시트로엥 DS; 雪铁龙DS; 시트로앵 DS; DS 19 | FR | 빈티지 자동차; 50년대; 크롬; 파리 | Streamlined 1950s French saloon with a round chrome mirror reflecting the street. | brand |
+| Chapeau de paille | 밀짚모자; straw hat; 샤포 드 파이; 와이드 브림 밀짚모자 | FR | 여름; 남프랑스; 야외; 시골 | A wide-brimmed straw hat with a frayed edge, throwing a soft shadow across the eyes. | item |
+| Béret | 베레; beret; 베레모; 울 베레 | FR | 겨울; 가을; 파리; 클래식 | A flat round wool hat tilted to one side, soft felt matte against the hair. | item |
+| Bonnet en laine | 울 비니; wool beanie; 니트 모자; 털모자 | FR | 겨울; 캐주얼; 클래식; 해양풍 | A snug navy wool cap with a folded cuff, ribbed stitches showing. | item |
+| Tasse en porcelaine | 도자기 커피잔; porcelain coffee cup; 본차이나 컵; 뼈자기 커피잔 | FR | 아침; 실내; 커피; 고전 | A white bone-china cup with a thin curved handle holding black coffee, steam rising. | item |
+| stylo plume | 만년필; fountain pen; 스틸로 플륨; 펜촉 금장 | FR | 편지; 글쓰기; 빈티지; 실내 | A black celluloid fountain pen with a two-tone engraved gold nib whose polished barrel catches a thin window reflection. | item |
+| Croissant au beurre | 크루아상; 버터 크루아상; 크로와상; butter croissant; 크루아상 오 뵈르 | FR | 아침; 베이커리; 따뜻함; 브런치 | A crescent-shaped hand-laminated butter croissant with a glossy golden shell of thin crisp layers and an open honeycomb crumb, flakes scattered on a small white porcelain plate. | item |
+| verre à pied | 와인잔; 크리스탈 와인잔; stemmed wine glass; burgundy glass; 부르고뉴 글라스; 피노 누아; pinot noir | FR | 저녁; 와인; 디너; 우아함; 클래식 | A very thin hand-blown crystal tulip glass on a hair-fine stem holding a third of ruby-red Burgundy pinot noir, with clear wine tears sliding down the inner wall and a bright window highlight on the bowl. | item |
+| verre à shot espresso | 더블 에스프레소; 샷 글라스 에스프레소; double espresso; layered crema; 에스프레소 샷잔 | FR | 카페; 아침; 진한 맛; 미니멀 | A small clear heat-resistant glass filled with double espresso that grades from jet black at the base to a dense inch-thin tan crema layer, backlit so the layers read clearly. | item |
+| Éventail | 에방타이; 접부채; 나무 부채; folding fan; carved wooden fan; 프랑스 부채 | FR | 여름; 앤티크; 우아함; 19세기 | A late-19th-century ebony folding fan with carved sticks and a sheer black silk leaf embroidered with faint fleur-de-lis, opening into a half-moon with a small black silk tassel swinging. | item |
+| Besace | 새들백; 가죽 새들백; cognac saddle bag; 크로스백; 베사스; patine; 파티나 | FR | 빈티지; 가죽; 가을; 클래식; 데일리 | A horseshoe-curved vegetable-tanned calfskin saddle bag in deep cognac with a honey-dark patina, blackened oxidized brass buckle and tiny natural scratches that catch the light. | item |
+| Lunettes rondes | 동그란 금테 안경; 원형 안경; 금테 안경; round gold glasses; wire-rimmed spectacles; 뤼네트 롱드 | FR | 지적; 빈티지; 좌안; 학자풍 | Hair-thin round gold wire-rim spectacles with tortoiseshell tip covers, clear titanium nose pads and lenses carrying a faint pale-green anti-reflective sheen that leaves the eyes visible. | item |
+| Gants longs | 롱 글러브; 검은 장갑; 오페라 글러브; opera gloves; lambskin gloves; 강 롱; agneau plongé | FR | 필름 누아르; 클래식; 밤; 우아함 | Mid-forearm black dip-dyed lambskin gloves of silk-soft leather hugging each finger and wrist, three hand-stitched lines on the back and fine silky wrinkles at the wrist when gripping. | item |
+| Voile transparent pailleté doré | 샴페인 골드 네일; 골드 미세 펄; champagne gold shimmer; topcoat micro shimmer; 발 트랑스파랑 | FR | 은은함; 햇살; 고급스러움; 데일리 | A clear top coat carrying a trace of nano-fine champagne-gold flecks that read as bare nails at a distance and show as a few star-like glints up close in direct sun. | look |
+| grenade mûre | 석류; 잘 익은 석류; pomegranate; grenade; 그르나드 | FR | 가을; 과일; 미식; 생동감 | A ripe split pomegranate with ruby-clear glistening arils bursting from the cracked skin, wet red juice on the fingertips. | item |
+| Draps de lin froissés | 구겨진 린넨; 린넨 침구; 워시드 리넨; washed linen; rumpled linen; lin lavé | FR | 구겨진; 흰; 침구; 아침; 일요일 | Un-ironed washed white linen sheets with deep soft creases that catch directional light in fine shadow lines. | item |
+| Échelle de bibliothèque | 도서관 사다리; 롤링 래더; sliding library ladder; 슬라이딩 사다리; velvet armchair | FR | 서재; 호두나무; 벨벳; 램프; 따뜻한 | A walnut wall of shelves with a brass-wheeled ladder, a deep-green velvet wing chair and a brass reading lamp casting a warm circle. | item |
+| Baignoire sur pieds de lion | 클로풋 욕조; 클로 풋 욕조; 사자발 욕조; clawfoot tub; freestanding bathtub; 체커보드 타일 | FR | 독립; 욕조; 체크; 타일; 수증기; 아침 | A white enamel cast-iron clawfoot tub with brass lion feet on a black-and-white marble chequerboard floor, steam beading the frosted window. | item |
+| Point de Hongrie | 헤링본 마루; 파르케 헤링본; parquet; Hungarian point; 헝가리 포인트; herringbone parquet; 밀랍 마루 | FR | 헤링본; 바닥; 먼지; 아침빛 | A waxed herringbone oak parquet with a soft matte sheen and gold dust motes drifting in a low sun beam above it. | item |
+| Voilage | 시어 커튼; 보일 커튼; sheer curtain; voile; 얇은 커튼; 바람결 커튼 | FR | 얇은; 커튼; 바람; 발코니; 아침; 역광 | A sheer white curtain billowing into the room through a half-open balcony door, backlit so the fabric glows translucent. | item |
+| Tourne-disque | 턴테이블; LP 플레이어; 바이닐; vinyl turntable; 레코드 플레이어; teak credenza; enfilade | FR | 바이닐; 턴테이블; 티크; 따뜻한; 재즈 | An open turntable on a teak sideboard with the needle in a spinning jazz record, a brass wall lamp pooling warm gold light and concentric reflections. | item |
+| Guéridon | 게리동; 대리석 원탁; marble bistro table; 대리석 테이블; petit-déjeuner; 크루아상; 튤립 | FR | 대리석; 원탁; 아침; 크루아상; 커피 | A small round white marble table on a cast-iron tripod with white tulips in a glass, a croissant and a black coffee, thin morning side light casting stem shadows. | item |
+| Armoire parisienne | 아르무아르; 옷장; painted armoire; 빈티지 옷장; vestiaire | FR | 빈티지; 흰; 옷장; 실크; 블라우스 | A tall two-door old wardrobe in worn grey-white paint, open to silk slip dresses, striped breton tops and herringbone blazers, window light on the carved relief. | item |
+| Chevalet | 이젤; 화가 이젤; artist easel; 유화 이젤; atelier; 아틀리에 | FR | 이젤; 유화; 거실; 북향; 창 | A wooden tripod easel holding a half-finished abstract oil painting with wet ridged brush marks, a loaded palette and brushes in turpentine beside it. | item |
+| Casseroles en cuivre | 구리 냄비; 코퍼 팬; copper cookware; copper pots; 모카 포트; espresso steam | FR | 구리; 냄비; 주방; 에스프레소; 아침 | A row of copper pans hanging from a black iron rack above a walnut counter, a moka pot steaming on the hob, bright warm metal highlights. | item |
+| Canapé en lin | 린넨 소파; 리넨 소파; deep linen sofa; 프랑스 고양이; French shorthair; chat; Chartreux | FR | 린넨; 소파; 고양이; 포근한; 오후 | A deep grey washed-linen sofa heaped with down cushions, a grey short-haired cat curled on the lap, loose hair and a completely relaxed pose in soft cool light. | item |
+| Cabinet de curiosités | 호기심의 방; 호기심 캐비닛; curio cabinet; 앤티크 판화; antique print; 지구본 | FR | 앤티크; 판화; 호두나무; 서랍 | A dark walnut cabinet of small drawers holding old copper engravings, botanical plates and an antique globe in muted shadow-soft light. | item |
+| Petit nœud brodé | 작은 자수 리본; 미니 리본 자수; tiny embroidered bow; 검정 리본 포인트 | FR | 리본; 자수; 디테일; 블랙 | A tiny black embroidered bow used as a small decorative accent. | item |

@@ -15,6 +15,24 @@ Pose 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다. �
 | 나른한 손짓 | 慵懒撩发; Languid Hair-Tuck Fatal Allure; 머리 넘기기; 나른한 머리 쓸기; languid hair tuck | KR | 밤; 라운지; 보라빛; 나른함; 머리카락 | A hand pauses mid-motion with fingers hovering beside the hair as it is tucked behind the ear, eyelids heavy and purple light sliding across the cheek. | look |
 | 무릎에 턱 괴기 | 下巴搁膝; Chin-on-Knees Vulnerable Gaze; 무릎 안고 앉기; 무릎에 턱; 웅크려 앉기 | KR | 비; 실내; 창가; 아늑함; 고요 | Knees are pulled to the chest with the chin resting on them and arms wrapped around the shins, the gaze drifting toward a rainy window with soft gray light on one cheek. | look |
 | 신발끈 묶는 집중 | 系鞋带; Tying Shoelaces Everyday Focus; 신발끈 묶기; 끈 묶는 순간; lace-up moment | KR | 일상; 공원; 스냅; 자연스러움; 스포티 | One foot rests on a stone step, head bowed and hair falling forward, fingers working the laces while the face shows plain concentration. | look |
+| 插兜 | 주머니에 손 넣기; 손 주머니; hands in pockets | KR | 시크; 쌀쌀한 날; 거리; 손동작; 계열:스트릿 | One or both hands pushed into coat or trouser pockets, elbows slightly in, shoulders relaxed and the sleeve fabric bunching at the wrists. | look |
+| 双臂抱胸 | 팔짱; 팔짱 포즈; arms crossed | KR | 여유; 실내; 카페; 자세; 계열:당당함 | Arms folded loosely across the chest, back sinking into the seat or leaning on glass, legs crossed and the posture reading calm and unhurried. | look |
+| 趴桌 | 엎드려 있기; 책상에 엎드리기; head down on table | KR | 나른함; 오후; 카페; 자세; 계열:일상 | Upper body folded flat onto a wooden table, cheek resting on a cotton sleeve, hair spilled across the tabletop and the eyes unfocused. | look |
+| 倒退走 | 뒷걸음; 뒤로 걷기; walking backwards | KR | 활기; 오후; 강변; 동세; 계열:데이트 스냅 | Walking backwards facing the camera with both arms swung slightly outward for balance, hair lifting in the wind. | look |
+| 기지개 | 伸懒腰; 기지개 켜기; morning stretch | KR | 활기; 아침; 창가; 동세; 계열:홈 | Standing at a window with fingers interlaced and both arms pushed overhead, torso stretched long with warm morning sun on the body. | look |
+| 侧颜 | 옆모습; 옆라인; profile view | KR | 고요함; 낮; 실내; 각도; 계열:사이드샷 | Head turned fully to the side so the forehead, nose, lips and jaw read as one clean silhouette line against a soft background. | look |
+| 前置自拍 | 전면 카메라; front camera selfie; 셀카; 셀피 | KR | 셀카; 일상; 스마트폰; 근접 | A half-body front-facing selfie at arm's length with the phone close to eye level. | look |
+| 린넨 시트 엎드린 자세 | 침대 엎드린 포즈; Lying on Linen Sheets; 亚麻床单趴着; 린넨 침구; 아침 침구 | KR | 침대; 엎드림; 린넨; 아침; 휴식 | A person lying face-down on rumpled linen bedsheets with morning sunlight raking across. | look |
+| 坐姿手肘支膝 | 앉아서 팔꿈치 무릎에 올리기; 팔꿈치 무릎 셀카 | KR | 실내; 앉은 자세; 셀카; 갤러리; 지적인 무드 | Seated upright on a low minimalist stool with knees together angled to one side, elbows resting on the knees and both hands holding a phone. | look |
+| 扶镜腿 | 안경테 만지기; 안경다리 잡기 | KR | 안경; 손동작; 지적인 무드; 클로즈업 | Both hands lightly pinching the temples of a pair of glasses while putting them on, eyes half closed. | look |
+| 趴栏杆 | 난간에 엎드리기; 난간에 턱 괴기 | KR | 야외; 거리; 난간; 멍때리기; 무드 | Leaning forward with forearms crossed on a green metal guard rail and the chin resting on the back of the hands, gaze drifting to the street. | look |
+| 单腿踩横梁 | 발받침에 한 발 올리기; 스툴 발받침 포즈 | KR | 앉은 자세; 바; 다리 라인; 스툴 | Seated sideways on a high stool with one knee bent and foot on the rung while the other leg hangs straight down to the floor. | look |
+| 餐巾纸轻按唇角 | 냅킨으로 입가 닦기; 냅킨 우아한 포즈 | KR | 식사; 우아함; 소품; 레스토랑 | One hand pressing a folded white napkin lightly to the corner of the lips with a slightly raised finger, composed and polite. | look |
+| 跨坐栏杆 | 난간에 걸터앉기; 난간 위 앉기 | KR | 야외; 난간; 강변; 활동적; 캐주얼 | Sitting sideways on a low wrought-iron railing with one foot on the ground and the other leg swinging in the air, both hands gripping the rail. | look |
+| 趴床晃腿 | 침대에 엎드려 다리 흔들기; 엎드려 다리 까딱 | KR | 침실; 침대; 실내; 편안함; 캐주얼 | Lying face down on a bed with hands stacked under the chin and both lower legs bent up and swaying in the air. | look |
+| 擦头发 | 수건으로 머리 말리기; 젖은 머리 닦기 | KR | 욕실; 헤어; 수건; 실내; 편안함 | Seated on the edge of a bed pressing a towel against wet hair, head slightly tilted back. | look |
+| 床沿坐姿 | 침대 끝에 앉기; 침대 가장자리 앉기 | KR | 침실; 침대; 앉은 자세; 실내 | Seated on the edge of a bed with feet on the floor and a relaxed posture. | look |
+| 投喂互动 | 먹여주기 시점; 떠먹여주는 구도 | KR | 데이트; 1인칭; 음식; 카페; 연인 시점 | A hand pushing a latte or spoonful of food toward the lens in first-person view, body leaning forward with an eager look. | look |
 
 ## CN
 
@@ -105,6 +123,37 @@ Pose 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다. �
 | 踮脚 | 踮起脚尖; 까치발; 까치발 서기; 발끝으로 서기; on tiptoe; Sur la pointe d'un pied | KR, CN | 경쾌함; 일상; 동세; 서 있기 | The heels lift off the ground so the weight rises onto the balls of the feet, often with one arm reaching up. | look |
 | 蹲姿 | 下蹲; 高街下蹲; 街拍蹲; 쪼그려 앉기; 쪼그려앉기; 스쿼트 포즈; street squat; Street Photography Crouch | KR, CN | 힙함; 스트릿; 거리; 낮은 자세 | A deep squat with the heels down or one knee lowered toward the ground, the forearms resting on the knees. | look |
 | 靠墙斜倚 | 靠墙; 倚墙; 벽에 기대기; 벽 기대 서기; lean on wall | KR, CN | 시크; 스트릿; 거리; 서 있기 | One shoulder or the back rests against a wall while one foot stays flat and the other bends with its sole pressed to the wall. | look |
+| 天鹅颈 | 천아경; 微扬下颌; swan neck; elevated chin; 턱 살짝 들기; 백조목; 턱을 살짝 든 자세; swan neck lift; raised chin poise | CN | 도도함; 차가움; 실내; 정면; 우아함; 계단; 저녁; 대여주계열 | The chin lifts about ten degrees so the neck stretches long and the collarbones open, shoulders pressed down, weight even over both feet. | look |
+| 3/4侧颜 | 3/4 측면; 쓰리쿼터 측면; three-quarter profile; 사분의삼 옆얼굴; 三四侧脸; 3/4 옆모습 | CN | 차가움; 갤러리; 정면과 측면 사이; 도도함; 고고함; 미술관; 사계절; 청랭계열 | The head turns three quarters away from the lens with the far cheek just visible and the eyes lowered, while light carves the jaw and cheekbone edge. | look |
+| 纯侧颜 | 순측면; 90度侧颜; pure profile; 완전 옆모습 | CN | 차가움; 건축; 낮; 날카로움 | The head turns a full ninety degrees so only one eye, the nose line and the jaw show as a clean outline, with a slanting light leaving a blade-like split of light and shadow. | look |
+| 单手叉腰 | 한 손 허리; 搭胯; hand on hip; one hip brace; 손 허리에 얹기 | CN | 모델; 미니멀; 갤러리; 차가움 | One hand rests on the hip bone with the elbow pushed out and the face tilted slightly up, giving a sculptural runway line. | look |
+| 双手环胸 | 쌍수환흉; 环抱双臂; folded arms; arms crossed; 팔짱 | CN | 방어적; 도시; 차가움; 당당함 | Both arms fold across the chest with the chin slightly lifted, the shoulders squared and the weight settled on both feet. | look |
+| 双手背后 | 쌍수배후; 挺胸昂首; hands behind back; chest up chin up; 뒷짐 | CN | 단정함; 저택; 전통; 중후함 | Both hands clasp behind the back, the chest lifts and the chin rises, the spine straight with the weight even. | look |
+| 单手插兜 | 한 손 주머니; 微侧身单手插兜; single pocket stance; one hand in pocket | CN | 도시; 코트; 여유; 강바람 | One hand slides into a coat pocket while the body angles slightly away, the coat hem lifting in the river wind. | look |
+| 高脚椅 | 하이스툴; 高脚椅长腿前伸; high stool leg extension; 높은 의자 다리 뻗기 | CN | 바; 따뜻한 조명; 우아함; 긴 다리 | The body perches on a high stool with one leg stretched forward at an angle, the warm point light tracing the long leg line. | look |
+| 疾步前行 | 빠른 걸음; 商界掌舵者; power stride; executive walk | CN | 오피스; 대리석; 차가운 조명; 당당함 | The figure strides quickly down a marble hall with hands in pockets, overhead white downlights stretching a long moving shadow ahead. | look |
+| 大步急停 | 급정지 포즈; 街拍定格; sudden halt; street candid freeze | CN | 밤; 거리; 플래시; 동적 | One foot reaches forward in a sudden stop with the body still carrying motion, a hard flash freezing the pose against streaks of lights. | look |
+| 席地而坐 | 바닥에 앉기; 须弥座; sitting on marble plinth; ground sit | CN | 석양; 궁정; 흰 돌; 편안함 | The figure sits on the ground leaning against a white marble plinth, sunset light on the old stone and the folds of a black coat. | look |
+| 百叶窗切光 | 블라인드 빛; 光影琴键; venetian blind light; blind shadow slices | CN | 오후; 실내; 줄무늬 그림자; 고대비 | Strong low sun through blinds lays parallel bright and dark bars across the face and body, a high-contrast keyboard of stripes. | look |
+| 直闪黑白 | 직광 플래시 흑백; 硬闪; hard flash black and white; direct flash noir | CN | 밤; 골목; 고대비; 흑백 | A direct on-camera flash flattens the face into hard bright skin against a pitch black background, shot in stark black and white. | look |
+| 逆光金边 | 역광 금빛 테두리; 发丝金边; backlit golden rim; rim light halo | CN | 석양; 실루엣; 따뜻한 빛; 영화적 | A low sun from behind rings the hair and shoulder outline in gold while the face stays in soft shadow. | look |
+| 顶光孤立 | 톱라이트 홀로 서기; 单束天光; overhead spotlight; single beam from above | CN | 어두움; 갤러리; 원형 빛; 경건함 | One vertical spotlight from straight above makes a round pool of light on the figure, with everything else around dissolving to black. | look |
+| 玻璃窗倒影 | 유리창 이중 반사; 双重倒影; window double reflection; glass reflection overlay | CN | 도시; 새벽 안개; 고층; 몽환 | A tall window shows the figure overlapped with a ghost reflection and the misty skyline outside, the two layers equal in strength. | look |
+| 屏风花影 | 병풍 그림자; 镂空光影; screen lattice shadow; carved screen shadow | CN | 정원; 햇빛; 그림자 무늬; 측면 | Sun passing through a carved wooden screen throws intricate lattice patterns over the side of the figure and the floor. | look |
+| 伦勃朗光 | 렘브란트 조명; 单灯照脸; rembrandt lighting; single light face | CN | 어두움; 골동품점; 점광원; 유화 | A single small light from one side leaves a bright triangle on the far cheek in deep darkness, like an oil painting. | person-style |
+| 烛光仰射 | 촛불 하이앵글; 烛光; candlelight from below; low candlelight | CN | 밤; 고택; 흔들림; 정극 | A flickering candle from below lights the chin, nose and brow from underneath and throws moving shadows on the wall behind. | look |
+| 霓虹切光 | 네온 빛 분할; 霓虹; neon split light; red green neon | CN | 밤; 홍콩; 젖은 길; 영화적 | Red and green neon tubes light each half of the face differently, with wet asphalt below repeating the colored glow. | look |
+| 王家卫 | 왕가위; 王家卫港风; Wong Kar-wai; wong kar wai hong kong noir | CN | 홍콩; 밤; 네온; 영화 | A slightly blurred, saturated night look with step-printed motion, neon glow, narrow alleys and figures half in shadow. | person-style |
+| 竹帘光影 | 대나무 발 빛; 竹影横斜; bamboo blind slat light; bamboo shade stripes | CN | 송대; 계곡; 물빛 반사; 고요함 | Fine bamboo slats cut the light into thin stripes across the face while stream reflections shimmer on the ceiling. | look |
+| 晨雾剪影 | 새벽 안개 실루엣; 晨雾; morning mist silhouette; ink wash mist | CN | 이른 아침; 돌다리; 은회색; 수묵화 | The figure stands as a soft dark outline in thick morning fog on a stone arch bridge, the sky and water the same silvery gray. | look |
+| 阴阳脸 | 반쪽 얼굴 조명; 侧光半脸; split lighting; half face in shadow | CN | 스튜디오; 검은 배경; 대비; 이중성 | A single horizontal hard light brightens exactly one half of the face while the other half sinks fully into the black background. | look |
+| 舞台追光 | 무대 스포트라이트; 追光; stage followspot; theatre spotlight | CN | 극장; 암흑; 원형 빛; 커튼콜 | A bright white circle of spotlight cuts out the figure on a wooden stage, the audience seats beyond fading to complete black. | look |
+| 雨夜车灯逆光 | 비 오는 밤 헤드라이트; 车灯背光; headlight rain backlight; rainy night headlights | CN | 비; 밤; 역광; 영화적 | Strong headlights from behind light rain streaks and the rim of the profile on a wet road, high contrast and cinematic. | look |
+| 暮色背靠苍穹 | 황혼 지평선 서기; 暮色; twilight horizon; epic dusk stand | CN | 산정; 노을; 웅장함; 당당함 | The figure stands small against a huge red and gold sky at dusk, an unbroken horizon line and mountain ridge below. | look |
+| 玉镯 | 翡翠玉镯; 手抚玉镯; 옥팔찌; 비취 팔찌; jade bangle; jadeite bracelet | CN | 우아함; 명문가; 온실; 낮; 동양여백계열 | A translucent green jade bangle on the wrist, rotated by the other hand, catching soft diffuse light along its curve. | item |
+| 耳垂珍珠 | 轻抚耳垂珍珠; 귀걸이 진주; 진주 귀걸이 만지기; touching a pearl earring; pearl earring play | CN | 우아함; 무심; 클럽; 저녁; 대여주계열 | Two fingers rest on a round pearl earring while the eyes stay cool and distant, listening without interest. | item |
+| 指尖掠过脖颈 | 손끝으로 목 쓸기; 목선을 스치는 손끝 | CN | 손동작; 목선; 우아함; 스냅; 자연스러움 | A hand with slightly bent fingers drags lightly down the side of the neck from the jaw corner while the chin is raised a few degrees and the gaze drifts off camera. | look |
+| 天鹅颈松弛 | 백조목 이완; 여유로운 백조목 | CN | 목선; 이완; 우아함; 자세 | A long relaxed neck line with the chin lifted slightly, shoulders loose, and no stiff posed tension. | look |
 
 ## JP
 
@@ -129,6 +178,36 @@ Pose 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다. �
 | 頬寄せ | 뺨 맞대기; 볼 맞대기; cheek to cheek; 贴脸 | JP | 우정; 둘이서; 셀카; 웃음 | Two faces press cheek to cheek, both heads tilted inward toward each other and toward the lens. | look |
 | コントラポスト | 骨盤スライド; 콘트라포스토; 골반 슬라이드; contrapposto; 侧胯 | JP | 전신; 실루엣; 캐주얼; 서 있기 | The weight rests on one leg so that hip shifts outward while the shoulders tilt the opposite way, making an S-curve through the torso. | look |
 | いただきます | 잇다다키마스; 잘 먹겠습니다; itadakimasu; 我要开动了 | JP | 식사; 귀여움; 식당; 일상 | Palms pressed together at chest height, elbows loose, eyes closed into crescents with a satisfied smile. | look |
+| しゃがみ | 쭈그려 앉기; 쪼그려 앉기; crouch; 蹲姿; ヤンキー座り | JP | 스트리트; 낮은 자세; 캐주얼; 일상 | Full deep squat, one knee against the chest and the other foot forward, weight on the balls of the feet, forearms resting loosely over the knees. | look |
+| ポケットイン | 포켓인; 주머니에 손; hand in pocket; 插兜 | JP | 캐주얼; 스트리트; 일상; 도시 | Four fingers pushed into the trouser or coat pocket with the thumb left outside, the forearm angled and the shoulder dropped slightly. | look |
+| 膝を抱える | 무릎 안기; 무릎 끌어안기; hugging knees; 抱膝 | JP | 작은 실루엣; 캐주얼; 실내; 친밀 | Low crouch with both arms wrapped around the shins, chin tucked between the knees and only the large eyes looking up toward the lens. | look |
+| 壁もたれ | 벽에 기대기; wall lean; 倚墙 | JP | 캐주얼; 콘크리트; 스트리트; 낮 | Back and hips against a rough concrete wall, one leg straight, the other knee bent with the toe pressed on the wall behind. | look |
+| 片目隠し | 한쪽 눈 가리기; 한 눈 가리기; one eye covered; 遮单眼 | JP | 신비; 갤러리; 실내; 시선 | Black switched-off phone held 5 cm before the right eye, covering it with a glass reflection, only the left eye looking at the lens. | look |
+| 振り返り | 돌아보기; 뒤돌아보기; glance back; 回眸 | JP | 시선; 거리; 움직임; 일상 | Head turned over the shoulder while the torso keeps facing away, hair swinging and one hand relaxed at the hip. | look |
+| 小走り | 종종걸음; 종종 걸음; brisk run; 小跑 | JP | 움직임; 스냅; 거리; 활기 | Body leaning 15 degrees forward, back heel lifted off the ground, arms swinging and long hair streaming behind. | look |
+| 爪先立ち | 발끝 서기; 까치발; tiptoe; 垫脚 | JP | 가벼움; 움직임; 다리 라인; 일상 | Heels lifted, weight carried on the balls of the feet, body leaning to one side as if skipping lightly over something. | look |
+| 背伸び | 까치발 뻗기; reach up; 踮脚取物 | JP | 스트레칭; 서점; 실루엣; 실내 | Heels raised high, arm fully extended to a top shelf, body stretched from ankles to fingertips. | look |
+| 傘を払う | 우산 털기; 우산 물 털기; shaking umbrella; 甩伞 | JP | 비; 입구; 움직임; 일상 | Closed umbrella shaken downward so beads of water arc in the air, torso leaning to one side beneath an awning. | look |
+| 頬杖 | 턱 괴기; 턱을 괴다; chin on hand; 托腮 | JP | 카페; 나른함; 시선; 실내 | Elbow planted on a dark walnut table, palm supporting the cheek and jaw, head tipped slightly to the side. | look |
+| 斜め座り | 비스듬히 앉기; side sit; 侧坐斜并 | JP | 벤치; 다리 라인; 가을; 우아함 | Seated sideways on a wooden bench with both legs together angled 45 degrees, knees slightly overlapped and ankles crossed. | look |
+| 乾杯 | 건배; cheers; 举杯 | JP | 술집; 웃음; 밤; 활기 | Tall glass held out toward the lens in a toast, body leaning forward and smiling broadly. | look |
+| 胡坐 | 양반다리; あぐら; cross-legged; 盘腿 | JP | 편안함; 다다미; 실내; 캐주얼 | Sitting cross-legged with loose trousers spread at the knees, hands resting casually on the knees and back slightly rounded. | look |
+| 手を引く | 손 이끌기; 손 잡아끌기; pulling hand; 牵手 | JP | 커플; 산책; 움직임; 시선 | One arm reaching back toward the lens holding a hand, torso twisted 90 degrees to look back while striding forward. | look |
+| 襟を直す | 옷깃 정리; collar fix; 整理衣领 | JP | 친밀; 근접; 겨울; 코트 | Face about 30 cm from the lens, fingers smoothing the coat lapels, eyes lowered on the collar. | look |
+| 手を振る | 손 흔들기; waving goodbye; 挥手 | JP | 이별; 저녁; 역; 움직임 | Right hand raised beside the face waving gently, walking backward with the body leaning slightly away. | look |
+| クロスレッグ | 다리 꼬기; crossed legs; 交叉腿 | JP | 다리 라인; 전신; 캐주얼; 벽 | Standing leaning back with legs crossed in front, front toe touching the floor, back foot flat, lengthening the leg line. | look |
+| 正座 | 정좌; seiza; 跪坐 | JP | 전통; 단정함; 다도; 실내; 다다미; 정적; 일본식 | Kneeling on tatami with shins folded beneath, back upright, weight settled on the heels and both hands resting in the lap. | look |
+| 寝そべり | 엎드리기; prone; 趴地 | JP | 나른함; 실내; 바닥; 캐주얼 | Lying belly-down on a wood floor with the forearms stacked under the chest and lower legs lifted and swinging. | look |
+| 伸び | 기지개; stretch; 伸懒腰; 스트레칭; morning stretch; 伸びをする | JP | 아침; 침대; 스트레칭; 나른함; 기지개; 포즈; 팔 위로; 이완 | Both arms straight up with fingers interlaced and palms flipped upward, spine arching in a long stretch. | look |
+| ピースサイン | peace sign; 피스 사인; 브이 포즈; 比耶手势 | JP | 장난스러움; 거리; 손; 팝 | Index and middle fingers lifted in a V beside the cheek, the other fingers curled, wrist turned outward toward the lens. | look |
+| グラス持ち | holding a flute glass; 잔 들기; 샴페인 잔 들기; 端杯姿势 | JP | 우아함; 저녁; 손; 파티 | A fine glass stem held between thumb and two fingers, wrist slightly bent and little finger lifted. | look |
+| 両手持ち | two-handed hold; 양손 잡기; 양손으로 쥐기; 双手捧杯 | JP | 따뜻함; 컵; 차분; 손 | Both hands cupped around a warm vessel, thumbs on one side and fingertips meeting at the far side. | look |
+| 足をブラブラ | 다리 흔들기; 垂晃双腿; dangling legs | JP | 걸터앉기; 명랑; 공중; 캐주얼 | Seated on a raised edge with both legs hanging free and swinging, hands braced on the sides, torso leaning back. | look |
+| 鎖骨 | 쇄골; 锁骨; collarbone | JP | 쇄골; 목선; 상체; 노출 | Clearly defined collarbones along an open neckline, light grazing the hollow above them. | look |
+| 肩甲骨 | 견갑골; 蝴蝶骨; shoulder blades | JP | 등; 뒷모습; 라인; 상체 | Shoulder blades standing out in relief under a fitted top, spine line and long neck visible from behind. | look |
+| くびれ | 허리 라인; 纤细腰线; waist curve | JP | 허리; 라인; 스트레칭; 핏 | Narrow waist line defined under a fitted tank top as arms are stretched overhead. | look |
+| S字ライン | S라인; S曲线; S-curve line | JP | 측와; 곡선; 라인; 누운 포즈 | Body lying on its side with hip raised and torso curving into a smooth S-shaped silhouette. | look |
+| 内股 | 안짱다리; 内八字; pigeon-toed stance | JP | 다리; 무릎; 귀여움; 서기 | Knees touching with toes turned inward, shoulders drawn in, small compact standing posture. | look |
 
 ## US
 
@@ -224,6 +303,13 @@ Pose 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다. �
 | Athleisure Morning Run | 애슬레저 모닝런; 晨跑中途稍歇; Morning Run Respite; Crisp Vitality; Morning Discipline | US | 아침; 운동; 클린; 야외; 활기 | Pausing after a run, breathing visibly in cool morning air, flushed cheeks and a focused clear gaze. | look |
 | Pizza Slice Bite | 피자 한입; 咬一口披萨; NYC Pizza Slice; NYC Foodie; 뉴욕 푸디 | US | 뉴욕; 음식; 스트리트; 낮; 명랑 | A cheesy slice held up with a bite taken, eyes sliding sideways over it with a grin. | look |
 | Surfer Head-Toss | 서퍼 머리 털기; 冲浪板甩头; Water Droplet Squint; California Surfer Girl; 캘리포니아 서퍼걸 | US | 서핑; 바다; 물방울; 활기; 여름 | Wet hair whipping up and out, droplets frozen in the air, eyes squinting against spray. | look |
+| Windblown Hair | wind in hair; hair blowing; 바람에 날리는 머리; 바람머리; 윈드블로운 | US | 바람; 해변; 동세; 자유 | Strands stream sideways in one direction and stretch long horizontal lines across the frame against a bright sky. | look |
+| Hand in Pocket | one hand in pocket; hand in jeans pocket; 손 주머니; 한 손 주머니; 핸드 인 포켓 | US | 여유; 캐주얼; 거리; 오후 | One thumb hooks into a front pocket while the other arm hangs loose and the chin lifts slightly, giving an unbothered posture. | look |
+| Hands Behind Head | arms behind head; sunbathing arch; 머리 뒤 깍지; 양손 뒷머리; 선배싱 포즈 | US | 일광욕; 해변; 여름; 개방감 | Both hands cradle the back of the head, chest lifted and spine arched slightly back toward the sun. | look |
+| Fast Walk | hurried walk; commute walk; 빠른 걸음; 출근 걸음; 패스트 워크 | US | 아침; 일상; 도시; 활기 | A brisk forward step with one hand holding a drink and the other holding a phone, body leaning slightly into the pace. | look |
+| Hugging Knees | knees hug; sit hugging knees; 무릎 안고 앉기; 무릎 껴안기; 니 허그 | US | 고요; 바다; 사색; 저녁 | She sits with both arms wrapped around her knees and chin close to them, looking out at the sea. | look |
+| Elbow Prop | chin on hand; propped elbow; 팔꿈치 괴기; 턱 괴기; 엘보 프롭 | US | 다이너; 오후; 친밀; 시선 | One elbow rests on a table and the chin sits in the palm, eyes soft on something off-frame. | look |
+| Hands in Pocket Wall Lean | 벽에 기대 손 주머니; 双手插兜斜倚墙; Sassy Low Glance; Street Sass; Wall Lean | US | 스트리트; 쿨함; 도시; 낮; 캐주얼 | Shoulder resting on a wall, both hands in pockets, chin lowered and eyes looking up from under the brows. | look |
 
 ## FR
 
@@ -269,3 +355,26 @@ Pose 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다. �
 | Main en visière | hand visor; 손 차양; 손으로 햇빛 가리기; 햇빛 가리기; 掌心遮阳; Hand Shielding Sun | FR | 햇살; 여름; 야외; 손동작 | One flat hand shades the brow while the eyes narrow and sunlight leaks around the fingers. | look |
 | Manteau jeté sur le dossier | coat over chair; 의자에 걸친 코트; coat drop | FR | 코트; 카페; 가을; 자연스러움 | A heavy coat is thrown over the chair back so the hem drapes in heavy vertical folds while the body sits slightly hunched. | look |
 | Odalisque | 오달리스크; reclining odalisque | FR | 눕기; 빈티지; 회화; 나른함 | A reclined pose with one elbow bent, head in hand and hips turned, as in classical paintings. | look |
+| Accoudée à la table en zinc | accoudée; elbow on zinc table; 카페 턱 괴기; 테이블에 팔꿈치 괴기 | FR | 파리; 카페; 오후; 느긋함 | One elbow rests on the table edge with the cheek sinking into the palm, the other arm hanging loose on the lap and the weight collapsed onto the elbow. | look |
+| Jambes croisées | crossed legs; 다리 꼬기; 다리 꼬고 앉기 | FR | 카페; 우아함; 앉기; 여유 | Seated with knees crossed and the spine stretched back slightly, the top foot hanging relaxed and the weight shifted to one hip. | look |
+| Coude en appui, menton dans la paume | chin in palm; 턱 괴기; 손바닥에 턱 | FR | 턱 괴기; 카페; 여유; 시선 돌리기 | One elbow is planted on the table edge with the chin cupped in the palm and the eyes cutting sideways to the shop window across the street. | look |
+| Mains derrière le dos | hands behind gripping rail; 난간 뒤로 잡기; back arch | FR | 발코니; 저녁; 아치; 여유 | Both hands grip the railing behind the back while the chest opens and the head tilts up to the cool air. | look |
+| Genoux fléchis | knees bent slouch; 무릎 굽혀 기대기; gravity release | FR | 나른함; 난간; 발코니; 체중 | Knees soften and hips sink back against the rail so the whole body hangs on the support. | look |
+| Pieds nus sur la pierre humide | barefoot on wet stone; 젖은 돌 위 맨발; post-rain | FR | 비 온 뒤; 맨발; 발코니; 상쾌함 | Bare feet on damp limestone with a dark wet sheen and a faint reflection of the sky on the surface. | look |
+| Chercher ses clés dans la poche | searching pocket for keys; 열쇠 찾기; key search | FR | 일상; 생활감; 거리; 숙인 고개 | Head bowed, one hand digging into the trench pocket with the shoulder lifted and the weight on one leg. | look |
+| Marcher d'un pas vif | brisk stride; 빠른 걸음; parisian walk | FR | 걷기; 동작; 파리; 일상 | A long fast stride with the arm swinging and the coat hem flicking behind. | look |
+| Mains dans les poches | hands in pockets; 주머니에 손; pocket walk | FR | 산책; 가을; 코트; 낙엽 | Both hands buried deep in the coat pockets, shoulders slightly raised and gaze down on fallen leaves. | look |
+| Descendre l'escalier | descending stairs; 계단 내려오기; swirling hem | FR | 계단; 동작; 치마; 스냅 | A fast step down the spiral with the skirt hem flaring outward and one hand skimming the rail. | look |
+| Accoudée à la boîte de bouquiniste | elbow on book stall; 헌책 노점에 팔꿈치; poetry browse | FR | 책; 센강; 기대기; 시 | An elbow rests on the metal lid edge while the other hand holds a poetry volume open. | look |
+| Presser un gros livre contre la poitrine | book clutched to chest; 책 가슴에 안고 걷기; academic walk | FR | 책; 산책; 낙엽; 지적 | A thick hardcover is hugged flat against the chest with both arms while walking a leafy path. | look |
+| Assise en tailleur | cross-legged sit; 양반다리; knee hug | FR | 앉기; 다리; 황혼; 편안함 | Sitting cross-legged on planks, arms wrapped around the knees and chin tilted down. | look |
+| Adossée à la pile de pierre | lean on stone pier; 돌 교각에 기대기; hands in pockets profile | FR | 그늘; 옆모습; 다리; 고독 | The back leans on a shaded stone pier, hands in pockets, face in profile toward the distance. | look |
+| Affalée | slouch; 소파에 널브러지기; aristocratic slump | FR | 소파; 나른함; 실내; 다리 | Sliding down the cushions with the spine slumped and both legs thrown over the armrest. | look |
+| Assise par terre adossée au lit | floor sit against bed; 침대에 기대 바닥에 앉기; bedside refuge | FR | 바닥; 침대; 휴식; 고독 | Seated on the floor with the back against the bed edge and knees bent, one hand holding a glass. | look |
+| Allongée de tout son long | lying flat; 대자로 누워 있기; supine | FR | 바닥; 햇살; 실내; 휴식 | Lying fully flat on the floor with arms and legs spread wide in a bright patch of sun. | look |
+| Pelotonnée dans le coin du canapé | curled in sofa corner; 소파 구석에 웅크리기; fetal cocoon | FR | 소파; 포근함; 스웨터; 안정감 | Curled up in the sofa corner with feet pulled under an oversized sweater hem. | look |
+| Jambes en l'air | legs up on couch; 소파 등받이에 다리 올리기; inverted legs | FR | 반항; 소파; 청춘; 역상 | The torso sinks on the seat while both legs rest high up the sofa back and the hair hangs down. | look |
+| À plat ventre | lying prone; 엎드려 턱 괴기; prone elbows | FR | 바닥; 엎드림; 일기; 실내 | Lying on the stomach with both elbows planted on the boards, chin in hands, feet kicked up. | look |
+| Couchée sur le côté | side lying; 옆으로 누워; dust mote trance | FR | 침대; 햇살; 나른함; 아침 | Lying on one side on the linen with a hand trailing through a sunbeam and dust catching the light. | look |
+| Pillow-Pressed Cheek | 베개에 눌린 볼; 베개 볼 눌림; cheek on pillow | FR | 베개; 침대; 볼; 졸린 눈; 아침 | One cheek sinks into a soft white pillow, pressing the eye slightly upward, with a drowsy gaze toward the edge of the bed. | look |
+| Joue pressée contre l'oreiller | 베개에 볼 대고; 졸린 눈빛; joue contre l'oreiller | FR | 베개; 침대; 볼; 졸린; 일요일 아침 | A face lying sideways on a feather pillow with one cheek softly compressed and a half-awake gaze, in an old wooden bed in morning light. | look |

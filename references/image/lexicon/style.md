@@ -49,6 +49,83 @@ Style 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다. 
 | 인증샷 | 打卡; 인스타 인증; 인증 사진; check-in photo | KR | SNS; 일상; 카페; 스냅 | A casual posted-to-social snapshot with real unstaged feeling. | look |
 | 클루리스 핑크 | 클루리스; Clueless; 클루리스 룩; 핑크 프레피 | KR | 사랑스러움; 봄; 디저트 카페; Y2K 계열 | Candy-pink and pastel coordinated sets with fluffy trims and small plaid accents, bright 1990s pop-preppy styling. | look |
 | 프렌치 빈티지 | 프렌치 코티지; French vintage | KR | 서정적; 봄여름; 시골 집; 빈티지 계열 | Tiny-floral pale-yellow cotton slip dress in a sunlit white-curtain room, softly faded like a vintage find. | look |
+| 街拍 | 스트릿 스냅; 스냅 사진; street snap | KR | 자연스러움; 낮; 거리; 스냅; 계열:스트릿 | Candid street frame with the subject caught mid-step against a plain urban backdrop in available light. | look |
+| 白衬衫 | 화이트 셔츠; 흰 셔츠; white shirt; 白衬衫领口 | KR | 출근룩; 미니멀; 반사광; 턱선 | A white shirt collar reflects soft light up under the chin and sharpens the jaw line. | item |
+| 浅灰羊绒 | 카시미어 니트; 그레이 니트; cashmere knit; 灰色针织 | KR | 가을; 그레이; 니트; 차분함 | A pale grey cashmere sweater blends in a fine grey scale with cool, pale skin. | item |
+| 트렌치코트 | 风衣; trench coat; 트렌치; 风衣领口 | KR | 이른 봄; 바람; 한강; 아우터 | A trench coat collar lifted slightly by a cold spring wind. | item |
+| 울 숄 | 羊毛披肩; wool shawl; 울 케이프; 粗羊毛 | KR | 겨울; 따뜻함; 거친 직물; 포근함 | Coarse beige wool pressed to the cheek against very smooth skin. | item |
+| 아이돌 무대의상 | 무대의상; 타가복; 打歌服; idol stage costume; K-POP 스테이지 | KR | 화려함; 사계절; 음악방송; 아이돌 계열 | Sparkling rhinestone-studded matching stage outfit with pleats and sequins flashing hard in bright backlit spotlights. | look |
+| Hipjiro Retro Nostalgia | 힙지로 레트로; 을지로 노스탤지어 | KR | 복고; 산업; 따뜻함; 노포 | Faded signage, worn enamel, mismatched metal stools and amber bulb light that makes every surface look aged and lived in. | look |
+| Samcheong Historical Blend | 삼청 히스토리컬 블렌드 | KR | 고즈넉; 절충; 가을; 전통 | Traditional tiled roofs next to modern glass cafes, with muted earth tones and a slow, unhurried quality of light. | look |
+| Futuristic Metallic Architecture | 퓨처리즘; 퓨처리스틱 메탈릭 | KR | 미래적; 은색; 차가움; 건축 | Brushed silver surfaces, smooth curved walls and cool blue-white light with sharp mirror-like highlights. | look |
+| Sunset Overlook Romantic | 선셋 오버룩; 노을 로맨틱 | KR | 로맨틱; 주황빛; 저녁; 전망 | Warm orange backlight, glowing hair edges and long soft shadows over a hazy city skyline. | look |
+| Hanok Cozy Fusion | 한옥 퓨전; 한옥 카페 퓨전 | KR | 아늑; 절충; 따뜻함; 목재 | Dark timber beams, modern glass counters and warm lantern light, creating a snug blend of old and new. | look |
+| Nordic Warm Wood | 노르딕 우드; 북유럽 원목; Scandinavian wood | KR | 따뜻함; 원목; 아늑; 북유럽 | Light birch and oak with oatmeal wool, soft matte surfaces and gentle even daylight. | look |
+| Speakeasy | 스피크이지; Low-Key Speakeasy; 로우키 스피크이지 | KR | 어두움; 밤; 은밀; 바 | Deep shadows, brass fittings and amber point lights with a hidden-bar mood and dark velvet and wood surfaces. | look |
+| Red Brick Loft | 레드브릭 로프트; 붉은벽돌 로프트 | KR | 벽돌; 따뜻함; 작업실 | Exposed red brick, wood beams and worn rugs lit warmly from a skylight above. | look |
+| Shipping Container Industrial | 컨테이너 인더스트리얼 | KR | 산업; 어두움; 금속 | Corrugated black steel, stenciled numbers and exposed bulbs with dull metal highlights. | look |
+| Hanok Courtyard Open Sky | 한옥 코트야드 | KR | 전통; 열린하늘; 고요 | Dark timber eaves framing a patch of sky, with pale gravel and clay-toned walls glowing under diffuse light. | look |
+| Botanical Greenhouse | 보타니컬 그린하우스; 보태니컬 | KR | 초록; 싱그러움; 식물 | Dense tropical foliage, damp air and green-filtered light, with linen and cotton in leaf tones. | look |
+| White Cube | 화이트 큐브; 화이트큐브 갤러리 | KR | 미니멀; 흰색; 전시; 고요 | Bare white walls, polished floors and precise spotlights, with all objects isolated in empty space. | look |
+| Antique Writer's Study | 앤티크 라이터 스터디 | KR | 복고; 서재; 짙은 갈색 | Dark walnut, brass fittings and yellowed paper under a single warm desk lamp. | look |
+| Han River Golden Reed Grass | 한강 골든 리드 | KR | 가을; 황금빛; 저녁 | Golden-hour backlight, glowing seed heads and a warm amber-toned haze over water. | look |
+| 인생네컷 | 인생4컷; 네컷사진; photo booth; 人生四格 | KR | 복고; 스티커; 귀여움; 실내 | A flash-lit photo-booth strip with a flat solid-colored backdrop, direct front flash and four quick frames with white borders. | look |
+| 핫걸 클럽 룩 | 클럽 파티 룩; 辣妹; spicy girl; hot girl club look | KR | 클럽; 파티; 블랙; 미니; 대담한 | A night-out look of short black leather or lamé pieces, thigh-high boots and strong eyeliner, lit by colored club light. | look |
+| 아방가르드 컨셉 화보 | 아방가르드 화보; 先锋概念时尚画报摄影; avant-garde editorial | KR | 아방가르드; 화보; 컨셉; 패션; 실험적 | A fashion editorial look built on unusual silhouettes, strong graphic lines and stark, deliberate light. | look |
+| 여고생 | 여고생 룩; 女高; 女高中生; JK; 女子高生; 女高生 | KR | 여고생; 교복; 하교; 청춘; 학교; 아동·학생 | A schoolgirl look: pleated skirt, short-sleeve or blazer uniform, school socks and plain shoes, seen in school or street settings. | person-style |
+| 첫사랑 메이크업 | 첫사랑 룩; First Love Look; 初恋妆; 청순 메이크업; 순정 무드 | KR | 청순; 첫사랑; 봄; 부드러움; 핑크 | Light, dewy makeup in soft pinks and peaches with a clear base and little contrast. | look |
+| 학교 선배 무드 | 대학 선배 룩; Senior Girl Look; 学姐气质; 지적 단발; 차분한 선배 | KR | 지적; 차분; 단발; 가을; 청순 | Neat shoulder-length hair with inward curls, matte-satin lips, and muted brown eye makeup. | look |
+| 핫걸 메이크업 | Hot Girl Makeup; 辣妹; Y2K 핫걸; 섹시 걸 룩 | KR | Y2K; 핫걸; 강한 인상; 글로시; 무대 | Bold, high-contrast makeup with glossy lips, defined eyeliner, and a bright base typical of early-2000s fashion. | look |
+| 书卷气 | 지적인 분위기; 문학소녀 무드; 북스마트 무드 | KR | 지적인 무드; 도서관; 안경; 차분함 | A calm studious look with glasses, neat hair and a book-like quiet pose. | look |
+| 治愈系 | 힐링 무드; 힐링 감성 | KR | 힐링; 따뜻함; 카페; 일상 | A soft, warm and quiet everyday mood with gentle light and relaxed expressions. | look |
+| 少年感 | 소년 같은 느낌; 보이시 무드 | KR | 보이시; 캐주얼; 활동적; 스트릿 | A boyish casual look with loose clothing, short or tied hair and a relaxed, energetic stance. | look |
+| 私密自白 | 프라이빗 고백 무드; 밤 감성 일기 | KR | 야간; 무드; 셀카; 감성; 실내 | A dim, quiet late-night mood with a half-turned face and an intimate diary-like selfie. | look |
+| 第一人称投喂 | 1인칭 먹여주기; 먹여주는 시점 | KR | 데이트; 1인칭; 음식; 연인 시점 | A close-up point-of-view of a spoon offered an inch from the lens by a smiling person leaning in. | look |
+| 副驾女友视角 | 조수석 여자친구 시점; 여친 시점 조수석 | KR | 차량; 여자친구 시점; 데이트; 연인 시점 | A person turned sideways in the passenger seat with one arm on the door and chin on hand, smiling toward the driver's side. | look |
+| 可爱小女生 | 귀여운 소녀; 소녀 무드 | KR | 소녀; 귀여움; 일상; 캐주얼; 아동·학생 | A cute everyday casual look with small gestures and bright expressions. | look |
+| 俏皮元气少女 | 발랄한 소녀; 발랄 소녀 무드 | KR | 소녀; 발랄함; 귀여움; 캐주얼; 아동·학생 | A bright playful look with exaggerated cute expressions and lively gestures. | look |
+| 少女心事 | 소녀 감성; 소녀의 비밀 무드 | KR | 소녀; 감성; 숨바꼭질; 캐주얼; 아동·학생 | A playful peek-a-boo pose with arms folded on a table and only one bright eye showing. | look |
+| 韩系萌妹 | 한국식 러블리 걸; 러블리 무드 | KR | 귀여움; 한국식; 손동작; 캐주얼; 아동·학생 | A cute Korean-style pose with elbows on the table and hands forming a flower under the chin, wide smile. | look |
+| 少女滑板 | 스케이트보드 소녀; 스케이트 걸 | KR | 스케이트보드; 활동적; 강변; 소녀; 스트릿; 아동·학생 | A girl standing on a skateboard in a skate park with knees bent and arms out for balance. | look |
+| 独居女孩 | 자취하는 여성 무드; 혼자 사는 집 감성 | KR | 실내; 감성; 의자; 혼자 | A person curled up in a plush armchair under an oversized hoodie, quiet and cozy. | look |
+| 都市精英女孩 | 도시 엘리트 여성; 커리어우먼 무드 | KR | 도시; 세련; 야간; 당당함 | A sleek, calm city night look leaning against floor-to-ceiling glass with arms folded. | look |
+| 감성교복 | 감성교복 대여; vibe uniform; 체험용 교복 | KR | 교복; 감성; 대여; 사진 스튜디오; 아동·학생 | A school-style uniform set in soft tones, styled with a ribbon or tie and worn as a photo-friendly outfit. | look |
+| 하이틴 룩 | 하이틴; high-teen look; high teen | KR | 하이틴; 교복; 프레피; 학교; 아동·학생 | A tidy school-inspired set of knit vest or cardigan, collared shirt and pleated skirt in navy, burgundy and white. | look |
+| 클래식 스쿨룩 | 스쿨룩; classic school look; 클래식 교복 | KR | 스쿨룩; 교복; 클래식; 학교; 아동·학생 | A conservative school uniform in dark wool with a bow tie, oxford shoes and a leather satchel. | look |
+| 러블리 하이틴 | 러블리 하이틴 룩; lovely high-teen; 파스텔 교복 | KR | 러블리; 하이틴; 파스텔; 학교; 아동·학생 | A pastel yellow short blazer with a white shirt, plaid pleated skirt and a large silk bow in a bright, sweet palette. | look |
+| 마린 스쿨룩 | 마린 룩 교복; marine school look | KR | 마린; 세일러; 여름; 학교; 아동·학생 | A navy and white nautical school set with a sailor collar, thin ribbon bow and white canvas sneakers. | look |
+| 캐주얼 스쿨룩 | 캐주얼 교복; casual school look; 스트릿 프레피 | KR | 캐주얼; 스쿨룩; 스트릿; 학교; 아동·학생 | A relaxed school-style outfit mixing a sweatshirt, pleated skirt, knee socks and a canvas messenger bag. | look |
+| 아이돌 예고 룩 | 예고 룩; K-idol uniform; 아이돌 교복 | KR | 예고; 아이돌; 교복; 학교; 아동·학생 | A sharp mustard blazer and black skirt look with a thin black ribbon tie and glossy loafers, as seen in arts-school uniforms. | look |
+| 코지 스쿨룩 | 코지 교복; cozy school look; 가을 하이틴 | KR | 코지; 니트; 가을; 학교; 아동·학생 | An oversized cream cable-knit sweater over a navy pleated skirt with chunky knit socks and brown ankle boots. | look |
+| 크롭 블레이저 스쿨룩 | 크롭 블레이저; cropped blazer school look; 짧은 블레이저 | KR | 블레이저; 크롭; 스쿨룩; 프레피; 아동·학생 | A short grey wool blazer with no collar and a white shirt over a layered pleated skirt, with a narrow black tie. | look |
+| 모던 하이틴 | 모던 프레피; modern high-teen; K-pop 스쿨룩 | KR | 모던; 하이틴; 블레이저; 학교; 아동·학생 | A sleek grey and white school-style set with a narrow tie, platform loafers and a baguette bag. | look |
+| 졸업 앨범 룩 | 졸업사진 룩; graduation album look; academic chic | KR | 졸업; 앨범; 클래식; 캠퍼스 | A formal academic style in black velvet and white shirt, posed with a bouquet of white tulips in kraft paper. | look |
+| 테니스 스커트 스쿨룩 | 테니스 스커트 교복; tennis skirt school look; 스포티 하이틴 | KR | 테니스; 스포티; 하이틴; 학교; 아동·학생 | A white polo with green trim and a crisp white pleated tennis skirt, with striped white sports socks and canvas tennis shoes. | look |
+| 캠퍼스 스포티 | 캠퍼스 룩; campus sporty; 대학생 룩 | KR | 캠퍼스; 스포티; 대학생; 바시티 | A sporty collegiate look of varsity jacket, sweatshirt, pleated skirt and sneakers. | look |
+| 리얼 학생 룩 | 학생 룩; everyday student look; real high schooler | KR | 학생; 일상; 백팩; 학교; 아동·학생 | A casual student outfit with a multi-pocket backpack, plain knit, pleated skirt and penny loafers. | look |
+| 볼캡 스쿨룩 | 볼캡 교복; cap school look; 힙 스쿨룩 | KR | 볼캡; 스쿨룩; 힙합; 믹스; 아동·학생 | A school-style jacket and skirt worn with a backwards embroidered baseball cap and chunky sneakers. | look |
+| 파스텔 하이틴 | 파스텔 체크 프레피; pastel high-teen; 러블리 프레피 | KR | 파스텔; 체크; 하이틴; 프레피; 아동·학생 | A grey-pink fine-check tailored blazer dress with a nipped waist and white collar. | look |
+| 란제리 룩 | 란제리; lingerie look; 슬립 레이어드; lingerie-inspired layering | KR | 란제리; 실크; 레이어드; 관능 | A fine silk camisole in cool white with thin straps and satin trim, layered under an open black wool blazer. | look |
+| 센슈얼 미니멀 | sensual minimal; 관능 미니멀 | KR | 미니멀; 관능; 실크; 도회적 | Monochrome black-and-white tailoring with a silk undershirt, sleek black trousers and a satin clutch. | look |
+| 소프트 럭셔리 | soft luxury; 소프트 럭셔리 룩 | KR | 소프트; 럭셔리; 크림; 고급 | A quiet-luxury set in cream and pale khaki with ballet flats, small diamond studs and a woven bag. | look |
+| 내추럴 바디웨어 | 바디웨어; natural bodywear; 유기농 코튼 룩 | KR | 바디웨어; 내추럴; 코튼; 미니멀 | Unbranded organic-cotton basics in heather grey worn as loungewear in soft morning window light. | look |
+| 슬림 페미닌 | slim feminine; 페미닌 슬림 | KR | 슬림; 페미닌; 블랙; 미니멀 | A close-fitting black top with side-slit wide jeans and a pointed black short boot. | look |
+| 매니시 시크 | mannish chic; 매니시 룩 | KR | 매니시; 수트; 시크; 미니멀 | Masculine-cut tailoring with waistcoat, shirt and straight trousers in a grey palette. | look |
+| 로우라이즈 크롭 프레피 | 로우라이즈 프레피; low-rise cropped preppy; 네오 프레피 미우미우 | KR | 로우라이즈; 크롭; 프레피; 네오 | A short belted trench jacket over a low-rise mini pleated skirt in a modern preppy mix. | look |
+| K-POP 스테이지 | 케이팝 스테이지; kpop stage outfit; 음악방송 의상 | KR | K-POP; 스테이지; 글리터; 아이돌 | A glittering cropped pleated stage set with sequins and rhinestones that catch stage lights. | look |
+| 페미닌 라운지웨어 | 라운지웨어; feminine loungewear; 캐시미어 트윈셋 | KR | 라운지웨어; 니트; 크림; 홈웨어 | A cream knit tube top with a matching open cardigan in a soft, matched texture. | look |
+| Steamy Bathroom After-Shower | 스티미 배스룸; 샤워 직후 욕실 스타일; 욕실 김서림 무드 | KR | 욕실; 수증기; 촉촉함; 따뜻한톤 | Soft diffused warm light through thick bathroom steam, with fogged glass and glossy damp surfaces. | look |
+| Balletcore Ethereal Romance | 발레코어 에테리얼; 발레코어 로맨스; 발레코어 몽환 | KR | 발레; 로맨틱; 핑크화이트; 튤 | Pale pink and white palette with tulle, lace and organza floating softly in diffuse light and long elongated neck and back lines. | look |
+| Girl Crush Dark Biker | 걸크러시 바이커; 다크 바이커 룩; 블랙 레더 바이크 | KR | 강렬; 블랙; 가죽; 바이크 | Glossy black leather and chrome chains beside a heavy motorcycle, with cold specular highlights and a hard direct stare. | look |
+| Dreamcore Halation Y2K | 드림코어 헐레이션; Y2K 드림코어; 밀레니엄 소프트포커스 | KR | 소프트포커스; 발광; 2000년대; 몽환 | Hazy soft-focus digital-camera image with glowing red-orange halation around bright edges and washed pastel colors. | look |
+| Y2K Barbie Princess Vibe | Y2K 바비 프린세스; 밀레니엄 바비; 핑크 프린세스 | KR | 핑크; 보라; 벨벳; 글리터 | Saturated pink and violet palette with velvet sheen and rhinestone sparkle in a playful retro glam look. | look |
+| Quiet Luxury Gallery | 콰이어트 럭셔리 갤러리; 조용한 럭셔리; 한남 갤러리 스타일 | KR | 미니멀; 화이트; 대리석; 고급 | White high-ceilinged gallery space with black-framed glass, marble surfaces and soft diffuse afternoon skylight. | look |
+| Polaroid Light Leak Nostalgia | 폴라로이드 빛 번짐; 필름 라이트 리크; 레트로 인화지 | KR | 빛샘; 폴라로이드; 레트로; 주황 | Instant-film frame with a yellowed white border and a red-orange flame-shaped light leak along one edge. | look |
+| Thermal Infrared Avant-Garde | 서멀 인프라레드 아방가르드; 열화상 스타일; 적외선 가색 | KR | 열화상; 가색; 대비; 아방가르드 | Body rendered as false-color blocks of red, yellow, cyan and deep blue like a thermal camera image. | look |
+| Vinyl Album Cover Aesthetic | 바이닐 앨범 커버; LP 커버 질감; 레코드 슬리브 | KR | 레코드; 마모; 빈티지; 90년대 | Faded square sleeve art with ring-wear circle imprint and worn paper corners on a muted cream backdrop. | look |
+| High-ISO Monochrome Grain | 고감도 흑백 입자; 트라이엑스 그레인; 하이 ISO 흑백 | KR | 흑백; 그레인; 대비; 필름 | Black-and-white portrait with deep crushed blacks and coarse film grain. | look |
+| Prismatic Holographic Iridescence | 프리즘 홀로그램; 무지개 굴절 빛; 홀로그래픽 이리데슨트 | KR | 프리즘; 무지개; 굴절; 홀로그램 | Seven-band rainbow spectra refracted across the face and surfaces with a shifting iridescent sheen. | look |
+| Space Age Metallic Capsule | 스페이스 에이지 캡슐; 우주선 메탈릭; SM 컨셉 메탈 | KR | 실버; 메탈; 우주; 차가움 | White streamlined pod interior with brushed cold metal and shadowless cool-white frontal light. | look |
 
 ## CN
 
@@ -106,6 +183,17 @@ Style 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다. 
 | 韩剧名场面 | 한드 명장면; K-드라마 감성; K-drama scene | KR, CN | 로맨틱; 겨울; 거리; 드라마; 한드 | A romantic K-drama frame with warm backlight, close two-person framing and soft cinematic colour. | look |
 | 首尔时装周 | 서울패션위크; Seoul Fashion Week street | KR, CN | 세련됨; 낮; 서울; 패션; 런웨이 스냅 | Sharp, confident street-style outfits caught outside fashion-week venues against plain urban backdrops. | look |
 | 高岭之花 | 고령지화; 손댈 수 없는 꽃; untouchable beauty | CN | 고고함; 차가움; 미술관; 사계절; 청랭계열 | Cool, untouchable elegance with a lifted chin, pale even styling and a distant gaze that keeps the viewer at arm's length. | look |
+| 晨曦竹雾 | 새벽 대숲 안개; bamboo morning mist; misty bamboo dawn | CN | 새벽; 안개; 대숲; 연녹; 신비 | Gold-green early light through thin bamboo mist, faint beams cutting the air and highlights softened to near white. | look |
+| 安藤忠雄 | 안도 다다오; Tadao Ando; 안도 건축; 안도 타다오; Ando | CN | 콘크리트; 건축; 빛; 미니멀; 차분; 건축가; 명상 | Ando-style rooms pair smooth concrete planes with a single controlled opening so light and shadow form the main composition. | person-style |
+| 邬达克 | 우달크; 후다커; László Hudec; Hudec | CN | 상하이; 1930년대; 건축가; 장식주의 | Hudec's buildings show sharp brick and stone volumes with Art Deco ornament and strong vertical lines in warm tones. | person-style |
+| 让·努维尔 | 장 누벨; Jean Nouvel; 努维尔 | CN | 건축가; 반사; 프레임; 현대 | Nouvel-style interiors use mirrored and glazed surfaces that stretch the view and bring the outside light deep into the room. | person-style |
+| 矶崎新 | 이소자키 아라타; Arata Isozaki; Isozaki | CN | 건축가; 곡선; 석재; 전시 | Isozaki-style galleries use long sweeping curves in pale stone, with smooth surfaces guiding the eye along the walls. | person-style |
+| 隈研吾 | 구마 겐고; Kengo Kuma; Kuma; 隈研吾建筑; 隈研吾 풍 | CN | 건축가; 목재; 기와; 경량; 건축; 부드러운 선; 현대; 투명 | Kuma-style architecture uses fine repeated slats or hanging tiles so surfaces look lightweight and let broken light through. | person-style |
+| 徽派 | 휘파; Huizhou style; 徽州; 徽派建筑 | CN | 안후이; 흰 벽; 검은 기와; 목조 | White walls with stepped gable tops and dark grey roofs surround a courtyard with fine wood, brick and stone carving. | look |
+| 优雅抓拍 | 우아한 스냅샷; 자연스러운 캔디드 컷 | CN | 캔디드; 스냅; 우아함; 무연출 | A candid-looking frame caught mid-movement, with an elegant unposed moment and a soft off-camera glance. | look |
+| 名媛私语 | 사교계 속삭임 무드; 친밀한 대화 분위기 | CN | 분위기; 친밀감; 사교계; 스냅 | Two heads close together in a relaxed pose, a confidential-conversation mood with soft smiles. | look |
+| 순욕 | 纯欲; 청순 섹시; 청순 관능; pure desire; 純欲; 퓨어 앤 섹시; 순수한 관능; 纯欲风 | CN | 순욕; 청순; 발레코어; 분홍; 관능; 순수; 시네마틱; 글로우; 클로즈업 | A look pairing innocent pastel items such as ballet wraps and white tulle with a soft, slightly smoldering gaze and close dewy skin. | look |
+| 纯欲 | 순욕; 퓨어 디자이어; pure desire; 순욕 룩 | CN | 순욕; 부드러움; 화이트; 관능 | A soft cream mink knit cardigan with its top button undone and a flowing khaki silk skirt in a warm daylight setting. | look |
 
 ## JP
 
@@ -166,6 +254,89 @@ Style 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다. 
 | 東京ノワール | Tokyo Noir; 도쿄 느와르; tokyo noir cinema | JP | 밤; 비; 시네마; 누아르 | Dark moody city scene with wet asphalt mirrors, deep shadows and cold purple-cyan neon accents. | look |
 | 東京モード | 도쿄 모드; tokyo modern; tokyo mode | JP | 도시; 미니멀; 현대; 쿨 | Clean, urban styling with understated tones and sharp, simple silhouettes. | look |
 | 銀座令嬢 | 긴자 레이조; 긴자 영애; ginza ojousama; 긴자 아가씨; 令嬢 | JP | 우아; 럭셔리; 도시; 클래식 | Polished upper-class elegance with glossy large waves, refined ladylike tailoring and soft satin-lit skin. | look |
+| ロリータ | 로리타; Lolita fashion; 洛丽塔; ロリィタ | JP | 로리타; 프릴; 레이스; 인형; 도쿄; 스타일 | Doll-like Japanese fashion with layered frills, lace and ribbon in soft pastel tones, worn by adults as a stylised look. | look |
+| Gothic Lolita | 고딕 로리타; ゴシックロリータ; 哥特洛丽塔; 고스로리; ゴスロリ | JP | 고딕; 로리타; 블랙; 레이스; 도쿄; 스타일; 하라주쿠 | A black, lace-heavy dress style with a high ruffled collar, a laced bodice, puffed sleeves and a stiff bell-shaped skirt. | look |
+| ゴスロリ | 고스로리; 고딕 로리타; gothic lolita; gosu rori; ゴシックロリータ | JP | 고딕; 클래식; 블랙; 인형 | Porcelain-doll gothic styling with black spiral-rolled hair under a lace headdress, deathly pale matte skin and a deep berry lip. | look |
+| Gothic & Lolita Bible | 고딕 앤 로리타 바이블; Gothic and Lolita Bible; 고스로리 바이블; GLB | JP | 고딕; 잡지; 로리타; 클래식 | The doll-like Gothic-Lolita magazine style of corseted dark romantic looks with ringlet hair. | brand |
+| 成人式 | 세이진시키; 성인식; coming of age day; seijin shiki; 成人式アップ | JP | 일본; 축제; 겨울; 기모노 | Festive formal styling in multi-layered braided updos dressed with dried flowers and gold ears of wheat, bright apricot makeup. | place |
+| 塩顔 | 시오가오; 솔트 페이스; salt face; salt girl cool | JP | 담백; 쿨; 미니멀; 도시 | A clean, understated look: minimal makeup, even skin, cool unsmiling expression and a slightly off-camera gaze. | look |
+| ペーソス | 페이소스; pathos; sunset melancholy | JP | 황혼; 쓸쓸함; 노을; 여운 | Low golden light, tired relaxed face and a faint closed-mouth smile. | look |
+| 浴衣 | 유카타; yukata; summer kimono | JP | 여름; 축제; 전통; 저녁 | A light cotton summer kimono tied with a sash, loose sleeves and a crisp printed pattern. | look |
+| 古着 | 후루기; 구제; 빈티지 고착; Shimokitazawa Vintage; Vintage; 古着风; ふるぎ | JP | 빈티지; 중고; 믹스; 캐주얼; 가을 | Secondhand style: slightly faded knits, worn denim and leather in mixed decades, with pilling and worn edges that show age. | look |
+| 透け感 | 스케감; 시스루; sheer; Translucent Minimal; Translucent Salt; 透明感 | JP | 여름; 투명감; 린넨; 시폰; 가벼움 | Fabrics thin enough to show the faint outline of a layer or limb behind them while staying matte, never wet-looking. | look |
+| 日規定番 | 日本規定; 정석 교복 규격; 일본 규정 길이; regulation school spec; standard Japanese school spec | JP | 교복; 규정; 정석; 길이; 학교; 아동·학생 | Conventional school-spec pieces in standard lengths and colours: navy, black and white socks and uniform items with a neat, uniform look. | look |
+| 英伦学院 | ブリティッシュ学院風; 영국 학원룩; 브리티시 스쿨; British collegiate look | JP | 영국풍; 학원룩; 트래드; 블레이저; 체크; 아동·학생 | Preppy British school look: dark blazer, plaid pleated skirt, knee socks and tasselled loafers. | look |
+| コギャル | 渋谷ギャル; 코갸루; 시부야 갸루; kogal | JP | 코갸루; 90년대; 시부야; 루즈삭스; 교복; 아동·학생 | Late-1990s Shibuya school-girl street look: short pleated skirt, bunched white socks, chunky loafers and a loose shirt. | look |
+| ミレニアムレトロ | Y2K; 千禧复古; 밀레니엄 레트로; Y2K 레트로 | JP | Y2K; 레트로; 90년대; 복각; 스트리트 | Late-1990s and early-2000s revival look, with film-snapshot colour, low-rise or short cuts, bunched socks and chunky shoes. | look |
+| カレッジスタイル | カレッジ; 칼리지 룩; 학원풍; collegiate style | JP | 칼리지; 캠퍼스; 니트; 스포티; 레트로 | Campus-style layering of knit pullover, striped socks and sneakers in navy, green and khaki. | look |
+| 日杂元气 | 日雑誌風元気; 일본 잡지 감성; 日系杂志风; Japanese magazine genki | JP | 일본 잡지; 발랄; 캐주얼; 내추럴; 레트로 | Bright, casual Japanese-magazine styling with relaxed knits, plain socks and a cheerful, unfussy feel. | look |
+| Cluel | クルーエル; 클루엘 매거진; Cluel magazine; 클루엘; CLUEL 잡지 | JP | 잡지; 일본; 패션지; 캐주얼; 에디토리얼; 시티걸; 내추럴; 대지색 | A natural city-girl magazine look of loose curls, earth-tone makeup and relaxed neutral clothes. | brand |
+| 玩偶感 | お人形風; 인형 같은 무드; doll-like look | JP | 인형; 섬세; 프릴; 로리타; 정교 | Delicately finished doll-like styling with frills, lace and neat, symmetrical details. | look |
+| 仙气 | フェアリー感; 요정 무드; ethereal fairy look | JP | 요정; 몽환; 펄; 화이트; 투명 | Ethereal pale look with pearly sheen, light fabrics and soft, airy light. | look |
+| 初恋感 | 初恋; 첫사랑 무드; first-love mood | JP | 첫사랑; 청순; 리본; 화이트; 수줍음 | Gentle first-love mood with white fabrics, small ribbon accents and soft, warm light. | look |
+| 微诱 | 微诱惑; 은은한 유혹; subtly alluring; ほんのり色気 | JP | 은근; 관능; 성숙; 레이스; 무드 | Understated alluring styling with lace trim, sheer fabric and softly shadowed contours. | look |
+| 甘欲 | 甘欲風; 달콤한 관능; sweet-sultry; 甘辛 | JP | 달콤; 관능; 리본; 핑크; 무드 | Sweet styling with bows and soft pink tones combined with a sultry, lowered gaze. | look |
+| 純欲 | 纯欲; 清纯欲; 순욕; pure-desire look; pure desire style; 纯欲风 | JP | 순욕; 청순; 관능; 화이트 레이스; 무드; 일본풍; 화보; 유혹 | Soft innocent styling in oversized knitwear or hoodie with bare knees and an upward glance, warm skin tones and dreamy light. | look |
+| 七五三アレンジ | 시치고산 어레인지; 시치고산 스타일; 七五三ヘア; 시치고산 헤어 | JP | 축제; 전통; 모던; 귀여움; 붉은색; 아동·학생 | A festive Japanese celebration look of twin hair buns wound with red and gold cord, a straight fringe and round vermilion-red cheeks. | look |
+| モダン和カワイイ | 모던 와카와이; 와풍 귀여움; modern wa-kawaii; 일본풍 큐트 | JP | 와풍; 귀여움; 모던; 축제 | A playful modern take on traditional Japanese festive style, mixing red and gold cord details, round buns and bright rosy cheeks. | look |
+| ポップジャパネスク | 팝 재패네스크; 팝 일본풍; pop Japanesque; 팝 와풍 | JP | 팝; 일본풍; 축제; 컬러풀 | A bright pop reinterpretation of Japanese motifs: saturated reds and golds, graphic cord knots and cheerful festival colour. | look |
+| 祇園風雅 | 기온 후가; 교토 기온 감성; Gion elegance; 기온풍 | JP | 교토; 전통; 우아함; 와풍 | A refined Kyoto geisha-quarter mood with pale skin, silver hair ornament, soft red accents and teahouse or paper-screen settings. | look |
+| 現代芸妓ニュアンス | 현대 게이샤 뉘앙스; 모던 게이코; modern geiko nuance; 현대 예기 스타일 | JP | 게이샤; 교토; 모던; 전통 | A contemporary reading of Kyoto geiko styling: pale base, soft red accents and long black hair worn with a single ornament. | look |
+| 純欲透明感 | 준요쿠 투명감; 청순 섹시 투명감; pure-desire clarity; 순욕 투명감 | JP | 청순; 투명감; 관능; 수광 | A luminous, translucent-skinned portrait style with soft light, glossy lips and a faintly flushed face. | look |
+| 初恋ピュア | 첫사랑 퓨어; 첫사랑 순수; first-love pure look; 첫사랑 스타일 | JP | 첫사랑; 청순; 투명감; 일본 | A soft, clean look of airy bangs, clear skin, pale pink cheeks and a gentle, natural expression. | look |
+| メンヘラ | 멘헤라; 멘헤라 스타일; menhera style; 멘헤라 감성 | JP | 서브컬처; 지뢰계; 다크; 핑크블랙 | A fragile, tearful-looking style with reddened eye area, dark hair in twin tails and pink-black accents. | look |
+| ドーリー | 돌리; 인형 같은 스타일; dolly style; 인형풍 | JP | 인형; 소녀; 달콤; LARME | A doll-like sweet look with round eyes, rosy cheeks, soft curls and ribbon or lace details. | look |
+| ドーリー甘め | 달콤 돌리; 돌리 스위트; sweet dolly; 달달한 인형풍 | JP | 인형; 달콤; 핑크; 소녀 | A sugary pink doll style with strawberry-toned makeup, soft waves and ruffled or ribboned accessories. | look |
+| お嬢様ドーリー | 오죠사마 돌리; 아가씨 인형풍; ojousama dolly; 아가씨 돌리 | JP | 아가씨; 인형; 클래식; 리본 | A well-bred doll look of ribbon half-up hair, pale powdery skin and soft pink touches. | look |
+| ガーリー | 걸리; 걸리시; girly style; 걸리 스타일 | JP | 걸리시; 소녀; 달콤; 핑크 | A soft, feminine styling of pastel colours, curls, ribbons and glossy pink lips. | look |
+| 王道ガーリー | 정석 걸리; 클래식 걸리시; classic girly; 오도 걸리 | JP | 걸리시; 정석; 달콤; CanCam | A classic sweet-feminine look of long soft curls, rosy makeup and pink or milk-tea tones. | look |
+| 甘酸っぱいガーリー | 새콤달콤 걸리시; 상큼 걸리; sweet-sour girly; 달콤새콤 걸리시 | JP | 걸리시; 상큼; 달콤; 딸기; 핑크 | A fresh strawberry-pink girly look with rosy cheeks, curled lashes and a juicy lip. | look |
+| アート系美少女 | 아트계 미소녀; 아트 미소녀; art-school beauty; 아티스틱 걸 | JP | 아트; 미소녀; 모드; Soup. | A graphic art-school look of heavy blunt fringe, long straight black hair and warm tea-toned makeup. | look |
+| モテ王道 | 모테 정석; 모테 스타일; classic charming look; 호감 스타일 | JP | 모테; 정석; 페미닌; CanCam | A crowd-pleasing feminine look of soft curls, peachy makeup and tidy, neutral outfit tones. | look |
+| 元気ハツラツ | 겐키 하츠라츠; 활기 넘치는; energetic look; 발랄한 스타일 | JP | 발랄; 활기; 오렌지; 스포티 | A bright, sporty look with a high half-up bun, orange-toned makeup and sunny colours. | look |
+| プレイフルキュート | 플레이풀 큐트; 장난스러운 귀여움; playful cute; 장난기 큐트 | JP | 귀여움; 장난기; 하라주쿠; 팝 | A mischievous cute style with low twin buns, freckles and a sun-flushed cheek. | look |
+| 原宿ポップ | 하라주쿠 팝; 하라주쿠 팝 스타일; Harajuku pop; 하라주쿠풍 팝 | JP | 하라주쿠; 팝; 컬러풀; 서브컬처 | A colourful pop street style with bold accessories, playful hair and bright, saturated makeup. | look |
+| ポップフレッシュ | 팝 프레시; 상큼한 팝; pop fresh; 프레시 팝 | JP | 팝; 상큼; 오렌지; 캐주얼 | A cheerful, fresh pop look with apricot makeup, jaw-length flipped hair and casual street clothes. | look |
+| ゴージャススウィート | 고저스 스위트; 화려한 스위트; gorgeous sweet; 럭셔리 스위트 | JP | 고급; 스위트; 화려; SWEET | A glamorous-sweet look of voluminous mermaid waves, pearl headband and champagne-gold highlight. | look |
+| お嬢様 | 오죠사마; 아가씨; ojousama; 상류층 아가씨; 아가씨 스타일; 名媛; refined lady style | JP | 아가씨; 고급; 클래식; 리본; 우아함; 단정; 캐시미어 | A well-bred young-lady look: neat hair with a ribbon or headband, powdery skin and soft elegant colours. | look |
+| 知的コンサバ | 지적 콘서바; 정통 오피스 스타일; intellectual conservative; 콘서바 스타일 | JP | 지적; 콘서바; 오피스; VERY | A tidy, grown-up look of a low-set chignon or clip updo, cinnamon-nude makeup and conservative neutral clothing. | look |
+| クラシカルトラッド | 클래시컬 트래드; 클래식 트래디셔널; classical trad; 트래드 스타일 | JP | 클래식; 트래드; 레트로; Fudge | A classic traditional look of a velvet-ribboned low ponytail, mocha-brown makeup and retro lady styling. | look |
+| エレガントラグジュアリー | 엘레강스 럭셔리; 우아한 럭셔리; elegant luxury; 럭셔리 엘레강스 | JP | 우아; 럭셔리; 웨이브; 25ans | A rich, elegant look of big glossy waves, satin skin and refined jewel-toned or neutral outfits. | look |
+| 知的モード | 지적 모드; 지적인 모드; intellectual mode; 지적 모드 룩 | JP | 지적; 모드; 시크; 도시 | A restrained urban look of a low chignon, grey-beige makeup and sleek tailored pieces. | look |
+| キャリアエレガンス | 커리어 엘레강스; 직장인 우아함; career elegance; 커리어 룩 | JP | 커리어; 우아; 오피스; Oggi | A polished office-appropriate look of curled, outward-flipped hair, amber-camel makeup and tailored clothes. | look |
+| 下北沢Vintage | 시모키타자와 빈티지; 시모키타 빈티지; Shimokitazawa vintage; 시모키타 감성 | JP | 빈티지; 시모키타; 인디; 구제 | A thrifted, indie vintage look of layered short hair, smudged dry-rose makeup and worn secondhand clothes. | look |
+| グランジモード | 그런지 모드; 그런지 스타일; grunge mode; 그런지 룩 | JP | 그런지; 모드; 록; 다크 | A moody grunge-meets-fashion look of tousled hair, smoky eyes and faded dark clothes. | look |
+| サブカル | 서브컬; 서브컬처; subculture style; 서브컬처 룩 | JP | 서브컬처; 하라주쿠; 개성; 잡지 | An offbeat subculture look mixing unusual colours, accessories and thrifted or character-driven clothes. | look |
+| Ray | 레이; Ray 잡지; レイ | JP | 잡지; 걸리시; 캐주얼; 일본 | A young, sweet Japanese magazine look of fringe, light makeup and girly casual clothes. | brand |
+| mini | 미니; mini 잡지; ミニ | JP | 잡지; 하라주쿠; 스트리트; 팝 | A Harajuku-style street magazine look of flipped short hair, bright makeup and playful casual outfits. | brand |
+| ar | 아르; ar 잡지; アール | JP | 잡지; 페미닌; 캐주얼; 일본 | A feminine casual magazine look of soft feathered hair and clear peachy makeup. | brand |
+| KERA | 케라; KERA 잡지; ケラ | JP | 잡지; 지뢰계; 서브컬처; 하라주쿠 | A dark-pink subculture magazine look of black twin tails, red-eye makeup and lace or ribbon clothes. | brand |
+| Soup | Soup.; 수프; Soup. 잡지; スープ | JP | 잡지; 하라주쿠; 아트; 걸리 | A Harajuku art-girl magazine look of heavy bangs, long black hair and quirky layered outfits. | brand |
+| VERY | 베리; VERY 잡지; ヴェリィ | JP | 잡지; 미시; 콘서바; 고급 | A polished grown-up lady magazine look in refined neutral outfits and tidy updos. | brand |
+| Oggi | 오기; Oggi 잡지; オッジ | JP | 잡지; 커리어; 오피스; 우아 | A tidy office-lady magazine look of curled hair and neatly tailored clothes. | brand |
+| Precious | 프레셔스; Precious 잡지; プレシャス | JP | 잡지; 고급; 지적; 마담 | A luxury mature-woman magazine look of a low chignon and expensive tailored fabrics. | brand |
+| SWEET | 스위트; SWEET 잡지; スウィート | JP | 잡지; 스위트; 페미닌; 고급 | A sweet-glamorous magazine look of voluminous waves, pearls and pastel feminine clothes. | brand |
+| NYLON JAPAN | 나일론 재팬; NYLON 잡지; ナイロンジャパン | JP | 잡지; 하라주쿠; 모드; 스트리트 | A Harajuku mode magazine look of a blunt hime cut, smoky eyes and graphic street fashion. | brand |
+| ONKUL | 온쿨; ONKUL 잡지; オンクル | JP | 잡지; 파리지엔; 시크; 트래드 | A Parisian-leaning Japanese magazine look of a chic bob, dry-rose makeup and trad clothes. | brand |
+| 美しいキモノ | 우쿠시이 기모노; 기모노 잡지; Utsukushii Kimono; 아름다운 기모노 | JP | 잡지; 기모노; 전통; 와풍 | A traditional kimono magazine look with neat low updos, soft makeup and formal kimono fabrics. | brand |
+| 婦人画報 | 후진가호; 婦人画報 잡지; Fujin Gaho; 부인화보 | JP | 잡지; 전통; 고급; 와풍 | A classic refined Japanese magazine look with traditional hair and vermilion-lip makeup. | brand |
+| 家庭画報 | 가정화보; 家庭画報 잡지; Katei Gaho; 카테이가호 | JP | 잡지; 고급; 전통; 황실 | A formal, dignified magazine look of a tight low chignon and matte rose lips. | brand |
+| 天然生活 | 텐넨세이카츠; 天然生活 잡지; Tennen Seikatsu; 자연생활 | JP | 잡지; 내추럴; 미니멀; 에티컬 | A simple natural lifestyle look with a plain wooden hairpin, bare skin and linen or cotton clothes. | brand |
+| 青春映画 | 청춘 영화; 日系青春电影; coming-of-age film look | JP | 청춘; 필름; 여름; 시네마틱 | Soft overexposed summer light, wind-blown hair, guardrails and seaside roads, slightly desaturated film color. | look |
+| 学院風 | 아카데믹 룩; 学院复古; academic preppy | JP | 프레피; 레드브릭; 코트; 클래식 | Wool coat over knitwear with plaid or pleated skirt against old red brick, muted autumn palette. | look |
+| Showa Retro Nostalgia | 쇼와 레트로; 쇼와 노스탤지어; 昭和レトロ | JP | 쇼와; 레트로; 향수; 일본 | A muted, slightly faded look from mid-century Japan: wool textures, simple cuts, warm film-like color and old-fashioned fixtures. | look |
+| Tokyo College Girl | 도쿄 칼리지 걸; 도쿄 캠퍼스 룩; 東京カレッジガール | JP | 캠퍼스; 프레피; 도쿄; 트래드 | A neat campus look of layered wool, plaid skirt, knee socks and a leather satchel in dark autumn colors. | look |
+| Gentlewoman Chic | 젠틀우먼 시크; 젠틀우먼 룩; ジェントルウーマン | JP | 클래식; 테일러드; 트위드; 시크 | A tailored, restrained outfit built from tweed or wool jackets and straight trousers in subdued heritage colors. | look |
+| 甘ロリ | 아마로리; 스위트 로리타; sweet lolita; 甜美洛丽塔 | JP | 로리타; 파스텔; 프릴; 하라주쿠 | A pastel pink and white dress style with layered frills, large bows and tiered lace, shaped into a full rounded skirt. | look |
+| Sensual Minimal | 센슈얼 미니멀; 관능적 미니멀; センシュアルミニマル | JP | 미니멀; 실크; 이브닝; 관능 | A restrained evening look in one silk piece, bare shoulders and warm low light, with almost no accessories. | look |
+| ネオ和服シック | 네오 와후쿠 시크; 개량 한복풍 일본 의상; Neo-Wafuku Chic; 新和风 | JP | 와후쿠; 시스루; 레이스; 여름밤 | A short sheer lace top with wide kimono-style cuffs and a crossed collar, worn over a pleated long skirt in pale gray-green. | look |
+| カワイイ | 카와이; 귀여운; kawaii; かわいい; 카와이이 | JP | 귀여움; 파스텔; 하라주쿠; 팝; 일본문화 | Sweet pastel styling with soft rounded shapes, bows, plush colors and playful accessories. | look |
+| 少女 | 소녀; girl; 소녀 감성; 少女趣味; 소녀풍 | JP | 소녀; 감성; 파스텔; 리본; 청춘; 아동·학생 | A girlish styling made of ribbons, lace trims, pastel colors and plush accessories, shown through clothing and props. | look |
+| マカロンカラー | 마카롱 컬러; 마카롱 색감; macaron colors; マカロン色 | JP | 파스텔; 마카롱; 팔레트; 달콤함; 색감 | A pastel palette of soft pink, mint, lavender and butter yellow with a smooth matte finish. | look |
+| ペンキ絵 | 페인트화; 펜키에; sento mural; 銭湯絵; 후지산 벽화 | JP | 벽화; 후지산; 센토; 페인트; 타일 | A large hand-painted mural of snow-capped Mount Fuji across a bathhouse tile wall in bright blue and white. | item |
+| 로리타 | 로리타 패션; ロリータ; 洛丽塔; Lolita fashion | JP | 로리타; 인형풍; 프릴; 클래식; 서브컬처 | A doll-like fashion style of bell-shaped skirts, frills, lace, bows and rounded shoes, usually in cream, pink or black. | look |
+| 스위트 로리타 | Sweet Lolita; 스위트 롤리타; 甜美洛丽塔; アマロリ | JP | 스위트; 파스텔; 프릴; 리본; 티파티 | A pastel, sugary Lolita variant: cream puff-sleeve dresses, ribbon bows, lace trims and pink-and-white shoes. | look |
+| 코갸루 | コギャル; Kogal; kogal; 辣妹; 고갸루; 시부야 갸루 | JP | 코갸루; 시부야; Y2K; 교복; 90년대; 아동·학생 | A late-1990s Shibuya street look of a short uniform skirt, blazer, huge loose socks, tanned skin and bleached hair. | look |
 
 ## US
 
@@ -315,6 +486,53 @@ Style 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다. 
 | Y2K Snapshot | Y2K 스냅; 밀레니엄 스냅; 千禧年代; 2000년대 감성 스냅 | US | 2000년대; 플래시; 레트로; 파티 | A grainy early-2000s party snapshot with hard flash, saturated color and neon signs behind. | look |
 | Yellowstone Ranching | 옐로스톤 랜칭; 옐로스톤 목장; Yellowstone | US | 서부; 목장; 가을 | Worn denim, felt hat and a leather saddle with river valley light and dust in the air. | look |
 | Hemingway Americana | 헤밍웨이 아메리카나; 헤밍웨이 | US | 섬; 해변; 복고 | Worn linen shirt and deck shoes against a white clapboard porch and bright sea. | person-style |
+| 爱德华巴洛克 | 에드워디언 바로크; Edwardian Baroque | US | 바로크; 장식; 석재; 호텔 | Heavy carved stone, columns and gilt trim dominate the interior, with warm light running over the rich ornament. | look |
+| Cindy Crawford | 신디 크로포드; 신디 크로퍼드; 신디 크로포드 스타일; Cindy Crawford 90s | US | 90년대; 슈퍼모델; 레트로; 글램; 볼륨 | Early-90s supermodel styling with a voluminous brunette blowout, bronzed skin, a defined brown lip line and strong warm studio light. | person-style |
+| Naomi Campbell | 나오미 캠벨; 나오미 캠벨 스타일; Naomi Campbell 90s | US | 90년대; 슈퍼모델; 런웨이; 브론즈; 글램 | 1990s runway-supermodel styling with a full, sculpted blowout, contoured bronze-toned makeup and confident high-fashion lighting. | person-style |
+| Bella Hadid Y2K | 벨라 하디드; 벨라 하디드 Y2K; 벨라 하디드 스타일; Bella Hadid Y2K chic | US | Y2K; 슈퍼모델; 사이버; 패션위크; 미니멀 | Y2K-inspired model styling with sleek pulled-back hair, frosty makeup and a futuristic runway feel. | person-style |
+| Britney 2000s Pop | 브리트니; 2000s 팝; 브리트니 스피어스 스타일; Britney 2000s; 2000s pop star | US | 2000년대; 팝; Y2K; 글리터; 무대 | Late-1990s and 2000s pop-stage styling with glossy straight or high-tied hair, shimmering makeup and bright stage lighting. | person-style |
+| Americana Radiance | 아메리카나 래디언스; Genuine Joy; 미국식 환한 무드; Sunny Girl; California Pop; 캘리포니아 팝 | US | 밝음; 활기; 낮; 미국; 명랑 | Open, high-energy joy that reads in the whole face: bright eyes, lifted cheeks, warm skin tones under direct daylight. | look |
+| Coachella Sass | 코첼라 새스; Festival Rocker; 페스티벌 록커; Rock-and-Roll Rebellious; 록앤롤 반항 | US | 페스티벌; 록; 반항; 여름; 장난 | Festival-field rebel attitude: playful dare in the eyes, dusty afternoon sun, loose messy hair. | look |
+| Speakeasy Noir | 스피크이지 누아르; Speakeasy Glamour; 스피크이지; Cocktail Glass Shielding Lips; Modern Noir | US | 밤; 바; 누아르; 글래머; 실내 | Dim bar with warm tungsten pools, a glass held in front of the lips and eyes lit from below. | look |
+| Athleisure Morning Run | 애슬레저 모닝런; 晨跑中途稍歇; Morning Run Respite; Crisp Vitality; Morning Discipline | US | 아침; 운동; 클린; 야외; 활기 | Pausing after a run, breathing visibly in cool morning air, flushed cheeks and a focused clear gaze. | look |
+| Princess Diana | 다이애나비 룩; 다이애나 룩; 다이애나 스포티; Princess Di; Diana style | US | 90년대; 스포티; 스웻셔츠; 바이크 쇼츠; 캐주얼 | A 1990s off-duty sporty look of an oversized crewneck sweatshirt over black bike shorts with white sneakers. | person-style |
+| Hailey Bieber | 헤일리 비버 룩; 헤일리 스타일; 헤일리 비버; hailey bieber style | US | 모델 데일리; 미니멀; 꾸안꾸; 스트리트; 2020년대 | An oversized poplin shirt or blazer with short tailored shorts, slim sunglasses and sleek minimal accessories. | person-style |
+| Kendall Jenner | 켄달 제너 룩; 켄달 스타일; 켄달 제너; kendall jenner style | US | 모델 데일리; 테일러링; 스트리트; 시크; 초콜릿 브라운 | A chocolate-brown oversized blazer over a white tank and straight jeans in a clean, understated model-off-duty look. | person-style |
+| Erewhon | 에레원; Erewhon Tonic Bar; 에레원 토닉바 | US | 웰니스; 아침; LA; 스무디 | A bright organic market juice bar with pale stone counters, cold-pressed glass bottles and kale stacked in clean rows. | brand |
+| Malibu Coastline Modern | 말리부 코스트라인 모던; 말리부 모던 | US | 해변; 모던; 아침; 캘리포니아 | Clean-lined white house on a cliff, raw linen and glass, soft pacific dawn light on pale decking. | look |
+| Rooftop Luxe | 루프탑 럭스; 루프탑 럭셔리 | US | 럭셔리; 수영장; 새벽; 도시 | An infinity-edge pool at the lip of a high rooftop, a city skyline in cool blue haze and glittering water. | look |
+| Mountain Sunrise Zen | 마운틴 선라이즈 젠; 산 일출 명상 | US | 요가; 새벽; 산; 명상 | A quiet figure silhouetted on a ridge with a pale peach sky and cool fog filling the lower valley. | look |
+| South Bay Coastal | 사우스베이 코스탈; 맨해튼 비치 | US | 해변; 맨발; 아침 | Wet pale sand, low foam lines and soft lilac-blue early light with a long empty horizon. | look |
+| Spanish Colonial Revival | 스패니시 콜로니얼 리바이벌; 스페니시 콜로니얼; 스패니시 리바이벌 | US | 지중해; 정원; 오전; 산타바바라 | White plaster walls, red clay roof tiles, wrought-iron and a citrus tree casting hard-edged sun shadows on a tiled patio. | look |
+| American Riviera | 아메리칸 리비에라; 산타바바라 리비에라 | US | 해안; 지중해; 오전 | Sun-bleached stucco, terracotta and deep blue sky over a calm coastline. | look |
+| Century City Modernism | 센추리 시티 모더니즘; 센추리 시티 | US | 모던; 유리; 스파; 낮 | Steel-framed glass walls, planted terraces and shimmering water in bright, cool light. | look |
+| Palm Springs Modernism | 팜스프링스 모더니즘; 팜 스프링스 모던 | US | 휴양; 복고; 수영장; 파스텔 | Flat-roof houses, breeze-block screens, a still turquoise pool and strong sun under dry mountains. | look |
+| Montana Big Sky | 몬태나 빅스카이; 빅 스카이 | US | 목장; 카우보이; 서부; 낮 | Huge cloud-filled sky over rolling grassland with a rider and horse small in the frame. | look |
+| Navajo Sandstone | 나바호 샌드스톤; 나바호 사암 | US | 사암; 사막; 곡선 | Smooth swirling red-orange rock with sculpted curves and warm bounce light. | look |
+| Pueblo Revival | 푸에블로 리바이벌; 푸에블로 리바이벌 모던 | US | 토담; 남서부; 따뜻한; 산타페 | Rounded adobe walls in ochre, wood beam ends and turquoise doors under strong dry sun. | look |
+| Collegiate Gothic | 콜리지에이트 고딕; 대학 고딕 | US | 대학; 석조; 안개; 가을 | Pointed stone arches, leaded windows and ivy on grey masonry in cool, soft light. | look |
+| Beaux-Arts | 보자르; 보자르 양식; Beaux-Arts Grandeur | US | 클래식; 웅장; 금장 | Carved stone, marble stairs, gilded detail and high painted ceilings in warm, glittering light. | look |
+| Private Social Club | 프라이빗 소셜 클럽; 프라이빗 클럽 | US | 클래식; 가죽; 서재; 밤 | Dark wood shelves, buttoned leather chairs and low amber lamps in a hushed room. | look |
+| Edwardian High Tea | 에드워디안 하이티; 하이티; Afternoon Tea | US | 티타임; 오후; 클래식 | Tiered stands, porcelain cups and white-gloved ease under a glittering chandelier. | look |
+| Hollywood Regency | 할리우드 리젠시; 핑크 팰리스 | US | 호텔; 열대; 복고; 핑크 | Glossy pink walls, banana-leaf wallpaper and white trim with a glamorous tropical sheen. | look |
+| Industrial Waterfront | 인더스트리얼 워터프론트; 워터프런트 인더스트리얼 | US | 항구; 벽돌; 낮 | Brick warehouses, steel girders and the river edge in clear cold light. | look |
+| Detroit Industrial Ruins | 디트로이트 폐허; 러스트 벨트; Rust Belt | US | 폐허; 녹; 콘크리트 | A rusted, cracked factory interior with peeling paint, weeds and shafts of grey light. | look |
+| Bushwick Street Art | 부시윅 스트리트 아트; 부시윅 스트리트아트 | US | 그래피티; 힙스터; 낮 | Layered bright spray murals behind the subject, loose vintage clothes and daytime city light. | look |
+| Piet Oudolf | 피트 오두프; 피에트 우돌프 | US | 정원; 식물; 가을 | A loose naturalistic planting of tall grasses and seedheads in soft, painterly colors. | person-style |
+| Windy City Heritage | 윈디 시티; 시카고 헤리티지 | US | 시카고; 강철; 겨울 | Dark steel, grey stone and cold wind-whipped light along an industrial street. | look |
+| Richardsonian Romanesque | 리처드슨 로마네스크; 로마네스크 리바이벌 | US | 건축; 벽돌; 아치 | Massive round stone arches and rough-cut brick in dark, rain-darkened tones. | look |
+| Colonial Craftsmanship | 콜로니얼 크래프트; 식민지 공예 | US | 수공; 가죽; 공방 | Hand-stitched leather, hammered iron and worn wooden benches in warm lamp light. | look |
+| Bob Dylan | 밥 딜런; 밥 딜런 룩 | US | 포크; 60년대; 음악 | 1960s folk look: rumpled jacket, sunglasses, tousled hair and a black-and-white street photo feel. | person-style |
+| Chelsea Industrial | 첼시 인더스트리얼; 첼시 갤러리 | US | 갤러리; 철강; 뉴욕 | Raw steel, concrete and a cage-like freight elevator in cool contrasty light. | look |
+| Converted Warehouse | 컨버티드 웨어하우스; 창고 개조 | US | 로프트; 벽돌; 조용한 | Tall arched windows, exposed brick and sparse expensive furniture in even soft light. | look |
+| Miami Beach Art Deco | 마이애미 비치 아르데코; 마이애미 아르데코; Art Deco Miami | US | 파스텔; 네온; 열대; 복고 | Pastel-painted curved facades with neon trim and sharp-edged geometric ornament. | look |
+| Wynwood Street Art | 윈우드 스트리트 아트; 윈우드 팝아트 | US | 팝아트; 그래피티; 색채 | A backdrop of loud overlapping murals in neon colors behind the subject. | look |
+| Addison Mizner | 애디슨 미즈너; 애디슨 미즈너 건축 | US | 건축; 지중해; 열대 | Mediterranean Revival arches, carved stone, tile roofs and shaded courtyards. | person-style |
+| Morris Lapidus | 모리스 라피더스; 모리스 래피더스 | US | 건축; 마이애미; 곡선; 복고 | Curving white forms, bowties, holes in walls and playful mid-century glamour. | person-style |
+| Buckminster Fuller | 버크민스터 풀러; 벅민스터 풀러; Fuller Dome | US | 돔; 건축; 모던 | A lightweight triangulated geodesic dome casting a mesh of shadows. | person-style |
+| Coquina | 코키나; 코키나 석재 | US | 석재; 역사; 요새 | Pale rough shell-stone walls full of small bright fossil flecks. | look |
+| Gulf Coast Serenity | 걸프 코스트 세레니티; 걸프 코스트 | US | 명상; 일몰; 해변 | Pastel pink and blue dusk over a flat calm sea with a quiet figure on the sand. | look |
+| Bowtie Motif | 보타이 모티프; 보우타이 모티프 | US | 건축; 복고; 마이애미 | A curving, symmetric bowtie shape repeated in floor and ceiling pattern, glossy and playful. | look |
 
 ## FR
 
@@ -438,3 +656,20 @@ Style 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다. 
 | Winter Parisian Opulence | 겨울 파리지앵 오펄런스; 겨울 풍요 룩; 플라뇌르 겨울 | FR | 겨울; 좌안; 초콜릿; 플라뇌르 | Big chocolate tweed coats over cashmere jumpers and check trousers with wool scarves. | look |
 | Camus | 카뮈; 알베르 카뮈; Camusian | FR | 부조리; 센강; 우울; 실존 | Muted grey-blue wet streets, a rain-soaked trench coat and a calm, wry resignation in the framing. | person-style |
 | Nymphéas | 님페아; 모네 수련; Monet water lilies; 모네 수련 색감 | FR | 인상주의; 몽환; 봄; 예술 | Soft blurred colour like Monet's water lily paintings, with violet, grey and green mixing at the edges and no hard outline. | person-style |
+| Café littéraire | literary cafe; 문학 카페; 카페 리테레르; 책 읽는 카페 | FR | 지적; 카페; 독서; 파리 | A reading-café mood with an open book beside a small cup, quiet posture and soft grey window light on the pages. | look |
+| Chambre bohème | bohemian bedroom; 보헤미안 방; bohemian room | FR | 실내; 보헤미안; 따뜻함; 마루 | A cozy bedroom corner with vintage rugs, books and an instrument on the floor in warm light. | look |
+| Odalisque | 오달리스크; reclining odalisque | FR | 눕기; 빈티지; 회화; 나른함 | A reclined pose with one elbow bent, head in hand and hips turned, as in classical paintings. | look |
+| haussmannien | haussmann; 오스만; 오스만 양식; haussmannian | FR | 파리; 건축; 크림색; 실내 | Cream limestone facades, wrought iron balconies, tall windows and herringbone floors. | look |
+| Coquetterie | 코케트리; 프렌치 코케트리; French Coquetry; 애교 있는 파리지엔 | FR | 파리; 애교; 리본; 로맨틱; 스타일 | A playful French styling mood built from small bows, dots and neat details, charming rather than flashy. | look |
+| Preppy Rive Gauche | 프레피 좌안; 좌안 프레피; left bank preppy; 리브고슈 프레피 | FR | 프레피; 학생룩; 리브고슈; 파리; 스타일; 아동·학생 | A Left Bank preppy look of knit vest, oxford shirt, pleated skirt and loafers. | look |
+| Baiser écarlate | 스칼렛 키스; 붉은 입맞춤; scarlet kiss; 금기의 로맨스 | FR | 붉은색; 디테일; 로맨틱; 백심; 스타일 | A restrained styling mood where a thin scarlet seam is only visible when the legs move or cross. | look |
+| Seductive Detail | 매혹 디테일; 유혹적 디테일; 관능 포인트 | FR | 디테일; 관능; 포인트; 백심; 스타일 | A small hidden or half-hidden accent, such as a contrasting seam, that draws the eye only when the wearer moves. | look |
+| Rococo chic | 로코코 시크; 로코코풍; 프렌치 로코코 | FR | 로코코; 리본; 벨벳; 귀여움; 스타일 | A decorative French look with velvet bows, puffed skirts and ornamental details. | look |
+| Bohemian Allure | 보헤미안 매력; 보헤미안 앨루어; 보헤미안 무드 | FR | 보헤미안; 와인색; 레이스; 야간; 스타일 | A bohemian dancer-style look with contrasting wine-red lace trim against black. | look |
+| Riviera romantique | 리비에라 로맨틱; 남프랑스 로맨스; Provençal Romance; 코트다쥐르 로맨스 | FR | 남프랑스; 로맨틱; 린넨; 여름; 스타일 | A Côte d'Azur romantic summer look with white linen, straw accessories and wedge sandals. | look |
+| Noce parisienne | 파리 웨딩; 프렌치 웨딩; Parisian wedding; 파리지엔 신부 | FR | 웨딩; 아이보리; 레이스; 신부; 스타일 | A Parisian church wedding look in ivory silk, lace veil and white satin heels. | look |
+| Esprit 70s | 70년대 무드; 에스프리 세븐티즈; 1970s intellectual; 70s 지성 | FR | 70년대; 리브드; 코튼; 복고; 스타일 | A 1970s intellectual look of ribbed cotton tights, corduroy and earthy tones. | look |
+| Torsades | 꽈배기 니트; 케이블 니트; cable knit; 트위스트 뜨개 | FR | 케이블; 니트; 울; 화이트; 소재 | Thick raised cable twists knitted along the length of the wool. | item |
+| Subtle Romance | 서틀 로맨스; 은은한 로맨스; quiet romance | FR | 로맨스; 은은함; 비스트로; 따뜻한 조명; 재즈 | A restrained romantic mood: warm low light, a soft sidelong look and faintly parted lips without strong gestures. | look |
+| French Film Noir Femme Fatale | 프렌치 필름 누아르 팜므파탈; 누아르 팜므파탈; noir femme fatale | FR | 누아르; 팜므파탈; 흑백; 어두운; 빨간 립 | A film-noir styled woman in hard side light with deep shadows, matte red lips and a direct unreadable stare. | look |
+| Elusive French Chic | 엘루시브 프렌치 시크; 잡히지 않는 시크; aloof chic | FR | 시크; 담배연기; 운하; 밤; 누아르 | Half-closed eyes seen through rising cigarette smoke, lips slightly open, chin lifted a few degrees, night canal setting with light rain. | look |

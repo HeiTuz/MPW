@@ -12,23 +12,23 @@
 6. 모델 아이덴티티가 있으면 외모 서술은 빼고 헤어·메이크업·표정 층은 쓴다([image-brief.md](image-brief.md) §5).
 7. 브랜드·제품명과 룩을 가리키는 실존 인물 이름(감독, 건축가, 스타일 아이콘)은 쓸 수 있다. 로고·상표 글자는 그리지 않고, 실존 인물의 얼굴·몸을 닮게 하는 용도로는 쓰지 않는다.
 
-넣지 않은 것: 미성년(아동·중고생)을 직접 가리키는 항목, 실존 인물의 얼굴·몸을 닮게 하는 용도의 항목. 출처: noahvisualsx/Iris b83de4c(MIT)에서 낱말만 참고했고 문장·프리셋은 옮기지 않았다.
+아이·학생 항목은 태그 `아동·학생`이 붙고, `--random`에서만 빠지며 관능 어휘를 붙이지 않는다. 넣지 않은 것: 실존 인물의 얼굴·몸을 닮게 하는 항목. 출처: noahvisualsx/Iris b83de4c(MIT)에서 낱말만 참고했고 문장·프리셋은 옮기지 않았다.
 
 ## 층별 파일
 
 <!-- lexicon-counts:start -->
 | 층 | 파일 | 행 수 | KR | CN | JP | US | FR |
 |---|---|---|---|---|---|---|---|
-| Optics | [lexicon/optics.md](lexicon/optics.md) | 301 | 7 | 27 | 149 | 110 | 8 |
-| Light | [lexicon/light.md](lexicon/light.md) | 122 | 4 | 42 | 10 | 54 | 12 |
-| Pose | [lexicon/pose.md](lexicon/pose.md) | 243 | 9 | 85 | 19 | 90 | 40 |
-| Outfit | [lexicon/outfit.md](lexicon/outfit.md) | 289 | 53 | 63 | 85 | 49 | 39 |
-| Legwear | [lexicon/legwear.md](lexicon/legwear.md) | 169 | 21 | 35 | 37 | 52 | 24 |
-| Style | [lexicon/style.md](lexicon/style.md) | 412 | 43 | 52 | 55 | 144 | 118 |
-| Hair and makeup | [lexicon/hair-makeup.md](lexicon/hair-makeup.md) | 357 | 72 | 89 | 60 | 92 | 44 |
-| Expression | [lexicon/expression.md](lexicon/expression.md) | 263 | 71 | 44 | 52 | 49 | 47 |
-| Props and nails | [lexicon/props-nails.md](lexicon/props-nails.md) | 340 | 36 | 75 | 111 | 60 | 58 |
-| Scene | [lexicon/scene.md](lexicon/scene.md) | 818 | 108 | 168 | 156 | 233 | 153 |
+| Optics | [lexicon/optics.md](lexicon/optics.md) | 371 | 15 | 34 | 162 | 126 | 34 |
+| Light | [lexicon/light.md](lexicon/light.md) | 189 | 18 | 56 | 21 | 70 | 24 |
+| Pose | [lexicon/pose.md](lexicon/pose.md) | 352 | 27 | 116 | 49 | 97 | 63 |
+| Outfit | [lexicon/outfit.md](lexicon/outfit.md) | 571 | 126 | 93 | 155 | 91 | 106 |
+| Legwear | [lexicon/legwear.md](lexicon/legwear.md) | 253 | 43 | 55 | 60 | 62 | 33 |
+| Style | [lexicon/style.md](lexicon/style.md) | 647 | 120 | 63 | 138 | 191 | 135 |
+| Hair and makeup | [lexicon/hair-makeup.md](lexicon/hair-makeup.md) | 443 | 90 | 112 | 85 | 98 | 58 |
+| Expression | [lexicon/expression.md](lexicon/expression.md) | 334 | 84 | 57 | 71 | 55 | 67 |
+| Props and nails | [lexicon/props-nails.md](lexicon/props-nails.md) | 505 | 65 | 90 | 151 | 99 | 100 |
+| Scene | [lexicon/scene.md](lexicon/scene.md) | 964 | 172 | 176 | 204 | 239 | 173 |
 <!-- lexicon-counts:end -->
 
 ## 문화권 룩 묶음

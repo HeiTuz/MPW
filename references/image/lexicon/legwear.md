@@ -27,6 +27,28 @@ Legwear 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다
 | 쿨톤 살스 | 쿨톤 누드 스타킹; 공기감 살스; 冷白皮肉丝; cool-tone nude sheer | KR | 쿨톤; 공기감; 맨다리; 봄여름 | Near-invisible nude hosiery with a cool pale tint that keeps the leg looking bare, with only a faint sheen where the knee bends. | look |
 | 버건디 스타킹 | 와인 스타킹; 와인색 스타킹; 크림슨 버건디; 酒红丝袜; 车厘子红; 深酒红; Collant bordeaux; burgundy tights | KR | 와인; 버건디; 가을; 저녁 | Sheer tights tinted deep wine red that pool darker toward the ankle and behind the knee and glow brighter where light passes through the shin. | look |
 | 태닝 스타킹 | 태닝 스킨 톤; 구릿빛 스타킹; 美黑丝袜; bronzed hosiery; tan tights | KR | 구릿빛; 여름; 건강미; 해변 | Sheer tights tinted a warm golden bronze that make the leg read sun-tanned with a soft sheen along the shin. | look |
+| 시스루 | see-through; sheer; 시스루 스타킹; 透肉; 透明感; sheer tights | KR | 비침; 얇음; 봄가을; 오피스 | A translucent weave where skin tone shows evenly through the fabric, darker at the seams of the toe and the waistband and lightest along the shin where light hits. | look |
+| 오일 광택 검스 | 유광 검스; 油亮黑丝; 水光黑丝; glossy black tights; oil shine tights | KR | 광택; 유광; 저녁; 파티 | Black tights with a continuous oily sheen that bounces a bright streak of light along the calf and fades into dark at the sides. | look |
+| 힙업 쉐이핑 | 힙업 스타킹; 提臀丝袜; tummy control tights; body shaping nude; 복부 압박 스타킹 | KR | 보정; 실루엣; 데일리; 봄가을 | Control-top tights with a double-layer panel that shows as a smooth flat waistband line under fitted clothes. | item |
+| 화이트 타이즈 | 흰 타이즈; 白丝; white tights; 불투명 화이트 | KR | 흰색; 불투명; 겨울; 순백 | Opaque white tights with an even flat surface that bounces light diffusely and shows faint folds at the ankle. | look |
+| 스테이업 실리콘 밴드 | 실리콘 밴드; 흘러내림 방지 밴드; 스테이업; 防滑硅胶条; stay-up band | KR | 실리콘; 밴드; 흘러내림 방지; 스타킹; 디테일 | A thin translucent silicone strip along the inside of a stocking top that holds it flat against the leg, visible as a faint glossy line. | item |
+| 플라워 레이스 밴드 스타킹 | 꽃 레이스 상단 스타킹; 花卉蕾丝袜口; floral lace-top stockings | KR | 꽃무늬; 레이스; 블랙; 스타킹; 클래식 | Black sheer stockings whose upper edge is a wide band of raised floral lace, contrasting the fine mesh below it. | item |
+| 와이드 레이스 밴드 오버니 | 와이드 레이스 오버니; 宽蕾丝大腿黑丝; wide lace-top thigh-high | KR | 블랙; 와이드 레이스; 오버니; 바로크; 드레시 | Sheer black thigh-high stockings finished with an extra-wide double-layer baroque lace band, usually shown with a short velvet or satin dress. | item |
+| 스트랩 랩 타이즈 | 십자 스트랩 타이즈; 크로스 스트랩 스타킹; 十字交叉绑带黑丝; strappy wrap tights | KR | 스트랩; 교차; 블랙; 아방가르드; 타이즈 | Sheer black tights with narrow matte elastic straps wound in a criss-cross spiral from the ankle up toward the thigh. | item |
+| 사이드 레이스업 스타킹 | 측면 끈 스타킹; 侧边气眼穿绳黑丝; side lace-up hosiery | KR | 측면; 레이스업; 그로밋; 블랙; 펑크 | Black stockings with a vertical row of small metal eyelets down the outer side, threaded with a thin black cord pulled across like a corset. | item |
+| 크로스 리본 오버니 | 리본 크로스 화이트 오버니; 纯白绑带大腿袜; criss-cross lace-up thigh-highs | KR | 리본; 화이트; 발레; 오버니; 무대 | White thigh-high stockings laced with fine satin ribbon crossing upward from the ankle and tied in a small bow above the knee, in the manner of ballet shoe ties. | item |
+| 화이트 오버니삭스 | 백색 오버니; 白色过膝袜; white over-the-knee socks | KR | 화이트; 오버니삭스; 니삭스; 사계절; 귀여운 | Plain white socks or stockings reaching above the knee, with a ribbed or lace top edge. | item |
+| 누드 오버니삭스 | 살색 오버니; 肤色大腿过膝长袜; nude thigh-high stockings | KR | 누드톤; 오버니; 10D; 레이스 밴드; 캠퍼스 | Very sheer skin-toned thigh-high stockings with a thin pale-pink patterned elastic band at the top. | item |
+| 코르셋 레이스업 화이트 타이즈 | 뒤 리본 화이트 타이즈; 后绑带束腰珍珠白丝; corset lace-up white tights | KR | 코르셋; 화이트; 레이스업; 진주; 로리타 | White semi-sheer tights with a vertical satin-ribbon lacing panel running up the center back of the calf and small pearl charms at the ankle. | item |
+| 프릴 레이스 삭스 | 프릴 삭스; 더블 프릴 양말; 洛丽塔木耳边蕾丝短袜; frill lace socks | KR | 프릴; 레이스; 양말; 로리타; 귀여운 | White cotton ankle socks with two stiff layers of embroidered chiffon frill folded over at the ankle, scalloped at the edge. | item |
+| 기모 스타킹 | 기모 타이즈; 加绒丝袜; fleece-lined tights | KR | 기모; 보온; 겨울; 스타킹; 실용 | Tights with a sheer-looking outer face and a soft brushed fleece lining, giving a faintly matte skin tone. | item |
+| 화이트 레이스 오버니삭스 | 레이스 상단 하얀 오버니; 纯白大腿蕾丝长袜; white lace-top over-knee socks | KR | 화이트; 레이스; 오버니삭스; 교복풍; 귀여운; 아동·학생 | White over-the-knee socks with a wide band of raised white floral lace at the top. | item |
+| 학생 스타킹 | 교복 스타킹; 学生丝袜; school hosiery | KR | 학생; 교복; 화이트; 니삭스; 학교; 아동·학생 | Light white knee-length hosiery with a wide ribbed cuff, worn with a school uniform. | item |
+| 니삭스 | 무릎 양말; 及膝袜; knee-high socks | KR | 니삭스; 무릎양말; 화이트; 리브; 교복; 아동·학생 | Socks that end just below the knee with a wide ribbed top cuff, white and slightly sheer in a thin weave. | item |
+| 골지 루즈삭스 | 굵은 골지 양말; 粗罗纹堆堆袜; ribbed slouch socks | KR | 골지; 루즈삭스; 화이트; 면; 교복; 아동·학생 | Heavy ribbed white cotton socks crumpled in layered folds above the ankle. | item |
+| 니트 레그워머 | 케이블 레그워머; 麻花腿套; knit leg warmers | KR | 레그워머; 케이블 니트; 크림; 겨울; 보온 | Chunky cream cable-knit tubes worn over the calf, flaring slightly at the bottom edge over the shoe. | item |
+| 플레어 레그워머 | 미니 플레어 레그워머; 微喇叭口腿套; flared leg warmers | KR | 플레어; 레그워머; 울; 겨울; 키 커 보이는 | Wool leg warmers that widen into a soft bell shape at the hem and drape over the front of the shoe. | item |
+| 학생 양말 | 교복 양말; 흰 양말; school socks; 크루 삭스 | KR | 양말; 교복; 화이트; 학교; 아동·학생 | Plain white cotton crew socks worn with loafers or sneakers, folded neatly at the calf. | item |
 
 ## CN
 
@@ -67,6 +89,26 @@ Legwear 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다
 | 青绿山水 | 千里江山; 青绿山水纹; 청록산수 스타킹; blue-green landscape tights | CN | 청록; 산수; 자카드; 예술 | Sheer tights with a faint jacquard of misty mountains in blue-green and ink grey that fades in and out with the knit. | look |
 | 青黛色 | 青黛; 远山青黛; 청대색 스타킹; slate blue-green tights | CN | 청대; 푸른 회색; 수묵; 차분함 | Muted greyish blue-green sheer tights, the dusty tone of distant ink-wash hills, with a soft airy haze. | look |
 | 墨竹剪影 | 竹影; 墨竹; 묵죽 스타킹; 대나무 그림자 스타킹; ink bamboo tights | CN | 묵죽; 그림자; 대나무; 문인 | Sheer tights printed with soft translucent bamboo stalks and leaves, like a brush painting seen through light. | look |
+| 羊脂玉光腿 | 羊脂玉; 양지옥; 양지옥 광택 스타킹; mutton-fat jade skin; jade-white sheer | CN | 백옥톤; 은은한 광택; 초박; 차분함; 티룸 | Warm milky-white sheen like polished white jade, soft and semi-matte, melting into pale skin without a visible edge at the ankle. | look |
+| 冷白瓷肌 | 냉백자기; 냉백 도자기 피부; porcelain matte skin; cool porcelain | CN | 도자기; 무광; 차가운 흰톤; 미술관; 미니멀 | Cool, even, matte porcelain finish on the leg, with a diffused soft-focus look and no hot highlight on the knee or shin. | look |
+| 名媛天鹅腿 | 名媛; 천아 다리; swan leg; high-society tights; 명원 룩 | CN | 우아함; 광택; 상류층; 파티; 외탄 | Long, smooth, softly glossy legs in fine sheer tights, with a gentle pearly highlight that follows the line of the calf. | look |
+| T裆无痕 | 无痕T裆; 全透T裆; T-crotch seamless; 투명 T 크로치 스타킹; 심리스 스타킹 | CN | 무봉제; 초박; 올 투명; 드레스 매치; 미니멀 | Fully transparent hosiery with a seamless, clean finish and no visible seam or thick band at the upper leg. | item |
+| 极透黑丝 | 10D 黑丝; 蝉翼黑丝; 玄黑丝袜; 초박 검정 스타킹; 흑사; raven black sheer | CN | 검정; 초박; 밤; 차가운 분위기; 저녁 | Very sheer black stockings where skin tone shows through as a deep, smoky, cool gray, brightening only where light grazes the shin. | item |
+| 缎光黑丝 | 水光黑丝; 缎面油亮黑丝; 20D 새틴 흑사; liquid satin black hosiery; 오일 광택 스타킹 | CN | 광택; 새틴; 검정; 파티; 런웨이 | Glossy black tights with a satin sheen, where a bright, smooth highlight runs along the front of the shin and bends over the knee. | item |
+| 大女主黑丝 | 大女主; 女强人黑丝; 대녀주 흑사; power woman black sheer | CN | 강인함; 검정; 초박; 권위; 드라마 | Razor-clean sheer black legs with a seamless T-crotch finish, giving a sharp, cool, composed silhouette. | look |
+| 盘扣 | 苏工盘扣; 手工盘扣; frog button; 반코; 판코; 중국식 매듭 단추 | CN | 매듭 단추; 전통; 수공예; 한정판; 실크 | Small hand-knotted cloth buttons in tight loops, standing a little proud of the fabric and casting a tiny shadow at the garment edge. | item |
+| 纯银水滴吊坠 | 水滴吊坠; 银吊坠; silver teardrop pendant; 은 물방울 펜던트 | CN | 은; 물방울; 장식; 차가운 광택; 파티 | A small silver teardrop that hangs from a thin chain at the garment edge, giving a cool point of reflection against dark fabric. | item |
+| 羊脂白玉水滴扣 | 白玉水滴扣; 玉扣; jade drop button; 옥 물방울 단추 | CN | 백옥; 옥; 단추; 우아함; 양지옥 | A small, smooth drop of white jade used as a fastener, glossy, milky, and warm to the eye against dark silk. | item |
+| 双鱼结流苏 | 双鱼结; 流苏饰边; 쌍어 매듭 술; double-fish knot tassel | CN | 매듭; 술; 원소절; 전통; 장식 | A paired fish-shaped knot with short silk tassels that swing slightly, the thread fibers catching the light separately. | item |
+| 青铜古扣 | 复古金属扣; 可拆卸; 청동 고리; bronze clasp | CN | 청동; 금속; 전위; 해체주의; 무광 | A dull bronze metal clasp with a worn, aged surface, joining the stocking edge to a detachable strap. | item |
+| 红丝绒盘扣 | 红丝绒边饰; 深红连裤袜; 붉은 벨벳 단추; red velvet trim | CN | 붉은 벨벳; 단추; 고전; 명문가; 연회 | Dark red velvet trim with a deep, light-absorbing pile and knotted buttons that stand out sharply from the sheer black. | item |
+| 星芒黑丝 | 金属微闪; 黑金晚宴; 스타라이트 블랙; metallic starlight sheer; 별빛 스타킹 | CN | 금속; 별빛; 연말; 레드카펫; 밤 | Sheer black tights scattered with tiny gold specks that sparkle like stars when the light moves across the leg. | look |
+| 连裤袜 | 롄쿠와; 타이즈; pantyhose; tights | CN | 타이즈; 일상; 가을겨울; 실루엣 | Full-length one-piece hosiery with a smooth waistband sitting flat at the hips. | item |
+| 打底袜 | 다디와; 레깅스 스타킹; base layer tights; leggings tights | CN | 겨울; 레이어드; 일상; 보온 | Opaque base-layer tights with a matte stretched surface that looks like a soft second skin. | item |
+| 哑光 | 아광; 매트; matte finish | CN | 매트; 부드러움; 실내; 가을 | A flat low-reflection finish that diffuses light evenly and shows no sharp highlights. | look |
+| 高腰无痕 | 고허리 무봉제; high-waist seamless; seamless waistband | CN | 무봉제; 보정; 일상; 미니멀 | A smooth wide waistband that sits flat on the hip with no visible seam line under the clothes. | item |
+| 蝉翼 | 매미날개 스타킹; 매미 날개; cicada wing sheer | CN | 극박; 시어; 10D; 표현; 얇은 | A hosiery finish so thin it reads as a faint veil of nylon over skin, with barely a trace of color. | look |
+| 透肉 | 투육; 피부 비침; 살비침; 은은한 살비침 | CN | 시스루; 살색 비침; 데니아; 스타킹; 얇은 | Sheer hosiery that lets skin tone read through the nylon as a soft warm glow instead of a flat color. | look |
 
 ## JP
 
@@ -109,6 +151,29 @@ Legwear 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다
 | 偏光シマー | 편광 시머; 오로라 스타킹; 偏光丝袜; iridescent shimmer tights | JP | 펄; 홀로그램; 저녁; 반짝임 | Shimmer knit into the hosiery that shifts between pale pink and silver as the leg turns toward the light. | look |
 | 接触冷感 | 접촉 냉감; 냉감 스타킹; 자외선 차단 스타킹; UVカット; 冷感丝袜; 防晒丝袜; cooling stockings; UPF tights | JP | 여름; 시원함; 기능성; 데일리 | Light airy summer hosiery with a slightly pale matte finish that resists glare. | gear |
 | 筆記体レタリング | 필기체 레터링 스타킹; 花体字母丝袜; script lettering tights | JP | 레터링; 프렌치; 패턴; 섬세함 | Small cursive script lines printed slightly darker than the knit, repeating in neat rows around the leg. | look |
+| 黒ストッキング | 黒スト; 블랙 스타킹; 검정 스타킹; black stockings; 黑丝 | JP | 블랙; 클래식; 데일리; 사계절; 도시; 스타킹 | Plain sheer black stockings with a smooth knit, soft gradient where the leg curves, and a flat toe seam. | look |
+| 濡れツヤ | 光沢; 글로시 스타킹; 젖은 광택; オイルシャイン; oil-shine; glossy sheer; 油亮丝袜 | JP | 광택; 파티; 저녁; 밤; 도심; 스타킹 | Oil-slick sheen on 20 denier stockings, with a bright stripe of specular highlight running down the shin and soft glints at the knee. | look |
+| 黒タイツ | 블랙 타이츠; 검정 타이츠; black tights; 黑色连裤袜 | JP | 블랙; 가을; 겨울; 데일리; 도심; 타이츠 | Solid black tights with an even knit that absorbs light and gives the leg one clean unbroken dark line. | look |
+| 微起毛 | 기모; 소프트 기모; fleece-lined; brushed tights; 微起毛タイツ | JP | 보온; 가을; 겨울; 부드러움; 데일리; 타이츠 | Lightly brushed inner surface that gives the tights a soft velvety bloom and removes any harsh shine. | look |
+| ベルベット | 벨벳 타이츠; velvet tights; 天鹅绒; ビロード | JP | 벨벳; 매트; 가을; 겨울; 우아; 타이츠 | Opaque tights with a velvety nap that takes light as a soft matte glow, with no specular shine. | look |
+| ガーターストッキング | 가터 스타킹; thigh-high stockings; レースガーター; 蕾丝大腿袜; 大腿袜 | JP | 레이스; 스타킹; 밤; 클래식; 도시 | Thigh-high stockings with a lace welt at the top that sits flat against the leg and holds without a garter belt. | item |
+| リブ編み | 골지; 리브; ribbed; 罗纹; 縦リブ; マイクロリブ | JP | 골지; 세로선; 가을; 겨울; 슬림; 타이츠 | Fine vertical ribs running the length of the leg that catch light in thin parallel lines and lengthen the silhouette. | look |
+| ガーターベルト | 가터 벨트; garter belt; 吊带袜; ガーターベルトセット; suspender belt | JP | 가터; 금속; 클래식; 밤; 스타킹; 빈티지 | Elastic belt with straps that clip to the stocking tops, with small metal clasps catching light at the thigh. | item |
+| メタルリング | 메탈 링; metal ring; 金属环扣; ring hardware | JP | 메탈; 링; 펑크; 디테일; 블랙; 악세서리 | Silver ring and buckle hardware on straps, with small bright highlights along the curved metal edges. | item |
+| 下駄 | 게타; getta; geta; 木屐; 나무 게타; 桐下駄; 桐木屐 | JP | 여름; 와후쿠; 목재; 축제 | Raised wooden sandals on two lacquered or bare paulownia-wood blocks with a velvet thong, leaving a high step and a bare-toe line. | item |
+| ストッキング | 스타킹; stockings; sheer stockings; 薄丝袜; 黑丝; 薄手ストッキング | JP | 출근; 우아함; 블랙; 가을 | Fine 20-denier sheer hosiery that tints the leg a slightly deeper tone and glints along the shin in direct light. | item |
+| 紺色ハイソックス | 紺ハイソ; 紺ソックス; 감색 하이삭스; 네이비 하이삭스; navy high socks | JP | 교복; 네이비; 면 양말; 하이삭스; 학교; 아동·학생 | Navy ribbed cotton crew-length socks ending just below the knee, with a snug ribbed cuff. | item |
+| ルーズソックス | 堆堆袜; 루즈삭스; loose socks; ルーズ | JP | 루즈삭스; 90년대; 화이트; 주름; 레트로; 아동·학생 | Extra-long thick white socks bunched into many loose folds around the calf and ankle. | item |
+| ツインラインソックス | 双杠条纹袜; ツインライン; 투라인 삭스; 두 줄 양말; twin-stripe socks | JP | 투라인; 스트라이프; 화이트; 면 양말; 레트로; 아동·학생 | White ribbed crew socks with two narrow navy or green stripes under the cuff. | item |
+| 絶対領域 | 絕對領域; 절대영역; zettai ryouiki; zettai ryoiki | JP | 절대영역; 오버니삭스; 치마; 허벅지; 틈 | The strip of bare thigh visible between the top of an over-knee sock and a skirt hem. | look |
+| 美脚 | 각선미; 美腿; long shapely legs | JP | 다리; 라인; 각선미; 포즈 | Long slim legs shown in full length, crossed or angled to lengthen the line from thigh to ankle. | look |
+| 三つ折りソックス | 세 번 접은 양말; 화이트 삼단 양말; triple-fold white socks; 三折袜 | JP | 양말; 교복; 화이트; 면; 아동·학생 | Plain white cotton socks folded over three times at mid-calf, the fold forming a thick even cuff above round-toe black shoes. | item |
+| 紺ソックス | 네이비 양말; 교복 양말; navy school socks; 深色中筒袜 | JP | 양말; 교복; 네이비; 면; 아동·학생 | Dark cotton mid-calf socks with a soft ribbed cuff, matte against black leather shoes. | item |
+| ティーポットシューズ | 티팟 슈즈; 로리타 슈즈; teapot platform shoes; 茶壶厚底鞋 | JP | 신발; 로리타; 플랫폼; 파스텔 | Rounded, thick-soled pastel shoes with a single strap and a bulbous toe, shaped like a teapot from the side. | item |
+| 절대영역 | 绝对领域; 絶対領域; zettai ryouiki; 스커트와 양말 사이 맨다리 구간 | JP | 절대영역; 오버니; 스커트; 비율; 일본식 용어 | The strip of bare leg framed between a short skirt hem and the top of thigh-high socks or stockings, composed as a clean horizontal band. | look |
+| 교복 오버니삭스 | JK 오버니삭스; JK经典纯白过膝长筒袜; school over-knee socks | JP | 교복; 화이트; 면; 오버니삭스; 학교; 아동·학생 | Thick matte white cotton knee-high socks that stop a few centimeters above the knee, opaque with a ribbed double band at the top. | item |
+| 루즈삭스 | ルーズソックス; 堆堆袜; loose socks; slouch socks | JP | 루즈삭스; 교복; 화이트; 주름; 코갸루; 아동·학생 | Long white socks bunched loosely in thick folds around the ankle and lower calf instead of pulled tight. | item |
+| 70cm 루즈삭스 | 70cm大泡泡袜; ビッグルーズ; 70cm loose socks; cable loose socks | JP | 루즈삭스; 70cm; 굵은 니트; Y2K; 코갸루; 아동·학생 | Extra-long thick cable-knit white socks stacked into a voluminous cloud-like bundle at the ankle and calf. | item |
 
 ## US
 
@@ -166,6 +231,16 @@ Legwear 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다
 | toe-less micro-mesh socks | 망사 앵클 삭스; 토리스 삭스; open-toe mesh socks | US | 샌들; 망사; 미니멀; 양말 | Ankle-length fine mesh socks with an open toe, so bare toes show inside slim sandals. | item |
 | zebra chevron sheer | 지브라 타이츠; 쉐브론 스타킹; zebra tights; diagonal chevron tights | US | 그래픽; 동물 무늬; 스트릿; 아방가르드 | Sheer tights with diagonal zebra-like chevron bands that break the leg line into a bold graphic. | item |
 | zebra stripe distressed mesh | 지브라 망사 스타킹; zebra fishnet; stripe mesh tights | US | 그런지; 동물 무늬; 망사; 밤 | Distressed mesh with horizontal zebra-like stripes and torn holes along the thigh. | item |
+| UPF sun-defense sheer | UV protection tights; 자외선 차단 스타킹; UPF tights; California sun | US | 여름; 해변; 캘리포니아; 낮 | Light summer sheer tights that glow warm in direct sun and sit under shorts or a mini skirt with sandals. | item |
+| glossy high-shine sheer | high shine tights; paparazzi glaze; 글로시 스타킹; 광택 스타킹; 유광 시어 | US | 클럽; 밤; 플래시; 광택 | High-sheen sheer tights whose shins and knees throw back a sharp specular highlight under camera flash. | item |
+| ivory semi-sheer matte tights | ivory tights; 아이보리 스타킹; 크림 스타킹; off-white tights | US | 복고; 정원; 로맨틱; 봄 | Matte semi-sheer tights in soft ivory that cool the skin to a pale warm cream next to floral prints. | item |
+| Leggings | 레깅스; 요가 팬츠; 요가 레깅스; yoga pants | US | 스트레치; 요가; 스포티; 블랙; 운동 | Smooth, full-length stretch tights that sit close to the leg with a matte, slightly brushed finish. | item |
+| Fishnets | 망사 스타킹; 피시넷; 그물 스타킹; fishnet tights | US | 검정; 망사; 펑크; 락; 레트로 | Open diamond-grid black tights in fine thread, with the grid pattern visible over bare skin at close range. | item |
+| Polka dot | 폴카 도트; 도트; 波点 | US | 도트; 귀여움; 봄; 캐주얼 | Small round dots scattered evenly over a sheer ground. | look |
+| Fishnet | 피시넷; 망사; 网袜 | US | 망사; 스트릿; 저녁; 록 | An open diamond-grid mesh that frames small patches of skin along the leg. | look |
+| Jacquard | 자카드; 提花; jacquard weave | US | 문양; 클래식; 가을; 직조 | A woven raised pattern that holds fine shadow lines where the motif lifts off the base fabric. | look |
+| 본디지 스트랩 스타킹 | Strappy Bondage Tights; 본디지 타이즈; 绑缚艺术丝袜 | US | 본디지; 스트랩; 블랙; 암시적; 컨셉 화보 | Black sheer hosiery crossed by tight matte straps, giving the leg a harnessed, graphic pattern of diagonal lines. | item |
+| 스터럽 타이즈 | 스터럽 화이트 타이즈; 발바닥 걸이 타이즈; 芭蕾踩脚白丝; stirrup tights | US | 스터럽; 발레; 화이트; 타이즈; 연습복 | Tights with an open foot and a loop strap that runs under the arch, worn over ballet shoes or bare feet. | item |
 
 ## FR
 
@@ -195,3 +270,12 @@ Legwear 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다
 | Collant opaque laine mérinos | 콜랑 오파크 렌 메리노; 메리노 울 타이츠; merino wool tights | FR | 울; 겨울; 매트; 따뜻함 | Opaque wool-blend tights with a soft matte surface that absorbs light and shows no skin through the knit. | look |
 | Collant vert forêt | 콜랑 베르 포레; 포레스트 그린 스타킹; 딥그린 스타킹; forest green tights | FR | 그린; 가을; 숲; 컬러 | Dark forest-green sheer tights that read almost black until light passes through and shows the green. | look |
 | Matelassé | 마틀라세; 퀼팅 스타킹; 다이아몬드 퀼팅 스타킹; quilted jacquard tights | FR | 퀼팅; 기하학; 클래식; 고급 | Sheer tights with a small diamond-lattice jacquard that looks quilted, a grid of crossing lines over the leg. | look |
+| Nymphéas | 님페아; 모네 수련; Monet water lilies; 모네 수련 색감 | FR | 인상주의; 몽환; 봄; 예술 | Soft blurred colour like Monet's water lily paintings, with violet, grey and green mixing at the edges and no hard outline. | person-style |
+| Collant noir | 콜랑 누아르; 블랙 스타킹; black tights; 블랙 타이츠 | FR | 기본; 사계절; 파리; 레그웨어 | Plain black tights, a uniform dark tone from ankle to waist. | look |
+| Couture arrière finissant par un petit nœud | 후면 심 끝 리본 스타킹; 리본 엔드 백심 스타킹; bow-ended back seam stockings; 작은 리본 백심 | FR | 리본; 백심; 빈티지; 귀여움; 레그웨어 | Sheer black hosiery with a single back seam running up the leg and ending in a tiny black embroidered bow just above the ankle. | item |
+| Porte-jarretelles rétro à six attaches | 여섯 스트랩 가터벨트; 6스트랩 가터 벨트; retro six-strap garter belt; 빈티지 가터벨트 | FR | 가터벨트; 빈티지; 란제리; 새틴; 레그웨어 | A high-waisted black satin garter belt with six elastic straps and metal clips fastening to the stocking tops. | item |
+| Bas traditionnels | 전통식 스타킹; 논슬립 아닌 나일론 스타킹; traditional nylon stockings; 클래식 나일론 스타킹 | FR | 스타킹; 클래식; 나일론; 빈티지; 레그웨어 | Classic non-silicone nylon thigh-high stockings with a flat folded welt at the top, held up by garter straps. | item |
+| Harnais porte-jarretelles en cuir | 가죽 가터 하네스; 레더 가터 벨트; leather garter harness; 가죽 하네스 스타킹 | FR | 가죽; 하네스; 펑크; 가터; 레그웨어 | Thin black calfskin straps worn at the waist and thigh with cold silver buckles, clipped to sheer stockings. | item |
+| Chaussettes mi-bas en fil d'Écosse | 스코틀랜드 실 무릎양말; 머서라이즈 코튼 니삭스; mercerized cotton knee socks; 차콜 니삭스 | FR | 니삭스; 코튼; 차콜; 학생룩; 양말; 아동·학생 | Dark charcoal fine-ribbed cotton knee-high socks with a wide non-pressing cuff, lying smooth against the calf. | item |
+| Jarretière dentelle | 레이스 가터 밴드; 레이스 톱 가터; lace garter top; 하이삭스 레이스 밴드 | FR | 레이스; 가터; 밴드; 스타킹; 레그웨어 | A band of lace at the top of a thigh-high stocking, sitting on the upper thigh. | item |
+| Effet seconde peau | 세컨드 스킨 효과; 제2의 피부; second-skin effect; 맨살 같은 스타킹 | FR | 시어; 맨살; 투명; 얇음; 레그웨어 | Hosiery so thin and close-fitting that it reads as a second layer of skin, nearly invisible in the light. | look |

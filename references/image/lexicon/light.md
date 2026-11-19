@@ -10,6 +10,20 @@ Light 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다. 
 | 빛내림 | 빛 내림; 빛기둥; 빛줄기; 구름 사이 햇살; god rays; crepuscular rays | KR | 하늘; 구름; 빛줄기; 신비; 아침 | Sunlight breaking through gaps in clouds falls as visible straight rays that fan down through the air toward the ground. | look |
 | 다중 스팟 캐치라이트 | 다중 스팟 캣치라이트; 여러 점 눈빛; 스팟 눈빛; 三星眼神光; multi-spot catchlight | KR | 눈; 스팟 조명; 반짝임; 실내; 매장 | Several small overhead spotlights leave a cluster of tiny white points in each iris and small bright specks along the cheekbones. | look |
 | 무광 눈동자 | 빛 없는 칠흑 눈동자; 눈빛 없는 눈; 캐치라이트 없는 눈; 无眼神光; catchlight-free eyes | KR | 눈; 어두움; 흐림; 무거움; 영화 같은 | The irises show no highlight at all and read as flat dark discs, as happens under broad diffuse light with no small bright source in front of the face. | look |
+| 落地窗柔光 | 통창 자연광; 창가 자연광; window light | KR | 부드러움; 낮; 실내; 창가; 계열:미니멀 | Soft daylight entering from the side through floor-to-ceiling glass, falling off gently across face and wall with no hard shadow edges. | look |
+| 柔和漫射光 | 확산광; 부드러운 확산광; diffused light | KR | 차분함; 낮; 실내; 전반; 계열:미니멀 | Even diffused light with wide soft shadows and no visible source, keeping tones on the skin and concrete gentle. | look |
+| 晨光 | 아침 햇살; 모닝 라이트; morning light | KR | 청량함; 아침; 창가; 따뜻함; 계열:아침 | Low warm sun entering from the side or from a stairwell mouth, lighting one cheek and leaving the rest in pale shade. | look |
+| 机顶直闪 | 직격 플래시; 직광 플래시; 온카메라 플래시; on-camera flash; direct flash | KR | Y2K; 밤; 스냅; 강한 대비 | A flash mounted on the camera hits the subject straight on, flattening the face with bright specular spots and dropping the background to near black. | look |
+| 手电筒补光 | 손전등 조명; 폰 플래시 보조광; flashlight fill; 친구 폰 라이트 | KR | 야식; 스냅; 직광; 과노출 | A friend's phone flashlight from the side gives blunt, slightly overexposed light with a lively spontaneous feel. | look |
+| 无影棚 | 무영 스튜디오; shadowless studio; 화이트 스튜디오; 白背景棚拍 | KR | 룩북; 스튜디오; 흰배경; 평광 | Soft overhead lighting leaves almost no visible hard shadows against a white background. | look |
+| 雪地反光 | 눈 반사광; snow reflector; 설경 반사; 天然反光板 | KR | 겨울; 하이키; 스키장; 평광 | Snow on the ground bounces even soft light upward and makes catch-lights clear. | look |
+| 屏幕冷光 | 스마트폰 화면빛; screen light; OLED 화면광; 手机屏幕光 | KR | 심야; 불면; 푸른빛; 폰 | Only a phone screen lights the face in a black room, a rectangular reflection in each pupil. | look |
+| 플래시 캣치라이트 | 闪光灯眼神光; Direct Flash Pinpoint Catchlight; 직사 플래시 눈빛; 플래시 눈빛; camera flash catchlight | KR | 밤; 거리; CCD; 직광; 스냅 | A hard on-camera flash leaves one small white dot dead center on each pupil, flattens the skin, and throws a sharp shadow behind the head. | look |
+| 물결 반사 캣치라이트 | 水面波光; Rippling Water Reflection in Iris; 물결 반사; 수영장 물빛; water ripple reflection | KR | 여름; 수영장; 물빛; 낮; 청량 | Wavy bright lines from pool water ripple across the chin and underside of the nose, with wobbling light streaks mirrored in each iris. | look |
+| 폰 화면 반사 캣치라이트 | 手机屏幕反光; OLED Screen Rectangle Reflection; 폰 불빛 눈빛; 휴대폰 불빛; phone screen glow | KR | 밤; 침실; 이불; 푸른 빛; 스마트폰 | A cool blue-white rectangle mirrors in each pupil and a faint bluish glow lights the face from below in an otherwise dark room. | look |
+| Music Show Intense Backlight | 음악방송 강한 역광; 무대 역광; 엄청난 역광 스포트라이트 | KR | 무대; 역광; 후광; 금빛 | Many warm-white spotlights behind the subject create a golden halo and silhouette edge. | look |
+| Midnight Screen Light Glow | 심야 스크린 빛; 휴대폰 블루라이트 얼굴; OLED 불빛 | KR | 암전; 블루; 스크린광; 밤 | Dark bedroom lit only by a small blue OLED screen glow across the lower face. | look |
+| Cyberpunk Dual Tone Neon | 사이버펑크 투톤 네온; 핑크 블루 네온; 듀얼톤 네온 | KR | 네온; 핑크; 시안; 대비 | Opposed magenta and cyan neon lights hitting face and surfaces from either side. | look |
 
 ## CN
 
@@ -57,6 +71,20 @@ Light 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다. 
 | 霓虹切光 | 네온 빛 분할; 霓虹; neon split light; red green neon | CN | 밤; 홍콩; 젖은 길; 영화적 | Red and green neon tubes light each half of the face differently, with wet asphalt below repeating the colored glow. | look |
 | 顶光孤立 | 톱라이트 홀로 서기; 单束天光; overhead spotlight; single beam from above | CN | 어두움; 갤러리; 원형 빛; 경건함 | One vertical spotlight from straight above makes a round pool of light on the figure, with everything else around dissolving to black. | look |
 | 晨曦竹雾 | 새벽 대숲 안개; bamboo morning mist; misty bamboo dawn | CN | 새벽; 안개; 대숲; 연녹; 신비 | Gold-green early light through thin bamboo mist, faint beams cutting the air and highlights softened to near white. | look |
+| 直闪 | 직섬; 다이렉트 플래시; 온카메라 플래시; on-camera flash; direct flash; 플래시 직사; 직관 플래시 | CN | 밤; 플래시; 고대비; 검은; 배경; 직촬; Y2K; 거울; 계열:레트로 | A hard on-camera flash flattens the front of the subject with real skin sheen, bright catchlights and a sharp fall-off into dark background. | look |
+| 慢门同步闪光 | 슬로우 싱크로; 후막 싱크; slow sync flash; dragging shutter flash | CN | 야경; 번짐; 보케; 밤; 플래시 | A flash freezes the subject while a slow shutter stretches the background lights into soft bokeh and streaks. | look |
+| 环形闪光 | 링 플래시; 링라이트; ring flash | CN | 접사; 눈동자; 하이라이트; 스튜디오 | A small ring flash around the lens leaves a thin white ring in each pupil and even, shadowless front light. | gear |
+| Profoto A10 | 프로포토 A10; A10 플래시 | CN | 온카메라; 플래시; 고대비; 직사 | A compact on-camera flash that gives a clean, hard burst with sharp shadow edges. | gear |
+| Godox V1 | 고독스 V1; V1 플래시; Godox | CN | 원형; 헤드; 플래시; 차가운; 직사 | A round-head flash that spreads a cool, hard but even burst on the front. | gear |
+| 高调布光 | 하이키; 하이키 조명; high-key; bright airy light | CN | 밝은; 무그림자; 스튜디오; 순백; 깨끗함 | Bright, even light with almost no shadow and a clean white tone across the frame. | look |
+| 低调布光 | 로우키; 로우키 조명; low-key; dark moody light | CN | 어두운; 배경; 깊은; 그림자; 드라마; 흑백 | Mostly dark frame with a small pool of light and rich blacks around the subject. | look |
+| 硬聚光 | 스누트 하드 라이트; 스포트라이트; snoot spotlight; hard spot | CN | 무대; 하드; 라이트; 고대비; 검은; 배경 | A narrow hard spot lights one side with sharp highlights while the rest drops to deep black. | look |
+| 线性灯带 | 선형 조명; 라인 라이트; linear ceiling light; LED strip | CN | 복도; 원근; 차가움; 현대; 미술관 | A long line of cool white ceiling light pulls the corridor into deep perspective. | look |
+| 无影棚拍 | 섀도리스 스튜디오; 무영 스튜디오; shadowless studio; white seamless | CN | 순백; 배경; 상업; 깨끗함; 화보 | A pure white background with large soft boxes so skin stays clear and nearly shadowless. | look |
+| 煤油灯 | 석유등; 기름 램프; oil lamp; kerosene lamp | CN | 저녁; 따뜻한; 노란; 불빛; 창가; 고전 | A deep warm yellow flame light inside against cold blue dusk at the window. | look |
+| 机顶硬闪 | 直闪; on-camera flash; 카메라 위 플래시; 직광 플래시; hard on-camera flash; direct flash | CN | 강한 빛; 스냅; 밤; 광학 | Frontal hard flash that gives one small white point in each pupil, flat pale skin and a short sharp shadow behind the figure. | gear |
+| 追光灯 | 剧院追光; 스포트라이트; 무대 조명; follow spot; theatre spotlight | CN | 무대; 강한 빛; 극장; 밤; 광학 | A narrow hard beam from above that isolates the figure in a bright cone against a dark stage. | gear |
+| 迷离幻梦 | 몽롱한 꿈결; 몽환적 네온 무드 | CN | 몽환; 네온; 홍콩; 조명 | Hazy multicolored neon reflections in the eyes and soft-focus background, giving a dreamy retro Hong Kong feel. | look |
 
 ## JP
 
@@ -72,6 +100,17 @@ Light 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다. 
 | 水滴越し | 水滴ボケ; 빗방울 창; 물방울 보케; 유리 위 빗방울; 창문 빗물; 빗물 보케; raindrop window; raindrop bokeh; rain on glass; 雨夜车窗 | JP | 비; 창문; 보케; 몽환; 밤 | Raindrops on glass between camera and subject scatter street and car lights into soft overlapping round blobs and short streaks. | look |
 | 雨の夜 | 雨夜; 비 오는 밤; 우천 야경; 비 오는 밤 빛; rainy night | JP | 비; 밤; 도시; 물방울; 차가움 | Fine rain under city lights gives every lamp a soft cold halo of mist and leaves tiny bright beads on wet surfaces. | look |
 | 睫毛の影 | 마츠게노 카게; 속눈썹 그림자; eyelash shadow | JP | 섬세; 측광; 클로즈업; 우아 | Long lashes throw fine parallel shadows onto the lower lid and cheek under a raised light. | look |
+| Canon Speedlite | 캐논 스피드라이트; Speedlite; EL-1; 430EX | JP | 외장; 플래시; 직사; 밤; 고대비 | A shoe-mount flash that gives a clean, hard front burst and a fast fall-off behind the subject. | gear |
+| Nikon SB-5000 | 니콘 SB-5000; SB-5000 플래시 | JP | 외장; 플래시; 직사; 고대비 | A shoe-mount flash that gives a clean hard burst and deep drop-off. | gear |
+| 夕暮れ | 유구레; 해질녘; dusk; 黄昏 | JP | 저녁; 오렌지; 역광; 따뜻함 | Low orange sun from behind, long soft shadows on the ground and a warm rim light along the hair edge. | look |
+| 朝の光 | 아침빛; morning light; 晨光; 아침 햇살; 朝日; 이른 아침빛 | JP | 아침; 백색; 부드러움; 침대; 자연광; 차가운 빛; 투명감; 창가 | Clean, cool-white early daylight spilling in from a window with soft, low-contrast shadows. | look |
+| トレイルライト | Light Trails; 빛 궤적; 차량 광선; 光跡; tail-light streaks; light streaks | JP | 야경; 장노출; 도로; 붉은 빛 | Long red and white streaks from moving cars during a slow exposure. | look |
+| ハレーション | Halation; 할레이션; 빛 번짐 붉은; red halation | JP | 밤; 붉은 후광; 필름 | Red-orange glow bleeding around bright lights against dark backgrounds. | look |
+| ストロボ | 스트로보; direct flash; on-camera flash; point flash | JP | 플래시; 정면광; 하이콘트라스트; 스냅 | Hard frontal flash puts a single white dot in each pupil and gives skin a bright, flat sheen with a tight shadow behind. | gear |
+| キャンドル | 캔들; candlelight; candle flicker | JP | 촛불; 따뜻함; 밤; 친밀 | A single warm amber flame lights the face from low, with flickering highlights and deep soft shadows. | look |
+| 提灯 | 초칭; chochin; paper lantern; 红灯笼; 赤提灯 | JP | 야간; 축제; 홍등; 따뜻함 | A round paper lantern with a warm red glow that lights nearby wood and fabric from beneath in orange tones. | item |
+| 透明感 | 투명감; 通透感; translucent clarity | JP | 밝음; 투명; 피부톤; 자연광 | High-key airy look with clean, bright skin tone, cool-neutral white balance and gentle contrast. | look |
+| 湯けむり | 유케무리; 온천 김; 온천 수증기; hot spring steam; 湯気 | JP | 수증기; 김; 온천; 안개; 몽환 | Rising soft white steam that diffuses light and blurs the background into a hazy glow. | look |
 
 ## US
 
@@ -131,6 +170,22 @@ Light 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다. 
 | Neon Tube Ring Catchlight | 네온 링 캐치라이트; 霓虹灯管环形眼神光; Neon Mystique; Motel Night; 모텔 네온 | US | 밤; 네온; 모텔; 시네마틱; 눈빛 | A ring-shaped reflection of a neon tube glows in each eye, pink and blue light spilling on the face. | look |
 | Paparazzi Direct Flash Catchlight | 파파라치 플래시 캐치라이트; 机顶直闪眼神光; Direct Flash Catchlight; 직사 플래시 눈빛; Raw Nightlife | US | 밤; 플래시; 클럽; 눈빛; 도시 | On-camera flash leaves a single hard white dot at the center of each pupil, with flat bright skin and a black background. | look |
 | Peaked Cap Shadow | 모자 그림자 눈썹; 压低鸭舌帽; Cap Brim Shadow; Skater Cool; 스케이터 쿨; Downtown Mystery | US | 스케이터; 그림자; 스트리트; 미스터리; 도시 | Cap brim pulled low so a band of shadow crosses the eyes and one brow shows sharply beneath it. | look |
+| golden-hour sidelight | 골든아워; golden hour; 해질녘 빛; 저녁 햇살 | US | 해질녘; 캘리포니아; 따뜻함 | Low warm sun from the side that rims the leg with a bright edge and throws long soft shadows across the ground. | look |
+| Golden Hour Glow | 골든아워 글로우; 골든 아워; 황금빛 노을; golden hour light; golden hour | US | 노을; 따뜻한; 저녁; 빛; 여름 | Low sun from the side casting long warm light that turns skin amber and runs a thin gold outline along hair edges. | look |
+| Golden Hour Backlight | 골든아워; 골든아워 역광; Magic Hour; 落日逆光; Golden Hour; 노을 역광; 황금빛 역광; Rimlight | US | 석양; 따뜻함; 역광; 해안; 봄여름 | Low golden sun behind the subject traces a bright rim around hair and shoulders and lets warm light spill into the lens. | look |
+| Palm Leaf Shadow Projection | 야자잎 그림자; 棕榈叶投影; Palm Shadow | US | 열대; 플래시; 휴양지 | Sharp feathery palm-leaf shapes are projected onto the wall or person behind by a hard flash. | look |
+| Sidewalk Bounce Light | 보도 반사광; 人行道反光; Ground Bounce | US | 도시; 흐림; 부드러움 | Pale pavement reflects soft fill light upward, lifting the jaw and collarbone without hard shadow. | look |
+| Bodega Fluorescent Light | 보데가 형광등; 便利店荧光; Fluorescent | US | 야간; 도시; 차가움 | Cold white fluorescent light from a shop front spills onto the street, forming a clear cool-versus-warm border against the dark. | look |
+| Multi-Flash Ghosting | 다중 플래시; 多重闪光灯重影; Paparazzi Flashes | US | 파파라치; 레드카펫; 밤 | Several side flashes overlap, leaving faint extra shadows and ghost edges around a sharply lit subject. | look |
+| Pool Light Glow | 풀 조명; 泳池水底照明; Underwater Pool Light | US | 야간; 수영장; 파티 | Underwater pool lights glow turquoise and reflect shimmering ripples across skin and walls. | look |
+| Solar Rim-Light Profile | 옆모습 림라이트; 侧脸避光; Golden Profile; Americana Cinematic; Sculpted Profile | US | 골든아워; 옆모습; 시네마틱; 야외; 실루엣 | Low sun from behind and to the side traces a thin gold line along forehead, nose bridge and lips. | look |
+| Blue Hour Peace | 블루아워; 暮色沉降; Twilight Calm; Blue Hour; 트와일라잇 | US | 황혼; 차분; 바다; 저녁; 멜랑콜리 | Cool, even blue dusk light with no hard shadows, a calm face turned toward a dim horizon. | look |
+| Paparazzi Flash Surprise | 파파라치 플래시; 闪光灯; Flashbulb; Hollywood Nightlife; 할리우드 나이트라이프 | US | 밤; 플래시; 파티; 할리우드; 놀람 | Harsh on-camera flash flattens the face and whitens the skin, brows jumping, background falling to black. | look |
+| Gas Station Fluorescent Glow | 주유소 형광등; 加油站荧光; Convenience Glow; Indie Cool; Americana Indie | US | 밤; 주유소; 인디; 형광; 시네마틱 | Green-white fluorescent canopy light lays a flat cool cast across the skin with green reflections in the eyes. | look |
+| Campfire Flicker Catchlight | 모닥불 캐치라이트; 篝火金红光斑; Campfire Glow; Wilderness Warmth; 캠핑 모닥불 | US | 캠핑; 밤; 따뜻함; 불빛; 야외 | Moving orange-red firelight flickers over the face and appears as small gold points in the eyes. | look |
+| Festival Laser Reflection | 페스티벌 레이저; 狂欢派对镭射; Laser Iris Reflection; Electric Trance; Cyber Euphoria | US | 밤; 페스티벌; 레이저; 몽환; 클럽 | Green and magenta laser beams sweep across the face and leave thin colored streaks in the irises. | look |
+| Direct Flash | 다이렉트 플래시; 직광 플래시; hard direct flash; Hard Strobe | US | 밤; 직광; 스냅 | A flat bright on-camera flash that blows out skin highlights and throws a crisp dark shadow on the wall behind. | gear |
+| Havana Smoke | 하바나 스모크; 하바나 연기 | US | 쿠바; 연기; 따뜻한 | Thin blue smoke curling through warm amber light shafts in a shaded room. | look |
 
 ## FR
 
@@ -148,3 +203,15 @@ Light 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다. 
 | Lumière du ciel gris | 흐린 하늘 캐치라이트; overcast catchlight; diffuse sky catchlight | FR | 흐림; 중립; 낮; 광장 | A soft crescent of pale sky glows at the top edge of each iris under even overcast light with no shadows. | look |
 | Reflet de pluie | 빗줄기 반사; rain window reflection; rainy catchlight | FR | 비; 창가; 가을; 우울 | Streaks of rain on glass cast thin vertical lines of light that slide across the eyes and cheek. | look |
 | Vaguelettes de la Seine | 물결 반사; water glint catchlight; Seine glints | FR | 물결; 정오; 다리; 반짝임 | Rippling reflections from river water dance in the pupils and across the underside of the chin. | look |
+| crépuscule | dusk; 황혼; 해질녘; twilight | FR | 일몰; 저녁; 주황; 강 | Low orange sun sinking toward the horizon with long soft shadows and a pink-gold reflection on water. | look |
+| Paris Overcast Light | 파리 흐린 날 빛; 흐린 날 확산광; 阴天漫射光; overcast softbox; 구름 소프트박스 | FR | 흐린 날; 확산광; 그림자 없음; 낮 | Cloud cover works as one giant softbox: even shadowless light, pale grey-blue shade and gentle midtones on skin. | look |
+| Firelight | 벽난로 불빛; 장작불; 柴火火光; 火光; 난로빛 | FR | 불빛; 겨울 밤; 따뜻함; 실내 | Flickering orange-red glow from one side, heavy deep shadows and warm highlights dancing on skin. | look |
+| Pin Spotlight | 스포트라이트; 追光; 핀 스포트라이트; 집중 조명 | FR | 스포트라이트; 어두운 공간; 무대; 집중 | A narrow beam picks out face and instrument and leaves the rest of the room black. | look |
+| Overexposed Highlights | 과노출; 하이라이트 날림; 过曝; 밝게 날린 빛 | FR | 과노출; 밝음; 여름; 아침 | Bright areas push to paper-white with softly bleeding edges while midtones stay airy. | look |
+| Wet Street Reflections | 젖은 길 반사; 湿润反光; 빗물 웅덩이 반사; wet cobblestone | FR | 비 온 뒤; 젖은 바닥; 반사; 흑백 | Wet stone and asphalt mirror the bright sky as glossy patches that add soft fill from below. | look |
+| Overhead Skylight | 천창 빛; 톱라이트; 天窗光; 顶光; skylight | FR | 천창; 수직광; 정물적; 실내 | Light falls from a glass roof above, modelling forehead, nose bridge and collarbones with soft shadows beneath. | look |
+| Silhouette | 실루엣; 剪影; 검은 윤곽; 역광 실루엣; backlit silhouette; contre-jour | FR | 실루엣; 강한 대비; 미니멀; 비 오는 날; 역광; 윤곽; 실내; 극적 | The subject becomes a dark outline against a much brighter window, with edges lit by a thin rim of light. | look |
+| Crystal Prism Light | 크리스털 프리즘 빛; 水晶折射; 무지개 빛 조각 | FR | 크리스털; 무지개; 쇼윈도; 반짝임 | Faceted glass throws tiny rainbow spots across window glass and cheek. | look |
+| Noon Sunlight | 한낮 직사광; 정오 햇빛; 烈日; 강한 낮 햇살 | FR | 한여름; 강한 햇빛; 짧은 그림자; 지중해 | High bright sun with small crisp shadows and near-white stone and skin edges slightly clipped. | look |
+| Lumière du matin | 아침빛; morning light; 창가 아침 햇살; 리뮈에르 뒤 마탱 | FR | 아침; 실내; 따뜻함; 창가 | Soft low sunlight entering from a tall side window, with long warm streaks across the wooden floor and sheets, creamy shadows on the far wall. | look |
+| Lueur de bougie | 촛불빛; candlelight; 캔들 라이트; 촛불 조명 | FR | 저녁; 밤; 따뜻함; 레스토랑 | A single warm flame lighting the face and the shoulder from below, deep brown shadows behind and a glow on the glass. | look |

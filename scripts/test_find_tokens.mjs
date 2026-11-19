@@ -6,7 +6,7 @@ import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { CULTURES, LEXICON_DIR, SLUGS, drawRandom, loadAll, search } from './find_tokens.mjs';
+import { CULTURES, LEXICON_DIR, MINOR_TAG, SLUGS, drawRandom, loadAll, search } from './find_tokens.mjs';
 
 const scripts = path.dirname(fileURLToPath(import.meta.url));
 const cli = path.join(scripts, 'find_tokens.mjs');
@@ -36,6 +36,13 @@ for (const [query, token] of aliasCases) assert.ok(tokensOf([query]).includes(to
 for (const [query, token] of [['시스루 뱅', '시스루뱅'], ['시스루뱅', 'see-through bangs'], ['seethroughbangs', 'see-through bangs']]) {
   const found = search({ terms: [query] }).flatMap((l) => l.matches.flatMap((m) => [m.token, ...m.aliases]));
   assert.ok(found.includes(token), `${query} -> ${token}`);
+}
+// The squashed form never crosses word boundaries: "한복" must not hit an alias like "젖은 듯한 복고 컬" (it still finds the 한복 token).
+for (const layer of search({ terms: ['한복'] })) {
+  for (const m of layer.matches) {
+    const direct = [m.token, ...m.aliases].some((x) => x.toLowerCase().includes('한복')) || m.tags.some((t) => t.includes('한복')) || m.looks.toLowerCase().includes('한복') || m.culture.includes('한복');
+    assert.ok(direct, `${m.token} matched 한복 only across a word boundary`);
+  }
 }
 // Width and case do not matter.
 assert.ok(tokensOf(['ＣＣＤ 카메라']).includes('CCD 카메라') && tokensOf(['kodak portra 400']).includes('Kodak Portra 400'));
@@ -85,6 +92,16 @@ for (let i = 0; i < results.length; i++) {
 assert.deepEqual(drawRandom(search({ terms: [nonsense], layers: ['scene'] }), 2, () => 0)[0].matches, []);
 out = run(['--q', '고요', '--layers', 'scene,expression', '--random', '2', '--json']);
 for (const rows of Object.values(JSON.parse(out.stdout).layers)) assert.equal(rows.length, 2);
+
+// --random never draws a row tagged 아동·학생, while a direct search still returns it.
+const minorRows = loadAll().flatMap((l) => l.rows.filter((r) => r.tags.includes(MINOR_TAG)).map((r) => ({ slug: l.slug, token: r.token })));
+assert.ok(minorRows.length > 0);
+const sample = minorRows[0];
+const pool = search({ terms: [sample.token], layers: [sample.slug] });
+assert.ok(pool[0].matches.some((m) => m.token === sample.token), 'direct search finds the tagged row');
+for (const layer of drawRandom(search({ terms: minorRows.map((r) => r.token), layers: [sample.slug] }), 1000, () => 0)) {
+  assert.ok(layer.matches.every((m) => !m.tags.includes(MINOR_TAG)), 'a tagged row was drawn at random');
+}
 
 // The CLI runs through a symlink (installs can sit behind one).
 const tmp = fs.mkdtempSync(path.join(os.tmpdir(), 'mpw-find-tokens-'));

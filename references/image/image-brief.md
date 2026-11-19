@@ -41,10 +41,10 @@
 
 | 틀린 줄 | 틀린 이유 | 맞는 줄 |
 |---|---|---|
-| `신중식 — A quiet documentary portrait with muted film color.` | 음차로 썼고, 뜻을 몰라 엉뚱하게 지어냈다 | `新中式 — A modern Chinese-inspired jacket with a straight clean cut, a stand collar and small knot buttons, in heavy matte fabric.` |
+| `신중식 — A quiet documentary portrait with muted film color.` | 음차로 썼고, 뜻을 몰라 엉뚱하게 지어냈다 | `新中式 — A modern Chinese-inspired look: clean straight cuts, small traditional details such as a stand collar and knot buttons, and heavy matte fabric.` |
 | `시스루뱅 — see-through bangs` | 번역일 뿐 화면 결과가 없다 | `시스루뱅 — A thin fringe of separated strands with the forehead showing between them.` |
 | `透明感 (a clear, airy look) — Skin and light read clear.` | 같은 뜻을 두 언어로 병기했고 문장이 화면 결과를 말하지 않는다 | `透明感 — Skin and air read clear and light: low contrast, a soft cool tint, and highlights that fade gently.` |
-| `夏の夕暮れ — A hot summer evening.` | 룩 토큰이 아닌 보통 구절이다 | `summer dusk — The sky fades from pale orange to blue-gray, and the warm air softens the distant poles.` |
+| `夏の夕暮れ` | 토큰만 있고 화면 결과를 말하는 문장이 없다 | `夏の夕暮れ — The sky fades from pale orange to blue-gray, and the warm air softens the distant poles.` |
 
 ## 3. 층 고르기
 
@@ -162,7 +162,7 @@ If a model reference is provided, the person in this photo is that model: take o
 ```
 
 - 참조에서 가져오는 것은 얼굴형과 이목구비뿐이다. 헤어·메이크업과 그 밖의 전부는 프롬프트가 정한다. 얼굴을 지나치게 고정하지 않고 장면의 표정·각도·빛에 자연스럽게 맞춘다.
-- `<인물 설정>`이 인물을 정하는 자리다. 사용자가 인물을 지정했으면 그 설정을, 지정하지 않았으면 아래 기본 인물을 쓴다. 문단의 "the person in this photo"는 첫 줄의 지칭에 맞춰 "the woman in this photo"처럼 바꿔 써도 된다. 인물을 정할 근거가 전혀 없고 범용으로 쓸 프롬프트면 원문대로 `create a new person suited to the scene`을 둔다.
+- `<인물 설정>`이 인물을 정하는 자리다. 사용자가 인물을 지정했으면 그 설정을, 지정하지 않았으면 아래 기본 인물을 쓴다. 문단의 "the person in this photo"는 첫 줄의 지칭에 맞춰 "the woman in this photo"처럼 바꿔 써도 된다. 인물 프롬프트의 기본은 항상 기본 인물 문장이다(요청에 없으면 Iris 기본: 22세 동아시아 여성, 룩의 문화권에 맞춰 조정). `create a new person suited to the scene` 원문은 사용자가 인물을 정하지 않은 범용 템플릿을 달라고 했을 때만 쓴다.
 - 사용자가 저장된 아이덴티티 문단을 직접 주면 그 문단을 글자 그대로 이 구획에 넣는다.
 - 조건절 밖의 층에는 얼굴형·이목구비·피부색·체형·나이 서술을 쓰지 않는다. 타고난 생김새(애교살의 볼록함 자체, 입술 두께, 눈매)도 쓰지 않는다. Hair and makeup과 Expression은 항상 쓴다. 화장과 스타일링으로 만든 것(블러셔, 립 색과 마감, 아이라인, 눈썹을 채운 모양, 헤어 커트와 색)은 쓰고, 눈빛 반사(캐치라이트)는 Light에 쓴다.
 - 참조의 고개 각도와 시선을 그대로 따르지 않도록 Expression이나 Pose에 장면에 맞는 각도와 시선을 쓴다.
@@ -192,7 +192,7 @@ If a model reference is provided, the person in this photo is that model: take o
 - 사용자가 문구를 주지 않았으면 글자를 지어내지 않는다. 간판·포장·화면은 `no readable lettering`처럼 보이는 상태로 쓴다.
 - 브랜드·제품명(카메라, 필름, 패션, 소품 등)은 룩을 가리키는 말로 쓸 수 있다. 로고와 상표 글자는 화면에 그리지 않는다. 실존 인물의 이름은 스타일을 가리킬 때만 쓰고(예: Godard, Jane Birkin), 그 사람의 얼굴이나 몸을 닮게 하는 용도로는 쓰지 않는다.
 - 첨부하지 않은 참조를 말하지 않는다(reference, same face). `## Identity Reference` 구획만 예외다.
-- 넣지 않는 것은 미성년(아동·중고생)을 직접 가리키는 설정·어휘(교복, 학생 연출 등)와 실존 인물의 얼굴·몸을 닮게 하는 것뿐이다. 미성년을 성적으로 그리지 않는다.
+- 아이·학생이 나오는 이미지도 만든다. 교복과 학생 연출도 쓸 수 있고, 스쿨룩·프레피·하이틴은 성인 패션 장르다. 지키는 것은 둘이다: 미성년을 성적으로 그리지 않는다(아이·학생이 나오는 이미지에는 관능 어휘와 노출 연출을 붙이지 않는다), 실존 인물의 얼굴·몸을 닮게 하지 않는다.
 - 금지 문장은 세 경우에만 쓴다: 사용자가 빼 달라고 한 것, 정확 문구 밖의 글자, 편집에서 지킬 것. 관련 층 안에 한 문장으로 쓰고, `no X, no Y`처럼 늘어놓지 않는다. 그 밖에 비워 두고 싶은 것은 보이는 상태로 쓴다("the table is bare", "the street is empty").
 - 비율은 사용자가 요청했을 때만 Camera 층에 한 번 쓴다. 모델명, API 설정, 로컬 파일 경로, 검수 절차는 쓰지 않는다.
 
@@ -232,7 +232,7 @@ unchanged — Keep the room, the sofa's shape and position, the window light dir
 새 이미지는 모두 본다. 첨부 이미지 편집은 1·3·7·8·9·10만 본다.
 
 1. 첫 줄이 이 사진의 이름을 말하는 제목 없는 한 문장이고(국적·피부색·얼굴 서술이 없다), 층이 셋 이상이며(편집은 바꿀 층과 Keep), 모든 줄이 `토큰 — 문장`인가(`## Identity Reference` 문단은 예외)? 쉼표로 늘어놓은 단어 줄이 없는가?
-2. 사람이 나오면 `## Identity Reference`가 첫 층이고 `## Person` 층이 없으며, 화면에 보이는 기본 층이 다 있는가? 안 보이는 부위의 층만 뺐는가? 인물을 내가 지었다면(기본·랜덤·다양하게) 조건절에 20세 이상의 나이가 있는가? (기계 계약이면 §1의 줄이는 순서가 우선한다.)
+2. 사람이 나오면 `## Identity Reference`가 첫 층이고 `## Person` 층이 없으며, 화면에 보이는 기본 층이 다 있는가? 안 보이는 부위의 층만 뺐는가? 인물을 내가 지었다면(기본·랜덤·다양하게) 조건절에 20세 이상의 나이가 있는가(사용자가 범용 템플릿을 달라고 해 `create a new person suited to the scene` 원문을 쓴 경우는 예외)? (기계 계약이면 §1의 줄이는 순서가 우선한다.)
 3. 사용자가 준 문구·수량·비율·지킬 것·뺄 것·룩 이름이 다 있는가?
 4. 빛마다 방향과 그 결과(하이라이트, 그림자, 반사)가 있는가? 층끼리 시간대와 날씨가 맞는가?
 5. 원어 토큰마다 사전에 있거나 확실히 아는 말인가? 음차를 원어 표기로 바꿨는가? 뒤 문장이 번역이 아니라 화면 결과인가?
@@ -323,8 +323,7 @@ If a model reference is provided, the woman in this photo is that model: take on
 head angle — Her face turns three-quarters to the camera's right with the chin slightly lowered, toward the light from the lattice window.
 
 ## Outfit
-新中式 — A modern Chinese-inspired jacket: a clean, straight cut in heavy ink-black silk, with traditional details kept small so it reads as current clothing rather than costume.
-立领 — A crisp stand collar rises close around the neck.
+立领 — A crisp stand collar rises close around the neck of a clean, straight-cut jacket in heavy ink-black silk.
 盘扣 — Three small knot buttons of twisted fabric cord fasten a front panel that crosses diagonally from the collar to the right underarm.
 香云纱 — The silk has a faintly crinkled surface and a dark brown sheen where it folds at the elbows and waist.
 
@@ -338,6 +337,7 @@ seated lean — She sits upright on a low wooden stool, forearms resting on the 
 shoulders — Shoulders level and relaxed, elbows close to the body, both hands around the cup.
 
 ## Style
+新中式 — A modern Chinese-inspired look: traditional details kept small so it reads as current clothing rather than costume.
 静奢风 — Quiet modern Chinese luxury: a restrained palette of black, ivory and celadon, heavy matte fabrics and almost no ornament.
 清冷感 — A cool, still mood with a composed face and no warm color cast anywhere in the frame.
 
