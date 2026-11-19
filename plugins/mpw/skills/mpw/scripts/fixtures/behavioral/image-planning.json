@@ -6,7 +6,7 @@
       "request": "MPW로 GPT Image용 영어 프롬프트만. 흰 배경 중앙에 파란 머그컵 하나. 그림자·소품·글자 없이.",
       "semantic_checks": [
         "한 개 파란 컵·흰 배경·중앙·그림자/소품/글자 금지를 보존한다",
-        "단순 지시를 구획·장비·질감·기획 설명으로 늘리지 않는다"
+        "첫 줄 한 문장 + ## 층 셋 이상, 층마다 토큰 — 문장 2~5줄이며 장면에 없는 장비 이야기를 늘어놓지 않는다"
       ],
       "format": {
         "kind": "code_blocks",
@@ -32,7 +32,8 @@
       "semantic_checks": [
         "도서관 입구·비가 막 그침·성인·기다리는 순간을 보존한다",
         "시선·행동·공간이 같은 순간을 설명하며 분위기 형용사만 나열하지 않는다",
-        "인종·체형·숫자 나이·필름 그레인·피부 디테일을 창작하지 않는다"
+        "인종·체형·숫자 나이·필름 그레인·피부 디테일을 창작하지 않는다",
+        "사용자가 금지한 인종·숫자 나이가 Identity Reference 조건절에 없고 조건절은 성인이라는 말만 쓴다; 첫 줄에 국적·피부색·얼굴 서술이 없다"
       ],
       "format": {
         "kind": "code_blocks",
@@ -91,6 +92,31 @@
         "두 입력 번호와 제품/스타일의 채택 범위를 분리한다",
         "보존할 제품 형상·다이얼·숫자·로고·스트랩·전체 프레임을 유지한다",
         "스타일 참조의 피사체·소품을 복사하거나 미업로드 자료를 봤다고 주장하지 않는다"
+      ],
+      "format": {
+        "kind": "code_blocks",
+        "count": 1
+      }
+    },
+    {
+      "id": "planning-identity",
+      "request": "GPT Image용 영어 프롬프트만. 내 캐릭터 사진을 첨부할 거야(모델 아이덴티티). 비 오는 밤 편의점 앞에서 우산을 든 전신 스냅. 헤어와 메이크업, 표정은 네가 잡아줘.",
+      "semantic_checks": [
+        "첫 줄이 인물 앵커가 아니라 사진의 이름(매체·순간·가장 두드러진 것)을 말하는 한 문장이고, ## Identity Reference 층이 첫 층이며 조건문(모델 참조가 있으면 얼굴형과 이목구비만 가져오고 없으면 지어 쓴 인물)이다",
+        "얼굴 골격·이목구비·피부색·나이·체형 같은 외모 서술이 조건절 밖의 어느 층에도 없고 ## Person 층이 없다",
+        "Hair and makeup 층과 Expression 층이 다른 층처럼 구체적으로 쓰여 있다"
+      ],
+      "format": {
+        "kind": "code_blocks",
+        "count": 1
+      }
+    },
+    {
+      "id": "planning-layer-followup",
+      "request": "직전 프롬프트에서 조명만 바꿔줘: 비 오는 밤 대신 해 질 녘 역광으로.\n\n직전 프롬프트:\n```text\nA vertical street photograph of one adult woman waiting under an awning on a rainy night.\n\n## Outfit\ntrench — A beige cotton trench coat, belted, darkened by rain at the shoulders.\n\n## Light\nneon rain — Pink and blue shop signs stretch into long streaks across the wet asphalt.\n\n## Camera\nfull length — A full-length frame from chest height about four meters away.\n```",
+      "semantic_checks": [
+        "Light 층만 새로 쓰고 첫 줄과 다른 층의 줄은 글자 그대로 같다",
+        "다른 층에 새 조명과 부딪치는 문장이 있을 때만 그 문장을 고치고 블록 밖에 한 줄로 알린다"
       ],
       "format": {
         "kind": "code_blocks",

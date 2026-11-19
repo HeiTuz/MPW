@@ -8,16 +8,12 @@ const root = new URL('../references/image/', import.meta.url);
 const read = (name) => fs.readFileSync(fileURLToPath(new URL(name, root)), 'utf8');
 let count = 0;
 const check = (name, fn) => { fn(); count++; console.log('PASS ' + name); };
-const portrait = read('editorial/portrait-brief.md');
+const brief = read('image-brief.md');
 const collision = read('editorial/concept-collision.md');
 const fromImage = read('from-image.md');
-check('simple portrait preservation does not mandate a constraints heading', () => {
-  assert.match(portrait, /짧은 보존 조건만으로 별도 헤딩을 만들지 않는다/);
-  assert.doesNotMatch(portrait, /`CONSTRAINTS`에 (한 번 쓴다|모은다)/);
-});
 check('nonsexual child requests retain their requested age', () => {
-  assert.match(portrait, /비성적인 어린이·청소년 인물 요청을 임의로 성인으로 바꾸지 않는다/);
-  assert.match(portrait, /성인 라벨만 덧붙여 허용 가능한 요청으로 취급하지 않는다/);
+  assert.match(brief, /비성적인 어린이·청소년 인물 요청을 임의로 성인으로 바꾸지 않는다/);
+  assert.match(brief, /성인 라벨만 덧붙여 허용 가능한 요청으로 취급하지 않는다/);
 });
 check('texture edits preserve user choices rather than replacing all skin detail', () => {
   assert.match(collision, /모공·잔털로 일괄 치환하지 않는다/);

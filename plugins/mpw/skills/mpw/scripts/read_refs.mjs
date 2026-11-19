@@ -28,19 +28,19 @@ import { fileURLToPath } from "node:url";
 const skillRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 
 export const BUNDLES = {
-  // 대상 미정·GPT Image 새 이미지. 작성 규칙은 image-brief.md(§1·§2·§3·§5·§6). 도해·슬라이드·UI·만화·로고는 -structured.
-  "gpt-image-new": ["references/image/surfaces.md#0", "references/image/image-brief.md#1,2,3,5,6"],
-  "gpt-image-new-structured": ["references/image/surfaces.md#0", "references/image/image-brief.md#1,2,3,5,6", "references/image/surface-contracts.md#3.4"],
-  // 대상 미정·GPT Image 인물·셀피·패션 화보 새 이미지.
+  // 대상 미정·GPT Image 새 이미지. 작성 규칙은 image-brief.md(§1~§7·§9·§10)와 층별 사전 색인. 도해·슬라이드·UI·만화·로고는 -structured.
+  "gpt-image-new": ["references/image/surfaces.md#0", "references/image/image-brief.md#1,2,3,4,5,6,7,9,10", "references/image/layer-lexicon.md"],
+  "gpt-image-new-structured": ["references/image/surfaces.md#0", "references/image/image-brief.md#1,2,3,4,5,6,7,9,10", "references/image/layer-lexicon.md", "references/image/surface-contracts.md#3.4"],
+  // 대상 미정·GPT Image 인물·셀피·패션 화보 새 이미지. 층 사전은 색인(layer-lexicon.md)만 읽는다. 층별 표는 find_tokens.mjs나 lexicon/ 절 읽기로 따로 찾는다. compiler.md 피부·재질은 GPT Image 새 이미지에 적용하지 않으므로 이 묶음에 넣지 않는다.
   "gpt-image-portrait": [
     "references/image/surfaces.md#0",
-    "references/image/image-brief.md#1,2,3,5,6",
+    "references/image/image-brief.md#1,2,3,4,5,6,7,9,10",
     "references/image/editorial/portrait-brief.md",
-    "references/image/compiler.md#피부·재질",
+    "references/image/layer-lexicon.md",
   ],
-  // 대상 미정·GPT Image 원본 편집(image-brief §1·§4·§5·§6 + 편집 패턴 §3.3). 참조 사진의 역할·관찰이 필요하면 from-image.md#1을 덧붙인다.
-  "gpt-image-edit": ["references/image/surfaces.md#0", "references/image/image-brief.md#1,4,5,6", "references/image/surface-contracts.md#3.3"],
-  "gpt-image-edit-structured": ["references/image/surfaces.md#0", "references/image/image-brief.md#1,4,5,6", "references/image/surface-contracts.md#3.3,3.4"],
+  // 대상 미정·GPT Image 원본 편집(image-brief §1·§2·§6~§9 + 편집 패턴 §3.3). 참조 사진의 역할·관찰이 필요하면 from-image.md#1을 덧붙인다.
+  "gpt-image-edit": ["references/image/surfaces.md#0", "references/image/image-brief.md#1,2,6,7,8,9", "references/image/surface-contracts.md#3.3"],
+  "gpt-image-edit-structured": ["references/image/surfaces.md#0", "references/image/image-brief.md#1,2,6,7,8,9", "references/image/surface-contracts.md#3.3,3.4"],
   // 영상 생성.
   video: ["references/image/surfaces.md#0", "references/image/lanes.md#영상 공통 규칙"],
   // 실행 작업·자동화 지시.

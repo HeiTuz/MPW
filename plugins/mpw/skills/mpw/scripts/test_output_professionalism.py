@@ -72,9 +72,11 @@ class OutputProfessionalismTest(unittest.TestCase):
     def test_all_expected_prompts_fit_the_codepoint_limit(self):
         for entry_id, payload in self.entries:
             expected = payload["expected"]
-            prompts = expected.values() if entry_id == "image-video" else (expected,)
-            for prompt in prompts:
-                self.assertLessEqual(len(prompt), 2000, f"{entry_id} exceeds 2000 code points")
+            prompts = expected.items() if entry_id == "image-video" else (("", expected),)
+            for kind, prompt in prompts:
+                # The image prompt is a layered ChatGPT-web paste block (10,000); the rest stay at 2000.
+                limit = 10000 if kind == "image" else 2000
+                self.assertLessEqual(len(prompt), limit, f"{entry_id} {kind} exceeds {limit} code points")
 
     def test_non_image_expected_prompts_have_no_image_lane_terms(self):
         for entry_id, payload in self.entries:

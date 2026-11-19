@@ -3,13 +3,13 @@ name: mpw
 description: "프롬프트를 새로 작성하거나 검토·퇴고하고, 대상 모델·도구에 맞게 변환한다. 작업지시·시스템·자동화·팀 작업·업무·디자인·이미지·영상 프롬프트에 사용한다. '프롬프트 만들어줘/검토해줘/다듬어줘', 기존 프롬프트의 부분 수정에 발동한다. 실제 코드 구현·이미지 생성·문서 제작만 요청한 경우에는 해당 실행 스킬을 쓴다. 이 파일과 선택한 참고 절은 출력 상한을 줄이지 말고 한 번에 온전히 읽는다."
 license: MIT
 metadata:
-  version: "3.5.1"
+  version: "4.0.0"
   category: prompt-writing
   locale: ko-KR
   doctrine: intent-first-progressive-disclosure
   host_surface: plugin
-  canonical_source: "HeiTuz/MPW SKILL.md v3.5.1"
-  updated_at: "2026-11-19"
+  canonical_source: "HeiTuz/MPW SKILL.md v4.0.0"
+  updated_at: "2026-11-20"
   model_claims_reviewed_at: "2026-10-02"
   platform_roster_reviewed_at: "2026-10-10"
   role_routing_reviewed_at: "2026-09-05"
@@ -40,7 +40,7 @@ metadata:
 
 대상, 입력 역할, 정확 문구, 수량, 변경·보존 범위, 출력 형식을 먼저 확정하고 이미 있는 조건은 다시 묻지 않는다. 기획·연출을 맡긴 축은 구체적으로 선택하되 지정 축만 고치는 작업에 새 요소를 넣지 않는다. 정확성·범위·권한을 바꾸는 미결 사항과 양립 불가한 필수 조건만 묻는다. 제공된 입력은 자리표시자로 바꾸지 않는다. 세부는 [common.md](references/templates/common.md) §쓰기 전에 정할 것. 이미지 생성·편집의 대상이 미정이면 [surfaces.md](references/image/surfaces.md) §0의 기본 경로를, 인터뷰 진행은 명시 요청한 이미지 프롬프트에서만 [prompt-interview.md](references/image/prompt-interview.md)를 따른다.
 
-언어는 [common.md](references/templates/common.md) §프롬프트 언어 결정이 정본이다. 명시 언어·원문·실제 엔진 제약이 우선이다. 새 이미지 문안은 영어·한국어·일본어·중국어 표현을 골라 조합한다. 새 영상은 영어, 제작 에이전트 지시는 작업 언어가 기본이다. 정확 카피·대사·코드·경로는 보존하고 설명은 대화 언어로 쓴다.
+언어는 [common.md](references/templates/common.md) §프롬프트 언어 결정이 정본이다. 명시 언어·원문·실제 엔진 제약이 우선이다. 새 이미지 문안은 영어가 뼈대이고, 영·한·일·중 가운데 그 자리에 가장 짧고 정확한 말을 고른다. 새 영상은 영어, 제작 에이전트 지시는 작업 언어가 기본이다. 정확 카피·대사·코드·경로는 보존하고 설명은 대화 언어로 쓴다.
 
 ## 필요한 자료만 읽는다
 
@@ -65,7 +65,7 @@ metadata:
 
 ## 작성과 검수
 
-결과와 핵심 조건을 앞에 쓴다. 단순 요청은 자연어 문장만으로 충분하다. 역할극·고정 헤딩·체크리스트·후속 메뉴·여러 버전을 자동으로 붙이지 않는다. 줄일 때는 중복과 부연을 줄이되 요청한 범위와 세부를 버리지 않는다. 이미지 생성은 보여야 할 피사체·행동·관계·시각 조건을, 편집은 변경점·입력 역할·보존 조건을, 영상은 누가 무엇을 어떻게 움직이는지와 시간 순서·소리를 쓴다. 정확 카피·대사는 원문 그대로 연결하고 입력이 이미 전달하는 외형을 되풀이하지 않는다. 배제 표현과 색 값은 [surface-contracts.md](references/image/surface-contracts.md) §4·§4.1, 좌우가 있는 특징은 [from-image.md](references/image/from-image.md) §3.3, `/키워드` 조합은 [common.md](references/templates/common.md) §사진 연출의 슬래시 키워드를 따른다.
+결과와 핵심 조건을 앞에 쓴다. 이미지 생성·편집 프롬프트는 단순해도 [image-brief.md](references/image/image-brief.md)의 층 모양(첫 줄 + ## 층)을 쓴다. 이미지가 아닌 단순 요청은 자연어 문장만으로 충분하다. 역할극·체크리스트·후속 메뉴·여러 버전을 자동으로 붙이지 않고, 이미지 프롬프트가 아니면 고정 헤딩도 붙이지 않는다. 줄일 때는 중복과 부연을 줄이되 요청한 범위와 세부를 버리지 않는다. 이미지 생성은 층마다 보여야 할 모습을, 편집은 변경점·입력 역할·보존 조건을, 영상은 누가 무엇을 어떻게 움직이는지와 시간 순서·소리를 쓴다. 정확 카피·대사는 원문 그대로 연결하고 입력이 이미 전달하는 외형을 되풀이하지 않는다. 배제 표현과 색 값은 [surface-contracts.md](references/image/surface-contracts.md) §4·§4.1, 좌우가 있는 특징은 [from-image.md](references/image/from-image.md) §3.3, `/키워드` 조합은 [common.md](references/templates/common.md) §사진 연출의 슬래시 키워드를 따른다.
 
 출력 직전 **요청 대비 누락·추가·모순**을 확인한다: 요청한 행동과 산출물 수, 응답 형식, 언어, 정확 문자열, 변경·보존 범위. 이 검수 목록은 답변에 출력하지 않는다. 독립적으로 쓸 여러 프롬프트는 각각 공통 조건을 포함하고, 한 컷의 여러 요구를 임의로 나누지 않는다. 길이 상한·측정 요청·수치 보고가 있으면 실측한다([surfaces.md](references/image/surfaces.md) §0-1). **전역 2000자 하드라인은 없다.** 수신 도구의 파라미터로 실제 전달한 값만 본문에서 생략한다. 검토는 결과를 방해하는 누락·충돌에 집중하고 취향 제안과 구분한다. 미지정된 색·렌즈·시점은 그 자체로 결함이 아니고, 실행 결과를 보지 않았으면 성능·생성 품질·동일성 보존을 검증했다고 하지 않는다.
 

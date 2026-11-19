@@ -42,8 +42,8 @@ const brief = (id) => {
 for (const name of ['gpt-image-edit', 'gpt-image-edit-structured']) {
   const result = readTargets(BUNDLES[name]);
   assert.equal(result.error, undefined, name);
-  for (const required of [brief('1'), brief('4'), edit]) assert.ok(result.text.includes(required), `${name} drops a common/edit section`);
-  for (const absent of [brief('2'), brief('3'), generation]) assert.ok(!result.text.includes(absent), `${name} loads a generation-only section`);
+  for (const required of [brief('1'), brief('8'), edit]) assert.ok(result.text.includes(required), `${name} drops a common/edit section`);
+  for (const absent of [brief('3'), brief('4'), brief('10'), generation]) assert.ok(!result.text.includes(absent), `${name} loads a generation-only section`);
   assert.doesNotMatch(result.text, /Create a vertical editorial fashion photo|\*\*구조 선택 —/);
   assert.equal(result.text.includes(section('3.4')), name.endsWith('-structured'), `${name} purpose-specific routing`);
   const oldRoute = readTargets(['references/image/surfaces.md#0', `references/image/surface-contracts.md#3.2,3.3${name.endsWith('-structured') ? ',3.4' : ''}`]);
@@ -52,8 +52,8 @@ for (const name of ['gpt-image-edit', 'gpt-image-edit-structured']) {
 for (const name of ['gpt-image-new', 'gpt-image-new-structured']) {
   const result = readTargets(BUNDLES[name]);
   assert.equal(result.error, undefined, name);
-  for (const required of [brief('2'), brief('3')]) assert.ok(result.text.includes(required), `${name} drops a generation section`);
-  assert.ok(!result.text.includes(brief('4')), `${name} loads the edit-only section`);
+  for (const required of [brief('3'), brief('4')]) assert.ok(result.text.includes(required), `${name} drops a generation section`);
+  assert.ok(!result.text.includes(brief('8')), `${name} loads the edit-only section`);
   assert.ok(!result.text.includes(section('3.2.4')), `${name} loads the noise detail section`);
 }
-console.log('Image edit routing: image-brief §1·§4 and §3.3 retained for edits; generation-only §2·§3 excluded; generation bundles carry §2·§3.');
+console.log('Image edit routing: image-brief §1·§8 and §3.3 retained for edits; generation-only §3·§4·§10 excluded; generation bundles carry §3·§4 and exclude §8.');

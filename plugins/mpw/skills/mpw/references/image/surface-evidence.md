@@ -85,7 +85,7 @@
 | MiniMax H3 실패 모드(서드파티 관측) | 커뮤니티 관측 — FL2VA 중간 구간 모프·다중 참조 속성 혼선·화면 텍스트 왜곡·오디오 밸런스. 공식 근거 아님. 규칙 서술은 [minimax-h3.md](minimax-h3.md) §실패 모드와 회피 | 2026-09-18 |
 | MiniMax H3 오픈웨이트 라이선스 지역 제한 | HF [LICENSE](https://huggingface.co/MiniMaxAI/MiniMax-H3/raw/main/LICENSE)·[Q&A](https://huggingface.co/MiniMaxAI/MiniMax-H3/raw/main/docs/QA-about-License.md) — Excluded Territories = EU·영국·한국·미국(자체 호스팅은 별도 라이선스 신청), 공식 클라우드 API는 전 세계 사용 가능 | 2026-09-18 |
 | Rentmeester v. Nike / selection-and-arrangement / idea-expression | 판례·해설 | 2026-07-25 |
-| S3 2000자 | 붙여넣기 UX 제약 + 상한 있는 채널 배선의 합성. 그 표면의 보편 상수가 아니다 | — |
+| S3 기본 10,000자 | ChatGPT 웹 입력창 붙여넣기 전환 상한(위 10,000자 행)을 기본 채널로 삼은 사용자 지정(2026-11-19). 그 표면의 보편 상수가 아니며 `--channel bounded`는 2000자다 | — |
 | 전달 채널 상한 | 런타임 배선 값 — 이 문서가 아니라 실행 런타임이 권한자([../adapters.md](../adapters.md)) | — |
 
 확인일이 `—`인 행은 **합성값이거나 런타임이 소유한 값이라 날짜 스탬프의 대상이 아니라는 뜻**이고, **[미확인]** 행과 다르다 — 전자는 근거가 다른 곳에 있고, 후자는 근거가 없다. 둘은 배타다: **[미확인]** 행은 "없음을 확인한 날"을 반드시 갖고 `—`를 쓰지 않으며, `—` 행에는 **[미확인]**을 달지 않는다.
