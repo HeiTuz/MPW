@@ -25,17 +25,24 @@ assert.ok(textFor(...BUNDLES['gpt-image-edit']).includes('editorial/portrait-var
 const guidance = textFor(variationPath);
 for (const heading of ['## 같은 기준에서 비교', '### 조합이 보존 조건과 겹칠 때', '## 명시적 랜덤 요청']) assert.ok(guidance.includes(heading), heading);
 for (const link of ['../from-image.md', '../reference-authority-pitfalls.md', '../image-brief.md']) assert.ok(guidance.includes(`](${link})`), link);
-const exampleCuts = text => [...text.matchAll(/```text\n([^\n]+)\n```/g)].map(match => match[1]);
+// Each example is a layered prompt; the two cuts of a section differ only inside the lighting layer.
+const exampleCuts = text => [...text.matchAll(/```text\n([\s\S]*?)\n```/g)].map(match => match[1]);
+const headingsOf = cut => cut.split('\n').filter(line => /^## /.test(line));
+const withoutLayer = (cut, layer) => cut.split(/\n(?=## )/).filter(part => !part.startsWith(`## ${layer}\n`)).join('\n');
 const mixed = exampleCuts(textFor(`${variationPath}#다국어 기본 문안`));
 const korean = exampleCuts(textFor(`${variationPath}#한국어 지정 문안`));
 assert.equal(mixed.length, 2);
 assert.equal(korean.length, 2);
-for (const cut of [...mixed, ...korean]) {
-  assert.equal(cut.split('. ')[0], mixed[0].split('. ')[0], 'the subject, crop, wardrobe and setting stay constant');
-  assert.doesNotMatch(cut, /첨부|참조|앞 컷|\b(?:reference|attached)\b|3:4/i);
+for (const [cuts, layer] of [[mixed, 'Light'], [korean, '조명']]) {
+  for (const cut of cuts) {
+    assert.ok(headingsOf(cut).length >= 3, 'layered cut has three or more ## layers');
+    assert.ok(headingsOf(cut).includes(`## ${layer}`), `${layer} layer present`);
+    assert.doesNotMatch(cut, /첨부|참조|앞 컷|\b(?:reference|attached)\b|3:4/i);
+  }
+  assert.deepEqual(headingsOf(cuts[0]), headingsOf(cuts[1]), 'both cuts use the same layers');
+  assert.equal(withoutLayer(cuts[0], layer), withoutLayer(cuts[1], layer), 'only the lighting layer differs');
+  assert.notEqual(cuts[0], cuts[1], 'the two cuts differ in lighting');
 }
-assert.notEqual(mixed[0], mixed[1], 'the two cuts differ in lighting');
-assert.notEqual(korean[0], korean[1], 'the two cuts differ in lighting');
 assert.ok(korean.every(cut => !/[A-Za-z\p{Script=Han}]/u.test(cut)));
 
 for (const path of ['SKILL.md', 'agents/plugin/SKILL.md', 'README.md', 'references/image/surface-contracts.md']) {

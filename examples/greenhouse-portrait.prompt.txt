@@ -1,1 +1,33 @@
-A quiet documentary portrait of a middle-aged greenhouse caretaker at the end of a workday. She pauses beside a waist-high bench of young tomato plants, one hand resting on the bench while she looks toward the open greenhouse door. Frame her from the waist up at eye level, with the orderly rows of leaves leading softly into the background. Late afternoon light passes through damp glass and gives the metal frame gentle reflections; her canvas apron shows ordinary soil marks and creases from use. Keep her expression thoughtful and unposed, with the face and hand in clear focus.
+A quiet documentary portrait of an adult greenhouse caretaker at the end of a workday, beside a bench of young tomato plants.
+
+## Person
+default adult — An adult East Asian woman in her mid-forties with a calm, weathered face and clear bone structure.
+build — A sturdy, slim build with level shoulders, standing relaxed.
+skin tone — Light skin with a warm undertone, slightly reddened across the cheeks from outdoor work.
+
+## Hair and makeup
+tied hair — Gray-streaked dark hair is tied back loosely at the nape, with a few short strands escaping at the temples.
+bare skin — No visible makeup, so the skin shows fine lines and a natural matte finish with a little sheen at the forehead.
+
+## Expression
+thoughtful gaze — Her eyes look toward the open greenhouse door with the eyelids relaxed and the brow smooth.
+unposed — Her mouth rests nearly closed and the face stays unposed, as if she did not notice the camera.
+
+## Outfit
+canvas apron — A worn canvas apron shows ordinary soil marks and creases from use, tied over a faded cotton work shirt with the sleeves rolled to the elbows.
+
+## Pose
+hand on bench — One hand rests on the edge of a waist-high wooden bench, her weight tilted slightly toward it.
+turn — Her shoulders face the plants while her head turns toward the door.
+
+## Scene
+tomato rows — Orderly rows of young tomato plants on the bench lead softly into the background.
+glass roof — Damp glass panels and a thin metal frame rise behind her, with a small door open at the far end.
+
+## Light
+late afternoon — Low afternoon light passes through damp glass and gives the metal frame soft, gentle reflections.
+face light — The light falls evenly on her face and the resting hand, and the shadows stay soft.
+
+## Camera
+waist-up — The camera is at eye level about two meters away, framing her from the waist up.
+focus — Her face and hand are in clear focus, and the leaves behind her soften gradually.

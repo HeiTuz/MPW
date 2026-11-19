@@ -1,1 +1,22 @@
-Create a welcoming poster for the opening weekend of a small neighborhood bookshop. Show a sunlit front window with a hand-painted display of books and a glimpse of the reading table inside. Keep the main title high in the window area and the event detail beneath it, leaving clear space between the lettering and the book display. Render the exact Korean headline "책의 다음 장" once, then the exact subheading "10월 12일, 오후 2시" once. Use sturdy dark lettering on warm paper, with clean Korean characters that remain easy to read at poster size.
+A welcoming poster for the opening weekend of a small neighborhood bookshop, with a sunlit front window and an exact Korean headline.
+
+## Window scene
+shop window — A sunlit shop front window holds a hand-painted display of stacked books, with a glimpse of a wooden reading table inside.
+display — The books lean in uneven stacks on a low shelf, and their spines catch warm light along the top edges.
+reading table — Behind the glass, a round oak table with two chairs sits slightly out of focus.
+
+## Text
+headline — The exact Korean headline "책의 다음 장" appears once, high in the window area, in sturdy dark letters that are crisp and easy to read at poster size.
+subheading — The exact subheading "10월 12일, 오후 2시" appears once directly beneath the headline in a smaller size of the same lettering style.
+no other lettering — No other readable text appears anywhere on the poster.
+
+## Layout
+spacing — Clear empty space separates the lettering from the book display, so the headline and the books never overlap.
+hierarchy — The headline is the largest element, the subheading is about a third of its height and the window scene fills the lower two thirds.
+
+## Color
+warm paper — The whole poster sits on warm cream paper with a faint fiber texture, and the dark lettering reads strongly against it.
+palette — Cream, deep brown and a muted green from the painted window frame.
+
+## Light
+window sun — Soft morning sun enters from the upper left and lays pale warm light across the book spines and the window sill.

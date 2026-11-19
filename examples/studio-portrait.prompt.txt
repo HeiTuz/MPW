@@ -1,1 +1,30 @@
-Create a color studio headshot for a company team page: an adult professional framed head and shoulders at eye level, slightly left of center with a little space above the head, turned a quarter away with the face back toward the lens, shoulders relaxed and a small closed-mouth smile, in plain clothing of a muted tone so the face leads. One large soft light from camera left and slightly above casts a gentle shadow across the far cheek, a dim fill keeps the shadow side readable, and each eye holds one small catchlight. The warm gray paper backdrop falls off a little darker behind the shoulders so the outline separates cleanly. Natural, lightly retouched skin, with no text or logos in the frame.
+A color studio headshot of one adult professional for a company team page, framed head and shoulders in front of a warm gray backdrop.
+
+## Person
+default adult — An adult East Asian woman in her mid-twenties with a small face, clean defined bone structure and a crisp jawline.
+build — A slender build with level shoulders and a long neck.
+skin tone — Light skin with a cool undertone.
+
+## Hair and makeup
+neat hair — Dark hair falls straight to the shoulders with a soft side part, and the ends sit smoothly without stray strands.
+촉촉피부 — A thin dewy base leaves a soft sheen on the cheekbones and nose bridge while fine skin texture still shows, lightly retouched.
+natural color — A sheer rose lip tint and a soft peach blush fading into the cheeks, with groomed natural brows.
+
+## Expression
+closed smile — A small closed-mouth smile with relaxed eyelids and brows, looking directly into the lens.
+catchlight — Each eye holds one small bright catchlight from the main light.
+
+## Outfit
+plain clothing — A plain muted gray-blue knit top with a clean round neckline and no logos or patterns, so the face leads.
+
+## Pose
+quarter turn — The shoulders turn a quarter away from the camera and the face returns toward the lens, with the shoulders relaxed.
+
+## Light
+key light — One large soft light from camera left and slightly above casts a gentle shadow across the far cheek.
+fill — A dim fill keeps the shadow side readable, and the shadow edge stays soft.
+backdrop falloff — The warm gray paper backdrop falls off a little darker behind the shoulders, so the outline separates cleanly.
+
+## Camera
+head and shoulders — The camera is at eye level, with the face slightly left of center and a little space above the head.
+focus — The eyes are sharp, and the shoulders soften very slightly.

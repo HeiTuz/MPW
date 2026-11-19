@@ -10,7 +10,7 @@ Checks the skill's own hardlines against its files:
   Labels bind to the nearest ```text fence before or after within BIND_WINDOW
   chars; far references (checklist/table mentions) must match some block in the
   same file.
-- every ```text example block is <= 2000 chars (all core files)
+- every ```text example block is <= 2000 chars (all core files; image-brief.md is <= 10000)
 - no approximate labels (`약 N자`)
 - YAML frontmatter parses and carries version + dated model/role review stamps (rejects future dates; re-verify after 6 calendar months)
 - canonical inline `(YYYY-MM 실측...)` measurement stamps are current, non-future, and used across all repository-owned Markdown
@@ -901,11 +901,16 @@ def check_labels(f, s, errors):
                 errors.append(f"{f}:{ln}: label {n}자 — 인접 블록 없음 + 파일 내 어떤 text 블록과도 불일치")
 
 
+# image-brief examples are ChatGPT-web paste blocks (surfaces.md §0-1), not machine contracts.
+EXAMPLE_LIMITS = {"references/image/image-brief.md": 10000}
+
+
 def check_example_lengths(filename, text, errors):
+    limit = EXAMPLE_LIMITS.get(filename, 2000)
     for i, body in enumerate(re.findall(r"```text\n(.*?)```", text, re.S)):
         actual = measured_len(body)
-        if actual > 2000:
-            errors.append(f"{filename}: text block #{i} is {actual} chars (> 2000)")
+        if actual > limit:
+            errors.append(f"{filename}: text block #{i} is {actual} chars (> {limit})")
 
 
 def extract_validator_codes(text):

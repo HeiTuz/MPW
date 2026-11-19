@@ -14,7 +14,7 @@
 
 ## 명시적 랜덤 요청
 
-“랜덤 인물 프롬프트 하나”처럼 전반을 맡기면 비어 있는 연출 축에서 필요한 것만 고른다. “이 조건에서 조명만 랜덤 3개”는 조명만 뽑고 기존 장면·포즈·의상·인물·참조 역할을 각 컷에 유지한다. 한 축을 다시 뽑을 때는 직전 컷의 다른 축을 고정하고 교체할 후보에서 현재 값과 같은 세트의 다른 컷이 이미 쓴 값을 뺀다. 수량이 없으면 하나다. 랜덤을 요청하지 않은 일반 요청과 비교 변주에는 난수 선택을 추가하지 않는다. 랜덤이 아닌 새 이미지 요청에서 맡긴 축은 [image-brief.md](../image-brief.md) §2의 축 위임 문단을 따른다.
+“랜덤 인물 프롬프트 하나”처럼 전반을 맡기면 비어 있는 연출 축에서 필요한 것만 고른다. “이 조건에서 조명만 랜덤 3개”는 조명만 뽑고 기존 장면·포즈·의상·인물·참조 역할을 각 컷에 유지한다. 한 축을 다시 뽑을 때는 직전 컷의 다른 축을 고정하고 교체할 후보에서 현재 값과 같은 세트의 다른 컷이 이미 쓴 값을 뺀다. 수량이 없으면 하나다. 랜덤을 요청하지 않은 일반 요청과 비교 변주에는 난수 선택을 추가하지 않는다. 랜덤이 아닌 새 이미지 요청에서 맡긴 축은 [image-brief.md](../image-brief.md) §4을 따른다.
 
 각 후보를 요청에 맞게 새로 쓰고, 장면·시간대·광원·포즈의 물리적 적합성과 사용자 제한을 먼저 대조한다. 두 축 이상을 뽑으면 각각을 독립적으로 뽑기보다 함께 쓸 수 있는 조합을 후보로 만든다. 전체를 맡긴 요청도 축을 따로따로 뽑지 않고 먼저 장면 분위기를 하나 정한 뒤 그 안에서 조합 후보를 만든다. 야간 실내라면 작은 램프의 반사광·천장에 튕긴 플래시처럼 가능한 조명을 검토한다. 한낮 햇빛이나 없는 창의 빛을 끼워 넣어 장면을 바꾸지 않는다. 인물과 의상 참조는 위의 보존 규칙을 따른다. 렌더 카피와 언어는 원래 계약을 유지한다. 국적·인종·피부·체형·숫자 나이·성적 표현·브랜드·로고는 자동으로 후보에 넣지 않는다.
 
@@ -26,26 +26,74 @@
 
 ## 작성 예시
 
-[common.md](../../templates/common.md) §프롬프트 언어 결정에 따른다. 아래는 참조 없이 광학·톤만 달리하는 두 컷을 기본 방식과 한국어 지정 방식으로 보여 준다. 납품에는 해당 방식만 적용하며 컷 수와 양식은 요청을 따른다.
+[common.md](../../templates/common.md) §프롬프트 언어 결정에 따른다. 아래는 참조 없이 빛 층만 달리하는 두 컷을 기본 방식과 한국어 지정 방식으로 보여 준다. 두 컷은 Light 층(한국어 지정 문안은 조명 층)만 다르고 나머지 층은 글자 그대로 같다. 납품에는 해당 방식만 적용하며 컷 수와 양식은 요청을 따른다.
 
 ### 다국어 기본 문안
 
 ```text
-단색 회색 벽 앞 작업대에서 남색 캔버스 재킷을 입고 닫힌 노트를 든 성인의 허리 위 인물 사진. 부드러운 overcast window light로 그림자가 서서히 옅어지고 색감은 차분하다.
+A waist-up portrait of one adult standing at a workbench in front of a plain gray wall, wearing a navy canvas jacket and holding a closed notebook.
+
+## Outfit
+canvas jacket — A navy cotton canvas jacket with a matte surface and straight, heavy folds at the elbows.
+
+## Scene
+workbench — A plain gray wall behind a worn wooden workbench, with nothing else in the frame.
+
+## Light
+overcast window light — Soft daylight from a window wraps the face, so the shadows fade slowly and the color stays calm.
+
+## Camera
+waist-up frame — The camera sits at chest height about two meters away, with the face and the notebook sharp.
 ```
 
 ```text
-단색 회색 벽 앞 작업대에서 남색 캔버스 재킷을 입고 닫힌 노트를 든 성인의 허리 위 인물 사진. 소형 디지털카메라의 direct flash로 그림자 경계가 또렷하고 대비가 강하다.
+A waist-up portrait of one adult standing at a workbench in front of a plain gray wall, wearing a navy canvas jacket and holding a closed notebook.
+
+## Outfit
+canvas jacket — A navy cotton canvas jacket with a matte surface and straight, heavy folds at the elbows.
+
+## Scene
+workbench — A plain gray wall behind a worn wooden workbench, with nothing else in the frame.
+
+## Light
+direct flash — A compact digital camera flash fires straight on, so the shadows have hard edges and the contrast is strong.
+
+## Camera
+waist-up frame — The camera sits at chest height about two meters away, with the face and the notebook sharp.
 ```
 
 ### 한국어 지정 문안
 
 ```text
-단색 회색 벽 앞 작업대에서 남색 캔버스 재킷을 입고 닫힌 노트를 든 성인의 허리 위 인물 사진. 흐린 날의 부드러운 창가 빛으로 그림자가 서서히 옅어지고 색감은 차분하다.
+단색 회색 벽 앞 작업대에서 남색 캔버스 재킷을 입고 닫힌 노트를 든 성인의 허리 위 인물 사진.
+
+## 의상
+캔버스 재킷 — 남색 면 캔버스 재킷은 표면이 무광이고 팔꿈치에 곧고 묵직한 주름이 진다.
+
+## 장면
+작업대 — 낡은 나무 작업대 뒤로 단색 회색 벽이 서 있고 화면에는 다른 물건이 없다.
+
+## 조명
+흐린 날 창가 빛 — 창에서 든 부드러운 빛이 얼굴을 감싸 그림자가 서서히 옅어지고 색감은 차분하다.
+
+## 카메라
+허리 위 구도 — 카메라는 가슴 높이에서 이 미터쯤 떨어져 얼굴과 노트에 초점이 맞는다.
 ```
 
 ```text
-단색 회색 벽 앞 작업대에서 남색 캔버스 재킷을 입고 닫힌 노트를 든 성인의 허리 위 인물 사진. 소형 디지털카메라의 직광 플래시로 그림자 경계가 또렷하고 대비가 강하다.
+단색 회색 벽 앞 작업대에서 남색 캔버스 재킷을 입고 닫힌 노트를 든 성인의 허리 위 인물 사진.
+
+## 의상
+캔버스 재킷 — 남색 면 캔버스 재킷은 표면이 무광이고 팔꿈치에 곧고 묵직한 주름이 진다.
+
+## 장면
+작업대 — 낡은 나무 작업대 뒤로 단색 회색 벽이 서 있고 화면에는 다른 물건이 없다.
+
+## 조명
+직광 플래시 — 소형 디지털카메라 플래시가 정면에서 터져 그림자 경계가 또렷하고 대비가 강하다.
+
+## 카메라
+허리 위 구도 — 카메라는 가슴 높이에서 이 미터쯤 떨어져 얼굴과 노트에 초점이 맞는다.
 ```
 
 연출 축을 분리해 조합하고 범위를 정해 뽑는 방식은 [Iris의 한국어 README](https://github.com/noahvisualsx/Iris/blob/main/README.ko.md)와 [웹 스튜디오](https://github.com/noahvisualsx/Iris/blob/main/index.html)를 참고했다. 검토한 Iris 커밋은 `b83de4c`(전체 SHA `b83de4cf5cb12f6c4572f01a922c258dd34a8087`, MIT)다. 외부 저장소의 문장·프리셋·코드는 옮기지 않았고, 이 문서의 규칙과 예문은 MPW용으로 작성했다.

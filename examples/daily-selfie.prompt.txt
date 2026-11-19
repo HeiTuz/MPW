@@ -1,7 +1,34 @@
-A casual front-camera phone selfie of a man in his thirties in his home kitchen on a weekday morning, holding a mug of coffee.
+A casual front-camera phone selfie of one adult man in his thirties in his home kitchen on a weekday morning, holding a mug of coffee.
 
-CAMERA: Held at arm's length slightly above eye level with the phone itself out of frame; his extended arm and shoulder enter from the lower edge, and the close distance stretches the frame edges slightly. His face and upper chest fill most of the frame.
+## Person
+adult man — An adult man in his thirties with a relaxed, slightly sleepy face.
+build — An average build with soft shoulders, wearing his weekday morning ease.
 
-SUBJECT: Hair still a little flat from sleep, a relaxed half-smile toward the screen, his free hand wrapped around a white ceramic mug near his chest with two fingers through the handle.
+## Hair and makeup
+flat hair — His hair is still a little flat from sleep, with one section pressed to the side.
+bare face — No makeup, so the skin looks natural with a little shine on the forehead and nose.
 
-LIGHT AND SETTING: Soft morning daylight from a window at camera right lights one side of his face. Behind him the kitchen is slightly out of focus: a kettle and a cutting board on the counter, pale cabinet doors. Natural color with a little phone-camera noise in the shadows.
+## Expression
+half-smile — A relaxed half-smile toward the screen, with one cheek lifting slightly.
+sleepy eyes — The eyelids sit half relaxed, as if he just woke up.
+
+## Outfit
+morning clothes — A soft gray cotton t-shirt with a slightly stretched collar.
+
+## Props and nails
+white mug — A white ceramic mug held near his chest in the free hand, with two fingers through the handle and a thin line of steam rising from it.
+
+## Pose
+arm's length — The phone is held at arm's length slightly above eye level and stays out of frame; his extended arm and shoulder enter from the lower edge of the frame.
+
+## Scene
+home kitchen — Behind him the kitchen is slightly out of focus: a kettle and a cutting board on the counter and pale cabinet doors.
+
+## Light
+window light — Soft morning daylight from a window at camera right lights one side of his face and leaves the other side in gentle shade.
+
+## Optics
+phone camera — Natural phone-camera color with a little noise in the shadows, and the close distance stretches the frame edges slightly.
+
+## Camera
+selfie frame — His face and upper chest fill most of the frame, seen from slightly above.

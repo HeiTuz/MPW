@@ -299,9 +299,11 @@ assert.equal(viaBundle.status, 0, viaBundle.stderr);
 assert.deepEqual(viaBundle.stdout.match(/^==> .*$/gm).map((line) => line.split(" (L")[0]), [
   "==> references/image/surfaces.md §0",
   "==> references/image/image-brief.md §1",
-  "==> references/image/image-brief.md §4",
-  "==> references/image/image-brief.md §5",
+  "==> references/image/image-brief.md §2",
   "==> references/image/image-brief.md §6",
+  "==> references/image/image-brief.md §7",
+  "==> references/image/image-brief.md §8",
+  "==> references/image/image-brief.md §9",
   "==> references/image/surface-contracts.md §3.3",
   "==> references/image/from-image.md §1",
 ]);

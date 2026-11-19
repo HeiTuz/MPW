@@ -45,6 +45,13 @@ class LintInvariantSmokeTests(unittest.TestCase):
         lint.check_example_lengths("sample.md", f"```text\n{'가' * 2001}\n```", errors)
         self.assertTrue(any("2001 chars (> 2000)" in error for error in errors), errors)
 
+        brief = "references/image/image-brief.md"
+        errors = []
+        lint.check_example_lengths(brief, f"```text\n{'가' * 4000}\n```", errors)
+        self.assertEqual([], errors)
+        lint.check_example_lengths(brief, f"```text\n{'가' * 10001}\n```", errors)
+        self.assertTrue(any("10001 chars (> 10000)" in error for error in errors), errors)
+
     def test_i17_rejects_s2_runtime_value_redefinition(self):
         for sentence in (
             "S2 플랫폼은 resolution 2k 이상 + quality high를 쓴다.",

@@ -144,8 +144,10 @@ function measure(text, result, options) {
   if (result.surface === "s1") layers.push({ kind: "contract", limit: 2000, assumed: false });
   if (options.channelLimit !== undefined) {
     layers.push({ kind: "channel", limit: options.channelLimit, assumed: false });
-  } else if (options.channel === "bounded" || (options.channel === undefined && result.surface === "s3")) {
-    layers.push({ kind: "channel", limit: 2000, assumed: options.channel === undefined });
+  } else if (options.channel === "bounded") {
+    layers.push({ kind: "channel", limit: 2000, assumed: false });
+  } else if (options.channel === undefined && result.surface === "s3") {
+    layers.push({ kind: "channel", limit: 10000, assumed: true });
   }
   if (result.engine === "gpt-image") layers.push({ kind: "engine", limit: 32000, assumed: false });
   const binding = layers.reduce((best, layer) => best === null || BigInt(layer.limit) < BigInt(best.limit) ? layer : best, null);
