@@ -28,13 +28,13 @@ import { fileURLToPath } from "node:url";
 const skillRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 
 export const BUNDLES = {
-  // 대상 미정·GPT Image 새 이미지. 작성 규칙은 image-brief.md(§1~§7·§9·§10)와 층별 사전 색인. 도해·슬라이드·UI·만화·로고는 -structured.
-  "gpt-image-new": ["references/image/surfaces.md#0", "references/image/image-brief.md#1,2,3,4,5,6,7,9,10", "references/image/layer-lexicon.md"],
-  "gpt-image-new-structured": ["references/image/surfaces.md#0", "references/image/image-brief.md#1,2,3,4,5,6,7,9,10", "references/image/layer-lexicon.md", "references/image/surface-contracts.md#3.4"],
+  // 대상 미정·GPT Image 새 이미지. 작성 규칙은 image-brief.md(§1~§7·§9~§11)와 층별 사전 색인. 도해·슬라이드·UI·만화·로고는 -structured.
+  "gpt-image-new": ["references/image/surfaces.md#0", "references/image/image-brief.md#1,2,3,4,5,6,7,9,10,11", "references/image/layer-lexicon.md"],
+  "gpt-image-new-structured": ["references/image/surfaces.md#0", "references/image/image-brief.md#1,2,3,4,5,6,7,9,10,11", "references/image/layer-lexicon.md", "references/image/surface-contracts.md#3.4"],
   // 대상 미정·GPT Image 인물·셀피·패션 화보 새 이미지. 층 사전은 색인(layer-lexicon.md)만 읽는다. 층별 표는 find_tokens.mjs나 lexicon/ 절 읽기로 따로 찾는다. compiler.md 피부·재질은 GPT Image 새 이미지에 적용하지 않으므로 이 묶음에 넣지 않는다.
   "gpt-image-portrait": [
     "references/image/surfaces.md#0",
-    "references/image/image-brief.md#1,2,3,4,5,6,7,9,10",
+    "references/image/image-brief.md#1,2,3,4,5,6,7,9,10,11",
     "references/image/editorial/portrait-brief.md",
     "references/image/layer-lexicon.md",
   ],

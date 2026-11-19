@@ -37,7 +37,7 @@
 - 사용자가 한글 음차로 말해도 사전의 원어 표기로 쓴다: 신중식 → 新中式, 코모레비 → 木漏れ日, 시오케이 → 塩系. 사전에 없고 뜻도 모르면 영어로 풀고, 어떻게 풀었는지 블록 밖에 한 줄로 알린다.
 - 사용자가 준 룩 이름은 토큰 자리에 그대로 둔다. 그냥 설명하는 말(그림자 부드럽게, 물결 그림자)은 영어 토큰으로 옮기고 문장으로 푼다.
 - 쓰지 않는 경우: 같은 뜻을 두 언어로 병기하기, 네 언어를 매번 채우려는 것, 영어가 더 짧고 정확한 자리에 원어를 억지로 넣기.
-- 화면 글자는 사용자가 준 문구를 그 언어 그대로 쓴다. 기존 프롬프트를 고칠 때는 원문 언어를 유지한다([../templates/common.md](../templates/common.md) §프롬프트 언어 결정).
+- 화면 글자는 사용자가 준 문구를 그 언어 그대로 쓴다. 기존 프롬프트의 일부만 고칠 때는 원문 언어를 유지한다([../templates/common.md](../templates/common.md) §프롬프트 언어 결정). 전체를 정제·교정할 때는 §11을 따른다.
 
 | 틀린 줄 | 틀린 이유 | 맞는 줄 |
 |---|---|---|
@@ -410,4 +410,24 @@ paper door glow — The sliding doors behind glow soft white, lit from windows o
 ## Camera
 low angle — The camera sits at board height about a meter and a half from the cat, with the cat in the lower left third and the veranda running toward the upper right.
 focus — The cat's face is sharp; the garden and the far end of the veranda soften.
+```
+
+## 11. 기존 프롬프트를 정제·교정할 때
+
+기존 이미지 프롬프트 전체를 "정제·교정·퇴고·검토 및 개선·다듬어 줘"라고 하면, 새로 쓸 때와 같은 모양(§1)과 언어(§2)로 옮겨 쓴다. 영어 산문 문단을 그대로 두고 문장만 손보는 것은 정제가 아니다.
+
+- 바꾸는 것: 모양과 말. 첫 줄 한 문장, `## 층`, 층 안은 `토큰 — 영어 문장`으로 나눈다. 원어가 더 짧고 정확한 자리에는 원어 토큰을 쓴다.
+- 바꾸지 않는 것: 원문이 말한 화면의 사실(자세, 의상, 소품, 빛, 색, 구도). 빼거나 바꾸거나 지어내지 않는다.
+- 토큰은 원문 내용과 정확히 맞을 때만 쓴다. `node scripts/find_tokens.mjs --q "찾을 말"`로 찾고, 맞는 말이 없으면 영어로 둔다. 억지로 채우지 않는다.
+- 일부만 바꿔 달라는 요청("조명만 저녁빛으로")은 §7을 따른다. 그 부분만 고치고 나머지는 원문 모양·언어 그대로 둔다.
+- 사용자가 "그대로 줘"라고 했거나 언어·형식·정확 카피를 정했거나, 호출자가 고칠 범위를 한정했으면(예: "문장 내용은 바꾸지 말고 다섯 가지만") 그 지정이 먼저다.
+- 원문에 `## Identity Reference` 층이나 그대로 두라고 한 구획이 있으면 글자 그대로 둔다.
+
+전후 예시(Light 층 하나).
+
+```
+Before: Sunlight comes through the leaves and falls in small scattered spots on her face and shirt, with cool shade around.
+After:
+## Light
+木漏れ日 — Sunlight filtered through leaves breaks into scattered soft-edged spots of light that shift over her face and shirt against cool shade.
 ```
