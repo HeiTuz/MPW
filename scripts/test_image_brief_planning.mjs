@@ -94,11 +94,11 @@ for (const name of ['Person', 'Optics', 'Pose', 'Outfit', 'Legwear', 'Style', 'H
 }
 
 // Review ceilings for reference-loading cost, not output length or API caps.
-// Measured at the layer renewal: new 48150, portrait 77245, edit 16246 UTF-8 bytes;
+// Measured at the layer renewal: new 48150, portrait 77245, edit 16246 UTF-8 bytes; edit re-measured at 17898 after the identity/Korean-layer notes;
 // ceilings are about 10% above the measurement.
 assert.ok(sizes['gpt-image-new'].utf8_bytes <= 52800);
 assert.ok(sizes['gpt-image-portrait'].utf8_bytes <= 85000);
-assert.ok(sizes['gpt-image-edit'].utf8_bytes <= 17800);
+assert.ok(sizes['gpt-image-edit'].utf8_bytes <= 19700);
 
 const scenarios = JSON.parse(read('scripts/fixtures/behavioral/image-planning.json')).cases;
 assert.deepEqual(scenarios.map(c => c.id), [

@@ -10,7 +10,8 @@
 - "화면에 보이는 모습" 칸은 토큰 뒤에 이어 쓸 영어 문장의 바탕이다. 장면에 맞게 색·위치·수량을 바꿔 쓰고, 문장을 통째로 여러 프롬프트에 되풀이하지 않는다.
 - "쓰는 자리" 칸은 어울리는 장면과 주의할 점이다. 영어권·프랑스권 룩은 영어 토큰으로 싣는다.
 - 모델 아이덴티티가 있으면 Person 절의 토큰은 하나도 쓰지 않는다([image-brief.md](image-brief.md) §5-2).
-- 넣지 않은 것: 카메라·필름·음료·패션 브랜드와 제품명, 실존 인물(감독·배우·모델)의 이름, 작품 제목을 룩 이름으로 쓴 것, 교복·학생 연출처럼 미성년을 떠올리게 하는 차림과 자세, 성적 연출 어휘, 일반 명사의 번역어.
+- 브랜드·제품명(카메라, 필름, 패션, 소품)과 실존 인물 이름 가운데 룩을 가리키는 스타일 이름은 쓸 수 있다. 로고와 상표 글자는 화면에 그리지 않고, 실존 인물 이름을 얼굴·몸을 닮게 하는 용도로 쓰지 않는다.
+- 넣지 않은 것: 교복·학생 연출처럼 미성년을 떠올리게 하는 차림과 자세, 성적 연출 어휘(신체 부위를 성적으로 강조하는 서술 포함), 일반 명사의 번역어.
 
 출처: 공개 저장소 noahvisualsx/Iris b83de4c(MIT)의 한국·중국·일본·미국·프랑스편 트랙에서 실제로 쓰인 낱말과 8트랙 구조만 참고했다. 문장과 프리셋은 옮기지 않고 새로 썼으며, 생성 결과와 대조하지 않았다.
 
@@ -76,8 +77,6 @@
 | 片脚引き | ja | Weight rests on the front leg while the back leg trails with only the toe touching down, making a long diagonal from hip to ankle. | 전신 패션 |
 | もたれ立ち | ja | The shoulders and back settle against a wall or shutter, one hand in a pocket and the torso in a loose curve. | 골목, 셔터 앞 |
 | しゃがみ込み | ja | Knees bend deeply with the forearms resting on the thighs, seen from low so the shoes and curb fill the foreground. | 스트리트 |
-| 後ろ手で腰掛ける | ja | She sits on a ledge with both palms pressed behind her, the chest opening and the legs hanging loose. | 난간, 방파제 |
-| 足をブラブラ | ja | Seated high on a ledge, she lets both calves swing in the air, one shoe slipping slightly off the heel. | 높은 턱, 벤치 |
 | mid-stride | en | One heel lifts behind as the front foot plants, the arms swing and the coat hem trails the motion. | 횡단보도, 거리 |
 | hands in coat pockets | en | Both hands sink into the coat pockets, shoulders slightly raised, standing square to the lens. | 겨울 거리 |
 | hem spin | en | A coat or skirt flares out in a circle as she stops mid-turn and glances at the lens. | 패션 동세 |
@@ -122,14 +121,11 @@
 | 백심 스타킹 | ko | A thin dark seam runs straight up the back of each calf on sheer black nylon. | 복고 패션 |
 | 발레코어 화이트 타이즈 | ko | Matte semi-opaque white tights with a soft, slightly chalky surface. | 발레코어 룩 |
 | 5D 蝉翼 | zh | Hosiery so thin it nearly disappears, leaving only a faint satin sheen on the skin. | 여름 샌들 |
-| 微哑光 | zh | A diffuse matte reflection with no hard glare across the thigh and shin. | 출근룩 |
 | 水光 | zh | A soft wet-looking gloss runs along the shin and catches window light in one long thin band. | 화보 |
 | 暗金织线 | zh | A hairline of dark gold thread stays dull in soft light and flashes only when a side light sweeps across it. | 新中式 패션 |
 | 10デニール | ja | An almost invisible film over the skin, with a faint sheen on the shin ridge and a slight tan tint where the fabric doubles at the ankle. | 일본 출근룩 |
 | シアー | ja | Translucent knit lets the skin glow through at the knee while the sides of the calf deepen into a soft gradient. | 봄·가을 |
-| 濡れツヤ | ja | A glossy highlight runs in a smooth vertical strip along each shin, as if the fabric were lightly oiled. | 밤 화보 |
 | マット | ja | An opaque, light-absorbing dark surface with almost no reflection and an even, velvet-like density. | 겨울 |
-| 微起毛 | ja | A fine fuzz catches rim light along the thigh like peach skin and softens the edge of the leg. | 겨울 역광 |
 | リブ | ja | Fine vertical ribs run along the leg and catch tiny stripes of light. | 니트 타이츠 |
 | opaque tights | en | Dense black tights with a smooth matte surface that hide the skin tone completely. | 겨울 |
 | Swiss dot | en | Small round dots sit evenly on a light see-through ground like a fine curtain over the skin. | 봄 원피스 |

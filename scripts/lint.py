@@ -902,7 +902,10 @@ def check_labels(f, s, errors):
 
 
 # image-brief examples are ChatGPT-web paste blocks (surfaces.md §0-1), not machine contracts.
-EXAMPLE_LIMITS = {"references/image/image-brief.md": 10000}
+EXAMPLE_LIMITS = {
+    "references/image/image-brief.md": 10000,
+    "references/image/editorial/portrait-variations.md": 10000,
+}
 
 
 def check_example_lengths(filename, text, errors):
@@ -1101,7 +1104,7 @@ def main():
         check_measurement_stamps(f, s, errors, today)
         check_verification_stamps(f, s, errors, today)
         check_measurement_near_misses(f, s, errors)
-    # all example blocks at or under the trimmed 2000-character contract (전 FILES)
+    # example blocks at or under 2000 characters, except files listed in EXAMPLE_LIMITS
     for f, s in texts.items():
         check_example_lengths(f, s, errors)
 

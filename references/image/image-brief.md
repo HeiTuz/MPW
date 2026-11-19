@@ -21,13 +21,13 @@
 ```
 
 - 첫 줄은 제목 없이 맨 위에 둔다. 모델 아이덴티티가 있으면 §5-2의 앵커로 시작한다.
-- 층은 `## 영어 이름`으로 시작하고, 층 사이는 빈 줄 하나로 띄운다.
-- 층 안의 줄은 모두 `토큰 — 문장` 꼴이다. 토큰은 원어 토큰(§2)이나 짧은 영어 이름이다. 문장은 영어 한두 문장이다. 대상을 묘사하는 명사구로 시작해도 되지만, 무엇이 어디에 어떻게 보이는지까지 이어 쓴다.
+- 층은 `## 영어 이름`으로 시작하고, 층 사이는 빈 줄 하나로 띄운다. 사용자가 프롬프트 언어를 지정하면 층 이름도 그 언어로 쓴다.
+- 층 안의 줄은 모두 `토큰 — 문장` 꼴이다(`## Identity Reference` 층만 예외다. 문단 하나를 글자 그대로 둔다, §5-2). 토큰은 원어 토큰(§2)이나 짧은 영어 이름이다. 문장은 영어 한두 문장이다. 대상을 묘사하는 명사구로 시작해도 되지만, 무엇이 어디에 어떻게 보이는지까지 이어 쓴다.
 - 단어를 쉼표로 늘어놓지 않는다. `soft light, film look, warm tone` 같은 나열은 엔진이 제멋대로 읽는다.
-- 층마다 2~5줄. 첫눈에 읽혀야 할 층(사용자가 가장 공들여 말한 것)은 4~5줄로 가장 자세히 쓴다. 단순 장면도 층은 셋 이상이다.
+- 층마다 2~5줄(§3 표가 1줄을 허용한 층만 예외). 첫눈에 읽혀야 할 층(사용자가 가장 공들여 말한 것)은 4~5줄로 가장 자세히 쓴다. 단순 장면도 층은 셋 이상이다.
 - 한 사실은 한 층에만 쓴다. 피부 마감은 Hair and makeup 한 곳에서만 말한다.
 - 길이는 10,000자 이하다(공백·줄바꿈 포함, ChatGPT 웹 입력창에 붙여 넣는 기본 경로의 상한, 근거는 [surfaces.md](surfaces.md) §0-1). 인물은 보통 3,000~6,000자, 단순 장면은 1,000~2,500자가 된다. 넘으면 같은 말 반복, 화면에 안 보이는 줄, 덜 중요한 층의 셋째 줄부터 지운다. 층 자체는 지우지 않는다.
-- 결과를 PromptBundle·ImageProductionHandoff 같은 기계 계약으로 넘기면 그 계약의 2,000자가 이긴다. 층 수와 줄 수를 줄여 맞추고, 잘라 내지 않는다.
+- 결과를 PromptBundle·ImageProductionHandoff 같은 기계 계약으로 넘기면 그 계약의 2,000자가 이긴다. 줄 수를 줄여 맞추고, 잘라 내지 않는다. 줄이는 순서: Legwear와 Props and nails를 1줄로 → Style을 1줄로 → 나머지 층의 둘째 줄부터 뒤에서 앞으로. 이 순서로도 안 맞을 때만 §3 표가 '빼는 경우'로 허용한 층부터 뺀다. 이 경우 §9-2의 '기본 층이 다 있는가'보다 이 줄이 우선한다.
 
 ## 2. 언어와 원어 토큰
 
@@ -147,18 +147,18 @@
 
 ### 5-1. 기본 인물
 
-요청에 성별·나이·외모가 없으면 `## Person` 층에 아래 기본 인물을 쓴다. 칸의 세 문장을 `default adult —`, `build —`, `skin tone —` 세 줄로 나눠 쓴다. 사용자가 준 값(성별, 나이, 분위기, 외모의 일부)은 그 값만 바꾸고 나머지는 기본값을 쓴다. 기본 인물은 언제나 성인이고 첫 줄에도 `adult`를 쓴다.
+요청에 성별·나이·외모가 없으면 `## Person` 층에 아래 기본 인물을 쓴다(Iris 프리셋이 기본으로 잡는 인물 설정을 따른 것이다: 22세 동아시아 여성). 칸의 세 문장을 `default adult —`, `build —`, `skin tone —` 세 줄로 나눠 쓴다. 사용자가 준 값(성별, 나이, 분위기, 외모의 일부)은 그 값만 바꾸고 나머지는 기본값을 쓴다. 기본 인물은 언제나 성인이고 첫 줄에도 `adult`를 쓴다.
 
 | 요청한 룩의 문화권 | Person 층에 쓸 기본 인물 |
 |---|---|
-| 한국·중국·일본, 또는 단서 없음 | An adult East Asian woman in her mid-twenties with a small face, clean defined bone structure and a crisp jawline. / A slender build with level shoulders and a long neck. / Light skin with a cool undertone. |
-| 미국 | An adult American woman in her mid-twenties with defined cheekbones and a crisp jawline. / A healthy, balanced build with level shoulders. / Warm sun-tanned skin. |
-| 프랑스 | An adult French woman in her mid-twenties with clean defined bone structure. / A slender build with level shoulders. / Light skin with a few pale freckles across the nose. |
-| 그 밖의 문화권 | 그 지역의 성인 여성, 20대 중반. 얼굴은 골격이 또렷하다는 정도, 체형은 날씬하고 어깨가 반듯하다는 정도만 쓴다 |
+| 한국·중국·일본, 또는 단서 없음 | A 22-year-old adult East Asian woman with a small face, clean defined bone structure and a crisp jawline. / A slender build with level shoulders and a long neck. / Light skin with a cool undertone. |
+| 미국 | A 22-year-old adult American woman with defined cheekbones and a crisp jawline. / A healthy, balanced build with level shoulders. / Warm sun-tanned skin. |
+| 프랑스 | A 22-year-old adult French woman with clean defined bone structure. / A slender build with level shoulders. / Light skin with a few pale freckles across the nose. |
+| 그 밖의 문화권 | 그 지역의 22세 성인 여성. 얼굴은 골격이 또렷하다는 정도, 체형은 날씬하고 어깨가 반듯하다는 정도만 쓴다 |
 
 - 외모 서술은 Person 층 한 곳에만 둔다. 다른 층에서 얼굴형이나 체형을 다시 말하지 않는다.
 - 헤어·메이크업·의상의 기본값은 Person이 아니라 각 층에서 장면에 맞게 지어 채운다(§4).
-- 피부색 미화어(flawless, porcelain-perfect)나 얼굴 비율 이상형 문구는 쓰지 않는다.
+- 기본 인물 칸과 사용자가 요청한 값 밖에서 flawless·porcelain-perfect 같은 미화어나 얼굴 비율 이상형 문구를 더하지 않는다.
 - 비성적인 어린이·청소년 인물 요청을 임의로 성인으로 바꾸지 않는다. 미성년을 가리키는 요청에 성인 라벨만 덧붙여 허용 가능한 요청으로 취급하지 않는다. 기본 인물은 요청에 나이가 없을 때만 쓴다.
 - "랜덤 인물", "다양하게"처럼 인물 자체를 맡기면 기본 인물을 되풀이하지 않고 [editorial/portrait-variations.md](editorial/portrait-variations.md)를 따른다.
 
@@ -180,7 +180,7 @@
 
 - 정확한 문구: 사용자가 준 문구를 따옴표 안에 한 글자도 바꾸지 않고 한 번만 쓴다. 그 줄에 위치, 크기, 서체, 또렷하게 읽힐 것, 한 번만 나온다는 것을 함께 쓰고, 다른 글자가 없다는 문장을 같은 층에 한 줄 둔다. 글자는 `Text`나 `Label` 같은 층에 모은다.
 - 사용자가 문구를 주지 않았으면 글자를 지어내지 않는다. 간판·포장·화면은 `no readable lettering`처럼 보이는 상태로 쓴다.
-- 실존 브랜드·로고·상표, 실존 인물의 이름과 닮은꼴과 얼굴 묘사는 쓰지 않는다.
+- 브랜드·제품명(카메라, 필름, 패션, 소품 등)은 룩을 가리키는 말로 쓸 수 있다. 로고와 상표 글자는 화면에 그리지 않는다. 실존 인물의 이름은 스타일을 가리킬 때만 쓰고(예: Godard, Jane Birkin), 그 사람의 얼굴이나 몸을 닮게 하는 용도로는 쓰지 않는다.
 - 첨부하지 않은 참조를 말하지 않는다(reference, same face). §5-2만 예외다.
 - 노출은 요청보다 더하지 않는다. 성적 연출과 미성년을 떠올리게 하는 설정·어휘(교복, 학생 연출 등)는 쓰지 않는다.
 - 금지 문장은 세 경우에만 쓴다: 사용자가 빼 달라고 한 것, 정확 문구 밖의 글자, 편집에서 지킬 것. 관련 층 안에 한 문장으로 쓰고, `no X, no Y`처럼 늘어놓지 않는다. 그 밖에 비워 두고 싶은 것은 보이는 상태로 쓴다("the table is bare", "the street is empty").
@@ -221,14 +221,14 @@ unchanged — Keep the room, the sofa's shape and position, the window light dir
 
 새 이미지는 모두 본다. 첨부 이미지 편집은 1·3·7·8·9·10만 본다.
 
-1. 첫 줄이 제목 없는 한 문장이고, 층이 셋 이상이며(편집은 바꿀 층과 Keep), 모든 줄이 `토큰 — 문장`인가? 쉼표로 늘어놓은 단어 줄이 없는가?
-2. 사람이 나오면 Person(또는 Identity Reference)과 화면에 보이는 기본 층이 다 있는가? 안 보이는 부위의 층만 뺐는가?
+1. 첫 줄이 제목 없는 한 문장이고, 층이 셋 이상이며(편집은 바꿀 층과 Keep), 모든 줄이 `토큰 — 문장`인가(`## Identity Reference` 문단은 예외)? 쉼표로 늘어놓은 단어 줄이 없는가?
+2. 사람이 나오면 Person(또는 Identity Reference)과 화면에 보이는 기본 층이 다 있는가? 안 보이는 부위의 층만 뺐는가? (기계 계약이면 §1의 줄이는 순서가 우선한다.)
 3. 사용자가 준 문구·수량·비율·지킬 것·뺄 것·룩 이름이 다 있는가?
 4. 빛마다 방향과 그 결과(하이라이트, 그림자, 반사)가 있는가? 층끼리 시간대와 날씨가 맞는가?
 5. 원어 토큰마다 사전에 있거나 확실히 아는 말인가? 음차를 원어 표기로 바꿨는가? 뒤 문장이 번역이 아니라 화면 결과인가?
 6. 모델 아이덴티티가 있으면 첫 줄 앵커와 괄호, `## Identity Reference`가 있고, 얼굴·체형·나이·피부색 서술이 하나도 없으며, Hair and makeup과 Expression은 있는가?
 7. 한 사실을 두 층에 쓰지 않았는가? 피부 마감이 한 층에만 있는가?
-8. §6을 어겼는가(지어낸 글자, 브랜드, 실존 인물, 품질 태그, 늘어놓은 금지)?
+8. §6을 어겼는가(지어낸 글자, 로고·상표 글자, 얼굴·몸을 닮게 하는 실존 인물 이름, 품질 태그, 늘어놓은 금지)?
 9. 후속 수정이면 바꾸라는 층 밖의 줄이 글자 그대로인가?
 10. 10,000자 이하인가? 기계 계약으로 넘기면 그 계약의 상한 안인가?
 
@@ -241,7 +241,7 @@ unchanged — Keep the room, the sofa's shape and position, the window light dir
 A full-length street-style photograph of one adult woman pausing outside a converted red-brick café in Seongsu-dong on an autumn afternoon, for a fashion feed.
 
 ## Person
-default adult — An adult East Asian woman in her mid-twenties with a small face, clean defined bone structure and a crisp jawline.
+default adult — A 22-year-old adult East Asian woman with a small face, clean defined bone structure and a crisp jawline.
 build — A slender build with level shoulders and a long neck; she stands tall without looking stiff.
 skin tone — Light skin with a cool undertone.
 

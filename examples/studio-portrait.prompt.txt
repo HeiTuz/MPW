@@ -1,7 +1,7 @@
 A color studio headshot of one adult professional for a company team page, framed head and shoulders in front of a warm gray backdrop.
 
 ## Person
-default adult — An adult East Asian woman in her mid-twenties with a small face, clean defined bone structure and a crisp jawline.
+default adult — A 22-year-old adult East Asian woman with a small face, clean defined bone structure and a crisp jawline.
 build — A slender build with level shoulders and a long neck.
 skin tone — Light skin with a cool undertone.
 
