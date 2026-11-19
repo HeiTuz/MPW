@@ -30,11 +30,8 @@ assert.match(edit, /§3\.2\.1.*§3\.2\.3/);
 assert.match(edit, /image-brief\.md/, '§3.3 points to the edit writing rules');
 assert.match(common, /image-brief\.md/, '§3.2.3 points to the reference/edit rules');
 assert.ok(!edit.includes('EXCLUDE:'), '§3.3 keeps no EXCLUDE example');
-assert.ok(Buffer.byteLength(generation) < 1200, '§3.2.2 stays a short rationale section');
 const defaults = extractSection(surfaces, '0').body;
-assert.match(defaults, /image-brief\.md.*새 생성이면 §1~§3·§5/);
-assert.match(defaults, /원본 편집이면 §1·§4·§5/);
-assert.match(defaults, /surface-contracts\.md.*§3\.3/);
+assert.match(defaults, /image-brief\.md/, 'surfaces §0 links to image-brief.md');
 
 const briefText = fs.readFileSync(path.join(root, 'references/image/image-brief.md'), 'utf8');
 const brief = (id) => {

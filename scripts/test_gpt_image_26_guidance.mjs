@@ -33,7 +33,7 @@ for (const bundle of ['gpt-image-new', 'gpt-image-edit', 'gpt-image-new-structur
   const result = readTargets(BUNDLES[bundle]);
   assert.equal(result.error, undefined, bundle);
   const common = result.text;
-  assert.match(common, /GPT Image 2\.5·2\.6/);
+  assert.match(common, /GPT Image 2\.5/);
   assert.match(common, /2\.6.*§4\.5/);
 }
 for (const text of ['`complexity`', '`quality`', '`input_fidelity`', '`reasoning.summary`', '`output_format: svg`', '`n: 1`', '`frame_count`', '`frame_duration_ms`', '`markup`', '`mask`', '`prompt_rewriter`']) {

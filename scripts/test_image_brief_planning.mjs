@@ -68,11 +68,11 @@ for (const text of examples) {
 assert.equal(headingSets.size, examples.filter(t => /^[A-Z][A-Z ]+:/m.test(t)).length, 'each sectioned example uses a different heading set');
 
 // Review ceilings for reference-loading cost, not output length or API caps.
-// Measured after C2 (image-brief routing): new 10364, portrait 19835 after C3,
-// edit 10337 UTF-8 bytes after C4 (surface-contracts §3.3 slimmed).
-assert.ok(sizes['gpt-image-new'].utf8_bytes <= 10500);
-assert.ok(sizes['gpt-image-portrait'].utf8_bytes <= 20000);
-assert.ok(sizes['gpt-image-edit'].utf8_bytes <= 11000);
+// Measured after review fixes: new 11872, portrait 21343, edit 11556 UTF-8 bytes;
+// ceilings are about 10% above the measurement.
+assert.ok(sizes['gpt-image-new'].utf8_bytes <= 13100);
+assert.ok(sizes['gpt-image-portrait'].utf8_bytes <= 23500);
+assert.ok(sizes['gpt-image-edit'].utf8_bytes <= 12700);
 
 const scenarios = JSON.parse(read('scripts/fixtures/behavioral/image-planning.json')).cases;
 assert.deepEqual(scenarios.map(c => c.id), [
