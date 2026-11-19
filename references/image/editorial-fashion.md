@@ -14,6 +14,7 @@
 | 인물 시리즈의 비교 변주·프리셋 조합 또는 명시적 랜덤 요청 | [editorial/portrait-variations.md](editorial/portrait-variations.md) |
 | 빛·심도·필름·구도·재질 결과 | [editorial/photo-results.md](editorial/photo-results.md) |
 | 포즈·소재·조명·시즌 장소 | [editorial/scene-craft.md](editorial/scene-craft.md) |
+| 매체 외형·의상 장르·헤어·표정·소품 어휘(열린 예시) | [editorial/styling-details.md](editorial/styling-details.md) |
 | 장소·인물 단서와 국적 추론 금지 | [editorial/locality.md](editorial/locality.md) |
 | 두 컨셉을 한 컷에서 증명 | [editorial/concept-collision.md](editorial/concept-collision.md) |
 
