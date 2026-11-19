@@ -119,7 +119,10 @@ const guidance = readTargets([target]);
 assert.equal(guidance.error, undefined);
 // Structure only: the section names the tool, links the owner of the delegation rule, and that link resolves.
 assert.ok(guidance.text.includes('draw_portrait_options.mjs'));
-assert.ok(guidance.text.includes('](../image-brief.md) §2'));
-assert.ok(fs.existsSync(new URL('../references/image/image-brief.md', import.meta.url)));
+const delegationLink = guidance.text.match(/\]\(([^)#]*image-brief\.md)\)\s*§(\d+)/);
+assert.ok(delegationLink, 'section links the delegation-rule owner');
+const linked = path.resolve(fileURLToPath(new URL('../references/image/editorial/', import.meta.url)), delegationLink[1]);
+assert.ok(fs.existsSync(linked), 'linked file exists');
+assert.equal(readTargets([`${path.relative(fileURLToPath(new URL('..', import.meta.url)), linked)}#${delegationLink[2]}`]).error, undefined, 'linked section exists');
 assert.ok(fs.existsSync(script));
 console.log('Portrait draw: CLI wiring (direct and symlinked), eligible options, scripted indices, locks, scoped reroll and no replacement pass. No model or image calls.');
