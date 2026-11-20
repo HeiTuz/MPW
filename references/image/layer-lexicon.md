@@ -28,7 +28,7 @@
 | Hair and makeup | [lexicon/hair-makeup.md](lexicon/hair-makeup.md) | 476 | 90 | 117 | 103 | 106 | 60 |
 | Expression | [lexicon/expression.md](lexicon/expression.md) | 359 | 84 | 70 | 76 | 61 | 68 |
 | Props and nails | [lexicon/props-nails.md](lexicon/props-nails.md) | 576 | 66 | 110 | 168 | 124 | 108 |
-| Scene | [lexicon/scene.md](lexicon/scene.md) | 1036 | 179 | 195 | 214 | 263 | 185 |
+| Scene | [lexicon/scene.md](lexicon/scene.md) | 1033 | 179 | 195 | 214 | 260 | 185 |
 <!-- lexicon-counts:end -->
 
 ## 문화권 룩 묶음
