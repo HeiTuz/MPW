@@ -40,13 +40,13 @@ metadata:
 
 ## 필요한 자료만 읽는다
 
-**이 파일과 요청만으로 완성할 수 있으면 바로 쓴다. 단, 요청에 해당하는 형식·표면 규칙은 먼저 확인한다.** 단순 문안·그대로 재출력·제공 자료의 단순 추출에 묶음을 자동으로 붙이지 않는다. 대상 모델이 정해졌으면 후보 탐색을 생략하고, 부분 수정은 바뀌는 조건의 절만 읽는다. 단 기존 이미지 프롬프트 전체의 정제·교정은 부분 수정이 아니다. GPT Image 대상이거나 대상 미정이면 새 이미지와 같은 묶음(인물이면 `gpt-image-portrait`, 아니면 `gpt-image-new`)을 읽고, 다른 엔진을 지정했으면 그 엔진 문서가 정한 형식(길이, 순서, 부정 표현, 옵션 표기 등)을 `map`으로 읽고 `references/image/image-brief.md#11`을 더 읽는다. 이미 읽은 절은 바뀌거나 누락·잘림이 있을 때만 다시 읽고, 링크만으로 연결 문서를 전부 펼치지 않는다. 파일·절은 `node scripts/read_refs.mjs`로 모아 읽는다(`#A,B` 여러 절, `#A~B` 범위, `--toc` 제목 목록, `--bundle 이름`은 아래 묶음, `--bundles`는 묶음 목록, 경로는 스킬 폴더 기준, Node가 없으면 `bun`). 묶음 뒤에 인자를 덧붙일 수 있고, 출력이 상한을 넘으면 두 번에 나눠 읽는다.
+**이 파일과 요청만으로 완성할 수 있으면 바로 쓴다. 단, 요청에 해당하는 형식·표면 규칙은 먼저 확인한다.** 단순 문안·그대로 재출력·제공 자료(텍스트)의 단순 추출에 묶음을 자동으로 붙이지 않는다(사진을 보고 프롬프트를 쓰는 요청은 아래 `gpt-image-extract`). 대상 모델이 정해졌으면 후보 탐색을 생략하고, 부분 수정은 바뀌는 조건의 절만 읽는다. 단 기존 이미지 프롬프트 전체의 정제·교정은 부분 수정이 아니다. GPT Image 대상이거나 대상 미정이면 새 이미지와 같은 묶음(인물이면 `gpt-image-portrait`, 아니면 `gpt-image-new`)을 읽고, 다른 엔진을 지정했으면 그 엔진 문서가 정한 형식(길이, 순서, 부정 표현, 옵션 표기 등)을 `map`으로 읽고 `references/image/image-brief.md#11`을 더 읽는다. 이미 읽은 절은 바뀌거나 누락·잘림이 있을 때만 다시 읽고, 링크만으로 연결 문서를 전부 펼치지 않는다. 파일·절은 `node scripts/read_refs.mjs`로 모아 읽는다(`#A,B` 여러 절, `#A~B` 범위, `--toc` 제목 목록, `--bundle 이름`은 아래 묶음, `--bundles`는 묶음 목록, 경로는 스킬 폴더 기준, Node가 없으면 `bun`). 묶음 뒤에 인자를 덧붙일 수 있고, 출력이 상한을 넘으면 두 번에 나눠 읽는다.
 
 | 요청 | `node scripts/read_refs.mjs --bundle` 뒤에 붙일 묶음 이름 |
 |---|---|
 | 대상 미정·GPT Image 새 이미지 | `gpt-image-new` (도해·슬라이드·UI·만화·로고는 `gpt-image-new-structured`) |
 | 대상 미정·GPT Image 인물·셀피·패션 화보 새 이미지 | `gpt-image-portrait` |
-| 사진(첨부 이미지)을 보고 그 사진을 다시 만들 프롬프트를 쓰는 요청 | `gpt-image-extract` (다른 엔진을 지정했으면 그 엔진 문서를 `map`으로 읽고 `references/image/image-brief.md#12`를 더 읽는다) |
+| 사진(첨부 이미지)을 보고 그 사진을 다시 만들 프롬프트를 쓰는 요청("사진 프롬프트 뽑아/추출해 줘") | `gpt-image-extract` (다른 엔진을 지정했으면 그 엔진 문서를 `map`으로 읽고 `references/image/image-brief.md#1,2,6,11,12`를 더 읽는다) |
 | 대상 미정·GPT Image 원본 편집 | `gpt-image-edit` (도해·슬라이드·UI·만화·로고는 `gpt-image-edit-structured`). 참조 사진의 역할·관찰이 필요하면 `references/image/from-image.md#1`을 덧붙인다 |
 | 영상 생성 | `video` |
 | 실행 작업·자동화·코딩 지시 | `delegation`. 응답형 시스템·도구 정의는 [contract.md](references/templates/contract.md), 장기 실행은 [goal.md](references/templates/goal.md) |
