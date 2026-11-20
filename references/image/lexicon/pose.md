@@ -91,6 +91,7 @@ Pose 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다. �
 | 踏碎银杏落叶 | 踩银杏叶; 은행잎 밟기; 낙엽 밟으며 걷기; stepping on ginkgo leaves | CN | 가을; 낙엽; 걷기; 거리 | Walking through a thick layer of fallen yellow ginkgo leaves, the boots kicking a few leaves up with each step. | look |
 |---|---|---|---|---|---|
 | 45度角自拍 | 45度自拍; 45도 셀카; 45도 각도 셀카; 비스듬히 든 셀카; 45-degree selfie | KR, CN | 셀카; 일상; 활기; 거리 | The phone is raised diagonally above eye level at about 45 degrees with the head tilted slightly toward it and the free hand relaxed. | look |
+| 倚门而立 | 이먼얼리; 문에 기대 서기; 문간에 기댐; leaning in a doorway | CN | 홍콩; 港风; 90년대; 실내; 영화적 | One shoulder rests on a door frame with the weight on one leg, the other foot crossed and the hands loose or in pockets. | look |
 | 二郎腿 | 跷二郎腿; 侧坐交叠; 다리 꼬기; 다리꼬기; 다리 꼬고 앉기; crossed legs seated | CN | 우아함; 여유; 실내; 앉기; 홍콩; 港风 | Seated with one thigh crossed over the other knee, the top foot hanging free and the hands resting on the knee or the seat. | look |
 | 托腮 | 单手托腮; 单手支颐; 侧头托腮; 턱 괴기; 턱괴기; chin in hand; Lawn Chin Prop | CN | 나른함; 사색; 카페; 손동작 | One elbow rests on a surface and the hand props the chin or cheek, letting the head tilt into the palm. | look |
 | 俯拍自拍 | 大头自拍; 高举手臂俯拍; 俯角自拍; 위에서 찍는 셀카; 대두 셀카; high-angle selfie; 俯角大头自拍 | CN | 셀카; 일상; 귀여움; 실내 | The phone is held high above the face and angled down so the head fills the frame and the eyes look up into the lens. | look |
@@ -142,8 +143,8 @@ Pose 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다. �
 | 屏风花影 | 병풍 그림자; 镂空光影; screen lattice shadow; carved screen shadow | CN | 정원; 햇빛; 그림자 무늬; 측면 | Sun passing through a carved wooden screen throws intricate lattice patterns over the side of the figure and the floor. | look |
 | 伦勃朗光 | 렘브란트 조명; 单灯照脸; rembrandt lighting; single light face | CN | 어두움; 골동품점; 점광원; 유화 | A single small light from one side leaves a bright triangle on the far cheek in deep darkness, like an oil painting. | person-style |
 | 烛光仰射 | 촛불 하이앵글; 烛光; candlelight from below; low candlelight | CN | 밤; 고택; 흔들림; 정극 | A flickering candle from below lights the chin, nose and brow from underneath and throws moving shadows on the wall behind. | look |
-| 霓虹切光 | 네온 빛 분할; 霓虹; neon split light; red green neon | CN | 밤; 홍콩; 젖은 길; 영화적; 港风 | Red and green neon tubes light each half of the face differently, with wet asphalt below repeating the colored glow. | look |
-| 王家卫 | 왕가위; 王家卫港风; Wong Kar-wai; wong kar wai hong kong noir | CN | 홍콩; 밤; 네온; 영화; 港风 | A slightly blurred, saturated night look with step-printed motion, neon glow, narrow alleys and figures half in shadow. | person-style |
+| 霓虹切光 | 네온 빛 분할; 霓虹; neon split light; red green neon | CN | 밤; 홍콩; 젖은 길; 영화적 | Red and green neon tubes light each half of the face differently, with wet asphalt below repeating the colored glow. | look |
+| 王家卫 | 왕가위; 王家卫港风; Wong Kar-wai; wong kar wai hong kong noir | CN | 홍콩; 밤; 네온; 영화 | A slightly blurred, saturated night look with step-printed motion, neon glow, narrow alleys and figures half in shadow. | person-style |
 | 竹帘光影 | 대나무 발 빛; 竹影横斜; bamboo blind slat light; bamboo shade stripes | CN | 송대; 계곡; 물빛 반사; 고요함 | Fine bamboo slats cut the light into thin stripes across the face while stream reflections shimmer on the ceiling. | look |
 | 晨雾剪影 | 새벽 안개 실루엣; 晨雾; morning mist silhouette; ink wash mist | CN | 이른 아침; 돌다리; 은회색; 수묵화 | The figure stands as a soft dark outline in thick morning fog on a stone arch bridge, the sky and water the same silvery gray. | look |
 | 阴阳脸 | 반쪽 얼굴 조명; 侧光半脸; split lighting; half face in shadow | CN | 스튜디오; 검은 배경; 대비; 이중성 | A single horizontal hard light brightens exactly one half of the face while the other half sinks fully into the black background. | look |
@@ -154,7 +155,6 @@ Pose 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다. �
 | 耳垂珍珠 | 轻抚耳垂珍珠; 귀걸이 진주; 진주 귀걸이 만지기; touching a pearl earring; pearl earring play | CN | 우아함; 무심; 클럽; 저녁; 대여주계열 | Two fingers rest on a round pearl earring while the eyes stay cool and distant, listening without interest. | item |
 | 指尖掠过脖颈 | 손끝으로 목 쓸기; 목선을 스치는 손끝 | CN | 손동작; 목선; 우아함; 스냅; 자연스러움 | A hand with slightly bent fingers drags lightly down the side of the neck from the jaw corner while the chin is raised a few degrees and the gaze drifts off camera. | look |
 | 天鹅颈松弛 | 백조목 이완; 여유로운 백조목 | CN | 목선; 이완; 우아함; 자세 | A long relaxed neck line with the chin lifted slightly, shoulders loose, and no stiff posed tension. | look |
-| 倚门而立 | 이먼얼리; 문에 기대 서기; 문간에 기댐; leaning in a doorway | CN | 홍콩; 港风; 90년대; 실내; 영화적 | One shoulder rests on a door frame with the weight on one leg, the other foot crossed and the hands loose or in pockets. | look |
 
 ## JP
 

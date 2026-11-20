@@ -51,8 +51,15 @@ assert.ok(tokensOf(['ＣＣＤ 카메라']).includes('CCD 카메라') && tokensO
 
 // A spaced phrase that matches nothing as written is retried word by word; one-character words are skipped.
 assert.ok(tokensOf(['90년대 홍콩 영화']).includes('港风妆'), 'spaced phrase falls back to its words');
-assert.ok(tokensOf(['비 오는 골목']).length > 0, 'spaced phrase with a one-character word still finds rows');
-assert.ok(!search({ terms: ['비 오는 골목'] }).every((l) => !l.matches.length) && search({ terms: [nonsense + ' ' + nonsense] }).every((l) => !l.matches.length));
+{
+  // The split is decided per layer: layers where the phrase matches as written keep it, the others use its words.
+  const hk = Object.fromEntries(search({ terms: ['90년대 홍콩'] }).map((l) => [l.slug, l.matches.map((m) => m.token)]));
+  assert.ok(hk.outfit.includes('港风西装') && hk.pose.includes('倚门而立'), 'phrase reaches layers where only its words match');
+  // A one-character Hangul word keeps its meaning but matches exactly only: rain rows appear, 첫눈 does not lead.
+  const rain = search({ terms: ['비 오는 골목'], layers: ['scene'] })[0].matches.map((m) => m.token);
+  assert.ok(rain.includes('비 오는 창가') && rain[0] !== '첫눈', 'one-character word 비 still finds rain rows');
+}
+assert.ok(search({ terms: [nonsense + ' ' + nonsense] }).every((l) => !l.matches.length));
 
 // Layer and culture filters.
 const sceneOnly = search({ terms: ['카페'], layers: ['scene'] });
