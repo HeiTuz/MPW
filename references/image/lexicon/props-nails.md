@@ -221,7 +221,7 @@ Props and nails 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토�
 | 団扇 | 우치와; 둥근 부채; uchiwa; Japanese flat fan | JP | 여름; 축제; 유카타; 대나무; 전통 | A flat round fan of paper on radiating bamboo ribs fixed to a handle, the printed paper face glowing when light comes through it. | item |
 | 懐紙 | kaishi; 가이시; 회지; 怀纸 | JP | 다도; 종이; 전통; 미니멀 | A folded stack of fine washi tea paper with soft fibrous edges and a faint watermark texture. | item |
 | 提灯 | 초칭; 초롱; 종이 초롱; chochin; paper lantern; 종이 등롱; 등롱; 红灯笼; 赤提灯 | JP | 일본식; 밤; 축제; 붉은 빛 | A pleated paper lantern on a bamboo frame glowing warm from inside, the light softened through the paper with the dark ribs showing. | item |
-| 文庫本 | 분코본; 문고본; bunko; 文库本 | JP | 독서; 서점; 가을; 책; 레트로 | A small pocket paperback with a thin soft cover, often wrapped in a paper bookshop cover, its pages curling slightly at the edges. | item |
+| 文庫本 | 분코본; 문고본; bunko; paperback; 文库本 | JP | 독서; 서점; 가을; 책; 레트로 | A small pocket paperback with a thin soft cover, often wrapped in a paper bookshop cover, its pages curling slightly at the edges. | item |
 | 日傘 | parasol; 히가사; 양산; 遮阳伞 | JP | 여름; 양산; 햇빛; 산책 | A light folding parasol on a slender handle whose fabric canopy filters the sun into a soft coloured glow underneath. | item |
 | 曲げわっぱ | magewappa; 마게왓파; 곡물 도시락; 杉木便当盒; 曲木盒 | JP | 도시락; 나무; 전통; 점심 | An oval bentwood lunch box made from thin cedar bent into a ring, with pale wood grain and a laced bark seam. | item |
 | 梅酒 | 우메슈; 매실주; umeshu; plum wine | JP | 술; 얼음; 여름; 유리잔 | Amber plum liqueur with ice in a short glass, ice clinking and condensation on the outside. | item |
