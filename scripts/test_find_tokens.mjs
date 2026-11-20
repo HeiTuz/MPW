@@ -78,7 +78,7 @@ let out = run(['--q', nonsense, '--layers', 'scene,pose']);
 assert.equal(out.status, 0, out.stderr);
 assert.match(out.stdout, /no match in any layer/);
 assert.ok(!/## /.test(out.stdout), 'a fully empty result prints one line, not layer headings');
-out = run(['--q', '신중식', '--layers', 'style,scene', '--limit', '2']);
+out = run(['--q', '코티지코어', '--layers', 'style,scene', '--limit', '2']);
 assert.match(out.stdout, /## Style\n.+ — .+/);
 assert.match(out.stdout, /## Scene\nno match/);
 assert.ok(out.stdout.split('\n').filter((l) => l.includes(' — ')).length <= 2, '--limit caps rows per layer');
