@@ -99,7 +99,7 @@ export function formatText(results) {
   }
   return results.map((l) => {
     const body = l.matches.length
-      ? l.matches.map((m) => `${m.token} — ${m.looks}${m.aliases.length ? ` (${m.aliases.slice(0, 4).join(', ')})` : ''}`).join('\n')
+      ? l.matches.map((m) => `${m.token} — ${m.looks}${m.aliases.length ? ` (${m.aliases.slice(0, 4).join(', ')})` : ''} [${m.kind}]`).join('\n')
       : 'no match';
     return `## ${l.title}\n${body}\n`;
   }).join('\n');
