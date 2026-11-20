@@ -116,8 +116,8 @@ Hair and makeup 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토�
 | 步摇 | 流苏步摇; 银流苏簪; 纯银流苏步摇; 보요; 부야오; dangling hairpin | CN | 우아; 궁중; 전통; 움직임 | A hairpin with fine dangling tassels or ornaments that sway and glint with each turn of the head. | item |
 | 竹节簪 | 竹节素银簪; 素银发簪; 죽절 비녀; 대나무 비녀; bamboo hairpin | CN | 미니멀; 문인; 은; 담백 | A long plain silver hairpin shaped like a bamboo stalk with raised joints, its smooth stem catching a single clean line of light. | item |
 | 缠花 | 非遗缠花; 真丝缠花; 缠花发夹; 실 감은 꽃 장식; 찬화; silk thread flower | CN | 섬세; 비단; 봄; 공예 | A hair clip with a flower or butterfly of silk thread wound around fine wire, its tiny petals showing a matte, slightly fuzzy sheen. | item |
-| 港风大波浪 | 90年代港风大波浪; 港风卷发; 홍콩풍 웨이브; 90년대 홍콩 웨이브; Hong Kong glam waves | CN | 복고; 90년대; 홍콩; 볼륨 | Big side-parted curls with a lifted crown and a glossy bounce, in the style of 1990s Hong Kong film posters. | look |
-| 王家卫 | 왕가위; 왕가위 펌; 王家卫风; 90年代王家卫鬈发; Wong Kar-wai | CN | 홍콩; 90년대; 무드; 시네마틱 | Soft, loose 1990s perm with airy volume and stray flyaways, the slightly undone hair of Wong Kar-wai's Hong Kong film heroines. | person-style |
+| 港风大波浪 | 90年代港风大波浪; 港风卷发; 홍콩풍 웨이브; 90년대 홍콩 웨이브; Hong Kong glam waves | CN | 복고; 90년대; 홍콩; 볼륨; 港风 | Big side-parted curls with a lifted crown and a glossy bounce, in the style of 1990s Hong Kong film posters. | look |
+| 王家卫 | 왕가위; 왕가위 펌; 王家卫风; 90年代王家卫鬈发; Wong Kar-wai | CN | 홍콩; 90년대; 무드; 시네마틱; 港风 | Soft, loose 1990s perm with airy volume and stray flyaways, the slightly undone hair of Wong Kar-wai's Hong Kong film heroines. | person-style |
 | 低马尾 | 中分贴耳低马尾; 로우 포니테일; 낮은 포니테일; low ponytail | CN | 미니멀; 깔끔; 데일리; 단정 | Hair tied in a smooth low ponytail at the nape, tucked behind the ears so the tail hangs straight down the back. | look |
 | 丸子头 | 똥머리; 올림머리; 만두 머리; messy bun | CN | 일상; 아침; 캐주얼; 헤어 | Long hair gathered high on the back of the head into a loose round bun, short strands left free around the nape. | look |
 | 侧马尾 | 侧扎高马尾; 사이드 포니테일; 옆 포니테일; side ponytail | CN | 스포티; 발랄; 데일리; 포니테일 | A ponytail tied to one side of the head, the tail resting across a shoulder. | look |
@@ -134,11 +134,11 @@ Hair and makeup 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토�
 | 肉桂唇 | 哑光肉桂红棕唇; 红棕唇; 시나몬 립; 레드브라운 립; cinnamon lip | CN | 가을; 매트; 차분; 립 | Warm reddish-brown matte lip with a velvety, non-reflective finish and a crisp edge. | look |
 | 豆沙唇 | 哑光豆沙唇; 豆沙红; 더스티 로즈 립; 팥색 립; dusty rose lip | CN | 차분; 지적; 가을; 매트 | Muted rosy-brown matte lipstick with a soft diffused edge and no gloss, absorbing light evenly across the lips. | look |
 | 侠女妆 | 国风侠女; 侠女妆发; 협녀 메이크업; 무협 메이크업; wuxia heroine look | CN | 국풍; 협객; 강렬; 시크 | Martial-heroine styling with the hair bound high, strong straight brows and a bare, unfussy base. | look |
-| 羊毛卷 | 复古羊毛卷; 양모 컬; 양털 펌; wool curls | CN | 복고; 홍콩; 볼륨; 개성 | Dense, springy small curls stacked into a large rounded volume with a soft, woolly texture. | look |
+| 羊毛卷 | 复古羊毛卷; 양모 컬; 양털 펌; wool curls | CN | 복고; 홍콩; 볼륨; 개성; 港风 | Dense, springy small curls stacked into a large rounded volume with a soft, woolly texture. | look |
 | 外翻大波浪 | 外翻卷发; 아웃플립 웨이브; 바깥말이 웨이브; outward flick waves | CN | 카리스마; 볼륨; 복고; 클래식 | Big waves with the ends flipped outward in an asymmetrical sweep, adding sharp volume at the shoulders. | look |
 | 大光明发型 | 大光明; 大光明后梳发髻; 全后梳发髻; 올백 번; slicked-back chignon | CN | 고전; 미니멀; 단정; 이마 | Every hair swept straight back off the forehead into a glossy bun, leaving the full forehead and hairline exposed. | look |
 | 包髻 | 宋代包髻; 宋制包髻; 송대 포계; 감싼 쪽머리; wrapped chignon | CN | 송나라; 고전; 차분; 국풍 | A bun wrapped in a woven silk band in the Song-dynasty manner, clean and unornamented. | look |
-| 山茶花红唇 | 山茶红唇; 동백 레드 립; 카멜리아 립; camellia red lip | CN | 복고; 민국; 매트; 립 | Matte red with a slight cool rose undertone like a camellia petal, set with a firm outline. | look |
+| 山茶花红唇 | 山茶红唇; 동백 레드 립; 카멜리아 립; camellia red lip | CN | 복고; 민국; 매트; 립; 홍콩; 港风 | Matte red with a slight cool rose undertone like a camellia petal, set with a firm outline. | look |
 | 柳叶眉 | 细眉; 工笔细眉; 버들잎 눈썹; 가는 눈썹; willow-leaf brows | CN | 정교; 단정; 고전; 국풍 | Thin, gently arched brows tapering to fine points at both ends like a willow leaf. | look |
 | 野生眉 | 平直野生眉; 平直眉; 야생 눈썹; 일자 눈썹; wild brows | CN | 내추럴; 시크; 미니멀; 눈썹 | Flat, straight brows left unshaped with visible individual hairs and a faintly extended tail. | look |
 | 冷白皮 | 냉백피; 냉백 피부; 쿨톤 하얀 피부; 冷白皮妆; cool fair skin makeup | CN | 쿨톤; 투명; 베이스; 청량 | Cool pink-neutral base with a soft satin finish and a faint bluish-white highlight on the cheekbones, so the complexion reads bright and cool in daylight. | look |
@@ -150,21 +150,21 @@ Hair and makeup 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토�
 | 内眼线 | 极细内眼线; 타이트라인; 속눈썹 사이 아이라인; tightline liner | CN | 정교; 데일리; 미니멀; 단정 | A hair-thin dark line drawn only along the lash roots, defining the eye without any visible wing or thickness. | look |
 | 低丸子头 | 松弛低丸子头; 慵懒发髻; 느슨한 로우 번; 로우 똥머리; low messy bun | CN | 내추럴; 차분; 데일리; 나른 | A loose, low knot at the nape with a few strands escaping, relaxed rather than tidy. | look |
 | 朱砂唇 | 正宫朱砂唇; 朱砂红唇; 朱唇; 주사 립; cinnabar lip | CN | 궁중; 강렬; 클래식; 립 | Deep orange-leaning red lip like cinnabar pigment, opaque and slightly satin with a precise outline. | look |
-| 正红唇 | 정홍 립; 주홍 립; 레드 립; true red lip | CN | 강렬; 클래식; 행사; 포인트 | Saturated true-red lip with a clear peak and clean edge, strong enough to be the single focal colour on the face. | look |
+| 正红唇 | 정홍 립; 주홍 립; 레드 립; true red lip | CN | 강렬; 클래식; 행사; 포인트; 홍콩; 港风 | Saturated true-red lip with a clear peak and clean edge, strong enough to be the single focal colour on the face. | look |
 | 民国妆 | 民国海派名媛; 海派名媛; 民国名媛; 민국 메이크업; Republican-era Shanghai makeup | CN | 복고; 상하이; 민국; 1930년대 | 1930s Shanghai high-society glamour with waved hair, thin defined brows and a deep red lip. | look |
 | 水波纹 | 水波纹烫; 水纹波; 물결 펌; 수파문 펌; water ripple perm | CN | 복고; 웨이브; 펌; 클래식 | Fine, regular ripples running in dense parallel lines through the whole length of the hair like small wavelets on water, springy rather than pressed flat. | look |
 | 水光唇 | 水粉红唇; 水粉唇; 워터 핑크 립; 물광 립; watery lip | CN | 청량; 봄; 내추럴; 글로스 | Sheer watery lip colour with a soft stain and a fresh, wet-looking gloss. | look |
 | 水墨妆 | 水墨眼妆; 水墨妆容; 수묵 메이크업; 수묵 아이메이크업; ink-wash makeup; 水墨メイク; 스이보쿠 메이크; sumi makeup | CN | 수묵; 청아; 고전; 국풍 | Grey-black eyeshadow blended outward like diluted ink, fading into the base with no hard edge. | look |
 | 法式大波浪 | 法式卷发; 프렌치 롱 웨이브; 프렌치 웨이브; French loose waves | CN | 로맨틱; 복고; 우아; 웨이브 | Loose, deep, soft waves flowing past the shoulders with a sleek, polished finish. | look |
 | 浆果唇 | 浆果红唇; 베리 립; 딥 베리 립; berry lip | CN | 가을; 무드; 복고; 립 | Dark berry-wine lip, soft at the edge, with a slightly stained look. | look |
-| 丝绒唇 | 深棕红丝绒唇; 丝绒红唇; 벨벳 립; 브라운 레드 벨벳 립; velvet lip | CN | 가을; 매트; 클래식; 립 | Soft-matte deep crimson-brown lip with a velvet finish and a slightly feathered edge. | look |
+| 丝绒唇 | 深棕红丝绒唇; 丝绒红唇; 벨벳 립; 브라운 레드 벨벳 립; velvet lip | CN | 가을; 매트; 클래식; 립; 홍콩; 港风 | Soft-matte deep crimson-brown lip with a velvet finish and a slightly feathered edge. | look |
 | 伪素颜 | 清透伪素颜; 清透素颜感; 꾸안꾸 메이크업; 노메이크업 메이크업; no-makeup makeup | CN | 투명; 내추럴; 데일리; 봄 | Sheer base that lets freckles and skin texture show through with a faint moist glow and only a hint of colour on the lips and cheeks. | look |
 | 泡泡马尾 | 灯笼高马尾; 竹节泡泡发; 버블 포니테일; 랜턴 포니테일; bubble ponytail | CN | 발랄; 개성; 포니테일; 도시 | A ponytail tied off at intervals so each section puffs into a rounded bubble like bamboo joints. | look |
 | 琉璃唇 | 微光琉璃唇; 유리 립; 글래스 립; glass shimmer lip | CN | 투명; 글로스; 청량; 립 | Glassy, translucent lip with a fine pearl shimmer. | look |
-| 砖红唇 | 砖红哑光唇; 벽돌색 립; 브릭 레드 립; brick-red lip | CN | 복고; 매트; 가을; 립 | Earthy orange-brown red, flat matte like fired brick, set with a crisp outline. | look |
+| 砖红唇 | 砖红哑光唇; 벽돌색 립; 브릭 레드 립; brick-red lip | CN | 복고; 매트; 가을; 립; 홍콩; 港风 | Earthy orange-brown red, flat matte like fired brick, set with a crisp outline. | look |
 | 毛流眉 | 自然毛流眉; 결 눈썹; 결눈썹; feathery brows | CN | 내추럴; 데일리; 봄; 눈썹 | Soft brushed brows with hair-by-hair strokes lying in the natural direction of growth. | look |
 | 贴头皮盘发 | 贴头皮中分盘发; 中分低发髻; 중분 올백 로우번; 슬릭 로우번; sleek low bun | CN | 절제; 미니멀; 클래식; 단정 | Hair parted in a ruler-straight centre line and pressed flat to the skull, gathered into a small low bun at the nape with no stray hairs and a satin sheen. | look |
-| 车厘子红 | 车厘子红唇; 체리 레드 립; 체리 립; cherry red lip | CN | 로맨틱; 복고; 강렬; 립 | Deep cherry-red lip, slightly cool and juicy-dark, with a defined but soft edge. | look |
+| 车厘子红 | 车厘子红唇; 체리 레드 립; 체리 립; cherry red lip | CN | 로맨틱; 복고; 강렬; 립; 홍콩; 港风 | Deep cherry-red lip, slightly cool and juicy-dark, with a defined but soft edge. | look |
 | 远山眉 | 远山黛; 远山黛青眼妆; 원산미; 먼 산 눈썹; distant-mountain brows | CN | 고전; 산수; 청아; 국풍 | Long, gently curved brows in a soft pale grey that fade at the ends like distant hills in mist. | look |
 | 剑眉 | 野生剑眉; 平直剑眉; 검미; 칼 눈썹; sword brows | CN | 강렬; 시크; 중성적; 눈썹 | Thick, straight brows with a sharp tapering tail and visible feathered hairs, drawn long and strong across the brow bone. | look |
 | 断眉 | 단미; 눈썹 슬릿; 브로우 슬릿; slit brow; 眉スリット | CN | 펑크; 아방가르드; 개성; 눈썹 | A clean shaved notch cut through one eyebrow that reads as a sharp, deliberate gap. | look |
@@ -182,7 +182,7 @@ Hair and makeup 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토�
 | 双簪对称插发 | 双簪; 对称双簪; 쌍 비녀; 대칭 비녀; symmetrical dual hairpins | CN | 정통; 단정; 고전; 국풍 | Two matching hairpins inserted symmetrically on either side of a bun, giving the head a balanced, formal outline. | look |
 | 宋代风雅松弛感 | 宋式松弛发髻; 송나라 풍 이완 룩; 송풍 메이크업; Song dynasty elegance | CN | 송나라; 차분; 고전; 국풍; 이완 | A loosely pinned low bun, pale pink lips and bare-looking skin with thin soft brows, relaxed and quietly refined. | look |
 | 微光冷瓷肌 | 冷玉肌; 微光透亮肌; 쿨 제이드 스킨; 루미너스 스킨; luminous cold jade skin | CN | 투명; 청량; 베이스; 쿨톤 | Cool, translucent skin with a faint inner glow, highlights sitting softly on the upper cheeks like polished jade. | look |
-| 微湿复古卷 | 微湿卷发; 젖은 듯한 복고 컬; 웻 레트로 컬; damp-look retro curls | CN | 복고; 무드; 젖은머리; 홍콩 | Slightly damp retro curls with strands clumped into glossy ropes and a faint wet sheen along each coil. | look |
+| 微湿复古卷 | 微湿卷发; 젖은 듯한 복고 컬; 웻 레트로 컬; damp-look retro curls | CN | 복고; 무드; 젖은머리; 홍콩; 港风 | Slightly damp retro curls with strands clumped into glossy ropes and a faint wet sheen along each coil. | look |
 | 江南水乡初恋感 | 水乡初恋感; 강남 수향 첫사랑 무드; 수향 첫사랑 메이크업; Jiangnan first-love look | CN | 강남; 첫사랑; 투명; 청순; 봄 | Soft nude-toned makeup with a hazy sheer base, a loose low bun and faint grey shading at the eyes for a misty, gentle look. | look |
 | 江南闺阁 | 江南闺阁妆; 강남 규방 룩; 규방 메이크업; Jiangnan boudoir | CN | 강남; 함축; 고전; 국풍 | Pale, restrained makeup with a neat bun hung with a small tassel ornament, modest and understated. | look |
 | 白描妆容 | 白描空灵妆; 백묘 메이크업; 선묘 메이크업; bai-miao makeup | CN | 수묵; 미니멀; 청량; 국풍 | Line-drawing minimalism: thin brows and fine eye lines on bare, pale skin with almost no colour. | look |
@@ -213,6 +213,7 @@ Hair and makeup 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토�
 | 半挽凌乱感 | 半挽凌乱发; 반묶음 흐트러진 머리; messy half-up hair | CN | 반묶음; 흐트러짐; 자연스러움; 센치; 롱헤어 | Long hair half pinned up with loose damp strands falling around the face and neck. | look |
 | 清冷田园风 | 清冷田园; 차분한 전원풍; muted pastoral look | CN | 전원풍; 차분함; 땋은머리; 내추럴; 청량 | Muted countryside styling with a loose side braid, bare soft skin and a faint shimmer on the lip. | look |
 | 终极东方大美女 | 东方美人; 동양 미인 스타일; ultimate oriental beauty look | CN | 동양미; 미니멀; 스트레이트; 차분함; 중국풍 | Long straight silky hair worn loose in the wind with minimalist ink-line eye makeup and pale skin. | person-style |
+| 港风妆 | 강펑 좡; 홍콩풍 메이크업; 90년대 홍콩 메이크업; Hong Kong 90s makeup | CN | 홍콩; 港风; 90년대; 립; 눈썹 | Full brushed-up brows, warm contoured cheeks and a crisply outlined matte red or brick lip. | look |
 
 ## JP
 

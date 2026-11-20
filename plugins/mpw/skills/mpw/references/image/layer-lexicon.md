@@ -5,7 +5,7 @@
 ## 사용법
 
 1. 층을 정하고 아래 층 표에서 그 층 파일을 연다. Identity Reference 층은 표가 없고 [image-brief.md](image-brief.md) §5를 따른다.
-2. 검색: `node scripts/find_tokens.mjs --q "신중식,찻집" --layers outfit,scene --limit 6`. 한글 음차·붙여 쓴 형태·태그·영어도 된다. `--culture KR`로 좁히고 `--random 1`로 층마다 하나 뽑는다. 못 돌리면 `grep -n "신중식" references/image/lexicon/*.md`로 찾는다.
+2. 검색: `node scripts/find_tokens.mjs --q "신중식,찻집" --layers outfit,scene --limit 6`. 음차·붙여 쓴 형태·태그·영어도 된다. `--culture KR`로 좁히고 `--random 1`로 층마다 하나 뽑는다. 빈 층은 모두 `--q "홍콩" --layers pose,optics,expression`처럼 찾는다(Camera는 optics). 못 돌리면 `grep -n "신중식" references/image/lexicon/*.md`로 찾는다.
 3. 열은 토큰, 별칭, 문화권, 태그, 화면에 보이는 모습, 종류다. 토큰은 원어 그대로 쓰고, 그 뒤 문장은 "화면에 보이는 모습"을 바탕으로 장면에 맞게 영어로 새로 쓴다. 문장을 통째로 되풀이하지 않는다.
 4. 표는 열린 예시다. 개수 할당은 없고 장면에 맞는 것만 쓴다. 일반 명사도 원어가 더 짧거나 그 문화권의 모습을 함께 부르면 원어로 쓴다. 표에 없어도 그 문화권에서 그 뜻으로 쓰이는 것을 확실히 알면 쓰고, 모르면 지어내지 않고 영어로 푼다.
 5. 사용자가 음차로 말하면(신중식, 코모레비) 표의 원어 표기(新中式, 木漏れ日)로 쓴다.
@@ -21,14 +21,14 @@
 |---|---|---|---|---|---|---|---|
 | Optics | [lexicon/optics.md](lexicon/optics.md) | 371 | 15 | 34 | 162 | 126 | 34 |
 | Light | [lexicon/light.md](lexicon/light.md) | 189 | 18 | 56 | 21 | 70 | 24 |
-| Pose | [lexicon/pose.md](lexicon/pose.md) | 352 | 27 | 116 | 49 | 97 | 63 |
-| Outfit | [lexicon/outfit.md](lexicon/outfit.md) | 575 | 130 | 93 | 155 | 91 | 106 |
+| Pose | [lexicon/pose.md](lexicon/pose.md) | 353 | 27 | 117 | 49 | 97 | 63 |
+| Outfit | [lexicon/outfit.md](lexicon/outfit.md) | 585 | 130 | 103 | 155 | 91 | 106 |
 | Legwear | [lexicon/legwear.md](lexicon/legwear.md) | 253 | 43 | 55 | 60 | 62 | 33 |
 | Style | [lexicon/style.md](lexicon/style.md) | 649 | 122 | 63 | 138 | 191 | 135 |
-| Hair and makeup | [lexicon/hair-makeup.md](lexicon/hair-makeup.md) | 443 | 90 | 112 | 85 | 98 | 58 |
-| Expression | [lexicon/expression.md](lexicon/expression.md) | 334 | 84 | 57 | 71 | 55 | 67 |
-| Props and nails | [lexicon/props-nails.md](lexicon/props-nails.md) | 506 | 66 | 90 | 151 | 99 | 100 |
-| Scene | [lexicon/scene.md](lexicon/scene.md) | 966 | 174 | 176 | 204 | 239 | 173 |
+| Hair and makeup | [lexicon/hair-makeup.md](lexicon/hair-makeup.md) | 444 | 90 | 113 | 85 | 98 | 58 |
+| Expression | [lexicon/expression.md](lexicon/expression.md) | 344 | 84 | 67 | 71 | 55 | 67 |
+| Props and nails | [lexicon/props-nails.md](lexicon/props-nails.md) | 517 | 66 | 101 | 151 | 99 | 100 |
+| Scene | [lexicon/scene.md](lexicon/scene.md) | 967 | 174 | 177 | 204 | 239 | 173 |
 <!-- lexicon-counts:end -->
 
 ## 문화권 룩 묶음

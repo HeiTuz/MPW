@@ -42,9 +42,11 @@ export const loadAll = (dir = LEXICON_DIR) => SLUGS.map((slug) => loadLayer(slug
 const same = (a, b) => a === b;
 const partial = (a, b) => a.includes(b);
 // Per query term: token/alias exact 100/90, partial 60/50, tag 30, culture code 20, looks 10. A row scores the sum over terms.
+// A term given as {q, exact:true} (a one-character word from a split phrase) scores only on an exact token, alias or tag match.
 function scoreRow(row, terms) {
   let total = 0;
-  for (const q of terms) {
+  for (const item of terms) {
+    const q = item.q ?? item, exact = item.exact === true;
     const sq = squash(q);
     const token = norm(row.token), sToken = squash(row.token);
     const aliases = row.aliases.map(norm), sAliases = row.aliases.map(squash);
@@ -52,6 +54,7 @@ function scoreRow(row, terms) {
     let best = 0;
     if (hit(token, sToken, same)) best = 100;
     else if (aliases.some((a, i) => hit(a, sAliases[i], same))) best = 90;
+    else if (exact) best = row.tags.some((t) => hit(norm(t), squash(t), same)) ? 30 : 0;
     else if (hit(token, sToken, partial)) best = 60;
     else if (aliases.some((a, i) => hit(a, sAliases[i], partial))) best = 50;
     else if (row.tags.some((t) => hit(norm(t), squash(t), partial))) best = 30;
@@ -62,12 +65,25 @@ function scoreRow(row, terms) {
   return total;
 }
 
+// Decided per layer: a spaced term that matches nothing in that layer's rows is retried word by word there ("90년대 홍콩" -> 홍콩).
+// Digit-only words and one-character Latin words are skipped; a one-character Hangul or CJK word (비, 눈, 雨) is kept but scores on exact matches only.
+function expandTerms(terms, rows) {
+  return terms.flatMap((t) => {
+    if (!/\s/.test(t) || rows.some((r) => scoreRow(r, [t]) > 0)) return [t];
+    return t.split(/\s+/)
+      .filter((w) => w && !/^\d+$/.test(w) && !(w.length === 1 && /[a-z0-9]/.test(w)))
+      .map((w) => (w.length === 1 ? { q: w, exact: true } : w));
+  });
+}
+
 // Returns [{slug, title, matches:[row+score]}] with every match (sorted); callers cut to a limit or draw at random.
 export function search({ terms, layers = SLUGS, culture = null, dir = LEXICON_DIR }) {
-  const q = terms.map(norm).filter(Boolean);
-  return loadAll(dir).filter((l) => layers.includes(l.slug)).map(({ slug, title, rows }) => {
-    const matches = rows
-      .filter((r) => !culture || r.culture.includes(culture))
+  const picked = loadAll(dir).filter((l) => layers.includes(l.slug));
+  const base = terms.map(norm).filter(Boolean);
+  return picked.map(({ slug, title, rows }) => {
+    const pool = rows.filter((r) => !culture || r.culture.includes(culture));
+    const q = expandTerms(base, pool);
+    const matches = pool
       .map((r) => ({ ...r, score: scoreRow(r, q) }))
       .filter((r) => r.score > 0)
       .sort((a, b) => b.score - a.score);
@@ -95,7 +111,7 @@ export function drawRandom(results, count, pickIndex = randomInt) {
 
 export function formatText(results) {
   if (results.every((l) => l.matches.length === 0)) {
-    return 'no match in any layer. Use English tokens and sentences unless you know an original-language term for sure (image-brief.md §2, §4). To search again, narrow with --layers and run once more.\n';
+    return 'no match in any layer. Use English tokens and sentences unless you know an original-language term for sure (image-brief.md §2, §4).\n';
   }
   return results.map((l) => {
     const body = l.matches.length

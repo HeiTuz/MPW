@@ -98,23 +98,23 @@ Expression 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이
 | 居高临下 | 上位者审视; 거고임하; 내려다보는 시선; looking down the nose; 턱을 든 오만한 시선; 턱 들고 내려다보기 | CN | 위압; 권위; 도도; 차가움 | The chin lifts a few degrees and the lids lower so the eyes look down along the nose, the mouth closed and flat. | look |
 | 不怒自威 | 불노자위; 화내지 않아도 위엄; commanding presence; quiet authority | CN | 위엄; 권위; 카리스마; 정적 | A still face, a level unblinking stare and a quiet mouth convey authority without any visible anger. | look |
 | 伤春悲秋 | 상춘비추; 계절 감상; 계절 타는 표정; seasonal melancholy | CN | 애수; 감상; 봄; 가을 | The brows draw slightly together and upward over a slow, wistful downward gaze, the mouth soft and unsmiling. | look |
-| 似笑非笑 | 사소비소; 웃는 듯 마는 듯; 한쪽 입꼬리 미소; enigmatic half-smile; 한쪽 입꼬리 미세 미소; 살짝 올라간 입꼬리 | CN | 여유; 장난기; 신비; 도도 | One mouth corner lifts barely a millimetre while the eyes stay level, a knowing half-smile that never becomes a grin. | look |
+| 似笑非笑 | 사소비소; 웃는 듯 마는 듯; 한쪽 입꼬리 미소; enigmatic half-smile; 한쪽 입꼬리 미세 미소; 살짝 올라간 입꼬리 | CN | 여유; 장난기; 신비; 도도; 홍콩; 港风 | One mouth corner lifts barely a millimetre while the eyes stay level, a knowing half-smile that never becomes a grin. | look |
 | 决绝眼神 | 决绝; 결연한 눈빛; 단호한 표정; resolute gaze; 칼 같은 서늘한 결단; 서늘한 결단; 冷酷决绝; 决绝神态 | CN | 단호함; 결의; 차가움; 당당 | The chin rises slightly, the lips press into a straight line and the jaw tightens under a hard, level gaze. | look |
-| 冷眼 | 냉안; 차가운 눈길; 무심한 눈빛; cold gaze | CN | 도도; 차가움; 시크; 무심 | An unsmiling face with slightly lowered lids and a steady, unreadable gaze, the brow relaxed. | look |
+| 冷眼 | 냉안; 차가운 눈길; 무심한 눈빛; cold gaze | CN | 도도; 차가움; 시크; 무심; 홍콩; 港风 | An unsmiling face with slightly lowered lids and a steady, unreadable gaze, the brow relaxed. | look |
 | 冷眼旁观 | 냉안방관; 냉정한 방관; dispassionate onlooker | CN | 무심; 냉정; 관찰; 거리감 | The eyes follow the scene from a distance without reacting, the body still and a faint trace of irony at the lips. | look |
 | 厌世眼 | 厌世脸; 半睁半闭; 空灵厌世眼; 염세안; 염세적인 눈; 반쯤 감은 눈; jaded half-lidded eyes; 半睁半闭厌世眼 | CN | 무심; 차가움; 시크; 나른함 | The upper lids sag over about a third of the pupils and the unfocused gaze rests past the lens, giving a jaded, untouchable look. | look |
 | 云淡风轻 | 四两拨千斤; 운담풍경; 대수롭지 않은 표정; effortless composure | CN | 여유; 절제; 차분; 우아 | A faint smile with lowered eyes and loose shoulders, the face calm as if nothing weighs on it. | look |
 | 垂眸 | 垂眸沉思; 수이머우; 눈을 내리깔다; lowered gaze | CN | 고요; 사색; 단아; 동양 | The eyes lower about forty-five degrees with the lashes resting toward the cheek and the face slack and quiet. | look |
 | 斜睨 | 사예; 흘겨보기; 곁눈질; sideways glare | CN | 무심; 도도; 경멸; 차가움 | The head stays forward while the eyes slide to the side, showing a sliver of white in a bored, dismissive stare. | look |
 | 清冷感 | 清冷; 칭렁감; 청랭감; 차가운 분위기; cool aloofness | CN | 차가움; 고요; 시크; 우아 | A still face with level, unhurried eyes and closed lips, nothing animated, so the whole look reads cool and distant. | look |
-| 欲语还休 | 욕어환휴; 말하려다 멈춤; 망설이는 입술; words withheld; 떨리는 입술 망설임; 颤唇欲言又止 | CN | 애수; 절제; 망설임; 고요 | The lips part just enough to speak and then hold, the eyes lowering as the words are held back. | look |
+| 欲语还休 | 욕어환휴; 말하려다 멈춤; 망설이는 입술; words withheld; 떨리는 입술 망설임; 颤唇欲言又止 | CN | 애수; 절제; 망설임; 고요; 홍콩; 港风 | The lips part just enough to speak and then hold, the eyes lowering as the words are held back. | look |
 | 歪头杀 | 歪头浅笑; 와이터우샤; 고개 갸웃; 갸웃 미소; head-tilt smile | CN | 귀여움; 밝음; 장난기; 셀카 | The head tilts to one side with a small curved smile and bright eyes held on the lens. | look |
 | 波澜不惊 | 沉稳如岳; 파란불경; 산처럼 침착함; unshaken calm | CN | 침착; 절제; 차분; 정적 | Perfectly steady eyes with still brows and mouth, the face showing no reaction at all. | look |
 | 玩味眼神 | 玩味; 戏谑; 장난기 섞인 눈빛; 놀리는 눈빛; amused gaze; 玩味戏谑; 냉소적인 장난기 | CN | 장난기; 여유; 도발; 아이러니 | A slight sideways smile with amused, narrowed eyes, as if quietly enjoying a private joke. | look |
 | 皮笑肉不笑 | 피소육불소; 웃어도 웃는 게 아닌; 억지 미소; polite cold smile | CN | 가식; 사교; 차가움; 냉소 | The lips curve politely but the cheeks stay flat and the eyes stay cold, a fixed social mask. | look |
 | 目光如炬 | 목광여거; 형형한 눈빛; 불타는 눈빛; blazing stare | CN | 위압; 결단; 강렬함; 카리스마 | The brows lower and draw in slightly over bright, unwavering eyes fixed on one point. | look |
 | 眼尾泛红 | 眼尾红; 눈꼬리 붉음; 붉은 눈꼬리; flushed eye corners | CN | 애잔함; 슬픔; 섬세; 클로즈업 | The outer corners of the eyes flush pink-red as if after crying, the skin there faintly glossy where it catches the light. | look |
-| 眼神涣散 | 안신환산; 멍한 눈빛; 초점 없는 눈; vacant gaze | CN | 허무함; 멍함; 애수; 무심 | The eyes lose focus and fix on no object, the lids loose and the mouth slack. | look |
+| 眼神涣散 | 안신환산; 멍한 눈빛; 초점 없는 눈; vacant gaze | CN | 허무함; 멍함; 애수; 무심; 홍콩; 港风 | The eyes lose focus and fix on no object, the lids loose and the mouth slack. | look |
 | 睥睨 | 睥睨全场; 비예; 헤이게이; 내려다보는 시선; 도도한 시선; haughty sweep | CN, JP | 도도; 위압; 오만; 차가움 | Half-lowered lids and a lifted chin let the eyes sweep over everything from above in a regal, dismissive survey. | look |
 | 瞳孔骤缩 | 瞬间警觉; 동공 수축; 순간 경계; startled pupils; 瞳孔収縮 | CN | 긴장; 경계; 놀람; 순간 | The eyes widen with white showing above the iris and the brows lift a little while the face freezes in place. | look |
 | 破碎感 | 清冷破碎感; 파쇄감; 부서질 듯한 느낌; fragile beauty | CN | 애잔함; 절제; 슬픔; 감성 | A composed face with reddened eye rims and a thin film of tears, held so the calm looks close to breaking. | look |
@@ -122,7 +122,7 @@ Expression 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이
 | 红眼眶 | 眼眶泛红; 홍안광; 붉어진 눈가; teary red eye rims; 눈가 붉어진 눈물 참기; 红眼眶蓄泪 | CN | 애잔함; 슬픔; 절제; 감정 | The lower lids and eye rims flush a natural pink-red and a bead of water sits on the lash line without falling. | look |
 | 泪眼盈盈 | 蓄泪未落; 레이옌잉잉; 눈물 맺힌 눈; 눈물이 고인 눈; brimming tears | CN | 애잔함; 절제; 슬픔; 감동 | A bright film of water pools along the lower lids and holds there, the eyes steady and glistening. | look |
 | 冷笑 | 轻嗤冷笑; 레이쇼; 렁샤오; 냉소; 차가운 웃음; sneer | CN, JP | 냉소; 경멸; 도도; 차가움 | One lip corner pulls up and to the side in a short cold smile while a nostril flares slightly and the eyes stay flat. | look |
-| 微醺 | 웨이쉰; 알딸딸; 취기 어린 눈빛; tipsy glow | CN | 취기; 밤; 나른함; 몽롱 | The eyes look glossy and a little slow to focus, the lids heavy and a loose, warm smile on the lips. | look |
+| 微醺 | 웨이쉰; 알딸딸; 취기 어린 눈빛; tipsy glow | CN | 취기; 밤; 나른함; 몽롱; 홍콩; 港风 | The eyes look glossy and a little slow to focus, the lids heavy and a loose, warm smile on the lips. | look |
 | 下三白 | 下三白眼; 三白眼; 하삼백; 삼백안; lower sclera show; Lower Sclera Exposure | CN | 그런지; 차가움; 시크; 강렬함 | The irises sit high under the upper lids so a thin strip of white shows below them, giving a cold, sullen stare. | look |
 | 东方机锋 | 含而不露; 抿嘴含蓄笑; 동양식 선문답; 머금은 미소; reticent smile | CN | 고요; 함축; 절제; 동양 | The lips stay closed with the corners barely drawn in, a restrained smile under bright, quick eyes. | look |
 | 命运重逢 | 错愕凝神; 운명의 재회; 놀란 눈빛; stunned recognition; ばったり; 우연히 마주침 | CN | 놀람; 재회; 정지; 설렘 | The lids flutter and the eyes lock on someone off-frame, the lips parting in stunned recognition. | look |
@@ -148,10 +148,20 @@ Expression 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이
 | 柳叶眉 | 微蹙柳叶细眉; 버들잎 눈썹; 가는 눈썹; willow-leaf brows; thin curved brows | CN | 애수; 고전; 정원; 저녁; 동양여백계열 | Thin brows that curve gently like willow leaves, drawn slightly together in a quiet sigh. | look |
 | 双唇微张 | 心悸凝固; 被戳中心事; 입술이 벌어짐; 경직; lips parted in shock; frozen gasp | CN | 충격; 긴장; 살롱; 밤; 대여주계열 | A narrow gap between still lips and fixed eyes in a stunned freeze. | look |
 | 轻咬下唇 | 아랫입술 깨물기; 입술 살짝 깨물기 | CN | 입술; 표정; 억누른 감정; 디테일 | Upper teeth lightly pressing the lower lip, lips slightly pressed, with a faint tension in the jaw. | look |
-| 风情万种 | 요염한 분위기; 농염한 매력 | CN | 분위기; 성숙; 화보; 표정 | A mature, self-assured look with half-lidded eyes, a slight head tilt and loosely styled hair across the shoulder. | look |
+| 风情万种 | 요염한 분위기; 농염한 매력 | CN | 분위기; 성숙; 화보; 표정; 홍콩; 港风 | A mature, self-assured look with half-lidded eyes, a slight head tilt and loosely styled hair across the shoulder. | look |
 | 脉脉含情 | 그윽한 눈빛; 정감 어린 시선 | CN | 시선; 그윽함; 고전미; 표정 | A soft, steady gaze held a beat longer than usual, eyes warmed by candle-colored light. | look |
-| 眼波流转 | 눈빛이 흐르는; 눈동자 굴리기 | CN | 시선; 눈동자; 표정; 생동감 | Eyes shifting from one side to the other with bright catchlights, creating a lively, fluid glance. | look |
-| 慵懒出神 | 나른한 멍때림; 나른한 표정 | CN | 나른함; 멍한 표정; 오후; 표정 | A relaxed, drowsy expression with eyes unfocused, head resting on a hand in soft afternoon light. | look |
+| 眼波流转 | 눈빛이 흐르는; 눈동자 굴리기 | CN | 시선; 눈동자; 표정; 생동감; 홍콩; 港风 | Eyes shifting from one side to the other with bright catchlights, creating a lively, fluid glance. | look |
+| 慵懒出神 | 나른한 멍때림; 나른한 표정 | CN | 나른함; 멍한 표정; 오후; 표정; 홍콩; 港风 | A relaxed, drowsy expression with eyes unfocused, head resting on a hand in soft afternoon light. | look |
+| 眼神迷离 | 옌선 미리; 몽롱한 눈빛; 흐릿한 눈빛; hazy gaze; dreamy unfocused eyes | CN | 홍콩; 港风; 90년대; 몽롱함; 눈빛 | Half-lowered lids and an unfocused gaze drifting past the lens, the mouth slightly slack. | look |
+| 漫不经心 | 만부징신; 무심함; 대수롭지 않은 표정; nonchalant; offhand | CN | 홍콩; 港风; 90년대; 무심함; 쿨함 | The face stays loose and unbothered, the eyes glancing off to one side and the mouth resting without a smile. | look |
+| 玩世不恭 | 완스부궁; 세상을 비웃는 듯한 태도; 건들거림; cynical swagger; devil-may-care | CN | 홍콩; 港风; 90년대; 반항; 냉소 | Chin slightly raised, one brow lifted and the mouth set in a lopsided half-smile aimed past the viewer. | look |
+| 痞笑 | 피샤오; 건들거리는 웃음; 능글맞은 웃음; roguish smirk; cheeky grin | CN | 홍콩; 港风; 90년대; 미소; 장난 | A crooked smile that lifts one mouth corner and shows a little of the teeth, the eyes narrowed with amusement. | look |
+| 失神 | 스선; 넋 나감; 멍한 눈; blank stare; lost in a daze | CN | 홍콩; 港风; 90년대; 멍한 표정; 애수 | The eyes fix on nothing in the middle distance, the lids still and the lips parted a fraction. | look |
+| 落寞 | 뤄모; 쓸쓸함; 적막한 표정; forlorn; lonely look | CN | 홍콩; 港风; 90년대; 쓸쓸함; 밤; 애수 | The gaze drops to one side, the mouth corners sag slightly and the brow is left slack. | look |
+| 惆怅 | 처우창; 서글픔; 아련한 애수; wistful; melancholy longing | CN | 홍콩; 港风; 90년대; 애수; 그리움 | The inner brows draw up a little and the eyes look far off, the lips pressed lightly together. | look |
+| 抿嘴笑 | 민쭈이샤오; 입 다문 미소; 머금은 미소; closed-lip smile; tight-lipped smile | CN | 홍콩; 港风; 90년대; 미소; 수줍음 | The lips press together while the mouth corners rise, the cheeks lifting slightly and the teeth hidden. | look |
+| 冷艳 | 렁옌; 차가운 미모; 차갑고 화려한 얼굴; icy glamour; cold beauty | CN | 홍콩; 港风; 90년대; 차가움; 글래머 | A level, unsmiling stare straight into the lens with still lids and a closed, relaxed mouth. | look |
+| 不屑 | 부셰; 하찮다는 표정; 깔보는 얼굴; disdain; scornful look | CN | 홍콩; 港风; 90년대; 냉소; 반항 | The eyes slide down and away while one mouth corner pulls back in a small sneer. | look |
 
 ## JP
 

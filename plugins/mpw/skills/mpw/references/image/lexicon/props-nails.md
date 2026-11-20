@@ -131,8 +131,8 @@ Props and nails 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토�
 | 紫罗兰翡翠 | 紫罗兰; 春色翡翠; 자라란 비취; 라벤더 비취; lavender jadeite; lavender jade; 粉紫冰种 | CN | 은은한; 봄; 보석; 파스텔; 우아한 | A pale lilac-purple jadeite with an icy, milky translucence that glows softly pink-violet and turns nearly clear where the stone is thinnest. | look |
 | 裸粉美甲 | 裸粉; 冰透裸粉; 누드 핑크 네일; 살구빛 네일; nude pink nails; bare pink nails | CN | 자연스러운; 핑크; 손; 미니멀; 봄 | A sheer nude-pink tint over clean nails, glossy and faintly translucent at the free edge. | look |
 | 贝壳光 | 贝壳光珍珠白; 珍珠白美甲; 조개 광택 네일; 펄 화이트 네일; pearl white nails; shell-luster nails; opalescent nails | CN | 하얀; 은은한; 손; 봄; 미니멀 | A pearly white nail finish with a soft mother-of-pearl sheen, showing faint pink and blue shifts as the angle of the light changes. | look |
-| 车厘子红 | 车厘子红水光甲; 浆果深红; 체리 레드; 체리색 네일; black cherry red; cherry red nails; 深红美甲 | CN | 붉은; 깊은; 가을; 겨울; 복고 | A dark red-black cherry shade with a glossy sheen, deepening toward near-black at the sides and showing wine-red where light hits. | look |
-| 酒红丝绒美甲 | 酒红丝绒; 丝绒美甲; 暗红细闪; 와인 벨벳 네일; 벨벳 네일; burgundy velvet nails | CN | 붉은; 벨벳; 야간; 가을; 고급 | Deep burgundy nails with a velvety finish and a faint micro-shimmer that glitters only when the hand moves under the light. | look |
+| 车厘子红 | 车厘子红水光甲; 浆果深红; 체리 레드; 체리색 네일; black cherry red; cherry red nails; 深红美甲 | CN | 붉은; 깊은; 가을; 겨울; 복고; 홍콩; 港风 | A dark red-black cherry shade with a glossy sheen, deepening toward near-black at the sides and showing wine-red where light hits. | look |
+| 酒红丝绒美甲 | 酒红丝绒; 丝绒美甲; 暗红细闪; 와인 벨벳 네일; 벨벳 네일; burgundy velvet nails | CN | 붉은; 벨벳; 야간; 가을; 고급; 홍콩; 港风 | Deep burgundy nails with a velvety finish and a faint micro-shimmer that glitters only when the hand moves under the light. | look |
 | 金箔美甲 | 金箔甲; 금박 네일; 골드 리프 네일; gold leaf nails; gold foil nails | CN | 화려한; 금색; 손; 겨울; 네일 | Thin torn flakes of gold leaf pressed into glossy nails, the crinkled foil catching sharp flashes of warm yellow light. | look |
 | 青瓷美甲 | 青瓷开片美甲; 汝窑天青; 哥窑冰裂美甲; 청자 네일; 청자빛 네일; celadon nails; crackle celadon nails | CN | 청초한; 청록색; 도자기; 손; 송나라 | Pale blue-green nails coated in a soft celadon gloss, with a fine crackle line pattern spread over the surface like glaze. | look |
 | 青花 | 青花瓷; 青花薄胎; 청화; 칭화; blue-and-white porcelain; blue and white; cobalt blue underglaze | CN | 푸른; 하얀; 도자기; 전통; 우아한 | Crisp cobalt-blue painting under a clear white glaze, the deepest strokes dark and the washes fading to pale blue on a glassy white surface. | look |
@@ -146,13 +146,13 @@ Props and nails 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토�
 | 点翠 | 뎬추이; 점취; 물총새 깃털 공예; kingfisher feather inlay | CN | 비취색; 장신구; 공예; 전통 | Metalwork inlaid with bright blue-green pieces that glow like kingfisher feathers against gold. | item |
 | 苗银 | 먀오인; 묘은; 먀오족 은공예; Miao silver | CN | 은; 장신구; 공예; 전통 | Heavy hand-worked silver jewelry with dense patterns and small hanging charms that jingle and catch the light. | item |
 | 錾刻 | 찬커; 참각; 금속 조각; 금속 각인; chasing | CN | 금속; 조각; 공예; 섬세함 | Fine patterns hammered and cut into metal by hand, leaving crisp lines that catch light along their edges. | look |
-| 黑胶唱片 | 黑胶; 비닐 레코드; LP판; 레코드판; vinyl record; disque vinyle; 블랙 바이닐 | CN | 음악; 복고; 실내; 아날로그 | A black vinyl disc whose fine concentric grooves throw a thin bright curved ring of reflected light. | item |
+| 黑胶唱片 | 黑胶; 비닐 레코드; LP판; 레코드판; vinyl record; disque vinyle; 블랙 바이닐 | CN | 음악; 복고; 실내; 아날로그; 홍콩; 港风 | A black vinyl disc whose fine concentric grooves throw a thin bright curved ring of reflected light. | item |
 | 缂丝团扇 | 缂丝; 通经断纬; 극사 부채; 커쓰; kesi fan; silk tapestry fan | CN | 정교한; 비단; 궁중; 전통; 공예 | A round silk fan woven in kesi tapestry so each colour area has a crisp, slightly stepped edge, giving flowers and birds a fine textile relief with a soft sheen. | item |
 | 双鱼结流苏 | 双鱼结; 流苏饰边; 쌍어 매듭 술; double-fish knot tassel | CN | 매듭; 술; 원소절; 전통; 장식 | A paired fish-shaped knot with short silk tassels that swing slightly, the thread fibers catching the light separately. | item |
 | 纯银水滴吊坠 | 水滴吊坠; 银吊坠; silver teardrop pendant; 은 물방울 펜던트 | CN | 은; 물방울; 장식; 차가운 광택; 파티 | A small silver teardrop that hangs from a thin chain at the garment edge, giving a cool point of reflection against dark fabric. | item |
 | 羊脂白玉水滴扣 | 白玉水滴扣; 玉扣; jade drop button; 옥 물방울 단추 | CN | 백옥; 옥; 단추; 우아함; 양지옥 | A small, smooth drop of white jade used as a fastener, glossy, milky, and warm to the eye against dark silk. | item |
 | 青铜古扣 | 复古金属扣; 可拆卸; 청동 고리; bronze clasp | CN | 청동; 금속; 전위; 해체주의; 무광 | A dull bronze metal clasp with a worn, aged surface, joining the stocking edge to a detachable strap. | item |
-| 尖头漆皮高跟鞋 | 漆皮尖头高跟; patent pointed pump; 에나멜 뾰족 구두; 红底鞋 | CN | 에나멜; 뾰족 구두; 광택; 정장; 빨간 밑창 | A pointed-toe pump in patent leather with a mirror-like shine, its glossy toe cap catching a clear, bright reflection. | item |
+| 尖头漆皮高跟鞋 | 漆皮尖头高跟; patent pointed pump; 에나멜 뾰족 구두; 红底鞋 | CN | 에나멜; 뾰족 구두; 광택; 정장; 빨간 밑창; 홍콩; 港风 | A pointed-toe pump in patent leather with a mirror-like shine, its glossy toe cap catching a clear, bright reflection. | item |
 | 玛丽珍鞋 | 玛丽珍; Mary Jane shoes; 메리제인 구두; 漆皮玛丽珍 | CN | 메리제인; 스트랩; 레트로; 광택; 파티 | A rounded-toe shoe with a single ankle strap, in glossy black leather that picks up a soft sheen along the toe. | item |
 | 穆勒鞋 | 平底穆勒; mule flats; 뮬 플랫; 백리스 슈즈; 뮬; mule; soft-sole mule | CN | 뮬; 플랫; 실내; 차분함; 봄여름; 신발; 블랙; 미니멀; 슬립온; 도시 | A flat, backless slip-on shoe in soft leather or satin, leaving the heel and top of the foot bare. | item |
 | 切尔西靴 | 切尔西短靴; Chelsea boots; 첼시 부츠; 踝靴 | CN | 부츠; 발목; 가죽; 겨울; 도시 | A smooth leather ankle boot with an elastic side panel and a flat, clean line with no laces. | item |
@@ -167,6 +167,17 @@ Props and nails 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토�
 | 哑光美甲 | 哑光甲; 磨砂美甲; 무광 네일; 매트 네일; matte nails; matte nail finish; 全哑光 | CN | 차분한; 매트; 손; 모던; 고급 | Nails coated in a flat, velvety finish that gives off no sheen, the colour looking soft and deep with only a faint glow along the free edge. | look |
 | 延长甲 | 延长美甲; 水光延长甲; 연장 네일; 젤 연장; extension nails; nail extensions; 长甲 | CN | 길고; 손; 세련된; 반짝이는; 모던 | Long, evenly shaped nail extensions with a smooth arched curve and clean tapered ends, all five of equal length. | look |
 | 法式美甲 | 朱砂红法式; 金边红甲; 新中式法式; 프렌치 네일; 프렌치 팁; French nails; French tip nails; gold edge nails; 누드톤 프렌치 네일 | CN | 우아한; 붉은; 금색; 손; 새로운 중국풍; 우아함; 실내; 네일; 계열:디테일 | A neat French manicure where the nail tip is picked out in a thin red line edged with a fine gold line, against a clear glossy base. | look |
+| 墨镜 | 모징; 선글라스; 검은 선글라스; sunglasses; dark shades | CN | 홍콩; 港风; 90년대; 밤; 안경 | Small dark-lensed sunglasses with thin metal or black acetate frames, street lights mirrored as points in the lenses. | item |
+| 大哥大 | 다거다; 벽돌폰; 초기 휴대전화; brick phone; brick cell phone | CN | 홍콩; 港风; 90년대; 80년대; 전화 | A heavy brick-sized black mobile phone with a stubby antenna, held against the ear in one hand. | item |
+| BB机 | 삐삐; 호출기; 비비지; pager; beeper | CN | 홍콩; 港风; 90년대; 전자기기 | A small black pager with a narrow green-lit LCD screen, clipped to a belt or resting in the palm. | item |
+| 打火机 | 다훠지; 라이터; 금속 라이터; lighter; flip lighter | CN | 홍콩; 港风; 90년대; 밤; 금속 | A metal flip-top lighter whose small flame lights the fingers and the underside of the face. | item |
+| 丝袜奶茶 | 쓰와 나이차; 홍콩 밀크티; 스타킹 밀크티; Hong Kong milk tea; pantyhose milk tea | CN | 홍콩; 港风; 90년대; 茶餐厅; 음료 | A thick white diner cup of strong tan milk tea, its smooth surface holding a soft sheen under fluorescent light. | item |
+| 菠萝包 | 보뤄바오; 파인애플 번; 뽀로바오; pineapple bun; bolo bao | CN | 홍콩; 港风; 90년대; 茶餐厅; 빵 | A round sweet bun with a crackled golden sugar crust, often split around a thick slab of butter. | item |
+| 鸡蛋仔 | 지단자이; 에그 와플; 홍콩 와플; egg waffle; bubble waffle | CN | 홍콩; 港风; 90년대; 길거리 음식; 간식 | A golden waffle sheet of puffed round bubbles, folded into a paper bag and held in one hand. | item |
+| 红白蓝袋 | 훙바이란 가방; 빨강 하양 파랑 줄무늬 가방; 홍콩 비닐 가방; red-white-blue bag; red white blue nylon bag | CN | 홍콩; 港风; 90년대; 생활; 줄무늬 | A large woven nylon tote striped red, white and blue, its stiff plastic weave creasing at the corners. | item |
+| 大圈耳环 | 다취안 얼환; 큰 링 귀걸이; 빅 후프; large hoop earrings; big hoops | CN | 홍콩; 港风; 90년대; 귀걸이; 금속 | Wide thin gold hoops hanging below the earlobes, swinging and catching light along the jaw. | item |
+| 红指甲 | 훙즈자; 빨간 손톱; 레드 네일; red nails; red nail polish | CN | 홍콩; 港风; 90년대; 복고; 네일 | Glossy opaque red polish on medium oval nails, a sharp highlight on each nail as the fingers move. | item |
+| 丝巾 | 쓰진; 실크 스카프; 스카프; silk scarf; silk square | CN | 홍콩; 港风; 90년대; 복고; 실크 | A small printed silk square knotted at the throat or tied over the hair, its sheen breaking in soft creases. | item |
 
 ## JP
 
@@ -174,7 +185,7 @@ Props and nails 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토�
 |---|---|---|---|---|---|
 | BOSS | boss coffee; 보스 커피; 보스 캔커피; BOSS咖啡 | JP | 커피; 캔; 자판기; 편의점 | A short steel coffee can with a dark matte body and a narrow metallic band under the rim, its ridged top showing a dull sheen. | brand |
 | PORTER | 吉田カバン; 요시다 포터; 포터; 포터 탱커; Porter Tanker; Yoshida Porter; 탱커; 吉田包; yoshida kaban; 요시다 카방 | JP | 기능성; 가방; 나일론; 브랜드 | A glossy black nylon bag in flight-jacket style with a bright orange inner lining showing at the openings and tight quilted stitching. | brand |
-| ウォークマン | sony walkman; Walkman; 소니 워크맨; 워크맨; 카세트 플레이어; cassette player; 索尼随身听 | JP | 레트로; 카세트; 빈티지; 오디오 | A compact brushed-metal cassette player with a tape window and small chunky buttons, its worn silver body catching edge highlights, often paired with orange foam headphones. | brand |
+| ウォークマン | sony walkman; Walkman; 소니 워크맨; 워크맨; 카세트 플레이어; cassette player; 索尼随身听 | JP | 레트로; 카세트; 빈티지; 오디오; 홍콩; 港风 | A compact brushed-metal cassette player with a tape window and small chunky buttons, its worn silver body catching edge highlights, often paired with orange foam headphones. | brand |
 | お〜いお茶 | oi ocha; 오이오차; 이토엔 녹차; 伊藤园绿茶 | JP | 녹차; 편의점; 음료; 차분 | A slim PET bottle with fine ribbed bamboo-node grooves holding pale grass-green tea, a white label with a bold green brush-lettered name. | brand |
 | カルピス | calpis; 칼피스; 카르피스; 可尔必思 | JP | 여름; 유백색; 음료; 레트로 | A milky white diluted drink poured over ice in a glass, slightly cloudy and opaque, the glass beaded with cold condensation. | brand |
 | サントリー烏龍茶 | suntory oolong tea; 산토리 우롱차; 烏龍茶; 三得利乌龙茶; oolong tea; iced oolong; 우롱차 | JP | 우롱차; 편의점; 병; 음료 | A PET bottle with an eight-sided faceted body of deep brown tea, the facets breaking the backlight into long amber bands. | brand |
@@ -194,7 +205,7 @@ Props and nails 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토�
 | お守り | omamori; 오마모리; 부적; 御守 | JP | 신사; 전통; 자수; 행운 | A small embroidered brocade pouch with gold thread and a knotted cord, its silk surface catching a soft sheen. | item |
 | お弁当 | 도시락; bento; 便当 | JP | 도시락; 소풍; 점심; 음식 | A lunch box packed with small colourful compartments of rice and side dishes, often wrapped in a knotted cloth. | item |
 | かごバッグ | 바구니 가방; 라탄백; 라탄 백; basket bag; 竹编包; 藤編みバッグ; ラタンバッグ | JP | 여름; 내추럴; 수공예; 소풍 | A woven bamboo or rattan basket bag with a rigid shape whose open weave lets small points of light through. | item |
-| カセットテープ | cassette tape; 카세트 테이프; 카세트; 磁带 | JP | 레트로; 오디오; 플라스틱; 추억 | A clear plastic cassette shell with two visible brown tape reels and a hand-written paper label on the spine. | item |
+| カセットテープ | cassette tape; 카세트 테이프; 카세트; 磁带 | JP | 레트로; 오디오; 플라스틱; 추억; 홍콩; 港风 | A clear plastic cassette shell with two visible brown tape reels and a hand-written paper label on the spine. | item |
 | カチューシャ | 카츄샤; 머리띠; headband; 发箍 | JP | 머리띠; 클래식; 헤어; 데일리 | A rigid arched headband across the crown that pushes the hair back, its smooth band catching a line of light. | item |
 | クリームソーダ | 크림소다; cream soda; 奶油苏打 | JP | 음료; 초록; 레트로; 카페 | Tall glass of green soda with fizz, a scoop of vanilla ice cream floating on top and a red cherry. | item |
 | コーンポタージュ | corn potage can; 콘포타주; 콘스프 캔; 玉米浓汤 | JP | 겨울; 따뜻함; 자판기; 캔 | A short stout yellow can of hot corn soup from a vending machine, a little steam at the opening and a few kernels at the rim. | item |
