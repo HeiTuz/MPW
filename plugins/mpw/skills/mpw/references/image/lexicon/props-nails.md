@@ -71,6 +71,7 @@ Props and nails 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토�
 | 电动牙刷 | 전동 칫솔 | KR | 욕실; 소품; 일상 | An electric toothbrush held in the mouth during a morning wash-up. | item |
 | 사선 스트라이프 넥타이 | 스트라이프 타이; diagonal stripe tie; 교복 넥타이 | KR | 넥타이; 교복; 스트라이프; 소품; 아동·학생 | A narrow burgundy and navy diagonal-striped necktie knotted at a white shirt collar. | item |
 | 멀티포켓 백팩 | 학생 백팩; 책가방; multi-pocket backpack | KR | 백팩; 책가방; 학생; 기능성; 아동·학생 | A grey nylon backpack with several zip pockets and padded shoulder straps. | item |
+| 투명 폰케이스 | 투명 케이스; 투명케이스; 클리어 폰케이스; clear phone case; 透明手机壳 | KR | 폰케이스; 투명; 일상; 휴대폰 | A phone case of clear plastic that shows the phone's own back and its camera bump through it, with a thin glossy edge. | item |
 
 ## CN
 

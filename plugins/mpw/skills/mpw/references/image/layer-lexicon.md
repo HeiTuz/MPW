@@ -22,13 +22,13 @@
 | Optics | [lexicon/optics.md](lexicon/optics.md) | 371 | 15 | 34 | 162 | 126 | 34 |
 | Light | [lexicon/light.md](lexicon/light.md) | 189 | 18 | 56 | 21 | 70 | 24 |
 | Pose | [lexicon/pose.md](lexicon/pose.md) | 352 | 27 | 116 | 49 | 97 | 63 |
-| Outfit | [lexicon/outfit.md](lexicon/outfit.md) | 571 | 126 | 93 | 155 | 91 | 106 |
+| Outfit | [lexicon/outfit.md](lexicon/outfit.md) | 575 | 130 | 93 | 155 | 91 | 106 |
 | Legwear | [lexicon/legwear.md](lexicon/legwear.md) | 253 | 43 | 55 | 60 | 62 | 33 |
-| Style | [lexicon/style.md](lexicon/style.md) | 647 | 120 | 63 | 138 | 191 | 135 |
+| Style | [lexicon/style.md](lexicon/style.md) | 649 | 122 | 63 | 138 | 191 | 135 |
 | Hair and makeup | [lexicon/hair-makeup.md](lexicon/hair-makeup.md) | 443 | 90 | 112 | 85 | 98 | 58 |
 | Expression | [lexicon/expression.md](lexicon/expression.md) | 334 | 84 | 57 | 71 | 55 | 67 |
-| Props and nails | [lexicon/props-nails.md](lexicon/props-nails.md) | 505 | 65 | 90 | 151 | 99 | 100 |
-| Scene | [lexicon/scene.md](lexicon/scene.md) | 964 | 172 | 176 | 204 | 239 | 173 |
+| Props and nails | [lexicon/props-nails.md](lexicon/props-nails.md) | 506 | 66 | 90 | 151 | 99 | 100 |
+| Scene | [lexicon/scene.md](lexicon/scene.md) | 966 | 174 | 176 | 204 | 239 | 173 |
 <!-- lexicon-counts:end -->
 
 ## 문화권 룩 묶음
