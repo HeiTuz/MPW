@@ -34,23 +34,23 @@ metadata:
 
 ## 쓰기 전에 정할 것
 
-대상, 입력 역할, 정확 문구, 수량, 변경·보존 범위, 출력 형식을 먼저 확정하고 이미 있는 조건은 다시 묻지 않는다. 기획·연출을 맡긴 축은 구체적으로 선택하되 지정 축만 고치는 작업에 새 요소를 넣지 않는다. 정확성·범위·권한을 바꾸는 미결 사항과 양립 불가한 필수 조건만 묻는다. 제공된 입력은 자리표시자로 바꾸지 않는다. 세부는 [common.md](references/templates/common.md) §쓰기 전에 정할 것. 이미지 생성·편집의 대상이 미정이면 [surfaces.md](references/image/surfaces.md) §0의 기본 경로를, 인터뷰 진행은 명시 요청한 이미지 프롬프트에서만 [prompt-interview.md](references/image/prompt-interview.md)를 따른다.
+대상, 입력 역할, 정확 문구, 수량, 변경·보존 범위, 출력 형식을 먼저 확정하고 이미 있는 조건은 다시 묻지 않는다. 기획·연출을 맡긴 축은 구체적으로 선택하되 지정 축만 고치는 작업에 새 요소를 넣지 않는다. 정확성·범위·권한을 바꾸는 미결 사항과 양립 불가한 필수 조건만 묻는다. 제공된 입력은 자리표시자로 바꾸지 않는다. 세부는 [common.md](references/templates/common.md) §쓰기 전에 정할 것. 이미지 생성·편집의 대상이 미정이면 [surfaces.md](references/image/surfaces.md) §0의 기본 경로를, 인터뷰 진행은 사용자가 인터뷰·질문 진행을 명시했을 때만 [prompt-interview.md](references/image/prompt-interview.md)를 따른다.
 
 언어는 [common.md](references/templates/common.md) §프롬프트 언어 결정이 정본이다. 명시 언어·원문·실제 엔진 제약이 우선이다. 새 이미지 문안은 영어가 뼈대이고, 영·한·일·중(그 밖의 문화권은 사전에 오른 토큰만) 가운데 그 자리에 가장 짧고 정확한 말을 고른다. 새 영상은 영어, 제작 에이전트 지시는 작업 언어가 기본이다. 정확 카피·대사·코드·경로는 보존하고 설명은 대화 언어로 쓴다.
 
 ## 필요한 자료만 읽는다
 
-**이 파일과 요청만으로 완성할 수 있으면 바로 쓴다. 단, 요청에 해당하는 형식·표면 규칙은 먼저 확인한다.** 단순 문안·그대로 재출력·제공 자료(텍스트)의 단순 추출에 묶음을 자동으로 붙이지 않는다(사진을 보고 프롬프트를 쓰는 요청은 아래 `gpt-image-extract`). 대상 모델이 정해졌으면 후보 탐색을 생략하고, 부분 수정은 바뀌는 조건의 절만 읽는다. 단 기존 이미지 프롬프트 전체의 정제·교정은 부분 수정이 아니다. GPT Image 대상이거나 대상 미정이면 새 이미지와 같은 묶음(인물이면 `gpt-image-portrait`, 아니면 `gpt-image-new`)을 읽고, 다른 엔진을 지정했으면 그 엔진 문서가 정한 형식(길이, 순서, 부정 표현, 옵션 표기 등)을 `map`으로 읽고 `references/image/image-brief.md#11`을 더 읽는다. 이미 읽은 절은 바뀌거나 누락·잘림이 있을 때만 다시 읽고, 링크만으로 연결 문서를 전부 펼치지 않는다. 파일·절은 `node scripts/read_refs.mjs`로 모아 읽는다(`#A,B` 여러 절, `#A~B` 범위, `--toc` 제목 목록, `--bundle 이름`은 아래 묶음, `--bundles`는 묶음 목록, 경로는 스킬 폴더 기준, Node가 없으면 `bun`). 묶음 뒤에 인자를 덧붙일 수 있고, 출력이 상한을 넘으면 두 번에 나눠 읽는다.
+**이 파일과 요청만으로 완성할 수 있으면 바로 쓴다. 단, 요청에 해당하는 형식·표면 규칙은 먼저 확인한다.** 단순 문안·그대로 재출력·제공 자료(텍스트)의 단순 추출에 묶음을 자동으로 붙이지 않는다(사진을 보고 프롬프트를 쓰는 요청은 아래 `gpt-image-extract`). 대상 모델이 정해졌으면 후보 탐색을 생략하고, 부분 수정은 바뀌는 조건의 절만 읽는다(기존 이미지 프롬프트의 한 층 수정은 `references/image/image-brief.md#7`과 바뀌는 층의 절). 단 기존 이미지 프롬프트 전체의 정제·교정은 부분 수정이 아니다. GPT Image 대상이거나 대상 미정이면 새 이미지와 같은 묶음(인물이면 `gpt-image-portrait`, 아니면 `gpt-image-new`)을 읽고, 다른 엔진을 지정했으면 그 엔진 문서가 정한 형식(길이, 순서, 부정 표현, 옵션 표기 등)을 `map`으로 읽고 `references/image/image-brief.md#11`을 더 읽는다. 이미 읽은 절은 바뀌거나 누락·잘림이 있을 때만 다시 읽고, 링크만으로 연결 문서를 전부 펼치지 않는다. 파일·절은 `node scripts/read_refs.mjs`로 모아 읽는다(`#A,B` 여러 절, `#A~B` 범위, `--toc` 제목 목록, `--bundle 이름`은 아래 묶음, `--bundles`는 묶음 목록, 경로는 스킬 폴더 기준, Node가 없으면 `bun`). 묶음 뒤에 인자를 덧붙일 수 있고, 출력이 상한을 넘으면 `--bundles`에 나온 그 묶음의 대상을 절 단위로 두 번에 나눠 `read_refs.mjs`에 직접 넘긴다.
 
 | 요청 | `node scripts/read_refs.mjs --bundle` 뒤에 붙일 묶음 이름 |
 |---|---|
-| 대상 미정·GPT Image 새 이미지 | `gpt-image-new` (도해·슬라이드·UI·만화·로고는 `gpt-image-new-structured`) |
+| 대상 미정·GPT Image 새 이미지 | `gpt-image-new` (도해·슬라이드·UI·만화·로고는 `gpt-image-new-structured`, 여러 컷 덱이면 [slides.md](references/slides.md)를 덧붙인다) |
 | 대상 미정·GPT Image 인물·셀피·패션 화보 새 이미지 | `gpt-image-portrait` |
-| 사진(첨부 이미지)을 보고 그 사진을 다시 만들 프롬프트를 쓰는 요청("사진 프롬프트 뽑아/추출해 줘") | `gpt-image-extract` (다른 엔진을 지정했으면 그 엔진 문서를 `map`으로 읽고 `references/image/image-brief.md#1,2,6,11,12`를 더 읽는다) |
+| 사진(첨부 이미지)을 보고 그 사진을 다시 만들 프롬프트를 쓰는 요청("사진 프롬프트 뽑아/추출해 줘") | `gpt-image-extract` (다른 엔진을 지정했으면 그 엔진 문서를 `map`으로 읽고 `references/image/image-brief.md#1,2,6,11,12`를 더 읽는다. 입력이 사용자가 만든 생성물이면 `references/image/from-image.md#4.2,4.4,4.5`를 덧붙인다) |
 | 대상 미정·GPT Image 원본 편집 | `gpt-image-edit` (도해·슬라이드·UI·만화·로고는 `gpt-image-edit-structured`). 참조 사진의 역할·관찰이 필요하면 `references/image/from-image.md#1`을 덧붙인다 |
 | 다른 엔진을 지정한 새 이미지 | 그 엔진 문서를 `map`으로 읽고 `references/image/image-brief.md#2,4,6,11`(언어·채움·글자·엔진 우선)을 더 읽는다 |
 | 영상 생성 | `video` |
-| 실행 작업·자동화·코딩 지시 | `delegation`. 응답형 시스템·도구 정의는 [contract.md](references/templates/contract.md), 장기 실행은 [goal.md](references/templates/goal.md) |
+| 실행 작업·자동화·코딩 지시 | `delegation`. 자동화 잡·API 통합·응답형 시스템·도구 정의는 [contract.md](references/templates/contract.md), UI·페이지 구현은 [design.md](references/templates/design.md), 장기 실행은 [goal.md](references/templates/goal.md) |
 | 여러 에이전트의 팀 작업 지시 | `team` ([team.md](references/templates/team.md) 골격과 역할 라우팅 포함) |
 | 외부 조사·리서치·팩트체크 | `research` |
 | 추출·분류의 스키마·결측값·라벨 경계 판단 | `extraction` |
@@ -63,7 +63,7 @@ metadata:
 
 ## 작성과 검수
 
-결과와 핵심 조건을 앞에 쓴다. GPT Image 대상이거나 대상 미정인 이미지 생성·편집 프롬프트는 단순해도 [image-brief.md](references/image/image-brief.md)의 층 모양(첫 줄 + ## 층)을 쓰고, 다른 엔진을 지정했으면 그 엔진 문서의 형식을 따른다. 이미지가 아닌 단순 요청은 자연어 문장만으로 충분하다. 역할극·체크리스트·후속 메뉴·여러 버전을 자동으로 붙이지 않고, 이미지 프롬프트가 아니면 고정 헤딩도 붙이지 않는다. 줄일 때는 중복과 부연을 줄이되 요청한 범위와 세부를 버리지 않는다. 이미지 생성은 층마다 보여야 할 모습을, 편집은 변경점·입력 역할·보존 조건을, 영상은 누가 무엇을 어떻게 움직이는지와 시간 순서·소리를 쓴다. 정확 카피·대사는 원문 그대로 연결하고 입력이 이미 전달하는 외형을 되풀이하지 않는다. 배제 표현과 색 값은 [surface-contracts.md](references/image/surface-contracts.md) §4·§4.1, 좌우가 있는 특징은 [from-image.md](references/image/from-image.md) §3.3, `/키워드` 조합은 [common.md](references/templates/common.md) §사진 연출의 슬래시 키워드를 따른다.
+결과와 핵심 조건을 앞에 쓴다. GPT Image 대상이거나 대상 미정인 이미지 생성·편집 프롬프트는 단순해도 [image-brief.md](references/image/image-brief.md)의 층 모양(첫 줄 + ## 층)을 쓰고, 다른 엔진을 지정했으면 그 엔진 문서의 형식을 따른다. 이미지가 아닌 단순 요청은 자연어 문장만으로 충분하다. 역할극·체크리스트·후속 메뉴·여러 버전을 자동으로 붙이지 않고, 이미지 프롬프트가 아니면 고정 헤딩도 붙이지 않는다. 줄일 때는 중복과 부연을 줄이되 요청한 범위와 세부를 버리지 않는다. 이미지 생성은 층마다 보여야 할 모습을, 편집은 변경점·입력 역할·보존 조건을, 영상은 누가 무엇을 어떻게 움직이는지와 시간 순서·소리를 쓴다. 정확 카피·대사는 원문 그대로 연결하고 입력이 이미 전달하는 외형을 되풀이하지 않는다. 배제 표현은 [surface-contracts.md](references/image/surface-contracts.md) §4, 색 값(HEX·팔레트)은 같은 문서 §4.1, 좌우가 있는 특징은 [from-image.md](references/image/from-image.md) §3.3, `/키워드` 조합은 [common.md](references/templates/common.md) §사진 연출의 슬래시 키워드를 따른다.
 
 출력 직전 **요청 대비 누락·추가·모순**을 확인한다: 요청한 행동과 산출물 수, 응답 형식, 언어, 정확 문자열, 변경·보존 범위. 이 검수 목록은 답변에 출력하지 않는다. 독립적으로 쓸 여러 프롬프트는 각각 공통 조건을 포함하고, 한 컷의 여러 요구를 임의로 나누지 않는다. 길이 상한·측정 요청·수치 보고가 있으면 실측한다([surfaces.md](references/image/surfaces.md) §0-1). **전역 2000자 하드라인은 없다.** 수신 도구의 파라미터로 실제 전달한 값만 본문에서 생략한다. 검토는 결과를 방해하는 누락·충돌에 집중하고 취향 제안과 구분한다. 미지정된 색·렌즈·시점은 그 자체로 결함이 아니고, 실행 결과를 보지 않았으면 성능·생성 품질·동일성 보존을 검증했다고 하지 않는다.
 

@@ -44,7 +44,7 @@ export const BUNDLES = {
   // 대상 미정·GPT Image로 사진(첨부 이미지)을 보고 그 사진을 다시 만들 프롬프트를 쓸 때. 새 이미지 규칙에 §12 추출 규칙을 얹는다(§7 후속 수정·§8 편집·§10 예시·§11 정제는 뺀다).
   "gpt-image-extract": ["references/image/surfaces.md#0", "references/image/image-brief.md#1,2,3,4,5,6,9,12", "references/image/layer-lexicon.md"],
   // 영상 생성.
-  video: ["references/image/surfaces.md#0", "references/image/lanes.md#영상 공통 규칙"],
+  video: ["references/image/surfaces.md#0", "references/image/lanes.md#영상 공통 규칙,이미지 슬롯 기본값"],
   // 실행 작업·자동화 지시.
   delegation: ["references/templates/delegation.md"],
   // 팀 작업 지시: 위임 계약 + TEAM 골격 + 역할·권한 라우팅.

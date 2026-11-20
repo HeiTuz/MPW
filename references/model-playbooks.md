@@ -110,11 +110,11 @@ Join gate: 실제 배정한 worker 산출물과 요청된 planner/critic/verifie
 
 | 공급자 | 날짜 절과 찾을 항목 |
 |---|---|
-| OpenAI | 11-18 GPT-6.2 Astra·Sol, 11-05 이전 GPT-6 위임, 09-05 GPT-6 Astra/GPT-5.6, 09-16 권한·캐시, 09-24 추론·공유 스킬, 09-27 상세도·도구 |
-| Anthropic | 09-05 문체, 09-24 서식, 09-25 이행·진행, 09-27 Opus/Fable 보강, 11-09 Sonnet JSON |
-| Google | 09-05·09-24 Gemini, 09-27 API 이행, 11-09 Gemini 4 Argon |
+| OpenAI | 2026-11-18 GPT-6.2 Astra·Sol, 2026-11-05 이전 GPT-6 위임, 2026-09-05 GPT-6 Astra/GPT-5.6, 2026-09-16 권한·캐시, 2026-09-24 추론·공유 스킬, 2026-09-27 상세도·도구 |
+| Anthropic | 2026-09-05 문체, 2026-09-24 서식, 2026-09-25 이행·진행, 2026-09-27 Opus/Fable 보강, 2026-11-09 Sonnet JSON |
+| Google | 2026-09-05·2026-09-24 Gemini, 2026-09-27 API 이행, 2026-11-09 Gemini 4 Argon |
 | xAI | Grok 텍스트·리서치 |
-| DeepSeek | 09-24 JSON Output |
+| DeepSeek | 2026-09-24 JSON Output |
 
 ### Grok 텍스트·리서치
 
