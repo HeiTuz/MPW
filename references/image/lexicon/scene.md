@@ -178,6 +178,8 @@ Scene 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다. 
 | Low-Key Dimly Lit Speakeasy | 로우키 스피크이지; 무주등 바; 어두운 칵테일 바 | KR | 어둠; 바; 호박빛; 분위기 | Dim bar interior with no main light, a few warm amber points and deep shadows. | place |
 | Steel and Glass Mirror Elevator | 엘리베이터 거울 스틸; 미러 엘리베이터 | KR | 엘리베이터; 스틸; 거울; 차가움 | Steel elevator cabin with mirrored walls and cold overhead light. | place |
 | Warm Ondol Floor Memory Photo | 온돌 바닥 추억 사진; 온돌방 앨범; 바닥 난방 앨범 | KR | 온돌; 앨범; 양말; 따뜻함 | Person sitting on a warm wooden floor in socks turning pages of a thick yellowed family photo album. | place |
+| 드레스룸 | 드레스 룸; 옷방; 워크인 클로젯; walk-in closet; dressing room | KR | 실내; 옷; 수납; 거울 | A small room whose walls hold clothes racks, shelves and hanging clothes, often with a full-length mirror. | place |
+| 붙박이장 | 붙박이 옷장; 빌트인 옷장; built-in wardrobe; fitted wardrobe | KR | 실내; 수납; 옷장; 침실 | A tall wardrobe fitted flush into the wall, its flat cabinet doors running in one plane up to the ceiling. | item |
 
 ## CN
 

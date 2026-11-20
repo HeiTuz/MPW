@@ -133,3 +133,8 @@ for (const c of fx.cases) {
 const mean = sum / fx.cases.length;
 assert.ok(mean >= fx.min_mean_recall, `mean recall ${mean.toFixed(3)} < ${fx.min_mean_recall}\n${misses.join('\n')}`);
 console.log(`find_tokens: ${fx.cases.length} cases, mean recall ${mean.toFixed(3)}${misses.length ? `; missed: ${misses.join(' / ')}` : ''}`);
+
+// --help prints the usage and exits 0 instead of failing with "needs a value".
+const help = run(['--help']);
+assert.equal(help.status, 0, 'find_tokens --help exits 0');
+assert.match(help.stdout, /usage: node scripts\/find_tokens\.mjs/);

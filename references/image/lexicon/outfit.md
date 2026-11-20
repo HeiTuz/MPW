@@ -132,6 +132,10 @@ Outfit 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다.
 | 크롭 후드 셋업 | 크롭 애슬레저; cropped hoodie set; 크롭 후디 | KR | 크롭; 후드; 애슬레저; 스트릿 | A short zip hoodie with high-waisted sweatpants in a matching colour. | look |
 | 수면잠옷 | 코랄 플리스 잠옷; plush pajama; 큐트 슬립웨어; 곰돌이 잠옷 | KR | 잠옷; 코랄 플리스; 핑크; 곰돌이 | A fluffy sakura-pink coral-fleece button-up top and trousers with bear-shaped buttons and a small plush bear pocket. | look |
 | 그레이 울 가디건 단독 룩 | 울 가디건 단독; grey merino cardigan alone; 단정 미니멀 | KR | 가디건; 울; 그레이; 단정함 | A charcoal fine-gauge merino V-neck cardigan buttoned fully and worn alone, tucked into pale blue straight jeans cropped at the ankle. | look |
+| 벌룬 스커트 | 벌룬스커트; 풍선 스커트; 버블 스커트; balloon skirt; bubble skirt | KR | 벌룬; 스커트; 볼륨; 미니; 귀여움 | A skirt gathered in at the hem so the fabric puffs into a rounded balloon shape around the hips. | item |
+| 민소매 미니 원피스 | 나시 원피스; 민소매 원피스; 슬리브리스 미니 원피스; sleeveless mini dress | KR | 민소매; 원피스; 미니; 여름 | A short dress with no sleeves that leaves the shoulders and arms bare and ends above the knee. | item |
+| 털 슬리퍼 | 털슬리퍼; 퍼 슬리퍼; 털 실내화; 폭신 털 슬리퍼; fluffy slippers; faux-fur slippers | KR | 슬리퍼; 털; 실내; 홈웨어 | Slip-on house slippers covered in a thick, fluffy fur pile that hides the shape of the shoe. | item |
+| 퍼 코트 | 퍼코트; 모피 코트; 털 코트; 페이크 퍼 코트; fur coat; faux-fur coat | KR | 퍼; 코트; 겨울; 아우터 | A coat covered in a dense, fluffy fur pile whose soft ends blur the outline of the shoulders and hem. | item |
 
 ## CN
 

@@ -150,7 +150,12 @@ function isMainModule() {
 
 if (isMainModule()) {
   try {
-    const opts = parseArgs(process.argv.slice(2));
+    const argv = process.argv.slice(2);
+    if (argv.includes('--help') || argv.includes('-h')) {
+      process.stdout.write(`${fs.readFileSync(fileURLToPath(import.meta.url), 'utf8').split('\n').slice(0, 3).filter((l) => l.startsWith('//')).map((l) => l.slice(3)).join('\n')}\n`);
+      process.exit(0);
+    }
+    const opts = parseArgs(argv);
     let results = search(opts);
     results = opts.random ? drawRandom(results, opts.random) : results.map((l) => ({ ...l, matches: l.matches.slice(0, opts.limit) }));
     process.stdout.write(opts.json ? JSON.stringify(formatJson(results, opts.terms)) + '\n' : formatText(results));

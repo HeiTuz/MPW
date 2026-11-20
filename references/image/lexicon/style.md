@@ -126,6 +126,8 @@ Style 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다. 
 | High-ISO Monochrome Grain | 고감도 흑백 입자; 트라이엑스 그레인; 하이 ISO 흑백 | KR | 흑백; 그레인; 대비; 필름 | Black-and-white portrait with deep crushed blacks and coarse film grain. | look |
 | Prismatic Holographic Iridescence | 프리즘 홀로그램; 무지개 굴절 빛; 홀로그래픽 이리데슨트 | KR | 프리즘; 무지개; 굴절; 홀로그램 | Seven-band rainbow spectra refracted across the face and surfaces with a shifting iridescent sheen. | look |
 | Space Age Metallic Capsule | 스페이스 에이지 캡슐; 우주선 메탈릭; SM 컨셉 메탈 | KR | 실버; 메탈; 우주; 차가움 | White streamlined pod interior with brushed cold metal and shadowless cool-white frontal light. | look |
+| 인스타 셀카 | 인스타 감성 셀카; 인스타그램 셀카; 셀스타그램; Instagram selfie | KR | 셀카; 일상; SNS; 스냅 | A casual front-camera selfie: the phone held at arm's length, the face close to the lens, in bright even light with lightly smoothed skin. | look |
+| 원톤 | 원톤 코디; 원 톤; 톤온톤; one-tone; tone-on-tone | KR | 모노톤; 코디; 단색; 컬러 | An outfit built from a single color family, its pieces differing only in shade and fabric so the figure reads as one color mass. | look |
 
 ## CN
 
