@@ -292,7 +292,7 @@ Scene 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다. 
 | 维多利亚港 | 빅토리아 하버; 빅토리아 항; Victoria Harbour | CN | 항구; 야경; 홍콩; 파란색; 반사 | A deep blue night harbour with gold building lights reflected on dark water. | place |
 | 网师园 | 망사원; Master of the Nets Garden; 월도풍래정; 月到风来亭 | CN | 밤; 달빛; 수경; 정원; 고요 | A small pavilion sits at the edge of a dark pond at night, with a pale moon reflection on the water and a faint lantern glow warming the timber eaves. | place |
 | 老洋房 | 올드 양옥; 옛 양옥; 상하이 옛 양옥; 상하이 옛 저택; old Shanghai villa; French Concession villa; 老上海洋房; 法租界老洋房 | CN | 상하이; 저택; 빈티지; 철제 문; 오후 | A pale stucco villa sits behind a black wrought-iron gate with curled patterns, half hidden by trees and silent in even light. | place |
-| 茶餐厅 | 차찬텡; 홍콩 옛 식당; 홍콩 다이너; cha chaan teng; 老茶餐厅 | CN | 홍콩; 식당; 타일; 복고; 형광등 | A Hong Kong diner with green-white mosaic tiles, booth seats and a green-tinged fluorescent over warm lamps. | place |
+| 茶餐厅 | 차찬텡; 홍콩 옛 식당; 홍콩 다이너; cha chaan teng; 老茶餐厅 | CN | 홍콩; 식당; 타일; 복고; 형광등; 港风 | A Hong Kong diner with green-white mosaic tiles, booth seats and a green-tinged fluorescent over warm lamps. | place |
 | 茶馆 | 옛 찻집; 중국 찻집; old teahouse; 老茶馆 | CN | 찻집; 비; 나무 창; 따뜻한 조명 | An old wooden teahouse on a river with lattice windows, warm yellow lamp inside and a cool gray rainy light outside. | place |
 | 耦园 | 우원; Couple's Garden | CN | 수변; 주택; 회랑; 물마을 | A residence stands directly on the water with covered corridors running along three sides, and ripples cast moving light under the eaves. | place |
 | 胜棋楼 | 승기루; Shengqi Pavilion | CN | 누각; 호수; 난징; 흐림 | A two-storey Ming-style pavilion with dark timber and grey roof stands at a lake edge, with cool even light on its flat tile planes. | place |

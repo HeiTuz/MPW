@@ -242,7 +242,7 @@ Optics 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다.
 | Bolex H16 | 볼렉스 H16; 볼렉스; Bolex H16 Reflex; 볼렉스 리플렉스 | US | 16mm; 빈티지; 손떨림; 입자 | Hand-wound 16mm film look with a faint frame wobble, soft vintage contrast and visible grain. | gear |
 | CTB Gel | 씨티비 젤; 청색 젤; 냉청색 필터; blue gel; 冰蓝滤色片 | US | 차가움; 청색; 플래시; 밤 | A blue CTB gel over the flash turns its light cool blue against warmer ambient light, with shadows dropping quickly to black. | gear |
 | CineStill 50D | 시네스틸 50D; 50D | US | 낮; 필름; 세밀; 입자; 따뜻함 | A fine-grain daylight film with clean warm colours and smooth skin. | gear |
-| CineStill 800T | 시네스틸 800T; 시네스틸; 800T; Cinestill | US | 필름; 텅스텐; 야경; 헐레이션; 네온 | Tungsten-balanced film with red halation glowing around bright lights, teal-leaning shadows and a cinematic night atmosphere. | gear |
+| CineStill 800T | 시네스틸 800T; 시네스틸; 800T; Cinestill | US | 필름; 텅스텐; 야경; 헐레이션; 네온; 홍콩; 港风 | Tungsten-balanced film with red halation glowing around bright lights, teal-leaning shadows and a cinematic night atmosphere. | gear |
 | Cooke Look | 쿡 렌즈; Cooke Speed Panchro; 쿡 룩; Cooke S4/i; 쿡 S4; Cooke lens; Cooke | US | 시네마; 렌즈; 따뜻함; 부드러움; 피부톤 | A cinema lens look with warm skin tones and gentle, rounded texture. | gear |
 | D-76 | D-76 현상액; D76; D-76 Developer | US | 흑백 현상; 고전적; 중간톤; 입자 | Classic developer rendering with crisp midtone separation and an evenly distributed traditional silver grain. | gear |
 | Hasselblad 500C/M | 하셀블라드 500C/M; 핫셀블라드 500C/M; 500C/M; 哈苏500C/M; Hasselblad 500; Hasselblad 500C; 핫셀블라드 500C; 핫셀 500 | US | 중형; 필름; 정사각; 부드러움; 클래식 | A square 6x6 medium-format film look with smooth tones, fine grain and a calm, soft depth. | gear |
