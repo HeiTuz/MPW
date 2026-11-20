@@ -46,6 +46,7 @@ metadata:
 |---|---|
 | 대상 미정·GPT Image 새 이미지 | `gpt-image-new` (도해·슬라이드·UI·만화·로고는 `gpt-image-new-structured`) |
 | 대상 미정·GPT Image 인물·셀피·패션 화보 새 이미지 | `gpt-image-portrait` |
+| 사진(첨부 이미지)을 보고 그 사진을 다시 만들 프롬프트를 쓰는 요청 | `gpt-image-extract` (다른 엔진을 지정했으면 그 엔진 문서를 `map`으로 읽고 `references/image/image-brief.md#12`를 더 읽는다) |
 | 대상 미정·GPT Image 원본 편집 | `gpt-image-edit` (도해·슬라이드·UI·만화·로고는 `gpt-image-edit-structured`). 참조 사진의 역할·관찰이 필요하면 `references/image/from-image.md#1`을 덧붙인다 |
 | 영상 생성 | `video` |
 | 실행 작업·자동화·코딩 지시 | `delegation`. 응답형 시스템·도구 정의는 [contract.md](references/templates/contract.md), 장기 실행은 [goal.md](references/templates/goal.md) |
