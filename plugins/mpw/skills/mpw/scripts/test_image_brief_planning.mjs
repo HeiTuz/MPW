@@ -35,6 +35,7 @@ const expectedSections = {
   'gpt-image-new': generation,
   'gpt-image-new-structured': generation,
   'gpt-image-portrait': generation,
+  'gpt-image-extract': [s1, s2, s3, s4, s5, s6, s9],
   'gpt-image-edit': [s1, s2, s6, s7, s8, s9],
   'gpt-image-edit-structured': [s1, s2, s6, s7, s8, s9],
 };
@@ -82,6 +83,11 @@ for (const text of examples) {
   }
 }
 assert.ok(examples.some(t => t.includes('## Identity Reference')), 'a person example shows the identity section');
+// Routing only: the photo-extraction bundle carries §12 and no other bundle does.
+const s12 = sec('12');
+for (const [name, targets] of Object.entries(BUNDLES)) {
+  assert.equal(readTargets(targets).text.includes(s12), name === 'gpt-image-extract', `${name}: image-brief §12 routing`);
+}
 
 // Lexicon: per-layer tables (references/image/lexicon/*.md), one row per token, plus the small index.
 const LAYER_FILES = {

@@ -9,7 +9,7 @@ const read = file => fs.readFileSync(new URL(`../${file}`, import.meta.url), 'ut
 const kernel = read('SKILL.md');
 const kernelBytes = Buffer.byteLength(kernel);
 assert.ok(kernelBytes <= 12000, `dispatch kernel grew to ${kernelBytes} bytes; review loading cost`);
-assert.match(kernel, /단순 문안·그대로 재출력·제공 자료의 단순 추출에 묶음을 자동으로 붙이지 않는다/);
+assert.match(kernel, /단순 문안·그대로 재출력·제공 자료(\(텍스트\))?의 단순 추출에 묶음을 자동으로 붙이지 않는다/);
 assert.match(kernel, /실제 코드 구현·이미지 생성·문서 제작만 요청한 경우에는 해당 실행 스킬/);
 assert.match(kernel, /이미 읽은 절.*다시 읽고/);
 assert.match(kernel, /링크만으로 연결 문서를 전부 펼치지 않는다/);
