@@ -62,10 +62,21 @@ function scoreRow(row, terms) {
   return total;
 }
 
+// A spaced term that matches nothing in any searched layer is retried word by word ("90년대 홍콩 영화" -> 홍콩, 영화).
+// One-character and digit-only words are skipped. Terms that match as written keep their own scoring.
+function expandTerms(terms, layers, culture) {
+  const rows = layers.flatMap((l) => l.rows).filter((r) => !culture || r.culture.includes(culture));
+  return terms.flatMap((t) => {
+    if (!/\s/.test(t) || rows.some((r) => scoreRow(r, [t]) > 0)) return [t];
+    return t.split(/\s+/).filter((w) => w.length > 1 && !/^\d+$/.test(w));
+  });
+}
+
 // Returns [{slug, title, matches:[row+score]}] with every match (sorted); callers cut to a limit or draw at random.
 export function search({ terms, layers = SLUGS, culture = null, dir = LEXICON_DIR }) {
-  const q = terms.map(norm).filter(Boolean);
-  return loadAll(dir).filter((l) => layers.includes(l.slug)).map(({ slug, title, rows }) => {
+  const picked = loadAll(dir).filter((l) => layers.includes(l.slug));
+  const q = expandTerms(terms.map(norm).filter(Boolean), picked, culture);
+  return picked.map(({ slug, title, rows }) => {
     const matches = rows
       .filter((r) => !culture || r.culture.includes(culture))
       .map((r) => ({ ...r, score: scoreRow(r, q) }))

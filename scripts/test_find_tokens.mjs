@@ -14,6 +14,8 @@ const run = (args, file = cli) => spawnSync(process.execPath, [file, ...args], {
 const tokensOf = (terms, opts = {}, limit = 6) =>
   search({ terms, ...opts }).flatMap((l) => l.matches.slice(0, limit).map((m) => m.token));
 
+const nonsense = 'zzqxjv';
+
 // Every table parses, rows have all columns, tokens are unique inside a layer, and the file list matches SLUGS.
 assert.deepEqual(fs.readdirSync(LEXICON_DIR).filter((f) => f.endsWith('.md')).map((f) => f.slice(0, -3)).sort(), [...SLUGS].sort());
 for (const { slug, rows } of loadAll()) {
@@ -47,6 +49,11 @@ for (const layer of search({ terms: ['한복'] })) {
 // Width and case do not matter.
 assert.ok(tokensOf(['ＣＣＤ 카메라']).includes('CCD 카메라') && tokensOf(['kodak portra 400']).includes('Kodak Portra 400'));
 
+// A spaced phrase that matches nothing as written is retried word by word; one-character words are skipped.
+assert.ok(tokensOf(['90년대 홍콩 영화']).includes('港风妆'), 'spaced phrase falls back to its words');
+assert.ok(tokensOf(['비 오는 골목']).length > 0, 'spaced phrase with a one-character word still finds rows');
+assert.ok(!search({ terms: ['비 오는 골목'] }).every((l) => !l.matches.length) && search({ terms: [nonsense + ' ' + nonsense] }).every((l) => !l.matches.length));
+
 // Layer and culture filters.
 const sceneOnly = search({ terms: ['카페'], layers: ['scene'] });
 assert.deepEqual(sceneOnly.map((l) => l.slug), ['scene']);
@@ -60,7 +67,6 @@ const komo = search({ terms: ['木漏れ日'], layers: ['light'] })[0].matches;
 assert.equal(komo[0].token, '木漏れ日');
 
 // CLI: empty results, JSON shape, limit, errors.
-const nonsense = 'zzqxjv';
 let out = run(['--q', nonsense, '--layers', 'scene,pose']);
 assert.equal(out.status, 0, out.stderr);
 assert.match(out.stdout, /no match in any layer/);
