@@ -37,7 +37,7 @@ Return its verified local path after the save succeeds.
 
 ## 검증기
 
-검증기는 프롬프트 텍스트 계약만 검사한다. 컴파일된 산출물에는 `--profile assembled`, 네이티브 GPT Image 문안에는 `--profile native --engine gpt-image`를 사용한다. 프로필별 입력·플래그·길이 층은 검증기 도움말과 테스트 계약을 따른다. S1 기계 산출은 이 검사기 대신 `contracts/validate.py`를 반드시 실행한다.
+검증기는 프롬프트 텍스트 계약만 검사한다. 컴파일된 산출물에는 `--profile assembled`, 네이티브 GPT Image 문안에는 `--profile native --engine gpt-image`를 사용한다. 프로필별 입력·플래그·길이 층은 아래 검증기 코드 표와 `node scripts/check_prompt.mjs --test` 사례를 따른다. S1 기계 산출은 이 검사기 대신 `contracts/validate.py`를 반드시 실행한다.
 
 길이는 계약·전달 채널·대상 엔진 층 중 가장 좁은 상한으로 판정하며, 구속 층이 아니어도 계약 위반은 따로 보고한다. 채널을 지정하지 않은 S3에서는 ChatGPT 웹 입력창 기준 기본 채널 상한 10000을 가정한다. 이는 S3 자체의 상한 선언이 아니다. 상한을 모르는 메신저형 전달은 `--channel bounded`(상한 2000)로 지정한다. 상한 없는 CLI·데스크톱 전달은 `--channel unbounded`, 측정된 유한 상한은 `--channel-limit N`으로 지정한다. 기본 가정으로 실패한 경우 검증기 메시지의 전달 채널 안내를 확인한다.
 
