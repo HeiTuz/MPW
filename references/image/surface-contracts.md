@@ -45,7 +45,7 @@
 
 모델이 받는 자연어와 MPW 조립 형식은 별도 계약이다. GPT Image 편집은 [image-brief.md](image-brief.md) §8의 층(바꿀 층 + `## Keep`, 구획 표기는 `## 영어 제목`)을 쓴다. 제외 명사 꼬리와 끝 비율 토큰은 새로 붙이지 않는다. 사용자가 MPW 조립 형식·전문 레인·기계 레코드를 지정한 경우에만 그 형식을 적용한다.
 
-`check_prompt.mjs`는 네이티브 자연어에는 기본 `native`, MPW 조립 산출물에는 `assembled` 프로필을 쓴다. 표면·채널·엔진이 정해졌으면 실제 값을 전달한다. GPT Image가 아닌 엔진 대상에는 내용 검사를 기대하지 않는다. Midjourney는 `--profile assembled --engine midjourney`로 돌리면 `input/engine-scope`와 단어 수가 나오고, 이 코드는 범위 밖이라는 표시이며 프롬프트 결함이 아니다. 그 밖의 엔진은 assembled에서 GPT Image용 문구 검사가 그대로 돌므로 길이 오류만 본다. 네이티브 검사는 필요한 자연어 편집 제약을 허용하고 끝 비율 토큰을 요구하지 않는다. 매니페스트의 텍스트 검사만으로 API 필드, 참조 전달, 픽셀 보존, 생성 품질을 검증했다고 보지 않는다. Higgsfield 래퍼의 길이·요청 계약을 대신하지 않으며 S2 전체 요청은 현재 도구·API 스키마로 별도 확인한다.
+`check_prompt.mjs`는 네이티브 자연어에는 기본 `native`, MPW 조립 산출물에는 `assembled` 프로필을 쓴다. 표면·채널·엔진이 정해졌으면 실제 값을 전달한다. GPT Image가 아닌 엔진 대상에는 내용 검사를 기대하지 않는다. Midjourney는 `--profile assembled --engine midjourney`로 돌리면 `input/engine-scope`와 단어 수가 나오고, 이 코드는 범위 밖이라는 표시이며 프롬프트 결함이 아니다. 그 밖의 엔진은 `--engine higgsfield` 또는 `unknown`으로 돌리고, 이때 assembled에서 GPT Image용 문구 검사가 그대로 돌므로 길이 오류만 본다. 네이티브 검사는 필요한 자연어 편집 제약을 허용하고 끝 비율 토큰을 요구하지 않는다. 매니페스트의 텍스트 검사만으로 API 필드, 참조 전달, 픽셀 보존, 생성 품질을 검증했다고 보지 않는다. Higgsfield 래퍼의 길이·요청 계약을 대신하지 않으며 S2 전체 요청은 현재 도구·API 스키마로 별도 확인한다.
 
 ### 3.2 GPT Image 2.5·2.6 — 네이티브 생성 브리프
 
