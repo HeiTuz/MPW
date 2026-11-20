@@ -24,7 +24,7 @@
 - 층은 `## 영어 이름`으로 시작하고, 층 사이는 빈 줄 하나로 띄운다. 사용자가 프롬프트 언어를 지정하면 층 이름도 그 언어로 쓴다.
 - 층 안의 줄은 모두 `토큰 — 문장` 꼴이다(`## Identity Reference` 층만 예외다. 문단 하나를 쓴다, §5). 토큰은 원어 토큰(§2)이나 짧은 영어 이름이다. 문장은 영어 한두 문장이다. 대상을 묘사하는 명사구로 시작해도 되지만, 무엇이 어디에 어떻게 보이는지까지 이어 쓴다.
 - 단어를 쉼표로 늘어놓지 않는다. `soft light, film look, warm tone` 같은 나열은 엔진이 제멋대로 읽는다.
-- 층마다 2~5줄(§3 표가 1줄을 허용한 층과 `## Identity Reference`만 예외). 첫눈에 읽혀야 할 층(사용자가 가장 공들여 말한 것)은 4~5줄로 가장 자세히 쓴다. 단순 장면도 층은 셋 이상이다.
+- 층마다 2~5줄(§3 표가 1줄을 허용한 층, `## Keep`, `## Identity Reference`만 예외). 첫눈에 읽혀야 할 층(사용자가 가장 공들여 말한 것)은 4~5줄로 가장 자세히 쓴다. 단순 장면도 층은 셋 이상이다.
 - 한 사실은 한 층에만 쓴다. 피부 마감은 Hair and makeup 한 곳에서만 말한다.
 - 길이는 10,000자 이하다(공백·줄바꿈 포함, ChatGPT 웹 입력창에 붙여 넣는 기본 경로의 상한, 근거는 [surfaces.md](surfaces.md) §0-1). 인물은 보통 3,000~6,000자, 단순 장면은 1,000~2,500자가 된다. 넘으면 같은 말 반복, 화면에 안 보이는 줄, 덜 중요한 층의 셋째 줄부터 지운다. 층 자체는 지우지 않는다. 호출자가 더 좁은 상한이나 다른 단위(바이트)를 정했으면 그것이 먼저이고, 그 단위로 직접 재어 맞춘다.
 - 결과를 PromptBundle·ImageProductionHandoff 같은 기계 계약으로 넘기면 그 계약의 2,000자가 이긴다. 줄 수를 줄여 맞추고, 잘라 내지 않는다. 줄이는 순서: Legwear와 Props and nails를 1줄로 → Style을 1줄로 → 나머지 층의 둘째 줄부터 뒤에서 앞으로. 이 순서로도 안 맞을 때만 §3 표가 '빼는 경우'로 허용한 층부터 뺀다. 이 경우 §9-2의 '기본 층이 다 있는가'보다 이 줄이 우선한다.
@@ -98,7 +98,7 @@
 
 ## 4. 층 채우기
 
-다른 엔진을 지정했으면 §2 표와 이 절의 `## 층`·`토큰 — 문장` 꼴, 모든 층 채우기는 쓰지 않는다(§11 마지막 줄).
+다른 엔진을 지정했으면 §2 표와 이 절의 `## 층`·`토큰 — 문장` 꼴, 모든 층 채우기는 쓰지 않는다(§11의 다른 엔진 줄).
 
 ### 사용자가 준 것
 
@@ -193,7 +193,7 @@ If a model reference is provided, the person in this photo is that model: take o
 
 - 정확한 문구: 사용자가 준 문구를 따옴표 안에 한 글자도 바꾸지 않고 한 번만 쓴다. 그 줄에 위치, 크기, 서체, 또렷하게 읽힐 것, 한 번만 나온다는 것을 함께 쓰고, 다른 글자가 없다는 문장을 같은 층에 한 줄 둔다. 글자는 `Text`나 `Label` 같은 층에 모은다.
 - 사용자가 문구를 주지 않았으면 글자를 지어내지 않는다. 간판·포장·화면은 `no readable lettering`처럼 보이는 상태로 쓴다.
-- 브랜드·제품명(카메라, 필름, 패션, 소품 등)은 룩을 가리키는 말로 쓸 수 있다. 로고와 상표 글자는 화면에 그리지 않는다. 실존 인물의 이름은 스타일을 가리킬 때만 쓰고(예: Godard, Jane Birkin), 그 사람의 얼굴이나 몸을 닮게 하는 용도로는 쓰지 않는다.
+- 브랜드·제품명(카메라, 필름, 패션, 소품 등)은 룩을 가리키는 말로 쓸 수 있다. 로고와 상표 글자는 새로 그리지 않는다. 실존 인물의 이름은 스타일을 가리킬 때만 쓰고(예: Godard, Jane Birkin), 그 사람의 얼굴이나 몸을 닮게 하는 용도로는 쓰지 않는다.
 - 첨부하지 않은 참조를 말하지 않는다(reference, same face). `## Identity Reference` 구획만 예외다.
 - 아이·학생이 나오는 이미지도 만든다. 교복과 학생 연출도 쓸 수 있고, 스쿨룩·프레피·하이틴은 성인 패션 장르다. 지키는 것은 둘이다: 미성년을 성적으로 그리지 않는다(아이·학생이 나오는 이미지에는 관능 어휘와 노출 연출을 붙이지 않는다), 실존 인물의 얼굴·몸을 닮게 하지 않는다.
 - 금지 문장은 세 경우에만 쓴다: 사용자가 빼 달라고 한 것, 정확 문구 밖의 글자, 편집에서 지킬 것. 관련 층 안에 한 문장으로 쓰고, `no X, no Y`처럼 늘어놓지 않는다. 그 밖에 비워 두고 싶은 것은 보이는 상태로 쓴다("the table is bare", "the street is empty").
@@ -241,7 +241,7 @@ unchanged — Keep the room, the sofa's shape and position, the window light dir
 5. 원어 토큰마다 사전에 있거나 확실히 아는 말인가? 음차를 원어 표기로 바꿨는가? 뒤 문장이 번역이 아니라 화면 결과인가?
 6. 사람이 나오면 `## Identity Reference`의 조건문이 있고 조건절 밖에 얼굴·체형·나이·피부색 서술이 하나도 없으며, Hair and makeup과 Expression은 있는가?
 7. 한 사실을 두 층에 쓰지 않았는가? 피부 마감이 한 층에만 있는가?
-8. §6을 어겼는가(지어낸 글자, 로고·상표 글자, 얼굴·몸을 닮게 하는 실존 인물 이름, 품질 태그, 늘어놓은 금지)?
+8. §6을 어겼는가(지어낸 글자, 새 로고·상표 글자, 얼굴·몸을 닮게 하는 실존 인물 이름, 품질 태그, 늘어놓은 금지)?
 9. 후속 수정이면 바꾸라는 층 밖의 줄이 글자 그대로인가?
 10. 10,000자 이하인가? 기계 계약으로 넘기면 그 계약의 상한 안인가?
 
@@ -350,7 +350,7 @@ shoulders — Shoulders level and relaxed, elbows close to the body, both hands 
 
 ## Light
 几何光影 — Late-morning sun comes through the lattice window behind her left shoulder and lays a pattern of small diamond shapes across the table, her shoulder and one sleeve.
-wall bounce — Daylight reflected off the white plaster fills her face softly, so the shadows stay gray-brown instead of black.
+wall bounce — Daylight reflected off the white plaster fills her face softly.
 steam — The backlight catches the steam above the cup as a pale, glowing curl.
 
 ## Optics
@@ -417,7 +417,7 @@ focus — The cat's face is sharp; the garden and the far end of the veranda sof
 
 ## 11. 기존 프롬프트를 정제·교정할 때
 
-기존 이미지 프롬프트 전체를 "정제·교정·퇴고·검토 및 개선·다듬어 줘"라고 하면, GPT Image 대상이거나 대상 엔진이 정해지지 않았을 때는 새로 쓸 때와 같은 모양(§1)과 언어(§2)로 옮겨 쓴다. 다른 엔진을 지정했으면 아래 마지막 규칙의 우선순위를 따른다. 영어 산문 문단을 그대로 두고 문장만 손보는 것은 정제가 아니다.
+기존 이미지 프롬프트 전체를 "정제·교정·퇴고·검토 및 개선·다듬어 줘"라고 하면, GPT Image 대상이거나 대상 엔진이 정해지지 않았을 때는 새로 쓸 때와 같은 모양(§1)과 언어(§2)로 옮겨 쓴다. 다른 엔진을 지정했으면 아래 다른 엔진 항목의 우선순위를 따른다. 영어 산문 문단을 그대로 두고 문장만 손보는 것은 정제가 아니다.
 
 - 바꾸는 것: 모양과 말. 첫 줄 한 문장, `## 층`, 층 안은 `토큰 — 영어 문장`으로 나눈다(GPT Image 대상이거나 엔진 미정일 때). 원어 토큰을 쓰는 기준은 §4 토큰 찾기를 따른다.
 - 바꾸지 않는 것: 원문이 말한 화면의 사실(자세, 의상, 소품, 빛, 색, 구도). 빼거나 바꾸거나 지어내지 않는다.
@@ -452,7 +452,7 @@ After:
    - 1명이면 §5를 따른다.
    - 2명 이상이면 사용자가 얼굴 참조를 붙일 인물을 정했을 때만 그 인물에게 조건문을 쓰고 위치로 가리킨다(`the woman on frame left`). 정하지 않았으면 조건문 없이 모든 인물을 Hair and makeup·Expression·Outfit·Pose로 쓴다. 이 경우 §5의 Identity Reference 항상 두기와 §9-2·§9-6의 Identity Reference 확인은 적용하지 않는다.
    - 배경 인물은 Scene에 수, 위치, 흐린 정도, 걷는 방향, 대략의 옷 색만 쓴다.
-   - 거울에 비친 모습은 사람 수에 세지 않는다. 한 사람과 그 반사상이 함께 보여도 1명이다. 반사 사진이라는 사실은 한 곳에만 쓴다. Pose에 `거울 셀카`·`ミラーセルフィー` 같은 거울 셀카 토큰을 쓰면 Camera에는 거울 테두리가 보이는지와 프레이밍만 쓴다. 토큰을 쓰지 않으면 Camera에 `A mirror selfie; the mirror frame is out of shot`처럼 쓴다. 거울에 대해 Camera에는 반사 사진이라는 사실(테두리가 보이면 그 위치, 실물과 반사상이 함께 보이면 둘의 배치)만 쓰고, 프레이밍·카메라 높이·초점은 평소대로 쓴다. 폰과 손의 위치는 Pose에만 쓰고, Props and nails에는 폰의 종류·색·케이스만 쓴다.
+   - 거울에 비친 모습은 사람 수에 세지 않는다. 한 사람과 그 반사상이 함께 보여도 1명이다. 반사 사진이라는 사실은 한 곳에만 쓴다. Pose에 `거울 셀카`·`ミラーセルフィー` 같은 거울 셀카 토큰을 쓰면 Camera에는 반사 사진이라는 말을 다시 쓰지 않고, 거울에 대해서는 테두리가 보이면 그 위치, 실물과 반사상이 함께 보이면 둘의 배치만 쓴다. 토큰을 쓰지 않으면 Camera에 `A mirror selfie; the mirror frame is out of shot`처럼 한 마디를 더한다. 어느 쪽이든 프레이밍·카메라 높이·초점은 평소대로 쓴다. 폰과 손의 위치는 Pose에만 쓰고, Props and nails에는 폰의 종류·색·케이스만 쓴다.
 2. 아래 항목을 사진에서 읽는다. 읽히는 것만 해당 층에 쓴다.
 
 | 읽을 것 | 쓸 층 | 볼 점 |
@@ -484,7 +484,7 @@ After:
 ### 12.3 인물
 
 - 사진 속 인물의 얼굴 생김새와 체형(이목구비, 얼굴형, 점, 피부 톤)은 쓰지 않는다. `## Identity Reference`는 §5의 조건문 문안 그대로 쓰고, `If none is provided,` 뒤는 §5 규칙(기본 인물이나 사용자가 정한 인물)을 따른다. 사진 속 사람의 외모를 옮겨 적지 않는다.
-- 사진에서 보이는 성별과 대략의 나이대(성인/아이)는 §5에서 사용자가 준 값처럼 다뤄 그 값만 바꾸고, 그 밖의 외모(얼굴형·이목구비·체형·피부색)는 옮기지 않는다. 아이·학생으로 보이면 조건절의 나이를 성인으로 바꾸지 않는다.
+- 사진에서 보이는 성별과 대략의 나이대(성인/아이)는 §5에서 사용자가 준 값처럼 다뤄 그 값만 바꾸고, 그 밖의 외모(얼굴형·이목구비·체형·피부색)는 옮기지 않는다. 아이·학생으로 보이면 조건절의 나이를 성인으로 바꾸지 않는다. 호출자·사용자가 완성 문단을 줬으면 §5의 그 예외가 먼저이므로 사진의 나이대로 고치지 않는다.
 - 헤어·메이크업·표정·포즈는 층으로 자세히 쓴다. 피부는 메이크업 마감과 보정 수준만 쓴다.
 - 사진 속 인물이 아이·학생으로 보이면 §6의 두 지킴을 그대로 따른다.
 
@@ -516,7 +516,7 @@ After:
 crewneck sweatshirt — A heavyweight gray-melange cotton sweatshirt worn loose, the sleeves pushed to the forearms; the chest is a plain unmarked surface.
 
 ## Light
-window light — A large window out of frame to the left lights the left cheek and arm; the shadows on the right fall soft-edged and stay gray, not black, because the white wall bounces light back.
+window light — A large window out of frame to the left lights the left cheek and arm; the shadows on the right fall soft-edged because the white wall bounces light back.
 
 ## Optics
 faded grade — A slightly faded look: the blacks are lifted to dark gray and the whites lean faintly warm, with low contrast overall.

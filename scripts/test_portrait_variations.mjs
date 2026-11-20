@@ -37,7 +37,7 @@ for (const [cuts, layer] of [[mixed, 'Optics'], [korean, '광학']]) {
   for (const cut of cuts) {
     assert.ok(headingsOf(cut).length >= 3, 'layered cut has three or more ## layers');
     assert.ok(headingsOf(cut).includes(`## ${layer}`), `${layer} layer present`);
-    assert.doesNotMatch(withoutLayer(cut, 'Identity Reference'), /첨부|참조|앞 컷|\b(?:reference|attached)\b|3:4/i);
+    assert.doesNotMatch(withoutLayer(cut, layer === 'Optics' ? 'Identity Reference' : '인물 참조'), /첨부|참조|앞 컷|\b(?:reference|attached)\b|3:4/i);
   }
   assert.deepEqual(headingsOf(cuts[0]), headingsOf(cuts[1]), 'both cuts use the same layers');
   assert.equal(withoutLayer(cuts[0], layer), withoutLayer(cuts[1], layer), 'only the optics layer differs');
