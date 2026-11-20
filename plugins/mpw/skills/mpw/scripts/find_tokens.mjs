@@ -95,7 +95,7 @@ export function drawRandom(results, count, pickIndex = randomInt) {
 
 export function formatText(results) {
   if (results.every((l) => l.matches.length === 0)) {
-    return 'no match in any layer. Read references/image/layer-lexicon.md (the index) and pick from its representative tokens.\n';
+    return 'no match in any layer. Use English tokens and sentences unless you know an original-language term for sure (image-brief.md §2, §4). To search again, narrow with --layers and run once more.\n';
   }
   return results.map((l) => {
     const body = l.matches.length
