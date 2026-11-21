@@ -36,7 +36,7 @@
 | catchlight | 카드 줄이 이긴다 | #045 단일 하이라이트, 神态 #042 창틀 사각, #051 가는 줄, #055 불꽃 두 점이 고정 줄의 점 하나와 어긋난다 |
 | grain | A·B는 켠다(고정 줄 그대로). C·D는 카드 줄이 이긴다 | Tri-X 은염의 굵은 입자(#043 #050 #057)와 500T 저조도 입자(#046 #051 #055)가 고정 줄의 곱고 고른 입자와 어긋난다 |
 | lens | 렌즈를 말하는 줄은 하나이고 출처 순서는 세트의 렌즈 > 쌍의 렌즈 > 갈래의 본체·렌즈 줄 > 고정 몫 줄이다. 세트를 쓰면 세트 Optics의 렌즈(S1 Canon FD 50mm, S2 Planar 50mm, S3 Summicron 35mm, S4 Summicron 50mm, S5 Planar 45mm, S6 Planar 50mm)가 그 줄이라 고정 줄을 붙이지 않는다. 세트의 렌즈 구절은 세트가 고른 본체의 Optics `camera` 줄 문장 끝에 붙인다(S2·S6은 `Contax RTS III` 줄, S3은 `Leica M6` 줄, S4는 `Leica MP` 줄, S5는 `Contax G2` 줄. 예: S3 `…rangefinder body, fitted with a Summicron 35mm f/2 lens`). S1의 `Canon New F-1`은 카드에 본체 줄이 없으니 `Canon FD 50mm f/1.4` 토큰을 줄 머리로 렌즈 줄 하나를 쓰고 A의 `camera`·`tone-rts` 줄은 붙이지 않는다. 세트 없이 갈래 줄로 쓰면 갈래의 본체 줄(A `Contax RTS III`, B `Leica M6`, C `Leica MP`, D `Contax G2`)은 렌즈를 말하지 않고 카드에 Optics lens 줄도 없어서 고정 몫 lens 줄을 켠다. 쌍 1~12의 Camera 줄은 모두 렌즈를 말하지 않는다(쌍 7·11은 화면 범위만 말한다) | FD 50·Planar 50·Summicron 35/50이 모두 표준 렌즈라 고정 몫 lens 줄과 부딪히지 않는다. B의 `Leica M6` 줄은 "자연스러운 약간 넓은 시야"를 말해 고정 줄(표준~중망원)과 어긋났으므로 시야 구절을 뺐다 |
-| framing | 켠다. 쌍 1·2·7~12는 프레임 범위를 직접 말하니 그때는 3:4만 쓴다 | 나머지 쌍은 범위를 말하지 않는다 |
+| framing | 켠다. 쌍 1·2·7~12는 프레임 범위를 직접 말하니 그때는 3:4만 쓴다. 나머지 쌍은 고정 몫 기준이다(범위는 fixed-lines.md의 중심 층) | 나머지 쌍은 범위를 말하지 않는다 |
 | ratio | 켠다. 사용자 비율이 없으면 3:4 세로 | Iris 20편이 모두 3:4이고 쌍은 비율을 정하지 않는다 |
 
 ## Hair and makeup

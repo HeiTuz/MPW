@@ -37,7 +37,7 @@
 | grain | 끈다. 필름용과 디카용 고정 몫 grain 줄을 모두 붙이지 않고 Optics의 `grain`(`ビデオノイズ`, B는 `ゲイン`) 줄이 채운다 | 이 룩의 입자는 필름도 디카도 아닌 비디오 노이즈이고 주사선과 함께 온다 |
 | realism | 모든 갈래에서 바꾼다. `8K`·땀구멍 줄 대신 `native resolution` 줄을 쓴다. 매체 구절은 `480-line camcorder`, 질감은 `soft edges, smeared fine texture and skin that shows no individual pores` | 480줄급 화면에 8K 모공 묘사를 얹으면 번짐이라는 룩의 정체와 반대다. 사실감은 medium과 closer가 맡는다 |
 | ratio | 켠다. 사용자 비율이 없으면 4:3 가로이고, 세로는 사용자가 말할 때만 쓴다. 이때 framing 줄은 `horizontal frame — A horizontal 4:3 frame from …` 꼴로 쓴다. 타임스탬프를 쓰는 장면은 어느 비율이든 오른쪽 아래 모서리에 둔다 | DV 본래 프레임이 4:3 가로이고 Iris 원문은 3:4로 잘랐다. 매체의 본래 프레임을 기본으로 둔다 |
-| framing | 켠다. 쌍 2(가슴 위), 6(전신이 작게), 7(위에서 전신), 9(얼굴 30cm), 12(화면의 3분의 1)는 Camera 줄이 범위를 직접 말하니 그 쌍에서는 쌍이 정한다. 범위를 말하지 않는 쌍 가운데 걸음·다리 동작이 있는 1·3·5·8은 `from head to toe`로 쓴다 | 나머지 쌍은 범위를 말하지 않는데 Pose가 걸음을 말하면 허리 위 프레임에서 그 동작이 안 보인다 |
+| framing | 켠다. 쌍 2(가슴 위), 6(전신이 작게), 7(위에서 전신), 9(얼굴 30cm), 12(화면의 3분의 1)는 Camera 줄이 범위를 직접 말하니 그 쌍에서는 쌍이 정한다. 범위를 말하지 않는 쌍 가운데 걸음·다리 동작이 있는 1·3·5·8은 `from head to toe`로 쓴다. 나머지 쌍은 고정 몫 기준이다(범위는 fixed-lines.md의 중심 층) | 나머지 쌍은 범위를 말하지 않는데 Pose가 걸음을 말하면 허리 위 프레임에서 그 동작이 안 보인다 |
 
 **모든 쌍에 해당하는 처리:** face-light는 끈다, grain은 끈다(Optics `ビデオノイズ`·`ゲイン` 줄이 채운다), realism은 `native resolution` 줄로 바꾼다, ratio는 4:3 가로다. 쌍 번호를 조건으로 건 것은 lens·face-clear·framing뿐이다
 

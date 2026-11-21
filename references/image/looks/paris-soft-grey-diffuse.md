@@ -37,7 +37,7 @@
 | grain | 카드 줄이 이긴다 | 고정 줄은 "고르게"만 말하지만 C·D의 어두운 골목·아케이드(#025 #029)는 암부에서 입자가 더 보인다 |
 | lens | 모든 갈래에서 끈다(갈래마다 Optics lens 줄이 있어 고정 몫 lens 줄까지 내려올 일이 없다). 렌즈를 말하는 줄은 하나이고 출처 순서는 세트의 렌즈 > 쌍의 렌즈 > 갈래의 Optics lens 줄이다(A·D Summicron 35mm, B Zeiss Planar 45mm, C Canon FD 50mm). 세트가 렌즈를 말하면(S1~S6 모두 말한다) 그 렌즈가 렌즈 줄이고, 세트가 속한 갈래의 Optics `lens` 줄 자리에 쓴다: S1·S2·S5는 `Summicron 35mm f/2` 줄, S3은 `Zeiss Planar 45mm f/2` 줄, S4는 `Canon FD 50mm f/1.4` 줄 그대로이고, S6은 세트의 `Zeiss Planar 50mm f/1.4`가 D의 `Summicron 35mm f/2` 줄 문장을 대신한다. 세트가 없으면 쌍 2의 Camera 줄 `telephoto compression`이 렌즈 줄이라 갈래 lens 줄을 붙이지 않고, 쌍 2가 아니면 갈래의 Optics `lens` 줄이 렌즈 줄이다. 세트와 쌍 2를 함께 쓰면 쌍 2의 Camera 줄은 `A longer lens` 같은 렌즈 구절을 빼고 줄기들이 한 장의 띠로 겹친다는 구도만 쓴다(렌즈는 세트가 쓰는 `lens` 줄이 말한다). 나머지 쌍(1·3~11)의 Camera 줄은 렌즈를 말하지 않는다 | Iris는 #030 #034의 필드를 Biogon 28mm f/2.8로 적었지만 본문과 고정 꼬리는 50mm 인물 렌즈를 말해 어긋났다. 이 카드는 Planar 45mm로 쓴다 |
 | realism | `Kodak Tri-X 400`(흑백)과 `Pellicule poussée`(D)를 함께 고르면 `8K`·땀구멍 줄 대신 `native resolution — The frame holds the resolution of pushed Tri-X 400 and no more: coarse grain over softened fine detail and skin that shows no individual pores.`를 쓴다. 다른 매체는 realism 줄을 그대로 켠다 | 강하게 푸시한 흑백은 굵은 입자가 모공을 가려 8K 묘사와 부딪힌다 |
-| framing | 켠다. 쌍 1·4·5·9·11은 프레임 범위를 직접 말하니 그때는 3:4만 쓴다 | 나머지 쌍은 범위를 말하지 않는다 |
+| framing | 켠다. 쌍 1·4·5·9·11은 프레임 범위를 직접 말하니 그때는 3:4만 쓴다. 나머지 쌍은 고정 몫 기준이다(범위는 fixed-lines.md의 중심 층) | 나머지 쌍은 범위를 말하지 않는다 |
 | ratio | 켠다. 사용자 비율이 없으면 3:4 세로 | 쌍은 비율을 정하지 않는다 |
 
 ## Hair and makeup

@@ -36,7 +36,7 @@
 | catchlight | 카드 줄이 이긴다 | 고정문의 清澈单点眼神光이 유리창의 이중 반사(#061)·빗물 다중 반사(#066)와 어긋난다 |
 | grain | 카드 줄이 이긴다 | 고정 줄의 고운 입자가 B의 증감 현상의 거친 입자(#066 #075)와 어긋난다 |
 | lens | 모든 갈래에서 끈다(갈래마다 Optics lens 줄이 있어 고정 몫 lens 줄까지 내려올 일이 없다). 렌즈를 말하는 줄은 하나이고 출처 순서는 세트의 렌즈 > 쌍의 렌즈 > 갈래의 Optics lens 줄이다. 세트 S1~S3은 Planar 80mm, S6은 Summicron 35mm를 주고, 그 렌즈는 같은 이름의 Optics `lens` 줄(S1~S3은 A의 `Zeiss Planar 80mm f/2.8`, S6은 C의 `Summicron 35mm f/2`)이 말한다. S4·S5는 렌즈를 말하지 않아 갈래 줄(A·B Zeiss Planar 80mm, C Summicron 35mm)이 렌즈 줄이다. 쌍 1~12의 Camera 줄은 모두 렌즈를 말하지 않으니 어느 쌍을 골라도 이 순서의 한 줄이 렌즈 줄이다 | #061 등은 Planar 80mm와 `50mm黄金人像定焦镜头平视无畸变视角`를 한 프롬프트에 함께 적었고, 허리 높이 파인더의 낮은 시점은 눈높이 줄과 맞지 않는다. C도 Optics에 Summicron 35mm 줄이 있어 고정 몫 lens 줄을 같이 붙이면 렌즈 줄이 둘이 된다 |
-| framing | 켠다. A·B는 `vertical frame` 줄의 방향·비율 구절 전체(`A vertical 3:4 frame`)를 `A square 1:1 frame`으로 바꾸고 `vertical`을 남기지 않는다. 쌍 4·6·10은 프레임 범위를 직접 말하니 그때는 비율만 쓴다 | 쌍 대부분이 프레임 범위를 말하지 않는다 |
+| framing | 켠다. A·B는 `vertical frame` 줄의 방향·비율 구절 전체(`A vertical 3:4 frame`)를 `A square 1:1 frame`으로 바꾸고 `vertical`을 남기지 않는다. 쌍 4·6·10은 프레임 범위를 직접 말하니 그때는 비율만 쓴다. 나머지 쌍은 고정 몫 기준이다(범위는 fixed-lines.md의 중심 층) | 쌍 대부분이 프레임 범위를 말하지 않는다 |
 | ratio | A·B는 사용자 비율이 없으면 1:1 정방형으로 바꾼다. 3:4 세로를 붙이지 않는다. C는 켠다(3:4 세로). 모든 쌍에 해당하는 처리: face-light·face-clear는 끄고 base·lip·catchlight·grain은 카드 줄이 이기며, lens는 세트 > 갈래의 Optics 줄 하나이고, ratio는 A·B 1:1·C 3:4다 | #061 등이 `1:1正方形` 구도 문장과 끝의 `3:4`를 함께 적었다. A·B의 정체는 6x6 정방형이다 |
 
 ## Hair and makeup

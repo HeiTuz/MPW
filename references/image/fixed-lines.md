@@ -74,11 +74,11 @@ GPT Image(웹·API)·대상 미정인 새 이미지(인물 사진과 인물 없�
 
 ## Camera
 
-- `framing`+`ratio`: `vertical frame — A vertical 3:4 frame from <위> to <아래>, <인물의 자리 한 구절>.` 사용자 비율이 없고 비율 설정이 없는 표면이면 인물 사진은 3:4 세로다. 사용자 비율이 있으면 그 비율과 방향으로 쓴다. 층의 중심에 따라 프레이밍을 고른다.
+- `framing`+`ratio`: `vertical frame — A vertical 3:4 frame from <위> to <아래>, <인물의 자리 한 구절>.` 사용자 비율이 없고 비율 설정이 없는 표면이면 인물 사진은 3:4 세로다. 사용자 비율이 있으면 그 비율과 방향으로 쓴다. 쌍·세트·요청이 범위를 말하지 않으면 중심 층이 정한다. 중심 층은 요청이 말한 것이다: 옷·신발·전신 자세면 머리부터 발끝, 얼굴·화장·표정이면 가슴 위, 그 밖은 허리 위.
 
   | 중심 층 | 프레이밍 |
   |---|---|
-  | Outfit·Legwear | 머리부터 발끝, 중망원 |
+  | Outfit·Legwear·전신 자세 | 머리부터 발끝, 중망원 |
   | Hair and makeup·Expression | 가슴 위, 눈높이 |
   | Props and nails | 허리 위, 손이 프레임 안 |
   | 그 밖 | 허리 위 |
