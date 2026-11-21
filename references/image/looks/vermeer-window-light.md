@@ -35,11 +35,15 @@
 | base, lip | 카드 줄이 이긴다(base 줄은 FR 문화권 공식의 주근깨를 되풀이하지 않는다) | Iris 메이크업 고정문의 浆果玫瑰唇이 프리셋마다 다른 입술색(복숭아·체리 핑크·시나몬 모브·와인) 위에 둘째 입술색을 얹었다 |
 | catchlight | 카드 줄이 이긴다 | #045 단일 하이라이트, 神态 #042 창틀 사각, #051 가는 줄, #055 불꽃 두 점이 고정 줄의 점 하나와 어긋난다 |
 | grain | A·B는 켠다(고정 줄 그대로). C·D는 카드 줄이 이긴다 | Tri-X 은염의 굵은 입자(#043 #050 #057)와 500T 저조도 입자(#046 #051 #055)가 고정 줄의 곱고 고른 입자와 어긋난다 |
-| lens | 렌즈를 말하는 줄은 하나이고 출처 순서는 세트의 렌즈 > 쌍의 렌즈 > 갈래의 본체·렌즈 줄 > 고정 몫 줄이다. 세트를 쓰면 세트 Optics의 렌즈(S1 Canon FD 50mm, S2 Planar 50mm, S3 Summicron 35mm, S4 Summicron 50mm, S5 Planar 45mm, S6 Planar 50mm)가 그 줄이라 고정 줄을 붙이지 않는다. 세트 없이 갈래 줄로 쓰면 갈래의 본체 줄(A `Contax RTS III`, B `Leica M6`, C `Leica MP`, D `Contax G2`)은 렌즈를 말하지 않고 카드에 Optics lens 줄도 없어서 고정 `自然透视` 줄을 켠다. 쌍 1~12의 Camera 줄은 모두 렌즈를 말하지 않는다(쌍 7·11은 화면 범위만 말한다) | FD 50·Planar 50·Summicron 35/50이 모두 표준 렌즈라 `自然透视` 줄과 부딪히지 않는다. B의 `Leica M6` 줄은 "자연스러운 약간 넓은 시야"를 말해 고정 줄(표준~중망원)과 어긋났으므로 시야 구절을 뺐다 |
+| lens | 렌즈를 말하는 줄은 하나이고 출처 순서는 세트의 렌즈 > 쌍의 렌즈 > 갈래의 본체·렌즈 줄 > 고정 몫 줄이다. 세트를 쓰면 세트 Optics의 렌즈(S1 Canon FD 50mm, S2 Planar 50mm, S3 Summicron 35mm, S4 Summicron 50mm, S5 Planar 45mm, S6 Planar 50mm)가 그 줄이라 고정 줄을 붙이지 않는다. 세트의 렌즈 구절은 세트가 고른 본체의 Optics `camera` 줄 문장 끝에 붙인다(S2·S6은 `Contax RTS III` 줄, S3은 `Leica M6` 줄, S4는 `Leica MP` 줄, S5는 `Contax G2` 줄. 예: S3 `…rangefinder body, fitted with a Summicron 35mm f/2 lens`). S1의 `Canon New F-1`은 카드에 본체 줄이 없으니 `Canon FD 50mm f/1.4` 토큰을 줄 머리로 렌즈 줄 하나를 쓰고 A의 `camera`·`tone-rts` 줄은 붙이지 않는다. 세트 없이 갈래 줄로 쓰면 갈래의 본체 줄(A `Contax RTS III`, B `Leica M6`, C `Leica MP`, D `Contax G2`)은 렌즈를 말하지 않고 카드에 Optics lens 줄도 없어서 고정 몫 lens 줄을 켠다. 쌍 1~12의 Camera 줄은 모두 렌즈를 말하지 않는다(쌍 7·11은 화면 범위만 말한다) | FD 50·Planar 50·Summicron 35/50이 모두 표준 렌즈라 고정 몫 lens 줄과 부딪히지 않는다. B의 `Leica M6` 줄은 "자연스러운 약간 넓은 시야"를 말해 고정 줄(표준~중망원)과 어긋났으므로 시야 구절을 뺐다 |
 | framing | 켠다. 쌍 1·2·7~12는 프레임 범위를 직접 말하니 그때는 3:4만 쓴다 | 나머지 쌍은 범위를 말하지 않는다 |
 | ratio | 켠다. 사용자 비율이 없으면 3:4 세로 | Iris 20편이 모두 3:4이고 쌍은 비율을 정하지 않는다 |
 
 ## Hair and makeup
+**하나만 고르는 슬롯:** `hair`·`hair-wrap`(머리 모양 후보, A의 두건 장면이면 `hair-wrap` 하나)
+
+**함께 쓰는 슬롯:** `hair-color`(머리색, 고른 머리 줄 위에 얹는다)
+
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
 | A, B, D | hair | Coiffure effet saut du lit — Long dark-brown waves lie loosely over one shoulder, slept-in and finger-tousled, with lifted roots and uneven ends. |
@@ -68,6 +72,8 @@
 | D | expression | Rêverie — The head turns slightly and the eyes follow something far outside the window, the lips softly closed. |
 
 ## Outfit
+**함께 쓰는 슬롯:** `outfit-apron`(A의 앞치마는 `outfit` 위에), `outfit-outer`(겉옷은 `outfit` 위에)
+
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
 | A | outfit | Lin lavé — A short-sleeved blouse of coarse washed linen in ochre-yellow creases deeply at the elbows and glows at the edges where the window light lands. |
@@ -134,6 +140,8 @@
 | D | background | Toits de Zinc — Zinc rooftops and chimney pots seen through an open casement. |
 
 ## Light
+**하나만 고르는 슬롯:** `pattern-blind`·`pattern-iron`(창가 그림자 무늬 후보, 블라인드 장면이면 `pattern-blind`, 철 난간 장면이면 `pattern-iron`), `place-light-*`(장소별 줄, 장면과 맞는 하나)
+
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
 | A | face-light | Vermeer — Soft daylight from one tall side window warms the near cheek, brow and collarbone while the far side sinks into deep blue-brown shadow. |
@@ -142,9 +150,9 @@
 | A, B, D | floor-light | Window Light — The light from the window spills across the floor in a wide beam, and the waxed oak boards carry a dull gleam of it along their length. |
 | B | face-light | Window Light — Sun softened by a sheer curtain wraps one side of the face evenly while the other side keeps a gentle gradient. |
 | B | backlight | Contre-jour — The sun sits behind her, so hair and the cheek edge glow gold while the face holds half a stop darker with its skin detail intact. |
-| B | pattern-light | Venetian Blind Shadows — Slats cut the sun into parallel bars that cross her cheek, collarbone and white shirt, with dust turning gold in the beams. |
+| B | pattern-blind | Venetian Blind Shadows — Slats cut the sun into parallel bars that cross her cheek, collarbone and white shirt, with dust turning gold in the beams. |
 | B | beam | god rays — Low sun through lace curtains makes straight visible shafts in the air, bright inside the beam with dust specks floating through it. |
-| B | pattern-shadow | Wrought-Iron Shadow — Backlight through the scrolled iron rail lays a lace of curling black shadow across her white shirt and bare arms. |
+| B | pattern-iron | Wrought-Iron Shadow — Backlight through the scrolled iron rail lays a lace of curling black shadow across her white shirt and bare arms. |
 | B | catchlight | Fenêtres haussmanniennes — The paned window shows as a small gridded reflection in each iris. |
 | B | place-light-barge | Caustics — Light from the river outside comes through the round brass porthole and throws rippling bright lines across the wooden wall and ceiling. |
 | B | place-light-cafe | Contre-jour — At the café window the boulevard outside glows bright while the dark interior behind the table stays in shadow. |
@@ -152,13 +160,15 @@
 | C | top-light | Overhead Skylight — A pitched skylight above drops pale vertical light that outlines the forehead, nose bridge and collarbones and leaves the eye sockets dark. |
 | C | slit | Filet de lumière — Behind the old carriage door, one slit of daylight at the doorframe cuts a thin bright line into the stone hall while the rest stays dark. |
 | D | face-light | Lueur de bougie — One white candle lights the jaw and the near eye from below with a warm amber glow while everything behind falls to brown-black. |
-| D | fire | Firelight — Hearth flames throw flickering orange light across one cheek, the collarbone and the knees and lighting the parquet and the marble hearth orange, with a heavy dark room behind. |
+| D | fire | Firelight — Hearth flames throw flickering orange light across one cheek, the collarbone and the knees, and the parquet and the marble hearth glow orange, with a heavy dark room behind. |
 | D | key | heure bleue — Cold blue dusk light from the window lays a silver-blue outline along one side of the face and body. |
 | D | slit | Filet de lumière — Nearly closed blinds let one narrow golden band cut across a single eye while the rest of the face stays blue-black. |
 | D | catchlight | Iris d'ambre — Two small warm points sit in each eye and turn the brown iris translucent amber, the light low and from the side. |
 | D | silhouette | Silhouette — At the window the figure reads as a dark outline against the deep blue sky, with only a thin warm line along the shoulder. |
 
 ## Optics
+**하나만 고르는 슬롯:** `tone-*`(고른 `camera` 줄의 것 하나: `tone-rts`는 `Contax RTS III`, `tone-m6`는 `Leica M6`, `tone-mp`는 `Leica MP` 줄을 골랐을 때만 쓴다)
+
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
 | A, B | stock | Kodak Portra 400 — Soft-contrast color negative with warm, creamy highlights and gentle skin tones; in this look the shadows keep their color instead of going gray. |
@@ -171,9 +181,9 @@
 | A | color | Bleu Outremer — Shadows and the apron lean toward a deep, calm French ultramarine set against warm ochre lights. |
 | C | color | High-Contrast Black and White — Bright silver highlights sit hard against deep black shadow with few mid-greys between them. |
 | B | bloom | Halation — The brightest backlit edges bleed a faint warm orange glow into the hair and fabric around them. |
-| A | tone-rts | Contax RTS III — The Zeiss rendering holds the lit eye in crisp focus while the fall-off behind it stays soft and creamy. |
-| B | tone-m6 | Leica M6 — Focus stays sharp where the light lands, and the brightest highlights glow gently. |
-| C | tone-mp | Leica MP — Fine micro-contrast shows the pores and the wool fibres in black and white. |
+| A | tone-rts | Crisp Eye Soft Falloff — On the Contax RTS III, the Zeiss rendering holds the lit eye in crisp focus while the fall-off behind it stays soft and creamy. |
+| B | tone-m6 | Sharp Focus Glowing Highlights — On the Leica M6, focus stays sharp where the light lands, and the brightest highlights glow gently. |
+| C | tone-mp | Fine Micro-Contrast — On the Leica MP, fine micro-contrast shows the pores and the wool fibres in black and white. |
 | D | vignette | Film Vignette — The corners of the frame fall off into darkness and gather the light onto the face. |
 | C | grain | Grain argentique — Coarse, organic silver grain sits across the whole frame, heaviest in the dark tones. |
 | D | grain | Gros grain — Dense, visible low-light grain fills the shadows and thickens toward the dark edges. |
@@ -191,18 +201,20 @@
 ## 포즈·구도 쌍
 | 번호 | 갈래 | Pose | Camera |
 |---|---|---|---|
-| 1 | A | Assise de profil devant la fenêtre — She sits sideways to a tall window with an open book in both hands, the lit cheek and the page turned toward the glass. | Plan rapproché — Her eye level, the frame running from the top of the head to mid-chest so the face and the page edge sit together. |
+| 1 | A | Assise de profil devant la fenêtre — She sits sideways to a tall window with an open book in both hands, the cheek and the page turned toward the glass. | Plan rapproché — Her eye level, the frame running from the top of the head to mid-chest so the face and the page edge sit together. |
 | 2 | A | Verser le lait — She stands at a wooden table tilting a jug in both hands, her eyes lowered to the thin stream. | Plan taille — Eye level from the side of the window, the frame cut at the waist so the table edge and the jug stay in view. |
 | 3 | A | Se coiffer devant le miroir — Seated at a dressing table, she lifts a hair clip toward her temple and meets her own eyes in the glass. | Over the Shoulder — Shot past her blurred shoulder so the mirror shows the opposite cheek and the back of her shoulder. |
-| 4 | B | Allongée de tout son long — She lies flat on a daybed with her arms loose, her eyes drifting to the ceiling. | Plongée — From above and slightly to the side, the bars of light crossing her body and the white linen under it. |
-| 5 | B | Bain de soleil — Barefoot, she stands in a beam of morning sun with her face tipped up into it and a cup in one hand. | Contre-plongée — From below at hip height looking up, the beam running past her into the dusty air behind. |
-| 6 | B | Mains jointes sur la rambarde — She leans on a scrolled iron balcony rail with both hands clasped, her head turned into the breeze. | Cadre dans le cadre — Shot from inside through the open casement, the window frame boxing her against the bright street. |
+| 4 | B | Allongée de tout son long — She lies flat on a daybed with her arms loose, her eyes drifting to the ceiling. | Plongée — From above and slightly to the side, so her whole lying figure and the white linen under it fill the frame. |
+| 5 | B | Bain de soleil — Barefoot, she stands with her face tipped up toward the window and a cup in one hand. | Contre-plongée — From below at hip height looking up, the open air of the room rising behind her. |
+| 6 | B | Mains jointes sur la rambarde — She leans on a scrolled iron balcony rail with both hands clasped, her head turned into the breeze. | Cadre dans le cadre — Shot from inside through the open casement, the window frame boxing her against the street. |
 | 7 | B | Cernée de piles de livres — She sits at a green marble desk with books stacked around her and one hand turning a page. | Plan d'ensemble — A wide frame from the aisle that shows her small beneath the tall arched windows and the shelves. |
-| 8 | C | Visage de trois quarts — Her head turns into a three-quarter view toward the lens, the lit cheek toward the window. | Gros plan — The frame holds only her face, so the lit triangle on the shadowed cheek fills the picture. |
+| 8 | C | Visage de trois quarts — Her head turns into a three-quarter view toward the lens, one cheek toward the window. | Gros plan — The frame holds only her face, the cheek and the eye nearest the window filling the picture. |
 | 9 | C | Devant le chevalet — She stands beside an easel with a loaded brush and her face turned to the unfinished canvas. | Plan américain — Eye level, the frame cut at mid-thigh so the easel and the skylight both stay in view. |
-| 10 | D | Pieds nus devant la cheminée — Barefoot, she sits curled on the floor with both hands around a warm mug and her eyes on the flames. | Plan moyen — Her seated eye level, the whole curled figure with the hearth and the dark room around her. |
-| 11 | D | Couchée sur le côté — Lying on her side, her face turns toward the one band of light, the eyes open and level. | Très gros plan — The frame is only the eyes and the bridge of the nose, filling the picture edge to edge. |
-| 12 | D | Pousser les battants — She pushes the tall casement open with one hand and looks out over the rooftops. | negative space — She fills a third of a vertical frame against the dark room, and the deep blue sky and rooftops fill the rest. |
+| 10 | D | Pieds nus devant la cheminée — Barefoot, she sits curled on the floor with both hands around a warm mug and her eyes on the hearth. | Plan moyen — Her seated eye level, the whole curled figure with the hearth and the room around her. |
+| 11 | D | Couchée sur le côté — Lying on her side, her face turns toward the window, the eyes open and level. | Très gros plan — The frame is only the eyes and the bridge of the nose, filling the picture edge to edge. |
+| 12 | D | Pousser les battants — She pushes the tall casement open with one hand and looks out over the rooftops. | negative space — She fills a third of a vertical frame against the room, and the sky and rooftops fill the rest. |
+
+장소: 쌍 1은 장소가 키 큰 창이 있는 실내일 때, 쌍 2는 장소가 나무 탁자가 있는 부엌일 때, 쌍 3은 장소가 화장대와 거울이 있는 방일 때, 쌍 4는 장소에 눕는 데이베드가 있을 때, 쌍 6은 장소가 철제 난간이 있는 발코니일 때, 쌍 7은 장소가 책상과 서가가 있는 열람실일 때, 쌍 9는 장소가 이젤과 천창이 있는 아틀리에일 때, 쌍 10은 장소가 벽난로 앞일 때, 쌍 12는 장소가 지붕이 내려다보이는 키 큰 창일 때 쓴다. 쌍 5·8·11은 장소를 가리지 않는다.
 
 ## 맞지 않는 것
 정오에 내리꽂는 직사광, 스트로브·링라이트, 네온 간판의 밤거리, 흰 스튜디오 배경, 채움광으로 평평하게 편 그림자, 디지털 청록-주황 보정, 파스텔 일색, 큰 웃음 포즈, 정면 증명사진 자세, 읽히는 책 표지·간판 글자.

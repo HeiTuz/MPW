@@ -31,18 +31,22 @@
 | 슬롯 | 처리 | 이유 |
 |---|---|---|
 | face-light | 모든 갈래에서 끈다. 얼굴 빛은 이 카드의 Light 줄이 정한다 | Iris 꼬리의 위·옆 입체광이 #098 #100의 금빛 역광(얼굴은 한 톤 어두움)과 #099의 덧창 빛줄기와 부딪혔다 |
-| face-clear | A·D에서 끈다. 바람이 머리를 옆으로 날려도 눈썹과 눈은 열려 있고 hair 줄이 방향을 정한다 | #092 #094 #097 #100의 바람머리가 이 룩의 특징인데 Iris 금지문(머리가 눈썹·눈을 가림)이 같은 프롬프트에 있었다 |
+| face-clear | A·D에서 끈다(A의 세트 S1·S2, D의 세트 S6, 두 갈래의 쌍 전부). 바람에 날린 머리가 이마와 뺨 옆을 지나가도 눈썹과 눈은 열려 있고 hair 줄이 방향을 정한다. B·C는 켠다 | #092 #094 #097 #100의 바람머리가 이 룩의 특징인데 Iris 금지문(머리가 눈썹·눈을 가림)이 같은 프롬프트에 있었다 |
 | base | 카드 줄이 이긴다(전 갈래 `Teint nu`. A는 땀 광, B·C·D는 맨 베이스이고 주근깨는 FR 문화권 공식이 말하니 되풀이하지 않는다) | #094의 땀 광이 Iris 메이크업 고정문의 깨끗한 베이스와 겹쳤다 |
 | blush | A·C에서 카드 줄(`Fard à joues crème`)이 이긴다. B·D는 켠다 | #034의 살구빛 크림 블러셔와 고정 `Rougeur naturelle`이 뺨에 둘이 된다 |
 | lip | 카드 줄이 이긴다(A·D `Lèvres corail`, B·C `Gloss transparent`) | Iris 고정문의 浆果玫瑰唇 위에 프리셋마다 다른 입술색(산호, 복숭아, 체리)이 얹혀 입술색이 둘이었다 |
 | catchlight | D에서 카드 줄(`Iris d'ambre`)이 이긴다. 눈을 감거나 가늘게 뜬 쌍(`Sun-Worshipping Bliss`, `Squint`)이면 붙이지 않는다. 나머지는 켠다 | 석양빛이 홍채에 비치는 값(#100)과 고정 단일 점 줄이 어긋난다 |
-| grain | 켠다. `Kodak Ektachrome E100` 줄이 있으면 끈다 | 슬라이드 필름은 입자가 거의 없어(#092 극세 입자) 고정 `胶片颗粒` 줄과 어긋난다 |
-| lens | 모든 갈래에서 끈다(갈래마다 Optics lens 줄이 있어 고정 `自然透视` 줄까지 내려올 일이 없다). 렌즈를 말하는 줄은 하나이고 출처 순서는 세트의 렌즈 > 쌍의 렌즈 > 갈래의 Optics 줄이다. 세트는 모두 렌즈를 준다(S1 Planar 45mm, S2·S5 Canon FD 50mm, S3·S4 Summicron 35mm, S6 Summilux 50mm). 세트 없이 쓰면 갈래의 Optics lens 줄(A Planar 45mm, 갑판 장면은 `lens-wide` Biogon 28mm / B Summicron 35mm / C Canon FD 50mm / D Summilux 50mm)이고, C에서 `Rolleiflex 2.8F`·`6x6 Square Frame` 줄(올리브 숲)을 쓰면 `lens-mf`의 Zeiss Planar 80mm(Rolleiflex 2.8F의 렌즈)가 렌즈 줄이라 Canon FD 줄을 붙이지 않는다. 쌍 5의 Camera 줄 `telephoto compression`만 렌즈를 말하는 쌍이다: 세트 없이 쓰면 그 줄이 렌즈 줄이라 B의 Summicron 줄 대신 그 줄 하나만 쓰고, 세트(S3·S4)와 함께 쓰면 세트 렌즈가 렌즈 줄이라 쌍 5의 Camera 줄은 `A long lens` 같은 렌즈 구절을 빼고 돌집들이 한 장의 흰 벽으로 겹친다는 구도만 쓴다. 나머지 쌍의 Camera 줄은 렌즈를 말하지 않는다(쌍 3 `Plan d'ensemble`은 화면 범위만 말한다) | Iris 꼬리의 `50mm 黄金人像` 문장과 프리셋의 35mm(#091 #093 #099)·28mm(#097)·6x6 80mm(#096)가 한 프롬프트에 둘이었다 |
+| grain | 켠다. `Kodak Ektachrome E100` 줄이 있으면 끈다 | 슬라이드 필름은 입자가 거의 없어(#092 극세 입자) 고정 몫 grain(필름 입자) 줄과 어긋난다 |
+| lens | 모든 갈래에서 끈다(갈래마다 Optics lens 줄이 있어 고정 몫 lens 줄까지 내려올 일이 없다). 렌즈를 말하는 줄은 하나이고 출처 순서는 세트의 렌즈 > 쌍의 렌즈 > 갈래의 Optics 줄이다. 세트는 모두 렌즈를 주고(S1 Planar 45mm, S2·S5 Canon FD 50mm, S3·S4 Summicron 35mm, S6 Summilux 50mm) 그 렌즈를 말하는 Optics `lens` 줄이 렌즈 줄이다: S1은 A `Zeiss Planar 45mm f/2`, S3·S4는 B `Summicron 35mm f/2`, S5는 C `Canon FD 50mm f/1.4`, S6은 D `Summilux 50mm f/1.4`. S2의 Canon FD 50mm는 A 갈래에 줄이 없으니 C `lens`의 `Canon FD 50mm f/1.4` 줄을 렌즈 줄로 가져오고 A의 `Zeiss Planar 45mm f/2` 줄은 붙이지 않는다. 세트 없이 쓰면 갈래의 Optics lens 줄(A Planar 45mm, 갑판 장면은 `lens-wide` Biogon 28mm / B Summicron 35mm / C Canon FD 50mm / D Summilux 50mm)이고, C에서 `Rolleiflex 2.8F`·`6x6 Square Frame` 줄(올리브 숲)을 쓰면 `lens-mf`의 Zeiss Planar 80mm(Rolleiflex 2.8F의 렌즈)가 렌즈 줄이라 Canon FD 줄을 붙이지 않는다. 쌍 5의 Camera 줄 `telephoto compression`만 렌즈를 말하는 쌍이다: 세트 없이 쓰면 그 줄이 렌즈 줄이라 B의 Summicron 줄 대신 그 줄 하나만 쓰고, 세트(S3·S4)와 함께 쓰면 세트 렌즈가 렌즈 줄이라 쌍 5의 Camera 줄은 `A long lens` 같은 렌즈 구절을 빼고 돌집들이 한 장의 벽으로 겹친다는 구도만 쓴다(렌즈는 세트 렌즈 줄이 말한다). 나머지 쌍의 Camera 줄은 렌즈를 말하지 않는다(쌍 3 `Plan d'ensemble`은 화면 범위만 말한다) | Iris 꼬리의 `50mm 黄金人像` 문장과 프리셋의 35mm(#091 #093 #099)·28mm(#097)·6x6 80mm(#096)가 한 프롬프트에 둘이었다 |
 | framing | 켠다. 쌍 1(Plongée)·3(Plan d'ensemble)·4(Règle des tiers)·6(Cadre dans le cadre)·8(Plan rapproché)·9(Plan américain)·12(Gros plan)는 프레임 범위를 직접 말하니 그 말과 부딪치지 않게 쓴다 | 나머지 쌍은 범위를 말하지 않는다 |
 | ratio | 켠다. 사용자 비율이 없으면 3:4 세로. `6x6 Square Frame` 줄을 쓰면 1:1 | #096 원문에 1:1과 3:4가 함께 적혀 있었다 |
 | identity | 참조 얼굴이 없을 때만, 인물 문장 끝에 `with a light summer tan from weeks in the sun`을 덧붙인다. 참조가 있으면 붙이지 않는다(그 사람의 피부색을 지킨다) | 한여름 지중해 볕에 그을린 피부가 이 룩의 일부인데, 피부색 표현을 카드 줄에 두면 참조 얼굴의 피부색과 부딪히고 검사기가 경고한다 |
 
 ## Hair and makeup
+**하나만 고르는 슬롯:** `hair`·`hair-wet`(머리 상태 후보, 마른 `hair`와 젖은 `hair-wet` 중 하나)
+
+**함께 쓰는 슬롯:** `hair-color`·`hair-gesture`(고른 머리 위에 머리색과 손짓을 얹는다)
+
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
 | 전부 | hair | Coiffure effet saut du lit — Collarbone-length brunette waves with uneven ends and lifted roots, tangled by sea wind or flattened where a hat sat, the tips lightened a shade by summer sun. |
@@ -57,6 +61,8 @@
 | B, C | lip | Gloss transparent — A clear, watery gloss over the natural peach-pink lip colour with small bright highlights at the centre and no outline. |
 
 ## Expression
+**하나만 고르는 슬롯:** `expression`·`expression-calm`(표정 후보, 갈래마다 하나)
+
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
 | A | expression | Fou rire — Laughter breaks out unplanned, the eyes crinkling and the head tipping toward the sea breeze, one hand rising to hold back the hair. |
@@ -68,6 +74,10 @@
 | D | expression-calm | Regard dans le vague — The eyes follow the last of the sun over the sea, the lips slightly parted, moved but still. |
 
 ## Outfit
+**하나만 고르는 슬롯:** `outfit`·`outfit-swim`(옷 후보, 수영복 장면은 `outfit-swim` 하나, 그 밖은 `outfit` 하나)
+
+**함께 쓰는 슬롯:** `outfit-bottom`(상의 `outfit` 줄과 함께 하의), `outfit-outer`(수영복 위에 파레오)
+
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
 | A | outfit | Broderie anglaise — A white cotton top with cut-out eyelet embroidery whose small holes let the sun through as bright dots on the skin, the white pushing toward silver in direct light. (滤镜 #092, 穿搭 #068) |
@@ -102,6 +112,8 @@
 | D | jewelry | Perles d'eau douce — Small irregular freshwater pearls on a fine chain at the collarbone, glowing softly in the gold light without sharp glints. (穿搭 #075) |
 
 ## Style
+**하나만 고르는 슬롯:** `style`·`style-sailor`·`style-picnic`·`style-lavender`(스타일 후보, 장면과 맞는 하나)
+
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
 | A | style | Riviera Chic — Striped tops, crisp white shorts or sundresses, flat sandals and big sunglasses in bright, sea-reflected sun. |
@@ -133,11 +145,13 @@
 | D | place | Èze — A clifftop garden of huge cacti and agaves above the sea, with a marble lookout. (滤镜 #100) |
 
 ## Light
+**하나만 고르는 슬롯:** `face-light`·`face-light-beam`·`face-light-dapple`(얼굴 빛 경로, 하나), `light-fill`·`light-fill-calanques`(보강광 후보, 장소와 맞는 하나: 칼랑크 절벽이면 `light-fill-calanques`)
+
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
 | A, B, C | face-light | Plein soleil — The sun stands high overhead with no cloud or shade between it and her, so skin, white cotton and pale stone push toward white while the shadows stay small and lavender-grey. |
 | A | light-fill | Scintillement de la mer — Sun on the moving sea breaks into thousands of tiny bright points behind her and throws faint rippling light back under her chin and onto her collarbones. (滤镜 #094 #097) |
-| A | light-fill-cliff | Lumière réfléchie — At the Calanques, pale limestone cliffs and the turquoise water throw the sun back up onto the chin, collarbones and shoulders as bright warm fill. |
+| A | light-fill-calanques | Lumière réfléchie — At the Calanques, pale limestone cliffs and the turquoise water throw the sun back up onto the chin, collarbones and shoulders as bright warm fill. |
 | A | sky-glare | Harsh Midday Sun — The sky over the bay is pale and almost white, so the sun, pebbles and sea all glitter under one hard bright glare. |
 | B | light-fill | Lumière réfléchie — Outdoors, sun thrown back from white limestone walls fills the jaw, the eyes under the hat brim and the neck with hot warm light, so nothing in shade goes dark. |
 | B | shadow-lane | Hard Shadows — In the Gordes lanes the high sun cuts thin crisp-edged lavender-grey shadows down the narrow stone stairs while the white-gold walls glare. |
@@ -148,6 +162,10 @@
 | D | catchlight | Iris d'ambre — Low golden light passes through each iris and turns it translucent amber, with the setting sun mirrored as a warm crescent. |
 
 ## Optics
+**하나만 고르는 슬롯:** `stock`·`stock-slide`(필름 줄은 하나, 슬라이드 요청이면 `stock-slide`), `lens`·`lens-mf`·`lens-wide`(렌즈 줄은 하나, 세트가 렌즈를 말하면 그 렌즈)
+
+**함께 쓰는 슬롯:** `camera-mf`(고르면 `lens-mf`가 그 렌즈 줄이다)
+
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
 | 전부 | exposure | Overexposed Highlights — Sunlit stone, linen and shoulders push toward paper-white with a soft bleed at their edges while the midtones stay open and airy. |
@@ -180,18 +198,20 @@
 ## 포즈·구도 쌍
 | 번호 | 갈래 | Pose | Camera |
 |---|---|---|---|
-| 1 | A | Bain de soleil — She leans back on a lounger or on warm pebbles with her head tipped up and her eyes closed, the face turned straight into the sun. | Plongée — The camera stands above and looks down, so her upturned face and bare shoulders fill the frame against sun-bleached pebbles. |
-| 2 | A | Main en visière — One flat hand shades her brow and her eyes narrow as the glare leaks around the fingers. | Contre-plongée — Shot from below with the sun just above her head, so the sky blows out to white behind her. |
-| 3 | A | Jambes dans le vide — She sits on a harbour wall or yacht rail with both legs hanging free over the water, one foot swinging, laughing at someone off-frame. | Plan d'ensemble — She is a small bright figure at the edge of a huge glittering bay with white boats along the horizon. |
+| 1 | A | Bain de soleil — She leans back on a lounger or on warm open ground with her head tipped up and her eyes closed, the face turned straight into the sun. | Plongée — The camera stands above and looks down, so her upturned face and bare shoulders fill the frame against the bright ground. |
+| 2 | A | Main en visière — One flat hand shades her brow and her eyes narrow behind the shading hand. | Contre-plongée — Shot from below so the open sky fills the space behind her. |
+| 3 | A | Jambes dans le vide — She sits on a low wall or yacht rail with both legs hanging free over the water, one foot swinging, laughing at someone off-frame. | Plan d'ensemble — She is a small figure at the edge of a huge open bay with boats along the horizon. |
 | 4 | A | Tremper les pieds — Seated at the sea's edge with bare feet in the shallows, her hands braced behind her and ripples spreading around the ankles. | Règle des tiers — The horizon sits on the upper third line and she sits whole, feet in the shallows, on the lower left intersection with open sea filling the rest. |
-| 5 | B | Appuyée de côté contre un pilier de pierre — One shoulder against a sun-bleached limestone pillar, one hand holding the straw hat brim down against the glare. | telephoto compression — A long lens from down the alley stacks the pale stone houses behind her into one flat white-gold wall. |
-| 6 | B | Pieds nus sur le seuil — Barefoot with one leg on each side of the farmhouse doorsill, half her body in dim shade and half in a bar of hard sun. | Cadre dans le cadre — The dark door frame boxes her full figure, bare feet on the sill, into a narrow bright slot while white beams cross the room behind her. |
-| 7 | B | Couchée sur le côté — Lying on her side on creased linen with one hand trailing through a narrow beam of light and dust floating in it. | Bird's-eye View — The camera looks straight down at the bed, the shutter bars of light laid across the sheet like white ribbons. |
-| 8 | C | Doigt hésitant — A fingertip hovers over a sunflower head as she leans toward it, the other hand holding her hair back. | Plan rapproché — The frame runs from the top of her head to mid-chest with a wall of yellow petals soft behind her. |
-| 9 | C | Tenir le bas de sa robe — One hand lifts the hem of her dress to thigh height at the edge of the field, so the hand and the hem sit inside the frame, her body half-turned back toward the lens. | Plan américain — Head-on at eye level with the frame cut at mid-thigh, wheat and sky filling the space around her. |
-| 10 | C | Allongée de tout son long — Lying full length on dry grass under an olive tree with her arms flung wide, flecks of sun moving across her face. | Amorce — Blurred silver-green leaves cross one corner of the frame in front of her. |
-| 11 | D | Over-the-Shoulder Glance — She walks away between lavender rows and turns her head back over one shoulder, one hand gathering the skirt. | negative space — She stands at the lower left while purple rows and a huge pale gold sky fill the rest of the frame. |
-| 12 | D | Mains jointes sur la rambarde — Her hands are clasped on a marble rail and her chin rests on her fingers, the face turned in profile toward the sinking sun. | Gros plan — The frame holds her profile and the clasped fingers under her chin edge to edge, the sun beyond her cheek flaring a red halation around the hair. |
+| 5 | B | Appuyée de côté contre un pilier de pierre — One shoulder against a stone pillar, one hand holding the straw hat brim down against the glare. | telephoto compression — A long lens from down the alley stacks the stone houses behind her into one flat wall. |
+| 6 | B | Pieds nus sur le seuil — Barefoot with one leg on each side of the doorsill, half her body inside the doorway and half outside it. | Cadre dans le cadre — The door frame boxes her full figure, bare feet on the sill, into a narrow slot while the room opens behind her. |
+| 7 | B | Couchée sur le côté — Lying on her side on creased linen with one hand trailing loosely over the sheet. | Bird's-eye View — The camera looks straight down at the bed, the creased sheet filling the frame like a pale ground. |
+| 8 | C | Doigt hésitant — A fingertip hovers over a large flower head as she leans toward it, the other hand holding her hair back. | Plan rapproché — The frame runs from the top of her head to mid-chest with a wall of petals soft behind her. |
+| 9 | C | Tenir le bas de sa robe — One hand lifts the hem of her dress to thigh height at the edge of the field, so the hand and the hem sit inside the frame, her body half-turned back toward the lens. | Plan américain — Head-on at eye level with the frame cut at mid-thigh, the field and sky filling the space around her. |
+| 10 | C | Allongée de tout son long — Lying full length on dry grass under a tree with her arms flung wide. | Amorce — Blurred leaves cross one corner of the frame in front of her. |
+| 11 | D | Over-the-Shoulder Glance — She walks away between planted rows and turns her head back over one shoulder, one hand gathering the skirt. | negative space — She stands at the lower left while the rows and a huge open sky fill the rest of the frame. |
+| 12 | D | Mains jointes sur la rambarde — Her hands are clasped on a stone rail and her chin rests on her fingers, the face turned in profile toward the horizon. | Gros plan — The frame holds her profile and the clasped fingers under her chin edge to edge. |
+
+장소: 쌍 1은 선베드가 있거나 기대 눕는 열린 땅(해변·갑판)일 때, 쌍 3은 만과 바다를 내려다보는 벽이나 난간일 때, 쌍 4는 장소가 얕은 물가일 때, 쌍 5는 장소가 돌집이 늘어선 골목일 때, 쌍 6은 장소에 문턱이 있는 문간일 때, 쌍 7은 누울 수 있는 침대가 있는 실내일 때, 쌍 8은 장소가 큰 꽃밭일 때, 쌍 9는 장소가 들판일 때, 쌍 10은 나무 그늘이 있는 풀밭일 때, 쌍 11은 장소가 줄지어 심은 밭일 때, 쌍 12는 난간이 있는 전망대일 때 쓴다. 쌍 2는 장소를 가리지 않는다.
 
 ## 맞지 않는 것
 흐린 날, 비, 밤, 네온 간판, 형광등, 직접 플래시, 스튜디오 흰 배경, 차가운 청회색 낮빛, 깊고 검은 그림자, 디지털 HDR 색, 정면 증명사진 자세, 읽히는 간판·로고 글자.

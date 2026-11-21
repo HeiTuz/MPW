@@ -10,7 +10,7 @@
 ## 고정 사실 (모든 갈래가 지킨다)
 | 슬롯 | 값 |
 |---|---|
-| medium | 플래시를 정면으로 한 발 터뜨린 밤 스냅이고 스튜디오 화보가 아니다. 첫 줄은 갈래마다 다르다: A는 `A 2000s snapshot shot on a small-sensor CCD compact with its built-in flash`, B는 `A night snapshot shot on a mirrorless camera with a hot-shoe flash fired straight on`, C는 `A paparazzi night snapshot shot on a 35mm film compact with its built-in flash`로 시작한다. C의 S6(Leica M6)만 예외다: 컴팩트가 아니라 레인지파인더라 첫 줄은 `A paparazzi night snapshot shot on a 35mm film rangefinder with an on-camera flash`다. 매체 구절과 장소 구절을 나눠 쓴다. 장소 구절은 갈래 기본이 A `in Seoul`, B `in Shanghai`, C `in Hollywood`이고 `snapshot` 뒤에 붙인다(`A 2000s snapshot in Seoul shot on …`). 사용자가 장소를 말하면 이 구절만 그 장소로 바꾼다 |
+| medium | 플래시를 정면으로 한 발 터뜨린 밤 스냅이고 스튜디오 화보가 아니다. 첫 줄은 갈래마다 다르고 매체만 말하는 구절로 시작한다: A는 `A photograph shot on a small-sensor CCD compact with its built-in flash`, B는 `A photograph shot on a mirrorless camera with a hot-shoe flash fired straight on`, C는 `A photograph shot on a 35mm film compact with its built-in flash`. C의 S6(Leica M6)만 예외다: 컴팩트가 아니라 레인지파인더라 첫 줄은 `A photograph shot on a 35mm film rangefinder with an on-camera flash`다. 혼자 쓸 때(이 카드만 불렸을 때의 첫 줄): A는 `A 2000s snapshot shot on a small-sensor CCD compact with its built-in flash`, B는 `A night snapshot shot on a mirrorless camera with a hot-shoe flash fired straight on`, C는 `A paparazzi night snapshot shot on a 35mm film compact with its built-in flash`(C의 S6은 `A paparazzi night snapshot shot on a 35mm film rangefinder with an on-camera flash`). 장르·시간 구절(`snapshot`·`night`·`paparazzi`·`2000s`)과 장소 구절은 혼자 쓸 때의 줄에만 있다. 장소 구절은 갈래 기본이 A `in Seoul`, B `in Shanghai`, C `in Hollywood`이고 `snapshot` 뒤에 붙인다(`A 2000s snapshot in Seoul shot on …`). 사용자가 장소를 말하면 이 구절만 그 장소로 바꾼다 |
 | closer | `直闪` |
 | culture | 문화권 공식(fixed-lines.md의 Identity Reference·base·under-eye·blush)은 A는 KR, B는 CN, C는 US를 쓴다. 사용자가 인물의 문화권을 말하면 그쪽이 이긴다 |
 | time | 밤 또는 해가 안 드는 어두운 실내. 플래시가 주광이고 주변 빛은 배경에만 약하게 남는다 |
@@ -30,13 +30,13 @@
 ## 끄는 고정 몫 (fixed-lines.md의 슬롯)
 | 슬롯 | 처리 | 이유 |
 |---|---|---|
-| face-light | 모든 갈래에서 끈다. 얼굴 빛은 이 카드의 Light 줄이 정한다 | `立体光`은 키라이트를 위·옆에 두는데 플래시는 렌즈 축에서 나와 그림자 방향이 갈린다 |
+| face-light | 모든 갈래에서 끈다. 얼굴 빛은 이 카드의 Light 줄이 정한다 | 고정 몫 face-light 줄은 키라이트를 위·옆에 두는데 플래시는 렌즈 축에서 나와 그림자 방향이 갈린다 |
 | catchlight | 모든 갈래에서 카드 줄이 이긴다 | 정면 플래시의 반사는 동공 한가운데 흰 점 하나다. 선글라스 세트는 눈이 안 보여 둘 다 끈다 |
-| lens | 쌍마다 렌즈를 말하는 줄이 정확히 하나다. 출처 순서는 세트의 렌즈 > 쌍 Camera 줄의 렌즈 > 갈래의 렌즈 줄 > 고정 몫 `自然透视`이다. 이 카드의 세트(S1~S6)는 Optics에 본체·필름 이름만 적고 렌즈를 말하지 않으며, 쌍 Camera 줄도 렌즈를 말하지 않는다(쌍 1의 가슴 높이, 쌍 7의 하이앵글은 높이만 정한다). 거리는 쌍 Camera 줄이 정하고(figure의 1~2 m) 렌즈 줄은 거리를 말하지 않는다. 그래서 A(쌍 1~3)·C(쌍 8~10)는 고정 몫을 끄고 갈래의 Optics `lens` 줄(A `카드형 디카`, C `CONTAX T3`)이 렌즈 줄이다. 단 C의 S6는 Optics가 `Leica M6`이라 `CONTAX T3` 줄을 쓰지 않고 고정 몫 `自然透视`가 렌즈 줄이다. B(쌍 4~7)는 갈래의 렌즈 줄이 없으니 고정 몫 `自然透视`가 렌즈 줄이다. 카메라 높이는 쌍 Camera 줄(쌍 1의 가슴 높이, 쌍 7의 하이앵글)이 정하고 렌즈 줄은 높이를 정하지 않는다 | KR 滤镜 #004는 28mm 환산 카드기와 50mm 무왜곡 꼬리가 한 프리셋에 같이 있어 부딪혔다. B의 미러리스 인물은 표준 시선이라 `自然透视`이 맞는다 |
-| grain | 카드 줄이 이긴다. A는 `디지털 노이즈`, B는 `数码噪点`, C는 `grain`(흑백 세트는 `B&W film grain`) | 매체가 디지털(A·B)과 필름(C)으로 갈린다 |
+| lens | 쌍마다 렌즈를 말하는 줄이 정확히 하나다. 출처 순서는 세트의 렌즈 > 쌍 Camera 줄의 렌즈 > 갈래의 렌즈 줄 > 고정 몫 lens 줄이다. 이 카드의 세트(S1~S6)는 Optics에 본체·필름 이름만 적고 렌즈를 말하지 않으며, 쌍 Camera 줄도 렌즈를 말하지 않는다(쌍 1의 가슴 높이, 쌍 7의 하이앵글은 높이만 정한다). 거리는 쌍 Camera 줄이 정하고(figure의 1~2 m) 렌즈 줄은 거리를 말하지 않는다. 그래서 A(쌍 1~3)·C(쌍 8~10)는 고정 몫을 끄고 갈래의 Optics `lens` 줄(A `카드형 디카`, C `CONTAX T3`)이 렌즈 줄이다. C의 S5는 Optics가 `CONTAX T3`라 갈래의 `CONTAX T3` 줄이 렌즈 줄이다(같은 카메라라 렌즈 문장을 따로 더하지 않는다). 단 C의 S6는 Optics가 `Leica M6`이라 `CONTAX T3` 줄을 쓰지 않고 고정 몫 lens 줄이 렌즈 줄이다. B(쌍 4~7)는 갈래의 렌즈 줄이 없으니 고정 몫 lens 줄이 렌즈 줄이다. 카메라 높이는 쌍 Camera 줄(쌍 1의 가슴 높이, 쌍 7의 하이앵글)이 정하고 렌즈 줄은 높이를 정하지 않는다 | KR 滤镜 #004는 28mm 환산 카드기와 50mm 무왜곡 꼬리가 한 프리셋에 같이 있어 부딪혔다. B의 미러리스 인물은 표준 시선이라 고정 몫 lens 줄이 맞는다 |
+| grain | 카드 줄이 이긴다. A는 `디지털 노이즈`, B는 `数码噪点`, C는 `film grain`(흑백 세트는 `B&W film grain`) | 매체가 디지털(A·B)과 필름(C)으로 갈린다 |
 | lip | B·C는 카드 줄이 이긴다. A는 켠다 | 문화권 입술 줄이 더 붙으면 B의 정홍·C의 붉은 입술과 입술색이 둘이 된다 |
 | blush | 켠다. 카드 줄(A `동상 메이크업`, B `微醺妆`)을 고른 장면에서만 그 줄이 대신한다 | 뺨 색이 둘이 되지 않게 |
-| face-clear | 켠다. C의 쌍 9(달리다 돌아봄)에서만 끈다. 머리가 날려 얼굴 가장자리를 지나가도 되고 눈은 가리지 않는다(S3·S5처럼 몇 가닥이 바람에 뜨는 묶음도 눈을 가리지 않으면 그대로 쓴다) | US 滤镜 #022의 흐트러진 금발과 달리는 동작이 가림 금지문과 부딪혔다 |
+| face-clear | 켠다. 끄는 곳은 C의 쌍 9(달리다 돌아봄)의 Pose를 쓸 때뿐이다. 머리가 날려 얼굴 가장자리를 지나가도 되고 눈은 가리지 않는다. 쌍 9의 Camera 줄만 빌린 경우는 켠다(S3·S5처럼 몇 가닥이 바람에 뜨는 묶음도 눈을 가리지 않으면 켠 채 쓴다) | US 滤镜 #022의 흐트러진 금발과 달리는 동작이 가림 금지문과 부딪혔다 |
 | realism | A에서 바꾼다. B·C는 켠다. `8K`·땀구멍 줄 대신 `native resolution` 줄을 쓴다. 매체 구절은 `an early-2000s small-sensor CCD compact`, 질감은 `flat flash-lit detail, blown highlights and skin that shows no individual pores` | 2000년대 소형 센서 CCD가 만드는 해상도에 8K 모공 묘사를 얹으면 룩의 정체와 반대다 |
 | framing | 켠다. 쌍 3(가슴 위)·쌍 8(허벅지 중간)·쌍 9(머리부터 신발까지)·쌍 10(앉은 전신)은 Camera 줄이 범위를 말하니 그 쌍에서는 쌍이 정한다 | 나머지 쌍은 범위를 말하지 않아 고정 몫 허리 위 줄이 범위를 정한다. 쌍 9의 공중에 뜬 발과 쌍 10의 꼰 다리가 보이게 두 쌍의 Camera 줄이 범위를 말한다 |
 | ratio | 켠다. 사용자 비율이 없으면 3:4 세로(A는 소형 CCD의 4:3을 세로로 든 모양이다). 모든 쌍에 해당하는 처리(쌍 번호와 무관): face-light 끔, catchlight·grain은 카드 줄, A의 realism은 `native resolution`. 위 행의 쌍 번호 조건은 이 카드의 쌍을 고를 때만 쓴다. | 쌍은 비율을 정하지 않는다 |
@@ -110,6 +110,8 @@
 | C | place | Subway Platform — White glazed tile and yellow safety poles on a late-night platform. |
 
 ## Light
+**하나만 고르는 슬롯:** `place-*`(장소별 줄, 장면과 맞는 하나)
+
 흑백(Tri-X, S6)이면 색이 든 줄은 쓰지 않는다. C의 `Neon and Flash Mix`(분홍·보라 네온)는 건너뛰고 `direct flash noir`만 쓰며, 팔레트의 포인트색 말도 명암의 말(가장 짙은 검정과 가장 밝은 흰 면)로 바꾼다.
 
 | 갈래 | 슬롯 | 줄 |
@@ -145,7 +147,7 @@
 | C | stock | Kodak Tri-X 400 — A black-and-white negative film giving pure monochrome tone with coarse grain, ink-deep blacks and brilliant highlights. |
 | C | lens | CONTAX T3 — A 35mm Sonnar compact lens, crisp at the center with natural proportions on the face. |
 | C | key | Paparazzi Flash — A hard on-camera flash at close range flattens the background to black and throws bright glints on any shiny surface. |
-| C | grain | grain — Fine, even film grain sits across the whole frame, slightly heavier in the shadows. |
+| C | grain | film grain — Fine, even film grain sits across the whole frame, slightly heavier in the shadows. |
 | C | grain | B&W film grain — Coarse silver grain sits over the monochrome frame with deep blacks and clipped bright highlights. |
 
 ## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 세트를 쓰는 조건은 규칙 4항이 정하고, 세트 값은 고정 사실보다 먼저다. 규칙은 image-brief.md §4 '룩 카드' 4항과 '비워 둔 층')
@@ -167,13 +169,15 @@
 | 1 | A | 뒤돌아보기 — She stands in a bare room with her body turned three-quarters away and her face swung back over one shoulder. | 중앙 구도 — The camera sits at chest height about 1.5 m away and drops her dead center against plain flash-lit wall. |
 | 2 | A | 팔짱 — Arms folded loosely across the chest, she leans a shoulder on the glass door of a drink cooler. | 팬포커스 — A small sensor keeps her and the shelves behind both sharp, so the frame reads flat. |
 | 3 | A | 3/4 측면 — Her head turns three quarters away from the lens so only the near cheek and the edge of the far eye show. | 미디엄 클로즈업 — The frame runs from the top of the head to mid-chest, the face filling most of it. |
-| 4 | B | 大步急停 — She halts in a sudden stop mid-walk while her shoulders still carry the motion of the stride. | 前景遮挡 — A blurred umbrella edge crosses one corner of the frame in front of her and adds depth. |
+| 4 | B | 大步急停 — She halts in a sudden stop mid-walk while her shoulders still carry the motion of the stride. | 前景遮挡 — A blurred foreground edge crosses one corner of the frame in front of her and adds depth. |
 | 5 | B | 单手叉腰 — One hand rests on the hip with the elbow pushed out and the face tilted slightly up. | 留白 — She fills about a third of a vertical frame and the pale wall behind carries her black shadow. |
-| 6 | B | 车后座侧坐 — She sits sideways on a car back seat with a hand under the chin and the face turned to the lens. | 框架构图 — The car window and door frame box her into a narrow lit slot in the dark cabin. |
+| 6 | B | 车后座侧坐 — She sits sideways on a car back seat with a hand under the chin and the face turned to the lens. | 框架构图 — The car window and door frame box her into a narrow slot of the cabin. |
 | 7 | B | 双肘撑吧台 — Both elbows plant on a bar counter, the torso leaning in and the chin close to her hands. | 俯拍 — The camera looks down from above, so the counter leads the eye in to her. |
 | 8 | C | Crosswalk Stride — A long confident step across painted crosswalk stripes, the body angled across the road and one hand in a pocket. | Cowboy Shot — The frame cuts at mid-thigh, showing the whole torso and the hand near the pocket. |
-| 9 | C | Airborne Glance — Both feet leave the ground mid-run while the face snaps back over one shoulder and the hair streams out. | Dutch angle — The frame takes in her full figure from head to shoes, with both feet off the ground, and is rotated a few degrees so the street and the door behind her lean. |
+| 9 | C | Airborne Glance — Both feet leave the ground mid-run while the face snaps back over one shoulder and the hair streams out. | Dutch angle — The frame takes in her full figure from head to shoes, with both feet off the ground, and is rotated a few degrees so the background behind her leans. |
 | 10 | C | Cross-Legged Barstool — Seated sideways on a tall stool with the legs crossed and one hand on the counter. | Over the Shoulder — The camera sits behind a blurred bartender's shoulder and frames her sharp beyond it, the whole seated figure down to the crossed legs inside the frame. |
+
+장소: 쌍 2는 장소가 음료 냉장고가 있는 편의점일 때, 쌍 6은 장소가 차 안일 때, 쌍 7은 장소가 바 카운터일 때, 쌍 8은 장소가 횡단보도일 때, 쌍 10은 장소가 바 카운터일 때 쓴다. 나머지 쌍은 장소를 가리지 않는다.
 
 ## 맞지 않는 것
 한낮의 해, 창가 확산광, 소프트박스 스튜디오 빛, 정면 증명사진 자세, 보정으로 매끈해진 피부, 파스텔, 읽히는 간판 글자.

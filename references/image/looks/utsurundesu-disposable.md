@@ -10,7 +10,7 @@
 ## 고정 사실 (모든 갈래가 지킨다)
 | 슬롯 | 값 |
 |---|---|
-| medium | 고정초점 플라스틱 렌즈 하나와 작은 내장 플래시로 찍은 ISO 400 컬러 네거티브 일상 스냅. 화보도 디지털 사진도 아니다. 첫 줄은 `A Japanese everyday snapshot shot on a Fujifilm 写ルンです single-use film camera`로 시작한다(D의 수중 모델은 `A Japanese everyday snapshot shot on a waterproof Fujifilm 写ルンです single-use film camera in its clear housing`). D의 수중 모델 `水中写ルンです`는 ISO 800 필름이고 플래시가 없다(해와 물빛이 주광이다). stock·realism 줄의 400을 800으로 쓰고, 본체 줄은 `写ルンです` 대신 `水中写ルンです` 줄이다 |
+| medium | 고정초점 플라스틱 렌즈 하나와 작은 내장 플래시가 달린 ISO 400 컬러 네거티브 일상 스냅(플래시를 터뜨리는지는 갈래와 빛이 정한다: A·B는 터뜨리고 C는 꺼 두거나 역광에서 얼굴만 채우고 D는 터뜨리지 않는다). 화보도 디지털 사진도 아니다. 첫 줄은 매체만 말하는 구절 `A photograph shot on a Fujifilm 写ルンです single-use film camera`로 시작한다(D의 수중 모델은 `A photograph shot on a waterproof Fujifilm 写ルンです single-use film camera in its clear housing`). 혼자 쓸 때: `A Japanese everyday snapshot shot on a Fujifilm 写ルンです single-use film camera`(수중 모델은 `A Japanese everyday snapshot shot on a waterproof Fujifilm 写ルンです single-use film camera in its clear housing`). 이 카드만 불렸을 때의 첫 줄이고 `Japanese everyday snapshot`은 문화권·장르 구절이라 매체 구절에 넣지 않는다. D의 수중 모델 `水中写ルンです`는 ISO 800 필름이고 플래시가 없다(해와 물빛이 주광이다). stock·realism 줄의 400을 800으로 쓰고, 본체 줄은 `写ルンです` 대신 `水中写ルンです` 줄이다 |
 | closer | `写ルンです` |
 | time | A·B는 밤이거나 해가 안 드는 좁은 실내이고 플래시가 주광이다(A의 역 장면만 해 진 직후). C는 해가 하늘이나 창에 있는 방과 후에서 석양까지(`雪の朝`는 눈빛이 퍼지는 겨울 아침이다). D는 맑은 한낮 |
 | light-key | 렌즈 위에서 정면으로 터지는 소형 내장 플래시 한 발(A·B 주광, C 역광에서 얼굴만 보충). C의 창가와 D는 해와 하늘빛이 주광 |
@@ -24,24 +24,22 @@
 |---|---|---|---|
 | A 夜街ストロボ (기본) | 편의점, 자판기, 횡단보도, 지하 통로, 여름밤 골목, 포장마차 제등, 선향 불꽃놀이, 비 오는 밤, 투명 우산, 肉まん, 라무네, 역 승강장, 친구와 팔 뻗어 셀카 | 밤거리에서 직부 플래시 한 발. 가까운 얼굴은 하얗고 평평하며 배경은 급히 검게 떨어지고 네 모서리가 어둡다 | 滤镜 #041 #042 #045 #047 #049 #053 #057 #060 |
 | B 屋内ストロボ | 라멘집, 카운터, 이자카야, 맥주, 레코드 가게, 노래방, 다다미방, 민박, 택시 뒷좌석, 김, 실내 | 좁은 실내에서 가까이 터지는 플래시. 김·유리·술잔이 하얀 반사점이 되고 방의 따뜻한 빛이 배경에 남는다 | 滤镜 #043 #048 #052 #054 #056 #059 |
-| C 昼のノンフラッシュと逆光 | 방과 후, 옥상, 철망, 목조 교사, 계단, 전철 창가, 석양, 역광, 첫눈, 버스 정류장, 교복 | 해가 있는 낮에서 석양까지. 플래시는 꺼져 있거나 역광에서 얼굴만 채운다. 하이라이트가 날리고 모서리가 어둡다 | 滤镜 #044 #050 #055 #058 |
+| C 昼のノンフラッシュと逆光 | 방과 후, 하굣길, 낮 편의점 앞, 아이스크림, 옥상, 철망, 목조 교사, 계단, 전철 창가, 석양, 역광, 첫눈, 버스 정류장, 교복 | 해가 있는 낮에서 석양까지. 플래시는 꺼져 있거나 역광에서 얼굴만 채운다. 하이라이트가 날리고 모서리가 어둡다 | 滤镜 #044 #050 #055 #058 |
 | D 海辺と水中 | 바다, 해변, 가마쿠라, 방파제, 수영복, 방수 카메라, 水中写ルンです, 물장난, 얕은 바다 | 맑은 한낮의 바닷가. 노출이 넘쳐 하늘이 우유빛이 되고 바람이 머리를 얼굴 앞으로 보낸다. 수중 모델은 두꺼운 투명 케이스와 렌즈 앞 물방울이 따른다 | 滤镜 #046 #051 |
 
 ## 끄는 고정 몫 (fixed-lines.md의 슬롯)
 | 슬롯 | 처리 | 이유 |
 |---|---|---|
-| face-light | 모든 갈래에서 끈다. 얼굴 빛은 이 카드의 Light 줄이 정한다 | `立体光`의 위·옆 키라이트가 렌즈 위 플래시(A·B), 역광 보충 플래시(C), 한낮 직사광(D)과 부딪힌다 |
+| face-light | 모든 갈래에서 끈다. 얼굴 빛은 이 카드의 Light 줄이 정한다 | 고정 몫 face-light 줄의 위·옆 키라이트가 렌즈 위 플래시(A·B), 역광 보충 플래시(C), 한낮 직사광(D)과 부딪힌다 |
 | catchlight | A·B는 카드 줄 `Direct Flash Pinpoint Catchlight`가 이긴다. C는 보충 플래시를 쓰는 장면(S5, 쌍 10)에서만 같은 줄을 쓰고, C의 노플래시 장면과 D는 켠다 | 플래시 반사는 눈동자 한가운데 흰 점 하나인데 고정 몫 catchlight는 창·램프 모양이다 |
-| lens | 모든 갈래에서 끈다. 렌즈를 말하는 줄은 프롬프트에서 하나이고 출처 순서는 세트의 렌즈 > 쌍의 렌즈 > 갈래의 본체·렌즈 줄 > 고정 몫 줄이다. 이 카드에서는 갈래의 Optics `lens` 줄(`プラスチックレンズ`, 모든 갈래) 하나다: 32mm 고정초점 플라스틱 렌즈, f/10쯤, 앞뒤가 다 선명하다. 쌍 1~12의 Camera 줄은 렌즈를 말하지 않고 구도와 심도만 말하니(쌍 12 `膝下フレーミング`도 구도다) 어느 쌍을 골라도 렌즈 줄은 이 하나다. 세트 S1은 Optics가 32mm f/10 렌즈를 직접 말하니 그 문장이 렌즈 줄이고 `プラスチックレンズ` 줄은 따로 쓰지 않는다(S2~S6은 `プラスチックレンズ` 줄이 렌즈 줄이다). Optics `body` 줄(`写ルンです`)은 35mm·ISO 400·내장 플래시 같은 사실만 말한다 | Iris 滤镜 #041~#060은 `相机/介质`에 32mm f/10 단일 플라스틱 렌즈를 적고서 본문 꼬리에 `50mm 단초점 얕은 심도`(원본 값)와 무왜곡을 얹어 한 프롬프트에 둘이 같이 있다. 이 룩의 정체는 앞쪽이다 |
-| grain | 카드 줄이 이긴다. 굵은 `粒状感` 줄을 쓴다 | 고정 몫 `胶片颗粒`는 가늘고 고른 입자인데 이 룩의 입자는 ISO 400 소형 카메라답게 거칠다 |
-| face-clear | D에서 끈다. C는 쌍 10(옥상 바람)에서만 끈다. 머리가 뺨과 입가 가장자리를 지나가도 되고 눈은 가리지 않는다 | 滤镜 #046은 바닷바람이 머리를 얼굴 반쯤에 붙이고 #050도 바람머리가 얼굴 앞을 지나는데 Iris 꼬리는 `乱发遮挡眉眼`을 금지한다 |
+| lens | 모든 갈래에서 끈다. 렌즈를 말하는 줄은 프롬프트에서 하나이고 출처 순서는 세트의 렌즈 > 쌍의 렌즈 > 갈래의 본체·렌즈 줄 > 고정 몫 줄이다. 이 카드에서는 갈래의 Optics `lens` 줄(`プラスチックレンズ`, 모든 갈래) 하나다: 32mm 고정초점 플라스틱 렌즈, f/10쯤, 앞뒤가 다 선명하다. 쌍 1~12의 Camera 줄은 렌즈를 말하지 않고 구도와 심도만 말하니(쌍 12 `膝下フレーミング`도 구도다) 어느 쌍을 골라도 렌즈 줄은 이 하나다. 세트 S1은 Optics에 32mm f/10 단일 플라스틱 렌즈를 적지만 `プラスチックレンズ` 줄과 같은 렌즈라 S1도 그 줄이 렌즈 줄이고 렌즈 문장을 따로 더하지 않는다(세트 S1~S6 모두 `プラスチックレンズ` 줄이 렌즈 줄이다). Optics `body` 줄(`写ルンです`)은 35mm·ISO 400·내장 플래시 같은 사실만 말한다 | Iris 滤镜 #041~#060은 `相机/介质`에 32mm f/10 단일 플라스틱 렌즈를 적고서 본문 꼬리에 `50mm 단초점 얕은 심도`(원본 값)와 무왜곡을 얹어 한 프롬프트에 둘이 같이 있다. 이 룩의 정체는 앞쪽이다 |
+| grain | 카드 줄이 이긴다. 굵은 `粒状感` 줄을 쓴다 | 고정 몫 grain(필름 입자) 줄은 가늘고 고른 입자인데 이 룩의 입자는 ISO 400 소형 카메라답게 거칠다 |
+| face-clear | D에서 끈다(세트 S6 포함). C는 쌍 10의 Pose를 쓸 때와 세트 S5에서만 끈다(옥상 바람). 쌍 10의 Camera 줄만 빌린 경우는 켠다. 머리가 뺨과 입가 가장자리를 지나가도 되고 눈은 가리지 않는다. A·B는 켠다(젖은 단발은 얼굴을 가리지 않는다) | 滤镜 #046은 바닷바람이 머리를 얼굴 반쯤에 붙이고 #050도 바람머리가 얼굴 앞을 지나는데 Iris 꼬리는 `乱发遮挡眉眼`을 금지한다 |
 | lip | D는 카드 줄 `ガラスリップ`가 이긴다. 나머지는 켠다. C의 교복 장면(S5와 교복·학교 줄을 고른 C)은 학생이라 끈다 | 물에 젖은 입술이 D 장면의 사실이라 `シアーリップ`와 입술색이 둘이 되지 않게 |
 | blush | B는 카드 줄 `アップルチーク`가 이긴다. 나머지는 켠다. C의 교복 장면은 학생이라 끈다 | 뜨거운 국물이나 맥주로 달아오른 뺨이 B 장면의 사실이라 뺨 색이 둘이 되지 않게 |
 | realism | 모든 갈래에서 바꾼다. `8K`·땀구멍 줄 대신 `native resolution` 줄을 쓴다. 매체 구절은 `single-use film camera`, 질감은 `coarse ISO 400 grain, soft corners and skin that shows no individual pores` | 이 매체의 해상도(고정초점 플라스틱 렌즈 한 장, ISO 400 네거티브)에 8K 모공 묘사를 얹으면 룩의 정체인 거칢과 반대다 |
 | framing | 켠다. 쌍 5(두 사람), 쌍 6(가슴 위), 쌍 12(무릎 아래)는 Camera 줄이 범위를 말하니 그 쌍에서는 쌍이 정한다. 범위를 말하지 않는 쌍 가운데 다리·발 동작이 있는 1·2·3·4·8은 `from head to toe`로 쓴다 | 나머지 쌍은 범위를 말하지 않는데 Pose가 발이나 걸음을 말하면 허리 위 프레임에서 그 동작이 안 보인다 |
 | ratio | 켠다. 사용자 비율이 없으면 3:4 세로이고 가로는 사용자가 말할 때 3:2로 쓴다 | 35mm 일회용 카메라의 본래 프레임은 3:2이고 세로로 들면 2:3이다. 이 룩의 기본 3:4는 그 세로 프레임의 위아래를 조금 잘라 낸 크롭이다(2:3 그대로 쓰려면 사용자가 말한다). 쌍은 비율을 정하지 않는다 |
-
-**선택 줄:** Optics `周辺減光` 줄은 선택 줄이다. 갈래 A에서 Optics가 6줄을 넘으면 이 줄부터 뺀다.
 
 **모든 쌍에 해당하는 처리:** face-light·lens·grain은 어느 쌍에서도 같은 처리다(face-light 끈다, lens는 Optics `プラスチックレンズ` 줄이 렌즈 줄이라 끈다, grain은 카드 줄 `粒状感`), realism은 `native resolution` 줄로 바꾼다. 쌍 번호를 조건으로 건 것은 아래 framing과 위 catchlight·face-clear뿐이다
 
@@ -64,11 +62,13 @@
 | B | expression | 口元を隠す笑い — One hand rises loosely over the mouth while the eyes curve into crescents above it and the shoulders shake at a joke. |
 | B | expression | ほろ酔い — The eyes look soft and slightly glassy, the cheeks warm and the smile loose after a cold drink. |
 | B | expression | 無防備 — Nothing is held for the camera: the eyes half close, the mouth rests soft and the shoulders drop on a quiet floor. |
-| C | expression | 物思い — The lids lower and the gaze rests on the window or on the horizon beyond the fence, the head tilted slightly toward the light. |
+| C | expression | 物思い — The lids lower and the gaze rests on the window or on the horizon beyond the fence, the head tilted slightly toward the light. (창가·옥상 장면 전용이다. 시선이 가는 곳이 다른 장면이면 시선 대상만 그 장면의 것으로 바꾼다) |
 | D | squint | まぶしげ — Hard sun narrows the lids into crescents and pinches the brows, as if one hand were about to rise to the forehead. |
 | D | expression | いたずらっぽい笑顔 — A lopsided grin with narrowed, sparkling eyes, as if she were about to flick water at the camera. |
 
 ## Outfit
+**함께 쓰는 슬롯:** `outfit-bottom`(C의 치마는 상의 `outfit`과 함께), `outfit-outer`(겉옷은 `outfit` 위에)
+
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
 | A | outfit | フーディー — A thick gray loop-back hoodie with the hood down, its fleecy face turning pale and matte under the flash. |
@@ -79,7 +79,7 @@
 | B | outfit | 綿麻ワンピース — A loose off-white cotton-linen lounge dress with natural wrinkles, its fibers warm under the low flash. |
 | C | outfit | 関東襟セーラー服 — A navy twill sailor top with a flat shallow collar, two thin white braid lines and a white scarf knotted at the chest. |
 | C | outfit-bottom | プリーツスカート — A knee-length navy pleated skirt whose fold edges pick up thin lines of low sun as she moves. |
-| C | outfit-outer | Tweed — A thick ivory tweed coat whose nubby weave scatters the snow light into tiny specks. |
+| C | outfit-outer | Tweed — A thick ivory tweed coat whose nubby weave scatters the snow light into tiny specks. (雪の朝 전용) |
 | D | outfit | 白T — A plain heavy white cotton tee cut oversized with a slightly stretched collar, nearly translucent where strong sun comes through it. |
 | D | outfit | セパレート水着 — A matte black athletic two-piece swimsuit with a scoop top and high-waisted bottoms, water beading on the shoulders. |
 
@@ -102,8 +102,9 @@
 | B | drink | 生ビール — A heavy glass mug of draft beer under a thick white head, the glass streaked with condensation and the flash bright on its curve. |
 | B | record | Vinyl LP — A black 12-inch record half out of its kraft sleeve, the grooves flashing a thin bright arc. |
 | B | mic | カラオケマイク — A black karaoke microphone held loosely near the chin, its mesh head catching one small hard glint. |
-| C | camera | 写ルンです — A small paper-wrapped single-use camera raised to one eye with its wrist strap hanging, the plastic shell matte in the low sun. |
-| C | drink-hot | コーンポタージュ — A short stout yellow can of hot corn soup held in both palms, steam at the opening in the cold air. |
+| C | camera | 写ルンです — A small paper-wrapped single-use camera raised to one eye with its wrist strap hanging, the plastic shell matte in the low sun. (손이 비어 있는 동작에만 쓴다. 먹거나 드는 동작이 있는 장면에는 쓰지 않는다) |
+| C | food | アイスクリーム — A vanilla cone held in one hand, the first drip sliding down the cone edge as it softens. |
+| C | soup | コーンポタージュ — A short stout yellow can of hot corn soup held in both palms, steam at the opening in the cold air. (雪の朝처럼 추운 날 장면 전용) |
 | A, B, D | nails | ちゅるんネイル — Short nails with a translucent pink-beige gel dome and one smooth crescent of light on each. |
 
 ## Style
@@ -111,7 +112,7 @@
 |---|---|---|
 | A | style | スナップ — An unposed frame slightly off-center and cut a little carelessly, as if a friend beside her pointed the camera without warning. |
 | B | style | 下北沢Vintage — A thrifted indie look of worn denim and secondhand layers, as if photographed between record crates and narrow counters. |
-| C | style | 昭和レトロ — The school or the train car is a Showa leftover of worn wood and green moquette, seen in warm negative color. |
+| C | style | 昭和レトロ — The school or the train car is a Showa leftover of worn wood and green moquette, seen in warm negative color. (木造校舎·夕暮れの電車 장면 전용) |
 | D | style | 青春映画 — A summer youth-film mood of sea wind, wind-blown hair and a washed-out sky, the exposure running over. |
 | A, B | palette | palette — Saturated everyday negative color with flash-lit surfaces pale and flat against near-black, flash-lit skin highlights that run warm, shadows leaning faintly green-cyan and no pastel retouching. |
 | C | palette | palette — Saturated everyday negative color in available light, with skin highlights that run warm, shadows leaning faintly green-cyan, bright sky and pale walls running to paper white and no pastel retouching; where a fill flash is used it only lifts the face. |
@@ -136,10 +137,13 @@
 | C | rooftop | 屋上 — A school rooftop behind a wire fence with a hazy city skyline beyond the mesh. |
 | C | school | 木造校舎 — An old wooden school building whose stair landing has dark boards worn smooth by decades of feet, dust floating in the air. |
 | C | snow | 雪の朝 — A bus stop on a snowy morning with white breath hanging in the cold air. |
+| C | storefront | コンビニ — A convenience store front with a glass door, a drink cooler beside the entrance and a few bicycles parked on the pavement outside. |
 | D | shore | 鎌倉 — A coastal town's sand and seawall with white wave foam. |
 | D | shallows | ケラマブルー — A jelly-clear turquoise shallows over white sand and a sharp blue horizon. |
 
 ## Light
+**하나만 고르는 슬롯:** `place-*`(장소별 줄, 장면과 맞는 하나)
+
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
 | A | face-light | ストロボ — A small on-camera flash from about 1.2 m hits her head-on, leaving a wet sheen on the forehead, cheeks and nose and a short hard shadow on whatever stands behind her while the background drops toward black. |
@@ -150,25 +154,29 @@
 | A | place-store | 蛍光灯 — In front of the convenience store, the lit glass front spills a flat cool-white glow onto the pavement and the door glass reflects one small white flash glare. |
 | A | place-vending | 蛍光灯 — At the side-street corner, the lit vending machines glow and lay a cold white-cyan square of light on the bare concrete. |
 | A | place-crossing | Wet Street Reflection — The wet black asphalt mirrors the traffic signals in its puddles, and the flash lights every rain streak in front of her. |
-| A | place-passage | 日光灯 — Cold fluorescent tubes run along the ceiling of the white-tiled passage and lay a flat green-white light over it. |
-| A | place-river | 低调布光 — Under the dark sky only a faint sheen of water shows in the distance, and the ground beyond the flash sinks to near black. |
+| A | place-passage | 蛍光灯 — Cold fluorescent tubes run along the ceiling of the white-tiled passage and lay a flat green-white light over it. |
+| A | place-river | low-key — Under the dark sky only a faint sheen of water shows in the distance, and the ground beyond the flash sinks to near black. |
 | B | steam | 湯気 — Dense white steam rising off the bowl catches the flash and turns into a soft milky haze between the lens and her face. |
 | B | light-fill | Neon and Flash Mix — A cool white flash lights her face cleanly while pink and cyan karaoke light spots sweep the sofa and the walls behind. |
-| B | place-ramen | 日光灯 — Bright fluorescent light hangs right over the dark red counter and the steaming bowls, flat and white. |
+| B | place-ramen | 蛍光灯 — Bright fluorescent light hangs right over the dark red counter and the steaming bowls, flat and white. |
 | B | place-table | 裸電球 — A warm tungsten bulb above the low izakaya table pools amber light over the plates, mugs and chopsticks. |
 | B | place-shop | 裸電球 — Dim warm ceiling bulbs light the basement record shop, leaving the crates and sleeves in a low amber glow. |
 | B | place-tatami | 行灯 — Soft low room light stays near the floor and glows through the white paper screen behind her. |
 | A, B, C | catchlight | Direct Flash Pinpoint Catchlight — One small hard white dot sits dead center in each pupil. |
-| C | face-light | 夕暮れ — The low sun stands behind her, rimming the hair and shoulders in gold while the sky burns to molten orange. (석양 장면 전용이다. 雪の朝에는 쓰지 않는다) |
+| C | face-light | 夕暮れ — The low sun stands behind her, rimming the hair and shoulders in gold while the sky burns to molten orange. (해가 낮게 걸린 늦은 오후~석양 장면에 쓴다. 雪の朝에는 쓰지 않는다) |
 | C | face-light | 雪明かり — Soft diffuse light from the pale sky and the snowy ground wraps her face evenly with almost no shadow edge and a cool, clean tone. (雪の朝 전용) |
+| C | face-light | Noon Sunlight — The afternoon sun stands high over the street, giving small crisp shadows on the face and skin highlights pushed slightly toward white. (해가 높은 한낮~이른 오후 방과 후 장면에 쓴다. 雪の朝에는 쓰지 않는다) |
 | C | light-fill | 日中シンクロ — When the sun is behind her, a small on-camera flash fills the face so it reads clearly against the bright sky and a bright gold rim outlines the hair. |
 | C | place-train | 西日 — At dusk the low gold sun rakes along the train window and across the green moquette seats. |
 | C | place-school | Window Light — Slanting window light crosses the stair landing and picks out the dust floating in the air. |
+| C | place-store | 日向と日陰 — At the convenience store front, bright afternoon sun lies on the pavement while the shop eave throws a band of open shade across the glass door and her shoulders. |
 | D | face-light | Noon Sunlight — High hard sun gives small crisp shadows and pushes the skin and sand highlights slightly past white. |
 | D | light-fill | Backlit Sea Mist — Fine spray thrown up beside her glows as a translucent gold veil, and drops on the lens window catch the sun as hard sparks. |
 | D | place-sea | Caustics — In the clear turquoise shallows, sun ripples run in moving bright lines across the white sand of the sea floor. |
 
 ## Optics
+**하나만 고르는 슬롯:** `flash`·`flash-off`(A·B는 터뜨리는 `flash`, C는 꺼 두는 `flash-off`. D는 둘 다 쓰지 않는다)
+
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
 | 전부 | body | 写ルンです — A single-use 35mm film camera with ISO 400 film and a small built-in flash. (수중 모델이 아닌 경로. 수중 모델이면 아래 `水中写ルンです` 줄이 본체 줄이다) |
@@ -199,18 +207,20 @@
 ## 포즈·구도 쌍
 | 번호 | 갈래 | Pose | Camera |
 |---|---|---|---|
-| 1 | A | 小走り — She hurries across wet crosswalk stripes in short quick steps, the torso leaning slightly forward and the hair swinging behind as the flash catches her mid-stride. | 日の丸構図 — The camera sits at chest height about 1.5 m away and drops her dead center, the white stripes, signals and far shop fronts behind her all in focus. |
+| 1 | A | 小走り — She hurries across crosswalk stripes in short quick steps, the torso leaning slightly forward and the hair swinging behind as the flash catches her mid-stride. | 日の丸構図 — The camera sits at chest height about 1.5 m away and drops her dead center, the white stripes, signals and far shop fronts behind her all in focus. |
 | 2 | A | しゃがみ — She crouches at a vending machine's outlet with one hand on her knee and the other reaching in, her face lit by the machine and the flash. | Low Angle — The camera sits at knee height and tilts up, so the lit machines, the pole and the dark sky above stay in focus. |
 | 3 | A | 傘の水を切る — Under a shop eave she shakes a closed umbrella downward, shoulders lifting and beads of water arcing off it where the flash catches them. | 三分割構図 — She stands on the left third while the lit shop front and the umbrella stand fill the rest, near and far both sharp. |
 | 4 | A | Sudden Halt — One foot reaches forward in a sudden stop while the body still carries the motion of the walk, the face frozen by the flash. | パンフォーカス — The camera stands about 1.5 m ahead at chest height and every tile seam down the passage behind her stays sharp, her moving legs left as a faint ghost. |
-| 5 | A | Arm's-Length Snap — One arm stretches straight out holding the small camera about 60 cm from the pair while the other arm pulls a friend in close, both faces crowding the center. | Two Shot — Two friends share the frame at similar size, heads together at the center, both flash-lit with the platform wall behind them sharp, the two faces just inside the camera's 1 m focus limit and a touch soft. |
+| 5 | A | Arm's-Length Snap — One arm stretches straight out holding the small camera about 60 cm from the pair while the other arm pulls a friend in close, both faces crowding the center. | Two Shot — Two friends share the frame at similar size, heads together at the center, both flash-lit with the wall behind them sharp, the two faces just inside the camera's 1 m focus limit and a touch soft. |
 | 6 | B | 両手持ち — Both hands wrap around a bowl held at chest height with the elbows tucked in, the head lowered to blow across the surface. | Medium Close-Up — The frame runs from the top of the head to mid-chest across the counter, with the bowl's steam crossing the lower third. |
 | 7 | B | 乾杯 — A tall glass is held out toward the lens in a toast, the body leaning forward and laughing. | カメラ目線 — A friend across the table shoots at chest height and she looks straight into the lens, the clutter of plates between them equally sharp. |
 | 8 | B | 膝を抱える — She sits on the tatami with both arms around her shins and the chin close to the knees, looking toward the lens from the side. | High Angle — Shot from standing height about 1.5 m away looking down, so the tatami edges lead the eye to her and the paper screen behind stays sharp. |
-| 9 | C | tram window seat — She sits by the train window with her head resting against the glass while gold light slides over her face. | Frame Within a Frame — The window frame and the darker carriage around it box her into one bright rectangle, everything inside it sharp. |
-| 10 | C | 振り返り — Standing at the rooftop fence she turns her head back over one shoulder while the wind pulls her hair across one cheek. | 手持ち撮影 — The frame tilts a little as if a friend shot it by hand on the move, the fence, the roofs and the sky all in focus. |
+| 9 | C | tram window seat — She sits by the train window with her head resting against the glass as the carriage sways. | Frame Within a Frame — The window frame and the darker carriage around it box her into one bright rectangle, everything inside it sharp. |
+| 10 | C | 振り返り — Standing at a wire fence she turns her head back over one shoulder while the wind pulls her hair across one cheek. | 手持ち撮影 — The frame tilts a little as if a friend shot it by hand on the move, the fence, the roofs and the sky all in focus. |
 | 11 | D | Hand Visor — One flat hand shades her brow with the eyes narrowed and sunlight leaking around the fingers, the sea wind lifting her wet hair. | Negative Space — She fills one third of the frame while the pale sky and the sea take the rest, the horizon and the sand equally sharp. |
 | 12 | D | Surf Splash Kick — One leg kicks forward through the shallows so the water sprays up in arcs around her knees and drops stick to her thighs, her arms flung out for balance. | 膝下フレーミング — The frame cuts just below the knees so the arcs of water around her legs stay in the picture, spray and horizon equally sharp. |
+
+장소: 쌍 1은 장소가 횡단보도일 때, 쌍 2는 장소에 자판기가 있을 때, 쌍 3은 처마가 있는 가게 앞일 때(우산을 들었을 때), 쌍 4는 장소가 타일 벽의 통로일 때, 쌍 6은 장소가 카운터(음식 그릇이 놓인 자리)일 때, 쌍 7은 장소가 식탁일 때, 쌍 8은 장소가 다다미방일 때, 쌍 9는 장소가 전철 창가 좌석일 때, 쌍 10은 장소가 철망이 있는 옥상일 때, 쌍 11은 장소가 바닷가일 때, 쌍 12는 장소가 얕은 바다일 때 쓴다. 쌍 5는 장소를 가리지 않는다.
 
 ## 맞지 않는 것
 얕은 심도와 배경 보케, 매끈하게 보정한 피부, 스튜디오 조명과 흰 배경, 소프트박스의 부드러운 빛, 깨끗하고 가는 디지털 노이즈, 흑백 필름, 파스텔 톤, 정면 증명사진 자세, 읽히는 간판·상표 글자.

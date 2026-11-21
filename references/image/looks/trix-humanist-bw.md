@@ -10,7 +10,7 @@
 ## 고정 사실 (모든 갈래가 지킨다)
 | 슬롯 | 값 |
 |---|---|
-| medium | 35mm 흑백 네거티브(은염)로 찍은 거리 인문 사진. 영화 스틸·화보·디지털 흑백 변환이 아니다. 첫 줄은 `A humanist street photograph in Paris shot on Kodak Tri-X 400 black-and-white 35mm negative`로 시작한다. 매체 구절과 장소 구절 `in Paris`를 나눠 적은 것이라, 사용자가 다른 도시를 말하면 장소 구절만 바꾼다(B는 `…shot on pushed Kodak Tri-X 400 black-and-white 35mm negative`, B에서 `Ilford Delta 3200` stock 줄을 고르면(촛불 세트 S4가 아니어도 촛불 식탁 요청이면) 첫 줄 끝은 세트 번호와 상관없이 `…shot on Ilford Delta 3200 black-and-white 35mm negative`, C는 `…shot on Ilford HP5 Plus black-and-white 35mm negative`, D는 `…shot on Kodak T-Max 400 black-and-white 35mm negative`) |
+| medium | 35mm 흑백 네거티브(은염)로 찍은 거리 인문 사진. 영화 스틸·화보·디지털 흑백 변환이 아니다. 첫 줄은 매체만 말하는 구절 `A photograph shot on Kodak Tri-X 400 black-and-white 35mm negative`로 시작한다. 혼자 쓸 때: `A humanist street photograph in Paris shot on Kodak Tri-X 400 black-and-white 35mm negative`(이 카드만 불렸을 때의 첫 줄이다. 장르 구절 `humanist street photograph`와 장소 구절 `in Paris`는 이 줄에만 붙고, 사용자가 다른 도시를 말하면 장소 구절만 바꾼다). 필름 구절은 갈래마다 다르다(B는 `…shot on pushed Kodak Tri-X 400 black-and-white 35mm negative`, B에서 `Ilford Delta 3200` stock 줄을 고르면(촛불 세트 S4가 아니어도 촛불 식탁 요청이면) 첫 줄 끝은 세트 번호와 상관없이 `…shot on Ilford Delta 3200 black-and-white 35mm negative`, C는 `…shot on Ilford HP5 Plus black-and-white 35mm negative`, D는 `…shot on Kodak T-Max 400 black-and-white 35mm negative`). 어느 갈래든 앞머리는 `A photograph`이고 혼자 쓸 때만 `A humanist street photograph in Paris`다 |
 | closer | `Photographie humaniste` |
 | time | 흐린 파리의 낮이 기본(A, C). B는 밤과 비 오는 낮, D는 낮은 해의 측광이나 한쪽 창빛. 스튜디오 조명과 플래시가 없다 |
 | light-key | 있는 빛 하나: 흐린 하늘, 한쪽 창, 낮은 측광, 가로등 하나, 촛불 하나. C의 Record Store(쌍 10)는 창이 아니라 알전구 하나가 빛이라 `face-light-bulb`·`catchlight-bulb` 줄이 `face-light`·`catchlight`(창빛·창틀 눈빛)를 대신한다 |
@@ -31,17 +31,19 @@
 | 슬롯 | 처리 | 이유 |
 |---|---|---|
 | face-light | 모든 갈래에서 끈다. 얼굴 빛은 Light 줄이 정한다 | Iris 꼬리의 위·옆 입체광이 #088 머리 위 단일 가로등, #089 아래에서 올라오는 촛불, #083 기둥에 잘린 측광과 부딪혔다 |
-| face-clear | A·B에서 끈다. 바람과 비에 젖은 머리가 뺨과 눈썹 가까이 지나가도 눈은 읽힌다. C·D는 켠다 | #085 강풍에 눈을 스치는 머리와 #082 목에 붙은 젖은 머리가 귀 뒤로 넘긴 머리 줄과 공존했다 |
+| face-clear | A·B에서 끈다. A는 바람에 머리가 옆으로 날려 뺨과 눈썹 가까이 지나가고(S2는 눈을 스친다), B는 젖은 가닥이 한쪽 뺨을 가로지른다. 어느 쪽도 눈은 읽힌다. C·D는 켠다(C의 `chignon flou`와 D의 `Chignon bas`는 얼굴을 가리지 않는다) | #085 강풍에 눈을 스치는 머리와 #082 목에 붙은 젖은 머리가 귀 뒤로 넘긴 머리 줄과 공존했다 |
 | base, lip | 카드 줄이 이긴다(base 줄은 FR 문화권 공식의 주근깨를 되풀이하지 않는다) | Iris 고정문의 浆果玫瑰唇이 #076 #084 #086의 맨 입술과 #088 #089의 어두운 입술 위에 둘째 입술색을 얹었다. 흑백에서 입술색은 회색 톤으로만 남는다 |
 | blush | 끈다. 뺨의 톤은 Light 줄이 정한다 | 흑백이라 블러셔 색이 화면에 없고, 고정문의 뺨 혈색이 #088의 하드 그림자와 부딪혔다 |
 | catchlight | 카드 줄이 이긴다. 가로등 세트 S3에는 눈빛 점이 없다 | #089의 촛불 두 점이 고정 줄의 점 하나와 어긋나고, #088 머리 위 가로등은 눈 속 점보다 눈 밑 그림자를 만든다 |
 | grain | 카드 줄이 이긴다 | 고정 줄의 고운 입자가 Tri-X의 굵은 입자(#076 #080)·푸시 3200(#088)과 어긋나고, T-Max는 입자가 거의 없다(#079) |
-| lens | 모든 갈래에서 끈다(갈래마다 Optics lens 줄이 있어 고정 `自然透视` 줄까지 내려올 일이 없다). 렌즈를 말하는 줄은 하나이고 출처 순서는 세트의 렌즈 > 쌍의 렌즈 > 갈래의 Optics lens 줄이다. 세트는 모두 렌즈를 준다(S1·S2 Summicron 35mm, S3 Summilux 35mm, S4 Canon FD 50mm f/1.2L, S5 Summilux 50mm, S6 Summicron 50mm). 세트 없이 쓰면 갈래의 줄(A Summicron 35mm, B Summilux 35mm, C Canon FD 50mm, D Summicron 50mm)이다. 쌍 1~12의 Camera 줄은 모두 렌즈를 말하지 않으니 어느 쌍을 골라도 이 순서의 한 줄이 렌즈 줄이다(쌍 5는 심도 대신 낮은 카메라 자리를 말한다) | 고정 줄의 `뒤로 물러선 표준~중망원`이 35mm 레인지파인더(#076 #080 #085 #088)와 부딪히고, 계단 이음새와 기둥 그림자가 또렷해야 하는 #080 #083에 Iris 꼬리가 얕은 심도를 요구했다(원본 값: 浅景深自然虚化背景) |
+| lens | 모든 갈래에서 끈다(갈래마다 Optics lens 줄이 있어 고정 몫 lens 줄까지 내려올 일이 없다). 렌즈를 말하는 줄은 하나이고 출처 순서는 세트의 렌즈 > 쌍의 렌즈 > 갈래의 Optics lens 줄이다. 세트는 모두 렌즈를 주고(S1·S2 Summicron 35mm, S3 Summilux 35mm, S4 Canon FD 50mm f/1.2L, S5 Summilux 50mm, S6 Summicron 50mm) 세트가 말하는 렌즈가 렌즈 줄이며 Optics `lens` 자리의 한 줄로 쓴다: S1·S2는 A `Summicron 35mm f/2`, S3은 B `Summilux 35mm f/1.4`, S6은 D `Summicron 50mm f/2` 줄을 쓰고, 카드 `lens` 줄에 없는 렌즈인 S4의 `Canon FD 50mm f/1.2L`과 S5의 `Summilux 50mm f/1.4`는 그 렌즈 토큰을 줄 머리로 `lens` 줄을 새로 쓰며 갈래의 `lens` 줄(B `Summilux 35mm f/1.4`, C `Canon FD 50mm f/1.4`)은 붙이지 않는다. 세트 없이 쓰면 갈래의 줄(A Summicron 35mm, B Summilux 35mm, C Canon FD 50mm, D Summicron 50mm)이다. 쌍 1~12의 Camera 줄은 모두 렌즈를 말하지 않으니 어느 쌍을 골라도 이 순서의 한 줄이 렌즈 줄이다(쌍 5는 심도 대신 낮은 카메라 자리를 말한다) | 고정 줄의 `뒤로 물러선 표준~중망원`이 35mm 레인지파인더(#076 #080 #085 #088)와 부딪히고, 계단 이음새와 기둥 그림자가 또렷해야 하는 #080 #083에 Iris 꼬리가 얕은 심도를 요구했다(원본 값: 浅景深自然虚化背景) |
 | framing | 켠다. 쌍 5·6·7·8·11은 프레임 범위를 직접 말하니 그때는 3:4만 쓴다 | 나머지 쌍은 범위를 말하지 않는다 |
 | ratio | 켠다. 사용자 비율이 없으면 3:4 세로. 모든 쌍에 해당하는 처리: face-light·blush는 끄고 catchlight·grain·base·lip은 카드 줄이 이기며, lens는 세트 > 갈래의 Optics 줄 하나, ratio는 3:4 세로다 | 쌍은 비율을 정하지 않는다 |
 | realism | 모든 갈래에서 `8K` 줄 대신 `native resolution` 줄을 넣되 입자 굵기로 둘로 나눈다. A·B(굵은 입자): `native resolution — The frame holds the resolution of a heavily grained black-and-white 35mm negative and no more: coarse silver grain over softened fine detail.` C·D(곱고 촘촘한 입자): `native resolution — The frame holds the resolution of a fine-grained black-and-white 35mm negative and no more: tight, almost invisible silver grain over clean, crisp detail.` 어느 쪽에도 모공을 말하는 구절을 넣지 않는다(A·C의 `Teint nu` 줄이 모공을 톤의 작은 점으로 읽히게 한다) | 강하게 푸시한 흑백과 굵은 은염 입자(A·B)는 8K 모공 줄과 부딪히고, 입자가 곱거나 거의 없는 C·D에 굵은 입자와 부드러운 가장자리를 씌우면 이 갈래의 Optics 줄과 어긋난다. `anti-cg` 줄은 그대로 붙는다 |
 
 ## Hair and makeup
+**하나만 고르는 슬롯:** `hair`·`hair-up`(머리 모양 후보, 하나), `lip`·`lip-wet`(입술 후보, 촛불 식탁이면 `lip-wet` 하나)
+
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
 | A, C | hair | Coiffure effet saut du lit — Dark waves reach the collarbones with uneven ends and airy roots, finger-tousled so that a turn of the head or a breeze pulls separate strands sideways. |
@@ -58,6 +60,8 @@
 | C | lip | Gloss transparent — Clear gloss over the natural lip colour leaves a small bright highlight at the centre of each lip. |
 
 ## Expression
+**하나만 고르는 슬롯:** `expression`·`expression-*`(표정 후보, 갈래마다 장면에 맞는 하나: `expression-pause`는 걸음을 멈출 때, `expression-wind`는 강풍, `expression-candle`은 촛불 식탁, `expression-calm`은 D의 고요한 얼굴)
+
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
 | A | expression | Nonchalance parisienne — Her eyes rest on a point beside the lens with relaxed lids and closed lips, the chin slightly tucked as she keeps walking. |
@@ -72,13 +76,17 @@
 | D | expression-calm | Dédain — The face holds perfectly still with a flat mouth and level eyes lowered a touch, composed like a stone statue. |
 
 ## Outfit
+**하나만 고르는 슬롯:** `outfit`·`outfit-candle`·`outfit-top-cardigan`(옷 후보, 장면에 맞는 하나: 촛불 식탁이면 `outfit-candle`)
+
+**함께 쓰는 슬롯:** `outfit-bottom`(하의는 상의 위아래로 함께), `outfit-outer`·`outfit-outer-coat`(겉옷은 속옷 위에, 둘 중 하나), `outfit-blazer`·`outfit-shirt`(C: 재킷은 셔츠 위에)
+
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
 | A | outfit | Marinière classique bretonne — Narrow dark and pale stripes run across a heavy cotton boat-neck top and stay crisp as black-and-white bands in the print. |
 | A, B | outfit-bottom | Jean droit — Plain straight-leg denim that reads as flat dark grey from hip to ankle, with a little slack at the knee. |
 | A, B | outfit-outer | Trench classique — A long belted gabardine trench worn open or loose, the hem swinging at the knee and the storm flap throwing a thin shadow. |
-| A | outfit-coat | pardessus — A heavy charcoal double-breasted wool overcoat with a felted surface, its wide hem lifted by the wind into a long backward arc. |
-| A | outfit-layer | Gilet — A black wool cardigan hangs open over a plain white tee, the knit texture breaking up the dark mass of the sleeves. |
+| A | outfit-outer-coat | pardessus — A heavy charcoal double-breasted wool overcoat with a felted surface, its wide hem lifted by the wind into a long backward arc. |
+| A | outfit-top-cardigan | Gilet — A black wool cardigan hangs open over a plain white tee, the knit texture breaking up the dark mass of the sleeves. |
 | B | outfit-outer | Blazer oversize — An oversize black blazer with built-up shoulders hangs in sharp planes, its lapel edge catching a thin white line of lamp light. |
 | B | outfit | Robe caraco — A thin-strap black silk slip dress with a sheen that runs along each fold, set against the lit collarbones. |
 | B | outfit-candle | Robe nuisette — A long black satin slip dress on thin straps with an open back, the heavy fabric hanging in smooth dark columns beside the candle. |
@@ -108,6 +116,8 @@
 | 전부 | palette | palette — Pure black, white and a full ladder of silver greys, with no colour anywhere in the frame. |
 
 ## Scene
+**하나만 고르는 슬롯:** `place`·`place-*`(장소별 줄, 장면과 맞는 하나)
+
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
 | A | place | quai de Seine — A pale stone embankment wall runs beside slow river water, the old buildings of the far bank reduced to a grey silhouette behind her. |
@@ -124,6 +134,8 @@
 | D | background | Boiseries — Plain painted wall panels with plaster mouldings sit softly out of focus behind her. |
 
 ## Light
+**하나만 고르는 슬롯:** `face-light`·`face-light-*`(얼굴 빛 경로, 장면과 맞는 하나), `catchlight`·`catchlight-bulb`(눈빛 후보, 알전구 장면이면 `catchlight-bulb`), `reflect`·`reflect-puddle`(반사 후보, 웅덩이가 장면에 있으면 `reflect-puddle`)
+
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
 | A | face-light | Paris Overcast Light — Cloud cover works as one huge softbox, so the street is lit evenly with no hard shadow and faces keep wide mid-grey tones and pale highlights. |
@@ -144,6 +156,8 @@
 | D | wall-light | Window Light — Soft curtain-filtered window light grazes the plaster mouldings and leaves only a faint gradient of light across the painted panels behind her. |
 
 ## Optics
+**하나만 고르는 슬롯:** `stock`·`stock-dim`(필름 줄은 하나, 촛불 식탁이면 `stock-dim`의 Delta 3200)
+
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
 | A | stock | Kodak Tri-X 400 — A black-and-white negative with ink-deep blacks and open bright highlights on a steep grey ramp, so faces and stone keep strong contrast. |
@@ -175,18 +189,20 @@
 ## 포즈·구도 쌍
 | 번호 | 갈래 | Pose | Camera |
 |---|---|---|---|
-| 1 | A | Marcher d'un pas vif — Caught mid-stride along the embankment with the arms swinging and the whole body coming toward the lens. | Instant décisif — The shutter falls at the peak of the step, when her body and the lines of the quay wall settle into a strict balance for an instant. |
+| 1 | A | Marcher d'un pas vif — Caught mid-stride along a wall or railing with the arms swinging and the whole body coming toward the lens. | Instant décisif — The shutter falls at the peak of the step, when her body and the lines of the nearest wall settle into a strict balance for an instant. |
 | 2 | A | Bras tendu sur le guéridon — One straight arm braces on a small café table while the torso leans back in a long diagonal, the other hand holding the paper. | Over the Shoulder — Shot past the blurred shoulder of a stranger at the next table, her face sharp beyond it. |
 | 3 | A | Over-the-Shoulder Glance — On the stair, her torso twists back and the face turns toward the lens past one shoulder. | Plongée — From the upper flight of the stair looking down, so the dark joints between the steps run in lines toward her. |
-| 4 | A | Coat Wind Blow — A gust throws the long coat wide behind her as she walks into the wind, one hand lifting to steady her hair. | Contre-plongée — From low at the foot of the bridge pier looking up, so the dark coat stands against a white storm sky. |
-| 5 | B | Puddle Leap — One long step carries her over a puddle, the other foot just leaving the wet cobbles. | Puddle Reflection — The camera sits low at the edge of the puddle, so her whole stepping figure and the lamps mirrored in the wet cobbles read as clearly as the street itself. |
-| 6 | B | Mains dans les poches — Both hands sink into the blazer pockets as she turns her body sideways beneath the lamp, shoulders relaxed. | Plan américain — Head-on at eye level with the frame cut at mid-thigh, the lamp above her and the empty alley around. |
+| 4 | A | Coat Wind Blow — A gust throws the long coat wide behind her as she walks into the wind, one hand lifting to steady her hair. | Contre-plongée — From low at the foot of a tall stone pier looking up, so the dark coat stands against the open sky. |
+| 5 | B | Puddle Leap — One long step carries her over a puddle, the other foot just leaving the wet cobbles. | Puddle Reflection — The camera sits low at the edge of the puddle, so her whole stepping figure and its reflection in the wet cobbles read as clearly as the street itself. |
+| 6 | B | Mains dans les poches — Both hands sink into the blazer pockets as she turns her body sideways beneath the street lamp, shoulders relaxed. | Plan américain — Head-on at eye level with the frame cut at mid-thigh, the lamp above her and the empty alley around. |
 | 7 | B | Coude en appui, menton dans la paume — Her chin sits in the palm of one hand, the eyes settling softly on the person across the table. | Plan rapproché — The frame runs from the top of the head to mid-chest, with the candle blurred low in the foreground. |
 | 8 | B | unhurried stroll — She walks at an easy pace across the wet square with the umbrella held overhead. | Plan d'ensemble — She is a small black mark in a huge pale square, the sky and wet ground filling almost the whole frame. |
-| 9 | C | turning an old book page — Seated under the arch, two fingers lift the corner of a page in the heavy book while her head bows over it. | Cadre dans le cadre — The stone arch boxes her into a narrow slot of side light with darker stone all around. |
-| 10 | C | Examiner un disque — Both hands hold a record by its edges up toward the bulb, the head tilted back a little to read the light across the grooves. | Amorce — The blurred edge of a record crate crosses the lower corner of the frame in front of her. |
-| 11 | D | Visage de trois quarts — Her head turns into a three-quarter view toward the lens from the tall window, so the far cheek just shows and the eyes meet the lens. | Gros plan — The frame holds only her face, filling the picture edge to edge. |
-| 12 | D | Adossée à un pilier de pierre — Her back leans on a massive stone column, shoulders square and face in profile toward the distance. | Règle des tiers — She stands on the left vertical third while the repeating columns and their shadow bands fill the rest. |
+| 9 | C | turning an old book page — Seated under the arch, two fingers lift the corner of a page in the heavy book while her head bows over it. | Cadre dans le cadre — The stone arch boxes her into a narrow slot with darker stone all around. |
+| 10 | C | Examiner un disque — Both hands hold a record by its edges up in front of her, the head tilted back a little to read the grooves. | Amorce — The blurred edge of a record crate crosses the lower corner of the frame in front of her. |
+| 11 | D | Visage de trois quarts — Her head turns into a three-quarter view toward the lens, so the far cheek just shows and the eyes meet the lens. | Gros plan — The frame holds only her face, filling the picture edge to edge. |
+| 12 | D | Adossée à un pilier de pierre — Her back leans on a massive stone column, shoulders square and face in profile toward the distance. | Règle des tiers — She stands on the left vertical third while the repeating columns fill the rest. |
+
+장소: 쌍 1은 장소가 벽이나 난간을 따라 걷는 길일 때, 쌍 2는 장소가 카페 테라스일 때, 쌍 3은 장소에 계단이 있을 때, 쌍 4는 장소에 큰 석조 교각이 서 있을 때, 쌍 5는 장소에 웅덩이가 있는 젖은 길일 때, 쌍 6은 장소가 가로등이 선 골목일 때, 쌍 7은 장소가 식탁(촛불이 놓인 자리)일 때, 쌍 8은 장소가 넓은 광장일 때, 쌍 9는 장소가 돌 아치 아래일 때, 쌍 10은 장소가 음반 상자가 있는 레코드 가게일 때, 쌍 12는 장소에 큰 돌기둥이 있는 회랑일 때 쓴다. 쌍 11은 장소를 가리지 않는다.
 
 ## 맞지 않는 것
 컬러와 세피아, 부분 채색, 디지털로 변환한 매끈한 회색, 스튜디오 조명·링라이트·플래시, 광각 근접 셀카, 한낮의 평평한 직사광(D의 기둥 그림자 제외), 큰 웃음 포즈, 정면 증명사진 자세, 읽히는 신문·간판 글자, 영화 스틸 문법(레터박스, 영화 조명).
