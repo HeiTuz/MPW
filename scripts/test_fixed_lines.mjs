@@ -30,6 +30,11 @@ const lines = [...text.matchAll(/`([^`\n]+ — [^`\n]+)`/gu)].map((match) => mat
 assert.ok(lines.length >= 25, `${lines.length} fixed lines`);
 for (const line of lines) assert.match(line, /^[^—]+ — [A-Z<].*[.>]$/u, line);
 
+// Finish tokens come from a per-culture table (CN KR JP FR and English) and the realism line has a low-resolution replacement.
+const finishTable = text.split(/^## Finish$/mu)[1]?.split(/^- `closer`/mu)[0] ?? "";
+for (const culture of ["CN", "KR", "JP", "FR", "US·그 밖"]) assert.match(finishTable, new RegExp(`^\\| ${culture}[^|]* \\| \`[^\`]+\` \\| \`[^\`]+\` \\| \`[^\`]+\` \\|$`, "mu"), `Finish token row ${culture}`);
+assert.match(text, /`native resolution — The frame holds the resolution of a <그 매체>/u, "realism replacement line for low-resolution media");
+
 // Beautifying lines are conditioned on an adult; a child or student turns them off.
 assert.match(text, /\*\*성인 인물에만\*\*/u);
 assert.match(text, /아이·학생[^\n]*미화 줄[^\n]*끈다/u);

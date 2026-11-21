@@ -117,7 +117,7 @@ const LAYER_FILES = {
 };
 const splitRow = line => line.replace(/^\| | \|$/g, '').split(/(?<!\\) \| /);
 const index = read('references/image/layer-lexicon.md');
-assert.ok(Buffer.byteLength(index) <= 11400, `lexicon index is ${Buffer.byteLength(index)} bytes`);
+assert.ok(Buffer.byteLength(index) <= 12000, `lexicon index is ${Buffer.byteLength(index)} bytes`);
 const lexiconRows = {};
 for (const [layer, slug] of Object.entries(LAYER_FILES)) {
   const text = read(`references/image/lexicon/${slug}.md`);

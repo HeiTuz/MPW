@@ -103,6 +103,8 @@ assert.ok(!codes(finish("超写实 — Ultra-realistic 8K photographic detail.")
 assert.ok(!codes(finish("超写实 — Ultra-realistic 8K photographic detail."), { profile: "assembled" }).has("phrasing/noise-trigger"));
 assert.ok(codes(finish("超写实 — Ultra-realistic 8K photographic detail.", " An 8K shot."), { profile: "assembled" }).has("phrasing/quality-tag"));
 assert.ok(codes(finish("实拍 — 8K. 超写实 — Ultra-realistic 8K detail."), { profile: "assembled" }).has("phrasing/quality-tag"));
+assert.ok(!codes(finish("photorealistic — Ultra-realistic 8K photographic detail."), { profile: "assembled" }).has("phrasing/quality-tag"), "the Finish 8K exception does not depend on the realism token");
+assert.ok(!codes(finish("극사실 — Ultra-realistic 8K photographic detail."), { profile: "assembled" }).has("phrasing/quality-tag"));
 assert.ok(codes("An 8K photograph of a cat.", { profile: "assembled" }).has("phrasing/quality-tag"));
 
 console.log("Engine levers PASS: table shape, grades, bundles, example, engine checks and the Finish 8K exception. No generation tested.");
