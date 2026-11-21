@@ -8,7 +8,7 @@ import os from "node:os";
 import path from "node:path";
 import { spawnSync } from "node:child_process";
 import { fileURLToPath } from "node:url";
-import { BUNDLES, expandBundles, extractSection, parseHeadings, parsePart, partitionChunks, readTargets } from "./read_refs.mjs";
+import { BUNDLES, cutParts, expandBundles, extractSection, parseHeadings, parsePart, partitionChunks, readTargets } from "./read_refs.mjs";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 
@@ -320,10 +320,18 @@ for (const bad of ["0/3", "4/3", "x", "1/", "2"]) assert.ok(parsePart(["--part",
 assert.deepEqual(partitionChunks(["aaaa", "bb", "cccc", "dd", "eeee", "ff"], 3), [0, 0, 1, 1, 2, 2], "chunks go to the part holding their middle");
 assert.deepEqual(partitionChunks(["one chunk"], 3), [1], "a single chunk lands in the middle part");
 {
+  // A long chunk may be cut at a heading inside it; the cut piece gets its own "==>" line, and pieces in one part join back.
+  const lines = ["# A", "one", "## B", "two"];
+  const result = { chunk: "==> a.md §A\n# A\none\n## B\ntwo\n", file: "a.md", label: " §A", from: 0, to: 4, lines, cuts: [2] };
+  assert.deepEqual(cutParts([result], 1), [[result.chunk]], "one part keeps the chunk whole");
+  assert.deepEqual(cutParts([result], 2), [["==> a.md §A (L1-2)\n# A\none\n"], ["==> a.md §A (L3-4)\n## B\ntwo\n"]], "two parts cut at the inner heading");
+}
+{
   const read = (...args) => spawnSync(process.execPath, [path.join(root, "scripts", "read_refs.mjs"), ...args], { encoding: "utf8", maxBuffer: 8 * 1024 * 1024 });
   const whole = read("--bundle", "gpt-image-portrait");
   assert.equal(whole.status, 0, whole.stderr);
-  const wholeChunks = whole.stdout.split(/(?=^==> )/m).filter(Boolean);
+  // Parts may cut a section between its subsections, so compare the body lines and check that every piece starts at a heading.
+  const bodyLines = (text) => text.split("\n").filter((line) => line.trim() && !line.startsWith("==> "));
   const gathered = [];
   const sizes = [];
   for (let n = 1; n <= 3; n += 1) {
@@ -332,10 +340,12 @@ assert.deepEqual(partitionChunks(["one chunk"], 3), [1], "a single chunk lands i
     const [first, ...body] = out.stdout.split("\n\n");
     assert.match(first, n < 3 ? new RegExp(`^part ${n} of 3, next: node scripts/read_refs\\.mjs --bundle gpt-image-portrait --part ${n + 1}/3$`) : /^part 3 of 3, last part$/, `part ${n} first line`);
     const text = body.join("\n\n");
-    gathered.push(...text.split(/(?=^==> )/m).filter(Boolean));
+    const pieces = text.split(/(?=^==> )/m).filter(Boolean);
+    for (const piece of pieces) assert.match(piece.split("\n")[1] ?? "", /^#{1,6} /, `part ${n} piece starts at a heading: ${piece.split("\n")[0]}`);
+    gathered.push(...bodyLines(text));
     sizes.push([...text].length);
   }
-  assert.deepEqual(gathered.map((chunk) => chunk.trimEnd()), wholeChunks.map((chunk) => chunk.trimEnd()), "the three parts hold every chunk once, in order");
+  assert.deepEqual(gathered, bodyLines(whole.stdout), "the three parts hold every line once, in order");
   assert.ok(Math.max(...sizes) < 0.45 * sizes.reduce((a, b) => a + b, 0), `parts are about equal: ${sizes}`);
   assert.equal(read("--bundle", "gpt-image-portrait", "--part", "4/3").status, 2, "n above m exits 2");
   const small = read("--bundle", "batch", "--part", "3/3");

@@ -24,7 +24,9 @@
 // these sets; SKILL.md refers to them by name.
 //
 // "--part n/m" prints only the n-th of m pieces of the output, cut at section
-// boundaries so the pieces have about the same size. The first line says
+// boundaries (a long section may be cut between its subsections, and the cut
+// piece gets its own "==>" line with its line range) so the pieces have about
+// the same size. The first line says
 // "part n of m, next: <command>", so a long bundle can be read piece by piece
 // when one tool output cannot hold it.
 import fs from "node:fs";
@@ -37,8 +39,8 @@ const skillRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..
 const FIXED_LINES = "references/image/fixed-lines.md#고정 몫: 층마다 늘 붙는 줄~입력 용도별로 붙는 것";
 // 사진 추출은 Camera 절(프레이밍·렌즈 고정 줄)을 뺀다. 추출은 '입력 용도별' 표대로 사진의 비율·잘린 자리·렌즈를 쓴다.
 const FIXED_LINES_EXTRACT = "references/image/fixed-lines.md#고정 몫: 층마다 늘 붙는 줄~Optics,Finish~입력 용도별로 붙는 것";
-// 층별 토큰 사전 색인에서 사용법과 문화권 룩 묶음만 읽는다. 대표 토큰 표는 파일에 남아 있고 셸이 없을 때 직접 읽는다.
-const LEXICON_INDEX = "references/image/layer-lexicon.md#사용법,문화권 룩 묶음";
+// 층별 토큰 사전 색인에서 사용법, 그 1항이 가리키는 층별 파일 표, 문화권 룩 묶음만 읽는다. 대표 토큰 표는 파일에 남아 있고 셸이 없을 때 직접 읽는다.
+const LEXICON_INDEX = "references/image/layer-lexicon.md#사용법~문화권 룩 묶음";
 
 export const BUNDLES = {
   // 대상 미정·GPT Image 새 이미지. 작성 규칙은 image-brief.md(§1~§7·§9~§11, 예시는 인물 없는 장면 §10.2), 층마다 붙는 고정 몫 fixed-lines.md, 층별 사전 색인(사용법·문화권 룩 묶음). 도해·슬라이드·UI·만화·로고는 -structured.
@@ -242,7 +244,11 @@ function* targetChunks(targets, read, toc = false) {
       continue;
     }
     if (toc) {
-      if (!source.tocPrinted) yield { chunk: `==> ${file} (toc)\n${tableOfContents(source.text)}\n` };
+      if (!source.tocPrinted) {
+        const chunk = `==> ${file} (toc)\n${tableOfContents(source.text)}\n`;
+        const lines = chunk.split("\n");
+        yield { chunk, lines, from: 0, to: lines.length, cuts: [] };
+      }
       source.tocPrinted = true;
       continue;
     }
@@ -263,7 +269,8 @@ function* targetChunks(targets, read, toc = false) {
         const fullFile = spec === null && start === 0 && line === source.lines.length;
         const label = spec === null ? "" : ` §${spec.trim()}`;
         const range = fullFile ? "" : ` (L${start + 1}-${line})`;
-        yield { chunk: `==> ${file}${label}${range}\n${body}\n` };
+        const cuts = source.headings.map((heading) => heading.line).filter((at) => at > start && at < line);
+        yield { chunk: `==> ${file}${label}${range}\n${body}\n`, file, label, from: start, to: line, lines: source.lines, cuts };
       }
     }
   }
@@ -282,15 +289,34 @@ export function readTargets(targets, read = readSource) {
 // One tool output holds about 40,000 bytes (a Korean character is 3 bytes), so --bundles says how many --part pieces a bundle needs.
 export const PART_LIMIT_BYTES = 40000;
 
-export function partsNeeded(chunks, limit = PART_LIMIT_BYTES) {
-  const sizes = chunks.map((chunk) => Buffer.byteLength(chunk));
-  for (let m = 1; m <= chunks.length; m += 1) {
-    const owner = partitionChunks(chunks, m);
-    const totals = Array(m).fill(0);
-    sizes.forEach((size, index) => { totals[owner[index]] += size; });
-    if (Math.max(...totals) <= limit) return m;
+export function partsNeeded(results, limit = PART_LIMIT_BYTES) {
+  const pieces = results.reduce((count, result) => count + result.cuts.length + 1, 0);
+  for (let m = 1; m <= pieces; m += 1) {
+    if (cutParts(results, m).every((part) => Buffer.byteLength(part.join("\n")) <= limit)) return m;
   }
-  return Math.max(chunks.length, 1);
+  return Math.max(pieces, 1);
+}
+
+// For --part a chunk may be cut at the headings inside it, so one long section (image-brief §12) does not fill a part alone.
+// Pieces of one chunk that land in the same part are joined back, so a cut adds a "==>" line only where a part ends.
+export function cutParts(results, m) {
+  const pieces = results.flatMap((result) => {
+    const edges = [result.from, ...result.cuts, result.to];
+    return edges.slice(1).map((to, index) => ({ result, from: edges[index], to }));
+  });
+  const owner = partitionChunks(pieces.map(({ result, from, to }) => result.lines.slice(from, to).join("\n")), m);
+  const parts = Array.from({ length: m }, () => []);
+  pieces.forEach((piece, index) => {
+    const part = parts[owner[index]];
+    const last = part.at(-1);
+    if (last && last.result === piece.result) last.to = piece.to;
+    else part.push({ ...piece });
+  });
+  return parts.map((part) => part.map(({ result, from, to }) => {
+    if (from === result.from && to === result.to) return result.chunk;
+    const body = result.lines.slice(from, to).join("\n").replace(/\s+$/, "");
+    return `==> ${result.file}${result.label} (L${from + 1}-${to})\n${body}\n`;
+  }));
 }
 
 function listBundles() {
@@ -300,9 +326,9 @@ function listBundles() {
       let error = null;
       for (const result of targetChunks(targets, readSource)) {
         if (result.error) error = result.error;
-        else chunks.push(result.chunk);
+        else chunks.push(result);
       }
-      const text = chunks.join("\n");
+      const text = chunks.map((result) => result.chunk).join("\n");
       const parts = partsNeeded(chunks);
       const size = error ? `error: ${error}` : `${[...text].length} chars, ${Buffer.byteLength(text)} bytes${parts > 1 ? `, read in ${parts} parts: --part 1/${parts}` : ""}`;
       return `${name}  (${size})\n${targets.map((target) => `  ${target}`).join("\n")}`;
@@ -377,14 +403,13 @@ function main(rawArgv) {
     if (result.toc) console.error(result.toc);
     failed += 1;
   }
-  const chunks = results.filter((item) => !item.error).map((item) => item.chunk);
+  const found = results.filter((item) => !item.error);
   if (!parsed.part) {
-    for (const chunk of chunks) console.log(chunk);
+    for (const item of found) console.log(item.chunk);
     return failed ? 1 : 0;
   }
   const { n, m } = parsed.part;
-  const owner = partitionChunks(chunks, m);
-  const mine = chunks.filter((_, index) => owner[index] === n - 1);
+  const mine = cutParts(found, m)[n - 1];
   const next = n < m ? `next: node scripts/read_refs.mjs ${[...argv, "--part", `${n + 1}/${m}`].map(shellQuote).join(" ")}` : "last part";
   console.log(`part ${n} of ${m}, ${next}${mine.length ? "" : " (no section falls in this part)"}\n`);
   for (const chunk of mine) console.log(chunk);
