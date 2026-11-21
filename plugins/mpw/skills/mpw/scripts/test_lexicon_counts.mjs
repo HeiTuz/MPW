@@ -24,5 +24,5 @@ for (const line of block.split('\n').filter(l => /^\| .+\]\(lexicon\//.test(l)))
   CULTURES.forEach((c, i) => assert.equal(perCulture[i], actual[c], `${slug}: ${c} rows`));
   checked++;
 }
-assert.equal(checked, 10, 'index lists 10 layers');
+assert.equal(checked, 11, 'index lists 11 layers');
 console.log(`ok test_lexicon_counts (${checked} layers)`);

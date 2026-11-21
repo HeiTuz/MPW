@@ -8,6 +8,7 @@
 | 실행 단위 사이 입력·출력이 얽힘 | [prompt-graph.md](prompt-graph.md) §5 |
 | 업무 고유 형식 | [business.md](templates/business.md); 덱은 [slides.md](slides.md), UI는 [design.md](templates/design.md) |
 | 지정 엔진의 문법·파라미터·길이 제한, 모델 추천 | [surfaces.md](image/surfaces.md) → [surface-contracts.md](image/surface-contracts.md)의 해당 표면만; 엔진 어댑터는 [model-routing.md](image/model-routing.md) §6, 모델 추천만 §1·§2와 §4. 대상 미정의 자연어 초안에는 API 조회·모델 선정을 요구하지 않는다 |
+| 다른 엔진(Seedream·Nano Banana·Midjourney·Soul)을 지정한 새 이미지, 또는 이미지 프롬프트의 엔진 간 변환 | 묶음 `image-other-engine`(새 이미지) 또는 `image-prompt-conversion`(변환). 층 문안을 먼저 쓰고 [engine-levers.md](image/engine-levers.md)로 그 엔진에 편다. 그 엔진 어댑터는 [model-routing.md](image/model-routing.md) §6 |
 | 참조 이미지의 역할·관찰이 필요함 | [from-image.md](image/from-image.md) §1. 원본 편집은 변경·보존 조건으로 바로 작성하고 상세 관찰·취향 변주는 요청될 때만 |
 | 캐릭터시트·고스트 캐릭터 레퍼런스 | 양식 선택은 [ghost-character-reference-sheet.md](image/ghost-character-reference-sheet.md) §1 |
 | 원본별 편집이 아닌 제품 사진 여러 컷의 새 생성 | [product-multicut-consistency.md](image/product-multicut-consistency.md) |

@@ -1,12 +1,10 @@
 # 인물 이미지 브리프
 
-작성 규칙(층 모양·채우기·기본 인물·Identity Reference)은 [../image-brief.md](../image-brief.md)가 정본이다. 이 파일은 참조 분기·장르 결정 축·검수만 다룬다. 우선순위는 [../lanes.md](../lanes.md) §레인 게이트 카드 > GPT Image 새 이미지의 [../image-brief.md](../image-brief.md) > [../compiler.md](../compiler.md) §원칙(GPT Image 새 이미지에는 적용하지 않는다) > [../editorial-fashion.md](../editorial-fashion.md) > 이 파일이며, 원본 편집은 [../surface-contracts.md](../surface-contracts.md) §3.3이 소유한다. 다른 엔진을 지정했으면 인물 설정·참조 분기·검수만 적용하고 형식과 참조 문법은 그 엔진 문서를 따른다.
+작성 규칙(층 모양·채우기·기본 인물·Identity Reference)은 [../image-brief.md](../image-brief.md)가 정본이다. 이 파일은 참조 분기·장르 결정 축·검수만 다룬다. 우선순위는 [../lanes.md](../lanes.md) §레인 게이트 카드 > GPT Image 새 이미지의 [../image-brief.md](../image-brief.md) > [../compiler.md](../compiler.md) §원칙(GPT Image 새 이미지에는 적용하지 않는다) > [../editorial-fashion.md](../editorial-fashion.md) > 이 파일이며, 원본 편집은 [../surface-contracts.md](../surface-contracts.md) §3.3이 소유한다. 다른 엔진을 지정했으면 인물 설정·참조 분기·검수만 적용하고 형식과 참조 문법은 그 엔진 문서를 따른다. 새 인물 사진의 기본 비율(사용자 비율이 없을 때 3:4 세로)은 [../fixed-lines.md](../fixed-lines.md)의 `framing`+`ratio` 슬롯이 정한다.
 
 공개 인물 프롬프트 모음 1,823건을 검수해 뽑은 작성 패턴이며 생성 품질 실측이 아니다. 원문 문장을 템플릿으로 복사하지 않는다.
 
-인물 시리즈의 지정 축 비교나 프리셋 조합, 명시적 랜덤 요청에는 [portrait-variations.md](portrait-variations.md)를 읽는다.
-
-인물 설정은 [../image-brief.md](../image-brief.md) §5.
+인물 시리즈의 지정 축 비교나 프리셋 조합, 명시적 랜덤 요청에는 [portrait-variations.md](portrait-variations.md)를 읽는다. 같은 장면을 여러 장 달라는 요청(바꿀 축 없음)도 읽는다. 룩 카드가 있으면 포즈·구도 쌍으로 장마다 Pose와 Camera를 바꾼다.
 
 ## 참조 분기
 
@@ -46,6 +44,6 @@
 
 답변에 출력하지 않는 내부 확인이다.
 
-- 조건절 밖에 얼굴·체형·나이·피부색 서술이 없는가
+- [../image-brief.md](../image-brief.md) §9-6의 Identity Reference 확인
 - 참조가 없으면 보존 문구가 없는가. 있으면 번호·역할이 있고 참조 외모를 다시 묘사하지 않았는가
 - 카메라 위치·광원·반사·손의 접촉이 서로 맞는가

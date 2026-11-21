@@ -66,7 +66,7 @@ VERIFICATION_STAMP_PATTERN = re.compile(
     r"\((\d{4})-(\d{2})(?:-\d{2})?[^)\n]*?(?:확인|대조|검증)[^)\n]*\)"
 )
 STAMP_DATE_PATTERN = re.compile(r"(\d{4})-(\d{2})(?:-(\d{2}))?")
-VALIDATOR_CODE_AREAS = ("input", "length", "copy", "syntax", "phrasing", "portrait", "manifest")
+VALIDATOR_CODE_AREAS = ("input", "length", "copy", "syntax", "phrasing", "portrait", "coherence", "token", "manifest")
 VALIDATOR_CODE_RE = re.compile(
     rf"(?:`|['\"])((?:{'|'.join(VALIDATOR_CODE_AREAS)})/[a-z0-9-]+)(?:`|['\"])"
 )
@@ -109,6 +109,9 @@ CODE_FAMILY_RE = re.compile(
     r"(?<![A-Za-z0-9])(?:C(?:1[0-2]|[1-9])|P(?:1[0-2]|[1-9])|TP(?:1[0-7]|[1-9])|L[1-9])(?![A-Za-z0-9])"
 )
 SOUL_LAYER_ALLOW = re.compile(r"(?<![A-Za-z0-9])L[1-4](?![A-Za-z0-9])")
+# Look cards and the layer lexicon name real camera models whose number tail looks like a catalog id (DSC-P10, DMX-C1).
+PRODUCT_MODEL_SCOPES = ("references/image/looks/", "references/image/lexicon/")
+PRODUCT_MODEL_TAIL = re.compile(r"[A-Za-z0-9]-$")
 NAMED_ANCHORS = {
     "references/image/compiler.md": (
         "# 이미지 프롬프트 조립 원칙",
@@ -905,6 +908,7 @@ def check_labels(f, s, errors):
 EXAMPLE_LIMITS = {
     "references/image/image-brief.md": 10000,
     "references/image/editorial/portrait-variations.md": 10000,
+    "references/image/engine-levers.md": 10000,
 }
 
 
@@ -1007,6 +1011,8 @@ def check_code_family_shapes(root, errors):
         for match in CODE_FAMILY_RE.finditer(text):
             token = match.group(0)
             if rel == "references/image/soul-v2-director.md" and SOUL_LAYER_ALLOW.fullmatch(token):
+                continue
+            if rel.startswith(PRODUCT_MODEL_SCOPES) and PRODUCT_MODEL_TAIL.search(text[max(0, match.start() - 2):match.start()]):
                 continue
             errors.append(f"{rel}:{line_of(text, match.start())}: [I22b] retired code-family token {token}")
 

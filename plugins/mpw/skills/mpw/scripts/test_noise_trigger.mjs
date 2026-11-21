@@ -5,6 +5,8 @@ import { checkText } from "./check_prompt.mjs";
 
 const CODE = "phrasing/noise-trigger";
 const flagged = (text, options) => checkText(text, options).warnings.find((item) => item.code === CODE)?.evidence ?? [];
+// New native image prompts are not screened (fixed-lines.md writes grain and 8K there); edits and assembled text are.
+const asEdit = (text) => `Edit the attached photo.\n${text}`;
 
 const warn = [
   ["No text, add film grain.", ["film grain"]],
@@ -19,7 +21,7 @@ const warn = [
   ["A hyperdetailed market street with intricate details and floating particles.", ["hyperdetailed", "intricate details", "floating particles"]],
   ["Soft tones with film grain and no text.", ["film grain"]],
 ];
-for (const [text, expected] of warn) assert.deepEqual(flagged(text), expected, text);
+for (const [text, expected] of warn) assert.deepEqual(flagged(asEdit(text)), expected, text);
 
 const quiet = [
   "No film grain, speckled noise or gritty texture.",
@@ -35,10 +37,13 @@ const quiet = [
   "A few dust motes inside the window beam only.",
   "Glitter on the eyelids and a textured background wall.",
 ];
-for (const text of quiet) assert.deepEqual(flagged(text), [], text);
+for (const text of quiet) assert.deepEqual(flagged(asEdit(text)), [], text);
 
-// Scope: GPT Image only, and a warning in both profiles.
+// Scope: GPT Image only, and only for edits and assembled text.
 const sample = "A harbor with heavy film grain.";
+assert.deepEqual(flagged(sample), []);
+assert.deepEqual(flagged("An ultra-detailed 8k portrait with film grain."), []);
+assert.deepEqual(flagged(asEdit(sample)), ["film grain"]);
 assert.deepEqual(flagged(sample, { profile: "assembled", surface: "s2", engine: "higgsfield" }), []);
 assert.deepEqual(flagged(sample, { profile: "assembled" }), ["film grain"]);
 assert.equal(checkText(sample).ok, true);

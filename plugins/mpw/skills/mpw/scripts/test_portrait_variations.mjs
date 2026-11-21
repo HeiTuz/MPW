@@ -26,6 +26,7 @@ const guidance = textFor(variationPath);
 for (const heading of ['## 같은 기준에서 비교', '### 조합이 보존 조건과 겹칠 때', '## 명시적 랜덤 요청']) assert.ok(guidance.includes(heading), heading);
 for (const link of ['../from-image.md', '../reference-authority-pitfalls.md', '../image-brief.md']) assert.ok(guidance.includes(`](${link})`), link);
 // Each example is a layered prompt; the two cuts of a section differ only inside the optics layer.
+// The 3:4 frame is part of the layered structure now (fixed-lines.md), so only references are kept out of other layers.
 const exampleCuts = text => [...text.matchAll(/```text\n([\s\S]*?)\n```/g)].map(match => match[1]);
 const headingsOf = cut => cut.split('\n').filter(line => /^## /.test(line));
 const withoutLayer = (cut, layer) => cut.split(/\n(?=## )/).filter(part => !part.startsWith(`## ${layer}\n`)).join('\n');
@@ -37,7 +38,7 @@ for (const [cuts, layer] of [[mixed, 'Optics'], [korean, '광학']]) {
   for (const cut of cuts) {
     assert.ok(headingsOf(cut).length >= 3, 'layered cut has three or more ## layers');
     assert.ok(headingsOf(cut).includes(`## ${layer}`), `${layer} layer present`);
-    assert.doesNotMatch(withoutLayer(cut, layer === 'Optics' ? 'Identity Reference' : '인물 참조'), /첨부|참조|앞 컷|\b(?:reference|attached)\b|3:4/i);
+    assert.doesNotMatch(withoutLayer(cut, layer === 'Optics' ? 'Identity Reference' : '인물 참조'), /첨부|참조|앞 컷|\b(?:reference|attached)\b/i);
   }
   assert.deepEqual(headingsOf(cuts[0]), headingsOf(cuts[1]), 'both cuts use the same layers');
   assert.equal(withoutLayer(cuts[0], layer), withoutLayer(cuts[1], layer), 'only the optics layer differs');

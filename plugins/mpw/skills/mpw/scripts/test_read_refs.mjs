@@ -8,7 +8,7 @@ import os from "node:os";
 import path from "node:path";
 import { spawnSync } from "node:child_process";
 import { fileURLToPath } from "node:url";
-import { BUNDLES, expandBundles, extractSection, parseHeadings, readTargets } from "./read_refs.mjs";
+import { BUNDLES, expandBundles, extractSection, parseHeadings, parsePart, partitionChunks, readTargets } from "./read_refs.mjs";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 
@@ -312,5 +312,34 @@ assert.equal(unknownBundle.status, 2);
 assert.match(unknownBundle.stderr, /unknown bundle: nope/);
 const listing = spawnSync(process.execPath, [path.join(root, "scripts", "read_refs.mjs"), "--bundles"], { encoding: "utf8" });
 assert.equal(listing.status, 0, listing.stderr);
-for (const name of Object.keys(BUNDLES)) assert.match(listing.stdout, new RegExp("^" + name + "  \\(\\d+ chars\\)$", "m"));
+for (const name of Object.keys(BUNDLES)) assert.match(listing.stdout, new RegExp("^" + name + "  \\(\\d+ chars, \\d+ bytes(?:, read in \\d+ parts: --part 1/\\d+)?\\)$", "m"));
+// --part n/m: the parts together are the whole output, cut at section boundaries, in order, about equal in size, each with a first line that names the next command.
+assert.deepEqual(parsePart(["--bundle", "x", "--part", "2/3"]), { rest: ["--bundle", "x"], part: { n: 2, m: 3 } });
+assert.deepEqual(parsePart(["--part=1/4", "a.md"]), { rest: ["a.md"], part: { n: 1, m: 4 } });
+for (const bad of ["0/3", "4/3", "x", "1/", "2"]) assert.ok(parsePart(["--part", bad]).error, `--part ${bad} is refused`);
+assert.deepEqual(partitionChunks(["aaaa", "bb", "cccc", "dd", "eeee", "ff"], 3), [0, 0, 1, 1, 2, 2], "chunks go to the part holding their middle");
+assert.deepEqual(partitionChunks(["one chunk"], 3), [1], "a single chunk lands in the middle part");
+{
+  const read = (...args) => spawnSync(process.execPath, [path.join(root, "scripts", "read_refs.mjs"), ...args], { encoding: "utf8", maxBuffer: 8 * 1024 * 1024 });
+  const whole = read("--bundle", "gpt-image-portrait");
+  assert.equal(whole.status, 0, whole.stderr);
+  const wholeChunks = whole.stdout.split(/(?=^==> )/m).filter(Boolean);
+  const gathered = [];
+  const sizes = [];
+  for (let n = 1; n <= 3; n += 1) {
+    const out = read("--bundle", "gpt-image-portrait", "--part", `${n}/3`);
+    assert.equal(out.status, 0, out.stderr);
+    const [first, ...body] = out.stdout.split("\n\n");
+    assert.match(first, n < 3 ? new RegExp(`^part ${n} of 3, next: node scripts/read_refs\\.mjs --bundle gpt-image-portrait --part ${n + 1}/3$`) : /^part 3 of 3, last part$/, `part ${n} first line`);
+    const text = body.join("\n\n");
+    gathered.push(...text.split(/(?=^==> )/m).filter(Boolean));
+    sizes.push([...text].length);
+  }
+  assert.deepEqual(gathered.map((chunk) => chunk.trimEnd()), wholeChunks.map((chunk) => chunk.trimEnd()), "the three parts hold every chunk once, in order");
+  assert.ok(Math.max(...sizes) < 0.45 * sizes.reduce((a, b) => a + b, 0), `parts are about equal: ${sizes}`);
+  assert.equal(read("--bundle", "gpt-image-portrait", "--part", "4/3").status, 2, "n above m exits 2");
+  const small = read("--bundle", "batch", "--part", "3/3");
+  assert.equal(small.status, 0, small.stderr);
+  assert.match(small.stdout, /^part 3 of 3, last part/);
+}
 console.log("read_refs: section extraction ok; " + checked + " section pointers and " + Object.keys(BUNDLES).length + " named bundles resolve");

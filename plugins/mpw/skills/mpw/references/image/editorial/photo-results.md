@@ -4,7 +4,7 @@
 
 요청을 가르는 화면 결과만 고른다. GPT Image 새 이미지 외에는 표를 채우지 않는다. 길이는 [../surfaces.md](../surfaces.md) §0-1·§0-2.
 
-빛·거리·결·색은 보이는 상태로 적는다. 사용자가 장비·시각을 지정했으면 그대로 둔다. 배제는 원하는 상태로 쓴다. 품질 태그와 가중치 문법은 쓰지 않는다. Soul 계열 대상이면 필름 스톡·조명 장비 이름(Portra, Pro 400H, 옥타박스, 클램셸 등)을 빼고 발색·빛의 결과만 쓴다([../soul-v2-director.md](../soul-v2-director.md) §실측 법칙 3).
+빛·거리·결·색은 보이는 상태로 적는다. 사용자가 장비·시각을 지정했으면 그대로 둔다. 배제는 원하는 상태로 쓴다. 품질 태그와 가중치 문법은 쓰지 않는다(GPT Image 새 이미지의 `## Finish` realism 줄에 `8K` 한 번만 예외, [../image-brief.md](../image-brief.md) §4). Soul 계열 대상이면 필름 스톡·조명 장비 이름(Portra, Pro 400H, 옥타박스, 클램셸 등)을 빼고 발색·빛의 결과만 쓴다([../soul-v2-director.md](../soul-v2-director.md) §실측 법칙 3).
 
 ## 심도·원근
 <!-- dict:depth_lens -->
@@ -77,7 +77,7 @@
 | 축 | 규칙 |
 |---|---|
 | 팔레트 | 정확 색·색 관계가 필요할 때만 지정하고 색 이름으로 되면 코드값은 생략. 전문 레인은 그 레인의 색 계약을 따른다. |
-| 색온도 | 켈빈 숫자 또는 `warm-3200 feel` / `neutral white` / `cool bias` |
+| 색온도 | 켈빈 숫자 대신 색(`warm amber` / `neutral white` / `cool blue-white`)으로 쓴다. 사용자가 숫자를 정했으면 그대로 둔다 |
 | 조화 | 반대색 / 이웃색 / 세 점 삼각 |
 | 룩 | 청록-주황 분리, 블리치 바이패스 대비, 채도 낮춘 뮤트, 하이라이트가 따뜻하게 꺾임 |
 | 스킨 보호 기본 | `warm grade applied to background and negative space, skin left neutral and true to its own undertone` |

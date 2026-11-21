@@ -57,6 +57,9 @@ for (const [name, targets] of Object.entries(BUNDLES)) {
 // layered prompt that passes the native checker at the default S3 channel limit.
 const examples = [...brief.matchAll(/```text\n([\s\S]*?)\n```/g)].map(m => m[1]);
 assert.ok(examples.length >= 5, 'image-brief keeps its layered examples');
+// The section 12 example is the photo-extraction walk-through; it uses the full person layer set on purpose.
+const extractExample = sec('12').match(/```text\n([\s\S]*?)\n```/)?.[1];
+assert.ok(extractExample && examples.includes(extractExample), 'section 12 keeps its extraction example');
 const headingSets = new Set();
 for (const text of examples) {
   const lines = text.split('\n');
@@ -71,8 +74,10 @@ for (const text of examples) {
   }
   assert.ok(!heads.some(h => /^(Negative|Avoid|Exclude|Constraints|Quality|Details)$/i.test(h)), 'no catch-all layer names');
   const key = heads.join('|');
-  assert.ok(!headingSets.has(key), 'examples use different layer sets');
-  headingSets.add(key);
+  if (text !== extractExample) {
+    assert.ok(!headingSets.has(key), 'examples use different layer sets');
+    headingSets.add(key);
+  }
   const result = checkText(text, { profile: 'native', surface: 's3', engine: 'gpt-image' });
   assert.deepEqual([result.errors.length, result.warnings.length], [0, 0], JSON.stringify(result));
   assert.ok(!/^The person in the attached image\b/.test(lines[0]), 'first line names the photo, not an identity anchor');
@@ -83,6 +88,25 @@ for (const text of examples) {
   }
 }
 assert.ok(examples.some(t => t.includes('## Identity Reference')), 'a person example shows the identity section');
+// Photo extraction example (structure, not prose): the first line opens with a medium name from the section 12.0 table, most
+// token lines are native-language names, no token is a slot name, and the whole thing passes the native checker.
+{
+  const media = [...sec('12').matchAll(/^\| [^|\n]+ \| [^|\n]+ \| `(An? [^`]+)` \|$/gm)].map(m => m[1].trim());
+  assert.ok(media.length >= 8, `12.0 medium table rows: ${media.length}`);
+  // §12.0 step 3: a called look card's first-line phrase wins over the table name, so a card's `medium` row also counts.
+  const cardOpenings = fs.readdirSync(new URL('../references/image/looks/', import.meta.url)).filter(f => f.endsWith('.md') && f !== 'index.md')
+    .flatMap(f => (read(`references/image/looks/${f}`).match(/^\| medium \| .*$/gm) || []).flatMap(row => [...row.matchAll(/`(An? [^`]+)`/g)].map(m => m[1].trim())));
+  assert.ok([...media.filter(name => !name.includes('<')), ...cardOpenings].some(name => extractExample.startsWith(name)), 'extraction example opens with a 12.0 medium name or a look card first line');
+  const layerLines = extractExample.split('\n').filter(line => / — /.test(line));
+  const tokens = layerLines.map(line => line.split(' — ')[0]);
+  const native = tokens.filter(token => /[^\x00-\x7f]/.test(token)).length;
+  assert.ok(native / tokens.length >= 0.5, `native-language tokens ${native}/${tokens.length}`);
+  const named = checkText(extractExample, { profile: 'native', surface: 's3', engine: 'gpt-image' });
+  assert.ok(![...named.errors, ...named.warnings].some(item => item.code === 'token/slot-name'), 'extraction example uses no slot-name token');
+  assert.ok(/^## Finish$/m.test(extractExample), 'extraction example ends with Finish');
+  const extractText = readTargets(BUNDLES['gpt-image-extract']).text;
+  assert.ok(extractText.includes('# 룩 카드 색인') && extractText.includes('# 고정 몫'), 'extraction bundle carries the look-card index and fixed-lines.md');
+}
 // Routing only: the photo-extraction bundle carries §12 and no other bundle does.
 const s12 = sec('12');
 for (const [name, targets] of Object.entries(BUNDLES)) {
@@ -92,11 +116,11 @@ for (const [name, targets] of Object.entries(BUNDLES)) {
 // Lexicon: per-layer tables (references/image/lexicon/*.md), one row per token, plus the small index.
 const LAYER_FILES = {
   Optics: 'optics', Light: 'light', Pose: 'pose', Outfit: 'outfit', Legwear: 'legwear', Style: 'style',
-  'Hair and makeup': 'hair-makeup', Expression: 'expression', 'Props and nails': 'props-nails', Scene: 'scene',
+  'Hair and makeup': 'hair-makeup', Expression: 'expression', 'Props and nails': 'props-nails', Scene: 'scene', Camera: 'camera',
 };
 const splitRow = line => line.replace(/^\| | \|$/g, '').split(/(?<!\\) \| /);
 const index = read('references/image/layer-lexicon.md');
-assert.ok(Buffer.byteLength(index) <= 10340, `lexicon index is ${Buffer.byteLength(index)} bytes`);
+assert.ok(Buffer.byteLength(index) <= 12000, `lexicon index is ${Buffer.byteLength(index)} bytes`);
 const lexiconRows = {};
 for (const [layer, slug] of Object.entries(LAYER_FILES)) {
   const text = read(`references/image/lexicon/${slug}.md`);
@@ -118,7 +142,7 @@ for (const [layer, slug] of Object.entries(LAYER_FILES)) {
     seen.add(token.toLowerCase());
     lexiconRows[layer].push(token);
   }
-  assert.ok(lexiconRows[layer].length >= 50, `${slug}: ${lexiconRows[layer].length} rows`);
+  assert.ok(lexiconRows[layer].length >= (slug === 'camera' ? 20 : 50), `${slug}: ${lexiconRows[layer].length} rows`);
 }
 // The index counts and representative tokens must match the tables.
 for (const [layer, slug] of Object.entries(LAYER_FILES)) {
@@ -132,10 +156,32 @@ for (const [layer, slug] of Object.entries(LAYER_FILES)) {
 // Review ceilings for reference-loading cost, not output length or API caps.
 // Measured after the full lexicon merge: new 51655, portrait 58261, edit 18996 UTF-8 bytes;
 // ceilings are about 10% above the measurement. Raised for 4.0.5 (new 56992 measured) after the
-// photo extraction and token-fit rules grew sections 2-6.
-assert.ok(sizes['gpt-image-new'].utf8_bytes <= 60000);
-assert.ok(sizes['gpt-image-portrait'].utf8_bytes <= 67000);
-assert.ok(sizes['gpt-image-edit'].utf8_bytes <= 20900);
+// photo extraction and token-fit rules grew sections 2-6. Raised again with fixed-lines.md and the
+// Finish layer (new, portrait and extract grew by the file itself; the edit route grew about 500 bytes through sections 1, 6 and 9).
+// Raised again with the look-card procedure (image-brief section 4), the Camera lexicon layer and the card lines in fixed-lines.md (new 81139, portrait 88028 measured).
+// Raised again for photo extraction (step 4): fixed-lines.md gained the two extraction columns, the closer note and the Korean Finish form
+// (new 82733, portrait 89622 measured); the extraction bundle now carries image-brief section 12 in full and the look-card index (93598 measured).
+// Raised again (step 5b) for the Finish culture table, the realism replacement line and the cool-light blush line in fixed-lines.md plus the card-pair rule in image-brief section 4
+// (new 85545, portrait 92434, extract 117544 measured). The ceilings are about 1.7% above the measurement.
+// Raised again for the extraction bundle only: looks/index.md carries 28 card rows (22503 bytes, was 1 row) and the bundle measured 114072; the other bundles do not include the index.
+// Raised again (step 7a) for the single value order, the scene-set rule, the candidate-card rule, the two-card split, the Korean Finish form, the no-cue makeup rule
+// and the card-summary column in looks/index.md (new 93260, portrait 100321, edit 20934, extract 129204 measured; image-other-engine 111707 has no ceiling). The ceilings are about 1.7% above the measurement.
+// Raised once more for the extraction bundle (step 7b): image-brief section 12.9 is now the card-fitted example with the longer card paragraph (extract 131111 measured, ceiling about 1.7% above).
+// Raised once more for the extraction bundle (step 7c): the 28 card rows in looks/index.md carry the longer do-not-call word lists the card workers wrote (index 32962 bytes, was 26356; extract 138002 measured, ceiling about 1.7% above).
+// Raised once more (step 8a, review fixes): the slot-table procedure with its worked table, the lens-source rule, the scene-set and branch rules, the two-card rules, the Korean 8K line and the
+// Hair/Makeup split in image-brief sections 3-4 and fixed-lines.md (new 100912, portrait 107973, extract 145836 measured; edit 21012 stays under its own ceiling). The ceilings are about 1.7% above the measurement.
+// Lowered (step 9) after rules written out in two places were cut to one place plus a pointer, and looks/index.md lost its name columns
+// (the card head tables already held them; find_tokens reads them there): new 95371, portrait 102299, edit 20300, extract 117066 measured, ceilings about 2.5% above.
+// Raised (second GPT Pro review): the slot-prefix, gaze-slot, scene-set place/prop, set-and-pair, first-line medium, framing and square variants, fine-grain realism, glass side, Legwear socks
+// and card-format rules in image-brief.md and fixed-lines.md (new 98026, portrait 104954, edit 20377, extract 119731 measured, ceilings about 2.5% above).
+// Raised (step 12a, second retest): the minor-only student rule, the male proportion line, the per-culture liner/grain/face-light/lens tokens, the two-step card read, the set tie-break,
+// the pair-borrowing order and the Optics/Light line cap (new 104138, portrait 111066, edit 20536, extract 126048 measured, ceilings about 2.5% above).
+// Lowered (step 13) after the step 12a rules were cut where one decision stood in two places or a paragraph restated what the script prints
+// (new 102540, portrait 109468, edit 20501, extract 124450 measured, ceilings about 2% above).
+assert.ok(sizes['gpt-image-new'].utf8_bytes <= 104600, `gpt-image-new is ${sizes['gpt-image-new'].utf8_bytes} bytes`);
+assert.ok(sizes['gpt-image-portrait'].utf8_bytes <= 111700, `gpt-image-portrait is ${sizes['gpt-image-portrait'].utf8_bytes} bytes`);
+assert.ok(sizes['gpt-image-edit'].utf8_bytes <= 20800, `gpt-image-edit is ${sizes['gpt-image-edit'].utf8_bytes} bytes`);
+assert.ok(sizes['gpt-image-extract'].utf8_bytes <= 126900, `gpt-image-extract is ${sizes['gpt-image-extract'].utf8_bytes} bytes`);
 
 const scenarios = JSON.parse(read('scripts/fixtures/behavioral/image-planning.json')).cases;
 assert.deepEqual(scenarios.map(c => c.id), [

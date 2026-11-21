@@ -6,7 +6,7 @@ import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { CULTURES, LEXICON_DIR, MINOR_TAG, SLUGS, drawRandom, loadAll, search } from './find_tokens.mjs';
+import { CULTURES, LEXICON_DIR, MINOR_TAG, SLUGS, drawRandom, findLookCards, loadAll, search } from './find_tokens.mjs';
 
 const scripts = path.dirname(fileURLToPath(import.meta.url));
 const cli = path.join(scripts, 'find_tokens.mjs');
@@ -31,7 +31,7 @@ for (const { slug, rows } of loadAll()) {
 // Hangul transliterations and other aliases find the original-language token.
 const aliasCases = [
   ['신중식', '新中式'], ['코모레비', '木漏れ日'], ['자판기', '自販機'], ['왕가위', '王家卫'],
-  ['프리쿠라', 'プリクラ'], ['유카타', '浴衣'], ['한복', '한복'], ['냉백피', '冷白皮'], ['투명감', '透明感'], ['시오케이', '塩系'], ['고다르', 'Jean-Luc Godard'], ['치파오', '旗袍'],
+  ['프리쿠라', 'プリクラ'], ['유카타', '浴衣'], ['한복', '한복'], ['냉백피', '쿨톤 새틴 베이스'], ['투명감', '透明感'], ['시오케이', '塩系'], ['고다르', 'Jean-Luc Godard'], ['치파오', '旗袍'],
 ];
 for (const [query, token] of aliasCases) assert.ok(tokensOf([query]).includes(token), `${query} -> ${token}`);
 // Spacing, hyphen and middle-dot variants match: the spaced query finds the unspaced token, and an unspaced query finds the hyphenated alias.
@@ -146,6 +146,124 @@ for (const c of fx.cases) {
 const mean = sum / fx.cases.length;
 assert.ok(mean >= fx.min_mean_recall, `mean recall ${mean.toFixed(3)} < ${fx.min_mean_recall}\n${misses.join('\n')}`);
 console.log(`find_tokens: ${fx.cases.length} cases, mean recall ${mean.toFixed(3)}${misses.length ? `; missed: ${misses.join(' / ')}` : ''}`);
+
+// Camera is a layer of its own: `--layers camera` finds composition rows, and the moved telephoto row lives there.
+assert.ok(SLUGS.includes('camera'));
+assert.ok(tokensOf(['过肩'], { layers: ['camera'] }).includes('过肩镜头'), 'camera layer finds over-the-shoulder');
+assert.ok(search({ terms: ['长焦压缩'], layers: ['optics'] })[0].matches.length === 0 && tokensOf(['长焦压缩'], { layers: ['camera'] }).includes('长焦压缩'), 'telephoto compression is a Camera row');
+
+// Phrase queries: brackets and slashes split a phrase, filler words (감성, 느낌, 스타일, 룩, vibe) are dropped, Latin words match whole words only.
+{
+  const hk = tokensOf(['90년대 홍콩영화(왕가위 감성)']);
+  assert.ok(hk.includes('王家卫'), 'bracketed phrase reaches 왕가위 rows');
+  const withFiller = search({ terms: ['왕가위 감성'], layers: ['hair-makeup'] })[0].matches.map((m) => m.token);
+  const without = search({ terms: ['왕가위'], layers: ['hair-makeup'] })[0].matches.map((m) => m.token);
+  assert.deepEqual(withFiller, without, 'a filler word does not change the rows');
+  assert.ok(tokensOf(['Nouvelle Vague']).every((t) => t !== 'Vaguelettes de la Seine'), 'a split Latin word does not match inside another word');
+  assert.deepEqual(tokensOf(['홍콩/왕가위'], { layers: ['hair-makeup'] }).slice(0, 1), tokensOf(['왕가위'], { layers: ['hair-makeup'] }).slice(0, 1), 'a slash splits a phrase');
+}
+
+// Look cards: the CLI prints a "## Look card" block first when the query names a look, and says so in JSON.
+for (const q of ['90년대 홍콩영화(왕가위 감성)', '왕가위', '港风', '홍콩 영화']) {
+  out = run(['--q', q, '--limit', '2']);
+  assert.equal(out.status, 0, out.stderr);
+  assert.match(out.stdout, /^## Look card\n.+ — references\/image\/looks\/wong-kar-wai\.md\nread: node scripts\/read_look\.mjs wong-kar-wai --outline\nbranch: node scripts\/read_look\.mjs wong-kar-wai --branch /, q);
+  assert.deepEqual(JSON.parse(run(['--q', q, '--json']).stdout).looks.map((l) => l.slug), ['wong-kar-wai'], q);
+}
+for (const q of ['홍콩', '신중식,찻집', '老钱风', '홍콩 여행 스냅']) {
+  out = run(['--q', q]);
+  assert.ok(!/^## Look card$/m.test(out.stdout), `${q} calls no card`);
+  assert.deepEqual(JSON.parse(run(['--q', q, '--json']).stdout).looks, []);
+}
+// The card is found however the query was cut: commas and brackets are ignored, and a name's words match in any order.
+for (const q of ['캘리포니아, 골든아워, 해변, Kodak Gold 200', '골든아워 캘리포니아 해변,Gold Kodak 200', '캘리포니아(골든아워), Kodak Gold 200']) {
+  assert.deepEqual(JSON.parse(run(['--q', q, '--json']).stdout).looks.map((l) => l.slug).sort(), ['california-golden-hour', 'kodak-gold-200'], q);
+}
+// A query that only touches a card's "do not call" words prints candidates with their summary and read command, never as a called card.
+for (const [q, slug] of [['필카 감성, 한강', 'korea-old-film-light-leak'], ['일회용 카메라', 'korea-old-film-light-leak'], ['폴라로이드', 'venice-beach-polaroid-light-leak'], ['카페 감성', 'seoul-cafe-warm-diffuse']]) {
+  out = run(['--q', q]);
+  assert.ok(!/^## Look card$/m.test(out.stdout), `${q}: no called card`);
+  assert.match(out.stdout, /^## Look card candidates\n/m, q);
+  const json = JSON.parse(run(['--q', q, '--json']).stdout);
+  assert.deepEqual(json.looks, [], q);
+  assert.ok(json.candidates.some((c) => c.slug === slug && c.summary && c.file === `references/image/looks/${slug}.md`), `${q} offers ${slug}`);
+  assert.ok(out.stdout.includes(`read: node scripts/read_look.mjs ${slug} --outline`), q);
+}
+// Candidates come out closest to the request first: a culture cue (한강, 도쿄) puts that culture's card first, and the cap of 6 cuts after sorting.
+{
+  const first = (q) => JSON.parse(run(['--q', q, '--json']).stdout).candidates;
+  assert.equal(first('필카 감성, 한강')[0].slug, 'korea-old-film-light-leak');
+  assert.ok(['fujifilm-classic-neg', 'japan-provia-astia-film', 'utsurundesu-disposable'].includes(first('필카 감성, 도쿄')[0].slug));
+  assert.ok(first('필카 감성, 도쿄').slice(0, 3).every((c) => /^(fujifilm|japan|utsurundesu)/.test(c.slug)), 'Japanese cards first');
+  assert.ok(first('필카 감성').length >= 5);
+}
+// The generic disposable-camera word offers both disposable cards; the QuickSnap name belongs to the Japanese disposable card (it calls it, the Seoul film card only lists it as a candidate word).
+assert.deepEqual(JSON.parse(run(['--q', '일회용 카메라', '--json']).stdout).candidates.map((c) => c.slug).filter((s) => ['utsurundesu-disposable', 'korea-old-film-light-leak'].includes(s)).sort(), ['korea-old-film-light-leak', 'utsurundesu-disposable']);
+for (const q of ['후지 퀵스냅', 'Fujifilm QuickSnap']) assert.deepEqual(JSON.parse(run(['--q', q, '--json']).stdout).looks.map((l) => l.slug), ['utsurundesu-disposable'], q);
+// A generic film word offers every film card that lists it, up to the cap, so the Seoul film card is not cut by the index order.
+assert.ok(JSON.parse(run(['--q', '필카 감성', '--json']).stdout).candidates.length >= 5);
+// A called card is not offered again as a candidate, and an ordinary query has no candidate block.
+assert.ok(JSON.parse(run(['--q', '90년대 홍콩영화(왕가위 감성)', '--json']).stdout).candidates.every((c) => c.slug !== 'wong-kar-wai'));
+assert.ok(!run(['--q', '老钱风']).stdout.includes('candidates'));
+// One query can call a 장면 card and a 매체 card together; both come out with their axis so the brief can split the roles.
+for (const q of ['캘리포니아 골든아워, Kodak Gold 200', '캘리포니아 골든아워 코닥 골드 200']) {
+  const both = JSON.parse(run(['--q', q, '--json']).stdout).looks;
+  assert.deepEqual(both.map((l) => [l.slug, l.axis]), [['california-golden-hour', '장면'], ['kodak-gold-200', '매체']], q);
+  assert.match(run(['--q', q, '--limit', '1']).stdout, /^## Look card\n.+ \[장면\] — .+\nread: .+\nbranch: .+\n.+ \[매체\] — .+\nread: /, q);
+}
+// A name's words that are scattered over the query call nothing (they stay candidates); a comma or one other word between them is fine.
+{
+  const looksOf = (q) => JSON.parse(run(['--q', q, '--json']).stdout);
+  const scattered = looksOf('a Kodak camera, a gold silk dress, ISO 200');
+  assert.deepEqual(scattered.looks, [], 'scattered words of Kodak Gold 200 call no card');
+  assert.ok(scattered.candidates.some((c) => c.slug === 'kodak-gold-200'), 'the card stays a candidate');
+  for (const q of ['Kodak, Gold, 200', 'Kodak Gold ISO 200', 'Kodak 200 gold', 'Kodak Gold 200, no flash']) assert.deepEqual(looksOf(q).looks.map((l) => l.slug), ['kodak-gold-200'], q);
+  assert.deepEqual(looksOf('캘리포니아, 골든아워').looks.map((l) => l.slug), ['california-golden-hour']);
+}
+// A name with a negation next to it calls nothing and is not offered as a candidate either.
+for (const q of ['no Kodak Gold, clean digital color', 'Kodak Gold 말고 디지털', '코닥 골드 200 말고 포트라', '不要 Kodak Gold 200', 'without Wong Kar-wai, a plain street']) {
+  const json = JSON.parse(run(['--q', q, '--json']).stdout);
+  assert.deepEqual(json.looks, [], q);
+  assert.ok(json.candidates.every((c) => c.slug !== 'kodak-gold-200'), `${q}: the negated card is not offered`);
+}
+// Two cards come out in the order their names appear in the query, not in index order.
+{
+  const order = (q) => JSON.parse(run(['--q', q, '--json']).stdout).looks.map((l) => l.slug);
+  assert.deepEqual(order('Kodak Gold 200, 캘리포니아 골든아워'), ['kodak-gold-200', 'california-golden-hour']);
+  assert.deepEqual(order('캘리포니아 골든아워, Kodak Gold 200'), ['california-golden-hour', 'kodak-gold-200']);
+  assert.match(run(['--q', 'Kodak Gold 200, 캘리포니아 골든아워', '--limit', '1']).stdout, /^## Look card\n.+ \[매체\] — .+\nread: .+\nbranch: .+\n.+ \[장면\] — .+\nread: /);
+}
+// Nouvelle Vague has its own card now.
+assert.deepEqual(JSON.parse(run(['--q', 'Nouvelle Vague', '--json']).stdout).looks.map((l) => l.slug), ['nouvelle-vague-16mm']);
+// The card path in the block is the path read_refs.mjs reads (documented command works as printed).
+{
+  const cmd = run(['--q', '왕가위']).stdout.match(/^read: node (scripts\/read_look\.mjs) (\S+) (--outline)$/m);
+  const read = spawnSync(process.execPath, [path.join(scripts, '..', cmd[1]), cmd[2], cmd[3]], { encoding: 'utf8', cwd: path.join(scripts, '..') });
+  assert.equal(read.status, 0, read.stderr);
+  assert.match(read.stdout, /^# 王家卫 · 港风/m);
+  const branch = spawnSync(process.execPath, [path.join(scripts, '..', cmd[1]), cmd[2], '--branch', 'A'], { encoding: 'utf8', cwd: path.join(scripts, '..') });
+  assert.equal(branch.status, 0, branch.stderr);
+}
+
+// A tag that is a look card's calling name matches only a term equal to it: the medium word "폴라로이드" does not pull the swimsuit rows the Polaroid cards use,
+// while the card's own name still reaches them.
+{
+  const swim = (t) => /수영복|swimsuit|bikini/i.test(t);
+  assert.ok(!tokensOf(['폴라로이드'], { layers: ['outfit'] }, 50).some(swim), 'a medium word does not match look-name tags by prefix');
+  assert.ok(tokensOf(['폴라로이드 빛샘'], { layers: ['outfit'] }, 50).some(swim), 'the card name itself reaches the rows the card uses');
+}
+// When the query called a card, the words of its name score on exact matches only and era words are dropped from the layer search,
+// so "Kodak Gold 200" does not hit a "gold thread" legwear row and "90년대 홍콩영화(왕가위 감성)" does not pull every 90s-tagged row.
+{
+  const gold = ['Kodak Gold 200'];
+  assert.ok(search({ terms: gold, layers: ['legwear'] })[0].matches.length > 0, 'without a card the split word "gold" still matches');
+  assert.equal(search({ terms: gold, layers: ['legwear'], cards: findLookCards(gold) })[0].matches.length, 0, 'with the card called it does not');
+  const hk = ['90년대 홍콩영화(왕가위 감성)'];
+  const optics = (cards) => search({ terms: hk, layers: ['optics'], cards })[0].matches.map((m) => m.token);
+  assert.ok(optics([]).includes('Kodak FunSaver'), 'without a card the era word matches 90s-tagged rows');
+  assert.ok(!optics(findLookCards(hk)).includes('Kodak FunSaver') && optics(findLookCards(hk)).includes('王家卫'), 'with the card called the era word is dropped and the look rows stay');
+  assert.ok(tokensOf(['90년대 스타일'], { layers: ['legwear'] }, 50).includes('ルーズソックス'), 'a plain era query with no card still finds era rows');
+}
 
 // --help prints the usage and exits 0 instead of failing with "needs a value".
 const help = run(['--help']);

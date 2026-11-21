@@ -82,13 +82,12 @@ try {
   const unknown = await cli("platform ceiling unknown", long, ["--profile", "assembled", "--surface", "s2", "--engine", "higgsfield"], [], ["length/ungated"]);
   assert.deepEqual(unknown.length.layers, []);
   assert.equal(unknown.length.binding, null);
-  await cli("native platform scope", long, ["--surface", "s2", "--engine", "higgsfield"], ["input/engine-scope"]);
+  await cli("native other engine keeps length only", long, ["--surface", "s2", "--engine", "higgsfield"], [], ["length/ungated"]);
   await cli("engine over boundary", "界".repeat(32001), ["--surface", "s3", "--channel", "unbounded"], ["length/engine"]);
   const cabin = await readFile(fixture("fail/input-cabin-engine.txt"), "utf8");
   await cli("external syntax short circuit", cabin, ["--profile", "assembled", "--engine", "midjourney"], ["input/engine-scope"]);
-  for (const profile of ["native", "assembled"]) {
-    await cli(`long engine scope ${profile}`, "ridge ".repeat(1700), ["--profile", profile, "--engine", "midjourney"], ["length/channel", "input/engine-scope"]);
-  }
+  await cli("long engine scope native", "ridge ".repeat(1700), ["--profile", "native", "--engine", "midjourney"], ["length/channel"]);
+  await cli("long engine scope assembled", "ridge ".repeat(1700), ["--profile", "assembled", "--engine", "midjourney"], ["length/channel", "input/engine-scope"]);
   await cli("explicit narrow external engine", "Mountain ridges beside a lake.", ["--profile", "assembled", "--engine", "midjourney", "--channel-limit", "10"], ["length/channel", "input/engine-scope"]);
   const dual = await cli("both machine and channel failures", "山".repeat(3000), ["--surface", "s1", "--channel-limit", "1999"], ["length/channel", "length/contract"]);
   assert.equal(dual.length.binding, "channel");
@@ -127,8 +126,8 @@ try {
   assert.deepEqual(new Set(Object.keys(native)), new Set(["ok", "mode", "profile", "surface", "engine", "scope", "length", "errors", "warnings"]));
   await cli("assembled product edit", mug, ["--profile", "assembled"], [], ["phrasing/negation"], ["syntax/ratio-token"]);
   await cli("native machine contract allowed", "竹".repeat(2001), ["--profile", "native", "--surface", "s1"], ["length/contract"]);
-  for (const engine of ["higgsfield", "midjourney", "unknown"]) {
-    await cli(`native engine ${engine}`, "A painted wooden door.", ["--engine", engine], ["input/engine-scope"]);
+  for (const engine of ["higgsfield", "midjourney", "unknown", "seedream", "nano-banana", "soul"]) {
+    await cli(`native engine ${engine}`, "A painted wooden door.", ["--engine", engine], [], [], ["phrasing/noise-trigger"]);
   }
   for (const blank of ["", "\uFEFF \t\n", "AR 3:2", "aspect ratio: 5:4 #aabbcc", "16:9", "#123 #12345678", "---"]) {
     await cli("empty content", blank, [], ["input/empty"]);

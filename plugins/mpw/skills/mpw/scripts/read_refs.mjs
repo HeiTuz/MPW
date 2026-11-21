@@ -8,6 +8,7 @@
 //   node scripts/read_refs.mjs --toc references/image/lanes.md
 //   node scripts/read_refs.mjs --bundle gpt-image-portrait references/image/from-image.md#1
 //   node scripts/read_refs.mjs --bundles
+//   node scripts/read_refs.mjs --bundle gpt-image-portrait --part 1/3
 //
 // A section runs from its heading to the next heading of the same or higher
 // level. "#A,B" reads several sections, "#A~B" reads from A through the end of B,
@@ -21,6 +22,11 @@
 // targets after a bundle are read in order. "--bundles" lists every bundle with
 // its targets and current character count. BUNDLES is the only definition of
 // these sets; SKILL.md refers to them by name.
+//
+// "--part n/m" prints only the n-th of m pieces of the output, cut at section
+// boundaries so the pieces have about the same size. The first line says
+// "part n of m, next: <command>", so a long bundle can be read piece by piece
+// when one tool output cannot hold it.
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
@@ -28,21 +34,22 @@ import { fileURLToPath } from "node:url";
 const skillRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 
 export const BUNDLES = {
-  // 대상 미정·GPT Image 새 이미지. 작성 규칙은 image-brief.md(§1~§7·§9~§11)와 층별 사전 색인. 도해·슬라이드·UI·만화·로고는 -structured.
-  "gpt-image-new": ["references/image/surfaces.md#0", "references/image/image-brief.md#1,2,3,4,5,6,7,9,10,11", "references/image/layer-lexicon.md"],
+  // 대상 미정·GPT Image 새 이미지. 작성 규칙은 image-brief.md(§1~§7·§9~§11), 층마다 붙는 고정 몫 fixed-lines.md, 층별 사전 색인. 도해·슬라이드·UI·만화·로고는 -structured.
+  "gpt-image-new": ["references/image/surfaces.md#0", "references/image/image-brief.md#1,2,3,4,5,6,7,9,10,11", "references/image/fixed-lines.md", "references/image/layer-lexicon.md"],
   "gpt-image-new-structured": ["references/image/surfaces.md#0", "references/image/image-brief.md#1,2,3,4,5,6,7,9,10,11", "references/image/layer-lexicon.md", "references/image/surface-contracts.md#3.4"],
   // 대상 미정·GPT Image 인물·셀피·패션 화보 새 이미지. 층 사전은 색인(layer-lexicon.md)만 읽는다. 층별 표는 find_tokens.mjs나 lexicon/ 절 읽기로 따로 찾는다. compiler.md 피부·재질은 GPT Image 새 이미지에 적용하지 않으므로 이 묶음에 넣지 않는다.
   "gpt-image-portrait": [
     "references/image/surfaces.md#0",
     "references/image/image-brief.md#1,2,3,4,5,6,7,9,10,11",
     "references/image/editorial/portrait-brief.md",
+    "references/image/fixed-lines.md",
     "references/image/layer-lexicon.md",
   ],
   // 대상 미정·GPT Image 원본 편집(image-brief §1·§2·§6~§9 + 편집 패턴 §3.3). 참조 사진의 역할·관찰이 필요하면 from-image.md#1을 덧붙인다.
   "gpt-image-edit": ["references/image/surfaces.md#0", "references/image/image-brief.md#1,2,6,7,8,9", "references/image/surface-contracts.md#3.3"],
   "gpt-image-edit-structured": ["references/image/surfaces.md#0", "references/image/image-brief.md#1,2,6,7,8,9", "references/image/surface-contracts.md#3.3,3.4"],
-  // 대상 미정·GPT Image로 사진(첨부 이미지)을 보고 그 사진을 다시 만들 프롬프트를 쓸 때. 새 이미지 규칙에 §12 추출 규칙을 얹는다(§7 후속 수정·§8 편집·§10 예시·§11 정제는 뺀다).
-  "gpt-image-extract": ["references/image/surfaces.md#0", "references/image/image-brief.md#1,2,3,4,5,6,9,12", "references/image/layer-lexicon.md"],
+  // 대상 미정·GPT Image로 사진(첨부 이미지)을 보고 그 사진을 다시 만들 프롬프트를 쓸 때. 새 이미지 규칙에 §12 추출 규칙(매체 판별, 카드 대조, 원어 이름, 본보기)을 얹는다(§7 후속 수정·§8 편집·§10 예시·§11 정제는 뺀다). 카드 대조에 룩 카드 색인을 싣고, 카드 본문은 맞을 때만 읽는다.
+  "gpt-image-extract": ["references/image/surfaces.md#0", "references/image/image-brief.md#1,2,3,4,5,6,9,12", "references/image/fixed-lines.md", "references/image/looks/index.md", "references/image/layer-lexicon.md"],
   // 영상 생성.
   video: ["references/image/surfaces.md#0", "references/image/lanes.md#영상 공통 규칙,이미지 슬롯 기본값"],
   // 실행 작업·자동화 지시.
@@ -62,7 +69,9 @@ export const BUNDLES = {
   // 텍스트 모델 적응·변환. 색인이 가리키는 공급자의 날짜 절을 덧붙인다.
   "text-model-adapt": ["references/model-playbooks.md#공통 적응 규칙,공급자 색인"],
   // 이미지·영상 프롬프트의 엔진 간 변환. §6 색인이 가리키는 엔진 어댑터 절을 덧붙인다.
-  "image-prompt-conversion": ["references/image/prompt-conversion.md", "references/image/model-routing.md#6"],
+  "image-prompt-conversion": ["references/image/prompt-conversion.md", "references/image/engine-levers.md", "references/image/model-routing.md#6"],
+  // 다른 엔진(Seedream·Nano Banana·Midjourney·Soul)을 지정한 새 이미지. 층 문안은 gpt-image-new 묶음과 같은 규칙으로 먼저 쓰고 engine-levers.md로 그 엔진에 편다. 그 엔진 어댑터는 묶음에 실린 model-routing §6 색인이 가리키는 문서로 덧붙인다.
+  "image-other-engine": ["references/image/surfaces.md#0", "references/image/image-brief.md#1,2,3,4,5,6,9,11", "references/image/fixed-lines.md", "references/image/layer-lexicon.md", "references/image/engine-levers.md", "references/image/model-routing.md#6"],
 };
 
 export function parseHeadings(text) {
@@ -263,17 +272,83 @@ export function readTargets(targets, read = readSource) {
   return { text: chunks.join("\n") };
 }
 
+// One tool output holds about 40,000 bytes (a Korean character is 3 bytes), so --bundles says how many --part pieces a bundle needs.
+export const PART_LIMIT_BYTES = 40000;
+
+export function partsNeeded(chunks, limit = PART_LIMIT_BYTES) {
+  const sizes = chunks.map((chunk) => Buffer.byteLength(chunk));
+  for (let m = 1; m <= chunks.length; m += 1) {
+    const owner = partitionChunks(chunks, m);
+    const totals = Array(m).fill(0);
+    sizes.forEach((size, index) => { totals[owner[index]] += size; });
+    if (Math.max(...totals) <= limit) return m;
+  }
+  return Math.max(chunks.length, 1);
+}
+
 function listBundles() {
   return Object.entries(BUNDLES)
     .map(([name, targets]) => {
-      const result = readTargets(targets);
-      const size = result.error ? `error: ${result.error}` : `${[...result.text].length} chars`;
+      const chunks = [];
+      let error = null;
+      for (const result of targetChunks(targets, readSource)) {
+        if (result.error) error = result.error;
+        else chunks.push(result.chunk);
+      }
+      const text = chunks.join("\n");
+      const parts = partsNeeded(chunks);
+      const size = error ? `error: ${error}` : `${[...text].length} chars, ${Buffer.byteLength(text)} bytes${parts > 1 ? `, read in ${parts} parts: --part 1/${parts}` : ""}`;
       return `${name}  (${size})\n${targets.map((target) => `  ${target}`).join("\n")}`;
     })
     .join("\n");
 }
 
-function main(argv) {
+// "--part n/m" (or "--part=n/m") leaves argv and is returned apart from the other arguments.
+export function parsePart(argv) {
+  const rest = [];
+  let part = null;
+  for (let index = 0; index < argv.length; index += 1) {
+    const arg = argv[index];
+    let value;
+    if (arg === "--part") {
+      index += 1;
+      value = argv[index] ?? "";
+    } else if (arg.startsWith("--part=")) {
+      value = arg.slice("--part=".length);
+    } else {
+      rest.push(arg);
+      continue;
+    }
+    const match = /^(\d+)\/(\d+)$/.exec(value);
+    if (!match || Number(match[1]) < 1 || Number(match[1]) > Number(match[2])) {
+      return { error: `bad --part ${JSON.stringify(value)} (use n/m with 1 <= n <= m, for example 1/3)` };
+    }
+    part = { n: Number(match[1]), m: Number(match[2]) };
+  }
+  return { rest, part };
+}
+
+// Give each chunk to the part that holds the middle of it, so the parts stay in order and about equal in size.
+export function partitionChunks(chunks, m) {
+  const sizes = chunks.map((chunk) => [...chunk].length);
+  const total = sizes.reduce((sum, size) => sum + size, 0);
+  let before = 0;
+  return chunks.map((_, index) => {
+    const middle = before + sizes[index] / 2;
+    before += sizes[index];
+    return total === 0 ? 0 : Math.min(m - 1, Math.floor((middle * m) / total));
+  });
+}
+
+const shellQuote = (arg) => (/^[\w@%+=:,./#~-]+$/.test(arg) ? arg : `"${arg.replace(/(["\\$`])/g, "\\$1")}"`);
+
+function main(rawArgv) {
+  const parsed = parsePart(rawArgv);
+  if (parsed.error) {
+    console.error(`read_refs: ${parsed.error}`);
+    return 2;
+  }
+  const argv = parsed.rest;
   if (argv.includes("--bundles")) {
     console.log(listBundles());
     return 0;
@@ -285,19 +360,27 @@ function main(argv) {
     return 2;
   }
   if (targets.length === 0) {
-    console.error("usage: read_refs.mjs [--toc] [--bundle <name>] <file>[#section[,section|~section]] ...  |  --bundles");
+    console.error("usage: read_refs.mjs [--toc] [--bundle <name>] [--part n/m] <file>[#section[,section|~section]] ...  |  --bundles");
     return 2;
   }
   let failed = 0;
-  for (const result of targetChunks(targets, readSource, toc)) {
-    if (result.error) {
-      console.error(`read_refs: ${result.error}`);
-      if (result.toc) console.error(result.toc);
-      failed += 1;
-    } else {
-      console.log(result.chunk);
-    }
+  const results = [...targetChunks(targets, readSource, toc)];
+  for (const result of results.filter((item) => item.error)) {
+    console.error(`read_refs: ${result.error}`);
+    if (result.toc) console.error(result.toc);
+    failed += 1;
   }
+  const chunks = results.filter((item) => !item.error).map((item) => item.chunk);
+  if (!parsed.part) {
+    for (const chunk of chunks) console.log(chunk);
+    return failed ? 1 : 0;
+  }
+  const { n, m } = parsed.part;
+  const owner = partitionChunks(chunks, m);
+  const mine = chunks.filter((_, index) => owner[index] === n - 1);
+  const next = n < m ? `next: node scripts/read_refs.mjs ${[...argv, "--part", `${n + 1}/${m}`].map(shellQuote).join(" ")}` : "last part";
+  console.log(`part ${n} of ${m}, ${next}${mine.length ? "" : " (no section falls in this part)"}\n`);
+  for (const chunk of mine) console.log(chunk);
   return failed ? 1 : 0;
 }
 

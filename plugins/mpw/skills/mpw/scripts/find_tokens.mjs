@@ -1,6 +1,8 @@
 #!/usr/bin/env node
 // Search the per-layer token tables in references/image/lexicon/*.md. No dependencies, no data file: the tables are parsed directly.
-// usage: node scripts/find_tokens.mjs --q "신중식,찻집" [--layers outfit,scene] [--culture KR|CN|JP|US|FR] [--limit 6] [--json] [--random N]
+// usage: node scripts/find_tokens.mjs --q "신중식,찻집" [--layers outfit,scene,camera] [--culture KR|CN|JP|US|FR] [--limit 6] [--json] [--random N]
+// A query that names a look (왕가위, 港风, 홍콩 영화) also prints a "## Look card" block first: read that card before the layer rows.
+// A query that only touches a card's "do not call" words (필카 감성, 폴라로이드) prints a "## Look card candidates" block with one-line summaries instead.
 import { randomInt } from 'node:crypto';
 import fs from 'node:fs';
 import path from 'node:path';
@@ -9,7 +11,8 @@ import { drawPortraitOptions } from './draw_portrait_options.mjs';
 
 const scriptsDir = path.dirname(fileURLToPath(import.meta.url));
 export const LEXICON_DIR = path.resolve(scriptsDir, '..', 'references', 'image', 'lexicon');
-export const SLUGS = ['optics', 'light', 'pose', 'outfit', 'legwear', 'style', 'hair-makeup', 'expression', 'props-nails', 'scene'];
+export const LOOKS_DIR = path.resolve(scriptsDir, '..', 'references', 'image', 'looks');
+export const SLUGS = ['optics', 'light', 'pose', 'outfit', 'legwear', 'style', 'hair-makeup', 'expression', 'props-nails', 'scene', 'camera'];
 export const CULTURES = ['KR', 'CN', 'JP', 'US', 'FR'];
 const COLS = 6;
 
@@ -39,50 +42,221 @@ export function loadLayer(slug, dir = LEXICON_DIR) {
 
 export const loadAll = (dir = LEXICON_DIR) => SLUGS.map((slug) => loadLayer(slug, dir));
 
-const same = (a, b) => a === b;
-const partial = (a, b) => a.includes(b);
+const escapeRe = (w) => w.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+const hasWord = (text, w) => new RegExp(`(?<![\\p{L}\\p{N}])${escapeRe(w)}(?![\\p{L}\\p{N}])`, 'u').test(text);
 // Per query term: token/alias exact 100/90, partial 60/50, tag 30, culture code 20, looks 10. A row scores the sum over terms.
+// A tag that is a look card's calling name (폴라로이드 빛샘, Kodak FunSaver) matches only a term equal to it, so "폴라로이드" does not pull every row linked to a Polaroid card.
 // A term given as {q, exact:true} (a one-character word from a split phrase) scores only on an exact token, alias or tag match.
+// A term given as {q, word:true} (a Latin word from a split phrase) matches inside a token, alias, tag or description only as a whole word ("vague" does not hit "Vaguelettes").
+let lookNameTags = null;
+const isLookNameTag = (tag) => {
+  lookNameTags ??= new Set(loadLooks().flatMap((l) => l.names.map(squash)));
+  return lookNameTags.has(squash(tag));
+};
 function scoreRow(row, terms) {
   let total = 0;
+  const token = norm(row.token), sToken = squash(row.token);
+  const aliases = row.aliases.map(norm), sAliases = row.aliases.map(squash);
+  const tags = row.tags.map(norm), sTags = row.tags.map(squash);
   for (const item of terms) {
-    const q = item.q ?? item, exact = item.exact === true;
+    const q = item.q ?? item, exact = item.exact === true, word = item.word === true;
     const sq = squash(q);
-    const token = norm(row.token), sToken = squash(row.token);
-    const aliases = row.aliases.map(norm), sAliases = row.aliases.map(squash);
-    const hit = (plain, squashed, test) => test(plain, q) || (sq && (test === partial ? squashed.startsWith(sq) : test(squashed, sq)));
+    const same = (plain, squashed) => plain === q || (sq && squashed === sq);
+    // Plain terms match a substring (or the squashed start); word terms match a whole word only.
+    const part = word ? (plain) => hasWord(plain, q) : (plain, squashed) => plain.includes(q) || (sq && squashed.startsWith(sq));
     let best = 0;
-    if (hit(token, sToken, same)) best = 100;
-    else if (aliases.some((a, i) => hit(a, sAliases[i], same))) best = 90;
-    else if (exact) best = row.tags.some((t) => hit(norm(t), squash(t), same)) ? 30 : 0;
-    else if (hit(token, sToken, partial)) best = 60;
-    else if (aliases.some((a, i) => hit(a, sAliases[i], partial))) best = 50;
-    else if (row.tags.some((t) => hit(norm(t), squash(t), partial))) best = 30;
+    if (same(token, sToken)) best = 100;
+    else if (aliases.some((a, i) => same(a, sAliases[i]))) best = 90;
+    else if (exact) best = tags.some((t, i) => same(t, sTags[i])) ? 30 : 0;
+    else if (part(token, sToken)) best = 60;
+    else if (aliases.some((a, i) => part(a, sAliases[i]))) best = 50;
+    else if (tags.some((t, i) => (isLookNameTag(t) ? same(t, sTags[i]) : part(t, sTags[i])))) best = 30;
     else if (row.culture.some((c) => c.toLowerCase() === q)) best = 20;
-    else if (q.length >= 2 && norm(row.looks).includes(q)) best = 10;
+    else if (q.length >= 2 && (word ? hasWord(norm(row.looks), q) : norm(row.looks).includes(q))) best = 10;
     total += best;
   }
   return total;
 }
 
-// Decided per layer: a spaced term that matches nothing in that layer's rows is retried word by word there ("90년대 홍콩" -> 홍콩).
-// Digit-only words and one-character Latin words are skipped; a one-character Hangul or CJK word (비, 눈, 雨) is kept but scores on exact matches only.
-function expandTerms(terms, rows) {
+// Decided per layer: a phrase (spaces, brackets or slashes inside) that matches nothing in that layer's rows is retried word by word there ("90년대 홍콩" -> 홍콩, "홍콩영화(왕가위 감성)" -> 홍콩영화, 왕가위).
+// Digit-only words, one-character Latin words and filler words (감성, 느낌, 스타일, 룩, vibe) are dropped; a one-character Hangul or CJK word (비, 눈, 雨) is kept but scores on exact matches only; a Latin word matches whole words only.
+// When the query called a look card, the card carries its own name and era: the words of the called name score on exact matches only
+// ("Kodak Gold 200" must not hit a "gold thread" row), and era words (90년대, 90s, 1990s) are dropped from the split because the card sets the era.
+const PHRASE_BREAK = /[\s()（）[\]【】「」『』/／]+/;
+const FILLER_WORDS = new Set(['감성', '느낌', '스타일', '룩', 'vibe']);
+const ERA_WORD = /^(\d{2,4}년대|\d{2,4}s|\d{2,4}代|\d{2,4}年代)$/;
+function expandTerms(terms, rows, cardWords = new Set(), cardCalled = false) {
   return terms.flatMap((t) => {
-    if (!/\s/.test(t) || rows.some((r) => scoreRow(r, [t]) > 0)) return [t];
-    return t.split(/\s+/)
-      .filter((w) => w && !/^\d+$/.test(w) && !(w.length === 1 && /[a-z0-9]/.test(w)))
-      .map((w) => (w.length === 1 ? { q: w, exact: true } : w));
+    if (!PHRASE_BREAK.test(t) || rows.some((r) => scoreRow(r, [t]) > 0)) return [t];
+    return t.split(PHRASE_BREAK)
+      .filter((w) => w && !/^\d+$/.test(w) && !FILLER_WORDS.has(w) && !(w.length === 1 && /[a-z0-9]/.test(w)) && !(cardCalled && ERA_WORD.test(w)))
+      .map((w) => (w.length === 1 || cardWords.has(w) ? { q: w, exact: true } : /^[a-z0-9'.-]+$/.test(w) ? { q: w, word: true } : w));
   });
 }
 
+// Look cards: references/image/looks/index.md lists one row per card ([slug](slug.md) | name | culture | branches | axis | summary). The names that call a card and the
+// words that must not call it sit only in the card's own head table (rows `부르는 이름` and `부르지 않는 말`), so the index stays short for the model.
+// A card is called when the raw query contains one of its names, the reverse of the row search above. The match ignores how the query was cut:
+// commas, spaces and brackets are dropped between the characters of a name. Hangul and CJK names match as text; Latin names match whole words only,
+// so a short name like "WKW" never fires inside another word.
+// A multi-word name whose words are not written together still calls the card when every word is in the query, in any order, with at most one other word between them
+// ("캘리포니아, 골든아워", "Gold Kodak 200"); words spread over the query ("a Kodak camera, a gold silk dress, ISO 200") call nothing.
+// A name or do-not-call word with a negation right next to it (no Kodak Gold, Kodak Gold 말고, 不要...) is ignored.
+// Called cards come out in the order their names first appear in the query, which decides the default card when two cards share an axis.
+// A card that is not called but lists a query word as one it must not answer to is offered as a candidate with its summary.
+const nameWords = (alias) => norm(alias).split(/[\s\-‐-―·・]+/).filter(Boolean);
+const SEP_CHARS = '\\s\\-\\u2010-\\u2015\\u00b7\\u30fb,，、;；:：.。!！?？"\'“”‘’()（）\\[\\]【】「」『』/／';
+const PUNCT = /[,，、;；:：.。!！?？"'“”‘’()（）[\]【】「」『』/／]+/g;
+const strip = (s) => squash(s).replace(PUNCT, '');
+const isLatin = (s) => /^[a-z0-9\s\-·.']+$/.test(norm(s));
+const hasName = (name, raw, stripped) => {
+  if (isLatin(name)) {
+    const body = nameWords(name).map(escapeRe).join('[\\s\\-\\u00b7]*');
+    return new RegExp(`(?<![a-z0-9])${body}(?![a-z0-9])`).test(raw);
+  }
+  return stripped.includes(strip(name));
+};
+const spanRegexes = new Map();
+function nameRegex(name) {
+  if (!spanRegexes.has(name)) {
+    const chars = [...strip(name)];
+    spanRegexes.set(name, isLatin(name)
+      ? new RegExp(`(?<![a-z0-9])${nameWords(name).map(escapeRe).join('[\\s\\-\\u00b7]*')}(?![a-z0-9])`, 'g')
+      : chars.length ? new RegExp(chars.map(escapeRe).join(`[${SEP_CHARS}]*`), 'gu') : null);
+  }
+  return spanRegexes.get(name);
+}
+const spansOf = (name, text) => {
+  const re = nameRegex(name);
+  return re ? [...text.matchAll(re)].map((m) => ({ start: m.index, end: m.index + m[0].length })) : [];
+};
+const TOKEN = new RegExp(`[^${SEP_CHARS.replace('\\-\\u2010-\\u2015\\u00b7\\u30fb', '')}]+`, 'gu');
+// The words of a multi-word name found as separate query words, in any order, with at most one other word inside the stretch they cover.
+function scatteredSpan(name, text) {
+  const words = norm(name).split(/\s+/).filter(Boolean);
+  if (words.length < 2) return null;
+  const tokens = [...text.matchAll(TOKEN)].map((m) => ({ s: squash(m[0]), start: m.index, end: m.index + m[0].length }));
+  const slots = words.map((w) => tokens.flatMap((t, i) => ((isLatin(w) ? t.s === squash(w) : t.s.includes(squash(w))) ? [i] : [])));
+  if (slots.some((found) => !found.length)) return null;
+  let best = null;
+  const walk = (k, picked) => {
+    if (k === slots.length) {
+      const lo = Math.min(...picked), hi = Math.max(...picked);
+      if (hi - lo + 1 <= words.length + 1 && (!best || hi - lo < best.hi - best.lo)) best = { lo, hi };
+      return;
+    }
+    for (const i of slots[k]) if (!picked.includes(i)) walk(k + 1, [...picked, i]);
+  };
+  walk(0, []);
+  return best && { start: tokens[best.lo].start, end: tokens[best.hi].end };
+}
+// English negators come before the name, Korean and Japanese ones after it. Blanking a negated name lets the next word of the same phrase ("no Kodak Gold") count as negated too.
+const NEG_BEFORE = /(?:(?<![\p{L}\p{N}])(?:no|not|without|never)|不要|不用|别用)\s*$/u;
+const NEG_AFTER = /^\s*(?:말고|없이|빼고|제외|아닌|아니고|なし|無し|抜き)/u;
+function maskNegated(text, looks) {
+  const words = [...new Set(looks.flatMap((l) => [...l.names, ...l.avoid]))];
+  for (let pass = 0; pass < 3; pass++) {
+    let changed = false;
+    for (const w of words) {
+      for (const { start, end } of spansOf(w, text)) {
+        if (!NEG_BEFORE.test(text.slice(0, start)) && !NEG_AFTER.test(text.slice(end))) continue;
+        text = text.slice(0, start) + ' '.repeat(end - start) + text.slice(end);
+        changed = true;
+      }
+    }
+    if (!changed) break;
+  }
+  return text;
+}
+export function loadLooks(dir = LOOKS_DIR) {
+  const file = path.join(dir, 'index.md');
+  if (!fs.existsSync(file)) return [];
+  const looks = [];
+  for (const line of fs.readFileSync(file, 'utf8').split('\n')) {
+    if (!/^\| /.test(line) || /^\| (slug|---)/.test(line)) continue;
+    const cells = splitRow(line);
+    if (cells.length !== 6) throw new Error(`looks/index.md: bad row: ${line.slice(0, 60)}`);
+    const [slugCell, name, culture, branches, axis, summary] = cells;
+    const slug = slugCell.replace(/^\[([^\]]+)\]\(\1\.md\)$/, '$1');
+    if (!['매체', '장면'].includes(axis)) throw new Error(`looks/index.md: ${slug} axis must be 매체 or 장면: ${axis}`);
+    if (!summary.trim()) throw new Error(`looks/index.md: ${slug} has no summary`);
+    if (!fs.existsSync(path.join(dir, `${slug}.md`))) throw new Error(`looks/index.md: ${slug}.md is missing`);
+    const card = fs.readFileSync(path.join(dir, `${slug}.md`), 'utf8');
+    const title = (card.match(/^# (.+?)(?: — .*)?$/m) ?? [])[1] ?? slug;
+    if (name !== title) throw new Error(`looks/index.md: ${slug} name ${name} is not the card title ${title}`);
+    const meta = Object.fromEntries(card.split(/^## /m)[0].split('\n').filter((l) => /^\| /.test(l)).map(splitRow).filter((c) => c.length === 2));
+    const names = list(meta['부르는 이름'] ?? ''), avoid = list(meta['부르지 않는 말'] ?? '');
+    if (!names.length) throw new Error(`looks/${slug}.md: head table has no 부르는 이름 row`);
+    looks.push({ slug, title, names, avoid, culture, branches, axis, summary, file: `references/image/looks/${slug}.md` });
+  }
+  return looks;
+}
+
+export function findLookCards(terms, dir = LOOKS_DIR) {
+  const looks = loadLooks(dir);
+  const raw = maskNegated(norm(terms.join(',')), looks);
+  return looks.flatMap((look) => {
+    const hits = look.names.flatMap((name) => {
+      const span = spansOf(name, raw)[0] ?? scatteredSpan(name, raw);
+      return span ? [{ name, ...span }] : [];
+    });
+    if (!hits.length) return [];
+    const first = hits.sort((a, b) => a.start - b.start || (b.end - b.start) - (a.end - a.start))[0];
+    return [{ ...look, matched: first.name, at: first.start }];
+  }).sort((a, b) => a.at - b.at);
+}
+
+const MAX_CANDIDATES = 6;
+// Culture cues in a query, matched to the culture column of looks/index.md (KR CN JP US FR). Kana in the query also means JP.
+const CULTURE_CUES = {
+  KR: ['한국', '서울', '한강', '성수', '홍대', '한남', '이태원', '부산', '제주', 'Korea', 'Seoul'],
+  JP: ['일본', '도쿄', '신주쿠', '오사카', '교토', '시부야', 'Japan', 'Tokyo'],
+  CN: ['중국', '홍콩', '상하이', '베이징', 'China', 'Hong Kong', 'Shanghai'],
+  US: ['미국', '뉴욕', '캘리포니아', 'LA', 'USA', 'New York', 'California'],
+  FR: ['프랑스', '파리', 'France', 'Paris'],
+};
+const queryCultures = (raw, stripped) => new Set([
+  ...Object.entries(CULTURE_CUES).filter(([, cues]) => cues.some((c) => hasName(c, raw, stripped))).map(([code]) => code),
+  ...(/[\u3040-\u30ff]/.test(raw) ? ['JP'] : []),
+]);
+// Query words (filler, digits, era words and one-character words dropped) that appear in a card's do-not-call words, names or summary.
+const queryWords = (terms) => [...new Set(terms.flatMap((t) => norm(t).split(PHRASE_BREAK)))]
+  .filter((w) => w.length >= 2 && !/^\d+$/.test(w) && !FILLER_WORDS.has(w) && !ERA_WORD.test(w));
+const wordHits = (look, words) => {
+  const text = norm([...look.avoid, ...look.names, look.summary].join(' '));
+  return words.filter((w) => (/^[a-z0-9'.-]+$/.test(w) ? hasWord(text, w) : text.includes(w))).length;
+};
+// Candidates come out closest to the request first: a card of the culture the query points to, then more query words in its words and summary, then index order.
+export function findLookCandidates(terms, called = [], dir = LOOKS_DIR) {
+  const raw = norm(terms.join(','));
+  const stripped = strip(raw);
+  const looks = loadLooks(dir);
+  const masked = maskNegated(raw, looks);
+  const skip = new Set(called.map((c) => c.slug));
+  const cultures = queryCultures(raw, stripped);
+  const words = queryWords(terms);
+  return looks
+    .filter((look) => !skip.has(look.slug))
+    .flatMap((look) => {
+      const hits = look.avoid.filter((w) => spansOf(w, masked).length > 0);
+      if (!hits.length) return [];
+      const inCulture = [...cultures].some((c) => look.culture.includes(c)) ? 1 : 0;
+      return [{ ...look, matched: hits.sort((a, b) => b.length - a.length)[0], inCulture, hits: wordHits(look, words) }];
+    })
+    .map((c, i) => ({ ...c, i }))
+    .sort((a, b) => b.inCulture - a.inCulture || b.hits - a.hits || a.i - b.i)
+    .slice(0, MAX_CANDIDATES);
+}
+
 // Returns [{slug, title, matches:[row+score]}] with every match (sorted); callers cut to a limit or draw at random.
-export function search({ terms, layers = SLUGS, culture = null, dir = LEXICON_DIR }) {
+// `cards` are the look cards the query called (findLookCards); their matched names feed expandTerms.
+export function search({ terms, layers = SLUGS, culture = null, dir = LEXICON_DIR, cards = [] }) {
   const picked = loadAll(dir).filter((l) => layers.includes(l.slug));
   const base = terms.map(norm).filter(Boolean);
+  const cardWords = new Set(cards.flatMap((c) => nameWords(c.matched)));
   return picked.map(({ slug, title, rows }) => {
     const pool = rows.filter((r) => !culture || r.culture.includes(culture));
-    const q = expandTerms(base, pool);
+    const q = expandTerms(base, pool, cardWords, cards.length > 0);
     const matches = pool
       .map((r) => ({ ...r, score: scoreRow(r, q) }))
       .filter((r) => r.score > 0)
@@ -109,24 +283,39 @@ export function drawRandom(results, count, pickIndex = randomInt) {
   });
 }
 
-export function formatText(results) {
+const cardBlock = (cards) => (cards.length
+  ? `## Look card\n${cards.map((c) => `${c.title} [${c.axis}] — ${c.file}\nread: node scripts/read_look.mjs ${c.slug} --outline\nbranch: node scripts/read_look.mjs ${c.slug} --branch <A|B|C|D> [--set S<n>] [--pair <n>]`).join('\n')}\n(read the outline first and choose the branch, set and pair; then run the branch command for that branch only. Read the card before the layer rows below; it fills the layers this look carries. Without a shell, open the card file whole.)\n\n`
+  : '');
+
+const candidateBlock = (candidates) => (candidates.length
+  ? `## Look card candidates\n(no card was named exactly; these cards list a word of your query as a general word. Pick the first one whose summary fits the medium or look the request asks for and read it; if none fits, or the request names no medium or look, write without a card.)\n${candidates.map((c) => `- ${c.title} [${c.axis}, ${c.culture}] — ${c.summary}\n  read: node scripts/read_look.mjs ${c.slug} --outline`).join('\n')}\n\n`
+  : '');
+
+export function formatText(results, cards = [], candidates = []) {
+  const head = cardBlock(cards) + candidateBlock(candidates);
   if (results.every((l) => l.matches.length === 0)) {
-    return 'no match in any layer. Use English tokens and sentences unless you know an original-language term for sure (image-brief.md §2, §4).\n';
+    if (cards.length) return `${head}no layer rows matched; the card above carries the look.\n`;
+    return `${head}no match in any layer. Use English tokens and sentences unless you know an original-language term for sure (image-brief.md §2, §4).\n`;
   }
-  return results.map((l) => {
+  return head + results.map((l) => {
     const body = l.matches.length
-      ? l.matches.map((m) => `${m.token} — ${m.looks}${m.aliases.length ? ` (${m.aliases.slice(0, 4).join(', ')})` : ''} [${m.kind}]`).join('\n')
+      ? l.matches.map((m) => `${m.token} — ${m.looks}${m.aliases.length ? ` (${m.aliases.slice(0, 4).join(', ')})` : ''} [${m.kind}${m.tags.includes('소품 필요') ? ', 소품 필요' : ''}]`).join('\n')
       : 'no match';
     return `## ${l.title}\n${body}\n`;
   }).join('\n');
 }
 
-export function formatJson(results, terms) {
+export function formatJson(results, terms, cards = [], candidates = []) {
   const layers = {};
   for (const l of results) {
     layers[l.slug] = l.matches.map(({ token, aliases, culture, tags, looks, kind, score }) => ({ token, aliases, culture, tags, looks, kind, score }));
   }
-  return { query: terms, layers };
+  return {
+    query: terms,
+    looks: cards.map(({ slug, title, axis, file, matched }) => ({ slug, title, axis, file, matched })),
+    candidates: candidates.map(({ slug, title, axis, summary, file, matched }) => ({ slug, title, axis, summary, file, matched })),
+    layers,
+  };
 }
 
 function parseArgs(argv) {
@@ -172,9 +361,11 @@ if (isMainModule()) {
       process.exit(0);
     }
     const opts = parseArgs(argv);
-    let results = search(opts);
+    const cards = findLookCards(opts.terms);
+    let results = search({ ...opts, cards });
     results = opts.random ? drawRandom(results, opts.random) : results.map((l) => ({ ...l, matches: l.matches.slice(0, opts.limit) }));
-    process.stdout.write(opts.json ? JSON.stringify(formatJson(results, opts.terms)) + '\n' : formatText(results));
+    const candidates = findLookCandidates(opts.terms, cards);
+    process.stdout.write(opts.json ? JSON.stringify(formatJson(results, opts.terms, cards, candidates)) + '\n' : formatText(results, cards, candidates));
   } catch (error) {
     console.error(`find_tokens: ${error.message}`);
     process.exitCode = 2;

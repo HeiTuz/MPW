@@ -9,7 +9,7 @@ ROOT = Path(__file__).resolve().parent.parent
 EDITORIAL = ROOT / "references" / "image" / "editorial"
 ROUTER = ROOT / "references" / "image" / "editorial-fashion.md"
 FASHION_CHAR_LIMIT = 3500
-TOPIC_BYTE_LIMIT = 20480
+TOPIC_BYTE_LIMIT = 26000  # portrait-variations.md examples carry Finish, 3:4 and catchlight lines (25,314)
 
 REQUIRED_FASHION_HEADINGS = (
     "## 읽을 자료",

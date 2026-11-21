@@ -134,6 +134,7 @@
 
 모델 선택 후 해당 어댑터의 적용 표면을 확인하고, 파라미터는 [surfaces.md](surfaces.md)와 실제 호출 계약을 따른다.
 
+- [engine-levers.md](engine-levers.md) — 효과 × 엔진 표와 층 → 엔진 배열표. 다른 엔진을 지정한 새 이미지와 모든 엔진 간 변환이 거치는 공통 단계(GPT Image 층 문안을 그 엔진 형식으로 펴고 매체·얼굴·몸 비율·입자·실사 장치를 붙인다). 엔진 문법의 세부는 아래 각 어댑터가 정본이다.
 - [gpt-image-2-5.md](gpt-image-2-5.md) — **기본 엔진.** GPT Image 2.5 규칙이 있는 절을 상황별로 가리키는 진입점. 대상 미정 이미지 문안도 여기서 시작한다.
 - [gpt-image-2-6.md](gpt-image-2-6.md) — GPT Image 2.6을 명시한 요청의 공통 문안·직접 API 설정 진입점. 기존 2.5 기본값이나 Higgsfield 로스터를 바꾸지 않는다.
 - [nano-banana.md](nano-banana.md) — Google Gemini 이미지의 서술형 작성 구조, 참조 역할, 편집·글자의 엔진 고유 방식, 촬영 용어 엔진 예외와 한계. 모델은 지정이 없으면 Nano Banana 2(`gemini-3.1-flash-image`), 복잡한 지시·정확한 글자·4K는 Pro(`gemini-3-pro-image`), 속도·비용 우선은 2 Lite(`gemini-3.1-flash-lite-image`), 대량 저지연 1024px는 Nano Banana(`gemini-2.5-flash-image`). 확인일은 [surface-evidence.md](surface-evidence.md) §7.

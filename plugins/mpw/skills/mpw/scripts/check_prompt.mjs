@@ -12,6 +12,7 @@ export const CODE_REGISTRY = Object.freeze({
   contract: { code: "length/contract", severity: { native: "error", assembled: "error" }, intent: "Enforce the machine handoff character ceiling." },
   channel: { code: "length/channel", severity: { native: "error", assembled: "error" }, intent: "Enforce the binding delivery ceiling." },
   engine: { code: "length/engine", severity: { native: "error", assembled: "error" }, intent: "Enforce the binding engine ceiling." },
+  engineWords: { code: "length/engine-words", severity: { native: "warning", assembled: "warning" }, intent: "Flag word counts over an engine's published word guidance." },
   ungated: { code: "length/ungated", severity: { native: "warning", assembled: "warning" }, intent: "Disclose that no numeric ceiling is known." },
   unquoted: { code: "copy/unquoted", severity: { native: "error", assembled: "error" }, intent: "Fix the exact text requested by a copy label." },
   repeated: { code: "copy/repeated", severity: { native: "error", assembled: "error" }, intent: "Avoid quoting the same rendered text repeatedly." },
@@ -35,6 +36,18 @@ export const CODE_REGISTRY = Object.freeze({
   skinColor: { code: "portrait/nationality-skin", severity: { native: null, assembled: "warning" }, intent: "Review color provenance without inferring nationality or discarding requested character color." },
   glow: { code: "portrait/glow-stack", severity: { native: null, assembled: "warning" }, intent: "Review possible overlap in shine descriptions; lexical counts do not predict image failure." },
   skinRepeat: { code: "portrait/skin-repeat", severity: { native: "warning", assembled: "warning" }, intent: "Review possible repetition while preserving distinct areas and partial-edit conditions." },
+  occlusion: { code: "coherence/occlusion", severity: { native: "warning", assembled: "warning" }, intent: "Flag hair that covers the face next to a line that keeps the face clear." },
+  focal: { code: "coherence/focal", severity: { native: "warning", assembled: "warning" }, intent: "Flag two focal lengths, or a wide lens beside an undistorted-face line." },
+  identitySkin: { code: "coherence/identity-skin", severity: { native: "warning", assembled: "warning" }, intent: "Flag a skin color written outside the identity paragraph while the reference skin tone is kept." },
+  ratioDup: { code: "coherence/ratio-dup", severity: { native: "warning", assembled: "warning" }, intent: "Flag an aspect ratio written more than once." },
+  decimal: { code: "coherence/decimal", severity: { native: "error", assembled: "error" }, intent: "Reject a decimal point replaced by an ideographic full stop." },
+  slotDup: { code: "coherence/slot-dup", severity: { native: "warning", assembled: "warning" }, intent: "Flag a slot filled twice: lips in Hair and makeup, or the catchlight." },
+  dayNight: { code: "coherence/day-night", severity: { native: "warning", assembled: "warning" }, intent: "Flag a night cue next to midday light." },
+  engineLayers: { code: "coherence/engine-layers", severity: { native: "warning", assembled: "warning" }, intent: "Flag GPT Image layer headings left in a prompt for another engine." },
+  engineFlag: { code: "coherence/engine-flag", severity: { native: "warning", assembled: "warning" }, intent: "Flag a Midjourney flag or ratio token in the body of an engine that takes it as a setting." },
+  engineBan: { code: "coherence/engine-ban", severity: { native: "warning", assembled: "warning" }, intent: "Flag a spoken ban on illustration or CGI where the engine's cell says to state the medium or use its own exclusion syntax." },
+  slotName: { code: "token/slot-name", severity: { native: "warning", assembled: "warning" }, intent: "Flag a layer-line token that names the slot (hair color, passersby, road surface) instead of the thing shown." },
+  engineBrand: { code: "coherence/engine-brand", severity: { native: "warning", assembled: "warning" }, intent: "Flag a film stock brand name in a Soul prompt, which draws the film border." },
   parse: { code: "manifest/parse", severity: { native: "error", assembled: "error" }, intent: "Report invalid JSON without losing subsequent rows." },
   notObject: { code: "manifest/not-object", severity: { native: "error", assembled: "error" }, intent: "Require an object for each manifest row." },
   manifestEmpty: { code: "manifest/empty", severity: { native: "error", assembled: "error" }, intent: "Require a nonblank manifest row." },
@@ -91,7 +104,7 @@ export function parseFlags(args) {
     "--profile": ["native", "assembled"],
     "--surface": ["s1", "s2", "s3"],
     "--channel": ["unbounded", "bounded"],
-    "--engine": ["gpt-image", "unknown", "midjourney", "higgsfield"],
+    "--engine": ["gpt-image", "unknown", "midjourney", "higgsfield", "seedream", "nano-banana", "soul"],
   };
   const valued = new Set([...Object.keys(choices), "--manifest", "--channel-limit"]);
   const reject = (message, details) => errors.push(diagnostic(CODE_REGISTRY.flag.code, message, details));
@@ -166,6 +179,19 @@ function measure(text, result, options) {
       `${names[layer.kind]}: ${codepoints} codepoints exceeds ${layer.limit}; surface=${result.surface}, engine=${result.engine}.${assumption}`,
       layer.assumed ? { hint: "Use --channel unbounded for an unlimited channel, or --channel-limit for its actual limit." } : {});
   }
+}
+
+// fixed-lines.md writes `8K` once, in the realism line of the closing "## Finish" layer (`## 마무리` in a Korean prompt).
+// That one occurrence is the documented exception to the quality-tag rule, so the
+// phrasing checks do not see it. Any other 8K or tag still counts.
+function withoutFinishEightK(instruction) {
+  const heading = /^##[ \t]+(?:Finish|마무리)[ \t]*$/imu.exec(instruction);
+  if (!heading) return instruction;
+  const start = heading.index + heading[0].length;
+  const next = /^##[ \t]/mu.exec(instruction.slice(start));
+  const end = next ? start + next.index : instruction.length;
+  const section = instruction.slice(start, end).replace(/(?<![\p{L}\p{N}_])8K(?![\p{L}\p{N}_])/iu, "  ");
+  return instruction.slice(0, start) + section + instruction.slice(end);
 }
 
 function copyViews(text) {
@@ -322,7 +348,9 @@ const NOISE_OPENS = new RegExp(`^\\s*(?:[A-Z][A-Z0-9 &/'’-]{1,40}:\\s*)?(?:do\
 const NOISE_AFTER = /^[\s-]*(?:free|removed|eliminated)(?![\p{L}\p{N}_])|없이|없는|없게|없도록|없애|제거|금지|빼고|않/iu;
 
 function inspectNoise(result, instruction) {
+  // fixed-lines.md writes grain and 8K into new prompts, so only assembled text and edits are screened.
   if (result.engine !== "gpt-image") return;
+  if (result.profile !== "assembled" && !/^\s*Edit the attached\b/u.test(instruction)) return;
   const hits = [];
   for (const segment of instruction.split(/(?<=[.?!。;])\s+|\r?\n/u)) {
     const clauses = segment.split(",").map((text) => ({
@@ -346,6 +374,109 @@ function inspectNoise(result, instruction) {
   }
   evidence(result, CODE_REGISTRY.noise, hits, "Reported vocabulary to review, not a verified grain prediction",
     "Not a deletion order: report it to the user, and keep it if that look was requested. In new prompts name the visible detail or tone instead.");
+}
+
+const KNOWN_RATIOS = "(?:1:1|2:3|3:2|3:4|4:3|4:5|5:4|9:16|16:9|9:21|21:9|1:2|2:1|1:3|3:1|2\\.39:1|1\\.85:1)";
+const SENTENCE_SPLIT = /(?<=[.?!。])\s+|\r?\n/u;
+
+function layerSections(instruction) {
+  const sections = [];
+  let current = { name: null, lines: [] };
+  sections.push(current);
+  for (const line of instruction.split(/\r?\n/u)) {
+    const heading = /^##\s+(.+?)\s*$/u.exec(line);
+    if (heading) {
+      current = { name: heading[1], lines: [] };
+      sections.push(current);
+    } else {
+      current.lines.push(line);
+    }
+  }
+  return sections;
+}
+
+// Engine-independent contradictions. Heuristics only: each one is a review prompt except the decimal point.
+function inspectCoherence(result, text, instruction) {
+  if (/\d。\d/u.test(text)) emit(result, CODE_REGISTRY.decimal, "A decimal point was replaced by an ideographic full stop.", { hint: "Write 7.5 and f/1.4 with an ASCII period." });
+  const sentences = instruction.split(SENTENCE_SPLIT);
+  const overFace = /\b(?:hair|strands?|fringe|bangs|curtains?)\b[^.\n]{0,60}\b(?:(?:falls?|falling|hangs?|drapes?)\s+(?:across|over)|(?:across|over)\s+(?:her|his|the|one|both)\s+(?:face|eyes?|brows?)|covers?|covering|hides?|hiding|veils?)\b[^.\n]{0,30}\b(?:face|eyes?|brows?)\b/iu;
+  const keptClear = /\b(?:stays?|stay|kept|keeps?)\s+clear\b|\bno\s+(?:hair|strands?)\s+(?:across|over|covering)\b/iu;
+  const awayFromFace = /\b(?:never|not|no|without|away from|off|tucked)\b/iu;
+  if (sentences.some((sentence) => overFace.test(sentence) && !awayFromFace.test(sentence)) && keptClear.test(instruction)) {
+    emit(result, CODE_REGISTRY.occlusion, "Hair is written over the face while another line keeps the face clear.", { hint: "Keep one: turn off the face-clear line when the look needs hair across the face." });
+  }
+  const mm = [...instruction.matchAll(/(?<![\p{L}\p{N}_.])(\d{1,3})\s?mm\b(?!\s+(?:film|grain|negative|stock|format|cinema|print|slide|super|photographs?|photos?|stills?|frames?|snapshots?|camera(?!\s+lens)))/giu)].map((match) => Number(match[1]));
+  const wideWord = /\b(?:ultra[- ]?wide|fish[- ]?eye|wide[- ]angle\s+(?:lens|shot|view|selfie)|wide\s+lens)\b/iu.test(instruction);
+  const noStretch = /\bno\s+(?:wide[- ]angle\s+stretch|distortion)\b|\bundistorted\b|\bdistortion[- ]free\b|无畸变|自然透视|natural perspective/iu.test(instruction);
+  if (new Set(mm).size >= 2 || (noStretch && (wideWord || mm.some((value) => value <= 28)))) {
+    emit(result, CODE_REGISTRY.focal, "Focal lengths disagree: two different lenses, or a wide lens beside an undistorted-face line.", { hint: "Keep one lens statement in the Camera layer." });
+  }
+  const sections = layerSections(instruction);
+  // A porcelain base is makeup (the CN base line is 冷白瓷肌), so it passes inside Hair and makeup; the same word elsewhere still reads as a natural color.
+  const porcelainBase = /瓷肌|瓷肤|도자기 피부|포슬린 스킨|\bporcelain[- ](?:skin|finish)\b/giu;
+  const outsideIdentity = sections.filter((section) => section.name !== "Identity Reference")
+    .flatMap((section) => (/^(?:Hair and makeup|Makeup)$/iu.test(section.name ?? "") ? section.lines.map((line) => line.replace(porcelainBase, "")) : section.lines)).join("\n");
+  const keepsTone = /\bkeeps?\s+(?:her|his|their)\s+own\s+skin\s+tone\b/iu.test(instruction);
+  // Only the natural skin color (fair, pale, tan, 冷白皮) is flagged. A finish the makeup makes (porcelain finish, 瓷肌, glass skin; porcelain only inside Hair and makeup) and light on the skin
+  // (sun-warmed glow on the skin, a neon tint on the cheek) pass: the color word must be a whole word next to "skin", at most one word between.
+  const skinColor = snippets(/\b(?:fair|pale|porcelain|ivory|olive|tan(?:ned)?|golden|bronzed?|deep|dark|brown|cool|warm|milky)\b[ -]?(?:[\w-]+[ -]){0,1}skin\b|冷白皮|白皙|瓷肌/giu, outsideIdentity);
+  if (keepsTone && skinColor.length) {
+    emit(result, CODE_REGISTRY.identitySkin, `A skin color is written outside the identity paragraph: ${[...new Set(skinColor)].slice(0, 3).join(" | ")}`, { hint: "The natural skin color belongs in the identity condition only; a reference keeps its own tone. Makeup finish and light on the skin are fine elsewhere." });
+  }
+  const ratios = instruction.match(new RegExp(`(?<![\\d:.])${KNOWN_RATIOS}(?![\\d:])`, "gu")) ?? [];
+  if (ratios.length >= 2) emit(result, CODE_REGISTRY.ratioDup, `An aspect ratio is written ${ratios.length} times: ${[...new Set(ratios)].join(" | ")}`, { hint: "Write the ratio once, in the Camera layer." });
+  const makeup = sections.find((section) => /^(?:Hair and makeup|Makeup)$/iu.test(section.name ?? ""));
+  const lipLines = (makeup?.lines ?? []).filter((line) => /\b(?:lips?|lipstick)\b|唇|립|입술/iu.test(line));
+  const catchLines = instruction.split(/\r?\n/u).filter((line) => /catch[- ]?lights?|eye[- ]?lights?|眼神光|\bglints?\s+in\s+(?:each|both|her|his)\s+eyes?|point of light sits in each eye/iu.test(line));
+  if (lipLines.length >= 2 || catchLines.length >= 2) {
+    emit(result, CODE_REGISTRY.slotDup, lipLines.length >= 2 ? `Hair and makeup has ${lipLines.length} lip lines.` : `The catchlight is written on ${catchLines.length} lines.`, { hint: "A slot is filled once: remove the later line." });
+  }
+  if (/\b(?:night(?:time)?|midnight|after dark)\b|深夜|夜晚|の夜/iu.test(instruction) && /\b(?:noon|midday|mid-day|noonday)\b|正午|中午|真昼/iu.test(instruction)) {
+    emit(result, CODE_REGISTRY.dayNight, "A night cue and midday light appear in the same prompt.", { hint: "Pick one time of day and make Light and Optics agree." });
+  }
+  inspectSlotNames(result, sections);
+  inspectEngine(result, instruction);
+}
+
+// image-brief.md §12.2: a token names the thing shown, never a layer or category name. Slot tokens that fixed-lines.md and the look-card frame define (face clear, catchlight, palette, vertical frame, horizontal frame, focus, hands) are allowed. Only the `token — sentence` lines inside a layer are read.
+const SLOT_NAMES = new Set(["hair color", "hair colour", "hair", "hairstyle", "makeup", "outfit", "clothing", "clothes", "pose", "expression", "background", "foreground", "scene", "setting", "location", "passersby", "passers-by", "people", "crowd", "road surface", "ground", "floor", "sky", "lighting", "light", "shadow", "shadows", "mood", "atmosphere", "color", "colors", "colour", "camera", "camera angle", "composition", "style", "medium", "nails", "nail", "props", "legwear", "optics"]);
+function inspectSlotNames(result, sections) {
+  const names = [];
+  for (const section of sections) {
+    if (!section.name) continue;
+    for (const line of section.lines) {
+      const token = /^([^—\n]{1,40}?)\s+—\s+\S/u.exec(line)?.[1].trim();
+      if (token && SLOT_NAMES.has(token.toLowerCase())) names.push(token);
+    }
+  }
+  if (names.length) emit(result, CODE_REGISTRY.slotName, `${names.length} token(s) name the slot, not the thing shown: ${[...new Set(names)].slice(0, 4).join(" | ")}`, { hint: "Name what is shown in the photo's own language (黒髪ロング, 通行人, マンホール) or the thing itself in English (cast shadows)." });
+}
+
+// engine-levers.md §5: the cells that say "do not write this" for one engine. Text matching only.
+const LAYER_ENGINES = new Set(["seedream", "nano-banana", "soul", "midjourney"]);
+function inspectEngine(result, instruction) {
+  const engine = result.engine;
+  if (!LAYER_ENGINES.has(engine)) return;
+  const hint = "engine-levers.md §4 flattens a GPT Image layer prompt into this engine's form.";
+  const headings = instruction.split(/\r?\n/u).filter((line) => /^##\s+\S/u.test(line));
+  if (headings.length >= 2) emit(result, CODE_REGISTRY.engineLayers, `${headings.length} layer headings (## …) in a ${engine} prompt.`, { hint });
+  if (engine !== "midjourney") {
+    const flags = snippets(/(?<![\p{L}\p{N}_-])--(?:ar|no|oref|ow|sref|style|raw|stylize|q|v)(?![\p{L}\p{N}_-])|\bAR\s+\d{1,2}:\d{1,2}\b/giu, instruction);
+    if (flags.length) emit(result, CODE_REGISTRY.engineFlag, `${engine} takes this as a call setting, not body text: ${[...new Set(flags)].slice(0, 3).join(" | ")}`, { hint: "Move it to the call setting and name it outside the prompt block." });
+  }
+  if (engine !== "seedream") {
+    // A Midjourney exclusion lives in the --no flag, so only the body is scanned.
+    const body = engine === "midjourney" ? instruction.replace(/--no\s[^\n]*?(?=\s--[a-z]|$)/gimu, " ") : instruction;
+    const ban = snippets(/\b(?:never|not|no)\s+(?:an?\s+)?(?:illustration|anime|cartoon|3d\s+render|cgi)\b/giu, body);
+    if (ban.length) {
+      const where = engine === "midjourney" ? "Put it in --no illustration, anime, cgi." : "State the medium instead: a real photograph.";
+      emit(result, CODE_REGISTRY.engineBan, `${engine}: spoken ban on illustration or CGI (${[...new Set(ban)].slice(0, 2).join(" | ")}).`, { hint: where });
+    }
+  }
+  if (engine === "soul") {
+    const brands = snippets(/\b(?:kodak|portra|ektachrome|ektar|fujifilm|fuji\s+(?:superia|velvia|provia|pro)|cinestill|vision3|ilford|tri-x)\b/giu, instruction);
+    if (brands.length) emit(result, CODE_REGISTRY.engineBrand, `Soul: film brand in the prompt (${[...new Set(brands.map((name) => name.toLowerCase()))].slice(0, 3).join(" | ")}).`, { hint: "Say the color response instead: fine grain, softly lifted blacks (soul-v2-director.md, real-run rule 3)." });
+  }
 }
 
 function inspectSkinRepeat(result, instruction) {
@@ -375,19 +506,26 @@ export function checkText(input, options = {}) {
   const result = textResult(options);
   const text = input.startsWith("\uFEFF") ? input.slice(1) : input;
   measure(text, result, options);
-  const { quotes, instruction } = copyViews(text);
+  const views = copyViews(text);
+  const { quotes } = views;
+  const instruction = withoutFinishEightK(views.instruction);
   const structured = result.profile === "native" && structuredBody(text);
   if (isEmpty(text, quotes) && !structured) {
     emit(result, CODE_REGISTRY.empty, "The prompt has no depictable content or nonempty quoted copy.");
     return result;
   }
+  const words = text.trim().split(/\s+/u).length;
+  if (result.engine === "seedream" && words >= 600) {
+    emit(result, CODE_REGISTRY.engineWords, `Seedream: ${words} words; the published guidance is under 600 English words (surfaces.md §0-1).`);
+  }
   if (result.profile === "native" && result.engine !== "gpt-image") {
-    emit(result, CODE_REGISTRY.engineScope, "The native profile accepts GPT Image natural language only.", { hint: "Use the selected engine's own syntax validator for other engines." });
+    // Only the engine-independent checks run for other engines; their own syntax is outside this checker.
+    inspectCoherence(result, text, instruction);
     return result;
   }
   if (result.profile === "assembled" && result.engine === "midjourney") {
-    const words = text.trim().split(/\s+/u).length;
     emit(result, CODE_REGISTRY.engineScope, `단어 수: ${words}. This checker does not judge Midjourney syntax; channel and machine-contract character limits still apply. See surfaces.md §0-1.`);
+    inspectCoherence(result, text, instruction);
     return result;
   }
   if (structured) {
@@ -399,6 +537,7 @@ export function checkText(input, options = {}) {
   inspectPhrasing(result, instruction);
   inspectNoise(result, instruction);
   inspectSkinRepeat(result, instruction);
+  inspectCoherence(result, text, instruction);
   if (result.profile === "assembled") inspectPortrait(result, instruction);
   return result;
 }

@@ -1,0 +1,17 @@
+A 35mm film still: a woman waiting at a tram stop in the night rain, shot on a 50mm lens.
+
+## Identity Reference
+If a model reference is provided, the woman in this photo is that model: take only the face shape and facial features from it, adapting them naturally to this scene's expression, angle and light, and keep her own skin tone. Hair, makeup and everything else follow this prompt. If none is provided, she is a 22-year-old Chinese woman with 清冷 bone structure and cool fair 冷白皮 skin. In either case she has 7.5-head proportions, a small head over level shoulders and a long neck.
+
+## Hair and makeup
+face clear — The hair falls away from the face, tucked behind one ear, so the brows, eyes and jawline stay clear.
+豆沙唇 — A muted rosy-brown matte lip with a softly blurred edge and no gloss.
+
+## Light
+streetlamp — A sodium streetlamp behind her left shoulder rims her hair, and a small window shaped catchlight sits in each eye.
+
+## Optics
+胶片颗粒 — Fine, even 35mm film grain sits across the whole frame, slightly heavier in the shadows.
+
+## Camera
+vertical frame — A vertical 3:4 frame from the top of her head to her waist, with the tram stop behind her.

@@ -45,7 +45,7 @@
 
 모델이 받는 자연어와 MPW 조립 형식은 별도 계약이다. GPT Image 편집은 [image-brief.md](image-brief.md) §8의 층(바꿀 층 + `## Keep`, 구획 표기는 `## 영어 제목`)을 쓴다. 제외 명사 꼬리와 끝 비율 토큰은 새로 붙이지 않는다. 사용자가 MPW 조립 형식·전문 레인·기계 레코드를 지정한 경우에만 그 형식을 적용한다.
 
-`check_prompt.mjs`는 네이티브 자연어에는 기본 `native`, MPW 조립 산출물에는 `assembled` 프로필을 쓴다. 표면·채널·엔진이 정해졌으면 실제 값을 전달한다. GPT Image가 아닌 엔진 대상에는 내용 검사를 기대하지 않는다. Midjourney는 `--profile assembled --engine midjourney`로 돌리면 `input/engine-scope`와 단어 수가 나오고, 이 코드는 범위 밖이라는 표시이며 프롬프트 결함이 아니다. 그 밖의 엔진은 `--engine higgsfield` 또는 `unknown`으로 돌리고, 이때 assembled에서 GPT Image용 문구 검사가 그대로 돌므로 길이 오류만 본다. 네이티브 검사는 필요한 자연어 편집 제약을 허용하고 끝 비율 토큰을 요구하지 않는다. 매니페스트의 텍스트 검사만으로 API 필드, 참조 전달, 픽셀 보존, 생성 품질을 검증했다고 보지 않는다. Higgsfield 래퍼의 길이·요청 계약을 대신하지 않으며 S2 전체 요청은 현재 도구·API 스키마로 별도 확인한다.
+`check_prompt.mjs`는 네이티브 자연어에는 기본 `native`, MPW 조립 산출물에는 `assembled` 프로필을 쓴다. 표면·채널·엔진이 정해졌으면 실제 값을 전달한다. 엔진 무관 모순 검사(`coherence/*`)는 모든 엔진에서 돌고, GPT Image용 어휘 검사는 GPT Image에서만 돈다. Midjourney는 `--profile assembled --engine midjourney`로 돌리면 `input/engine-scope`와 단어 수가 나오고, 이 코드는 범위 밖이라는 표시이며 프롬프트 결함이 아니다. 그 밖의 엔진은 `--engine higgsfield`·`seedream`·`nano-banana`·`soul` 또는 `unknown`으로 돌리고, 층 문안을 그 엔진 형식으로 편 뒤([engine-levers.md](engine-levers.md) §4)에는 `seedream`·`nano-banana`·`soul`·`midjourney`가 `## 층` 제목 잔류·본문의 플래그·엔진이 쓰지 않는 금지 꼬리·Soul의 필름 상표명을 경고한다. native는 길이와 `coherence/*`만 보고(`seedream`은 600단어 이상이면 `length/engine-words`), assembled의 문구 검사는 그대로 돌므로 길이 오류와 `coherence/*`를 본다. 네이티브 검사는 필요한 자연어 편집 제약을 허용하고 끝 비율 토큰을 요구하지 않는다. 매니페스트의 텍스트 검사만으로 API 필드, 참조 전달, 픽셀 보존, 생성 품질을 검증했다고 보지 않는다. Higgsfield 래퍼의 길이·요청 계약을 대신하지 않으며 S2 전체 요청은 현재 도구·API 스키마로 별도 확인한다.
 
 ### 3.2 GPT Image 2.5·2.6 — 네이티브 생성 브리프
 
@@ -75,7 +75,7 @@
 
 GPT Image 2 계열에는 요청하지 않은 미세 입자·자글거림·타일형 반복 무늬가 화면 전체나 넓은 평면(하늘·단색 배경·피부·평면색 일러스트)에 깔리는 실패가 보고되어 있다. 2.5·2.6에서는 나아졌다는 보고와 일부 프롬프트에 남는다는 보고가 엇갈리고, OpenAI의 공식 수정 발표는 확인하지 못했다. 공식 프롬프팅 가이드와 Cookbook은 이 현상을 다루지 않는다. Cookbook(gpt-image-2 기준)은 필름 그레인·매크로 디테일 같은 품질 단서를 필요할 때만 겨냥해 쓰라고 하고, 두 문서의 실사 예시는 35mm 필름 사진에 `subtle film grain`을 쓴다. 아래는 2026-11에 모은 커뮤니티 보고에 따른 작성 기준이며 MPW가 직접 생성해 검증한 결과가 아니다(근거와 한계는 [surface-evidence.md](surface-evidence.md) §7). 문안이 낮출 수 있는 것은 유발 가능성이고 노이즈 제거를 보증하지 않는다.
 
-**새 문안에 넣지 않을 어휘.** 입자·매체, 부유 입자, 거친 표면 행은 사용자가 그 외형이나 그 외형을 가진 매체를 요청했을 때, 또는 Optics 층이 매체의 입자를 위치와 양을 한정해 쓸 때(`fine grain only in the dark shadows`, [image-brief.md](image-brief.md) §4 문장 쓰는 법)만 쓴다. 과잉 세부 행은 품질 태그이므로 요청과 무관하게 새 문안에 넣지 않고 보여야 할 세부로 풀어 쓴다([image-brief.md](image-brief.md) §4가 품질 태그를 쓰지 않는다고 한 것과 같은 판정).
+**이 표를 쓰는 곳.** 이 표는 기존 문안 정리, 편집(`Edit the attached…`), assembled 문안, 노이즈가 실제로 보인 결과의 처리에 쓴다. 새 인물·사진 문안의 Optics 입자 줄과 Finish의 `8K`는 [fixed-lines.md](fixed-lines.md)가 정하며 이 표로 지우지 않는다. 그 밖의 새 문안에서 입자·매체, 부유 입자, 거친 표면 행은 사용자가 그 외형이나 그 외형을 가진 매체를 요청했을 때만 쓰고, 과잉 세부 행은 품질 태그이므로 보여야 할 세부로 풀어 쓴다.
 
 | 축 | 유발 어휘 | 바꿔 쓰기 | 출처 |
 |---|---|---|---|
@@ -86,7 +86,7 @@ GPT Image 2 계열에는 요청하지 않은 미세 입자·자글거림·타일
 
 축이 겹칠수록 위험하다고 보고된다(예: `ultra-detailed` + `film grain`). 피부 미세결의 반복과 프레이밍보다 과한 매크로 결은 이 표가 아니라 [compiler.md](compiler.md) §피부·재질과 `portrait/skin-repeat`가 맡는다. `sharp focus`·`tack sharp`와 넓은 무드어(`cinematic`, `film look`, `moody`, `raw photo`)는 출처가 하나씩이고 서로 엇갈리는 미검증 참고다. 이 어휘만으로 문안을 바꾸거나 경고하지 않으며, 화면 결과로 풀어 쓰는 일반 원칙([compiler.md](compiler.md) §스타일은 화면 결과로)만 적용한다.
 
-**필름 매체 요청의 판정.** 사용자가 필름 매체나 에뮬레이션을 요청했으면(필름 사진·필름톤·35mm·스톡명·`/35mmfilmgrain`) 입자는 그 외형의 일부다. 방향어(`subtle`, `fine`)를 붙여 한 번만 쓰고 나머지는 색·대비·하이라이트로 적는다. MPW가 처방이나 연출로 고른 필름 룩([realism.md](realism.md) §1 등)에는 입자 어휘를 넣지 않는다. [editorial/photo-results.md](editorial/photo-results.md)와 [editorial/locality.md](editorial/locality.md)의 필름 토큰, 층별 사전(`references/image/lexicon/`)의 필름 토큰에 든 입자 표현도 GPT Image 대상에서는 이 판정을 따른다.
+**필름 매체 요청의 판정.** 사용자가 필름 매체나 에뮬레이션을 요청했으면(필름 사진·필름톤·35mm·스톡명·`/35mmfilmgrain`) 입자는 그 외형의 일부다. 방향어(`subtle`, `fine`)를 붙여 한 번만 쓰고 나머지는 색·대비·하이라이트로 적는다. MPW가 처방이나 연출로 고른 필름 룩([realism.md](realism.md) §1 등)에도 [fixed-lines.md](fixed-lines.md)의 입자 줄을 한 번 쓴다. [editorial/photo-results.md](editorial/photo-results.md)와 [editorial/locality.md](editorial/locality.md)의 필름 토큰, 층별 사전(`references/image/lexicon/`)의 필름 토큰에 든 입자 표현은 그 줄로 모은다.
 
 **기존 문안은 지우지 않고 알린다.** 기준 원문의 수정은 [common.md](../templates/common.md) §기준 원문과 누적 수정의 보존을 그대로 따른다. 수정 요청 범위 밖에 위 표의 어휘가 있으면 문안은 두고, 블록 밖 한 줄로 해당 어휘와 바꿔 쓰기를 사실로만 알린다. 선택지를 묻지 않으며, [SKILL.md](../../SKILL.md) §Output format이 블록 밖 설명을 막는 요청(‘프롬프트만’·‘설명 없이’·지정 양식)에서는 알리지 않는다. 사용자가 정리를 요청했거나 노이즈를 문제로 말했을 때 걷어 낸다. 같은 문안에서 어휘 유무만 바꾼 생성 대조가 있기 전에는 이 표를 삭제 규칙으로 올리지 않는다. 사용자가 원한 입자(필름 그레인·종이 질감·빛 속 먼지)는 정리 요청에서도 남기고, 뺄지는 사용자가 정한다.
 
@@ -104,7 +104,7 @@ GPT Image 2 계열에는 요청하지 않은 미세 입자·자글거림·타일
 2. **누적 차단:** 무늬가 낀 결과를 다음 생성·편집의 입력으로 쓰지 않는다. 한 대화에서 생성·편집이 이어질수록 누적된다는 보고가 있고, 이 누적은 출시 직후 고쳐졌다는 제3자 분석도 있으나 공식 확인은 없다. 재발하면 새 대화에서 원래 문안으로 다시 생성하고, 편집은 깨끗한 원본에서 시작한다.
 3. **후처리:** 결과를 살려야 하면 출력의 축소 리샘플링, 약한 외부 디노이즈, 다른 모델의 낮은 강도 재렌더를 후속 단계로 명시한다(§5). 이 셋의 효과와 순위는 MPW의 추정이다. 영상 모델로 넘기면 입자가 증폭된다는 보고가 있어 인계 전에 원본 크기로 확인한다.
 4. **모델 안 디노이즈 편집:** `Remove the noise and grain from this image. Keep every line, edge and detail unchanged.` 또는 디노이즈를 강하게 걸라는 지시. 일부 복구된다는 보고와 효과가 없다는 보고가 함께 있으므로 한 번만 시도한다.
-5. **문안:** 위 표의 어휘 가운데 사용자가 원한 질감 조건이 아닌 것을 걷어 내고, 무늬가 낀 넓은 면(하늘·벽·단색 배경)을 원하는 상태로 한 문장 적는다. 예: `Smooth, even tones across the sky and wall, with clean gradients and natural sharpness.` 피부와 옷감은 [compiler.md](compiler.md) §피부·재질의 질감 조건을 그대로 두고 매끈한 면으로 바꾸지 않는다. 그래도 보였다면 그 실패에 맞춘 짧은 제약 한 문장을 더한다. 예: `No film grain, speckled noise or gritty texture.` 금지어 묶음을 예방용 기본 문안으로 붙이지 않는다([compiler.md](compiler.md) §제외 조건의 형식).
+5. **문안:** 위 표의 어휘 가운데 사용자가 원한 질감 조건이 아닌 것을 걷어 내고, 무늬가 낀 넓은 면(하늘·벽·단색 배경)을 원하는 상태로 한 문장 적는다. 예: `Smooth, even tones across the sky and wall, with clean gradients and natural sharpness.` 피부와 옷감은 [compiler.md](compiler.md) §피부·재질의 질감 조건을 그대로 두고 매끈한 면으로 바꾸지 않는다. 그래도 보였다면 그 실패에 맞춘 짧은 제약 한 문장을 더한다. 예: `No film grain, speckled noise or gritty texture.` 금지어 묶음을 예방용 기본 문안으로 붙이지 않는다([compiler.md](compiler.md) §제외 조건의 형식). `## Finish`의 금지 한 줄([fixed-lines.md](fixed-lines.md))과 [engine-levers.md](engine-levers.md) §5가 엔진별로 정한 금지 한 문장은 묶음이 아니라 효과 장치 한 문장이라 예외다.
 
 품질·크기 설정은 §4 소관이며, 설정을 올리면 무늬가 사라진다는 근거는 확인하지 못했다.
 
@@ -169,7 +169,7 @@ GPT Image 2 계열에는 요청하지 않은 미세 입자·자글거림·타일
 |---|---|
 | **인라인 문법이 있다** (Midjourney `--no`) | 블록 안 프롬프트 문자열에 그대로 둔다. `--no` 값 규칙은 [../midjourney-identity.md](../midjourney-identity.md) §5를 따른다 |
 | **별도 필드가 있다** (예: 직접 Veo API의 `negativePrompt`, `tripo_3d`의 `negative_prompt`) | 해당 필드로 보낸다. 필드명·명사 목록 문법은 실제 엔진 계약을 따른다 |
-| **별도 필드가 없다** (현재 Higgsfield 이미지·영상 모델, GPT Image) | 원하는 결과 상태를 우선 서술한다. 지시 기반 모델에서는 변경 범위·보존·추가 금지 같은 짧은 자연어 제약도 쓴다. 제외할 명사만 본문에 나열하지 않는다 |
+| **별도 필드가 없다** (현재 Higgsfield 이미지·영상 모델, GPT Image) | 원하는 결과 상태를 우선 서술한다. 지시 기반 모델에서는 변경 범위·보존·추가 금지 같은 짧은 자연어 제약도 쓴다. 제외할 명사만 본문에 나열하지 않는다(GPT Image 새 이미지의 `## Finish` 금지 한 줄은 예외, [compiler.md](compiler.md)) |
 
 이 3분기는 S3 붙여넣기와 대상이 정해지지 않은 자연어 초안에도 적용한다. 대상이 미정이면 "별도 필드가 없다" 행을 따른다. 제외 명사를 본문 끝에 모아 붙이지 말고 배경·소품·인원은 원하는 화면 상태로 쓴다. 정확 카피의 작성과 검수는 [text-structure.md](text-structure.md) §이미지 안의 글자를 따른다.
 

@@ -11,7 +11,7 @@ These files are original, text-only native prompt examples for distinct requests
 | daily-selfie.prompt.txt | A front-camera morning selfie of a man in his thirties, as the request specifies; no reference image |
 | fashion-campaign-reference.prompt.txt | A trench coat campaign photo with two attached images: image 1 is the model, image 2 is the product |
 
-The three portrait requests show the rules in references/image/image-brief.md section 5 and references/image/editorial/portrait-brief.md: a default person written inside the Identity Reference condition when the request gives none, no preservation wording without a reference, and numbered roles with preserved identity and product construction when references exist.
+Photographs close with a `## Finish` layer (medium closer, realism line, anti-CG line from references/image/fixed-lines.md); portraits carry the 3:4 frame and the Identity Reference proportion sentence. The three portrait requests show the rules in references/image/image-brief.md section 5 and references/image/editorial/portrait-brief.md: a default person written inside the Identity Reference condition when the request gives none, no preservation wording without a reference, and numbered roles with preserved identity and product construction when references exist.
 
 No images were generated for this set, and the examples make no claims about rendered results. All prompts pass the clean-room validator's native text check. To repeat that check after integration, run:
 
