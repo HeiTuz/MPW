@@ -70,7 +70,7 @@ Legwear 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다
 | 暗金中缝 | 金线中缝; 金线后线; 금사 솔기 스타킹; gold thread back seam | CN | 금사; 솔기; 고급; 밤 | A narrow back seam in dim warm gold thread that glints only when the leg turns toward the light. | item |
 | 暗金提花 | 金丝提花; 金丝透肉; 금사 자카드 스타킹; gold-filament jacquard tights | CN | 금사; 미광; 자카드; 파티; 国潮; 궈차오; 국조 | Sheer tights with fine gold threads woven into a jacquard pattern that flicker as tiny warm sparks when the leg moves. | look |
 | 深秋保暖丝袜 | 保暖丝袜; 30D保暖黑丝; 微暖半透; 가을 보온 스타킹; autumn thermal sheer tights | CN | 가을; 보온; 반투명; 기모 | Slightly thick semi-sheer tights with a soft brushed matte surface that still lets a little skin tone show through the knit. | item |
-| 真丝双绉 | 双绉丝袜; 真丝双绉丝袜; 크레이프 드 신 스타킹; crepe de chine hosiery | CN | 실크; 크레이프; 무광; 고급 | Hosiery with a finely crinkled matte silk-crepe surface that gives a soft grainy sheen and never turns glossy. | look |
+| 真丝双绉 | 双绉丝袜; 真丝双绉丝袜; 크레이프 드 신 스타킹; crepe de chine hosiery | CN | 실크; 크레이프; 무광; 고급 | Hosiery with a finely crinkled matte silk-crepe surface that gives a soft crinkled sheen and never turns glossy. | look |
 | 真丝天丝肉丝 | 真丝肉丝; 天丝丝袜; 冰凉天丝; 실크 텐셀 스타킹; silk tencel sheer | CN | 실크; 시원함; 여름; 초박; 老钱风; 라오첸펑; 올드머니 | Ultra-fine sheer hosiery with a cool natural-fibre sheen that looks calm and faintly uneven, like silk in soft window light. | item |
 | 真丝缎面宽边 | 缎面宽边; 宽边防滑; 새틴 와이드 밴드 스타킹; silk satin wide band | CN | 새틴; 와이드 밴드; 밴드; 고급 | Thigh-high stockings topped with a broad satin band that lies flat against the leg with a soft even sheen. | item |
 | 竹节后中缝 | 竹节后线; 竹节中缝; 立体提花中缝; 대나무 마디 솔기; bamboo-joint back seam | CN | 대나무; 솔기; 엠보; 차분함; 新中式; 신중식 | A back seam broken into small evenly spaced raised bamboo nodes, each casting a tiny soft shadow up the calf. | item |
@@ -89,7 +89,7 @@ Legwear 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다
 | 青绿山水 | 千里江山; 青绿山水纹; 청록산수 스타킹; blue-green landscape tights | CN | 청록; 산수; 자카드; 예술 | Sheer tights with a faint jacquard of misty mountains in blue-green and ink grey that fades in and out with the knit. | look |
 | 青黛色 | 青黛; 远山青黛; 청대색 스타킹; slate blue-green tights | CN | 청대; 푸른 회색; 수묵; 차분함; 新中式; 신중식 | Muted greyish blue-green sheer tights, the dusty tone of distant ink-wash hills, with a soft airy haze. | look |
 | 墨竹剪影 | 竹影; 墨竹; 묵죽 스타킹; 대나무 그림자 스타킹; ink bamboo tights | CN | 묵죽; 그림자; 대나무; 문인; 新中式; 신중식 | Sheer tights printed with soft translucent bamboo stalks and leaves, like a brush painting seen through light. | look |
-| 羊脂玉光腿 | 羊脂玉; 양지옥; 양지옥 광택 스타킹; mutton-fat jade skin; jade-white sheer | CN | 백옥톤; 은은한 광택; 초박; 차분함; 티룸; 新中式; 신중식 | Warm milky-white sheen like polished white jade, soft and semi-matte, melting into pale skin without a visible edge at the ankle. | look |
+| 羊脂玉光腿 | 羊脂玉; 양지옥; 양지옥 광택 스타킹; mutton-fat jade skin; jade-white sheer | CN | 백옥톤; 은은한 광택; 초박; 차분함; 티룸; 新中式; 신중식 | Warm milky-white sheen like polished white jade, soft and semi-matte, melting into the skin without a visible edge at the ankle. | look |
 | 冷白瓷肌 | 냉백자기; 냉백 도자기 피부; porcelain matte skin; cool porcelain | CN | 도자기; 무광; 차가운 흰톤; 미술관; 미니멀; 当代美术馆冷光极简; 当代美术馆冷光; 美术馆冷光; 冷光极简; 현대 미술관 냉광 미니멀; 미술관 냉광 미니멀; 미술관 냉광; 냉광 미니멀 | Cool, even, matte porcelain finish on the leg, with a diffused soft-focus look and no hot highlight on the knee or shin. | look |
 | 名媛天鹅腿 | 名媛; 천아 다리; swan leg; high-society tights; 명원 룩 | CN | 우아함; 광택; 상류층; 파티; 외탄; 老钱风; 라오첸펑; 올드머니 | Long, smooth, softly glossy legs in fine sheer tights, with a gentle pearly highlight that follows the line of the calf. | look |
 | T裆无痕 | 无痕T裆; 全透T裆; T-crotch seamless; 투명 T 크로치 스타킹; 심리스 스타킹 | CN | 무봉제; 초박; 올 투명; 드레스 매치; 미니멀 | Fully transparent hosiery with a seamless, clean finish and no visible seam or thick band at the upper leg. | item |
@@ -238,7 +238,7 @@ Legwear 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다
 | zebra stripe distressed mesh | 지브라 망사 스타킹; zebra fishnet; stripe mesh tights | US | 그런지; 동물 무늬; 망사; 밤 | Distressed mesh with horizontal zebra-like stripes and torn holes along the thigh. | item |
 | UPF sun-defense sheer | UV protection tights; 자외선 차단 스타킹; UPF tights; California sun | US | 여름; 해변; 캘리포니아; 낮 | Light summer sheer tights that glow warm in direct sun and sit under shorts or a mini skirt with sandals. | item |
 | glossy high-shine sheer | high shine tights; paparazzi glaze; 글로시 스타킹; 광택 스타킹; 유광 시어 | US | 클럽; 밤; 플래시; 광택 | High-sheen sheer tights whose shins and knees throw back a sharp specular highlight under camera flash. | item |
-| ivory semi-sheer matte tights | ivory tights; 아이보리 스타킹; 크림 스타킹; off-white tights | US | 복고; 정원; 로맨틱; 봄 | Matte semi-sheer tights in soft ivory that cool the skin to a pale warm cream next to floral prints. | item |
+| ivory semi-sheer matte tights | ivory tights; 아이보리 스타킹; 크림 스타킹; off-white tights | US | 복고; 정원; 로맨틱; 봄 | Matte semi-sheer tights in soft ivory that give the leg a soft cream tint next to floral prints. | item |
 | Leggings | 레깅스; 요가 팬츠; 요가 레깅스; yoga pants | US | 스트레치; 요가; 스포티; 블랙; 운동 | Smooth, full-length stretch tights that sit close to the leg with a matte, slightly brushed finish. | item |
 | Fishnets | 망사 스타킹; 피시넷; 그물 스타킹; fishnet tights | US | 검정; 망사; 펑크; 락; 레트로 | Open diamond-grid black tights in fine thread, with the grid pattern visible over bare skin at close range. | item |
 | Polka dot | 폴카 도트; 도트; 波点 | US | 도트; 귀여움; 봄; 캐주얼 | Small round dots scattered evenly over a sheer ground. | look |

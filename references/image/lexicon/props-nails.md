@@ -56,7 +56,7 @@ Props and nails 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토�
 | 빈티지 메탈 시계 | 빈티지 스퀘어 시계; 스퀘어 메탈 시계; vintage square watch; 小方表; 은색 시계 | KR | 복고; 미니멀; 은색; 손목; 액세서리 | A very slim square-faced silver watch on a fine metal bracelet, its small crystal glass reflecting a thin white line of light. | item |
 | 한 송이 튤립 | 튤립 한 송이; 흰 튤립; single tulip; 白郁金香; 꽃다발 | KR | 봄; 꽃; 흰색; 미니멀; 선물 | A single white tulip wrapped in a frosted translucent paper sleeve, the soft petals glowing and the wrapping paper crinkling with a faint sheen. | item |
 | 심플 실버 링 귀걸이 | 실버 링 귀걸이; 얇은 후프; dainty hoops; 细耳圈; 미니 후프 | KR | 액세서리; 은색; 미니멀; 귀걸이; 일상; 꾸안꾸; 꾸민 듯 안 꾸민 듯; 쿨톤 도자기 피부; 블루 그레이 미니멀; 청랭 도자기 피부; 냉백 도자기 피부; 회청색 미니멀; 清冷瓷肌; 极简灰蓝 | Ultra-fine silver hoop earrings that swing a little and catch a tiny point of light on the curve. | item |
-| 빈티지 가죽 시계 | 가죽 스트랩 시계; 코냑 시계; leather strap watch; 复古皮带手表; 빈티지 시계 | KR | 복고; 갈색; 손목; 액세서리; 차분함; 老钱风; 라오첸펑; 올드머니 | A small round metal-dial watch on a thin cognac leather strap, with visible grain and faint wear on the leather. | item |
+| 빈티지 가죽 시계 | 가죽 스트랩 시계; 코냑 시계; leather strap watch; 复古皮带手表; 빈티지 시계 | KR | 복고; 갈색; 손목; 액세서리; 차분함; 老钱风; 라오첸펑; 올드머니 | A small round metal-dial watch on a thin cognac leather strap, with a natural leather texture and faint wear. | item |
 | 솔리테어 다이아 목걸이 | 솔리테어 목걸이; 단석 목걸이; solitaire diamond necklace; 单钻项链; 다이아 목걸이 | KR | 액세서리; 보석; 미니멀; 고급; 은색 | An ultra-fine white-gold chain resting on the collarbone with one small diamond that throws tiny sparkling points of light. | item |
 | 가죽 다이어리 | 다이어리; 만년필; fountain pen; 手账; 민트 다이어리 | KR | 문구; 민트; 다이어리; 클래식; 금색 | A mint green leather-bound journal lying open next to a gold-nibbed fountain pen, the nib throwing a small bright highlight. | item |
 | Binggrae Banana Milk Jar | 빙그레 바나나우유 단지; banana milk jar | KR | 복고; 여름; 편의점; 노랑 | A rounded pale-yellow plastic jar of banana milk with a foil lid, glowing soft yellow against window light. | item |
@@ -77,6 +77,15 @@ Props and nails 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토�
 | 실버 쇄골 체인 | 얇은 실버 목걸이; 쇄골 체인; thin silver collarbone chain; 极细银质锁骨链; 은 쇄골 체인; 실버 체인 목걸이 | KR | 쿨톤 도자기 피부; 블루 그레이 미니멀; 청랭 도자기 피부; 냉백 도자기 피부; 회청색 미니멀; 清冷瓷肌; 极简灰蓝; 쇄골; 미니멀 주얼리; 서울 밤 시네마; 서울 나이트 시네마; 차창 불빛 시네마; Seoul night cinema; 首尔夜生活电影感; 车内流光; 택시; 야경 | A hair-fine silver chain lies flat along the collarbones, with one tiny bright point where it catches the cool light. | item |
 | 컵라면 | 컵 라면; 편의점 컵라면; 杯面; cup noodles; instant noodle cup | KR | 서울 밤 시네마; 서울 나이트 시네마; Seoul night cinema; 首尔夜生活电影感; 편의점; 새벽 두 시; 형광등; 심야 | A paper cup of instant noodles with its lid peeled back and a plastic fork across the top, steam rising into cold white light. | item |
 | 생수병 | 생수; 물병; 冰水; bottle of water; iced water bottle | KR | 서울 밤 시네마; 서울 나이트 시네마; Seoul night cinema; 首尔夜生活电影感; 편의점; 새벽 두 시; 형광등; 심야 | A clear bottle of cold water beaded with condensation and carrying no readable label, a bright line of light running down the plastic. | item |
+| 텀블러 | 스테인리스 텀블러; 개인 컵; tumbler | KR | 텀블러; 음료; 일상; 컵 | A tall stainless-steel tumbler with a flip lid and a plastic straw, a few fingerprints on its body. | item |
+| 장우산 | 큰 우산; 긴 우산; long umbrella | KR | 우산; 비; 일상; 손 | A full-length umbrella with a straight handle, held open over the head or closed and carried by the hook handle. | item |
+| 카드지갑 | 카드 케이스; 미니 지갑; 카드 홀더; card holder | KR | 지갑; 작은 소품; 일상; 손 | A slim leather card holder with a few cards fanned at the top, held between two fingers or pulled from a pocket. | item |
+| 휴대용 선풍기 | 손선풍기; 핸디 선풍기; 목걸이 선풍기; handheld fan | KR | 선풍기; 여름; 손; 더위 | A small handheld fan with a round guard and a short grip, blowing loose strands of hair back from the face. | item |
+| 보조배터리 | 파워뱅크; 충전기; power bank | KR | 충전; 휴대폰; 가방; 일상 | A slim rounded-rectangle power bank in matte plastic with a charging cable looped to a phone. | item |
+| 립밤 | 입술 보호제; 립 케어; lip balm | KR | 립; 작은 소품; 일상; 손 | A small tube of clear lip balm held between two fingers, its tip glossy and its cap off or in the other hand. | item |
+| 파우치 | 화장 파우치; 필통 파우치; 지퍼 파우치; zip pouch | KR | 파우치; 가방 속; 작은 소품; 일상 | A small zip pouch in cotton or nylon with a wrist loop, slightly bulging from what is inside. | item |
+| 쇼핑백 | 브랜드 쇼핑백; 종이가방; paper shopping bag | KR | 쇼핑; 손; 종이; 거리 | A stiff paper shopping bag with twisted rope handles held by one hand, its plain faces left without any visible mark. | item |
+| 손거울 | 콤팩트 거울; 미니 거울; hand mirror | KR | 거울; 메이크업; 화장 고치기; 반사 | A small round hand mirror held up near the face, flashing a bright reflection of the sky or a lamp. | item |
 
 ## CN
 
@@ -200,6 +209,12 @@ Props and nails 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토�
 | 硬质手包 | 硬壳手包; 方形手包; 하드 클러치; 각진 클러치; rigid clutch; structured clutch | CN | 当代美术馆冷光极简; 当代美术馆冷光; 美术馆冷光; 冷光极简; 현대 미술관 냉광 미니멀; 미술관 냉광 미니멀; 미술관 냉광; 냉광 미니멀; 핸드백; 각진 | A small rigid clutch with square corners and no visible hardware holds its shape at the hip, its hard edges catching a thin line of light. | item |
 | 几何银耳夹 | 银耳夹; 几何耳夹; 기하학 은 이어커프; 실버 이어커프; geometric silver ear cuff; angular ear cuff | CN | 当代美术馆冷光极简; 当代美术馆冷光; 美术馆冷光; 冷光极简; 현대 미술관 냉광 미니멀; 미술관 냉광 미니멀; 미술관 냉광; 냉광 미니멀; 은; 귀걸이 | A sculptural silver cuff of angular flat planes clamps along the rim of one ear and throws a single cold metal glint. | item |
 | 几何银手镯 | 银手镯; 几何银镯; 기하학 은 팔찌; 실버 뱅글; geometric silver cuff; angular silver bangle | CN | 当代美术馆冷光极简; 当代美术馆冷光; 美术馆冷光; 冷光极简; 현대 미술관 냉광 미니멀; 미술관 냉광 미니멀; 미술관 냉광; 냉광 미니멀; 은; 팔찌 | A plain angular sterling-silver cuff sits on one wrist, its flat faces reflecting cold light as thin white lines. | item |
+| 帆布袋 | 판부다이; 천 가방; canvas tote bag | CN | 토트백; 천 가방; 일상; 캐주얼 | A plain cotton canvas tote with two flat straps, sagging slightly with its contents and carried on the shoulder or forearm. | item |
+| 双肩包 | 솽젠바오 | CN | 백팩; 어깨; 일상; 나일론 | A soft nylon daypack with two shoulder straps, a front zip pocket and a slightly slumped shape. | item |
+| 斜挎包 | 셰쿠아바오; 대각선 가방; crossbody bag | CN | 크로스백; 가방끈; 일상; 어깨 | A small bag on a long strap crossing the chest diagonally and resting at the opposite hip, with a front flap and a zip. | item |
+| 奶茶 | 나이차; 밀크티; 버블티 컵; milk tea cup | CN | 밀크티; 음료; 컵; 빨대 | A clear plastic cup of pale brown milk tea with a domed or sealed lid and a wide straw, beads of water on its wall. | item |
+| 共享单车 | 궁샹 단처; 공유 자전거; 공유 바이크; shared bike | CN | 자전거; 도시; 길가; 일상 | A bright blue or yellow shared bicycle with a front basket and a lock plate, parked in a row at the curb. | item |
+| 塑料袋 | 쑤랴오다이; 비닐 봉투; plastic bag | CN | 비닐봉지; 장보기; 일상; 손 | A thin plastic shopping bag with knotted handles hanging from one hand, its sides stretched by the contents. | item |
 
 ## JP
 
@@ -291,7 +306,7 @@ Props and nails 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토�
 | ラメグラデーション | lame gradient; 라메 그라데이션; 글리터 그라데이션; 细闪渐变 | JP | 반짝임; 네일; 그라데이션; 펄 | A fine scatter of glitter that is dense at the nail tip and thins out toward the base. | look |
 | 和風ネイル | wafu nail; 와후 네일; 일본풍 네일; 和风甲 | JP | 일본풍; 전통; 네일; 차분 | Deep black, vermilion and gold nail art with thin brushlines and flat matte ground echoing Japanese lacquerware. | look |
 | 抹茶グリーン | matcha green; 말차 그린; 말차색; 宇治抹茶 | JP | 녹차; 청량; 네일; 여름 | A translucent pale tea green that goes from darker at the tip to nearly clear at the cuticle, like sun through bamboo leaves. | look |
-| 楽焼 | raku ware; 라쿠야키; 라쿠 | JP | 도자기; 무광; 검정; 다도 | A deep black, slightly rough ceramic glaze with a matte grainy feel and no hard shine. | look |
+| 楽焼 | raku ware; 라쿠야키; 라쿠 | JP | 도자기; 무광; 검정; 다도 | A deep black, slightly rough ceramic glaze with a matte, slightly rough feel and no hard shine. | look |
 | 水滴ネイル | 立体水滴アート; 물방울 네일; 워터드롭 네일; 3d water drop nail; 立体水滴甲 | JP | 입체; 투명; 네일; 여름 | Clear half-dome droplets of hard gel set on the nail, each bubble-free and bending the light with a tiny highlight on top. | look |
 | 結露 | 결로; 물방울 맺힘; condensation; 水雾 | JP | 여름; 차가움; 유리; 음료 | Fine beads of condensation covering cold glass or a can, scattering light into tiny bright points and running into thin streaks of water. | look |
 | 金箔ネイル | gold leaf nails; 금박 네일; 金箔甲; 純金箔 | JP | 금박; 럭셔리; 네일; 일본 | Tiny flakes of gold leaf pressed into clear gel near the nail edge, crinkled and catching light as scattered warm points under a glossy top coat. | look |
@@ -380,6 +395,13 @@ Props and nails 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토�
 | 肉まん | 니쿠만; 고기만두; 찐빵; 중화만; steamed pork bun; 肉包 | JP | 写ルンです; 우츠룬데스; 일회용 카메라; 편의점; 겨울; 야식 | A pale steamed pork bun held in a thin paper wrap with the top torn open, one bite taken and a thread of steam rising from it. | item |
 | ラーメン | 라멘; 라면; 라멘 그릇; ramen; ramen bowl; 拉面 | JP | 写ルンです; 우츠룬데스; 일회용 카메라; 라멘집; 야식; 김 | A deep ceramic bowl of ramen with chopsticks laid across the rim, dense white steam rising off the broth and beading on nearby skin. | item |
 | カラオケマイク | 가라오케 마이크; 노래방 마이크; karaoke microphone; 卡拉OK麦克风 | JP | 写ルンです; 우츠룬데스; 일회용 카메라; 가라오케; 노래방; 친구 | A black karaoke microphone with a mesh ball head, held loosely in one hand near the chin. | item |
+| ショルダーバッグ | 쇼루다 박구; 숄더백; 크로스 숄더백; shoulder bag | JP | 가방; 어깨; 일상; 직사각 | A boxy bag on a long strap carried over one shoulder and resting at the hip, with a front zip pocket and a small metal buckle. | item |
+| エコバッグ | 에코 박구; 장바구니; reusable shopping bag | JP | 장바구니; 일상; 편의점; 손 | A thin folded-nylon or cotton shopping bag with short handles hanging full or slack from one hand. | item |
+| リュック | 류쿠; 백팩; 배낭; backpack | JP | 백팩; 어깨; 일상; 나일론 | A soft nylon daypack with two shoulder straps, a front zip pocket and a slightly slumped shape. | item |
+| ペットボトル | 펫토보토루; 페트병; PET bottle | JP | 음료; 손; 일상; 투명 | A clear plastic drink bottle with a ridged body and a colored cap, condensation beading on its surface. | item |
+| イヤホン | 이야혼; 이어폰; earphones | JP | 이어폰; 음악; 귀; 코드 | Small earbuds sit in the ears with a thin cord looping down to the chest and into a pocket. | item |
+| 腕時計 | 우데도케이; 손목시계; wristwatch | JP | 시계; 손목; 액세서리 | A slim watch with a round face and a thin strap sits on the wrist, its glass catching a small glint. | item |
+| 折りたたみ傘 | 오리타타미 가사; 접이 우산; folding umbrella | JP | 우산; 비; 가방; 일상 | A compact folding umbrella with a short telescoping handle, either closed in the hand or open as a small canopy. | item |
 
 ## US
 
@@ -398,7 +420,7 @@ Props and nails 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토�
 | MetroCard | NYC subway card; metro card; 메트로카드; 지하철 카드; 뉴욕 지하철 | US | 뉴욕; 지하철; 일상; 도시 | A thin yellow-and-blue magnetic-stripe fare card with a glossy plastic surface. | brand |
 | Monster Energy | 몬스터 에너지; 몬스터 에너지 캔; monster can; 에너지 드링크 | US | 스케이트; Y2K; 그런지; 음료 | A matte black can with a neon-green claw mark, its slim body glossy with cold sweat and a sharp green glint on the rim. | brand |
 | Owala FreeSip | 오왈라; 오왈라 프리십; Owala bottle; Owala | US | 트렌디; 운동; 일상; 물병 | A two-tone insulated bottle with a curved carry loop and a spout lid, glossy color blocking and tiny water droplets on its sides. | brand |
-| Polaroid Instant Camera | Polaroid; instant camera; 폴라로이드; 즉석카메라; 拍立得 | US | 노스탤지어; 아날로그; 페스티벌; 놀이; Venice Beach Polaroid; 베니스 비치 폴라로이드; road trip light leak; 로드트립 빛샘 | A boxy white instant camera with a rainbow stripe and a square lens, a square print sliding out of the front slot. | brand |
+| Polaroid Instant Camera | Polaroid; instant camera; 폴라로이드; 즉석카메라; 拍立得 | US | 노스탤지어; 아날로그; 페스티벌; 놀이 | A boxy white instant camera with a rainbow stripe and a square lens, a square print sliding out of the front slot. | brand |
 | Ray-Ban Aviator | 레이밴 에비에이터; 레이밴; Ray-Ban; aviator sunglasses; G-15 lenses; 에비에이터 선글라스 | US | 클래식; 드라이브; 여름; 선글라스; Venice Beach Polaroid; 베니스 비치 폴라로이드; road trip light leak; 로드트립 빛샘 | Thin gold-framed teardrop sunglasses with dark green G-15 lenses that reflect the surroundings as a dark mirrored sheen. | brand |
 | Shake Shack | 쉐이크쉐이크; 쉑쉑; 쉑쉑 쉐이크; crinkle fries; 셰이크쉑 | US | 패스트푸드; 뉴욕; 공원; 음식 | A paper cup of thick pale milkshake beside a paper tray of ridged crinkle-cut fries, with a little grease sheen on the paper. | brand |
 | Snapple bottle | 스내플; 스내플 병; Snapple Peach Tea; glass bottle iced tea | US | 복고; 동네가게; 여름; 음료 | A thick ribbed glass bottle of amber peach tea with a metal cap and paper label, bright rim highlights on the curved glass. | brand |
@@ -498,7 +520,7 @@ Props and nails 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토�
 | Trail Mix | 트레일 믹스; gorp; 견과류 믹스; 하이킹 간식 | US | Gorpcore; 고프코어; 山系; 하이킹; 간식; 아웃도어 | A handful or open zip bag of loose peanuts, almonds, dark raisins and chocolate pieces, small irregular shapes in mixed browns piled on a palm. | item |
 | Cigarette Holder | 담배 홀더; 시가렛 홀더; 긴 담배 파이프; 롱 홀더; 烟嘴 | US | Old Hollywood; 올드 할리우드; 老好莱坞; 글래머; 흡연; 필름 누아르; 소품 | A slim black holder as long as a hand with a cigarette set in its tip, held between two fingers away from the face while a thin curl of smoke rises from the ash. | item |
 | Champagne Coupe | 샴페인 쿠페; 샴페인 쿠프; 쿠페 잔; 쿠프 글라스; 香槟碟形杯; coupe glass | US | Old Hollywood; 올드 할리우드; 老好莱坞; 샴페인; 파티; 글래머; 건배 | A shallow wide-bowled stemmed glass with a flat curved rim, pale gold wine inside and a bright curved highlight along the rim. | item |
-| Martini Glass | 마티니 잔; 마티니 글라스; 칵테일 글라스; 马天尼杯; cocktail glass | US | Old Hollywood; 올드 할리우드; 老好莱坞; 칵테일; 바; 글래머; 소품; Venice Beach Polaroid; 베니스 비치 폴라로이드; road trip light leak; 로드트립 빛샘 | A conical stemmed glass of clear liquid with a skewered olive, its sloping sides catching two thin bright reflection lines. | item |
+| Martini Glass | 마티니 잔; 마티니 글라스; 칵테일 글라스; 马天尼杯; cocktail glass | US | Old Hollywood; 올드 할리우드; 老好莱坞; 칵테일; 바; 글래머; 소품 | A conical stemmed glass of clear liquid with a skewered olive, its sloping sides catching two thin bright reflection lines. | item |
 | Pearl Choker | 진주 초커; 진주 목걸이 초커; 다중 진주 목걸이; 진주 스트랜드; 珍珠颈链; multi-strand pearls | US | Old Hollywood; 올드 할리우드; 老好莱坞; 진주; 목걸이; 글래머; 저녁 | Several tight strands of round white pearls sit snug around the base of the neck, each pearl holding a small soft round highlight. | item |
 | Ostrich Feather Fan | 타조 깃털 부채; 타조 깃털 팬; 깃털 부채; 깃털 팬; 鸵鸟羽毛扇; feather fan | US | Old Hollywood; 올드 할리우드; 老好莱坞; 깃털; 쇼걸; 글래머; 소품 | A large spread fan of soft ostrich plumes on a thin handle, the feather barbs trembling at their edges and holding a faint halo of light. | item |
 | Ribbon Microphone | 리본 마이크; 빈티지 마이크; 클래식 마이크; 옛날 방송 마이크; 铝带麦克风 | US | Old Hollywood; 올드 할리우드; 老好莱坞; 가수; 라디오; 클래식 할리우드; 소품 | A chunky rounded vintage studio microphone with a perforated metal grille and a satin-chrome body, held on a stand at mouth height and catching a long highlight down its curve. | item |
@@ -516,6 +538,8 @@ Props and nails 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토�
 | Cheeseburger | 치즈버거; 더블 치즈버거; 햄버거; double cheeseburger | US | 로드트립 빛샘; Road-Trip Light Leak; 公路旅行漏光; 날짜 각인; 베니스 비치; 밤 | A large cheeseburger in loose paper, melted cheese edging over a tall bun and sauce shining on the lettuce. | item |
 | Leather Suitcase | 가죽 트렁크; 낡은 가죽 여행가방; 가죽 슈트케이스; battered leather suitcase | US | 로드트립 빛샘; Road-Trip Light Leak; 公路旅行漏光; 66번 국도; 모텔; 컬러플러스 | A scuffed brown leather suitcase with brass latches and a worn handle, its corners rubbed pale from years of travel. | item |
 | Photo Book | 포토 북; 포토북; 사진집; 화보집; modern photo book; photography book; art book | US | 서점; 갤러리; 미술관; 뉴욕 쿨 그레이; 맨해튼 쿨 그레이; New York overcast cool grey; 纽约SOHO阴天冷调; 曼哈顿冷灰 | A heavy hardbound photography book with a plain matte cover and crisp corners, carried flat against the chest. | item |
+| Plastic Grocery Bag | 비닐 장바구니; 마트 비닐봉지; 장보기 봉지; shopping bag | US | 장보기; 손; 비닐; 일상 | A thin white plastic bag with twin handles swinging from one hand, the shape of cans and boxes pressing through its sides. | item |
+| Smartphone in Hand | 폰 든 손; 손에 든 폰; phone in hand | US | 휴대폰; 손; 일상; 화면 | A slim phone held in one hand at chest height, its glass screen throwing a small reflection and a faint glow onto the fingers. | item |
 
 ## FR
 
@@ -633,3 +657,10 @@ Props and nails 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토�
 | Parapluie pliant | 파라플뤼 플리앙; 접이식 우산; 작은 접이 우산; folded umbrella; 折叠伞 | FR | 파리 소프트 그레이; 巴黎午后柔灰漫射; Lumière grise de Paris; 비 갠 뒤; 비; 센강 | A short folded umbrella held by its handle, the wet black fabric beaded with rain and dripping from the tips. | item |
 | Gravure ancienne | 그라뷔르 앙시엔; 고판화; 오래된 판화; 헌 판화집; vintage engraving portfolio; 古旧版画 | FR | 파리 소프트 그레이; 巴黎午后柔灰漫射; Lumière grise de Paris; 센강; 헌책 노점; 부키니스트 | A loose portfolio of yellowed engraved prints with deckled edges and faint brown spotting. | item |
 | Livre relié | 리브르 르리에; 양장본; 두꺼운 양장 책; thick hardcover; 精装书 | FR | 파리 소프트 그레이; 巴黎午后柔灰漫射; Lumière grise de Paris; 팡테옹; 철학; 책 | A thick cloth-bound hardcover with a dark spine and a gold-stamped band, heavy enough to hug flat against the chest. | item |
+| Sac à dos | 삭 아 도 | FR | 백팩; 어깨; 일상; 배낭 | A soft canvas or nylon pack with two shoulder straps and a front pocket, slightly slouched from its contents. | item |
+| Sac bandoulière | 삭 방둘리에르; 사선 가방 | FR | 크로스백; 가방끈; 일상; 어깨 | A small leather bag on a long strap crossing the chest diagonally and resting on the opposite hip. | item |
+| Gourde | 구르드; 물통; water bottle | FR | 물통; 스테인리스; 일상; 손 | A dented steel water flask with a screw cap and a small carrying loop, held by the neck in one hand. | item |
+| Gobelet en carton | 고블레 앙 카르통; 종이컵; paper cup | FR | 커피; 테이크아웃; 종이컵; 손 | A paper take-out cup with a plastic lid held in one hand at chest height, a thin wisp of steam rising. | item |
+| Écouteurs filaires | 에쿠퇴르 필레르; 줄 이어폰; wired earphones | FR | 이어폰; 음악; 귀; 코드 | White earbuds sit in the ears with the cord looping over the shoulder into a coat pocket. | item |
+| Sac de boulangerie | 삭 드 불랑제리 | FR | 빵; 종이봉투; 일상; 손 | A thin kraft-paper bag from the bakery, the top folded over and a baguette tip poking out of one end. | item |
+| Livre de poche | 리브르 드 포슈; 페이퍼백 | FR | 책; 문고본; 손; 일상 | A small paperback with a creased spine and soft curled corners, held open in one hand or pressed against the chest. | item |

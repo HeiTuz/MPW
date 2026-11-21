@@ -51,7 +51,7 @@ Style 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다. 
 | 프렌치 빈티지 | 프렌치 코티지; French vintage | KR | 서정적; 봄여름; 시골 집; 빈티지 계열 | Tiny-floral pale-yellow cotton slip dress in a sunlit white-curtain room, softly faded like a vintage find. | look |
 | 街拍 | 스트릿 스냅; 스냅 사진; street snap | KR | 자연스러움; 낮; 거리; 스냅; 계열:스트릿; 아이폰 원본 셀카; 아이폰 셀카; iPhone native selfie | Candid street frame with the subject caught mid-step against a plain urban backdrop in available light. | look |
 | 白衬衫 | 화이트 셔츠; 흰 셔츠; white shirt; 白衬衫领口 | KR | 출근룩; 미니멀; 반사광; 턱선 | A white shirt collar reflects soft light up under the chin and sharpens the jaw line. | item |
-| 浅灰羊绒 | 카시미어 니트; 그레이 니트; cashmere knit; 灰色针织 | KR | 가을; 그레이; 니트; 차분함 | A pale grey cashmere sweater blends in a fine grey scale with cool, pale skin. | item |
+| 浅灰羊绒 | 카시미어 니트; 그레이 니트; cashmere knit; 灰色针织 | KR | 가을; 그레이; 니트; 차분함 | A pale grey cashmere sweater blends in a fine grey scale under cool, clean light. | item |
 | 트렌치코트 | 风衣; trench coat; 트렌치; 风衣领口 | KR | 이른 봄; 바람; 한강; 아우터 | A trench coat collar lifted slightly by a cold spring wind. | item |
 | 울 숄 | 羊毛披肩; wool shawl; 울 케이프; 粗羊毛 | KR | 겨울; 따뜻함; 거친 직물; 포근함; 서울 카페 웜톤; 서울 카페 웜톤 확산광; 웜톤 확산광; 首尔咖啡馆与居家暖调漫射 | Coarse beige wool pressed to the cheek against very smooth skin. | item |
 | 아이돌 무대의상 | 무대의상; 타가복; 打歌服; idol stage costume; K-POP 스테이지 | KR | 화려함; 사계절; 음악방송; 아이돌 계열 | Sparkling rhinestone-studded matching stage outfit with pleats and sequins flashing hard in bright backlit spotlights. | look |
@@ -161,13 +161,13 @@ Style 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다. 
 | 机能风 | 机能; 지넝펑; 테크웨어; 테크 웨어; techwear | CN | 기능적; 블랙; 도시; 밤 | Black utility layers with zip pockets, adjustable straps and matte technical shells, with buckles catching cold street light. | look |
 | 爱豆私服 | 아이돌 사복; 아이돌 사복룩; 아이돌 사복 룩; idol off-duty look | CN | 캐주얼; 아이돌; 일상; 미니멀 | Plain off-duty idol dressing of oversized hoodies, caps and simple sneakers with minimal accessories and a tidy, low-key finish. | look |
 | 电影感 | 시네마틱; 영화 같은 분위기; 영화감; cinematic | CN | 영화; 분위기; 필름; 저녁 | A film-still feel with muted contrast, slight grain, wide-aperture falloff and a composed, story-like frame. | look |
-| 梦核 | 몽핵; 드림코어; 드림 코어; dreamcore; 드림코어 룩 | CN | 몽환; 그리움; 흐림; 파스텔; 古早DV梦核; 古早DV; 梦核; 夢核; 低保真录像带; 몽핵; 드림코어; 올드 DV; 폴라로이드 빛샘; 유통기한 지난 필름; 과기필름; 古早胶片 | A faded, hazy frame with bloom around highlights, soft low-saturation pastels and empty familiar spaces that feel half-remembered. | look |
+| 梦核 | 몽핵; 드림코어; 드림 코어; dreamcore; 드림코어 룩 | CN | 몽환; 그리움; 흐림; 파스텔; 폴라로이드 빛샘; 유통기한 지난 필름; 과기필름; 古早胶片 | A faded, hazy frame with bloom around highlights, soft low-saturation pastels and empty familiar spaces that feel half-remembered. | look |
 | 千禧风 | 千禧; 千禧年风; Y2K; 와이투케이; 치엔시펑; 千禧年 | CN | 복고; 2000년대; 컬러; 트렌디 | Early-2000s Chinese-internet fashion with candy colors, metallic pieces, butterfly clips, glossy lips and chrome accents. | look |
 | 解构 | 解构主义; 先锋解构; 해체주의; 해체주의 룩; 디컨스트럭티드; deconstructed | CN | 아방가르드; 비대칭; 모노톤; 전시; 当代美术馆冷光极简; 当代美术馆冷光; 美术馆冷光; 冷光极简; 현대 미술관 냉광 미니멀; 미술관 냉광 미니멀; 미술관 냉광; 냉광 미니멀 | Garments with off-center closures, uneven hems, exposed seams and drapes that fall asymmetrically in plain dark fabric. | look |
-| 港风 | 港风复古; 香港复古; 홍콩 감성; 홍콩풍; 항풍; 홍콩 레트로; HK retro; Hong Kong style; Hong Kong 90s; 홍콩 90년대 | CN | 홍콩; 90년대; 복고; 필름 | Nineties Hong Kong cinema styling in saturated red and black with padded shoulders, velvet and satin, lit warm and slightly grainy. | look |
+| 港风 | 港风复古; 香港复古; 홍콩 감성; 홍콩풍; 항풍; 홍콩 레트로; HK retro; Hong Kong style; Hong Kong 90s; 홍콩 90년대 | CN | 홍콩; 90년대; 복고; 필름 | Nineties Hong Kong cinema styling in saturated red and black with padded shoulders, velvet and satin, lit warm with a soft film texture. | look |
 | 花样年华 | 화양연화; 화양연화 감성; In the Mood for Love | CN | 홍콩; 복고; 영화; 애수 | Fitted floral cheongsams, warm tungsten glow in cramped stairwells and corridors, deep shadows and slow, restrained film color. | look |
 | 重庆森林 | 중경삼림; 중경삼림 감성; Chungking Express | CN | 홍콩; 90년대; 영화; 밤 | Handheld frames with step-printed motion smear, vivid saturated color and fluorescent light in narrow snack bars and streets. | look |
-| 春光乍泄 | 춘광사설; Happy Together; 해피 투게더 | CN | 영화; 필름; 향수; 노을 | Yellowed nostalgic film color with burnt-gold highlights and brown shadows, cutting between saturated color and grainy monochrome. | look |
+| 春光乍泄 | 춘광사설; Happy Together; 해피 투게더 | CN | 영화; 필름; 향수; 노을 | Yellowed nostalgic film color with burnt-gold highlights and brown shadows, cutting between saturated color and rough monochrome. | look |
 | 堕落天使 | 타락천사; 타락천사 감성; Fallen Angels | CN | 영화; 홍콩; 밤; 왜곡 | Ultra-wide lens close to faces, stretched edges, motion smear and high-contrast neon night color. | look |
 | 阿飞正传 | 아비정전; 아비정전 감성; Days of Being Wild | CN | 영화; 홍콩; 60년대; 녹색 | Muted green-tinted interiors, humid low light and 1960s Hong Kong styling with soft waved hair and slim tailored shapes. | look |
 | 王家卫 | 왕가위; 王家衛; Wong Kar-wai; Wong Kar Wai; 왕가위 감성; 왕가위 스타일; WKW look | CN | 홍콩; 영화; 감성; 네온 | Saturated neon and green-tinted light, slow-shutter motion smear and tight frames through doorways, with a lone still figure amid the blur. | person-style |
@@ -263,7 +263,7 @@ Style 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다. 
 | 銀座令嬢 | 긴자 레이조; 긴자 영애; ginza ojousama; 긴자 아가씨; 令嬢 | JP | 우아; 럭셔리; 도시; 클래식; 日系Provia; 高保真Provia; Provia; 프로비아; プロビア; Astia; 아스티아; アスティア; リバーサルフィルム | Polished upper-class elegance with glossy large waves, refined ladylike tailoring and soft satin-lit skin. | look |
 | ロリータ | 로리타; Lolita fashion; 洛丽塔; ロリィタ | JP | 로리타; 프릴; 레이스; 인형; 도쿄; 스타일 | Doll-like Japanese fashion with layered frills, lace and ribbon in soft pastel tones, worn by adults as a stylised look. | look |
 | Gothic Lolita | 고딕 로리타; ゴシックロリータ; 哥特洛丽塔; 고스로리; ゴスロリ | JP | 고딕; 로리타; 블랙; 레이스; 도쿄; 스타일; 하라주쿠 | A black, lace-heavy dress style with a high ruffled collar, a laced bodice, puffed sleeves and a stiff bell-shaped skirt. | look |
-| ゴスロリ | 고스로리; 고딕 로리타; gothic lolita; gosu rori; ゴシックロリータ | JP | 고딕; 클래식; 블랙; 인형 | Porcelain-doll gothic styling with black spiral-rolled hair under a lace headdress, deathly pale matte skin and a deep berry lip. | look |
+| ゴスロリ | 고스로리; 고딕 로리타; gothic lolita; gosu rori; ゴシックロリータ | JP | 고딕; 클래식; 블랙; 인형 | Porcelain-doll gothic styling with black spiral-rolled hair under a lace headdress, a deathly pale matte base and a deep berry lip. | look |
 | Gothic & Lolita Bible | 고딕 앤 로리타 바이블; Gothic and Lolita Bible; 고스로리 바이블; GLB | JP | 고딕; 잡지; 로리타; 클래식 | The doll-like Gothic-Lolita magazine style of corseted dark romantic looks with ringlet hair. | brand |
 | 成人式 | 세이진시키; 성인식; coming of age day; seijin shiki; 成人式アップ | JP | 일본; 축제; 겨울; 기모노 | Festive formal styling in multi-layered braided updos dressed with dried flowers and gold ears of wheat, bright apricot makeup. | place |
 | 塩顔 | 시오가오; 솔트 페이스; salt face; salt girl cool | JP | 담백; 쿨; 미니멀; 도시 | A clean, understated look: minimal makeup, even skin, cool unsmiling expression and a slightly off-camera gaze. | look |
@@ -283,18 +283,18 @@ Style 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다. 
 | 初恋感 | 初恋; 첫사랑 무드; first-love mood | JP | 첫사랑; 청순; 리본; 화이트; 수줍음 | Gentle first-love mood with white fabrics, small ribbon accents and soft, warm light. | look |
 | 微诱 | 微诱惑; 은은한 유혹; subtly alluring; ほんのり色気 | JP | 은근; 관능; 성숙; 레이스; 무드 | Understated alluring styling with lace trim, sheer fabric and softly shadowed contours. | look |
 | 甘欲 | 甘欲風; 달콤한 관능; sweet-sultry; 甘辛 | JP | 달콤; 관능; 리본; 핑크; 무드 | Sweet styling with bows and soft pink tones combined with a sultry, lowered gaze. | look |
-| 純欲 | 纯欲; 清纯欲; 순욕; pure-desire look; pure desire style; 纯欲风 | JP | 순욕; 청순; 관능; 화이트 레이스; 무드; 일본풍; 화보; 유혹 | Soft innocent styling in oversized knitwear or hoodie with bare knees and an upward glance, warm skin tones and dreamy light. | look |
+| 純欲 | 纯欲; 清纯欲; 순욕; pure-desire look; pure desire style; 纯欲风 | JP | 순욕; 청순; 관능; 화이트 레이스; 무드; 일본풍; 화보; 유혹 | Soft innocent styling in oversized knitwear or hoodie with bare knees and an upward glance, warm tones in the skin highlights and dreamy light. | look |
 | 七五三アレンジ | 시치고산 어레인지; 시치고산 스타일; 七五三ヘア; 시치고산 헤어 | JP | 축제; 전통; 모던; 귀여움; 붉은색; 아동·학생 | A festive Japanese celebration look of twin hair buns wound with red and gold cord, a straight fringe and round vermilion-red cheeks. | look |
 | モダン和カワイイ | 모던 와카와이; 와풍 귀여움; modern wa-kawaii; 일본풍 큐트 | JP | 와풍; 귀여움; 모던; 축제 | A playful modern take on traditional Japanese festive style, mixing red and gold cord details, round buns and bright rosy cheeks. | look |
 | ポップジャパネスク | 팝 재패네스크; 팝 일본풍; pop Japanesque; 팝 와풍 | JP | 팝; 일본풍; 축제; 컬러풀 | A bright pop reinterpretation of Japanese motifs: saturated reds and golds, graphic cord knots and cheerful festival colour. | look |
-| 祇園風雅 | 기온 후가; 교토 기온 감성; Gion elegance; 기온풍 | JP | 교토; 전통; 우아함; 와풍 | A refined Kyoto geisha-quarter mood with pale skin, silver hair ornament, soft red accents and teahouse or paper-screen settings. | look |
+| 祇園風雅 | 기온 후가; 교토 기온 감성; Gion elegance; 기온풍 | JP | 교토; 전통; 우아함; 와풍 | A refined Kyoto geisha-quarter mood with a white-powder base, silver hair ornament, soft red accents and teahouse or paper-screen settings. | look |
 | 現代芸妓ニュアンス | 현대 게이샤 뉘앙스; 모던 게이코; modern geiko nuance; 현대 예기 스타일 | JP | 게이샤; 교토; 모던; 전통 | A contemporary reading of Kyoto geiko styling: pale base, soft red accents and long black hair worn with a single ornament. | look |
 | 純欲透明感 | 준요쿠 투명감; 청순 섹시 투명감; pure-desire clarity; 순욕 투명감 | JP | 청순; 투명감; 관능; 수광 | A luminous, translucent-skinned portrait style with soft light, glossy lips and a faintly flushed face. | look |
 | 初恋ピュア | 첫사랑 퓨어; 첫사랑 순수; first-love pure look; 첫사랑 스타일 | JP | 첫사랑; 청순; 투명감; 일본 | A soft, clean look of airy bangs, clear skin, pale pink cheeks and a gentle, natural expression. | look |
 | メンヘラ | 멘헤라; 멘헤라 스타일; menhera style; 멘헤라 감성 | JP | 서브컬처; 지뢰계; 다크; 핑크블랙 | A fragile, tearful-looking style with reddened eye area, dark hair in twin tails and pink-black accents. | look |
 | ドーリー | 돌리; 인형 같은 스타일; dolly style; 인형풍 | JP | 인형; 소녀; 달콤; LARME | A doll-like sweet look with round eyes, rosy cheeks, soft curls and ribbon or lace details. | look |
 | ドーリー甘め | 달콤 돌리; 돌리 스위트; sweet dolly; 달달한 인형풍 | JP | 인형; 달콤; 핑크; 소녀 | A sugary pink doll style with strawberry-toned makeup, soft waves and ruffled or ribboned accessories. | look |
-| お嬢様ドーリー | 오죠사마 돌리; 아가씨 인형풍; ojousama dolly; 아가씨 돌리 | JP | 아가씨; 인형; 클래식; 리본 | A well-bred doll look of ribbon half-up hair, pale powdery skin and soft pink touches. | look |
+| お嬢様ドーリー | 오죠사마 돌리; 아가씨 인형풍; ojousama dolly; 아가씨 돌리 | JP | 아가씨; 인형; 클래식; 리본 | A well-bred doll look of ribbon half-up hair, a pale powdery base and soft pink touches. | look |
 | ガーリー | 걸리; 걸리시; girly style; 걸리 스타일 | JP | 걸리시; 소녀; 달콤; 핑크 | A soft, feminine styling of pastel colours, curls, ribbons and glossy pink lips. | look |
 | 王道ガーリー | 정석 걸리; 클래식 걸리시; classic girly; 오도 걸리 | JP | 걸리시; 정석; 달콤; CanCam | A classic sweet-feminine look of long soft curls, rosy makeup and pink or milk-tea tones. | look |
 | 甘酸っぱいガーリー | 새콤달콤 걸리시; 상큼 걸리; sweet-sour girly; 달콤새콤 걸리시 | JP | 걸리시; 상큼; 달콤; 딸기; 핑크 | A fresh strawberry-pink girly look with rosy cheeks, curled lashes and a juicy lip. | look |
@@ -380,7 +380,7 @@ Style 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다. 
 | Boho | 보호; 보헤미안; 보헤미안 룩; 보헤미안 시크; 보호 시크; boho chic; bohemian | US | 자유로움; 프린지; 페스티벌; 여름 | Loose flowing fabrics in earth tones with fringe, crochet, woven textiles and layered jewelry in warm dusty light. | look |
 | Festival Chic | 페스티벌 시크; 페스티벌룩; 페스티벌 룩; 페스티벌 패션; festival fashion | US | 페스티벌; 여름; 글리터; 보헤미안 | Layered, embellished outfits with sparkle, fringe and metallic details that catch low sun and stage lights. | look |
 | Hippie | 히피; 히피 룩; 우드스탁 룩; 우드스탁; woodstock style; Woodstock Revival | US | 70년대; 자유로움; 타이다이; 빈티지 | Earth-toned tie-dye, frayed denim, flowing prints and layered beads or silver chains in a loose, sun-faded style. | look |
-| 70s Revival | 70s 리바이벌; 70년대 복고; 70년대 룩; seventies revival | US | 70년대; 복고; 따뜻한 톤; 빈티지 | Flared denim, wide collars and earthy browns, mustard and orange with a warm, sun-faded, slightly grainy cast. | look |
+| 70s Revival | 70s 리바이벌; 70년대 복고; 70년대 룩; seventies revival | US | 70년대; 복고; 따뜻한 톤; 빈티지 | Flared denim, wide collars and earthy browns, mustard and orange with a warm, sun-faded, slightly dusty cast. | look |
 | Psychedelic | 사이키델릭; 사이키델릭 룩; 70년대 사이키델릭; psychedelic style | US | 70년대; 원색; 화려함; 페스티벌 | Swirling orange, magenta and turquoise prints in high-contrast saturated color with a warm glow. | look |
 | Beat Generation | 비트 세대; 비트 제너레이션; 비트닉; beatnik | US | 50년대; 문학; 반항; 흑백 | Black turtlenecks, slim trousers and dark sunglasses with a worn bohemian edge in dim, smoky café light. | look |
 | Grunge | 그런지; 그런지 룩; 그런지룩; 90년대 그런지; 시애틀 그런지; 90s grunge; グランジ; Grunge Aesthetic; Seattle Grunge | US | 90년대; 빈티지; 어두운 톤; 락 | Oversized flannel, faded band tees, ripped denim and worn boots in black, charcoal and dark red, layered loosely with a lived-in finish. | look |
@@ -420,16 +420,16 @@ Style 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다. 
 | Awards Season Glamour | 시상식 글래머; 어워즈 시즌 | US | 레드카펫; 파우더룸; 밤 | Sparkling gowns checked in a mirror, bright vanity bulbs and soft candid framing. | look |
 | Beverly Hills Chic | 비버리힐스 시크; 비버리힐스 룩; LA glam; 할리우드 명사 룩; paparazzi proof glam | US | 고급; 도시; 낮; 글램 | A glossy polished luxury look of oversized shades, structured accessories and sleek hair under bright hard sunlight. | look |
 | Beverly Hills Y2K | 베벌리힐스 Y2K; 베벌리 힐스 밀레니얼; Rodeo Drive Y2K | US | Y2K; 핑크; 쇼핑; LA | Hot-pink velour sets, big sunglasses and mirror-bright shopfronts in hard sunshine. | look |
-| Boho Coastal | 보호 코스탈; 보헤미안 해변; 보헤미안 코스탈; bohemian coastal; boho beach | US | 보헤미안; 해변; 여름; 자유로운; 내추럴; Venice Beach Polaroid; 베니스 비치 폴라로이드; road trip light leak; 로드트립 빛샘 | Relaxed beach styling with loose waves, earthy lip color, natural fabrics, and bright sunlit surfaces of sand and wood. | look |
+| Boho Coastal | 보호 코스탈; 보헤미안 해변; 보헤미안 코스탈; bohemian coastal; boho beach | US | 보헤미안; 해변; 여름; 자유로운; 내추럴 | Relaxed beach styling with loose waves, earthy lip color, natural fabrics, and bright sunlit surfaces of sand and wood. | look |
 | Boho Freedom | 보호 프리덤; 보헤미안 자유; 보호 무드; Boho Spiritual | US | 보헤미안; 페스티벌; 석양; 자유; 야외 | Loose sun-warmed festival layers, unstyled hair and an easy, free posture in late golden light. | look |
 | Boston Brahmin | 보스턴 브라만; 뉴잉글랜드 헤리티지 | US | 클래식; 가을; 벽돌 | Navy wool coat, sturdy leather bag and aged red brick with cool gas-lit tones. | look |
 | Bridal romance | 브라이덜 로맨스; 웨딩 룩; bridal; 해변 웨딩 | US | 웨딩; 해변; 화이트; 펄 | White silk bridal dresses with open backs and pearl details, airy and bright in soft daylight. | look |
 | Brooklyn Indie | 브루클린 인디; 윌리엄스버그 인디 | US | 인디; 로프트; 벽돌; 뉴욕 | Exposed brick, wood beams and worn wool in an artist's workspace with soft north light. | look |
 | Brutalist Industrial Chic | 브루탈리스트 인더스트리얼; 콘크리트 갤러리 | US | 모노크롬; 갤러리; 아침; 콘크리트 | Bare poured concrete walls and floors with a single narrow window of cool daylight and a monochrome wardrobe. | look |
 | Bubblegum Pop | 버블검 팝; 버블검 핑크 | US | 핑크; 팝; Y2K | Saturated pink, glossy plastic accessories and playful bright light. | look |
-| California Coastal | Cali coast; coastal California; 캘리포니아 해안; 캘리 감성; 서해안 | US | 해안; 황금빛; 느긋함; 바다 | Warm low sun over a calm blue ocean, salt haze and golden skin tones. | look |
+| California Coastal | Cali coast; coastal California; 캘리포니아 해안; 캘리 감성; 서해안 | US | 해안; 황금빛; 느긋함; 바다 | Warm low sun over a calm blue ocean, salt haze and a golden glow on the skin. | look |
 | California Organic Minimalism | 캘리포니아 오가닉 미니멀리즘; 캘리포니아 미니멀 | US | 미니멀; 오가닉; 아침; 캘리포니아 | Pale oak, matte microcement and potted greenery under bright milky window light, with a restrained cream and sage palette. | look |
-| California sun-drenched | 캘리포니아 선드렌치; 캘리포니아 룩; 캘리포니아 감성; West Coast; 웨스트코스트 | US | 캘리포니아; 햇살; 여름; 해변 | Warm golden sunlight on denim, tan skin tones and open-road beach scenery. | look |
+| California sun-drenched | 캘리포니아 선드렌치; 캘리포니아 룩; 캘리포니아 감성; West Coast; 웨스트코스트 | US | 캘리포니아; 햇살; 여름; 해변 | Warm golden sunlight on denim, a warm glow on the skin and open-road beach scenery. | look |
 | Cinematic Wild West | 시네마틱 와일드 웨스트; 서부극 룩 | US | 서부; 영화; 먼지 | Dust hanging in warm light over saloon doors, worn leather and sun-faded wood. | look |
 | Conch Republic | 콘치 리퍼블릭; 콘크 리퍼블릭 | US | 섬; 카리브; 일몰 | Faded Hawaiian shirts, straw hats and bright turquoise water with a relaxed island feel. | look |
 | Cricket Core | 크리켓 코어; 크리켓 스웨터; 크리켓룩; cricket sweater | US | 프레피; 니트; 흰색; 가을; 스포티 | A cream cable-knit V-neck sweater with navy and red stripes at the neckline, worn over a pleated tennis skirt. | look |
@@ -487,11 +487,11 @@ Style 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다. 
 | Uptown Chic | 업타운 시크; 어퍼이스트 룩; uptown style | US | 클래식; 트위드; 고급스러움; 가을; 도시 | A salt-and-pepper tweed collarless jacket with fluid high-waisted trousers in a restrained classic palette. | look |
 | Varsity | 바시티; 바시티 룩; 바시티 스타일; varsity style | US | 캠퍼스; 스포티; 빈티지; 가을; 야구 | A wool-body baseball jacket with leather sleeves, striped ribbing and a chest letter patch in school colours. | look |
 | Venice Beach Grunge | 베니스 비치 그런지; 베니스비치 그런지 | US | 그런지; 해변; 반항; 낮; 캘리포니아; Venice Beach Polaroid; 베니스 비치 폴라로이드; road trip light leak; 로드트립 빛샘 | Sun-bleached, slightly rumpled beach-town grit in faded tees and worn denim, with a direct challenging gaze. | look |
-| Venice Street Culture | Venice skate culture; venice scene; 베니스 문화; 베니스 스트리트; LA 해변 문화 | US | 그래피티; 스케이트; 해변; 여름; Venice Beach Polaroid; 베니스 비치 폴라로이드; road trip light leak; 로드트립 빛샘 | Spray painted walls, graffiti murals, skateboards and relaxed beach clothes in bright sun. | look |
+| Venice Street Culture | Venice skate culture; venice scene; 베니스 문화; 베니스 스트리트; LA 해변 문화 | US | 그래피티; 스케이트; 해변; 여름 | Spray painted walls, graffiti murals, skateboards and relaxed beach clothes in bright sun. | look |
 | West Hollywood Nightlife | 웨스트 할리우드 나이트라이프; WeHo 나이트 | US | 클럽; 밤; 벨벳 | Deep red velvet, gold mirrors and dim, golden-glowing party light. | look |
 | Wild Florida | 와일드 플로리다; 야생 플로리다 | US | 습지; 자연; 사파리 | Khaki safari wear, sweat-damp air and tangled mangrove roots in hot soft sun. | look |
 | Y2K Disco | Y2K 디스코; 디스코룩; 디스코 룩; disco look | US | 글리터; 금속; 2000년대; 페스티벌; 밤 | A metallic chain-mail halter top with low-slung flared jeans, reflecting coloured stage light. | look |
-| Y2K Snapshot | Y2K 스냅; 밀레니엄 스냅; 千禧年代; 2000년대 감성 스냅 | US | 2000년대; 플래시; 레트로; 파티; Venice Beach Polaroid; 베니스 비치 폴라로이드; road trip light leak; 로드트립 빛샘 | A grainy early-2000s party snapshot with hard flash, saturated color and neon signs behind. | look |
+| Y2K Snapshot | Y2K 스냅; 밀레니엄 스냅; 千禧年代; 2000년대 감성 스냅 | US | 2000년대; 플래시; 레트로; 파티; Venice Beach Polaroid; 베니스 비치 폴라로이드; road trip light leak; 로드트립 빛샘 | An early-2000s party snapshot with a rough digital look, hard flash, saturated color and neon signs behind. | look |
 | Yellowstone Ranching | 옐로스톤 랜칭; 옐로스톤 목장; Yellowstone | US | 서부; 목장; 가을 | Worn denim, felt hat and a leather saddle with river valley light and dust in the air. | look |
 | Hemingway Americana | 헤밍웨이 아메리카나; 헤밍웨이 | US | 섬; 해변; 복고 | Worn linen shirt and deck shoes against a white clapboard porch and bright sea. | person-style |
 | 爱德华巴洛克 | 에드워디언 바로크; Edwardian Baroque | US | 바로크; 장식; 석재; 호텔 | Heavy carved stone, columns and gilt trim dominate the interior, with warm light running over the rich ornament. | look |
@@ -499,7 +499,7 @@ Style 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다. 
 | Naomi Campbell | 나오미 캠벨; 나오미 캠벨 스타일; Naomi Campbell 90s | US | 90년대; 슈퍼모델; 런웨이; 브론즈; 글램 | 1990s runway-supermodel styling with a full, sculpted blowout, contoured bronze-toned makeup and confident high-fashion lighting. | person-style |
 | Bella Hadid Y2K | 벨라 하디드; 벨라 하디드 Y2K; 벨라 하디드 스타일; Bella Hadid Y2K chic | US | Y2K; 슈퍼모델; 사이버; 패션위크; 미니멀 | Y2K-inspired model styling with sleek pulled-back hair, frosty makeup and a futuristic runway feel. | person-style |
 | Britney 2000s Pop | 브리트니; 2000s 팝; 브리트니 스피어스 스타일; Britney 2000s; 2000s pop star | US | 2000년대; 팝; Y2K; 글리터; 무대 | Late-1990s and 2000s pop-stage styling with glossy straight or high-tied hair, shimmering makeup and bright stage lighting. | person-style |
-| Americana Radiance | 아메리카나 래디언스; Genuine Joy; 미국식 환한 무드; Sunny Girl; California Pop; 캘리포니아 팝 | US | 밝음; 활기; 낮; 미국; 명랑 | Open, high-energy joy that reads in the whole face: bright eyes, lifted cheeks, warm skin tones under direct daylight. | look |
+| Americana Radiance | 아메리카나 래디언스; Genuine Joy; 미국식 환한 무드; Sunny Girl; California Pop; 캘리포니아 팝 | US | 밝음; 활기; 낮; 미국; 명랑 | Open, high-energy joy that reads in the whole face: bright eyes, lifted cheeks, warm daylight color on the cheeks under direct sun. | look |
 | Coachella Sass | 코첼라 새스; Festival Rocker; 페스티벌 록커; Rock-and-Roll Rebellious; 록앤롤 반항 | US | 페스티벌; 록; 반항; 여름; 장난 | Festival-field rebel attitude: playful dare in the eyes, dusty afternoon sun, loose messy hair. | look |
 | Speakeasy Noir | 스피크이지 누아르; Speakeasy Glamour; 스피크이지; Cocktail Glass Shielding Lips; Modern Noir | US | 밤; 바; 누아르; 글래머; 실내 | Dim bar with warm tungsten pools, a glass held in front of the lips and eyes lit from below. | look |
 | Athleisure Morning Run | 애슬레저 모닝런; 晨跑中途稍歇; Morning Run Respite; Crisp Vitality; Morning Discipline | US | 아침; 운동; 클린; 야외; 활기 | Pausing after a run, breathing visibly in cool morning air, flushed cheeks and a focused clear gaze. | look |
@@ -514,7 +514,7 @@ Style 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다. 
 | Spanish Colonial Revival | 스패니시 콜로니얼 리바이벌; 스페니시 콜로니얼; 스패니시 리바이벌 | US | 지중해; 정원; 오전; 산타바바라 | White plaster walls, red clay roof tiles, wrought-iron and a citrus tree casting hard-edged sun shadows on a tiled patio. | look |
 | American Riviera | 아메리칸 리비에라; 산타바바라 리비에라 | US | 해안; 지중해; 오전 | Sun-bleached stucco, terracotta and deep blue sky over a calm coastline. | look |
 | Century City Modernism | 센추리 시티 모더니즘; 센추리 시티 | US | 모던; 유리; 스파; 낮 | Steel-framed glass walls, planted terraces and shimmering water in bright, cool light. | look |
-| Palm Springs Modernism | 팜스프링스 모더니즘; 팜 스프링스 모던 | US | 휴양; 복고; 수영장; 파스텔; Venice Beach Polaroid; 베니스 비치 폴라로이드; road trip light leak; 로드트립 빛샘 | Flat-roof houses, breeze-block screens, a still turquoise pool and strong sun under dry mountains. | look |
+| Palm Springs Modernism | 팜스프링스 모더니즘; 팜 스프링스 모던 | US | 휴양; 복고; 수영장; 파스텔 | Flat-roof houses, breeze-block screens, a still turquoise pool and strong sun under dry mountains. | look |
 | Montana Big Sky | 몬태나 빅스카이; 빅 스카이 | US | 목장; 카우보이; 서부; 낮 | Huge cloud-filled sky over rolling grassland with a rider and horse small in the frame. | look |
 | Navajo Sandstone | 나바호 샌드스톤; 나바호 사암 | US | 사암; 사막; 곡선 | Smooth swirling red-orange rock with sculpted curves and warm bounce light. | look |
 | Pueblo Revival | 푸에블로 리바이벌; 푸에블로 리바이벌 모던 | US | 토담; 남서부; 따뜻한; 산타페 | Rounded adobe walls in ochre, wood beam ends and turquoise doors under strong dry sun. | look |
@@ -542,7 +542,7 @@ Style 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다. 
 | Gulf Coast Serenity | 걸프 코스트 세레니티; 걸프 코스트 | US | 명상; 일몰; 해변 | Pastel pink and blue dusk over a flat calm sea with a quiet figure on the sand. | look |
 | Bowtie Motif | 보타이 모티프; 보우타이 모티프 | US | 건축; 복고; 마이애미 | A curving, symmetric bowtie shape repeated in floor and ceiling pattern, glossy and playful. | look |
 | California Golden Hour | 加州 골든아워; 加州黄金时刻; 加州落日; 캘리포니아 골든아워; 캘리 골든아워; Cali golden hour; 캘리포니아 낙조 | US | 加州 골든아워; 캘리포니아 골든아워; California golden hour; 포트라; 역광; 낙조; 해안 | Low Pacific sun behind the figure, gold-edged hair, warm haze, sun-warmed skin and loose natural movement in the wind. | look |
-| Portra Natural Light | 포트라 내추럴 라이트; 포트라 자연광; Portra soft light; 柯达Portra 自然柔光 | US | 柯达Portra 400; 柯达Portra400人像传奇; 코닥 포트라 400; 포트라 400; Kodak Portra 400; Portra 400; 자연광; 창가; 열린 그늘; 흐린 날; 복숭아빛 피부 | Warm peach skin, creamy highlights and low-contrast pastel color under soft window, shade or overcast daylight, shot on Kodak Portra 400. | look |
+| Portra Natural Light | 포트라 내추럴 라이트; 포트라 자연광; Portra soft light; 柯达Portra 自然柔光 | US | 柯达Portra 400; 柯达Portra400人像传奇; 코닥 포트라 400; 포트라 400; Kodak Portra 400; Portra 400; 자연광; 창가; 열린 그늘; 흐린 날; 복숭아빛 피부 | Warm peach tones in the skin, creamy highlights and low-contrast pastel color under soft window, shade or overcast daylight, shot on Kodak Portra 400. | look |
 | Venice Beach Polaroid | 베니스 비치 폴라로이드; 베니스 비치 즉석사진; Venice Beach instant film; 威尼斯海滩拍立得; 威尼斯海滩拍立得与公路旅行漏光 | US | 베니스 비치 폴라로이드; Venice Beach Polaroid; 威尼斯海滩拍立得; 폴라로이드 SX-70; 즉석사진; 흰 테두리; 해변 | Sun-bleached beach-town snapshots on white-bordered instant prints, with creamy highlights, saturated reds and blues and unguarded laughter under hard sun. | look |
 | Road-Trip Light Leak | 로드트립 빛샘; 로드트립 라이트 리크; road trip light leak; 公路旅行漏光; 卷末过卷漏光 | US | 로드트립 빛샘; Road-Trip Light Leak; 公路旅行漏光; 威尼斯海滩拍立得与公路旅行漏光; 롤 끝 번; 컨버터블; 1번 국도 | A coast-road snapshot where stray light from the camera back or the end of the roll burns red, orange and yellow across one side of the frame and over her hair. | look |
 
@@ -558,7 +558,7 @@ Style 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다. 
 | Provençal | 프로방스; 프로방스 룩; 프로방스 스타일; provencal; Provence style | FR | 여름; 전원; 린넨; 남프랑스; 남프랑스 한여름 과노출; 南法盛夏过曝; Soleil du Midi | Undyed and ochre linen, small floral prints, woven baskets and straw hats in dusty warm light on pale stone. | look |
 | Art Déco | 아르데코; 아르 데코; Art Deco; Années folles; 아네 폴; 1920년대 파리 | FR | 1920년대; 기하학; 황동; 장식 | Geometric ornament, polished brass, black-and-gold lines and strict symmetry with beaded, dropped-waist 1920s shapes. | look |
 | Impressionnisme | 인상주의; 인상파; 인상파 회화; impressionism; Impressionist Parisian; 인상파 파리지앵 | FR | 회화; 빛; 파스텔; 야외 | Soft broken brushwork-like color, sunlight dabbed across the scene and edges dissolving into warm and cool patches of light. | look |
-| Nouvelle Vague | 누벨바그; 누벨 바그; 프렌치 뉴웨이브; French New Wave; 新浪潮; 法国新浪潮 | FR | 60년대; 영화; 흑백; 파리 | Handheld street realism in natural light with grainy high-contrast film and offhand, spontaneous framing. | look |
+| Nouvelle Vague | 누벨바그; 누벨 바그; 프렌치 뉴웨이브; French New Wave; 新浪潮; 法国新浪潮 | FR | 60년대; 영화; 흑백; 파리 | Handheld street realism in natural light with high-contrast black-and-white film and offhand, spontaneous framing. | look |
 | Flâneur | 플라뇌르; flaneur; flânerie; 플라네리; 산책자; 도시 산책자; Modern Flâneur; 모던 플라뇌르 | FR | 산책; 도시; 사색; 고독 | An unhurried city walker in a long coat and loose scarf, hands in pockets and attention drifting over the street. | look |
 | Jean-Luc Godard | 장뤼크 고다르; 장 뤽 고다르; 장뤽 고다르; 고다르; Godard; Godardian; 戈达尔 | FR | 누벨바그; 영화; 원색; 거리 | Flat primary red, blue and white color blocks, hard daylight on boulevards and an offhand, jump-cut casual cool. | person-style |
 | François Truffaut | 프랑수아 트뤼포; 트뤼포; Truffaut; 特吕弗 | FR | 누벨바그; 흑백; 영화; 거리 | Humanist black-and-white realism with rich grey transitions, clear shadows and an unhurried walking camera. | person-style |

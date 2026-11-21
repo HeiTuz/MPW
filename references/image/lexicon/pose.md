@@ -32,8 +32,16 @@ Pose 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다. �
 | 趴床晃腿 | 침대에 엎드려 다리 흔들기; 엎드려 다리 까딱 | KR | 침실; 침대; 실내; 편안함; 캐주얼 | Lying face down on a bed with hands stacked under the chin and both lower legs bent up and swaying in the air. | look |
 | 擦头发 | 수건으로 머리 말리기; 젖은 머리 닦기 | KR | 욕실; 헤어; 수건; 실내; 편안함 | Seated on the edge of a bed pressing a towel against wet hair, head slightly tilted back. | look |
 | 床沿坐姿 | 침대 끝에 앉기; 침대 가장자리 앉기 | KR | 침실; 침대; 앉은 자세; 실내 | Seated on the edge of a bed with feet on the floor and a relaxed posture. | look |
-| 投喂互动 | 먹여주기 시점; 떠먹여주는 구도 | KR | 데이트; 1인칭; 음식; 카페; 연인 시점; 古早DV梦核; 古早DV; 梦核; 夢核; 低保真录像带; 몽핵; 드림코어; 올드 DV | A hand pushing a latte or spoonful of food toward the lens in first-person view, body leaning forward with an eager look. | look |
+| 投喂互动 | 먹여주기 시점; 떠먹여주는 구도 | KR | 데이트; 1인칭; 음식; 카페; 연인 시점 | A hand pushing a latte or spoonful of food toward the lens in first-person view, body leaning forward with an eager look. | look |
 | 누워서 폰 보기 | 누워서 셀카; 침대에서 폰 보기; 폰 위로 들기; lying phone selfie | KR | 아이폰 원본 셀카; 아이폰 셀카; iPhone native selfie; 침대; 심야; 불면 | She lies on her back in bed holding the phone above her face with both hands, the screen glow resting on her features. | look |
+| 멈춰 서기 | 우뚝 서기 | KR | 정지; 걷는 도중; 거리; 일상 | A person who has just stopped walking, feet planted side by side or one slightly ahead, the body still and the weight settled while the head stays free to turn. | look |
+| 하늘 올려다보기 | 하늘 보기; 턱 들기 | KR | 하늘; 시선; 턱 들기; 청춘 | The chin lifts and the face tips up toward the sky, the neck lengthens and the eyes follow something above the frame. | look |
+| 폰 보며 걷기 | 폰 보면서 걷기; 스몸비; 폰 들고 걷기; walking while looking at the phone | KR | 휴대폰; 걷기; 시선 아래; 도시 | Walking with the head tipped down toward a phone held at chest height, the stride unbroken and the face lit faintly from below. | look |
+| 가방끈 잡기 | 어깨끈 쥐기; 백팩 끈 잡기; holding the bag strap | KR | 가방; 손; 걷기; 일상 | One hand grips the shoulder strap of a bag near the collarbone while the other arm swings loosely, the bag riding high on the back or hip. | look |
+| 계단에 앉기 | 계단 앉기; 계단에 걸터앉기; 계단 중간 앉기; sitting on steps | KR | 계단; 앉기; 휴식; 거리 | Seated on a stone or concrete step with the knees apart or together and the forearms resting on the thighs, the feet a step lower. | look |
+| 담벼락에 기대기 | 벽 기대기; 담에 기대기; leaning on a wall | KR | 벽; 기대기; 골목; 여유 | The shoulder or back rests against a plain wall with one foot propped behind and the weight on the other leg, the arms loosely crossed or in pockets. | look |
+| 걸어가는 뒷모습 | 멀어지는 뒷모습; 뒤돌아 걷기; walking away seen from behind | KR | 뒷모습; 걷기; 거리; 여운 | Seen from behind in mid-stride, the figure walks away along the street with arms swinging and the hair or coat moving with the step. | look |
+| 벤치에 앉기 | 벤치 앉기; 공원 벤치 앉기; 벤치에 걸터앉기; sitting on a bench | KR | 벤치; 앉기; 휴식; 공원 | Seated on a slatted bench with the back straight or slightly slumped, knees together or crossed and the hands resting on the lap or the seat edge. | look |
 
 ## CN
 
@@ -102,7 +110,7 @@ Pose 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다. �
 | 双手捧杯 | 双手捧茶; 捧茶盏; 두 손으로 컵 감싸기; 두손 컵; 컵 감싸 쥐기; holding a cup with both hands; Deux mains enveloppant la tasse | CN | 따뜻함; 겨울; 카페; 손동작; 江南烟雨柔焦; 강남 연우 소프트 포커스; 烟雨柔焦; 연우 소프트 포커스 | Both hands wrap around a cup held at chest height with the elbows tucked in and the shoulders softened. | look |
 | 后仰撑地 | 双手后撑; 뒤로 짚고 앉기; 손 뒤로 짚기; lean back on hands; Hands Planted Behind | KR, CN | 여유; 여름; 야외; 앉기 | Seated with both palms planted behind the hips and the torso leaning back on straight arms, the chin lifted. | look |
 | 回眸 | 回首; 不经意回眸; 背身回眸; 走路回眸; 转头瞬间; 뒤돌아보기; 돌아보는 포즈; 뒤돌아보는 순간; looking back over the shoulder; backward glance; 行走回眸; Tourner la tête en marchant | KR, CN | 자연스러움; 스냅; 거리; 영화 같은; 홍콩; 港风 | The body faces or walks away while the head turns back over one shoulder so the eyes land near the lens. | look |
-| 撑伞回眸 | 打伞回眸; 油纸伞回眸; 우산 들고 뒤돌아보기; 우산 쓰고 돌아보기; umbrella look-back | CN | 비 오는 날; 시적; 골목; 전통; 江南烟雨柔焦; 강남 연우 소프트 포커스; 烟雨柔焦; 연우 소프트 포커스; 雨夜新宿; 비 오는 신주쿠 밤; 東京ノワール; 도쿄 누아르; 歌舞伎町ネオン; 가부키초 네온 | One hand holds an umbrella over the shoulder while the head turns back beneath its rim toward the lens. | look |
+| 撑伞回眸 | 打伞回眸; 油纸伞回眸; 우산 들고 뒤돌아보기; 우산 쓰고 돌아보기; umbrella look-back | CN | 비 오는 날; 시적; 골목; 전통; 江南烟雨柔焦; 강남 연우 소프트 포커스; 烟雨柔焦; 연우 소프트 포커스 | One hand holds an umbrella over the shoulder while the head turns back beneath its rim toward the lens. | look |
 | 折扇掩面 | 折扇半遮面; 부채로 얼굴 가리기; 부채 가리기; folding fan over face; Fan Peek | CN | 신비; 전통; 한푸; 눈빛; 新中式; 신중식; 国潮; 궈차오; 국조 | An open folding fan is raised over the lower half of the face so only the eyes show above its edge. | look |
 | 手挡镜头 | 挡镜头; 狗仔风; 손으로 렌즈 가리기; 카메라 가리기; 파파라치 컷; hand blocking lens | KR, CN | 스냅; 장난; 파파라치; 정면; 아이폰 원본 셀카; 아이폰 셀카; iPhone native selfie; 古早DV梦核; 古早DV; 梦核; 夢核; 低保真录像带; 몽핵; 드림코어; 올드 DV | One palm reaches toward the lens and half covers it, the hand blurred close to the camera while the face stays visible behind it. | look |
 | 手机贴脸 | 手机贴脸自拍; 侧脸贴手机; 폰 볼에 붙이기; 얼굴에 폰 붙이기; cheek against phone | KR, CN | 나른함; 셀카; 실내; 거울; 아이폰 원본 셀카; 아이폰 셀카; iPhone native selfie | The cheek presses against the back of the phone held at the side of the face, the head tilted into it and the eyes glancing toward the mirror. | look |
@@ -164,6 +172,10 @@ Pose 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다. �
 | close lean | 렌즈 앞 기울이기; 카메라에 얼굴 들이밀기; 凑近镜头; leaning into the lens | CN | 홍콩; 港风; 王家卫; 왕가위; 堕落天使; 초광각; 클로즈업 | Leaning toward the lens with the chin up and one hand near the face, so the face fills the frame. | look |
 | tram window seat | 트램 창가 자리; 叮叮车窗边; 电车靠窗; tram upper-deck window seat | CN | 홍콩; 港风; 王家卫; 왕가위; 叮叮车; 창가; 이층 | Seated on the upper deck of a tram with the head resting against the window while the street slides by. | look |
 | standing at louvres | 덧창 옆에 서기; 百叶窗边站立; standing beside louvres | CN | 홍콩; 港风; 王家卫; 왕가위; 阿飞正传; 덧창; 비 | Standing beside half-closed louvres and looking out through them at rain on foliage. | look |
+| 驻足 | 주쭈; 걸음 멈춤; stopping in mid-step | CN | 정지; 걷는 도중; 거리; 일상 | The walker stops mid-stride with both feet planted, the body still and the head turning slightly toward something in the street. | look |
+| 低头看手机 | 디터우 칸 서우지; 폰 내려다보기; 폰 보기; looking down at the phone | CN | 휴대폰; 시선 아래; 일상; 도시 | The head tips down toward a phone held in one or both hands at chest height, the eyes lowered and the face lit faintly from below. | look |
+| 抬头望天 | 타이터우 왕톈; 고개 들어 하늘 보기 | CN | 하늘; 시선; 턱 들기; 청춘 | The chin lifts and the face tips up toward the sky, the neck lengthens and the eyes follow something above the frame. | look |
+| 单手拎包 | 단서우 린바오; 한 손에 가방 들기; 가방 들기; carrying a bag in one hand | CN | 가방; 한 손; 걷기; 일상 | One hand lets a bag hang from straight fingers beside the hip while the other arm stays free, the shoulder dipping slightly on the loaded side. | look |
 
 ## JP
 
@@ -225,12 +237,19 @@ Pose 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다. �
 | ギャルピース | 갸루피스; 갸루 피스; 横ピース; 目元ピース; 눈가 브이; 눈 옆 피스; sideways peace sign | JP | ギャル; 갸루; 손동작; 셀카; 프리쿠라; 장난스러움 | The V of index and middle fingers is turned sideways and held flat against the corner of the eye, wrist bent back and palm toward the lens, the head tilted slightly the other way. | look |
 | ハートポーズ | 하트 포즈; 손 하트; 양손 하트; ハートハンド; heart hands; 比心 | JP | ギャル; 갸루; 손동작; 귀여움; 프리쿠라 | Both hands meet in front of the chest or cheek with thumbs and index fingers curved into one heart outline, fingertips touching at the top and thumbs at the bottom. | look |
 | 自転車に跨がる | 자전거에 걸터앉기; 자전거 한 발 짚기; 片足で止める; straddling a bicycle | JP | 日系CCD日光; 日系CCD; 일본 CCD; コンデジ; 콘데지; 일본; 상점가; 자전거; 거리 | Seated astride a city bicycle with one foot down on the pavement and the other on the pedal, one hand on the handlebar. | look |
-| Swing Sit | ブランコに座る; 그네에 앉기; swing seat | JP | 古早DV梦核; 古早DV; 梦核; 夢核; 低保真录像带; 몽핵; 드림코어; 올드 DV; 그네; 황혼; 빈 공원 | Seated on a swing with both hands wrapped around the cold chains, toes just touching the ground and the body swaying slightly. | look |
-| Supine Nap | 仰向けの昼寝; 누워 낮잠; 仰卧小睡; lying nap | JP | 古早DV梦核; 古早DV; 梦核; 夢核; 低保真录像带; 몽핵; 드림코어; 올드 DV; 다다미; 낮잠; 여름 | Lying on the back on a mat floor with one hand tucked behind the head, the other resting on the stomach and the eyes closed. | look |
-| Fence Lean | フェンスにもたれる; 철망에 기대기; 屋上のフェンス; chain-link lean | JP | 古早DV梦核; 古早DV; 梦核; 夢核; 低保真录像带; 몽핵; 드림코어; 올드 DV; 옥상; 철망; 바람 | Back and one elbow resting against a chain-link fence with the shoulders loose and the face turned in profile toward the distance. | look |
-| Fridge Peek | チルド棚を覗き込む; 냉장 코너 엿보기; 冰柜探身; peeking into the cooler | JP | 古早DV梦核; 古早DV; 梦核; 夢核; 低保真录像带; 몽핵; 드림코어; 올드 DV; 편의점; 아이스크림; 심야 | Standing at an open cold case and leaning forward from the waist with the hands behind the back, scanning the shelf. | look |
-| Watering Turn | 水やり; 물 주기; 浇花回眸; watering and turning | JP | 古早DV梦核; 古早DV; 梦核; 夢核; 低保真录像带; 몽핵; 드림코어; 올드 DV; 베란다; 화분; 아침 | Holding a watering can over potted plants while turning the head back over the shoulder toward someone behind. | look |
+| ブランコに座る | 그네에 앉기; ブランコ; swing seat; sitting on a swing; Swing Sit | JP | 古早DV梦核; 古早DV; 梦核; 夢核; 低保真录像带; 몽핵; 드림코어; 올드 DV; 그네; 황혼; 빈 공원 | Seated on a swing with both hands wrapped around the cold chains, toes just touching the ground and the body swaying slightly. | look |
+| 仰向けで昼寝 | 仰向けの昼寝; 누워 낮잠; 仰卧小睡; lying nap; Supine Nap | JP | 古早DV梦核; 古早DV; 梦核; 夢核; 低保真录像带; 몽핵; 드림코어; 올드 DV; 다다미; 낮잠; 여름 | Lying on the back on a mat floor with one hand tucked behind the head, the other resting on the stomach and the eyes closed. | look |
+| フェンスにもたれる | 철망에 기대기; 屋上のフェンス; chain-link lean; leaning on a fence; Fence Lean | JP | 古早DV梦核; 古早DV; 梦核; 夢核; 低保真录像带; 몽핵; 드림코어; 올드 DV; 옥상; 철망; 바람 | Back and one elbow resting against a chain-link fence with the shoulders loose and the face turned in profile toward the distance. | look |
+| チルド棚を覗き込む | 냉장 코너 엿보기; 冰柜探身; peeking into the cooler; 冷蔵ケースを覗く; Fridge Peek | JP | 古早DV梦核; 古早DV; 梦核; 夢核; 低保真录像带; 몽핵; 드림코어; 올드 DV; 편의점; 아이스크림; 심야 | Standing at an open cold case and leaning forward from the waist with the hands behind the back, scanning the shelf. | look |
+| 水やり | 물 주기; 물뿌리개; 浇花回眸; watering and turning; watering plants; Watering Turn | JP | 古早DV梦核; 古早DV; 梦核; 夢核; 低保真录像带; 몽핵; 드림코어; 올드 DV; 베란다; 화분; 아침 | Holding a watering can over potted plants while turning the head back over the shoulder toward someone behind. | look |
 | Arm's-Length Snap | 팔 뻗은 일회용 카메라 셀카; 腕を伸ばして撮る; arm-extended disposable selfie; 伸臂自拍; 친구와 셀카 | JP | 写ルンです; 우츠룬데스; 일회용 카메라; 셀카; 친구; 플래시 | One arm stretches fully forward holding a small camera about 60 cm from the pair while the other arm pulls a friend close, both faces crowding the center of the frame. | look |
+| 立ち止まり | 타치도마리; 걷다 멈춤; standing still mid-walk | JP | 정지; 걷는 도중; 거리; 일상; 스냅 | A person who has just stopped walking, feet planted side by side or one slightly ahead, the body still and the weight settled while the head stays free to turn. | look |
+| 空を見上げる | 소라오 미아게루; 空を仰ぐ; looking up at the sky | JP | 시선; 하늘; 턱 들기; 청춘 | The chin lifts and the face tips up toward the sky, the neck lengthens and the eyes follow something above the frame. | look |
+| 自転車を押す | 지텐샤오 오스; 자전거 끌고 가기; 자전거 밀기; pushing a bicycle | JP | 자전거; 걷기; 골목; 일상 | Walking beside a bicycle with both hands on the handlebars, the frame leaning against the hip and the front wheel pointing along the walking line. | look |
+| 傘をさす | 가사오 사스; 우산 쓰기; 우산 들기; holding an umbrella | JP | 우산; 비; 한 손; 일상 | One hand holds the umbrella handle at shoulder height with the canopy tilted slightly forward while the other arm hangs relaxed at the side. | look |
+| 手をかざす | 테오 카자스; 손 그늘; shading the eyes with a hand | JP | 햇빛; 손; 눈부심; 여름 | A flat hand held above the brow shades the eyes and casts a soft shadow across the upper face while the lower face stays lit. | look |
+| 後ろ手 | 우시로데; 뒤로 깍지; hands clasped behind the back | JP | 뒷짐; 손; 수줍음; 산책 | Both hands clasp loosely behind the back so the chest opens slightly and the elbows angle out to the sides. | look |
+| 髪をかき上げる | 카미오 카키아게루; 머리 쓸어올리기; 앞머리 넘기기; pushing the hair back | JP | 머리; 손동작; 바람; 이마 | One hand sweeps the hair back from the forehead and holds it against the crown, elbow raised and the face fully open. | look |
 
 ## US
 
@@ -308,7 +327,7 @@ Pose 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다. �
 | Finger to Cheek | 손가락 볼에 대기; 볼에 검지; 手指抵颊 | US | 지적; 무심; 도시; 손동작 | One index finger rests against the cheek with the head slightly tilted. | look |
 | Follow Me Pose | follow me to; hand lead; pov hand; 따라와 포즈; 팔로미 포즈; 손잡고 이끌기; Hand Lead Dash | US | 여행; 동세; 시점; 야외 | The body walks ahead with one arm stretched back toward the lens as if leading the viewer by the hand. | look |
 | Hands in Back Pockets | back pocket pose; 뒷주머니 손; 뒷주머니 포즈 | US | 빈티지; 데님; 캐주얼; 서 있기; Western; 웨스턴; 서부; 카우보이 | Both hands slide into the back jeans pockets so the elbows angle outward and the shoulders draw back. | look |
-| Hands in Pockets | hands in coat pockets; 주머니에 손; 코트 주머니에 손; 双手插兜; Hands in Overcoat Pockets | US | 여유; 가을; 도시; 서 있기; 老钱风; 라오첸펑; 올드머니; 꾸안꾸; 꾸민 듯 안 꾸민 듯; 뉴욕 쿨 그레이; 맨해튼 쿨 그레이; New York overcast cool grey; 纽约SOHO阴天冷调; 曼哈顿冷灰; 雨夜新宿; 비 오는 신주쿠 밤; 東京ノワール; 도쿄 누아르; 歌舞伎町ネオン; 가부키초 네온 | Both hands sink into the front pockets with the shoulders relaxed and the arms resting close to the body. | look |
+| Hands in Pockets | hands in coat pockets; 주머니에 손; 코트 주머니에 손; 双手插兜; Hands in Overcoat Pockets | US | 여유; 가을; 도시; 서 있기; 老钱风; 라오첸펑; 올드머니; 꾸안꾸; 꾸민 듯 안 꾸민 듯; 뉴욕 쿨 그레이; 맨해튼 쿨 그레이; New York overcast cool grey; 纽约SOHO阴天冷调; 曼哈顿冷灰 | Both hands sink into the front pockets with the shoulders relaxed and the arms resting close to the body. | look |
 | Hip Pop | hip shift; weight shift; hip shift stand; 골반 빼기; 힙 팝 | US | 캐주얼; 모델; 전신; 서 있기 | The weight sits on one leg and that hip is pushed out to the side, often with one hand resting on it. | look |
 | Hood Sit | sitting on car hood; hood perch; 보닛 앉기; 보닛 위 앉기 | US | 로드트립; 여유; 일몰; 앉기 | Seated on the hood of a car with the knees drawn up or the feet resting on the bumper. | look |
 | Jump Shot | mid-air leap; heel kick leap; 점프샷; 점프 샷; 공중 점프 | US | 활기; 환희; 야외; 동세 | Both feet leave the ground at the top of a jump, the knees bent behind and the arms flung up or out. | look |
@@ -352,6 +371,11 @@ Pose 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다. �
 | Bodega Lean | 보데가 기대기; 가게 앞 기대기; 편의점 앞 기대기; storefront lean; 便利店门口倚靠 | US | 뉴욕 쿨 그레이; 맨해튼 쿨 그레이; New York overcast cool grey; 纽约SOHO阴天冷调; 曼哈顿冷灰; 보데가; 편의점; 심야; 기대기 | One shoulder rests on a shopfront beside a fruit stand while a cold drink hangs from one hand and the light of the open door falls on the face. | look |
 | Camp Chair Roast | 캠핑 의자 마시멜로 굽기; 모닥불 앞 캠핑 의자; roasting by the fire; 모닥불 마시멜로 | US | 베니스 비치 폴라로이드; Venice Beach Polaroid; 威尼斯海滩拍立得; 인스탁스 와이드; 캠핑; 조슈아 트리 | Seated in a folding camp chair and leaning toward a fire with a stick held out over the embers, the head turned to smile sideways. | look |
 | Burger Bite | 버거 한입; 햄버거 먹기; 버거 베어물기; biting a burger | US | 로드트립 빛샘; Road-Trip Light Leak; 公路旅行漏光; 날짜 각인; 베니스 비치; 밤 | Both hands lift a big burger toward the mouth mid-laugh, the elbows out and the teeth about to bite. | look |
+| Standing Still | 가만히 서 있기; 멈춰 선 자세; 정지 자세; planted stance | US | 정지; 서 있기; 거리; 일상 | A person standing quietly with weight evenly on both feet and arms relaxed at the sides, shoulders level and the face turned to the camera. | look |
+| Hoodie Pocket Stance | 후디 주머니 손; 후드 앞주머니; 캥거루 주머니; hands in the hoodie pocket | US | 후디; 주머니; 캐주얼; 스트리트 | Both hands push into the front pocket of a hoodie, the elbows pinned in and the shoulders hunched slightly forward. | look |
+| Stoop Sit | 현관 계단 앉기; 집 앞 계단 앉기; sitting on the front steps | US | 계단; 앉기; 동네; 여유 | Seated on the front steps of a house or building with the knees apart, the elbows on them and the hands loosely clasped. | look |
+| Bike Lean | 자전거에 기대기; 자전거 옆 서기; 자전거 잡고 서기; standing with a bicycle | US | 자전거; 기대기; 거리; 일상 | Standing beside a bicycle with one hand on the handlebar and a hip against the frame, one foot crossed in front of the other. | look |
+| Reverse Chair Sit | 의자 거꾸로 앉기; 등받이 안고 앉기; 의자 뒤집어 앉기; straddling a chair backward | US | 의자; 앉기; 캐주얼; 실내 | Straddling a chair with the chest toward the backrest, the forearms stacked on its top rail and the chin resting on them. | look |
 
 ## FR
 
@@ -439,3 +463,9 @@ Pose 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다. �
 | Se coiffer devant le miroir | 스 쿠아페 드방 르 미루아르; 거울 앞 머리 만지기; 화장대 앞에 앉기; fixing hair at the mirror | FR | 베르메르; 페르메이르; Vermeer; 维米尔; 维米尔窗边光; 화장대; 거울; 머리핀 | Seated at a dressing table, she lifts a hair clip toward her temple and meets her own eyes in the glass. | look |
 | Visage de trois quarts | 비자주 드 트루아 카르; 3/4 얼굴; 비스듬히 돌린 얼굴; three-quarter face turn; head turned back to the lens | FR | 베르메르; 페르메이르; Vermeer; 维米尔; 维米尔窗边光; 렘브란트; 흑백; 삼각 빛 | Her body turns toward a side light and her head turns three quarters back toward the lens, showing the cheek in shadow. | look |
 | Devant le chevalet | 드방 르 슈발레; 이젤 앞에 서기; 붓 든 화가; standing at the easel; painter at the canvas | FR | 베르메르; 페르메이르; Vermeer; 维米尔; 维米尔窗边光; 아틀리에; 화가; 천창 | She stands beside an easel with a loaded brush in one hand and her face turned toward the unfinished canvas. | look |
+| S'arrêter en pleine marche | 사레테 앙 플렌 마르슈; 걷다 멈추기; stopping mid-stride | FR | 정지; 걷는 도중; 거리; 일상 | A person who has just stopped walking, feet planted one slightly ahead of the other, the body still while the head turns. | look |
+| Adossée à un mur | 아도세 아 앵 뮈르; 담벼락 기대기 | FR | 벽; 기대기; 골목; 여유 | The shoulder or back rests against a plain stone wall with one foot propped behind and the arms loosely crossed or in pockets. | look |
+| Assise sur un banc | 아시즈 쉬르 앵 방 | FR | 벤치; 앉기; 휴식; 공원 | Seated on a slatted bench with the back straight, knees together or crossed and the hands resting on the lap. | look |
+| Lever les yeux vers le ciel | 르베 레 지외 베르 르 시엘; 시선 위로 | FR | 하늘; 시선; 턱 들기; 여유 | The chin lifts and the face tips up toward the sky, the neck lengthens and the eyes follow something above the frame. | look |
+| Remettre une mèche | 르메트르 윈 메슈; 머리 한 가닥 넘기기; 귀 뒤로 넘기기; tucking a lock back | FR | 머리; 손동작; 귀; 일상 | One hand tucks a loose lock behind the ear, the elbow lifted and the head tilting slightly toward that side. | look |
+| Marcher de dos | 마르셰 드 도; walking away from behind | FR | 뒷모습; 걷기; 거리; 여운 | Seen from behind in mid-stride, the figure walks away along the street with arms swinging and the hair or coat moving with the step. | look |

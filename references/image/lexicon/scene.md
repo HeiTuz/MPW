@@ -171,7 +171,7 @@ Scene 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다. 
 | 浴室镜前 | 욕실 거울 앞; 세면대 거울 | KR | 욕실; 실내; 일상; 양치 | A person at a bathroom sink with a toothbrush and loosely clipped hair in front of the mirror. | look |
 | 샤워 후 거울 | 샤워 후 거울 셀카; 욕실 거울 김서림; Post-shower mirror | KR | 욕실; 김서림; 거울; 수분감; 아침; 아이폰 원본 셀카; 아이폰 셀카; iPhone native selfie | A bathroom mirror clouded with warm steam and one hand-wiped clear circle reflecting flushed cheeks and damp skin. | place |
 | Dance Studio Raw Realism | 연습실 로우 리얼리즘; 댄스 스튜디오 땀 스냅; 연습생 거울 스냅 | KR | 연습실; 땀; 거울; 목재바닥 | Wooden-floored dance room with a full wall mirror reflecting a damp-haired person in sportswear under flat room lighting. | place |
-| Life Four Cuts Photo Booth | 인생네컷 부스; 포토부스 4컷; 네컷사진 스타일 | KR | 포토부스; 네컷; 정면광; 흰피부 | Tiny booth interior lit by two even front lights giving smooth porcelain skin in a four-panel strip. | place |
+| Life Four Cuts Photo Booth | 인생네컷 부스; 포토부스 4컷; 네컷사진 스타일 | KR | 포토부스; 네컷; 정면광; 흰피부 | Tiny booth interior lit by two even front lights giving smooth, evenly lit skin in a four-panel strip. | place |
 | Morning Bed Sunlit Slumber | 모닝 베드 햇살; 아침 침대 햇살; 침대 모닝 룩 | KR | 침대; 아침; 흰이불; 햇살 | Fluffy white duvet with morning sun filtering through double sheer curtains onto the pillow. | place |
 | Rainy Day Window Stargazing | 비 오는 날 창가 스타일; 창가 빗물 응시; 빗방울 창문 | KR | 비; 창가; 대리석; 정적 | Person seated on a cool marble sill with forehead near glass streaked by gathering raindrops. | place |
 | Floor Rug Headphone Listening | 러그 위 헤드폰 감상; 카펫 음악 감상; 바닥 헤드폰 | KR | 러그; 헤드폰; 휴식; 회색 | Person lying flat on a long-pile gray rug wearing headphones with closed eyes and folded hands. | place |
@@ -195,6 +195,19 @@ Scene 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다. 
 | 한강 야경 | 한강 야경 테라스; 한강 대교 야경; 한강 밤 전망; 汉江夜景; Hangang night view; Han River night terrace | KR | 서울 밤 시네마; 서울 나이트 시네마; 차창 불빛 시네마; Seoul night cinema; 首尔夜生活电影感; 车内流光; 한강; 대교; 야경; 밤; 냉백 | A riverside terrace at night facing a long bridge and a far bank of office towers, their cold white lights rippling on the dark water. | place |
 | 심야 주택가 골목 | 심야 골목; 밤 골목길; 주택가 골목 야간; 深夜小巷; late-night alley | KR | 서울 밤 시네마; 서울 나이트 시네마; 차창 불빛 시네마; Seoul night cinema; 首尔夜生活电影感; 车内流光; 가로등; 나트륨등; 골목; 심야 | A narrow empty residential lane at night with closed shutters and one tall streetlamp, damp pavement and long deep shadows. | place |
 | 야간 육교 | 밤 육교; 고속도로 육교; 跨江天桥; 行人天桥; night pedestrian overpass | KR | 서울 밤 시네마; 서울 나이트 시네마; 차창 불빛 시네마; Seoul night cinema; 首尔夜生活电影感; 车内流光; 육교; 보케; 도시 밤 | A pedestrian overpass at night looking out over a wide road, endless car lights streaming below and melting into large round blurs behind. | place |
+| 편의점 파라솔 | 편의점 테이블; 편의점 앞 파라솔; 야외 테이블; convenience-store parasol table | KR | 편의점; 파라솔; 야외; 여름 | A plastic table and chairs under a striped parasol outside a convenience store, with a few drink cans and cup noodles on the tabletop. | place |
+| 골목길 | 골목; 동네 골목; neighborhood alley | KR | 골목; 좁은 길; 주택가; 일상 | A narrow residential lane between low buildings with electric meters, plastic crates, potted plants and cables overhead. | place |
+| 버스정류장 | 정류장 | KR | 정류장; 도로; 대기; 일상 | A roadside bus stop with a sign pole, a shelter with an arrival board and a bench, set along a plain sidewalk. | place |
+| 신호등 | 횡단보도 신호등; 보행 신호; 교차로 신호; traffic light | KR | 신호; 교차로; 대기; 도시 | Vehicle and pedestrian signal heads on a pole at a crossing, glowing red or green against a dim sky. | item |
+| 보도블록 | 인도 보도블록; 보도블럭; 바닥 블록; paving blocks | KR | 인도; 바닥; 거리; 일상 | A sidewalk of small interlocking gray and red paving blocks with moss in the seams and a curb along its edge. | item |
+| 아파트 단지 | 아파트; 단지; 아파트 놀이터; apartment complex | KR | 아파트; 단지; 주거; 낮 | Rows of tall identical apartment towers with numbered facades, a paved walkway, trimmed trees and parked cars between them. | place |
+| 놀이터 | 동네 놀이터; playground | KR | 놀이터; 그네; 낮; 동네 | A small neighborhood playground with a swing set, a slide and benches on sand or rubber flooring under trees. | place |
+| 상가 골목 | 상가; 동네 상가; 번화가 골목; shopfront street | KR | 상가; 간판; 가게; 낮 | A short strip of small shops with stacked signboards, sidewalk displays and awnings, set under a tangle of cables. | place |
+| 원룸 | 원룸 방; 작은 방; studio apartment | KR | 원룸; 좁은 방; 실내; 생활감 | A compact one-room apartment with a single bed, a desk by the window, a small kitchenette and everyday clutter. | place |
+| 현관 | 현관문; 신발장; apartment entryway | KR | 현관; 신발; 실내; 집 | A small entryway with a step up, a row of shoes, a shoe cabinet and a metal front door with a peephole. | place |
+| 동네 슈퍼 | 동네 마트; 슈퍼마켓; 구멍가게; neighborhood grocery store | KR | 가게; 간판; 일상; 동네 | A small neighborhood grocery with crates of fruit outside, a hand-lettered sign and a glass door covered with posters. | place |
+| 분식집 | 떡볶이집; 분식점; 포장마차 분식; Korean snack bar | KR | 분식; 떡볶이; 실내; 일상 | A small snack shop with a steaming tteokbokki pan at the counter, plastic stools, a laminated menu and bright overhead light. | place |
+| 가로수 | 가로수 그늘; roadside trees | KR | 가로수; 그늘; 거리; 초록 | Trees planted in a line along the road with trimmed trunks and canopies that shade the sidewalk below. | place |
 
 ## CN
 
@@ -406,6 +419,18 @@ Scene 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다. 
 | 雕塑展厅 | 雕塑馆; 雕塑陈列厅; 조각 전시실; 조각 전시관; sculpture hall; plinth gallery | CN | 当代美术馆冷光极简; 当代美术馆冷光; 美术馆冷光; 冷光极简; 현대 미술관 냉광 미니멀; 미술관 냉광 미니멀; 미술관 냉광; 냉광 미니멀; 미술관; 석고; 석상 | A quiet hall of bare plinths and one stone column, with pale walls and a matte floor and nothing on show but sculpted forms. | place |
 | 黑匣子剧场 | 黑盒剧场; 黑盒子剧场; 블랙박스 극장; 소극장 무대; black box theatre | CN | 当代美术馆冷光极简; 当代美术馆冷光; 美术馆冷光; 冷光极简; 현대 미술관 냉광 미니멀; 미술관 냉광 미니멀; 미술관 냉광; 냉광 미니멀; 무대; 스포트라이트; 암전 | An all-black theatre stage with no set, the empty seats beyond it lost in darkness. | place |
 | 白色无缝背景 | 白背景; 无缝白背景; 흰 무봉 배경; 화이트 백드롭; white seamless backdrop | CN | 当代美术馆冷光极简; 当代美术馆冷光; 美术馆冷光; 冷光极简; 현대 미술관 냉광 미니멀; 미술관 냉광 미니멀; 미술관 냉광; 냉광 미니멀; 스튜디오; 하이키; 잡지 표지 | A seamless white backdrop curves into the floor with no horizon line, lit clean so only the figure stands in it. | place |
+| 电线杆 | 덴셴간; 전신주 | CN | 전봇대; 전선; 거리; 일상 | Concrete or wooden poles stand along the roadside, trailing bundles of cables across the sky between them. | item |
+| 公交站 | 궁자오잔 | CN | 정류장; 도로; 대기; 일상 | A roadside bus stop with a sign pole, a canopy shelter with an advertising panel and a metal bench, set along a plain sidewalk. | place |
+| 菜市场 | 차이스창; 재래시장; 동네 시장; wet market | CN | 시장; 생활감; 아침; 좌판 | A covered market of stalls stacked with vegetables and fish under bare bulbs, wet concrete floors and plastic crates. | place |
+| 路边摊 | 루볜탄; 길거리 노점; 노점; roadside stall | CN | 노점; 길거리; 밤; 생활감 | A small cart or folding table at the curb with a steaming pot or grill, plastic stools and a bare lamp hanging over it. | place |
+| 老小区 | 라오 샤오취; 오래된 아파트 단지; 낡은 주택가; old residential compound | CN | 아파트; 오래됨; 생활감; 낮 | Gray six-story apartment blocks with air-conditioner boxes, laundry poles and bicycles parked under trees. | place |
+| 楼道 | 러우다오; 계단통; 복도 계단; stairwell | CN | 계단; 실내; 좁은 곳; 생활감 | A narrow stairwell of painted walls, concrete steps, a metal handrail and a small window that lets in cool light. | place |
+| 梧桐树 | 우퉁수; 플라타너스; 프랑스 오동; plane trees | CN | 가로수; 상하이; 그늘; 가을 | Tall plane trees line the street, their mottled trunks and wide leaves forming a green or yellow canopy over the road. | place |
+| 街角 | 제자오; 길모퉁이; 모퉁이; street corner | CN | 모퉁이; 거리; 일상; 도시 | A street corner where two roads meet, with a shopfront on the bend, a lamp post and people turning past. | place |
+| 巷子 | 샹쯔; 좁은 골목; alley | CN | 골목; 좁은 길; 도심; 일상 | A narrow lane between buildings with pipes, drain covers and potted plants along the walls, lit unevenly where daylight drops in between the roofs. | place |
+| 出租屋 | 추쭈우; 월세방; 자취방; rented room | CN | 자취방; 작은 방; 생활감; 실내 | A small rented room with a single bed, a thin curtain, a desk by the window and cables along the wall. | place |
+| 操场 | 차오창; 운동장; 학교 운동장 트랙; running track field | CN | 운동장; 트랙; 넓음; 오후 | A wide athletic field with a red rubber track, white lane lines and goal posts under an open sky. | place |
+| 小区门口 | 샤오취 먼커우; 단지 입구; 아파트 입구; compound gate | CN | 입구; 경비실; 일상; 도시 | The gate of a residential compound with a barrier arm, a small guard booth, a name plaque and delivery bikes at the curb. | place |
 
 ## JP
 
@@ -484,7 +509,7 @@ Scene 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다. 
 | 東京タワー | Tokyo Tower; 도쿄 타워; 도쿄타워; 东京铁塔 | JP | 도쿄; 빨강; 비; 밤; 야경; 로맨틱; 雨夜新宿; 비 오는 신주쿠 밤; 東京ノワール; 도쿄 누아르; 歌舞伎町ネオン; 가부키초 네온 | A red-and-white lattice tower seen from below through dark tree silhouettes, lit steel edges glowing against the night sky. | place |
 | 枯山水 | 가레산스이; 고산수; dry landscape garden; karesansui | JP | 젠; 정원; 자갈; 정적; 日系Provia; 高保真Provia; Provia; 프로비아; プロビア; Astia; 아스티아; アスティア; リバーサルフィルム | Raked gravel and a few placed rocks form a dry garden, with low side light drawing fine lines in the gravel. | place |
 | 根津美術館 | 네즈 미술관; Nezu Museum; 根津美术馆庭院 | JP | 정원; 대나무; 여름; 고요; 건축 | A museum garden with bamboo shadows on grey granite and a deep covered veranda of pale wood. | place |
-| 歌舞伎町 | Kabukicho; 가부키초; 신주쿠 가부키초; 歌舞伎町一番街; 가부키초 네온 | JP | 도쿄; 밤; 네온; 비; 도시; 누아르; 雨夜新宿; 비 오는 신주쿠 밤; 東京ノワール; 도쿄 누아르; 歌舞伎町ネオン; 가부키초 네온 | A narrow neon-gated street at night where red and magenta signs reflect in rain-slicked asphalt and puddles. | place |
+| 歌舞伎町 | Kabukicho; 가부키초; 신주쿠 가부키초; 歌舞伎町一番街; 가부키초 네온 | JP | 도쿄; 밤; 네온; 비; 도시; 누아르; 雨夜新宿; 비 오는 신주쿠 밤; 東京ノワール; 도쿄 누아르; 歌舞伎町ネオン; 가부키초 네온 | A narrow neon-gated street at night where red, magenta, violet and cyan signs reflect in rain-slicked asphalt and puddles. | place |
 | 歩道橋 | 육교; 보도교; pedestrian bridge; 人行天桥; 天桥 | JP | 도시; 콘크리트; 계단; 도로; 雨夜新宿; 비 오는 신주쿠 밤; 東京ノワール; 도쿄 누아르; 歌舞伎町ネオン; 가부키초 네온 | Concrete stairs with a turning landing and cross-hatched railing, stepped height differences creating strong diagonals. | place |
 | 汐留 | 시오도메; Shiodome; 汐留高架玻璃天桥 | JP | 비 오는 날; 도시; 유리; 현대 | Glass sky-bridges and towers shining with rain on the pavement after a storm. | place |
 | 江の島 | 에노시마; Enoshima; 江之岛; 稚児ヶ淵; 치고가후치 | JP | 노을; 바위; 바다; 후지산; 일몰 | A rocky wave-cut platform at sunset with dark wet stone in the foreground and a distant volcano silhouette against orange-pink sky. | place |
@@ -638,6 +663,22 @@ Scene 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다. 
 | 螺旋階段 | 나선 계단; 라센 카이단; spiral staircase; 螺旋楼梯 | JP | 日系Provia; 高保真Provia; 日系高保真胶片; プロビア; 프로비아; アスティア; 아스티아; リバーサルフィルム; 긴자; 석조; 클래식; 계단 | A stone spiral staircase inside a classical building, its pale curved balustrade drawing one smooth curve under a soft skylight. | place |
 | 木造校舎 | 목조 교사; 목조 학교 건물; 낡은 학교 건물; wooden school building; 木造校舍 | JP | 写ルンです; 우츠룬데스; 일회용 카메라; 쇼와; 방과 후; 계단; 학교 | An old wooden school building whose stair landing has dark boards worn smooth by decades of feet, with slanting window light and dust floating in it. | place |
 | 河原 | 가와라; 강변 자갈밭; 강가; riverbank gravel; 河滩 | JP | 写ルンです; 우츠룬데스; 일회용 카메라; 여름밤; 선향 불꽃; 불꽃놀이 | A quiet riverbank of round pebbles and coarse stones under a dark sky, the water a faint sheen in the distance and the ground close to black beyond the light. | place |
+| 路地裏 | 로지우라; 뒷골목; back alley | JP | 골목; 좁은 길; 도심; 일상 | A narrow back lane between buildings with pipes, drain covers and potted plants along the walls, lit unevenly where daylight drops in between the roofs. | place |
+| 室外機 | 시쓰가이키; 에어컨 실외기; 실외기; air-conditioner outdoor unit | JP | 실외기; 일상; 골목; 도시 생활 | Gray air-conditioner condenser boxes with round fans sit on balconies and beside doorways, with pipes and cables running to the wall. | item |
+| バス停 | 바스테이; 버스 승강장; bus stop | JP | 정류장; 도로; 대기; 일상 | A roadside bus stop with a sign pole, a small shelter or bench and a timetable panel, set along a plain sidewalk. | place |
+| 落ち葉 | 오치바; 낙엽; fallen leaves | JP | 가을; 낙엽; 바닥; 계절감 | Dry brown and yellow leaves scatter over pavement and curbs in loose drifts, some curled and some lying flat. | item |
+| 街路樹 | 가이로주; 길가 나무; street trees | JP | 가로수; 초록; 그늘; 거리 | A row of trimmed trees lines the sidewalk, their trunks evenly spaced and their leaves throwing patchy shade onto the pavement. | place |
+| 住宅街 | 주타쿠가이; 주택가; 동네; residential neighborhood | JP | 주택가; 조용함; 낮; 일상 | Quiet streets of low two-story houses with small gardens, concrete block walls, utility poles and parked bicycles. | place |
+| 駅前 | 에키마에; 역 앞; 역 앞 광장; station forecourt | JP | 역; 광장; 번화; 통근 | A small plaza in front of a train station with a bus rotary, bicycle racks, chain shops and a steady trickle of commuters. | place |
+| アーケード | 아케이드; 아케이드 상점가; 지붕 있는 상점가; covered shopping arcade | JP | 상점가; 지붕; 쇼핑; 낮 | A long shopping street roofed with translucent panels, shopfronts on both sides and light spreading soft and even under the canopy. | place |
+| 電話ボックス | 덴와 복쿠스; 공중전화 부스; 전화 부스; telephone booth | JP | 공중전화; 레트로; 유리; 거리 | A glass-sided telephone booth with a green or gray phone inside, its frame and panes catching reflections of the street. | item |
+| ベンチ | 벤치; 긴 의자; park bench | JP | 벤치; 휴식; 공원; 앉기 | A plain slatted bench of wood or metal on a paved path, with a trash bin or a tree beside it. | item |
+| 玄関 | 겐칸; 현관 입구; entryway | JP | 현관; 신발; 실내; 집 | A small entryway with a step up, a row of shoes, an umbrella stand and a door with a frosted pane. | place |
+| 本屋 | 홍야; 책방; 동네 서점; neighborhood bookstore | JP | 서점; 책; 실내; 동네 | A neighborhood bookstore with tall shelves, paperbacks stacked flat on tables and fluorescent light over the spines. | place |
+| 歩道 | 호도; 인도; 보도; sidewalk | JP | 인도; 도로; 일상; 보행자 | A narrow paved sidewalk beside the road with a guardrail on one side and shop fronts on the other. | place |
+| 交差点 | 코사텐; 교차로; 사거리; intersection | JP | 교차로; 신호; 도로; 낮 | A street crossing with traffic lights on poles, painted lane lines, a crosswalk and people waiting at the curb. | place |
+| 土手 | 도테; 둑길; 강둑; riverbank embankment | JP | 강둑; 잔디; 산책; 석양 | A grassy embankment sloping to a river with a paved path along the top, a chain fence and a wide sky. | place |
+| 看板 | 칸반; 간판; 가게 간판; shop signboard | JP | 간판; 상점; 거리; 색 | Shop signboards of painted or printed panels stack along the street front, their letters reduced to blocks of color. | item |
 
 ## US
 
@@ -719,7 +760,7 @@ Scene 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다. 
 | Hudson Valley | 허드슨 밸리; 哈德逊河谷 | US | 뉴욕 북부; 아침 안개; 오두막 | A mist-covered river valley seen from a wooden cabin deck at dawn. | place |
 | Huntington Beach | 헌팅턴 비치; 헌팅턴 비치 피어; Surf City; 亨廷顿海滩 | US | 서핑; 해안; 역광 | A long surf beach and pier with backlit spray and golden mist rising over the waves. | place |
 | speakeasy | 스피크이지; 스피크이지 바; 재즈 위스키 바; Jazz Whiskey Bar; 地下酒吧; Speakeasy; 스피크이지 룩; Low-Key Speakeasy; 로우키 스피크이지; Speakeasy Noir; 스피크이지 누아르 | US | 지하; 바; 재즈; 밤 | A hidden dim bar behind an unmarked door, with a long wooden counter, amber lamps and smoky haze. | place |
-| Joshua Tree | 조슈아 트리; 约书亚树; 조슈아트리; 조슈아 트리 국립공원; joshua tree national park; 조슈아트리 국립공원 | US | 사막; 캠핑; 바위; 일몰; 캘리포니아; Gorpcore; 고프코어; 山系; Venice Beach Polaroid; 베니스 비치 폴라로이드; road trip light leak; 로드트립 빛샘 | A dry rocky desert of twisted spiky trees and pale boulders, with long low light turning the sand pink at dawn. | place |
+| Joshua Tree | 조슈아 트리; 约书亚树; 조슈아트리; 조슈아 트리 국립공원; joshua tree national park; 조슈아트리 국립공원 | US | 사막; 캠핑; 바위; 일몰; 캘리포니아; 로드트립; Gorpcore; 고프코어; 山系; Venice Beach Polaroid; 베니스 비치 폴라로이드; road trip light leak; 로드트립 빛샘 | A dry rocky desert of twisted spiky trees and pale boulders, with long low light turning the sand pink at dawn. | place |
 | Key West | 키웨스트; 키 웨스트; Mallory Square | US | 섬; 일몰; 카리브; 부두 | A wooden pier at the southern tip with a flaming orange sunset and pastel gingerbread houses. | place |
 | Laguna Beach | 라구나 비치; 라구나 해변; Laguna coast; 拉古纳 | US | 해변; 캘리포니아; 여름; 절벽; 낮; 해안 | A rocky Southern California cove with turquoise water, cliffs and bright spray, lit by strong overhead sun. | place |
 | Lake Tahoe | 레이크 타호; 타호 호수; 에메랄드 베이; Emerald Bay | US | 호수; 소나무; 여름; 맑음; Gorpcore; 고프코어; 山系 | A clear alpine lake with transparent turquoise shallows, granite shore and dark pine edges. | place |
@@ -913,6 +954,16 @@ Scene 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다. 
 | Open-Air Beach Cafe | 해변 야외 카페; 비치 카페 테라스; 오픈에어 카페; beachside cafe patio | US | 베니스 비치 폴라로이드; Venice Beach Polaroid; 威尼斯海滩拍立得; 폴라로이드 SX-70; 베니스 비치; 해변 | Wooden chairs and small tables stand under striped umbrellas on sun-bleached pavement beside the sand, with beach glare bouncing up from the ground. | place |
 | Roadside Burger Stand | 로드사이드 버거 스탠드; 야외 버거집; 노점 버거; open-air burger stand | US | 로드트립 빛샘; Road-Trip Light Leak; 公路旅行漏光; 날짜 각인; 베니스 비치; 밤 | A small open-air burger stand with a lit counter window and red plastic picnic tables on bare pavement, the street beyond the light left black. | place |
 | stone kitchen | 석조 부엌; 돌벽 주방; 오래된 돌 부엌; old stone kitchen | US, FR | 베르메르; 페르메이르; Vermeer; 维米尔; 维米尔窗边光; 倒牛奶的女仆; 우유를 따르는 여인; The Milkmaid; 부엌; 창가; 빵 | An old kitchen with bare stone walls and a rough wooden table under a high casement window, bread and an earthenware jug on the wood. | place |
+| Parking Lot | 쇼핑몰 주차장; 야외 주차장; surface lot | US | 주차장; 아스팔트; 교외; 낮 | A wide asphalt lot with painted white stall lines, parked cars, light poles and a low store front at the far edge. | place |
+| Laundromat | 코인 빨래방; 빨래방; 셀프 빨래방 | US | 빨래방; 실내; 형광등; 밤 | A bright coin laundry with rows of round-windowed washers, a long folding table and plastic chairs under flat fluorescent light. | place |
+| Corner Store | 동네 가게; 길모퉁이 가게; neighborhood corner market | US | 가게; 간판; 일상; 동네 | A small neighborhood market on a street corner with a striped awning, crates of produce outside and posters taped across the windows. | place |
+| Strip Mall | 스트립 몰; 길가 상가; 교외 상가; roadside plaza | US | 상가; 교외; 주차장; 간판 | A low row of small shops with a shared sign pylon, glass storefronts and a long parking lot in front. | place |
+| Suburban Street | 교외 주택가; 주택가 거리; 미국 동네; residential cul-de-sac | US | 교외; 주택; 잔디; 조용함 | A quiet residential street with detached houses, trimmed lawns, mailboxes at the curb and parked cars in the driveways. | place |
+| Front Porch | 앞 베란다; 현관 포치; 집 앞 현관; porch steps | US | 현관; 계단; 주택; 낮 | A wooden front porch with a few steps, a railing, a screen door and a worn welcome mat, shaded by a roof edge. | place |
+| Basketball Court | 길거리 농구 코트; 야외 농구장; 농구장; outdoor court | US | 농구; 야외; 아스팔트; 스포츠 | An outdoor asphalt court with faded painted lines, chain-net hoops on tall poles and a chain-link fence around it. | place |
+| Chain-Link Fence | 철망 울타리; 철조망; 체인링크 펜스; wire fence | US | 울타리; 철망; 질감; 거리 | A diamond-mesh steel fence on metal posts, its wires catching hard highlights and casting a fine net of shadow on the ground. | item |
+| City Sidewalk | 시내 인도; 도시 인도; urban pavement | US | 인도; 도시; 거리; 낮 | A broad concrete sidewalk with expansion joints, a fire hydrant, parking meters and storefronts passing along one side. | place |
+| Dorm Room | 기숙사 방; 대학 기숙사; 캠퍼스 방; college dorm | US | 기숙사; 실내; 침대; 청춘 | A small shared room with two narrow beds, string lights, taped posters, a desk piled with books and a cluttered window ledge. | place |
 
 ## FR
 
@@ -977,7 +1028,7 @@ Scene 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다. 
 | Hôtel Ritz | 리츠 호텔; Ritz Paris; 리츠 파리; 방돔 호텔 | FR | 파리; 고급; 오전; 호텔 | A grand hotel garden with white tables, trimmed hedges and soft light on pale stone walls. | place |
 | Île Saint-Louis | 생루이 섬; 圣路易岛; 일 생루이; 생루이섬; 생 루이 섬; Ile Saint-Louis | FR | 센강; 골목; 석조; 중세; 파리 | A narrow stone lane with tall facades facing each other, a thin strip of sky overhead, wrought-iron shop signs and wooden shutters. | place |
 | Jardin des Plantes | 파리 식물원; 그랑 세르; 파리 식물원 온실; Grandes Serres; 巴黎植物园 | FR | 온실; 철골; 열대식물; 유리 | A tall iron-and-glass greenhouse with dark green steel ribs, palm and banana leaves and a faint mist that makes the foliage glisten. | place |
-| Jardin des Tuileries | 튈르리; 튈르리 정원; 튈르리 공원; 튀일리; Tuileries; 초록 의자; Tuileries green chairs; 杜乐丽花园 | FR | 파리; 정원; 분수; 철제 의자; 가을; 파리 소프트 그레이; 巴黎午后柔灰漫射; Lumière grise de Paris | Dark-green slanted metal chairs scattered round an octagonal fountain basin on pale packed gravel, with sparkling spray in noon light. | place |
+| Jardin des Tuileries | 튈르리; 튈르리 정원; 튈르리 공원; 튀일리; Tuileries; 초록 의자; Tuileries green chairs; 杜乐丽花园 | FR | 파리; 정원; 분수; 철제 의자; 가을; 파리 소프트 그레이; 巴黎午后柔灰漫射; Lumière grise de Paris | Dark-green slanted metal chairs scattered round an octagonal fountain basin on pale packed gravel, with spray rising from the basin. | place |
 | Jardin du Luxembourg | 뤽상부르 공원; 뤼상부르 공원; Luxembourg Gardens; 룩셈부르크 정원; 卢森堡公园; 룩셈부르 공원; 룩셈부르크 공원; 룩상부르 공원; 녹색 철제 의자; 뤽상부르; Luxembourg | FR | 공원; 파리; 가을; 철제 의자; 그늘; Parisian Chic; 파리지앵 시크 | A formal park of chestnut-shaded gravel paths, a large octagonal basin and scattered green metal chairs in dappled light. | place |
 | kiosque à journaux | newsstand; 신문 가판대; 키오스크; news kiosk | FR | 거리; 파리; 잡지; Nouvelle Vague; 누벨바그; 프렌치 뉴웨이브; 60년대; 신문; Parisian Chic; 파리지앵 시크 | A dark green newspaper kiosk with magazine covers pinned in rows and glass reflecting the street. | place |
 | La Closerie des Lilas | 라 클로즈리 데 릴라; 클로즈리 데 릴라; Closerie des Lilas; hemingway bar; 헤밍웨이 바 | FR | 재즈; 바; 마호가니; 황동; 촛불 | A dark mahogany bar with a brass nameplate, green glass lamp, heavy velvet curtains and a black grand piano glimpsed in the garden room. | place |
@@ -987,7 +1038,7 @@ Scene 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다. 
 | Marché provençal | 프로방스 시장; 프로방스 장터; 플라타너스 시장; Provençal market | FR | 시장; 바구니; 무화과; 프로방스 | Wooden market stalls under tall plane trees with woven baskets, Marseille soap, olive oil and white-bloomed black figs in green dappled light. | place |
 | Menton | 망통; 레몬 마을; Menton old town | FR | 레몬; 나무; 노란색; 벽; 파스텔; 덧문; 남프랑스 한여름 과노출; 南法盛夏过曝; Soleil du Midi | Terraced lemon and bitter-orange trees beside a warm yellow lime-washed house with pale blue-grey shutters in soft Mediterranean sun. | place |
 | Métro de Paris | 파리 지하철; 메트로; 巴黎地铁; 파리 메트로 | FR | 지하철; 타일; 녹색 철기둥; 창문 반사; Nouvelle Vague; 누벨바그; 프렌치 뉴웨이브; 60년대; Parisian Chic; 파리지앵 시크 | Tiled station and tunnel with green-painted iron columns, tungsten lamps and moving window reflections. | place |
-| Montmartre | 몽마르트; 몽마르트르; 蒙马特; Montmartre hill; 몽마르트르 계단; 몽마르트 언덕; Butte Montmartre; la Butte; Moulin Rouge Montmartre | FR | 언덕; 돌계단; 파리; 황혼; 예술; Parisian Chic; 파리지앵 시크 | A steep granite stair with double cast-iron railings beside nineteenth-century apartments with coloured shutters, lit by low golden sun above a sea of zinc roofs. | place |
+| Montmartre | 몽마르트; 몽마르트르; 蒙马特; Montmartre hill; 몽마르트르 계단; 몽마르트 언덕; Butte Montmartre; la Butte; Moulin Rouge Montmartre | FR | 언덕; 돌계단; 파리; 황혼; 예술; Parisian Chic; 파리지앵 시크 | A steep granite stair with double cast-iron railings beside nineteenth-century apartments with coloured shutters, with a sea of zinc roofs below. | place |
 | Montparnasse | 몽파르나스; 몽파르나스 카페; Montparnasse bistro; 보헤미안 식당 | FR | 보헤미안; 비스트로; 유화; 오후; Nouvelle Vague; 누벨바그; 프렌치 뉴웨이브; 60년대; 고다르 | A narrow old bistro with yellow wood panelling, unframed paintings on the walls, an old wooden bar and faded red check tablecloths in slanting afternoon sun. | place |
 | Mosaïque hall d'entrée | 모자이크 현관; 현관 홀; vestibule; mosaic vestibule | FR | 타일; 현관; 아파트; 클래식 | A building entrance hall with a geometric terrazzo mosaic floor, marble pilasters, brass mailboxes and a spiral wooden stair with red carpet. | place |
 | Moulin de la Galette | 물랭 드 라 갈레트; 갈레트 풍차; Moulin Blute-Fin | FR | 인상파; 나무; 풍차; 아침; 정원 | An old timber windmill with cracked oak posts and large wooden sails above a flower garden fence, lit by low golden morning sun. | place |
@@ -1031,7 +1082,7 @@ Scene 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다. 
 | Saint-Paul-de-Vence | 생폴드방스; 생폴 드 방스; Saint Paul de Vence; 자갈 모자이크 | FR | 예술; 마을; 자갈; 모자이크; 보라; 꽃; 남프랑스 한여름 과노출; 南法盛夏过曝; Soleil du Midi | A walled hill town with pebble-mosaic floors in petal patterns, old stone galleries draped in wisteria and bougainvillea, polished by footsteps. | place |
 | Saint-Tropez | 생트로페; St Tropez; 생 트로페; 생트로페 항구 | FR | 여름; 리비에라; 요트; 50년대 | A sunny harbour with moored yachts, pastel-painted facades and warm stone quay. | place |
 | Sainte-Chapelle | 생트샤펠; 생트 샤펠; Sainte Chapelle | FR | 고딕; 스테인드글라스; 중세; 실내 | A Gothic chapel whose upper hall is walled almost entirely in tall stained-glass windows, flooding the space with jewel-colored light. | place |
-| Shakespeare and Company | 셰익스피어 앤 컴퍼니; 셰익스피어 서점; Shakespeare & Co; Shakespeare & Company; 莎士比亚书店 | FR | 파리; 서점; 고서; 좌안; 문학; Nouvelle Vague; 누벨바그; 프렌치 뉴웨이브; 60년대; 책; Parisian Chic; 파리지앵 시크 | A cramped old oak stair and walls packed floor to ceiling with yellowed books, a typewriter, a red velvet armchair and a small green-shaded lamp. | place |
+| Shakespeare and Company | 셰익스피어 앤 컴퍼니; 셰익스피어 서점; Shakespeare & Co; Shakespeare & Company; 莎士比亚书店 | FR | 파리; 서점; 고서; 좌안; 문학; Nouvelle Vague; 누벨바그; 프렌치 뉴웨이브; 60년대; 책; Parisian Chic; 파리지앵 시크 | A dark-green painted wood shopfront with small panes and a crate of old paperbacks outside; inside, a cramped old oak stair and walls packed floor to ceiling with yellowed books, a typewriter, a red velvet armchair and a small green-shaded lamp. | place |
 | Sorbonne | 소르본; 소르본 대학; 소르본대학; 소르본 계단; Sorbonne steps | FR | 파리; 대학; 가을; 석조; 아케이드; 다크 아카데미아; Dark Academia | A pale limestone arcade with heavy carved vaults, dark wooden doors and deep shadows cut by one side of cool white light. | place |
 | Square du Vert-Galant | 베르갈랑 광장; 베르갈랑; 베르갈랑 공원; 시테섬 끝; Vert-Galant; Île de la Cité tip | FR | 센강; 황혼; 버드나무; 부두 | A low limestone embankment at the tip of the island with willow branches trailing into grey-blue river water and distant bridges under dusk light. | place |
 | Terrasse de Café | 카페 테라스; 露天咖啡座; 파리 카페 테라스; sidewalk café | FR | 카페; 거리; 오후; 여유; Nouvelle Vague; 누벨바그; 프렌치 뉴웨이브; 60년대; Parisian Chic; 파리지앵 시크; 파리 소프트 그레이; 巴黎午后柔灰漫射; Lumière grise de Paris | Small round tables and chairs on the pavement with steaming coffee, passersby and the street behind. | place |
@@ -1110,3 +1161,17 @@ Scene 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다. 
 | Notre-Dame de Paris | 노트르담 드 파리; 노트르담; 노트르담 대성당; Notre-Dame cathedral | FR | 롤라이플렉스; Rolleiflex; 禄来双反; 双反双重倒影; 유리 이중 반사; Reflet de vitrine; 센강; 파리; 쌍탑 | The twin grey limestone towers of the cathedral stand across the Seine, flat and slightly hazy under overcast light. | place |
 | Volets clos | 볼레 클로; 닫힌 덧창; 덧창 닫힌 방; closed shutters; shuttered farmhouse room | FR | 남프랑스 한여름 과노출; 南法盛夏过曝; Soleil du Midi; 남프랑스; 프로방스; 농가; 시에스타; 낮잠; 덧창; 한낮 | A dim stone farmhouse room behind closed white wooden shutters, the midday sun leaking through the slats as a few almost-white beams across a cool plank floor. | place |
 | flaque d'eau | 플라크 도; 포석 위 웅덩이; mirror puddle; reflecting puddle | FR | Photographie humaniste; 휴머니스트 사진; Tri-X; 트라이엑스; 柯达Tri-X; 흑백 인문 사진; 비; 마레; 포석; 반사 | A shallow puddle on dark cobbles holds a clean mirror image of the pale sky and the street lamps, ringed by wet black stone. | place |
+| Arrêt de bus | 아레 드 뷔스; 버스 쉘터; abribus | FR | 정류장; 도로; 대기; 일상 | A roadside bus stop with a pole sign, a glass shelter with a timetable and a bench, set along a plain sidewalk. | place |
+| Passage piéton | 파사주 피에통; 흰 줄 횡단보도; zebra crossing | FR | 횡단보도; 도로; 줄무늬; 도시 | Wide white stripes painted across a gray road with a lit signal on a pole and pedestrians waiting at the curb. | place |
+| Trottoir | 트로투아르; 파리 인도; Paris sidewalk | FR | 인도; 거리; 일상; 도시 | A narrow pale-gray sidewalk edged with a stone curb, a street gutter running with water and shop fronts close along the other side. | place |
+| Ruelle | 뤼엘; 뒷길; narrow lane | FR | 골목; 좁은 길; 돌담; 구시가 | A narrow lane between old stone houses with shuttered windows, potted geraniums and cobbles worn smooth underfoot. | place |
+| Cour d'immeuble | 쿠르 디뫼블; 건물 안뜰; 아파트 안마당; apartment courtyard | FR | 안뜰; 건물; 조용함; 일상 | An inner courtyard of tall stone apartment walls with identical windows, a few bicycles, a tree and a patch of sky overhead. | place |
+| Escalier haussmannien | 에스칼리에 오스마니앵; 아파트 계단; stairwell of a Haussmann building | FR | 계단; 실내; 철제 난간; 파리 | A worn wooden stair winding up through a Haussmann building with a wrought-iron banister, tiled landings and a skylight at the top. | place |
+| Pharmacie | 파르마시; 약국; 초록 십자 약국; pharmacy with a green cross | FR | 약국; 초록 십자; 거리; 밤 | A neighborhood pharmacy with a glowing green cross above the door and a bright shop window of neatly stacked boxes. | place |
+| Laverie automatique | 라브리 오토마티크; self-service laundry | FR | 빨래방; 실내; 형광등; 밤 | A bright self-service laundry with rows of round-windowed machines, a plastic bench and flat white light on a tiled floor. | place |
+| Gare | 가르; 기차역; 역사; train station | FR | 기차역; 대기; 이동; 철도 | A station concourse with a large departure board, a high iron-and-glass roof and travelers crossing the stone floor. | place |
+| Quai de gare | 케 드 가르; 기차 승강장 | FR | 승강장; 철도; 대기; 이동 | A long platform with a painted safety line, benches, a clock hanging from the canopy and rails running off into haze. | place |
+| Platanes | 플라타느; 플라타너스 가로수; 길가 플라타너스 | FR | 가로수; 그늘; 남프랑스; 여름 | Tall plane trees with mottled trunks line a road and cast dappled shade over the gravel or pavement beneath them. | place |
+| Jardin public | 자르댕 퓌블릭; 시립 공원; 동네 공원; public garden | FR | 공원; 초록; 벤치; 낮 | A small municipal garden with raked gravel paths, trimmed lawns, green benches and tall trees. | place |
+| Banc public | 방 퓌블릭 | FR | 벤치; 휴식; 공원; 앉기 | A green slatted bench with cast-iron ends beside a gravel path, a trash bin and fallen leaves at its feet. | item |
+| Supérette | 쉬페레트; 작은 마트; small neighborhood grocery | FR | 가게; 간판; 일상; 동네 | A small neighborhood grocery with crates of fruit outside, a striped awning and a glass door covered with notices. | place |
