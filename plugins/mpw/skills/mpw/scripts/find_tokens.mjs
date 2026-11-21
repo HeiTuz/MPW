@@ -1,8 +1,9 @@
 #!/usr/bin/env node
 // Search the per-layer token tables in references/image/lexicon/*.md. No dependencies, no data file: the tables are parsed directly.
-// usage: node scripts/find_tokens.mjs --q "신중식,찻집" [--layers outfit,scene,camera] [--culture KR|CN|JP|US|FR] [--limit 6] [--json] [--random N]
+// usage: node scripts/find_tokens.mjs --q "신중식,찻집" [--layers outfit,scene,camera] [--culture KR|CN|JP|US|FR] [--limit 6] [--json] [--aliases] [--random N]
 // A query that names a look (왕가위, 港风, 홍콩 영화) also prints a "## Look card" block first: read that card before the layer rows.
-// A query that only touches a card's "do not call" words (필카 감성, 폴라로이드) prints a "## Look card candidates" block with one-line summaries instead.
+// A query that only touches a card's "do not call" words (필카 감성, 폴라로이드), or shares two or more cues (비 오는 밤, 네온) with a card's summary, names and facts, prints a "## Look card candidates" block with one-line summaries instead.
+// Rows print without their aliases (the search still matches them); --aliases adds them.
 import { randomInt } from 'node:crypto';
 import fs from 'node:fs';
 import path from 'node:path';
@@ -168,6 +169,16 @@ function maskNegated(text, looks) {
   }
   return text;
 }
+// What a card says about how its look appears, for matching what a photo shows (rain, neon, a flash, a bench): the names, the do-not-call words, the index summary,
+// the card's own medium, palette, time and light rows, and the 요청에 이 말이 있으면 cells of 갈래 고르기, in one string.
+const cueText = (card, names, avoid, summary) => {
+  const section = (key) => card.split(/^## /m).find((s) => s.startsWith(key)) ?? '';
+  const facts = section('고정 사실').split('\n').filter((l) => /^\| (medium|palette|time|light-key) \|/.test(l)).map((l) => splitRow(l)[1]);
+  const clues = section('갈래 고르기').split('\n').filter((l) => /^\| [A-Z]/.test(l)).map((l) => splitRow(l)[1]);
+  const text = norm([...names, ...avoid, summary, ...facts, ...clues].join(' '));
+  return { text, stripped: strip(text) };
+};
+
 export function loadLooks(dir = LOOKS_DIR) {
   const file = path.join(dir, 'index.md');
   if (!fs.existsSync(file)) return [];
@@ -187,7 +198,7 @@ export function loadLooks(dir = LOOKS_DIR) {
     const meta = Object.fromEntries(card.split(/^## /m)[0].split('\n').filter((l) => /^\| /.test(l)).map(splitRow).filter((c) => c.length === 2));
     const names = list(meta['부르는 이름'] ?? ''), avoid = list(meta['부르지 않는 말'] ?? '');
     if (!names.length) throw new Error(`looks/${slug}.md: head table has no 부르는 이름 row`);
-    looks.push({ slug, title, names, avoid, culture, branches, axis, summary, file: `references/image/looks/${slug}.md` });
+    looks.push({ slug, title, names, avoid, culture, branches, axis, summary, cues: cueText(card, names, avoid, summary), file: `references/image/looks/${slug}.md` });
   }
   return looks;
 }
@@ -226,7 +237,18 @@ const wordHits = (look, words) => {
   const text = norm([...look.avoid, ...look.names, look.summary].join(' '));
   return words.filter((w) => (/^[a-z0-9'.-]+$/.test(w) ? hasWord(text, w) : text.includes(w))).length;
 };
-// Candidates come out closest to the request first: a card of the culture the query points to, then more query words in its words and summary, then index order.
+// The cues of a query: its comma terms, or its words when it has no comma. Words every card lists (photo, snap, person) cue nothing.
+const GENERIC_CUES = new Set(['사진', '스냅', '인물', '이미지', '장면', 'photo', 'image', 'picture', 'snapshot', 'snap']);
+const queryCues = (text) => {
+  const terms = text.split(/[,，、]/).map((t) => t.trim()).filter(Boolean);
+  return [...new Set(terms.length > 1 ? terms : text.trim().split(/\s+/))]
+    .filter((c) => squash(c).length >= 2 && !/^\d+$/.test(c) && !FILLER_WORDS.has(c) && !ERA_WORD.test(c) && !GENERIC_CUES.has(c) && !/^[가-힣]는$/.test(c));
+};
+const cueHits = (look, cues) => cues.filter((c) => hasName(c, look.cues.text, look.cues.stripped));
+// A card is offered when a query word is one of its do-not-call words (one is enough), or when two or more cues of the query are in what the card says about its look
+// (비 오는 밤, 네온: a photo described by what it shows, not by the card's name). Candidates come out closest to the request first: a card of the culture the query points to,
+// then more shared cues, then more query words in its words and summary, then index order. A card the query named and negated (no Kodak Gold) is not offered for shared cues.
+// A card offered only for the same cues as a card above it (four cards on 네온, 우산) adds no reason and is dropped; a card with one more or other cue stays.
 export function findLookCandidates(terms, called = [], dir = LOOKS_DIR) {
   const raw = norm(terms.join(','));
   const stripped = strip(raw);
@@ -235,16 +257,20 @@ export function findLookCandidates(terms, called = [], dir = LOOKS_DIR) {
   const skip = new Set(called.map((c) => c.slug));
   const cultures = queryCultures(raw, stripped);
   const words = queryWords(terms);
+  const cues = queryCues(masked);
   return looks
     .filter((look) => !skip.has(look.slug))
     .flatMap((look) => {
       const hits = look.avoid.filter((w) => spansOf(w, masked).length > 0);
-      if (!hits.length) return [];
+      const shared = cueHits(look, cues);
+      const negated = [...look.names, ...look.avoid].some((w) => spansOf(w, raw).length > 0 && spansOf(w, masked).length === 0);
+      if (!hits.length && (negated || shared.length < 2)) return [];
       const inCulture = [...cultures].some((c) => look.culture.includes(c)) ? 1 : 0;
-      return [{ ...look, matched: hits.sort((a, b) => b.length - a.length)[0], inCulture, hits: wordHits(look, words) }];
+      return [{ ...look, matched: hits.length ? hits.sort((a, b) => b.length - a.length)[0] : shared.join(', '), avoidHit: hits.length > 0, cueList: shared, inCulture, shared: shared.length, hits: wordHits(look, words) }];
     })
     .map((c, i) => ({ ...c, i }))
-    .sort((a, b) => b.inCulture - a.inCulture || b.hits - a.hits || a.i - b.i)
+    .sort((a, b) => b.inCulture - a.inCulture || b.shared - a.shared || b.hits - a.hits || a.i - b.i)
+    .filter((c, k, all) => c.avoidHit || !all.slice(0, k).some((up) => up.cueList.join(',') === c.cueList.join(',')))
     .slice(0, MAX_CANDIDATES);
 }
 
@@ -283,15 +309,16 @@ export function drawRandom(results, count, pickIndex = randomInt) {
   });
 }
 
+// Two ways to read a called card, one line each: for writing a new image (outline, then the branch with its set and pair) and for extracting a prompt from a photo (facts, then the branch without pairs).
 const cardBlock = (cards) => (cards.length
-  ? `## Look card\n${cards.map((c) => `${c.title} [${c.axis}] — ${c.file}\nread: node scripts/read_look.mjs ${c.slug} --outline\nbranch: node scripts/read_look.mjs ${c.slug} --branch <A|B|C|D> [--set S<n>] [--pair <n>]`).join('\n')}\n(read the outline first and choose the branch, set and pair; then run the branch command for that branch only. Use a scene set only when the request names that set's specific place or prop; a city name or a kind of place (cafe, alley, street) alone is not enough, and what the request says beats the card. Read the card before the layer rows below; it fills the layers this look carries. Without a shell, open the card file whole.)\n\n`
+  ? `## Look card\n${cards.map((c) => `${c.title} [${c.axis}] — ${c.file}\nnew image: node scripts/read_look.mjs ${c.slug} --outline, then --branch <A|B|C|D> [--set S<n>] [--pair <n>]\nextract: node scripts/read_look.mjs ${c.slug} --facts, then --branch <A|B|C|D> --no-pairs`).join('\n')}\n(Read the card before the layer rows below. Use a scene set only when the request names its place or prop, not a city or a kind of place alone; the request beats the card. No shell: open the card file.)\n\n`
   : '');
 
 const candidateBlock = (candidates) => (candidates.length
-  ? `## Look card candidates\n(no card was named exactly; these cards list a word of your query as a general word. Pick the first one whose summary fits the medium or look the request asks for and read it; if none fits, or the request names no medium or look, write without a card.)\n${candidates.map((c) => `- ${c.title} [${c.axis}, ${c.culture}] — ${c.summary}\n  read: node scripts/read_look.mjs ${c.slug} --outline`).join('\n')}\n\n`
+  ? `## Look card candidates\n(no card was named. New image: read the first whose summary fits with \`node scripts/read_look.mjs <slug> --outline\`; if none fits, write without a card. Photo extraction: a candidate is only a suggestion; check it with \`--facts\` only when the photo shows that medium's marks (image-brief §12.0), otherwise write without a card. [매체] cards name a film or camera, [장면] cards a place.)\n${candidates.map((c) => `- ${c.slug} · ${c.title} [${c.axis}, ${c.culture}] — ${c.summary}`).join('\n')}\n\n`
   : '');
 
-export function formatText(results, cards = [], candidates = []) {
+export function formatText(results, cards = [], candidates = [], { aliases = false } = {}) {
   const head = cardBlock(cards) + candidateBlock(candidates);
   if (results.every((l) => l.matches.length === 0)) {
     if (cards.length) return `${head}no layer rows matched; the card above carries the look.\n`;
@@ -299,7 +326,7 @@ export function formatText(results, cards = [], candidates = []) {
   }
   return head + results.map((l) => {
     const body = l.matches.length
-      ? l.matches.map((m) => `${m.token} — ${m.looks}${m.aliases.length ? ` (${m.aliases.slice(0, 4).join(', ')})` : ''} [${m.kind}${m.tags.includes('소품 필요') ? ', 소품 필요' : ''}]`).join('\n')
+      ? l.matches.map((m) => `${m.token} — ${m.looks}${aliases && m.aliases.length ? ` (${m.aliases.slice(0, 4).join(', ')})` : ''} [${m.kind}${m.tags.includes('소품 필요') ? ', 소품 필요' : ''}]`).join('\n')
       : 'no match';
     return `## ${l.title}\n${body}\n`;
   }).join('\n');
@@ -319,10 +346,11 @@ export function formatJson(results, terms, cards = [], candidates = []) {
 }
 
 function parseArgs(argv) {
-  const opts = { q: null, layers: SLUGS, culture: null, limit: 6, json: false, random: 0 };
+  const opts = { q: null, layers: SLUGS, culture: null, limit: 6, json: false, aliases: false, random: 0 };
   for (let i = 0; i < argv.length; i++) {
     const flag = argv[i];
     if (flag === '--json') { opts.json = true; continue; }
+    if (flag === '--aliases') { opts.aliases = true; continue; }
     const value = argv[++i];
     if (value === undefined) throw new Error(`${flag} needs a value`);
     if (flag === '--q') opts.q = value;
@@ -365,7 +393,7 @@ if (isMainModule()) {
     let results = search({ ...opts, cards });
     results = opts.random ? drawRandom(results, opts.random) : results.map((l) => ({ ...l, matches: l.matches.slice(0, opts.limit) }));
     const candidates = findLookCandidates(opts.terms, cards);
-    process.stdout.write(opts.json ? JSON.stringify(formatJson(results, opts.terms, cards, candidates)) + '\n' : formatText(results, cards, candidates));
+    process.stdout.write(opts.json ? JSON.stringify(formatJson(results, opts.terms, cards, candidates)) + '\n' : formatText(results, cards, candidates, opts));
   } catch (error) {
     console.error(`find_tokens: ${error.message}`);
     process.exitCode = 2;

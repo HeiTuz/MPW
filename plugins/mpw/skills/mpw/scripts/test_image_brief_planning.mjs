@@ -30,12 +30,21 @@ assert.match(evidence.body, /의미를 정독하거나 결과 이미지를 대�
 assert.match(evidence.body, /원문 프롬프트·이미지 모음은 재배포하지 않는다/);
 
 const sizes = {};
-const generation = [s1, s2, s3, s4, s5, s6, s7, s9, s10];
+// §10 is read by part: 10.0 (how to read the examples) with 10.1 (person examples, portrait bundle) or 10.2 (no-person examples, new bundles).
+const generation = [s1, s2, s3, s4, s5, s6, s7, s9];
+const [s10read, s10person, s10scene] = ['10.0', '10.1', '10.2'].map(sec);
+const s4cards = sec('룩 카드');
+const s4parts = ['사용자가 준 것', '토큰 찾기', '비워 둔 층', '쓰기 전에 슬롯 표를 정한다', '문장 쓰는 법'].map(sec);
+const expectedExamples = {
+  'gpt-image-new': [s10read, s10scene],
+  'gpt-image-new-structured': [s10read, s10scene],
+  'gpt-image-portrait': [s10read, s10person],
+};
 const expectedSections = {
   'gpt-image-new': generation,
   'gpt-image-new-structured': generation,
   'gpt-image-portrait': generation,
-  'gpt-image-extract': [s1, s2, s3, s4, s5, s6, s9],
+  'gpt-image-extract': [s1, s2, s3, s5, s6, s9],
   'gpt-image-edit': [s1, s2, s6, s7, s8, s9],
   'gpt-image-edit-structured': [s1, s2, s6, s7, s8, s9],
 };
@@ -47,6 +56,14 @@ for (const [name, targets] of Object.entries(BUNDLES)) {
   for (const id of ids) {
     const wanted = expectedSections[name].includes(sec(id));
     assert.equal(result.text.includes(sec(id)), wanted, `${name}: image-brief §${id} routing`);
+  }
+  for (const part of [s10read, s10person, s10scene]) {
+    assert.equal(result.text.includes(part), (expectedExamples[name] ?? []).includes(part), `${name}: image-brief §10 part routing`);
+  }
+  // The extraction bundle reads §4 by subsection without '룩 카드' (§12.0 carries its own card steps); the other §4 readers get it whole.
+  if (expectedSections[name].includes(s4) || name === 'gpt-image-extract') {
+    for (const part of s4parts) assert.ok(result.text.includes(part), `${name}: image-brief §4 subsection routing`);
+    assert.equal(result.text.includes(s4cards), name !== 'gpt-image-extract', `${name}: image-brief §4 '룩 카드' routing`);
   }
   assert.ok(!result.text.includes(legacyPlanning), `${name}: §3.2.2 body must not be bundled`);
   assert.ok(!result.text.includes(legacyNoise), `${name}: §3.2.4 body must not be bundled`);
@@ -91,7 +108,7 @@ assert.ok(examples.some(t => t.includes('## Identity Reference')), 'a person exa
 // Photo extraction example (structure, not prose): the first line opens with a medium name from the section 12.0 table, most
 // token lines are native-language names, no token is a slot name, and the whole thing passes the native checker.
 {
-  const media = [...sec('12').matchAll(/^\| [^|\n]+ \| [^|\n]+ \| `(An? [^`]+)` \|$/gm)].map(m => m[1].trim());
+  const media = [...sec('12').matchAll(/^\| [^|\n]+ \| [^|\n]+ \| `(An? [^`]+)` \|(?: [^|\n]+ \|)?$/gm)].map(m => m[1].trim());
   assert.ok(media.length >= 8, `12.0 medium table rows: ${media.length}`);
   // §12.0 step 3: a called look card's first-line phrase wins over the table name, so a card's `medium` row also counts.
   const cardOpenings = fs.readdirSync(new URL('../references/image/looks/', import.meta.url)).filter(f => f.endsWith('.md') && f !== 'index.md')
@@ -105,7 +122,7 @@ assert.ok(examples.some(t => t.includes('## Identity Reference')), 'a person exa
   assert.ok(![...named.errors, ...named.warnings].some(item => item.code === 'token/slot-name'), 'extraction example uses no slot-name token');
   assert.ok(/^## Finish$/m.test(extractExample), 'extraction example ends with Finish');
   const extractText = readTargets(BUNDLES['gpt-image-extract']).text;
-  assert.ok(extractText.includes('# 룩 카드 색인') && extractText.includes('# 고정 몫'), 'extraction bundle carries the look-card index and fixed-lines.md');
+  assert.ok(!extractText.includes('# 룩 카드 색인') && extractText.includes('# 고정 몫'), 'extraction bundle carries fixed-lines.md and leaves the look-card index to read_look.mjs --list');
 }
 // Routing only: the photo-extraction bundle carries §12 and no other bundle does.
 const s12 = sec('12');
@@ -180,10 +197,16 @@ for (const [layer, slug] of Object.entries(LAYER_FILES)) {
 // (new 102540, portrait 109468, edit 20501, extract 124450 measured, ceilings about 2% above).
 // Lowered (step 14) after the request-wins rules replaced overlapping card sentences and the card-authoring paragraph moved to looks/index.md
 // (new 102083, portrait 109011, edit 20303, extract 124463 measured, ceilings about 2% above).
-assert.ok(sizes['gpt-image-new'].utf8_bytes <= 104100, `gpt-image-new is ${sizes['gpt-image-new'].utf8_bytes} bytes`);
-assert.ok(sizes['gpt-image-portrait'].utf8_bytes <= 111200, `gpt-image-portrait is ${sizes['gpt-image-portrait'].utf8_bytes} bytes`);
+// Lowered (token stage 1) with no rule text changed: bundles read layer-lexicon.md by 사용법 and 문화권 룩 묶음 only, fixed-lines.md ends with the 한국어 문안 section that no bundle reads by default,
+// the extraction bundle skips fixed-lines Camera, and image-brief section 10 is read by part (new 81289, portrait 94914, edit 20303, extract 112588 measured, ceilings about 2% above).
+// Token stage 2: the extraction bundle reads image-brief section 4 without its '룩 카드' subsection and no longer carries looks/index.md (section 12.0 now holds the extraction card steps
+// and points at read_look.mjs --list), and every layer-lexicon reader gets back the 층별 파일 table that 사용법 1 points at (new 82424, portrait 96049, edit 20303, extract 94388 measured, ceilings about 2% above).
+// Token stage 4: section 12.0 asks yes/no questions before a card is used (medium marks column, light, place for scene cards) and overlapping section 12 sentences were cut to pay for it
+// (new 82855, portrait 96480, edit 20303, extract 94570 measured; ceilings unchanged, about 2% above).
+assert.ok(sizes['gpt-image-new'].utf8_bytes <= 84100, `gpt-image-new is ${sizes['gpt-image-new'].utf8_bytes} bytes`);
+assert.ok(sizes['gpt-image-portrait'].utf8_bytes <= 98000, `gpt-image-portrait is ${sizes['gpt-image-portrait'].utf8_bytes} bytes`);
 assert.ok(sizes['gpt-image-edit'].utf8_bytes <= 20700, `gpt-image-edit is ${sizes['gpt-image-edit'].utf8_bytes} bytes`);
-assert.ok(sizes['gpt-image-extract'].utf8_bytes <= 126900, `gpt-image-extract is ${sizes['gpt-image-extract'].utf8_bytes} bytes`);
+assert.ok(sizes['gpt-image-extract'].utf8_bytes <= 96300, `gpt-image-extract is ${sizes['gpt-image-extract'].utf8_bytes} bytes`);
 
 const scenarios = JSON.parse(read('scripts/fixtures/behavioral/image-planning.json')).cases;
 assert.deepEqual(scenarios.map(c => c.id), [

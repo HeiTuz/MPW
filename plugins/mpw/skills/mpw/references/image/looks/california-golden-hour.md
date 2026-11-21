@@ -16,7 +16,7 @@
 | light-key | A·B·C는 낮은 해 하나가 주광. 역광이나 측광이고 앞면은 하늘·모래·흰 벽·붉은 기와가 되튀긴 빛이 채운다. D는 예외로 해가 높은 오전~이른 오후의 부드러운 자연광(창빛·잎 그늘)이 주광이다. 플래시·인공 조명 없음 |
 | palette | 꿀빛 금색, 호박색, 살구, 테라코타, 바다 남색 그림자(바다가 없는 B 사막은 적갈색 그림자), 바랜 흰색, 데님 청색. 낮은 해의 금빛이 어깨와 뺨 위에 얹힌다. 네온·차가운 회청 낮빛·형광 파스텔 없음(S7 Superia의 옅은 청록 기운은 세트 값) |
 | grain | 고운 컬러 네거티브 입자가 화면 전체에, 그림자에서 조금 더(S1은 중간 입자, S2는 Gold 200의 보이는 입자). B 갈래는 입자가 화면 전체에 아주 옅게 깔려 거의 안 보인다 |
-| lens | 표준~중망원 인물 렌즈, 얼굴 비례 자연. 카메라 높이는 쌍이 정한다. 환경 인물(쌍 6·10)만 28mm대 광각이고 얼굴은 화면 가운데다(`Zeiss Biogon 28mm f/2.8` 줄도 쌍 6·10에서만 쓴다). 렌즈 줄의 출처 순서는 세트 > 쌍 > 갈래 Optics 줄 > 고정 몫 lens 줄이다. 세트는 자기 Optics의 렌즈를 쓴다(S1 35mm, S2 40mm, S3 90mm 6x9, S4 50mm f/0.95, S5 내장 줌 55-90mm, S6 90mm, S7 50mm) |
+| lens | 표준~중망원 인물 렌즈, 얼굴 비례 자연. 환경 인물(쌍 6·10)만 28mm대 광각이고 얼굴은 화면 가운데다(`Zeiss Biogon 28mm f/2.8` 줄도 쌍 6·10에서만 쓴다). 세트는 자기 Optics의 렌즈를 쓴다(S1 35mm, S2 40mm, S3 90mm 6x9, S4 50mm f/0.95, S5 내장 줌 55-90mm, S6 90mm, S7 50mm) |
 | figure | 한 사람이 빛 속에서 움직이거나 쉰다. 바람이 머리카락과 천을 한 방향으로 날린다. 정면 증명사진 자세 없음. 시선은 렌즈·해·먼 곳 중 하나 |
 
 ## 갈래 고르기
@@ -32,12 +32,12 @@
 |---|---|---|
 | face-light | 모든 갈래에서 끈다. 얼굴 빛은 이 카드의 Light 줄이 정한다 | Iris 꼬리의 위·옆 입체광이 #001 #003 #080류 역광(얼굴은 그늘, 가장자리만 금빛)과 부딪혔다 |
 | catchlight | 카드 줄이 이긴다. 선글라스·감은 눈이면(세트 S4, `Ray-Ban Aviator`, `Sun-Worshipping Bliss`) 붙이지 않는다 | Iris는 모든 블록에 캐치라이트를 넣었는데 #008 #010 #014는 선글라스라 눈이 안 보인다 |
-| face-clear | 켠다. 끄는 경우는 가닥이 얼굴을 가로지를 때뿐이다: A의 Expression `Windswept Coastal Laugh`(가닥이 뺨을 가로지름)와 쌍 1의 Pose(머리가 한쪽으로 흩날림)를 쓸 때(쌍 1의 Camera 줄만 빌린 경우는 켠다). A·B의 바람맞은 머리(`Windswept Waves`·`Voluminous Curls`, 쌍 2의 머리를 뒤로 날리는 자세)는 얼굴 반대쪽으로 날려 눈과 턱선이 열린 채이니 켠 채로 둔다. S7의 젖은 머리도 켠다. D의 `Slick Low Bun`은 얼굴을 이미 드러내니 `face clear`를 다시 붙이지 않는다 | #001 #007 #013 #080의 바람머리가 이 룩의 특징인데 Iris 금지문(머리가 눈썹·눈을 가림)이 같은 프롬프트에 있었다 |
+| face-clear | 켠다. 끔: A의 Expression `Windswept Coastal Laugh`(가닥이 뺨을 가로지름), 쌍 1의 Pose(머리가 한쪽으로 흩날림. 쌍 1의 Camera 줄만 빌리면 켠다). 켠 채: A·B의 `Windswept Waves`·`Voluminous Curls`, 쌍 2의 머리를 뒤로 날리는 자세(얼굴 반대쪽으로 날림), S7의 젖은 머리. 다시 붙이지 않음: D의 `Slick Low Bun` | #001 #007 #013 #080의 바람머리가 이 룩의 특징인데 Iris 금지문(머리가 눈썹·눈을 가림)이 같은 프롬프트에 있었다 |
 | base, blush | D에서 카드 줄(`Dewy Makeup`, `Post-Workout Flush`)이 이긴다. A·B·C는 켠다 | #072 #083의 땀·선크림 광과 자연 홍조가 Iris 고정 메이크업과 겹쳤다 |
 | lip | C에서 카드 줄(`Classic Red Lip`)이 이긴다. 나머지는 켠다 | #014의 烈焰红唇과 고정문의 玫瑰裸色果冻唇이 한 프롬프트에 둘 다 있었다 |
 | grain | 카드의 grain 줄이 이긴다(B 줄은 입자가 거의 안 보이게 쓴다). 세트가 입자를 말하면 세트가 이긴다(S1 중간 입자, S2 Gold 200의 실제 입자). `Kodak Gold 200` stock 줄은 입자를 말하지 않는다 | #013(Ektar)과 #017(4x5)은 입자가 거의 없는데 고정 꼬리는 입자를 넣었다. Iris #001은 중간 입자, #003은 실제 필름 입자다 |
-| lens | 렌즈를 말하는 줄은 프롬프트마다 정확히 하나이고 출처 순서는 세트의 렌즈 > 쌍의 렌즈 > 갈래의 Optics 렌즈 줄 > 고정 몫 lens 줄이다. 세트를 쓰면 세트 Optics가 말한 렌즈가 렌즈 줄이고(세트의 `<본체> + <렌즈>` 값, 예: S1 `Leica M6 + Summilux 35mm f/1.4`는 Optics에 본체·렌즈 줄 한 줄로 쓰고 그 줄이 렌즈 줄이다. `stock` 줄에는 렌즈를 쓰지 않는다) 갈래의 Optics 렌즈 줄과 고정 몫 lens 줄은 붙이지 않는다(쌍 6·10과 세트를 함께 쓰면 세트 렌즈가 먼저라 28mm대 광각 문구는 쓰지 않는다). 세트가 없으면 쌍 6(Extreme Wide Shot)·10(Environmental Portrait)은 Camera 줄이 거리만 말하니 Optics `Zeiss Biogon 28mm f/2.8` 줄이 렌즈 줄이고 고정 몫 lens 줄은 끈다. 나머지 쌍(1~5, 7, 8, 9, 11, 12)의 Camera 줄은 렌즈를 말하지 않으니 갈래의 Optics 렌즈 줄(A `Telephoto Compression`, D `Zeiss Planar 80mm f/2.8`)을 골랐으면 그 줄이, 고르지 않았으면 고정 몫 lens 줄이 렌즈 줄이다. B·C의 `Zeiss Biogon 28mm f/2.8`은 쌍 6·10이 아닌 쌍에서는 쓰지 않고 고정 몫 lens 줄이 렌즈 줄이다(이 줄은 카메라 높이를 말하지 않아 쌍 1의 knee-high, 쌍 9의 Plongée와 부딪히지 않는다). 쌍 8(Shallow Depth of Field)은 Biogon의 deep focus와 심도가 반대라 Biogon 줄을 고르지 않고 고정 몫 lens 줄을 렌즈 줄로 쓴다 | #009(43mm) #010 #018(28mm)에 50mm 무왜곡 꼬리가 같이 있어 렌즈가 둘이었다. 쌍 1(knee-high)·쌍 9(Plongée)와 렌즈 줄의 출처를 시험에서 추론해야 했다 |
-| framing | 켠다. 쌍 6(Extreme Wide Shot)·7(Cowboy Shot)·10(Environmental Portrait)·11(Medium Close-Up)은 프레임 범위를 직접 말하니 그 말과 부딪치지 않게 쓴다. 쌍 1(걷는 걸음)·4(부츠)·9(다리와 발목)·12(다리)는 Pose가 낮은 몸을 말하니 framing 줄의 범위를 머리부터 발끝으로 쓴다. 나머지 쌍은 고정 몫 기준이다(범위는 fixed-lines.md의 중심 층) | 나머지 쌍은 범위를 말하지 않고 Pose가 허리 위에서 보인다 |
+| lens | 세트, 세트 없는 쌍 6·10, 갈래 Optics 렌즈 줄(A `Telephoto Compression`·D `Zeiss Planar 80mm f/2.8`)을 고른 쌍에서 끈다. 렌즈 줄 — 세트: 세트 Optics의 `<본체> + <렌즈>` 값(예: S1 `Leica M6 + Summilux 35mm f/1.4`)을 Optics 본체·렌즈 줄 한 줄로 쓴다. `stock` 줄에는 렌즈를 쓰지 않고 갈래의 Optics 렌즈 줄은 붙이지 않는다. 세트+쌍 6·10: 28mm대 광각 문구는 쓰지 않는다. 세트 없음+쌍 6·10: Optics `Zeiss Biogon 28mm f/2.8` 줄(Camera 줄은 거리만 말한다). 세트 없음+쌍 1~5, 7, 8, 9, 11, 12: 갈래의 Optics 렌즈 줄(A `Telephoto Compression`, D `Zeiss Planar 80mm f/2.8`)을 골랐으면 그 줄, 아니면 고정 몫 lens 줄. B·C의 `Zeiss Biogon 28mm f/2.8`은 이 쌍들에서 쓰지 않는다(고정 몫 lens 줄). 쌍 8은 Biogon의 deep focus와 심도가 반대라 Biogon 줄을 고르지 않고 고정 몫 lens 줄 | #009(43mm) #010 #018(28mm)에 50mm 무왜곡 꼬리가 같이 있어 렌즈가 둘이었다. 쌍 1(knee-high)·쌍 9(Plongée)와 렌즈 줄의 출처를 시험에서 추론해야 했다 |
+| framing | 켠다. 범위 — 쌍 6·7·10·11: 쌍 Camera가 말한 범위. 쌍 1·4·9·12: 머리부터 발끝(Pose가 낮은 몸을 말한다). 그 밖 쌍: 중심 층(고정 몫) | 나머지 쌍은 범위를 말하지 않고 Pose가 허리 위에서 보인다 |
 | ratio | 켠다. 사용자 비율이 없으면 3:4 세로(S3의 6x9는 2:3 세로) | 쌍은 비율을 정하지 않는다 |
 
 ## Hair and makeup

@@ -167,7 +167,7 @@ assert.ok(search({ terms: ['长焦压缩'], layers: ['optics'] })[0].matches.len
 for (const q of ['90년대 홍콩영화(왕가위 감성)', '왕가위', '港风', '홍콩 영화']) {
   out = run(['--q', q, '--limit', '2']);
   assert.equal(out.status, 0, out.stderr);
-  assert.match(out.stdout, /^## Look card\n.+ — references\/image\/looks\/wong-kar-wai\.md\nread: node scripts\/read_look\.mjs wong-kar-wai --outline\nbranch: node scripts\/read_look\.mjs wong-kar-wai --branch /, q);
+  assert.match(out.stdout, /^## Look card\n.+ — references\/image\/looks\/wong-kar-wai\.md\nnew image: node scripts\/read_look\.mjs wong-kar-wai --outline, then --branch <A\|B\|C\|D> \[--set S<n>\] \[--pair <n>\]\nextract: node scripts\/read_look\.mjs wong-kar-wai --facts, then --branch <A\|B\|C\|D> --no-pairs\n/, q);
   assert.deepEqual(JSON.parse(run(['--q', q, '--json']).stdout).looks.map((l) => l.slug), ['wong-kar-wai'], q);
 }
 for (const q of ['홍콩', '신중식,찻집', '老钱风', '홍콩 여행 스냅']) {
@@ -187,7 +187,8 @@ for (const [q, slug] of [['필카 감성, 한강', 'korea-old-film-light-leak'],
   const json = JSON.parse(run(['--q', q, '--json']).stdout);
   assert.deepEqual(json.looks, [], q);
   assert.ok(json.candidates.some((c) => c.slug === slug && c.summary && c.file === `references/image/looks/${slug}.md`), `${q} offers ${slug}`);
-  assert.ok(out.stdout.includes(`read: node scripts/read_look.mjs ${slug} --outline`), q);
+  assert.ok(out.stdout.includes(`- ${slug} · `), `${q}: the candidate line names the slug`);
+  assert.ok(out.stdout.includes('node scripts/read_look.mjs <slug> --outline') && out.stdout.includes('--facts'), `${q}: one line tells how to read a candidate`);
 }
 // Candidates come out closest to the request first: a culture cue (한강, 도쿄) puts that culture's card first, and the cap of 6 cuts after sorting.
 {
@@ -209,7 +210,7 @@ assert.ok(!run(['--q', '老钱风']).stdout.includes('candidates'));
 for (const q of ['캘리포니아 골든아워, Kodak Gold 200', '캘리포니아 골든아워 코닥 골드 200']) {
   const both = JSON.parse(run(['--q', q, '--json']).stdout).looks;
   assert.deepEqual(both.map((l) => [l.slug, l.axis]), [['california-golden-hour', '장면'], ['kodak-gold-200', '매체']], q);
-  assert.match(run(['--q', q, '--limit', '1']).stdout, /^## Look card\n.+ \[장면\] — .+\nread: .+\nbranch: .+\n.+ \[매체\] — .+\nread: /, q);
+  assert.match(run(['--q', q, '--limit', '1']).stdout, /^## Look card\n.+ \[장면\] — .+\nnew image: .+\nextract: .+\n.+ \[매체\] — .+\nnew image: /, q);
 }
 // A name's words that are scattered over the query call nothing (they stay candidates); a comma or one other word between them is fine.
 {
@@ -231,18 +232,22 @@ for (const q of ['no Kodak Gold, clean digital color', 'Kodak Gold 말고 디지
   const order = (q) => JSON.parse(run(['--q', q, '--json']).stdout).looks.map((l) => l.slug);
   assert.deepEqual(order('Kodak Gold 200, 캘리포니아 골든아워'), ['kodak-gold-200', 'california-golden-hour']);
   assert.deepEqual(order('캘리포니아 골든아워, Kodak Gold 200'), ['california-golden-hour', 'kodak-gold-200']);
-  assert.match(run(['--q', 'Kodak Gold 200, 캘리포니아 골든아워', '--limit', '1']).stdout, /^## Look card\n.+ \[매체\] — .+\nread: .+\nbranch: .+\n.+ \[장면\] — .+\nread: /);
+  assert.match(run(['--q', 'Kodak Gold 200, 캘리포니아 골든아워', '--limit', '1']).stdout, /^## Look card\n.+ \[매체\] — .+\nnew image: .+\nextract: .+\n.+ \[장면\] — .+\nnew image: /);
 }
 // Nouvelle Vague has its own card now.
 assert.deepEqual(JSON.parse(run(['--q', 'Nouvelle Vague', '--json']).stdout).looks.map((l) => l.slug), ['nouvelle-vague-16mm']);
 // The card path in the block is the path read_refs.mjs reads (documented command works as printed).
 {
-  const cmd = run(['--q', '왕가위']).stdout.match(/^read: node (scripts\/read_look\.mjs) (\S+) (--outline)$/m);
-  const read = spawnSync(process.execPath, [path.join(scripts, '..', cmd[1]), cmd[2], cmd[3]], { encoding: 'utf8', cwd: path.join(scripts, '..') });
+  const block = run(['--q', '왕가위']).stdout;
+  const cmd = block.match(/^new image: node (scripts\/read_look\.mjs) (\S+) (--outline), then /m);
+  const readLook = (...args) => spawnSync(process.execPath, [path.join(scripts, '..', cmd[1]), cmd[2], ...args], { encoding: 'utf8', cwd: path.join(scripts, '..') });
+  const read = readLook(cmd[3]);
   assert.equal(read.status, 0, read.stderr);
   assert.match(read.stdout, /^# 王家卫 · 港风/m);
-  const branch = spawnSync(process.execPath, [path.join(scripts, '..', cmd[1]), cmd[2], '--branch', 'A'], { encoding: 'utf8', cwd: path.join(scripts, '..') });
-  assert.equal(branch.status, 0, branch.stderr);
+  assert.equal(readLook('--branch', 'A', '--set', 'S1', '--pair', '1').status, 0, 'the new-image path runs as printed');
+  assert.ok(block.match(/^extract: node scripts\/read_look\.mjs \S+ (--facts), then --branch <A\|B\|C\|D> (--no-pairs)$/m), 'the extract path is printed');
+  assert.equal(readLook('--facts').status, 0, 'the extract path runs as printed');
+  assert.equal(readLook('--branch', 'A', '--no-pairs').status, 0);
 }
 
 // A tag that is a look card's calling name matches only a term equal to it: the medium word "폴라로이드" does not pull the swimsuit rows the Polaroid cards use,
@@ -269,3 +274,59 @@ assert.deepEqual(JSON.parse(run(['--q', 'Nouvelle Vague', '--json']).stdout).loo
 const help = run(['--help']);
 assert.equal(help.status, 0, 'find_tokens --help exits 0');
 assert.match(help.stdout, /usage: node scripts\/find_tokens\.mjs/);
+
+// Aliases are searched but not printed unless --aliases asks: the same query finds the same tokens either way.
+{
+  const withAliases = run(['--q', '시스루뱅', '--layers', 'hair-makeup', '--aliases']).stdout;
+  const without = run(['--q', '시스루뱅', '--layers', 'hair-makeup']).stdout;
+  assert.ok(/ \([^)]+\) \[/.test(withAliases), '--aliases prints the alias list');
+  assert.ok(!/ \([^)]+\) \[/.test(without), 'the default output has no alias list');
+  assert.ok(/ \[(look|item|gear|place)(, 소품 필요)?\]$/m.test(without), 'the kind (and 소품 필요) stays');
+  const tokens = (t) => t.split('\n').filter((l) => l.includes(' — ')).map((l) => l.split(' — ')[0]);
+  assert.deepEqual(tokens(without), tokens(withAliases), 'the same rows come out');
+  assert.ok(tokens(without).length > 0 && without.includes('소품 필요') === withAliases.includes('소품 필요'), '소품 필요 is kept');
+  const props = run(['--q', '傘をさす', '--layers', 'pose']).stdout;
+  assert.ok(/\[look(, 소품 필요)?\]/.test(props));
+}
+
+// Photo cues: a query that says what a photo shows (weather, light, place, medium) offers the cards whose summary, names and facts share two or more of those cues,
+// the card with the most shared cues first. One shared word offers nothing unless it is one of a card's do-not-call words. Prose in the cards is not pinned.
+{
+  const candidates = (q) => JSON.parse(run(['--q', q, '--json']).stdout).candidates.map((c) => c.slug);
+  const photos = [
+    ['비 오는 밤,네온,젖은 도로,투명 우산', 'rainy-night-shinjuku'],
+    ['雨夜,ネオン,透明傘', 'rainy-night-shinjuku'],
+    ['비 오는 네온 밤거리', 'rainy-night-shinjuku'],
+    ['낮,공원,벤치,디카', 'japan-ccd-daylight'],
+    ['낮 공원 벤치 디카', 'japan-ccd-daylight'],
+    ['카페,창가,오후', 'seoul-cafe-warm-diffuse'],
+    ['플래시 터진 실내 스냅', 'y2k-ccd-flash'],
+    ['흑백,거리', 'trix-humanist-bw'],
+    ['석양,해변', 'california-golden-hour'],
+  ];
+  for (const [q, slug] of photos) assert.ok(candidates(q).slice(0, 3).includes(slug), `${q}: ${slug} is in the first three candidates (${candidates(q).join(', ')})`);
+  for (const q of ['고양이, 툇마루, 낮잠', '고양이 툇마루 낮잠 한옥', '인물,여자,스냅,사진', '老钱风']) {
+    assert.deepEqual(candidates(q), [], `${q}: nothing to offer`);
+    assert.ok(!run(['--q', q]).stdout.includes('## Look card candidates'), `${q}: no candidate block`);
+  }
+  assert.ok(candidates('비 오는 밤,네온,젖은 도로,투명 우산,雨夜,ネオン').length <= 6, 'at most six');
+  // A card offered only for the same cues as a card above it is dropped (several cards matched only 네온 and 우산 here).
+  const reasons = JSON.parse(run(['--q', '네온,비,우산,신주쿠,밤,젖은 노면', '--json']).stdout).candidates.map((c) => c.matched);
+  assert.equal(new Set(reasons).size, reasons.length, `no two candidates for the same cues: ${reasons.join(' / ')}`);
+  // A cue on its own offers nothing; the old do-not-call rule still offers one card on one word.
+  assert.deepEqual(candidates('雨夜'), []);
+  assert.ok(candidates('네온사인').includes('rainy-night-shinjuku'));
+  // A card the request names and negates is not offered for its cues.
+  assert.ok(!candidates('no Kodak Gold, clean digital color').includes('kodak-gold-200'));
+}
+
+// Output size: the card block and the rows print shorter than before; ceilings are the measured size plus 5% (5076, 6109, 8189 bytes when set).
+{
+  const size = (args) => Buffer.byteLength(run(args).stdout);
+  const queries = [
+    [['--q', '비 오는 밤 신주쿠,투명 우산,여자', '--limit', '3'], 5400],
+    [['--q', '툇마루,낮잠,고양이,한옥,오후 햇살,KR', '--limit', '4'], 6500],
+    [['--q', '雨夜新宿,透明傘,女性,ネオン', '--limit', '6'], 8700],
+  ];
+  for (const [args, limit] of queries) assert.ok(size(args) <= limit, `${args[1]}: ${size(args)} bytes is over ${limit}`);
+}

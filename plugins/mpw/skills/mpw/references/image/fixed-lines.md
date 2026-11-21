@@ -99,11 +99,35 @@ GPT Image(웹·API)·대상 미정인 새 이미지(인물 사진과 인물 없�
 | FR | `Photographie` | `photoréaliste` | `prise de vue réelle` |
 | US·그 밖(영어) | `photograph` | `photorealistic` | `real photograph` |
 
-행은 룩 카드가 있으면 카드의 문화권(갈래가 다른 문화권의 장면을 정하면 갈래의 것)으로, 카드가 없으면 요청한 장소·말·사진 속 장소의 문화권으로 고른다. 문화권 단서가 없으면 KR 행이다(Identity의 '한·중·일 단서도 없음' 행). 인물이 `그 밖` 행이면 마지막 행이다. 사진 추출은 사진 속 장소의 문화권을 쓴다.
+행은 사진 추출이면 카드가 있어도 사진 속 장소의 문화권이다. 그 밖은 룩 카드가 있으면 카드의 문화권(갈래가 다른 문화권의 장면을 정하면 갈래의 것), 없으면 요청한 장소·말의 문화권이다. 문화권 단서가 없으면 KR 행이다(Identity의 '한·중·일 단서도 없음' 행). 인물이 `그 밖` 행이면 마지막 행이다.
 
 - `closer`: `<closer 토큰> — The whole frame reads as <첫 줄의 매체>, not a <반대 매체>.` 카드의 고정 사실이 closer 토큰을 주면 그것을 쓰고(왕가위 카드는 `港片剧照`, 반대 매체는 스냅·화보), 카드가 없으면 위 표의 `closer` 기본으로 `<closer 기본> — The whole frame reads as a real <첫 줄의 매체>.`를 쓴다. 매체 이름이 `photograph`·`snapshot`·`still`로 끝나지 않으면 끝에 `photograph`를 붙인다(`clean digital`이면 `a real clean digital photograph`, `candid street-style photograph`면 이름 그대로). 사진 추출에서 카드가 없으면 사진 문화권의 말로 부른 매체 이름도 closer 토큰이 된다(일본 스냅이면 `実写スナップ`). 끄는 조건 없음.
-- `realism`: `<realism 토큰> — Ultra-realistic 8K photographic detail: real pores on the skin, real weave in the fabric, real wear on the surfaces.` 인물 없는 사진은 `real <장면의 재질 둘> and real wear on the surfaces`로 바꾼다. 끄는 조건: 그림·3D 매체를 요청함. 사용자가 피부 디테일을 빼 달라고 했으면 `real pores on the skin,`만 뺀다. 매체의 해상도가 낮으면 위 줄 대신 매체의 해상도를 말하는 줄을 쓴다. 해상도가 낮은 매체는 카드의 `끄는 고정 몫`에 `realism`이 적힌 경우, 그리고 카드가 없어도 첫 줄의 매체가 일회용·토이·인스턴트·폰·소형 CCD·비디오테이프(캠코더)인 경우다. 16mm 필름, 강하게 푸시한 흑백, 굵은 입자가 정체인 필름도 같다(그 매체의 입자가 모공을 가린다). 일반 35mm·중형 필름은 위 줄을 그대로 쓴다: `native resolution — The frame holds the resolution of a <그 매체> and no more: <그 매체가 만드는 질감 한 구절>.` 입자가 굵거나 해상도가 낮은 매체(캠코더, 토이, 일회용, 16mm, 강한 푸시)는 모공이 안 보이는 본보기를 쓴다: `native resolution — The frame holds the resolution of a 480-line camcorder and no more: soft edges, smeared fine texture and skin that shows no individual pores.`, 16mm이면 `native resolution — The frame holds the resolution of 16mm film and no more: coarse grain over softened fine detail and skin that shows no individual pores.` 입자가 고운 필름(푸시 없는 흑백)은 가장자리만 부드럽고 피부 결이 남는 본보기를 쓴다: `native resolution — The frame holds the resolution of fine-grained 35mm black-and-white film and no more: fine grain and slightly soft edges while the skin texture stays readable.` 이 줄에는 숫자 품질 표기를 쓰지 않는다. 금지 한 줄(`anti-cg`)은 그대로 붙는다.
+- `realism`: `<realism 토큰> — Ultra-realistic 8K photographic detail: real pores on the skin, real weave in the fabric, real wear on the surfaces.` 인물 없는 사진은 `real <장면의 재질 둘> and real wear on the surfaces`로 바꾼다. 끄는 조건: 그림·3D 매체를 요청함. 사용자가 피부 디테일을 빼 달라고 했으면 `real pores on the skin,`만 뺀다. 일반 35mm·중형 필름(고운~보통 입자)은 이 8K 줄을 그대로 쓴다. 아래 두 경우에만 이 줄 대신 매체의 해상도를 말하는 `native resolution — The frame holds the resolution of a <그 매체> and no more: <그 매체가 만드는 질감 한 구절>.`을 쓴다. 이 줄에는 숫자 품질 표기를 쓰지 않고, 금지 한 줄(`anti-cg`)은 그대로 붙는다.
+  - 카드의 `끄는 고정 몫`에 `realism`이 적혀 있으면 카드가 준 매체 구절과 질감을 쓴다. 카드가 고운 입자 필름(푸시 없는 흑백)에서 이 줄을 쓰게 하면 가장자리만 부드럽고 피부 결이 남는 본보기다: `native resolution — The frame holds the resolution of fine-grained 35mm black-and-white film and no more: fine grain and slightly soft edges while the skin texture stays readable.`
+  - 카드가 `realism`을 정하지 않았고 첫 줄의 매체가 저해상·굵은 입자 매체(캠코더, 토이, 일회용, 인스턴트, 폰, 소형 CCD, 16mm 필름, 강하게 푸시한 흑백, 굵은 입자가 정체인 필름)이면 모공이 안 보이는 본보기를 쓴다(그 매체의 입자와 해상도가 모공을 가린다): `native resolution — The frame holds the resolution of a 480-line camcorder and no more: soft edges, smeared fine texture and skin that shows no individual pores.`, 16mm이면 `native resolution — The frame holds the resolution of 16mm film and no more: coarse grain over softened fine detail and skin that shows no individual pores.`
 - `anti-cg`: `<anti-cg 토큰> — A real person photographed on location, never an illustration, anime frame, 3D render or plastic-skinned CGI.` 인물 없는 사진은 `<anti-cg 토큰> — A real photograph of a real <장소·사물>, never an illustration, 3D render or CGI.`를 쓴다. 끄는 조건: 그림·애니·3D를 요청함.
+
+프롬프트 언어가 한국어면 `fixed-lines.md#한국어 문안`을 읽는다.
+
+## 입력 용도별로 붙는 것
+
+| 고정 몫 | 새 이미지, 참조 없음 | 새 이미지, 인물 참조 | 사진 추출, 참조 없이 | 사진 추출, 참조 얼굴로 재현 | 원본 편집 | 아이·학생 | 인물 없는 사진 |
+|---|---|---|---|---|---|---|---|
+| 문화권 공식(미화) | 붙임 | 조건절에 있지만 참조가 이김 | 붙임. 문화권은 장면 단서, 나이·성별·체형 인상은 사진대로(image-brief.md §12.3), 사진 속 얼굴은 옮기지 않음 | 조건절에 있지만 참조가 이김 | 없음 | 끔 | 없음 |
+| skin-tone keep | 문단에 있음 | 작동 | 문단에 있음 | 작동 | 없음 | 문단에 있음 | 없음 |
+| 비율 문장 | 붙임 | 붙임 | 몸이 보이는 성인이면 붙임 | 같음 | 없음 | 끔 | 없음 |
+| face-clear | 붙임 | 붙임 | 사진이 정함 | 같음 | 없음 | 붙임 | 없음 |
+| 메이크업 5슬롯(base·under-eye·liner·blush·lip) | 비어 있는 슬롯만 | 비어 있는 슬롯만 | 보이는 슬롯은 사진. 판독이 흐린 슬롯만 카드, 고정 몫 순 | 같음(메이크업은 프롬프트가 정해 참조와 부딪히지 않음) | 없음 | 끔 | 없음 |
+| catchlight | 붙임 | 붙임 | 눈에 보이면 | 같음 | 없음 | 붙임 | 없음 |
+| face-light | 붙임 | 같음 | 사진의 빛대로 | 같음 | 없음 | 붙임 | 없음 |
+| grain | 매체가 필름·디카면 | 같음 | 사진에 보이는 양을 Optics 한 줄로 | 같음 | 없음 | 같음 | 같음 |
+| framing·ratio | 3:4 세로 기본 | 같음 | 사진의 비율과 잘린 자리 | 같음 | 원본 크롭 | 같음 | 기본 비율 없음 |
+| lens 자연 원근 | 붙임 | 붙임 | 사진대로 | 같음 | 없음 | 붙임 | 없음 |
+| Finish 3줄 | 붙임 | 붙임 | 붙임(매체가 사진이면). closer는 사진의 매체 이름 | 같음 | 없음 | 붙임 | 붙임(사람 문장 대신 장소 문장) |
+
+사진 추출의 '화면 밖은 비우고 화면 안에서 판독이 흐린 칸만 채운다'는 규칙은 [image-brief.md](image-brief.md) §12.0이 정한다.
+
+## 한국어 문안
 
 한국어 문안(사용자가 프롬프트 언어를 한국어로 지정한 경우)은 층 이름(`## 마무리`)과 줄의 문장만 한국어로 쓴다. 토큰은 영어 문안과 같은 규칙으로 고른다. closer는 카드가 있으면 카드의 closer 토큰을 원어 그대로(왕가위 카드면 `港片剧照`), 카드가 없으면 위 표의 문화권 행 closer이고, realism·anti-cg 토큰도 그 문화권 행이다. 줄 뜻은 위 영어 줄과 같고(`realism` 줄에는 영어 줄처럼 `8K`를 넣는다), `3D`·`CGI`는 `삼차원`·`컴퓨터 그래픽`으로 풀어 쓴다. 인물 없는 사진도 같은 형태다. 나머지 고정 줄도 토큰은 그대로 두고 문장만 아래 한 벌처럼 옮긴다(`<…>` 자리는 장면에 맞게 채운다).
 
@@ -134,21 +158,3 @@ natural perspective — 카메라가 표준에서 중망원 사이 렌즈로 물
 ```text
 native resolution — 프레임은 480라인 캠코더의 해상도만 담는다: 가장자리는 부드럽고 고운 질감은 번지며 피부에 모공이 하나하나 보이지 않는다.
 ```
-
-## 입력 용도별로 붙는 것
-
-| 고정 몫 | 새 이미지, 참조 없음 | 새 이미지, 인물 참조 | 사진 추출, 참조 없이 | 사진 추출, 참조 얼굴로 재현 | 원본 편집 | 아이·학생 | 인물 없는 사진 |
-|---|---|---|---|---|---|---|---|
-| 문화권 공식(미화) | 붙임 | 조건절에 있지만 참조가 이김 | 붙임. 문화권은 장면 단서로 정하고 사진 속 얼굴은 옮기지 않음 | 조건절에 있지만 참조가 이김 | 없음 | 끔 | 없음 |
-| skin-tone keep | 문단에 있음 | 작동 | 문단에 있음 | 작동 | 없음 | 문단에 있음 | 없음 |
-| 비율 문장 | 붙임 | 붙임 | 몸이 보이는 성인이면 붙임 | 같음 | 없음 | 끔 | 없음 |
-| face-clear | 붙임 | 붙임 | 사진이 정함 | 같음 | 없음 | 붙임 | 없음 |
-| 메이크업 5슬롯(base·under-eye·liner·blush·lip) | 비어 있는 슬롯만 | 비어 있는 슬롯만 | 보이는 슬롯은 사진. 판독이 흐린 슬롯만 카드, 고정 몫 순 | 같음(메이크업은 프롬프트가 정해 참조와 부딪히지 않음) | 없음 | 끔 | 없음 |
-| catchlight | 붙임 | 붙임 | 눈에 보이면 | 같음 | 없음 | 붙임 | 없음 |
-| face-light | 붙임 | 같음 | 사진의 빛대로 | 같음 | 없음 | 붙임 | 없음 |
-| grain | 매체가 필름·디카면 | 같음 | 사진에 보이는 양을 Optics 한 줄로 | 같음 | 없음 | 같음 | 같음 |
-| framing·ratio | 3:4 세로 기본 | 같음 | 사진의 비율과 잘린 자리 | 같음 | 원본 크롭 | 같음 | 기본 비율 없음 |
-| lens 자연 원근 | 붙임 | 붙임 | 사진대로 | 같음 | 없음 | 붙임 | 없음 |
-| Finish 3줄 | 붙임 | 붙임 | 붙임(매체가 사진이면). closer는 사진의 매체 이름 | 같음 | 없음 | 붙임 | 붙임(사람 문장 대신 장소 문장) |
-
-사진 추출의 '화면 밖은 비우고 화면 안에서 판독이 흐린 칸만 채운다'는 규칙은 [image-brief.md](image-brief.md) §12.0이 정한다.

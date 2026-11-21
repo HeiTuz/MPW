@@ -16,7 +16,7 @@
 | light-key | 해 하나가 주광이고 그림자는 짙고 단단하다. 앞면은 아스팔트·벽·차체가 되튀긴 빛이 채운다. D의 전구만 실용광이다. 네온·형광등·직부 플래시 없음(S4 다이너 창가의 노란 형광 간판 빛은 세트 값) |
 | palette | 이 룩에서는 노랑·빨강·파랑이 가장 세게 포화된다(레몬 노랑, 벽돌·사과 빨강, 하늘 파랑, 데님 청색, 마른 풀 금색이 그 예). 그림자는 따뜻한 적갈색으로 기운다(B의 협곡 암벽 그늘만 약간 푸르다). 파스텔·네온·차가운 회청 없음 |
 | grain | 눈에 보이는 중간 굵기의 유기 입자가 화면 전체에, 그림자에서 조금 더. 120 중형(`Mamiya 645`) 한 장만 곱다 |
-| lens | 소형 필름 SLR·레인지파인더의 35~50mm 표준 렌즈, 얼굴 비례 자연. 카메라 높이는 쌍이 정한다. 심도는 중간이라 장소가 읽힌다. 28mm 광각은 A의 `Pentax K1000` 줄(Iris #061)이 있을 때만, 큰 구경 보케는 D의 `Nikon FM`·`Pentax Spotmatic F` 줄(50mm f/1.4)과 쌍 12번뿐이다 |
+| lens | 소형 필름 SLR·레인지파인더의 35~50mm 표준 렌즈, 얼굴 비례 자연. 심도는 중간이라 장소가 읽힌다. 28mm 광각은 A의 `Pentax K1000` 줄(Iris #061)이 있을 때만, 큰 구경 보케는 D의 `Nikon FM`·`Pentax Spotmatic F` 줄(50mm f/1.4)과 쌍 12번뿐이다 |
 | figure | 한 사람이 환한 햇빛 속에서 손에 뭔가를 쥐고 움직이거나 쉰다. 크게 웃거나 먼 곳을 본다. 정면 증명사진 자세 없음 |
 
 ## 갈래 고르기
@@ -34,11 +34,9 @@
 | catchlight | B에서 카드 줄(`Golden Sunset Arc Catchlight`)이 이긴다. A·C·D는 켠다 | Iris는 모든 블록에 점 하나를 넣었는데 B의 해 질 녘 장면은 눈 속의 해 모양이 곧 빛이다 |
 | face-clear | 모든 갈래·쌍·세트에서 켠다. C의 `Ear-Tucked Bob`은 헤어 줄이 이미 귀 뒤로 넘겼으니 face-clear 줄을 다시 붙이지 않는다 | #061의 질주 포니테일, #063 #067의 강풍 머리, #065의 회전 바람 머리는 모두 머리가 얼굴 반대쪽(뒤·옆)으로 날리고 눈과 눈썹을 덮지 않아 face-clear와 부딪히지 않는다(`Windblown Hair`도 가닥이 얼굴에서 멀어진다). 얼굴을 가로지르는 머리를 원하는 줄이 이 카드에 없다 |
 | grain | 카드의 `Visible Film Grain` 줄이 이긴다 | Iris 꼬리의 `纯净胶片颗粒`·`细致微颗粒感`은 고운 입자로 읽히는데 골드 200은 중간 굵기 입자가 보이는 필름이다(원본 값: 고운 입자) |
-| lens | 켠다. 렌즈를 말하는 줄은 프롬프트마다 정확히 하나이고 출처는 세트의 렌즈 > 쌍의 렌즈 > 갈래의 본체·렌즈 줄 > 고정 몫의 lens 줄 순이다. ① 세트: S1~S6은 Optics에 본체와 렌즈를 한 벌로 적었다(AE-1+FD 50mm, OM-1+Zuiko 35mm, A-1+FD 50mm, Canonet QL17 G-III 40mm, Spotmatic F+Takumar 50mm, XA 35mm). 세트를 고르면 세트의 본체+렌즈 한 벌이 Optics `body` 줄 하나의 문장이 되고(예: S1 `Canon AE-1 — A 1970s film SLR with an FD 50mm f/1.4 lens.`) 그 줄이 렌즈 줄이다. 갈래 `body` 줄 문장·쌍 Camera 줄의 렌즈 말은 쓰지 않는다(S1에 쌍 3을 붙여도 `A wide compact lens`가 아니라 S1의 FD 50mm). 본체별 `tone-*` 줄은 렌즈를 말하지 않는다. ② 세트가 없으면 쌍: 쌍 3(deep focus)은 Camera 줄이 `A wide compact lens`로 렌즈를 말하니 그 줄이 렌즈 줄이고, 이때 갈래 본체 줄은 렌즈 말 없이 본체 이름과 색감만 쓴다. ③ 둘 다 없으면 갈래 줄: Optics `body` 줄이 본체와 렌즈를 함께 말하니 그 줄이 렌즈 줄이다(A는 `Canon AE-1` 50mm·`Olympus XA` 35mm·`Pentax K1000` 28mm, B는 `Mamiya 645` 80mm, C는 `Canon Canonet QL17` 40mm, D는 `Nikon FM`·`Pentax Spotmatic F` 50mm f/1.4). 쌍 12(Shallow Depth of Field)는 Camera 줄이 조리개만 말하니 D 본체 줄의 50mm f/1.4가 렌즈 줄이다. ④ 본체 줄을 고르지 않았으면 고정 몫의 lens 줄이 렌즈 줄이다. 이 줄은 카메라 높이를 말하지 않으니 쌍 2(low-angle shot)·쌍 5(Bird's-eye View)의 시점과 부딪히지 않는다. ①~③에서는 고정 몫의 lens 줄을 붙이지 않는다 | #061(28mm)·#065(f/1.4)가 50mm 무왜곡 꼬리와 같은 프롬프트에 있어 렌즈가 둘이었다(원본 값: 50mm 평시). 쌍 3과 세트가 함께 걸리면 값 우선순위(세트가 먼저)와 거꾸로였다 |
-| framing | 켠다. 쌍 5·6·7·8·9는 프레임 범위를 직접 말하니 그 말과 부딪히지 않게 쓴다. 쌍 2(굽힌 다리)·3(두 발이 뜸)·4(늘어뜨린 다리)는 Pose가 낮은 몸을 말하니 framing 줄의 범위를 머리부터 발끝으로 쓴다. 나머지 쌍은 고정 몫 기준이다(범위는 fixed-lines.md의 중심 층) | 나머지 쌍은 범위를 말하지 않고 Pose가 허리 위에서 보인다 |
+| lens | 켠다. 렌즈 줄 — 세트: 세트의 본체+렌즈 한 벌을 Optics `body` 줄 하나의 문장으로 쓰고 갈래 `body` 줄 문장은 쓰지 않는다(S1 AE-1+FD 50mm, S2 OM-1+Zuiko 35mm, S3 A-1+FD 50mm, S4 Canonet QL17 G-III 40mm, S5 Spotmatic F+Takumar 50mm, S6 XA 35mm. 예: S1 `Canon AE-1 — A 1970s film SLR with an FD 50mm f/1.4 lens.`). 세트+쌍 3: `A wide compact lens`가 아니라 세트 렌즈(S1이면 FD 50mm). 세트 없음+쌍 3: Camera `A wide compact lens`이고 갈래 본체 줄은 렌즈 말 없이 본체 이름과 색감만. 세트 없음+쌍 12: Camera는 조리개만 말하니 D 본체 줄의 50mm f/1.4. 그 밖: 갈래 Optics `body` 줄 — A `Canon AE-1` 50mm·`Olympus XA` 35mm·`Pentax K1000` 28mm, B `Mamiya 645` 80mm, C `Canon Canonet QL17` 40mm, D `Nikon FM`·`Pentax Spotmatic F` 50mm f/1.4. 본체 줄을 고르지 않았으면 고정 몫 lens 줄. 본체별 `tone-*` 줄은 렌즈를 말하지 않는다. | #061(28mm)·#065(f/1.4)가 50mm 무왜곡 꼬리와 같은 프롬프트에 있어 렌즈가 둘이었다(원본 값: 50mm 평시). 쌍 3과 세트가 함께 걸리면 값 우선순위(세트가 먼저)와 거꾸로였다 |
+| framing | 켠다. 범위 — 쌍 5·6·7·8·9: 쌍 Camera가 말한 범위. 쌍 2·3·4: 머리부터 발끝. 그 밖 쌍: 중심 층(고정 몫). | 나머지 쌍은 범위를 말하지 않고 Pose가 허리 위에서 보인다 |
 | ratio | 켠다. 사용자 비율이 없으면 3:4 세로 | 쌍은 비율을 정하지 않는다 |
-
-모든 쌍에 해당하는 처리: face-light 끔, grain은 카드 줄, ratio 3:4, lens는 위 출처 순서. 이 카드를 매체 카드로 다른 장면 카드와 함께 쓸 때 쌍 번호는 장면 카드의 것이라 위 쌍 3·12 조건은 적용하지 않고 이 한 줄만 쓴다.
 
 ## Hair and makeup
 **하나만 고르는 슬롯:** `hair`(갈래마다 후보 중 하나)
