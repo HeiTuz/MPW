@@ -106,5 +106,8 @@ assert.ok(codes(finish("实拍 — 8K. 超写实 — Ultra-realistic 8K detail."
 assert.ok(!codes(finish("photorealistic — Ultra-realistic 8K photographic detail."), { profile: "assembled" }).has("phrasing/quality-tag"), "the Finish 8K exception does not depend on the realism token");
 assert.ok(!codes(finish("극사실 — Ultra-realistic 8K photographic detail."), { profile: "assembled" }).has("phrasing/quality-tag"));
 assert.ok(codes("An 8K photograph of a cat.", { profile: "assembled" }).has("phrasing/quality-tag"));
+// The Korean Finish layer (`## 마무리`) carries the same one-time exception.
+assert.ok(!codes("A real photograph of a cat.\n\n## 마무리\n극사실 — 8K 극사실적인 사진 디테일: 고양이 털의 실제 결.", { profile: "assembled" }).has("phrasing/quality-tag"));
+assert.ok(codes("An 8K photograph of a cat.\n\n## 마무리\n극사실 — 8K 극사실적인 사진 디테일.", { profile: "assembled" }).has("phrasing/quality-tag"));
 
 console.log("Engine levers PASS: table shape, grades, bundles, example, engine checks and the Finish 8K exception. No generation tested.");

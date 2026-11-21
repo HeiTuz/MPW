@@ -84,11 +84,11 @@ manifest 검사는 한 행에 하나의 객체를 받는다. 필수 텍스트는
 | `portrait/glow-stack` | 경고, assembled | 광택 어휘 중첩 검토 휴리스틱이며 실패 예측이나 매트 강제 아님 |
 | `portrait/skin-repeat` | 경고 | 여러 구획의 피부 질감 표현을 검토하되 서로 다른 부위·부분 수정 조건을 보존 |
 | `coherence/occlusion` | 경고, 공통 | 머리가 얼굴을 가린다는 문장과 얼굴을 비워 둔다는 문장(`stay clear`, `no hair across`)이 함께 있음 |
-| `coherence/focal` | 경고, 공통 | 서로 다른 렌즈 mm가 둘 이상이거나, 광각 렌즈·28mm 이하와 무왜곡 문장이 함께 있음. 필름 규격(`35mm film`)은 세지 않는다 |
+| `coherence/focal` | 경고, 공통 | 서로 다른 렌즈 mm가 둘 이상이거나, 광각 렌즈·28mm 이하와 자연 원근(`自然透视`·무왜곡) 문장이 함께 있음. 필름 규격(`35mm film`)은 세지 않는다 |
 | `coherence/identity-skin` | 경고, 공통 | `keep her own skin tone`이 있는데 Identity Reference 밖 층에 피부색 서술이 있음 |
 | `coherence/ratio-dup` | 경고, 공통 | 화면비(`3:4`, `16:9` 등 알려진 값)가 둘 이상 적힘 |
 | `coherence/decimal` | 오류, 공통 | 소수점이 `。`로 바뀜(`7。5`) |
-| `coherence/slot-dup` | 경고, 공통 | Hair and makeup에 입술 줄이 둘 이상이거나, 캐치라이트를 적은 줄이 둘 이상 |
+| `coherence/slot-dup` | 경고, 공통 | Hair and makeup(나눈 `Makeup` 층 포함)에 입술 줄이 둘 이상이거나, 캐치라이트를 적은 줄이 둘 이상 |
 | `coherence/day-night` | 경고, 공통 | 밤 단서와 `noon`·`midday`가 한 문안에 함께 있음 |
 | `coherence/engine-layers` | 경고, 엔진 한정 | `--engine seedream·nano-banana·soul·midjourney`에서 `## 층` 제목이 둘 이상. GPT Image 층 문안을 그 엔진 모양으로 펴지 않았다([engine-levers.md](engine-levers.md) §4) |
 | `coherence/engine-flag` | 경고, 엔진 한정 | `--engine seedream·nano-banana·soul`의 본문에 `--ar`·`--no`·`--oref` 같은 Midjourney 플래그나 `AR 3:4`. 호출 설정으로 옮긴다 |

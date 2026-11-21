@@ -181,11 +181,11 @@ function measure(text, result, options) {
   }
 }
 
-// fixed-lines.md writes `8K` once, in the realism line of the closing "## Finish" layer.
+// fixed-lines.md writes `8K` once, in the realism line of the closing "## Finish" layer (`## 마무리` in a Korean prompt).
 // That one occurrence is the documented exception to the quality-tag rule, so the
 // phrasing checks do not see it. Any other 8K or tag still counts.
 function withoutFinishEightK(instruction) {
-  const heading = /^##[ \t]+Finish[ \t]*$/imu.exec(instruction);
+  const heading = /^##[ \t]+(?:Finish|마무리)[ \t]*$/imu.exec(instruction);
   if (!heading) return instruction;
   const start = heading.index + heading[0].length;
   const next = /^##[ \t]/mu.exec(instruction.slice(start));
@@ -407,7 +407,7 @@ function inspectCoherence(result, text, instruction) {
   }
   const mm = [...instruction.matchAll(/(?<![\p{L}\p{N}_.])(\d{1,3})\s?mm\b(?!\s+(?:film|grain|negative|stock|format|cinema|print|slide|super))/giu)].map((match) => Number(match[1]));
   const wideWord = /\b(?:ultra[- ]?wide|fish[- ]?eye|wide[- ]angle\s+(?:lens|shot|view|selfie)|wide\s+lens)\b/iu.test(instruction);
-  const noStretch = /\bno\s+(?:wide[- ]angle\s+stretch|distortion)\b|\bundistorted\b|\bdistortion[- ]free\b|无畸变/iu.test(instruction);
+  const noStretch = /\bno\s+(?:wide[- ]angle\s+stretch|distortion)\b|\bundistorted\b|\bdistortion[- ]free\b|无畸变|自然透视/iu.test(instruction);
   if (new Set(mm).size >= 2 || (noStretch && (wideWord || mm.some((value) => value <= 28)))) {
     emit(result, CODE_REGISTRY.focal, "Focal lengths disagree: two different lenses, or a wide lens beside an undistorted-face line.", { hint: "Keep one lens statement in the Camera layer." });
   }
@@ -415,7 +415,7 @@ function inspectCoherence(result, text, instruction) {
   // A porcelain base is makeup (the CN base line is 冷白瓷肌), so it passes inside Hair and makeup; the same word elsewhere still reads as a natural color.
   const porcelainBase = /瓷肌|瓷肤|도자기 피부|포슬린 스킨|\bporcelain[- ](?:skin|finish)\b/giu;
   const outsideIdentity = sections.filter((section) => section.name !== "Identity Reference")
-    .flatMap((section) => (/^Hair and makeup$/iu.test(section.name ?? "") ? section.lines.map((line) => line.replace(porcelainBase, "")) : section.lines)).join("\n");
+    .flatMap((section) => (/^(?:Hair and makeup|Makeup)$/iu.test(section.name ?? "") ? section.lines.map((line) => line.replace(porcelainBase, "")) : section.lines)).join("\n");
   const keepsTone = /\bkeeps?\s+(?:her|his|their)\s+own\s+skin\s+tone\b/iu.test(instruction);
   // Only the natural skin color (fair, pale, tan, 冷白皮) is flagged. A finish the makeup makes (porcelain finish, 瓷肌, glass skin; porcelain only inside Hair and makeup) and light on the skin
   // (sun-warmed glow on the skin, a neon tint on the cheek) pass: the color word must be a whole word next to "skin", at most one word between.
@@ -425,7 +425,7 @@ function inspectCoherence(result, text, instruction) {
   }
   const ratios = instruction.match(new RegExp(`(?<![\\d:.])${KNOWN_RATIOS}(?![\\d:])`, "gu")) ?? [];
   if (ratios.length >= 2) emit(result, CODE_REGISTRY.ratioDup, `An aspect ratio is written ${ratios.length} times: ${[...new Set(ratios)].join(" | ")}`, { hint: "Write the ratio once, in the Camera layer." });
-  const makeup = sections.find((section) => /^Hair and makeup$/iu.test(section.name ?? ""));
+  const makeup = sections.find((section) => /^(?:Hair and makeup|Makeup)$/iu.test(section.name ?? ""));
   const lipLines = (makeup?.lines ?? []).filter((line) => /\b(?:lips?|lipstick)\b|唇|립|입술/iu.test(line));
   const catchLines = instruction.split(/\r?\n/u).filter((line) => /catch[- ]?lights?|eye[- ]?lights?|眼神光|\bglints?\s+in\s+(?:each|both|her|his)\s+eyes?|point of light sits in each eye/iu.test(line));
   if (lipLines.length >= 2 || catchLines.length >= 2) {

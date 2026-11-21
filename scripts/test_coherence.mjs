@@ -24,6 +24,8 @@ lacks("Shot on 35mm film grain with a 50mm lens.", "coherence/focal");
 lacks("A 35mm film still and a 35mm cinema negative look.", "coherence/focal");
 lacks("A 50mm lens and a 50 mm lens.", "coherence/focal");
 lacks("A moderate telephoto lens with no wide-angle stretch on the nose.", "coherence/focal");
+has("A 24mm lens up close. 自然透视 — the face keeps natural perspective.", "coherence/focal", { profile: "native" });
+has("A wide-angle lens up close, 自然透视 face.", "coherence/focal");
 
 // identity-skin: skin colour outside the identity paragraph while the reference tone is kept.
 const identity = "## Identity Reference\nIf a model reference is provided, keep her own skin tone. If none is provided, she has cool fair skin.\n\n";
@@ -44,6 +46,11 @@ has(`${identity}## Style\nlook — Porcelain skin against white linen.`, "cohere
 has(`${identity}## Hair and makeup\n冷白皮 — Cool fair skin with a faint glow.`, "coherence/identity-skin");
 lacks(`${identity}## Light\nlow sun — A sun-warmed glow lies on the skin of her shoulders, and a neon tint falls on the cheek.`, "coherence/identity-skin");
 lacks(`${identity}## Light\nwarm light — Warm light on her skin turns the shadow side amber.`, "coherence/identity-skin");
+
+// A split makeup layer (`## Makeup`) is read like Hair and makeup: porcelain base passes, two lip lines count.
+lacks(`${identity}## Makeup\n冷白瓷肌 — A semi-matte cool porcelain base with a faint satin glow only on the high points.`, "coherence/identity-skin");
+has(`${identity}## Hair\nlong hair — Long dark hair.\n\n## Makeup\nlip tint — A sheer coral lip tint.\nbitten — A deep red lip tapped outward.`, "coherence/slot-dup");
+lacks(`## Hair\nlip-length bob — A bob ending at the lips.\n\n## Makeup\nlip tint — A sheer coral lip tint.`, "coherence/slot-dup");
 
 // ratio-dup: known ratios only, counted over the whole prompt; times and ratios in quotes are not ratios.
 has("A vertical 3:4 frame. The 3:4 frame leaves space above.", "coherence/ratio-dup");

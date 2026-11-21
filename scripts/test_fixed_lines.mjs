@@ -40,7 +40,13 @@ assert.match(text, /\*\*성인 인물에만\*\*/u);
 assert.match(text, /아이·학생[^\n]*미화 줄[^\n]*끈다/u);
 assert.match(text, /^성인이고 얼굴이 보일 때만 붙인다\./mu);
 
-// 8K appears once in the whole file as an instruction line, and the brief points here for it.
-assert.equal((text.match(/8K/g) ?? []).length, 2, "8K only in the realism line and its one-time rule");
+// 8K appears only on instruction lines: the realism line, its one-time rule, and the Korean form (its note and its realism line, which carry 8K like the English line).
+const eightK = text.split("\n").filter((line) => /8K/u.test(line));
+assert.equal(eightK.length, 4, `8K lines: ${eightK.map((line) => line.slice(0, 30)).join(" | ")}`);
+assert.ok(eightK.every((line) => /^- `realism`:|^`8K`는|^한국어 문안|^극사실 — 8K /u.test(line)), "8K only in the realism line, its rule and the Korean form");
+assert.equal(text.match(/^극사실 — 8K /mu)?.length, 1, "the Korean realism line carries 8K");
+// The lens line is the one natural-perspective line, and the retired token is gone from the instructions.
+assert.match(text, /^- `lens`: `自然透视 — /mu);
+assert.ok(!/无畸变/u.test(text), "the lens token is 自然透视");
 assert.match(brief, /fixed-lines\.md/);
 console.log(`Fixed lines: ${slots.length} slots, ${lines.length} lines, five cultures covered; image output NOT RUN.`);
