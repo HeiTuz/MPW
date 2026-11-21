@@ -50,7 +50,7 @@
 | B | hair | C컬 펌 — A chin-length cut whose ends curl inward in one smooth C shape toward the neck, the rounded edge catching soft light. |
 | C | hair | 프렌치 펌 — Loose lazy waves fall past the collarbone in soft uneven curls with no set pattern, a few strands lifting in the backlight. (역광 장면일 때) |
 | D | hair | 검은 긴 생머리 — Long blunt-ended black hair falls straight behind the shoulders and reads as a pure dark mass with one thin line of sheen. |
-| A | blush | 코랄 블러셔 — Coral-pink color sits on the cheeks with a faint shimmer and turns warmer under the honey-colored sun. |
+| A | blush | 코랄 블러셔 — A sheer coral-pink tint sits on the cheeks with a faint shimmer and turns warmer under the honey-colored sun. |
 | C, D | base | 누드 스킨 — A bare-looking base with almost no coverage leaves the pores and the natural texture of the skin visible, with the grain settling over them. |
 | A | lip | 과즙 립 — A glassy peach-pink gloss with a wet, syrupy shine and no visible lip edge. |
 | B | lip | 물광 립 — A sheer watery lip color with a soft stain and a fresh wet-looking gloss that takes one small highlight from the flash. (플래시 장면일 때) |

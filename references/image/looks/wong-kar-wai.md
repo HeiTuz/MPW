@@ -44,9 +44,9 @@
 ## Hair and makeup
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
-| A | hair | 港风蓬松卷发 — A loose, voluminous 1990s Hong Kong perm grazing the collarbones, airy and slightly undone, a few strands lifting off the crown. |
+| A | hair | 港风蓬松卷发 — A loose, voluminous 1990s Hong Kong perm grazing the collarbones, airy and slightly undone, a few strands lifting off the crown. (1990년대 장면일 때) |
 | A, C | hair | 港风大波浪 — Big side-parted curls with a lifted crown falling past the shoulders, glossy where the curls bend. |
-| B | hair | 1960s bouffant chignon — Hair smoothed into a high rounded crown and a neat low chignon, every strand in place. |
+| B | hair | 1960s bouffant chignon — Hair smoothed into a high rounded crown and a neat low chignon, every strand in place. (1960년대 장면일 때) |
 | D | hair | parted straight hair — Straight dark hair with a soft side part, tucked around the ears. |
 | A, B, C | base | 无粉感底妆 — A matte, shine-free base that still reads as skin under colored light. |
 | D | base | 冷白瓷肌 — A semi-matte cool porcelain base that reads slightly translucent in the green shade. |

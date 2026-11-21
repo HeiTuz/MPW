@@ -96,7 +96,7 @@
 ## Style
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
-| A | style | Y2K — Early-2000s dressing reduced to one plain fitted knit and a single small chain, with the digicam flash doing the rest of the styling. |
+| A | style | Y2K — Early-2000s dressing reduced to one plain fitted knit and a single small chain, with the digicam flash doing the rest of the styling. (2000년대 스냅 장면일 때) |
 | B | style | 大女主 — Commanding dark tailoring and unsmiling poise, the flash treating her like a magazine cover shot after midnight. |
 | C | style | Paparazzi Candid — A mid-stride look at the lens, caught off guard by a flash with a casual, composed face. |
 | C | style | Indie Sleaze — Night-out black leather and vintage layers under harsh camera flash, the hair slightly undone. |

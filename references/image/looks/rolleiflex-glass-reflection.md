@@ -109,7 +109,7 @@
 | C | style-mirror | Reflet de vitrine — Mirror street photography: her face and the street appear together only as one small bent picture inside the opaque mirror, caught in a quick 35mm frame. |
 | A, B, C | wardrobe | Parisian Chic — Undone layering of a striped knit, plain denim, a coat and flat shoes, slightly rumpled and never matched too carefully. |
 | A | mood | Left Bank Intellectual — Dark neutral layers, a book in hand and an unhurried attention to what the window shows. |
-| B | mood | Existentialist Patina — A muted grey-beige palette with worn surfaces and dark wool, introspective in the way of a 1950s Left Bank street photograph. |
+| B | mood | Existentialist Patina — A muted grey-beige palette with worn surfaces and dark wool, introspective in the way of a 1950s Left Bank street photograph. (1950년대 풍 장면일 때) |
 | C | mood | Instantané spontané — A candid mid-motion frame, slightly off-centre, caught before she has settled for the camera. |
 | C | mood | Photographie Humaniste — A quiet street photograph of a plain gesture, warm and unposed rather than staged. |
 | A, B | palette | palette — Muted Portra pastels of ecru, cream, navy stripes, bottle-green foliage, cognac and limestone grey, with warm amber and deep wine added at night, and no neon or digital teal-orange anywhere. |

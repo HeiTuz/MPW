@@ -110,7 +110,7 @@
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
 | 전부 | style | Americana — Mid-century American nostalgia of faded denim, worn leather and chrome in warm, slightly faded film color. |
-| A | style-era | 1970s Road Movie — Primary-color roadside scenes under hard sun with deep shadows, as in a 1970s American road film. |
+| A | style-era | 1970s Road Movie — Primary-color roadside scenes under hard sun with deep shadows, as in a 1970s American road film. (1970년대 로드무비 장면일 때) |
 | B | style-era | Road Trip — A sunny open-road feel built around a pickup or camper van, with hair and clothes moved by wind in warm film color. |
 | C | style-era | 50s Americana — Red vinyl, chrome and formica of a mid-century American diner, lit by daylight through the window rather than neon. |
 | 전부 | palette | palette — In this look reds, yellows and blues are saturated the hardest (lemon yellow, brick red, sky blue, denim blue, dry-grass gold) while the shadows lean warm red-brown; nothing pastel, neon or cool gray appears. |

@@ -50,7 +50,7 @@
 | 전부 | brow | Brow Lamination — Full natural brows brushed upward with every hair visible and a faint sheen where the sun grazes them. |
 | A, C | glow | Gilded Glow — Warm honey-gold shimmer on the cheekbones and lids that picks up the warm light like fine gold leaf. |
 | D | base | Dewy Makeup — Almost no visible color, only a damp sheen across the skin so the face looks freshly washed in morning light. |
-| D | blush | Post-Workout Flush — A pink flush over the cheeks and nose with a light sheen on the forehead, as if from a run rather than from product. |
+| D | blush | Post-Workout Flush — A faint pink flush over the cheeks and nose with a light sheen on the forehead, as if from a run rather than from product. |
 | C | lip | Classic Red Lip — A saturated, slightly cool red lip with a crisp outline and a glossy-satin spot at the center, bold against warm gold light. |
 
 ## Expression

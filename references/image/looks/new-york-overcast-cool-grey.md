@@ -56,7 +56,7 @@
 | B | lip | Deep Plum Lip — A dark plum lip, matte and slightly stained, that reads as one near-black shape against the grey tones. |
 | C | lip | Mauve Lip — A dusty pinkish-purple lip with a matte velvet finish and a slightly blurred edge, cool against the wet street. |
 | D | lip | Cinnamon Nude Lip — A warm brown-beige lip with a faint reddish cast, the one warm note under the cold white light. |
-| A, C | blush | Windburn — Raw pink colour sits unevenly over the cheeks and nose tip as if reddened by cold wind, with no blended edge. |
+| A, C | blush | Windburn — A faint raw-pink tint sits unevenly over the cheeks and nose tip as if cooled by cold wind, with no blended edge. |
 | B | blush | Windburn — An uneven raw darkening sits over the cheeks and nose tip as if reddened by cold wind, a mid-grey patch with no blended edge. |
 
 ## Expression

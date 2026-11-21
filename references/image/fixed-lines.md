@@ -47,11 +47,11 @@ GPT Image(웹·API)·대상 미정인 새 이미지(인물 사진과 인물 없�
 - `under-eye`: KR `애교살`, CN `卧蚕`, JP `涙袋メイク` 가운데 문화권에 맞는 토큰으로 `<토큰> — A soft pearly band under the lower lashes with a faint shadow line beneath it.` US·FR은 이 줄이 없다. 끄는 조건: 사용자나 카드가 눈 화장을 정함, 맨얼굴.
 - `liner`: `<토큰> — A hair-thin dark line along the upper lash roots defines the eye with no visible wing.` 토큰은 CN `内眼线`, KR `점막 아이라인`, JP `インライン`, US·FR·그 밖 `tightline`. 끄는 조건: 사용자나 카드가 아이라인을 정함, 맨얼굴.
 - `blush`: 끄는 조건은 사용자가 블러셔를 정함, 카드가 블러셔를 정하거나 끔, 맨얼굴.
-  - KR `딸기우유 블러셔 — A soft milky pink blush spreads wide across the cheeks and nose and fades into the base with no hard edge.`
-  - CN `rose blush — A soft rose wash sits high on the cheekbones and melts into the base with no visible edge.`
-  - JP `桜色チーク — A soft sakura-pink wash of blush between the cheeks and temples melts into the base.`
-  - US `Coral Blush — Coral-pink color on the cheeks with a slight shimmer that reads fresh and warm.`
-  - FR `Rougeur naturelle — A soft pink flush on the cheeks and the tops of the ears melts into the base with no powder edge.`
+  - KR `딸기우유 블러셔 — A sheer, soft milky-pink blush spreads thinly across the cheeks and nose and fades into the base with no hard edge.`
+  - CN `rose blush — A sheer, soft rose wash sits high on the cheekbones and melts into the base with no visible edge.`
+  - JP `桜色チーク — A sheer, soft sakura-pink wash of blush between the cheeks and temples melts into the base.`
+  - US `Coral Blush — A sheer coral-pink tint on the cheeks with a slight shimmer that reads fresh and warm.`
+  - FR `Rougeur naturelle — A barely-there pink tint on the cheeks and the tops of the ears melts into the base with no powder edge.`
   - 장면의 빛이 차가우면(흐린 날, 형광등, 푸른 시간, 회청 팔레트, 차가운 흰 플래시나 폰 화면빛) 어느 문화권이든 위 줄 대신 `muted rose blush — A low-saturation dusty-rose wash sits high on the cheeks and melts into the base with no visible edge.`를 쓴다. 후속 수정에서 Light만 차갑게 바꿀 때도 이 줄로 블러셔를 고친다.
 - `lip`: 끄는 조건은 사용자나 카드가 입술을 정함, 맨얼굴.
   - KR `그라데이션 립 — Lip color is pressed into the center of the lips and blurred outward so it fades softly toward the edges.`

@@ -108,7 +108,7 @@
 | A | style | Venice Beach Polaroid — Sun-bleached beach-town snapshots on white-bordered instant prints: creamy highlights, saturated reds and blues and unguarded laughter under hard sun. |
 | B | style | Road-Trip Light Leak — A coast-road snapshot where stray light burns red, orange and yellow across one side of the frame and over her hair. |
 | C | style | Venice Beach Grunge — Faded tees and worn denim with sun-bleached beach-town grit and a direct stare. |
-| D | style | Y2K Snapshot — A grainy early-2000s snapshot with hard on-camera flash and saturated color. |
+| D | style | Y2K Snapshot — A grainy early-2000s snapshot with hard on-camera flash and saturated color. (2000년대 스냅 장면일 때) |
 | A | palette | palette — Cream yellow and milk amber with faded white borders, saturated red and blue, and nothing neon, cold grey or fluorescent pastel anywhere in the frame (only Expired Instant Color Shift may turn the shadows grey-cyan). |
 | B | palette | palette — Cream yellow and milk amber with flame-orange and red leaks and a lemon-yellow burn, and nothing neon, cold grey or fluorescent pastel anywhere in the frame. |
 | C | palette | palette — Faded cream yellow and milk amber with saturated sea-and-sky color, and nothing neon, cold grey or fluorescent pastel anywhere in the frame. |
@@ -174,7 +174,7 @@
 | C | grain | B&W film grain — Coarse silver grain clumps across the whole frame and in the corners, heaviest in the dark vignette. |
 | D | stock | Kodak FunSaver — A disposable-camera frame from a plastic lens, with soft corners, warm saturated color and flat light from the built-in flash. |
 | D | stock | Kodak ColorPlus 200 — Budget film that in this look carries a thick yellow cast, faint red and cyan color noise and rough grain in the shadows. |
-| D | stamp | Date Imprint — A glowing orange LED date sits in the lower right corner of the frame, like a printed snapshot from the early 2000s. |
+| D | stamp | Date Imprint — A glowing orange LED date sits in the lower right corner of the frame, like a printed snapshot from the early 2000s. (2000년대 스냅 장면일 때) |
 | D | grain | Visible Film Grain — Rough consumer-film grain sits across the whole frame, heavier in the dark areas behind the flash. |
 
 ## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 세트를 쓰는 조건은 규칙 4항이 정하고, 세트 값은 고정 사실보다 먼저다. 규칙은 image-brief.md §4 '룩 카드' 4항과 '비워 둔 층')
