@@ -154,7 +154,7 @@
 | B, C | highlight | 하이라이트 날림 — Bright patches such as the flash hotspot and a clipped sky push to flat white with softly bleeding edges. |
 | A, B, C | grain | 디지털 노이즈 — Very fine digital noise sits only in the darkest parts of the frame. |
 
-## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 요청이 세트와 맞으면 통째로 쓰고, 세트 값이 같은 슬롯의 갈래 줄보다 먼저다)
+## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 요청의 장소·소품·시간대·의상 가운데 둘 이상이 같으면 통째로 쓴다. 우선순위는 image-brief.md §4 '룩 카드' 4항)
 | 세트 | 갈래 | 묶음 |
 |---|---|---|
 | S1 성수동 전면 셀카 (滤镜 #061) | A | Hair 검은 긴 생머리, 풍성한 어두운 머리가 어깨 뒤와 가슴 옆으로, 한쪽은 귀 뒤로 / Outfit 스퀘어넥(숯회색 슬림 긴소매 니트) / Props 은 물방울 펜던트(아주 가는 은 체인) / Scene 클린 콘크리트 카페, 노출 콘크리트와 부드러운 확산광의 조용한 예술 공간, 잡동사니 없음 / Light 5200K 낮의 확산광 / Optics iPhone 15 Pro 전면 TrueDepth, 머리카락 결과 콧대가 선명하다 / Pose 전면 카메라, 몸은 3/4로 비스듬히 / Camera 미디엄 클로즈업, 팔 길이(Iris 원본: 50mm 평시선) / Expression 무심히 돌아보는 눈빛, 맑은 눈으로 렌즈를 돌아봄 |

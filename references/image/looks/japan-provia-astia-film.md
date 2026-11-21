@@ -168,7 +168,7 @@
 | A | vignette | 暗角 — The corners fall a little darker than the center without a heavy tunnel, as from a compact's round aperture. (滤镜 #022 #023) |
 | 전부 | grain | 胶片颗粒 — Very fine, even film grain across the whole frame, barely visible in the midtones and slightly heavier in the shadows. |
 
-## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 요청이 세트와 맞으면 통째로 쓰고, 세트 값이 같은 슬롯의 갈래 줄보다 먼저다)
+## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 요청의 장소·소품·시간대·의상 가운데 둘 이상이 같으면 통째로 쓴다. 우선순위는 image-brief.md §4 '룩 카드' 4항)
 | 세트 | 갈래 | 묶음 |
 |---|---|---|
 | S1 代官山 カフェテラス (滤镜 #021) | A | Hair 濡れ髪의 검은 단발, シースルーバング / Lip 水紅(투명한 맨입술) / Outfit シアーリネン(흰 린넨 셔츠) / Props 文庫本 / Scene 代官山 카페의 야외 목재석, 나무 그늘 / Light 5400K 오후, 木漏れ日 / Optics CONTAX T3 + プロビア 100F, 선명한 가장자리와 부드럽게 녹는 배경(Iris 원본의 50mm 얕은 심도는 컴팩트 35mm에 맞춰 중간 깊이로 바꿨다) / Expression 無防備, 책 읽던 손을 멈추고 조용히 본다 / Pose 斜め座り, 테이블 곁 / Camera 35mm, 테이블 높이에서 가까이 |

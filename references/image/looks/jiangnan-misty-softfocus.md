@@ -157,7 +157,7 @@
 | D | bloom | 柔焦 — Steam and lamp haze soften the brightest edges into a gentle glow while the eyes and fingertips stay clear. |
 | D | color | 冷茶色调 — A muted grey-brown grade with low contrast and a faint cool tea cast, the warm lamp and slat light kept quiet. |
 
-## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 요청이 세트와 맞으면 통째로 쓰고, 세트 값이 같은 슬롯의 갈래 줄보다 먼저다)
+## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 요청의 장소·소품·시간대·의상 가운데 둘 이상이 같으면 통째로 쓴다. 우선순위는 image-brief.md §4 '룩 카드' 4항)
 | 세트 | 갈래 | 묶음 |
 |---|---|---|
 | S1 月洞门黑柔 (滤镜 #091) | C | Hair 低丸子头, 뒤통수에 느슨하게 올린 검은 머리 / Lip 水光唇(자연스러운 水粉) / Outfit 雪纺(素白 双层 真丝 雪纺 개량 롱 드레스) / Scene 月洞门, 苏州 고전 정원의 한백옥 월동문 앞에 선다 / Light 柔和漫射光 5500K 흐린 날 확산광, 흰 실크 하이라이트에 은은한 光晕 / Optics Leica M11 + Summilux 35mm f/1.4, 黑柔滤镜 1/4(하이라이트가 번지고 속눈썹과 홍채는 선명) / Expression 云淡风轻, 담담히 먼 곳을 응시 / Pose 월동문 앞에 가만히 서서 먼 곳을 본다 |

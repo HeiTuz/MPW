@@ -154,7 +154,7 @@
 | A, B | scanline | 走査線 — A faint ladder of fine horizontal lines runs across flat areas such as skin, sky and walls, like a screen seen up close. |
 | A, C, D | grain | ビデオノイズ — Very fine colored speckle sits in the shadows, mostly green and purple-gray, and the rest of the frame stays soft. |
 
-## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 요청이 세트와 맞으면 통째로 쓰고, 세트 값이 같은 슬롯의 갈래 줄보다 먼저다)
+## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 요청의 장소·소품·시간대·의상 가운데 둘 이상이 같으면 통째로 쓴다. 우선순위는 image-brief.md §4 '룩 카드' 4항)
 | 세트 | 갈래 | 묶음 |
 |---|---|---|
 | S1 下北沢の路地 (滤镜 #076) | A | Hair 濡れ髪의 검은 단발, シースルーバング가 바람에 흔들린다 / Lip 水紅(고정 몫 그대로) / Outfit カレッジスウェット(바랜 프린트 맨투맨) / Props 없음, 한 손이 비어 있다 / Scene 下北沢의 오후 좁은 골목 / Light 5000K 부드러운 오후 햇빛, 하이라이트가 안개처럼 번진다 / Optics ハンディカム, 4:3, 저채도의 MiniDV 색 / Expression 無邪気な振り返り, 렌즈에 웃어 보인다 / Pose 걸어오다 멈춰 손으로 렌즈를 덮는다 / Camera 걷는 인물을 가까이서 따라가는 핸드헬드 |

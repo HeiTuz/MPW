@@ -154,7 +154,7 @@
 | B | push | Push Processing — The film is pushed two to three stops, giving harder contrast, bolder grain and deeper blacks than the stock gives at its normal speed. |
 | A | motion | 1/1000s Shutter — The coat hem and hair freeze mid-gust with crisp edges while the background stays perfectly still. |
 
-## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 요청이 세트와 맞으면 통째로 쓰고, 세트 값이 같은 슬롯의 갈래 줄보다 먼저다)
+## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 요청의 장소·소품·시간대·의상 가운데 둘 이상이 같으면 통째로 쓴다. 우선순위는 image-brief.md §4 '룩 카드' 4항)
 | 세트 | 갈래 | 묶음 |
 |---|---|---|
 | S1 센강 둑 (滤镜 #076) | A | Hair Cheveux saut du lit(깊은 갈색 어깨 길이, 헝클어진 결) + Frange rideau / Base Teint nu(맨 피부) / Lip 입술선만 자연스럽게 보이는 맨 입술(립 줄 없음) / Outfit Marinière classique bretonne(두툼한 면 줄무늬) + 짙은 하이웨이스트 Jean droit / Scene quai de Seine, 오래된 청석 둑길 옆 강물과 건너편 건물 실루엣 / Light Paris Overcast Light / Optics Leica M6 + Summicron 35mm f/2, Kodak Tri-X 400(D-76 현상), coarse grain, 하이라이트는 순백이고 그림자는 두툼한 검정 / Expression Nonchalance parisienne, 느긋하게 렌즈를 본다 / Pose Walking Shot, 렌즈를 향해 성큼성큼 걷는다 / Camera Instant décisif |

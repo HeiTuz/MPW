@@ -162,7 +162,7 @@
 | A, D | flare | Lens Flare — The high or low sun sends soft veils and a faint colour streak across one corner of the frame and lowers contrast near it. |
 | C | format | 6x6 Square Frame — A square 1:1 composition with the subject centered or lightly offset and calm, balanced margins. (滤镜 #096) |
 
-## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 요청이 세트와 맞으면 통째로 쓰고, 세트 값이 같은 슬롯의 갈래 줄보다 먼저다)
+## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 요청의 장소·소품·시간대·의상 가운데 둘 이상이 같으면 통째로 쓴다. 우선순위는 image-brief.md §4 '룩 카드' 4항)
 | 세트 | 갈래 | 묶음 |
 |---|---|---|
 | S1 자갈 해변 땀 광 (滤镜 #094) | A | Hair Effet mouillé, 깊은 갈색 장발이 바닷바람과 물기로 쇄골·어깨에 흩어짐 + Frange rideau / Base Peau hâlée, 꾸밈 없는 맨 피부에 코 위 햇볕 주근깨, 코끝·이마·쇄골에 얇은 땀 광 / Lip 산호빛 분홍 촉촉한 입술(Lèvres corail) / Outfit Caraco côtelé(흰 가는 골지 면 캐미솔) + denim cutoff shorts / Scene Baie des Anges 회색 자갈 해변, 뒤로 부서지는 흰 파도와 파란 바다 / Light Plein soleil 5900K, 이마·쇄골에 금빛 하이라이트 / Optics Contax G2 + Zeiss Planar 45mm f/2, Kodak Portra 400, 고운 입자 / Expression 눈웃음, 시원한 바닷바람 쪽으로 얼굴을 살짝 든다 / Pose 자갈 위에 두 손을 짚고 뒤로 기대 앉는다(lean back on hands) |

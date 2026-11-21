@@ -170,11 +170,28 @@ for (const q of ['90년대 홍콩영화(왕가위 감성)', '왕가위', '港风
   assert.match(out.stdout, /^## Look card\n.+ — references\/image\/looks\/wong-kar-wai\.md\nread: node scripts\/read_refs\.mjs references\/image\/looks\/wong-kar-wai\.md\n/, q);
   assert.deepEqual(JSON.parse(run(['--q', q, '--json']).stdout).looks.map((l) => l.slug), ['wong-kar-wai'], q);
 }
-for (const q of ['홍콩', '신중식,찻집']) {
+for (const q of ['홍콩', '신중식,찻집', '老钱风', '홍콩 여행 스냅']) {
   out = run(['--q', q]);
-  assert.ok(!out.stdout.includes('## Look card'), `${q} calls no card`);
+  assert.ok(!/^## Look card$/m.test(out.stdout), `${q} calls no card`);
   assert.deepEqual(JSON.parse(run(['--q', q, '--json']).stdout).looks, []);
 }
+// The card is found however the query was cut: commas and brackets are ignored, and a name's words match in any order.
+for (const q of ['캘리포니아, 골든아워, 해변, Kodak Gold 200', '골든아워 캘리포니아 해변,Gold Kodak 200', '캘리포니아(골든아워), Kodak Gold 200']) {
+  assert.deepEqual(JSON.parse(run(['--q', q, '--json']).stdout).looks.map((l) => l.slug).sort(), ['california-golden-hour', 'kodak-gold-200'], q);
+}
+// A query that only touches a card's "do not call" words prints candidates with their summary and read command, never as a called card.
+for (const [q, slug] of [['필카 감성, 한강', 'korea-old-film-light-leak'], ['일회용 카메라', 'korea-old-film-light-leak'], ['폴라로이드', 'venice-beach-polaroid-light-leak'], ['카페 감성', 'seoul-cafe-warm-diffuse']]) {
+  out = run(['--q', q]);
+  assert.ok(!/^## Look card$/m.test(out.stdout), `${q}: no called card`);
+  assert.match(out.stdout, /^## Look card candidates\n/m, q);
+  const json = JSON.parse(run(['--q', q, '--json']).stdout);
+  assert.deepEqual(json.looks, [], q);
+  assert.ok(json.candidates.some((c) => c.slug === slug && c.summary && c.file === `references/image/looks/${slug}.md`), `${q} offers ${slug}`);
+  assert.ok(out.stdout.includes(`read: node scripts/read_refs.mjs references/image/looks/${slug}.md`), q);
+}
+// A called card is not offered again as a candidate, and an ordinary query has no candidate block.
+assert.ok(JSON.parse(run(['--q', '90년대 홍콩영화(왕가위 감성)', '--json']).stdout).candidates.every((c) => c.slug !== 'wong-kar-wai'));
+assert.ok(!run(['--q', '老钱风']).stdout.includes('candidates'));
 // One query can call a 장면 card and a 매체 card together; both come out with their axis so the brief can split the roles.
 for (const q of ['캘리포니아 골든아워, Kodak Gold 200', '캘리포니아 골든아워 코닥 골드 200']) {
   const both = JSON.parse(run(['--q', q, '--json']).stdout).looks;

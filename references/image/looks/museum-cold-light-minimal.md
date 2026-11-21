@@ -162,7 +162,7 @@
 | D | stock | Phase One IQ4 — An ultra-high-resolution medium-format body with pure colour and very clean detail. |
 | D | color | Cool White Balance — Whites sit slightly cold and clean, giving skin a pale porcelain clarity with no warm yellow. |
 
-## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 요청이 세트와 맞으면 통째로 쓰고, 세트 값이 같은 슬롯의 갈래 줄보다 먼저다)
+## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 요청의 장소·소품·시간대·의상 가운데 둘 이상이 같으면 통째로 쓴다. 우선순위는 image-brief.md §4 '룩 카드' 4항)
 | 세트 | 갈래 | 묶음 |
 |---|---|---|
 | S1 雕塑切光 (滤镜 #061) | A | Hair 贴头皮盘发, 중분 낮은 쪽 / Lip 正红唇(무광 냉색 홍색) / Outfit 无领西装外套(墨黑 精纺 울, 수축 허리) / Scene 白盒子美术馆, 순백 전시 벽 앞에 선다 / Light 雕塑切光(5600K, 측상방 45도 단일 방향 광이 광대·콧대·턱선을 칼로 깎은 듯 나눈다) / Optics Sony A7R V, 85mm 人像(원본 85mm f/1.4), 모공과 직물 결까지 선명 / Expression 冷艳, 렌즈를 직시 / Pose 极简雕塑立姿 |

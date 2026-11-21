@@ -170,7 +170,7 @@
 | C | grain | Grain argentique — Coarse, organic silver grain sits across the whole frame, heaviest in the dark tones. |
 | D | grain | Gros grain — Dense, visible low-light grain fills the shadows and thickens toward the dark edges. |
 
-## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 요청이 세트와 맞으면 통째로 쓰고, 세트 값이 같은 슬롯의 갈래 줄보다 먼저다)
+## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 요청의 장소·소품·시간대·의상 가운데 둘 이상이 같으면 통째로 쓴다. 우선순위는 image-brief.md §4 '룩 카드' 4항)
 | 세트 | 갈래 | 묶음 |
 |---|---|---|
 | S1 창가 독서 (滤镜 #041) | A | Hair Cheveux saut du lit(깊은 갈색 장발이 한쪽 어깨로) + Frange rideau / Base Taches de rousseur / Lip 자연스러운 살구 분홍 / Outfit Gilet(연한 귀리색 굵은 캐시미어 카디건)와 안에 실크 캐미솔 / Props Collection Blanche(펼친 책) / Scene porte-fenêtre, 오스만 아파트의 키 큰 창과 마루 / Light Vermeer(4200K, 창 한쪽 빛이 한쪽 얼굴만 금빛으로), clair-obscur / Optics Canon New F-1 FD 50mm f/1.4, Kodak Portra 400, 35mm 입자 / Expression Regard baissé sur les pages / Pose Assise de profil devant la fenêtre |

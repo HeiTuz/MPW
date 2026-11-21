@@ -159,7 +159,7 @@
 | D | body | Fujifilm X-H2S — A crisp mirrorless rendering of white store light with firm whites and fine shadow noise. (滤镜 #094: 33mm f/1.4) |
 | D | lens | 85mm 인물 렌즈 — A short-telephoto lens compresses the far lights and blurs them softly behind her face. (滤镜 #091) |
 
-## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 요청이 세트와 맞으면 통째로 쓰고, 세트 값이 같은 슬롯의 갈래 줄보다 먼저다)
+## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 요청의 장소·소품·시간대·의상 가운데 둘 이상이 같으면 통째로 쓴다. 우선순위는 image-brief.md §4 '룩 카드' 4항)
 | 세트 | 갈래 | 묶음 |
 |---|---|---|
 | S1 택시 뒷좌석 차창 (滤镜 #092) | A | Hair 검은 긴 생머리, 한쪽 옆머리를 귀 뒤로 / Lip 글래스 립(산호 누드 핑크 글래스) / Outfit 보트넥(순흑 슬림 긴소매 니트) / Scene 택시 뒷좌석, 깊은 밤 / Light 차창 불빛(4500K), 서울 번화가의 붉은 후미등과 푸른 간판이 몽환적 광궤적으로 / Optics 장노출(Long Exposure Rear Window Seat) / Expression 시선 회피, 청랭한 눈으로 창밖을 본다 / Pose 차 뒷좌석에 옆으로 앉기, 몸은 3/4 |

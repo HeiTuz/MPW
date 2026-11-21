@@ -156,7 +156,7 @@
 | C | grain | 胶片颗粒 — Visible silver-style grain across the whole frame, heaviest in the black shadow side. |
 | D | color | 奶茶色调 — A low-contrast warm grade pulling the colours toward off-white, oat and camel beige. |
 
-## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 요청이 세트와 맞으면 통째로 쓰고, 세트 값이 같은 슬롯의 갈래 줄보다 먼저다)
+## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 요청의 장소·소품·시간대·의상 가운데 둘 이상이 같으면 통째로 쓴다. 우선순위는 image-brief.md §4 '룩 카드' 4항)
 | 세트 | 갈래 | 묶음 |
 |---|---|---|
 | S1 水墨宣纸 (滤镜 #001) | A | Hair 一丝不苟低盘发, 긴 머리를 뒤로 올려 목선이 살짝 드러남 / Brow 野生眉 / Lip 옅은 朱红 립(淡雅朱红唇, 광택 없음) / Outfit 长衫(玄黑 重磅 真丝 개량 장삼) / Scene 苏州园林의 흰 분벽 앞에 단정히 선다 / Light 5800K 흐린 날 확산광, 그림자는 청회색 먹 번짐 / Optics Leica M11, 水墨影调, 어두운 곳에 고운 입자 / Expression 清冷感, 렌즈를 조용히 응시 / Composition 흰 벽과 검은 옷의 留白 |

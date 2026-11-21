@@ -166,7 +166,7 @@
 | D | stock | Kodak Tri-X 400 — Pure black-and-white tone with coarse grain, ink-deep blacks and brilliant highlights. |
 | D | grain | 흑백 필름 그레인 — Coarse silver grain over monochrome with deep blacks and bright clipped highlights, giving a gritty high-contrast texture. |
 
-## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 요청이 세트와 맞으면 통째로 쓰고, 세트 값이 같은 슬롯의 갈래 줄보다 먼저다)
+## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 요청의 장소·소품·시간대·의상 가운데 둘 이상이 같으면 통째로 쓴다. 우선순위는 image-brief.md §4 '룩 카드' 4항)
 | 세트 | 갈래 | 묶음 |
 |---|---|---|
 | S1 서울 옛 골목 (滤镜 #076) | A | Outfit 보트넥(검정 슬림 긴소매 니트) / Scene 연남동, 서울 오래된 골목 / Light 흐린 날 빛(5500K), 그림자는 짙은 먹녹색 / Optics フジカラー Superia 400, 청록 색조, 절제된 붉은색과 노란색, 어두운 곳의 촘촘한 입자 / Style 필름 생활지 / Pose 3/4로 몸을 틀고 고개만 렌즈로 돌린다 / Expression 맑게 렌즈를 본다 |

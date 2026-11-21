@@ -135,7 +135,7 @@
 | D | lens | Zeiss Planar 80mm f/2.8 — A medium-format portrait lens look: fine detail at the focus point and a slow, smooth fall into soft background. |
 | 전부 | grain | 胶片颗粒 — Fine, even film grain sits across the whole frame, slightly heavier in the shadows. |
 
-## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 요청이 세트와 맞으면 통째로 쓰고, 세트 값이 같은 슬롯의 갈래 줄보다 먼저다)
+## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 요청의 장소·소품·시간대·의상 가운데 둘 이상이 같으면 통째로 쓴다. 우선순위는 image-brief.md §4 '룩 카드' 4항)
 | 세트 | 갈래 | 묶음 |
 |---|---|---|
 | S1 一号公路 (滤镜 #001) | A | Hair Windswept Waves, 금갈색 장발이 바닷바람에 날려 머리끝에 금빛 테 / Outfit Ribbed Tank Top(상아색 넓은 U넥) 위에 숯회색 오버사이즈 울 블레이저를 앞 열고 / Scene Pacific Coast Highway 절벽 옆 나무 울타리, 아래로 태평양 / Light Golden Hour Backlight 3200K, 머리 둘레에 금빛 고리, 오른쪽 위 모서리로 옅은 무지개 플레어 / Optics Leica M6 + Summilux 35mm f/1.4, Kodak Portra 400, 중간 입자, Highlight Roll-off / Expression 자유분방 |

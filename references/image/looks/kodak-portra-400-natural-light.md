@@ -157,7 +157,7 @@
 | A, C | lens-wide | Summicron 35mm f/2 — A wide-normal lens keeps a little of the street or colonnade in the frame with a soft, smooth falloff behind her. |
 | A, B, D | lens-medium | Zeiss Planar 80mm f/2.8 — A medium-format portrait lens gives fine detail at the focus point and a slow, smooth fall into the soft background. |
 
-## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 요청이 세트와 맞으면 통째로 쓰고, 세트 값이 같은 슬롯의 갈래 줄보다 먼저다)
+## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 요청의 장소·소품·시간대·의상 가운데 둘 이상이 같으면 통째로 쓴다. 우선순위는 image-brief.md §4 '룩 카드' 4항)
 | 세트 | 갈래 | 묶음 |
 |---|---|---|
 | S1 Manhattan Window Morning (滤镜 05 #071) | B | Hair Golden Balayage, 짙은 금빛 긴 머리가 가볍게 말려 흰 면 나이트셔츠 어깨 위에 내려앉음 / Outfit Cotton Nightshirt, 흰 면 나이트셔츠 / Scene Manhattan Loft, 동향 통창과 흰 시어 커튼, 창가에 앉음 / Light Window Light 5200K, 커튼을 거친 아침 확산광이 얼굴과 쇄골을 감싸고 딱딱한 그림자가 없음 / Optics Contax 645 + Zeiss Planar 80mm f/2, Kodak Portra 400(320으로 노출), Highlight Roll-off, 아주 고운 입자 / Expression 창의 빛 쪽으로 고개를 돌려 부드럽게 웃음 |

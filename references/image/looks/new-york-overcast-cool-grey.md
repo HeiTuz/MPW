@@ -179,7 +179,7 @@
 | A, C | grain | 胶片颗粒 — Fine, even color-film grain sits across the whole frame, slightly heavier in the shadows. |
 | B | grain | 胶片颗粒 — Crisp silver grain lies over the whole grey ramp, fine on T-Max and bold on Tri-X. |
 
-## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 요청이 세트와 맞으면 통째로 쓰고, 세트 값이 같은 슬롯의 갈래 줄보다 먼저다)
+## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 요청의 장소·소품·시간대·의상 가운데 둘 이상이 같으면 통째로 쓴다. 우선순위는 image-brief.md §4 '룩 카드' 4항)
 | 세트 | 갈래 | 묶음 |
 |---|---|---|
 | S1 SoHo Cobblestones (滤镜 #041) | A | Hair Glass Hair, 짙은 검은 직모가 어깨 위 코트로 떨어진다 / Lip Taupe Matte Lips(누드 무광, 입술을 살짝 다문다) / Outfit wool trench coat(숯회색 더블 브레스티드 울, 어깨선이 큼직) + Sunglasses(복고풍 검정 선글라스, 눈이 안 보이니 catchlight 끈다) / Scene SoHo, 자갈길과 주철·붉은 벽돌 건물 / Light Overcast Light(6500K 그림자 없는 확산 하늘빛) / Optics Leica M11, Summicron 50mm f/2(원본 APO-Summicron-M 50mm f/2 ASPH), Cool Grey Tone(원본 Custom SoHo Cool Grey DNG) / Pose 자갈길을 걷는다 / Camera 허리 위, 눈높이 |

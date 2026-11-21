@@ -160,7 +160,7 @@
 | C | color | 金褐暗调 — A low-key grade where deep shadows turn gold-brown like old resinous wood and the few highlights stay small and warm. (滤镜 #083) |
 | 전부 | grain | 胶片颗粒 — Fine, even film grain sits across the whole frame, slightly heavier in the shadows. |
 
-## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 요청이 세트와 맞으면 통째로 쓰고, 세트 값이 같은 슬롯의 갈래 줄보다 먼저다)
+## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 요청의 장소·소품·시간대·의상 가운데 둘 이상이 같으면 통째로 쓴다. 우선순위는 image-brief.md §4 '룩 카드' 4항)
 | 세트 | 갈래 | 묶음 |
 |---|---|---|
 | S1 宫墙朱红 (滤镜 #076) | A | Hair 一丝不苟低盘发, 검은 머리를 뒤로 올린 고전적인 낮은 쪽, 竹节簪(순은 죽절 비녀) / Brow 野生眉 / Lip 正红唇(무광의 짙은 정궁 붉은색, 豆沙 립은 얹지 않음) / Outfit 麦尔登呢(검은 중량 순양모 立领 더블 코트, 양손은 주머니에) / Pose 红墙 옆 青砖 석판 길을 천천히 걷는다 / Scene 红墙, 풍화한 주홍 담과 青砖 석판 길 / Light 柔和漫射光(5000K 오후, 낡은 붉은 회벽을 비추는 부드러운 햇빛, 그림자는 따뜻한 적갈색) / Optics Leica M11, 朱红暖调, 胶片颗粒 / Expression 波澜不惊, 붉은 담 끝을 바라본다 |

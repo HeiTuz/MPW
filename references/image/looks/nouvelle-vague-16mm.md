@@ -137,7 +137,7 @@
 | A | bloom | Halation — The brightest lamps bleed a soft red-orange glow at their edges, as light scatters inside the film. |
 | C | flare | Lens Flare — The low sun spreads soft veils and a faint rainbow streak across the frame and lowers its contrast. |
 
-## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 요청이 세트와 맞으면 통째로 쓰고, 세트 값이 같은 슬롯의 갈래 줄보다 먼저다)
+## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 요청의 장소·소품·시간대·의상 가운데 둘 이상이 같으면 통째로 쓴다. 우선순위는 image-brief.md §4 '룩 카드' 4항)
 | 세트 | 갈래 | 묶음 |
 |---|---|---|
 | S1 생제르맹 카페 모퉁이 (滤镜 #001) | A | Hair Cheveux saut du lit(깊은 갈색 곱슬 장발, 부스스) + Frange rideau / Base Taches de rousseur / Lip 베리 로즈 / Outfit Marinière classique bretonne / Scene Terrasse de Café, 모퉁이 등나무 의자에 앉는다 / Light Paris Overcast Light(오후 4800K) / Optics ARRI 16SR3, Kodak Vision3 500T, 粗颗粒, 암부는 따뜻한 청회색, 절제된 하이라이트 번짐 / Expression Nonchalance parisienne, 자신 있게 렌즈를 본다 |

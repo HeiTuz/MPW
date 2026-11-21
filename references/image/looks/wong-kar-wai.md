@@ -146,7 +146,7 @@
 | A, B, D | grain | 胶片颗粒 — Fine, even 35mm film grain sits across the whole frame, slightly heavier in the shadows. |
 | C | grain | 胶片颗粒 — Coarse, visible film grain across the whole frame, heaviest in the dark window. |
 
-## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 요청이 세트와 맞으면 통째로 쓰고, 세트 값이 같은 슬롯의 갈래 줄보다 먼저다)
+## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 요청의 장소·소품·시간대·의상 가운데 둘 이상이 같으면 통째로 쓴다. 우선순위는 image-brief.md §4 '룩 카드' 4항)
 | 세트 | 갈래 | 묶음 |
 |---|---|---|
 | S1 公寓客厅 (滤镜 #041) | B | Hair 港风大波浪, 짙고 풍성한 검은 곱슬이 한쪽 어깨로 / Lip 丝绒唇 / Outfit 改良旗袍(와인색 실크 벨벳) / Props whisky glass / Scene 녹색 가죽 소파 옆 오래된 홍콩 아파트 거실 / Light 탁상 텅스텐 등(3200K)이 옆얼굴을, 그림자는 녹색 쪽으로 / Optics Kodak Vision3 500T, 胶片颗粒 / Expression 렌즈 밖을 보는 깊은 시선 |

@@ -158,7 +158,7 @@
 | D | stamp | Date Imprint — A glowing orange LED date sits in the lower right corner of the frame, like a printed snapshot from the early 2000s. |
 | D | grain | grain — Rough consumer-film grain sits across the whole frame, heavier in the dark areas behind the flash. |
 
-## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 요청이 세트와 맞으면 통째로 쓰고, 세트 값이 같은 슬롯의 갈래 줄보다 먼저다)
+## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 요청의 장소·소품·시간대·의상 가운데 둘 이상이 같으면 통째로 쓴다. 우선순위는 image-brief.md §4 '룩 카드' 4항)
 | 세트 | 갈래 | 묶음 |
 |---|---|---|
 | S1 베니스 카페 (滤镜 #086) | A | Hair Half Bun, 헝클어진 금발을 뒤로 느슨하게 묶음 / Outfit Striped Crop Cami(컬러 줄무늬 끈 크롭 탑) / Props ice pop, 녹는 과일 아이스바를 든 채 / Scene Open-Air Beach Cafe, 베니스 비치 야외 나무 의자 / Light 4200K 낮 해가 크림색 인화지 하이라이트를 만든다 / Optics Polaroid SX-70, Chemical Spread Artifacts(테두리 현상 얼룩), 흰 정사각 테두리 / Expression Candid Laugh, 렌즈를 향해 크게 웃음 / Pose Arm Over Chair Back, 나무 의자에 비스듬히 앉음 |

@@ -157,7 +157,7 @@
 | D | tone | 쿨톤 — The whole palette leans cold blue-white with a slightly pale, quiet mood. |
 | A, B, D | bokeh | 아웃포커싱 — A wide aperture melts the background into soft blur while her face stays tack-sharp. |
 
-## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 요청이 세트와 맞으면 통째로 쓰고, 세트 값이 같은 슬롯의 갈래 줄보다 먼저다)
+## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 요청의 장소·소품·시간대·의상 가운데 둘 이상이 같으면 통째로 쓴다. 우선순위는 image-brief.md §4 '룩 카드' 4항)
 | 세트 | 갈래 | 묶음 |
 |---|---|---|
 | S1 성수동 아침 (滤镜 #021) | A | Hair 검은 긴 생머리, 한쪽을 귀 뒤로 넘겨 이마와 눈썹이 드러난다 / Lip 깨문 립 / Outfit 스퀘어넥(깊은 차콜 슬림 스퀘어넥 니트) / Props 실버 쇄골 체인 / Scene 성수동의 조용한 콘크리트 아트 스페이스, 배경은 비어 있다 / Light 흐린 날 빛 6500K, 직사 햇빛 없이 회백색 하늘이 만드는 확산 냉광, 피부는 무광에 기름기 없음 / Optics Sony A7R V + 50mm f/1.8 / Expression 맑은 눈에 캐치라이트가 하나, 막 세수한 듯 평온한 얼굴 / Pose 뒤돌아보기, 몸은 3/4로 비스듬하고 어깨가 내려간다 |

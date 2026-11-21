@@ -155,7 +155,7 @@
 | C | grain | 고감도 노이즈 — At ISO 6400 the dark room shows real luminance noise across the shadows and the far wall, softly smearing fine detail with no night-mode lift. (滤镜 #049) |
 | D | lens | 85mm 인물 렌즈 — A short-telephoto portrait look that flatters the face with gentle compression and creamy blur. (滤镜 #048) |
 
-## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 요청이 세트와 맞으면 통째로 쓰고, 세트 값이 같은 슬롯의 갈래 줄보다 먼저다)
+## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 요청의 장소·소품·시간대·의상 가운데 둘 이상이 같으면 통째로 쓴다. 우선순위는 image-brief.md §4 '룩 카드' 4항)
 | 세트 | 갈래 | 묶음 |
 |---|---|---|
 | S1 성수동 빵집 (滤镜 #041) | A | Outfit 스퀘어 넥(숯회색 슬림 긴팔 니트) / Props 은 물방울 펜던트(아주 가는 은 쇄골 체인) / Scene 베이커리 카페, 성수동 빵집의 한가한 오후 간식 자리 / Light 4800K 오트·카멜 톤의 낮은 대비 따뜻한 빛, 갓 내린 라떼의 온도 / Optics Fujifilm X100V 23mm f/2, 밀크티 톤 / Pose 어깨 너머 시선, 몸은 3/4로 틀고 어깨는 내려놓는다 / Expression 렌즈 쪽을 맑게 보는 눈 |

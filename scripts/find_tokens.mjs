@@ -2,6 +2,7 @@
 // Search the per-layer token tables in references/image/lexicon/*.md. No dependencies, no data file: the tables are parsed directly.
 // usage: node scripts/find_tokens.mjs --q "신중식,찻집" [--layers outfit,scene,camera] [--culture KR|CN|JP|US|FR] [--limit 6] [--json] [--random N]
 // A query that names a look (왕가위, 港风, 홍콩 영화) also prints a "## Look card" block first: read that card before the layer rows.
+// A query that only touches a card's "do not call" words (필카 감성, 폴라로이드) prints a "## Look card candidates" block with one-line summaries instead.
 import { randomInt } from 'node:crypto';
 import fs from 'node:fs';
 import path from 'node:path';
@@ -84,10 +85,26 @@ function expandTerms(terms, rows) {
   });
 }
 
-// Look cards: references/image/looks/index.md lists one row per card (slug | names | words that must not call it | culture | branches | axis).
-// A card is called when the raw query contains one of its names, the reverse of the row search above. Hangul and CJK names match as text
-// (spaces and brackets ignored); Latin names match whole words only, so a short name like "WKW" never fires inside another word.
+// Look cards: references/image/looks/index.md lists one row per card (slug | names | words that must not call it | culture | branches | axis | summary).
+// A card is called when the raw query contains one of its names, the reverse of the row search above. The match ignores how the query was cut:
+// commas, spaces and brackets are dropped, and a multi-word name also matches when every one of its words is in the query, in any order.
+// Hangul and CJK names match as text; Latin names match whole words only, so a short name like "WKW" never fires inside another word.
+// A card that is not called but lists a query word as one it must not answer to is offered as a candidate with its summary.
 const nameWords = (alias) => norm(alias).split(/[\s\-\u2010-\u2015\u00b7\u30fb]+/).filter(Boolean);
+const PUNCT = /[,，、;；:：.。!！?？"'“”‘’()（）[\]【】「」『』/／]+/g;
+const strip = (s) => squash(s).replace(PUNCT, '');
+const isLatin = (s) => /^[a-z0-9\s\-\u00b7.']+$/.test(norm(s));
+const hasName = (name, raw, stripped) => {
+  if (isLatin(name)) {
+    const body = nameWords(name).map(escapeRe).join('[\\s\\-\\u00b7]*');
+    return new RegExp(`(?<![a-z0-9])${body}(?![a-z0-9])`).test(raw);
+  }
+  return stripped.includes(strip(name));
+};
+const hasAllWords = (name, raw, stripped) => {
+  const words = norm(name).split(/\s+/).filter(Boolean);
+  return words.length >= 2 && words.every((w) => hasName(w, raw, stripped));
+};
 export function loadLooks(dir = LOOKS_DIR) {
   const file = path.join(dir, 'index.md');
   if (!fs.existsSync(file)) return [];
@@ -95,30 +112,40 @@ export function loadLooks(dir = LOOKS_DIR) {
   for (const line of fs.readFileSync(file, 'utf8').split('\n')) {
     if (!/^\| /.test(line) || /^\| (slug|---)/.test(line)) continue;
     const cells = splitRow(line);
-    if (cells.length !== 6) throw new Error(`looks/index.md: bad row: ${line.slice(0, 60)}`);
-    const [slug, names, avoid, culture, branches, axis] = cells;
+    if (cells.length !== 7) throw new Error(`looks/index.md: bad row: ${line.slice(0, 60)}`);
+    const [slug, names, avoid, culture, branches, axis, summary] = cells;
     if (!['매체', '장면'].includes(axis)) throw new Error(`looks/index.md: ${slug} axis must be 매체 or 장면: ${axis}`);
+    if (!summary.trim()) throw new Error(`looks/index.md: ${slug} has no summary`);
     if (!fs.existsSync(path.join(dir, `${slug}.md`))) throw new Error(`looks/index.md: ${slug}.md is missing`);
     const card = fs.readFileSync(path.join(dir, `${slug}.md`), 'utf8');
     const title = (card.match(/^# (.+?)(?: — .*)?$/m) ?? [])[1] ?? slug;
-    looks.push({ slug, title, names: list(names), avoid: list(avoid), culture, branches, axis, file: `references/image/looks/${slug}.md` });
+    looks.push({ slug, title, names: list(names), avoid: list(avoid), culture, branches, axis, summary, file: `references/image/looks/${slug}.md` });
   }
   return looks;
 }
 
 export function findLookCards(terms, dir = LOOKS_DIR) {
   const raw = norm(terms.join(','));
-  const squashed = squash(raw);
+  const stripped = strip(raw);
   return loadLooks(dir).flatMap((look) => {
-    const name = look.names.find((n) => {
-      if (/^[a-z0-9\s\-\u00b7.']+$/.test(norm(n))) {
-        const body = nameWords(n).map(escapeRe).join('[\\s\\-\\u00b7]*');
-        return new RegExp(`(?<![a-z0-9])${body}(?![a-z0-9])`).test(raw);
-      }
-      return squashed.includes(squash(n));
-    });
+    const name = look.names.find((n) => hasName(n, raw, stripped)) ?? look.names.find((n) => hasAllWords(n, raw, stripped));
     return name ? [{ ...look, matched: name }] : [];
   });
+}
+
+const MAX_CANDIDATES = 4;
+export function findLookCandidates(terms, called = [], dir = LOOKS_DIR) {
+  const raw = norm(terms.join(','));
+  const stripped = strip(raw);
+  const skip = new Set(called.map((c) => c.slug));
+  return loadLooks(dir)
+    .filter((look) => !skip.has(look.slug))
+    .flatMap((look) => {
+      const hits = look.avoid.filter((w) => hasName(w, raw, stripped));
+      return hits.length ? [{ ...look, matched: hits.sort((a, b) => b.length - a.length)[0] }] : [];
+    })
+    .sort((a, b) => b.matched.length - a.matched.length)
+    .slice(0, MAX_CANDIDATES);
 }
 
 // Returns [{slug, title, matches:[row+score]}] with every match (sorted); callers cut to a limit or draw at random.
@@ -158,13 +185,17 @@ const cardBlock = (cards) => (cards.length
   ? `## Look card\n${cards.map((c) => `${c.title} [${c.axis}] — ${c.file}\nread: node scripts/read_refs.mjs ${c.file}`).join('\n')}\n(read the card before the layer rows below; it fills the layers this look carries)\n\n`
   : '');
 
-export function formatText(results, cards = []) {
+const candidateBlock = (candidates) => (candidates.length
+  ? `## Look card candidates\n(no card was named exactly; these list a word of the query as one they do not answer to. Read one only if its summary matches the medium or look the request asks for; if the request names no medium or look, write without a card.)\n${candidates.map((c) => `- ${c.title} [${c.axis}, ${c.culture}] — ${c.summary}\n  read: node scripts/read_refs.mjs ${c.file}`).join('\n')}\n\n`
+  : '');
+
+export function formatText(results, cards = [], candidates = []) {
+  const head = cardBlock(cards) + candidateBlock(candidates);
   if (results.every((l) => l.matches.length === 0)) {
-    return cards.length
-      ? `${cardBlock(cards)}no layer rows matched; the card above carries the look.\n`
-      : 'no match in any layer. Use English tokens and sentences unless you know an original-language term for sure (image-brief.md §2, §4).\n';
+    if (cards.length) return `${head}no layer rows matched; the card above carries the look.\n`;
+    return `${head}no match in any layer. Use English tokens and sentences unless you know an original-language term for sure (image-brief.md §2, §4).\n`;
   }
-  return cardBlock(cards) + results.map((l) => {
+  return head + results.map((l) => {
     const body = l.matches.length
       ? l.matches.map((m) => `${m.token} — ${m.looks}${m.aliases.length ? ` (${m.aliases.slice(0, 4).join(', ')})` : ''} [${m.kind}]`).join('\n')
       : 'no match';
@@ -172,12 +203,17 @@ export function formatText(results, cards = []) {
   }).join('\n');
 }
 
-export function formatJson(results, terms, cards = []) {
+export function formatJson(results, terms, cards = [], candidates = []) {
   const layers = {};
   for (const l of results) {
     layers[l.slug] = l.matches.map(({ token, aliases, culture, tags, looks, kind, score }) => ({ token, aliases, culture, tags, looks, kind, score }));
   }
-  return { query: terms, looks: cards.map(({ slug, title, axis, file, matched }) => ({ slug, title, axis, file, matched })), layers };
+  return {
+    query: terms,
+    looks: cards.map(({ slug, title, axis, file, matched }) => ({ slug, title, axis, file, matched })),
+    candidates: candidates.map(({ slug, title, axis, summary, file, matched }) => ({ slug, title, axis, summary, file, matched })),
+    layers,
+  };
 }
 
 function parseArgs(argv) {
@@ -226,7 +262,8 @@ if (isMainModule()) {
     let results = search(opts);
     results = opts.random ? drawRandom(results, opts.random) : results.map((l) => ({ ...l, matches: l.matches.slice(0, opts.limit) }));
     const cards = findLookCards(opts.terms);
-    process.stdout.write(opts.json ? JSON.stringify(formatJson(results, opts.terms, cards)) + '\n' : formatText(results, cards));
+    const candidates = findLookCandidates(opts.terms, cards);
+    process.stdout.write(opts.json ? JSON.stringify(formatJson(results, opts.terms, cards, candidates)) + '\n' : formatText(results, cards, candidates));
   } catch (error) {
     console.error(`find_tokens: ${error.message}`);
     process.exitCode = 2;

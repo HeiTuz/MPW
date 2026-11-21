@@ -135,7 +135,7 @@
 | C | grain | 胶片颗粒 — Fine, even film grain sits across the whole frame, slightly heavier in the shadows. |
 | C | grain | 흑백 필름 그레인 — Coarse silver grain sits over the monochrome frame with deep blacks and clipped bright highlights. |
 
-## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 요청이 세트와 맞으면 통째로 쓰고, 세트 값이 같은 슬롯의 갈래 줄보다 먼저다)
+## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 요청의 장소·소품·시간대·의상 가운데 둘 이상이 같으면 통째로 쓴다. 우선순위는 image-brief.md §4 '룩 카드' 4항)
 | 세트 | 갈래 | 묶음 |
 |---|---|---|
 | S1 圣水洞 (KR 滤镜 #001) | A | Hair 黑长直, 한쪽 옆머리를 귀 뒤로 / Outfit 方领(숯회색 슬림 긴소매 니트) / Props 纯银水滴吊坠(가는 은 체인) / Scene 성수동, 노출 콘크리트와 부드러운 확산광의 조용한 예술 공간, 잡동사니 없음 / Light 机顶直闪(5600K), 국소 하이라이트 번짐, 배경은 순흑으로 낙하, 뺨·콧날의 수광 하이라이트 / Optics Canon IXY 400, 数码噪点 / Pose 回眸, 몸은 3/4, 어깨를 내림 / Expression 맑고 또렷한 눈으로 렌즈를 돌아봄 |

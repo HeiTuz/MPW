@@ -170,7 +170,7 @@
 | A, B | grain | 胶片颗粒 — Fine silver-halide grain sits evenly across the whole frame, a touch denser in the blue-grey shadows. |
 | C, D | grain | 胶片颗粒 — Fine, visible grain across the whole frame that thickens in the dark of the arcade, the alley and the deep shade. |
 
-## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 요청이 세트와 맞으면 통째로 쓰고, 세트 값이 같은 슬롯의 갈래 줄보다 먼저다)
+## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 요청의 장소·소품·시간대·의상 가운데 둘 이상이 같으면 통째로 쓴다. 우선순위는 image-brief.md §4 '룩 카드' 4항)
 | 세트 | 갈래 | 묶음 |
 |---|---|---|
 | S1 생제르맹 카페 테라스 (滤镜 #021) | A | Hair Cheveux saut du lit(깊은 갈색 곱슬 장발, 결이 흐트러진다) + Frange rideau / Base Taches de rousseur / Lip Framboise(물기 있는 베리 로즈) / Outfit Marinière classique bretonne + Jean évasé / Scene Terrasse de Café, 생제르맹 대로 인도 쪽 등나무 의자 / Light Paris Overcast Light(오후 5200K, 단단한 하이라이트 가장자리 없음, 암부는 옅은 청회색, 중간 톤이 풍부) / Optics Leica M6, Summicron 35mm f/2, Kodak Portra 400, 암부에 가는 입자 / Expression Nonchalance parisienne, 시선이 거리로 / Pose 등나무 의자에 앉아 몸을 느슨하게 |

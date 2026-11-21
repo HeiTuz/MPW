@@ -156,7 +156,7 @@
 | B, C | grain | Pellicule poussée — Pushed film with stronger grain and harder contrast, where lamps glow and spill softly into the dark. |
 | B | bloom | Halation — Lamps and street lights bleed a faint red-orange glow around their edges through the wet glass. |
 
-## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 요청이 세트와 맞으면 통째로 쓰고, 세트 값이 같은 슬롯의 갈래 줄보다 먼저다)
+## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 요청의 장소·소품·시간대·의상 가운데 둘 이상이 같으면 통째로 쓴다. 우선순위는 image-brief.md §4 '룩 카드' 4항)
 | 세트 | 갈래 | 묶음 |
 |---|---|---|
 | S1 화신 카페 창가 (滤镜 #061) | A | Hair Cheveux saut du lit, 어깨 길이 짙은 갈색 머리가 약간 흐트러진다 + Frange rideau / Base Taches de rousseur, 코 위 옅은 주근깨 두 점 / Lip Beige rosé, 물기 있는 천연 豆沙색 / Outfit Marinière classique bretonne / Scene Café de Flore 길가 큰 유리창 안쪽에 앉는다, 유리에 Haussmannien 석조 건물·가로수·행인이 비친다 / Light Paris Overcast Light(5000K)가 안쪽 얼굴을 비춘다 / Optics Rolleiflex 2.8F, Zeiss Planar 80mm f/2.8, Kodak Portra 400, 6x6 Square Frame, 유리에 옅은 김 / Expression 창밖을 보는 사색, Regard dans le vague / Camera Reflets superposés |

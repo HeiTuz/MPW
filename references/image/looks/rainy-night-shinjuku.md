@@ -157,7 +157,7 @@
 | D | key | Deep Blacks — The darkest parts of the frame sink to clean, deep black with no visible noise, and the highlights stay small and unclipped. |
 | D | color | Cool Grey Tone — A pale gray with a trace of blue and restrained contrast, the whites clean and cold. |
 
-## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 요청이 세트와 맞으면 통째로 쓰고, 세트 값이 같은 슬롯의 갈래 줄보다 먼저다)
+## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 요청의 장소·소품·시간대·의상 가운데 둘 이상이 같으면 통째로 쓴다. 우선순위는 image-brief.md §4 '룩 카드' 4항)
 | 세트 | 갈래 | 묶음 |
 |---|---|---|
 | S1 歌舞伎町 雨夜 (滤镜 #091) | A | Hair 濡れ髪의 검은 단발, シースルーバング가 바람에 흔들린다 / Lip 琉璃唇(Iris 원본은 水润素唇) / Outfit 검은 칠피 짧은 재킷(漆皮) / Props ビニール傘, 큰 투명 우산을 쓴다 / Scene 歌舞伎町, 괴수 머리 조형이 얹힌 건물 아래 좁은 골목 / Light 4200K, 젖은 아스팔트가 보라·청록·분홍 네온을 거울처럼 되비춘다 / Optics ARRI Alexa Mini, アナモルフィック(Iris 원본 Cooke S4/i 35mm 아나모픽) / Expression 걸음이 느슨하고 시선이 렌즈를 스친다 / Pose 거리 한가운데를 걷는다 |

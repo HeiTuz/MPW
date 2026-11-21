@@ -125,7 +125,7 @@
 | B | camera | キヤノン PowerShot G2 — A 2000s CCD look: warm white balance, slightly clipped highlights and a smooth porcelain skin tone. |
 | D | camera | サイバーショット DSC — A cool blue-cast CCD look with sharp edges: shadows lean blue-gray while the sky stays clean and cold. |
 
-## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 요청이 세트와 맞으면 통째로 쓰고, 세트 값이 같은 슬롯의 갈래 줄보다 먼저다)
+## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 요청의 장소·소품·시간대·의상 가운데 둘 이상이 같으면 통째로 쓴다. 우선순위는 image-brief.md §4 '룩 카드' 4항)
 | 세트 | 갈래 | 묶음 |
 |---|---|---|
 | S1 渋谷 信号待ち (滤镜 #069) | A | Hair 濡れ髪의 검은 단발, シースルーバング / Lip 水紅 / Outfit フーディー / Pose ポケットイン, 횡단보도에서 신호 대기 / Scene 渋谷スクランブル交差点의 인파 / Light 5300K 부드러운 낮빛 / Optics ディマージュ Xt, 부드러운 화면 가장자리, 초기 CCD의 가는 노이즈 / Expression 친구가 꺼낸 카메라를 알아채고 힘 뺀 미소 / Camera 친구가 옆에서 불쑥 찍은 거리 |

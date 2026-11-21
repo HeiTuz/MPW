@@ -161,7 +161,7 @@
 | C, D | highlight | Overexposed Highlights — Fixed exposure lets the bright sky and any pale wall run to paper white with softly bleeding edges while the midtones stay airy. |
 | D | case | 水中写ルンです — A thick clear housing around the camera adds faint ripple refraction at the frame edge, and water drops on the lens window flare bright in the sun. |
 
-## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 요청이 세트와 맞으면 통째로 쓰고, 세트 값이 같은 슬롯의 갈래 줄보다 먼저다)
+## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 요청의 장소·소품·시간대·의상 가운데 둘 이상이 같으면 통째로 쓴다. 우선순위는 image-brief.md §4 '룩 카드' 4항)
 | 세트 | 갈래 | 묶음 |
 |---|---|---|
 | S1 コンビニ前 (滤镜 #041) | A | Hair 濡れ髪의 검은 단발, シースルーバング가 바람에 흔들린다 / Lip 水紅(촉촉한 맨 입술) / Outfit フーディー(두꺼운 회색) / Props 肉まん(김이 오르는, 한입 문 고기만두) / Scene コンビニ, 한밤 도쿄 편의점의 밝은 유리창 밖 / Light ストロボ(5600K) 직사, 뺨의 윤기 있는 하이라이트, 배경은 순간 검게 낙하 / Optics 写ルンです 27매 Simple Ace, 32mm f/10 단일 플라스틱 렌즈, 네 모서리 暗角과 배럴 왜곡, GN14급 소형 플래시(Iris 원본의 50mm 얕은 심도는 옮기지 않았다) / Expression まぶしげ, 불쑥 터진 플래시에 눈을 가늘게 뜬다 / Pose 가게 앞을 걷다 멈춰 서서 한 손에 肉まん |

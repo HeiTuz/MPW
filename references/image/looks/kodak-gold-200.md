@@ -154,7 +154,7 @@
 | D | bloom | Halation — Each bright bulb bleeds a soft red-orange glow around its edges as light scatters in the film. |
 | D | bokeh | Bokeh Circles — Out-of-focus bulbs and sunset glints turn into smooth round gold discs behind her. |
 
-## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 요청이 세트와 맞으면 통째로 쓰고, 세트 값이 같은 슬롯의 갈래 줄보다 먼저다)
+## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 요청의 장소·소품·시간대·의상 가운데 둘 이상이 같으면 통째로 쓴다. 우선순위는 image-brief.md §4 '룩 카드' 4항)
 | 세트 | 갈래 | 묶음 |
 |---|---|---|
 | S1 해안 도로 (滤镜 #056) | A | Hair Power Ponytail, 금발 포니테일이 걸음에 흔들림 / Lip 고정 몫(Glazed Lips) / Outfit Tank Top(흰색) + Denim Cutoffs(연한 파랑, 낡은 가공) / Scene Pacific Coast Highway, 노란 경고 표지판 옆 갓길 / Light Noon Sunlight(3800K), 아스팔트와 노란 중앙선이 선명 / Optics Canon AE-1 + FD 50mm f/1.4, Kodak Gold 200, 중간 유기 입자 / Expression Americana Radiance, 해를 맞고 활짝 웃음 / Pose Hands on Hips, 한 손은 허리 |
