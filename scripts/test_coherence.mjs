@@ -26,6 +26,8 @@ lacks("A 50mm lens and a 50 mm lens.", "coherence/focal");
 lacks("A moderate telephoto lens with no wide-angle stretch on the nose.", "coherence/focal");
 has("A 24mm lens up close. 自然透视 — the face keeps natural perspective.", "coherence/focal", { profile: "native" });
 has("A wide-angle lens up close, 自然透视 face.", "coherence/focal");
+has("A wide-angle lens up close, natural perspective face.", "coherence/focal");
+lacks("natural perspective — The camera stands back with a standard-to-moderate telephoto lens, so the face keeps natural perspective.", "coherence/focal");
 
 // identity-skin: skin colour outside the identity paragraph while the reference tone is kept.
 const identity = "## Identity Reference\nIf a model reference is provided, keep her own skin tone. If none is provided, she has cool fair skin.\n\n";

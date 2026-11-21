@@ -44,7 +44,7 @@ catchlight — A small soft bright patch from the open street sits in each eye.
 ## Optics
 コンデジ — An early-2000s compact digital camera rendering: crisp, slightly over-sharpened edges, bright saturated awnings and clean daylight white balance.
 白飛び — The sky and the far end of the street clip to flat white, and the brightest edges of the white sleeve clip with them.
-数码噪点 — Very fine digital noise sits only in the dark shop interiors and under the awnings.
+デジタルノイズ — Very fine digital noise sits only in the dark shop interiors and under the awnings.
 
 ## Camera
 パンフォーカス — Everything from her face to the far end of the street stays in focus, the deep depth of field of a small sensor.

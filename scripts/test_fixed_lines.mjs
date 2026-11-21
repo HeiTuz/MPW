@@ -46,8 +46,17 @@ const eightK = text.split("\n").filter((line) => /8K/u.test(line));
 assert.equal(eightK.length, 3, `8K lines: ${eightK.map((line) => line.slice(0, 30)).join(" | ")}`);
 assert.ok(eightK.every((line) => /^- `realism`:|^한국어 문안|^극사실 — 8K /u.test(line)), "8K only in the realism line and the Korean form");
 assert.equal(text.match(/^극사실 — 8K /mu)?.length, 1, "the Korean realism line carries 8K");
-// The lens line is the one natural-perspective line, and the retired token is gone from the instructions.
-assert.match(text, /^- `lens`: `自然透视 — /mu);
+// The lens line is the one natural-perspective line (CN token 自然透视, every other culture English), and the retired token is gone from the instructions.
+assert.match(text, /^- `lens`: `<토큰> — [^\n]*`自然透视`[^\n]*`natural perspective`/mu);
 assert.ok(!/无畸变/u.test(text), "the lens token is 自然透视");
+// The culture-fixed tokens liner, face-light and grain are per culture, so no Chinese token is the only form (CN first, the others after it).
+for (const [slot, cn, others] of [["liner", "内眼线", ["점막 아이라인", "インライン", "tightline"]], ["face-light", "立体光", ["soft key light"]]]) {
+  const bullet = text.split(new RegExp(`^- \`${slot}\`:`, "mu"))[1]?.split(/^- /mu)[0] ?? "";
+  assert.ok(bullet.includes(cn) && others.every((token) => bullet.includes(token)), `${slot} tokens per culture`);
+}
+const noise = text.match(/^- `grain`\(디지털[^\n]*/mu)?.[0] ?? "";
+for (const token of ["数码噪点", "디지털 노이즈", "デジタルノイズ", "digital noise"]) assert.ok(noise.includes(token), `digital noise token ${token}`);
+const filmGrain = text.match(/^- `grain`\(필름[^\n]*/mu)?.[0] ?? "";
+for (const token of ["胶片颗粒", "필름 그레인", "粒状感", "film grain"]) assert.ok(filmGrain.includes(token), `film grain token ${token}`);
 assert.match(brief, /fixed-lines\.md/);
 console.log(`Fixed lines: ${slots.length} slots, ${lines.length} lines, five cultures covered; image output NOT RUN.`);
