@@ -129,6 +129,7 @@
 | C | place | coastal bluff meadow — A grassy clifftop with wildflowers and the sea behind. |
 | D | place | Roadside Burger Stand — A small open-air burger stand with a counter window and red plastic picnic tables on bare pavement. |
 | D | place | Route 66 — A long straight two-lane road with a double yellow line, faded roadside signs and a lone old motel on the shoulder. |
+| A | place | Santa Monica — A beachfront of pale sand with a wooden boardwalk beside it and a pier stretching out over the water, sand trailing across the planks. (S2 전용) |
 
 ## Light
 **하나만 고르는 슬롯:** `place-*`(장소별 줄, 장면과 맞는 하나)

@@ -32,6 +32,7 @@
 |---|---|---|
 | face-light | 모든 갈래에서 끈다. 얼굴 빛은 이 카드의 Light 줄이 정한다 | 고정 몫 face-light 줄의 위·옆 키라이트가 알전구(#080), 형광등(#083), 석양 역광(#089), 차창 물방울 빛(#085)과 부딪힌다 |
 | face-clear | 켠다. 끄는 경우: 바람이 부는 쌍 3·8·11의 Pose를 쓸 때(Camera 줄만 빌린 경우는 켠다), A의 Expression `無邪気な振り返り`(가닥 하나가 뺨에 붙음)와 Hair `おくれ毛`(귀 옆 가닥이 턱선을 따라감)를 쓸 때. 끄면 머리카락이 뺨과 이마를 지나가도 되고 눈은 가리지 않는다 | Iris 프리셋은 바람에 흔들리는 시스루 뱅과 달리기를 쓰는데 고정문의 가림 금지가 이를 지운다. シースルーバング는 이마 틈이 보이는 앞머리라 켠 상태와 부딪히지 않는다 |
+| lip | 세트 S1~S6을 쓰면 끈다(세트의 `素の唇` 줄이 입술이다). 세트 없이 쓰면 켠다 | 세트의 맨입술과 고정 몫의 `シアーリップ`(코랄)가 입술색을 둘로 말하지 않게 |
 | lens | 렌즈를 말하는 줄은 프롬프트에서 하나다. 출처 순서는 세트의 렌즈 > 쌍의 렌즈 > 갈래의 본체·렌즈 줄 > 고정 몫 줄이다. 세트 S1~S4는 세트 Optics와 Camera가 렌즈(어댑터·망원 줌)를 말하지 않으니 고정 몫 lens 줄이 렌즈 줄이다(켠다). 세트 S5(C)와 S6(D)은 Optics가 어댑터 없는 표준 화각을 직접 말하니(세트 렌즈 > 갈래 렌즈) C의 `ワイコン`·D의 `望遠ズーム` 줄은 쓰지 않고 고정 몫 lens 줄이 렌즈 줄이다(켠다). 쌍 1~7(A·B)은 Camera 줄이 렌즈를 말하지 않고 갈래의 Optics 줄(`ハンディカム` 등 본체 줄)도 렌즈 길이를 말하지 않으니 고정 몫 lens 줄이 렌즈 줄이다(켠다). 쌍 8(C)은 끈다: Camera `Dutch Angle`은 렌즈를 말하지 않으니 갈래의 Optics `ワイコン` 줄이 렌즈 줄이다. 쌍 9(C)는 끈다: Camera `Ultra-Wide Distortion` 줄이 같은 어댑터를 말하니 그 줄이 렌즈 줄이고 `ワイコン` 줄은 쓰지 않는다. 쌍 10(D)은 켠다: Camera `Window Double Reflection`이 렌즈를 말하지 않으니 고정 몫 lens 줄이 렌즈 줄이고, 이때 Optics `望遠ズーム` 줄은 쓰지 않는다. 쌍 11(D)은 끈다: Camera `Telephoto Compression` 줄이 렌즈 줄이고 Optics `望遠ズーム` 줄은 쓰지 않는다. 쌍 12(D, 모노레일 안)는 켠다: Camera `Negative Space`는 렌즈를 말하지 않으니 고정 몫 lens 줄이 렌즈 줄이고 Optics `望遠ズーム` 줄은 쓰지 않는다(그 줄은 屋上 경로 전용이다). 쌍 10과 세트 S6(D의 비 오는 차창)을 뺀 어느 쌍이든 화면 전체가 같은 정도로 부드럽고 배경 보케를 말하지 않는다(S6·쌍 10은 초점이 유리 위 물방울에 있고 창밖 불빛이 큰 반투명 원이 된다) | Iris 고정 꼬리의 50mm 얕은 심도는 옮기지 않았다(소형 센서의 깊은 심도가 이 룩의 정체다). 고정 몫 lens 줄은 렌즈 길이만 말해 A·B와 부딪히지 않지만, C의 광각 컨버터(#077 0.7x, #082 0.3x 어안)와 D의 20배 줌 망원단(#089)은 카드가 렌즈를 따로 정한다 |
 | grain | 끈다. 필름용과 디카용 고정 몫 grain 줄을 모두 붙이지 않고 Optics의 `grain`(`ビデオノイズ`, B는 `ゲイン`) 줄이 채운다 | 이 룩의 입자는 필름도 디카도 아닌 비디오 노이즈이고 주사선과 함께 온다 |
 | realism | 모든 갈래에서 바꾼다. `8K`·땀구멍 줄 대신 `native resolution` 줄을 쓴다. 매체 구절은 `480-line camcorder`, 질감은 `soft edges, smeared fine texture and skin that shows no individual pores` | 480줄급 화면에 8K 모공 묘사를 얹으면 번짐이라는 룩의 정체와 반대다. 사실감은 medium과 closer가 맡는다 |
@@ -51,6 +52,7 @@
 | B | hair | 切りっぱなしボブ — A blunt one-length bob ends between jaw and collarbone, its damp ends parting into thin pieces. |
 | C | hair | 外ハネボブ — A chin-length bob with the ends flipped outward, light enough to bounce and trail a little behind her whenever she moves. |
 | D | hair | 前下がりボブ — A bob cut longer at the front with the ends rolled under the jaw, smooth enough to carry a soft light edge. |
+| 전부 | lip | 素の唇 — Bare lips in their own natural color with a faint moist sheen, the lip line left plain. (S1~S6 전용) |
 
 ## Expression
 | 갈래 | 슬롯 | 줄 |
@@ -127,6 +129,8 @@
 | D | place | 助手席 — A car passenger seat beside a rain-streaked window, the belt and door frame in view. |
 | D | place | モノレール — A suspended monorail car with pale-blue velvet seats and drifting dust. |
 | D | place | 屋上 — A rooftop with a chain-link fence and a hazy city skyline far behind it, a tower standing faint at the edge. |
+| A | place | ベランダ — A small apartment balcony with a metal railing and potted plants, a white lace curtain stirring in the open doorway behind. (S2 전용) |
+| C | place | 表参道 — A wide pavement beside an avenue of zelkova trees with glass-fronted boutiques along one side, traffic passing at the curb. (S5 전용) |
 
 ## Light
 | 갈래 | 슬롯 | 줄 |
@@ -142,6 +146,7 @@
 | D | face-light | 水滴越し — Raindrops on the car window beside her scatter the city's lights into large soft overlapping circles, the drops themselves the clearest shapes in view. (카메라와 인물이 같은 차 안이라 창은 인물 옆에 있다. 렌즈와 인물 사이에 유리가 오게 쓰지 않는다) |
 | D | face-light | 夕暮れ — Strong low sun from behind melts her outline into a warm golden glow and washes her cheek to a soft peach. |
 | D | dust-light | God Rays — Slanting sun cuts the car into bands of gold and shadow, and dust specks drift visibly inside each beam. |
+| A | face-light | 朝の光 — Clean early daylight with a cool white cast that leans slightly green, falling softly over the face with low-contrast shadows. (S2 전용) |
 
 ## Optics
 **하나만 고르는 슬롯:** `tone-*`(고른 `camera` 본체 줄의 것 하나)

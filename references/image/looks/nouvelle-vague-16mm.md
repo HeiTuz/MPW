@@ -115,6 +115,7 @@
 | C | place | Montmartre — A steep granite stair with iron railings and coloured shutters, with zinc roofs below. |
 | C | place | Jardin du Luxembourg — Chestnut-lined gravel paths strewn with fallen leaves and scattered green metal chairs. |
 | C | place | Pont des Arts — An iron-railed footbridge over the Seine with river haze. |
+| C | place | Rue Crémieux — A short pedestrian lane of pastel pink and yellow two-storey houses with small front steps, climbing plants and cobbled paving, an old shop front among them. (S5 전용) |
 
 ## Light
 **하나만 고르는 슬롯:** `face-light`·`face-light-back`(해가 옆에 있는지 뒤에 있는지에 따라 주광 줄 하나)
@@ -145,6 +146,7 @@
 | A | motion | Caméra à l'épaule — Shoulder-held sway: the frame drifts and re-corrects as the operator walks with her. |
 | A | bloom | Halation — The brightest lamps bleed a soft red-orange glow at their edges, as light scatters inside the film. |
 | C | flare | Lens Flare — The low sun spreads soft veils and a faint rainbow streak across the frame and lowers its contrast. |
+| C | stock | ETERNA 250D — A flat motion-picture negative with low saturation, lifted shadows and soft highlight roll-off, the colors reading as muted macaron pastels. (S5 전용) |
 
 ## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 세트를 쓰는 조건은 규칙 4항이 정하고, 세트 값은 고정 사실보다 먼저다. 세트를 고르면 갈래는 그 세트의 갈래 열이다. 단서는 네 칸으로 판정한다. 묶음 속 K 숫자는 Iris 프리셋의 연출 값이라 문장에는 색으로 옮긴다. 규칙은 image-brief.md §4 '룩 카드' 4항과 '비워 둔 층')
 | 세트 | 갈래 | 묶음 |

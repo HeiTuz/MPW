@@ -111,6 +111,8 @@
 | C | place | Palm Springs — Low pale buildings and tall palms by a bright blue pool under a dry sky. |
 | D | place | Orange Grove — Rows of heavy citrus trees with dense green leaves. |
 | D | place | Malibu Coastline Modern — A clean-lined white house on a bluff with raw linen, glass and pale decking. |
+| A | place | Venice Beach — A seaside boardwalk lined with palm trees and sand-colored pavement, a skate bowl beside it and the ocean flat along the horizon. (S2 전용) |
+| C | place | Sunset Boulevard — A wide palm-lined boulevard of dark asphalt with a painted crosswalk in front of a line of commuter cars and storefront signs. (S4 전용) |
 
 ## Light
 | 갈래 | 슬롯 | 줄 |
@@ -143,6 +145,7 @@
 | D | lens | Zeiss Planar 80mm f/2.8 — A medium-format portrait lens look: fine detail at the focus point and a slow, smooth fall into soft background. |
 | A, C, D | grain | film grain — Fine, even film grain sits across the whole frame, slightly heavier in the shadows. |
 | B | grain | film grain — Grain stays very faint and even across the whole frame, barely visible even in the deepest shadows. |
+| A | highlight | Highlight Roll-off — Bright areas such as the low sun, white cloth and skin highlights fade gradually toward white with no hard clipped edge, the texture still readable in the brightest cloth. (S1 전용) |
 
 ## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 세트를 쓰는 조건은 규칙 4항이 정하고, 세트 값은 고정 사실보다 먼저다. 규칙은 image-brief.md §4 '룩 카드' 4항과 '비워 둔 층')
 

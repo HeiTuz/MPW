@@ -35,7 +35,7 @@
 | lens | 모든 갈래에서 끈다. 렌즈를 말하는 줄은 프롬프트에서 하나이고 출처 순서는 세트의 렌즈 > 쌍의 렌즈 > 갈래의 본체·렌즈 줄 > 고정 몫 줄이다. 이 카드에서는 갈래의 Optics `lens` 줄(`プラスチックレンズ`, 모든 갈래) 하나다: 32mm 고정초점 플라스틱 렌즈, f/10쯤, 앞뒤가 다 선명하다. 쌍 1~12의 Camera 줄은 렌즈를 말하지 않고 구도와 심도만 말하니(쌍 12 `膝下フレーミング`도 구도다) 어느 쌍을 골라도 렌즈 줄은 이 하나다. 세트 S1은 Optics에 32mm f/10 단일 플라스틱 렌즈를 적지만 `プラスチックレンズ` 줄과 같은 렌즈라 S1도 그 줄이 렌즈 줄이고 렌즈 문장을 따로 더하지 않는다(세트 S1~S6 모두 `プラスチックレンズ` 줄이 렌즈 줄이다). Optics `body` 줄(`写ルンです`)은 35mm·ISO 400·내장 플래시 같은 사실만 말한다 | Iris 滤镜 #041~#060은 `相机/介质`에 32mm f/10 단일 플라스틱 렌즈를 적고서 본문 꼬리에 `50mm 단초점 얕은 심도`(원본 값)와 무왜곡을 얹어 한 프롬프트에 둘이 같이 있다. 이 룩의 정체는 앞쪽이다 |
 | grain | 카드 줄이 이긴다. 굵은 `粒状感` 줄을 쓴다 | 고정 몫 grain(필름 입자) 줄은 가늘고 고른 입자인데 이 룩의 입자는 ISO 400 소형 카메라답게 거칠다 |
 | face-clear | D에서 끈다(세트 S6 포함). C는 쌍 10의 Pose를 쓸 때와 세트 S5에서만 끈다(옥상 바람). 쌍 10의 Camera 줄만 빌린 경우는 켠다. 머리가 뺨과 입가 가장자리를 지나가도 되고 눈은 가리지 않는다. A·B는 켠다(젖은 단발은 얼굴을 가리지 않는다) | 滤镜 #046은 바닷바람이 머리를 얼굴 반쯤에 붙이고 #050도 바람머리가 얼굴 앞을 지나는데 Iris 꼬리는 `乱发遮挡眉眼`을 금지한다 |
-| lip | D는 카드 줄 `ガラスリップ`가 이긴다. 나머지는 켠다. C의 교복 장면(S5와 교복·학교 줄을 고른 C)은 학생이라 끈다 | 물에 젖은 입술이 D 장면의 사실이라 `シアーリップ`와 입술색이 둘이 되지 않게 |
+| lip | D는 카드 줄 `ガラスリップ`가 이긴다. 세트 S1~S4는 세트의 `素の唇` 줄이 이긴다. 나머지는 켠다. C의 교복 장면(S5와 교복·학교 줄을 고른 C)은 학생이라 끈다 | 물에 젖은 입술이 D 장면의 사실이라 `シアーリップ`와 입술색이 둘이 되지 않게 |
 | blush | B는 카드 줄 `アップルチーク`가 이긴다. 나머지는 켠다. C의 교복 장면은 학생이라 끈다 | 뜨거운 국물이나 맥주로 달아오른 뺨이 B 장면의 사실이라 뺨 색이 둘이 되지 않게 |
 | realism | 모든 갈래에서 바꾼다. `8K`·땀구멍 줄 대신 `native resolution` 줄을 쓴다. 매체 구절은 `single-use film camera`, 질감은 `coarse ISO 400 grain, soft corners and skin that shows no individual pores` | 이 매체의 해상도(고정초점 플라스틱 렌즈 한 장, ISO 400 네거티브)에 8K 모공 묘사를 얹으면 룩의 정체인 거칢과 반대다 |
 | framing | 켠다. 쌍 5(두 사람), 쌍 6(가슴 위), 쌍 12(무릎 아래)는 Camera 줄이 범위를 말하니 그 쌍에서는 쌍이 정한다. 범위를 말하지 않는 쌍 가운데 다리·발 동작이 있는 1·2·3·4·8은 `from head to toe`로 쓴다 | 나머지 쌍은 범위를 말하지 않는데 Pose가 발이나 걸음을 말하면 허리 위 프레임에서 그 동작이 안 보인다 |
@@ -53,6 +53,7 @@
 | A, B | lip | シアーリップ — A thin translucent coral-red stain on the lips, slightly sheer, with a faint wet shine where the flash hits. |
 | D | lip | ガラスリップ — A clear lip-oil film keeps the lips plump and wet-looking and throws one crisp sun glint across the center. |
 | B | blush | アップルチーク — Blush pools high on the apples of the cheeks, flushed warm as if from hot broth or beer, soft between matte and satin. |
+| A, B | lip | 素の唇 — Bare lips in their own natural color with a faint moist sheen, the lip line left plain. (S1~S4 전용) |
 
 ## Expression
 | 갈래 | 슬롯 | 줄 |

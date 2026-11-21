@@ -53,6 +53,7 @@
 | A, C | lip | Beige rosé — A greyed pink-beige matte lip close to the natural lip tone, its edge softly blurred. |
 | A | lip-satin | Beige rosé — A moist, satin-finish dusty pink-beige lip close to the natural lip tone, its edge softly blurred; it replaces the matte lip when the scene asks for a wet natural lip. |
 | B | lip | Lie-de-vin — A deep burgundy-wine lip in a semi-matte finish that reads almost black in dim corners and glows dark red under the lamp. |
+| A | lip | Gloss transparent — A colorless lip balm sheen over the natural lip tone, with a few small water-drop highlights at the center of the lips. (S2 전용) |
 
 ## Expression
 | 갈래 | 슬롯 | 줄 |

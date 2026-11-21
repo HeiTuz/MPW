@@ -61,6 +61,8 @@ A는 `hair`(雨后微湿长发)와 `hair-tied`(贴头皮盘发) 가운데 하나
 | B | brow | 远山眉 — Long, softly curved brows in pale grey that fade at the ends like hills in mist. |
 | A, C, D | lip | 水光唇 — A sheer watery pink lip colour with a soft stain and a fresh wet sheen, no hard outline. |
 | B | lip | 水光唇 — A barely-there pale pink wet lip, close to the bare mouth and almost lost in the cool fog light. |
+| D | lip | 砖红唇 — A matte brick-red lip with an earthy orange-brown cast and a crisp outline, the red of autumn maple leaves. (S5 전용) |
+| B | lip | 朱砂唇 — A pale cinnabar tone on the lips, an orange-leaning red kept natural and slightly satin with a soft edge. (S6 전용) |
 
 ## Expression
 쌍 10(`特写`)을 고르면 눈이 프레임 밖이라 눈·속눈썹을 말하는 줄은 쓰지 않고, 표정은 입술과 턱의 말로만 쓴다.

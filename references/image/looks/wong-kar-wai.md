@@ -56,6 +56,8 @@
 | B | lip | 山茶花红唇 — A matte camellia red with a cool rose undertone and a firm outline. |
 | C | lip | 车厘子红 — A deep cherry-red lip, slightly cool, with a defined but soft edge. |
 | D | lip | 浆果唇 — A muted dark berry lip with a slightly stained edge. |
+| B | lip | 丝绒唇 — A soft-matte deep brown-red lip with a velvet finish and a slightly feathered edge. (S1 전용) |
+| C | lip | 正红唇 — A saturated true-red lip with a clear peak and a clean edge, the single focal color on the face. (S5 전용) |
 
 ## Expression
 | 갈래 | 슬롯 | 줄 |

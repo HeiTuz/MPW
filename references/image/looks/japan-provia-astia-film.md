@@ -31,6 +31,7 @@
 | 슬롯 | 처리 | 이유 |
 |---|---|---|
 | face-light | 모든 갈래에서 끈다. 얼굴 빛은 이 카드의 Light 줄이 정한다 | 고정 몫의 face-light 줄의 위·옆 키라이트가 木漏れ日의 점빛, 역광 림, 창빛, 소프트박스 사이드라이트와 부딪힌다 |
+| lip | 세트 S1~S6을 쓰면 끈다(세트의 `素の唇` 줄이 입술이다). 세트 없이 쓰면 켠다 | 세트의 맨입술과 고정 몫의 `シアーリップ`(코랄)가 입술색을 둘로 말하지 않게 |
 | closer | 스톡 줄이나 세트가 네거티브 필름을 정하면(A의 `フジカラー 100`, C의 `フジカラー PRO 400H`, D의 `Kodak Portra 400`, 세트 S2·S3·S6) closer 토큰을 `リバーサルフィルム` 대신 JP 기본 `写真`으로 쓴다. 나머지는 그대로 | `リバーサルフィルム`는 반전 필름이라 네거티브 필름 장면의 첫 줄 매체와 부딪힌다 |
 | catchlight | B·C·D는 카드 줄이 이긴다. A는 고정 줄(창이나 하늘 모양 한 점)이 그대로 맞다. D는 `夕暮れ` 줄이면 `Golden Hour Catchlight`(slot `catchlight-sunset`), `逆光` 줄이면 `デュアルキャッチライト`(slot `catchlight-sea`) 하나만 짝으로 쓴다 | 카드가 장소별 캐치라이트(나뭇잎 사이 하늘, 창, 바다의 반짝임, 석양)를 정한다 |
 | face-clear | D는 끈다. A·B·C는 켠다. 쌍 11의 Pose와 세트 S6은 갈래와 상관없이 끈다(쌍 11의 Camera 줄만 빌린 경우는 켠다) | D의 `hair` 줄(濡れ髪)과 쌍 11·S6의 Pose(`Windblown Hair`)는 바람에 날린 머리가 뺨을 가로지르는 것이 정체라 얼굴을 가린다. A·B·C의 앞머리(`シースルーバング`)는 이마가 비치고 눈썹과 눈이 보이며 濡れ髪도 얼굴을 가로지르지 않으니 켠 채로 둔다 |
@@ -57,6 +58,7 @@
 | 전부 | bangs | シースルーバング — A thin see-through fringe over the forehead with small gaps between the strands, moving a little in the air, the brows and eyes still clearly visible through it. |
 | B | blush | 頬染め — A soft warm-pink flush spreads on both cheeks and fades into the skin as if from the cool morning air, giving the faint pink lean that Astia lends to skin highlights. |
 | C | base | きめ細かなマット肌 — A fine matte skin finish that reads smooth and faintly pearly in soft window light, with no wet sheen anywhere. |
+| 전부 | lip | 素の唇 — Bare lips in their own natural color with a faint moist sheen, the lip line left plain. (S1~S6 전용) |
 
 ## Expression
 | 갈래 | 슬롯 | 줄 |
@@ -71,6 +73,7 @@
 | C | mood | 物思い — The gaze rests on something outside the frame, the head tilted slightly toward the light and the mouth relaxed. (滤镜 #029) |
 | D | expression | 童心 — An open, unguarded laugh with crinkled eyes and visible teeth, as if a wave has just splashed her ankles. (滤镜 #035) |
 | D | expression | ほろ甘い幸福感 — A quiet half-smile with the lids slightly lowered, content and a little wistful as the day ends. (滤镜 #027) |
+| A | expression | いたずらっぽい笑顔 — A lopsided grin spreads suddenly at a friend's remark, the eyes narrowed and sparkling as if she were about to pull a prank. (S3 전용) |
 
 ## Outfit
 **함께 쓰는 슬롯:** `outfit`·`outfit-outer`·`outfit-bottom`(겉옷은 속옷 위에, 하의는 함께. 슬롯마다 갈래의 후보 중 한 줄)
@@ -92,6 +95,7 @@
 | D | outfit | 綿麻ワンピース — A sleeveless white cotton-linen dress with natural wrinkles, the hem moving in the sea breeze. (滤镜 #035) |
 | D | outfit-outer | ダッフルコート — A deep navy wool duffle coat with horn toggles, its matte nap soaking up the low light. (滤镜 #027) |
 | D | swimwear | ワンピース水着 — A plain dark one-piece swimsuit with thin straps and a clean scooped back, the wet fabric holding a smooth sheen under an open white linen shirt. |
+| A | outfit | フーディー — A loose heavyweight cotton hoodie with a thick double hood that stands up by itself and a dropped shoulder seam. (S3 전용) |
 
 ## Legwear
 | 갈래 | 슬롯 | 줄 |
@@ -142,6 +146,8 @@
 | D | place | 七里ヶ浜 — A long stretch of Shonan coast with a low concrete seawall, dark sand and a wide Pacific horizon. (滤镜 #027) |
 | D | place | 湘南 — A seaside road running along the open water with a small vintage green tram passing in the distance. (滤镜 #034) |
 | D | shore | 鎌倉 — A pale sand beach where small waves break and spray around ankles. (风格/04 #061, 滤镜 #035) |
+| A | storefront | ラーメン屋 — A narrow ramen shop front with a sliding door and a short counter inside, steam rising from the doorway. (S3 전용) |
+| A | entrance | 暖簾 — Short split curtains of dark red cloth hang across the shop entrance, swaying slightly and partly hiding the interior. (S3 전용) |
 
 ## Light
 **하나만 고르는 슬롯:** `face-light`(갈래의 후보 중 하나), `catchlight`·`catchlight-sea`·`catchlight-sunset`(눈의 빛점 하나, 장면의 빛과 맞는 줄), `shrine-light`·`garden-light`·`veranda-light`·`shoji-light`·`stair-light`(Scene에서 고른 장소의 줄 하나)
@@ -195,6 +201,9 @@
 | D | camera | Hasselblad XPan — A panoramic 65:24 frame nearly twice the width of 35mm through a 45mm lens. (滤镜 #034) |
 | A | vignette | 周辺減光 — The corners fall a little darker than the center without a heavy tunnel, like the mild vignetting of a compact's lens. (滤镜 #022 #023) |
 | 전부 | grain | 粒状感 — Very fine, even film grain across the whole frame, barely visible in the midtones and slightly heavier in the shadows. |
+| A | camera | ミノルタ TC-1 — A small compact film camera with a fixed wide-angle lens that darkens the corners of the frame slightly. (S2 전용) |
+| A | stock | ナチュラ 1600 — A high-speed color negative film with visible coarse grain, a soft ambient look in dim light and slightly green-magenta, mildly desaturated color. (S3 전용) |
+| A | camera | コニカ ヘキサー — A quiet black compact film camera with a sharp, contrasty lens that holds detail in dim available light. (S3 전용) |
 
 ## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 세트를 쓰는 조건은 규칙 4항이 정하고, 세트 값은 고정 사실보다 먼저다. 규칙은 image-brief.md §4 '룩 카드' 4항과 '비워 둔 층')
 켈빈 숫자(5400K 등)는 Iris 프리셋이 적은 연출 값이고 실측이 아니다. 이 룩에서 그 빛이 그렇게 보이게 쓰는 값이다.

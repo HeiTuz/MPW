@@ -70,6 +70,7 @@
 | C | outfit | ローゲージニット — An oatmeal chunky knit with a soft slouch, window light brightening the fuzz along the shoulder and sleeve. |
 | D | outfit | ホワイトリネンワンピース — A long white linen dress with natural creases, its edges turning bright where the low sun passes through. |
 | D | outfit | オーバーサイズコート — A black oversized coat with dropped shoulders and a knee-length hem, hands deep in the pockets against the cool dusk sky. |
+| A | outfit | フーディー — A heavyweight cotton hoodie with a thick double hood that stands up by itself, the shoulder seam dropped a little below the shoulder. (S1 전용) |
 
 ## Props and nails
 | 갈래 | 슬롯 | 줄 |
@@ -106,6 +107,9 @@
 | B | place | 代官山 — A quiet slope of low boutiques under keyaki trees over a pale pavement. |
 | C | place | 窓際席 — A bar-height seat at a street-facing window with a white lace curtain and a wooden counter in front. |
 | D | place | 防波堤 — A long concrete seawall runs along the shore with the sea behind it, wide enough to sit on. |
+| A | place | 渋谷スクランブル交差点 — A wide diagonal crosswalk of white stripes on dark asphalt with crowds crossing from every corner, tall LED screens rising over the buildings around it. (S1 전용) |
+| A | place | 裏原宿 — A narrow back street behind the main avenue with shutters covered in stickers, small shop windows and painted walls between low buildings. (S2 전용) |
+| C | place | 下北沢 — A maze of narrow lanes of secondhand clothing shops and small theaters, a retro kissaten tucked in among them. (S4 전용) |
 
 ## Light
 | 갈래 | 슬롯 | 줄 |
@@ -133,6 +137,7 @@
 | B | tone-g2 | キャノン パワーショット G2 — On the Canon PowerShot G2, the white balance leans warm, the skin highlights clip slightly and the skin carries a smooth, brightened sheen. |
 | D | camera | サイバーショット DSC-P10 — A slim early-2000s small-sensor CCD compact. |
 | D | tone-p10 | サイバーショット DSC — On the Cyber-shot DSC-P10, the frame carries a cool blue cast with sharp edges: shadows lean blue-gray while the whites stay clean and cold. |
+| A | camera | ザクティ — A pistol-grip compact digital camera of the 2000s with a small CCD sensor, held in one hand so the frame tilts a little. (S2 전용) |
 
 ## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 세트를 쓰는 조건은 규칙 4항이 정하고, 세트 값은 고정 사실보다 먼저다. 세트를 고르면 갈래는 그 세트의 갈래 열이다. 단서는 네 칸으로 판정한다. 묶음 속 K 숫자는 Iris 프리셋의 연출 값이고 프롬프트 문장에는 색으로 옮긴다. 규칙은 image-brief.md §4 '룩 카드' 4항과 '비워 둔 층')
 | 세트 | 갈래 | 묶음 |

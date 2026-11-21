@@ -54,6 +54,7 @@
 | C | hair | California Beach Waves — Loose sun-lightened waves fall over the shoulders and the front of the jacket, a few strands lifting in the night air. |
 | C | lip | Classic Red Lip — A saturated cool red lip with a crisp outline, glossy-satin where the flash lands on the center. |
 | C | lip | glossy nude lip — A beige-nude lip under a clear gloss that throws one small bright flash dot on the lower lip. |
+| C | lip | Matte Nude Lip — A beige-nude lip in a flat velvet matte with a softly pressed edge and no gloss, the lips lightly closed. (S5 전용) |
 
 ## Expression
 | 갈래 | 슬롯 | 줄 |
@@ -63,6 +64,7 @@
 | B | expression | 微醺 — The eyes look glossy and slow to focus under heavy lids, with a loose warm smile on the lips. |
 | C | expression | Off-Camera Gaze — The eyes rest on a point beside the lens with relaxed lids, as if she has not noticed the camera. |
 | C | expression | Turnaround Laugh — The shoulders stay turned away while the head swings back toward the lens and the mouth opens in a laugh. |
+| C | expression | 冷眼 — An unsmiling face with slightly lowered lids and a steady, unreadable gaze, the brows relaxed. (S6 전용) |
 
 ## Outfit
 | 갈래 | 슬롯 | 줄 |
@@ -76,6 +78,8 @@
 | C | outfit | Leather Jacket — A black leather jacket hangs open over a white ribbed tank, the waxy leather throwing hard highlights on the shoulders and zip. |
 | C | outfit | satin slip dress — A champagne satin slip dress on thin straps, a liquid highlight running down each fold. |
 | C | outfit | Camel Coat — A long camel cashmere coat in heavy folds, its brushed surface turning pale gold in the flash. |
+| B | outfit | 削肩 — A black silk dress with the armholes cut in toward the neck, leaving both shoulder points bare. (S3 전용) |
+| B | outfit-neckline | 挂脖 — The same black silk dress is held by a halter strap around the neck, leaving the shoulders and arms bare. (S3 전용) |
 
 ## Props and nails
 | 갈래 | 슬롯 | 줄 |
@@ -87,6 +91,7 @@
 | B | hand-prop | 透明雨伞 — A clear plastic umbrella held over one shoulder, rain beads on the canopy lit as points. |
 | C | face-prop | sunglasses — Small dark retro sunglasses, the flash reflected as one white spot in each lens. |
 | C | hand-prop | Kraft Sleeve Hot Latte Paper Cup — A takeaway latte in a corrugated kraft sleeve, its steam lit white by the flash. |
+| C | face-prop | Wire-rim glasses — Thin oval antique-gold wire frames with plain lenses sit on the nose bridge, a small flash glint on each lens. (S6 전용) |
 
 ## Style
 | 갈래 | 슬롯 | 줄 |

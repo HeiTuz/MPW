@@ -65,6 +65,9 @@
 | C | lip | 浆果唇 — A dark berry-wine lip, soft at the edge, that sinks into the shadow like wet ink. |
 | D | lip | 肉桂唇 — A warm reddish-brown matte lip with a velvety, non-reflective finish. |
 | D | eye | 水墨妆 — Grey-black shadow blended outward from the lash line like diluted ink, fading into the base with no edge. |
+| B | hair-pin | 竹节簪 — A plain sterling-silver hairpin shaped like a bamboo stalk with raised joints holds the high modern knot, its smooth stem catching one clean line of light. (S3 전용) |
+| B | lip | 砖红唇 — A matte brick-red lip, flat as fired brick, with an earthy orange-brown cast like autumn maple leaves. (S3 전용) |
+| A | hair | 黑长直 — Long, blunt-ended black hair hangs straight with silky lines of light along its length, combed neatly behind the ears. (S4 전용) |
 
 ## Expression
 | 갈래 | 슬롯 | 줄 |
@@ -77,6 +80,7 @@
 | C | expression | 睥睨 — Half-lowered lids and a lifted chin let the eyes survey the frame from above. |
 | D | expression | 垂眸 — The eyes lower about forty-five degrees with the lashes resting toward the cheek and the face quiet. |
 | D | expression | 茶道入定 — The lowered eyes rest on the cup below, steam rising across the face and the shoulders loose. |
+| B | expression | 庄严肃穆 — An upright, still face with a flat mouth and the chin lifted slightly, the gaze level into the lens and grave as a formal portrait. (S3 전용) |
 
 ## Outfit
 **하나만 고르는 슬롯:** `outfit`(갈래의 옷 후보 하나)
@@ -133,6 +137,7 @@
 | D | place | 茶寮 — A small timber tea room with a low table, closed off from outside by walls and trees. |
 | D | place | 清雅茶室 — A quiet wood-and-paper tea room with a tea tray on a low table and warm matte wood. |
 | D | background | 博古架 — A dark wood shelf of open compartments, each holding one vase, bowl or stone with plenty of empty space between. |
+| B | rockery | 太湖石 — A tall pitted scholar rock of grey limestone, full of hollows and through-holes, stands in a rockery against a stone cliff wall. (S3 전용) |
 
 ## Light
 **하나만 고르는 슬롯:** `face-light`(갈래의 얼굴 빛 후보 하나), `light-fill`·`room-light`(D의 창빛은 해가 든 날의 또렷한 光斑 `light-fill` 窗光光斑과 종이창의 부드러운 `room-light` Window Light 가운데 하나)
@@ -155,6 +160,7 @@ B의 `月光`(밤)을 고르면 햇빛·새벽빛 줄(`竹影`, `幽篁深处`, 
 | D | light-fill | 窗光光斑 — Sun through a window lays a sharp-edged patch of light on the table or floor, her hands striped by light and shade. |
 | D | catchlight | 窗格眼神光 — A large window leaves a soft rectangular, pane-divided highlight in the upper part of each iris. |
 | D | room-light | Window Light — Soft low natural light from a paper window settles over the low table, the tea tray and the warm matte wood. |
+| B | light-contrast | 冷暖对冲 — Slanting evening light splits cool and warm, the shadows turning mineral blue-green while the highlights glow amber and meet in a soft seam. (S3 전용) |
 
 ## Optics
 | 갈래 | 슬롯 | 줄 |

@@ -59,6 +59,7 @@
 | B | lip | Beige rosé — A cool, greyed pink-beige velvet lip that sits close to the natural lip tone with a softly blurred edge. |
 | C | lip | Vieux rose — A matte dusty old-rose lip with a brown-grey undertone and a faintly blurred edge, dry-looking beside the wet stone. |
 | D | lip | Rouge brique — A matte brick-red lip with an orange-brown cast that picks up the warm neutrals of brick and tweed. |
+| A, D | lip | Gloss transparent — Clear gloss over the natural lip color leaves a wet pink shine with water-drop highlights at the center of both lips, the tint a natural pink in S2 and a pale apricot pink in S6. (S2·S6 전용) |
 
 ## Expression
 | 갈래 | 슬롯 | 줄 |

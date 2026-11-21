@@ -131,6 +131,7 @@
 | C | place | Record Shop — A narrow independent record shop with oak crates, wooden louvre blinds and stacked sleeves. |
 | D | place | Drive-in Theater — A grass lot of parked pickups faces a huge outdoor screen. |
 | D | place | Carousel — Gilded carved horses turn on a round platform. |
+| A | place | Pacific Coast Highway — A coastal two-lane road with the sea on one side and dry hills on the other, a yellow warning sign standing on the gravel shoulder. (S1 전용) |
 
 ## Light
 **하나만 고르는 슬롯:** `face-light`(갈래의 얼굴 빛 하나)

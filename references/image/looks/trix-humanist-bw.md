@@ -58,6 +58,7 @@
 | B | lip | Lie-de-vin — A deep wine lip that the film renders as a near-black shape against the lit skin, matte with a clear outline. |
 | B | lip-wet | Lie-de-vin — A deep wine-stain lip with a wet satin sheen that the film renders as a near-black shape with one small bright highlight; it replaces the matte lip for the candlelit table. |
 | C | lip | Gloss transparent — Clear gloss over the natural lip colour leaves a small bright highlight at the centre of each lip. |
+| B | hair | Coiffé-décoiffé — Shoulder-length curly hair left deliberately undone, finger-tousled and uneven, a few loose strands falling beside the cheeks. (S3 전용) |
 
 ## Expression
 **하나만 고르는 슬롯:** `expression`·`expression-*`(표정 후보, 갈래마다 장면에 맞는 하나: `expression-pause`는 걸음을 멈출 때, `expression-wind`는 강풍, `expression-candle`은 촛불 식탁, `expression-calm`은 D의 고요한 얼굴)
@@ -132,6 +133,8 @@
 | C | place-shop | Record Store — A cramped basement record shop with vinyl sleeves packed in wooden crates. |
 | D | place | Palais du Louvre — The stone arcades of the Richelieu wing with massive square columns with flat sides. |
 | D | background | Boiseries — Plain painted wall panels with plaster mouldings sit softly out of focus behind her. |
+| A | place | Pont Neuf — A wide limestone bridge with half-round alcoves, worn stone benches and carved faces, a massive stone pier rising beside the riverbank. (S2 전용) |
+| B | ground | pavés parisiens — Uneven grey granite setts with dark seams cover the whole ground of an empty alley, a cast-iron street lamp standing overhead. (S3 전용) |
 
 ## Light
 **하나만 고르는 슬롯:** `face-light`·`face-light-*`(얼굴 빛 경로, 장면과 맞는 하나), `catchlight`·`catchlight-bulb`(눈빛 후보, 알전구 장면이면 `catchlight-bulb`), `reflect`·`reflect-puddle`(반사 후보, 웅덩이가 장면에 있으면 `reflect-puddle`)

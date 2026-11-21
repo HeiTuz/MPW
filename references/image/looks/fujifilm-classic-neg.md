@@ -60,6 +60,7 @@
 | C | expression | 振り向きざまの視線 — The head turns back with the hair still swinging, the pupils small and the eyes alert in the dim light. |
 | D | expression | 芯のある眼差し — A steady level gaze with still brows and a relaxed jaw, calm and unhurried against the large scene behind her. |
 | D | expression | ペーソス — Low golden light on a tired, relaxed face and a faint closed-mouth smile. |
+| D | expression | 流し目 — Her eyes slide toward one corner of the frame while the head stays still, the lids half lowered and a thin crescent of white showing beside the iris. (S6 전용) |
 
 ## Outfit
 **함께 쓰는 슬롯:** `outfit`·`outfit-outer`(겉옷은 `outfit` 위에 걸친다. 같은 이름의 줄이 여럿이면 장면에 맞는 하나)
@@ -78,6 +79,7 @@
 | D | outfit | 綿麻ワンピース — A deep ink-green sleeveless cotton-linen dress with natural wrinkles, the hem moving a little in the damp air. (滤镜 #008) |
 | D | outfit-outer | 羽織 — A wide-sleeved pale-green linen haori worn open at the front and falling to the hip. (滤镜 #017) |
 | D | outfit-outer | アノラックパーカー — A dark gray weatherproof shell with a half zip and drawstring hood, the nylon puffing slightly in the wind. (滤镜 #018) |
+| D | outfit-outer | コーチジャケット — A black work jacket in light nylon twill with a small collar and a snap front, the shell creasing softly at the elbows. (S6 전용) |
 
 ## Props and nails
 | 갈래 | 슬롯 | 줄 |
@@ -124,6 +126,7 @@
 | D | place | 紫陽花 — Dense blue-violet hydrangea blooms stand in a hedge before an old temple's stone wall, packed to the edges of the frame. (滤镜 #008) |
 | D | place-open | 七里ヶ浜 — A wide beach with the outline of a far volcano on the horizon. (滤镜 #020) |
 | D | place-mono | 打ち放しコンクリート — Smooth bare concrete walls with narrow slits, cool gray and quiet. (滤镜 #015) |
+| D | place | 箱根 — A deep mountain gorge where a fast stream runs over wet boulders between steep walls, dense primeval forest on both banks. (S5 전용) |
 
 ## Light
 | 갈래 | 슬롯 | 줄 |

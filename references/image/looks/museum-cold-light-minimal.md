@@ -59,6 +59,7 @@
 | A, D | lip | 正红唇 — A cool matte true-red lip with a clean firm edge, the single saturated colour in a grey-and-white frame. |
 | B | lip | 浆果唇 — A dark berry matte lip that reads as a near-black value in monochrome, keeping the mouth one small dark shape. |
 | C | lip | 车厘子红 — A deep cherry-red matte lip that sinks into the shadow, its edge visible only where the beam grazes it. |
+| A | lip | 丝绒唇 — A soft-matte deep brown-red lip with a velvet finish and a slightly feathered edge. (S2 전용) |
 
 ## Expression
 | 갈래 | 슬롯 | 줄 |
@@ -91,6 +92,7 @@
 | D | outfit | 抹胸礼服 — A strapless black silk evening gown cut straight across above the bust, leaving the shoulders and collarbones bare in a smooth column. (滤镜 #073) |
 | D | outfit | 一字领 — A fitted dark velvet top with a straight neckline running across the collarbones, so shoulders and neck form one horizontal line. (滤镜 #074) |
 | D | outfit-outer | 双面呢 — A collarless black double-faced wool coat belted at the waist, its clean unlined edges reading as one dark shape against the white backdrop. (滤镜 #068) |
+| B | outfit | 真丝 — A heavy pure-black silk robe cut sleeveless and straight, its highlight sliding along each fold in a soft luminous sheen. (S4 전용) |
 
 ## Legwear
 A의 다리는 한 줄이다. 맨다리(`裸腿`)와 `极透黑丝` 가운데 하나만 쓰고 둘을 함께 쓰지 않는다.
