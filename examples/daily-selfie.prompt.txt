@@ -1,7 +1,7 @@
 A casual front-camera phone selfie of a man in his home kitchen on a weekday morning, holding a mug of coffee.
 
 ## Identity Reference
-If a model reference is provided, the man in this photo is that model: take only the face shape and facial features from it, adapting them naturally to this scene's expression, angle and light. Hair, makeup and everything else follow this prompt. If none is provided, he is a man in his thirties with a relaxed, slightly sleepy face and an average build.
+If a model reference is provided, the man in this photo is that model: take only the face shape and facial features from it, adapting them naturally to this scene's expression, angle and light, and keep his own skin tone. Hair, makeup and everything else follow this prompt. If none is provided, he is a man in his thirties with a relaxed, slightly sleepy face and clear skin. In either case he has 7.5-head proportions, a small head over level shoulders and a long neck.
 
 ## Hair and makeup
 flat hair — His hair is still a little flat from sleep, with one section pressed to the side.
@@ -25,9 +25,15 @@ home kitchen — Behind him the kitchen is slightly out of focus: a kettle and a
 
 ## Light
 window light — Soft morning daylight from a window at camera right lights one side of his face and leaves the other side in gentle shade.
+catchlight — A small window shaped point of light sits in each eye.
 
 ## Optics
 phone camera — Natural phone-camera color with a little noise in the shadows, and the close distance stretches the frame edges slightly.
 
 ## Camera
-selfie frame — His face and upper chest fill most of the frame, seen from slightly above.
+selfie frame — A vertical 3:4 frame with his face and upper chest filling most of it, seen from slightly above.
+
+## Finish
+实拍 — The whole frame reads as a real front-camera phone selfie.
+超写实 — Ultra-realistic 8K photographic detail: real pores on the skin, real weave in the cotton, real steam off the coffee.
+真人实拍 — A real person photographed in his own kitchen, never an illustration, anime frame, 3D render or plastic-skinned CGI.

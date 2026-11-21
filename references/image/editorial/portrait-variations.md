@@ -35,11 +35,14 @@
 A waist-up studio profile portrait of a woman standing at a workbench in front of a plain gray wall, in a navy canvas jacket and holding a closed notebook.
 
 ## Identity Reference
-If a model reference is provided, the woman in this photo is that model: take only the face shape and facial features from it, adapting them naturally to this scene's expression, angle and light. Hair, makeup and everything else follow this prompt. If none is provided, she is a 22-year-old East Asian woman with a small face and a slender build.
+If a model reference is provided, the woman in this photo is that model: take only the face shape and facial features from it, adapting them naturally to this scene's expression, angle and light, and keep her own skin tone. Hair, makeup and everything else follow this prompt. If none is provided, she is a 22-year-old East Asian woman with a small face, a defined nose bridge, a clean jawline and clear, fair skin. In either case she has 7.5-head proportions, a small head over level shoulders and a long neck.
 
 ## Hair and makeup
 straight bob — Dark brown hair cut to the jaw with a soft side part, one side tucked behind the ear so the jawline shows.
 촉촉피부 — A thin dewy base leaves a soft sheen on the cheekbones and the nose bridge, and fine pores still show through it.
+애교살 — A soft pearly band under the lower lashes with a faint shadow line beneath it.
+内眼线 — A hair-thin dark line along the upper lash roots defines the eye with no visible wing.
+lips and cheeks — A sheer coral-pink lip tint with a soft edge and a diffuse rose blush that fades into the cheeks with no visible edge.
 
 ## Expression
 off-lens gaze — Her eyes rest just past the lens, the lids relaxed and the brows level.
@@ -68,25 +71,34 @@ floor line — The wall meets a pale concrete floor at the bottom edge of the fr
 ## Light
 window light — Soft daylight from a tall window at the camera's left wraps the face and the jacket, so the shadows on the right fade slowly.
 wall bounce — Light reflected off the gray wall fills the shadow side of the jacket with a cool, even tone.
+catchlight — A small window shaped point of light sits in each eye.
 
 ## Optics
 ノンフラッシュ — Only the window light is used and the camera flash stays off, so the skin has low contrast, gentle warm highlights and a softly washed background.
 muted color — The color is calm, with slightly lifted shadows and highlights on the jacket that roll off without clipping.
 
 ## Camera
-waist-up frame — The camera sits at chest height about two meters away, with the frame running from the top of her head to her waist.
+vertical frame — A vertical 3:4 frame from the top of her head to her waist, shot from chest height about two meters away with a moderate telephoto lens so the face keeps natural proportions.
 focus — The face and the notebook are sharp, and the bench edge in the foreground softens slightly.
+
+## Finish
+实拍 — The whole frame reads as a real studio profile portrait photograph.
+超写实 — Ultra-realistic 8K photographic detail: real pores on the skin, real weave in the canvas, real marks on the wood.
+真人实拍 — A real person photographed in a studio, never an illustration, anime frame, 3D render or plastic-skinned CGI.
 ```
 
 ```text
 A waist-up studio profile portrait of a woman standing at a workbench in front of a plain gray wall, in a navy canvas jacket and holding a closed notebook.
 
 ## Identity Reference
-If a model reference is provided, the woman in this photo is that model: take only the face shape and facial features from it, adapting them naturally to this scene's expression, angle and light. Hair, makeup and everything else follow this prompt. If none is provided, she is a 22-year-old East Asian woman with a small face and a slender build.
+If a model reference is provided, the woman in this photo is that model: take only the face shape and facial features from it, adapting them naturally to this scene's expression, angle and light, and keep her own skin tone. Hair, makeup and everything else follow this prompt. If none is provided, she is a 22-year-old East Asian woman with a small face, a defined nose bridge, a clean jawline and clear, fair skin. In either case she has 7.5-head proportions, a small head over level shoulders and a long neck.
 
 ## Hair and makeup
 straight bob — Dark brown hair cut to the jaw with a soft side part, one side tucked behind the ear so the jawline shows.
 촉촉피부 — A thin dewy base leaves a soft sheen on the cheekbones and the nose bridge, and fine pores still show through it.
+애교살 — A soft pearly band under the lower lashes with a faint shadow line beneath it.
+内眼线 — A hair-thin dark line along the upper lash roots defines the eye with no visible wing.
+lips and cheeks — A sheer coral-pink lip tint with a soft edge and a diffuse rose blush that fades into the cheeks with no visible edge.
 
 ## Expression
 off-lens gaze — Her eyes rest just past the lens, the lids relaxed and the brows level.
@@ -115,14 +127,20 @@ floor line — The wall meets a pale concrete floor at the bottom edge of the fr
 ## Light
 window light — Soft daylight from a tall window at the camera's left wraps the face and the jacket, so the shadows on the right fade slowly.
 wall bounce — Light reflected off the gray wall fills the shadow side of the jacket with a cool, even tone.
+catchlight — A small window shaped point of light sits in each eye.
 
 ## Optics
 机顶直闪 — An on-camera flash fires straight from the front, flattening the face into even bright light, putting small hot spots on the forehead and nose, and throwing a short, hard shadow on the wall just behind her.
 flash falloff — The background drops a stop darker than the face, and the navy jacket reads saturated with small bright reflections on its folds.
 
 ## Camera
-waist-up frame — The camera sits at chest height about two meters away, with the frame running from the top of her head to her waist.
+vertical frame — A vertical 3:4 frame from the top of her head to her waist, shot from chest height about two meters away with a moderate telephoto lens so the face keeps natural proportions.
 focus — The face and the notebook are sharp, and the bench edge in the foreground softens slightly.
+
+## Finish
+实拍 — The whole frame reads as a real studio profile portrait photograph.
+超写实 — Ultra-realistic 8K photographic detail: real pores on the skin, real weave in the canvas, real marks on the wood.
+真人实拍 — A real person photographed in a studio, never an illustration, anime frame, 3D render or plastic-skinned CGI.
 ```
 
 ### 한국어 지정 문안
@@ -131,11 +149,14 @@ focus — The face and the notebook are sharp, and the bench edge in the foregro
 단색 회색 벽 앞 작업대에서 남색 캔버스 재킷을 입고 닫힌 노트를 든 성인 여성의 허리 위 인물 사진. 스튜디오 프로필 페이지용이다.
 
 ## 인물 참조
-참조가 있으면 사진의 여성은 그 모델이고, 얼굴형과 이목구비만 가져와 장면에 맞춘다. 헤어·메이크업 등은 프롬프트를 따른다. 없으면 얼굴이 작고 날씬한 22세 동아시아 여성이다.
+참조가 있으면 사진의 여성은 그 모델이고, 얼굴형과 이목구비만 가져와 장면의 표정·각도·빛에 맞추며 피부색은 그 모델 그대로 둔다. 헤어·메이크업 등은 프롬프트를 따른다. 없으면 얼굴이 작고 콧대가 또렷하며 턱선이 깨끗하고 피부가 맑고 흰 22세 동아시아 여성이다. 어느 쪽이든 머리가 작고 어깨선이 수평이며 목이 긴 7.5등신 비율이다.
 
 ## 헤어와 메이크업
 단발 — 짙은 갈색 머리를 턱선 길이로 자르고 옆가르마를 탔으며, 한쪽은 귀 뒤로 넘겨 턱선이 드러난다.
 촉촉피부 — 얇고 촉촉한 베이스가 광대와 콧등에 은은한 윤기를 남기고, 고운 모공은 그대로 비친다.
+애교살 — 아래 속눈썹 밑에 은은한 진주빛 띠가 있고 그 아래로 옅은 그림자선이 진다.
+속눈썹 라인 — 윗속눈썹 뿌리를 따라 머리카락처럼 가는 어두운 선이 눈매를 또렷하게 하고 꼬리는 빼지 않는다.
+립과 볼 — 투명한 코랄 핑크 립 틴트가 가장자리를 부드럽게 두르고, 장밋빛 블러셔가 뺨에서 경계 없이 번진다.
 
 ## 표정
 시선 이탈 — 눈은 렌즈 바로 옆을 향하고 눈꺼풀은 편안하며 눈썹은 수평이다.
@@ -164,25 +185,34 @@ focus — The face and the notebook are sharp, and the bench edge in the foregro
 ## 조명
 창가 빛 — 카메라 왼쪽의 키 큰 창에서 든 부드러운 빛이 얼굴과 재킷을 감싸 오른쪽 그림자가 서서히 옅어진다.
 벽 반사 — 회색 벽에 반사된 빛이 재킷의 그늘 쪽을 차갑고 고른 톤으로 채운다.
+눈빛 반사 — 눈마다 작은 창문 모양의 빛점이 하나씩 맺힌다.
 
 ## 광학
 ノンフラッシュ — 창에서 든 빛만 쓰고 카메라 플래시는 꺼 두어, 피부 대비가 낮고 하이라이트는 은은히 따뜻하며 배경은 부드럽게 바랜다.
 차분한 색 — 그림자가 살짝 들려 있어 색이 차분하고, 재킷의 하이라이트는 날아가지 않고 부드럽게 넘어간다.
 
 ## 카메라
-허리 위 구도 — 카메라는 가슴 높이에서 이 미터쯤 떨어져 머리 위부터 허리까지를 담는다.
+세로 프레임 — 머리 위부터 허리까지를 담는 3:4 세로 프레임이고, 카메라는 가슴 높이에서 이 미터쯤 떨어져 중망원 렌즈로 찍어 얼굴 비율이 자연스럽다.
 초점 — 얼굴과 노트에 초점이 맞고 앞쪽 작업대 가장자리는 살짝 흐려진다.
+
+## 마무리
+실사 — 화면 전체가 실제 스튜디오 프로필 인물 사진으로 읽힌다.
+극사실 — 캔버스의 실제 짜임, 티셔츠의 실제 주름, 나무의 실제 흠집이 보이는 극사실 사진 질감이다.
+실제 촬영 — 실제 인물을 스튜디오에서 찍은 사진이며, 일러스트·애니메이션 프레임·삼차원 렌더·플라스틱 같은 컴퓨터 그래픽 피부가 아니다.
 ```
 
 ```text
 단색 회색 벽 앞 작업대에서 남색 캔버스 재킷을 입고 닫힌 노트를 든 성인 여성의 허리 위 인물 사진. 스튜디오 프로필 페이지용이다.
 
 ## 인물 참조
-참조가 있으면 사진의 여성은 그 모델이고, 얼굴형과 이목구비만 가져와 장면에 맞춘다. 헤어·메이크업 등은 프롬프트를 따른다. 없으면 얼굴이 작고 날씬한 22세 동아시아 여성이다.
+참조가 있으면 사진의 여성은 그 모델이고, 얼굴형과 이목구비만 가져와 장면의 표정·각도·빛에 맞추며 피부색은 그 모델 그대로 둔다. 헤어·메이크업 등은 프롬프트를 따른다. 없으면 얼굴이 작고 콧대가 또렷하며 턱선이 깨끗하고 피부가 맑고 흰 22세 동아시아 여성이다. 어느 쪽이든 머리가 작고 어깨선이 수평이며 목이 긴 7.5등신 비율이다.
 
 ## 헤어와 메이크업
 단발 — 짙은 갈색 머리를 턱선 길이로 자르고 옆가르마를 탔으며, 한쪽은 귀 뒤로 넘겨 턱선이 드러난다.
 촉촉피부 — 얇고 촉촉한 베이스가 광대와 콧등에 은은한 윤기를 남기고, 고운 모공은 그대로 비친다.
+애교살 — 아래 속눈썹 밑에 은은한 진주빛 띠가 있고 그 아래로 옅은 그림자선이 진다.
+속눈썹 라인 — 윗속눈썹 뿌리를 따라 머리카락처럼 가는 어두운 선이 눈매를 또렷하게 하고 꼬리는 빼지 않는다.
+립과 볼 — 투명한 코랄 핑크 립 틴트가 가장자리를 부드럽게 두르고, 장밋빛 블러셔가 뺨에서 경계 없이 번진다.
 
 ## 표정
 시선 이탈 — 눈은 렌즈 바로 옆을 향하고 눈꺼풀은 편안하며 눈썹은 수평이다.
@@ -211,14 +241,20 @@ focus — The face and the notebook are sharp, and the bench edge in the foregro
 ## 조명
 창가 빛 — 카메라 왼쪽의 키 큰 창에서 든 부드러운 빛이 얼굴과 재킷을 감싸 오른쪽 그림자가 서서히 옅어진다.
 벽 반사 — 회색 벽에 반사된 빛이 재킷의 그늘 쪽을 차갑고 고른 톤으로 채운다.
+눈빛 반사 — 눈마다 작은 창문 모양의 빛점이 하나씩 맺힌다.
 
 ## 광학
 정면 플래시 — 카메라 위의 플래시가 정면에서 터져 얼굴을 고르고 밝게 펴고, 이마와 콧등에 작은 광점을 찍고, 바로 뒤 벽에 짧고 진한 그림자를 드리운다.
 플래시 감쇠 — 배경은 얼굴보다 한 단계 어두워지고, 남색 재킷은 채도가 올라 주름마다 작은 반사가 생긴다.
 
 ## 카메라
-허리 위 구도 — 카메라는 가슴 높이에서 이 미터쯤 떨어져 머리 위부터 허리까지를 담는다.
+세로 프레임 — 머리 위부터 허리까지를 담는 3:4 세로 프레임이고, 카메라는 가슴 높이에서 이 미터쯤 떨어져 중망원 렌즈로 찍어 얼굴 비율이 자연스럽다.
 초점 — 얼굴과 노트에 초점이 맞고 앞쪽 작업대 가장자리는 살짝 흐려진다.
+
+## 마무리
+실사 — 화면 전체가 실제 스튜디오 프로필 인물 사진으로 읽힌다.
+극사실 — 캔버스의 실제 짜임, 티셔츠의 실제 주름, 나무의 실제 흠집이 보이는 극사실 사진 질감이다.
+실제 촬영 — 실제 인물을 스튜디오에서 찍은 사진이며, 일러스트·애니메이션 프레임·삼차원 렌더·플라스틱 같은 컴퓨터 그래픽 피부가 아니다.
 ```
 
 연출 축을 분리해 조합하고 범위를 정해 뽑는 방식은 [Iris의 한국어 README](https://github.com/noahvisualsx/Iris/blob/main/README.ko.md)와 [웹 스튜디오](https://github.com/noahvisualsx/Iris/blob/main/index.html)를 참고했다. 검토한 Iris 커밋은 `b83de4c`(전체 SHA `b83de4cf5cb12f6c4572f01a922c258dd34a8087`, MIT)다. 외부 저장소의 문장·프리셋·코드는 옮기지 않았고, 이 문서의 규칙과 예문은 MPW용으로 작성했다.

@@ -1,7 +1,7 @@
 A vertical autumn fashion campaign photo of a woman walking across a stone plaza in a belted stone-beige trench coat.
 
 ## Identity Reference
-If a model reference is provided, the woman in this photo is that model: take only the face shape and facial features from it, adapting them naturally to this scene's expression, angle and light. Hair, makeup and everything else follow this prompt. If none is provided, she is a 22-year-old East Asian woman with a small face and a slender build.
+If a model reference is provided, the woman in this photo is that model: take only the face shape and facial features from it, adapting them naturally to this scene's expression, angle and light, and keep her own skin tone. Hair, makeup and everything else follow this prompt. If none is provided, she is a 22-year-old East Asian woman with a small face, a defined nose bridge, a clean jawline and clear, fair skin. In either case she has 7.5-head proportions, a small head over level shoulders and a long neck.
 
 ## Attachments
 image 1 — Image 1 is the model photo and gives only the face shape and facial features.
@@ -11,6 +11,7 @@ image 2 — Image 2 is the trench coat product photo and gives the coat's color,
 loose updo — Her dark hair is pulled back loosely into a low twist, with a few soft strands falling at the temples and one longer strand moving in the wind.
 natural makeup — A sheer, soft matte base with a faint satin glow only on the cheekbones, and a muted rose lip color with a soft powdery edge.
 brows and eyes — The brows are brushed up and filled in a soft brown-gray; a thin brown liner and a single coat of mascara define the lashes without making the eyes heavy.
+애교살 — A soft pearly band under the lower lashes with a faint shadow line beneath it.
 blush — A diffuse dusty-rose blush sits high on the cheeks and fades out with no visible edge.
 
 ## Expression
@@ -47,6 +48,7 @@ background — A low, plain cream building with tall windows stands far back on 
 late afternoon sun — Late-afternoon sun low from camera right lays long shadows on the stone and rakes across the twill so the diagonal weave shows.
 open shade — Open shade from her own body keeps her face evenly lit and the shadow side of the coat readable.
 bounce — Warm light bounced from the stone fills the underside of the coat and the lower edge of the belt.
+catchlight — A small point of light shaped like the low sun sits in each eye.
 
 ## Optics
 clean digital color — Natural color with gently lifted shadows; the coat stays a true stone beige and highlights on the twill roll off smoothly instead of clipping.
@@ -54,9 +56,14 @@ white balance — A slightly warm daylight white balance keeps the cream knit ne
 sharpness — Modern crisp rendering with a smooth, noise-free sky and plaza and no visible grain.
 
 ## Camera
-full length — A full-length vertical frame shot from hip height, with the whole coat visible from the shoulders to the hem and her shoes inside the frame.
+full length — A vertical 3:4 frame shot from hip height, with the whole coat visible from the shoulders to the hem and her shoes inside the frame.
 lens — A moderate telephoto view about five meters away keeps the proportions natural and the plaza lines straight.
 focus — She is sharp from hair to loafers, and the building far behind softens gradually.
 
 ## Keep
 coat — The coat from image 2 stays unchanged in color, button layout and topstitching, and no logos or text appear that are not on the coat in image 2.
+
+## Finish
+实拍 — The whole frame reads as a real autumn fashion campaign photograph.
+超写实 — Ultra-realistic 8K photographic detail: real pores on the skin, real twill in the gabardine, real joints in the stone.
+真人实拍 — A real person photographed on location, never an illustration, anime frame, 3D render or plastic-skinned CGI.
