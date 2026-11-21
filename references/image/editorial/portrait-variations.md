@@ -4,10 +4,10 @@
 
 ## 같은 기준에서 비교
 
-1. 기준 장면과 바꿀 축을 먼저 정한다. 광학·톤, 포즈·프레이밍, 의상·소재는 비교할 수 있는 예다. 요청의 범위가 더 좁으면 그대로 둔다. 포즈만 바꿀 때는 프레임을 유지하고, 색감만 바꿀 때는 조명 방향을 유지한다.
+1. 기준 장면과 바꿀 축을 먼저 정한다. 광학·톤, 포즈·프레이밍, 의상·소재는 비교할 수 있는 예다. 요청의 범위가 더 좁으면 그대로 둔다. 포즈만 바꿀 때는 프레임을 유지하고("포즈와 구도"를 함께 말했으면 둘 다 바꾼다), 색감만 바꿀 때는 조명 방향을 유지한다.
 2. 바꾸지 않는 조건은 컷마다 같은 말로 전달한다. 프리셋은 그 컷에 허용된 축의 효과만 가져온다. 여러 축이나 조합을 명시했다면 요청한 짝과 순서를 따른다. 별도 기준 컷이나 가능한 모든 조합을 자동으로 증설하지 않는다.
 3. 각 컷에 해당 장면과 보존 조건을 넣어 단독 실행할 수 있게 쓴다. 앞 컷이나 앞 문장을 읽어야 알 수 있는 표현으로 공통 조건을 생략하지 않는다. 참조가 없으면 같은 인물 **설정**을 쓰고 첨부나 실제 얼굴의 동일성을 가정하지 않는다.
-4. 수량만 있고 바꿀 축이 없으면("같은 장면 8장") Pose와 Camera를 바꿀 축으로 본다. 룩 카드가 있으면 고른 갈래의 포즈·구도 쌍을 번호순으로 장수만큼 배정한다. 쌍이 모자라면 다른 갈래의 쌍 가운데 고정한 Scene·Outfit과 부딪히지 않는 것만 빌리고, 부딪히면 그 쌍의 Camera 줄만 쓰고 Pose는 장면에 맞게 고쳐 쓴다([image-brief.md](../image-brief.md) §4 '룩 카드' 6항). 카드가 없으면 몸 방향·카메라 높이·거리 조합이 겹치지 않게 장수만큼 짓는다. 나머지 조건은 컷마다 같은 말로 두되, Light의 방향은 카메라 기준(`camera left`) 대신 장면 기준(해가 바다 쪽 낮게 있다)으로 쓰고 컷마다 카메라가 돌아 얼굴의 밝은 쪽이 달라지면 그 한 문장만 컷별로 쓴다.
+4. 수량만 있고 바꿀 축이 없으면("같은 장면 8장") Pose와 Camera를 바꿀 축으로 본다. 룩 카드가 있으면 고른 갈래의 포즈·구도 쌍을 번호순으로 장수만큼 배정한다. 쌍이 모자랄 때 빌리는 순서와 컷 사이에 달라도 되는 줄은 [image-brief.md](../image-brief.md) §4 '룩 카드' 6항이 정한다. 카드가 없으면 몸 방향·카메라 높이·거리 조합이 겹치지 않게 장수만큼 짓는다. 나머지 조건은 컷마다 같은 말로 두되, Light의 방향은 카메라 기준(`camera left`) 대신 장면 기준(해가 바다 쪽 낮게 있다)으로 쓰고 컷마다 카메라가 돌아 얼굴의 밝은 쪽이 달라지면 그 한 문장만 컷별로 쓴다.
 
 ### 조합이 보존 조건과 겹칠 때
 
@@ -41,7 +41,7 @@ If a model reference is provided, the woman in this photo is that model: take on
 straight bob — Dark brown hair cut to the jaw with a soft side part, one side tucked behind the ear so the jawline shows.
 촉촉피부 — A thin dewy base leaves a soft sheen on the cheekbones and the nose bridge, and fine pores still show through it.
 애교살 — A soft pearly band under the lower lashes with a faint shadow line beneath it.
-内眼线 — A hair-thin dark line along the upper lash roots defines the eye with no visible wing.
+점막 아이라인 — A hair-thin dark line along the upper lash roots defines the eye with no visible wing.
 lips and cheeks — A sheer coral-pink lip tint with a soft edge and a diffuse rose blush that fades into the cheeks with no visible edge.
 
 ## Expression
@@ -97,7 +97,7 @@ If a model reference is provided, the woman in this photo is that model: take on
 straight bob — Dark brown hair cut to the jaw with a soft side part, one side tucked behind the ear so the jawline shows.
 촉촉피부 — A thin dewy base leaves a soft sheen on the cheekbones and the nose bridge, and fine pores still show through it.
 애교살 — A soft pearly band under the lower lashes with a faint shadow line beneath it.
-内眼线 — A hair-thin dark line along the upper lash roots defines the eye with no visible wing.
+점막 아이라인 — A hair-thin dark line along the upper lash roots defines the eye with no visible wing.
 lips and cheeks — A sheer coral-pink lip tint with a soft edge and a diffuse rose blush that fades into the cheeks with no visible edge.
 
 ## Expression
