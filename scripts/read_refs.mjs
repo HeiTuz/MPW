@@ -272,11 +272,32 @@ export function readTargets(targets, read = readSource) {
   return { text: chunks.join("\n") };
 }
 
+// One tool output holds about 40,000 bytes (a Korean character is 3 bytes), so --bundles says how many --part pieces a bundle needs.
+export const PART_LIMIT_BYTES = 40000;
+
+export function partsNeeded(chunks, limit = PART_LIMIT_BYTES) {
+  const sizes = chunks.map((chunk) => Buffer.byteLength(chunk));
+  for (let m = 1; m <= chunks.length; m += 1) {
+    const owner = partitionChunks(chunks, m);
+    const totals = Array(m).fill(0);
+    sizes.forEach((size, index) => { totals[owner[index]] += size; });
+    if (Math.max(...totals) <= limit) return m;
+  }
+  return Math.max(chunks.length, 1);
+}
+
 function listBundles() {
   return Object.entries(BUNDLES)
     .map(([name, targets]) => {
-      const result = readTargets(targets);
-      const size = result.error ? `error: ${result.error}` : `${[...result.text].length} chars`;
+      const chunks = [];
+      let error = null;
+      for (const result of targetChunks(targets, readSource)) {
+        if (result.error) error = result.error;
+        else chunks.push(result.chunk);
+      }
+      const text = chunks.join("\n");
+      const parts = partsNeeded(chunks);
+      const size = error ? `error: ${error}` : `${[...text].length} chars, ${Buffer.byteLength(text)} bytes${parts > 1 ? `, read in ${parts} parts: --part 1/${parts}` : ""}`;
       return `${name}  (${size})\n${targets.map((target) => `  ${target}`).join("\n")}`;
     })
     .join("\n");

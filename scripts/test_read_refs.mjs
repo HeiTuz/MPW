@@ -312,7 +312,7 @@ assert.equal(unknownBundle.status, 2);
 assert.match(unknownBundle.stderr, /unknown bundle: nope/);
 const listing = spawnSync(process.execPath, [path.join(root, "scripts", "read_refs.mjs"), "--bundles"], { encoding: "utf8" });
 assert.equal(listing.status, 0, listing.stderr);
-for (const name of Object.keys(BUNDLES)) assert.match(listing.stdout, new RegExp("^" + name + "  \\(\\d+ chars\\)$", "m"));
+for (const name of Object.keys(BUNDLES)) assert.match(listing.stdout, new RegExp("^" + name + "  \\(\\d+ chars, \\d+ bytes(?:, read in \\d+ parts: --part 1/\\d+)?\\)$", "m"));
 // --part n/m: the parts together are the whole output, cut at section boundaries, in order, about equal in size, each with a first line that names the next command.
 assert.deepEqual(parsePart(["--bundle", "x", "--part", "2/3"]), { rest: ["--bundle", "x"], part: { n: 2, m: 3 } });
 assert.deepEqual(parsePart(["--part=1/4", "a.md"]), { rest: ["a.md"], part: { n: 1, m: 4 } });
