@@ -101,7 +101,7 @@
 ## Props and nails
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
-| A | hand-prop | 油纸伞 — A round oiled-paper umbrella on bamboo ribs, its canopy glowing softly in the rain and mist. |
+| A | hand-prop | 油纸伞 — A round oiled-paper umbrella on bamboo ribs, its canopy glowing softly in the rain and mist. (비 오는 장면일 때) |
 | A | hand-prop | 团扇 — A round silk fan on a slender handle hangs at her side, the sheer silk letting light through. |
 | B | jewelry | 水滴耳坠 — Smooth jade teardrops hang from fine hooks and catch one soft highlight along each curve. |
 | B | jewelry | 手串 — A loop of round polished beads sits on the wrist, each bead showing its own small highlight. |
@@ -131,7 +131,7 @@
 | A | background | 青砖黛瓦 — Grey-blue brick walls and dark tile roofs, clean and slightly cool. |
 | B | place | 安吉竹海 — Endless slopes of tall green bamboo with leaves moving like waves and a mossy path. |
 | B | place | 云栖竹径 — A stone path under a dense bamboo canopy with morning haze hanging between the stalks. |
-| B | background | 远山含黛 — Layered hills fade into blue-grey haze behind her, the foreground sharp and the distance dissolving. |
+| B | background | 远山含黛 — Layered hills fade into blue-grey haze behind her, the foreground sharp and the distance dissolving. (먼 산 풍경 장면일 때) |
 | C | place | 书斋 — A wood-panelled study with a big desk and shelves of old books and a window frame. |
 | C | background | 影壁 — A blank whitewashed screen wall with a tiled cap forms a plain flat backdrop. |
 | D | place | 茶寮 — A small timber tea room with a low table, closed off from outside by walls and trees. |
@@ -147,19 +147,19 @@ B의 `月光`(밤)을 고르면 햇빛·새벽빛 줄(`竹影`, `幽篁深处`, 
 
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
-| A | face-light | 天井冷白 — Cool overcast light drops straight into the courtyard, lighting the crown and brow and carving crisp shadows under the brow bone and jaw. |
+| A | face-light | 天井冷白 — Cool overcast light drops straight into the courtyard, lighting the crown and brow and carving crisp shadows under the brow bone and jaw. (천정 중정 장면일 때) |
 | A | light-fill | 烟雨 — Fine drizzle and mist soften the light and lower contrast, greying the distance and leaving a pale sheen on wet surfaces. |
-| B | face-light | 竹影 — Sun through bamboo leaves lays narrow leaf-shaped shadows and small bright flecks over her skin and dress. |
-| B | face-light | 幽篁深处 — Deep green shade fills the grove and only a few thin shafts reach her, touching the eyes and the highest points of the face. |
-| B | light-fill | 晨曦竹雾 — Gold-green early light through thin bamboo mist, faint beams cutting the air and highlights softened to near white. |
-| B | night-light | 月光 — Dim cool blue light from a high moon leaves soft low-contrast shapes and a blue cast over the white wall and the bamboo shadows. |
+| B | face-light | 竹影 — Sun through bamboo leaves lays narrow leaf-shaped shadows and small bright flecks over her skin and dress. (대숲 장면일 때) |
+| B | face-light | 幽篁深处 — Deep green shade fills the grove and only a few thin shafts reach her, touching the eyes and the highest points of the face. (대숲 장면일 때) |
+| B | light-fill | 晨曦竹雾 — Gold-green early light through thin bamboo mist, faint beams cutting the air and highlights softened to near white. (대숲 장면일 때) |
+| B | night-light | 月光 — Dim cool blue light from a high moon leaves soft low-contrast shapes and a blue cast over the white wall and the bamboo shadows. (대숲 장면일 때) |
 | C | face-light | 焦墨留白 — One hard light from the side leaves half the face bright and the other half sunk in pure black, like dense ink against bare paper. |
 | C | key | 低调布光 — A mostly dark frame with one small pool of light and rich blacks all around her. |
-| C | desk-light | Window Light — Soft daylight from the window frame rests on the paper and the desk while the rest of the study keeps to quiet grey. |
+| C | desk-light | Window Light — Soft daylight from the window frame rests on the paper and the desk while the rest of the study keeps to quiet grey. (서재 장면일 때) |
 | D | face-light | 羊脂温玉 — Very large diffused light with almost no hard shadow gives the skin a warm, matte, milky sheen like polished white jade. |
 | D | light-fill | 窗光光斑 — Sun through a window lays a sharp-edged patch of light on the table or floor, her hands striped by light and shade. |
 | D | catchlight | 窗格眼神光 — A large window leaves a soft rectangular, pane-divided highlight in the upper part of each iris. |
-| D | room-light | Window Light — Soft low natural light from a paper window settles over the low table, the tea tray and the warm matte wood. |
+| D | room-light | Window Light — Soft low natural light from a paper window settles over the low table, the tea tray and the warm matte wood. (다실 장면일 때) |
 | B | light-contrast | 冷暖对冲 — Slanting evening light splits cool and warm, the shadows turning mineral blue-green while the highlights glow amber and meet in a soft seam. (S3 전용) |
 
 ## Optics

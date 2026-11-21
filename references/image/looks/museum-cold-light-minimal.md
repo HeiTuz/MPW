@@ -82,13 +82,13 @@
 |---|---|---|
 | A | outfit | 无领西装外套 — A collarless black worsted jacket with square dropped shoulders and a clean round neckline, closed by one hidden fastening with no hardware showing. (穿搭 #054 #063) |
 | A | outfit | 白衬衫 — A crisp white poplin shirt whose stiff, sculpted collar stands away from the neck, its folds cut sharp like folded paper. (穿搭 #052) |
-| A | outfit-outer | 风衣 — A black double-breasted wool trench worn buttoned and belted, its hem swinging with each stride while the shoulders keep a hard outline. (穿搭 #051) |
+| A | outfit-outer | 风衣 — A black double-breasted wool trench worn buttoned and belted, its hem swinging with each stride while the shoulders keep a hard outline. (穿搭 #051) (걷는 장면일 때) |
 | A | outfit-alt-gown | 缎面礼服 — A floor-length black silk-satin gown with a high side slit, the satin throwing one long highlight down each fold. (滤镜 #069) |
 | B | outfit | 双面呢 — A double-faced cashmere cape, black on one side and cold white on the other, draped loose over the shoulders so its cut edges fold into hard black and white blocks. (穿搭 #061) |
 | B | outfit | 西装套装 — A double-breasted black worsted suit with sharp lapels and a defined waist, every seam pressed flat. (滤镜 #070) |
 | C | outfit | 斜襟 — A black wool blazer whose diagonal placket runs from the neck to the side seam and draws one hard line across the chest. (滤镜 #065) |
-| C | outfit | 吊带裙 — A thin-strapped black silk slip dress that falls straight, its sheen reduced to a thin bright edge where the backlight reaches. (滤镜 #067) |
-| C | outfit-alt-robe | 长衫 — A white heavy-silk robe falls to the shin with side slits that swing, taking the beam as the brightest shape in the dark room. (滤镜 #071) |
+| C | outfit | 吊带裙 — A thin-strapped black silk slip dress that falls straight, its sheen reduced to a thin bright edge where the backlight reaches. (滤镜 #067) (유리 역광 장면일 때) |
+| C | outfit-alt-robe | 长衫 — A white heavy-silk robe falls to the shin with side slits that swing, taking the beam as the brightest shape in the dark room. (滤镜 #071) (틈새 광주 장면일 때) |
 | D | outfit | 抹胸礼服 — A strapless black silk evening gown cut straight across above the bust, leaving the shoulders and collarbones bare in a smooth column. (滤镜 #073) |
 | D | outfit | 一字领 — A fitted dark velvet top with a straight neckline running across the collarbones, so shoulders and neck form one horizontal line. (滤镜 #074) |
 | D | outfit-outer | 双面呢 — A collarless black double-faced wool coat belted at the waist, its clean unlined edges reading as one dark shape against the white backdrop. (滤镜 #068) |
@@ -99,7 +99,7 @@ A의 다리는 한 줄이다. 맨다리(`裸腿`)와 `极透黑丝` 가운데 �
 
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
-| A | legwear | 裸腿 — Bare legs that take a cool cast from the gallery light, matte with no hot highlight on the knee or shin, mirrored faintly in the polished floor. (滤镜 #069) |
+| A | legwear | 裸腿 — Bare legs that take a cool cast from the gallery light, matte with no hot highlight on the knee or shin, mirrored faintly in the polished floor. (滤镜 #069) (광택 바닥 장면일 때) |
 | A | legwear | 极透黑丝 — Very sheer black stockings where the skin reads as a smoky cool grey, brightening only along the shin where light grazes it. |
 | B | legwear | 大女主黑丝 — Sheer black tights cover the legs with a seamless finish, reading as one flat dark shape against the pale wall. |
 | C | legwear | 哑光黑色连裤袜 — Matte black tights with a flat finish take the beam without any sharp highlight, so the legs sink into the dark. |
@@ -124,7 +124,7 @@ S3(맨발)에서는 `尖头漆皮高跟鞋` 줄을 쓰지 않는다.
 |---|---|---|
 | 전부 | style-core | 当代美术馆冷光极简 — A contemporary-museum look: one person, one cold clean light (architectural in A to C, a studio light in D), and planes of white, grey and black with nothing else in the frame. |
 | A, B | style | 极简 — Almost nothing fills the frame, leaving clean planes and wide empty space under even, cool light. |
-| A | architecture | 安藤忠雄 — Smooth concrete planes with one controlled opening, so a single slit of light and the shadow it throws make the composition. (风格 #054 #055) |
+| A | architecture | 安藤忠雄 — Smooth concrete planes with one controlled opening, so a single slit of light and the shadow it throws make the composition. (风格 #054 #055) (노출 콘크리트 장면일 때) |
 | B | style | 解构 — Garments with off-centre closures, uneven hems and asymmetric drape in plain black, cut like architecture. |
 | C | style | 大女主 — Commanding styling in strong-shouldered dark tailoring, polished and controlled from collar to hem. |
 | D | style | 高岭之花 — Cool, untouchable elegance with a lifted chin, pale even styling and a gaze that keeps the viewer at arm's length. |
@@ -159,15 +159,15 @@ C의 유리 커튼월 역광(金鹰美术馆, 쌍 10)에서는 `key`의 `低调�
 |---|---|---|
 | A | face-light | 雕塑切光 — One hard key light from above and to one side carves knife-edged shadows under the cheekbones, brow and jaw. (滤镜 #061) |
 | A, B | light-fill | 柔和漫射光 — Even skylight spreads with wide soft shadows and no visible source, keeping the tones on skin and concrete gentle. (滤镜 #063 #064 #070) |
-| A | corridor-light | 线性灯带 — A long line of cool white ceiling light drives the corridor into deep perspective and lays parallel reflections on the floor. (滤镜 #066) |
-| A | stair-light | Overhead Skylight — Cool skylight falls from above down the tall shaft and casts overlapping curved shadows under the two stair ribbons. (风格 #055) |
-| A | vault-light | Sidelight — Pale light slips down the curved concrete shells from the sides, leaving each vault bright along one flank and soft-shadowed along the other. (风格 #058) |
+| A | corridor-light | 线性灯带 — A long line of cool white ceiling light drives the corridor into deep perspective and lays parallel reflections on the floor. (滤镜 #066) (긴 복도 장면일 때) |
+| A | stair-light | Overhead Skylight — Cool skylight falls from above down the tall shaft and casts overlapping curved shadows under the two stair ribbons. (风格 #055) (쌍나선 계단 장면일 때) |
+| A | vault-light | Sidelight — Pale light slips down the curved concrete shells from the sides, leaving each vault bright along one flank and soft-shadowed along the other. (风格 #058) (우산 볼트 장면일 때) |
 | B | face-light | 几何光影 — Hard sun through a skylight cuts one slanted triangle of light across the white wall and the body, the rest falling away in grey steps. (滤镜 #062 #075) |
 | C | face-light | 硬聚光 — A narrow hard spot from one side lights half the face and one shoulder with sharp highlights while the rest drops to deep black. (滤镜 #065) |
 | C | beam | 狭缝光柱 — Daylight through a high slit falls as one thin hard-edged column across the dark floor and the figure, with dust drifting in it. (滤镜 #071, 风格 #054) |
-| C | rim-light | 逆光勾边 — Bright daylight from behind rings the hair, nose bridge and shoulders in one thin cold-white edge while the face stays in soft shadow, and beyond the glass a pale overcast sky blooms to near white above a floor bright with daylight. (滤镜 #067) |
+| C | rim-light | 逆光勾边 — Bright daylight from behind rings the hair, nose bridge and shoulders in one thin cold-white edge while the face stays in soft shadow, and beyond the glass a pale overcast sky blooms to near white above a floor bright with daylight. (滤镜 #067) (유리 커튼월 장면일 때) |
 | C | key | 低调布光 — A mostly dark frame with one small pool of light and rich blacks all around the figure. |
-| C | curve-light | Raking Light — In the dim cave-like gallery, low light slides along the smooth curved walls and picks out their contours. (风格 #066) |
+| C | curve-light | Raking Light — In the dim cave-like gallery, low light slides along the smooth curved walls and picks out their contours. (风格 #066) (동굴형 갤러리 장면일 때) |
 | D | face-light | 无影棚拍 — Large soft boxes light the white background and the skin evenly, leaving almost no shadow anywhere. (滤镜 #068) |
 | D | ring-light | 环形灯 — A large circular light at the lens axis gives even, nearly shadowless frontal light and a thin white ring in each pupil. (滤镜 #073) |
 | D | catchlight | 柔光箱眼神光 — One crisp rectangular softbox highlight sits in the upper part of each iris. (滤镜 #074) |

@@ -47,7 +47,7 @@
 |---|---|---|
 | A, B | hair | 一丝不乱的低盘发 — Hair is combed into a low bun at the nape with every strand laid flat, so the long neck line stays clear against the wall or the dusk sky. (滤镜 #076 #086) |
 | A, D | hair-wind | 黑长直 — Long, blunt black hair falls straight past the shoulders, and where there is wind a few strands lift sideways across the cheek and neck. (滤镜 #080 #081 #090) |
-| B | hair-wind | 微卷长发 — Long dark hair with a loose natural curl streams sideways in the wind off the hilltop, its ends catching the low sun as a thin gold edge. (滤镜 #077 #085) |
+| B | hair-wind | 微卷长发 — Long dark hair with a loose natural curl streams sideways in the wind off the hilltop, its ends catching the low sun as a thin gold edge. (滤镜 #077 #085) (景山 산정 장면일 때) |
 | A | hair-pin | 竹节簪 — A plain silver pin shaped like a bamboo stalk is pushed through the bun, one thin cool line of light running along its raised joints. (滤镜 #076) |
 | B | hair-pin | 发簪 — A plain white jade pin is pushed through the chignon, its milky head showing as a soft pale point against the black hair. (滤镜 #078) |
 | C | hair | 大光明发型 — Every hair is swept straight back off the forehead into a smooth knot, leaving the whole forehead and hairline in view. (滤镜 #083) |
@@ -64,9 +64,9 @@
 ## Expression
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
-| A | expression | 波澜不惊 — The eyes stay perfectly steady with brows and mouth still, her gaze carried past the lens toward the far end of the wall. (滤镜 #076) |
+| A | expression | 波澜不惊 — The eyes stay perfectly steady with brows and mouth still, her gaze carried past the lens toward the far end of the wall. (滤镜 #076) (붉은 담 장면일 때) |
 | A, C | expression | 不怒自威 — A still face and a level, unblinking stare convey authority with the mouth quiet and no visible anger. (滤镜 #080 #084 #087) |
-| B | expression | 居高临下 — The chin lifts a few degrees and the lids lower so the eyes look down along the nose over the roofs below. (滤镜 #077) |
+| B | expression | 居高临下 — The chin lifts a few degrees and the lids lower so the eyes look down along the nose over the roofs below. (滤镜 #077) (景山 조망 장면일 때) |
 | A, B | expression | 睥睨 — Half-lowered lids and a lifted chin let the eyes survey the plaza or the avenue from above, the jaw squared into the wind. (滤镜 #085 #090) |
 | C | expression | 庄严肃穆 — An upright, still bearing with a flat mouth and a level gaze toward the light at the hall door, grave as a formal portrait. (滤镜 #083 #088) |
 | D | expression | 闭目冥思 — Both lids rest closed with the lashes flat, the brow smooth and the mouth relaxed, as if listening to a distant bell. (滤镜 #079) |
@@ -82,12 +82,12 @@
 | A, B, D | outfit-outer | 羊绒大衣 — A long double-faced cashmere coat falls in heavy straight folds with a soft fuzzy halo along its edges in low sun. (滤镜 #077 #080 #081 #089, 穿搭 #027 #032) |
 | B | outfit-outer-color | 墨绿 — A very dark blue-green cashmere that glints jewel-bright where the golden backlight touches its folds. (滤镜 #077) |
 | B, C | outfit | 斜襟 — A vermilion damask silk robe closes on a diagonal placket from the neck to the side seam, the woven pattern catching small glints as she moves. (滤镜 #078 #088) |
-| B | outfit-outer-dusk | 风衣 — A black heavy-silk double-breasted trench hangs straight to the knee, its dark sheen picking up the last warm light along each fold. (滤镜 #086) |
+| B | outfit-outer-dusk | 风衣 — A black heavy-silk double-breasted trench hangs straight to the knee, its dark sheen picking up the last warm light along each fold. (滤镜 #086) (황혼 장면일 때) |
 | C, D | outfit | 长衫 — A long black silk robe falls straight to the shin with side slits, its sheen only a thin line along each fold. (滤镜 #079 #083) |
 | C | outfit-gown | 改良旗袍 — A peacock-blue crepe satin dress with a stand collar and a side placket skims the body, its glassy sheen turning enamel-bright under a spot. (滤镜 #084) |
 | C | outfit-gown-trim | 金线滚边 — Gold thread is worked as piping along the hem and the placket edge, giving a low metallic glint at each curve. (滤镜 #084) |
-| D | outfit | 对襟 — An ivory heavy-silk tunic with a stand collar closes straight down the centre and hangs plain, so patterned light reads cleanly on its flat white. (滤镜 #082) |
-| D | outfit-outer-color | 烟草棕 — A warm dark brown with a golden-amber undertone, close to the bark colour of the old trees behind her. (滤镜 #081) |
+| D | outfit | 对襟 — An ivory heavy-silk tunic with a stand collar closes straight down the centre and hangs plain, so patterned light reads cleanly on its flat white. (滤镜 #082) (창살 빛무늬 장면일 때) |
+| D | outfit-outer-color | 烟草棕 — A warm dark brown with a golden-amber undertone, close to the bark colour of the old trees behind her. (滤镜 #081) (古柏 장면일 때) |
 | D | outfit-inner | 羊绒针织衫 — A heavyweight ivory cashmere knit with a smooth rib at the neck shows as a pale band under the black coat. (滤镜 #089) |
 
 ## Legwear
@@ -147,20 +147,20 @@
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
 | A | face-light | 柔和漫射光 — Even afternoon light bounced off the weathered red plaster fills the face with warm, soft shadows and no visible source. (滤镜 #076 #087) |
-| A | light-fill | 雪地反光 — Snow on the ground bounces cool even light upward and fills the underside of the brow and jaw. (滤镜 #080) |
+| A | light-fill | 雪地反光 — Snow on the ground bounces cool even light upward and fills the underside of the brow and jaw. (滤镜 #080) (눈 쌓인 장면일 때) |
 | B | face-light | 逆光金边 — A low sun from behind rings the hair and the coat edge in gold while the face stays in soft shadow. (滤镜 #077) |
 | B | face-light | 黄金时刻 — Warm light from a low sun skims the marble and her sleeve, outlining the figure and warming every surface it touches while the marble's own shadows stay cool grey-blue. (滤镜 #078) |
-| B | sky-light | 残阳如血 — A low sun in a deep red-orange sky floods the plaza with crimson light and throws one long dark shadow toward the camera, the gate tower's dark outline cut against that sky. (滤镜 #085) |
-| B | dusk-light | 蓝调时刻 — Deep blue twilight wraps the scene in cool soft light while the lit tower glows amber, its reflection laid on the still water. (滤镜 #086) |
+| B | sky-light | 残阳如血 — A low sun in a deep red-orange sky floods the plaza with crimson light and throws one long dark shadow toward the camera, the gate tower's dark outline cut against that sky. (滤镜 #085) (午门 광장 장면일 때) |
+| B | dusk-light | 蓝调时刻 — Deep blue twilight wraps the scene in cool soft light while the lit tower glows amber, its reflection laid on the still water. (滤镜 #086) (角楼 해자 장면일 때) |
 | B | tile-light | Tile Highlights — The low sun picks up the hard glaze of the yellow roof tiles and lays bright stripes of reflected light along each ridge. (滤镜 #077) |
 | B | catchlight | 金色眼神光 — Low setting sun puts fine amber sparkles in the irises and a warm gold edge along the cheek. |
 | C | face-light | 低调布光 — A mostly dark hall with one small pool of light leaves rich blacks around the figure and a dim gold gleam on the wood. (滤镜 #083 #084) |
 | C | light-fill | 柔和漫射光 — Daylight from outside reflects softly into the hall and fills the shade under the painted beams with no visible source. (滤镜 #088) |
-| C | case-light | Spotlight — Inside the gallery, soft spots catch only the display cases and the antiques in them while the rest of the room stays dark. (滤镜 #084) |
-| D | face-light | 丁达尔 — Early sun through the cypress branches turns the incense smoke into straight bright shafts with lit particles floating in them. (滤镜 #079) |
-| D | face-light | 窗棂光影 — Slanting sun through the carved lattice window lays a crisp lattice pattern across her cheek, collarbone and white silk. (滤镜 #082) |
-| D | dapple | 斑驳树影 — Sun filtered through cypress needles breaks into scattered soft-edged spots that move over her face and coat against cool shade. (滤镜 #081) |
-| D | dawn-light | 破晓冷光 — Clear cool blue-cyan light just before sunrise lies on the flagstones and turns the vermilion doors a quiet cold red. (滤镜 #089) |
+| C | case-light | Spotlight — Inside the gallery, soft spots catch only the display cases and the antiques in them while the rest of the room stays dark. (滤镜 #084) (珍宝馆 장면일 때) |
+| D | face-light | 丁达尔 — Early sun through the cypress branches turns the incense smoke into straight bright shafts with lit particles floating in them. (滤镜 #079) (古柏·향 연기 장면일 때) |
+| D | face-light | 窗棂光影 — Slanting sun through the carved lattice window lays a crisp lattice pattern across her cheek, collarbone and white silk. (滤镜 #082) (漏窗 장면일 때) |
+| D | dapple | 斑驳树影 — Sun filtered through cypress needles breaks into scattered soft-edged spots that move over her face and coat against cool shade. (滤镜 #081) (古柏 장면일 때) |
+| D | dawn-light | 破晓冷光 — Clear cool blue-cyan light just before sunrise lies on the flagstones and turns the vermilion doors a quiet cold red. (滤镜 #089) (大觉寺 새벽 장면일 때) |
 
 ## Optics
 **하나만 고르는 슬롯:** `tone-*`(고른 `stock` 본체 줄의 것 하나)

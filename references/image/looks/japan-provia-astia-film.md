@@ -56,7 +56,7 @@
 | C | hair | タイトシニヨン — A low flat chignon at the nape with the crown kept close to the head and two thin loose strands at the ears. (发型与妆容/03 #022) |
 | D | hair | 濡れ髪 — Hair looks damp from the sea air and blows in dark glossy ribbons across one cheek and the neck wherever the sun catches it. |
 | 전부 | bangs | シースルーバング — A thin see-through fringe over the forehead with small gaps between the strands, moving a little in the air, the brows and eyes still clearly visible through it. |
-| B | blush | 頬染め — A soft warm-pink flush spreads on both cheeks and fades into the skin as if from the cool morning air, giving the faint pink lean that Astia lends to skin highlights. |
+| B | blush | 頬染め — A soft warm-pink flush spreads on both cheeks and fades into the skin as if from the cool morning air, giving the faint pink lean that Astia lends to skin highlights. (아침 장면일 때) |
 | C | base | きめ細かなマット肌 — A fine matte skin finish that reads smooth and faintly pearly in soft window light, with no wet sheen anywhere. |
 | 전부 | lip | 素の唇 — Bare lips in their own natural color with a faint moist sheen, the lip line left plain. (S1~S6 전용) |
 
@@ -66,13 +66,13 @@
 | A | expression | 無邪気な振り返り — She turns mid-step as if a friend had called her name, the eyes still refocusing and the lips slightly parted. |
 | A | expression | 無防備 — Nothing is held for the camera: the eyes drift to something off to the side, the mouth rests soft and the shoulders stay loose. |
 | A, B | gaze | 芯のある眼差し — A level, steady gaze straight into the lens with relaxed lids and closed lips, calm and unforced. (滤镜 #038 #026) |
-| B | expression | 朝露の瞳 — Bright, wet-looking eyes with one crisp catchlight, the lids fully open and the skin faintly dewy in the cool morning air. (滤镜 #025) |
+| B | expression | 朝露の瞳 — Bright, wet-looking eyes with one crisp catchlight, the lids fully open and the skin faintly dewy in the cool morning air. (滤镜 #025) (아침 장면일 때) |
 | B, D | squint | まぶしげ — The lids narrow against strong light and lift the cheeks into a faint squint, the brows relaxed. |
 | C | expression | 伏し目 — The eyelids lower and the lashes rest toward the cheek, the face quiet and composed. (滤镜 #030 #037) |
 | C | expression | 無垢な静寂 — A blank, calm face with soft lids and a relaxed jaw, thinking of nothing in particular. (滤镜 #028) |
 | C | mood | 物思い — The gaze rests on something outside the frame, the head tilted slightly toward the light and the mouth relaxed. (滤镜 #029) |
-| D | expression | 童心 — An open, unguarded laugh with crinkled eyes and visible teeth, as if a wave has just splashed her ankles. (滤镜 #035) |
-| D | expression | ほろ甘い幸福感 — A quiet half-smile with the lids slightly lowered, content and a little wistful as the day ends. (滤镜 #027) |
+| D | expression | 童心 — An open, unguarded laugh with crinkled eyes and visible teeth, as if a wave has just splashed her ankles. (滤镜 #035) (파도 가장자리 장면일 때) |
+| D | expression | ほろ甘い幸福感 — A quiet half-smile with the lids slightly lowered, content and a little wistful as the day ends. (滤镜 #027) (해질녘 장면일 때) |
 | A | expression | いたずらっぽい笑顔 — A lopsided grin spreads suddenly at a friend's remark, the eyes narrowed and sparkling as if she were about to pull a prank. (S3 전용) |
 
 ## Outfit
@@ -81,20 +81,20 @@
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
 | A | outfit | 白シャツ — A crisp white cotton shirt worn untucked with the sleeves pushed to the elbows, the sunlit side bright white and the shaded side pale blue-gray. (滤镜 #032) |
-| A | outfit | シアーリネン — A white washed-linen shirt thin enough that dappled light glows through the open weave at the shoulders. (滤镜 #021) |
+| A | outfit | シアーリネン — A white washed-linen shirt thin enough that dappled light glows through the open weave at the shoulders. (滤镜 #021) (나뭇잎 그림자 장면일 때) |
 | A | outfit-outer | トレンチコート — A light olive trench with the belt loosely tied, the storm flap holding a crisp edge and the hem swinging as she walks. (滤镜 #023) |
 | A | outfit-outer | テーラードスーツ — A charcoal double-breasted tailored suit with sharp shoulders, the wool holding fine clean lines at the lapel. (滤镜 #038) |
 | A | outfit-bottom | カーゴパンツ — Olive cargo trousers cut wide with deep side pockets that bulge a little, the hem breaking onto her shoes. (滤镜 #032) |
 | B | outfit | ローゲージニット — A thick white loose-stitched knit whose large stitches cast tiny shadows on each other and soften into the backlight. (滤镜 #025) |
 | B | outfit | オックスフォードシャツ — A light-blue basket-weave oxford shirt with the collar points buttoned flat and soft creases at the elbows. (滤镜 #040) |
 | B | outfit-outer | トレンチコート — A pale khaki trench worn open over a quiet outfit, the cloth falling straight in the still air. (滤镜 #026) |
-| B | outfit-bottom | プリーツスカート — A white knee-length skirt with knife pleats that open in a fan as she steps up. (滤镜 #040) |
+| B | outfit-bottom | プリーツスカート — A white knee-length skirt with knife pleats that open in a fan as she steps up. (滤镜 #040) (계단 장면일 때) |
 | C | outfit | ホワイトリネンワンピース — A long plain white linen dress with natural creases, its edges turning bright where soft light reaches them. (滤镜 #028) |
 | C | outfit | タートルネック — A fitted black fine-knit turtleneck dress that holds a narrow line from collar to knee and shows no highlight except along the shoulder. (滤镜 #030) |
 | C | outfit-outer | コクーンコート — A heavy deep-gray wool coat with dropped shoulders that balloons through the body, the nap soaking up the window light. (滤镜 #024) |
 | D | outfit | 綿麻ワンピース — A sleeveless white cotton-linen dress with natural wrinkles, the hem moving in the sea breeze. (滤镜 #035) |
 | D | outfit-outer | ダッフルコート — A deep navy wool duffle coat with horn toggles, its matte nap soaking up the low light. (滤镜 #027) |
-| D | swimwear | ワンピース水着 — A plain dark one-piece swimsuit with thin straps and a clean scooped back, the wet fabric holding a smooth sheen under an open white linen shirt. |
+| D | swimwear | ワンピース水着 — A plain dark one-piece swimsuit with thin straps and a clean scooped back, the wet fabric holding a smooth sheen under an open white linen shirt. (물가 장면일 때) |
 | A | outfit | フーディー — A loose heavyweight cotton hoodie with a thick double hood that stands up by itself and a dropped shoulder seam. (S3 전용) |
 
 ## Legwear
@@ -106,7 +106,7 @@
 ## Props and nails
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
-| A | hand-prop | 文庫本 — A worn paperback held half-open in one hand with a finger marking the page, the paper warm white in the dappled light. (滤镜 #021) |
+| A | hand-prop | 文庫本 — A worn paperback held half-open in one hand with a finger marking the page, the paper warm white in the dappled light. (滤镜 #021) (나뭇잎 그림자 장면일 때) |
 | A | carry | LP — An old LP sleeve held against her hip, its cover a plain faded color with no readable title. (滤镜 #022) |
 | A | bag | トートバッグ — A large soft black leather tote carried over the forearm, its smooth grain taking one long highlight. (穿搭/06 #093 #096) |
 | C | hand-prop | 文庫本 — A yellowed second-hand paperback whose thin pages are turned by one fingertip, glowing at the edge in the window light. (滤镜 #024) |
@@ -119,7 +119,7 @@
 | A | style | シティガール — A minimal wardrobe of muted solid pieces, flat shoes and one good bag, worn with an unforced, relaxed stance. |
 | B | style | ナチュラル系 — A soft natural wardrobe of light cotton and knit in off-white and pale tones, nothing stiff or structured. |
 | C | style | 和モダン — Quiet modern-Japanese restraint: plain natural fabrics, straight lines and a lot of calm empty space around her. |
-| C | style | 物の哀れ — A faint melancholy in passing things, soft light resting on a still figure while rain and time move on outside. (滤镜 #029) |
+| C | style | 物の哀れ — A faint melancholy in passing things, soft light resting on a still figure while rain and time move on outside. (滤镜 #029) (비 오는 실내 장면일 때) |
 | C | elegance | 銀座令嬢 — Refined Ginza composure: a long black dress, pale stone and an upright, quiet posture. (滤镜 #030) |
 | D | style | 青春映画 — A summer youth-film mood of sea wind, wide sky and bright color, kept clean and sharp instead of faded. |
 | A | palette | palette — Slide-film color that stays true to nature, with deep emerald green, medium saturation, gentle contrast and bright skin highlights with the faintest pink; a clear sky reads blue only where the frame shows one, the フジカラー 100 route renders the same colors in a neutral standard way, and the S3 night turns warm red-orange under the lamps. |
@@ -154,22 +154,22 @@
 
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
-| A | face-light | 木漏れ日 — Sunlight through the leaves drops small soft-edged gold spots on her shoulder and the table while her face stays in soft open shade. (滤镜 #021) |
+| A | face-light | 木漏れ日 — Sunlight through the leaves drops small soft-edged gold spots on her shoulder and the table while her face stays in soft open shade. (滤镜 #021) (카페 테이블 장면일 때) |
 | A | face-light | 透明感 — Even, clean daylight from the open sky lights her face with gentle contrast and a cool-neutral white balance, so the skin reads bright and clear. (滤镜 #033 #038) |
-| A | rim-light | 西日 — Low afternoon sun comes from behind and to one side, rimming the shirt and hair and stretching long clean shadows across the steps. (滤镜 #032) |
-| A | night-light | ハレーション — Warm light from the shopfront and street lamps spreads a faint red-orange glow around its brightest points, steam softening the air by the noren. (滤镜 #031) |
-| B | face-light | 逆光 — The sun stands behind her and wraps hair and shoulders in a glowing edge while the face is lit softly by the lawn and the open sky. (滤镜 #025) |
+| A | rim-light | 西日 — Low afternoon sun comes from behind and to one side, rimming the shirt and hair and stretching long clean shadows across the steps. (滤镜 #032) (계단 장면일 때) |
+| A | night-light | ハレーション — Warm light from the shopfront and street lamps spreads a faint red-orange glow around its brightest points, steam softening the air by the noren. (滤镜 #031) (S3 전용) |
+| B | face-light | 逆光 — The sun stands behind her and wraps hair and shoulders in a glowing edge while the face is lit softly by the lawn and the open sky. (滤镜 #025) (잔디밭 장면일 때) |
 | B | catchlight | キャッチライト — A small round point of bright sky between the leaves sits in each eye. |
-| B | shrine-light | 木漏れ日 — On the shrine approach, leaf shadows mottle the old stone steps in shifting patches of light and shade under the dense trees. (滤镜 #040) |
+| B | shrine-light | 木漏れ日 — On the shrine approach, leaf shadows mottle the old stone steps in shifting patches of light and shade under the dense trees. (滤镜 #040) (신사 돌계단 장면일 때) |
 | C | face-light | 窓明かり — Daylight from one window falls from the side, modeling the face with a bright side and a soft shadow side that fall off gently. (滤镜 #024 #037) |
-| C | face-light | Rembrandt Lighting — One large softbox about 45 degrees to the side lights one cheek and leaves a small triangle of light on the shadow cheek, the shadow deep but never black. (滤镜 #039) |
+| C | face-light | Rembrandt Lighting — One large softbox about 45 degrees to the side lights one cheek and leaves a small triangle of light on the shadow cheek, the shadow deep but never black. (滤镜 #039) (스튜디오 장면일 때) |
 | C | catchlight | Window Catchlight — A soft rectangular window shape sits in each eye. |
-| C | garden-light | 透明感 — In the dry garden, even bright daylight lies over the raked white gravel while a low side light draws the fine raked lines. (滤镜 #028) |
-| C | veranda-light | Open Shade — On the veranda, deep eaves keep the pale boards in soft open shade while the garden beyond stays bright. (滤镜 #028) |
-| C | shoji-light | Window Light — In the townhouse room, daylight from the garden side glows white through the paper screens and spreads over the tatami. (滤镜 #029) |
-| C | stair-light | Overhead Skylight — Inside the classical building, a soft skylight above falls down the spiral stair and along the one smooth curve of the pale balustrade. (滤镜 #030) |
+| C | garden-light | 透明感 — In the dry garden, even bright daylight lies over the raked white gravel while a low side light draws the fine raked lines. (滤镜 #028) (枯山水 정원 장면일 때) |
+| C | veranda-light | Open Shade — On the veranda, deep eaves keep the pale boards in soft open shade while the garden beyond stays bright. (滤镜 #028) (縁側 장면일 때) |
+| C | shoji-light | Window Light — In the townhouse room, daylight from the garden side glows white through the paper screens and spreads over the tatami. (滤镜 #029) (町屋 장지문 장면일 때) |
+| C | stair-light | Overhead Skylight — Inside the classical building, a soft skylight above falls down the spiral stair and along the one smooth curve of the pale balustrade. (滤镜 #030) (螺旋階段 장면일 때) |
 | D | face-light | 夕暮れ — Low orange sun from behind and the side lays a warm rim along the hair and shoulder and long soft shadows on the ground. (滤镜 #027) |
-| D | face-light | 逆光 — Strong sun from behind and above rims her hair and turns flying spray into bright white points while her face stays lit by the sand. (滤镜 #035) |
+| D | face-light | 逆光 — Strong sun from behind and above rims her hair and turns flying spray into bright white points while her face stays lit by the sand. (滤镜 #035) (파도 물보라 장면일 때) |
 | D | catchlight-sea | デュアルキャッチライト — Two small bright points of reflected sea glitter sit in each eye. |
 | D | catchlight-sunset | Golden Hour Catchlight — Low setting sun puts fine amber sparkles in the irises and a warm gold edge along the cheek. |
 

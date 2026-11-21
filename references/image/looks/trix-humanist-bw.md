@@ -47,7 +47,7 @@
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
 | A, C | hair | Coiffure effet saut du lit — Dark waves reach the collarbones with uneven ends and airy roots, finger-tousled so that a turn of the head or a breeze pulls separate strands sideways. |
-| B | hair | Effet mouillé — Rain-damp hair dries into dark glossy locks that stick to the neck and temples, with a few wet strands lying across one cheek. |
+| B | hair | Effet mouillé — Rain-damp hair dries into dark glossy locks that stick to the neck and temples, with a few wet strands lying across one cheek. (비 오는 장면일 때) |
 | C | hair-up | chignon flou — In place of the loose waves, a loose knot gathered at the back of the head bares the neck, with a few wisps drifting down beside the cheeks. |
 | D | hair | Chignon bas — A tidy low knot at the nape with a few curling wisps at the temples, so the jaw, neck and square shoulders stay bare. |
 | 전부 | bangs | Frange rideau — Centre-parted curtain bangs fall in soft arcs over the temples and cheekbones while the brows and both eyes stay visible. |
@@ -56,7 +56,7 @@
 | D | base | Base légère au fini satiné — A sheer satin-finish base with a soft glassy sheen, so the cheekbones and forehead pick up the side light as clean silver-white against dark hair. |
 | A, D | lip | Beige rosé — A soft matte lip close to the natural lip tone, rendered a shade darker than the cheek with a blurred edge. |
 | B | lip | Lie-de-vin — A deep wine lip that the film renders as a near-black shape against the lit skin, matte with a clear outline. |
-| B | lip-wet | Lie-de-vin — A deep wine-stain lip with a wet satin sheen that the film renders as a near-black shape with one small bright highlight; it replaces the matte lip for the candlelit table. |
+| B | lip-wet | Lie-de-vin — A deep wine-stain lip with a wet satin sheen that the film renders as a near-black shape with one small bright highlight; it replaces the matte lip for the candlelit table. (촛불 식탁 장면일 때) |
 | C | lip | Gloss transparent — Clear gloss over the natural lip colour leaves a small bright highlight at the centre of each lip. |
 | B | hair | Coiffé-décoiffé — Shoulder-length curly hair left deliberately undone, finger-tousled and uneven, a few loose strands falling beside the cheeks. (S3 전용) |
 
@@ -68,11 +68,11 @@
 | A | expression | Nonchalance parisienne — Her eyes rest on a point beside the lens with relaxed lids and closed lips, the chin slightly tucked as she keeps walking. |
 | A | expression | Sourire en coin — Only one mouth corner rises by a millimetre while the eyes stay calm and amused, a quiet knowing look. |
 | A | expression-pause | Rêverie — A fingertip rests near the lips and the eyes drift unfocused toward the distance, the face still and absorbed. |
-| A | expression-wind | Regard glacial — The eyes narrow against the gale and hold level on the way ahead, the face unsmiling and the cheeks tight from the cold. |
+| A | expression-wind | Regard glacial — The eyes narrow against the gale and hold level on the way ahead, the face unsmiling and the cheeks tight from the cold. (강풍 장면일 때) |
 | B | expression | Femme fatale — A steady unsmiling stare from slightly lowered lids, the lips closed and the face calm and guarded under the hard light. |
-| B | expression-candle | Pompette — Glassy, half-lowered eyes and a loose lazy smile, a little tipsy across the table. |
-| C | expression | Lecture absorbée — The lashes lower toward the page and the eyes follow the lines, the lips closed and the brow smooth, all attention inside the book. |
-| C | expression-pause | Acuité du regard — A fingertip stops on the frame of her glasses and the eyes turn sharp and clear as a thought lands. |
+| B | expression-candle | Pompette — Glassy, half-lowered eyes and a loose lazy smile, a little tipsy across the table. (촛불 식탁 장면일 때) |
+| C | expression | Lecture absorbée — The lashes lower toward the page and the eyes follow the lines, the lips closed and the brow smooth, all attention inside the book. (독서 장면일 때) |
+| C | expression-pause | Acuité du regard — A fingertip stops on the frame of her glasses and the eyes turn sharp and clear as a thought lands. (안경 낀 장면일 때) |
 | D | expression | Regard énigmatique — A guarded, unreadable look straight into the lens with the face half in shade and a sliver of light along the cheek. |
 | D | expression-calm | Dédain — The face holds perfectly still with a flat mouth and level eyes lowered a touch, composed like a stone statue. |
 
@@ -86,11 +86,11 @@
 | A | outfit | Marinière classique bretonne — Narrow dark and pale stripes run across a heavy cotton boat-neck top and stay crisp as black-and-white bands in the print. |
 | A, B | outfit-bottom | Jean droit — Plain straight-leg denim that reads as flat dark grey from hip to ankle, with a little slack at the knee. |
 | A, B | outfit-outer | Trench classique — A long belted gabardine trench worn open or loose, the hem swinging at the knee and the storm flap throwing a thin shadow. |
-| A | outfit-outer-coat | pardessus — A heavy charcoal double-breasted wool overcoat with a felted surface, its wide hem lifted by the wind into a long backward arc. |
+| A | outfit-outer-coat | pardessus — A heavy charcoal double-breasted wool overcoat with a felted surface, its wide hem lifted by the wind into a long backward arc. (강풍 장면일 때) |
 | A | outfit-top-cardigan | Gilet — A black wool cardigan hangs open over a plain white tee, the knit texture breaking up the dark mass of the sleeves. |
-| B | outfit-outer | Blazer oversize — An oversize black blazer with built-up shoulders hangs in sharp planes, its lapel edge catching a thin white line of lamp light. |
+| B | outfit-outer | Blazer oversize — An oversize black blazer with built-up shoulders hangs in sharp planes, its lapel edge catching a thin white line of lamp light. (가로등 밤길 장면일 때) |
 | B | outfit | Robe caraco — A thin-strap black silk slip dress with a sheen that runs along each fold, set against the lit collarbones. |
-| B | outfit-candle | Robe nuisette — A long black satin slip dress on thin straps with an open back, the heavy fabric hanging in smooth dark columns beside the candle. |
+| B | outfit-candle | Robe nuisette — A long black satin slip dress on thin straps with an open back, the heavy fabric hanging in smooth dark columns beside the candle. (촛불 식탁 장면일 때) |
 | C | outfit-blazer | Veste en tweed à chevrons — A charcoal herringbone three-button wool jacket with natural shoulders, the weave showing as fine diagonal lines. |
 | C | outfit-shirt | Chemise blanche boyfriend — A very large pale cotton-linen shirt with a slumped open collar and cuffs folded back, its creases catching the side light. |
 | D | outfit | Col roulé — A close black wool roll-neck folded once at the throat, giving a plain dark column under the face. |
@@ -111,7 +111,7 @@
 |---|---|---|
 | A | style | Henri Cartier-Bresson — Black-and-white street reportage built on strict geometry, a passing gesture caught at its peak against clean architectural lines. |
 | A, C | style | Photographie Humaniste — Quiet pictures of ordinary gestures in rich black-and-white, unposed, close to the person and warm in tone. |
-| B | style | Camus — Rain-dark streets and a trench coat soaked at the shoulders, with a calm, dry resignation in how the figure stands. |
+| B | style | Camus — Rain-dark streets and a trench coat soaked at the shoulders, with a calm, dry resignation in how the figure stands. (비 오는 장면일 때) |
 | C | style | French Academic Heritage — Tweed, a plain shirt and round wire glasses, a scholarly Paris look that reads as dark wool against pale stone. |
 | D | style | Minimalist Monochrome French Chic — Plain black knit and tailoring with no jewellery, so the face and the stone behind it carry the whole picture. |
 | 전부 | palette | palette — Pure black, white and a full ladder of silver greys, with no colour anywhere in the frame. |
@@ -143,20 +143,20 @@
 |---|---|---|
 | A | face-light | Paris Overcast Light — Cloud cover works as one huge softbox, so the street is lit evenly with no hard shadow and faces keep wide mid-grey tones and pale highlights. |
 | A | catchlight | Lumière du ciel gris — A soft crescent of pale sky glows at the top edge of each iris under even overcast light. |
-| B | face-light | Réverbère — A single cast-iron street lamp overhead lights the crown of the head, nose bridge and collarbones with bright points and drops hard black shadows under the brow and chin. |
-| B | face-light-candle | Lueur de bougie — One candle on the table lights the near cheek, lashes and collarbones from below, while the rest of the face and the room fall into deep shadow. |
-| B | catchlight | dual starburst catchlight — Two tiny bright flame points sit in each dark pupil like distant stars. |
-| B | backlight | Silhouette — She becomes a clean black outline against the much brighter rain-washed sky, with only a thin rim of light on the edges. |
-| B | reflect | Wet Street Reflections — Wet stone and puddles mirror the bright sky as glossy white patches beside deep black paving. |
-| B | reflect-puddle | Wet Street Reflections — In the shallow puddle the pale sky and the street lamps sit as clean mirror shapes of white and bright points in black water. |
-| C | face-light-overcast | Paris Overcast Light — Outdoors under the grey sky, soft even daylight lays pale highlights and mid-grey tones over the book boxes and her face with no hard shadow. |
-| C | face-light-arcade | Sidelight — Under the Sorbonne arcade, pale light enters from one side only and cuts deep shadow across the carved stone and half of her face. |
-| C | face-light-bulb | Lumière tungstène — One bare overhead bulb lights the forehead, nose bridge and the raised record from above in hard silver-white points while the sleeves and crates fall into deep grey shadow. |
+| B | face-light | Réverbère — A single cast-iron street lamp overhead lights the crown of the head, nose bridge and collarbones with bright points and drops hard black shadows under the brow and chin. (가로등 밤길 장면일 때) |
+| B | face-light-candle | Lueur de bougie — One candle on the table lights the near cheek, lashes and collarbones from below, while the rest of the face and the room fall into deep shadow. (촛불 식탁 장면일 때) |
+| B | catchlight | dual starburst catchlight — Two tiny bright flame points sit in each dark pupil like distant stars. (촛불 식탁 장면일 때) |
+| B | backlight | Silhouette — She becomes a clean black outline against the much brighter rain-washed sky, with only a thin rim of light on the edges. (비 오는 낮 장면일 때) |
+| B | reflect | Wet Street Reflections — Wet stone and puddles mirror the bright sky as glossy white patches beside deep black paving. (젖은 길 장면일 때) |
+| B | reflect-puddle | Wet Street Reflections — In the shallow puddle the pale sky and the street lamps sit as clean mirror shapes of white and bright points in black water. (웅덩이 장면일 때) |
+| C | face-light-overcast | Paris Overcast Light — Outdoors under the grey sky, soft even daylight lays pale highlights and mid-grey tones over the book boxes and her face with no hard shadow. (부키니스트 장면일 때) |
+| C | face-light-arcade | Sidelight — Under the Sorbonne arcade, pale light enters from one side only and cuts deep shadow across the carved stone and half of her face. (소르본 아치 장면일 때) |
+| C | face-light-bulb | Lumière tungstène — One bare overhead bulb lights the forehead, nose bridge and the raised record from above in hard silver-white points while the sleeves and crates fall into deep grey shadow. (레코드 가게 장면일 때) |
 | C, D | face-light | Window Light — Daylight from one tall side window lights the near cheek, brow and nose bridge and falls off smoothly into the shadow on the far side of the face. |
-| C | catchlight-bulb | Catchlight — A small round point of the bare bulb sits at the top of each eye. |
+| C | catchlight-bulb | Catchlight — A small round point of the bare bulb sits at the top of each eye. (레코드 가게 장면일 때) |
 | C, D | catchlight | Fenêtres haussmanniennes — Tall paned window shapes appear as small gridded reflections in the iris, light falling from one side. |
-| D | shadow | geometric light and shadow — Strong afternoon side light is cut by a row of columns into parallel black bands across the floor and wall, leaving one clean strip of light on her face and shoulder, and each flat column side splits into a clean vertical plane of light and a plane of dark. |
-| D | wall-light | Window Light — Soft curtain-filtered window light grazes the plaster mouldings and leaves only a faint gradient of light across the painted panels behind her. |
+| D | shadow | geometric light and shadow — Strong afternoon side light is cut by a row of columns into parallel black bands across the floor and wall, leaving one clean strip of light on her face and shoulder, and each flat column side splits into a clean vertical plane of light and a plane of dark. (기둥 회랑 장면일 때) |
+| D | wall-light | Window Light — Soft curtain-filtered window light grazes the plaster mouldings and leaves only a faint gradient of light across the painted panels behind her. (판벽 실내 장면일 때) |
 
 ## Optics
 **하나만 고르는 슬롯:** `stock`·`stock-dim`(필름 줄은 하나, 촛불 식탁이면 `stock-dim`의 Delta 3200)
@@ -165,7 +165,7 @@
 |---|---|---|
 | A | stock | Kodak Tri-X 400 — A black-and-white negative with ink-deep blacks and open bright highlights on a steep grey ramp, so faces and stone keep strong contrast. |
 | B | stock | Kodak Tri-X 400 — The same stock exposed in dim light, with blacks that swallow detail and highlights that glare almost white. |
-| B | stock-dim | Ilford Delta 3200 — A very fast film for a room lit by one flame: heavy soft grain, softly spreading highlights and a smoky low-light rendering. |
+| B | stock-dim | Ilford Delta 3200 — A very fast film for a room lit by one flame: heavy soft grain, softly spreading highlights and a smoky low-light rendering. (촛불 식탁 장면일 때) |
 | C | stock | Ilford HP5 Plus — A forgiving film with a long scale of greys, moderate contrast and shadows that keep their detail in cloth and hair. |
 | D | stock | Kodak T-Max — A modern fine-grain film with smooth tones, crisp detail and clean luminous highlights. |
 | A | lens | Summicron 35mm f/2 — A wide-normal lens keeps her sharp and holds enough of the street around her to read the place, with a smooth falloff behind. |
@@ -177,7 +177,7 @@
 | C | grain | Grain fin — Fine, tight silver grain that stays tactile in the shadows but lets wool and skin read smoothly. |
 | D | grain | Grain fin — Almost no grain shows at normal size, so skin and stone move from white to black in clean smooth steps. |
 | B | push | Pellicule poussée — The Tri-X is pushed two to three stops, giving harder contrast and deeper blacks than the stock gives at its normal speed. |
-| A | motion | 1/1000s Shutter — The coat hem and hair freeze mid-gust with crisp edges while the background stays perfectly still. |
+| A | motion | 1/1000s Shutter — The coat hem and hair freeze mid-gust with crisp edges while the background stays perfectly still. (강풍 장면일 때) |
 
 ## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 세트를 쓰는 조건은 규칙 4항이 정하고, 세트 값은 고정 사실보다 먼저다. 규칙은 image-brief.md §4 '룩 카드' 4항과 '비워 둔 층')
 | 세트 | 갈래 | 묶음 |

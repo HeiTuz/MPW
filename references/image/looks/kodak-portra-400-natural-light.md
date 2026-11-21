@@ -51,8 +51,8 @@
 | A | hair-loose | Sunkissed Lob — A collarbone-length cut in dirty blonde with sun-lightened caramel ends flips outward at the shoulders and tousles when she laughs. |
 | B, C | hair | Golden Balayage — Long dark-gold hair with honey streaks falls in soft waves or straight lengths over the shoulders, each streak warming where daylight grazes it. |
 | C | hair-tied | Sleek Low Ponytail — Dark chestnut hair is combed smooth into a low tail at the nape, leaving the neck, the jaw and small pearl studs fully visible. |
-| D | hair | Windblown Hair — Light-gold strands lift in one direction in the sea breeze and brush the cheek and forehead while the eyes and brows stay open. |
-| D | hair-curl | Voluminous Curls — Big gold curls bounce at the shoulders and swing with the evening wind, each curl catching a little warm light on its upper curve. |
+| D | hair | Windblown Hair — Light-gold strands lift in one direction in the sea breeze and brush the cheek and forehead while the eyes and brows stay open. (바닷바람 장면일 때) |
+| D | hair-curl | Voluminous Curls — Big gold curls bounce at the shoulders and swing with the evening wind, each curl catching a little warm light on its upper curve. (S6 전용) |
 | 전부 | brow | Brow Lamination — Full natural brows are brushed upward with every hair visible and a faint sheen where the light grazes them. |
 | 전부 | base | Skin Tint — A sheer peach-toned tint evens the color but leaves pores, faint sun freckles and fine texture clearly visible, with no powder finish. |
 | 전부 | blush | Peach Blush — A soft peach wash over the cheeks and nose bridge melts into the base with no hard edge and a faint satin shine. |
@@ -70,7 +70,7 @@
 | B | expression-quiet | Half-Lidded Gaze — The lids rest halfway over the irises in a quiet, unhurried look while the brows stay smooth. |
 | B, C | expression-away | Off-Camera Gaze — The eyes settle on a point just beside the lens, on the window or the far path, with relaxed lids and an easy mouth. |
 | C | expression-pensive | Pensive Gaze — The eyes fix on a far point among the trees with relaxed lips and a quiet, untroubled brow. |
-| C | expression-mug | Coffee Cup Contemplation — Both hands wrap a hot mug near the chest while the brows soften and the eyes rest on the mist over the river. |
+| C | expression-mug | Coffee Cup Contemplation — Both hands wrap a hot mug near the chest while the brows soften and the eyes rest on the mist over the river. (S5 전용) |
 | D | expression-laugh | Head-Tilted Laugh — The head tips back about fifteen degrees with the eyes nearly closed and the mouth wide open in a laugh against the open sky. |
 | D | expression-dusk | Sunset Serene Grin — The lips part just enough to show a thin line of teeth in a calm smile, the face turned a little over one shoulder in the cool dusk. |
 
@@ -87,11 +87,11 @@
 | A | outfit-alt-sport | Sports Bra Set — A gray sports bra and high-waisted leggings in matte stretch fabric hug the torso with a faint sheen along the seams, a white terry towel around the neck. |
 | B | outfit | Cotton Nightshirt — A loose white cotton nightshirt with a soft collar and fine creases at the elbows slips slightly off one shoulder. |
 | B | outfit-alt-silk | Silk Slip Dress — A narrow-strap ivory silk dress slips straight down the body, a liquid sheen running along each fold. |
-| C | outfit | Camel Coat — A long camel wool coat with a soft brushed surface hangs open over a dark knit, its drape catching dappled gold light. |
+| C | outfit | Camel Coat — A long camel wool coat with a soft brushed surface hangs open over a dark knit, its drape catching dappled gold light. (나뭇잎 사이 햇빛 장면일 때) |
 | C | outfit-alt-jacket | Double-Breasted Blazer — A navy worsted wool blazer with two rows of buttons sits over a crisp white shirt, the weave visible and the brass buttons throwing small glints. |
 | C | outfit-alt-knit | Argyle Cardigan — A knit cardigan with an oatmeal diamond lattice in navy and burgundy hangs loose over a white collared shirt, its wool loops soft and slightly fuzzy. |
-| C | outfit-wrap | shawl — A heavy charcoal wool shawl with a fringed edge wraps the shoulders, its coarse weave and fringe softened by mist. |
-| D | outfit | white linen dress — A white linen dress on thin straps with a long skirt billows in the sea wind, soft slubs and creases glowing at the edges. |
+| C | outfit-wrap | shawl — A heavy charcoal wool shawl with a fringed edge wraps the shoulders, its coarse weave and fringe softened by mist. (S5 전용) |
+| D | outfit | white linen dress — A white linen dress on thin straps with a long skirt billows in the sea wind, soft slubs and creases glowing at the edges. (바닷바람 장면일 때) |
 | D | outfit-alt-floral | ditsy floral dress — A light cotton dress printed with small scattered flowers falls from thin straps in loose gathers over the chest. |
 | D | outfit-alt-knit | cashmere knit — An ivory oversized cashmere knit with a soft fuzzy nap drapes in loose folds, its fibers glowing faintly along the edges. |
 
@@ -121,7 +121,7 @@ S6(블루아워)는 `style-look` 줄 대신 D의 `style-look-dusk` 줄을 쓰고
 | B | style | Raw Linen Minimalism — Undyed wrinkled cotton and linen in ivory, matte surfaces and quiet empty space around her. |
 | B | style-room | California Organic Minimalism — Pale oak, matte plaster and soft greenery in bright milky window light with a restrained cream and sage palette. |
 | C | style | Upper East Side — Quiet Manhattan polish in muted camel, charcoal and brown leather with no logos and nothing overdone. |
-| C | style-campus | Ivy League — Oxford shirts, cricket knits and navy blazers against old brick and ivy in soft autumn light. |
+| C | style-campus | Ivy League — Oxford shirts, cricket knits and navy blazers against old brick and ivy in soft autumn light. (하버드 교정 장면일 때) |
 | D | style | Sunlit Vitality — Warm clear light on glowing skin and fresh greens, with bright whites and soft green accents. |
 | D | style-pastoral | Cottagecore — A soft pastoral look of tiny florals and loose cotton gathers in warm leaf-filtered light. |
 | 전부 | palette | palette — The film's color response leans warm in this look: skin highlights hold a peach to apricot tone and whites turn cream and ivory, with brick, camel and drab olive midtones and misty blue-grey shadows; saturation stays low, and nothing neon, fluorescent or cold cyan appears in the daylight. |
@@ -147,16 +147,16 @@ S6(블루아워)는 `style-look` 줄 대신 D의 `style-look-dusk` 줄을 쓰고
 ## Light
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
-| A | face-light | Open Shade — Daylight in shade under an awning gives soft even light on the face with gentle shadows and clean neutral color. |
-| A | light-fill | Sidewalk Bounce Light — Pale granite pavement reflects soft fill upward into the jaw, collarbones and eye sockets without any hard shadow. |
-| A | sun | Noon Sunlight — Strong overhead sun lands on a white cotton shirt while the face sits in open shade, so the whites keep every thread instead of clipping. |
+| A | face-light | Open Shade — Daylight in shade under an awning gives soft even light on the face with gentle shadows and clean neutral color. (카페 차양 장면일 때) |
+| A | light-fill | Sidewalk Bounce Light — Pale granite pavement reflects soft fill upward into the jaw, collarbones and eye sockets without any hard shadow. (화강암 인도 장면일 때) |
+| A | sun | Noon Sunlight — Strong overhead sun lands on a white cotton shirt while the face sits in open shade, so the whites keep every thread instead of clipping. (흰 셔츠 입은 장면일 때) |
 | A, D | sky | Overcast Light — A grey cloud layer acts as one big softbox, giving shadowless even light and a quiet, slightly cool color on the skin. |
-| B | face-light | Window Light — Soft morning daylight from one window through a white sheer curtain models the face with a bright side and a gentle shadow side. |
-| B | light-fill | Venetian Blind Shadows — Sun through wooden blinds lays parallel soft-edged bands of gold and shadow across her face, shoulders and the white wall. |
+| B | face-light | Window Light — Soft morning daylight from one window through a white sheer curtain models the face with a bright side and a gentle shadow side. (시어 커튼 장면일 때) |
+| B | light-fill | Venetian Blind Shadows — Sun through wooden blinds lays parallel soft-edged bands of gold and shadow across her face, shoulders and the white wall. (블라인드 창 장면일 때) |
 | C, D | face-light | dappled light — Sun filtered through yellow elm leaves or orchard canopy breaks into soft moving spots on her face, shoulders and the ground. |
-| C | light-fill | Bounce Light — Sun striking an aged red brick wall reflects a warm terracotta fill into the side of her face and collarbones. |
+| C | light-fill | Bounce Light — Sun striking an aged red brick wall reflects a warm terracotta fill into the side of her face and collarbones. (붉은 벽돌 장면일 때) |
 | C, D | weather | Atmospheric Haze — Fine mist or sea haze scatters the light so contrast drops, shadows weaken and distant shapes fade into pale layers. |
-| D | ambient | Blue Hour — A deep indigo sky after sunset gives cool shadowless light on her face while the city below glows warm gold. |
+| D | ambient | Blue Hour — A deep indigo sky after sunset gives cool shadowless light on her face while the city below glows warm gold. (도시 야경 장면일 때) |
 
 ## Optics
 **하나만 고르는 슬롯:** `body`·`body-tlr`(갈래의 본체 하나), `lens`·`lens-wide`·`lens-medium`(렌즈 줄 하나, 본체와 마운트가 맞는 것), `gradation-*`·`cast-p67`(고른 본체의 것 하나만: `gradation-contax`는 `Contax 645`, `gradation-rollei`는 `Rolleiflex 2.8F`, `cast-p67`은 `Pentax 67` 본체와 `SMC Takumar 105mm f/2.4` 줄을 골랐을 때)

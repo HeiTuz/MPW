@@ -52,8 +52,8 @@ A는 `hair`(雨后微湿长发)와 `hair-tied`(贴头皮盘发) 가운데 하나
 | B | hair | 黑长直 — Long straight black hair hangs loose down the back, its ends stirred by the faint lake breeze and showing a dim silken sheen under the grey light. |
 | C | hair | 低丸子头 — A loose low bun sits at the nape with a few strands slipping out, soft and unhurried rather than tidy. |
 | C | hair-side | 碎发低发髻 — A low side chignon lets fine strands drift beside the ears and down to the collarbone. |
-| D | hair | 发簪 — A warm brown sandalwood pin holds a loose low knot of dark hair, its matte grain faintly lit by the slanting sun. |
-| D | hair-wave | 法式大波浪 — Loose dark waves fall past the shoulders and catch a thin warm line of lamplight along their curves. |
+| D | hair | 发簪 — A warm brown sandalwood pin holds a loose low knot of dark hair, its matte grain faintly lit by the slanting sun. (S4 전용) |
+| D | hair-wave | 法式大波浪 — Loose dark waves fall past the shoulders and catch a thin warm line of lamplight along their curves. (S5 전용) |
 | A, C | base | 微光冷瓷肌 — A cool translucent base leaves a faint inner glow on the skin, the highlights resting softly on the upper cheeks like damp jade. |
 | B | base | 伪素颜 — A sheer, almost bare base lets pores and fine texture show under only a faint moist glow, with no visible colour work. |
 | D | base | 冷白瓷肌 — A semi-matte cool porcelain base that warms slightly wherever the slatted sun or the lamp touches it. |
@@ -69,16 +69,16 @@ A는 `hair`(雨后微湿长发)와 `hair-tied`(贴头皮盘发) 가운데 하나
 
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
-| A | expression | 波澜不惊 — The eyes stay steady and the brows and mouth stay still as the head turns a few degrees toward the water, showing nothing for the camera. |
+| A | expression | 波澜不惊 — The eyes stay steady and the brows and mouth stay still as the head turns a few degrees toward the water, showing nothing for the camera. (물가 장면일 때) |
 | A | expression | 垂眸 — The lids lower and the gaze softens onto the wet stones at her feet, the lashes dark against the cheek and the lips closed. |
 | A | expression | 矜持 — The chin sits level and slightly raised, the lips closed and the gaze steady on the lens, composed and unhurried. |
 | B | expression | 清冷感 — A still face with level, unhurried eyes drifting out over the water, the lips closed and nothing animated. |
 | B | expression | 失神 — The eyes rest on nothing in the middle distance, the lids still and the lips parted a fraction. |
 | C | expression | 云淡风轻 — A faint ease sits around the mouth and the shoulders hang loose, the eyes resting on the far distance as if nothing weighs on her. |
-| C | expression | 莞尔 — A small closed-lip smile lifts only the mouth corners while her eyes follow the lilies drifting on the water. |
+| C | expression | 莞尔 — A small closed-lip smile lifts only the mouth corners while her eyes follow the lilies drifting on the water. (연못 수련 장면일 때) |
 | D | expression | 茶道入定 — The lowered eyes rest on the tea below while steam climbs across the face and the shoulders stay loose. |
 | D | expression | 垂眸 — The eyes lower toward the tea things with the lashes resting toward the cheek, the mouth closed and the face quiet. |
-| D | expression | 凝视灯火 — The eyes rest on the small lamp flame, a tiny warm point reflected in each pupil, the face calm and the shoulders loose. |
+| D | expression | 凝视灯火 — The eyes rest on the small lamp flame, a tiny warm point reflected in each pupil, the face calm and the shoulders loose. (S5 전용) |
 
 ## Outfit
 **하나만 고르는 슬롯:** `outfit`·`outfit-alt-*`(갈래의 옷 후보, 하나만 입는다. A는 `outfit` 改良旗袍·`outfit-alt-coat` 风衣·`outfit-alt-robe` 长衫, C는 `outfit` 雪纺·`outfit-alt-cheongsam` 改良旗袍, D는 `outfit` 交领·`outfit-alt-blouse` 真丝·`outfit-alt-knit` 高领针织衫)
@@ -90,9 +90,9 @@ A는 `hair`(雨后微湿长发)와 `hair-tied`(贴头皮盘发) 가운데 하나
 | A | outfit-alt-coat | 风衣 — A floor-length black wool trench hangs straight and heavy, the dark cloth giving back only a thin pale line along the lapel and hem. |
 | A | outfit-alt-robe | 长衫 — A black worsted-wool crossover robe falls straight to the shin, its fine weave matte and its folds sharp against the pale wall. |
 | B | outfit | 月白 — A moon-white double-layered washed-silk robe falls to the ankle, its pale blue-white nearly lost in the fog except where soft creases catch the light. |
-| B | outfit-outer | 斗篷 — An ink-black heavy-silk cloak falls from the shoulders in one wide swing and lifts in the pond breeze, a hard dark shape against the white wall. |
+| B | outfit-outer | 斗篷 — An ink-black heavy-silk cloak falls from the shoulders in one wide swing and lifts in the pond breeze, a hard dark shape against the white wall. (S6 전용) |
 | C | outfit | 雪纺 — A white double-layer silk chiffon gown lifts in the air and lets haze show through its layers, its highlights blooming softly. |
-| C | outfit-alt-cheongsam | 改良旗袍 — A pale celadon heavy-silk cheongsam dress holds a soft satin sheen that picks up the moving water light across the bodice. |
+| C | outfit-alt-cheongsam | 改良旗袍 — A pale celadon heavy-silk cheongsam dress holds a soft satin sheen that picks up the moving water light across the bodice. (수면 반사광 장면일 때) |
 | D | outfit | 交领 — A tea-white raw dupioni silk robe crosses right over left and ties at the waist, its slubby weave catching the slats of sun as fine bumps. |
 | D | outfit-alt-blouse | 真丝 — A moon-white heavy silk V-neck blouse drapes in soft folds that lengthen the neck, a fine sheen moving along each fold. |
 | D | outfit-alt-knit | 高领针织衫 — A fine-knit earth-brown wool turtleneck folds once at the collar, its soft fuzz catching the amber lamp in a thin halo. |
@@ -121,14 +121,14 @@ A는 `hair`(雨后微湿长发)와 `hair-tied`(贴头皮盘发) 가운데 하나
 | A | place | 乌镇 — A water town of dark wooden houses, stone arch bridges and still canals under low mist, wet stone steps leading down to the grey water. |
 | A | place | 天井积水 — In the sunken brick paving of an old Huizhou house, rain pools in a shallow puddle that mirrors the stepped gables and dark tile eaves above. |
 | A | alley | 雨巷 — A narrow wet lane between grey brick walls and dark tile roofs, the paving damp underfoot. |
-| A | ground | 青石板路 — Blue-grey flagstones rinsed by rain turn into a dim mirror that doubles the upright figure and the umbrella at low angle. |
+| A | ground | 青石板路 — Blue-grey flagstones rinsed by rain turn into a dim mirror that doubles the upright figure and the umbrella at low angle. (우산 든 장면일 때) |
 | A | background | 青砖黛瓦 — Grey-blue brick walls and dark tile roofs, clean and slightly cool, the brick darkened with damp. |
 | B | place | 西湖 — A broad calm lake ringed by willows and stone causeways with grey mist lying on the water, a flat lakeside rock in the foreground. |
 | B | place | 宏村 — Across the crescent pond of a Huizhou village, stacked white walls with stepped gables and black tiles climb behind a stone embankment. |
-| B | background | 远山含黛 — Layered hills and a distant pagoda fade into milky grey haze behind her, the foreground sharp and the far distance dissolving. |
+| B | background | 远山含黛 — Layered hills and a distant pagoda fade into milky grey haze behind her, the foreground sharp and the far distance dissolving. (S3 전용) |
 | C | place | 月洞门 — A perfectly round opening in a white garden wall with a white marble rim frames her like a circular picture, the garden beyond softened by haze. |
 | C | place | 水榭 — An open-air wooden pavilion stands over a koi pond with vermilion railings and latticed windows, lily pads floating below. |
-| C | rail | 美人靠 — A curved vermilion bench-rail runs along the pavilion edge and opens to the pond, the water just beneath it. |
+| C | rail | 美人靠 — A curved vermilion bench-rail runs along the pavilion edge and opens to the pond, the water just beneath it. (물가 정자 장면일 때) |
 | D | place | 茶舍 — A Jiangnan tea room with carved windows open to flowing water and a low tea table. |
 | D | window | 木格栅窗 — Slatted wooden windows with evenly spaced wooden bars are set into the walls. |
 | D | floor | 蔺草席 — A woven rush mat with fine straight ridges and a pale straw-green tone lies flat and matte on the dark floor. |
@@ -151,7 +151,7 @@ C의 `柔和漫射光`과 `水面焦散`은 둘 중 하나만 쓴다. `水面焦
 | D | face-light | 百叶窗光影 — Slanting afternoon sun through wooden slats lays evenly spaced warm golden bars across the mat, the robe and her profile. |
 | D | backlight | 茶烟逆光 — A soft side-back light passes through the rising tea steam so the vapour glows white and softens the jaw line, lip line and fingers. |
 | D | dusk-light | 冷暖对冲 — A warm lamp on one side and the cool blue canal dusk at the window on the other split her face into amber and pale blue that meet in a soft seam. |
-| D | light-fill | 煤油灯 — A small oil lamp burns on the table, its deep yellow flame lighting the knit sleeve and hands while the window behind stays cold blue. |
+| D | light-fill | 煤油灯 — A small oil lamp burns on the table, its deep yellow flame lighting the knit sleeve and hands while the window behind stays cold blue. (S5 전용) |
 | D | catchlight | 窗格眼神光 — The window leaves a soft rectangular highlight, split by the lattice, in the upper part of each iris. |
 | D | catchlight-lamp | lamp catchlight — One small warm point from the lamp flame sits in each eye. |
 | D | window-light | Soft Lattice Window Light — When the tea room is lit by day, soft light through the carved windows breaks into scattered mottled patches over the mat and low table, their edges kept gentle by the haze. |

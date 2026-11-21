@@ -132,17 +132,17 @@
 |---|---|---|
 | A, C | face-light | 霓虹双色侧光 — A red neon sign on one side and green tube light on the other split her face into two colors that meet along the nose. |
 | A | light-fill | 荧光灯 — Green-tinged fluorescent light from a shop interior washes the background flat and cool. |
-| A | place-light-corridor | 荧光灯 — In the cramped shop corridor, mixed light from the signs and tubes bounces between the close walls and over the reflective floor. |
-| A | place-light-diner | 荧光灯 — In the diner, green-tinged fluorescent light hangs over the booths above the warmer lamps along the walls. |
-| B | face-light | 钨丝灯 — One low warm tungsten street lamp high above throws amber light across her shoulders and leaves the walls in deep shadow. |
-| B | face-light | 百叶窗光影 — Mixed warm bulb light and cool window light fall through louvres in parallel bars across her cheek. |
-| B | place-light-booth | 钨丝灯 — In the deep red booth, the warm light of the brass wall sconces leaves the corners in dark red shade. |
-| C | place-light-fastfood | 荧光灯 — At the fast-food booth, hard cool-white fluorescent light falls on the red plastic seats while the window beside it stays dark. |
+| A | place-light-corridor | 荧光灯 — In the cramped shop corridor, mixed light from the signs and tubes bounces between the close walls and over the reflective floor. (상가 복도 장면일 때) |
+| A | place-light-diner | 荧光灯 — In the diner, green-tinged fluorescent light hangs over the booths above the warmer lamps along the walls. (차찬텡 식당 장면일 때) |
+| B | face-light | 钨丝灯 — One low warm tungsten street lamp high above throws amber light across her shoulders and leaves the walls in deep shadow. (가로등 골목 장면일 때) |
+| B | face-light | 百叶窗光影 — Mixed warm bulb light and cool window light fall through louvres in parallel bars across her cheek. (덧창 복도 장면일 때) |
+| B | place-light-booth | 钨丝灯 — In the deep red booth, the warm light of the brass wall sconces leaves the corners in dark red shade. (식당 부스석 장면일 때) |
+| C | place-light-fastfood | 荧光灯 — At the fast-food booth, hard cool-white fluorescent light falls on the red plastic seats while the window beside it stays dark. (패스트푸드점 장면일 때) |
 | D | face-light | green louvre light — Filtered daylight through green louvres lays a jade-green cast over the room and the shadow side of her face. |
-| D | place-light-room | 钨丝灯 — The room behind the half-closed louvres is lit warm from a lamp, and the louvres lay cool striped light across it. |
+| D | place-light-room | 钨丝灯 — The room behind the half-closed louvres is lit warm from a lamp, and the louvres lay cool striped light across it. (덧창 방 장면일 때) |
 | A, C | catchlight | 彩色霓虹眼神光 — Thin red and green neon strips mirror as colored streaks in her irises. |
 | B, D | catchlight | lamp catchlight — One small warm point from the lamp sits in each eye. |
-| A | weather | 雨夜 — Fine rain gives every sign a soft cold halo of mist and catches the neon as short bright streaks. |
+| A | weather | 雨夜 — Fine rain gives every sign a soft cold halo of mist and catches the neon as short bright streaks. (비 오는 밤 장면일 때) |
 
 ## Optics
 | 갈래 | 슬롯 | 줄 |
@@ -156,7 +156,7 @@
 | C | lens | 超广角畸变 — An ultra-wide lens held close stretches the frame edges and gives a slight barrel curve. |
 | D | color | 青绿偏色 — Shadows and midtones lean ink green and the humid light leaves only a faint pale sheen on the skin. |
 | A, B, D | grain | 胶片颗粒 — Fine, even 35mm film grain sits across the whole frame, slightly heavier in the shadows. |
-| C | grain | 胶片颗粒 — Coarse, visible film grain across the whole frame, heaviest in the dark window. |
+| C | grain | 胶片颗粒 — Coarse, visible film grain across the whole frame, heaviest in the dark window. (패스트푸드점 창가 장면일 때) |
 
 ## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 세트를 쓰는 조건은 규칙 4항이 정하고, 세트 값은 고정 사실보다 먼저다. 세트를 고르면 갈래는 그 세트의 갈래 열이다. 단서는 네 칸으로 판정하고 찾기용 낱말이 아니라 장소·소품·시간대·의상이 맞는지로 본다. 묶음 속 K 숫자는 Iris 프리셋의 연출 값이고 프롬프트 문장에는 색으로 옮긴다. 규칙은 image-brief.md §4 '룩 카드' 4항과 '비워 둔 층')
 | 세트 | 갈래 | 묶음 |

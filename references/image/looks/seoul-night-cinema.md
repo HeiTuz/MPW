@@ -54,7 +54,7 @@
 | C | hair | 슬릭 로우포니테일 — Hair is pulled flat into a low ponytail at the nape, leaving the brow, jaw and neck open to the shadows the overhead lamp throws beneath them. (发型 #003) |
 | C | lip | 더스티 로즈 립 — A muted rosy-brown matte lip that stays soft under the orange lamp, with no gloss to catch light. |
 | C | hair | 검은 긴 생머리 — Long black hair hangs straight, a few fine strands lifting in the night air and glinting orange against the dark wall behind. (滤镜 #100) |
-| D | hair | 검은 긴 생머리 — Long black hair blows loose in the river breeze, a few strands streaming sideways across the lit night behind her. (滤镜 #091) |
+| D | hair | 검은 긴 생머리 — Long black hair blows loose in the river breeze, a few strands streaming sideways across the lit night behind her. (滤镜 #091) (한강 장면일 때) |
 | D | hair | 로우 포니테일 — Hair is tied in a smooth low ponytail at the nape and tucked behind the ears, leaving the face open to the cold light. |
 | 전부 | base | 쿨톤 새틴 베이스 — A cool pink-neutral base with a satin finish keeps a soft highlight on the cheekbones that takes the color of the nearest light, so the face holds a cool, bright finish under colored light. |
 
@@ -62,7 +62,7 @@
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
 | A | expression | 차가운 분위기 — A still face with level, unhurried eyes and closed lips, so the passing colored light moves across a calm, cool expression. |
-| A | expression | 빗방울을 따라가는 시선 — The forehead rests near the glass and the eyes follow rain beads down the pane, the face cool and still. (滤镜 #093) |
+| A | expression | 빗방울을 따라가는 시선 — The forehead rests near the glass and the eyes follow rain beads down the pane, the face cool and still. (滤镜 #093) (빗방울 맺힌 차창 장면일 때) |
 | A | expression | 시선 회피 — The eyes slide off toward the window and away from the lens and the head follows a little, leaving a half-turned, unposed look. (滤镜 #092) |
 | B | expression | 도도한 표정 — A level, unsmiling look turned back toward the lens, lids still and mouth closed, with two neon colors cutting across the face. |
 | B | expression | 몽롱한 눈빛 — Half-lowered lids and an unfocused gaze drifting past the lens, the mouth slightly slack. |
@@ -70,7 +70,7 @@
 | C | expression | 넋 나감 — The eyes fix on nothing in the middle distance, the lids still and the lips parted a fraction. |
 | D | expression | 무표정 — Brows, eyes and mouth rest at neutral with no tension, leaving a smooth, unreadable face lit cold white. |
 | D | expression | 멍때리기 — The gaze goes unfocused on a point in the air, the lids relaxed, the lips softly parted and the brow smooth. |
-| D | expression | 체념의 한숨 — The eyes close and a long breath leaves the lips while the shoulders drop high above the traffic. |
+| D | expression | 체념의 한숨 — The eyes close and a long breath leaves the lips while the shoulders drop high above the traffic. (육교·옥상 장면일 때) |
 
 ## Outfit
 | 갈래 | 슬롯 | 줄 |
@@ -92,8 +92,8 @@
 | A | hand-prop | 무선 이어폰 — One white earbud is pinched between thumb and finger and hovers at the ear, lit by the streaks outside. |
 | B | jewelry | 심플 실버 링 귀걸이 — Ultra-fine silver hoops swing slightly and catch one pink point and one blue point on the same curve. |
 | C | hand-prop | 비닐우산 — A clear plastic long umbrella hangs closed from one hand, rain beads sliding down its spokes and holding small orange points of the lamp. |
-| D | hand-prop | 컵라면 — A paper cup of instant noodles with its lid peeled back and a plastic fork across the top, steam rising into the cold white light. (滤镜 #094) |
-| D | hand-prop | 생수병 — A clear bottle of cold water beaded with condensation, a bright line of tube light running down the plastic. (滤镜 #094) |
+| D | hand-prop | 컵라면 — A paper cup of instant noodles with its lid peeled back and a plastic fork across the top, steam rising into the cold white light. (滤镜 #094) (편의점 장면일 때) |
+| D | hand-prop | 생수병 — A clear bottle of cold water beaded with condensation, a bright line of tube light running down the plastic. (滤镜 #094) (형광등 실내 장면일 때) |
 | A, C, D | nails | 맨손톱 — Short natural nails buffed to a soft sheen, the pink nail bed and pale free edge showing through. |
 | B | nails | 미러 파우더 네일 — Chrome-mirror nails reflect the neon as separate bands of magenta and cyan. |
 
@@ -114,7 +114,7 @@
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
 | A | place | 택시 뒷좌석 — A taxi back seat late at night, quiet, with the side window beside her. (滤镜 #092, 风格 #049) |
-| A | window | 창문 빗방울 — Dense droplets on the window glass behind her. (滤镜 #093) |
+| A | window | 창문 빗방울 — Dense droplets on the window glass behind her. (滤镜 #093) (S2 전용) |
 | A | mirror | 백미러 — A narrow rearview-mirror strip hangs at the top edge of the frame, holding the road behind the car. |
 | B | place | 한남동 — A quiet minimal room beside a floor-to-ceiling window with bare pale walls. (滤镜 #095) |
 | B | place | 성수동 — A street corner of raw concrete shopfronts at night with two shop signs. |
@@ -131,10 +131,10 @@
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
 | A | face-light | 차창 불빛 — Red tail lights, blue signs and green road signs outside the moving car stretch into bright bands that slide across her cheek, jaw and the window glass. |
-| A | window | 빗방울 창 — Raindrops on the window glass beside and behind her scatter street and car lights into soft overlapping round blobs. |
+| A | window | 빗방울 창 — Raindrops on the window glass beside and behind her scatter street and car lights into soft overlapping round blobs. (S2 전용) |
 | A | catchlight | 이중 반사 — Street lights and passing cars mirror faintly in her pupils, layered over the reflections in the window glass. |
 | A | weather | 비 오는 밤 — Fine rain gives every lamp outside a cold halo of mist and leaves tiny bright beads on the wet glass. |
-| B | face-light | 투톤 네온 — A magenta sign on her left and an ice-blue shop sign on her right carve the face into two hues with a dark seam along the nose. |
+| B | face-light | 투톤 네온 — A magenta sign on her left and an ice-blue shop sign on her right carve the face into two hues with a dark seam along the nose. (좌우 간판 장면일 때) |
 | B | light-fill | 네온사인 — Glass-tube neon signs spill saturated color onto the wall and floor behind her. |
 | B | catchlight | 네온 캐치라이트 — Thin magenta and blue neon strips mirror as colored streaks in her irises. |
 | C | face-light | 가로등 불빛 — One sodium street lamp overhead gives heavy orange-yellow light that flattens color and leaves deep shadows under the brow and chin. |
@@ -142,11 +142,11 @@
 | C | bounce | 보도 반사광 — Light thrown up from the pale pavement softly fills the underside of her jaw and nose so the shadow under the chin keeps a little detail. |
 | C | catchlight | 캐치라이트 — A small lamp-shaped point of light sits high in each eye. |
 | C | weather | 비 오는 밤 — Mist left after the rain rings the lamp in a faint cold halo and bright beads sit on the wet road. |
-| D | face-light | 한강 야경 불빛 — Cold white lights from the bridge and the far bank ripple on the water and lay a faint cool glitter along her jaw and cheek while the rest of her stays dark. |
-| D | face-light | 형광등 — Overhead tube lighting gives flat, even cool-white light with a faint green cast and very few shadows. |
-| D | light-fill | 별 모양 반사광 — Stainless steel and glass throw sharp star-shaped glints of the tube lights back toward the camera. |
-| D | storefront | 편의점 불빛 — From the convenience store, flat cool-white fluorescent light pours through the full glass front and washes the dark pavement outside. |
-| D | traffic | 빛 궤적 — From the overpass, the car lights on the wide road far below run as long red and white streaks and melt into large round blurs behind her. |
+| D | face-light | 한강 야경 불빛 — Cold white lights from the bridge and the far bank ripple on the water and lay a faint cool glitter along her jaw and cheek while the rest of her stays dark. (한강 장면일 때) |
+| D | face-light | 형광등 — Overhead tube lighting gives flat, even cool-white light with a faint green cast and very few shadows. (형광등 실내 장면일 때) |
+| D | light-fill | 별 모양 반사광 — Stainless steel and glass throw sharp star-shaped glints of the tube lights back toward the camera. (형광등 실내 장면일 때) |
+| D | storefront | 편의점 불빛 — From the convenience store, flat cool-white fluorescent light pours through the full glass front and washes the dark pavement outside. (편의점 장면일 때) |
+| D | traffic | 빛 궤적 — From the overpass, the car lights on the wide road far below run as long red and white streaks and melt into large round blurs behind her. (육교 장면일 때) |
 
 ## Optics
 **하나만 고르는 슬롯:** `tone-*`(고른 `body` 줄의 것 하나: `tone-a7iv`는 `Sony A7 IV`, `tone-a7s`는 `Sony A7S III`, `tone-alexa`는 `ARRI Alexa Mini`, `tone-xh2s`는 `Fujifilm X-H2S` body 줄을 골랐을 때만 쓴다)

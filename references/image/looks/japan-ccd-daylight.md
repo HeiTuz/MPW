@@ -45,7 +45,7 @@
 | A | hair | 外ハネボブ — A chin-length bob with the ends flipped outward, light on top, bouncing a little with each step. |
 | B | hair | 前下がりボブ — A bob slanted longer at the front with the ends rolled under the jaw, smooth enough to hold a clean highlight in the sun. |
 | C | hair | 切りっぱなしボブ — A blunt one-length bob between jaw and collarbone, its damp-looking ends parting into thin pieces in the window light. |
-| D | hair | 濡れ髪 — Hair looks freshly damp from the sea air, strands clumped into dark glossy ribbons that catch the low sun. |
+| D | hair | 濡れ髪 — Hair looks freshly damp from the sea air, strands clumped into dark glossy ribbons that catch the low sun. (바닷가 장면일 때) |
 | 전부 | bangs | シースルーバング — A thin see-through fringe with visible gaps between the strands and long side pieces curving past the cheekbones. |
 
 ## Expression
@@ -87,10 +87,10 @@
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
 | A | style | 日常スナップ — An ordinary-day snapshot: no styled pose, a person caught mid-errand on her own street, the frame cropped a little carelessly. |
-| A | style | 昭和レトロ — The shop street itself is Showa-era leftover, with sun-faded canvas awnings, enamel-coated shutters and old tiled fronts, rendered in clean modern digital color. |
+| A | style | 昭和レトロ — The shop street itself is Showa-era leftover, with sun-faded canvas awnings, enamel-coated shutters and old tiled fronts, rendered in clean modern digital color. (상점가 장면일 때) |
 | B | style | シティガール — A minimal wardrobe of muted solid pieces with flats or clean sneakers and a small bag, worn with a relaxed, unforced stance. |
 | C | style | 下北沢Vintage — A thrifted indie look of worn knitwear, a secondhand bag and wooden furniture lit by a white window. |
-| D | style | 青春映画 — A summer-evening youth-film mood of sea breeze, guardrail and low sun, kept in vivid digital color instead of faded film. |
+| D | style | 青春映画 — A summer-evening youth-film mood of sea breeze, guardrail and low sun, kept in vivid digital color instead of faded film. (바닷가 장면일 때) |
 | 전부 | palette | palette — Clean, slightly oversaturated daylight color with a white-clipped sky, pale blue shade and skin highlights that sun makes read bright and warm, and no film teal-orange or neon tint anywhere. |
 
 ## Scene
@@ -100,7 +100,7 @@
 | A | place | 下町 — Low older houses and potted plants crowd the side lanes, with wires overhead. |
 | A | storefront | コンビニ — A convenience store whose glass front reflects the white sky, with a short eave over it and its sign only a band of color. |
 | A | background | 電柱 — Concrete utility poles stand along both sides of the street with a tangle of 電線 slung between them. |
-| A | background | 軒先テント — Canvas tents project over the shop fronts, above the displays and the pavement strip below. |
+| A | background | 軒先テント — Canvas tents project over the shop fronts, above the displays and the pavement strip below. (상점가 장면일 때) |
 | A | sky | 電線 — Black cables cut thin lines across the sky, thickest where they meet the poles. |
 | A | passersby | 通行人 — People with shopping bags walk the sidewalk and a man on a ママチャリ rides past at frame left, all small and sharp. |
 | A | ground | マンホール — A round iron manhole cover with a raised stamped pattern sits in the road. |
@@ -115,11 +115,11 @@
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
 | A, B | face-light | 逆光 — The sun stands behind and above her, rimming her hair and shoulders with a bright edge while her face is lit softly by the pavement and the open sky. |
-| A | sun-light | Hard Shadows — Under hard clear daylight, short sharp-edged shadows fall under the eaves and the canvas tents across the shop fronts and the pavement, and the sun catches raised metal such as the manhole cover. |
+| A | sun-light | Hard Shadows — Under hard clear daylight, short sharp-edged shadows fall under the eaves and the canvas tents across the shop fronts and the pavement, and the sun catches raised metal such as the manhole cover. (상점가 장면일 때) |
 | B | face-light | 木漏れ日 — Sunlight through the leaves drops small soft-edged gold spots on her cheek and shoulder while the rest of the face stays in open shade. |
-| C | face-light | 透明感 — Daylight through the lace curtain spreads wide and even over her jaw and collarbone, with almost no shadow edge anywhere on the face. |
+| C | face-light | 透明感 — Daylight through the lace curtain spreads wide and even over her jaw and collarbone, with almost no shadow edge anywhere on the face. (레이스 커튼 창가 장면일 때) |
 | D | face-light | 西日 — Low orange sun from one side grazes her cheek and arm and stretches long shadows across the sand and the wall. |
-| D | rim-light | 夕暮れ — A warm rim runs along her hair edge and the shoulder away from the sun, and the wet sand reflects gold. |
+| D | rim-light | 夕暮れ — A warm rim runs along her hair edge and the shoulder away from the sun, and the wet sand reflects gold. (젖은 모래 해변 장면일 때) |
 
 ## Optics
 **하나만 고르는 슬롯:** `tone-*`(고른 `camera` 본체 줄의 것 하나)

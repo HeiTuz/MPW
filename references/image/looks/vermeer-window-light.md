@@ -60,8 +60,8 @@
 ## Expression
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
-| A | expression | Regard baissé sur le lait — The eyes drop fully to the thin stream of milk, the lids relaxed and the long lashes laying a fan of shadow under the eye, the lips closed and slack. |
-| A | expression | Regard baissé sur les pages — The eyes drop fully to the open book, the lids relaxed and the long lashes laying a fan of shadow under the eye, the lips closed and slack. |
+| A | expression | Regard baissé sur le lait — The eyes drop fully to the thin stream of milk, the lids relaxed and the long lashes laying a fan of shadow under the eye, the lips closed and slack. (우유 따르는 장면일 때) |
+| A | expression | Regard baissé sur les pages — The eyes drop fully to the open book, the lids relaxed and the long lashes laying a fan of shadow under the eye, the lips closed and slack. (책 읽는 장면일 때) |
 | A | expression | Regard dans le vague — The gaze hangs on a point in the air beside the window, the pupils slightly unfocused and the mouth barely parted. |
 | B | expression | Regard embrumé du réveil — Half-lowered lids and a drowsy, unfocused gaze drift up toward the light, the whole face slack and unguarded. |
 | B | expression | Nonchalance parisienne — The eyes rest on a point beside the lens with easy lids and closed lips, the head turned a little away. |
@@ -104,7 +104,7 @@
 | B | face-prop | Lunettes rondes — Hair-thin round gold wire-rim glasses carry one small point of window light on each lens. |
 | C | easel | Chevalet — A wooden easel with a half-finished canvas stands beside her while one hand holds a paint-stained brush loosely. |
 | D | hand-prop | Verre de bordeaux — A stemmed glass of red wine held low glows deep ruby where the lamp light passes through the wine. |
-| D | writing | stylo plume à piston — A fountain pen rests on a leather-bound diary under the candle, one small flash on its gold nib. |
+| D | writing | stylo plume à piston — A fountain pen rests on a leather-bound diary under the candle, one small flash on its gold nib. (촛불 장면일 때) |
 | A, B, C | nails | Ongles courts arrondis — Short round nails trimmed to the fingertip, with long rosy nail beds and a pale half-moon. |
 | D | nails | Bordeaux laqué — Short nails in a deep burgundy lacquer with one sharp window-shaped highlight on each. |
 
@@ -113,7 +113,7 @@
 |---|---|---|
 | A | style | Peinture de genre — Genre-painting stillness: one figure absorbed in a small domestic task while light from a single window does all the storytelling. |
 | B | style | French Morning Laissez-faire — An oversized white shirt, bare feet and rumpled linen in strong window sun, with nothing styled or planned. |
-| B | style | French Academic Heritage — Charcoal tweed, a black roll-neck and round gold-rim glasses in a hushed reading room. |
+| B | style | French Academic Heritage — Charcoal tweed, a black roll-neck and round gold-rim glasses in a hushed reading room. (열람실 장면일 때) |
 | C | style | Left Bank Intellectual — Dark neutral layers and a bare, unadorned face, a thoughtful scholar carved out of black by one hard light. |
 | D | style | Parisian Nocturne Elegance — Black silk and a single lamp in dim evening light, quiet and slightly formal. |
 | D | style | Cinematic Bordeaux Red — Deep wine-red silk against warm brown surroundings, lit low so the reds glow darkly. |
@@ -150,19 +150,19 @@
 | A, B, D | floor-light | Window Light — The light from the window spills across the floor in a wide beam, and the waxed oak boards carry a dull gleam of it along their length. |
 | B | face-light | Window Light — Sun softened by a sheer curtain wraps one side of the face evenly while the other side keeps a gentle gradient. |
 | B | backlight | Contre-jour — The sun sits behind her, so hair and the cheek edge glow gold while the face holds half a stop darker with its skin detail intact. |
-| B | pattern-blind | Venetian Blind Shadows — Slats cut the sun into parallel bars that cross her cheek, collarbone and white shirt, with dust turning gold in the beams. |
-| B | beam | god rays — Low sun through lace curtains makes straight visible shafts in the air, bright inside the beam with dust specks floating through it. |
-| B | pattern-iron | Wrought-Iron Shadow — Backlight through the scrolled iron rail lays a lace of curling black shadow across her white shirt and bare arms. |
+| B | pattern-blind | Venetian Blind Shadows — Slats cut the sun into parallel bars that cross her cheek, collarbone and white shirt, with dust turning gold in the beams. (블라인드 장면일 때) |
+| B | beam | god rays — Low sun through lace curtains makes straight visible shafts in the air, bright inside the beam with dust specks floating through it. (레이스 커튼 장면일 때) |
+| B | pattern-iron | Wrought-Iron Shadow — Backlight through the scrolled iron rail lays a lace of curling black shadow across her white shirt and bare arms. (철 난간 발코니 장면일 때) |
 | B | catchlight | Fenêtres haussmanniennes — The paned window shows as a small gridded reflection in each iris. |
-| B | place-light-barge | Caustics — Light from the river outside comes through the round brass porthole and throws rippling bright lines across the wooden wall and ceiling. |
-| B | place-light-cafe | Contre-jour — At the café window the boulevard outside glows bright while the dark interior behind the table stays in shadow. |
+| B | place-light-barge | Caustics — Light from the river outside comes through the round brass porthole and throws rippling bright lines across the wooden wall and ceiling. (선상 서점 장면일 때) |
+| B | place-light-cafe | Contre-jour — At the café window the boulevard outside glows bright while the dark interior behind the table stays in shadow. (카페 유리창 장면일 때) |
 | C | face-light | Rembrandt lighting — A single window at 45 degrees leaves a small bright triangle on the shadowed cheek under the eye, framed by the shadow of the nose. |
-| C | top-light | Overhead Skylight — A pitched skylight above drops pale vertical light that outlines the forehead, nose bridge and collarbones and leaves the eye sockets dark. |
-| C | slit | Filet de lumière — Behind the old carriage door, one slit of daylight at the doorframe cuts a thin bright line into the stone hall while the rest stays dark. |
-| D | face-light | Lueur de bougie — One white candle lights the jaw and the near eye from below with a warm amber glow while everything behind falls to brown-black. |
-| D | fire | Firelight — Hearth flames throw flickering orange light across one cheek, the collarbone and the knees, and the parquet and the marble hearth glow orange, with a heavy dark room behind. |
+| C | top-light | Overhead Skylight — A pitched skylight above drops pale vertical light that outlines the forehead, nose bridge and collarbones and leaves the eye sockets dark. (천창 아틀리에 장면일 때) |
+| C | slit | Filet de lumière — Behind the old carriage door, one slit of daylight at the doorframe cuts a thin bright line into the stone hall while the rest stays dark. (대문 안 현관 장면일 때) |
+| D | face-light | Lueur de bougie — One white candle lights the jaw and the near eye from below with a warm amber glow while everything behind falls to brown-black. (촛불 장면일 때) |
+| D | fire | Firelight — Hearth flames throw flickering orange light across one cheek, the collarbone and the knees, and the parquet and the marble hearth glow orange, with a heavy dark room behind. (벽난로 장면일 때) |
 | D | key | heure bleue — Cold blue dusk light from the window lays a silver-blue outline along one side of the face and body. |
-| D | slit | Filet de lumière — Nearly closed blinds let one narrow golden band cut across a single eye while the rest of the face stays blue-black. |
+| D | slit | Filet de lumière — Nearly closed blinds let one narrow golden band cut across a single eye while the rest of the face stays blue-black. (닫힌 블라인드 장면일 때) |
 | D | catchlight | Iris d'ambre — Two small warm points sit in each eye and turn the brown iris translucent amber, the light low and from the side. |
 | D | silhouette | Silhouette — At the window the figure reads as a dark outline against the deep blue sky, with only a thin warm line along the shoulder. |
 
@@ -178,7 +178,7 @@
 | B | camera | Leica M6 — A compact 35mm film rangefinder body with a bright-line viewfinder. |
 | C | camera | Leica MP — A mechanical 35mm film rangefinder body with a bright-line viewfinder. |
 | D | camera | Contax G2 — An autofocus 35mm film rangefinder body with interchangeable Zeiss lenses. |
-| A | color | Bleu Outremer — Shadows and the apron lean toward a deep, calm French ultramarine set against warm ochre lights. |
+| A | color | Bleu Outremer — Shadows and the apron lean toward a deep, calm French ultramarine set against warm ochre lights. (앞치마 장면일 때) |
 | C | color | High-Contrast Black and White — Bright silver highlights sit hard against deep black shadow with few mid-greys between them. |
 | B | bloom | Halation — The brightest backlit edges bleed a faint warm orange glow into the hair and fabric around them. |
 | A | tone-rts | Crisp Eye Soft Falloff — On the Contax RTS III, the Zeiss rendering holds the lit eye in crisp focus while the fall-off behind it stays soft and creamy. |

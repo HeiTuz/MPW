@@ -48,21 +48,21 @@
 | A | hair | 레이어드 컷 — Feathered layers lift at the crown and curl lightly at the ends, falling past the shoulders with the camera-side strand tucked behind the ear. |
 | A, B | bangs | 시스루뱅 — A thin see-through fringe lets the forehead show through in light wisps and curves down both sides of the face while the brows and eyes stay clear. |
 | B | hair | C컬 펌 — A chin-length cut whose ends curl inward in one smooth C shape toward the neck, the rounded edge catching soft light. |
-| C | hair | 프렌치 펌 — Loose lazy waves fall past the collarbone in soft uneven curls with no set pattern, a few strands lifting in the backlight. |
+| C | hair | 프렌치 펌 — Loose lazy waves fall past the collarbone in soft uneven curls with no set pattern, a few strands lifting in the backlight. (역광 장면일 때) |
 | D | hair | 검은 긴 생머리 — Long blunt-ended black hair falls straight behind the shoulders and reads as a pure dark mass with one thin line of sheen. |
 | A | blush | 코랄 블러셔 — Coral-pink color sits on the cheeks with a faint shimmer and turns warmer under the honey-colored sun. |
 | C, D | base | 누드 스킨 — A bare-looking base with almost no coverage leaves the pores and the natural texture of the skin visible, with the grain settling over them. |
 | A | lip | 과즙 립 — A glassy peach-pink gloss with a wet, syrupy shine and no visible lip edge. |
-| B | lip | 물광 립 — A sheer watery lip color with a soft stain and a fresh wet-looking gloss that takes one small highlight from the flash. |
+| B | lip | 물광 립 — A sheer watery lip color with a soft stain and a fresh wet-looking gloss that takes one small highlight from the flash. (플래시 장면일 때) |
 | C | lip | 로즈 베이지 립 — A greyed pink-beige matte lip that nearly merges with the natural lip tone, its edge softly blurred. |
 | D | lip | 깨문 립 — Lip color is concentrated in the center and blended outward so the edges fade into bare skin, reading as a soft dark center in black and white. |
 
 ## Expression
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
-| A | expression | 사색의 눈빛 — The eyes fix on a far point at the end of the lane with relaxed lips and a quiet brow. |
+| A | expression | 사색의 눈빛 — The eyes fix on a far point at the end of the lane with relaxed lips and a quiet brow. (골목 장면일 때) |
 | A | expression | 눈웃음 — The eyes curve into crescents as the lower lids rise with the smile, the mouth soft and relaxed. |
-| A | expression | 돌아보며 활짝 웃기 — The shoulders stay turned toward the sea while the head swings back to the lens and the mouth opens in a short laugh. |
+| A | expression | 돌아보며 활짝 웃기 — The shoulders stay turned toward the sea while the head swings back to the lens and the mouth opens in a short laugh. (바닷가 장면일 때) |
 | B | expression | 은은한 미소 — A small closed-lip smile lifts only the mouth corners, the eyes relaxed and held on the lens as the shutter fires. |
 | C | expression | 아련한 애수 — The inner brows lift slightly and the eyes look far off, the lips pressed lightly together. |
 | C | expression | 멍때리기 — The gaze goes unfocused on a point in the air, the lids relaxed, the lips softly parted and the brow smooth. |
@@ -77,11 +77,11 @@
 | A, C, D | outfit | 보트넥 — A slim black long-sleeve knit with a straight boat neckline across the collarbones, its matte weave soaking up the dull light. |
 | A | outfit-bottom | 와이드 데님 — Wide-leg washed denim hangs straight from the hip with a soft break over the shoe, the fabric faded at the knees. |
 | A | outfit-outer | 데님 재킷 — A boxy faded-blue denim jacket with metal buttons and a slightly frayed hem hangs open, creased at the elbows. |
-| A | outfit | 원피스 수영복 — A plain navy one-piece swimsuit with wide straps and a scooped back, the wet fabric holding small bright highlights along its seams. |
-| A | outfit-outer | 남친 셔츠 — An oversized cotton shirt with dropped shoulders and rolled sleeves hangs open over the swimsuit, its hem lifting in the sea wind. |
+| A | outfit | 원피스 수영복 — A plain navy one-piece swimsuit with wide straps and a scooped back, the wet fabric holding small bright highlights along its seams. (바닷가 장면일 때) |
+| A | outfit-outer | 남친 셔츠 — An oversized cotton shirt with dropped shoulders and rolled sleeves hangs open over the swimsuit, its hem lifting in the sea wind. (바닷가 장면일 때) |
 | B | outfit | 캐시미어 니트 — A mocha-brown fine cashmere knit with a deep V neckline and a soft brushed halo, the ribbed hem and cuffs lying smooth. |
 | B | outfit | 스퀘어넥 — A charcoal slim knit with a clean square neckline across the chest that bares both collarbones. |
-| B, D | outfit-outer | 오버핏 — A pale oat oversized blazer hangs open over a black bandeau top, the lapels taking soft light and turning light grey in black and white. |
+| B, D | outfit-outer | 오버핏 — A pale oat oversized blazer hangs open over a black bandeau top, the lapels taking soft light and turning light grey in black and white. (흑백 장면일 때) |
 
 ## Legwear
 | 갈래 | 슬롯 | 줄 |
@@ -99,7 +99,7 @@
 | B | hand-prop | 빈티지 엽서 — A vintage postcard with a faded photograph on the front and handwritten ink on the back beside a stamp, its edges softly worn. |
 | B | jewelry | 실버 체인 레이어드 — Several fine silver necklaces of different lengths glint against the collarbones. |
 | C | hand-prop | Olympus mju II — A small champagne-gold compact film camera with a sliding lens cover hangs from the wrist, its plastic body in a metallic finish and the edges worn. |
-| C | drink | 참이슬 — A slim emerald glass bottle turns into a glowing green line beside the lamp, its label too small to read. |
+| C | drink | 참이슬 — A slim emerald glass bottle turns into a glowing green line beside the lamp, its label too small to read. (심야식당 장면일 때) |
 | D | hand-prop | 인화 사진 팩 — A clear film sleeve stuffed with developed prints with white borders, the plastic laying a soft sheen over the stack. |
 | 전부 | nails | 마이크로 프렌치 — A hair-thin line of colour along the very tip of a short nail over a sheer base, crisp under a glossy top coat. |
 
@@ -138,17 +138,17 @@
 | A | face-light | 흐린 날 빛 — Cloud cover acts as one huge softbox, giving shadowless even light, soft contrast and slightly cool grey-green shade. |
 | A | midday | 한낮 직사광 — High bright sun throws small crisp shadows and clips the near-white edges of the cheeks and the wall behind. |
 | A | low-sun | 골든아워 글로우 — Low sun from the side lays a honey-amber glow across the skin and runs a thin gold line along the hair edge. |
-| A, D | window-light | 통창 자연광 — Soft daylight enters from the side through floor-to-ceiling glass and falls off gently across the face and wall with no hard shadow edge. |
-| A | lane-light | 그림자 — In a narrow lane the eaves of the low houses shade the ground, so pale light reaches only the upper walls. |
-| C | window-light | 통창 자연광 — Soft daylight from a side window grazes the raw concrete wall and falls off gently across the face with no hard shadow edge. |
+| A, D | window-light | 통창 자연광 — Soft daylight enters from the side through floor-to-ceiling glass and falls off gently across the face and wall with no hard shadow edge. (통창 실내 장면일 때) |
+| A | lane-light | 그림자 — In a narrow lane the eaves of the low houses shade the ground, so pale light reaches only the upper walls. (골목 장면일 때) |
+| C | window-light | 통창 자연광 — Soft daylight from a side window grazes the raw concrete wall and falls off gently across the face with no hard shadow edge. (노출콘크리트 장면일 때) |
 | B, C | face-light | 부드러운 확산광 — Even diffused light with wide soft shadows and no visible source keeps skin and wall tones gentle. |
 | B | face-light | 직광 플래시 — A flat bright on-camera flash evens the skin and throws a crisp dark shadow on the wall behind. |
 | B | catchlight | 플래시 캐치라이트 — A hard on-camera flash leaves one small white dot dead center on each pupil. |
-| B | pin-shadow | Soft Pin Shadows — On the cork wall each pin leaves a small soft shadow beneath it. |
-| B | spot-light | 갤러리 스팟 조명 — A ceiling spot lights the bench corner in a soft pool while the spotless floor reflects the even light of the room. |
+| B | pin-shadow | Soft Pin Shadows — On the cork wall each pin leaves a small soft shadow beneath it. (코르크 보드 장면일 때) |
+| B | spot-light | 갤러리 스팟 조명 — A ceiling spot lights the bench corner in a soft pool while the spotless floor reflects the even light of the room. (갤러리 라운지 장면일 때) |
 | C | face-light | 텅스텐 조명 — Incandescent bulbs give warm amber-orange light in soft pools on the face and wall, deeper orange on daylight film. |
 | C | backlight | 역광 — The light source sits behind her, so hair and shoulders glow at the edge while the face reads slightly darker against the bright background. |
-| C | backlight-reed | 억새 역광 — At the riverside a low gold sun behind the reed grass rings each feathered tip in glowing gold against a warm hazy sky. |
+| C | backlight-reed | 억새 역광 — At the riverside a low gold sun behind the reed grass rings each feathered tip in glowing gold against a warm hazy sky. (한강 억새 장면일 때) |
 | D | face-light | 암실 안전등 — A single deep red safelight bathes everything in red and black with strong falloff and no other color in the frame. |
 | D | catchlight | 램프 캐치라이트 — One small deep-red point from the safelight sits in each eye. |
 

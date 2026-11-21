@@ -58,10 +58,10 @@
 |---|---|---|
 | A | expression | 커피잔 사색 — The brows stay relaxed and the eyes rest on a far point, the face still in thought. |
 | A | mouth | 살짝 벌어진 입술 — The lips part by a few millimetres with the lower lip catching a soft highlight, as if mid-breath before a bite or a sip. |
-| B | expression | 졸린 눈 — The lids sit half open and a little puffy, the gaze unfocused and the cheek resting near soft white bedding. (滤镜 #043) |
+| B | expression | 졸린 눈 — The lids sit half open and a little puffy, the gaze unfocused and the cheek resting near soft white bedding. (滤镜 #043) (S3 전용) |
 | B | eyes | 내리깐 눈 — The upper lids drop over part of the irises and the lashes cast thin shadows on the lower lids while she reads or looks down. |
 | B, D | expression | 햇빛 향한 황홀 — The face tips toward the light with the eyes closed and a warm glow washes over the forehead and cheeks. |
-| C | expression | 촛불 응시 — The eyes rest on a small flame below the face, one tiny orange point in each pupil and the face calm. (滤镜 #049. 쌍 9와 짝이다) |
+| C | expression | 촛불 응시 — The eyes rest on a small flame below the face, one tiny orange point in each pupil and the face calm. (滤镜 #049. 쌍 9와 짝이다) (촛불 장면일 때) |
 | C | expression | 헤드폰 끼고 음미 — Headphones sit over the ears, the eyes closed and the lips loose, the head swaying a little with the music. (눈이 감기는 줄이라 쌍 8과 짝이다. 눈이 불꽃을 보는 쌍 9와 옆얼굴로 창을 보는 쌍 10에는 쓰지 않는다) |
 | D | expression | 눈 감고 바람 느끼기 — The eyes close and the chin lifts slightly into the cold air, the face relaxed while loose strands stream sideways. |
 
@@ -83,7 +83,7 @@
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
 | A, D | hand-prop | 따뜻한 종이컵 — Both palms wrap a hot paper cup with steam rising in front of the face, the steam glowing white wherever light comes from behind. |
-| A | hand-prop | 크루아상 — A freshly baked golden croissant pinched between two fingers, its flaky layers lit by the warm shop spots. |
+| A | hand-prop | 크루아상 — A freshly baked golden croissant pinched between two fingers, its flaky layers lit by the warm shop spots. (베이커리 장면일 때) |
 | A | hand-prop | LP판 — A black 12-inch record half-slid from a kraft sleeve, its fine grooves catching a thin curved line of lamp light. |
 | B | hand-prop | 머그컵 — A heavy white ceramic mug held near the chin in both hands, steam curling up toward the nose and softening the edge of the lips. |
 | B | plant | 다육 화분 — A row of small succulent pots on the sill, their plump leaves glowing translucent green where the sun passes through. |
@@ -95,10 +95,10 @@
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
 | A, B, D | style | 힐링 무드 — A soft, warm and quiet everyday mood with gentle light and relaxed expressions. |
-| A | style | 힙지로 레트로 — Worn wood, faded enamel and amber bulb light make every surface look aged and lived in. (滤镜 #042) |
+| A | style | 힙지로 레트로 — Worn wood, faded enamel and amber bulb light make every surface look aged and lived in. (滤镜 #042) (을지로 카페 장면일 때) |
 | B | style | 노르딕 우드 — Light birch and oak with oatmeal wool, soft matte surfaces and gentle even daylight. |
 | B | texture | 울 숄 — Coarse beige wool pressed against the cheek, the rough weave making the skin look very smooth by contrast. (滤镜 #056) |
-| C | style | 앤티크 서재 — Dark walnut, brass fittings and yellowed paper under a single warm desk lamp. (滤镜 #060) |
+| C | style | 앤티크 서재 — Dark walnut, brass fittings and yellowed paper under a single warm desk lamp. (滤镜 #060) (서재 장면일 때) |
 | A, B, C | style | 서울 카페 웜톤 — Soft warm indoor light diffused by windows, sheer curtains, plaster walls or lampshades, so edges and shadows stay gentle in Seoul cafes and homes. |
 | D | style | 서울 카페 웜톤 — Soft warm low-sun light diffused by haze, reed heads and cup steam, so edges and shadows stay gentle on a Seoul riverside path or street corner. |
 | 전부 | palette | palette — Oat, cream and camel with walnut-brown and honey-amber shadows and warm apricot light on the skin, nothing neon, pastel or cold gray in the frame except the one blue dusk window of 냉온 대비. |
@@ -126,28 +126,28 @@
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
 | A | face-light | 창가 빛 — Daylight from a window falls on her from one side, leaving a bright cheek and a soft shadow side that falls off gently. |
-| A | face-light | 쇼윈도 스팟 빛 — Warm ceiling spots over a bakery display glow on the pastries and reach her cheek through the glass, with faint glass reflections laid over the skin. (滤镜 #054) |
+| A | face-light | 쇼윈도 스팟 빛 — Warm ceiling spots over a bakery display glow on the pastries and reach her cheek through the glass, with faint glass reflections laid over the skin. (滤镜 #054) (베이커리 장면일 때) |
 | A | light-fill | 텅스텐 조명 — Incandescent bulbs give warm amber-orange pools on the wood, the walls and the near cheek, leaving deeper amber in the corners. |
-| A | bounce | 바닥 반사광 — In the old walnut cafe, the worn dark wood of the tables and shelves bounces a deep reddish warmth up into the shadows. |
-| A | lane-light | Sidelight — In the narrow lane, warm side daylight falls softly across the brick walls and the painted storefronts. |
+| A | bounce | 바닥 반사광 — In the old walnut cafe, the worn dark wood of the tables and shelves bounces a deep reddish warmth up into the shadows. (을지로 카페 장면일 때) |
+| A | lane-light | Sidelight — In the narrow lane, warm side daylight falls softly across the brick walls and the painted storefronts. (연남동 골목 장면일 때) |
 | A, B | catchlight | 창문 캐치라이트 — A large window leaves a soft rectangular, sometimes pane-divided highlight in the upper part of each iris. |
-| B | face-light | 아침 햇살 — Low warm sun slips through a gap in the curtains as one golden band across white sheets, lighting one cheek and leaving the rest in pale shade. (滤镜 #043) |
-| B | face-light | 블라인드 빛 — Afternoon sun through window blinds falls in evenly spaced bright and dark bands over the face, collarbones and wall. (滤镜 #044) |
+| B | face-light | 아침 햇살 — Low warm sun slips through a gap in the curtains as one golden band across white sheets, lighting one cheek and leaving the rest in pale shade. (滤镜 #043) (S3 전용) |
+| B | face-light | 블라인드 빛 — Afternoon sun through window blinds falls in evenly spaced bright and dark bands over the face, collarbones and wall. (滤镜 #044) (S4 전용) |
 | B | beam | 빛내림 — Light crossing a sheer curtain and dusty air shows as straight soft shafts with floating dust bright inside each one. (滤镜 #051) |
 | B | light-fill | 바닥 반사광 — Light reflected up from a sunlit wooden floor softly fills the underside of the jaw, nose and brows in the warm colour of the wood. (滤镜 #050) |
-| B | sheer-light | 柔和漫射光 — In the bed by the window, bright morning light passes through the thin sheer curtains and spreads evenly over the white bedding, softening every shadow. |
-| B | glass-light | 落地窗柔光 — In the hillside room, soft diffuse daylight arrives from the side through the floor-to-ceiling glass and falls off gently across the pale walls. |
-| B | leaf-shadow | Dappled Shade — In the glass-walled plant room, soft light floods in and the leaf shadows of the plants move across the pale floor tiles. |
-| C | face-light | Akari 1A — A paper-shaded table lamp stands close beside her at face height and spreads a soft warm orange glow through its shade, lighting one half of the face and fading fast into the dark room. (滤镜 #045) |
-| C | face-light | 촛불 조명 — A small flame close by casts warm amber light that falls off fast into darkness, flickers softly and leaves a tiny warm glint in the eyes. (滤镜 #049) |
+| B | sheer-light | 柔和漫射光 — In the bed by the window, bright morning light passes through the thin sheer curtains and spreads evenly over the white bedding, softening every shadow. (침대 장면일 때) |
+| B | glass-light | 落地窗柔光 — In the hillside room, soft diffuse daylight arrives from the side through the floor-to-ceiling glass and falls off gently across the pale walls. (한남동 장면일 때) |
+| B | leaf-shadow | Dappled Shade — In the glass-walled plant room, soft light floods in and the leaf shadows of the plants move across the pale floor tiles. (선룸 장면일 때) |
+| C | face-light | Akari 1A — A paper-shaded table lamp stands close beside her at face height and spreads a soft warm orange glow through its shade, lighting one half of the face and fading fast into the dark room. (滤镜 #045) (S5 전용) |
+| C | face-light | 촛불 조명 — A small flame close by casts warm amber light that falls off fast into darkness, flickers softly and leaves a tiny warm glint in the eyes. (滤镜 #049) (촛불 장면일 때) |
 | C | ambient | 냉온 대비 — Cool blue dusk light from the window and a small warm lamp inside meet on the face, one side reading blue and the other amber with a soft seam between. (滤镜 #055) |
-| C | backlight | 뱅커스 램프 — A green glass-shaded desk lamp behind and to one side traces a thin gold line along the hair and shoulder while its warm pool lights the desk. (滤镜 #060) |
-| C | pile | 로우키 조명 — On the corduroy sofa, the soft ribbed pile swallows stray light, so the lit side of her face is set off in warm white against the dark fabric. |
+| C | backlight | 뱅커스 램프 — A green glass-shaded desk lamp behind and to one side traces a thin gold line along the hair and shoulder while its warm pool lights the desk. (滤镜 #060) (서재 장면일 때) |
+| C | pile | 로우키 조명 — On the corduroy sofa, the soft ribbed pile swallows stray light, so the lit side of her face is set off in warm white against the dark fabric. (코듀로이 소파 장면일 때) |
 | C | catchlight | 램프 캐치라이트 — One small warm point of light from a lamp or flame sits in each eye. |
 | D | face-light | 역광 금빛 테두리 — A low sun from behind rings the hair and shoulder outline in gold while the face stays in soft shadow lifted by sky and ground. (滤镜 #048) |
-| D | backlight | 역광 — Light from behind lifts the whole frame into a soft, airy brightness, and the steam from the cup glows white and blurs the background into a haze. (滤镜 #046) |
+| D | backlight | 역광 — Light from behind lifts the whole frame into a soft, airy brightness, and the steam from the cup glows white and blurs the background into a haze. (滤镜 #046) (종이컵 장면일 때) |
 | D | catchlight | 황금빛 눈동자 — The low setting sun puts fine amber sparkles in the irises and a warm gold edge along the cheek. |
-| D | reed-glow | 억새 역광 — At the riverside, low gold backlight makes each feathered reed tip glow against the warm hazy sky. |
+| D | reed-glow | 억새 역광 — At the riverside, low gold backlight makes each feathered reed tip glow against the warm hazy sky. (한강 억새 장면일 때) |
 
 ## Optics
 **하나만 고르는 슬롯:** `body-*`(고른 `camera` 줄의 본체와 같은 이름의 줄만: `body-x100v`는 `Fujifilm X100V`, `body-m10`은 `Leica M10`, `body-r6`은 `Canon EOS R6`, `body-a7s`는 `Sony A7S III`, `body-q`는 `Leica Q`, `body-r5`는 `Canon EOS R5`, `body-xt4`는 `Fujifilm X-T4`를 골랐을 때)

@@ -65,7 +65,7 @@
 |---|---|---|
 | A | gaze | 카메라 밖 시선 — The eyes rest on a point about fifteen degrees beside the lens with relaxed lids, as if something out of frame had drawn her attention. (神态 #001) |
 | A | expression | 내리깐 눈 — The upper lids drop over part of the irises and the gaze angles slightly down, the lashes casting thin shadows on the lower lids. (神态 #002) |
-| A | expression | 독서 몰입 — The eyes follow a line of text on a page just below the lens, lashes lowered, lips closed and the face still. |
+| A | expression | 독서 몰입 — The eyes follow a line of text on a page just below the lens, lashes lowered, lips closed and the face still. (책 읽는 장면일 때) |
 | B | expression | 턱 들기 — The chin tips up a few degrees so the jaw and neck stretch into one clean line while the eyes look down at the lens. (神态 #008) |
 | B | expression | 눈썹 까딱 — One brow lifts a little higher than the other in a quiet arch as she studies the lens from a short distance. (神态 #005) |
 | C | expression | 무표정 — Brows, eyes and mouth rest at neutral with no muscle tension, so the face reads as a still, clean surface. (神态 #004) |
@@ -98,7 +98,7 @@
 | A | face-prop | 얇은 금테 안경 — Thin gold-framed glasses with clear lenses show faint window reflections and a narrow highlight on each rim. (拍照姿势 #032) |
 | 전부 | necklace | 쇄골 길이의 가는 실버 체인 목걸이 — A hair-fine silver chain lies flat along the collarbones with one tiny bright point where it catches the cool light. |
 | 전부 | earring | 심플 실버 링 귀걸이 — Ultra-fine silver hoops hang just below the earlobes and catch a small bright point on each curve. |
-| D | hand-prop | 투명 우산 — A clear plastic umbrella with a white curved handle, rain beads clinging to the canopy and the gray sky showing through it. (滤镜 #025) |
+| D | hand-prop | 투명 우산 — A clear plastic umbrella with a white curved handle, rain beads clinging to the canopy and the gray sky showing through it. (滤镜 #025) (비 오는 장면일 때) |
 | D | head-prop | 비니 — A slim charcoal ribbed beanie sits just above the brows, the wool texture visible at close range. |
 | 전부 | nails | 밀키 네일 — Short nails in a milky, semi-sheer white gel with a faint pink bed showing through. |
 
@@ -137,8 +137,8 @@
 |---|---|---|
 | A, D | face-light | 흐린 날 빛 — Cloud cover acts as one huge softbox, so shadowless, even light with slightly cool gray tones and soft contrast falls on her face. (滤镜 #021) |
 | A | face-light | 창가 빛 — Daylight from a window to one side models the face with a bright cheek and a soft shadow side that falls off gently. (滤镜 #022) |
-| A | sheer-light | 이중 시어 커튼 빛 — She stands behind two layers of white sheer curtain: the face glows softly through the gauze and the outline washes toward white. (滤镜 #036) |
-| A | book-light | 창가 빛 — In the bookshop, soft window light pools over the open pages of the art books on the table. |
+| A | sheer-light | 이중 시어 커튼 빛 — She stands behind two layers of white sheer curtain: the face glows softly through the gauze and the outline washes toward white. (滤镜 #036) (이중 커튼 장면일 때) |
+| A | book-light | 창가 빛 — In the bookshop, soft window light pools over the open pages of the art books on the table. (독립서점 장면일 때) |
 | A | catchlight | 창가 사각 캐치라이트 — A large window leaves a soft rectangular highlight in the upper part of each iris. |
 | B | face-light | 천장 확산광 — Cool white light falls from a large panel or glass roof above and lights the forehead, nose bridge and collarbones with only a soft shadow under the chin. (滤镜 #023 #037) |
 | B, C | catchlight | 캐치라이트 — A small wide-rectangle reflection of the overhead panel sits on each eye, making the eyes look clear and wet. |
@@ -147,9 +147,9 @@
 | D | weather | 안개비 — Fine drizzle and mist soften the light, lower the contrast and leave a pale wet sheen on every surface. (滤镜 #025) |
 | D | weather | 옅은 안개 — Light haze scatters the daylight so contrast drops and distant shapes fade into pale layers. (滤镜 #026 #035) |
 | D | ambient | 블루 아워 — Just after sunset the sky turns a deep, pure blue that gives cool, shadowless ambient light across her profile. (滤镜 #031) |
-| D | light-fill | 눈 반사광 — Snow on the ground bounces even soft light upward into her face and makes the catchlights clear. (滤镜 #038) |
-| D | skyline | 야경 보케 — On the rooftop, the skyline far below is reduced to small points of light and the car lights melt into soft blurred bokeh. |
-| D | wet-pavement | Wet Street Reflections — On the boulevard, the wet pavement mirrors the low grey sky in pale glossy patches. |
+| D | light-fill | 눈 반사광 — Snow on the ground bounces even soft light upward into her face and makes the catchlights clear. (滤镜 #038) (눈 덮인 장면일 때) |
+| D | skyline | 야경 보케 — On the rooftop, the skyline far below is reduced to small points of light and the car lights melt into soft blurred bokeh. (루프탑 장면일 때) |
+| D | wet-pavement | Wet Street Reflections — On the boulevard, the wet pavement mirrors the low grey sky in pale glossy patches. (강남 거리 장면일 때) |
 
 ## Optics
 **하나만 고르는 슬롯:** `body-*`(쓰는 본체와 같은 이름의 줄만. `camera` 줄을 골랐거나 세트가 그 본체를 말했을 때: `body-a7rv`는 `Sony A7R V`, `body-sl2`는 S2의 Leica SL2-S, `body-x2d`는 `Hasselblad X2D 100C`, `body-iq4`는 `Phase One IQ4`, `body-a7r4`는 `Sony A7R IV`, `body-r5`는 `Canon EOS R5`, `body-a7iv`는 S6의 Sony A7 IV)

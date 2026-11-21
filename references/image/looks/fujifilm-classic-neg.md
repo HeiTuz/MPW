@@ -56,7 +56,7 @@
 | A, D | squint | まぶしげ — The lids narrow against the sun and the brows pinch slightly, lifting the cheeks into a faint squint. |
 | B | expression | 澄んだ瞳 — The eyes rest level and bright with no posed charm in the lids or brows, and the skin around them looks clear. |
 | B | expression | 潤んだまなざし — Slightly moist eyes carry a soft shine along the lower lids, the brows relaxed and the gaze warm and gentle. |
-| C | expression | 物思い — The lids lower and the gaze drifts to one side, the mouth relaxed and the head tilted a little toward the lamp. |
+| C | expression | 物思い — The lids lower and the gaze drifts to one side, the mouth relaxed and the head tilted a little toward the lamp. (램프 아래 장면일 때) |
 | C | expression | 振り向きざまの視線 — The head turns back with the hair still swinging, the pupils small and the eyes alert in the dim light. |
 | D | expression | 芯のある眼差し — A steady level gaze with still brows and a relaxed jaw, calm and unhurried against the large scene behind her. |
 | D | expression | ペーソス — Low golden light on a tired, relaxed face and a faint closed-mouth smile. |
@@ -67,12 +67,12 @@
 
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
-| A | outfit | バンドカラーシャツ — A washed ivory linen band-collar shirt hangs long and loose with soft creases, its slubs catching small bright patches where leaf shadow breaks. (滤镜 #001, 穿搭/04 #053) |
+| A | outfit | バンドカラーシャツ — A washed ivory linen band-collar shirt hangs long and loose with soft creases, its slubs catching small bright patches where leaf shadow breaks. (滤镜 #001, 穿搭/04 #053) (나뭇잎 그림자 장면일 때) |
 | A | outfit | ローゲージニット — A thick white chunky sweater whose large stitches cast tiny shadows on each other, with a soft slouch at the shoulder. (滤镜 #003) |
 | A, B | outfit-outer | トレンチコート — A thin cotton trench worn open with the belt loose and the hem swinging with each step, deep gray under cloud or pale honey-khaki against a white wall. (滤镜 #002 #004) |
 | B | outfit | ホワイトリネンワンピース — A sleeveless white linen dress with natural creases, its edges turning bright where light passes through the weave. (滤镜 #007) |
-| B | outfit | シルクサテンブラウス — An off-white silk satin blouse with a hidden placket, long soft highlights sliding along the sleeve folds in the window light. (滤镜 #019) |
-| B | outfit-outer | ダッフルコート — A navy wool duffle coat with chunky horn toggles, its matte nap soaking up light while yellow ginkgo leaves fall around it. (滤镜 #009) |
+| B | outfit | シルクサテンブラウス — An off-white silk satin blouse with a hidden placket, long soft highlights sliding along the sleeve folds in the window light. (滤镜 #019) (창가 장면일 때) |
+| B | outfit-outer | ダッフルコート — A navy wool duffle coat with chunky horn toggles, its matte nap soaking up light while yellow ginkgo leaves fall around it. (滤镜 #009) (은행나무길 장면일 때) |
 | C, D | outfit | タートルネック — A fine black knit turtleneck folded once at the collar and close to the neck, losing its texture in the dark of a room or against pale concrete. (滤镜 #005 #015) |
 | C | outfit-outer | ヴィンテージレザージャケット — A washed-soft black leather jacket with worn edges, small warm highlights sitting on the zip and the creases. (滤镜 #006) |
 | C | outfit | フーディー — A heavyweight black hoodie with a thick double hood, hanging loose off a slightly dropped shoulder. (滤镜 #011) |
@@ -89,7 +89,7 @@
 | A | drink | ホット缶コーヒー — A small dented steel can of hot coffee warms her fingers, with a faint breath of steam beside it. (拍照姿势/02 #023) |
 | A, B | hand-prop | 文庫本 — A pocket paperback in a plain bookshop cover, its pages curling at the edges, held open in one hand. (滤镜 #014) |
 | B | hand-prop | かごバッグ — A stiff woven basket bag sits at her side, small points of light slipping through the open weave. (滤镜 #007) |
-| C | hand-prop | ティーカップ — A thin white porcelain cup on its saucer holds hot coffee, steam rising through the amber lamp light. (滤镜 #005) |
+| C | hand-prop | ティーカップ — A thin white porcelain cup on its saucer holds hot coffee, steam rising through the amber lamp light. (滤镜 #005) (램프 아래 장면일 때) |
 | A, B | nails | シアーヌード — Near-bare milky pink nails that let the nail bed show through with a soft flush at the tip. |
 
 ## Style
@@ -98,7 +98,7 @@
 | A | style | スナップ — An unposed candid frame with the person caught mid-errand and the crop cut a little loosely. |
 | A, C | style | 下北沢Vintage — A thrifted, worn-in look of secondhand knits and jackets with an indie vintage mood. |
 | B | style | 透け感 — Thin fabrics show the faint edge of a layer behind them and stay matte in the pale light. |
-| C | style | 東京ノワール — A dark city frame with wet reflections and deep shadows, cold cyan set against warm lamp light. |
+| C | style | 東京ノワール — A dark city frame with wet reflections and deep shadows, cold cyan set against warm lamp light. (비 젖은 거리 장면일 때) |
 | D | style | 侘び寂び — Quiet imperfection in moss, stone and weathered concrete. |
 | A | palette | palette — Film color with cyan-green in the shadows, slightly warm red highlights and restrained saturation, with no digitally vivid color or fluorescent pastel. |
 | B | palette | palette — Bright film color with pale mint highlights, a soft pink flush in the skin and restrained saturation, with no digitally vivid color or fluorescent pastel. |
@@ -133,16 +133,16 @@
 |---|---|---|
 | A | face-light | Overcast Light — Even gray cloud light wraps her with almost no shadow edge, flat and cool, and the shade picks up a faint green. (滤镜 #002 #014) |
 | A, B | face-light | 木漏れ日 — Sunlight through leaves drops small soft-edged gold spots on cheek and shoulder while the rest of the face stays in open shade. (滤镜 #001 #003) |
-| A | lane-light | 朝の光 — In the narrow lane, mild morning light lies soft and even over the timber houses and the half-raised shutters. (滤镜 #012 #013) |
-| A, B | park-light | Long Shadows — Beside the park pond, the low sun slants through the trees and stretches long shadows over the bench and the damp ground, with a gentle light on the water. (滤镜 #003) |
-| B | face-light | 逆光 — Soft spring light from behind and above rims her hair and shoulders with a glowing edge, and the face is lit by the open sky and a pale wall. (滤镜 #004) |
-| B | window | 窓明かり — Daylight through a sheer curtain falls from one side, a bright cheek and a soft shadow side with no hard edge. (滤镜 #019) |
-| C | face-light | 裸電球 — One amber lamp above the table warms the cup and her hands and leaves the rest of the room dim. (滤镜 #005) |
+| A | lane-light | 朝の光 — In the narrow lane, mild morning light lies soft and even over the timber houses and the half-raised shutters. (滤镜 #012 #013) (下町 골목 장면일 때) |
+| A, B | park-light | Long Shadows — Beside the park pond, the low sun slants through the trees and stretches long shadows over the bench and the damp ground, with a gentle light on the water. (滤镜 #003) (井の頭公園 장면일 때) |
+| B | face-light | 逆光 — Soft spring light from behind and above rims her hair and shoulders with a glowing edge, and the face is lit by the open sky and a pale wall. (滤镜 #004) (흰 벽 장면일 때) |
+| B | window | 窓明かり — Daylight through a sheer curtain falls from one side, a bright cheek and a soft shadow side with no hard edge. (滤镜 #019) (창가 장면일 때) |
+| C | face-light | 裸電球 — One amber lamp above the table warms the cup and her hands and leaves the rest of the room dim. (滤镜 #005) (純喫茶 장면일 때) |
 | C | weather | 雨の夜 — Fine rain gives every lamp a soft cold halo and leaves small bright beads on wet paving and glass. (滤镜 #006 #010) |
-| C | taxi-light | Taxi Window Lights — Inside the taxi, headlights and neon signs outside slide in bright bands along the rain-spotted window glass and across her. (滤镜 #010) |
+| C | taxi-light | Taxi Window Lights — Inside the taxi, headlights and neon signs outside slide in bright bands along the rain-spotted window glass and across her. (滤镜 #010) (택시 안 장면일 때) |
 | C | bloom | ハレーション — Red-orange glow bleeds around the brightest lights against the dark. (滤镜 #011) |
 | D | face-light | 夕暮れ — Low orange sun from behind lays a warm rim along her hair and shoulder, and the sky leans faintly magenta, and at the beach the sea's edge glows against the horizon. (滤镜 #020) |
-| D | face-light | Geometric Light and Shadow — Hard sun through architectural openings cuts crisp geometric shapes of light and shadow across the wall and her face. (滤镜 #015) |
+| D | face-light | Geometric Light and Shadow — Hard sun through architectural openings cuts crisp geometric shapes of light and shadow across the wall and her face. (滤镜 #015) (콘크리트 건축 장면일 때) |
 
 ## Optics
 **하나만 고르는 슬롯:** `stock`·`stock-*`(필름 스톡 후보, 하나), `grain`·`grain-*`(고른 스톡이나 시뮬레이션에 맞는 입자 줄 하나)
@@ -164,7 +164,7 @@
 | C | stock | フジカラー Venus 800 — In this look, a night snapshot leans red in the shadows and green in the neon, with heavy grain and a Showa-era warmth. |
 | C | stock-cine | ETERNA 250D — In this look, a flat cinema-negative rendering with low saturation, soft highlight roll-off and lifted gray-cyan shadows. |
 | D | stock | ベルビア 50 — In this look, saturation runs extreme: deep emerald greens, dense shadow color and hard contrast. |
-| D | stock | フォルティア SP — In this look, very high chroma slide color makes blue-violet blooms and dark greens hit with an oil-paint punch. |
+| D | stock | フォルティア SP — In this look, very high chroma slide color makes blue-violet blooms and dark greens hit with an oil-paint punch. (수국 장면일 때) |
 | D | stock-natural | プロビア 100F — In this look, slide color stays neutral and true to nature, with lush emerald greens and clean contrast, no cast. |
 | D | stock-dusk | プロビア 400X — In this look, dusk carries a faint magenta cast and a warm golden glow with slightly lifted dark tones. |
 | D | stock-mono | アクロス 100 II — Black-and-white with extremely fine grain, a smooth gray ramp and gentle contrast. |

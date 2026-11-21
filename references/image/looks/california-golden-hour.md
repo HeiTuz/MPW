@@ -75,7 +75,7 @@
 | A, B | outfit-bottom | denim cutoff shorts — Frayed-hem blue denim shorts bleached pale at the thighs, the loose threads lit white along the edge. |
 | B | outfit | Utility Jumpsuit — A faded khaki cotton jumpsuit belted at the waist, the heavy twill creasing at elbows and knees and glowing ochre in the last light. |
 | C | outfit | Halter Swimsuit — A black halter-neck one-piece with a high-cut leg and an open back, the satin fabric throwing a long gold highlight along the hip where the low sun reaches it. |
-| C | outfit | High-Waisted Bikini — A retro lemon-yellow high-waisted two-piece with a plain bandeau top, the ribbed knit glowing saturated against blue pool water and white plaster. |
+| C | outfit | High-Waisted Bikini — A retro lemon-yellow high-waisted two-piece with a plain bandeau top, the ribbed knit glowing saturated against blue pool water and white plaster. (수영장 장면일 때) |
 | C | outfit-outer | Moto Jacket — A black leather moto jacket with a worn collar, hard highlights on the zips and creased elbows. |
 | D | outfit | Oxford Shirt — A large white cotton oxford shirt with the collar open and cuffs rolled, its weave and folds visible with no blown-out white. |
 
@@ -95,7 +95,7 @@
 | A | style | California Golden Hour — Low Pacific sun behind the figure, gold-edged hair, warm haze, a gold sheen along the shoulders and loose natural movement in the wind. |
 | A, C | style | California Coastal — Warm low sun over calm blue water, salt haze and a gold glow on the bare arms and cheeks. |
 | B | style | Road Trip — A sunny open-road feel with a convertible or camper, hair and clothes moved by wind and warm film color. |
-| C | style | Palm Springs Modernism — Low white buildings, breeze-block screens, tall palms and sharp sun-and-shadow geometry. |
+| C | style | Palm Springs Modernism — Low white buildings, breeze-block screens, tall palms and sharp sun-and-shadow geometry. (팜스프링스 장면일 때) |
 | D | style | Clean Girl — A slicked-back bun, dewy skin, neutral fitted basics and a tidy everyday polish. |
 | A, C, D | palette | palette — Honey gold, amber and apricot against sea-blue shadows, with sun-bleached white and denim blue; the daylight stays warm and nothing neon or cold gray appears anywhere. |
 | B | palette | palette — Honey gold, amber and apricot with terracotta red earth, reddish-brown shadows, sun-bleached white and denim blue; the daylight stays warm and nothing neon or cold gray appears anywhere. |
@@ -121,14 +121,14 @@
 | A, C | catchlight | Golden Sunset Arc Catchlight — A curved arc of warm orange sunlight shines across each iris, the horizon line bending in it. |
 | B | face-light | golden-hour sidelight — The low sun rakes in from the side, lighting one cheek amber and throwing long soft shadows across the ground. |
 | B | beam | God Rays — Dust in the dry air lights up as straight gold shafts with floating particles bright inside each beam. |
-| B | light-fill | Window Sun Patches — Inside the diner booth, the setting sun cuts through the dusty window glass in bright stripes that lie across the red vinyl, the table and her side. |
+| B | light-fill | Window Sun Patches — Inside the diner booth, the setting sun cuts through the dusty window glass in bright stripes that lie across the red vinyl, the table and her side. (다이너 장면일 때) |
 | C | face-light | Palm Leaf Shadows — Low sun through palm fronds breaks into moving gold patches and feathery shadows on her shoulders, cheek and the street. |
 | C | face-light | Bounce Light — Sun reflected from a pale wall or red clay roof fills the jaw, neck and collarbones with warm light that picks up the wall's color. |
-| C | light-fill | Caustics — Pool-water light breaks into a moving net of bright gold lines that ripple across her shoulders, collarbones and the white wall behind her. |
-| C | shadow-edge | Hard Shadows — Around the Palm Springs pool and pale walls, the low sharp-edged sun draws crisp dark shadow lines beside the palms and along the white buildings. |
-| D | face-light | Window Light — Indoors, daylight from one window models the face with a bright side and a soft shadow side that falls off gently. |
-| D | light-fill | Venetian Blind Shadows — Sun through wooden blinds lays parallel gold stripes across her cheek, shoulders and the white bedding. |
-| D | light-fill | Dappled Shade — Inside the orange grove, warm afternoon light breaks into soft spots of sun between the leaves and drifts over her face, shoulders and the ground. |
+| C | light-fill | Caustics — Pool-water light breaks into a moving net of bright gold lines that ripple across her shoulders, collarbones and the white wall behind her. (수영장 장면일 때) |
+| C | shadow-edge | Hard Shadows — Around the Palm Springs pool and pale walls, the low sharp-edged sun draws crisp dark shadow lines beside the palms and along the white buildings. (팜스프링스 장면일 때) |
+| D | face-light | Window Light — Indoors, daylight from one window models the face with a bright side and a soft shadow side that falls off gently. (실내 창가 장면일 때) |
+| D | light-fill | Venetian Blind Shadows — Sun through wooden blinds lays parallel gold stripes across her cheek, shoulders and the white bedding. (블라인드 창가 장면일 때) |
+| D | light-fill | Dappled Shade — Inside the orange grove, warm afternoon light breaks into soft spots of sun between the leaves and drifts over her face, shoulders and the ground. (오렌지 과수원 장면일 때) |
 
 ## Optics
 `Bokeh Circles`는 얕은 심도를 고른 장면에서만 쓴다(쌍 8 Shallow Depth of Field, `Telephoto Compression`, `Zeiss Planar` 줄이거나 세트 렌즈가 얕은 심도인 S4). Biogon(deep focus)을 고른 쌍 6·10에서는 쓰지 않는다.

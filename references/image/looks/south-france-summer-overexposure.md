@@ -68,7 +68,7 @@
 | A | expression | Fou rire — Laughter breaks out unplanned, the eyes crinkling and the head tipping toward the sea breeze, one hand rising to hold back the hair. |
 | A | expression-calm | Sun-Worshipping Bliss — The chin lifts into the sun with the eyes closed, hot light washing over the forehead and cheeks. |
 | B | expression | Squint — The lids narrow against the glare, the cheeks lift and the lashes bunch into a dark line, a relaxed smile left on the mouth. |
-| B | expression-calm | Regard dans le vague — The eyes rest on a patch of light on the floor and stay there, the mouth slack and the whole face unhurried. |
+| B | expression-calm | Regard dans le vague — The eyes rest on a patch of light on the floor and stay there, the mouth slack and the whole face unhurried. (덧창 방 장면일 때) |
 | C, D | expression | Sourire franc — A plain open smile that reaches the eyes: the outer corners crease, the lower lids rise and the cheeks lift in bright light. |
 | C | expression-calm | Rêverie — The gaze drifts a little past the lens with the lids half lowered, as if she were listening to cicadas in the heat. |
 | D | expression-calm | Regard dans le vague — The eyes follow the last of the sun over the sea, the lips slightly parted, moved but still. |
@@ -96,7 +96,7 @@
 ## Legwear
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
-| A | legwear | crochet thigh-highs — Openwork crocheted cotton thigh-highs with a rolled ribbed top, the sun-warmed skin glowing through the mesh under a striped beach parasol. (丝袜 #046) |
+| A | legwear | crochet thigh-highs — Openwork crocheted cotton thigh-highs with a rolled ribbed top, the sun-warmed skin glowing through the mesh under a striped beach parasol. (丝袜 #046) (파라솔 해변 장면일 때) |
 | B, C, D | legwear | Jambes nues — Bare sun-warmed legs with a soft highlight down the shin, ending in rope-soled or flat leather sandals. |
 
 ## Props and nails
@@ -117,12 +117,12 @@
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
 | A | style | Riviera Chic — Striped tops, crisp white shorts or sundresses, flat sandals and big sunglasses in bright, sea-reflected sun. |
-| A | style-sailor | Riviera Sailor Casual — Light-blue striped linen shirts, white shorts and rope-sole shoes on a white deck. (穿搭 #070) |
+| A | style-sailor | Riviera Sailor Casual — Light-blue striped linen shirts, white shorts and rope-sole shoes on a white deck. (穿搭 #070) (요트 갑판 장면일 때) |
 | B | style | Provençal — Undyed and ochre linen, small floral prints, woven baskets and straw hats in dusty warm light on pale stone. |
-| C | style | Provence Warm Pastoral — Ochre linen wrap dresses, woven baskets and straw hats among sunflowers in warm light. |
+| C | style | Provence Warm Pastoral — Ochre linen wrap dresses, woven baskets and straw hats among sunflowers in warm light. (해바라기 밭 장면일 때) |
 | C | style-picnic | Classic French Country Picnic — Gingham linen dresses, wicker baskets and straw hats in bright summer daylight on open grass. |
-| D | style | Pure White French Riviera — White double-layer linen long dresses and wicker bags in bright clifftop sun. |
-| D | style-lavender | Lavender Dream — Ivory cotton and lavender linen set against purple rows, the shadows tinted soft violet. |
+| D | style | Pure White French Riviera — White double-layer linen long dresses and wicker bags in bright clifftop sun. (절벽 정원 장면일 때) |
+| D | style-lavender | Lavender Dream — Ivory cotton and lavender linen set against purple rows, the shadows tinted soft violet. (라벤더 밭 장면일 때) |
 | 전부 | palette | palette — Honey gold, ochre and limestone white against cobalt and turquoise sea, olive grey-green in the shade and a soft lavender-grey in every shadow; nothing neon and nothing cold or overcast. |
 
 ## Scene
@@ -132,7 +132,7 @@
 | A | place | pont en teck — A white teak yacht deck over deep blue sea. (滤镜 #097) |
 | A | place | Calanques de Cassis — Tall white limestone cliffs plunging into a clear turquoise inlet. (风格 #085) |
 | A | place | Corniche — A winding cliff road high above the sea with stone walls and hairpin turns, the water far below. (风格 #090) |
-| A | background | Côte d'Azur — Sapphire sea, a pebble beach and white yachts behind her. |
+| A | background | Côte d'Azur — Sapphire sea, a pebble beach and white yachts behind her. (자갈 해변 장면일 때) |
 | B | place | Gordes — A hill village stacked in pale dry-laid stone with narrow stairs. (滤镜 #093) |
 | B | place | Bastide — A Provençal stone farmhouse with pale shutters and a gravel court under plane trees, hot and still at midday. (滤镜 #099) |
 | B | place | Volets clos — A stone farmhouse room behind closed white wooden shutters with a cool plank floor. (滤镜 #099) |
@@ -151,12 +151,12 @@
 |---|---|---|
 | A, B, C | face-light | Plein soleil — The sun stands high overhead with no cloud or shade between it and her, so skin, white cotton and pale stone push toward white while the shadows stay small and lavender-grey. |
 | A | light-fill | Scintillement de la mer — Sun on the moving sea breaks into thousands of tiny bright points behind her and throws faint rippling light back under her chin and onto her collarbones. (滤镜 #094 #097) |
-| A | light-fill-calanques | Lumière réfléchie — At the Calanques, pale limestone cliffs and the turquoise water throw the sun back up onto the chin, collarbones and shoulders as bright warm fill. |
-| A | sky-glare | Harsh Midday Sun — The sky over the bay is pale and almost white, so the sun, pebbles and sea all glitter under one hard bright glare. |
+| A | light-fill-calanques | Lumière réfléchie — At the Calanques, pale limestone cliffs and the turquoise water throw the sun back up onto the chin, collarbones and shoulders as bright warm fill. (칼랑크 장면일 때) |
+| A | sky-glare | Harsh Midday Sun — The sky over the bay is pale and almost white, so the sun, pebbles and sea all glitter under one hard bright glare. (자갈 해변 장면일 때) |
 | B | light-fill | Lumière réfléchie — Outdoors, sun thrown back from white limestone walls fills the jaw, the eyes under the hat brim and the neck with hot warm light, so nothing in shade goes dark. |
-| B | shadow-lane | Hard Shadows — In the Gordes lanes the high sun cuts thin crisp-edged lavender-grey shadows down the narrow stone stairs while the white-gold walls glare. |
-| B | face-light-beam | Lumière à travers les volets — Midday sun forces through the slats of closed wooden shutters as a few narrow, almost pure-white bands that cross the floor, the linen and one shoulder while the rest of the room stays cool and dark. (滤镜 #099) |
-| C | face-light-dapple | Lumière mouchetée — Sun through silver olive leaves breaks into moving gold spots over her face and dress, with cool olive-grey ambient shade between them and a scatter of sun flecks on the dry ground. (滤镜 #096) |
+| B | shadow-lane | Hard Shadows — In the Gordes lanes the high sun cuts thin crisp-edged lavender-grey shadows down the narrow stone stairs while the white-gold walls glare. (고르드 골목 장면일 때) |
+| B | face-light-beam | Lumière à travers les volets — Midday sun forces through the slats of closed wooden shutters as a few narrow, almost pure-white bands that cross the floor, the linen and one shoulder while the rest of the room stays cool and dark. (滤镜 #099) (덧창 방 장면일 때) |
+| C | face-light-dapple | Lumière mouchetée — Sun through silver olive leaves breaks into moving gold spots over her face and dress, with cool olive-grey ambient shade between them and a scatter of sun flecks on the dry ground. (滤镜 #096) (올리브 숲 장면일 때) |
 | D | face-light | heure dorée — Low amber sun from the side throws long shadows and lays a gold edge along hair and shoulders. |
 | D | backlight | Contre-jour — The sun sits behind her, so hair and shoulders burn gold while the face reads a shade darker against a blown-out bright sky. (滤镜 #098 #100) |
 | D | catchlight | Iris d'ambre — Low golden light passes through each iris and turns it translucent amber, with the setting sun mirrored as a warm crescent. |
@@ -174,13 +174,13 @@
 | B | stock | Kodak Portra 160 — A finer-grained negative with muted pastel colour and smooth midtones; in this look it leaves white stone reading cool-white instead of yellow. |
 | A | stock-slide | Kodak Ektachrome E100 — A fine-grained daylight reversal film, rendered in this look with vivid colour and deep, high-contrast shadows: cobalt sea, clean silver-white cotton and almost no visible grain. (滤镜 #092) |
 | C | camera-mf | Rolleiflex 2.8F — A square 6x6 medium-format twin-lens reflex camera used at waist level. (滤镜 #096) |
-| C | lens-mf | Zeiss Planar 80mm f/2.8 — A standard medium-format lens that holds the face crisp and lets the silver-green leaves fall softly behind it with no wide-angle stretch. (Rolleiflex 2.8F의 렌즈. 이 줄을 쓰면 `Canon FD 50mm f/1.4` 줄은 쓰지 않는다) |
+| C | lens-mf | Zeiss Planar 80mm f/2.8 — A standard medium-format lens that holds the face crisp and lets the silver-green leaves fall softly behind it with no wide-angle stretch. (Rolleiflex 2.8F의 렌즈. 이 줄을 쓰면 `Canon FD 50mm f/1.4` 줄은 쓰지 않는다) (올리브 숲 장면일 때) |
 | A | lens | Zeiss Planar 45mm f/2 — A clean-edged standard lens with clear colour and a tidy, natural perspective. (滤镜 #094) |
-| A | lens-wide | Zeiss Biogon 28mm f/2.8 — A wide lens that takes in the whole deck and the sea behind her with deep focus and mild edge stretching, the face staying central. (滤镜 #097) |
+| A | lens-wide | Zeiss Biogon 28mm f/2.8 — A wide lens that takes in the whole deck and the sea behind her with deep focus and mild edge stretching, the face staying central. (滤镜 #097) (요트 갑판 장면일 때) |
 | B | lens | Summicron 35mm f/2 — A wide-normal lens with a crisp subject, soft smooth falloff and a bit of the surrounding place kept in the frame. (滤镜 #091 #093 #099) |
 | C | lens | Canon FD 50mm f/1.4 — A vintage standard lens with warm, slightly soft rendering and gently glowing highlights. (滤镜 #095 #098) |
 | D | lens | Summilux 50mm f/1.4 — A wide-aperture lens with a sharp focal plane and a creamy glow around the bright edges of hair and sea. (滤镜 #100) |
-| B | bloom | Soft Glow — The almost-white beams and sunlit limestone spread a gentle luminous halo into the surrounding shade. (滤镜 #099) |
+| B | bloom | Soft Glow — The almost-white beams and sunlit limestone spread a gentle luminous halo into the surrounding shade. (滤镜 #099) (덧창 방 장면일 때) |
 | D | bloom | Halation — The sun and the gold-lit hair bleed a soft red-orange glow around their edges, as light scatters inside the film. (滤镜 #100) |
 | A, D | flare | Lens Flare — The high or low sun sends soft veils and a faint colour streak across one corner of the frame and lowers contrast near it. |
 | C | format | 6x6 Square Frame — A square 6x6 composition with the subject centered or lightly offset and calm, balanced margins. (滤镜 #096) |

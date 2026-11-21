@@ -74,10 +74,10 @@
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
 | A | outfit | Striped Crop Cami — A short cotton cami in bold multicolor stripes with thin straps, bare shoulders and a ribbed edge that stops above the waist. |
-| A | outfit | Retro One-Piece Swimsuit — A bright red stretch one-piece with wide straps and a scooped back, the wet fabric pulled tight and holding highlights where drops sit. |
-| A | outfit | Halter Swimsuit — A black halter-neck one-piece with a high-cut leg and an open back, its satin-finish fabric throwing a long soft highlight along the hip. |
+| A | outfit | Retro One-Piece Swimsuit — A bright red stretch one-piece with wide straps and a scooped back, the wet fabric pulled tight and holding highlights where drops sit. (수영 장면일 때) |
+| A | outfit | Halter Swimsuit — A black halter-neck one-piece with a high-cut leg and an open back, its satin-finish fabric throwing a long soft highlight along the hip. (수영 장면일 때) |
 | A | outfit-outer | Sherpa Fleece — A thick curly-pile sherpa layer with a folded collar, its loose fibers catching the light at their tips. |
-| A | outfit-outer | pea coat — A double-breasted navy wool pea coat with big dark buttons and a broad collar turned up against the sea fog. |
+| A | outfit-outer | pea coat — A double-breasted navy wool pea coat with big dark buttons and a broad collar turned up against the sea fog. (금문교 안개 장면일 때) |
 | B | outfit | white tank top — A plain white ribbed cotton tank clings to the torso and leaves the shoulders bare, taking the leak's orange as a wash. |
 | B | outfit | Cotton Maxi Dress — A plain white fine-cotton dress falls to the ankles, its skirt blown out by the sea wind and faintly translucent where the low sun comes through. |
 | B | outfit-outer | Denim Jacket — A worn denim jacket with faded seams, metal buttons and a slightly frayed hem, its twill taking the red-yellow burn along one edge. |
@@ -85,7 +85,7 @@
 | C, D | outfit-bottom | Denim Cutoffs — Frayed low-slung denim shorts with raw hems, soft faded cotton and white threads trailing at each leg opening. |
 | C | outfit | Floral Sundress — A light-blue cotton-linen sundress on thin straps printed with tiny flowers, the loose weave creased softly at the waist. |
 | D | outfit | Crewneck Sweatshirt — A faded grey crewneck in heavy cotton with ribbed cuffs and a plain chest patch, the fleece pilled at the elbows. |
-| D | outfit | Triangle Bikini — A black triangle-top bikini tied at the neck and hips, the wet fabric clinging with beads of water along the straps. |
+| D | outfit | Triangle Bikini — A black triangle-top bikini tied at the neck and hips, the wet fabric clinging with beads of water along the straps. (수영 장면일 때) |
 
 ## Props and nails
 | 갈래 | 슬롯 | 줄 |
@@ -93,9 +93,9 @@
 | A | hand-prop | ice pop — A frozen fruit bar on a wooden stick starts to melt, its glossy surface dripping bright juice onto her fingers. |
 | A | hand-prop | Polaroid Print — A white-bordered instant print with a square image area, held by its edge, its image still developing from pale cream toward full color. |
 | A | hand-prop | Roasted Marshmallow — A white marshmallow on a thin stick above glowing embers, its surface browning gold as it sags. |
-| A | face-prop | Cat-Eye Sunglasses — Upswept white frames with dark lenses that reflect the pool water and the sky. |
+| A | face-prop | Cat-Eye Sunglasses — Upswept white frames with dark lenses that reflect the pool water and the sky. (수영장 장면일 때) |
 | B | face-prop | Ray-Ban Aviator — Thin gold-framed teardrop sunglasses with dark lenses that mirror the road and the low sun as small bright points. |
-| C | hand-prop | Picnic Basket — A woven wicker basket lined in red-and-white gingham sits in the wildflowers beside her. |
+| C | hand-prop | Picnic Basket — A woven wicker basket lined in red-and-white gingham sits in the wildflowers beside her. (들꽃 풀밭 장면일 때) |
 | D | hand-prop | Red Party Cup — A bright red plastic cup held in one hand, its ribbed sides glossy under the flash with no readable lettering. |
 | D | hand-prop | Cheeseburger — A large cheeseburger in loose paper, melted cheese edging over a tall bun and sauce shining on the lettuce. |
 | D | hand-prop | Leather Suitcase — A scuffed brown leather suitcase with brass latches and a worn handle, its corners rubbed pale from travel. |
@@ -138,21 +138,21 @@
 
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
-| A | face-light | Campfire Light — Low orange firelight from the fire pit lights her face and hands warmly from below and one side against the dark desert, with no sunlight and no flash in the frame. |
+| A | face-light | Campfire Light — Low orange firelight from the fire pit lights her face and hands warmly from below and one side against the dark desert, with no sunlight and no flash in the frame. (캠프파이어 장면일 때) |
 | A, D | face-light | Direct Flash — A flat bright on-camera flash blows out the skin highlights and throws a crisp dark shadow on whatever stands behind her. (A는 `Polaroid 600` 줄을 고른 경우에만 쓴다) |
-| A | light-fill | Parasol Shade — Beach umbrellas cast bands and patches of shade with bright spots of sun leaking across her shoulders and the table. |
-| A | place-boardwalk | Bounce Light — Under the bright sky over the boardwalk and the cafe, glare bounces up from the sun-bleached pavement beside the sand and lifts the chin and the table in front of her. |
-| A | weather | Atmospheric Haze — Fine marine haze scatters the light so contrast drops and the far bridge fades toward the sky. |
-| A | catchlight | Campfire Flicker Catchlight — Moving orange-red firelight flickers across the irises as small gold points. |
+| A | light-fill | Parasol Shade — Beach umbrellas cast bands and patches of shade with bright spots of sun leaking across her shoulders and the table. (비치 카페 장면일 때) |
+| A | place-boardwalk | Bounce Light — Under the bright sky over the boardwalk and the cafe, glare bounces up from the sun-bleached pavement beside the sand and lifts the chin and the table in front of her. (산책로·카페 장면일 때) |
+| A | weather | Atmospheric Haze — Fine marine haze scatters the light so contrast drops and the far bridge fades toward the sky. (금문교 안개 장면일 때) |
+| A | catchlight | Campfire Flicker Catchlight — Moving orange-red firelight flickers across the irises as small gold points. (캠프파이어 장면일 때) |
 | B | face-light | Golden Hour Backlight — The low sun sits behind her and rims her hair and shoulders in gold while the face rests in soft shade filled by sea and sky. |
-| B | catchlight | Golden Sunset Arc Catchlight — A curved arc of warm orange sunlight shines across each iris with the road narrowing inside it. |
-| B | glint | Specular Flare — The chrome mirror and window glass of the open-top car catch the low gold sun and throw sharp glints back toward the lens. |
+| B | catchlight | Golden Sunset Arc Catchlight — A curved arc of warm orange sunlight shines across each iris with the road narrowing inside it. (낙조 도로 장면일 때) |
+| B | glint | Specular Flare — The chrome mirror and window glass of the open-top car catch the low gold sun and throw sharp glints back toward the lens. (오픈카 장면일 때) |
 | A, C | face-light | Noon Sunlight — High bright sun gives small crisp shadows and skin edges that clip slightly toward white. |
-| C | shadow | Palm Leaf Shadow Projection — Hard sun through palm fronds projects feathery black leaf shapes across her face, shoulders and shirt. |
-| C | place-bluff | Bounce Light — On the coastal bluff, light reflected up from the pale dry grass and the sea softly fills the underside of her jaw and brow. |
+| C | shadow | Palm Leaf Shadow Projection — Hard sun through palm fronds projects feathery black leaf shapes across her face, shoulders and shirt. (야자수 대로 장면일 때) |
+| C | place-bluff | Bounce Light — On the coastal bluff, light reflected up from the pale dry grass and the sea softly fills the underside of her jaw and brow. (해안 절벽 풀밭 장면일 때) |
 | D | catchlight | Paparazzi Direct Flash Catchlight — The on-camera flash leaves a single hard white dot at the center of each pupil. |
-| D | sun | Noon Sunlight — Over the Palm Springs pool and along the Route 66 shoulder, a dry bright sky and hard sharp-edged sun lay crisp shadows, and the small flash only adds a flat fill on her face. |
-| D | place-burger | Bodega Fluorescent Light — The lit counter window of the burger stand glows against the dark street, and the pavement beyond its light is left black. |
+| D | sun | Noon Sunlight — Over the Palm Springs pool and along the Route 66 shoulder, a dry bright sky and hard sharp-edged sun lay crisp shadows, and the small flash only adds a flat fill on her face. (수영장·국도 낮 장면일 때) |
+| D | place-burger | Bodega Fluorescent Light — The lit counter window of the burger stand glows against the dark street, and the pavement beyond its light is left black. (버거집 장면일 때) |
 
 ## Optics
 | 갈래 | 슬롯 | 줄 |
@@ -170,7 +170,7 @@
 | C | camera | Holga 120N — A plastic toy-camera frame through its fixed plastic lens, with a sharp center, smeared soft edges, a heavy dark vignette and uneven light leaks. |
 | C | stock | Ilford HP5 Plus — Forgiving black-and-white film with wide grey-scale gradation, moderate contrast and detailed shadows. |
 | C | camera | Lomography Diana F+ — A toy-camera frame through its fixed plastic lens, with soft focus, dark corners and a soft pale leak along one edge. |
-| C | exposure | Double Exposure — Two exposures overlap in one frame, so a dark leafy silhouette lies over the face and clothing like a transparent layer. |
+| C | exposure | Double Exposure — Two exposures overlap in one frame, so a dark leafy silhouette lies over the face and clothing like a transparent layer. (야자수 장면일 때) |
 | C | grain | B&W film grain — Coarse silver grain clumps across the whole frame and in the corners, heaviest in the dark vignette. |
 | D | stock | Kodak FunSaver — A disposable-camera frame from a plastic lens, with soft corners, warm saturated color and flat light from the built-in flash. |
 | D | stock | Kodak ColorPlus 200 — Budget film that in this look carries a thick yellow cast, faint red and cyan color noise and rough grain in the shadows. |

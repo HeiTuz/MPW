@@ -44,7 +44,7 @@
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
 | A | hair | Glass Hair — Pin-straight dark hair parted dead centre falls over the shoulders of the coat, its glossy surface taking one broad soft grey highlight instead of a hard streak. (滤镜 #041 #042) |
-| A, C | hair | Sea Salt Waves — Loose dirty-blonde waves move in the river wind and brush the cheek, their ends separating into soft uneven strands. (滤镜 #046 #051) |
+| A, C | hair | Sea Salt Waves — Loose dirty-blonde waves move in the river wind and brush the cheek, their ends separating into soft uneven strands. (滤镜 #046 #051) (강변 장면일 때) |
 | A, B | hair | Windblown Hair — Hair lifts sideways in a cold gust and streams across one shoulder, loose strands crossing the cheek while the eyes stay clear. (滤镜 #044 #047 #052 #054) |
 | B | hair | Neat Pixie Cut — A very short dark crop is combed smooth and tucked behind both ears, every strand lying in a clean line. (滤镜 #045) |
 | B | hair | Ear-Tucked Bob — A smooth black bob ending at chin length is tucked neatly behind both ears, leaving the ears and the jaw fully open. (滤镜 #048) |
@@ -64,10 +64,10 @@
 |---|---|---|
 | A | expression | Off-Camera Gaze — The eyes rest on a point about fifteen degrees past the lens, level and calm, the lids relaxed and the mouth closed. (滤镜 #046 #050) |
 | A, C | expression | Cool Gaze — A steady look straight into the lens with the chin level and no smile, nothing performed. (神态 #069 #082) |
-| A | expression | Pensive Gaze — The eyes fix on the far skyline with relaxed lips and a quiet brow, the face still and unguarded. (滤镜 #046) |
+| A | expression | Pensive Gaze — The eyes fix on the far skyline with relaxed lips and a quiet brow, the face still and unguarded. (滤镜 #046) (스카이라인 보이는 장면일 때) |
 | A, C | expression | Candid Laugh — Laughter breaks out mid-motion, the head tipping back into the wind with the face unarranged and the shoulders loose. (滤镜 #047 #052, 拍照姿势 #028) |
 | B | expression | Sharp Jawline Turn — The head turns toward profile with the jaw set in a clean angle while the eyes cut back toward the camera. (滤镜 #044 #054) |
-| B | expression | Art Gallery Contemplation — The head tilts slightly as the eyes assess the canvas from a step away, the brows tightening faintly. (滤镜 #048, 神态 #081) |
+| B | expression | Art Gallery Contemplation — The head tilts slightly as the eyes assess the canvas from a step away, the brows tightening faintly. (滤镜 #048, 神态 #081) (갤러리 장면일 때) |
 | B | expression | Boardroom Listener — The head leans a little forward, still and attentive, the eyes unblinking and sharp. (滤镜 #045, 神态 #070) |
 | D | expression | Half-Lidded Gaze — The lids rest halfway down over the irises for a relaxed, unbothered look with the brows smooth. (滤镜 #055) |
 
@@ -81,14 +81,14 @@
 | A | outfit | Turtleneck — A close-fitting black knit with a high rolled neck sits under an open coat and leaves the throat as one dark column. (滤镜 #046) |
 | A | outfit | Double-Breasted Blazer — A navy wool club blazer with gold buttons and flat-rolled lapels sits over a pale blue button-down oxford shirt. (滤镜 #053) |
 | A | outfit | Cable-Knit Sweater — An oversized chunky oatmeal knit slides off one shoulder and falls to mid-thigh. (滤镜 #052) |
-| A | outfit-bottom | biker shorts — Fitted black stretch shorts end above the knee beneath the long knit, their matte surface tracing the thigh. (滤镜 #052) |
+| A | outfit-bottom | biker shorts — Fitted black stretch shorts end above the knee beneath the long knit, their matte surface tracing the thigh. (滤镜 #052) (긴 니트 입은 장면일 때) |
 | A, D | outfit-outer | Leather Jacket — A short black leather jacket worn open shows a worn sheen at the shoulders and elbows, with hard highlights on its zips. (滤镜 #047 #055) |
 | A | outfit-outer | M-65 — An olive cotton-nylon field jacket with dropped shoulders and flap pockets creases in heavy soft folds. (滤镜 #049) |
 | A | outfit-bottom | Parachute Pants — Black wide-leg nylon trousers with toggle hems swish and balloon above chunky soles as she walks. (滤镜 #049) |
 | A | footwear | Combat Boots — Lace-up boots with a thick lugged sole and scuffed black leather, one planted on the kerb. (滤镜 #047 #049) |
 | A, C | sunglasses | Sunglasses — Small dark retro lenses hide the eyes while the grey sky and the building edges mirror in them as pale panels. (滤镜 #041 #043) |
 | B | outfit | Pinstripe — Thin, sharply defined pale pinstripes run down a charcoal worsted suit, the jacket cut sharp at the shoulder. (滤镜 #045) |
-| B | outfit-outer | wool overcoat — A deep black double-breasted wool overcoat falls to the shin, its felted surface taking the fog light without a shine. (滤镜 #044 #048) |
+| B | outfit-outer | wool overcoat — A deep black double-breasted wool overcoat falls to the shin, its felted surface taking the fog light without a shine. (滤镜 #044 #048) (안개 장면일 때) |
 | C | outfit-outer | wool trench coat — A pale khaki double-breasted trench is belted loosely at the waist, its hem flying behind and the cloth darkened by rain. (滤镜 #043) |
 | C | outfit | Single-Breasted Blazer — A structured charcoal wool blazer is buttoned at the waist with square shoulders and lapels that hold a clean line. (滤镜 #051) |
 | D | outfit | Hoodie — A grey cotton hoodie with a bunched hood sits under an open jacket, the cloth soft and slightly pilled. (滤镜 #055) |
@@ -109,7 +109,7 @@
 | A | hand-prop | Photo Book — A heavy hardbound photography book is carried against the chest, its dark matte cover worn at the corners. (滤镜 #053) |
 | A | bag | Baguette Bag — A slim black calfskin shoulder bag is tucked under one arm, its edge catching a thin grey highlight. (穿搭 #036 #045) |
 | A | face-prop | Wire-rim glasses — Fine gold wire frames with small lens glints rest on the nose bridge. (滤镜 #053) |
-| C | hand-prop | Clear Dome Umbrella — A transparent dome umbrella is held overhead, rain beads running down the canopy and the wet city blurred through it. (拍照姿势 #028) |
+| C | hand-prop | Clear Dome Umbrella — A transparent dome umbrella is held overhead, rain beads running down the canopy and the wet city blurred through it. (拍照姿势 #028) (비 오는 장면일 때) |
 | D | hand-prop | soda can — A cold cherry soda can with no visible lettering is held loosely at hip height, beaded with condensation. (滤镜 #055) |
 | 전부 | nails | Vanilla Matte Nails — Short square nails in an opaque creamy vanilla with a velvety matte finish that absorbs the flat light. |
 
@@ -120,7 +120,7 @@
 |---|---|---|
 | A, B, C | style-core | NYC Street Style — Tailored coats, quick strides and stone-and-iron facades under a flat grey sky, nothing arranged for the camera. |
 | D | style-core | NYC Street Style — Worn-in jackets, slow stops and tiled or shopfront walls under cold tube light, nothing arranged for the camera. |
-| A | style | Downtown High Street — Crisp dark tailoring on a cobbled street between cast-iron facades, with strict architectural lines under even cloud light. (滤镜 #041 #042) |
+| A | style | Downtown High Street — Crisp dark tailoring on a cobbled street between cast-iron facades, with strict architectural lines under even cloud light. (滤镜 #041 #042) (주철 건물 거리 장면일 때) |
 | A | style | Model Off-Duty — One oversized piece over one fitted piece with chunky or flat shoes and a plain bag, thrown together without effort. (滤镜 #049 #052) |
 | A, D | style | Downtown Girl — Worn-in leather, washed denim and flat boots with a deliberately undone finish. (滤镜 #047 #055) |
 | B | style | Documentary Street Photography — An unposed black-and-white frame of someone passing through a real city scene, with strong tonal contrast. (滤镜 #044 #054) |
@@ -153,12 +153,12 @@
 |---|---|---|
 | A, C | face-light | Overcast Light — The cloud ceiling works as one huge softbox, giving shadowless even light and cool grey tones on the face and the coat. (滤镜 #041 #042 #043 #053) |
 | A | light-fill | Open Shade — Daylight reaches the face from the sky only, with no sun on the wall behind her, so colour stays clean and the shadows under the brow stay gentle. (滤镜 #047) |
-| A | key | Storm Light — A heavy slate sky gives flat blue-grey light with no direct sun, cold cyan air standing against the warm rust of the steel. (滤镜 #049) |
+| A | key | Storm Light — A heavy slate sky gives flat blue-grey light with no direct sun, cold cyan air standing against the warm rust of the steel. (滤镜 #049) (S2 전용) |
 | A, B | haze | Atmospheric Haze — Fine haze scatters the light so contrast drops, shadows go weak and the far skyline or cables fade into pale layers. (滤镜 #044 #046) |
-| B | face-light | Urban Canyon Light — One narrow band of cold white skylight drops between the towers onto her face and shoulders while both walls and the street around stay black. (滤镜 #045) |
-| B | face-light | North Light — Indirect skylight from high gallery glass falls cool-neutral and shadowless, so the grey ramp stays smooth. (滤镜 #048) |
+| B | face-light | Urban Canyon Light — One narrow band of cold white skylight drops between the towers onto her face and shoulders while both walls and the street around stay black. (滤镜 #045) (S4 전용) |
+| B | face-light | North Light — Indirect skylight from high gallery glass falls cool-neutral and shadowless, so the grey ramp stays smooth. (滤镜 #048) (갤러리 장면일 때) |
 | C | face-light | Wet Street Reflection — Wet asphalt turns into a dark mirror that throws the pale sky back up at her and doubles her outline below. (滤镜 #043) |
-| C | light-fill | Bounce Light — A blue-glass facade acts as a giant reflector and washes her cheek and jaw in cool cyan skylight. (滤镜 #051) |
+| C | light-fill | Bounce Light — A blue-glass facade acts as a giant reflector and washes her cheek and jaw in cool cyan skylight. (滤镜 #051) (유리 파사드 장면일 때) |
 | D | face-light | Bodega Fluorescent Light — Cold white tube light from the shop front spills over her face and shoulders, bordered sharply by the inky dark street beyond. (滤镜 #055) |
 | D | light-fill | Fluorescent Light — Overhead tubes give flat cool-white light with a faint green cast and very few shadows. (神态 #079) |
 | A, B, C | catchlight | Catchlight — A broad pale rectangle of overcast sky sits in each eye as a soft grey-white patch. |
@@ -183,10 +183,10 @@
 | D | color | Cool White Balance — Whites sit slightly cold and clean, so the skin highlights read clean and neutral with no warm yellow cast. (滤镜 #055) |
 | A, B | lens | Summicron 50mm f/2 — A standard lens with natural perspective and clean detail, kept at a middle aperture so the architecture behind her stays readable. (滤镜 #041 #054) |
 | A | lens | XCD 45mm f/4 P — A 45mm medium-format lens (about 36mm in 35mm terms) keeps the iron lines straight and the face natural, with the architecture behind her still readable. (滤镜 #042) |
-| A | lens | Zeiss Biogon 28mm f/2.8 — A wide lens with deep focus sets her inside the broad industrial lot, with mild edge stretching while the face stays near the centre. (滤镜 #049) |
+| A | lens | Zeiss Biogon 28mm f/2.8 — A wide lens with deep focus sets her inside the broad industrial lot, with mild edge stretching while the face stays near the centre. (滤镜 #049) (폐창고 장면일 때) |
 | C | lens | Summilux 35mm f/1.4 — A wide-normal lens at a middle aperture holds the avenue or glass wall around her instead of melting it. (滤镜 #043 #051) |
 | C | filter | Circular Polarizer — A rotating polarizer deepens the sky reflected in glass and strips white glare off the wet asphalt, so both read as dark clear mirrors. (滤镜 #043 #051) |
-| B | filter | Fog Filter — A diffusion filter spreads highlights into a hazy bloom and lifts the blacks to faint grey, so distant cables dissolve into the fog. (滤镜 #044) |
+| B | filter | Fog Filter — A diffusion filter spreads highlights into a hazy bloom and lifts the blacks to faint grey, so distant cables dissolve into the fog. (滤镜 #044) (브루클린 브리지 안개 장면일 때) |
 | A, C | grain | film grain — Fine, even color-film grain sits across the whole frame, slightly heavier in the shadows. |
 | B | grain | B&W film grain — Crisp silver grain lies over the whole grey ramp, fine on T-Max and bold on Tri-X. |
 | A | tone-m11 | Highlight Roll-off — Crisp micro-contrast holds in the fine surfaces while bright areas fade gradually into white without a hard clipped edge. |

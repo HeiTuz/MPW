@@ -58,7 +58,7 @@
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
 | A | expression | 無邪気な振り返り — She turns mid-step as if a friend behind the camera had called her name, lips slightly parted and one strand stuck to her cheek. |
-| A | expression | ほろ甘い幸福感 — The eyes crinkle into a wide easy smile and the cheeks lift, the look of someone sharing a warm snack. |
+| A | expression | ほろ甘い幸福感 — The eyes crinkle into a wide easy smile and the cheeks lift, the look of someone sharing a warm snack. (군것질 장면일 때) |
 | A | unguarded | 無防備 — Nothing is arranged for the camera: the gaze drifts to one side, the mouth rests soft and the shoulders stay loose. |
 | A, D | squint | まぶしげ — The lids narrow against the sun and the brows pinch slightly, lifting the cheeks into a faint squint. |
 | B | expression | 気だるげ — The lids hang half-lowered and the lips rest slightly apart, a late-night tiredness with no effort to hide it. |
@@ -76,26 +76,26 @@
 |---|---|---|
 | A | outfit | カレッジスウェット — A faded heavy crewneck with a cracked print on the chest hangs loose over the hips, its worn cotton taking the soft light. |
 | A | outfit | ネルシャツ — A thick red and black plaid flannel shirt with a brushed nap, the saturated red pulling forward in the soft frame. |
-| A | outfit | Pajamas — A cream cotton-linen pajama set with loose short sleeves, its soft folds catching the light from a sheer curtain. |
-| A | outfit | 半袖シャツ — A washed navy short-sleeve shirt hangs untucked over loose white trousers, the cotton rippling in the sea breeze. |
-| A | outfit | 水着 — A plain dark two-piece sports swimsuit under an open loose shirt at the shoreline, the fabric darkened by water. |
-| B | outfit-outer | ヴィンテージレザージャケット — A loose black leather jacket hangs open, with soft creases at the elbows and a dull highlight on each shoulder under the bulb. |
-| B | outfit | フーディー — A dark gray zip hoodie worn open, its thick cotton flattening to a plain gray under the cold fluorescent light. |
+| A | outfit | Pajamas — A cream cotton-linen pajama set with loose short sleeves, its soft folds catching the light from a sheer curtain. (레이스 커튼 장면일 때) |
+| A | outfit | 半袖シャツ — A washed navy short-sleeve shirt hangs untucked over loose white trousers, the cotton rippling in the sea breeze. (바닷가 장면일 때) |
+| A | outfit | 水着 — A plain dark two-piece sports swimsuit under an open loose shirt at the shoreline, the fabric darkened by water. (해변 장면일 때) |
+| B | outfit-outer | ヴィンテージレザージャケット — A loose black leather jacket hangs open, with soft creases at the elbows and a dull highlight on each shoulder under the bulb. (알전구 장면일 때) |
+| B | outfit | フーディー — A dark gray zip hoodie worn open, its thick cotton flattening to a plain gray under the cold fluorescent light. (형광등 장면일 때) |
 | B | outfit | 甚平 — A white short-sleeve jinbei top tied at the side with matching shorts, the crisp cotton glowing against the dim room. |
 | B, D | outfit-outer | カーディガン — A loose-gauge knit cardigan with a soft slouch, its fuzzy edge catching the last light. |
 | C | outfit-outer | トレンチコート — A black oversized work trench worn open, its hem flaring behind her each time she breaks into a run. |
 | C | outfit | ストライプシャツ — A wide striped short-sleeve shirt with baggy sleeves, the stripes bending slightly across the chest as she crouches. |
-| D | outfit | JK制服 — A dark navy school uniform with a plain pleated skirt and a tied collar, worn neatly and softened by warm backlight. |
+| D | outfit | JK制服 — A dark navy school uniform with a plain pleated skirt and a tied collar, worn neatly and softened by warm backlight. (교복 장면일 때) |
 
 ## Props and nails
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
-| A | hand-prop | アイスクリーム — A vanilla cone starts to melt in the summer heat and a drip runs over her fingers. |
+| A | hand-prop | アイスクリーム — A vanilla cone starts to melt in the summer heat and a drip runs over her fingers. (한여름 장면일 때) |
 | A | hand-prop | 焼き芋 — A split roasted sweet potato with golden flesh steams in her hands, its dark peel blistered. |
-| A | hand-prop | じょうろ — A small watering can pours a thin stream over potted leaves, water beading along the spout. |
-| B | hand-prop | 風鈴 — A small glass wind chime hangs from the eaves, its paper slip swaying and a point of light on the rim. |
-| B | grip | ブランコ — Two cold rusted chains run up from the swing seat into her hands, flecking the links with orange. |
-| C | hand-prop | スケートボード — A worn deck with black grip tape leans against her knee as she crouches by the bowl's edge. |
+| A | hand-prop | じょうろ — A small watering can pours a thin stream over potted leaves, water beading along the spout. (베란다 화분 장면일 때) |
+| B | hand-prop | 風鈴 — A small glass wind chime hangs from the eaves, its paper slip swaying and a point of light on the rim. (和室 처마 장면일 때) |
+| B | grip | ブランコ — Two cold rusted chains run up from the swing seat into her hands, flecking the links with orange. (그네 장면일 때) |
+| C | hand-prop | スケートボード — A worn deck with black grip tape leans against her knee as she crouches by the bowl's edge. (스케이트볼 장면일 때) |
 | 전부 | nails | シアーヌード — Short nails in sheer milky pink let the nail bed show with a soft flush at the tip. |
 
 ## Style
@@ -104,7 +104,7 @@
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
 | A | style | スナップ — An unplanned snapshot taken by someone walking beside her, the framing a little off-center and no styled pose. |
-| A | style | 下北沢Vintage — A thrifted look of faded prints and worn layers in a lane of secondhand shops. |
+| A | style | 下北沢Vintage — A thrifted look of faded prints and worn layers in a lane of secondhand shops. (下北沢 장면일 때) |
 | 전부 | mood | ノスタルジア — Everything looks remembered rather than seen: low resolution, a faded warm cast and the feel of an old tape found in a drawer. |
 | B | style | アンニュイ — A weary, drifting mood that never turns dramatic, the look of a late night with nothing planned. |
 | C | style | 元気系 — High-energy street movement of quick steps, loose clothes and a grin at the lens. |
@@ -137,15 +137,15 @@
 |---|---|---|
 | A | face-light | 逆光 — The sun stands behind and above her, rimming hair and shoulders with a bright edge while the video exposure lifts her face to an even milky glow. |
 | A | shade-light | 木漏れ日 — Sunlight through park trees drops soft-edged spots on her shoulder and cheek while the rest of her face stays in open shade. |
-| B | face-light | 裸電球 — One bare yellow bulb hangs in front of and above her, throwing warm short shadows under her nose and brow while the corridor behind sinks into dark. |
-| B | face-light | 蛍光灯 — Overhead tube light lays a flat cool white with a faint green-cyan cast over her skin and the cold shelves, leaving almost no shadow. |
+| B | face-light | 裸電球 — One bare yellow bulb hangs in front of and above her, throwing warm short shadows under her nose and brow while the corridor behind sinks into dark. (지하 통로 장면일 때) |
+| B | face-light | 蛍光灯 — Overhead tube light lays a flat cool white with a faint green-cyan cast over her skin and the cold shelves, leaving almost no shadow. (편의점 장면일 때) |
 | B | sky-light | 夕暮れ — Low dusk light from behind turns the sky cool pink and blue and lays a thin warm rim along her hair. |
-| C | face-light | 西日 — Low late-afternoon sun comes in sideways across the crossing, warming one side of her face and the edge of her coat. |
-| C | background-light | テールランプの光跡 — Passing red tail-lights stretch into thin horizontal streaks behind her while she holds one spot in the frame. |
-| C | screen-light | 街頭ビジョン — Under the tall screen, its glow pours a cold white light over the crowd and the crossing. |
-| D | face-light | 水滴越し — Raindrops on the car window beside her scatter the city's lights into large soft overlapping circles, the drops themselves the clearest shapes in view. (카메라와 인물이 같은 차 안이라 창은 인물 옆에 있다. 렌즈와 인물 사이에 유리가 오게 쓰지 않는다) |
+| C | face-light | 西日 — Low late-afternoon sun comes in sideways across the crossing, warming one side of her face and the edge of her coat. (횡단보도 장면일 때) |
+| C | background-light | テールランプの光跡 — Passing red tail-lights stretch into thin horizontal streaks behind her while she holds one spot in the frame. (밤 도로 장면일 때) |
+| C | screen-light | 街頭ビジョン — Under the tall screen, its glow pours a cold white light over the crowd and the crossing. (渋谷 교차로 장면일 때) |
+| D | face-light | 水滴越し — Raindrops on the car window beside her scatter the city's lights into large soft overlapping circles, the drops themselves the clearest shapes in view. (카메라와 인물이 같은 차 안이라 창은 인물 옆에 있다. 렌즈와 인물 사이에 유리가 오게 쓰지 않는다) (차창 빗방울 장면일 때) |
 | D | face-light | 夕暮れ — Strong low sun from behind melts her outline into a warm golden glow and washes her cheek to a soft peach. |
-| D | dust-light | God Rays — Slanting sun cuts the car into bands of gold and shadow, and dust specks drift visibly inside each beam. |
+| D | dust-light | God Rays — Slanting sun cuts the car into bands of gold and shadow, and dust specks drift visibly inside each beam. (차량 안 장면일 때) |
 | A | face-light | 朝の光 — Clean early daylight with a cool white cast that leans slightly green, falling softly over the face with low-contrast shadows. (S2 전용) |
 
 ## Optics

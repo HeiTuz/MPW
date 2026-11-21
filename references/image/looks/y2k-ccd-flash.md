@@ -74,7 +74,7 @@
 | A | outfit | 오버핏 — A pale oat oversized blazer hangs open over a black bandeau top, the lapels bright where the flash grazes them. |
 | B | outfit | 丝绒晚礼服 — A deep red velvet gown with a high collar, the pile drinking the flash into crimson and turning almost black in the folds. |
 | B | outfit | 改良旗袍 — A black heavy-silk cheongsam with a stand collar and knotted buttons, one bright band of sheen running along the hip. |
-| B | outfit | 机能风衣 — A long black water-repellent coat with a matte shell, rain beads on its surface lit as tiny points. |
+| B | outfit | 机能风衣 — A long black water-repellent coat with a matte shell, rain beads on its surface lit as tiny points. (비 오는 밤 장면일 때) |
 | C | outfit | Leather Jacket — A black leather jacket hangs open over a white ribbed tank, the waxy leather throwing hard highlights on the shoulders and zip. |
 | C | outfit | satin slip dress — A champagne satin slip dress on thin straps, a liquid highlight running down each fold. |
 | C | outfit | Camel Coat — A long camel cashmere coat in heavy folds, its brushed surface turning pale gold in the flash. |
@@ -88,7 +88,7 @@
 | A | hand-prop | 투명캔 — A see-through drink can held at chest height, the flash laying a white streak across the clear side. |
 | B | jewelry | 水滴耳坠 — Smooth teardrop jade earrings swing from fine hooks, each polished face holding a small bright flash glint. |
 | B | hand-prop | 香槟高脚杯 — A tall champagne flute held at chest height, a thin line of bubbles lit gold by the flash. |
-| B | hand-prop | 透明雨伞 — A clear plastic umbrella held over one shoulder, rain beads on the canopy lit as points. |
+| B | hand-prop | 透明雨伞 — A clear plastic umbrella held over one shoulder, rain beads on the canopy lit as points. (비 오는 밤 장면일 때) |
 | C | face-prop | sunglasses — Small dark retro sunglasses, the flash reflected as one white spot in each lens. |
 | C | hand-prop | Kraft Sleeve Hot Latte Paper Cup — A takeaway latte in a corrugated kraft sleeve, its steam lit white by the flash. |
 | C | face-prop | Wire-rim glasses — Thin oval antique-gold wire frames with plain lenses sit on the nose bridge, a small flash glint on each lens. (S6 전용) |
@@ -128,15 +128,15 @@
 | A | catchlight | 플래시 캐치라이트 — One small hard white dot sits dead center in each pupil. |
 | B | catchlight | 闪光灯眼神光 — One small hard white dot sits dead center in each pupil. |
 | C | catchlight | camera flash catchlight — One small hard white dot sits dead center in each pupil. |
-| A | light-fill | 형광등 — Cold green-white tube light behind her tints the background flat and cool while the flash keeps her skin neutral. |
-| A | place-flash-wall | 직격 플래시 — In the gallery, the bare board-marked concrete behind her takes the flash as a flat pale wash. |
-| A | place-flash-glass | 직격 플래시 — On the glass door of the drink cooler, the flash leaves one small white glare. |
-| B | light-fill | 雨后沥青倒影 — Wet pavement mirrors her and the street lights as long streaks, the puddles throwing a second glow up at her chin. |
-| B | weather | 雨夜 — A fast flash freezes each drop of fine rain into a tiny bright point against the black night. |
-| B | place-flash-brick | 直闪 — In the courtyard, the flash picks out the weathered texture of the grey brick behind her. |
-| B | place-bounce | Bounce Light — Inside the red-velvet box, the walls throw a rich red glow back onto her from every side. |
-| C | light-fill | Neon and Flash Mix — A cool white flash lights her face cleanly while saturated pink and violet neon tints the shadows and the wall behind. |
-| C | reflect | Wet Street Reflection — The red and blue neon signs smear into long streaks across the wet asphalt. |
+| A | light-fill | 형광등 — Cold green-white tube light behind her tints the background flat and cool while the flash keeps her skin neutral. (편의점 장면일 때) |
+| A | place-flash-wall | 직격 플래시 — In the gallery, the bare board-marked concrete behind her takes the flash as a flat pale wash. (성수동 갤러리 장면일 때) |
+| A | place-flash-glass | 직격 플래시 — On the glass door of the drink cooler, the flash leaves one small white glare. (편의점 냉장고 장면일 때) |
+| B | light-fill | 雨后沥青倒影 — Wet pavement mirrors her and the street lights as long streaks, the puddles throwing a second glow up at her chin. (젖은 길 장면일 때) |
+| B | weather | 雨夜 — A fast flash freezes each drop of fine rain into a tiny bright point against the black night. (비 오는 밤 장면일 때) |
+| B | place-flash-brick | 直闪 — In the courtyard, the flash picks out the weathered texture of the grey brick behind her. (사합원 장면일 때) |
+| B | place-bounce | Bounce Light — Inside the red-velvet box, the walls throw a rich red glow back onto her from every side. (붉은 벨벳 방 장면일 때) |
+| C | light-fill | Neon and Flash Mix — A cool white flash lights her face cleanly while saturated pink and violet neon tints the shadows and the wall behind. (네온 거리 장면일 때) |
+| C | reflect | Wet Street Reflection — The red and blue neon signs smear into long streaks across the wet asphalt. (젖은 네온 거리 장면일 때) |
 
 ## Optics
 | 갈래 | 슬롯 | 줄 |
@@ -147,7 +147,7 @@
 | A | bloom | Soft Glow Bloom — On the Canon IXY compact, the flash-lit skin reads crisp while the brightest highlights bloom strongly into the dark around them. |
 | B | grain | 数码噪点 — Very fine digital noise sits only in the darkest parts of the frame, with faint colored speckle where the flash does not reach. |
 | B | flash | Canon Speedlite — A Canon hot-shoe flash (Speedlite series) fired straight on gives a clean, hard front burst and a fast fall-off behind her. |
-| B | bokeh | Bokeh Circles — At the Bund, the lights across the river and the warm windows along the far embankment stretch into soft ovals behind her. |
+| B | bokeh | Bokeh Circles — At the Bund, the lights across the river and the warm windows along the far embankment stretch into soft ovals behind her. (와이탄 장면일 때) |
 | C | stock | Kodak Portra 400 — A color negative film that in this look leans warm and low-contrast, with creamy skin tones, soft highlight roll-off and fine even grain. |
 | C | stock | Kodak Tri-X 400 — A black-and-white negative film giving pure monochrome tone with coarse grain, ink-deep blacks and brilliant highlights. |
 | C | lens | CONTAX T3 — A 35mm Sonnar compact lens, crisp at the center with natural proportions on the face. |

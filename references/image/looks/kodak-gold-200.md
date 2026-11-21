@@ -46,14 +46,14 @@
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
 | A | hair | Power Ponytail — A high ponytail tied off the crown whips behind her as she moves, loose wisps lifting at the temples and the ends lit gold by the sun. |
-| A | hair | Hat Hair — Wavy hair lies pressed flat in a band under the cap brim, the loose ends springing out unevenly below it. |
+| A | hair | Hat Hair — Wavy hair lies pressed flat in a band under the cap brim, the loose ends springing out unevenly below it. (트러커 캡 쓴 장면일 때) |
 | A | hair | Pigtail Braids — Two loose plaits hang forward over the chest from a center part, tied with plain elastics and a little frayed by the day. |
-| A | hair | Wet-Look Waves — Hair wet from the pool lies in clumped ropes against the neck and shoulders, each wave carrying a wet sheen. |
+| A | hair | Wet-Look Waves — Hair wet from the pool lies in clumped ropes against the neck and shoulders, each wave carrying a wet sheen. (수영장 장면일 때) |
 | B | hair | Windblown Hair — Deep-gold waves are whipped sideways by the open-land wind, strands streaming away from the face so the eyes stay clear. |
 | B | hair | Messy Bun — Hair is pinned into a loose round bun on the crown with loops and wisps escaping at the temples and the nape. |
 | C | hair | Voluminous Curls — Big soft curls with lift at the roots rest on the shoulders and bounce light off their upper curves. |
 | C | hair | Ear-Tucked Bob — A chin-length bob is worn tucked behind both ears with the ends turning under at the jaw. |
-| D | hair | Windswept Waves — Long golden-brown waves lift in the slipstream of the turning ride, each strand edged by the amber bulbs. |
+| D | hair | Windswept Waves — Long golden-brown waves lift in the slipstream of the turning ride, each strand edged by the amber bulbs. (S5 전용) |
 | 전부 | brow | Brow Lamination — Full natural brows brushed upward with every hair visible and a faint sheen where the sun grazes them. |
 
 ## Expression
@@ -64,7 +64,7 @@
 | A | eyes | Squint — The lids narrow against the hard light, the cheeks lift and the lashes gather into a dark line. |
 | B | expression | Pensive Gaze — The eyes rest on a far point past the horizon with the lips relaxed and the brow quiet. |
 | B | expression | Eye-Closed Smile — The eyes close over a soft smile while she hums or strums, the head tilted a few degrees. |
-| C | expression | Paper Straw Peek — The teeth hold the end of a striped straw while the eyes slide sideways toward the window light with a small spark. |
+| C | expression | Paper Straw Peek — The teeth hold the end of a striped straw while the eyes slide sideways toward the window light with a small spark. (S4 전용) |
 | D | expression | Head-Tilt Beaming Smile — The head tips to one side with a broad smile, the cheeks plump and lifted in the bulb light. |
 
 ## Outfit
@@ -79,13 +79,13 @@
 | A | outfit-bottom | Denim Cutoffs — Light-blue distressed denim shorts with raw frayed hems, the loose threads lit white against the leg. |
 | A | outfit-outer | Denim Jacket — A boxy faded-blue denim jacket worn open, pale at the seams and creased at the elbows, its brass buttons throwing small glints. |
 | A | outfit-outer | Baseball Jersey — A vintage button-front cotton baseball jersey worn open over a tank, its mesh-like weave and trim crisp in direct sun. |
-| A | outfit-swim | Retro One-Piece Swimsuit — A saturated red scoop-back one-piece swimsuit whose stretch fabric turns glossy where pool water beads on it. |
+| A | outfit-swim | Retro One-Piece Swimsuit — A saturated red scoop-back one-piece swimsuit whose stretch fabric turns glossy where pool water beads on it. (수영장 장면일 때) |
 | A, D | outfit-dress | Floral Sundress — A strappy cotton sundress in a small printed pattern, the hem lifting in the breeze and the print crisp in the light. |
 | B | outfit | Chambray Shirt — A faded light-blue chambray shirt with soft creases, its tails and sleeves whipped sideways by the wind. |
 | B | outfit-outer | Cardigan — A chunky oatmeal knit cardigan hangs loose off the shoulders, its thick stitches throwing small shadows in the low sun. |
 | B | outfit | Jumpsuit — An earth-tone cotton utility jumpsuit belted at the waist, the coarse twill worn into creases at the knees and elbows. |
 | C | outfit-top | Corduroy — A brown wide-wale corduroy shirt whose ribs shift from tan to dark brown as the window stripes cross it. |
-| C | outfit-bottom | Dad Jeans — Loose straight faded jeans with a high waist, the denim creasing at the knee against the booth seat. |
+| C | outfit-bottom | Dad Jeans — Loose straight faded jeans with a high waist, the denim creasing at the knee against the booth seat. (다이너 부스 장면일 때) |
 | D | outfit | Cable-Knit Sweater — A thick ivory cable knit with raised rope-like columns soaks up the amber of the dusk. |
 
 ## Props and nails
@@ -97,7 +97,7 @@
 | A | hat | Trucker Hat — A foam-front cap with open mesh panels and no printed logo, its brim shading the forehead above squinting eyes. |
 | A, B | vehicle | Vintage Pickup — A faded-paint pickup with a rusty tailgate and wide fenders sits in dry grass, sun glinting along its chrome. |
 | B | hand-prop | Enamel camp mug — A white enamel mug with a cobalt rolled rim, soot-marked low on the body, steams with fresh coffee. |
-| B | hand-prop | Ukulele — A small honey-wood ukulele rests in the lap, its grain glowing in the low light from an open van door. |
+| B | hand-prop | Ukulele — A small honey-wood ukulele rests in the lap, its grain glowing in the low light from an open van door. (캠핑카 장면일 때) |
 | C | hand-prop | Milkshake Glass — A tall glass of vanilla milkshake with a red-and-white striped straw beads with cold sweat beside the chrome. |
 | C | hand-prop | Vinyl LP — A black 12-inch record slides half out of a kraft sleeve, its fine grooves catching a curved line of window light. |
 | C | face-prop | Wire-Rim Glasses — Fine round antique-gold wire frames sit low on the nose with small lens glints from the window. |
@@ -142,16 +142,16 @@
 | A | face-light | Noon Sunlight — High bright sun lays small crisp shadows under the brow and chin, with a warm gleam on the cheekbones and the pale edges of cotton slightly clipped. |
 | A | rim | Rim Light — Afternoon sun from behind and above draws a thin gold line along the hair and shoulders as she runs. |
 | A, C | glint | Specular Flare — Chrome, glass and enamel throw sharp star-shaped glints of the sun back toward the lens. |
-| A | face-shadow | Peaked Cap Shadow — The cap brim throws a band of shadow across the eyes while one brow shows sharply beneath it. |
+| A | face-shadow | Peaked Cap Shadow — The cap brim throws a band of shadow across the eyes while one brow shows sharply beneath it. (트러커 캡 쓴 장면일 때) |
 | A | sun-shadow | Hard Shadows — High bright sun draws short, sharp-edged, dark shadows across the road, the bowl, under the station canopy and between the bleacher rows while pale surfaces bleach in the glare. |
-| A | water-light | Caustics — Water bends the sun into moving net-like bright lines across skin and the pool wall, with drops flashing gold. |
+| A | water-light | Caustics — Water bends the sun into moving net-like bright lines across skin and the pool wall, with drops flashing gold. (수영장 장면일 때) |
 | B, D | face-light | Golden Hour Glow — Low sun from the side turns skin amber and runs a thin gold outline along the hair edges. |
 | B | beam | God Rays — Sunlight crossing dusty or misty air becomes straight shafts bright with floating particles. |
-| B | wall-light | Golden Hour — Where a vast gorge falls away, the low sundown sun lights the red canyon walls gold on their faces and leaves the folds in dark, slightly blue-leaning shade. |
+| B | wall-light | Golden Hour — Where a vast gorge falls away, the low sundown sun lights the red canyon walls gold on their faces and leaves the folds in dark, slightly blue-leaning shade. (대협곡 장면일 때) |
 | B | catchlight | Golden Sunset Arc Catchlight — A curved arc of warm orange sunlight shines across each iris with the road falling away behind. |
 | C | face-light | Window Light — Daylight from the shop window models the face with a bright side and a soft shadow side. |
-| C | light-fill | Venetian Blind Shadows — Sun through wooden blinds lays parallel gold stripes across her shoulders, the records and the counter. |
-| D | light-fill | String Lights — Rows of bare incandescent bulbs strung over the ride glow amber, each bulb a warm point against the dusk sky. |
+| C | light-fill | Venetian Blind Shadows — Sun through wooden blinds lays parallel gold stripes across her shoulders, the records and the counter. (레코드점 장면일 때) |
+| D | light-fill | String Lights — Rows of bare incandescent bulbs strung over the ride glow amber, each bulb a warm point against the dusk sky. (S5 전용) |
 | D | sky-glow | Sunset Sky Glow — Over the drive-in lot and the carousel the sunset sky turns warm orange and pink, tinting skin and gilded paint and softening every shadow. |
 
 ## Optics
@@ -174,8 +174,8 @@
 | A | tone-ae1 | Warm Vintage Daylight Color — Warm, slightly soft vintage colour with an honest daylight exposure. |
 | A | tone-xa | Film Vignette — Soft vintage colour with the corners falling faintly darker toward the edge of the frame. |
 | A | tone-k1000 | Deep Focus Wide View — The wide view keeps deep focus from the running figure to the bowl or road around her with mild edge stretching, in plain, slightly rough documentary colour. |
-| B | tone-mamiya | Highlight Roll-off — Rich texture holds across the red rock while the sky and bright rock faces step smoothly toward white without a hard clipped edge. |
-| C | tone-canonet | Soft Low-Contrast Warm Color — Soft, slightly low-contrast warm colour keeps the whole diner readable. |
+| B | tone-mamiya | Highlight Roll-off — Rich texture holds across the red rock while the sky and bright rock faces step smoothly toward white without a hard clipped edge. (대협곡 장면일 때) |
+| C | tone-canonet | Soft Low-Contrast Warm Color — Soft, slightly low-contrast warm colour keeps the whole diner readable. (다이너 장면일 때) |
 | D | tone-fm | Open Airy Exposure — The dusk exposure stays open and airy through the midtones, with honest grain. |
 | D | tone-spotmatic | Takumar — The coated glass gives her face a gentle three-dimensional pop against a softly blended background of bulbs. |
 

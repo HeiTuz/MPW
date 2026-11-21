@@ -61,7 +61,7 @@
 | A | expression | 無邪気な振り返り — She looks back mid-step as a friend's flash goes off, the eyes still refocusing and the lips parted in an unguarded half-smile. |
 | A | squint | まぶしげ — The sudden flash narrows the lids and pinches the brows, lifting the cheeks into a squint with the gaze not quite on the lens. |
 | B | expression | 口元を隠す笑い — One hand rises loosely over the mouth while the eyes curve into crescents above it and the shoulders shake at a joke. |
-| B | expression | ほろ酔い — The eyes look soft and slightly glassy, the cheeks warm and the smile loose after a cold drink. |
+| B | expression | ほろ酔い — The eyes look soft and slightly glassy, the cheeks warm and the smile loose after a cold drink. (술자리 장면일 때) |
 | B | expression | 無防備 — Nothing is held for the camera: the eyes half close, the mouth rests soft and the shoulders drop on a quiet floor. |
 | C | expression | 物思い — The lids lower and the gaze rests on the window or on the horizon beyond the fence, the head tilted slightly toward the light. (창가·옥상 장면 전용이다. 시선이 가는 곳이 다른 장면이면 시선 대상만 그 장면의 것으로 바꾼다) |
 | D | squint | まぶしげ — Hard sun narrows the lids into crescents and pinches the brows, as if one hand were about to rise to the forehead. |
@@ -78,11 +78,11 @@
 | B | outfit | ボアフリース — A black grained fleece jacket zipped to the collar, the pile fluffing slightly and soaking up the flash. |
 | B | outfit | デニムジャケット — A washed oversized denim jacket with faded elbows and brass buttons, the flash picking out the seam lines. |
 | B | outfit | 綿麻ワンピース — A loose off-white cotton-linen lounge dress with natural wrinkles, its fibers warm under the low flash. |
-| C | outfit | 関東襟セーラー服 — A navy twill sailor top with a flat shallow collar, two thin white braid lines and a white scarf knotted at the chest. |
-| C | outfit-bottom | プリーツスカート — A knee-length navy pleated skirt whose fold edges pick up thin lines of low sun as she moves. |
+| C | outfit | 関東襟セーラー服 — A navy twill sailor top with a flat shallow collar, two thin white braid lines and a white scarf knotted at the chest. (교복 장면일 때) |
+| C | outfit-bottom | プリーツスカート — A knee-length navy pleated skirt whose fold edges pick up thin lines of low sun as she moves. (교복 장면일 때) |
 | C | outfit-outer | Tweed — A thick ivory tweed coat whose nubby weave scatters the snow light into tiny specks. (雪の朝 전용) |
 | D | outfit | 白T — A plain heavy white cotton tee cut oversized with a slightly stretched collar, nearly translucent where strong sun comes through it. |
-| D | outfit | セパレート水着 — A matte black athletic two-piece swimsuit with a scoop top and high-waisted bottoms, water beading on the shoulders. |
+| D | outfit | セパレート水着 — A matte black athletic two-piece swimsuit with a scoop top and high-waisted bottoms, water beading on the shoulders. (물놀이 장면일 때) |
 
 ## Legwear
 | 갈래 | 슬롯 | 줄 |
@@ -97,7 +97,7 @@
 |---|---|---|
 | A | food | 肉まん — A pale steamed pork bun held in its paper wrap with one bite taken, a thread of steam rising and catching the flash. |
 | A | drink | ラムネ — A pale-green glass bottle with the marble in its pinched neck, cold condensation on the shoulder lit as small white points. |
-| A | umbrella | ビニール傘 — A clear plastic umbrella held over one shoulder, rain beads on the canopy turned into small white sparks by the flash. |
+| A | umbrella | ビニール傘 — A clear plastic umbrella held over one shoulder, rain beads on the canopy turned into small white sparks by the flash. (비 오는 밤 장면일 때) |
 | A | sparkler | 線香花火 — A thin paper sparkler held low between two fingers, its orange bead throwing fine branching gold sparks into the dark. |
 | B | food | ラーメン — A deep ceramic bowl of ramen with chopsticks laid across the rim, dense white steam rising off the broth. |
 | B | drink | 生ビール — A heavy glass mug of draft beer under a thick white head, the glass streaked with condensation and the flash bright on its curve. |
@@ -149,31 +149,31 @@
 |---|---|---|
 | A | face-light | ストロボ — A small on-camera flash from about 1.2 m hits her head-on, leaving a wet sheen on the forehead, cheeks and nose and a short hard shadow on whatever stands behind her while the background drops toward black. |
 | B | face-light | ストロボ — The flash fires from barely a meter in a small room, so the face and the nearest hand burn bright and flat and the wall behind takes one hard shadow edge. |
-| A | light-fill | 提灯 — Rows of red paper lanterns glow warm behind her, so the cold white flash on her face meets red-amber light in the background. |
-| A | weather | 雨の夜 — Fine rain under city lights gives every lamp a soft halo, and the flash freezes each drop in front of her as a tiny bright dot. |
-| A | spark | 線香花火の灯り — A hand-held sparkler's orange bead and fine gold sparks light the lowered eyelids, lips and fingers from below in a small warm pool while everything else falls to dark. |
-| A | place-store | 蛍光灯 — In front of the convenience store, the lit glass front spills a flat cool-white glow onto the pavement and the door glass reflects one small white flash glare. |
-| A | place-vending | 蛍光灯 — At the side-street corner, the lit vending machines glow and lay a cold white-cyan square of light on the bare concrete. |
-| A | place-crossing | Wet Street Reflection — The wet black asphalt mirrors the traffic signals in its puddles, and the flash lights every rain streak in front of her. |
-| A | place-passage | 蛍光灯 — Cold fluorescent tubes run along the ceiling of the white-tiled passage and lay a flat green-white light over it. |
-| A | place-river | low-key — Under the dark sky only a faint sheen of water shows in the distance, and the ground beyond the flash sinks to near black. |
-| B | steam | 湯気 — Dense white steam rising off the bowl catches the flash and turns into a soft milky haze between the lens and her face. |
-| B | light-fill | Neon and Flash Mix — A cool white flash lights her face cleanly while pink and cyan karaoke light spots sweep the sofa and the walls behind. |
-| B | place-ramen | 蛍光灯 — Bright fluorescent light hangs right over the dark red counter and the steaming bowls, flat and white. |
-| B | place-table | 裸電球 — A warm tungsten bulb above the low izakaya table pools amber light over the plates, mugs and chopsticks. |
-| B | place-shop | 裸電球 — Dim warm ceiling bulbs light the basement record shop, leaving the crates and sleeves in a low amber glow. |
-| B | place-tatami | 行灯 — Soft low room light stays near the floor and glows through the white paper screen behind her. |
+| A | light-fill | 提灯 — Rows of red paper lanterns glow warm behind her, so the cold white flash on her face meets red-amber light in the background. (제등 골목 장면일 때) |
+| A | weather | 雨の夜 — Fine rain under city lights gives every lamp a soft halo, and the flash freezes each drop in front of her as a tiny bright dot. (비 오는 밤 장면일 때) |
+| A | spark | 線香花火の灯り — A hand-held sparkler's orange bead and fine gold sparks light the lowered eyelids, lips and fingers from below in a small warm pool while everything else falls to dark. (선향 불꽃놀이 장면일 때) |
+| A | place-store | 蛍光灯 — In front of the convenience store, the lit glass front spills a flat cool-white glow onto the pavement and the door glass reflects one small white flash glare. (편의점 앞 장면일 때) |
+| A | place-vending | 蛍光灯 — At the side-street corner, the lit vending machines glow and lay a cold white-cyan square of light on the bare concrete. (자판기 장면일 때) |
+| A | place-crossing | Wet Street Reflection — The wet black asphalt mirrors the traffic signals in its puddles, and the flash lights every rain streak in front of her. (횡단보도 장면일 때) |
+| A | place-passage | 蛍光灯 — Cold fluorescent tubes run along the ceiling of the white-tiled passage and lay a flat green-white light over it. (지하 통로 장면일 때) |
+| A | place-river | low-key — Under the dark sky only a faint sheen of water shows in the distance, and the ground beyond the flash sinks to near black. (강가 장면일 때) |
+| B | steam | 湯気 — Dense white steam rising off the bowl catches the flash and turns into a soft milky haze between the lens and her face. (김 오르는 그릇 장면일 때) |
+| B | light-fill | Neon and Flash Mix — A cool white flash lights her face cleanly while pink and cyan karaoke light spots sweep the sofa and the walls behind. (노래방 장면일 때) |
+| B | place-ramen | 蛍光灯 — Bright fluorescent light hangs right over the dark red counter and the steaming bowls, flat and white. (라멘집 장면일 때) |
+| B | place-table | 裸電球 — A warm tungsten bulb above the low izakaya table pools amber light over the plates, mugs and chopsticks. (이자카야 장면일 때) |
+| B | place-shop | 裸電球 — Dim warm ceiling bulbs light the basement record shop, leaving the crates and sleeves in a low amber glow. (레코드 가게 장면일 때) |
+| B | place-tatami | 行灯 — Soft low room light stays near the floor and glows through the white paper screen behind her. (다다미방 장면일 때) |
 | A, B, C | catchlight | Direct Flash Pinpoint Catchlight — One small hard white dot sits dead center in each pupil. |
 | C | face-light | 夕暮れ — The low sun stands behind her, rimming the hair and shoulders in gold while the sky burns to molten orange. (해가 낮게 걸린 늦은 오후~석양 장면에 쓴다. 雪の朝에는 쓰지 않는다) |
 | C | face-light | 雪明かり — Soft diffuse light from the pale sky and the snowy ground wraps her face evenly with almost no shadow edge and a cool, clean tone. (雪の朝 전용) |
 | C | face-light | Noon Sunlight — The afternoon sun stands high over the street, giving small crisp shadows on the face and skin highlights pushed slightly toward white. (해가 높은 한낮~이른 오후 방과 후 장면에 쓴다. 雪の朝에는 쓰지 않는다) |
 | C | light-fill | 日中シンクロ — When the sun is behind her, a small on-camera flash fills the face so it reads clearly against the bright sky and a bright gold rim outlines the hair. |
-| C | place-train | 西日 — At dusk the low gold sun rakes along the train window and across the green moquette seats. |
-| C | place-school | Window Light — Slanting window light crosses the stair landing and picks out the dust floating in the air. |
-| C | place-store | 日向と日陰 — At the convenience store front, bright afternoon sun lies on the pavement while the shop eave throws a band of open shade across the glass door and her shoulders. |
+| C | place-train | 西日 — At dusk the low gold sun rakes along the train window and across the green moquette seats. (전철 창가 장면일 때) |
+| C | place-school | Window Light — Slanting window light crosses the stair landing and picks out the dust floating in the air. (목조 교사 계단 장면일 때) |
+| C | place-store | 日向と日陰 — At the convenience store front, bright afternoon sun lies on the pavement while the shop eave throws a band of open shade across the glass door and her shoulders. (편의점 앞 장면일 때) |
 | D | face-light | Noon Sunlight — High hard sun gives small crisp shadows and pushes the skin and sand highlights slightly past white. |
 | D | light-fill | Backlit Sea Mist — Fine spray thrown up beside her glows as a translucent gold veil, and drops on the lens window catch the sun as hard sparks. |
-| D | place-sea | Caustics — In the clear turquoise shallows, sun ripples run in moving bright lines across the white sand of the sea floor. |
+| D | place-sea | Caustics — In the clear turquoise shallows, sun ripples run in moving bright lines across the white sand of the sea floor. (얕은 바다 장면일 때) |
 
 ## Optics
 **하나만 고르는 슬롯:** `flash`·`flash-off`(A·B는 터뜨리는 `flash`, C는 꺼 두는 `flash-off`. D는 둘 다 쓰지 않는다)
@@ -189,7 +189,7 @@
 | D | vignette | 周辺減光 — Even in bright sun the four corners fall slightly darker while the sky and sea in the middle stay bright. |
 | A, B | motion | わずかな被写体ブレ — The flash freezes her sharp while a swinging arm or leg leaves only a faint, brief smear at its fastest point. |
 | C | flash-off | ノンフラッシュ — Where light comes from a window or from the side the flash stays off, so the sky or the glass draws the picture with soft contrast and heavier grain in the dim parts. |
-| C | flare | Lens Flare — The low sun at the train window sends a soft flare across the edge of the frame and lowers contrast near it. |
+| C | flare | Lens Flare — The low sun at the train window sends a soft flare across the edge of the frame and lowers contrast near it. (전철 창가 장면일 때) |
 | C, D | highlight | 白飛び — Fixed exposure lets the bright sky and any pale wall run to paper white with softly bleeding edges while the midtones stay airy. |
 | D | case | 水中写ルンです — A waterproof single-use film camera in a thick clear housing with ISO 800 film and no flash, the housing adding faint ripple refraction at the frame edge. (수중 모델 경로 전용) |
 

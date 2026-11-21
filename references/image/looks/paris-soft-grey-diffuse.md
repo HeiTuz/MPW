@@ -80,7 +80,7 @@
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
 | A, C, D | outfit | Marinière classique bretonne — Narrow navy and cream stripes in heavy combed cotton on a boat-neck top with dropped shoulders, the matte weave taking the grey light with no sheen. (穿搭 #001) |
-| A | outfit | Chemise blanche boyfriend — A man's-cut white cotton-linen shirt worn alone as a dress, collar slumped open and cuffs folded back, the thin weave faintly translucent against the window light. |
+| A | outfit | Chemise blanche boyfriend — A man's-cut white cotton-linen shirt worn alone as a dress, collar slumped open and cuffs folded back, the thin weave faintly translucent against the window light. (창가 장면일 때) |
 | B | outfit | Blazer oversize — A charcoal oversized blazer with built-up shoulders over a white ribbed tank, its sharp planes held cleanly in even light. |
 | C | outfit | Col roulé — A close black fine-knit roll-neck folded once at the throat, matte against the damp stone. |
 | D | outfit | Lin lavé — Washed ecru linen that creases deeply at the elbows and waist and glows slightly where soft light passes through the thin weave. |
@@ -104,7 +104,7 @@
 | C, D | book | Collection Blanche — A worn cream-white paperback with thin red and black rules on the cover, its soft corners curling. |
 | D | book | Gravure ancienne — A loose portfolio of yellowed engraved prints with deckled edges and faint brown spotting, turned with two fingers. |
 | D | bag | Sac à main en cuir — A hand-stitched leather shoulder bag in warm brown with a matte patina along the edges, held by its thin strap. |
-| D | flower | hortensias — Rounded white hydrangea heads massed in the corner of the courtyard, soft and full in the green shade. |
+| D | flower | hortensias — Rounded white hydrangea heads massed in the corner of the courtyard, soft and full in the green shade. (S6 전용) |
 | 전부 | nails | Polissage naturel — Short bare nails buffed to a fine satin finish with clean cuticle lines and no polish. |
 
 ## Style
@@ -112,11 +112,11 @@
 
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
-| A | style | Parisian Chic — A deliberately undone mix of striped knit, jeans and one loose layer, slightly rumpled and never over-matched, in flat grey daylight. |
+| A | style | Parisian Chic — A deliberately undone mix of striped knit, jeans and one loose layer, slightly rumpled and never over-matched, in flat grey daylight. (S1 전용) |
 | A | style | Instantané spontané — A candid mid-motion frame, slightly off-centre, caught between one gesture and the next. |
 | B | style | Cool Toned Parisian Modern — Silver-grey and charcoal cloth, long dark coats and pale cool stone surfaces under an overcast sky. |
 | C | style | Camus — Grey-blue wet streets, a damp coat and a calm, wry stillness in the framing. |
-| C | style | Parisian Trench Look — A belted khaki trench over a striped knit, with wet cobbles shining after a light rain. |
+| C | style | Parisian Trench Look — A belted khaki trench over a striped knit, with wet cobbles shining after a light rain. (S4 전용) |
 | D | style | Left Bank Intellectual — Dark neutral layers, a book held to the hip and a quiet scholarly attention to old paper and stone. |
 | 전부 | palette | palette — Limestone ivory, greige and soft blue-grey with muted green, brick and camel, every colour kept quiet and low in saturation. |
 | C, D | palette-mono | palette — Limestone white, pale grey and soft slate-grey shadows as one grey ramp from milk white to ink black, every tone a neutral grey. |
@@ -148,18 +148,18 @@
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
 | A, C | face-light | Paris Overcast Light — The whole sky is one soft grey-white lid, so the face is lit evenly, the highlights soft and the area under the nose as bright as the cheeks. |
-| A | face-light | Lumière du nord — Steady, cool-neutral daylight from a north-facing window or balcony falls from one wide side and grades smoothly from cheek to shoulder with no sun patch. |
-| A | key | Overhead Skylight — A huge frosted glass roof spreads the sky into shadowless white light over the whole room and the figure. |
+| A | face-light | Lumière du nord — Steady, cool-neutral daylight from a north-facing window or balcony falls from one wide side and grades smoothly from cheek to shoulder with no sun patch. (북향 창·발코니 장면일 때) |
+| A | key | Overhead Skylight — A huge frosted glass roof spreads the sky into shadowless white light over the whole room and the figure. (유리 천장 실내 장면일 때) |
 | A | weather | Ciel couvert — A single unbroken layer of grey-white cloud hides the sun, the whole sky one even grey-white. |
 | C | weather | Après la pluie — The rain has just stopped: a flat pale grey cloud blanket hangs overhead while every surface below is dark, wet and faintly mirroring the sky. |
 | B | face-light | Lumière réfléchie — Pale limestone or marble walls throw the grey sky back as a wide cool-white fill that lifts the underside of the jaw and the eyes, so the skin reads clean and almost translucent. |
-| B | face-light | Lumière zénithale — High overcast light falls straight down past tall stone columns and leaves only a faint, gently graded shadow under the nose and chin. |
+| B | face-light | Lumière zénithale — High overcast light falls straight down past tall stone columns and leaves only a faint, gently graded shadow under the nose and chin. (석조 기둥 장면일 때) |
 | C | light-fill | Wet Street Reflections — Wet paving and stone mirror the bright sky as glossy patches that add a soft upward fill under the jaw and along the coat. |
 | D | face-light | Ombre douce — Open shade under an arch, ivy or awning lets sky light arrive from one wide side while the far cheek falls into a soft shadow that never goes black. |
 | D | light-fill | Lumière réfléchie — Brick, dark-green iron or ivy bounces a faint tint into the shadow side, warm neutral beside brick and cool emerald-grey beside leaves. |
-| D | cast | Faint Cast Shadows — Around the striped columns of the Palais-Royal courtyard, the columns throw only faint, elongated grey shadows across the paving under the flat sky. |
+| D | cast | Faint Cast Shadows — Around the striped columns of the Palais-Royal courtyard, the columns throw only faint, elongated grey shadows across the paving under the flat sky. (팔레루아얄 줄무늬 기둥 장면일 때) |
 | A, B, C | catchlight | Lumière du ciel gris — A soft crescent of pale sky sits at the top edge of each iris under the even grey sky. |
-| C | catchlight | Vaguelettes de la Seine — Rippling river light dances in the pupils and along the underside of the chin when she stands by the water. |
+| C | catchlight | Vaguelettes de la Seine — Rippling river light dances in the pupils and along the underside of the chin when she stands by the water. (센강 물가 장면일 때) |
 
 ## Optics
 **하나만 고르는 슬롯:** `stock`·`stock-mono`(흑백 요청이면 `stock-mono`가 `stock`을 대신한다), `tone-m6`(`camera`의 `Leica M6` 줄을 골랐을 때만. S5의 Leica MP와 S6의 Contax RTS III에는 쓰지 않는다)
@@ -172,7 +172,7 @@
 | D | stock | Kodak Portra 160 — A finer-grained, slightly cooler colour negative with muted pastel colour and smooth mid-tones. |
 | B | stock | Pro 400H — Pastel teal-green highlights with soft airy light; in this look skin lit by the bright stone leans toward a cool, high-key rendering. |
 | C, D | stock-mono | Kodak Tri-X 400 — Pure black-and-white tone with ink-deep blacks and open highlights, used only when the request asks for monochrome. |
-| D | push | Pellicule poussée — The film is overdeveloped for extra speed, giving stronger contrast and a deeper shadow tone in the arcade shade. |
+| D | push | Pellicule poussée — The film is overdeveloped for extra speed, giving stronger contrast and a deeper shadow tone in the arcade shade. (아케이드 장면일 때) |
 | A, D | camera | Leica M6 — A 35mm rangefinder camera. |
 | A, D | tone-m6 | Micro-Contrast With Soft Glow — On the Leica M6, the rendering keeps rich micro-contrast, so the fine texture of stone, cloth and hair separates cleanly, with a faint soft glow around the brightest highlights. |
 | B | camera | Contax G2 — An autofocus 35mm rangefinder camera. |

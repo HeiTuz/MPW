@@ -48,11 +48,11 @@
 |---|---|---|
 | A, B | hair | 검은 긴 생머리 — Long dark hair falls straight behind the shoulders and over the chest, one side tucked behind the ear so the forehead and both eyes stay clear. |
 | C, D | hair | 검은 긴 생머리 — Long dark hair hangs loose, lifted by the street air in C or pressed flat on one side by the seat headrest in D, with both eyes still clear. |
-| A | hair-up | 똥머리 — Hair is gathered into a loose high bun after the workout, a few damp strands clinging at the nape and temples. |
+| A | hair-up | 똥머리 — Hair is gathered into a loose high bun after the workout, a few damp strands clinging at the nape and temples. (운동 후 장면일 때) |
 | B | hair-up | 집게핀 — A large claw clip holds the hair up loosely at the back of the head, loose ends spilling from the top and the neck bare. |
-| D | hair-bed | 자다 일어난 머리 — Hair is flattened on one side and puffed on the other from the pillow, a few strands lying across the bedding. |
-| A | base | 운동 후 땀 광택 — After a workout a thin film of sweat beads on the forehead and cheekbones while the pores stay visible. |
-| A | blush | 운동 후 홍조 — Warm pink spreads wide over the cheekbones and nose bridge as a real post-exercise flush rather than applied color. |
+| D | hair-bed | 자다 일어난 머리 — Hair is flattened on one side and puffed on the other from the pillow, a few strands lying across the bedding. (침대 장면일 때) |
+| A | base | 운동 후 땀 광택 — After a workout a thin film of sweat beads on the forehead and cheekbones while the pores stay visible. (운동 후 장면일 때) |
+| A | blush | 운동 후 홍조 — Warm pink spreads wide over the cheekbones and nose bridge as a real post-exercise flush rather than applied color. (운동 후 장면일 때) |
 | 전부 | lip | 과즙 립 — A glassy peach-coral lip gloss with a wet syrupy shine and no visible edge. |
 
 ## Expression
@@ -79,12 +79,12 @@
 | A, C | outfit | 오버핏 — A pale oat oversized blazer hangs open over a black bandeau top, the lapel edge and bare collarbones taking clean light. |
 | A | outfit | 레깅스 룩 — High-waisted black seamless leggings with a fitted sports top, worn as everyday clothes between sets, the stretch fabric matte under the room light. |
 | B | outfit | 흰 목욕가운 — A thick white waffle-weave bathrobe tied at the waist, the honeycomb weave holding a small shadow in every cell. |
-| B | outfit | 트렌치코트 — A long belted trench hangs open over the outfit, its hem spilling over the floor tiles at the foot of the mirror. |
+| B | outfit | 트렌치코트 — A long belted trench hangs open over the outfit, its hem spilling over the floor tiles at the foot of the mirror. (타일 바닥 거울 장면일 때) |
 | B | outfit-bottom | 조거 팬츠 — Soft grey cotton jogger pants with a drawstring waist and ribbed ankle cuffs, the loose fabric folding at the knees under an oversized tee. |
 | C | outfit | 후드집업 — A heavyweight grey zip hoodie with white drawstrings hanging and the hood folded flat behind the neck. |
 | C | outfit | 울 코트 — A long wool overcoat falls in thick folds, deep pockets holding both hands and the collar pulled up to the chin. |
 | C | outfit-bottom | 루즈핏 청바지 — Loose washed jeans stack at the ankle, one hand pushed into the back pocket. |
-| D | outfit | 슬립 원피스 파자마 — A pale yellow cotton camisole nightdress with a small floral print and thin straps, creased where she lies. |
+| D | outfit | 슬립 원피스 파자마 — A pale yellow cotton camisole nightdress with a small floral print and thin straps, creased where she lies. (침대 장면일 때) |
 
 ## Props and nails
 | 갈래 | 슬롯 | 줄 |
@@ -105,7 +105,7 @@
 |---|---|---|
 | A | style | 인스타 셀카 — A casual front-camera selfie with bright even tones and a clean, lightly saturated finish, nothing staged. |
 | A | style | 미니멀 — The room is cut down to clean planes and one soft light, leaving wide empty wall around her. |
-| A | style | 클린걸 — Fresh dewy skin, a tidy bun and neutral fitted basics read as an everyday polish after the workout. |
+| A | style | 클린걸 — Fresh dewy skin, a tidy bun and neutral fitted basics read as an everyday polish after the workout. (운동 후 장면일 때) |
 | A, C | style | 한남동 룩 — Camel, cream and grey layers with small silver jewelry and no visible logo, calm and quietly expensive. |
 | B | style | OOTD — A mirror record of the outfit in a plain, uncluttered room, shown from head to shoes only when the frame runs full length. |
 | C | style | 스트릿 스냅 — A candid street frame with her caught mid-step against a plain city backdrop in available light. |
@@ -144,15 +144,15 @@
 | B | face-light | 다이렉트 플래시 — The phone's small rear flash fires toward the mirror and lights her face flat and bright, leaving a hot white spot in the glass that blooms into a faint star-shaped glare. |
 | B | face-light | 형광등 — Long overhead tubes spread flat cool-white light from above, leaving no dark corner and a clear shadow under each collarbone. |
 | B | face-light | 트랙 조명 — One narrow ceiling beam lights the forehead, nose bridge and collarbones in hard bright planes while the eye sockets sit in faint shadow. |
-| B | face-light | Window Light — In the bedroom mirror, soft window daylight from one side lights her face and the room, falling off gently across the pale wall. |
+| B | face-light | Window Light — In the bedroom mirror, soft window daylight from one side lights her face and the room, falling off gently across the pale wall. (집 방 거울 장면일 때) |
 | B | catchlight | 플래시 캐치라이트 — One small hard white dot from the flash sits in each pupil. |
 | C | face-light | 차창 빛 — Daylight through a moving vehicle's window lights half of her face and slides across it while the other half stays in shade. |
-| C | face-light | Overcast Light — Along the Hannam-dong street, soft diffuse daylight lies even over the pale gallery walls, the glass fronts and her face. |
-| C | face-light | Fluorescent Light — In the subway car and on the platform, flat cold tube light falls evenly from above and leaves almost no shadow on her. |
+| C | face-light | Overcast Light — Along the Hannam-dong street, soft diffuse daylight lies even over the pale gallery walls, the glass fronts and her face. (한남동 장면일 때) |
+| C | face-light | Fluorescent Light — In the subway car and on the platform, flat cold tube light falls evenly from above and leaves almost no shadow on her. (지하철 장면일 때) |
 | D | face-light | 스마트폰 화면빛 — Only the phone screen lights her face in the dark, a cold blue-white glow that falls from wherever the phone is held: on the chin and nose when it is held low, on the forehead and cheeks when it is held above her face. |
 | D | face-light | 손전등 조명 — A friend's phone flashlight from close at the side gives blunt, slightly overexposed light with a lively spontaneous feel. |
-| D | car-light | 차창 불빛 — In the taxi at night, streaks of city light sweep across the window and over her face. |
-| D | bulb-light | String Lights — Under the canopy of the street food tent, warm bulbs glow above the steaming counter against the dark street. |
+| D | car-light | 차창 불빛 — In the taxi at night, streaks of city light sweep across the window and over her face. (택시 장면일 때) |
+| D | bulb-light | String Lights — Under the canopy of the street food tent, warm bulbs glow above the steaming counter against the dark street. (포장마차 장면일 때) |
 | D | catchlight | 폰 화면 반사 캐치라이트 — A tiny cool blue-white rectangle sits in the center of each pupil, only when the phone screen is the light.
 | D | catchlight | 플래시 캐치라이트 — One small hard white dot from the friend's flashlight sits at the side of each pupil, only when the flashlight is the light. |
 

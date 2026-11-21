@@ -78,9 +78,9 @@
 | A | outfit-knit | Gilet — A chunky oatmeal wool cardigan worn open, its ribbed placket and coarse stitches catching the diffuse window light. |
 | A | outfit-knit | Cachemire — An ivory brushed-cashmere cardigan whose soft pile blurs the stitch lines, worn over a plain white silk camisole. |
 | B | outfit-knit | Pull cachemire — A fine-gauge caramel cashmere jumper with a close rib, its nap picking up warm bulb light and darkening slightly at the folds. |
-| A | outfit-dress | Lin lavé — An oat-colored washed-linen wrap dress tied at the waist, creased at the elbows and softened against the green behind the glass. |
+| A | outfit-dress | Lin lavé — An oat-colored washed-linen wrap dress tied at the waist, creased at the elbows and softened against the green behind the glass. (온실 장면일 때) |
 | A | outfit-outer | Veste en daim — A cognac suede jacket cropped at the waist over a striped top, its napped matte surface darkening where the hand rubs it. |
-| A | outfit-outer | Blazer oversize — A charcoal wool blazer cut long and boxy with structured shoulders, falling in sharp planes against pale gallery walls. |
+| A | outfit-outer | Blazer oversize — A charcoal wool blazer cut long and boxy with structured shoulders, falling in sharp planes against pale gallery walls. (갤러리 장면일 때) |
 | C | outfit-outer | pardessus — A long black double-breasted wool overcoat with a felted surface that holds straight vertical creases and takes a pale cold edge of light along the lapel. |
 | A, C | outfit-bottom | Jean droit — Mid-blue straight denim at the natural waist with a plain hem. |
 
@@ -90,13 +90,13 @@
 | A | hand-prop | Tasse en porcelaine — A white bone-china cup with a thin handle held in one hand, dark coffee in it and steam fading against the pane. |
 | A | hand-prop | croissant — A golden croissant bitten once, flaking crumbs onto its paper, the crust catching warm morning window light. |
 | A | book | Collection Blanche — A cream paperback with thin red and black rules on its cover held open in one hand, the soft covers curling at the corners and the small cover lettering unreadable. |
-| A | window-prop | Flacon de parfum — Rows of faceted glass perfume flacons on the window shelf, each cut surface breaking daylight into small colored sparks. |
-| A | window-prop | Gilded Window Lettering — Hand-lettered gold script on a glass door that reads only as thin glints and strokes against the street reflection. |
+| A | window-prop | Flacon de parfum — Rows of faceted glass perfume flacons on the window shelf, each cut surface breaking daylight into small colored sparks. (S3 전용) |
+| A | window-prop | Gilded Window Lettering — Hand-lettered gold script on a glass door that reads only as thin glints and strokes against the street reflection. (유리문 장면일 때) |
 | A, B | table | Guéridon — A small round marble table on a cast-iron tripod, a faint wet ring on the stone and the glass's reflection across it. |
 | B | hand-prop | verre à pied — A thin stemmed glass of red wine turned slowly between two fingers, a bright window highlight sliding along the bowl. |
 | B | neck | Collier pièce de monnaie — A fine chain with a small gold coin resting below the collarbone, catching one warm lamp point. |
-| B | mirror | Foxed Antique Mirror — A large gilt-framed mirror with spotted silvering on the bistro wall, folding the banquettes and the street door into hazy layers beside her profile. |
-| C | mirror | Citroën DS — A dark-green 1950s Citroën parked at the kerb, its round chrome side mirror bending a small bright picture of the street. |
+| B | mirror | Foxed Antique Mirror — A large gilt-framed mirror with spotted silvering on the bistro wall, folding the banquettes and the street door into hazy layers beside her profile. (비스트로 장면일 때) |
+| C | mirror | Citroën DS — A dark-green 1950s Citroën parked at the kerb, its round chrome side mirror bending a small bright picture of the street. (백미러 장면일 때) |
 | 전부 | nails | Ongles courts arrondis — Short round natural nails with rosy nail beds and a pale half-moon, bare of polish. |
 
 ## Style
@@ -127,7 +127,7 @@
 | A | place | boulangerie — A century-old bakery window with golden croissants and baguettes on trays, her smiling reflection and the stone steps behind laid over them. |
 | A | place | Serre victorienne — An iron-framed Victorian greenhouse of old glass beside a museum garden, dense palms and vines inside and her profile reflected on the outer pane. |
 | A | background | Haussmannien — Pale cream limestone facades with iron balconies, plane-tree crowns and passers-by drifting across the reflection on the glass. |
-| A | background | Notre-Dame de Paris — The twin grey limestone towers of the cathedral across the Seine, mirrored small and hazy in a shop window. |
+| A | background | Notre-Dame de Paris — The twin grey limestone towers of the cathedral across the Seine, mirrored small and hazy in a shop window. (S2 전용) |
 | B | place | Les Deux Magots — A boulevard café with a green awning and bentwood rattan chairs, its large front windows beaded with rain. |
 | B | place | Bistrot — A century-old neighborhood bistro with dark red banquettes and brass fittings. |
 | C | place | Métro de Paris — An old carriage with white convex tiles streaking past outside the door glass. |
@@ -140,18 +140,18 @@
 | A, C | face-light | Paris Overcast Light — Cloud cover acts as one broad softbox outside, so the face is lit evenly beside the glass with pale grey-blue shade and no hard shadow. |
 | A | face-light | Lumière du matin — Low morning sun from the side lays a warm gold edge on the cheek and the shopfront while the reflected street stays cool. |
 | B, C | face-light | Lumière tungstène — Warm amber light from bare indoor bulbs pools on the face and the wall, while the window beside holds the cool blue of dusk. |
-| B | face-light | crépuscule — Low orange dusk light from the side warms one cheek and the marble table while the sky behind turns pink and mauve. |
+| B | face-light | crépuscule — Low orange dusk light from the side warms one cheek and the marble table while the sky behind turns pink and mauve. (S4 전용) |
 | A, C | light-fill | Reflet du ciel sur la vitre — The bright overcast sky mirrored in the pane lays a pale veil over the room behind it and lifts the reflection to nearly the strength of the face. |
 | B | light-fill | heure bleue — Deep blue dusk light enters through the door or window and fills the shadows cool, so the warm lamps glow against it. |
 | A, C | catchlight | Double reflet de vitrine — The street and a passer-by mirror faintly in each pupil on top of the window's own reflection. |
 | A | catchlight | Fenêtres haussmanniennes — Tall paned window shapes sit as small gridded reflections in each iris, the light falling from one side. |
 | B | catchlight | Reflet de pluie — Streaks of rain on the glass slide as thin vertical lights across the iris and the cheek. |
-| A | accent | Crystal Prism Light — Faceted crystal flacons throw tiny spectral rainbow spots across the pane, the cheekbone and the cardigan. |
-| A | water-light | Vaguelettes de la Seine — At the island quay bistro, rippling Seine light is laid over the glass beside her and shimmers across the pane. |
-| A | shop-window | Shop Window Lighting — At the bakery, soft warm window light falls on the golden croissants and trays and reaches her cheek through the glass. |
+| A | accent | Crystal Prism Light — Faceted crystal flacons throw tiny spectral rainbow spots across the pane, the cheekbone and the cardigan. (S3 전용) |
+| A | water-light | Vaguelettes de la Seine — At the island quay bistro, rippling Seine light is laid over the glass beside her and shimmers across the pane. (Île Saint-Louis 장면일 때) |
+| A | shop-window | Shop Window Lighting — At the bakery, soft warm window light falls on the golden croissants and trays and reaches her cheek through the glass. (빵집 장면일 때) |
 | B | weather | Gouttes sur la vitre — Raindrops on the pane scatter street lamps and ruby taillights into overlapping round blobs and short streaks that lie across her face and the glass. |
 | B | lamp-gold | Blue Hour — Through the rain-beaded front windows of the café, the street lamps outside turn gold against the deepening blue dusk. |
-| C | water-light | Vaguelettes de la Seine — On the Batobus, bright reflections from the river water glint and ripple across the curved panoramic glass. |
+| C | water-light | Vaguelettes de la Seine — On the Batobus, bright reflections from the river water glint and ripple across the curved panoramic glass. (유람선 장면일 때) |
 
 ## Optics
 **하나만 고르는 슬롯:** `tone-*`(고른 `camera` 줄의 본체와 같은 이름의 줄만: `tone-hassel`은 `Hasselblad 500C/M`, `tone-rollei`는 `Rolleiflex 2.8F`를 골랐을 때), `grain`·`grain-mono`(Tri-X 흑백 지하철 컷이면 `grain-mono`가 `grain`을 대신한다)

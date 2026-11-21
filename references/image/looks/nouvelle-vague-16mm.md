@@ -70,7 +70,7 @@
 | A, C | outfit | Marinière classique bretonne — Narrow navy and ecru stripes in heavy combed cotton, a boat neck and dropped shoulders, the matte weave taking soft grey light. |
 | A | outfit-outer | Trench classique — A pale khaki gabardine trench worn belted loosely or open, the hem swinging as she walks. |
 | A | outfit-outer | Veste en tweed à chevrons — A tailored charcoal herringbone tweed three-button jacket with natural shoulders over a plain white tee. |
-| A, D | outfit | Pull cachemire — A fine-gauge cashmere jumper in caramel or charcoal whose soft nap picks up warm lamplight. |
+| A, D | outfit | Pull cachemire — A fine-gauge cashmere jumper in caramel or charcoal whose soft nap picks up warm lamplight. (램프 켜진 실내 장면일 때) |
 | B | outfit-outer | pardessus — A heavy charcoal herringbone wool overcoat with a felted surface and deep vertical folds, the collar turned up. |
 | B | outfit | Col roulé — A close black fine-knit roll-neck folded once at the throat under the coat. |
 | C | outfit | Robe portefeuille — A cherry-red small-floral wrap dress in light crepe, the skirt overlapping at the side waist and lifting in a breeze. |
@@ -90,7 +90,7 @@
 | A | face-prop | Lunettes rondes — Hair-thin round gold wire-rim glasses with a small point of light on each lens. |
 | A, B | book | Collection Blanche — A cream-white paperback of poems with thin red and black rules on its cover, the soft corners curling. |
 | A | book | Cahiers du Cinéma — A thin yellow-covered film magazine folded in one hand. |
-| C | hand-prop | Parapluie transparent — A clear umbrella held over one shoulder, its wet rim dripping and the sky showing through the canopy. |
+| C | hand-prop | Parapluie transparent — A clear umbrella held over one shoulder, its wet rim dripping and the sky showing through the canopy. (S5 전용) |
 | 전부 | nails | Ongles courts arrondis — Short round nails trimmed to the fingertip, with long rosy nail beds and a pale half-moon. |
 
 ## Style
@@ -127,7 +127,7 @@
 | A, B | catchlight | Lumière du ciel gris — A soft crescent of pale sky glows at the top edge of each iris under even overcast light. |
 | C | face-light | heure dorée — Low warm sun from the side lays long shadows and a gold rim along hair and shoulders. |
 | C | face-light-back | Contre-jour — The low sun sits behind her, so hair and shoulders glow with a gold rim while the face reads slightly darker. |
-| C | dapple | Dappled Shade — Under the olive trees or the chestnut canopy, the leaves break the sun into shifting patches of bright and shade that scatter across the path, her skin and her clothes. |
+| C | dapple | Dappled Shade — Under the olive trees or the chestnut canopy, the leaves break the sun into shifting patches of bright and shade that scatter across the path, her skin and her clothes. (나무 그늘 장면일 때) |
 | D | face-light | Lumière du matin — Soft light from one tall window beside her falls gently from bright to shadow across the nose. |
 
 ## Optics
