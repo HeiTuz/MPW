@@ -91,7 +91,7 @@ Legwear 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다
 | 青黛色 | 青黛; 远山青黛; 청대색 스타킹; slate blue-green tights | CN | 청대; 푸른 회색; 수묵; 차분함; 新中式; 신중식 | Muted greyish blue-green sheer tights, the dusty tone of distant ink-wash hills, with a soft airy haze. | look |
 | 墨竹剪影 | 竹影; 墨竹; 묵죽 스타킹; 대나무 그림자 스타킹; ink bamboo tights | CN | 묵죽; 그림자; 대나무; 문인; 新中式; 신중식 | Sheer tights printed with soft translucent bamboo stalks and leaves, like a brush painting seen through light. | look |
 | 羊脂玉光腿 | 羊脂玉; 양지옥; 양지옥 광택 스타킹; mutton-fat jade skin; jade-white sheer | CN | 백옥톤; 은은한 광택; 초박; 차분함; 티룸; 新中式; 신중식 | Warm milky-white sheen like polished white jade, soft and semi-matte, melting into the skin without a visible edge at the ankle. | look |
-| 冷白瓷肌 | 냉백자기; 냉백 도자기 피부; porcelain matte skin; cool porcelain | CN | 도자기; 무광; 차가운 흰톤; 미술관; 미니멀; 当代美术馆冷光极简; 当代美术馆冷光; 美术馆冷光; 冷光极简; 현대 미술관 냉광 미니멀; 미술관 냉광 미니멀; 미술관 냉광; 냉광 미니멀 | Cool, even, matte porcelain finish on the leg, with a diffused soft-focus look and no hot highlight on the knee or shin. | look |
+| 冷白瓷肌 | 냉백자기; 냉백 도자기 피부; porcelain matte skin; cool porcelain | CN | 도자기; 무광; 차가운 흰톤; 미술관; 미니멀 | Cool, even, matte porcelain finish on the leg, with a diffused soft-focus look and no hot highlight on the knee or shin. | look |
 | 名媛天鹅腿 | 名媛; 천아 다리; swan leg; high-society tights; 명원 룩 | CN | 우아함; 광택; 상류층; 파티; 외탄; 老钱风; 라오첸펑; 올드머니 | Long, smooth, softly glossy legs in fine sheer tights, with a gentle pearly highlight that follows the line of the calf. | look |
 | T裆无痕 | 无痕T裆; 全透T裆; T-crotch seamless; 투명 T 크로치 스타킹; 심리스 스타킹 | CN | 무봉제; 초박; 올 투명; 드레스 매치; 미니멀 | Fully transparent hosiery with a seamless, clean finish and no visible seam or thick band at the upper leg. | item |
 | 极透黑丝 | 10D 黑丝; 蝉翼黑丝; 玄黑丝袜; 초박 검정 스타킹; 흑사; raven black sheer | CN | 검정; 초박; 밤; 차가운 분위기; 저녁; 홍콩; 港风; 当代美术馆冷光极简; 当代美术馆冷光; 美术馆冷光; 冷光极简; 현대 미술관 냉광 미니멀; 미술관 냉광 미니멀; 미술관 냉광; 냉광 미니멀 | Very sheer black stockings where skin tone shows through as a deep, smoky, cool gray, brightening only where light grazes the shin. | item |
@@ -106,11 +106,13 @@ Legwear 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다
 | 星芒黑丝 | 金属微闪; 黑金晚宴; 스타라이트 블랙; metallic starlight sheer; 별빛 스타킹 | CN | 금속; 별빛; 연말; 레드카펫; 밤 | Sheer black tights scattered with tiny gold specks that sparkle like stars when the light moves across the leg. | look |
 | 连裤袜 | 롄쿠와; 타이즈; pantyhose; tights | CN | 타이즈; 일상; 가을겨울; 실루엣 | Full-length one-piece hosiery with a smooth waistband sitting flat at the hips. | item |
 | 打底袜 | 다디와; 레깅스 스타킹; base layer tights; leggings tights | CN | 겨울; 레이어드; 일상; 보온 | Opaque base-layer tights with a matte stretched surface that looks like a soft second skin. | item |
-| 哑光 | 아광; 매트; matte finish | CN | 매트; 부드러움; 실내; 가을; 当代美术馆冷光极简; 当代美术馆冷光; 美术馆冷光; 冷光极简; 현대 미술관 냉광 미니멀; 미술관 냉광 미니멀; 미술관 냉광; 냉광 미니멀 | A flat low-reflection finish that diffuses light evenly and shows no sharp highlights. | look |
+| 哑光 | 아광; 매트; matte finish | CN | 매트; 부드러움; 실내; 가을 | A flat low-reflection finish that diffuses light evenly and shows no sharp highlights. | look |
 | 高腰无痕 | 고허리 무봉제; high-waist seamless; seamless waistband | CN | 무봉제; 보정; 일상; 미니멀 | A smooth wide waistband that sits flat on the hip with no visible seam line under the clothes. | item |
 | 蝉翼 | 매미날개 스타킹; 매미 날개; cicada wing sheer | CN | 극박; 시어; 10D; 표현; 얇은 | A hosiery finish so thin it reads as a faint veil of nylon over skin, with barely a trace of color. | look |
 | 透肉 | 투육; 피부 비침; 살비침; 은은한 살비침 | CN | 시스루; 살색 비침; 데니아; 스타킹; 얇은 | Sheer hosiery that lets skin tone read through the nylon as a soft warm glow instead of a flat color. | look |
 | 船袜 | 隐形袜; 浅口袜; 보트 삭스; 페이크 삭스; no-show socks; boat socks | CN | 로퍼; 짧은 양말; 면; 봄여름; 老钱风; 라오첸펑; 올드머니 | A very low cotton sock cut below the ankle bone that vanishes inside a loafer, leaving a strip of bare ankle between the shoe opening and the trouser hem. | item |
+| 裸腿 | 光腿; 맨 다리 | CN | 맨다리; 무광; 미술관; 미니멀; 当代美术馆冷光极简; 当代美术馆冷光; 美术馆冷光; 冷光极简; 현대 미술관 냉광 미니멀; 미술관 냉광 미니멀; 미술관 냉광; 냉광 미니멀 | Bare legs that take a cool cast from the surrounding light, matte with no hot highlight on the knee or shin. | look |
+| 哑光黑色连裤袜 | 哑光黑丝; 아광 검정 타이즈; 매트 블랙 타이츠; matte black tights | CN | 매트; 검정; 타이츠; 실내; 当代美术馆冷光极简; 当代美术馆冷光; 美术馆冷光; 冷光极简; 현대 미술관 냉광 미니멀; 미술관 냉광 미니멀; 미술관 냉광; 냉광 미니멀 | Matte black tights with a flat low-reflection finish that diffuses light evenly and shows no sharp highlights. | look |
 
 ## JP
 

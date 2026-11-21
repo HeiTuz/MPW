@@ -7,7 +7,7 @@ Expression 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이
 | 토큰 | 별칭 | 문화권 | 태그 | 화면에 보이는 모습 | 종류 |
 |---|---|---|---|---|---|
 | 눈웃음 | 눈 웃음; 笑眼; 月牙眼; eye smile | KR | 밝음; 다정; 웃음; 청순; 아이폰 원본 셀카; 아이폰 셀카; iPhone native selfie | The eyes curve into crescents as the lower lids rise with the smile, the mouth soft and relaxed. | look |
-| 무표정 | 무 표정; 아무 표정 없음; 无表情; neutral face; blank expression; 무표정 칠 | KR | 차분; 미니멀; 시크; 고요; 쿨톤 도자기 피부; 블루 그레이 미니멀; 청랭 도자기 피부; 냉백 도자기 피부; 회청색 미니멀; 清冷瓷肌; 极简灰蓝 | Brows, eyes and mouth rest at neutral with no muscle tension, leaving a smooth, unreadable face. | look |
+| 무표정 | 무 표정; 아무 표정 없음; 无表情; neutral face; blank expression; 무표정 칠 | KR | 차분; 미니멀; 시크; 고요; 쿨톤 도자기 피부; 블루 그레이 미니멀; 냉백 도자기 피부; 회청색 미니멀; 清冷瓷肌; 极简灰蓝 | Brows, eyes and mouth rest at neutral with no muscle tension, leaving a smooth, unreadable face. | look |
 | 멍때리기 | 멍 때리기; 멍한 표정; 发呆; 放空; blank stare; zoning out | KR | 나른함; 오후; 일상; 무심; 아이폰 원본 셀카; 아이폰 셀카; iPhone native selfie | The gaze goes unfocused on a point in the air, the lids relaxed, the lips softly parted and the brow smooth. | look |
 | 썩소 | 썩은 미소; 비웃는 미소; 嗤笑; smirk; 비웃는 썩소 | KR | 냉소; 시크; 도도; 장난기 | One mouth corner pulls up and sideways into a thin dry smile that never reaches the eyes. | look |
 | 피식 | 피식 웃음; 픽 웃음; short exhale laugh; 피식 헛웃음; 헛웃음; 冷笑气音 | KR | 무심; 냉소; 장난기; 일상 | A short puff of air escapes through barely parted lips as one mouth corner twitches up, the eyes staying mostly still. | look |
@@ -24,11 +24,11 @@ Expression 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이
 | 울먹임 | 울먹울먹; 울먹이는 표정; 떨리는 입술; 颤唇; on the verge of tears | KR | 슬픔; 망설임; 애수; 감정 | The lips quiver and pull down at the corners, the chin dimples and the brows pinch upward as if about to cry. | look |
 | 글썽글썽 | 글썽이는 눈; 눈물 글썽; 눈물 고인 눈; 含泪; teary eyes | KR | 슬픔; 감동; 애틋; 클로즈업 | A bright film of tears gathers along the lower lids and catches the light without spilling, the eye rims faintly reddened. | look |
 | 입술 깨물기 | 입술 꽉 깨물기; 입술깨물기; 울음 참는 입술; 咬唇强忍; lip bite restraint; 입술 꽉 깨문 고집 | KR | 참음; 슬픔; 결의; 긴장 | The lower lip presses between the teeth with the chin tight and the jaw set, holding back tears or words. | look |
-| 내리깐 눈 | 눈 내리깔기; 내리 깐 눈; 半垂眼; downcast eyes; 반쯤 내리깐 시선; 클래식 냉미녀 눈 | KR | 차분; 도도; 고요; 무심; 쿨톤 도자기 피부; 블루 그레이 미니멀; 청랭 도자기 피부; 냉백 도자기 피부; 회청색 미니멀; 清冷瓷肌; 极简灰蓝 | The upper lids drop over part of the irises and the gaze angles down, the lashes casting thin shadows on the lower lids. | look |
+| 내리깐 눈 | 눈 내리깔기; 내리 깐 눈; 半垂眼; downcast eyes; 반쯤 내리깐 시선; 클래식 냉미녀 눈 | KR | 차분; 도도; 고요; 무심; 쿨톤 도자기 피부; 블루 그레이 미니멀; 냉백 도자기 피부; 회청색 미니멀; 清冷瓷肌; 极简灰蓝 | The upper lids drop over part of the irises and the gaze angles down, the lashes casting thin shadows on the lower lids. | look |
 | 치켜뜬 눈 | 눈 치켜뜨기; 치켜 뜬 눈; 위로 째려보기; upward glare; 치켜뜬 차가운 눈빛; 上目线斜瞪 | KR | 반항; 차가움; 대치; 강렬함 | The chin tucks and the eyes look up from beneath lowered brows so white shows below the iris, hard and unblinking. | look |
 | 위아래로 훑어보기 | 위아래 훑기; 아래위로 훑어보기; 上下打量; sizing up; 위아래로 훑어보는 시선 | KR | 도도; 압박; 평가; 차가움 | The eyes travel slowly down and back up while the chin stays level and the brows stay flat. | look |
 | 도도한 표정 | 도도함; 도도한 눈빛; 高冷; haughty look | KR | 도도; 시크; 차가움; 당당 | The chin lifts a few degrees and the eyes look down along the nose from half-lowered lids, the mouth closed and still. | look |
-| 눈썹 까딱 | 눈썹 까딱이기; 한쪽 눈썹 올리기; 挑眉; single brow raise; 한쪽 눈썹 쓱 올리기; 单边挑眉 | KR | 당당; 장난기; 아이러니; 도발; 쿨톤 도자기 피부; 블루 그레이 미니멀; 청랭 도자기 피부; 냉백 도자기 피부; 회청색 미니멀; 清冷瓷肌; 极简灰蓝 | One brow lifts higher than the other in a quick arch while the eyes stay level and appraising. | look |
+| 눈썹 까딱 | 눈썹 까딱이기; 한쪽 눈썹 올리기; 挑眉; single brow raise; 한쪽 눈썹 쓱 올리기; 单边挑眉 | KR | 당당; 장난기; 아이러니; 도발; 쿨톤 도자기 피부; 블루 그레이 미니멀; 냉백 도자기 피부; 회청색 미니멀; 清冷瓷肌; 极简灰蓝 | One brow lifts higher than the other in a quick arch while the eyes stay level and appraising. | look |
 | 턱짓 | 턱 짓; 턱으로 가리키기; 用下巴示意; chin point | KR | 당당; 장난기; 스트리트; 시크 | The chin jerks forward and sideways toward something off-frame while the eyes follow the same line and the mouth stays relaxed. | look |
 | 질색 | 질색하는 표정; 역겨운 표정; 인상 쓰기; 嫌弃脸; disgust face; 역겨움 스치는 입매; 本能嫌弃; 코 찡긋 불쾌함; 嫌恶皱鼻 | KR | 불쾌; 거부; 밈; 순간 | The upper lip lifts and the nose wrinkles while the mouth pulls to one side and the head draws back slightly. | look |
 | 코 찡긋 | 코찡긋; 코 찡그리며 웃기; 皱鼻微笑; nose scrunch | KR | 밝음; 장난기; 귀여움; 친구 | The bridge of the nose crinkles and the upper lip lifts in a small smile, the eyes narrowing with fine lines at the corners. | look |
@@ -44,14 +44,14 @@ Expression 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이
 | 눈물 멎은 촉촉한 여운 | 눈물 그친 얼굴; 촉촉한 눈가; 泪停; after tears | KR | 여운; 고요; 촉촉함; 애잔함 | Tiny droplets cling to the lower lashes, the nose faintly pink and the face settled into calm stillness after crying. | look |
 | 눈이 반짝이는 수다 | 신나서 말하는 중; 신난 눈빛; 덕질 수다; 眼睛放光; eyes sparkling mid-story | KR | 밝음; 활기; 수다; 친구 | The brows lift and the eyes widen with bright catchlights while the mouth moves mid-sentence and a hand gestures near the face. | look |
 | 비밀 미소 | 눈치 빠른 비밀 미소; 몰래 웃기; 暗笑; secret smile | KR | 은근함; 장난기; 신비; 여유 | The eyes slide down and to the side while the lips curl into a closed, knowing smile. | look |
-| 독서 몰입 | 독서에 몰입; 책에 몰입; 책 읽는 눈; 专注阅读; reading focus; 読書への没頭; Art Monograph Immersion; Regard baissé sur les pages; Immersion tactile | KR | 독서; 집중; 고요; 지적; 다크 아카데미아; Dark Academia; 쿨톤 도자기 피부; 블루 그레이 미니멀; 청랭 도자기 피부; 냉백 도자기 피부; 회청색 미니멀; 清冷瓷肌; 极简灰蓝; 베르메르; 페르메이르; Vermeer; 维米尔; 维米尔窗边光 | The eyes angle down at a page and follow the lines, the lashes lowered toward the cheek and the lips softly closed, ignoring the camera. | look |
+| 독서 몰입 | 독서에 몰입; 책에 몰입; 책 읽는 눈; 专注阅读; reading focus; 読書への没頭; Art Monograph Immersion; Regard baissé sur les pages; Immersion tactile | KR | 독서; 집중; 고요; 지적; 다크 아카데미아; Dark Academia; 쿨톤 도자기 피부; 블루 그레이 미니멀; 냉백 도자기 피부; 회청색 미니멀; 清冷瓷肌; 极简灰蓝; 베르메르; 페르메이르; Vermeer; 维米尔; 维米尔窗边光 | The eyes angle down at a page and follow the lines, the lashes lowered toward the cheek and the lips softly closed, ignoring the camera. | look |
 | 무광 눈빛 | 동공 풀린 무광 눈빛; 깊은 검은 눈; 哑光深渊凝视; matte void gaze | KR | 미스터리; 어두움; 무심; 강렬함 | The irises look deep and flat with no catchlight, the gaze steady on the lens and the face unreadable. | look |
 | 뒤돌아 꽂히는 시선 | 돌아보는 눈빛; 어깨너머 시선; 回眸; over-the-shoulder stare | KR | 차가움; 강렬함; 시선; 도도 | The body faces away while the head swings back over the shoulder, the eyes fixed on the lens with no smile. | look |
 | 뒤로 물러서는 경계 | 뒤로 물러남; 경계하며 몸 빼기; 后仰避让; leaning back defensively | KR | 방어; 경계; 긴장; 거리감 | The upper body leans back from the center line, the chin tucked, the eyes wide and steady and the shoulders lifted toward the neck. | look |
 | 물건을 바라보는 시선 | 소품 감상; 물건 들여다보기; 端详小物; fond gaze at a trinket | KR | 다정; 호기심; 손; 섬세 | The eyes dwell on a small object held in the hand, the brows softened and a faint smile on the lips. | look |
 | 번쩍 뜬 눈 | 번쩍 뜨인 긴장감; 번쩍 눈뜸; 화들짝 깬 눈; 惊觉; startled awake | KR | 긴장; 놀람; 순간; 경계 | The upper lids snap up so white shows all around the iris, the face frozen in sudden alertness. | look |
 | 혀로 볼 찌르기 | 볼 안쪽 혀로 찌르기; 혀로 볼 누르기; 반항적 냉소; 舌顶腮; tongue in cheek | KR | 반항; 냉소; 스트리트; 도발 | The tongue pushes a rounded bump into one cheek while the lips curl into a hard half smile. | look |
-| 비 오는 창가 멍하니 | 창밖 비 바라보기; 비 오는 날 창가; 望雨出神; rainy window gaze; 雨垂れに見惚れる; 雨窓の追憶 | KR | 비; 창가; 우울; 사색 | The forehead rests near the window glass and the eyes follow raindrops down the pane, the face cool and still in gray light. | look |
+| 빗방울을 따라가는 시선 | 비 오는 창가 멍하니; 창밖 비 바라보기; 비 오는 날 창가; 望雨出神; rainy window gaze; 雨垂れに見惚れる; 雨窓の追憶 | KR | 비; 창가; 우울; 사색 | The forehead rests near the window glass and the eyes follow raindrops down the pane, the face cool and still in gray light. | look |
 | 한쪽 입꼬리 내리기 | 삐죽거리는 비하; 撇嘴; mouth-corner pull-down; 口角の拒絶; Coin de lèvre baissé | KR | 경멸; 냉소; 차가움; 거부 | One mouth corner pulls down and sideways while the other stays level, deepening a crease below the lip. | look |
 | 생각에서 깨어난 순간 | 정신 차린 순간; 불러서 돌아본 눈; 回过神; snapping out of reverie | KR | 순간; 스냅; 놀람; 캔디드 | The head turns quickly toward a voice, the eyes refocusing from far to near with the brows lifting and the mouth slightly open. | look |
 | 젖은 속눈썹 | 속눈썹 젖은 떨림; 눈물 속눈썹; 睫毛微湿; wet lashes | KR | 섬세함; 눈물; 촉촉함; 클로즈업 | The lashes cling together in damp points with tiny beads of moisture while the lids tremble slightly. | look |
@@ -70,7 +70,7 @@ Expression 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이
 | 카메라 액정 확인 | 카메라 액정 보기; 결과 확인하는 눈; 看相机回放; checking camera playback | KR | 집중; 스냅; 촬영; 캔디드 | The head bows over a camera's rear screen, its glow faintly lighting the face from below while the brows draw slightly as the eyes scan the shot. | look |
 | 코끝 빨개진 서러움 | 코끝 빨개짐; 서러운 눈물; 红鼻尖泪光; red-nosed tears | KR | 슬픔; 홍조; 서러움; 클로즈업 | The nose tip, cheeks and ear lobes flush pink while the eyes shine wet. | look |
 | 턱 괴고 멍 | 턱 괴고 영혼 탈출; 턱 괴기; 한 손 턱 괴고 멍; 托腮出神; propped-cheek daze; Méditation de bistrot | KR | 나른함; 지루함; 멍함; 창가 | One hand props the cheek so the face tilts and the cheek pushes up toward the eye, the gaze loose and drifting far away. | look |
-| 턱 들기 | 턱 살짝 들기; 도도한 턱선; 微昂下巴; chin lift; Menton levé | KR | 도도; 우아; 측면; 조각 같은; 쿨톤 도자기 피부; 블루 그레이 미니멀; 청랭 도자기 피부; 냉백 도자기 피부; 회청색 미니멀; 清冷瓷肌; 极简灰蓝 | The chin tips up a few degrees so the jawline and neck stretch into one long clean line. | look |
+| 턱 들기 | 턱 살짝 들기; 도도한 턱선; 微昂下巴; chin lift; Menton levé | KR | 도도; 우아; 측면; 조각 같은; 쿨톤 도자기 피부; 블루 그레이 미니멀; 냉백 도자기 피부; 회청색 미니멀; 清冷瓷肌; 极简灰蓝 | The chin tips up a few degrees so the jawline and neck stretch into one long clean line. | look |
 | 턱선 쓸어내리기 | 턱 쓸기; 턱선 만지기; 抚颌; chin stroke | KR | 집중; 관찰; 도발; 미니멀 | One index finger slides along the jawline while the narrowed eyes lock on a target. | look |
 | 주위 살피기 | 퇴로 살피는 치밀함; 출구 살피는 눈; 巡视退路; scanning the room | KR | 경계; 침착; 치밀함; 긴장 | The eyes sweep calmly around the surroundings while the head turns in small steps and the face stays composed. | look |
 | 체념의 한숨 | 포기한 듯 차가운 한숨; 차가운 한숨; 冷叹气; resigned sigh | KR | 체념; 차가움; 한숨; 허탈 | The eyes close and a long breath leaves the lips while the shoulders drop. | look |
@@ -90,6 +90,7 @@ Expression 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이
 | 上抬眼神 | 올려다보는 눈빛; 위로 올려 뜬 눈 | KR | 눈빛; 시선; 표정; 카메라 응시 | Eyes lifted upward toward the camera with the chin slightly lowered. | look |
 | 慵懒斜视 | 나른한 곁눈질; 게슴츠레 곁눈 | KR | 눈빛; 나른함; 표정; 셀카; 아이폰 원본 셀카; 아이폰 셀카; iPhone native selfie | Heavy-lidded eyes glancing sideways toward a mirror reflection, relaxed face. | look |
 | 嘟嘟唇 | 오리입; 볼 눌러 뾰로통 | KR | 표정; 귀여움; 장난; 손동작 | Both palms pressing the cheeks inward so the cheeks bulge and the lips pout. | look |
+| 나른한 무표정 | 나른한 눈; 무기력한 무표정; 졸린 듯한 무표정 | KR | 무심; 나른함; 시크; 차가움; 千禧CCD直闪; 밀레니엄 CCD 플래시; Y2K CCD flash | The upper lids sag over about a third of the pupils and the unfocused gaze rests just past the lens, the mouth shut and slack. | look |
 
 ## CN
 
@@ -133,7 +134,7 @@ Expression 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이
 | 桀骜清冷 | 오만한 청랭; 바람 맞은 고고함; defiant aloofness | CN | 도도함; 고고함; 바람; 차가움; 雨夜新宿; 비 오는 신주쿠 밤; 東京ノワール; 도쿄 누아르; 歌舞伎町ネオン; 가부키초 네온 | The head tilts back slightly into the wind, the face still and unbowed with cool, distant eyes. | look |
 | 深闺幽怨 | 倚窗望雨; 규원; 안방의 한; 창가의 그리움; secluded sorrow | CN | 애수; 그리움; 창가; 고요 | Leaning at a window with the eyes on the rain outside, the mouth soft and the shoulders slack in quiet longing. | look |
 | 眸底水光 | 释然动容; 눈빛에 비친 물기; 안도의 눈물; glistening eyes of relief | CN | 애잔함; 해소; 안도; 촉촉함 | A soft shine sits over the irises with a slow, relieved smile after a long strain. | look |
-| 瞳孔凝聚如渊 | 不动声色; 심연 같은 눈; 동공이 깊어짐; abyssal stare | CN | 위압; 냉정함; 미스터리; 강렬함; 当代美术馆冷光极简; 当代美术馆冷光; 美术馆冷光; 冷光极简; 현대 미술관 냉광 미니멀; 미술관 냉광 미니멀; 미술관 냉광; 냉광 미니멀 | Dark, narrowed pupils fix on the lens in a motionless face, the eyes deep and unreadable. | look |
+| 瞳孔凝聚如渊 | 不动声色; 심연 같은 눈; 동공이 깊어짐; abyssal stare | CN | 위압; 냉정함; 미스터리; 강렬함 | Dark, narrowed pupils fix on the lens in a motionless face, the eyes deep and unreadable. | look |
 | 穿透性凝视 | 穿透镜头凝视; 꿰뚫는 시선; 렌즈 응시; piercing stare | CN | 위압; 강렬함; 정면; 카리스마; 当代美术馆冷光极简; 当代美术馆冷光; 美术馆冷光; 冷光极简; 현대 미술관 냉광 미니멀; 미술관 냉광 미니멀; 미술관 냉광; 냉광 미니멀 | The face squares to the lens and the eyes lock on it without blinking, so the gaze seems to come through the frame. | look |
 | 茶道入定 | 垂眸观盏; 다도 몰입; 찻잔 응시; tea ceremony absorption; 茶香の静寂 | CN | 고요; 명상; 차; 동양; 新中式; 신중식; 江南烟雨柔焦; 강남 연우 소프트 포커스; 烟雨柔焦; 연우 소프트 포커스; 新中式水墨; 신중식 수묵; 水墨影调; 수묵 톤 | The lowered eyes follow a teacup held in both hands, steam rising across the face and the shoulders loose. | look |
 | 凝望落花 | 落花; 垂首凝望落花; 낙화 응시; 떨어진 꽃 바라보기; contemplating fallen blossoms | CN | 애수; 봄; 꽃; 고요; 新中式; 신중식 | The head bows toward a few fallen petals, the mouth soft and the eyes unfocused in quiet melancholy. | look |
@@ -143,7 +144,7 @@ Expression 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이
 | 单侧挑眉 | 挑眉; 한쪽 눈썹 올리기; 눈썹 한쪽 치켜올림; one raised eyebrow; arched brow | CN | 장난기; 교활함; 서재; 낮; 대여주계열 | One brow arches higher than the other while the eyes glint and the mouth stays almost neutral, a calculating, playful look. | look |
 | 闭目冥思 | 双目微阖; 눈 감고 명상; 명상하는 얼굴; eyes-closed meditation; serene closed eyes | CN | 고요; 명상; 고찰; 아침; 동양여백계열; 新中式; 신중식 | Both lids rest closed with the lashes flat, brow smooth and mouth relaxed, as if listening to a distant bell. | look |
 | 剑眉星目 | 剑眉; 검미성목; 칼날 같은 눈썹; sword brows bright eyes; sharp brows clear eyes | CN | 선명함; 위압; 복도; 낮; 대여주계열 | Straight, tapered brows over clear dark eyes with a steady, direct stare that reads as sharp and precise. | look |
-| 下颌线 | 如刃下颌线; 利落折角侧颜; 칼 같은 턱선; razor jawline; sharp mandible line | CN | 선명함; 차가움; 콘크리트; 낮; 청랭계열; 当代美术馆冷光极简; 当代美术馆冷光; 美术馆冷光; 冷光极简; 현대 미술관 냉광 미니멀; 미술관 냉광 미니멀; 미술관 냉광; 냉광 미니멀 | Profile with a clean angular jaw, a hard slanted light edge along it and an ice-cold glance. | look |
+| 下颌线 | 如刃下颌线; 利落折角侧颜; 칼 같은 턱선; razor jawline; sharp mandible line | CN | 선명함; 차가움; 콘크리트; 낮; 当代美术馆冷光极简; 当代美术馆冷光; 美术馆冷光; 冷光极简; 현대 미술관 냉광 미니멀; 미술관 냉광 미니멀; 미술관 냉광; 냉광 미니멀 | Profile with a clean angular jaw, a hard slanted light edge along it and an ice-cold glance. | look |
 | 面无表情 | 无形威压; 무표정; 무표정한 위압; deadpan face; blank intimidating stare | CN | 위압; 냉정함; 살롱; 밤; 대여주계열 | Smooth, expressionless face with direct level eyes that carry quiet pressure. | look |
 | 柳叶眉 | 微蹙柳叶细眉; 버들잎 눈썹; 가는 눈썹; willow-leaf brows; thin curved brows | CN | 애수; 고전; 정원; 저녁; 동양여백계열 | Thin brows that curve gently like willow leaves, drawn slightly together in a quiet sigh. | look |
 | 双唇微张 | 心悸凝固; 被戳中心事; 입술이 벌어짐; 경직; lips parted in shock; frozen gasp | CN | 충격; 긴장; 살롱; 밤; 대여주계열 | A narrow gap between still lips and fixed eyes in a stunned freeze. | look |
@@ -165,6 +166,8 @@ Expression 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이
 | 莞尔 | 莞尔一笑; 완이; 살짝 웃음; 은은한 미소; faint smile | CN | 新中式; 신중식; 미소; 온화; 단아; 동양; 江南烟雨柔焦; 강남 연우 소프트 포커스; 烟雨柔焦; 연우 소프트 포커스; 新中式水墨; 신중식 수묵; 水墨影调; 수묵 톤 | A small closed-lip smile that lifts only the corners of the mouth and softens the cheeks, with relaxed eyes held on the lens and the head level and quiet. | look |
 | 飒爽 | 飒气; 英姿飒爽; 飒姐; 당당하고 시원한 표정; 씩씩한 표정; dashing look; confident dashing look | CN | 国潮; 궈차오; 국조; 중국풍; 당당함; 시원함; 자신감; 스트리트 | The chin stays level and the brows sit straight over a direct, steady gaze, with one mouth corner pulled into a short firm half-smile and the jaw squared. | look |
 | 矜持 | 矜持感; 端庄矜持; 절제된 품위; 점잖은 표정; reserved poise | CN | 절제; 단정; 우아; 품위; 老钱风; 라오첸펑; 올드머니; 江南烟雨柔焦; 강남 연우 소프트 포커스; 烟雨柔焦; 연우 소프트 포커스 | The chin sits level and slightly drawn in, the lips closed and the gaze steady and unhurried, so the face holds back any show of eagerness. | look |
+| 目光深邃 | 深邃凝视 | CN | 위압; 냉정함; 미스터리; 강렬함; 当代美术馆冷光极简; 当代美术馆冷光; 美术馆冷光; 冷光极简; 현대 미술관 냉광 미니멀; 미술관 냉광 미니멀; 미술관 냉광; 냉광 미니멀 | The eyes fix on the lens in a motionless face, the gaze deep and unreadable. | look |
+| 凝视灯火 | 凝望灯焰; 등불 응시; 등불 바라보기; lamp flame gaze | CN | 명상; 고요; 따뜻함; 밤; 江南烟雨柔焦; 강남 연우 소프트 포커스; 烟雨柔焦; 연우 소프트 포커스 | The eyes rest on a small lamp flame below the face, a tiny orange point reflected in each pupil and the face calm. | look |
 
 ## JP
 
@@ -212,10 +215,10 @@ Expression 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이
 | ほろ甘い幸福感 | 호로아마이 코후쿠칸; 달콤한 행복감; sweet contentment | JP | 행복; 여유; 달콤함; 여름 | Soft, contented eyes and a relaxed half-smile, the cheeks lightly lifted. | look |
 | 光を宿す瞳 | 히카리오 야도스 히토미; 빛이 깃든 눈; luminous eyes; catchlight eyes | JP | 반짝임; 야경; 생기; 클로즈업 | Small bright reflections sit on the glossy corneas so the dark irises look lit from within. | look |
 | 告白直前 | 코쿠하쿠 초쿠젠; 고백 직전; 고백 전 숨 고르기; deep breath before confessing | JP | 설렘; 긴장; 결심; 숨 | The shoulders lift on a deep inhale, the lips parted so the front teeth show slightly and the eyes resolute. | look |
-| 振り返る瞳 | 후리카에루 히토미; 돌아보는 눈; 휙 돌아보기; whip-around look; 肩を叩かれる | JP | 순간; 경계; 회두; 머리카락 | The head whips around with the hair still swinging, the pupils small and the eyes alert. | look |
+| 振り向きざまの視線 | 振り返る瞳; 후리카에루 히토미; 돌아보는 눈; 휙 돌아보기; whip-around look; 肩を叩かれる | JP | 순간; 경계; 회두; 머리카락 | The head whips around with the hair still swinging, the pupils small and the eyes alert. | look |
 | 朝露の瞳 | 아사쓰유노 히토미; 아침 이슬 눈; dewy morning eyes | JP | 아침; 청량; 맑음; 촉촉함 | Bright, wet-looking eyes with a crisp catchlight, the lids fully awake and clear and the skin slightly dewy. | look |
 | 涙を拭う | 나미다오 누구우; 눈물 닦기; wiping tears; Résilience intime | JP | 눈물; 결의; 손; 회복 | The back of a hand or a knuckle wipes the lower lid, leaving the eyes clear and resolute afterwards. | look |
-| 温潤な眼差し | 온준나 마나자시; 촉촉하고 부드러운 시선; gentle dewy gaze | JP | 온화; 촉촉함; 다정; 부드러움; 森ガール; 모리걸 | Slightly moist eyes with a soft shine on the lower lids and relaxed brows, the gaze warm and gentle. | look |
+| 潤んだまなざし | 温潤な眼差し; 온준나 마나자시; 촉촉하고 부드러운 시선; gentle dewy gaze | JP | 온화; 촉촉함; 다정; 부드러움; 森ガール; 모리걸 | Slightly moist eyes with a soft shine on the lower lids and relaxed brows, the gaze warm and gentle. | look |
 | 祭りの終わり | 마츠리노 오와리; 축제 끝; 축제 끝의 여운; festival end nostalgia | JP | 그리움; 여운; 늦여름; 축제; 昭和レトロ; 쇼와 레트로; 엔니치; 쇼와 여름 축제 | The eyes linger on something fading in the distance with a wistful half-smile, the face softened by end-of-summer nostalgia. | look |
 | 秘密がバレる | 히미츠가 바레루; 비밀 들킴; 들킨 표정; caught in the act | JP | 당황; 홍조; 순간; 놀람 | The wide eyes dart, the ears redden and the hands freeze mid-motion. | look |
 | 見送り | 미오쿠리; 배웅; 배웅하는 표정; seeing off | JP | 이별; 그리움; 손 흔들기; 절제 | A small restrained wave with tightly held lips and a slightly trembling gaze. | look |
@@ -269,7 +272,7 @@ Expression 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이
 | Jaw Drop | Jaw Drop Laugh; 입 떡 벌어짐; 입이 떡 벌어진 표정; 惊掉下巴 | US | 놀람; 충격; 캔디드; 활기 | The mouth drops open with the brows high and the eyes wide, the jaw hanging in surprise. | look |
 | Half-Lidded Gaze | heavy-lidded gaze; 반쯤 감은 눈; 나른한 눈빛; 半阖眼 | US | 나른함; 무심; 여유; 시크; Old Hollywood; 올드 할리우드; 老好莱坞; 베드룸 아이즈; 글래머 | The lids rest halfway down over the irises for a relaxed, lazy look, the brows smooth. | look |
 | Editorial Stare | Dismissive Cool Glance; 에디토리얼 스테어; 화보 시선; 무심한 쿨 시선 | US | 에디토리얼; 쿨함; 무심; 미니멀 | The chin rises a few degrees and heavy lids let the eyes slide past the lens over a flat, unimpressed mouth. | look |
-| Off-Camera Gaze | Off-Camera Glance; off-axis gaze; 카메라 밖 시선; 시선 이탈; 镜头外视线; 카메라 밖 15도 시선; 偏离镜头15度视线; 視線15度 | US | 캔디드; 무심; 도회적; 인디; 当代美术馆冷光极简; 当代美术馆冷光; 美术馆冷光; 冷光极简; 현대 미술관 냉광 미니멀; 미술관 냉광 미니멀; 미술관 냉광; 냉광 미니멀; 쿨톤 도자기 피부; 블루 그레이 미니멀; 청랭 도자기 피부; 냉백 도자기 피부; 회청색 미니멀; 清冷瓷肌; 极简灰蓝 | The eyes rest on a point about fifteen degrees to the side of the lens with relaxed lids, as if something out of frame caught attention. | look |
+| Off-Camera Gaze | Off-Camera Glance; off-axis gaze; 카메라 밖 시선; 시선 이탈; 镜头外视线; 카메라 밖 15도 시선; 偏离镜头15度视线; 視線15度 | US | 캔디드; 무심; 도회적; 인디; 当代美术馆冷光极简; 当代美术馆冷光; 美术馆冷光; 冷光极简; 현대 미술관 냉광 미니멀; 미술관 냉광 미니멀; 미술관 냉광; 냉광 미니멀; 쿨톤 도자기 피부; 블루 그레이 미니멀; 냉백 도자기 피부; 회청색 미니멀; 清冷瓷肌; 极简灰蓝 | The eyes rest on a point about fifteen degrees to the side of the lens with relaxed lids, as if something out of frame caught attention. | look |
 | Pensive Gaze | distant gaze; 먼 곳 응시; 사색의 눈빛; 생각에 잠긴 눈 | US | 사색; 고요; 차분; 감성; 森ガール; 모리걸; 昭和レトロ; 쇼와 레트로; 遠い目; 토오이메; 먼 눈; 회상; 향수; 다크 아카데미아; Dark Academia; Kodak Gold 200; 코닥 골드 200; 柯达Gold 200 | The eyes fix on a far point with relaxed lips and a quiet brow. | look |
 | Peering Over Sunglasses | Eyebrow Over Sunglasses; 선글라스 위로 보기; 선글라스 너머 시선; 墨镜上方看; Removing Sunglasses; 선글라스 벗기 | US | 쿨함; 도발; 시크; 여름 | The sunglasses slide down the nose so the eyes peer over the rim, one brow visible and lifted above the frame. | look |
 | Kubrick Stare | Regard hypnotique; 큐브릭 스테어; 큐브릭 시선; 치켜뜬 눈 | US | 스릴러; 압박; 강렬함; 영화 | The head tilts down while the eyes look up from under the brows straight into the lens, the brow line casting the eye sockets into shadow. | look |
@@ -390,3 +393,4 @@ Expression 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이
 | Air serein | 에르 스렝; 평온한 얼굴; 고요한 표정; serene face; 恬静神态 | FR | 파리 소프트 그레이; 巴黎午后柔灰漫射; Lumière grise de Paris; 안뜰; 비 갠 뒤; 평온 | The face is smooth and unhurried, the lids relaxed and the mouth softly closed as she takes in the place around her. | look |
 | Regard vers son reflet | 르가르 베르 손 르플레; 거울 속 자신 보기; 유리 속 나와 눈 맞추기; looking at her own reflection | FR | 롤라이플렉스; Rolleiflex; 禄来双反; 双反双重倒影; 유리 이중 반사; Reflet de vitrine; 거울; 지하철 | The eyes fix on her own reflection in glass or chrome, the face calm and slightly analytical with the head tilted a few degrees. | look |
 | Lecture absorbée | 레크튀르 앱소르베; 독서에 빠진 눈; absorbed reading; eyes on the page | FR | Photographie humaniste; 휴머니스트 사진; Tri-X; 트라이엑스; 柯达Tri-X; 흑백 인문 사진; 독서; 책; 서점; 소르본 | The lashes lower toward an open page and the eyes follow the lines, the lips closed and the brow smooth, attention fully inside the book. | look |
+| Regard baissé sur le lait | 우유를 내려다보는 시선; 우유 따르는 눈; eyes lowered on the milk | FR | 조용; 집중; 부엌; 우유; 베르메르; 페르메이르; Vermeer; 维米尔; 维米尔窗边光; 倒牛奶的女仆 | The eyes drop fully to the thin stream of milk, the lids relaxed and the long lashes laying a fan of shadow under the eye, the lips closed and slack. | look |

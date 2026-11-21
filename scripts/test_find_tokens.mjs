@@ -31,7 +31,7 @@ for (const { slug, rows } of loadAll()) {
 // Hangul transliterations and other aliases find the original-language token.
 const aliasCases = [
   ['신중식', '新中式'], ['코모레비', '木漏れ日'], ['자판기', '自販機'], ['왕가위', '王家卫'],
-  ['프리쿠라', 'プリクラ'], ['유카타', '浴衣'], ['한복', '한복'], ['냉백피', '冷白皮'], ['투명감', '透明感'], ['시오케이', '塩系'], ['고다르', 'Jean-Luc Godard'], ['치파오', '旗袍'],
+  ['프리쿠라', 'プリクラ'], ['유카타', '浴衣'], ['한복', '한복'], ['냉백피', '쿨톤 새틴 베이스'], ['투명감', '透明感'], ['시오케이', '塩系'], ['고다르', 'Jean-Luc Godard'], ['치파오', '旗袍'],
 ];
 for (const [query, token] of aliasCases) assert.ok(tokensOf([query]).includes(token), `${query} -> ${token}`);
 // Spacing, hyphen and middle-dot variants match: the spaced query finds the unspaced token, and an unspaced query finds the hyphenated alias.

@@ -11,13 +11,13 @@ Style 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다. 
 | Y2K | 와이투케이; Y2K 룩; Y2K 감성; 밀레니엄 룩; 밀레니엄 감성; Y2K 리바이벌; Y2K revival; Y2K aesthetic; Y2K 카고; Y2K Streetwear; Y2K 스트리트웨어 | KR, JP, US | 복고; 2000년대; 스트리트; 컬러 | Early-2000s fashion with low-rise cuts, small fitted cropped tees, cargo pants, glossy lips, tinted sunglasses and shiny chrome or rhinestone accessories. | look |
 | 꾸안꾸 | 꾸민 듯 안 꾸민 듯; 꾸안꾸 룩; 꾸안꾸룩; kkuankku; effortless chic | KR | 자연스러움; 일상; 캐주얼; 사계절 | Well-fitted basics in muted neutrals that look casually thrown on, yet nothing is wrinkled, over-matched or loudly accessorized. | look |
 | 걸크러쉬 | 걸크러시; 걸 크러쉬; 걸크러쉬 룩; 걸크러시 룩; girl crush | KR | 강렬함; 시크; 아이돌; 블랙 | Sharp dark styling in black leather, structured shoulders and heavy boots, with hard light catching on metal hardware and seams. | look |
-| 클린핏 | 클린 핏; 클린핏 룩; clean fit | KR | 단정함; 미니멀; 데일리; 사계절; 쿨톤 도자기 피부; 블루 그레이 미니멀; 청랭 도자기 피부; 냉백 도자기 피부; 회청색 미니멀; 清冷瓷肌; 极简灰蓝 | Plain tonal layers in good fabric with straight seams and no logos, each piece sitting flat and unwrinkled at the shoulder, waist and hem. | look |
+| 클린핏 | 클린 핏; 클린핏 룩; clean fit | KR | 단정함; 미니멀; 데일리; 사계절; 쿨톤 도자기 피부; 블루 그레이 미니멀; 냉백 도자기 피부; 회청색 미니멀; 清冷瓷肌; 极简灰蓝 | Plain tonal layers in good fabric with straight seams and no logos, each piece sitting flat and unwrinkled at the shoulder, waist and hem. | look |
 | 원마일웨어 | 원마일 웨어; 원마일룩; one-mile wear; 이지웨어 | KR | 편안함; 동네; 홈웨어; 사계절 | Heavyweight jersey sets and loose knits with a soft brushed matte surface, hanging relaxed and roomy on the body. | look |
 | 오피스룩 | 오피스 룩; 출근룩; 출근 룩; office look | KR | 단정함; 출근; 도시; 사계절 | Tailored jackets, slim slacks and simple blouses in navy, grey and ivory, with crisp collars and clean straight lines. | look |
 | 올블랙 | 올 블랙; 올블랙 룩; 블랙 온 블랙; all black; 올블랙 미니멀 | KR | 시크; 미니멀; 블랙; 사계절 | Head-to-toe black in mixed textures, so matte wool, smooth leather and ribbed knit read as separate tones under soft light. | look |
 | 올화이트 | 올 화이트; 올화이트 룩; 화이트 온 화이트; all white | KR | 청결함; 미니멀; 톤온톤; 여름 | Cream, ivory and white layered tone on tone, with only the fabric texture separating crisp cotton from brushed knit. | look |
 | 청담동 며느리룩 | 청담동 며느리 룩; 청담 며느리룩; 청담동 룩; 청담동룩; 청담동 프레피 | KR | 고급; 우아함; 단정함; 가을겨울 | Polished ladylike dressing in tweed, cashmere and silk with small pearl jewelry and a smooth blowout, refined and expensive-looking. | look |
-| 한남동 룩 | 한남동룩; 한남동 스타일; Hannam-dong look | KR | 고급; 미니멀; 무로고; 가을겨울; 아이폰 원본 셀카; 아이폰 셀카; iPhone native selfie; 쿨톤 도자기 피부; 블루 그레이 미니멀; 청랭 도자기 피부; 냉백 도자기 피부; 회청색 미니멀; 清冷瓷肌; 极简灰蓝 | Soft camel, cream and grey cashmere layers with small gold jewelry and no visible logo, calm and quietly expensive. | look |
+| 한남동 룩 | 한남동룩; 한남동 스타일; Hannam-dong look | KR | 고급; 미니멀; 무로고; 가을겨울; 아이폰 원본 셀카; 아이폰 셀카; iPhone native selfie; 쿨톤 도자기 피부; 블루 그레이 미니멀; 냉백 도자기 피부; 회청색 미니멀; 清冷瓷肌; 极简灰蓝 | Soft camel, cream and grey cashmere layers with small gold jewelry and no visible logo, calm and quietly expensive. | look |
 | 아이돌 컨셉포토 | 컨셉 포토; 컨셉포토; 아이돌 컨셉 포토; 韩流爱豆概念照; K-pop concept photo | KR | 아이돌; 화보; 콘셉트; 강렬함 | A heavily art-directed K-pop concept image with one strong color story, coordinated styling and polished, high-finish lighting. | look |
 | 헤어질 결심 | 헤어질결심; Decision to Leave; 分手的决心 | KR | 영화; 미스터리; 안개; 차가움 | A cool muted blue-green palette with misty air, soft overcast light and precisely composed, quietly tense frames. | look |
 | 수묵 | 수묵화; 수묵풍; 수묵 미학; ink wash; Traditional Ink Aesthetic; 전통 수묵 | KR | 전통; 흑백; 여백; 고요 | Black ink-wash tones on pale paper texture, with soft tonal gradients and large quiet empty areas like a brushed scroll. | look |
@@ -41,7 +41,7 @@ Style 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다. 
 | 네온 펑크 | neon punk; 네온 레이어드 | KR | 강렬함; 여름; 페스티벌; 사이버 계열 | Neon-green camisole over a loose black mesh top, with fluorescent color glowing against dark layered fabric. | look |
 | 레코드 커버 | 앨범 커버; LP 커버; record cover; vinyl album cover; 黑胶封套 | KR | 복고; 90년대; 질감; 인쇄 | A square worn album-cover composition with faded print, ring-wear and slightly muted old ink colors. | look |
 | 룩북 | 브랜드 룩북; 룩북 촬영; Lookbook; 型录 | KR | 브랜드; 스튜디오; 깔끔; 패션 | A neutral brand catalogue frame with even light and a clean silhouette. | look |
-| 뷰티 화보 | 美妆护肤大片; beauty editorial; 스킨케어 화보 | KR | 뷰티; 하이키; 무결점; 산뜻; 쿨톤 도자기 피부; 블루 그레이 미니멀; 청랭 도자기 피부; 냉백 도자기 피부; 회청색 미니멀; 清冷瓷肌; 极简灰蓝 | A very evenly lit, flawless skin-care editorial with an airy clean feel. | look |
+| 뷰티 화보 | 美妆护肤大片; beauty editorial; 스킨케어 화보 | KR | 뷰티; 하이키; 무결점; 산뜻; 쿨톤 도자기 피부; 블루 그레이 미니멀; 냉백 도자기 피부; 회청색 미니멀; 清冷瓷肌; 极简灰蓝 | A very evenly lit, flawless skin-care editorial with an airy clean feel. | look |
 | 스노우보드 룩 | 스노보드 룩; snowboard look; 스트릿 스노우; 스노우 웨어 | KR | 스포티; 겨울; 스키장; 스트릿 계열 | Oversized retro color-block ski jacket and baggy pants in matte shell fabric with bright floodlight on the snow behind. | look |
 | 스페이스 실버 | space silver; 스페이스 에이지; 太空银 | KR | 미래적; 은색; 캡슐; 차가움 | Silver and white capsule interior with rounded forms and shiny metallic surfaces under cool even light. | look |
 | 업사이클링 데님 | 업사이클 데님; upcycled denim; 리폼 데님; 데님 홀터넥 | KR | 자유로움; 여름; 야외 페스티벌; Y2K 계열 | Re-cut vintage denim made into a halter vest with visible stitching, raw frayed edges and mismatched wash panels. | look |
@@ -67,7 +67,7 @@ Style 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다. 
 | Hanok Courtyard Open Sky | 한옥 코트야드 | KR | 전통; 열린하늘; 고요 | Dark timber eaves framing a patch of sky, with pale gravel and clay-toned walls glowing under diffuse light. | look |
 | Botanical Greenhouse | 보타니컬 그린하우스; 보태니컬 | KR | 초록; 싱그러움; 식물 | Dense tropical foliage, damp air and green-filtered light, with linen and cotton in leaf tones. | look |
 | White Cube | 화이트 큐브; 화이트큐브 갤러리 | KR | 미니멀; 흰색; 전시; 고요 | Bare white walls, polished floors and precise spotlights, with all objects isolated in empty space. | look |
-| Antique Writer's Study | 앤티크 라이터 스터디 | KR | 복고; 서재; 짙은 갈색; 서울 카페 웜톤; 서울 카페 웜톤 확산광; 웜톤 확산광; 首尔咖啡馆与居家暖调漫射 | Dark walnut, brass fittings and yellowed paper under a single warm desk lamp. | look |
+| 앤티크 서재 | 앤티크 라이터 스터디; Antique Writer's Study; 고풍스러운 서재 | KR | 복고; 서재; 짙은 갈색; 서울 카페 웜톤; 서울 카페 웜톤 확산광; 웜톤 확산광; 首尔咖啡馆与居家暖调漫射 | Dark walnut, brass fittings and yellowed paper under a single warm desk lamp. | look |
 | Han River Golden Reed Grass | 한강 골든 리드 | KR | 가을; 황금빛; 저녁 | Golden-hour backlight, glowing seed heads and a warm amber-toned haze over water. | look |
 | 인생네컷 | 인생4컷; 네컷사진; photo booth; 人生四格 | KR | 복고; 스티커; 귀여움; 실내 | A flash-lit photo-booth strip with a flat solid-colored backdrop, direct front flash and four quick frames with white borders. | look |
 | 핫걸 클럽 룩 | 클럽 파티 룩; 辣妹; spicy girl; hot girl club look | KR | 클럽; 파티; 블랙; 미니; 대담한 | A night-out look of short black leather or lamé pieces, thigh-high boots and strong eyeliner, lit by colored club light. | look |
@@ -76,7 +76,7 @@ Style 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다. 
 | 첫사랑 메이크업 | 첫사랑 룩; First Love Look; 初恋妆; 청순 메이크업; 순정 무드 | KR | 청순; 첫사랑; 봄; 부드러움; 핑크 | Light, dewy makeup in soft pinks and peaches with a clear base and little contrast. | look |
 | 학교 선배 무드 | 대학 선배 룩; Senior Girl Look; 学姐气质; 지적 단발; 차분한 선배 | KR | 지적; 차분; 단발; 가을; 청순 | Neat shoulder-length hair with inward curls, matte-satin lips, and muted brown eye makeup. | look |
 | 핫걸 메이크업 | Hot Girl Makeup; 辣妹; Y2K 핫걸; 섹시 걸 룩 | KR | Y2K; 핫걸; 강한 인상; 글로시; 무대 | Bold, high-contrast makeup with glossy lips, defined eyeliner, and a bright base typical of early-2000s fashion. | look |
-| 书卷气 | 지적인 분위기; 문학소녀 무드; 북스마트 무드 | KR | 지적인 무드; 도서관; 안경; 차분함; 쿨톤 도자기 피부; 블루 그레이 미니멀; 청랭 도자기 피부; 냉백 도자기 피부; 회청색 미니멀; 清冷瓷肌; 极简灰蓝 | A calm studious look with glasses, neat hair and a book-like quiet pose. | look |
+| 书卷气 | 지적인 분위기; 문학소녀 무드; 북스마트 무드 | KR | 지적인 무드; 도서관; 안경; 차분함; 쿨톤 도자기 피부; 블루 그레이 미니멀; 냉백 도자기 피부; 회청색 미니멀; 清冷瓷肌; 极简灰蓝 | A calm studious look with glasses, neat hair and a book-like quiet pose. | look |
 | 治愈系 | 힐링 무드; 힐링 감성 | KR | 힐링; 따뜻함; 카페; 일상; 서울 카페 웜톤; 서울 카페 웜톤 확산광; 웜톤 확산광; 首尔咖啡馆与居家暖调漫射 | A soft, warm and quiet everyday mood with gentle light and relaxed expressions. | look |
 | 少年感 | 소년 같은 느낌; 보이시 무드 | KR | 보이시; 캐주얼; 활동적; 스트릿 | A boyish casual look with loose clothing, short or tied hair and a relaxed, energetic stance. | look |
 | 私密自白 | 프라이빗 고백 무드; 밤 감성 일기 | KR | 야간; 무드; 셀카; 감성; 실내; 아이폰 원본 셀카; 아이폰 셀카; iPhone native selfie | A dim, quiet late-night mood with a half-turned face and an intimate diary-like selfie. | look |
@@ -154,7 +154,7 @@ Style 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다. 
 | 静奢风 | 静奢; 징서펑; 정사풍; 조용한 럭셔리; quiet luxury | CN | 절제; 고급; 무로고; 미니멀 | Logo-free garments in muted neutrals where quality shows in the weight of the fabric, a soft matte sheen and exact tailoring lines. | look |
 | 大女主 | 大女主风; 다뉘주; 대여주; 강한 여주인공; strong female lead | CN | 카리스마; 정장; 드라마; 권위; 当代美术馆冷光极简; 当代美术馆冷光; 美术馆冷光; 冷光极简; 현대 미술관 냉광 미니멀; 미술관 냉광 미니멀; 미술관 냉광; 냉광 미니멀; 新中式水墨; 신중식 수묵; 水墨影调; 수묵 톤 | Commanding styling in strong-shouldered tailoring and dark rich colors, polished and controlled from collar to hem. | look |
 | 财阀千金 | 재벌 천금; 재벌가 아가씨; 재벌 아가씨; chaebol heiress | CN | 부유함; 정돈됨; 드라마; 가을겨울 | Immaculate dark tailoring, long cashmere coats and structured bags with clean hems and a polished, expensive finish. | look |
-| 清冷感 | 清冷; 칭렁간; 청랭; 차가운 무드; 차가운 분위기; cool aloof | CN | 차가움; 절제; 고요함; 미니멀; 当代美术馆冷光极简; 当代美术馆冷光; 美术馆冷光; 冷光极简; 현대 미술관 냉광 미니멀; 미술관 냉광 미니멀; 미술관 냉광; 냉광 미니멀; 쿨톤 도자기 피부; 블루 그레이 미니멀; 청랭 도자기 피부; 냉백 도자기 피부; 회청색 미니멀; 清冷瓷肌; 极简灰蓝 | Cool restrained styling in pale grey, white and icy blue with minimal ornament and a quiet, distant air. | look |
+| 清冷感 | 清冷; 칭렁간; 청랭; 차가운 무드; 차가운 분위기; cool aloof | CN | 차가움; 절제; 고요함; 미니멀; 当代美术馆冷光极简; 当代美术馆冷光; 美术馆冷光; 冷光极简; 현대 미술관 냉광 미니멀; 미술관 냉광 미니멀; 미술관 냉광; 냉광 미니멀; 쿨톤 도자기 피부; 블루 그레이 미니멀; 냉백 도자기 피부; 회청색 미니멀; 清冷瓷肌; 极简灰蓝 | Cool restrained styling in pale grey, white and icy blue with minimal ornament and a quiet, distant air. | look |
 | 松弛感 | 쑹츠간; 송이감; 여유로운 무드; 릴렉스 무드; relaxed ease | CN | 편안함; 여유; 캐주얼; 일상 | Loose drop-shouldered shapes in washed natural fabric with soft creases and no tension at the seams. | look |
 | 酷飒 | 쿨사; 쿠싸; 시크 쿨; edgy chic | CN | 시크; 강렬함; 블랙; 가죽 | Sharp, slightly rough black outerwear with diagonal zips and metal hardware catching hard highlights. | look |
 | 高街 | 하이스트리트; 하이 스트리트; high street | CN | 스트리트; 쿨함; 도시; 트렌디 | Oversized outerwear, chunky sneakers and bold graphic pieces worn in loose, layered street proportions. | look |
@@ -188,7 +188,7 @@ Style 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다. 
 | 非遗 | 비유; 무형문화유산; heritage craft; ICH craft | CN | 공예; 전통; 수공예; 고급; 미술관 | Hand-crafted textiles with visible weave, dye variation and artisan finishing at edges and buttons. | look |
 | 韩剧名场面 | 한드 명장면; K-드라마 감성; K-drama scene | KR, CN | 로맨틱; 겨울; 거리; 드라마; 한드 | A romantic K-drama frame with warm backlight, close two-person framing and soft cinematic colour. | look |
 | 首尔时装周 | 서울패션위크; Seoul Fashion Week street | KR, CN | 세련됨; 낮; 서울; 패션; 런웨이 스냅 | Sharp, confident street-style outfits caught outside fashion-week venues against plain urban backdrops. | look |
-| 高岭之花 | 고령지화; 손댈 수 없는 꽃; untouchable beauty | CN | 고고함; 차가움; 미술관; 사계절; 청랭계열; 当代美术馆冷光极简; 当代美术馆冷光; 美术馆冷光; 冷光极简; 현대 미술관 냉광 미니멀; 미술관 냉광 미니멀; 미술관 냉광; 냉광 미니멀 | Cool, untouchable elegance with a lifted chin, pale even styling and a distant gaze that keeps the viewer at arm's length. | look |
+| 高岭之花 | 고령지화; 손댈 수 없는 꽃; untouchable beauty | CN | 고고함; 차가움; 미술관; 사계절; 当代美术馆冷光极简; 当代美术馆冷光; 美术馆冷光; 冷光极简; 현대 미술관 냉광 미니멀; 미술관 냉광 미니멀; 미술관 냉광; 냉광 미니멀 | Cool, untouchable elegance with a lifted chin, pale even styling and a distant gaze that keeps the viewer at arm's length. | look |
 | 晨曦竹雾 | 새벽 대숲 안개; bamboo morning mist; misty bamboo dawn | CN | 새벽; 안개; 대숲; 연녹; 신비 | Gold-green early light through thin bamboo mist, faint beams cutting the air and highlights softened to near white. | look |
 | 安藤忠雄 | 안도 다다오; Tadao Ando; 안도 건축; 안도 타다오; Ando | CN | 콘크리트; 건축; 빛; 미니멀; 차분; 건축가; 명상; 当代美术馆冷光极简; 当代美术馆冷光; 美术馆冷光; 冷光极简; 현대 미술관 냉광 미니멀; 미술관 냉광 미니멀; 미술관 냉광; 냉광 미니멀 | Ando-style rooms pair smooth concrete planes with a single controlled opening so light and shadow form the main composition. | person-style |
 | 邬达克 | 우달크; 후다커; László Hudec; Hudec | CN | 상하이; 1930년대; 건축가; 장식주의 | Hudec's buildings show sharp brick and stone volumes with Art Deco ornament and strong vertical lines in warm tones. | person-style |
@@ -220,7 +220,7 @@ Style 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다. 
 | ViVi | 비비; ViVi 잡지; ヴィヴィ | JP | 페미닌; 스트리트; 잡지; 트렌디 | A trend-led feminine street magazine look with puffy braids, soft flushed makeup and mixed casual pieces. | brand |
 | VOGUE JAPAN | 보그 재팬; 보그재팬; VOGUE JAPAN 잡지; ヴォーグジャパン | JP | 모드; 하이패션; 잡지; 강렬함 | High-fashion editorial styling with mirror-straight hair, a single strong matte red lip and sculptural designer pieces. | brand |
 | Zipper | 지퍼 잡지; Zipper 잡지; Zipper magazine; ジッパー | JP | 하라주쿠; 펑크; 잡지; 서브컬처 | Harajuku punk-subculture styling with mixed colors, metal hardware, layered prints and playful rebel makeup. | brand |
-| 無印良品 | 무인양품; 무지; MUJI; 无印良品 | JP | 미니멀; 내추럴; 베이지; 일상; 쿨톤 도자기 피부; 블루 그레이 미니멀; 청랭 도자기 피부; 냉백 도자기 피부; 회청색 미니멀; 清冷瓷肌; 极简灰蓝 | Plain garments in natural and grey tones with no logos, simple cuts and honest cotton and linen textures. | brand |
+| 無印良品 | 무인양품; 무지; MUJI; 无印良品 | JP | 미니멀; 내추럴; 베이지; 일상; 쿨톤 도자기 피부; 블루 그레이 미니멀; 냉백 도자기 피부; 회청색 미니멀; 清冷瓷肌; 极简灰蓝 | Plain garments in natural and grey tones with no logos, simple cuts and honest cotton and linen textures. | brand |
 | アメカジ | 아메카지; 아메리칸 캐주얼; American casual; アメリカンカジュアル | JP | 빈티지; 캐주얼; 데님; 워크웨어 | Japanese-interpreted American casual of rigid denim, flannel, leather boots and canvas bags in worn blues, browns and cream. | look |
 | アンニュイ | 앙뉘; 앙뉘이; 앙뉴이; ennui; アンニュイメイク | JP | 나른함; 몽환; 무드; 빈티지 | A languid, half-tired mood with softly smudged shadow, a lowered gaze and dry blurred lip color. | look |
 | ギャル | 갸루; 갸루 룩; 갸루계; gyaru; gal; ギャル系 | JP | 시부야; 화려함; 스트리트; 강렬함 | Bright high-tone hair, heavy lashes and glossy lips with loud fitted streetwear, sequins and glitter details sparkling under hard light. | look |
@@ -345,6 +345,7 @@ Style 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다. 
 | 스위트 로리타 | Sweet Lolita; 스위트 롤리타; 甜美洛丽塔; アマロリ | JP | 스위트; 파스텔; 프릴; 리본; 티파티 | A pastel, sugary Lolita variant: cream puff-sleeve dresses, ribbon bows, lace trims and pink-and-white shoes. | look |
 | 코갸루 | コギャル; Kogal; kogal; 辣妹; 고갸루; 시부야 갸루 | JP | 코갸루; 시부야; Y2K; 교복; 90년대; 아동·학생 | A late-1990s Shibuya street look of a short uniform skirt, blazer, huge loose socks, tanned skin and bleached hair. | look |
 | 日常スナップ | 일상 스냅; 니치조 스냅; everyday snapshot | JP | 日系CCD日光; 日系CCD; 일본 CCD; コンデジ; 콘데지; 일본; 스냅; 일상; 거리 | An everyday snapshot of an unposed person mid-errand, framed a little carelessly in ordinary light. | look |
+| ナイトドライブ | Night Drive; 나이트 드라이브; 夜のドライブ; 차 안 야경 | JP | 차 안; 심야; 도로; 조수석; 차분; 雨夜新宿; 비 오는 신주쿠 밤; 東京ノワール; 도쿄 누아르; 歌舞伎町ネオン; 가부키초 네온 | A quiet night-drive mood in the car, a dark jacket zipped against the cold and the road and its lights sliding past the window, nothing styled. | look |
 
 ## US
 
@@ -392,7 +393,7 @@ Style 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다. 
 | Biker Chic | 바이커 시크; 바이커 룩; 바이커룩; 라이더 룩; 라이더룩; biker style; Americana Biker Chic; 아메리카나 바이커 시크 | US | 가죽; 강렬함; 도시; 캐주얼 | Heavy leather moto jackets with asymmetric zips and scuffed edges over plain tanks and worn denim or leather trousers. | look |
 | Motocore | 모토코어; 모토 코어; 모토크로스 룩; motocross look; moto core; 모토크로스 자켓 | US | 레이싱; 가죽; 스포티; 강렬함 | Racing-inspired panelled jackets in contrasting color blocks with high zipped collars and padded shoulders, worn with fitted trousers or boots. | look |
 | Glam Rock | 글램록; 글램 록; glam rock style | US | 70년대; 광택; 락; 밤 | Glittering metallics, patent leather, platform boots and bold colored eye makeup with a high-shine stage finish. | look |
-| Indie Sleaze | 인디 슬리즈; 인디슬리즈; 인디 슬리즈 룩; indie sleaze aesthetic | US | 2000년대; 인디; 파티; 플래시; 千禧CCD直闪; 천희 CCD 직섬 | Night-out clothing under harsh camera flash, with black leather, skinny jeans and vintage band tees, messy hair and smudged eyeliner. | look |
+| Indie Sleaze | 인디 슬리즈; 인디슬리즈; 인디 슬리즈 룩; indie sleaze aesthetic | US | 2000년대; 인디; 파티; 플래시; 千禧CCD直闪; 밀레니엄 CCD 직광 플래시 | Night-out clothing under harsh camera flash, with black leather, skinny jeans and vintage band tees, messy hair and smudged eyeliner. | look |
 | Downtown Girl | 다운타운 걸; 다운타운걸; 다운타운 걸 룩; 다운타운 룩; downtown girl aesthetic | US | 뉴욕; 도시; 시크; 빈티지; 뉴욕 쿨 그레이; 맨해튼 쿨 그레이; New York overcast cool grey; 纽约SOHO阴天冷调; 曼哈顿冷灰 | A black-and-denim New York wardrobe of worn-in leather jackets, low-slung jeans and flat boots with a deliberately undone finish. | look |
 | Model Off-Duty | 모델 오프듀티; 모델 오프 듀티; 오프듀티 룩; off-duty model; model off duty | US | 캐주얼; 시크; 도시; 데일리; 뉴욕 쿨 그레이; 맨해튼 쿨 그레이; New York overcast cool grey; 纽约SOHO阴天冷调; 曼哈顿冷灰 | One oversized piece with one fitted piece, flat or chunky shoes, sunglasses and a plain bag in a relaxed, thrown-together street outfit. | look |
 | Power Dressing | 파워 드레싱; 파워드레싱; 파워 수트; 파워수트; power suit; executive chic; 이그제큐티브 시크; Wall Street Chic; 월스트리트 시크; Wall Street executive; 월스트리트 룩 | US | 테일러링; 오피스; 강렬함; 도시; 뉴욕 쿨 그레이; 맨해튼 쿨 그레이; New York overcast cool grey; 纽约SOHO阴天冷调; 曼哈顿冷灰 | Strong-shouldered tailored suiting in black, charcoal or navy with sharp lapels, clean drape and polished leather accessories. | look |
@@ -461,7 +462,7 @@ Style 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다. 
 | Outdoor Fitness Grit | 아웃도어 피트니스; 야외 운동 룩 | US | 운동; 땀; 아침 | Flushed skin with real sweat sheen, tied-back hair and compact technical sportswear in dull colors. | look |
 | Pacific Northwest | 퍼시픽 노스웨스트; 태평양 북서부룩; PNW; pnw style; Pacific Northwest Moody; 퍼시픽 노스웨스트 무디 | US | 흐림; 비; 숲; 아웃도어; 가을 | A water-repellent parka in light khaki with leggings, under grey overcast light and wet green foliage. | look |
 | Pacific Northwest Hipster | 퍼시픽 노스웨스트 힙스터; PNW 힙스터 | US | 인디; 비; 서점 | Waxed jackets, wool beanies and well-read paperbacks in cozy dim light. | look |
-| Paparazzi Candid | 파파라치 스타일; 파파라치 캔디드; 狗仔抓拍; Paparazzi; Celebrity Snapshot; Paparazzi Realism; 파파라치 리얼리즘 | US | 스냅; 야간; 플래시; 연예인; 千禧CCD直闪; 천희 CCD 직섬 | A candid mid-stride look at the lens, caught off guard by a flash with a casual, composed cool. | look |
+| Paparazzi Candid | 파파라치 스타일; 파파라치 캔디드; 狗仔抓拍; Paparazzi; Celebrity Snapshot; Paparazzi Realism; 파파라치 리얼리즘 | US | 스냅; 야간; 플래시; 연예인; 千禧CCD直闪; 밀레니엄 CCD 직광 플래시 | A candid mid-stride look at the lens, caught off guard by a flash with a casual, composed cool. | look |
 | Parisian Chic Infused Americana | 파리지앵 아메리카나; 캘리포니아 파리지앵 | US | 카페; 브런치; 오전 | Buttery croissants on marble café tables, striped awnings and relaxed tailoring beside California palms. | look |
 | Parisian-American | 파리지앵 아메리칸; 파리지앵 시크; parisian chic | US | 클래식; 봄; 카페; 뉴욕; 미니멀 | Straight cropped jeans with a small leather baguette bag and chunky loafers, a French wardrobe in American denim. | look |
 | Post-Apocalyptic Chic | 포스트 아포칼립틱 시크; 종말 시크 | US | 폐허; 소프트; 쓸쓸 | Washed-out pastels and rust against dry salt flats, calm and quietly melancholy. | look |
@@ -491,7 +492,7 @@ Style 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다. 
 | West Hollywood Nightlife | 웨스트 할리우드 나이트라이프; WeHo 나이트 | US | 클럽; 밤; 벨벳 | Deep red velvet, gold mirrors and dim, golden-glowing party light. | look |
 | Wild Florida | 와일드 플로리다; 야생 플로리다 | US | 습지; 자연; 사파리 | Khaki safari wear, sweat-damp air and tangled mangrove roots in hot soft sun. | look |
 | Y2K Disco | Y2K 디스코; 디스코룩; 디스코 룩; disco look | US | 글리터; 금속; 2000년대; 페스티벌; 밤 | A metallic chain-mail halter top with low-slung flared jeans, reflecting coloured stage light. | look |
-| Y2K Snapshot | Y2K 스냅; 밀레니엄 스냅; 千禧年代; 2000년대 감성 스냅 | US | 2000년대; 플래시; 레트로; 파티; Venice Beach Polaroid; 베니스 비치 폴라로이드; road trip light leak; 로드트립 빛샘 | An early-2000s party snapshot with a rough digital look, hard flash, saturated color and neon signs behind. | look |
+| Y2K Snapshot | Y2K 스냅; 밀레니엄 스냅; 千禧年代; 2000년대 감성 스냅 | US | 2000년대; 플래시; 레트로; 파티; Venice Beach Polaroid; 베니스 비치 폴라로이드; road trip light leak; 로드트립 빛샘 | An early-2000s snapshot with a rough digital look, hard on-camera flash and saturated color. | look |
 | Yellowstone Ranching | 옐로스톤 랜칭; 옐로스톤 목장; Yellowstone | US | 서부; 목장; 가을 | Worn denim, felt hat and a leather saddle with river valley light and dust in the air. | look |
 | Hemingway Americana | 헤밍웨이 아메리카나; 헤밍웨이 | US | 섬; 해변; 복고 | Worn linen shirt and deck shoes against a white clapboard porch and bright sea. | person-style |
 | 爱德华巴洛克 | 에드워디언 바로크; Edwardian Baroque | US | 바로크; 장식; 석재; 호텔 | Heavy carved stone, columns and gilt trim dominate the interior, with warm light running over the rich ornament. | look |
@@ -544,7 +545,7 @@ Style 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다. 
 | California Golden Hour | 加州 골든아워; 加州黄金时刻; 加州落日; 캘리포니아 골든아워; 캘리 골든아워; Cali golden hour; 캘리포니아 낙조 | US | 加州 골든아워; 캘리포니아 골든아워; California golden hour; 포트라; 역광; 낙조; 해안 | Low Pacific sun behind the figure, gold-edged hair, warm haze, sun-warmed skin and loose natural movement in the wind. | look |
 | Portra Natural Light | 포트라 내추럴 라이트; 포트라 자연광; Portra soft light; 柯达Portra 自然柔光 | US | 柯达Portra 400; 柯达Portra400人像传奇; 코닥 포트라 400; 포트라 400; Kodak Portra 400; Portra 400; 자연광; 창가; 열린 그늘; 흐린 날; 복숭아빛 피부 | Warm peach tones in the skin, creamy highlights and low-contrast pastel color under soft window, shade or overcast daylight, shot on Kodak Portra 400. | look |
 | Venice Beach Polaroid | 베니스 비치 폴라로이드; 베니스 비치 즉석사진; Venice Beach instant film; 威尼斯海滩拍立得; 威尼斯海滩拍立得与公路旅行漏光 | US | 베니스 비치 폴라로이드; Venice Beach Polaroid; 威尼斯海滩拍立得; 폴라로이드 SX-70; 즉석사진; 흰 테두리; 해변 | Sun-bleached beach-town snapshots on white-bordered instant prints, with creamy highlights, saturated reds and blues and unguarded laughter under hard sun. | look |
-| Road-Trip Light Leak | 로드트립 빛샘; 로드트립 라이트 리크; road trip light leak; 公路旅行漏光; 卷末过卷漏光 | US | 로드트립 빛샘; Road-Trip Light Leak; 公路旅行漏光; 威尼斯海滩拍立得与公路旅行漏光; 롤 끝 번; 컨버터블; 1번 국도 | A coast-road snapshot where stray light from the camera back or the end of the roll burns red, orange and yellow across one side of the frame and over her hair. | look |
+| Road-Trip Light Leak | 로드트립 빛샘; 로드트립 라이트 리크; road trip light leak; 公路旅行漏光; 卷末过卷漏光; 卷尾漏光; 胶卷尾部漏光 | US | 로드트립 빛샘; Road-Trip Light Leak; 公路旅行漏光; 威尼斯海滩拍立得与公路旅行漏光; 롤 끝 번; 컨버터블; 1번 국도 | A coast-road snapshot where stray light from the camera back or the end of the roll burns red, orange and yellow across one side of the frame and over her hair. | look |
 
 ## FR
 
