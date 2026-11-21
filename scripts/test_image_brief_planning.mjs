@@ -57,6 +57,9 @@ for (const [name, targets] of Object.entries(BUNDLES)) {
 // layered prompt that passes the native checker at the default S3 channel limit.
 const examples = [...brief.matchAll(/```text\n([\s\S]*?)\n```/g)].map(m => m[1]);
 assert.ok(examples.length >= 5, 'image-brief keeps its layered examples');
+// The section 12 example is the photo-extraction walk-through; it uses the full person layer set on purpose.
+const extractExample = sec('12').match(/```text\n([\s\S]*?)\n```/)?.[1];
+assert.ok(extractExample && examples.includes(extractExample), 'section 12 keeps its extraction example');
 const headingSets = new Set();
 for (const text of examples) {
   const lines = text.split('\n');
@@ -71,8 +74,10 @@ for (const text of examples) {
   }
   assert.ok(!heads.some(h => /^(Negative|Avoid|Exclude|Constraints|Quality|Details)$/i.test(h)), 'no catch-all layer names');
   const key = heads.join('|');
-  assert.ok(!headingSets.has(key), 'examples use different layer sets');
-  headingSets.add(key);
+  if (text !== extractExample) {
+    assert.ok(!headingSets.has(key), 'examples use different layer sets');
+    headingSets.add(key);
+  }
   const result = checkText(text, { profile: 'native', surface: 's3', engine: 'gpt-image' });
   assert.deepEqual([result.errors.length, result.warnings.length], [0, 0], JSON.stringify(result));
   assert.ok(!/^The person in the attached image\b/.test(lines[0]), 'first line names the photo, not an identity anchor');
@@ -83,6 +88,22 @@ for (const text of examples) {
   }
 }
 assert.ok(examples.some(t => t.includes('## Identity Reference')), 'a person example shows the identity section');
+// Photo extraction example (structure, not prose): the first line opens with a medium name from the section 12.0 table, most
+// token lines are native-language names, no token is a slot name, and the whole thing passes the native checker.
+{
+  const media = [...sec('12').matchAll(/^\| [^|\n]+ \| [^|\n]+ \| `(An? [^`]+)` \|$/gm)].map(m => m[1].trim());
+  assert.ok(media.length >= 8, `12.0 medium table rows: ${media.length}`);
+  assert.ok(media.filter(name => !name.includes('<')).some(name => extractExample.startsWith(name)), 'extraction example opens with a 12.0 medium name');
+  const layerLines = extractExample.split('\n').filter(line => / — /.test(line));
+  const tokens = layerLines.map(line => line.split(' — ')[0]);
+  const native = tokens.filter(token => /[^\x00-\x7f]/.test(token)).length;
+  assert.ok(native / tokens.length >= 0.5, `native-language tokens ${native}/${tokens.length}`);
+  const named = checkText(extractExample, { profile: 'native', surface: 's3', engine: 'gpt-image' });
+  assert.ok(![...named.errors, ...named.warnings].some(item => item.code === 'token/slot-name'), 'extraction example uses no slot-name token');
+  assert.ok(/^## Finish$/m.test(extractExample), 'extraction example ends with Finish');
+  const extractText = readTargets(BUNDLES['gpt-image-extract']).text;
+  assert.ok(extractText.includes('# 룩 카드 색인') && extractText.includes('# 고정 몫'), 'extraction bundle carries the look-card index and fixed-lines.md');
+}
 // Routing only: the photo-extraction bundle carries §12 and no other bundle does.
 const s12 = sec('12');
 for (const [name, targets] of Object.entries(BUNDLES)) {
@@ -135,9 +156,12 @@ for (const [layer, slug] of Object.entries(LAYER_FILES)) {
 // photo extraction and token-fit rules grew sections 2-6. Raised again with fixed-lines.md and the
 // Finish layer (new, portrait and extract grew by the file itself; the edit route grew about 500 bytes through sections 1, 6 and 9).
 // Raised again with the look-card procedure (image-brief section 4), the Camera lexicon layer and the card lines in fixed-lines.md (new 81139, portrait 88028 measured).
-assert.ok(sizes['gpt-image-new'].utf8_bytes <= 82000, `gpt-image-new is ${sizes['gpt-image-new'].utf8_bytes} bytes`);
-assert.ok(sizes['gpt-image-portrait'].utf8_bytes <= 89000, `gpt-image-portrait is ${sizes['gpt-image-portrait'].utf8_bytes} bytes`);
+// Raised again for photo extraction (step 4): fixed-lines.md gained the two extraction columns, the closer note and the Korean Finish form
+// (new 82733, portrait 89622 measured); the extraction bundle now carries image-brief section 12 in full and the look-card index (93598 measured).
+assert.ok(sizes['gpt-image-new'].utf8_bytes <= 83500, `gpt-image-new is ${sizes['gpt-image-new'].utf8_bytes} bytes`);
+assert.ok(sizes['gpt-image-portrait'].utf8_bytes <= 90500, `gpt-image-portrait is ${sizes['gpt-image-portrait'].utf8_bytes} bytes`);
 assert.ok(sizes['gpt-image-edit'].utf8_bytes <= 20900);
+assert.ok(sizes['gpt-image-extract'].utf8_bytes <= 95000, `gpt-image-extract is ${sizes['gpt-image-extract'].utf8_bytes} bytes`);
 
 const scenarios = JSON.parse(read('scripts/fixtures/behavioral/image-planning.json')).cases;
 assert.deepEqual(scenarios.map(c => c.id), [
