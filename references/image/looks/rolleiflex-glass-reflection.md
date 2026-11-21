@@ -158,13 +158,14 @@
 
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
-| A, B | camera | Rolleiflex 2.8F — A 6x6 medium-format twin-lens reflex camera. |
+| A | camera | Rolleiflex 2.8F — A 6x6 medium-format twin-lens reflex camera. |
+| B | camera | Rolleiflex 2.8F — A 6x6 medium-format twin-lens reflex camera whose square frame holds the face and the window reflection balanced, with calm margins on every side. |
 | A | camera | Hasselblad 500C/M — A 6x6 medium-format SLR camera with a waist-level finder. |
 | A | tone-hassel | Razor-Flat Planes — On the Hasselblad 500C/M, the planes stay very flat and razor-sharp across the frame, with smooth tones from skin to glass. |
 | A, B | tone-rollei | Fine Tonal Gradation — On the Rolleiflex 2.8F, the square frame holds fine tonal gradation from the lit skin through the glass reflection to the shaded room. |
 | A, B | lens | Zeiss Planar 80mm f/2.8 — A standard medium-format lens that holds the face crisp and lets the reflected street fall softly behind it with no wide-angle stretch. |
 | A, B | viewfinder | Waist-Level Viewfinder — The camera is held at belly height and looks slightly up, so the figure stands a little tall and unhurried against the glass and the sky. |
-| A, B | format | 6x6 Square Frame — A square 6x6 frame with the face and the window reflection balanced inside it and calm margins on every side. |
+| A | format | 6x6 Square Frame — A square 6x6 frame with the face and the window reflection balanced inside it and calm margins on every side. |
 | A, C | stock | Kodak Portra 400 — Warm, low-contrast color negative with creamy midtones on lit skin, soft highlight roll-off and fine, even grain. |
 | B | stock | Kodak Portra 800 — Low-light color negative; in this look it leans lamplit skin toward warm tones and lets lamps and wet glass carry a soft glow. |
 | B | color | Vision3 500T-inspired grade — A tungsten cinema-negative look: in this look lamplit skin leans toward warm amber and the shadows toward a slightly green-cool tone. |
