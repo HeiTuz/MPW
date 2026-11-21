@@ -4,7 +4,7 @@
 
 공개 인물 프롬프트 모음 1,823건을 검수해 뽑은 작성 패턴이며 생성 품질 실측이 아니다. 원문 문장을 템플릿으로 복사하지 않는다.
 
-인물 시리즈의 지정 축 비교나 프리셋 조합, 명시적 랜덤 요청에는 [portrait-variations.md](portrait-variations.md)를 읽는다.
+인물 시리즈의 지정 축 비교나 프리셋 조합, 명시적 랜덤 요청에는 [portrait-variations.md](portrait-variations.md)를 읽는다. 같은 장면을 여러 장 달라는 요청(바꿀 축 없음)도 읽는다. 룩 카드가 있으면 포즈·구도 쌍으로 장마다 Pose와 Camera를 바꾼다.
 
 인물 설정은 [../image-brief.md](../image-brief.md) §5.
 
