@@ -1,6 +1,6 @@
 # 인물 이미지 브리프
 
-작성 규칙(층 모양·채우기·기본 인물·Identity Reference)은 [../image-brief.md](../image-brief.md)가 정본이다. 이 파일은 참조 분기·장르 결정 축·검수만 다룬다. 우선순위는 [../lanes.md](../lanes.md) §레인 게이트 카드 > GPT Image 새 이미지의 [../image-brief.md](../image-brief.md) > [../compiler.md](../compiler.md) §원칙(GPT Image 새 이미지에는 적용하지 않는다) > [../editorial-fashion.md](../editorial-fashion.md) > 이 파일이며, 원본 편집은 [../surface-contracts.md](../surface-contracts.md) §3.3이 소유한다. 다른 엔진을 지정했으면 인물 설정·참조 분기·검수만 적용하고 형식과 참조 문법은 그 엔진 문서를 따른다.
+작성 규칙(층 모양·채우기·기본 인물·Identity Reference)은 [../image-brief.md](../image-brief.md)가 정본이다. 이 파일은 참조 분기·장르 결정 축·검수만 다룬다. 우선순위는 [../lanes.md](../lanes.md) §레인 게이트 카드 > GPT Image 새 이미지의 [../image-brief.md](../image-brief.md) > [../compiler.md](../compiler.md) §원칙(GPT Image 새 이미지에는 적용하지 않는다) > [../editorial-fashion.md](../editorial-fashion.md) > 이 파일이며, 원본 편집은 [../surface-contracts.md](../surface-contracts.md) §3.3이 소유한다. 다른 엔진을 지정했으면 인물 설정·참조 분기·검수만 적용하고 형식과 참조 문법은 그 엔진 문서를 따른다. 새 인물 사진의 기본 비율(사용자 비율이 없을 때 3:4 세로)은 [../fixed-lines.md](../fixed-lines.md)의 `framing`+`ratio` 슬롯이 정한다.
 
 공개 인물 프롬프트 모음 1,823건을 검수해 뽑은 작성 패턴이며 생성 품질 실측이 아니다. 원문 문장을 템플릿으로 복사하지 않는다.
 
@@ -46,6 +46,6 @@
 
 답변에 출력하지 않는 내부 확인이다.
 
-- 조건절 밖에 얼굴형·이목구비·피부색·나이 서술이 없고 체형은 `In either case` 비율 문장 한 곳뿐인가
+- 조건절 밖에 얼굴형·이목구비·타고난 피부색·나이 서술이 없고 체형은 `In either case` 비율 문장 한 곳뿐인가
 - 참조가 없으면 보존 문구가 없는가. 있으면 번호·역할이 있고 참조 외모를 다시 묘사하지 않았는가
 - 카메라 위치·광원·반사·손의 접촉이 서로 맞는가

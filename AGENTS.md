@@ -26,7 +26,7 @@
    - 엔진별 효과 장치(효과 × 엔진 표, 층 → 엔진 배열표, 두 단계 변환 절차): `references/image/engine-levers.md`. 엔진 문법·파라미터의 세부는 그 엔진 문서가 정본이고 이 표는 문구·자리·근거 등급만 정한다
    - 텍스트·구조 이미지 결정: `references/image/text-structure.md`
    - 레인별 게이트(필수 요소·네거티브 정책): `references/image/lanes.md` §레인 게이트 카드
-   - 이미지 슬롯 기본값: `references/image/lanes.md` §이미지 슬롯 기본값
+   - 이미지 슬롯 기본값: `references/image/lanes.md` §이미지 슬롯 기본값(GPT Image 웹·대상 미정의 새 인물 사진의 기본 비율만 `references/image/fixed-lines.md`의 ratio 슬롯이 정본)
    - 추론 불가 슬롯 목록: `references/templates/common.md` §슬롯 자동 채움
    - 프롬프트 언어 결정 규칙: `references/templates/common.md` §수신자·채널 적응 — SKILL.md와 오버레이는 요약+포인터만 둔다
    - S1 기계 계약 값(ar·size·quality enum): **문서가 아니라 `contracts/v1/*.schema.json`**. 문서는 스키마 값을 복제하지 않는다

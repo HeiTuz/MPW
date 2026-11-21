@@ -33,15 +33,15 @@
 |---|---|---|---|---|---|
 | GPT Image 웹 | 첫 줄 + `## 층` | 그대로 | 없음(비율은 Camera 줄) | 그대로 | 10,000자. image-brief §1 순서 |
 | GPT Image API | 같음 | 그대로 | `size`, `quality` | 그대로 | 32,000자 |
-| Seedream ModelArk(영어) | 한 문단 | 매체 문장, 참조 역할, 몸 비율 문장, 장소와 자세, 소품과 시선, 헤어·메이크업, 의상·레그웨어, 배경과 글자 상태, 빛, Optics, 입자, Camera, 실사 문장, 끝 문장(매체와 금지) | `size`, 출력 형식 | 룩·필름·브랜드 이름만 남기고 나머지는 영어로 푼다 | 영어 600단어 미만. 원어 중복, Light·Optics 둘째 문장, 소품 세부 순으로 줄인다 |
+| Seedream ModelArk(영어) | 한 문단 | 매체 문장, 참조 역할, 몸 비율 문장, 장소와 자세, 소품과 시선, 헤어·메이크업, 의상·레그웨어, 배경과 글자 상태, 빛, Optics, 입자, Camera, 실사 문장, 끝 문장(매체와 금지) | `size`, 출력 형식 | 룩·필름·브랜드 이름만 남기고 나머지는 영어로 푼다 | 영어 600단어 미만. 줄이는 순서: 고정 메이크업 줄의 수식어, 배경 인물·소품의 둘째 묘사, 층별 둘째 문장. 룩을 정하는 Optics·Light의 사실과 사용자가 말한 소품은 끝까지 남긴다 |
 | Seedream 豆包·即梦 | 중문 한 문단 | 위와 같음 | UI의 비율 | 중문 토큰 그대로 | 표면 상한은 미확인 |
 | Nano Banana | 서술 문장 몇 개 | 동사 작업 문장(매체), 참조 역할, 용도 한 줄, 배경(Scene), 중간(Light), 전경 인물(Pose, Outfit, Hair and makeup, Expression, Props), 촬영 용어(Camera, Optics, 필름), 실사 | 비율, 해상도 | 짧은 원어는 남길 수 있다 | 용도와 배경 문장부터 줄인다 |
-| Midjourney | 짧은 서술 + 파라미터 | 매체, 피사체와 행동, 의상, 장소와 빛, 색·필름, 파라미터(`--ar` `--oref` `--no` `--raw`) | 파라미터 | 영어 | 층마다 한 구절. 단어 수로 살핀다 |
+| Midjourney | 짧은 서술 + 파라미터 | 매체, 피사체와 행동, 의상, 장소와 빛, 색·필름, 파라미터(`--ar` `--oref` `--no` `--raw`) | 파라미터 | 영어 | 층마다 한 구절, 룩을 정하는 층(Optics·Light)만 두 구절. 단어 수 경계는 없다([surfaces.md](surfaces.md) §0-1) |
 | Soul 2 | 용어 스택 | 구도 관용어, 피사체, 의상, 장소, 빛 관용어, 발색 | `soul_id`, 비율 | 영어 | 금지 문장 없음 |
 
 - 표의 Seedream 두 행은 BytePlus ModelArk direct의 영어 문안 기준이다. Higgsfield `seedream_v5_pro`는 별도 표면이라 문장 형식만 같은 행을 쓰고 모델 id·파라미터는 런타임 정의로 확인한다([seedream-5-pro.md](seedream-5-pro.md) 적용 경계). 豆包·即梦은 이 레포에 표면 문서가 없어 중문 한 문단 형식이 `[Iris]` 수준이다.
 - Soul 2는 Higgsfield의 `soul_2`다. 모델 id가 요청에 이미 있으면 그 id가 라우팅이고, 이 표는 문장 쪽만 맡는다([model-routing.md](model-routing.md) §4).
-- 이 표에 없는 엔진(Flux·Grok Imagine·Higgsfield의 다른 모델 등)은 그 엔진 문서의 형식이 먼저이고, §5의 칸을 가까운 열에서 빌려 쓰지 않는다.
+- 이 표에 없는 엔진(Flux·Grok Imagine·Higgsfield의 다른 모델 등)은 그 엔진 문서의 형식이 먼저이고, §5의 칸을 가까운 열에서 빌려 쓰지 않는다. 층 문안의 Finish 세 줄과 Identity 조건문(문화권 공식 포함)은 빼지 않고 그 엔진 문서의 형식 안에서 자연어 문장으로 남긴다.
 - 엔진 문서가 정한 문법(Midjourney 파라미터 표기, Soul의 구도 자리, Nano Banana의 참조 슬롯)은 이 표보다 그 문서가 먼저다.
 
 ## 4. 두 단계로 옮긴다
@@ -50,7 +50,11 @@
 2. **장치 붙이기.** §5의 효과 표를 위에서 아래로 내려가며 줄마다 묻는다. 이 장면에 이 효과가 있나(인물이 있다, 필름 매체다, 사진 매체다)? 있으면 대상 엔진 칸의 문구를 칸이 정한 자리에 넣는다. 칸이 '쓰지 않는다'이면 층 문안에 있던 해당 줄을 뺀다(Soul의 anti-cg 줄). 층 문안에서 이미 같은 효과를 낸 줄(Finish의 closer·realism·anti-cg, 문화권 공식의 비율 문장)은 그 칸의 문구로 바꾸고 둘을 겹쳐 쓰지 않는다.
 3. **대조.** 층 문안의 장면 사실(의상, 소품, 장소, 빛, 자세, 시선)이 하나도 빠지지 않았는지 본다. 장치가 장면 사실과 부딪히면 장면 사실이 이긴다. 대체값으로 바꾸지 않는다. 그 뒤 `node scripts/check_prompt.mjs --engine <대상>`을 돌린다([production.md](production.md)).
 
+**참조가 없을 때.** '얼굴 고정' 칸은 사용자가 참조 얼굴을 실제로 붙일 때만 쓴다. 참조가 없으면 그 칸을 쓰지 않고 층 문안의 Identity 조건문 `If none is provided,` 뒤 인물(문화권 공식)을 영어로 풀어 인물 문장으로 쓴다. Seedream은 매체 문장 바로 뒤 둘째 문장으로 쓴다(`She is a 22-year-old Chinese woman with cool, composed bone structure, a small face, a straight nose bridge, a clean jawline and cool fair skin.`). Midjourney는 `a woman`처럼 성별·나이대 구절만 쓰고 얼굴 서술은 [midjourney-identity.md](../midjourney-identity.md) §8대로 요청이나 오류 교정에 필요할 때만 구절로 줄여 넣는다. Nano Banana는 인물 문장 안에, Soul은 피사체 항에 넣는다. `清冷`·`巴掌脸`·`冷白皮` 같은 중문 토큰은 영어로 푼다.
+
 변환(기존 프롬프트를 다른 엔진으로)은 1단계 앞에 원문의 효과 장치를 이름으로 되돌리는 일이 붙고, 2단계에서 붙이는 장치는 원문이 노린 효과만이다([prompt-conversion.md](prompt-conversion.md) §2, 이 파일 §6).
+
+**원문이 층 문안이 아닐 때.** 문단형이거나 다른 엔진 형식의 원문은 층 문안을 먼저 새로 만들지 않고, 원문 문장을 §3의 그 엔진 행 순서로 바로 펴며 원문의 효과 장치만 §6의 단서대로 이름으로 되돌려 대상 칸으로 바꾼다. 원문이 층 문안(`## 층`, `토큰 — 문장`)이면 줄을 그대로 이어 붙인다. 대상이 GPT Image면 `node scripts/read_refs.mjs references/image/image-brief.md#1,3`의 층 모양(첫 줄 + `## 층`)으로 옮기고, 원문에 실사·금지 꼬리 같은 단서(§6)가 있을 때만 그 효과를 `## Finish`의 `closer`·`realism`·`anti-cg` 줄([fixed-lines.md](fixed-lines.md))로 옮긴다. 단서가 없으면 Finish를 새로 붙이지 않는다.
 
 **사진 추출**도 층 문안을 먼저 쓰고([image-brief.md](image-brief.md) §12) 위 순서(펴기, 장치 붙이기, 대조)로 편다. 장치의 근거는 원문 단서(§6)가 아니라 사진에서 읽은 것이다. 효과마다 사진이 그 자리에 무엇을 보였는지를 묻는다.
 
@@ -70,7 +74,7 @@
 | 얼굴 고정 | `## Identity Reference` 조건 문단, `keep her own skin tone` 포함 · 첫 층 · `[문서]` image-brief §5 | `Use Image 1 only for the woman's identity: keep her face shape, facial features and natural skin tone, and do not take her clothes, hair, background or pose from Image 1.` · 매체 문장 바로 뒤 · 이미지마다 역할 하나는 `[공식]`, 옷·배경·자세를 가져오지 않는다는 단서는 `[Iris]` | `Use the attached photo for her face; everything else comes from this description.` · 첫 문장 뒤 · 참조 역할은 `[공식]` | `--oref <url>`(V7, `--ow`는 필요할 때만), V8은 Edit Model · 파라미터 · `[문서]` midjourney-identity §2 | `soul_id` · 파라미터 · `[문서]` |
 | 몸 비율 | Identity 문단의 마지막 문장 `In either case she has 7.5-head proportions, a small head over level shoulders and a long neck.` · 첫 층 · `[Iris]` | 얼굴 문장 바로 뒤에 같은 문장 · 둘째 문장 · `[Iris]` | 인물 문장 안에 같은 구절 · 인물 문장 · `[미검증]` | `tall slender figure, small head` · 피사체 구절 · `[미검증]` | 구도 관용어 `A full-body shot`과 `statuesque proportions` · 구도 항 · 수치보다 관용 명칭이 통했다 `[실측]`, 이 구절 자체는 `[미검증]` |
 | 미화 메이크업 | Hair and makeup 슬롯 줄(fixed-lines.md) · 헤어 층 · `[Iris]` | 한 문장으로 압축한 메이크업(`Matte base, …, a muted rosy-brown matte lip.`) · 헤어 문장 뒤 · `[Iris]` | 같은 내용의 서술 문장 · 인물 문장 뒤 · `[미검증]` | 낱말 3~4개 · 피사체 구절 · `[미검증]` | 메이크업 용어와 결 토큰. `flawless`·`porcelain`·`glass skin` 같은 미화어는 쓰지 않는다 · 용어 스택 · realism.md §1 `[문서]` |
-| 피부 실사감 | Finish realism 줄 `<realism 토큰> — Ultra-realistic 8K photographic detail: real pores on the skin, …` · 끝 · 꼬리는 `[Iris]`, `8K`는 `[미검증]` | 끝 앞 문장 `Ultra-realistic photographic detail with real skin pores, <옷감> weave and <표면> …` · 끝 앞 · `[Iris]` | `Photorealistic, with natural skin texture and visible pores.` · 끝 · `[미검증]` | `--raw`, 품질은 `--q` 설정 · 파라미터 · `[문서]` | 결 토큰 `natural skin texture, visible pores` · 용어 스택 · `[미검증]` |
+| 피부 실사감 | Finish realism 줄 `<realism 토큰> — Ultra-realistic 8K photographic detail: real pores on the skin, …` · 끝 · 꼬리는 `[Iris]`, `8K`는 `[미검증]` | 끝 앞 문장 `Ultra-realistic photographic detail with real skin pores, <옷감> weave and <표면> …` · 끝 앞 · `[Iris]` | `Photorealistic, with natural skin texture and visible pores.` · 끝 · `[미검증]` | 품질은 `--q` 설정이고 `--raw`는 매체 고정 칸의 조건일 때만 · 파라미터 · `[문서]` | 결 토큰 `natural skin texture, visible pores` · 용어 스택 · `[미검증]` |
 | 필름·입자 | Optics `胶片颗粒 — Fine, even film grain … across the whole frame` 한 번(디지털 매체는 `数码噪点`) · Optics · `[Iris]`. GPT의 화면 노이즈 위험은 커뮤니티 보고(surface-contracts.md §3.2.4) | `Fine even 35mm film grain across the whole frame.` 한 번 · Camera 앞 · `[Iris]` | 스톡 이름과 `with fine film grain` · Optics 문장 · 필름 질감은 `[공식]` | 스톡 이름과 `fine grain` · 색·필름 구절 · `[미검증]` | 상표 없이 `fine grain, softly lifted blacks` · 용어 스택 끝 · `[실측]` |
 | 빛 | Light 층: 광원 위치와 결과. 카드가 빛을 정하면 고정 얼굴 빛은 끈다 · Light · `[문서]` | 장면 문장 뒤 한 문장: 광원, 방향, 눈빛 · 장면 뒤 · 조명으로 미학을 보강하는 것은 `[공식]` | 배경, 중간, 전경 순서 안의 빛 문장 · 중간 · `[공식]` | 짧은 구절 `red and green neon split light` · 장소·빛 구절 · `[미검증]` | 관용 조명 명칭(`Paramount lighting`) · 빛 관용어 항 · `[실측]` |
 | 화면비 | 웹: Camera 줄 한 번(인물 기본 3:4). API: `size`, 본문에 쓰지 않는다 · Camera 또는 설정 · `[문서]` | ModelArk: `size` 파라미터. 설정이 없는 채팅 표면만 끝에 `3:4 vertical` 한 번 · 설정 또는 끝 · 파라미터는 `[공식]`. Iris는 본문에 두 번 썼지만 이득 근거가 없다 | 호출 설정. 본문에 `--ar`을 쓰지 않는다 · 설정 · `[문서]` | `--ar 3:4` · 파라미터 · `[공식]` 문법 | 파라미터 · 설정 · `[문서]` |
@@ -81,11 +85,12 @@
 | 의상 정확도 | Outfit의 원단과 빛 반응 · Outfit · `[문서]` | 원단 이름과 `real fabric drape and weave` · 의상 문장 · `[Iris]` | 원단 이름과 빛 반응 · 의상 문장 · `[미검증]` | 원단 이름 낱말 · 의상 구절 · `[미검증]` | 의상 정확도가 우선한다 · soul-v2-director 지시 우선순위 `[문서]` |
 | 언어 | 영어 뼈대와 원어 토큰 · `[문서]` | ModelArk는 영어, 600단어 미만 · `[공식]`(2026-08-02 확인). 豆包·即梦·火山의 중국 표면은 중문 `[Iris]`, 그 표면의 권장은 `[미검증]` | 영어 또는 한국어 · `[공식]` 권장 언어 목록 | 영어 · `[문서]` | 영어 · `[문서]` |
 
-표 밖 규칙 셋.
+표 밖 규칙 넷.
 
 - **모든 장치는 장면 사실 뒤다.** 장치가 장면 사실(소품, 자세, 의상, 시선)과 부딪히면 장면 사실이 이긴다. 머리카락이 얼굴을 가리는 룩이면 '가림 금지'를 넣지 않고, 광각 룩이면 무왜곡 칸을 쓰지 않는다.
 - **금지 문장은 칸이 정한 것만 쓴다.** 위 표의 금지 한 문장(애니·CG, 글자·워터마크, 손가락)은 묶음으로 늘려 쓰지 않는다. 사용자가 직접 빼 달라고 한 것은 장치가 아니라 내용이라 그 엔진의 배제 형식으로 쓴다([surface-contracts.md](surface-contracts.md) §4).
 - **같은 효과를 두 칸이 내지 않게 한다.** 층 문안이 이미 낸 효과(Finish 줄, 문화권 공식의 비율 문장)를 장치 칸으로 바꿨으면 원래 줄은 뺀다.
+- **저해상 매체는 모공 칸을 쓰지 않는다.** 층 문안의 realism 줄이 `native resolution` 줄이면([fixed-lines.md](fixed-lines.md) Finish) '피부 실사감' 칸의 모공 문구(`real skin pores`, `visible pores`)를 붙이지 않고, 그 줄의 매체 해상도를 대상 엔진의 말로 옮긴다(Seedream은 끝 앞 문장 `Soft edges and smeared fine texture, the resolution of a 480-line camcorder.`, Nano Banana와 Soul은 같은 뜻의 서술 한 구절, Midjourney는 `soft low-resolution camcorder frame` 같은 구절).
 
 ## 6. 원문에서 효과 장치 찾기 (변환할 때)
 
@@ -121,7 +126,7 @@
 A 1990s Hong Kong film still shot on tungsten cinema negative. Use Image 1 only for the woman's identity: keep her face shape, facial features and natural skin tone, and do not take her clothes, hair, background or pose from Image 1. She has 7.5-head proportions, a small head over level shoulders and a long neck. She shelters under a covered shop arcade on an old Kowloon street at night in the rain, her left shoulder resting against a tiled pillar with a closed rolling shutter behind her, weight in her left hip, right foot crossed over the left ankle, left hand deep in her coat pocket. She holds a white paper take-out coffee cup with a brown sleeve at chest height in her right hand, steam rising and catching red light, and looks far down the street to the right with a wistful, waiting look, not at the camera. Her hair is a loose 1990s Wong Kar-wai perm grazing the collarbones, tucked behind the right ear, a few damp strands loose on the far side. Matte shine-free base, full natural brows, a soft pearly band under the lower lashes, a hair-thin upper liner, a muted rosy-brown matte lip and glossy red nails. She wears a deep crimson silk slip dress under a man's oversized black wool coat hanging open from her shoulders, the wool beaded with rain and the satin throwing a long liquid highlight where neon reaches it. Rain sheets off the arcade edge in a bright curtain; across the street dense red and green neon signs stack up an old tenement, blurred past reading, over black mirror-wet asphalt. The mood is Chungking Express: saturated neon, one still figure, everything else streaking past. A red neon sign at the left lights the left side of her face and the silk, green tube light edges her right cheek, the two colors meeting along her nose, thin red and green streaks mirror in her irises, and every light wears a cold halo of mist while the falling rain catches the neon in short bright streaks. Kodak Vision3 500T color: red-orange highlights, teal-green shadows, deep pressed blacks, red halation around the brightest tubes, and step-printed ghost trails on the rain, passing umbrellas and a cyclist while she stays sharp. Fine even 35mm film grain across the whole frame, a little heavier in the shadows of the street. Shot from across the arcade with a moderate telephoto at chest height, waist-up, her in the left third, a blurred umbrella edge in the lower right foreground, the signs compressed into one glowing wall. Ultra-realistic photographic detail with real skin pores, wool weave and wet tile. This is a real person photographed on location as a still from a 1990s Hong Kong feature film, not an illustration, anime, 3D render or plastic CGI, with no on-screen text, watermark, collage border or extra fingers.
 ```
 
-참조가 없으면 둘째 문장을 `She is a 22-year-old Chinese woman with cool, composed bone structure, a small face, a straight nose bridge, a clean jawline and cool fair skin.`으로 바꾼다(ModelArk 영어판이라 `清冷`·`巴掌脸`·`冷白皮`를 영어로 풀었다). 설정이 없는 채팅 표면이면 끝에 `3:4 vertical`을 한 번 쓴다.
+참조가 없으면 §4의 '참조가 없을 때'대로 둘째 문장을 `She is a 22-year-old Chinese woman with cool, composed bone structure, a small face, a straight nose bridge, a clean jawline and cool fair skin.`으로 바꾼다(ModelArk 영어판이라 `清冷`·`巴掌脸`·`冷白皮`를 영어로 풀었다). 설정이 없는 채팅 표면이면 끝에 `3:4 vertical`을 한 번 쓴다.
 
 ### 8.2 Nano Banana, 인물 참조를 붙이는 경우
 
@@ -138,7 +143,7 @@ Shot from across the arcade with a moderate telephoto lens at chest height, wais
 
 ### 8.3 Midjourney, 참조 없이
 
-한 줄의 구절 목록이다. 금지는 `--no`, 비율은 `--ar`로 나가고 본문에 문장이 없다. 몸 비율과 매체는 구절로 줄였다. 얼굴 참조를 붙이면 V7은 `--oref <url>`, V8은 Edit Model을 파라미터 구간에 더한다([midjourney-identity.md](../midjourney-identity.md) §2).
+한 줄의 구절 목록이다. 금지는 `--no`, 비율은 `--ar`로 나가고 본문에 문장이 없다. 필름 룩이라 매체 이름만으로 스타일이 흐르기 쉬워 `--raw`를 썼다. 몸 비율과 매체는 구절로 줄였다. 얼굴 참조를 붙이면 V7은 `--oref <url>`, V8은 Edit Model을 파라미터 구간에 더한다([midjourney-identity.md](../midjourney-identity.md) §2).
 
 (702자 실측)
 ```text
