@@ -95,7 +95,7 @@ assert.ok(examples.some(t => t.includes('## Identity Reference')), 'a person exa
   assert.ok(media.length >= 8, `12.0 medium table rows: ${media.length}`);
   // §12.0 step 3: a called look card's first-line phrase wins over the table name, so a card's `medium` row also counts.
   const cardOpenings = fs.readdirSync(new URL('../references/image/looks/', import.meta.url)).filter(f => f.endsWith('.md') && f !== 'index.md')
-    .flatMap(f => [...read(`references/image/looks/${f}`).matchAll(/^\| medium \| .*?`(An? [^`]+)`/gm)].map(m => m[1].trim()));
+    .flatMap(f => (read(`references/image/looks/${f}`).match(/^\| medium \| .*$/gm) || []).flatMap(row => [...row.matchAll(/`(An? [^`]+)`/g)].map(m => m[1].trim())));
   assert.ok([...media.filter(name => !name.includes('<')), ...cardOpenings].some(name => extractExample.startsWith(name)), 'extraction example opens with a 12.0 medium name or a look card first line');
   const layerLines = extractExample.split('\n').filter(line => / — /.test(line));
   const tokens = layerLines.map(line => line.split(' — ')[0]);
