@@ -8,7 +8,7 @@
 //   node scripts/read_refs.mjs --toc references/image/lanes.md
 //   node scripts/read_refs.mjs --bundle gpt-image-portrait references/image/from-image.md#1
 //   node scripts/read_refs.mjs --bundles
-//   node scripts/read_refs.mjs --bundle gpt-image-portrait --part 1/3
+//   node scripts/read_refs.mjs --bundle gpt-image-portrait --part 1/5
 //
 // A section runs from its heading to the next heading of the same or higher
 // level. "#A,B" reads several sections, "#A~B" reads from A through the end of B,
@@ -287,8 +287,8 @@ export function readTargets(targets, read = readSource) {
   return { text: chunks.join("\n") };
 }
 
-// One tool output holds about 40,000 bytes (a Korean character is 3 bytes), so --bundles says how many --part pieces a bundle needs.
-export const PART_LIMIT_BYTES = 40000;
+// One tool output holds about 24,000 bytes on the hosts tried (a 31 KB part was cut and saved to a file; a Korean character is 3 bytes), so --bundles says how many --part pieces a bundle needs.
+export const PART_LIMIT_BYTES = 24000;
 // Parts are planned 5% under the limit so a part near it is not cut by the host.
 export const PART_TARGET_BYTES = Math.floor(PART_LIMIT_BYTES * 0.95);
 
