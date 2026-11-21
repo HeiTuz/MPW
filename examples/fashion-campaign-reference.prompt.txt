@@ -42,7 +42,7 @@ palette — Stone beige, cream, charcoal and black, warmed only by the late sun 
 
 ## Scene
 stone plaza — A pale stone plaza with a smooth honed surface stretches to the edges of the frame, with fine joint lines and a few fallen leaves.
-background — A low, plain cream building with tall windows stands far back on the left and stays pale and out of focus.
+cream building — A low, plain cream building with tall windows stands far back on the left and stays pale and out of focus.
 
 ## Light
 late afternoon sun — Late-afternoon sun low from camera right lays long shadows on the stone and rakes across the twill so the diagonal weave shows.

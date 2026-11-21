@@ -5,7 +5,7 @@ import { checkText } from "./check_prompt.mjs";
 
 const codes = (text, options) => {
   const result = checkText(text, options);
-  return [...result.errors, ...result.warnings].map((item) => item.code).filter((code) => code.startsWith("coherence/"));
+  return [...result.errors, ...result.warnings].map((item) => item.code).filter((code) => /^(?:coherence|token)\//u.test(code));
 };
 const has = (text, code, options) => assert.ok(codes(text, options).includes(code), `${code}: ${text}`);
 const lacks = (text, code, options) => assert.ok(!codes(text, options).includes(code), `${code} should not fire: ${text}`);
@@ -55,4 +55,12 @@ lacks("A woman on a rainy night under a sodium lamp.", "coherence/day-night");
 // Scope: native checks for other engines still run these; assembled midjourney stops at engine-scope but keeps them.
 has("A 24mm lens. An 85mm lens.", "coherence/focal", { engine: "higgsfield" });
 has("A 24mm lens. An 85mm lens.", "coherence/focal", { profile: "assembled", engine: "midjourney" });
-console.log("Coherence matching: occlusion, focal, identity-skin, ratio-dup, decimal, slot-dup and day-night cases pass; image output NOT RUN.");
+// token/slot-name: a layer-line token that names the slot; names of the thing shown and flat prompts pass.
+has("## Hair and makeup\nhair color — Long straight black hair.", "token/slot-name");
+has("## Scene\npassersby — People walk the sidewalk.\nroad surface — Gray asphalt.", "token/slot-name");
+lacks("## Hair and makeup\n黒髪ロング — Long straight black hair.\nwind-blown strands — Loose strands lift.", "token/slot-name");
+lacks("## Light\ncast shadows — Short hard shadows fall toward the camera.\ncatchlight — A small bright patch sits in each eye.", "token/slot-name");
+lacks("A woman with hair color — dark brown — stands in the street.", "token/slot-name");
+lacks("hair color — Long straight black hair, before any layer heading.", "token/slot-name");
+
+console.log("Coherence matching: occlusion, focal, identity-skin, ratio-dup, decimal, slot-dup, day-night and token/slot-name cases pass; image output NOT RUN.");

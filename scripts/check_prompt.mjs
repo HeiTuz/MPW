@@ -46,6 +46,7 @@ export const CODE_REGISTRY = Object.freeze({
   engineLayers: { code: "coherence/engine-layers", severity: { native: "warning", assembled: "warning" }, intent: "Flag GPT Image layer headings left in a prompt for another engine." },
   engineFlag: { code: "coherence/engine-flag", severity: { native: "warning", assembled: "warning" }, intent: "Flag a Midjourney flag or ratio token in the body of an engine that takes it as a setting." },
   engineBan: { code: "coherence/engine-ban", severity: { native: "warning", assembled: "warning" }, intent: "Flag a spoken ban on illustration or CGI where the engine's cell says to state the medium or use its own exclusion syntax." },
+  slotName: { code: "token/slot-name", severity: { native: "warning", assembled: "warning" }, intent: "Flag a layer-line token that names the slot (hair color, passersby, road surface) instead of the thing shown." },
   engineBrand: { code: "coherence/engine-brand", severity: { native: "warning", assembled: "warning" }, intent: "Flag a film stock brand name in a Soul prompt, which draws the film border." },
   parse: { code: "manifest/parse", severity: { native: "error", assembled: "error" }, intent: "Report invalid JSON without losing subsequent rows." },
   notObject: { code: "manifest/not-object", severity: { native: "error", assembled: "error" }, intent: "Require an object for each manifest row." },
@@ -428,7 +429,22 @@ function inspectCoherence(result, text, instruction) {
   if (/\b(?:night(?:time)?|midnight|after dark)\b|深夜|夜晚|の夜/iu.test(instruction) && /\b(?:noon|midday|mid-day|noonday)\b|正午|中午|真昼/iu.test(instruction)) {
     emit(result, CODE_REGISTRY.dayNight, "A night cue and midday light appear in the same prompt.", { hint: "Pick one time of day and make Light and Optics agree." });
   }
+  inspectSlotNames(result, sections);
   inspectEngine(result, instruction);
+}
+
+// image-brief.md §12.2: a token names the thing shown, never the slot it fills. Only the `token — sentence` lines inside a layer are read.
+const SLOT_NAMES = new Set(["hair color", "hair colour", "hair", "hairstyle", "makeup", "outfit", "clothing", "clothes", "pose", "expression", "background", "foreground", "scene", "setting", "location", "passersby", "passers-by", "people", "crowd", "road surface", "ground", "floor", "sky", "lighting", "light", "shadow", "shadows", "mood", "atmosphere", "color", "colors", "colour", "camera", "camera angle", "composition", "style", "medium"]);
+function inspectSlotNames(result, sections) {
+  const names = [];
+  for (const section of sections) {
+    if (!section.name) continue;
+    for (const line of section.lines) {
+      const token = /^([^—\n]{1,40}?)\s+—\s+\S/u.exec(line)?.[1].trim();
+      if (token && SLOT_NAMES.has(token.toLowerCase())) names.push(token);
+    }
+  }
+  if (names.length) emit(result, CODE_REGISTRY.slotName, `${names.length} token(s) name the slot, not the thing shown: ${[...new Set(names)].slice(0, 4).join(" | ")}`, { hint: "Name what is shown in the photo's own language (黒髪ロング, 通行人, マンホール) or the thing itself in English (cast shadows)." });
 }
 
 // engine-levers.md §5: the cells that say "do not write this" for one engine. Text matching only.

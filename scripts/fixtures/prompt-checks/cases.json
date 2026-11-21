@@ -55,6 +55,8 @@
   {"case":"night with midday light","input":"pass/coherence-day-night.txt","args":[],"expect":{"ok":true,"warnings_include":["coherence/day-night"]}},
   {"case":"coherence clean layered prompt","input":"pass/coherence-clean.txt","args":[],"expect":{"ok":true,"warnings_exclude":["coherence/occlusion","coherence/focal","coherence/identity-skin","coherence/ratio-dup","coherence/slot-dup","coherence/day-night","phrasing/noise-trigger"]}},
   {"case":"coherence runs for other engines","input":"pass/coherence-focal.txt","args":["--engine","seedream"],"expect":{"ok":true,"warnings_include":["coherence/focal"]}},
+  {"case":"slot names used as tokens","input":"pass/token-slot-name.txt","args":[],"expect":{"ok":true,"warnings_include":["token/slot-name"]}},
+  {"case":"photo extraction example names the things shown","input":"pass/extract-japan-street.txt","args":[],"expect":{"ok":true,"warnings_exclude":["token/slot-name","coherence/ratio-dup","coherence/slot-dup","coherence/focal","coherence/identity-skin","phrasing/noise-trigger"]}},
   {"case":"manifest row resilience","input":"fail/manifest-row-recovery.jsonl","args":["--manifest"],"expect":{"ok":false,"errors":["manifest/parse","manifest/not-object","manifest/missing-field","manifest/duplicate-id"]}},
   {"case":"blank manifest","input":"fail/manifest-blank.jsonl","args":["--manifest"],"expect":{"ok":false,"errors":["manifest/empty"]}},
   {"case":"profile outside enumeration","input":"pass/input-rain-shelter.txt","args":["--profile","retired"],"expect":{"ok":false,"errors":["input/flag"]}},

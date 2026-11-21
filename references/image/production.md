@@ -94,6 +94,7 @@ manifest 검사는 한 행에 하나의 객체를 받는다. 필수 텍스트는
 | `coherence/engine-flag` | 경고, 엔진 한정 | `--engine seedream·nano-banana·soul`의 본문에 `--ar`·`--no`·`--oref` 같은 Midjourney 플래그나 `AR 3:4`. 호출 설정으로 옮긴다 |
 | `coherence/engine-ban` | 경고, 엔진 한정 | `--engine nano-banana·soul·midjourney`에서 `never·not·no` + `illustration·anime·cartoon·3D render·CGI`. Midjourney는 `--no`, 나머지는 `a real photograph` 같은 긍정 매체로(Seedream 칸은 이 문장을 쓴다) |
 | `coherence/engine-brand` | 경고, 엔진 한정 | `--engine soul`에서 Kodak·Portra·Fujifilm·Vision3 같은 필름 상표명. 필름 테두리가 그려진 실측이 있다(soul-v2-director.md 실측 법칙 3) |
+| `token/slot-name` | 경고, 공통 | 층 안 `토큰 — 문장` 줄의 토큰이 `hair color`·`passersby`·`road surface`·`background`·`lighting` 같은 칸 이름. 그 대상을 부르는 이름(`黒髪ロング`, `通行人`, `cast shadows`)으로 쓴다([image-brief.md](image-brief.md) §12.2) |
 | `manifest/parse` | 오류, manifest | JSON 행 파싱 실패 |
 | `manifest/not-object` | 오류, manifest | 행이 객체가 아님 |
 | `manifest/empty` | 오류, manifest | 매니페스트에 행이 없음 |
