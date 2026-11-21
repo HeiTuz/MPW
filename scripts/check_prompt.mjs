@@ -106,7 +106,7 @@ export function parseFlags(args) {
     "--channel": ["unbounded", "bounded"],
     "--engine": ["gpt-image", "unknown", "midjourney", "higgsfield", "seedream", "nano-banana", "soul"],
   };
-  const valued = new Set([...Object.keys(choices), "--manifest", "--channel-limit"]);
+  const valued = new Set([...Object.keys(choices), "--manifest", "--channel-limit", "--file"]);
   const reject = (message, details) => errors.push(diagnostic(CODE_REGISTRY.flag.code, message, details));
   for (let index = 0; index < args.length; index += 1) {
     const token = args[index];
@@ -145,6 +145,12 @@ export function parseFlags(args) {
     } else {
       options[token.slice(2)] = value;
     }
+  }
+  if (options.file !== undefined) {
+    // --file <path> is the positional input spelled as an option.
+    if (options.input !== undefined) reject("Give the input file once: positional or --file.");
+    else options.input = options.file;
+    delete options.file;
   }
   if (options.test && args.length !== 1) reject("--test must be used alone.");
   if (options.manifest !== undefined && options.input !== undefined) reject("A manifest cannot be combined with a positional input.");
@@ -730,9 +736,22 @@ function isMainModule() {
   }
 }
 
+export const USAGE = `usage: node scripts/check_prompt.mjs [<prompt-file> | --file <prompt-file>] [options]
+  The prompt file is a positional argument or --file; with neither, the prompt is read from stdin.
+  The result is JSON (ok, errors, warnings); the exit code is 1 when ok is false.
+  --profile native|assembled     native (default) is a natural-language prompt; assembled is machine-assembled handoff text
+  --surface s1|s2|s3             the execution surface
+  --engine gpt-image|unknown|midjourney|higgsfield|seedream|nano-banana|soul
+  --channel unbounded|bounded    --channel-limit <characters>
+  --manifest <file>              check a JSON-lines manifest instead of one prompt
+  --test                         run the built-in cases (used alone)
+  --help                         this text`;
+
 if (isMainModule()) {
   const args = process.argv.slice(2);
-  if (args.length === 1 && args[0] === "--test") {
+  if (args.includes("--help") || args.includes("-h")) {
+    console.log(USAGE);
+  } else if (args.length === 1 && args[0] === "--test") {
     const result = await runHarness();
     process.exitCode = result.ok ? 0 : 1;
   } else {
