@@ -622,7 +622,8 @@ After:
 ### 12.3 인물
 
 - 사진 속 인물의 얼굴 생김새(이목구비, 얼굴형, 점, 피부 톤)는 옮기지 않는다. `## Identity Reference`는 §5의 조건문 문안 그대로 쓰고, `If none is provided,` 뒤에는 [fixed-lines.md](fixed-lines.md)의 문화권 공식을 쓴다. 문화권은 사진 속 사람의 얼굴이 아니라 장소·간판·글자 같은 장면 단서로 정한다. 단서가 없으면 그 표의 '한·중·일 단서도 없음' 행이다. 체형은 문단 끝의 비율 문장 한 곳에만 쓴다.
-- 사진에서 보이는 성별과 대략의 나이대(성인/아이)는 §5에서 사용자가 준 값처럼 다뤄 그 값만 바꾼다. 아이·학생으로 보이고(판정은 §5의 기준) 완성 문단이 없으면 [fixed-lines.md](fixed-lines.md) 'Identity Reference'의 아이·학생 처리를 쓴다(숫자 없는 `a child`·`a student`, 비율 문장과 미화 줄을 끈다). 이 인물은 §9-2가 말하는 내가 지은 인물(20세 이상 나이 확인)에 해당하지 않으며, 조건절의 나이를 성인으로 바꾸지 않는다. 호출자·사용자가 완성 문단을 줬으면 §5의 그 예외가 먼저이므로 사진의 나이대로 고치지 않는다.
+- 성인이면 공식의 나이·성별·체형 인상은 사진에 보이는 대로 바꿔 쓴다. 나이는 `in his thirties`처럼 십 년 단위나 `in her early twenties`처럼 넓게, 20대 초반부터 쓴다. 공식의 나머지(문화권별 얼굴 묘사 틀, 비율 문장, 피부 마감)는 그대로 쓴다. 예: `he is a Korean man in his thirties with a defined jawline and a broad build`.
+- 아이·학생으로 보이고(판정은 §5의 기준) 완성 문단이 없으면 [fixed-lines.md](fixed-lines.md) 'Identity Reference'의 아이·학생 처리를 쓴다(숫자 없는 `a child`·`a student`, 비율 문장과 미화 줄을 끈다). 이 인물은 §9-2가 말하는 내가 지은 인물(20세 이상 나이 확인)에 해당하지 않으며, 조건절의 나이를 성인으로 바꾸지 않는다. 호출자·사용자가 완성 문단을 줬으면 §5의 그 예외가 먼저이므로 사진의 나이대로 고치지 않는다.
 - 헤어·메이크업·표정·포즈는 층으로 자세히 쓴다. 피부는 메이크업 마감과 보정 수준만 쓴다.
 - 붙는 고정 몫은 fixed-lines.md '입력 용도별로 붙는 것'의 사진 추출 두 열이 정한다. 참조 없이 쓰는 추출은 누가 붙여 넣어도 그 사진의 느낌이 나와야 하므로 문화권 공식이 조건절에 들어가고, 참조 얼굴로 재현하는 추출은 같은 문단을 쓰되 얼굴과 피부색은 참조가 정한다. 눈이 맨눈으로 보이면 `eyes left almost bare`처럼 쓴다.
 - 사진 속 인물이 아이·학생으로 보이면 §6의 두 지킴을 그대로 따른다.
@@ -669,13 +670,13 @@ After:
 - 매체: 4:3, 깊은 심도, 하늘의 白飛び, 선명한 엣지가 모두 콤팩트 디카를 가리킨다. 첫 줄과 Optics와 Finish가 이 매체를 부른다.
 - 룩 카드: `find_tokens --q "コンデジ,商店街,逆光,日本"`의 맨 위에 `日系CCD日光 · コンデジ`가 떴다. §12.0의 다섯 항목 대조가 모두 맞았다: medium은 소형 센서 콤팩트 스냅, time은 해가 하늘에 있는 낮, light-key는 직사 역광과 그늘, palette는 채도 높은 색과 순백의 하늘, lens는 깊은 심도다. 갈래는 A 商店街スナップ로 읽었다. 카드에서 가져온 것: 첫 줄 문구, closer `コンデジ`, realism 자리의 `native resolution` 줄(`8K`와 모공 줄은 쓰지 않는다), 입자 `デジタルノイズ`, 끈 `lens` 몫(Optics의 `コンデジ`가 렌즈를 말한다), JP 문화권의 Finish 토큰(`実写`). 카드의 장면 세트와 쌍은 이 사진과 맞지 않아 쓰지 않았고, 보이는 칸은 모두 사진 값이다.
 - 이름 목록: 商店街, コンビニ, 電柱, 通行人, マンホール, 落ち葉, 黒髪ロング, ほつれ毛, 素肌感, 白シャツ, ベスト, ショルダーバッグ, スマホ, 素爪, カメラ目線, 半開き唇, 立ち止まり, 逆光, 影, コンデジ, 白飛び, 黒つぶれ, パンフォーカス, 日常スナップ를 일본어로 먼저 적고 층별로 검색했다. 사전에 있는 것은 그 표기로, 없는 것은 확실한 일본어라 그대로 썼다.
-- 사람은 젊은 성인으로 읽혀 기본 성인 공식을 썼다. 흰 셔츠와 검은 베스트, 숄더백은 교복풍으로 읽힐 수 있지만 학교 표식과 학교 장소가 없어 `制服` 같은 말은 쓰지 않았다. 사진 속 인물이 학생으로 보이면 §12.3의 학생 처리로 바꾼다. 편의점 로고는 색 띠만 남겼고 얼굴 생김새는 옮기지 않았다. 좌우는 헷갈리는 곳만 화면 기준으로 썼다.
+- 사람은 20대 초반 성인으로 읽혀 JP 공식의 나이를 `in her early twenties`로 바꿔 썼다. 흰 셔츠와 검은 베스트, 숄더백은 교복풍으로 읽힐 수 있지만 학교 표식과 학교 장소가 없어 `制服` 같은 말은 쓰지 않았다. 사진 속 인물이 학생으로 보이면 §12.3의 학생 처리로 바꾼다. 편의점 로고는 색 띠만 남겼고 얼굴 생김새는 옮기지 않았다. 좌우는 헷갈리는 곳만 화면 기준으로 썼다.
 
 ```text
 A Japanese everyday compact digital camera snapshot shot on a small-sensor CCD compact: a woman with long wind-tossed dark hair stands stopped on a sunlit shopping street, a silver phone held low in both hands, her eyes meeting the lens while the sky behind her clips to white.
 
 ## Identity Reference
-If a model reference is provided, the woman in this photo is that model: take only the face shape and facial features from it, adapting them naturally to this scene's expression, angle and light, and keep her own skin tone. Hair, makeup and everything else follow this prompt. If none is provided, she is a 22-year-old Japanese woman with a soft 透明感 look: a small face, gentle features and clear, fair skin. In either case she has 7.5-head proportions, a small head over level shoulders and a long neck.
+If a model reference is provided, the woman in this photo is that model: take only the face shape and facial features from it, adapting them naturally to this scene's expression, angle and light, and keep her own skin tone. Hair, makeup and everything else follow this prompt. If none is provided, she is a Japanese woman in her early twenties with a soft 透明感 look: a small face, gentle features and clear, fair skin. In either case she has 7.5-head proportions, a small head over level shoulders and a long neck.
 
 ## Hair and makeup
 黒髪ロング — Long dark hair, black with a brown cast, falls well past the chest in loose layers with a soft center part, and turns lighter brown wherever the sun passes through its edges.
