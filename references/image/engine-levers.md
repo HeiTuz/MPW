@@ -60,7 +60,7 @@
 
 - 매체 고정·애니·CG 방지: 매체 판별이 사진이면 붙인다. 매체 이름은 image-brief §12.0의 것이다.
 - 필름·입자, 렌즈 왜곡, 화면비: 사진에서 잰 값대로 쓴다. 입자는 보이는 양만 쓰고 안 보이면 칸을 비운다. 광각·셀카 사진이면 렌즈 왜곡 칸을 쓰지 않는다. 화면비는 사진의 비율을 대상 엔진의 설정으로 넘긴다(ModelArk `size`, Midjourney `--ar 4:3`).
-- 얼굴 고정: 사용자가 참조 얼굴을 붙여 같은 연출을 재현할 때만 그 엔진의 '얼굴 고정' 칸을 쓴다(Seedream `Use Image 1 only for the woman's identity…` 문장, Midjourney `--oref`, Soul `soul_id`). 참조가 없으면 그 칸을 쓰지 않고, 문화권 공식을 인물 문장으로 쓰며 사진 속 얼굴은 옮기지 않는다.
+- 얼굴 고정: 사용자가 참조 얼굴을 붙여 같은 연출을 재현할 때만 그 엔진의 '얼굴 고정' 칸을 쓴다(Seedream `Use Image 1 only for the woman's identity…` 문장, Midjourney `--oref`, Soul `soul_id`). 참조가 없으면 그 칸을 쓰지 않고, 문화권 공식을 인물 문장으로 쓰며(나이·성별·체형 인상은 사진대로, `in her early twenties`처럼 넓게: image-brief §12.3) 사진 속 얼굴은 옮기지 않는다.
 - Soul은 카메라·필름 상표명 대신 발색으로 쓰고(`crisp digital color, clipped white sky`) anti-cg 줄은 뺀다. Nano Banana는 매체를 동사 문장에 넣는다(`Create a compact digital camera snapshot of …`).
 - 몸 비율·손가락 칸은 사진에 그 대상이 보일 때만 붙인다.
 

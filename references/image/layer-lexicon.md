@@ -4,7 +4,7 @@
 
 ## 사용법
 
-1. 층을 정하고 아래 층 표에서 그 층 파일을 연다. Identity Reference 층은 표가 없고 [image-brief.md](image-brief.md) §5를 따른다. 룩 이름이 요청에 있으면 층 표보다 먼저 `looks/`의 카드를 읽는다([looks/index.md](looks/index.md)).
+1. 층을 정하고 아래 층 표에서 그 층 파일을 연다. Identity Reference 층은 표가 없고 [image-brief.md](image-brief.md) §5를 따른다. 룩 이름이 요청에 있으면 층 표보다 먼저 `looks/`의 카드를 읽는다(검색 결과의 `## Look card` 블록이 읽는 명령을 준다. 카드 목록은 `node scripts/read_look.mjs --list`).
 2. 검색 명령과 결과를 쓰는 법은 [image-brief.md](image-brief.md) §4 '토큰 찾기', 원어를 쓰는 기준은 §2, 브랜드·실존 인물 이름은 §6이다. 스크립트를 못 돌리면 `grep -n "신중식" references/image/lexicon/*.md`로 찾는다.
 3. 열은 토큰, 별칭, 문화권, 태그, 화면에 보이는 모습, 종류다. 표는 열린 예시다. 개수 할당은 없고 장면에 맞는 것만 쓴다.
 
