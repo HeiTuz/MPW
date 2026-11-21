@@ -145,11 +145,12 @@
 검색 결과 맨 위에 `## Look card` 블록이 나오면 그 룩의 카드가 있다([looks/index.md](looks/index.md)). 층을 채우기 전에 블록의 `read:` 명령으로 카드를 한 번 읽는다. 카드가 없는 룩은 '비워 둔 층'의 순서대로 쓴다.
 
 1. 갈래를 고른다. 카드 `갈래 고르기` 표에서 요청에 단서 말이 있는 갈래를 쓴다. 두 갈래 단서가 섞이면 시대·의상 단서가 있는 쪽, 단서가 룩 이름뿐이면 카드의 기본 갈래다.
-2. 첫 줄은 카드 `고정 사실`의 첫 줄 매체로 시작하고, `## Finish`의 closer는 카드의 closer 토큰을 쓴다(fixed-lines.md).
+2. 첫 줄은 카드 `고정 사실`의 첫 줄 매체로 시작하고, `## Finish`의 closer는 카드의 closer 토큰을, realism·anti-cg 토큰은 카드의 문화권 행을 쓴다(fixed-lines.md의 Finish 표).
 3. 슬롯마다 위에서 처음 값이 있는 것을 쓴다: 사용자 값, 카드 고정 사실, 고른 갈래의 층별 줄, fixed-lines.md의 고정 몫(카드 `끄는 고정 몫`이 끈 슬롯은 붙이지 않는다), 층 검색 행, 장면에서 자연스러운 것. 사용자 값이 카드 고정 사실과 반대이면(왕가위인데 "한낮") 사용자 값을 쓰고, 그 값에 물린 슬롯(빛, 매체의 색 반응, 입자)도 사용자 쪽으로 맞춘다. 나머지 슬롯은 카드대로 둔다.
 4. 층별 줄은 장면에 맞는 줄을 골라 `토큰 — 문장`으로 쓰고, 문장은 카드 줄을 베끼지 않고 장면의 자리·방향·색에 맞게 다시 쓴다. 요청과 맞는 `장면 세트`가 있으면 그 묶음의 값을 빼지 않고 함께 쓴다.
 5. Pose와 Camera는 `포즈·구도 쌍` 표에서 한 번호의 쌍으로 고른다. 사용자가 포즈나 구도를 말했으면 그 말이 먼저다. `맞지 않는 것`은 그 룩이 아닌 요소의 목록이고, 요청이 그것을 정했으면 사용자 값이 이긴다.
 6. 같은 장면을 여러 장 달라고 하면서 바꿀 축을 말하지 않았으면, 고른 갈래의 쌍을 번호 순서대로 장수만큼 배정한다. 한 세트 안에서 쌍을 되풀이하지 않는다. 쌍이 모자라면 다른 갈래의 쌍 가운데 고정 사실과 안 부딪히는 것을 이어 쓴다. 나머지 층은 블록마다 글자 그대로 같게 둔다. 사용자가 축을 말했으면("포즈만") 그 축만 쌍 목록에서 바꾸고 Camera는 고정한다. 생성 표면이 프롬프트 하나로 여러 장을 뽑으면 블록 밖에 "포즈를 다르게 받으려면 블록을 하나씩 넣는다"는 한 줄을 쓴다.
+7. 요청이 카드 둘을 부르면 색인(`looks/index.md`)의 `축` 열로 역할을 나눈다. `매체` 카드가 첫 줄 매체, Optics, Finish closer, 입자, 화면 모양(비율)을 정하고 `장면` 카드가 장소, 빛, 의상, 헤어, 자세와 문화권(Identity·Finish의 문화권 행)을 정한다. 예: `캘리포니아 골든아워, Kodak Gold 200`이면 Kodak Gold 200 카드가 필름 매체의 첫 줄·입자·closer를 쓰고 캘리포니아 카드가 해변 낙조 장면을 채운다. 두 카드가 같은 축이면 요청에서 먼저 나온 이름의 카드가 기본이고, 다른 카드에서는 기본 카드의 값과 부딪히지 않는 줄만 가져온다. 사용자 값이 먼저인 것과 위 3항의 슬롯 순서는 그대로다.
 
 ### 비워 둔 층
 
@@ -166,7 +167,7 @@
 - 포즈: 체중이 실린 다리, 손이 닿는 물건이나 몸의 자리, 어깨와 고개의 방향.
 - 재질: 빛을 받았을 때 반사하는지, 흩는지, 비치는지, 어떻게 접히고 늘어지는지.
 - 표정: 시선이 닿는 곳, 눈꺼풀과 입꼬리가 움직인 정도.
-- beautiful, stunning, perfect 같은 형용사 대신 그렇게 보이는 원인을 쓴다. 품질 태그(8K, ultra-detailed, masterpiece)는 `## Finish`의 `超写实` 줄에 `8K` 한 번만 두고 다른 층에는 쓰지 않는다.
+- beautiful, stunning, perfect 같은 형용사 대신 그렇게 보이는 원인을 쓴다. 품질 태그(8K, ultra-detailed, masterpiece)는 `## Finish`의 realism 줄에 `8K` 한 번만 두고 다른 층에는 쓰지 않는다.
 - 필름·디카 매체면 입자는 Optics 한 줄에서 화면 전체에 고르게 쓴다([fixed-lines.md](fixed-lines.md)의 `grain`). 양은 사용자가 정하고, 사용자가 입자를 빼 달라고 하면 쓰지 않는다. GPT Image에서 입자 어휘가 화면 노이즈를 부른다는 보고는 [surface-contracts.md](surface-contracts.md) §3.2.4에 있고, 생성 대조가 없어 새 문안의 금지 근거로 쓰지 않는다.
 
 라벨을 모습으로 푸는 예:
@@ -338,9 +339,9 @@ full-length frame — A vertical 3:4 frame from the top of her head to her shoes
 focus — She is sharp from hair to loafers; the door and the bench at the frame edges soften slightly.
 
 ## Finish
-实拍 — The whole frame reads as a real clean digital street-style photograph.
-超写实 — Ultra-realistic 8K photographic detail: real pores on the skin, real weave in the wool and knit, real wear on the brick.
-真人实拍 — A real person photographed on location, never an illustration, anime frame, 3D render or plastic-skinned CGI.
+실사 — The whole frame reads as a real clean digital street-style photograph.
+극사실 — Ultra-realistic 8K photographic detail: real pores on the skin, real weave in the wool and knit, real wear on the brick.
+실사 촬영 — A real person photographed on location, never an illustration, anime frame, 3D render or plastic-skinned CGI.
 ```
 
 인물, 참조 없이 필름 룩과 중국어 토큰(요청: 90년대 홍콩영화 여주인공. 비 오는 밤, 네온 처마 밑에서 커피 한 잔 들고 멀리 보는 한 장면):
@@ -436,8 +437,8 @@ product view — The camera is level with the label, the bottle centered with ev
 focus — The label and the front edge of the bottle are sharp, and the wall behind softens into a smooth gradient.
 
 ## Finish
-实拍 — The whole frame reads as a real clean product photograph.
-超写实 — Ultra-realistic 8K photographic detail: real amber glass, real brushed metal and real pits in the travertine.
+photograph — The whole frame reads as a real clean product photograph.
+photorealistic — Ultra-realistic 8K photographic detail: real amber glass, real brushed metal and real pits in the travertine.
 real photograph — A real photograph of a real bottle on a real stone slab, never an illustration, 3D render or CGI.
 ```
 
@@ -463,9 +464,9 @@ low angle — The camera sits at board height about a meter and a half from the 
 focus — The cat's face is sharp; the garden and the far end of the veranda soften.
 
 ## Finish
-实拍 — The whole frame reads as a real natural-light photograph.
-超写实 — Ultra-realistic 8K photographic detail: real fur on the cat, real grain in the boards and real wear on the paper doors.
-real photograph — A real photograph of a real cat on a real veranda, never an illustration, 3D render or CGI.
+写真 — The whole frame reads as a real natural-light photograph.
+高精細 — Ultra-realistic 8K photographic detail: real fur on the cat, real grain in the boards and real wear on the paper doors.
+実写 — A real photograph of a real cat on a real veranda, never an illustration, 3D render or CGI.
 ```
 
 ## 11. 기존 프롬프트를 정제·교정할 때
@@ -694,6 +695,6 @@ horizontal frame — A horizontal 4:3 frame cut at her hips, her figure in the r
 
 ## Finish
 実写スナップ — The whole frame reads as an unretouched compact-camera snapshot a friend took on the street, not a fashion shoot.
-超写实 — Ultra-realistic 8K photographic detail: real skin texture, real cotton weave, real grit on the asphalt.
-真人实拍 — A real person photographed on a real street, never an illustration, anime frame, 3D render or plastic-skinned CGI.
+高精細 — Ultra-realistic 8K photographic detail: real skin texture, real cotton weave, real grit on the asphalt.
+実写 — A real person photographed on a real street, never an illustration, anime frame, 3D render or plastic-skinned CGI.
 ```

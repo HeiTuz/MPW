@@ -37,6 +37,7 @@
 | lip | B·C는 카드 줄이 이긴다. A는 켠다 | 문화권 입술 줄이 더 붙으면 B의 정홍·C의 붉은 입술과 입술색이 둘이 된다 |
 | blush | 켠다. 카드 줄(`冻伤妆`, `취한 듯한 블러셔`)을 고른 장면에서만 그 줄이 대신한다 | 뺨 색이 둘이 되지 않게 |
 | face-clear | 켠다. C의 쌍 9(달리다 돌아봄)에서만 끈다. 머리가 날려 얼굴 가장자리를 지나가도 되고 눈은 가리지 않는다 | US 滤镜 #022의 흐트러진 금발과 달리는 동작이 가림 금지문과 부딪혔다 |
+| realism | A에서 바꾼다. B·C는 켠다. `8K`·땀구멍 줄 대신 `native resolution` 줄을 쓴다. 매체 구절은 `small-sensor CCD compact`, 질감은 `flat flash-lit detail, blown highlights and skin that shows no individual pores` | 2000년대 소형 센서 CCD가 만드는 해상도에 8K 모공 묘사를 얹으면 룩의 정체와 반대다 |
 | framing | 켠다. 쌍 3(가슴 위)과 쌍 8(허벅지 중간)은 Camera 줄이 범위를 말하니 그 쌍에서는 쌍이 정한다 | 나머지 쌍은 범위를 말하지 않는다 |
 | ratio | 켠다. 사용자 비율이 없으면 3:4 세로 | 쌍은 비율을 정하지 않는다 |
 

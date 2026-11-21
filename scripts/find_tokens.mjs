@@ -84,7 +84,7 @@ function expandTerms(terms, rows) {
   });
 }
 
-// Look cards: references/image/looks/index.md lists one row per card (slug | names | words that must not call it | culture | branches).
+// Look cards: references/image/looks/index.md lists one row per card (slug | names | words that must not call it | culture | branches | axis).
 // A card is called when the raw query contains one of its names, the reverse of the row search above. Hangul and CJK names match as text
 // (spaces and brackets ignored); Latin names match whole words only, so a short name like "WKW" never fires inside another word.
 const nameWords = (alias) => norm(alias).split(/[\s\-\u2010-\u2015\u00b7\u30fb]+/).filter(Boolean);
@@ -95,12 +95,13 @@ export function loadLooks(dir = LOOKS_DIR) {
   for (const line of fs.readFileSync(file, 'utf8').split('\n')) {
     if (!/^\| /.test(line) || /^\| (slug|---)/.test(line)) continue;
     const cells = splitRow(line);
-    if (cells.length !== 5) throw new Error(`looks/index.md: bad row: ${line.slice(0, 60)}`);
-    const [slug, names, avoid, culture, branches] = cells;
+    if (cells.length !== 6) throw new Error(`looks/index.md: bad row: ${line.slice(0, 60)}`);
+    const [slug, names, avoid, culture, branches, axis] = cells;
+    if (!['매체', '장면'].includes(axis)) throw new Error(`looks/index.md: ${slug} axis must be 매체 or 장면: ${axis}`);
     if (!fs.existsSync(path.join(dir, `${slug}.md`))) throw new Error(`looks/index.md: ${slug}.md is missing`);
     const card = fs.readFileSync(path.join(dir, `${slug}.md`), 'utf8');
     const title = (card.match(/^# (.+?)(?: — .*)?$/m) ?? [])[1] ?? slug;
-    looks.push({ slug, title, names: list(names), avoid: list(avoid), culture, branches, file: `references/image/looks/${slug}.md` });
+    looks.push({ slug, title, names: list(names), avoid: list(avoid), culture, branches, axis, file: `references/image/looks/${slug}.md` });
   }
   return looks;
 }
@@ -154,7 +155,7 @@ export function drawRandom(results, count, pickIndex = randomInt) {
 }
 
 const cardBlock = (cards) => (cards.length
-  ? `## Look card\n${cards.map((c) => `${c.title} — ${c.file}\nread: node scripts/read_refs.mjs ${c.file}`).join('\n')}\n(read the card before the layer rows below; it fills the layers this look carries)\n\n`
+  ? `## Look card\n${cards.map((c) => `${c.title} [${c.axis}] — ${c.file}\nread: node scripts/read_refs.mjs ${c.file}`).join('\n')}\n(read the card before the layer rows below; it fills the layers this look carries)\n\n`
   : '');
 
 export function formatText(results, cards = []) {
@@ -176,7 +177,7 @@ export function formatJson(results, terms, cards = []) {
   for (const l of results) {
     layers[l.slug] = l.matches.map(({ token, aliases, culture, tags, looks, kind, score }) => ({ token, aliases, culture, tags, looks, kind, score }));
   }
-  return { query: terms, looks: cards.map(({ slug, title, file, matched }) => ({ slug, title, file, matched })), layers };
+  return { query: terms, looks: cards.map(({ slug, title, axis, file, matched }) => ({ slug, title, axis, file, matched })), layers };
 }
 
 function parseArgs(argv) {

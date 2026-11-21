@@ -22,6 +22,6 @@ framing — A slightly high three-quarter view about half a meter from the cup, 
 focus — The cup is sharp from rim to foot, and the shelf in the distance is blurred.
 
 ## Finish
-实拍 — The whole frame reads as a real still-life photograph.
-超写实 — Ultra-realistic 8K photographic detail: real glaze and linen weave, and real wear on the surfaces.
+photograph — The whole frame reads as a real still-life photograph.
+photorealistic — Ultra-realistic 8K photographic detail: real glaze and linen weave, and real wear on the surfaces.
 real photograph — A real photograph of a real teacup on a real worktable, never an illustration, 3D render or CGI.

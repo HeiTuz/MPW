@@ -82,9 +82,9 @@ vertical frame — A vertical 3:4 frame from the top of her head to her waist, s
 focus — The face and the notebook are sharp, and the bench edge in the foreground softens slightly.
 
 ## Finish
-实拍 — The whole frame reads as a real studio profile portrait photograph.
-超写实 — Ultra-realistic 8K photographic detail: real pores on the skin, real weave in the canvas, real marks on the wood.
-真人实拍 — A real person photographed in a studio, never an illustration, anime frame, 3D render or plastic-skinned CGI.
+photograph — The whole frame reads as a real studio profile portrait photograph.
+photorealistic — Ultra-realistic 8K photographic detail: real pores on the skin, real weave in the canvas, real marks on the wood.
+real photograph — A real person photographed in a studio, never an illustration, anime frame, 3D render or plastic-skinned CGI.
 ```
 
 ```text
@@ -138,9 +138,9 @@ vertical frame — A vertical 3:4 frame from the top of her head to her waist, s
 focus — The face and the notebook are sharp, and the bench edge in the foreground softens slightly.
 
 ## Finish
-实拍 — The whole frame reads as a real studio profile portrait photograph.
-超写实 — Ultra-realistic 8K photographic detail: real pores on the skin, real weave in the canvas, real marks on the wood.
-真人实拍 — A real person photographed in a studio, never an illustration, anime frame, 3D render or plastic-skinned CGI.
+photograph — The whole frame reads as a real studio profile portrait photograph.
+photorealistic — Ultra-realistic 8K photographic detail: real pores on the skin, real weave in the canvas, real marks on the wood.
+real photograph — A real person photographed in a studio, never an illustration, anime frame, 3D render or plastic-skinned CGI.
 ```
 
 ### 한국어 지정 문안
@@ -198,7 +198,7 @@ focus — The face and the notebook are sharp, and the bench edge in the foregro
 ## 마무리
 실사 — 화면 전체가 실제 스튜디오 프로필 인물 사진으로 읽힌다.
 극사실 — 캔버스의 실제 짜임, 티셔츠의 실제 주름, 나무의 실제 흠집이 보이는 극사실 사진 질감이다.
-실제 촬영 — 실제 인물을 스튜디오에서 찍은 사진이며, 일러스트·애니메이션 프레임·삼차원 렌더·플라스틱 같은 컴퓨터 그래픽 피부가 아니다.
+실사 촬영 — 실제 인물을 스튜디오에서 찍은 사진이며, 일러스트·애니메이션 프레임·삼차원 렌더·플라스틱 같은 컴퓨터 그래픽 피부가 아니다.
 ```
 
 ```text
@@ -254,7 +254,7 @@ focus — The face and the notebook are sharp, and the bench edge in the foregro
 ## 마무리
 실사 — 화면 전체가 실제 스튜디오 프로필 인물 사진으로 읽힌다.
 극사실 — 캔버스의 실제 짜임, 티셔츠의 실제 주름, 나무의 실제 흠집이 보이는 극사실 사진 질감이다.
-실제 촬영 — 실제 인물을 스튜디오에서 찍은 사진이며, 일러스트·애니메이션 프레임·삼차원 렌더·플라스틱 같은 컴퓨터 그래픽 피부가 아니다.
+실사 촬영 — 실제 인물을 스튜디오에서 찍은 사진이며, 일러스트·애니메이션 프레임·삼차원 렌더·플라스틱 같은 컴퓨터 그래픽 피부가 아니다.
 ```
 
 연출 축을 분리해 조합하고 범위를 정해 뽑는 방식은 [Iris의 한국어 README](https://github.com/noahvisualsx/Iris/blob/main/README.ko.md)와 [웹 스튜디오](https://github.com/noahvisualsx/Iris/blob/main/index.html)를 참고했다. 검토한 Iris 커밋은 `b83de4c`(전체 SHA `b83de4cf5cb12f6c4572f01a922c258dd34a8087`, MIT)다. 외부 저장소의 문장·프리셋·코드는 옮기지 않았고, 이 문서의 규칙과 예문은 MPW용으로 작성했다.

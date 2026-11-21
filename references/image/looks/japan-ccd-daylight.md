@@ -33,6 +33,7 @@
 | face-light | 모든 갈래에서 끈다. 얼굴 빛은 이 카드의 Light 줄이 정한다 | `立体光`의 위·옆 키라이트가 #072의 역광 림, #073의 확산 창빛과 부딪힌다 |
 | lens | 모든 갈래에서 끈다. `无畸变` 줄 대신 쌍의 Camera 줄이 lens 슬롯을 채우고, 모든 쌍의 문장이 앞뒤가 다 선명하다고 말한다 | Iris 고정 꼬리의 50mm 얕은 심도가 이 룩의 정체인 깊은 심도와 반대다. #071~#074의 비콤팩트 기종은 콤팩트로 바꿔 옮겼다 |
 | grain | 켠다. 고정 몫의 `数码噪点` 줄이 그대로 맞다 | 이 룩의 입자는 디지털 노이즈다 |
+| realism | 모든 갈래에서 바꾼다. `8K`·땀구멍 줄 대신 `native resolution` 줄을 쓴다. 매체 구절은 `small-sensor CCD compact`, 질감은 `crisp but over-sharpened edges, clipped highlights and skin that shows no individual pores` | 소형 센서 콤팩트가 만드는 해상도에 8K 모공 묘사를 얹으면 룩의 정체인 하드한 디지털 엣지와 반대다 |
 | framing | 켠다. 12번만 전신이 작게 나온다고 직접 말하니 framing 줄과 부딪히지 않게 쓴다 | 쌍 대부분이 범위를 말하지 않는다 |
 | ratio | 켠다. 사용자 비율이 없으면 3:4 세로 | 콤팩트 본래 비율은 4:3 가로다. 가로 요청이면 사용자 값이 이긴다 |
 

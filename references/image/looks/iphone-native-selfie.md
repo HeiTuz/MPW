@@ -37,6 +37,7 @@
 | lip | 모든 갈래에서 카드 줄(`과즙 립`)이 이긴다 | 고정 몫의 `그라데이션 립`이 더 붙으면 Iris 저자의 코랄 누드 글로스와 입술색이 둘이 된다 |
 | base, blush | A의 운동 후 장면에서만 카드 줄(`하이드로 글로우`, `취한 듯한 블러셔`)이 이긴다. 나머지는 켠다 | #073의 땀 광택과 운동 홍조가 일반 물광·딸기우유 뺨과 겹친다 |
 | face-clear | 켠다. 쌍 8(횡단보도)에서만 끈다. 머리가 바람에 얼굴 가장자리를 지나가도 눈은 가리지 않는다 | Iris 모든 프리셋이 귀 뒤로 넘긴 머리를 쓰지만 걷는 장면은 머리가 날린다 |
+| realism | 모든 갈래에서 바꾼다. `8K`·땀구멍 줄 대신 `native resolution` 줄을 쓴다. 매체 구절은 `iPhone camera`, 질감은 `clean computational sharpness, softly smoothed skin and bright highlights that clip`(D는 `coarse high-ISO noise and smeared shadow detail`) | 폰 카메라의 자체 해상도와 HDR 보정이 그리는 피부에 8K 모공 묘사를 얹으면 원본 사진이라는 룩의 정체와 반대다 |
 | framing | 켠다. 쌍 1·4·6·10은 Camera 줄이 프레임 범위를 말하니 그 쌍에서는 쌍이 정한다 | 나머지 쌍은 범위를 말하지 않는다 |
 | ratio | 켠다. 사용자 비율이 없으면 3:4 세로 | 폰 본래 비율은 4:3이지만 셀카는 세로로 든다. 가로 요청이면 사용자 값이 이긴다 |
 

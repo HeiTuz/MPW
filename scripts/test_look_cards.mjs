@@ -127,6 +127,7 @@ for (const look of looks) {
   for (const key of ['부르는 이름', '부르지 않는 말', '문화권', '기본 갈래']) assert.ok(meta[key], `${where}: meta ${key}`);
   assert.deepEqual(list(meta['부르는 이름']), look.names, `${where}: names differ from looks/index.md`);
   assert.deepEqual(list(meta['부르지 않는 말']), look.avoid, `${where}: avoid words differ from looks/index.md`);
+  assert.ok(['매체', '장면'].includes(look.axis), `${where}: index axis ${look.axis} must be 매체 or 장면`);
   assert.ok(look.avoid.length >= 1 && look.avoid.every((w) => !look.names.some((n) => norm(n) === norm(w))), `${where}: an avoid word is also a name`);
 
   // Branches: letters from the table; the default is one of them.

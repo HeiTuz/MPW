@@ -34,6 +34,6 @@ phone camera — Natural phone-camera color with a little noise in the shadows, 
 selfie frame — A vertical 3:4 frame with his face and upper chest filling most of it, seen from slightly above.
 
 ## Finish
-实拍 — The whole frame reads as a real front-camera phone selfie.
-超写实 — Ultra-realistic 8K photographic detail: real pores on the skin, real weave in the cotton, real steam off the coffee.
-真人实拍 — A real person photographed in his own kitchen, never an illustration, anime frame, 3D render or plastic-skinned CGI.
+photograph — The whole frame reads as a real front-camera phone selfie.
+photorealistic — Ultra-realistic 8K photographic detail: real pores on the skin, real weave in the cotton, real steam off the coffee.
+real photograph — A real person photographed in his own kitchen, never an illustration, anime frame, 3D render or plastic-skinned CGI.

@@ -64,6 +64,6 @@ focus — She is sharp from hair to loafers, and the building far behind softens
 coat — The coat from image 2 stays unchanged in color, button layout and topstitching, and no logos or text appear that are not on the coat in image 2.
 
 ## Finish
-实拍 — The whole frame reads as a real autumn fashion campaign photograph.
-超写实 — Ultra-realistic 8K photographic detail: real pores on the skin, real twill in the gabardine, real joints in the stone.
-真人实拍 — A real person photographed on location, never an illustration, anime frame, 3D render or plastic-skinned CGI.
+photograph — The whole frame reads as a real autumn fashion campaign photograph.
+photorealistic — Ultra-realistic 8K photographic detail: real pores on the skin, real twill in the gabardine, real joints in the stone.
+real photograph — A real person photographed on location, never an illustration, anime frame, 3D render or plastic-skinned CGI.

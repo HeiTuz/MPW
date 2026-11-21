@@ -1,10 +1,10 @@
 # 고정 몫: 층마다 늘 붙는 줄
 
-GPT Image 웹·대상 미정인 새 이미지(인물 사진과 인물 없는 사진)에서 사용자가 말하지 않은 칸을 채우는 줄이다. 사진 추출에는 아래 '입력 용도별로 붙는 것'의 사진 추출 열이 정한 줄만 붙는다. 층의 모양·첫 줄·채우는 순서는 [image-brief.md](image-brief.md)가 정하고, 이 파일은 그 위에 붙는 줄과 끄는 조건만 정한다. 이 파일의 토큰(`立体光`, `数码噪点`, `无畸变`, `实拍`, `超写实`, `真人实拍`)은 사전에 없어도 그대로 쓴다. `<…>` 자리는 장면에 맞게 채운다. 요청한 룩에 카드가 있으면([looks/index.md](looks/index.md)) 아래 끄는 조건의 '룩'은 그 카드의 `끄는 고정 몫`을 뜻한다.
+GPT Image 웹·대상 미정인 새 이미지(인물 사진과 인물 없는 사진)에서 사용자가 말하지 않은 칸을 채우는 줄이다. 사진 추출에는 아래 '입력 용도별로 붙는 것'의 사진 추출 열이 정한 줄만 붙는다. 층의 모양·첫 줄·채우는 순서는 [image-brief.md](image-brief.md)가 정하고, 이 파일은 그 위에 붙는 줄과 끄는 조건만 정한다. 이 파일의 토큰(`立体光`, `数码噪点`, `无畸变`과 Finish 표의 토큰)은 사전에 없어도 그대로 쓴다. `<…>` 자리는 장면에 맞게 채운다. 요청한 룩에 카드가 있으면([looks/index.md](looks/index.md)) 아래 끄는 조건의 '룩'은 그 카드의 `끄는 고정 몫`을 뜻한다.
 
 ## 절차
 
-1. 사용자 값과 요청한 룩으로 층을 먼저 채운다. 룩 카드가 있으면 카드의 고정 사실, 고른 갈래의 줄, `끄는 고정 몫`이 먼저이고, 카드가 채웠거나 끈 슬롯에는 아래 줄을 붙이지 않는다.
+1. 사용자 값과 요청한 룩으로 층을 먼저 채운다. 룩 카드가 있으면 카드의 고정 사실, 고른 갈래의 줄, `끄는 고정 몫`이 먼저이고, 카드가 채웠거나 끈 슬롯에는 아래 줄을 붙이지 않는다(카드가 `realism`을 끄면 그 자리에 Finish의 `native resolution` 줄이 들어간다).
 2. 아래 표를 위에서 아래로 내려가며 줄마다 묻는다. 이 줄의 슬롯이 이미 채워졌나? 예면 건너뛴다. 끄는 조건에 걸리나? 예면 건너뛴다. 둘 다 아니면 그 층에 줄을 붙인다. 사용자가 그 줄의 내용을 빼 달라거나 정하지 말라고 했으면 그 줄도 건너뛴다(맨얼굴, "입자는 필요 없어", "나이는 정하지 마").
 3. 다 쓴 뒤 슬롯 시트를 머릿속으로 한 번 훑는다(답변에 쓰지 않는다): 입술 하나, 베이스 하나, 캐치라이트 하나, 얼굴 빛 하나, 장소 하나, 시간대 하나, 화면비 하나, 입자 하나. 둘이면 뒤에 붙인 것을 지운다.
 
@@ -49,6 +49,7 @@ GPT Image 웹·대상 미정인 새 이미지(인물 사진과 인물 없는 사
   - JP `桜色チーク — A soft sakura-pink wash of blush between the cheeks and temples melts into the base.`
   - US `Coral Blush — Coral-pink color on the cheeks with a slight shimmer that reads fresh and warm.`
   - FR `Rougeur naturelle — A soft pink flush on the cheeks and the tops of the ears melts into the base with no powder edge.`
+  - 장면의 빛이 차가우면(흐린 날, 형광등, 푸른 시간, 회청 팔레트) 위 KR·US 줄 대신 `muted rose blush — A low-saturation dusty-rose wash sits high on the cheeks and melts into the base with no visible edge.`를 쓴다. 따뜻한 분홍·코랄 뺨이 차가운 장면 속에서 혼자 떠 보이기 때문이다.
 - `lip`: 끄는 조건은 사용자나 카드가 입술을 정함, 맨얼굴.
   - KR `그라데이션 립 — Lip color is pressed into the center of the lips and blurred outward so it fades softly toward the edges.`
   - CN `豆沙唇 — A muted rosy-brown matte lip with a softly blurred edge and no gloss.`
@@ -84,15 +85,25 @@ GPT Image 웹·대상 미정인 새 이미지(인물 사진과 인물 없는 사
 
 ## Finish
 
-마지막 층이다. 사진 매체의 새 이미지에 붙는다. 빛에 관한 사실은 쓰지 않는다(빛은 Light 층의 몫이다).
+마지막 층이다. 사진 매체의 새 이미지에 붙는다. 빛에 관한 사실은 쓰지 않는다(빛은 Light 층의 몫이다). 세 줄의 토큰은 아래 표에서 문화권에 맞는 말로 고른다. 문장은 어느 문화권이든 영어다.
 
-- `closer`: `<카드 closer> — The whole frame reads as <첫 줄의 매체>, not a <반대 매체>.` 카드의 고정 사실이 closer 토큰을 주면 그것을 쓰고(왕가위 카드는 `港片剧照`, 반대 매체는 스냅·화보), 카드가 없으면 `实拍 — The whole frame reads as a real <첫 줄의 매체> photograph.`를 쓴다. 사진 추출에서 카드가 없으면 사진 문화권의 말로 부른 매체 이름도 closer 토큰이 된다(일본 스냅이면 `実写スナップ`). 첫 줄이 부른 매체 이름을 그대로 다시 부른다. 끄는 조건 없음.
-- `realism`: `超写实 — Ultra-realistic 8K photographic detail: real pores on the skin, real weave in the fabric, real wear on the surfaces.` 인물 없는 사진은 `real <장면의 재질 둘> and real wear on the surfaces`로 바꾼다. 끄는 조건: 그림·3D 매체를 요청함. 사용자가 피부 디테일을 빼 달라고 했으면 `real pores on the skin,`만 뺀다.
-- `anti-cg`: `真人实拍 — A real person photographed on location, never an illustration, anime frame, 3D render or plastic-skinned CGI.` 인물 없는 사진은 `real photograph — A real photograph of a real <장소·사물>, never an illustration, 3D render or CGI.`를 쓴다. 끄는 조건: 그림·애니·3D를 요청함.
+| 문화권 | `closer` 기본(카드가 없을 때) | `realism` 토큰 | `anti-cg` 토큰 |
+|---|---|---|---|
+| CN | `实拍` | `超写实` | `真人实拍` |
+| KR | `실사` | `극사실` | `실사 촬영` |
+| JP | `写真` | `高精細` | `実写` |
+| FR | `Photographie` | `photoréaliste` | `photographie réelle` |
+| US·그 밖(영어) | `photograph` | `photorealistic` | `real photograph` |
 
-`8K`는 이 층의 `超写实` 줄에만 쓰고 다른 층에는 쓰지 않는다.
+행은 룩 카드가 있으면 카드의 문화권(갈래가 다른 문화권의 장면을 정하면 갈래의 것)으로, 카드가 없으면 요청한 장소·말·사진 속 장소의 문화권으로 고른다. 문화권 단서가 없으면 마지막 행이다. 사진 추출은 사진 속 장소의 문화권을 쓴다.
 
-한국어 문안은 층 이름이 `## 마무리`이고, 세 줄의 토큰과 문장도 한국어다. closer는 `실사`, realism은 `극사실`, anti-cg는 `실제 촬영`이다. 줄 뜻은 위 영어 세 줄과 같고, 숫자 품질 표기는 쓰지 않으며 `3D`·`CGI`는 `삼차원`·`컴퓨터 그래픽`으로 풀어 쓴다. 인물 없는 사진도 같은 형태다.
+- `closer`: `<closer 토큰> — The whole frame reads as <첫 줄의 매체>, not a <반대 매체>.` 카드의 고정 사실이 closer 토큰을 주면 그것을 쓰고(왕가위 카드는 `港片剧照`, 반대 매체는 스냅·화보), 카드가 없으면 위 표의 `closer` 기본으로 `<closer 기본> — The whole frame reads as a real <첫 줄의 매체> photograph.`를 쓴다. 사진 추출에서 카드가 없으면 사진 문화권의 말로 부른 매체 이름도 closer 토큰이 된다(일본 스냅이면 `実写スナップ`). 첫 줄이 부른 매체 이름을 그대로 다시 부른다. 끄는 조건 없음.
+- `realism`: `<realism 토큰> — Ultra-realistic 8K photographic detail: real pores on the skin, real weave in the fabric, real wear on the surfaces.` 인물 없는 사진은 `real <장면의 재질 둘> and real wear on the surfaces`로 바꾼다. 끄는 조건: 그림·3D 매체를 요청함. 사용자가 피부 디테일을 빼 달라고 했으면 `real pores on the skin,`만 뺀다. 카드의 `끄는 고정 몫`에 `realism`이 적혀 있으면(일회용·캠코더·초기 디카처럼 해상도가 낮은 매체) 위 줄 대신 매체의 해상도를 말하는 줄을 쓴다: `native resolution — The frame holds the resolution of a <그 매체> and no more: <그 매체가 만드는 질감 한 구절>.` 본보기: `native resolution — The frame holds the resolution of a 480-line camcorder and no more: soft edges, smeared fine texture and skin that shows no individual pores.` 이 줄에는 숫자 품질 표기를 쓰지 않는다. 금지 한 줄(`anti-cg`)은 그대로 붙는다.
+- `anti-cg`: `<anti-cg 토큰> — A real person photographed on location, never an illustration, anime frame, 3D render or plastic-skinned CGI.` 인물 없는 사진은 `<anti-cg 토큰> — A real photograph of a real <장소·사물>, never an illustration, 3D render or CGI.`를 쓴다. 끄는 조건: 그림·애니·3D를 요청함.
+
+`8K`는 이 층의 `realism` 줄에만 쓰고 다른 층에는 쓰지 않는다.
+
+한국어 문안은 층 이름이 `## 마무리`이고, 세 줄의 토큰과 문장도 한국어다. 문화권과 상관없이 closer는 `실사`, realism은 `극사실`, anti-cg는 `실사 촬영`이다(위 표의 KR 행). 줄 뜻은 위 영어 세 줄과 같고, 숫자 품질 표기는 쓰지 않으며 `3D`·`CGI`는 `삼차원`·`컴퓨터 그래픽`으로 풀어 쓴다. 인물 없는 사진도 같은 형태다.
 
 ## 입력 용도별로 붙는 것
 

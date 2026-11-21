@@ -55,6 +55,6 @@ lens — A moderate 50mm view keeps the proportions natural and the bench lines 
 focus — Her face and hand are in clear focus, and the leaves behind her soften gradually.
 
 ## Finish
-实拍 — The whole frame reads as a real documentary portrait photograph.
-超写实 — Ultra-realistic 8K photographic detail: real lines in the skin, real soil in the creases, real wear on the canvas and glass.
-真人实拍 — A real person photographed on location, never an illustration, anime frame, 3D render or plastic-skinned CGI.
+photograph — The whole frame reads as a real documentary portrait photograph.
+photorealistic — Ultra-realistic 8K photographic detail: real lines in the skin, real soil in the creases, real wear on the canvas and glass.
+real photograph — A real person photographed on location, never an illustration, anime frame, 3D render or plastic-skinned CGI.

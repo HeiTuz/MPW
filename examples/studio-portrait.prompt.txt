@@ -49,6 +49,6 @@ lens — The camera is at eye level about two meters away with a short telephoto
 focus — The eyes are sharp, the ears and the shoulders soften very slightly, and the backdrop is smooth.
 
 ## Finish
-实拍 — The whole frame reads as a real color studio headshot photograph.
-超写实 — Ultra-realistic 8K photographic detail: real pores on the skin, real weave in the knit, real fibers in the paper backdrop.
-真人实拍 — A real person photographed in a studio, never an illustration, anime frame, 3D render or plastic-skinned CGI.
+photograph — The whole frame reads as a real color studio headshot photograph.
+photorealistic — Ultra-realistic 8K photographic detail: real pores on the skin, real weave in the knit, real fibers in the paper backdrop.
+real photograph — A real person photographed in a studio, never an illustration, anime frame, 3D render or plastic-skinned CGI.

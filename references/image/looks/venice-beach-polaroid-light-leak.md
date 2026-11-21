@@ -37,8 +37,9 @@
 | face-clear | B·C에서 끈다. 바람이 머리를 얼굴 반대쪽으로 날려 눈은 열려 있고 hair 줄이 방향을 정한다. A·D는 켠다 | #088 #091 #093 #100의 바람머리가 이 룩의 특징인데 Iris 금지문(머리가 눈썹·눈을 가림)이 같은 프롬프트에 있다 |
 | lip | D에서 카드 줄 `Classic Red Lip`이 이긴다. 나머지는 켠다 | #097의 烈焰红唇과 고정문의 玫瑰裸色果冻唇이 한 프롬프트에 둘 다 있었다 |
 | blush | A에서 카드 줄 `Sunburn Blush`가 이긴다. 나머지는 켠다 | #087의 햇볕 홍조와 고정 줄의 반짝이는 코랄이 겹친다 |
+| realism | A·C·D에서 바꾼다. B는 켠다. `8K`·땀구멍 줄 대신 `native resolution` 줄을 쓴다. 매체 구절은 A `instant print`, C `plastic toy camera`, D `consumer film compact`이고 질감은 `soft edges, creamy faded detail and skin that shows no individual pores` | 인스턴트 인화지·플라스틱 렌즈·값싼 컴팩트 필름이 만드는 해상도에 8K 모공 묘사를 얹으면 크림빛 번짐이라는 룩의 정체와 반대다 |
 | framing | 켠다. 쌍 7(negative space)과 쌍 11(Medium Close-Up)은 프레임 범위를 직접 말하니 그 말과 부딪치지 않게 쓴다 | 나머지 쌍은 범위를 말하지 않는다 |
-| ratio | 켠다. 사용자 비율이 없으면 3:4 세로. 인화지 흰 테두리는 그 프레임 안쪽에 그리고, 정사각·와이드 인화지 비율은 사용자가 정할 때만 쓴다 | Iris는 정사각·와이드 인화지를 묘사하면서도 모든 블록을 3:4로 닫았다 |
+| ratio | 켠다. 사용자 비율이 없으면 A는 1:1 정사각(`Polaroid SX-70`·`Polaroid 600` 줄을 쓰는 장면과 세트 S1·S2)이고, A에서 `Polaroid Spectra` 줄을 고르면 가로로 넓은 4:3이다. B·C·D는 3:4 세로다. 인화지 흰 테두리는 그 프레임 안쪽에 그린다 | SX-70·600 인화지는 정사각 흰 테두리이고 Spectra는 가로로 넓은 인화지인데 Iris는 모든 블록을 3:4로 닫았다 |
 
 ## Hair and makeup
 | 갈래 | 슬롯 | 줄 |

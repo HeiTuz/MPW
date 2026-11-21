@@ -175,6 +175,12 @@ for (const q of ['홍콩', '신중식,찻집']) {
   assert.ok(!out.stdout.includes('## Look card'), `${q} calls no card`);
   assert.deepEqual(JSON.parse(run(['--q', q, '--json']).stdout).looks, []);
 }
+// One query can call a 장면 card and a 매체 card together; both come out with their axis so the brief can split the roles.
+for (const q of ['캘리포니아 골든아워, Kodak Gold 200', '캘리포니아 골든아워 코닥 골드 200']) {
+  const both = JSON.parse(run(['--q', q, '--json']).stdout).looks;
+  assert.deepEqual(both.map((l) => [l.slug, l.axis]), [['california-golden-hour', '장면'], ['kodak-gold-200', '매체']], q);
+  assert.match(run(['--q', q, '--limit', '1']).stdout, /^## Look card\n.+ \[장면\] — .+\nread: .+\n.+ \[매체\] — .+\nread: /, q);
+}
 // Nouvelle Vague has its own card now.
 assert.deepEqual(JSON.parse(run(['--q', 'Nouvelle Vague', '--json']).stdout).looks.map((l) => l.slug), ['nouvelle-vague-16mm']);
 // The card path in the block is the path read_refs.mjs reads (documented command works as printed).
