@@ -93,7 +93,10 @@ assert.ok(examples.some(t => t.includes('## Identity Reference')), 'a person exa
 {
   const media = [...sec('12').matchAll(/^\| [^|\n]+ \| [^|\n]+ \| `(An? [^`]+)` \|$/gm)].map(m => m[1].trim());
   assert.ok(media.length >= 8, `12.0 medium table rows: ${media.length}`);
-  assert.ok(media.filter(name => !name.includes('<')).some(name => extractExample.startsWith(name)), 'extraction example opens with a 12.0 medium name');
+  // §12.0 step 3: a called look card's first-line phrase wins over the table name, so a card's `medium` row also counts.
+  const cardOpenings = fs.readdirSync(new URL('../references/image/looks/', import.meta.url)).filter(f => f.endsWith('.md') && f !== 'index.md')
+    .flatMap(f => [...read(`references/image/looks/${f}`).matchAll(/^\| medium \| .*?`(An? [^`]+)`/gm)].map(m => m[1].trim()));
+  assert.ok([...media.filter(name => !name.includes('<')), ...cardOpenings].some(name => extractExample.startsWith(name)), 'extraction example opens with a 12.0 medium name or a look card first line');
   const layerLines = extractExample.split('\n').filter(line => / — /.test(line));
   const tokens = layerLines.map(line => line.split(' — ')[0]);
   const native = tokens.filter(token => /[^\x00-\x7f]/.test(token)).length;
@@ -163,10 +166,12 @@ for (const [layer, slug] of Object.entries(LAYER_FILES)) {
 // Raised again for the extraction bundle only: looks/index.md carries 28 card rows (22503 bytes, was 1 row) and the bundle measured 114072; the other bundles do not include the index.
 // Raised again (step 7a) for the single value order, the scene-set rule, the candidate-card rule, the two-card split, the Korean Finish form, the no-cue makeup rule
 // and the card-summary column in looks/index.md (new 93260, portrait 100321, edit 20934, extract 129204 measured; image-other-engine 111707 has no ceiling). The ceilings are about 1.7% above the measurement.
+// Raised once more for the extraction bundle (step 7b): image-brief section 12.9 is now the card-fitted example with the longer card paragraph (extract 131111 measured, ceiling about 1.7% above).
+// Raised once more for the extraction bundle (step 7c): the 28 card rows in looks/index.md carry the longer do-not-call word lists the card workers wrote (index 32962 bytes, was 26356; extract 138002 measured, ceiling about 1.7% above).
 assert.ok(sizes['gpt-image-new'].utf8_bytes <= 94400, `gpt-image-new is ${sizes['gpt-image-new'].utf8_bytes} bytes`);
 assert.ok(sizes['gpt-image-portrait'].utf8_bytes <= 101500, `gpt-image-portrait is ${sizes['gpt-image-portrait'].utf8_bytes} bytes`);
 assert.ok(sizes['gpt-image-edit'].utf8_bytes <= 21300);
-assert.ok(sizes['gpt-image-extract'].utf8_bytes <= 131100, `gpt-image-extract is ${sizes['gpt-image-extract'].utf8_bytes} bytes`);
+assert.ok(sizes['gpt-image-extract'].utf8_bytes <= 140400, `gpt-image-extract is ${sizes['gpt-image-extract'].utf8_bytes} bytes`);
 
 const scenarios = JSON.parse(read('scripts/fixtures/behavioral/image-planning.json')).cases;
 assert.deepEqual(scenarios.map(c => c.id), [
