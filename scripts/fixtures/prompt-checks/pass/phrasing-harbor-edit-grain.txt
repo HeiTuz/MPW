@@ -1,0 +1,7 @@
+Edit the attached photo of a fishing harbor at dawn.
+
+## Grain
+film grain — Add heavy film grain across the whole frame while the boats and the water stay where they are.
+
+## Keep
+unchanged — Keep the boats, the water and the original crop exactly as they are.

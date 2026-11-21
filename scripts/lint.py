@@ -66,7 +66,7 @@ VERIFICATION_STAMP_PATTERN = re.compile(
     r"\((\d{4})-(\d{2})(?:-\d{2})?[^)\n]*?(?:확인|대조|검증)[^)\n]*\)"
 )
 STAMP_DATE_PATTERN = re.compile(r"(\d{4})-(\d{2})(?:-(\d{2}))?")
-VALIDATOR_CODE_AREAS = ("input", "length", "copy", "syntax", "phrasing", "portrait", "manifest")
+VALIDATOR_CODE_AREAS = ("input", "length", "copy", "syntax", "phrasing", "portrait", "coherence", "manifest")
 VALIDATOR_CODE_RE = re.compile(
     rf"(?:`|['\"])((?:{'|'.join(VALIDATOR_CODE_AREAS)})/[a-z0-9-]+)(?:`|['\"])"
 )

@@ -1,0 +1,58 @@
+#!/usr/bin/env node
+// Text matching only: coherence/* heuristics of check_prompt.mjs. No image output is judged.
+import assert from "node:assert/strict";
+import { checkText } from "./check_prompt.mjs";
+
+const codes = (text, options) => {
+  const result = checkText(text, options);
+  return [...result.errors, ...result.warnings].map((item) => item.code).filter((code) => code.startsWith("coherence/"));
+};
+const has = (text, code, options) => assert.ok(codes(text, options).includes(code), `${code}: ${text}`);
+const lacks = (text, code, options) => assert.ok(!codes(text, options).includes(code), `${code} should not fire: ${text}`);
+
+// occlusion: hair over the face only counts next to a face-clear line.
+has("Wet bangs fall across her eyes and brows. The brows and eyes stay clear.", "coherence/occlusion");
+lacks("Wet bangs fall across her eyes and brows.", "coherence/occlusion");
+lacks("The hair is tucked behind her ear so the brows and eyes stay clear.", "coherence/occlusion");
+lacks("Her hair does not fall across her eyes, so the brows stay clear.", "coherence/occlusion");
+
+// focal: two lenses, or a wide lens next to the undistorted-face line; film formats are not lenses.
+has("A 24mm lens. An 85mm lens.", "coherence/focal");
+has("A 24mm lens up close, with no wide-angle stretch on the nose.", "coherence/focal");
+has("A wide-angle lens up close, undistorted face.", "coherence/focal");
+lacks("Shot on 35mm film grain with a 50mm lens.", "coherence/focal");
+lacks("A 35mm film still and a 35mm cinema negative look.", "coherence/focal");
+lacks("A 50mm lens and a 50 mm lens.", "coherence/focal");
+lacks("A moderate telephoto lens with no wide-angle stretch on the nose.", "coherence/focal");
+
+// identity-skin: skin colour outside the identity paragraph while the reference tone is kept.
+const identity = "## Identity Reference\nIf a model reference is provided, keep her own skin tone. If none is provided, she has cool fair skin.\n\n";
+has(`${identity}## Hair and makeup\nbase — A pale skin finish with a faint glow.`, "coherence/identity-skin");
+lacks(`${identity}## Hair and makeup\nbase — A matte finish with a faint glow.`, "coherence/identity-skin");
+lacks("## Hair and makeup\nbase — A pale skin finish with a faint glow.", "coherence/identity-skin");
+
+// ratio-dup: known ratios only, counted over the whole prompt; times and ratios in quotes are not ratios.
+has("A vertical 3:4 frame. The 3:4 frame leaves space above.", "coherence/ratio-dup");
+has("A 16:9 frame, later called 4:3.", "coherence/ratio-dup");
+lacks("A vertical 3:4 frame.", "coherence/ratio-dup");
+lacks("A poster that says \"11:30\" and \"3:4\", framed 16:9.", "coherence/ratio-dup");
+
+// decimal is an error.
+assert.equal(checkText("She has 7。5-head proportions.").ok, false);
+lacks("She has 7.5-head proportions at f/1.4.", "coherence/decimal");
+
+// slot-dup: lips inside Hair and makeup, the catchlight anywhere.
+has("## Hair and makeup\nlip tint — A sheer coral lip tint.\nbitten — A deep red lip tapped outward.", "coherence/slot-dup");
+lacks("## Hair and makeup\nlips and cheeks — A sheer coral lip tint and a rose blush.\n\n## Props and nails\nlipstick — A lipstick tube in her hand.", "coherence/slot-dup");
+has("## Light\ncatchlight — A small window shaped point of light sits in each eye.\n\n## Expression\ngaze — A glint in both eyes, her catchlight bright.", "coherence/slot-dup");
+lacks("## Light\ncatchlight — A small window shaped point of light sits in each eye.", "coherence/slot-dup");
+
+// day-night.
+has("A woman on a rainy night. Hard midday sun throws short shadows.", "coherence/day-night");
+lacks("A woman at midday under hard sun, her daylight white balance neutral.", "coherence/day-night");
+lacks("A woman on a rainy night under a sodium lamp.", "coherence/day-night");
+
+// Scope: native checks for other engines still run these; assembled midjourney stops at engine-scope but keeps them.
+has("A 24mm lens. An 85mm lens.", "coherence/focal", { engine: "higgsfield" });
+has("A 24mm lens. An 85mm lens.", "coherence/focal", { profile: "assembled", engine: "midjourney" });
+console.log("Coherence matching: occlusion, focal, identity-skin, ratio-dup, decimal, slot-dup and day-night cases pass; image output NOT RUN.");

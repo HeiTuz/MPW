@@ -1,0 +1,7 @@
+A candid street photograph of a woman waiting at a tram stop in the rain.
+
+## Identity Reference
+If a model reference is provided, the woman in this photo is that model: take only the face shape and facial features from it, adapting them naturally to this scene's expression, angle and light, and keep her own skin tone. Hair, makeup and everything else follow this prompt. If none is provided, she is a 22-year-old Chinese woman with cool fair skin. In either case she has 7.5-head proportions, a small head over level shoulders and a long neck.
+
+## Hair and makeup
+porcelain base — A matte porcelain skin finish with a faint glow on the cheekbones.

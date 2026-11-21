@@ -317,7 +317,7 @@
       "--profile native --engine gpt-image는 텍스트 전용 네이티브 검사다",
       "허용 목록에 없는 플래그와 프로필 값은 input/flag다. 힌트는 이행 절을 가리키고 옛 이름을 쓰지 않는다",
       "native와 --surface s1은 함께 쓸 수 있고 계약층만 붙는다",
-      "native에서 엔진이 gpt-image가 아니면 길이 판정 뒤 input/engine-scope로 멈춘다",
+      "native에서 엔진이 gpt-image가 아니면 길이 판정과 엔진 무관 coherence 검사만 하고 끝낸다(어휘 검사는 gpt-image에서만 돈다)",
       "--manifest는 행의 prompt 또는 full_prompt 텍스트만 보고 나머지 필드는 무시한다",
       "--profile assembled는 MPW 조립 산출물을 검사한다"
     ],
