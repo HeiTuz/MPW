@@ -172,10 +172,12 @@ for (const [layer, slug] of Object.entries(LAYER_FILES)) {
 // Hair/Makeup split in image-brief sections 3-4 and fixed-lines.md (new 100912, portrait 107973, extract 145836 measured; edit 21012 stays under its own ceiling). The ceilings are about 1.7% above the measurement.
 // Lowered (step 9) after rules written out in two places were cut to one place plus a pointer, and looks/index.md lost its name columns
 // (the card head tables already held them; find_tokens reads them there): new 95371, portrait 102299, edit 20300, extract 117066 measured, ceilings about 2.5% above.
-assert.ok(sizes['gpt-image-new'].utf8_bytes <= 97800, `gpt-image-new is ${sizes['gpt-image-new'].utf8_bytes} bytes`);
-assert.ok(sizes['gpt-image-portrait'].utf8_bytes <= 104900, `gpt-image-portrait is ${sizes['gpt-image-portrait'].utf8_bytes} bytes`);
+// Raised (second GPT Pro review): the slot-prefix, gaze-slot, scene-set place/prop, set-and-pair, first-line medium, framing and square variants, fine-grain realism, glass side, Legwear socks
+// and card-format rules in image-brief.md and fixed-lines.md (new 98026, portrait 104954, edit 20377, extract 119731 measured, ceilings about 2.5% above).
+assert.ok(sizes['gpt-image-new'].utf8_bytes <= 100500, `gpt-image-new is ${sizes['gpt-image-new'].utf8_bytes} bytes`);
+assert.ok(sizes['gpt-image-portrait'].utf8_bytes <= 107600, `gpt-image-portrait is ${sizes['gpt-image-portrait'].utf8_bytes} bytes`);
 assert.ok(sizes['gpt-image-edit'].utf8_bytes <= 20800, `gpt-image-edit is ${sizes['gpt-image-edit'].utf8_bytes} bytes`);
-assert.ok(sizes['gpt-image-extract'].utf8_bytes <= 120000, `gpt-image-extract is ${sizes['gpt-image-extract'].utf8_bytes} bytes`);
+assert.ok(sizes['gpt-image-extract'].utf8_bytes <= 122800, `gpt-image-extract is ${sizes['gpt-image-extract'].utf8_bytes} bytes`);
 
 const scenarios = JSON.parse(read('scripts/fixtures/behavioral/image-planning.json')).cases;
 assert.deepEqual(scenarios.map(c => c.id), [
