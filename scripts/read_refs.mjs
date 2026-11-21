@@ -63,7 +63,9 @@ export const BUNDLES = {
   // 텍스트 모델 적응·변환. 색인이 가리키는 공급자의 날짜 절을 덧붙인다.
   "text-model-adapt": ["references/model-playbooks.md#공통 적응 규칙,공급자 색인"],
   // 이미지·영상 프롬프트의 엔진 간 변환. §6 색인이 가리키는 엔진 어댑터 절을 덧붙인다.
-  "image-prompt-conversion": ["references/image/prompt-conversion.md", "references/image/model-routing.md#6"],
+  "image-prompt-conversion": ["references/image/prompt-conversion.md", "references/image/engine-levers.md", "references/image/model-routing.md#6"],
+  // 다른 엔진(Seedream·Nano Banana·Midjourney·Soul)을 지정한 새 이미지. 층 문안은 gpt-image-new 묶음과 같은 규칙으로 먼저 쓰고 engine-levers.md로 그 엔진에 편다. 그 엔진 어댑터는 map의 model-routing §6 색인으로 덧붙인다.
+  "image-other-engine": ["references/image/surfaces.md#0", "references/image/image-brief.md#1,2,3,4,5,6,9,11", "references/image/fixed-lines.md", "references/image/layer-lexicon.md", "references/image/engine-levers.md"],
 };
 
 export function parseHeadings(text) {

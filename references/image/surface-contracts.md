@@ -45,7 +45,7 @@
 
 모델이 받는 자연어와 MPW 조립 형식은 별도 계약이다. GPT Image 편집은 [image-brief.md](image-brief.md) §8의 층(바꿀 층 + `## Keep`, 구획 표기는 `## 영어 제목`)을 쓴다. 제외 명사 꼬리와 끝 비율 토큰은 새로 붙이지 않는다. 사용자가 MPW 조립 형식·전문 레인·기계 레코드를 지정한 경우에만 그 형식을 적용한다.
 
-`check_prompt.mjs`는 네이티브 자연어에는 기본 `native`, MPW 조립 산출물에는 `assembled` 프로필을 쓴다. 표면·채널·엔진이 정해졌으면 실제 값을 전달한다. 엔진 무관 모순 검사(`coherence/*`)는 모든 엔진에서 돌고, GPT Image용 어휘 검사는 GPT Image에서만 돈다. Midjourney는 `--profile assembled --engine midjourney`로 돌리면 `input/engine-scope`와 단어 수가 나오고, 이 코드는 범위 밖이라는 표시이며 프롬프트 결함이 아니다. 그 밖의 엔진은 `--engine higgsfield`·`seedream`·`nano-banana`·`soul` 또는 `unknown`으로 돌린다. native는 길이와 `coherence/*`만 보고(`seedream`은 600단어 이상이면 `length/engine-words`), assembled의 문구 검사는 그대로 돌므로 길이 오류와 `coherence/*`를 본다. 네이티브 검사는 필요한 자연어 편집 제약을 허용하고 끝 비율 토큰을 요구하지 않는다. 매니페스트의 텍스트 검사만으로 API 필드, 참조 전달, 픽셀 보존, 생성 품질을 검증했다고 보지 않는다. Higgsfield 래퍼의 길이·요청 계약을 대신하지 않으며 S2 전체 요청은 현재 도구·API 스키마로 별도 확인한다.
+`check_prompt.mjs`는 네이티브 자연어에는 기본 `native`, MPW 조립 산출물에는 `assembled` 프로필을 쓴다. 표면·채널·엔진이 정해졌으면 실제 값을 전달한다. 엔진 무관 모순 검사(`coherence/*`)는 모든 엔진에서 돌고, GPT Image용 어휘 검사는 GPT Image에서만 돈다. Midjourney는 `--profile assembled --engine midjourney`로 돌리면 `input/engine-scope`와 단어 수가 나오고, 이 코드는 범위 밖이라는 표시이며 프롬프트 결함이 아니다. 그 밖의 엔진은 `--engine higgsfield`·`seedream`·`nano-banana`·`soul` 또는 `unknown`으로 돌리고, 층 문안을 그 엔진 형식으로 편 뒤([engine-levers.md](engine-levers.md) §4)에는 `seedream`·`nano-banana`·`soul`·`midjourney`가 `## 층` 제목 잔류·본문의 플래그·엔진이 쓰지 않는 금지 꼬리·Soul의 필름 상표명을 경고한다. native는 길이와 `coherence/*`만 보고(`seedream`은 600단어 이상이면 `length/engine-words`), assembled의 문구 검사는 그대로 돌므로 길이 오류와 `coherence/*`를 본다. 네이티브 검사는 필요한 자연어 편집 제약을 허용하고 끝 비율 토큰을 요구하지 않는다. 매니페스트의 텍스트 검사만으로 API 필드, 참조 전달, 픽셀 보존, 생성 품질을 검증했다고 보지 않는다. Higgsfield 래퍼의 길이·요청 계약을 대신하지 않으며 S2 전체 요청은 현재 도구·API 스키마로 별도 확인한다.
 
 ### 3.2 GPT Image 2.5·2.6 — 네이티브 생성 브리프
 
@@ -104,7 +104,7 @@ GPT Image 2 계열에는 요청하지 않은 미세 입자·자글거림·타일
 2. **누적 차단:** 무늬가 낀 결과를 다음 생성·편집의 입력으로 쓰지 않는다. 한 대화에서 생성·편집이 이어질수록 누적된다는 보고가 있고, 이 누적은 출시 직후 고쳐졌다는 제3자 분석도 있으나 공식 확인은 없다. 재발하면 새 대화에서 원래 문안으로 다시 생성하고, 편집은 깨끗한 원본에서 시작한다.
 3. **후처리:** 결과를 살려야 하면 출력의 축소 리샘플링, 약한 외부 디노이즈, 다른 모델의 낮은 강도 재렌더를 후속 단계로 명시한다(§5). 이 셋의 효과와 순위는 MPW의 추정이다. 영상 모델로 넘기면 입자가 증폭된다는 보고가 있어 인계 전에 원본 크기로 확인한다.
 4. **모델 안 디노이즈 편집:** `Remove the noise and grain from this image. Keep every line, edge and detail unchanged.` 또는 디노이즈를 강하게 걸라는 지시. 일부 복구된다는 보고와 효과가 없다는 보고가 함께 있으므로 한 번만 시도한다.
-5. **문안:** 위 표의 어휘 가운데 사용자가 원한 질감 조건이 아닌 것을 걷어 내고, 무늬가 낀 넓은 면(하늘·벽·단색 배경)을 원하는 상태로 한 문장 적는다. 예: `Smooth, even tones across the sky and wall, with clean gradients and natural sharpness.` 피부와 옷감은 [compiler.md](compiler.md) §피부·재질의 질감 조건을 그대로 두고 매끈한 면으로 바꾸지 않는다. 그래도 보였다면 그 실패에 맞춘 짧은 제약 한 문장을 더한다. 예: `No film grain, speckled noise or gritty texture.` 금지어 묶음을 예방용 기본 문안으로 붙이지 않는다([compiler.md](compiler.md) §제외 조건의 형식). `## Finish`의 금지 한 줄([fixed-lines.md](fixed-lines.md))은 묶음이 아니라 한 문장이라 예외다.
+5. **문안:** 위 표의 어휘 가운데 사용자가 원한 질감 조건이 아닌 것을 걷어 내고, 무늬가 낀 넓은 면(하늘·벽·단색 배경)을 원하는 상태로 한 문장 적는다. 예: `Smooth, even tones across the sky and wall, with clean gradients and natural sharpness.` 피부와 옷감은 [compiler.md](compiler.md) §피부·재질의 질감 조건을 그대로 두고 매끈한 면으로 바꾸지 않는다. 그래도 보였다면 그 실패에 맞춘 짧은 제약 한 문장을 더한다. 예: `No film grain, speckled noise or gritty texture.` 금지어 묶음을 예방용 기본 문안으로 붙이지 않는다([compiler.md](compiler.md) §제외 조건의 형식). `## Finish`의 금지 한 줄([fixed-lines.md](fixed-lines.md))과 [engine-levers.md](engine-levers.md) §5가 엔진별로 정한 금지 한 문장은 묶음이 아니라 효과 장치 한 문장이라 예외다.
 
 품질·크기 설정은 §4 소관이며, 설정을 올리면 무늬가 사라진다는 근거는 확인하지 못했다.
 

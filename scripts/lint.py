@@ -905,6 +905,7 @@ def check_labels(f, s, errors):
 EXAMPLE_LIMITS = {
     "references/image/image-brief.md": 10000,
     "references/image/editorial/portrait-variations.md": 10000,
+    "references/image/engine-levers.md": 10000,
 }
 
 

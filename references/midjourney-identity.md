@@ -76,6 +76,7 @@ Edit 프롬프트는 **참조별 역할 → 바꿀 부분 → 보존 조건**만
 
 - **일반 Image Prompt:** 최종 화면에 보여야 할 내용을 묘사한다. 원본의 정확 복제 기능으로 취급하지 않는다. **Edit:** §2처럼 변경 지시를 쓴다. 일반 Image Prompt의 문체를 Edit에 일괄 강제하지 않는다. [Image Prompts](https://docs.midjourney.com/hc/en-us/articles/32040250122381-Image-Prompts)
 - **Style Reference:** 스타일 전달용이다. 내용 보존이 필요한 이미지를 단순히 sref로 옮기지 않는다. 감도만 원하는데 내용이 섞이면 먼저 실제 슬롯을 확인하고, 필요하면 스타일 영향도 또는 참조 한 축만 조정한다. 얼굴·의상 금지어를 늘려 해결하지 않는다.
+- **GPT Image 층 문안에서 옮길 때:** 인물 새 이미지를 층 문안으로 먼저 썼다면 [image/engine-levers.md](image/engine-levers.md) §3의 Midjourney 행 순서로 구절로 줄이고 §5의 칸 문구를 쓴다. 금지는 `--no`, 비율은 `--ar`로 옮기고 본문에 문장으로 쓰지 않는다.
 - 스타일 본문은 짧게 유지한다. 맞지 않는 스타일어를 제거하고 필요한 묘사만 보강한다. 업로드 이미지에서 sref 코드를 추출한다고 주장하지 않는다. `--sv`의 문서화된 버전 범위와 구형 코드 재현은 현재 [Style Reference](https://docs.midjourney.com/hc/en-us/articles/32180011136653-Style-Reference)를 따른다.
 - Discord의 개별 스타일 참조 가중치는 `--sref URL1::2 URL2::1`로 문서화되어 있다. 일반 본문의 `::` 멀티프롬프트와 구분하며, 사용할 모델 버전에서의 지원은 현재 표면으로 확인한다.
 
