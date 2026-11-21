@@ -10,7 +10,7 @@
 ## 고정 사실 (모든 갈래가 지킨다)
 | 슬롯 | 값 |
 |---|---|
-| medium | 코닥 골드 200 컬러 네거티브로 찍은 소형 필름 카메라 스냅. 동네 현상소에서 뽑은 프린트 같은 짙은 원색이 정체이고, 스튜디오 조명 화보도 디지털 보정 사진도 아니다. 35mm 장면의 첫 줄은 `A photograph shot on Kodak Gold 200 color negative`로 시작한다(매체만 말하는 구절. 35mm 포맷은 Optics의 본체 줄이 말하고, 첫 줄에 `35mm`를 쓰면 렌즈 mm와 같은 낱말로 읽혀 검사기가 렌즈 둘로 센다). 혼자 쓸 때: `A sunlit Americana 35mm snapshot shot on Kodak Gold 200 color negative`(`sunlit Americana`는 장면 구절이라 이 카드가 매체 카드로 불리거나 장면이 다를 때는 쓰지 않는다). 120 장면(B 갈래 협곡 한 장, `Mamiya 645`)은 35mm 접두까지 빼고 첫 줄 전체를 `A medium-format photograph shot on Kodak Gold 200 120 color negative`로 쓴다(혼자 쓸 때: `A medium-format snapshot shot on Kodak Gold 200 120 color negative`) |
+| medium | 코닥 골드 200 컬러 네거티브로 찍은 소형 필름 카메라 스냅. 동네 현상소에서 뽑은 프린트 같은 짙은 원색이 정체이고, 스튜디오 조명 화보도 디지털 보정 사진도 아니다. 35mm 장면의 첫 줄은 `A 35mm photograph shot on Kodak Gold 200 color negative`로 시작한다(매체만 말하는 구절). 혼자 쓸 때: `A sunlit Americana 35mm snapshot shot on Kodak Gold 200 color negative`(`sunlit Americana`는 장면 구절이라 이 카드가 매체 카드로 불리거나 장면이 다를 때는 쓰지 않는다). 120 장면(B 갈래 협곡 한 장, `Mamiya 645`)은 35mm 접두까지 빼고 첫 줄 전체를 `A medium-format photograph shot on Kodak Gold 200 120 color negative`로 쓴다(혼자 쓸 때: `A medium-format snapshot shot on Kodak Gold 200 120 color negative`) |
 | closer | `Kodak Gold 200 snapshot` |
 | time | 낮에서 해질녘까지. A는 해가 높은 한낮~오후(흰빛에 가까운 강한 직사), B·D는 해가 낮은 금주황빛, C는 실내 창가의 오후. 밤·흐린 날·플래시 없음. 세트 묶음의 K 숫자는 Iris 프리셋의 연출 값이다 |
 | light-key | 해 하나가 주광이고 그림자는 짙고 단단하다. 앞면은 아스팔트·벽·차체가 되튀긴 빛이 채운다. D의 전구만 실용광이다. 네온·형광등·직부 플래시 없음(S4 다이너 창가의 노란 형광 간판 빛은 세트 값) |

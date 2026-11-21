@@ -23,6 +23,8 @@ has("A wide-angle lens up close, undistorted face.", "coherence/focal");
 lacks("Shot on 35mm film grain with a 50mm lens.", "coherence/focal");
 lacks("A 35mm film still and a 35mm cinema negative look.", "coherence/focal");
 lacks("A 50mm lens and a 50 mm lens.", "coherence/focal");
+lacks("A 35mm photograph shot on a 50mm lens.", "coherence/focal");
+has("A 35mm photograph shot on a 50mm lens with an 85mm lens beside it.", "coherence/focal");
 lacks("A moderate telephoto lens with no wide-angle stretch on the nose.", "coherence/focal");
 has("A 24mm lens up close. 自然透视 — the face keeps natural perspective.", "coherence/focal", { profile: "native" });
 has("A wide-angle lens up close, 自然透视 face.", "coherence/focal");

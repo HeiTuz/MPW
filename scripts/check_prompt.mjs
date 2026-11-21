@@ -405,7 +405,7 @@ function inspectCoherence(result, text, instruction) {
   if (sentences.some((sentence) => overFace.test(sentence) && !awayFromFace.test(sentence)) && keptClear.test(instruction)) {
     emit(result, CODE_REGISTRY.occlusion, "Hair is written over the face while another line keeps the face clear.", { hint: "Keep one: turn off the face-clear line when the look needs hair across the face." });
   }
-  const mm = [...instruction.matchAll(/(?<![\p{L}\p{N}_.])(\d{1,3})\s?mm\b(?!\s+(?:film|grain|negative|stock|format|cinema|print|slide|super))/giu)].map((match) => Number(match[1]));
+  const mm = [...instruction.matchAll(/(?<![\p{L}\p{N}_.])(\d{1,3})\s?mm\b(?!\s+(?:film|grain|negative|stock|format|cinema|print|slide|super|photographs?|photos?|stills?|frames?|snapshots?|camera(?!\s+lens)))/giu)].map((match) => Number(match[1]));
   const wideWord = /\b(?:ultra[- ]?wide|fish[- ]?eye|wide[- ]angle\s+(?:lens|shot|view|selfie)|wide\s+lens)\b/iu.test(instruction);
   const noStretch = /\bno\s+(?:wide[- ]angle\s+stretch|distortion)\b|\bundistorted\b|\bdistortion[- ]free\b|无畸变|自然透视|natural perspective/iu.test(instruction);
   if (new Set(mm).size >= 2 || (noStretch && (wideWord || mm.some((value) => value <= 28)))) {
