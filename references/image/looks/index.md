@@ -26,7 +26,7 @@
 | [rainy-night-shinjuku](rainy-night-shinjuku.md) | 雨夜新宿 · 東京ノワール | JP | A 歌舞伎町ネオンの路面(기본); B 渋谷と銀座の雨; C 高みと車窓の光跡; D 深夜の黒階調 | 장면 | 비 오는 밤 도쿄 네온 영화 스틸. 차가운 보라와 시안, 젖은 노면의 광택 검정 |
 | [rolleiflex-glass-reflection](rolleiflex-glass-reflection.md) | Rolleiflex 유리 이중 반사 · 롤라이플렉스 | FR (파리) | A Reflet de vitrine(기본); B Heure bleue; C Miroirs de rue | 매체 | 롤라이플렉스 6x6 필름의 파리 유리창 이중 반사 스냅. 눌린 포트라 톤 |
 | [seoul-cafe-warm-diffuse](seoul-cafe-warm-diffuse.md) | 서울 카페 웜톤 · 웜톤 확산광 | KR | A 카페·가게 오후(기본); B 창가·침실 자연광; C 램프·촛불 밤; D 해질녘·겨울 역광 | 장면 | 서울 카페와 집 안의 디지털 스냅. 창과 갓에 걸러진 따뜻한 확산광, 오트와 모카색 |
-| [seoul-cool-porcelain](seoul-cool-porcelain.md) | 쿨톤 도자기 피부 · 블루 그레이 미니멀 | KR | A 창가 흐린 날(기본); B 갤러리 천창광; C 스튜디오 평광; D 야외 냉기 | 장면 | 서울 인물 사진. 흐린 날 확산광, 차가운 흰 하이라이트와 회청의 낮은 채도 |
+| [seoul-cool-porcelain](seoul-cool-porcelain.md) | 쿨톤 도자기 피부 · 블루 그레이 미니멀 | KR | A 창가 흐린 날(기본); B 갤러리 천창광; C 스튜디오 플랫 라이팅; D 야외 냉기 | 장면 | 서울 인물 사진. 흐린 날 확산광, 차가운 흰 하이라이트와 회청의 낮은 채도 |
 | [seoul-night-cinema](seoul-night-cinema.md) | 서울 밤 시네마 · Seoul night cinema | KR | A 차창 불빛(기본); B 투톤 네온; C 가로등 불빛; D 냉백 야경 | 장면 | 서울 밤 영화 스틸. 시안 그림자, 마젠타·보라 네온, 후미등의 붉은 점 |
 | [south-france-summer-overexposure](south-france-summer-overexposure.md) | 남프랑스 한여름 과노출 · Soleil du Midi | FR | A Côte d'Azur(기본); B Pierre et volets; C Champs et oliveraie; D Dernières lueurs | 장면 | 포트라 필름의 남프랑스 한여름 스냅. 노출을 넉넉히 줘 하이라이트가 흰색 쪽으로 밀리고 바다는 코발트 |
 | [trix-humanist-bw](trix-humanist-bw.md) | Kodak Tri-X · 트라이엑스 | FR | A Le moment décisif(기본); B Nuit et pluie; C Demi-teintes; D Grain fin | 매체 | Tri-X 35mm 흑백 은염의 파리 거리 인문 사진. 순흑에서 순백까지 은회색 계조 |
