@@ -22,7 +22,7 @@
    - 이미지 조립 원칙: `references/image/compiler.md`
    - 이미지 자연어 작성 규칙(층 모양·채우기·첫 줄 규칙·Identity Reference 조건 구획·기본 인물·편집·예시): `references/image/image-brief.md`(층별 토큰 사전: 색인 `references/image/layer-lexicon.md`, 층별 표 `references/image/lexicon/`가 사전의 정본이다. 표를 직접 고치고 추출·재생성 도구는 없다. 검색은 `scripts/find_tokens.mjs`). 인물 설정의 정본은 image-brief §5(문화권별 인물 공식 표는 `references/image/fixed-lines.md`), 이미지 언어 세부의 정본은 image-brief §2, 노출은 editorial-fashion §노출 수위. common §프롬프트 언어 결정은 요약+포인터다.
    - 층마다 늘 붙는 고정 몫(문화권 인물 공식·메이크업 슬롯 줄·입자·무왜곡·화면비 기본·`## Finish`)과 끄는 조건: `references/image/fixed-lines.md`
-   - 룩 카드(룩 하나가 모든 층에 넣는 값: 고정 사실·갈래·끄는 고정 몫·층별 줄·장면 세트·포즈·구도 쌍): `references/image/looks/<slug>.md`, 색인 `references/image/looks/index.md`(카드 이름·문화권·갈래·축·요약. 부르는 이름·부르지 않는 말의 정본은 각 카드의 머리 표이고 `find_tokens.mjs`가 거기서 읽는다), Iris MIT 고지 `references/image/looks/LICENSE-Iris.md`. 카드가 쓰는 토큰의 정본은 층별 사전이고, 카드는 그 토큰을 고르는 묶음일 뿐이다
+   - 룩 카드(룩 하나가 모든 층에 넣는 값: 고정 사실·갈래·끄는 고정 몫·층별 줄·장면 세트·포즈·구도 쌍): `references/image/looks/<slug>.md`, 색인 `references/image/looks/index.md`(카드 이름·문화권·갈래·축·요약. 부르는 이름·부르지 않는 말의 정본은 각 카드의 머리 표이고 `find_tokens.mjs`가 거기서 읽는다), Iris MIT 고지 `references/image/looks/LICENSE-Iris.md`. 카드는 `scripts/read_look.mjs`(`--outline`, `--branch <갈래> [--set S<n>] [--pair <n>]`)로 두 단계로 읽는다. 카드가 쓰는 토큰의 정본은 층별 사전이고, 카드는 그 토큰을 고르는 묶음일 뿐이다
    - 엔진별 효과 장치(효과 × 엔진 표, 층 → 엔진 배열표, 두 단계 변환 절차): `references/image/engine-levers.md`. 엔진 문법·파라미터의 세부는 그 엔진 문서가 정본이고 이 표는 문구·자리·근거 등급만 정한다
    - 텍스트·구조 이미지 결정: `references/image/text-structure.md`
    - 레인별 게이트(필수 요소·네거티브 정책): `references/image/lanes.md` §레인 게이트 카드
