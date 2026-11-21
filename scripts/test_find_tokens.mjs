@@ -189,6 +189,14 @@ for (const [q, slug] of [['필카 감성, 한강', 'korea-old-film-light-leak'],
   assert.ok(json.candidates.some((c) => c.slug === slug && c.summary && c.file === `references/image/looks/${slug}.md`), `${q} offers ${slug}`);
   assert.ok(out.stdout.includes(`read: node scripts/read_refs.mjs references/image/looks/${slug}.md`), q);
 }
+// Candidates come out closest to the request first: a culture cue (한강, 도쿄) puts that culture's card first, and the cap of 6 cuts after sorting.
+{
+  const first = (q) => JSON.parse(run(['--q', q, '--json']).stdout).candidates;
+  assert.equal(first('필카 감성, 한강')[0].slug, 'korea-old-film-light-leak');
+  assert.ok(['fujifilm-classic-neg', 'japan-provia-astia-film', 'utsurundesu-disposable'].includes(first('필카 감성, 도쿄')[0].slug));
+  assert.ok(first('필카 감성, 도쿄').slice(0, 3).every((c) => /^(fujifilm|japan|utsurundesu)/.test(c.slug)), 'Japanese cards first');
+  assert.ok(first('필카 감성').length >= 5);
+}
 // The generic disposable-camera word offers both disposable cards; the QuickSnap name belongs to the Japanese disposable card (it calls it, the Seoul film card only lists it as a candidate word).
 assert.deepEqual(JSON.parse(run(['--q', '일회용 카메라', '--json']).stdout).candidates.map((c) => c.slug).filter((s) => ['utsurundesu-disposable', 'korea-old-film-light-leak'].includes(s)).sort(), ['korea-old-film-light-leak', 'utsurundesu-disposable']);
 for (const q of ['후지 퀵스냅', 'Fujifilm QuickSnap']) assert.deepEqual(JSON.parse(run(['--q', q, '--json']).stdout).looks.map((l) => l.slug), ['utsurundesu-disposable'], q);

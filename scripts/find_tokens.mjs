@@ -143,17 +143,42 @@ export function findLookCards(terms, dir = LOOKS_DIR) {
 }
 
 const MAX_CANDIDATES = 6;
+// Culture cues in a query, matched to the culture column of looks/index.md (KR CN JP US FR). Kana in the query also means JP.
+const CULTURE_CUES = {
+  KR: ['한국', '서울', '한강', '성수', '홍대', '한남', '이태원', '부산', '제주', 'Korea', 'Seoul'],
+  JP: ['일본', '도쿄', '신주쿠', '오사카', '교토', '시부야', 'Japan', 'Tokyo'],
+  CN: ['중국', '홍콩', '상하이', '베이징', 'China', 'Hong Kong', 'Shanghai'],
+  US: ['미국', '뉴욕', '캘리포니아', 'LA', 'USA', 'New York', 'California'],
+  FR: ['프랑스', '파리', 'France', 'Paris'],
+};
+const queryCultures = (raw, stripped) => new Set([
+  ...Object.entries(CULTURE_CUES).filter(([, cues]) => cues.some((c) => hasName(c, raw, stripped))).map(([code]) => code),
+  ...(/[\u3040-\u30ff]/.test(raw) ? ['JP'] : []),
+]);
+// Query words (filler, digits, era words and one-character words dropped) that appear in a card's do-not-call words, names or summary.
+const queryWords = (terms) => [...new Set(terms.flatMap((t) => norm(t).split(PHRASE_BREAK)))]
+  .filter((w) => w.length >= 2 && !/^\d+$/.test(w) && !FILLER_WORDS.has(w) && !ERA_WORD.test(w));
+const wordHits = (look, words) => {
+  const text = norm([...look.avoid, ...look.names, look.summary].join(' '));
+  return words.filter((w) => (/^[a-z0-9'.-]+$/.test(w) ? hasWord(text, w) : text.includes(w))).length;
+};
+// Candidates come out closest to the request first: a card of the culture the query points to, then more query words in its words and summary, then index order.
 export function findLookCandidates(terms, called = [], dir = LOOKS_DIR) {
   const raw = norm(terms.join(','));
   const stripped = strip(raw);
   const skip = new Set(called.map((c) => c.slug));
+  const cultures = queryCultures(raw, stripped);
+  const words = queryWords(terms);
   return loadLooks(dir)
     .filter((look) => !skip.has(look.slug))
     .flatMap((look) => {
       const hits = look.avoid.filter((w) => hasName(w, raw, stripped));
-      return hits.length ? [{ ...look, matched: hits.sort((a, b) => b.length - a.length)[0] }] : [];
+      if (!hits.length) return [];
+      const inCulture = [...cultures].some((c) => look.culture.includes(c)) ? 1 : 0;
+      return [{ ...look, matched: hits.sort((a, b) => b.length - a.length)[0], inCulture, hits: wordHits(look, words) }];
     })
-    .sort((a, b) => b.matched.length - a.matched.length)
+    .map((c, i) => ({ ...c, i }))
+    .sort((a, b) => b.inCulture - a.inCulture || b.hits - a.hits || a.i - b.i)
     .slice(0, MAX_CANDIDATES);
 }
 

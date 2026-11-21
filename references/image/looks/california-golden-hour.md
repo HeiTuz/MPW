@@ -39,7 +39,6 @@
 | lens | 렌즈를 말하는 줄이 프롬프트마다 정확히 하나가 되게 쌍으로 정한다. 쌍 6(Extreme Wide Shot)·10(Environmental Portrait)은 Camera 줄이 거리만 말하니 Optics `Zeiss Biogon 28mm f/2.8` 줄이 렌즈 줄이고 `无畸变`은 끈다. 나머지 쌍(1~5, 7, 8, 9, 11, 12)의 Camera 줄은 렌즈를 말하지 않으니 `无畸变`이 렌즈 줄이다(이 줄은 카메라 높이를 말하지 않아 쌍 1의 knee-high, 쌍 9의 Plongée와 부딪히지 않는다). 단 Optics `Telephoto Compression`(A)·`Zeiss Planar 80mm f/2.8`(D)을 골랐거나 세트를 쓰면(세트 Optics가 렌즈를 말한다) 그 줄이 렌즈 줄이고 `无畸变`은 끈다 | #009(43mm) #010 #018(28mm)에 50mm 무왜곡 꼬리가 같이 있어 렌즈가 둘이었다. 쌍 1(knee-high)·쌍 9(Plongée)와 렌즈 줄의 출처를 시험에서 추론해야 했다 |
 | framing | 켠다. 쌍 6(Extreme Wide Shot)·7(Cowboy Shot)·10(Environmental Portrait)·11(Medium Close-Up)은 프레임 범위를 직접 말하니 그 말과 부딪치지 않게 쓴다. 쌍 1(걷는 걸음)·4(부츠)·9(다리와 발목)·12(다리)는 Pose가 낮은 몸을 말하니 framing 줄의 범위를 머리부터 발끝으로 쓴다 | 나머지 쌍은 범위를 말하지 않고 Pose가 허리 위에서 보인다 |
 | ratio | 켠다. 사용자 비율이 없으면 3:4 세로 | 쌍은 비율을 정하지 않는다 |
-| identity | 참조 얼굴이 없을 때만, 인물 문장 끝에 `with sun-kissed, lightly tanned skin`을 덧붙인다. 참조가 있으면 붙이지 않는다(그 사람의 피부색을 지킨다) | 캘리포니아 낙조 햇볕에 그을린 피부가 이 룩의 일부인데, 피부색 표현을 카드 줄에 두면 참조 얼굴의 피부색과 부딪히고 검사기가 경고한다 |
 
 ## Hair and makeup
 | 갈래 | 슬롯 | 줄 |
