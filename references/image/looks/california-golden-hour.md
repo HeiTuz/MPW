@@ -101,14 +101,14 @@
 ## Scene
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
-| A | place | Pacific Coast Highway — A coastal road with the ocean on one side and sun-baked hills on the other, a wooden fence along the cliff edge and long amber light. |
-| B | place | Joshua Tree — A dry rocky desert of twisted spiky trees and pale boulders, with long low light turning the sand amber. |
-| B | place | Diner — A roadside diner booth in red vinyl beside a large dusty window, the setting sun cutting through the glass in bright stripes. |
-| B | background | Salton Sea — A white salt crust and a still lake mirror the whole sunset sky, the horizon running on without end. |
+| A | place | Pacific Coast Highway — A coastal road with the ocean on one side and sun-baked hills on the other, a wooden fence along the cliff edge. |
+| B | place | Joshua Tree — A dry rocky desert of twisted spiky trees and pale boulders over open sand. |
+| B | place | Diner — A roadside diner booth in red vinyl beside a large dusty window. |
+| B | background | Salton Sea — A white salt crust and a still lake mirror the whole sky, the horizon running on without end. |
 | C | place | Santa Barbara — A Spanish-style arched arcade of white plaster and red clay roofs with hot-pink bougainvillea spilling over the wall. |
-| C | place | Palm Springs — Low pale buildings and tall palms by a bright blue pool under a dry sky and sharp-edged sun. |
-| D | place | Orange Grove — Rows of heavy citrus trees with warm afternoon light broken into soft spots between the leaves. |
-| D | place | Malibu Coastline Modern — A clean-lined white house on a bluff with raw linen, glass and pale decking in soft Pacific light. |
+| C | place | Palm Springs — Low pale buildings and tall palms by a bright blue pool under a dry sky. |
+| D | place | Orange Grove — Rows of heavy citrus trees with dense green leaves. |
+| D | place | Malibu Coastline Modern — A clean-lined white house on a bluff with raw linen, glass and pale decking. |
 
 ## Light
 | 갈래 | 슬롯 | 줄 |
@@ -139,7 +139,7 @@
 | A, C, D | grain | 胶片颗粒 — Fine, even film grain sits across the whole frame, slightly heavier in the shadows. |
 | B | grain | 胶片颗粒 — Grain stays very faint and even across the whole frame, barely visible even in the deepest shadows. |
 
-## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 요청의 장소·소품·시간대·의상 가운데 둘 이상이 그 세트의 단서와 같으면 통째로 쓰고, 세트 값은 고정 사실보다 먼저다. 규칙은 image-brief.md §4 '룩 카드' 4항과 '비워 둔 층')
+## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 세트를 쓰는 조건은 규칙 4항이 정하고, 세트 값은 고정 사실보다 먼저다. 규칙은 image-brief.md §4 '룩 카드' 4항과 '비워 둔 층')
 
 세트는 자기 Pose를 쓰고 같은 갈래의 쌍 Pose를 붙이지 않는다. 세트가 Camera를 말하지 않으면 쌍에서 Camera 줄만 빌리고, 어느 쌍의 Camera를 빌릴지는 세트 묶음의 `쌍` 값이 정한다.
 

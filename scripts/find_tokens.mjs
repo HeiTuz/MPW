@@ -299,7 +299,7 @@ export function formatText(results, cards = [], candidates = []) {
   }
   return head + results.map((l) => {
     const body = l.matches.length
-      ? l.matches.map((m) => `${m.token} — ${m.looks}${m.aliases.length ? ` (${m.aliases.slice(0, 4).join(', ')})` : ''} [${m.kind}]`).join('\n')
+      ? l.matches.map((m) => `${m.token} — ${m.looks}${m.aliases.length ? ` (${m.aliases.slice(0, 4).join(', ')})` : ''} [${m.kind}${m.tags.includes('소품 필요') ? ', 소품 필요' : ''}]`).join('\n')
       : 'no match';
     return `## ${l.title}\n${body}\n`;
   }).join('\n');

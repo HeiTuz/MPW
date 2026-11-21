@@ -114,21 +114,21 @@
 ## Scene
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
-| A | place | 클린 콘크리트 카페 — A minimalist space of bare concrete walls and floor with cool diffuse daylight from large windows and nothing else in the frame. |
-| A | place | 창가 자리 — A high counter seat at a street-facing window with bright outside light behind her and the street visible beyond. |
-| B | place | 피팅룸 — A small boutique fitting room with a full-length mirror and a curtain, one bright spot light overhead. |
-| B | place | 파우더룸 — A department-store washroom with a wide vanity mirror over a marble basin, long overhead tubes lighting the glass evenly. |
-| B | place | 엘리베이터 거울 — A steel elevator car with mirrored walls and a ceiling light panel, cool even light bouncing between the reflective surfaces. |
-| B | place | 연습실 — A bare practice room with a full mirror wall, a wooden floor and flat bright ceiling light, the whole room doubled in the glass. |
-| B | place | 집 방 벽 거울 — A bedroom with a tall wall mirror leaning against a pale wall, soft window daylight from one side and the bed and floor sharp in the reflection. |
+| A | place | 클린 콘크리트 카페 — A minimalist space of bare concrete walls and floor with large windows and nothing else in the frame. |
+| A | place | 창가 자리 — A high counter seat at a street-facing window with the street visible beyond. |
+| B | place | 피팅룸 — A small boutique fitting room with a full-length mirror and a curtain. |
+| B | place | 파우더룸 — A department-store washroom with a wide vanity mirror over a marble basin. |
+| B | place | 엘리베이터 거울 — A steel elevator car with mirrored walls. |
+| B | place | 연습실 — A bare practice room with a full mirror wall and a wooden floor, the whole room doubled in the glass. |
+| B | place | 집 방 벽 거울 — A bedroom with a tall wall mirror leaning against a pale wall, the bed and floor sharp in the reflection. |
 | B | place | 샤워 후 거울 — A bathroom mirror clouded with warm steam and one hand-wiped clear circle showing flushed cheeks and damp skin. |
 | C | place | 횡단보도 — A wide crosswalk of white stripes on gray asphalt with the buildings and traffic behind her all in sharp focus. |
-| C | place | 한남동 — A hillside street of pale-walled galleries and brunch cafes with glass fronts and soft diffuse daylight. |
-| C | place | 지하철 2호선 — A Seoul subway car and platform of steel handrails and glass doors under flat cold tube light that leaves almost no shadow. |
-| C | place | KTX — A high-speed train window seat with bright fields outside streaking past the glass while the cabin stays evenly lit. |
-| D | place | 택시 뒷좌석 — A taxi back seat at night with streaks of city light sweeping across the window and her face. |
-| D | place | 포장마차 — A street food tent with plastic stools and a steaming counter, warm bulbs glowing under the canopy against the dark street. |
-| D | place | 침대 — A dark bedroom with rumpled white bedding, the only light coming from the phone held above her face. |
+| C | place | 한남동 — A hillside street of pale-walled galleries and brunch cafes with glass fronts. |
+| C | place | 지하철 2호선 — A Seoul subway car and platform of steel handrails and glass doors. |
+| C | place | KTX — A high-speed train window seat with fields outside streaking past the glass. |
+| D | place | 택시 뒷좌석 — A taxi back seat at night with the city moving past the window. |
+| D | place | 포장마차 — A street food tent with plastic stools and a steaming counter under the canopy against the dark street. |
+| D | place | 침대 — A bedroom with rumpled white bedding. |
 
 ## Light
 | 갈래 | 슬롯 | 줄 |
@@ -149,8 +149,8 @@
 ## Optics
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
-| A, D | body | iPhone 15 Pro — The front TrueDepth camera, a small built-in lens of about 23mm equivalent, renders with crisp computational sharpness, so every hair edge and the nose bridge read clean and bright highlights clip. |
-| B | body | iPhone 16 Pro — The rear main camera, a small built-in lens of about 24mm equivalent, renders the mirror scene with crisp computational sharpness, so the room, the phone and the face in the glass all read clean. |
+| A, D | body | iPhone 15 Pro — The front TrueDepth camera, a small built-in lens of about 23mm equivalent. |
+| B | body | iPhone 16 Pro — The rear main camera, a small built-in lens of about 24mm equivalent. |
 | C | wide | 초광각 — The ultra-wide camera, about 13mm equivalent, stretches the frame edges and exaggerates near-far scale while everything from her hand to the far street stays sharp. |
 | A | hdr | 스마트 HDR — Multi-frame HDR balances the bright window and her face in one frame, lifting the shadows and flattening contrast a little. |
 | A | motion | 라이브 포토 — A still from a live clip catches slight motion blur in a hand or swinging hair while the face stays sharp. |
@@ -159,13 +159,13 @@
 | B, C | highlight | 하이라이트 날림 — Bright patches such as a lamp or window hotspot (a flash hotspot only when a direct flash fires) and a clipped sky push to flat white with softly bleeding edges. |
 | A, B, C | grain | 디지털 노이즈 — Very fine digital noise sits only in the darkest parts of the frame. |
 
-## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 요청의 장소·소품·시간대·의상 가운데 둘 이상이 그 세트의 단서와 같으면 통째로 쓰고, 세트 값은 고정 사실보다 먼저다. 규칙은 image-brief.md §4 '룩 카드' 4항과 '비워 둔 층')
+## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 세트를 쓰는 조건은 규칙 4항이 정하고, 세트 값은 고정 사실보다 먼저다. 규칙은 image-brief.md §4 '룩 카드' 4항과 '비워 둔 층')
 
 이 카드의 색온도 숫자(세트의 5200K 같은 값)는 Iris 프리셋을 옮긴 이 룩의 연출 값이고 측정값이 아니다. 프롬프트의 영어 줄에는 숫자 대신 색 말(soft neutral daylight, cold blue-white screen light)로 쓴다.
 
 | 세트 | 갈래 | 묶음 |
 |---|---|---|
-| S1 성수동 전면 셀카 (滤镜 #061. 단서: 장소 성수동 콘크리트 카페 / 소품 - / 시간대 낮 확산광 / 의상 스퀘어넥 니트 (매체: 전면 카메라)) | A | Hair 검은 긴 생머리, 풍성한 어두운 머리가 어깨 뒤와 가슴 옆으로, 한쪽은 귀 뒤로 / Outfit 스퀘어넥(숯회색 슬림 긴소매 니트) / Props 은 물방울 펜던트(아주 가는 은 체인) / Scene 클린 콘크리트 카페, 노출 콘크리트와 부드러운 확산광의 조용한 예술 공간, 잡동사니 없음 / Light 5200K 낮의 확산광 / Optics iPhone 15 Pro 전면 TrueDepth, 머리카락 결과 콧대가 선명하다 / Pose 전면 카메라, 몸은 3/4로 비스듬히 / Camera 미디엄 클로즈업, 팔 길이 / Expression 무심히 돌아보는 눈빛, 맑은 눈으로 렌즈를 돌아봄 |
+| S1 성수동 전면 셀카 (滤镜 #061. 단서: 장소 성수동 콘크리트 카페 / 소품 - / 시간대 낮 확산광 / 의상 스퀘어넥 니트 (매체: 전면 카메라)) | A | Hair 검은 긴 생머리, 풍성한 어두운 머리가 어깨 뒤와 가슴 옆으로, 한쪽은 귀 뒤로 / Outfit 스퀘어넥(숯회색 슬림 긴소매 니트) / Props 은 물방울 펜던트(아주 가는 은 체인) / Scene 클린 콘크리트 카페, 노출 콘크리트의 조용한 예술 공간, 잡동사니 없음 / Light 5200K 낮의 확산광 / Optics iPhone 15 Pro 전면 TrueDepth, 머리카락 결과 콧대가 선명하다 / Pose 전면 카메라, 몸은 3/4로 비스듬히 / Camera 미디엄 클로즈업, 팔 길이 / Expression 무심히 돌아보는 눈빛, 맑은 눈으로 렌즈를 돌아봄 |
 | S2 거울 플래시 (滤镜 #062. 단서: 장소 피팅룸 거울 앞(거울 셀카) / 소품 플래시 / 시간대 - / 의상 모카 캐시미어 니트(OOTD)) | B | Hair 검은 긴 생머리, 한쪽을 귀 뒤로 / Outfit 브이넥 캐시미어 니트(모카 브라운, 깊은 V) / Scene 피팅룸 거울 앞 OOTD 기록 / Light 5600K 후면 LED 플래시가 거울에서 육각 별빛으로 터지고 얼굴은 밝다 / Optics iPhone 16 Pro 후면 카메라 / Pose 플래시 거울 셀카, 거울 속 렌즈 쪽을 보며 / Expression 차가운 눈길, 플래시 눈부심 너머로 자신을 본다 / Camera 중앙 구도, 거울 속 방까지 모두 선명 |
 | S3 초광각 거리 (滤镜 #063. 단서: 장소 한남동 길거리 / 소품 - / 시간대 - / 의상 귀리색 블레이저 (매체: 초광각, 팔을 높이 든 셀카)) | C | Hair 검은 긴 생머리 / Outfit 오버핏(연한 귀리색 블레이저, 안은 검은 튜브탑, 열린 깃으로 쇄골과 목선) / Scene 한남동, 서울 거리의 반신 스냅 / Light 5000K 낮빛 / Optics 초광각, 가장자리가 가볍게 늘어난다(이 세트의 렌즈 줄은 이 `초광각` 하나이고 쌍 7의 Camera 문장은 렌즈 이름 없이 구도만 쓴다) / Pose 위에서 찍는 셀카, 팔을 높이 들어 / Camera 하이앵글, 머리가 조금 크게 보이고 거리가 모두 선명 / Expression 무심함, 젊고 활기찬 얼굴 / 쌍 7만(다른 C 쌍을 붙이지 않는다) |
 | S4 어두운 택시 (滤镜 #064. 단서: 장소 택시 뒷좌석 / 소품 - / 시간대 심야 귀갓길 / 의상 보트넥 니트 (매체: 야간 모드 끔)) | D | Hair 검은 긴 생머리, 시트 헤드레스트에 눌려 한쪽이 납작하다 / Outfit 보트넥(검은 슬림 긴소매 니트) / Scene 택시 뒷좌석, 심야 귀갓길 / Light 5400K 어두운 차 안, 창밖 도시 빛이 얼굴을 스친다 / Optics 고감도 노이즈, 야간 모드를 끄고 굵은 노이즈와 약한 뭉개짐을 남긴다 / Pose 전면 카메라, 몸을 시트에 묻고 / Camera 팔 길이 전면 카메라, 가까운 창과 먼 불빛이 함께 선명 / Expression 졸린 눈, 피곤한데 맑은 얼굴 / 쌍 없음(세트의 Pose·Camera를 그대로 쓰고 쌍 10~12를 붙이지 않는다) |

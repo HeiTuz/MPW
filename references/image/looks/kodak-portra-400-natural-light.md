@@ -121,18 +121,18 @@ S6(블루아워)는 `style-look` 줄 대신 D의 `style-look-dusk` 줄을 쓰고
 
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
-| A | place | SoHo — Cast-iron facades and a cobbled corner under a flat grey sky, with pale granite sidewalks lifting soft light upward. |
-| A | place-cafe | Sidewalk Cafe Patio — An outdoor café patio of poured concrete and slim wooden chairs beside a sunny sidewalk, a canvas awning casting open shade next to a patch of direct sun. |
-| A | place-sun | West Hollywood — Low pastel buildings and palm trunks line a sunny sidewalk in clear daylight. |
-| B | place | Manhattan Loft — A high-rise apartment room beside a tall east-facing window with a white sheer curtain, soft morning daylight spreading over the floor and walls. |
-| B | place-bungalow | California Bungalow — A small older California house with a wooden floor, plain white walls and wooden blinds that cut morning sun into thin stripes. |
+| A | place | SoHo — Cast-iron facades and a cobbled corner beside pale granite sidewalks. |
+| A | place-cafe | Sidewalk Cafe Patio — An outdoor café patio of poured concrete and slim wooden chairs beside a sidewalk, with a canvas awning over the tables. |
+| A | place-sun | West Hollywood — Low pastel buildings and palm trunks line a sidewalk. |
+| B | place | Manhattan Loft — A high-rise apartment room beside a tall east-facing window with a white sheer curtain. |
+| B | place-bungalow | California Bungalow — A small older California house with a wooden floor, plain white walls and wooden blinds on the windows. |
 | C | place | Central Park Mall — A tunnel of arching elm trees drops yellow leaves over a stone promenade. |
 | C | place-mist | Hudson Valley — A cedar cabin deck looks over a river valley filled with morning mist. |
 | C | place-campus | Harvard Yard — Red brick halls with white trim and ivy on the walls stand behind tall elms and fallen leaves on the lawn. |
 | C | place-street | Beacon Hill — A narrow cobblestone lane of red-brick townhouses with black iron lanterns and damp stones. |
-| D | place | Orange Grove — Rows of fruit-heavy orange trees with warm light broken into soft spots between the leaves. |
-| D | place-bluff | coastal bluff meadow — A grassy clifftop with wildflowers and the sea behind it under soft daylight. |
-| D | place-dusk | Griffith Observatory — A white domed observatory on a hillside with a marble balustrade, the city spreading out below in the last blue light. |
+| D | place | Orange Grove — Rows of fruit-heavy orange trees with green leaves. |
+| D | place-bluff | coastal bluff meadow — A grassy clifftop with wildflowers and the sea behind it. |
+| D | place-dusk | Griffith Observatory — A white domed observatory on a hillside with a marble balustrade, the city spreading out below. |
 
 ## Light
 | 갈래 | 슬롯 | 줄 |
@@ -157,11 +157,11 @@ S6(블루아워)는 `style-look` 줄 대신 D의 `style-look-dusk` 줄을 쓰고
 | 전부 | tone | Warm Peach Tones — Skin leans toward a healthy peach glow with a faint pink flush in the cheeks and soft lavender-grey shadows. |
 | B, D | exposure | Overexposed Highlights — The negative is exposed a little generously, so highlights push toward paper-white yet still roll off with no hard clipped edge while the midtones stay airy. |
 | C | color | Muted Low-Saturation — Colors pull back to soft greys, beiges and faded greens with gently lowered contrast. |
-| A, C | body | Leica M6 — A compact 35mm rangefinder body, small and quiet in the hand, so candid frames stay unobtrusive. |
-| B | body | Contax 645 — A medium-format frame with very smooth tone transitions and a silky shallow focus plane. |
-| C | body | Mamiya 7 II — A medium-format rangefinder frame with extremely sharp, gentle-contrast clarity across the whole scene. |
+| A, C | body | Leica M6 — A compact 35mm rangefinder body, small and quiet in the hand. |
+| B | body | Contax 645 — A medium-format frame. |
+| C | body | Mamiya 7 II — A medium-format rangefinder frame. |
 | D | body | Pentax 67 — A 6x7 medium-format SLR body with a large negative. |
-| D | body-tlr | Rolleiflex 2.8F — A twin-lens frame seen from a slightly low waist-level position, with fine tonal steps and crisp center sharpness. |
+| D | body-tlr | Rolleiflex 2.8F — A twin-lens frame seen from a slightly low waist-level position. |
 | A | lens | Summicron 50mm f/2 — A standard lens with natural perspective, clean detail and a softly blurred background. |
 | A, C | lens-wide | Summicron 35mm f/2 — A wide-normal lens keeps a little of the street or colonnade in the frame with a soft, smooth falloff behind her. |
 | D | lens-medium | Zeiss Planar 80mm f/2.8 — A medium-format portrait lens (the Rolleiflex 2.8F's own lens) gives fine detail at the focus point and a slow, smooth fall into the soft background. |
@@ -169,18 +169,18 @@ S6(블루아워)는 `style-look` 줄 대신 D의 `style-look-dusk` 줄을 쓰고
 | C | lens-medium | Mamiya N 80mm f/4 — The standard 80mm lens of the Mamiya 7 II holds clean, even sharpness across the frame with a gentle, flat falloff behind her. |
 | D | lens-medium | SMC Takumar 105mm f/2.4 — A 105mm Pentax 67 portrait lens gives very shallow focus and a slow, creamy fall into the background. |
 
-## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 요청의 장소·소품·시간대·의상 가운데 둘 이상이 그 세트의 단서와 같으면 통째로 쓰고, 세트 값은 고정 사실보다 먼저다. 규칙은 image-brief.md §4 '룩 카드' 4항과 '비워 둔 층')
+## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 세트를 쓰는 조건은 규칙 4항이 정하고, 세트 값은 고정 사실보다 먼저다. 규칙은 image-brief.md §4 '룩 카드' 4항과 '비워 둔 층')
 
 묶음 끝의 `쌍` 값이 있는 세트는 그 번호의 쌍하고만 짝이고 같은 갈래의 다른 쌍 Pose를 붙이지 않는다.
 
 | 세트 | 갈래 | 묶음 |
 |---|---|---|
 | S1 Manhattan Window Morning (滤镜 05 #071) | B | 단서: 장소 맨해튼 로프트 동향 창가·흰 시어 커튼 / 소품 - / 시간대 아침 / 의상 흰 나이트셔츠 / Hair Golden Balayage, 짙은 금빛 긴 머리가 가볍게 말려 흰 면 나이트셔츠 어깨 위에 내려앉음 / Outfit Cotton Nightshirt, 흰 면 나이트셔츠 / Scene Manhattan Loft, 동향 통창과 흰 시어 커튼, 창가에 앉음 / Light Window Light 5200K, 커튼을 거친 아침 확산광이 얼굴과 쇄골을 감싸고 딱딱한 그림자가 없음 / Optics Contax 645 + Zeiss Planar 80mm f/2, Kodak Portra 400(320으로 노출), Highlight Roll-off, 아주 고운 입자 / Expression 창의 빛 쪽으로 고개를 돌려 부드럽게 웃음 |
-| S2 SoHo Sidewalk Bounce (滤镜 05 #073) | A | 단서: 장소 소호 화강암 인도 / 소품 - / 시간대 흐린 낮 / 의상 검은 울 블레이저 / Hair sleek bob, 짙은 밤색 단발을 귀 뒤로 넘김 / Outfit Wool Blazer, 검은 싱글 울 블레이저와 흰 티 / Scene SoHo, 회색 화강암 인도와 자갈 모퉁이, 흐린 하늘 / Light Sidewalk Bounce Light 5600K, 인도 반사가 턱·쇄골·눈두덩을 채움 / Optics Hasselblad 500C/M + Zeiss Planar 80mm f/2.8, Kodak Portra 400, 중형이라 입자가 거의 없음 / Expression Cool Gaze, 차분하고 지적인 응시 / Pose Walking Shot, 모퉁이를 걸어 지나감 |
+| S2 SoHo Sidewalk Bounce (滤镜 05 #073) | A | 단서: 장소 소호 화강암 인도 / 소품 - / 시간대 흐린 낮 / 의상 검은 울 블레이저 / Hair sleek bob, 짙은 밤색 단발을 귀 뒤로 넘김 / Outfit Wool Blazer, 검은 싱글 울 블레이저와 흰 티 / Scene SoHo, 회색 화강암 인도와 자갈 모퉁이 / Light Sidewalk Bounce Light 5600K, 인도 반사가 턱·쇄골·눈두덩을 채움 / Optics Hasselblad 500C/M + Zeiss Planar 80mm f/2.8, Kodak Portra 400, 중형이라 입자가 거의 없음 / Expression Cool Gaze, 차분하고 지적인 응시 / Pose Walking Shot, 모퉁이를 걸어 지나감 |
 | S3 White Shirt Patio (滤镜 05 #076) | A | 단서: 장소 소호 카페 야외 좌석 / 소품 - / 시간대 한낮 / 의상 흰 옥스퍼드 셔츠·청바지 / Hair 짙은 갈색 부드러운 단발을 귀 뒤로 / Outfit Oxford Shirt, 큰 흰 면 셔츠 단추 셋을 풀고 + Denim Jeans, 워시드 / Scene Sidewalk Cafe Patio, 콘크리트 카페 야외 좌석 / Light Noon Sunlight 5500K, 흰 셔츠에 직사해도 면의 올이 살아 있고 얼굴은 입체적으로 밝음 / Optics Contax T2 + Zeiss Sonnar 38mm f/2.8, Kodak Portra 400, Highlight Roll-off / Expression 한 손으로 턱을 괴고 돌아보며 편안히 / Pose Elbow Prop |
 | S4 Central Park Autumn Mall (滤镜 05 #077) | C | 단서: 장소 센트럴파크 몰 느릅나무 낙엽길 / 소품 - / 시간대 가을 낮 / 의상 카멜 코트 / Hair Golden Balayage, 짙은 금빛 곧은 긴 머리가 카멜 코트 어깨 위로 / Outfit Camel Coat, 카멜 울 트렌치 코트 / Scene Central Park Mall, 노란 느릅나무 가로수 길과 푹신한 낙엽 / Light dappled light 5000K, 노란 수관을 지난 빛이 석판 길과 얼굴에 얼룩지고 바람이 머리카락을 살짝 흔듦 / Optics Leica M-A + Summicron 35mm f/2, Kodak Portra 400, 노란 낙엽과 혈색이 균형 / Expression Pensive Gaze, 지적이고 부드러운 표정 / Pose Walking Shot, 느릅나무 길을 걸음 |
 | S5 Hudson Valley Mist (滤镜 05 #081) | C | 단서: 장소 허드슨 밸리 안개 낀 강·삼나무 데크 / 소품 머그잔 / 시간대 새벽 안개 / 의상 울 숄 / Hair Golden Balayage, 깊은 금빛 긴 머리를 어깨 뒤로 / Outfit shawl, 두꺼운 짙은 회색 스코틀랜드 울 프린지 숄, 안에 상아색 립 탱크와 열어 입은 차콜 블레이저 / Props Ceramic Diner Mug, 김 나는 도자 머그 / Scene Hudson Valley, 삼나무 데크와 안개 낀 강 / Light Atmospheric Haze 5100K, 새벽 안개가 대비를 눌러 줌 / Optics Mamiya 7 II + Mamiya N 80mm f/4, Kodak Portra 400, 옅은 파스텔 녹색 / Expression Coffee Cup Contemplation / Pose Mug Steam Blow, 맨발로 데크에 서서 안개를 봄 / 쌍 8만(쌍 9의 책·기둥 포즈는 붙이지 않는다) |
-| S6 Griffith Blue Hour (滤镜 05 #085) | D | 단서: 장소 그리피스 천문대 대리석 난간·로스앤젤레스 야경 / 소품 - / 시간대 블루 아워 / 의상 캐시미어 니트 / Hair Voluminous Curls, 깊은 금빛 큰 컬이 저녁 바람에 날림 / Outfit cashmere knit, 상아색 오버사이즈 캐시미어 / Scene Griffith Observatory, 흰 대리석 난간과 놋쇠 관람 망원경, 아래로 로스앤젤레스의 불빛 / Light Blue Hour 4000~6500K, 짙은 남색 하늘과 따뜻한 금빛 도시 불빛이 균형 / Optics Pentax 67 II + SMC Takumar 105mm f/2.4, Kodak Portra 400, 차가운 파랑과 따뜻한 금빛이 한 장에 / Expression Sunset Serene Grin, 돌아보며 은은한 미소 / Pose Over-the-Shoulder Glance, 난간에 기대어 돌아봄 / 쌍 11만(난간이 있는 쌍이다. 쌍 10 Twirl 등 다른 D 쌍은 붙이지 않는다) |
+| S6 Griffith Blue Hour (滤镜 05 #085) | D | 단서: 장소 그리피스 천문대 대리석 난간·로스앤젤레스 야경 / 소품 - / 시간대 블루 아워 / 의상 캐시미어 니트 / Hair Voluminous Curls, 깊은 금빛 큰 컬이 저녁 바람에 날림 / Outfit cashmere knit, 상아색 오버사이즈 캐시미어 / Scene Griffith Observatory, 흰 대리석 난간과 놋쇠 관람 망원경, 아래로 로스앤젤레스 시가지 / Light Blue Hour 4000~6500K, 짙은 남색 하늘과 따뜻한 금빛 도시 불빛이 균형 / Optics Pentax 67 II + SMC Takumar 105mm f/2.4, Kodak Portra 400, 차가운 파랑과 따뜻한 금빛이 한 장에 / Expression Sunset Serene Grin, 돌아보며 은은한 미소 / Pose Over-the-Shoulder Glance, 난간에 기대어 돌아봄 / 쌍 11만(난간이 있는 쌍이다. 쌍 10 Twirl 등 다른 D 쌍은 붙이지 않는다) |
 
 ## 포즈·구도 쌍
 | 번호 | 갈래 | Pose | Camera |

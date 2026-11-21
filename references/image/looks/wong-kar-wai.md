@@ -111,15 +111,15 @@
 ## Scene
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
-| A | place | 重庆大厦 — A tight corridor of small shops and mixed signs, reflective floors and uneven light bouncing between close walls. |
+| A | place | 重庆大厦 — A tight corridor of small shops and mixed signs, reflective floors and close walls. |
 | A | place | 骑楼 — A covered shop arcade along an old Kowloon street, tiled square pillars and a closed rolling shutter. |
-| A | place | 茶餐厅 — A Hong Kong diner with green-white mosaic tiles, booth seats and green-tinged fluorescent light over warm lamps. |
+| A | place | 茶餐厅 — A Hong Kong diner with green-white mosaic tiles, and booth seats. |
 | A, C | background | 九龙霓虹 — Dense overlapping neon signs stacked over a narrow old street, red and green tubes clashing in the haze, every sign blurred past reading. |
-| B | place | stone stair alley — A narrow stone staircase between weathered plaster walls, lit from above by one old street lamp. (滤镜 #044) |
+| B | place | stone stair alley — A narrow stone staircase between weathered plaster walls. (滤镜 #044) |
 | B | place | 金雀餐厅 — A deep red high-backed leather booth under brass wall sconces and green floral wallpaper. (风格 #091) |
-| B | place | 唐楼 — A dim tenement corridor with green wooden louvres and peeling paint. (滤镜 #055) |
-| C | place | 快餐店 — A fluorescent-lit booth by a dark window, hard white light on red plastic seats. (滤镜 #048) |
-| D | place | 绿色百叶窗 — A warm-lit room behind half-closed green wooden louvres. (滤镜 #047) |
+| B | place | 唐楼 — A tenement corridor with green wooden louvres and peeling paint. (滤镜 #055) |
+| C | place | 快餐店 — A booth by a window with red plastic seats. (滤镜 #048) |
+| D | place | 绿色百叶窗 — A room behind half-closed green wooden louvres. (滤镜 #047) |
 
 ## Light
 | 갈래 | 슬롯 | 줄 |
@@ -147,7 +147,7 @@
 | A, B, D | grain | 胶片颗粒 — Fine, even 35mm film grain sits across the whole frame, slightly heavier in the shadows. |
 | C | grain | 胶片颗粒 — Coarse, visible film grain across the whole frame, heaviest in the dark window. |
 
-## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 요청의 장소·소품·시간대·의상 가운데 둘 이상이 그 세트의 단서와 같으면 통째로 쓰고, 세트 값은 고정 사실보다 먼저다. 세트를 고르면 갈래는 그 세트의 갈래 열이다. 단서는 네 칸으로 판정하고 찾기용 낱말이 아니라 장소·소품·시간대·의상이 맞는지로 본다. 묶음 속 K 숫자는 Iris 프리셋의 연출 값이고 프롬프트 문장에는 색으로 옮긴다. 규칙은 image-brief.md §4 '룩 카드' 4항과 '비워 둔 층')
+## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 세트를 쓰는 조건은 규칙 4항이 정하고, 세트 값은 고정 사실보다 먼저다. 세트를 고르면 갈래는 그 세트의 갈래 열이다. 단서는 네 칸으로 판정하고 찾기용 낱말이 아니라 장소·소품·시간대·의상이 맞는지로 본다. 묶음 속 K 숫자는 Iris 프리셋의 연출 값이고 프롬프트 문장에는 색으로 옮긴다. 규칙은 image-brief.md §4 '룩 카드' 4항과 '비워 둔 층')
 | 세트 | 갈래 | 묶음 |
 |---|---|---|
 | S1 公寓客厅 (滤镜 #041) | B | 단서: 장소 아파트 거실·녹색 가죽 소파 / 소품 위스키 잔·탁상 램프 / 시간대 밤 실내 / 의상 와인색 치파오 / Hair 港风大波浪, 짙고 풍성한 검은 곱슬이 한쪽 어깨로 / Lip 丝绒唇 / Outfit 改良旗袍(와인색 실크 벨벳) / Props whisky glass / Scene 녹색 가죽 소파 옆 오래된 홍콩 아파트 거실 / Light 탁상 텅스텐 등이 옆얼굴을, 그림자는 녹색 쪽으로 / Optics Kodak Vision3 500T, 胶片颗粒 / Expression 렌즈 밖을 보는 깊은 시선 |

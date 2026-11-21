@@ -121,22 +121,22 @@
 ## Scene
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
-| A | place | 代官山 — A quiet slope of low boutiques and a café terrace under tall trees, the pale pavement dappled with leaf shadow beside a tall clear shop window. (风格/01 #009, 滤镜 #021 #033) |
+| A | place | 代官山 — A quiet slope of low boutiques and a café terrace under tall trees, the pale pavement beside a tall clear shop window. (风格/01 #009, 滤镜 #021 #033) |
 | A | place | 表参道 — A wide avenue of tall zelkova trees beside clean concrete and glass facades, gray-white paving below an open sky. (风格/01 #003, 滤镜 #038) |
 | A | storefront | レコード屋 — A small record shop front with wooden crates of LPs by the door and a shallow awning over the porch of a side street. (滤镜 #022) |
 | A | structure | 歩道橋 — A concrete pedestrian bridge with a steel railing above a busy crossing, the crowd flowing below and a wide skyline opening ahead. (滤镜 #023) |
-| A | structure | ミヤシタパーク — A rooftop park with long concrete steps and a sunlit wall, the late sun laying long clean shadows across the stairs. (风格/01 #016, 滤镜 #032) |
+| A | structure | ミヤシタパーク — A rooftop park with long concrete steps and a wall. (风格/01 #016, 滤镜 #032) |
 | B | place | 新宿御苑 — A wide morning lawn edged by tall old trees, pale grass and dark trunks fading into cool green. (滤镜 #025) |
 | B | place | 坂道 — A quiet gentle slope lined with low buildings and green hedges that dissolve into soft blocks of color behind her. (滤镜 #026) |
-| B | shrine | 代々木八幡宮 — A shrine approach of old stone steps climbing under dense old trees, the stone mottled with moss and leaf shadow. (滤镜 #040) |
-| C | place | 枯山水 — A temple garden of raked white gravel with a few placed stones, still and evenly bright. (滤镜 #028) |
-| C | veranda | 縁側 — A worn wooden veranda on the edge of a garden, its pale boards shaded by deep eaves. (滤镜 #028) |
-| C | place | 町屋 — A quiet room of an old wooden townhouse with a tatami floor and paper screens glowing white from the garden side. (滤镜 #029) |
-| C | stair | 螺旋階段 — A stone spiral staircase inside a classical building, its pale curved balustrade drawing one smooth curve under a soft skylight. (滤镜 #030) |
+| B | shrine | 代々木八幡宮 — A shrine approach of old stone steps climbing under dense old trees, the stone mottled with moss. (滤镜 #040) |
+| C | place | 枯山水 — A temple garden of raked white gravel with a few placed stones, still and quiet. (滤镜 #028) |
+| C | veranda | 縁側 — A worn wooden veranda on the edge of a garden, its pale boards under deep eaves. (滤镜 #028) |
+| C | place | 町屋 — A quiet room of an old wooden townhouse with a tatami floor and paper screens on the garden side. (滤镜 #029) |
+| C | stair | 螺旋階段 — A stone spiral staircase inside a classical building, its pale curved balustrade drawing one smooth curve. (滤镜 #030) |
 | C | cafe | 純喫茶 — A window seat in an old kissaten with a dark wood table, thick old window glass and a quiet mid-afternoon street outside. (滤镜 #024) |
 | D | place | 七里ヶ浜 — A long stretch of Shonan coast with a low concrete seawall, dark sand and a wide Pacific horizon. (滤镜 #027) |
 | D | place | 湘南 — A seaside road running along the open water with a small vintage green tram passing in the distance. (滤镜 #034) |
-| D | shore | 鎌倉 — A bright sand beach where small waves break and spray around ankles under a strong summer sun. (风格/04 #061, 滤镜 #035) |
+| D | shore | 鎌倉 — A pale sand beach where small waves break and spray around ankles. (风格/04 #061, 滤镜 #035) |
 
 ## Light
 | 갈래 | 슬롯 | 줄 |
@@ -164,23 +164,23 @@
 | C | stock | プロビア 100F — Fine-grain slide film with clean whites and smooth tonal gradation from skin to shadow, the colors accurate and quiet. (滤镜 #028 #030 #037) |
 | C | stock | フジカラー PRO 400H — Pale airy color with soft teal-green highlights and creamy skin highlights in a high-key exposure. (滤镜 #029) |
 | D | stock | Kodak Portra 400 — A warm, low-contrast negative look with creamy skin highlights, soft highlight roll-off and fine even grain. (滤镜 #027) |
-| A | camera | CONTAX T3 — A titanium fixed-lens compact with Zeiss T* coating, drawn here with a crisp center, natural color and gently contrasty skin, the sharp edge of a face against a softly melting background. (滤镜 #021) |
-| A | camera | コンタックス G2 — A Contax G rangefinder body drawn here with very high sharpness even at open aperture, clean saturated color and a smooth soft background. (滤镜 #038) |
-| B | camera | オリンパス OM-1 — A compact 35mm SLR body shot wide open: a gentle glow in the highlights and background lights melting into large soft discs. (滤镜 #025) |
-| C | camera | Hasselblad 503CW — A square 6x6 medium-format frame with Planar 80mm clarity, transparent color, smooth skin and calm edges. (滤镜 #028) |
-| C | camera | Rolleiflex 2.8F — A waist-level twin-lens square frame with a Planar 80mm view, fine tonal gradation, crisp center sharpness and a slightly low, respectful viewpoint. (滤镜 #030) |
-| D | camera | ペンタックス 67 — A 6x7 medium-format look with a very thin focus plane that lifts her off the background and, in this look, a faint warm cast from the old glass. (滤镜 #027) |
-| D | camera | Hasselblad XPan — A panoramic 65:24 frame nearly twice the width of 35mm through a 45mm lens, wide enough to hold the figure, the road and the sea together. (滤镜 #034) |
+| A | camera | CONTAX T3 — A titanium fixed-lens compact with Zeiss T* coating. (滤镜 #021) |
+| A | camera | コンタックス G2 — A Contax G rangefinder body. (滤镜 #038) |
+| B | camera | オリンパス OM-1 — A compact 35mm SLR body shot wide open. (滤镜 #025) |
+| C | camera | Hasselblad 503CW — A square 6x6 medium-format frame with a Planar 80mm lens. (滤镜 #028) |
+| C | camera | Rolleiflex 2.8F — A waist-level twin-lens square frame with a Planar 80mm lens. (滤镜 #030) |
+| D | camera | ペンタックス 67 — A 6x7 medium-format film body. (滤镜 #027) |
+| D | camera | Hasselblad XPan — A panoramic 65:24 frame nearly twice the width of 35mm through a 45mm lens. (滤镜 #034) |
 | A | vignette | 周辺減光 — The corners fall a little darker than the center without a heavy tunnel, like the mild vignetting of a compact's lens. (滤镜 #022 #023) |
 | 전부 | grain | 粒状感 — Very fine, even film grain across the whole frame, barely visible in the midtones and slightly heavier in the shadows. |
 
-## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 요청의 장소·소품·시간대·의상 가운데 둘 이상이 그 세트의 단서와 같으면 통째로 쓰고, 세트 값은 고정 사실보다 먼저다. 규칙은 image-brief.md §4 '룩 카드' 4항과 '비워 둔 층')
+## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 세트를 쓰는 조건은 규칙 4항이 정하고, 세트 값은 고정 사실보다 먼저다. 규칙은 image-brief.md §4 '룩 카드' 4항과 '비워 둔 층')
 켈빈 숫자(5400K 등)는 Iris 프리셋이 적은 연출 값이고 실측이 아니다. 이 룩에서 그 빛이 그렇게 보이게 쓰는 값이다.
 
 | 세트 | 갈래 | 묶음 |
 |---|---|---|
-| S1 代官山 カフェテラス (滤镜 #021) | A | 단서: 장소 다이칸야마 카페 테라스, 나무 그늘 / 소품 문고본 / 시간대 오후 / 의상 린넨 셔츠 / Hair 濡れ髪의 검은 단발, シースルーバング / Lip 素の唇(촉촉한 맨입술) / Outfit シアーリネン(흰 린넨 셔츠) / Props 文庫本 / Scene 代官山 카페의 야외 목재석, 나무 그늘 / Light 5400K 오후, 木漏れ日 / Optics CONTAX T3 + プロビア 100F, 선명한 가장자리와 부드럽게 녹는 배경(Iris 원본의 50mm 얕은 심도는 컴팩트 35mm에 맞춰 중간 깊이로 바꿨다) / Expression 無防備, 책 읽던 손을 멈추고 조용히 본다 / Pose 斜め座り, 테이블 곁 / Camera 35mm, 테이블 높이에서 가까이 |
-| S2 渋谷 歩道橋 (滤镜 #023) | A | 단서: 장소 시부야 육교, 난간 / 소품 - / 시간대 맑은 낮 / 의상 트렌치코트 / Hair 濡れ髪의 검은 단발, シースルーバング / Lip 素の唇 / Outfit トレンチコート(올리브색 얇은 코트) / Scene 歩道橋, 시부야 역 앞의 인파가 아래로 흐른다 / Light 5500K 맑은 낮빛, 透明感 / Optics ミノルタ TC-1 + フジカラー 100, 周辺減光(원본 G-Rokkor 28mm f/3.5 렌즈의 약한 가장자리 광량 저하) / Expression 芯のある眼差し, 도시의 바람을 맞는 단정한 눈빛 / Pose ポケットイン, 난간 곁 / Camera 28mm를 2.5m 이상 물러서서, 三分割構図 |
+| S1 代官山 カフェテラス (滤镜 #021) | A | 단서: 장소 다이칸야마 카페 테라스, 나무 그늘 / 소품 문고본 / 시간대 오후 / 의상 린넨 셔츠 / Hair 濡れ髪의 검은 단발, シースルーバング / Lip 素の唇(촉촉한 맨입술) / Outfit シアーリネン(흰 린넨 셔츠) / Props 文庫本 / Scene 代官山 카페의 야외 목재석과 나무 / Light 5400K 오후, 木漏れ日 / Optics CONTAX T3 + プロビア 100F, 선명한 가장자리와 중간 깊이에서 부드럽게 녹는 배경 / Expression 無防備, 책 읽던 손을 멈추고 조용히 본다 / Pose 斜め座り, 테이블 곁 / Camera 35mm, 테이블 높이에서 가까이 |
+| S2 渋谷 歩道橋 (滤镜 #023) | A | 단서: 장소 시부야 육교, 난간 / 소품 - / 시간대 맑은 낮 / 의상 트렌치코트 / Hair 濡れ髪의 검은 단발, シースルーバング / Lip 素の唇 / Outfit トレンチコート(올리브색 얇은 코트) / Scene 歩道橋, 시부야 역 앞의 인파가 아래로 흐른다 / Light 5500K 맑은 낮빛, 透明感 / Optics ミノルタ TC-1 + フジカラー 100, G-Rokkor 28mm f/3.5 렌즈의 약한 周辺減光 / Expression 芯のある眼差し, 도시의 바람을 맞는 단정한 눈빛 / Pose ポケットイン, 난간 곁 / Camera 28mm를 2.5m 이상 물러서서, 三分割構図 |
 | S3 下北沢 深夜ラーメン (滤镜 #031) | A | 단서: 장소 시모키타자와 라멘집 앞, 노렌 / 소품 - / 시간대 심야 / 의상 후드티 / Hair 濡れ髪의 검은 단발 / Lip 素の唇 / Outfit 헐렁한 フーディー / Scene ラーメン屋 앞 붉은 暖簾, 김이 오른다 / Light ハレーション, 4500K 가로등과 가게 불빛(이 세트만 밤이다) / Optics コニカ ヘキサー + ナチュラ 1600, 굵은 입자(고정 사실 grain의 예외), 플래시 없음 / Expression いたずらっぽい笑顔, 친구의 말에 불쑥 번진 웃음 / Pose 壁もたれ / Camera 35mm, 노렌 가장자리가 만든 좁은 틀 |
 | S4 新宿御苑 朝 (滤镜 #025) | B | 단서: 장소 신주쿠교엔 아침 숲 / 소품 - / 시간대 아침 / 의상 흰 니트 / Hair 外ハネボブ, シースルーバング / Lip 素の唇 / Cheek 頬染め / Outfit 흰 ローゲージニット / Scene 新宿御苑 아침 숲, 풀밭 / Light 逆光, 5200K 아침빛이 만든 무수한 광륜 / Optics オリンパス OM-1(Zuiko 50mm f/1.2 개방) + アスティア 100F, 하이라이트가 비눗방울처럼 번지는 구면수차 / Expression 朝露の瞳, 부드러운 미소로 돌아본다 / Pose 振り返り / Camera Medium Close-Up, 개방 조리개 |
 | S5 枯山水 縁側 (滤镜 #028) | C | 단서: 장소 가레산스이 정원 툇마루 / 소품 - / 시간대 낮 / 의상 흰 린넨 원피스 / Hair 前下がりボブ, シースルーバング / Lip 素の唇 / Base きめ細かなマット肌 / Outfit ホワイトリネンワンピース(흰 면·마 장원피스) / Pose 正座 / Scene 京都 선사의 枯山水, 흰 모래와 돌이 놓인 정원의 縁側 / Light 처마가 거른 부드러운 낮빛, 5500K / Optics Hasselblad 503CW + プロビア 100F, 6x6 정사각 / Expression 無垢な静寂 / Camera スクエア構図, 여백이 큰 정사각 화면 |
@@ -207,3 +207,7 @@
 
 ## 출처
 Iris (noahvisualsx/Iris b83de4c, MIT, © 2026 noahvisuals): 日本/滤镜/02 #021–040, 风格/01 #003 #009 #016, 风格/04 #061, 穿搭/05 #072, 穿搭/06 #093 #096, 发型与妆容/01 #001 #003 #006, 发型与妆容/03 #022. 낱말과 구성은 참고했고 문장은 MPW용으로 새로 썼다. 라이선스 전문은 [LICENSE-Iris.md](LICENSE-Iris.md).
+
+Iris 원문 값 기록(렌더링에는 쓰지 않는다):
+S1 Optics — Iris 원본은 50mm 얕은 심도. 이 카드는 컴팩트 35mm에 맞춰 중간 깊이로 바꿨다.
+S2 Optics — 周辺減光은 원본 G-Rokkor 28mm f/3.5 렌즈의 약한 가장자리 광량 저하다(본문에 사실로 남겼다).

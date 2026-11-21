@@ -100,14 +100,14 @@
 ## Scene
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
-| A | place | 성수동 — Raw board-marked concrete walls inside a converted factory gallery, the bare surfaces taking the flash as a flat pale wash. |
-| A | place | 편의점 — A convenience store at night with a glass-door drink cooler and packed shelves, the flash leaving a small white glare on the glass. |
-| A | place | 지하주차장 — A gray concrete garage of columns and painted lines, cold strip lights far behind her and the near wall catching the flash. |
-| B | place | 外滩 — Stone neoclassical façades across a wide river at night, the far lights stretched into soft ovals behind her. |
-| B | place | 四合院 — A gray-brick courtyard at night where the flash picks out the weathered brick texture and a vermilion gate behind her. |
-| B | place | 红丝绒包厢 — A private box lined in deep-red velvet that throws a rich red glow back onto her from every side. |
-| C | place | Sunset Strip — A neon boulevard of billboards and music clubs at 2 a.m., red and blue signs smearing in the wet asphalt. |
-| C | place | Subway Platform — White glazed tile and yellow safety poles on a late-night platform, the flash landing as bright spots on the wall tiles. |
+| A | place | 성수동 — Raw board-marked concrete walls inside a converted factory gallery. |
+| A | place | 편의점 — A convenience store at night with a glass-door drink cooler and packed shelves. |
+| A | place | 지하주차장 — A gray concrete garage of columns and painted lines. |
+| B | place | 外滩 — Stone neoclassical façades across a wide river at night. |
+| B | place | 四合院 — A gray-brick courtyard at night with weathered brick texture and a vermilion gate behind her. |
+| B | place | 红丝绒包厢 — A private box lined in deep-red velvet. |
+| C | place | Sunset Strip — A neon boulevard of billboards and music clubs at 2 a.m. with red and blue signs over wet asphalt. |
+| C | place | Subway Platform — White glazed tile and yellow safety poles on a late-night platform. |
 
 ## Light
 흑백(Tri-X, S6)이면 색이 든 줄은 쓰지 않는다. C의 `Neon and Flash Mix`(분홍·보라 네온)는 건너뛰고 `direct flash noir`만 쓰며, 팔레트의 포인트색 말도 명암의 말(가장 짙은 검정과 가장 밝은 흰 면)로 바꾼다.
@@ -129,7 +129,7 @@
 ## Optics
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
-| A | body | Canon IXY 400 — An early-2000s small-sensor CCD compact (Canon IXY series, 1/1.8-inch CCD): in this look the flash-lit skin reads crisp, with strong highlight bloom and a deep black falloff behind her. |
+| A | body | Canon IXY 400 — An early-2000s small-sensor CCD compact (Canon IXY series, 1/1.8-inch CCD) with a built-in flash. |
 | A | lens | 카드형 디카 — A slim compact's built-in zoom, used at about 35mm equivalent, wide enough to show the wall behind her with no stretch on the nose or forehead. |
 | A | grain | 디지털 노이즈 — Very fine digital noise sits only in the darkest parts of the frame, with faint colored speckle where the flash does not reach. |
 | B | grain | 数码噪点 — Very fine digital noise sits only in the darkest parts of the frame, with faint colored speckle where the flash does not reach. |
@@ -141,13 +141,13 @@
 | C | grain | grain — Fine, even film grain sits across the whole frame, slightly heavier in the shadows. |
 | C | grain | B&W film grain — Coarse silver grain sits over the monochrome frame with deep blacks and clipped bright highlights. |
 
-## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 요청의 장소·소품·시간대·의상 가운데 둘 이상이 그 세트의 단서와 같으면 통째로 쓰고, 세트 값은 고정 사실보다 먼저다. 규칙은 image-brief.md §4 '룩 카드' 4항과 '비워 둔 층')
+## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 세트를 쓰는 조건은 규칙 4항이 정하고, 세트 값은 고정 사실보다 먼저다. 규칙은 image-brief.md §4 '룩 카드' 4항과 '비워 둔 층')
 
 이 카드의 색온도 숫자(세트의 5600K 같은 값)는 Iris 프리셋을 옮긴 이 룩의 연출 값이고 측정값이 아니다. 프롬프트의 영어 줄에는 숫자 대신 색 말(cold white flash)로 쓴다.
 
 | 세트 | 갈래 | 묶음 |
 |---|---|---|
-| S1 圣水洞 (KR 滤镜 #001. 단서: 장소 성수동 콘크리트 아트 스페이스 / 소품 은 펜던트 / 시간대 - / 의상 숯회색 니트) | A | Hair 검은 긴 생머리, 한쪽 옆머리를 귀 뒤로 / Outfit 스퀘어넥(숯회색 슬림 긴소매 니트) / Props 은 물방울 펜던트(가는 은 체인) / Scene 성수동, 노출 콘크리트와 부드러운 확산광의 조용한 예술 공간, 잡동사니 없음 / Light 직격 플래시(5600K), 국소 하이라이트 번짐, 배경은 순흑으로 낙하, 뺨·콧날의 수광 하이라이트 / Optics Canon IXY 400, 디지털 노이즈 / Pose 뒤돌아보기, 몸은 3/4, 어깨를 내림 / Expression 맑고 또렷한 눈으로 렌즈를 돌아봄 |
+| S1 圣水洞 (KR 滤镜 #001. 단서: 장소 성수동 콘크리트 아트 스페이스 / 소품 은 펜던트 / 시간대 - / 의상 숯회색 니트) | A | Hair 검은 긴 생머리, 한쪽 옆머리를 귀 뒤로 / Outfit 스퀘어넥(숯회색 슬림 긴소매 니트) / Props 은 물방울 펜던트(가는 은 체인) / Scene 성수동, 노출 콘크리트의 조용한 예술 공간, 잡동사니 없음 / Light 직격 플래시(5600K), 국소 하이라이트 번짐, 배경은 순흑으로 낙하, 뺨·콧날의 수광 하이라이트 / Optics Canon IXY 400, 디지털 노이즈 / Pose 뒤돌아보기, 몸은 3/4, 어깨를 내림 / Expression 맑고 또렷한 눈으로 렌즈를 돌아봄 |
 | S2 便利店 (KR 滤镜 #012. 단서: 장소 편의점 심야 음료 냉장고(형광등) / 소품 캔 음료 / 시간대 심야 / 의상 순흑 니트) | A | Hair 검은 긴 생머리 / Outfit 보트넥(순흑 슬림 니트) / Props 음료 한 캔(`투명캔`) / Scene 편의점, 서울 CU 심야 음료 냉장고 앞 / Light 냉장 진열대의 차가운 형광(6000K)과 직격 플래시, 유리에 작은 흰 광반 / Optics Canon IXY Digital 900 IS, 디지털 노이즈 / Pose 뒤돌아보기, 냉장고 유리문 앞에서 3/4 / Expression 맑은 눈으로 렌즈를 돌아봄 |
 | S3 会所外廊 (CN 滤镜 #021. 단서: 장소 회원제 클럽 노천 외랑 / 소품 비취 귀걸이 / 시간대 한밤 / 의상 개량 드레스(정홍 립)) | B | Hair 黑长直, 한쪽 어깨로 넘겨 몇 가닥이 바람에 뜸 / Brow 野生眉 / Lip 正红唇(매트) / Outfit 검은 실크 削肩·挂脖 개량 드레스 / Props 水滴耳坠(翡翠) / Scene 한밤 회원제 클럽의 노천 외랑 / Light 直闪(5600K, 1.2 m), 배경 순흑 낙하, 뒷벽의 단단한 그림자, 코끝·광대의 피지 광택 / Optics Canon EOS R5 + `Canon Speedlite` / Expression 决绝眼神, 턱을 들어 렌즈 응시 |
 | S4 雨夜街角 (CN 滤镜 #032. 단서: 장소 비 오는 길모퉁이(물웅덩이) / 소품 투명 우산 / 시간대 비 오는 밤 / 의상 발수 롱코트) | B | Hair 검은 곱슬머리, 비에 젖어 어깨에 흩어짐 / Lip 正红唇 / Outfit 机能风衣(검은 발수 롱코트) / Props 透明雨伞 / Scene 도심 깊은 밤, 가랑비에 젖은 길모퉁이 / Light 직사 5600K, 짧은 플래시 펄스가 빗줄기를 광점으로 얼리고 물웅덩이가 얼굴을 비춤 / Optics Canon EOS R5 + EL-1, 数码噪点 / Expression 단단하고 침착한 눈 / Pose 투명 우산을 들고 모퉁이에 섬 |

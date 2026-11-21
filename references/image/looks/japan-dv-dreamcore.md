@@ -110,16 +110,16 @@
 |---|---|---|
 | A | place | 下北沢 — A narrow lane of secondhand clothing shops with racks spilling onto the street and wires overhead, every edge a little smeared. |
 | A | storefront | 屋台 — A retro street-food cart with a steaming iron oven drum and a hand-painted board too small to read, parked at a seaside roadside. |
-| A | place | ベンチ — A wooden slatted bench in a summer park with leaf shade across the seat and a hazy lawn behind. |
-| A | place | 湘南 — A seaside road beside a low concrete seawall with pale sand and white surf beyond it, bright salt haze over everything. |
-| B | place | 地下道 — A narrow stained-concrete corridor under an old building, its worn tile edge catching a dull yellow shine and the far end lost in dark. |
+| A | place | ベンチ — A wooden slatted bench in a summer park with a hazy lawn behind. |
+| A | place | 湘南 — A seaside road beside a low concrete seawall with pale sand and white surf beyond it, salt haze over everything. |
+| B | place | 地下道 — A narrow stained-concrete corridor under an old building with a worn tile edge. |
 | B | place | コンビニ — A late-night convenience store with open chilled shelves venting faint vapor, rows of colored packages and rain-dotted glass at the door. |
 | B | place | 和室 — A quiet tatami room with woven mats and paper-screened doors opening onto a veranda where a glass wind chime hangs under the eaves. |
-| B | place | ブランコ — An empty swing in a small neighborhood park under a dusk sky that fades from cool blue to pink. |
-| C | place | 渋谷スクランブル交差点 — A wide crosswalk with crowds crossing from every corner under a tall glowing screen, the people streaking slightly as they move. |
-| C | place | スケートボウル — A concrete skate bowl of curved graffiti-covered walls under bright daylight, its lip a few steps from the camera. |
-| D | place | 助手席 — A car passenger seat beside a rain-streaked window, the belt and door frame in view and the city lights sliding past outside. |
-| D | place | モノレール — A suspended monorail car with pale-blue velvet seats where slanting afternoon sun lights drifting dust. |
+| B | place | ブランコ — An empty swing in a small neighborhood park. |
+| C | place | 渋谷スクランブル交差点 — A wide crosswalk with crowds crossing from every corner under a tall screen, the people streaking slightly as they move. |
+| C | place | スケートボウル — A concrete skate bowl of curved graffiti-covered walls, its lip a few steps from the camera. |
+| D | place | 助手席 — A car passenger seat beside a rain-streaked window, the belt and door frame in view. |
+| D | place | モノレール — A suspended monorail car with pale-blue velvet seats and drifting dust. |
 | D | place | 屋上 — A rooftop with a chain-link fence and a hazy city skyline far behind it, a tower standing faint at the edge. |
 
 ## Light
@@ -139,9 +139,9 @@
 ## Optics
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
-| A | camera | ハンディカム — A palm-sized Sony Handycam DCR-PC100 MiniDV camcorder frame with low-contrast color, a slightly smeared image and highlights that glow into a milky haze. |
-| A | camera | パナソニック NV-DS9 — A tiny Panasonic NV-DS9 MiniDV camcorder frame that softens toward the edges and reads with a muted pale-green cast and plain standard-definition proportions. |
-| A | camera | ビクター ビデオカメラ — A JVC Victor GR-DVL9000 MiniDV camcorder frame with saturated reds and golden yellows, slightly firmer contrast and skin highlights that run warm. (A의 camera 줄 셋 가운데 하나만 고른다) |
+| A | camera | ハンディカム — A palm-sized Sony Handycam DCR-PC100 MiniDV camcorder frame. |
+| A | camera | パナソニック NV-DS9 — A tiny Panasonic NV-DS9 MiniDV camcorder frame with plain standard-definition proportions. |
+| A | camera | ビクター ビデオカメラ — A JVC Victor GR-DVL9000 MiniDV camcorder frame. (A의 camera 줄 셋 가운데 하나만 고른다) |
 | A | overlay | タイムスタンプ — A short pale-green dot-matrix date glows in the lower-right corner of the frame, flatter and cleaner than the picture under it. |
 | A, D | stock | MiniDV — A shaky handheld tape look with soft low resolution, faint comb teeth on moving edges and light that smears slightly when it moves. |
 | B | stock | VHS-C — Analog tape playback: a band of horizontal tracking noise rides the bottom edge and chroma smears sideways into soft halos around bright shapes. |
@@ -158,7 +158,7 @@
 | A, B | scanline | 走査線 — The tape is played back on a CRT monitor and photographed again, so a faint ladder of fine horizontal lines runs across flat areas such as skin, sky and walls. |
 | A, C, D | grain | ビデオノイズ — Very fine colored speckle sits in the shadows, mostly green and purple-gray, and the rest of the frame stays soft. |
 
-## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 요청의 장소·소품·시간대·의상 가운데 둘 이상이 그 세트의 단서와 같으면 통째로 쓰고, 세트 값은 고정 사실보다 먼저다. 규칙은 image-brief.md §4 '룩 카드' 4항과 '비워 둔 층')
+## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 세트를 쓰는 조건은 규칙 4항이 정하고, 세트 값은 고정 사실보다 먼저다. 규칙은 image-brief.md §4 '룩 카드' 4항과 '비워 둔 층')
 켈빈 숫자(5000K 등)는 Iris 프리셋이 적은 연출 값이고 실측이 아니다. 이 룩에서 그 빛이 그렇게 보이게 쓰는 값이다.
 
 | 세트 | 갈래 | 묶음 |

@@ -113,19 +113,19 @@
 ## Scene
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
-| A | place | 택시 뒷좌석 — A taxi back seat late at night, the cabin dark and quiet while city light streaks across the side window and her face. (滤镜 #092, 风格 #049) |
-| A | window | 창문 빗방울 — Dense bright droplets on the window glass turn red and green traffic lights into soft colored blobs behind her. (滤镜 #093) |
-| A | mirror | 백미러 — A narrow rearview-mirror strip hangs at the top edge of the frame, holding the cold streaked road behind the car. |
-| B | place | 한남동 — A quiet minimal room beside a floor-to-ceiling window with bare pale walls, colored sign light entering from the street. (滤镜 #095) |
-| B | place | 성수동 — A street corner of raw concrete shopfronts at night where two signs throw pink and blue light across the wall and pavement. |
-| B | background | 명동 — Dense signs stacked overhead above a packed street, colored light spilling over wet pavement, every sign blurred past reading. (风格 #011) |
-| C | place | 횡단보도 — A wide crosswalk at night with painted stripes gleaming on wet black asphalt, the crossing empty except for her. (滤镜 #097) |
-| C | place | 심야 주택가 골목 — A narrow empty residential lane at night with closed shutters and one tall streetlamp, damp pavement and long deep shadows. (滤镜 #096) |
-| D | place | 한강 야경 — A riverside terrace at night facing a long bridge and a far bank of office towers, their cold white lights rippling on the dark water. (滤镜 #091) |
-| D | place | 루프탑 — A rooftop edge above streams of traffic, red and white car lights melting into soft blurred bokeh below. (风格 #046) |
-| D | interior | 편의점 — A brightly lit convenience store with packed shelves and glass fridge doors, its glass front spilling cold light onto the dark pavement. (滤镜 #094, 风格 #044) |
-| D | transit | 지하철 2호선 — A near-empty late-night subway car of steel handrails and glass screen doors under flat cold fluorescent light. (滤镜 #099, 风格 #041) |
-| D | bridge | 야간 육교 — A pedestrian overpass at night looking out over a wide road, endless car lights streaming below and melting into large round blurs behind her. (滤镜 #098) |
+| A | place | 택시 뒷좌석 — A taxi back seat late at night, quiet, with the side window beside her. (滤镜 #092, 风格 #049) |
+| A | window | 창문 빗방울 — Dense droplets on the window glass behind her. (滤镜 #093) |
+| A | mirror | 백미러 — A narrow rearview-mirror strip hangs at the top edge of the frame, holding the road behind the car. |
+| B | place | 한남동 — A quiet minimal room beside a floor-to-ceiling window with bare pale walls. (滤镜 #095) |
+| B | place | 성수동 — A street corner of raw concrete shopfronts at night with two shop signs. |
+| B | background | 명동 — Dense signs stacked overhead above a packed street with wet pavement, every sign blurred past reading. (风格 #011) |
+| C | place | 횡단보도 — A wide crosswalk at night with painted stripes on wet black asphalt, the crossing empty except for her. (滤镜 #097) |
+| C | place | 심야 주택가 골목 — A narrow empty residential lane at night with closed shutters and one tall streetlamp and damp pavement. (滤镜 #096) |
+| D | place | 한강 야경 — A riverside terrace at night facing a long bridge and a far bank of office towers across the dark water. (滤镜 #091) |
+| D | place | 루프탑 — A rooftop edge above streams of traffic. (风格 #046) |
+| D | interior | 편의점 — A convenience store with packed shelves, glass fridge doors and a glass front onto the pavement. (滤镜 #094, 风格 #044) |
+| D | transit | 지하철 2호선 — A near-empty late-night subway car of steel handrails and glass screen doors. (滤镜 #099, 风格 #041) |
+| D | bridge | 야간 육교 — A pedestrian overpass at night looking out over a wide road with endless traffic streaming below. (滤镜 #098) |
 
 ## Light
 | 갈래 | 슬롯 | 줄 |
@@ -149,27 +149,27 @@
 ## Optics
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
-| A | body | Sony A7 IV — A full-frame low-light body, read here as clean and neutral in color with the dark areas held smooth. (원본 滤镜 #093: 50mm f/1.2 GM, 렌즈는 S2 세트가 말한다) |
+| A | body | Sony A7 IV — A full-frame mirrorless camera. |
 | A | motion | 장노출 — A long exposure stretches the red tail lights and blue signs outside into dream-like streaks while she stays still and sharp. (滤镜 #092) |
 | A, D | bokeh | 보케 — Distant lights turn into big round overlapping discs behind her. |
 | A, B, D | color | 청보라 밤 색감 — Shadows lean cyan-teal while highlights from signs pick up violet and magenta, with the blacks held deep. (D의 형광등 실내 경로인 편의점·지하철에서는 쓰지 않는다) |
-| B, D | body | Sony A7S III — A low-light full-frame look with clean shadows, steady color and calm reflective night highlights. (滤镜 #091 #095) |
+| B, D | body | Sony A7S III — A full-frame mirrorless camera. (滤镜 #091 #095) |
 | B | bloom | 글로우 블룸 — Bright neon highlights spill softly into the surrounding shadows, wrapping the signs in a hazy glow. |
-| C | body | ARRI Alexa Mini — A cinema camera with smooth highlight roll-off and a filmic, slightly soft finish. (원본 滤镜 #100: Alexa Mini LF, Master Prime 35mm) |
+| C | body | ARRI Alexa Mini — A compact digital cinema camera with a Super 35 sensor. |
 | C | key | 홍콩 누아르 — Most of the frame sits in deep black, with narrow amber light catching only the edges of her face and the wet road. |
 | C | color | 청록 그림자 — Dark areas lean cool teal-grey while the lamp highlights stay warm orange. |
-| D | body | Fujifilm X-H2S — A crisp mirrorless rendering of white store light with firm whites and fine shadow noise. (滤镜 #094: 33mm f/1.4) |
+| D | body | Fujifilm X-H2S — An APS-C mirrorless camera. |
 | D | lens | 85mm 인물 렌즈 — A short-telephoto lens compresses the far lights and blurs them softly behind her face. (滤镜 #091) |
 
-## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 요청의 장소·소품·시간대·의상 가운데 둘 이상이 그 세트의 단서와 같으면 통째로 쓰고, 세트 값은 고정 사실보다 먼저다. 규칙은 image-brief.md §4 '룩 카드' 4항과 '비워 둔 층')
+## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 세트를 쓰는 조건은 규칙 4항이 정하고, 세트 값은 고정 사실보다 먼저다. 규칙은 image-brief.md §4 '룩 카드' 4항과 '비워 둔 층')
 
 이 카드의 색온도 숫자(세트의 4500K 같은 값)는 Iris 프리셋을 옮긴 이 룩의 연출 값이고 측정값이 아니다. 프롬프트의 영어 줄에는 숫자 대신 색 말(warm amber, cold white)로 쓴다.
 
 | 세트 | 갈래 | 묶음 |
 |---|---|---|
 | S1 택시 뒷좌석 차창 (滤镜 #092. 단서: 장소 택시 뒷좌석·차창 밖 후미등 광궤적(장노출) / 소품 - / 시간대 깊은 밤 / 의상 -) | A | Hair 검은 긴 생머리, 한쪽 옆머리를 귀 뒤로 / Lip 글래스 립(산호 누드 핑크 글래스) / Outfit 보트넥(순흑 슬림 긴소매 니트) / Scene 택시 뒷좌석, 깊은 밤 / Light 차창 불빛(4500K), 서울 번화가의 붉은 후미등과 푸른 간판이 몽환적 광궤적으로 / Optics 장노출(Long Exposure Rear Window Seat) / Expression 시선 회피, 청랭한 눈으로 창밖을 본다 / Pose 차 뒷좌석에 옆으로 앉기, 몸은 3/4 |
-| S2 비 오는 밤 택시 (滤镜 #093. 단서: 장소 택시 창문 빗방울 / 소품 - / 시간대 비 오는 밤 퇴근길 / 의상 스퀘어넥 니트) | A | Hair 검은 긴 생머리 / Lip 글래스 립 / Outfit 스퀘어넥(깊은 숯회색 슬림 긴소매 니트) / Props 쇄골 길이의 가는 실버 체인 목걸이(극세 은 체인) / Scene 택시 뒷좌석, 창문 빗방울(빗방울 가득한 유리 밖 신호등이 번지는 빛망울) / Light 빗방울 창(4200K) / Optics Sony A7 IV, 50mm f/1.2 GM, 보케 / Expression 쓸쓸함, 비 오는 밤 퇴근길의 근심 / Pose 차 뒷좌석에 옆으로 앉기, 몸은 3/4 |
-| S3 한남동 네온 (滤镜 #095. 단서: 장소 한남동 통유리창 옆 마젠타·청색 투톤 네온 / 소품 - / 시간대 - / 의상 귀리색 블레이저(사이버 패션)) | B | Hair 검은 긴 생머리 / Lip 글래스 립 / Outfit 오버핏(연한 귀리색 블레이저 + 순흑 튜브톱, 트인 칼라) / Scene 한남동, 통유리창 옆 고요한 연한 빛의 미니멀 공간, 잡동사니 없음 / Light 투톤 네온(왼쪽 간판의 깊은 마젠타 핑크, 오른쪽 가게의 얼음빛 청색이 얼굴을 두 색으로 새긴다) / Optics 청보라 밤 색감, Dual Neon Sign Ambient / Style 사이버펑크, 서울 사이버 패션 / Expression 도도한 표정, 렌즈를 돌아본다 |
+| S2 비 오는 밤 택시 (滤镜 #093. 단서: 장소 택시 창문 빗방울 / 소품 - / 시간대 비 오는 밤 퇴근길 / 의상 스퀘어넥 니트) | A | Hair 검은 긴 생머리 / Lip 글래스 립 / Outfit 스퀘어넥(깊은 숯회색 슬림 긴소매 니트) / Props 쇄골 길이의 가는 실버 체인 목걸이(극세 은 체인) / Scene 택시 뒷좌석, 창문 빗방울(빗방울 가득한 유리 밖 신호등) / Light 빗방울 창(4200K) / Optics Sony A7 IV, 50mm f/1.2 GM, 보케 / Expression 쓸쓸함, 비 오는 밤 퇴근길의 근심 / Pose 차 뒷좌석에 옆으로 앉기, 몸은 3/4 |
+| S3 한남동 네온 (滤镜 #095. 단서: 장소 한남동 통유리창 옆 마젠타·청색 투톤 네온 / 소품 - / 시간대 - / 의상 귀리색 블레이저(사이버 패션)) | B | Hair 검은 긴 생머리 / Lip 글래스 립 / Outfit 오버핏(연한 귀리색 블레이저 + 순흑 튜브톱, 트인 칼라) / Scene 한남동, 통유리창 옆 고요한 미니멀 공간, 잡동사니 없음 / Light 투톤 네온(왼쪽 간판의 깊은 마젠타 핑크, 오른쪽 가게의 얼음빛 청색이 얼굴을 두 색으로 새긴다) / Optics 청보라 밤 색감, Dual Neon Sign Ambient / Style 사이버펑크, 서울 사이버 패션 / Expression 도도한 표정, 렌즈를 돌아본다 |
 | S4 가로등 한 개 (滤镜 #096. 단서: 장소 심야 주택가 골목 가로등·텅 빈 길 / 소품 - / 시간대 심야 / 의상 보트넥 니트) | C | Hair 검은 긴 생머리 / Lip 글래스 립 / Outfit 보트넥(순흑 슬림 긴소매 니트) / Scene 심야 주택가 골목, 텅 빈 길 / Light 가로등 불빛(3500K, 머리 위 가로등 하나, 턱과 가슴에 깊은 그림자, 정면에서 약한 빛이 이목구비를 윤곽 짓는다) / Optics Single Sodium Street Light(Overhead) / Style 네오누아르, 조용한 서스펜스 영화의 분위기 / Expression 차가운 분위기 |
 | S5 한강 야경 (滤镜 #091. 단서: 장소 한강공원 강변 테라스 난간 / 소품 - / 시간대 냉백 야경(밤) / 의상 귀리색 블레이저) | D | Hair 검은 긴 생머리, 한쪽을 귀 뒤로, 미풍에 머리카락이 흐트러진다 / Lip 글래스 립 / Outfit 오버핏(연한 귀리색 블레이저 + 순흑 튜브톱, 트인 칼라) / Scene 한강 야경, 한강공원 강변 테라스 / Light 한강 야경 불빛(6500K, 한강대교와 강남 오피스 타워의 냉백 네온, 수면의 반짝이는 냉광) / Optics Sony A7S III, 85mm f/1.4 GM(`85mm 인물 렌즈`) / Expression 맑고 또렷한 눈 / Pose 난간 기대 바라보기, 몸은 3/4 |
 | S6 편의점 (滤镜 #094. 단서: 장소 편의점(형광등) / 소품 컵라면 / 시간대 새벽 두 시 / 의상 모카 니트) | D | Hair 검은 긴 생머리 / Lip 글래스 립 / Outfit 캐시미어 니트(모카 딥브라운, 슬림 와이드 V넥) / Props 컵라면, 생수병 / Scene 편의점, 새벽 두 시, 유리 너머로 보인다 / Light 형광등(5800K 차가운 흰빛의 형광등이 실내를 새하얗게 비춰 유리 너머 쇼윈도 모델처럼) / Optics Fujifilm X-H2S, 33mm f/1.4 / Expression 무표정, 새벽 두 시의 담담한 얼굴 |
@@ -196,3 +196,8 @@
 
 ## 출처
 Iris (noahvisualsx/Iris b83de4c, MIT, © 2026 noahvisuals): 韩国/滤镜/06 #091–#100(이 파일은 프리셋 10편), 韩国/风格/03 #041 #044 #046 #049 #053, 韩国/风格/01 #011, 韩国/风格/04 #064 #075, 韩国/穿搭/02 #016–#035·03 #036–#050 가운데 #021 #023 #045 #046 #047, 韩国/发型与妆容/01 #003, 韩国/神态与微表情/04 #032·05 #044 #047, 韩国/拍照姿势/02 #021–#040·05 #076–#090. 낱말과 구성은 참고했고 문장은 MPW용으로 새로 썼다. 라이선스 전문은 [LICENSE-Iris.md](LICENSE-Iris.md).
+
+Iris 원문 값 기록(렌더링에는 쓰지 않는다):
+- A body Sony A7 IV: 원본 滤镜 #093은 50mm f/1.2 GM이고, 렌즈는 S2 세트가 말한다.
+- C body ARRI Alexa Mini: 원본 滤镜 #100은 Alexa Mini LF, Master Prime 35mm.
+- D body Fujifilm X-H2S: 滤镜 #094는 33mm f/1.4(S6 세트가 같은 값을 말한다).

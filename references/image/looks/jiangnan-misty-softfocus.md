@@ -113,19 +113,19 @@
 |---|---|---|
 | A | place | 乌镇 — A water town of dark wooden houses, stone arch bridges and still canals under low mist, wet stone steps leading down to the grey water. |
 | A | place | 天井积水 — In the sunken brick paving of an old Huizhou house, rain pools in a shallow puddle that mirrors the stepped gables and dark tile eaves above. |
-| A | alley | 雨巷 — A narrow wet lane between grey brick walls and dark tile roofs, the damp paving reflecting the overcast sky. |
+| A | alley | 雨巷 — A narrow wet lane between grey brick walls and dark tile roofs, the paving damp underfoot. |
 | A | ground | 青石板路 — Blue-grey flagstones rinsed by rain turn into a dim mirror that doubles the upright figure and the umbrella at low angle. |
-| A | background | 青砖黛瓦 — Grey-blue brick walls and dark tile roofs hold even overcast light, clean and slightly cool with a damp shine on the brick. |
+| A | background | 青砖黛瓦 — Grey-blue brick walls and dark tile roofs, clean and slightly cool, the brick darkened with damp. |
 | B | place | 西湖 — A broad calm lake ringed by willows and stone causeways with grey mist lying on the water, a flat lakeside rock in the foreground. |
 | B | place | 宏村 — Across the crescent pond of a Huizhou village, stacked white walls with stepped gables and black tiles climb behind a stone embankment. |
 | B | background | 远山含黛 — Layered hills and a distant pagoda fade into milky grey haze behind her, the foreground sharp and the far distance dissolving. |
 | C | place | 月洞门 — A perfectly round opening in a white garden wall with a white marble rim frames her like a circular picture, the garden beyond softened by haze. |
 | C | place | 水榭 — An open-air wooden pavilion stands over a koi pond with vermilion railings and latticed windows, lily pads floating below. |
-| C | rail | 美人靠 — A curved vermilion bench-rail runs along the pavilion edge and opens to the pond, the water glinting just beneath it. |
-| D | place | 茶舍 — A Jiangnan tea room with carved windows open to flowing water, a low tea table and soft mottled light. |
-| D | window | 木格栅窗 — Slatted wooden windows let slanting afternoon sun in as evenly spaced warm stripes across the floor and walls. |
-| D | floor | 蔺草席 — A woven rush mat with fine straight ridges and a pale straw-green tone lies flat on the dark floor, matte under the stripes of light. |
-| D | background | 水乡 — A canal village of stone bridges and mossy walls seen through the window in damp dusk light. |
+| C | rail | 美人靠 — A curved vermilion bench-rail runs along the pavilion edge and opens to the pond, the water just beneath it. |
+| D | place | 茶舍 — A Jiangnan tea room with carved windows open to flowing water and a low tea table. |
+| D | window | 木格栅窗 — Slatted wooden windows with evenly spaced wooden bars are set into the walls. |
+| D | floor | 蔺草席 — A woven rush mat with fine straight ridges and a pale straw-green tone lies flat and matte on the dark floor. |
+| D | background | 水乡 — A canal village of stone bridges and mossy walls seen through the window. |
 
 ## Light
 C의 `柔和漫射光`과 `水面焦散`은 둘 중 하나만 쓴다. `水面焦散`을 고르면 하늘의 확산광 줄은 쓰지 않고, 얼굴에는 해가 아니라 수면에 튄 빛이 그물 무늬로 떨어진다.
@@ -148,22 +148,22 @@ C의 `柔和漫射光`과 `水面焦散`은 둘 중 하나만 쓴다. `水面焦
 ## Optics
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
-| A | stock | Fujifilm GFX — A medium-format digital frame that in this look shows fine texture and calm colour, the wet brick and stone keeping small tonal steps. |
+| A | stock | Fujifilm GFX — A medium-format digital frame. |
 | A | color | 冷灰 — A palette of pale grey with a trace of blue, restrained contrast and clean cold whites over the wet stone. |
 | A | bloom | 柔焦 — Rain mist in the air diffuses edges and highlights into a soft glow while the lashes and irises stay sharp. |
-| B | stock | Phase One IQ4 — An ultra-high-resolution medium-format frame that in this look shows pure colour and very clean detail, keeping fog and white sky free of harshness. |
+| B | stock | Phase One IQ4 — An ultra-high-resolution medium-format frame. |
 | B | color | 低饱和 — Colour pulled back to near grey with a faint cyan-white cast, so fog, water and robe sit within a few quiet tones. |
 | B | surface | 哑光相纸 — No glossy sheen, only a quiet matte photo-paper finish with slow, soft tonal fall-off across the milky haze. |
-| C | stock | Leica M11 — A compact rangefinder frame that in this look shows crisp micro-contrast, calm colour and gentle highlight roll-off, fine hair detail staying sharp. |
+| C | stock | Leica M11 — A compact rangefinder frame. |
 | C | lens | Summilux 35mm f/1.4 — A fast 35mm lens look where bright points bloom softly and the white silk glows against the dim garden. |
 | C | bloom | 黑柔滤镜 — A 1/4-strength Black Pro-Mist blooms the brightest silk and sky into a faint halo and lowers contrast slightly, with fine detail left intact. |
-| D | stock | Leica M11 — A compact rangefinder frame that in this look shows crisp micro-contrast, calm colour and gentle highlight roll-off. |
+| D | stock | Leica M11 — A compact rangefinder frame. |
 | D | lens | Summicron 50mm f/2 — A balanced 50mm look with crisp but gentle rendering and smooth blur, the slat stripes holding clean edges. |
 | D | macro | 微距特写 — Extreme close focus with razor-thin depth on a tight lower-face-and-hands frame, showing the skin texture of the jaw and the grain of the clay. |
 | D | bloom | 柔焦 — Steam and the haze around the selected warm source soften the brightest edges into a gentle glow while the eyes (when in frame) and fingertips stay clear. |
 | D | color | 冷茶色调 — A muted grey-brown grade with low contrast and a faint cool tea cast, the selected warm source (slat light or lamp) kept quiet. |
 
-## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 단서는 찾기용이고 요청의 장소·소품·시간대·의상 가운데 둘 이상이 그 세트의 단서와 같으면 통째로 쓰고, 세트 값은 고정 사실보다 먼저다. 규칙은 image-brief.md §4 '룩 카드' 4항과 '비워 둔 층'. 이 표의 켈빈 숫자는 광원을 잰 값이 아니라 이 룩에서 정한 연출 값이다)
+## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 단서는 찾기용이고 세트를 쓰는 조건은 규칙 4항이 정하고, 세트 값은 고정 사실보다 먼저다. 규칙은 image-brief.md §4 '룩 카드' 4항과 '비워 둔 층'. 이 표의 켈빈 숫자는 광원을 잰 값이 아니라 이 룩에서 정한 연출 값이다)
 | 세트 | 갈래 | 묶음 |
 |---|---|---|
 | S1 月洞门黑柔 (滤镜 #091) | C | 단서: 장소 월동문, 흐린 날 정원 / 소품 黑柔 필터 / 시간대 흐린 날 / 의상 흰 실크 롱 드레스 / Hair 低丸子头, 뒤통수에 느슨하게 올린 검은 머리 / Lip 水光唇(자연스러운 水粉) / Outfit 雪纺(素白 双层 真丝 雪纺 개량 롱 드레스) / Scene 月洞门, 苏州 고전 정원의 한백옥 월동문 앞에 선다 / Light 柔和漫射光 5500K 흐린 날 확산광, 흰 실크 하이라이트에 은은한 光晕 / Optics Leica M11 + Summilux 35mm f/1.4, 黑柔滤镜 1/4(하이라이트가 번지고 속눈썹과 홍채는 선명) / Expression 云淡风轻, 담담히 먼 곳을 응시 / Pose 월동문 앞에 가만히 서서 먼 곳을 본다 |

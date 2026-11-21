@@ -106,13 +106,13 @@
 |---|---|---|
 | A | place | Terrasse de Café — Small round zinc tables and woven chairs on the pavement of a Saint-Germain boulevard, passers-by blurred behind. |
 | A | place | Banquette de café — A deep red velvet banquette against dark panelling and a tall window, a marble-topped table in front. |
-| A | place | Métro de Paris — An elevated platform with green-painted iron columns, white tiled walls and warm bulbs overhead. |
+| A | place | Métro de Paris — An elevated platform with green-painted iron columns and white tiled walls. |
 | B | place | quai de Seine — A pale stone embankment under bridge arches above slow river water, with a damp mist along the edge. |
-| B | place | Bouquinistes — Dark-green book boxes fixed to the stone parapet, filled with old paperbacks and prints under soft grey light. |
-| C | place | Oliveraie — A dirt path under old olive trees with silver-green leaves, sun spots scattering across the ground. |
-| C | place | Montmartre — A steep granite stair with iron railings and coloured shutters, low golden sun above zinc roofs. |
-| C | place | Jardin du Luxembourg — Chestnut-shaded gravel paths strewn with fallen leaves and scattered green metal chairs. |
-| C | place | Pont des Arts — An iron-railed footbridge over the Seine with river haze and the low sun straight ahead. |
+| B | place | Bouquinistes — Dark-green book boxes fixed to the stone parapet, filled with old paperbacks and prints. |
+| C | place | Oliveraie — A dirt path under old olive trees with silver-green leaves. |
+| C | place | Montmartre — A steep granite stair with iron railings and coloured shutters, with zinc roofs below. |
+| C | place | Jardin du Luxembourg — Chestnut-lined gravel paths strewn with fallen leaves and scattered green metal chairs. |
+| C | place | Pont des Arts — An iron-railed footbridge over the Seine with river haze. |
 
 ## Light
 | 갈래 | 슬롯 | 줄 |
@@ -131,7 +131,7 @@
 | A | stock | Kodak Vision3 500T — A tungsten-balanced cinema negative that in this look reads as red-orange skin in lamplight, shadows leaning slightly cool-green and blacks held deep. |
 | B | stock | Kodak Tri-X Reversal 7266 — A black-and-white reversal 16mm film with pure monochrome tone, ink-deep blacks and bright highlights that stay open. |
 | C | stock | Kodak Vision3 250D — Daylight cinema negative: neutral-warm natural color and supple highlights. |
-| A | camera | ARRI 16SR3 — A handheld 16mm cinema camera, rendered in this look with softly rolled-off highlights and slightly uneven corner sharpness. |
+| A | camera | ARRI 16SR3 — A handheld 16mm cinema camera. |
 | D | lens | Zeiss Super Speed T1.3 — A wide-open fast prime with a razor-thin focal plane on the near pupil, ears and hair melting into soft blur. |
 | A | grain | Gros grain — Coarse, organic grain across the whole frame, heaviest in the shadows. |
 | B | grain | Grain argentique — Coarse silver grain over monochrome with deep blacks and a gritty texture. |
@@ -140,13 +140,13 @@
 | A | bloom | Halation — The brightest lamps bleed a soft red-orange glow at their edges, as light scatters inside the film. |
 | C | flare | Lens Flare — The low sun spreads soft veils and a faint rainbow streak across the frame and lowers its contrast. |
 
-## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 요청의 장소·소품·시간대·의상 가운데 둘 이상이 그 세트의 단서와 같으면 통째로 쓰고, 세트 값은 고정 사실보다 먼저다. 세트를 고르면 갈래는 그 세트의 갈래 열이다. 단서는 네 칸으로 판정한다. 묶음 속 K 숫자는 Iris 프리셋의 연출 값이라 문장에는 색으로 옮긴다. 규칙은 image-brief.md §4 '룩 카드' 4항과 '비워 둔 층')
+## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 세트를 쓰는 조건은 규칙 4항이 정하고, 세트 값은 고정 사실보다 먼저다. 세트를 고르면 갈래는 그 세트의 갈래 열이다. 단서는 네 칸으로 판정한다. 묶음 속 K 숫자는 Iris 프리셋의 연출 값이라 문장에는 색으로 옮긴다. 규칙은 image-brief.md §4 '룩 카드' 4항과 '비워 둔 층')
 | 세트 | 갈래 | 묶음 |
 |---|---|---|
 | S1 생제르맹 카페 모퉁이 (滤镜 #001) | A | 단서: 장소 생제르맹 카페 테라스·등나무 의자 / 소품 - / 시간대 오후 / 의상 줄무늬 상의 / Hair Coiffure effet saut du lit(깊은 갈색 곱슬 장발, 부스스) + Frange rideau / Base Teint nu / Lip 베리 로즈 / Outfit Marinière classique bretonne / Scene Terrasse de Café, 모퉁이 등나무 의자에 앉는다 / Light Paris Overcast Light(오후) / Optics ARRI 16SR3, Kodak Vision3 500T, Gros grain, 암부는 따뜻한 청회색, 절제된 하이라이트 번짐 / Expression Nonchalance parisienne, 자신 있게 렌즈를 본다 |
 | S2 쌍둥이 카페 해 질 녘 (滤镜 #006) | A | 단서: 장소 카페 안 붉은 벨벳 의자·큰 창 / 소품 커피잔 / 시간대 황혼 / 의상 카라멜 니트 스웨터 / Hair Coiffé-décoiffé(깊은 갈색 곱슬 중단발, 귀 뒤로) + Frange rideau / Lip 말린 장미색 무광 / Outfit 카라멜색 가는 니트 울 스웨터 / Props tasse d'expresso / Scene Banquette de café, 붉은 벨벳 의자와 큰 창 / Light Lumière tungstène(놋쇠 천장등의 따뜻한 호박빛)과 창밖 황혼의 짙은 파랑이 옆얼굴에서 만난다, 그림자는 붉은 갈색 / Optics ARRI 16SR3, Kodak Vision3 500T, 짙은 동적 Gros grain / Expression 창밖 행인을 보는 나른한 얼굴 / Pose 의자에 앉아 커피잔을 든다 |
 | S3 센강 다리 밑 흑백 (滤镜 #003) | B | 단서: 장소 센강 다리 밑 돌 제방 / 소품 - / 시간대 안개 낀 겨울 낮 / 의상 헤링본 롱코트 (흑백은 매체 단서라 갈래 B를 정한다) / Hair 깊은 갈색 흐트러진 어깨 길이 머리 + 이마를 스치는 Frange rideau / Lip 입술선만 또렷한 맨 입술 / Outfit pardessus(짙은 회색 헤링본) + Col roulé(검정) / Scene quai de Seine, 겨울 예술의 다리 아래 돌 제방 / Light Paris Overcast Light, 물안개와 찬 흐린 하늘 / Optics ARRI 16SB, Kodak Tri-X Reversal 7266(16mm 흑백 반전 필름), Grain argentique, 은회색 하이라이트, 촘촘한 회색 계조 / Expression 깊고 집중한 눈으로 앞을 보는 단단한 얼굴 / Pose 성큼성큼 걷는다 |
-| S4 프로방스 올리브 그늘 (滤镜 #002) | C | 단서: 장소 올리브 나무 그늘·밀밭 / 소품 - / 시간대 여름 오후 / 의상 체리 꽃무늬 원피스 / Hair 햇빛에 금갈색으로 바랜 깊은 갈색 곱슬 장발, 바람에 날리는 Frange rideau / Base Teint nu, 햇볕에 달아오른 맨 베이스 / Lip 물기 있는 복숭아빛 옅은 붉은색 / Outfit Robe portefeuille(체리색 작은 꽃무늬 티 드레스) / Props 한 손으로 치맛자락을 잡는다 / Scene Oliveraie, 금빛 밀밭 옆 올리브 그늘 길 / Light 여름 오후 햇빛이 잎을 뚫고 쏟아진다 / Optics Aaton XTR Prod, Kodak Vision3 250D, Grain fin, 우유빛 하이라이트, 올리브 잎과 꽃무늬가 진하지만 부드럽다 / Expression 웃으며 렌즈를 본다 / Pose 치맛자락을 잡고 걷는다 |
+| S4 프로방스 올리브 그늘 (滤镜 #002) | C | 단서: 장소 올리브 나무 그늘·밀밭 / 소품 - / 시간대 여름 오후 / 의상 체리 꽃무늬 원피스 / Hair 햇빛에 금갈색으로 바랜 깊은 갈색 곱슬 장발, 바람에 날리는 Frange rideau / Base Teint nu, 햇볕에 달아오른 맨 베이스 / Lip 물기 있는 복숭아빛 옅은 붉은색 / Outfit Robe portefeuille(체리색 작은 꽃무늬 티 드레스) / Props 한 손으로 치맛자락을 잡는다 / Scene Oliveraie, 밀밭 옆 올리브나무 길 / Light 여름 오후 햇빛이 잎을 뚫고 쏟아진다 / Optics Aaton XTR Prod, Kodak Vision3 250D, Grain fin, 우유빛 하이라이트, 올리브 잎과 꽃무늬가 진하지만 부드럽다 / Expression 웃으며 렌즈를 본다 / Pose 치맛자락을 잡고 걷는다 |
 | S5 쉘부르 우산 가게 (滤镜 #005) | C | 단서: 장소 쉘부르 우산 가게·분홍·노랑 벽 / 소품 투명 우산 / 시간대 비 갠 오후 / 의상 하늘색 플리츠 스커트 / Hair 연분홍 리본으로 느슨하게 묶은 깊은 갈색 장발 + Frange rideau / Lip 산호빛 분홍 주황 / Outfit 연노랑 짧은 니트 가디건 + 하늘색 플리츠 스커트 / Props Parapluie transparent / Scene Rue Crémieux, 분홍·노랑 벽의 오래된 가게 앞 / Light 비 갠 오후 하늘빛이 우산을 지나 쏟아진다, 맑고 가벼운 그림자 / Optics ARRI 16SR2, Fuji Eterna 250D, 마카롱 파스텔, 꿈결 같은 광조 / Expression 눈웃음으로 하늘을 올려다보는 장난스러운 얼굴 |
 | S6 오디션 클로즈업 (滤镜 #010) | D | 단서: 장소 오디션 룸·흰 천 배경 / 소품 - / 시간대 - / 의상 숯회색 캐시미어 브이넥 (클로즈업·정면 시선은 구도·표정이라 단서로 세지 않는다) / Hair Coiffé-décoiffé(곱슬 잔머리가 뺨에 흩어진다) / Base Teint nu, 파운데이션 느낌 없는 맨 피부 / Lip 물기 있는 살구빛 분홍, 살짝 다문다 / Outfit 숯회색 두툼한 깊은 브이넥 캐시미어, 쇄골이 보인다 / Scene 오디션 룸의 흰 천 배경 / Light 부드러운 옆면 확산광 / Optics Aaton XTR Prod, Zeiss Super Speed T1.3, 가까운 눈동자와 콧등에만 초점, 귀와 머리끝은 녹는다, 짙고 고운 Grain fin / Camera Gros plan / Expression Regard fixe vers l'objectif, 살피듯 무심하게 정면을 본다 |
 

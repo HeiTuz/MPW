@@ -89,7 +89,7 @@
 | A | legwear | 下駄 — Raised wooden geta on two dark blocks with a velvet thong lift her heel off the ground, leaving a bare-toe line that the flash picks out in pale white.
 | A | legwear | 素足 — Bare lower legs and ankles with no hosiery, the skin flash-pale and flat below the hem of a yukata or skirt.
 | A, B | legwear | 黒タイツ — Solid black tights with an even knit that absorbs the flash and leaves the leg one clean dark line. |
-| C | legwear | 紺色ハイソックス — Navy ribbed cotton socks ending just below the knee with a snug ribbed cuff. (C의 교복 장면은 학생이라 이 줄을 포함해 Legwear 층을 통째로 쓰지 않는다) |
+| C | legwear | 紺色ハイソックス — Navy ribbed cotton socks ending just below the knee with a snug ribbed cuff. (C의 교복 장면은 학생이라 스타킹류 줄은 쓰지 않고 이 양말 줄은 쓴다) |
 
 ## Props and nails
 | 갈래 | 슬롯 | 줄 |
@@ -120,24 +120,24 @@
 ## Scene
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
-| A | storefront | コンビニ — A night convenience store whose lit glass front fills the background, the glass throwing back one small white flash glare. |
-| A | vending | 自販機 — Two glowing vending machines at a dark side-street corner lay a cold white-cyan square of light on the concrete. |
-| A | crossing | 横断歩道 — Wet black asphalt with white crosswalk stripes, puddles mirroring the signals and the flash lighting every rain streak. |
+| A | storefront | コンビニ — A night convenience store whose glass front fills the background. |
+| A | vending | 自販機 — Two vending machines stand at a side-street corner on bare concrete. |
+| A | crossing | 横断歩道 — Wet black asphalt with white crosswalk stripes and puddles. |
 | A | alley | 下北沢 — A narrow old lane of small izakaya on a summer night, paper lanterns hanging over the doors and stools crowding the pavement. |
-| A | passage | 地下道 — A white-tiled underground passage under cold fluorescent tubes, other walkers smeared faintly past behind her. |
-| A | riverside | 河原 — A quiet riverbank of round pebbles under a dark sky, the water a faint sheen in the distance and the ground near black beyond the light. |
+| A | passage | 地下道 — A white-tiled underground passage, other walkers smeared faintly past behind her. |
+| A | riverside | 河原 — A quiet riverbank of round pebbles with the water in the distance. |
 | A | platform | 駅のホーム — A night platform with a yellow tactile line, an overhead cable run and a plain bench along the wall. |
-| B | counter | ラーメン屋 — A narrow ramen counter of dark red wood under bright overhead light, steam from the pots and seats close enough to touch elbows. |
-| B | table | 居酒屋 — A tatami-floor izakaya table under a warm tungsten bulb, plates, mugs and chopsticks scattered unarranged across the wood. |
-| B | shop | レコード屋 — A cramped basement record shop of vinyl sleeves in dense wooden crates under dim warm ceiling bulbs. |
-| B | room | カラオケボックス — A small private karaoke room with a large screen and a dark leather sofa, pink and cyan light spots sweeping the walls. |
+| B | counter | ラーメン屋 — A narrow ramen counter of dark red wood, steam from the pots and seats close enough to touch elbows. |
+| B | table | 居酒屋 — A tatami-floor izakaya table, plates, mugs and chopsticks scattered unarranged across the wood. |
+| B | shop | レコード屋 — A cramped basement record shop of vinyl sleeves in dense wooden crates. |
+| B | room | カラオケボックス — A small private karaoke room with a large screen and a dark leather sofa. |
 | B | tatami | 和室 — An old guesthouse's tatami room with pale grass mats and a white paper sliding screen close behind her. |
-| C | train | 夕暮れの電車 — A train window seat at dusk, gold light raking across the green moquette and a soft flare at the frame edge. |
-| C | rooftop | 屋上 — A school rooftop behind a wire fence with a hazy city skyline and a molten sky beyond the mesh. |
-| C | school | 木造校舎 — An old wooden school building whose stair landing has dark boards worn smooth by decades of feet, slanting window light and dust floating in it. |
-| C | snow | 雪の朝 — A bus stop on a snowy morning with soft diffuse light and white breath hanging in the cold air. |
-| D | shore | 鎌倉 — A bright afternoon on a coastal town's sand and seawall, white wave foam and a washed-out pale sky. |
-| D | shallows | ケラマブルー — A jelly-clear turquoise shallows over white sand, sun ripples across the sea floor and a sharp blue horizon. |
+| C | train | 夕暮れの電車 — A train window seat with green moquette. |
+| C | rooftop | 屋上 — A school rooftop behind a wire fence with a hazy city skyline beyond the mesh. |
+| C | school | 木造校舎 — An old wooden school building whose stair landing has dark boards worn smooth by decades of feet, dust floating in the air. |
+| C | snow | 雪の朝 — A bus stop on a snowy morning with white breath hanging in the cold air. |
+| D | shore | 鎌倉 — A coastal town's sand and seawall with white wave foam. |
+| D | shallows | ケラマブルー — A jelly-clear turquoise shallows over white sand and a sharp blue horizon. |
 
 ## Light
 | 갈래 | 슬롯 | 줄 |
@@ -159,7 +159,7 @@
 ## Optics
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
-| 전부 | body | 写ルンです — A single-use film camera frame with soft corners and a dark vignette, saturated ISO 400 color and a small built-in flash. (수중 모델이 아닌 경로. 수중 모델이면 아래 `水中写ルンです` 줄이 본체 줄이다) |
+| 전부 | body | 写ルンです — A single-use 35mm film camera with ISO 400 film and a small built-in flash. (수중 모델이 아닌 경로. 수중 모델이면 아래 `水中写ルンです` 줄이 본체 줄이다) |
 | 전부 | lens | プラスチックレンズ — A fixed-focus 32mm plastic single lens at about f/10: everything from about a meter outward stays in focus with no background blur, the center acceptably sharp and the corners soft with a faint barrel curve and colored fringing. |
 | 전부 | stock | フジカラー Superia 400 — Everyday 400-speed negative with saturated reds and yellows, a faint green lean in the shadows and visible grain. |
 | 전부 | grain | 粒状感 — Large, uneven grain sits across the whole frame, coarser in the dark areas the flash does not reach. |
@@ -168,14 +168,14 @@
 | A, B | motion | わずかな被写体ブレ — The flash freezes her sharp while a swinging arm or leg leaves only a faint, brief smear at its fastest point. |
 | C | flash-off | ノンフラッシュ — Where light comes from a window or from the side the flash stays off, so the sky or the glass draws the picture with soft contrast and heavier grain in the dim parts. |
 | C, D | highlight | 白飛び — Fixed exposure lets the bright sky and any pale wall run to paper white with softly bleeding edges while the midtones stay airy. |
-| D | case | 水中写ルンです — A waterproof single-use film camera in a thick clear housing with ISO 800 color and no flash, the housing adding faint ripple refraction at the frame edge and water drops on the lens window flaring bright in the sun. (수중 모델 경로 전용) |
+| D | case | 水中写ルンです — A waterproof single-use film camera in a thick clear housing with ISO 800 film and no flash, the housing adding faint ripple refraction at the frame edge. (수중 모델 경로 전용) |
 
-## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 요청의 장소·소품·시간대·의상 가운데 둘 이상이 그 세트의 단서와 같으면 통째로 쓰고, 세트 값은 고정 사실보다 먼저다. 규칙은 image-brief.md §4 '룩 카드' 4항과 '비워 둔 층')
+## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 세트를 쓰는 조건은 규칙 4항이 정하고, 세트 값은 고정 사실보다 먼저다. 규칙은 image-brief.md §4 '룩 카드' 4항과 '비워 둔 층')
 켈빈 숫자(5600K 등)는 Iris 프리셋이 적은 연출 값이고 실측이 아니다. 이 룩에서 그 빛이 그렇게 보이게 쓰는 값이다.
 
 | 세트 | 갈래 | 묶음 |
 |---|---|---|
-| S1 コンビニ前 (滤镜 #041) | A | 단서: 장소 밤 편의점 앞 / 소품 고기만두 / 시간대 한밤 / 의상 후드티 / Hair 濡れ髪의 검은 단발, シースルーバング가 바람에 흔들린다 / Lip 素の唇(촉촉한 맨입술) / Outfit フーディー(두꺼운 회색) / Props 肉まん(김이 오르는, 한입 문 고기만두) / Scene コンビニ, 한밤 도쿄 편의점의 밝은 유리창 밖 / Light ストロボ(5600K) 직사, 뺨의 윤기 있는 하이라이트, 배경은 순간 검게 낙하 / Optics 写ルンです 27매 Simple Ace, 32mm f/10 단일 플라스틱 렌즈, 네 모서리 暗角과 배럴 왜곡, GN14급 소형 플래시(Iris 원본의 50mm 얕은 심도는 옮기지 않았다) / Expression まぶしげ, 불쑥 터진 플래시에 눈을 가늘게 뜬다 / Pose 가게 앞을 걷다 멈춰 서서 한 손에 肉まん |
+| S1 コンビニ前 (滤镜 #041) | A | 단서: 장소 밤 편의점 앞 / 소품 고기만두 / 시간대 한밤 / 의상 후드티 / Hair 濡れ髪의 검은 단발, シースルーバング가 바람에 흔들린다 / Lip 素の唇(촉촉한 맨입술) / Outfit フーディー(두꺼운 회색) / Props 肉まん(김이 오르는, 한입 문 고기만두) / Scene コンビニ, 한밤 도쿄 편의점의 밝은 유리창 밖 / Light ストロボ(5600K) 직사, 뺨의 윤기 있는 하이라이트, 배경은 순간 검게 낙하 / Optics 写ルンです 27매 Simple Ace, 32mm f/10 단일 플라스틱 렌즈, 네 모서리 暗角과 배럴 왜곡, GN14급 소형 플래시 / Expression まぶしげ, 불쑥 터진 플래시에 눈을 가늘게 뜬다 / Pose 가게 앞을 걷다 멈춰 서서 한 손에 肉まん |
 | S2 夏の夜店 (滤镜 #045) | A | 단서: 장소 여름밤 옛 골목, 붉은 제등 / 소품 라무네 / 시간대 여름밤 / 의상 유카타 / Hair 濡れ髪의 검은 단발 / Lip 素の唇 / Outfit 浴衣(짙은 남색 무늬) / Props ラムネ(김 서린 병) / Legwear 下駄, 素足 / Scene 下北沢의 여름밤 옛 골목, 居酒屋 붉은 종이 제등 앞 / Light ストロボ 1 m 근거리 직사, 4800K 혼합, 차가운 흰 빛이 전경을 누르고 제등의 붉은 환경광이 배경에 깊게 남는다 / Optics 写ルンです, 粒状感 / Expression 눈이 초승달이 되도록 소리 내어 웃는다 / Pose 병을 든 채 웃으며 허리를 젖힌다 |
 | S3 ラーメン屋 (滤镜 #048) | B | 단서: 장소 라멘집 카운터 / 소품 김 오르는 라멘 / 시간대 - / 의상 플리스 / Hair 濡れ髪의 검은 단발 / Lip 素の唇 / Outfit 검은 플리스(ボアフリース 계열) / Props ラーメン 그릇과 젓가락 / Scene ラーメン屋, 신주쿠 오래된 가게의 좁고 진한 붉은 목재 카운터 / Light ストロボ 카운터 근거리(5000K)가 짙은 흰 김에 부딪혀 렌즈 앞에 유백색 광무가 생기고(湯気), 붉은 국물과 목재 색이 진하게 남는다 / Optics 写ルンです / Expression 젓가락을 든 채 흰 김 너머로 카메라를 본다, 꾸미지 않은 표정 / Pose 그릇을 두 손으로 받쳐 들고 식히려 입김을 분다 |
 | S4 和室 (滤镜 #043) | B | 단서: 장소 민박 다다미방, 장지문 / 소품 - / 시간대 - / 의상 면마 원피스 / Hair 濡れ髪의 검은 단발 / Lip 素の唇 / Outfit 綿麻ワンピース(느슨한 미색 면마 홈웨어) / Scene 和室, 옛 민박 목조집의 다다미방과 흰 장지문(障子) / Light ストロボ 1.5 m 확산 직사(5200K), 연둣빛 다다미에는 한쪽으로 옅은 그림자가 지고 뒤 障子에는 가장자리가 또렷한 사람 그림자가 맺히며, 피부 하이라이트는 따뜻한 오렌지 기 / Optics 写ルンです 39매, 거리에 따라 약해지는 플래시 / Expression 無防備, 렌즈를 향한 부드러운 눈 / Pose 膝を抱える, 다다미에 앉아 쉰다 |
@@ -203,3 +203,6 @@
 
 ## 출처
 Iris (noahvisualsx/Iris b83de4c, MIT, © 2026 noahvisuals): 日本/滤镜/03 #041–060, 风格/03 #044 #045 #046 #048 #056 #057, 风格/06 #091 #093 #100, 拍照姿势/02 #021 #023 #025 #026 #030 #032 #033 #034 #036 #039, 道具与美甲/01 #002 #003 #011 #014, 道具与美甲/02 #016. 낱말과 구성은 참고했고 문장은 MPW용으로 새로 썼다. 라이선스 전문은 [LICENSE-Iris.md](LICENSE-Iris.md).
+
+Iris 원문 값 기록(렌더링에는 쓰지 않는다):
+- S1 コンビニ前, Optics: Iris 원본의 50mm 얕은 심도는 옮기지 않았다.

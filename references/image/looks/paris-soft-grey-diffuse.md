@@ -117,24 +117,24 @@
 ## Scene
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
-| A | place | Terrasse de Café — Small round café tables and woven chairs on a Saint-Germain boulevard pavement, cream limestone facades and blurred passers-by behind under an even grey sky. (滤镜 #021) |
-| A | place | Pont Saint-Louis — A small iron-and-timber footbridge between the two islands with open river on both sides, so grey sky light wraps all the way around her. (滤镜 #032) |
+| A | place | Terrasse de Café — Small round café tables and woven chairs on a Saint-Germain boulevard pavement, cream limestone facades and blurred passers-by behind. (滤镜 #021) |
+| A | place | Pont Saint-Louis — A small iron-and-timber footbridge between the two islands with open river on both sides. (滤镜 #032) |
 | A | place | Jardin des Tuileries — Ranks of bare winter chestnut trees over pale packed gravel with dark-green iron chairs along the alley, the trunks reading as thin grey verticals. (滤镜 #026) |
-| A | place | Nymphéas — An oval gallery ringed with huge blue-violet and green water-lily canvases under a frosted glass ceiling, with no shadows on the walls. (滤镜 #037) |
+| A | place | Nymphéas — An oval gallery ringed with huge blue-violet and green water-lily canvases under a frosted glass ceiling. (滤镜 #037) |
 | A | place | balcon haussmannien — A north-facing top-floor balcony with black wrought-iron railing on a cream limestone facade, a grey-blue sea of zinc roofs stretching beyond. (滤镜 #039) |
-| A | place | Place de la Concorde — A wide open square with a green-bronze fountain basin and fine mist in the air, the sky one bright grey lid. (滤镜 #040) |
+| A | place | Place de la Concorde — A wide open square with a green-bronze fountain basin and fine mist in the air. (滤镜 #040) |
 | B | place | Haussmannien — Tall ivory-white limestone apartment facades on both sides of a street, wrought-iron balconies repeating in rows. (滤镜 #023) |
-| B | place | Opéra Garnier — Carved white marble steps and columns on the side wing of the opera house, bright and cold under an open grey sky. (滤镜 #030) |
-| B | place | Centre Pompidou — A sloping stone plaza below a steel-tube and glass facade, concrete and steel throwing back a cool industrial grey. (滤镜 #034) |
+| B | place | Opéra Garnier — Carved white marble steps and columns on the side wing of the opera house. (滤镜 #030) |
+| B | place | Centre Pompidou — A sloping stone plaza below a steel-tube and glass facade, the concrete and steel in a cool industrial grey. (滤镜 #034) |
 | B | place | Panthéon — Huge Corinthian stone columns above wide steps, the portico holding back the open sky above her. (滤镜 #035) |
 | C | place | Pont des Arts — A wooden plank deck and iron balustrade over the Seine in winter, river vapour hanging above water the colour of the sky. (风格 #049) |
-| C | place | Montmartre — A steep cobbled stair alley between old walls, the setts dark and glossy after a shower with an old iron street lamp above. (滤镜 #029) |
+| C | place | Montmartre — A steep cobbled stair alley between old walls, the setts dark and glossy after a shower. (滤镜 #029) |
 | C | place | Père-Lachaise — A cobbled lane past moss-covered family tombs and carved stone crosses under old chestnut trees, deep red maple leaves and yellow leaves on the ground. (滤镜 #031) |
 | C | place | Escalier de quai — Old stone steps on the Seine quay running down to the water, the stone dark and soaked and faintly mirroring the sky, willow branches trailing above. (滤镜 #038) |
-| D | place | Place des Vosges — Symmetrical red-brick and stone arcades under pointed slate roofs, the soft arch shadows holding warm brick tones. (滤镜 #025) |
+| D | place | Place des Vosges — Symmetrical red-brick and stone arcades under pointed slate roofs. (滤镜 #025) |
 | D | place | Bouquinistes — Dark-green painted iron book boxes along the Seine parapet with cracked paint edges, filled with yellowed prints and paperbacks. (滤镜 #027) |
-| D | place | Colonnes de Buren — Short black-and-white striped marble columns in the Palais-Royal courtyard, throwing only faint elongated grey shadows under the flat sky. (滤镜 #028) |
-| D | place | cour intérieure pavée — A cobbled inner courtyard with ivy covering the stone walls and old steps, white hydrangeas in one corner and a green tint in the shade. (滤镜 #036) |
+| D | place | Colonnes de Buren — Short black-and-white striped marble columns in the Palais-Royal courtyard. (滤镜 #028) |
+| D | place | cour intérieure pavée — A cobbled inner courtyard with ivy covering the stone walls and old steps, white hydrangeas in one corner. (滤镜 #036) |
 | D | place | Rue de Grenelle — A quiet street corner with a heavy dark grey-green painted wooden door set into a beige-grey limestone wall. (滤镜 #033) |
 
 ## Light
@@ -163,23 +163,23 @@
 | B | stock | Pro 400H — Pastel teal-green highlights with soft airy light; in this look skin lit by the bright stone leans toward a cool, high-key rendering. |
 | C, D | stock-mono | Kodak Tri-X 400 — Pure black-and-white tone with ink-deep blacks and open highlights, used only when the request asks for monochrome. |
 | D | push | Pellicule poussée — The film is overdeveloped for extra speed, giving stronger contrast and a deeper shadow tone in the arcade shade. |
-| A, D | camera | Leica M6 — A 35mm rangefinder with a quiet, candid feel and rich micro-contrast. |
-| B | camera | Contax G2 — A rangefinder with clean contrast and tidy, natural perspective in city streets. |
-| C | camera | Canon New F-1 — A sturdy pro film SLR with natural contrast and honest sharpness. |
+| A, D | camera | Leica M6 — A 35mm rangefinder camera. |
+| B | camera | Contax G2 — An autofocus 35mm rangefinder camera. |
+| C | camera | Canon New F-1 — A sturdy professional 35mm film SLR camera. |
 | A, D | lens | Summicron 35mm f/2 — A wide-normal lens with a crisp subject, a soft smooth falloff and a bit of the surrounding street kept in the frame. |
 | B | lens | Zeiss Planar 45mm f/2 — A clean-edged standard lens with subtle contrast and natural perspective. |
 | C | lens | Canon FD 50mm f/1.4 — A vintage standard lens with gentle rendering and softly glowing highlights, the background falling softly away behind a sharp face. |
 | A, B | grain | Grain argentique — Fine color-film grain sits evenly across the whole frame, a touch denser in the blue-grey shadows. |
 | C, D | grain | Grain fin — Fine, visible grain across the whole frame that thickens in the dark of the arcade, the alley and the deep shade. |
 
-## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 요청의 장소·소품·시간대·의상 가운데 둘 이상이 그 세트의 단서와 같으면 통째로 쓰고, 세트 값은 고정 사실보다 먼저다. 규칙은 image-brief.md §4 '룩 카드' 4항과 '비워 둔 층')
+## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 세트를 쓰는 조건은 규칙 4항이 정하고, 세트 값은 고정 사실보다 먼저다. 규칙은 image-brief.md §4 '룩 카드' 4항과 '비워 둔 층')
 | 세트 | 갈래 | 묶음 |
 |---|---|---|
 | S1 생제르맹 카페 테라스 (滤镜 #021) | A | 단서: 장소 생제르맹 카페 테라스, 등나무 의자 / 소품 - / 시간대 오후 / 의상 줄무늬 상의, 청바지 / Hair Coiffure effet saut du lit(깊은 갈색 곱슬 장발, 결이 흐트러진다) + Frange rideau / Base Teint nu / Lip Framboise(물기 있는 베리 로즈) / Outfit Marinière classique bretonne + Jean évasé / Scene Terrasse de Café, 생제르맹 대로 인도 쪽 등나무 의자 / Light Paris Overcast Light(오후 5200K, 단단한 하이라이트 가장자리 없음, 암부는 옅은 청회색, 중간 톤이 풍부) / Optics Leica M6, Summicron 35mm f/2, Kodak Portra 400, 암부에 가는 입자 / Expression Nonchalance parisienne, 시선이 거리로 / Pose 등나무 의자에 앉아 몸을 느슨하게 |
 | S2 북향 발코니 (滤镜 #039) | A | 단서: 장소 북향 발코니, 아연 지붕 / 소품 도자기 컵 / 시간대 - / 의상 흰 셔츠 한 장, 맨발 / Hair Coiffure effet saut du lit(허리까지 오는 장발) + Frange rideau / Base Teint nu / Lip Gloss transparent(자연스러운 물기 있는 핑크) / Outfit Chemise blanche boyfriend(맨발, 흰 면린넨 셔츠 한 장) / Props Tasse en porcelaine(흰 도자기 컵) / Scene balcon haussmannien, 검은 주철 난간과 아연 지붕 너머 몽마르트 언덕 / Light Lumière du nord(5200K, 직사광 없는 안정된 확산광, 어깨선을 따라 비단처럼 붙는 빛) / Optics Leica M6, Summicron 35mm f/2, Kodak Portra 400, 가는 입자 / Expression Regard dans le vague(먼 언덕 쪽) / Pose 난간에 기대 컵을 두 손으로 든다 |
-| S3 오페라 대리석 (滤镜 #030) | B | 단서: 장소 오페라 대리석, 흰 석조 기둥, 광장 / 소품 - / 시간대 - / 의상 검은 실크 슬립, 회색 캐시미어 가디건 / Hair 어깨 길이 흐트러진 갈색, mèche derrière l'oreille + Frange rideau / Base Base légère au fini satiné / Lip Beige rosé(차가운 토프 베이지) / Outfit Robe caraco(검은 실크 슬립 롱드레스) + Gilet(연회색 얇은 캐시미어, 열어서 걸친다) / Scene Opéra Garnier, 흰 조각 대리석 기둥 회랑의 계단에 기댄다 / Light Lumière réfléchie(5600K, 흰 대리석 벽이 고명도 냉회백 빛을 돌려준다, 암부는 옅은 청회색) / Optics Contax G2, Zeiss Planar 45mm f/2(Iris 필드는 Biogon 28mm f/2.8, 본문은 50mm 인물 렌즈로 어긋난다), Pro 400H, 가는 입자 / Expression Regard dans le vague(차분하고 도도하게 광장 차들을 본다) / Pose Adossée à un pilier de pierre |
-| S4 센강 비 갠 계단 (滤镜 #038) | C | 단서: 장소 센강 돌계단, 버드나무 / 소품 우산 / 시간대 비 갠 뒤 / 의상 트렌치 / Hair Effet mouillé(젖은 곱슬 어깨 길이, 목 옆에 붙는 잔머리) + Frange rideau / Base Teint nu(비 갠 뒤 상기된 뺨) / Lip Framboise(윤기 나는 붉은 입술) / Outfit Trench classique(연한 카키 더블 롱) + Jean évasé + Botte Chelsea / Props Parapluie pliant / Scene Escalier de quai, 버드나무 아래 젖은 센강 돌계단 / Light Après la pluie(5400K, 회백 구름과 젖은 돌이 위아래에서 서로 받아치는 부드러운 빛) / Optics Canon New F-1, Canon FD 50mm f/1.4, Kodak Portra 400(Iris 필드는 Kodak Tri-X 400이고, 이 세트는 일부러 컬러로 다시 해석해 Portra 400을 쓴다), 암부에 촘촘한 입자 / Expression Air serein(구름 틈의 빛을 향해 고개를 든다) / Pose Refermer son parapluie |
-| S5 보주 광장 아케이드 (滤镜 #025) | D | 단서: 장소 보주 광장, 붉은 벽돌 아케이드 / 소품 문고본 / 시간대 - / 의상 트위드 블레이저 / Hair Coiffé-décoiffé(어깨 길이 흐트러진 갈색) + Frange rideau / Base Teint nu(깨끗한 맨 피부) / Lip Rouge brique(레트로 홍갈색 무광) / Outfit Tweed chevron(코냑색 헤링본 블레이저) / Props Collection Blanche(낡은 프랑스어 문고본) / Scene Place des Vosges, 붉은 벽돌과 석조 아케이드를 걷는다 / Light Ombre douce(4800K, 아케이드 밖에서 비스듬히 들어온 하늘빛과 붉은 벽돌의 따뜻한 중립 반사가 옆얼굴에 윤곽을 만든다, 암부는 깊되 까맣지 않다) / Optics Leica MP, Summicron 35mm f/2, Kodak Portra 400 + Pellicule poussée(Iris 필드는 Kodak Tri-X 400 Pushed to 800이고, 이 세트는 일부러 컬러로 다시 해석한다), 짙은 입자 / Expression Regard dans le vague(아케이드 밖 분수 광장 쪽으로 고개를 돌린다) / Pose 걷다가 고개를 돌린다 |
+| S3 오페라 대리석 (滤镜 #030) | B | 단서: 장소 오페라 대리석, 흰 석조 기둥, 광장 / 소품 - / 시간대 - / 의상 검은 실크 슬립, 회색 캐시미어 가디건 / Hair 어깨 길이 흐트러진 갈색, mèche derrière l'oreille + Frange rideau / Base Base légère au fini satiné / Lip Beige rosé(차가운 토프 베이지) / Outfit Robe caraco(검은 실크 슬립 롱드레스) + Gilet(연회색 얇은 캐시미어, 열어서 걸친다) / Scene Opéra Garnier, 흰 조각 대리석 기둥 회랑의 계단에 기댄다 / Light Lumière réfléchie(5600K, 흰 대리석 벽이 고명도 냉회백 빛을 돌려준다, 암부는 옅은 청회색) / Optics Contax G2, Zeiss Planar 45mm f/2, Pro 400H, 가는 입자 / Expression Regard dans le vague(차분하고 도도하게 광장 차들을 본다) / Pose Adossée à un pilier de pierre |
+| S4 센강 비 갠 계단 (滤镜 #038) | C | 단서: 장소 센강 돌계단, 버드나무 / 소품 우산 / 시간대 비 갠 뒤 / 의상 트렌치 / Hair Effet mouillé(젖은 곱슬 어깨 길이, 목 옆에 붙는 잔머리) + Frange rideau / Base Teint nu(비 갠 뒤 상기된 뺨) / Lip Framboise(윤기 나는 붉은 입술) / Outfit Trench classique(연한 카키 더블 롱) + Jean évasé + Botte Chelsea / Props Parapluie pliant / Scene Escalier de quai, 버드나무 아래 젖은 센강 돌계단 / Light Après la pluie(5400K, 회백 구름과 젖은 돌이 위아래에서 서로 받아치는 부드러운 빛) / Optics Canon New F-1, Canon FD 50mm f/1.4, Kodak Portra 400, 암부에 촘촘한 입자 / Expression Air serein(구름 틈의 빛을 향해 고개를 든다) / Pose Refermer son parapluie |
+| S5 보주 광장 아케이드 (滤镜 #025) | D | 단서: 장소 보주 광장, 붉은 벽돌 아케이드 / 소품 문고본 / 시간대 - / 의상 트위드 블레이저 / Hair Coiffé-décoiffé(어깨 길이 흐트러진 갈색) + Frange rideau / Base Teint nu(깨끗한 맨 피부) / Lip Rouge brique(레트로 홍갈색 무광) / Outfit Tweed chevron(코냑색 헤링본 블레이저) / Props Collection Blanche(낡은 프랑스어 문고본) / Scene Place des Vosges, 붉은 벽돌과 석조 아케이드를 걷는다 / Light Ombre douce(4800K, 아케이드 밖에서 비스듬히 들어온 하늘빛과 붉은 벽돌의 따뜻한 중립 반사가 옆얼굴에 윤곽을 만든다, 암부는 깊되 까맣지 않다) / Optics Leica MP, Summicron 35mm f/2, Kodak Portra 400 + Pellicule poussée, 짙은 입자 / Expression Regard dans le vague(아케이드 밖 분수 광장 쪽으로 고개를 돌린다) / Pose 걷다가 고개를 돌린다 |
 | S6 담쟁이 안뜰 (滤镜 #036) | D | 단서: 장소 담쟁이 안뜰, 석계단 / 소품 허브차 컵, 흰 수국 / 시간대 - / 의상 린넨 슬립 드레스 / Hair 한쪽 어깨로 내린 긴 갈색 머리 + Frange rideau / Base Teint nu / Lip Gloss transparent(옅은 살구 핑크) / Outfit Lin lavé(에크뤼 워시드 린넨 무릎 길이 슬립 드레스) / Props Tasse en porcelaine(허브차 도자기 컵), hortensias / Scene cour intérieure pavée, 담쟁이가 덮인 석벽과 오래된 석계단에 앉는다 / Light Ombre douce(5300K, 흐린 하늘빛이 담쟁이를 거치며 흰 린넨과 얼굴에 옅은 청록 회색 반사를 얹는다) / Optics Contax RTS III, Zeiss Planar 50mm f/1.4, Kodak Portra 400, 고운 입자 / Expression Air serein(구석의 흰 수국을 본다) / Pose 석계단에 앉아 두 손으로 잔을 든다 |
 
 ## 포즈·구도 쌍
@@ -202,3 +202,8 @@
 
 ## 출처
 Iris (noahvisualsx/Iris b83de4c, MIT, © 2026 noahvisuals): 法国/滤镜/02 #021–040, 风格/01 #001 #011 #015·03 #049 #053 #060, 发型与妆容/04 #031 #033 #035, 穿搭/01 #001·03 #036, 拍照姿势/01 #001·04 #062 #063 #066. 낱말과 구성은 참고했고 문장은 MPW용으로 새로 썼다. 라이선스 전문은 [LICENSE-Iris.md](LICENSE-Iris.md).
+
+Iris 원문 값 기록(렌더링에는 쓰지 않는다):
+- S3 Optics: Iris 필드는 Biogon 28mm f/2.8이고, 본문은 50mm 인물 렌즈로 어긋난다.
+- S4 Optics: Iris 필드는 Kodak Tri-X 400이고, 이 세트는 일부러 컬러로 다시 해석해 Portra 400을 쓴다.
+- S5 Optics: Iris 필드는 Kodak Tri-X 400 Pushed to 800이고, 이 세트는 일부러 컬러로 다시 해석한다.

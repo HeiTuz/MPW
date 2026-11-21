@@ -119,14 +119,14 @@
 |---|---|---|
 | A | place | 苏州园林 — A classical garden of white walls, grey tile, rockery and lattice windows over still water. |
 | A | place | 徽派建筑 — White walls with stepped gables and dark roofs close in a narrow courtyard open to the sky. |
-| A | background | 青砖黛瓦 — Grey-blue brick walls and dark tile roofs under even overcast light, clean and slightly cool. |
-| B | place | 安吉竹海 — Endless slopes of tall green bamboo with leaves moving like waves and thin strips of light on the mossy path. |
-| B | place | 云栖竹径 — A stone path under a dense bamboo canopy where morning haze turns sunlight into soft vertical shafts. |
+| A | background | 青砖黛瓦 — Grey-blue brick walls and dark tile roofs, clean and slightly cool. |
+| B | place | 安吉竹海 — Endless slopes of tall green bamboo with leaves moving like waves and a mossy path. |
+| B | place | 云栖竹径 — A stone path under a dense bamboo canopy with morning haze hanging between the stalks. |
 | B | background | 远山含黛 — Layered hills fade into blue-grey haze behind her, the foreground sharp and the distance dissolving. |
-| C | place | 书斋 — A wood-panelled study with a big desk and shelves of old books, light resting on paper and the window frame. |
-| C | background | 影壁 — A blank whitewashed screen wall with a tiled cap forms a plain flat backdrop that takes the hard light cleanly. |
-| D | place | 茶寮 — A small timber tea room with a low table and paper-soft window light, closed off from outside by walls and trees. |
-| D | place | 清雅茶室 — A quiet wood-and-paper tea room with a tea tray on a low table and warm matte wood in low natural light. |
+| C | place | 书斋 — A wood-panelled study with a big desk and shelves of old books and a window frame. |
+| C | background | 影壁 — A blank whitewashed screen wall with a tiled cap forms a plain flat backdrop. |
+| D | place | 茶寮 — A small timber tea room with a low table, closed off from outside by walls and trees. |
+| D | place | 清雅茶室 — A quiet wood-and-paper tea room with a tea tray on a low table and warm matte wood. |
 | D | background | 博古架 — A dark wood shelf of open compartments, each holding one vase, bowl or stone with plenty of empty space between. |
 
 ## Light
@@ -149,10 +149,10 @@ B의 `月光`(밤)을 고르면 햇빛·새벽빛 줄(`竹影`, `幽篁深处`, 
 ## Optics
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
-| A | stock | Leica M11 — In this look the frame has crisp micro-contrast with calm colour and gentle highlight roll-off. |
+| A | stock | Leica M11 — A compact rangefinder frame. |
 | A | color | 水墨影调 — A low-contrast grey-cyan grade where the whites soften to matte paper and the shadows lean faintly cool. |
 | A, D | surface | 哑光相纸 — No glossy sheen, only a quiet matte photo-paper finish with slow, soft tonal fall-off. |
-| B | stock | Fujifilm GFX — A medium-format digital frame that in this look shows fine material texture and rich colour in the greens. |
+| B | stock | Fujifilm GFX — A medium-format digital frame. |
 | B | color | 青绿偏色 — Shadows and midtones lean ink green with restrained red and yellow while the green shade leaves only a faint pale sheen on the skin. |
 | B | lens | 85mm 人像 — A short-telephoto portrait look with gentle compression, the bamboo behind melting into creamy blur. |
 | C | mono | 黑白银盐 — Pure monochrome with a rich grey ramp, deep velvet blacks and clean highlights. |
@@ -160,7 +160,7 @@ B의 `月光`(밤)을 고르면 햇빛·새벽빛 줄(`竹影`, `幽篁深处`, 
 | C | grain | 胶片颗粒 — Visible silver-style grain is laid over the monochrome digital file across the whole frame, heaviest in the black shadow side. |
 | D | color | 奶茶色调 — A low-contrast warm grade pulling the colours toward off-white, oat and camel beige. |
 
-## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 단서는 찾기용이고 요청의 장소·소품·시간대·의상 가운데 둘 이상이 그 세트의 단서와 같으면 통째로 쓰고, 세트 값은 고정 사실보다 먼저다. 규칙은 image-brief.md §4 '룩 카드' 4항과 '비워 둔 층'. 이 표의 켈빈 숫자는 광원을 잰 값이 아니라 이 룩에서 정한 연출 값이다)
+## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 단서는 찾기용이고 세트를 쓰는 조건은 규칙 4항이 정하고, 세트 값은 고정 사실보다 먼저다. 규칙은 image-brief.md §4 '룩 카드' 4항과 '비워 둔 층'. 이 표의 켈빈 숫자는 광원을 잰 값이 아니라 이 룩에서 정한 연출 값이다)
 | 세트 | 갈래 | 묶음 |
 |---|---|---|
 | S1 水墨宣纸 (滤镜 #001) | A | 단서: 장소 苏州 정원, 흰 분벽 / 소품 - / 시간대 흐린 날 / 의상 玄黑 장삼 / Hair 一丝不乱的低盘发, 긴 머리를 뒤로 올려 목선이 살짝 드러남 / Brow 野生眉 / Lip 옅은 朱红 립(淡雅朱红唇, 광택 없음) / Outfit 长衫(玄黑 重磅 真丝 개량 장삼) / Scene 苏州园林의 흰 분벽 앞에 단정히 선다 / Light 5800K 흐린 날 확산광, 그림자는 청회색 먹 번짐 / Optics Leica M11, 水墨影调, 어두운 곳에 고운 입자 / Expression 清冷感, 렌즈를 조용히 응시 / Composition 흰 벽과 검은 옷의 留白 |

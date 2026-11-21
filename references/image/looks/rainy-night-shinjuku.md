@@ -109,19 +109,19 @@
 ## Scene
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
-| A | place | 歌舞伎町 — A narrow lane under the neon gate arch of the main street and a tall building crowned with a giant monster-head statue, cold violet, cyan and magenta signs spilling onto black rain-slick asphalt that mirrors them whole. |
-| A | place | 秋葉原 — An electric-town street under a pedestrian overpass where giant screens pour cyan and cold white down through drizzle, every sign blurred beyond reading. |
+| A | place | 歌舞伎町 — A narrow lane under the neon gate arch of the main street and a tall building crowned with a giant monster-head statue, with violet, cyan and magenta signs above black rain-slick asphalt. |
+| A | place | 秋葉原 — An electric-town street under a pedestrian overpass with giant screens overhead and drizzle in the air, every sign blurred beyond reading. |
 | B | place | 渋谷スクランブル交差点 — The wide diagonal crossing at the moment the lights turn green, a sea of clear umbrellas filling the road under towering screens and wet black asphalt. |
-| B | place | 銀座 — A corner under a luxury-shop awning where a cast-iron street lamp glows amber and cars sweep past on the wet road in cold white. |
-| B | storefront | コンビニ — A convenience store whose full-height window pours flat cold-white fluorescent light over the rain-dark pavement and the umbrella stand at its door. |
-| B | shelter | 雨宿り — She waits under a shop eave while rain pours past in a bright curtain, the concrete at her feet darkened with shaken-off drops. |
+| B | place | 銀座 — A corner under a luxury-shop awning with a cast-iron street lamp and cars sweeping past on the wet road. |
+| B | storefront | コンビニ — A convenience store with a full-height window, rain-dark pavement and an umbrella stand at its door. |
+| B | shelter | 雨宿り — She waits under a shop eave while rain pours past in a heavy curtain, the concrete at her feet darkened with shaken-off drops. |
 | B | back-alley | 非常階段 — A back-alley iron fire stair with a corner landing against dark concrete walls soaked nearly black, the rain echoing in the narrow space. (神态 #079) |
-| C | place | 六本木ヒルズ — A high observation corridor with floor-to-ceiling glass, a black interior and a sea of city lights beyond the pane. |
+| C | place | 六本木ヒルズ — A high observation corridor with floor-to-ceiling glass, a black interior and the city spread beyond the pane. |
 | C | place | 首都高 — A night expressway seen from the passenger seat, gray concrete pillars and bends racing past the rain-streaked window. |
-| C | background | 東京タワー — The red-and-white lattice tower stands in rain mist beyond a quiet slope, its glow spreading into a soft deep-red haze across the sky. |
-| C | overpass | 歩道橋 — A gray footbridge over a wide multi-lane road, its railing cold under her hands while red and white traffic streams below. |
-| D | place | 新宿東口 — The station-exit plaza at 2 a.m. with the screens dark and the crowds gone, only old street lamps lighting a wet crosswalk. |
-| D | place | 中目黒 — A small red arched bridge with black iron railings over a canal in light rain, pale paper lanterns along the bank mirrored on the black water. |
+| C | background | 東京タワー — The red-and-white lattice tower stands in rain mist beyond a quiet slope. |
+| C | overpass | 歩道橋 — A gray footbridge over a wide multi-lane road, its railing cold under her hands while traffic streams below. |
+| D | place | 新宿東口 — The station-exit plaza at 2 a.m. with the crowds gone, a wet crosswalk and old street lamps. |
+| D | place | 中目黒 — A small red arched bridge with black iron railings over a canal of black water in light rain, with pale paper lanterns along the bank. |
 
 ## Light
 | 갈래 | 슬롯 | 줄 |
@@ -146,27 +146,27 @@
 ## Optics
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
-| A | camera | ARRI Alexa Mini — A cinema-camera look for this frame: smooth highlight roll-off that keeps the neon tubes unclipped and blacks held in a deep violet-blue. (滤镜 #091) |
-| A | camera | Sony A7S III — A low-light full-frame look with clean shadows and steady cyan, the screen light reflected calmly in the wet street. (滤镜 #098) |
+| A | camera | ARRI Alexa Mini — A compact digital cinema camera with a Super 35 sensor. (滤镜 #091) |
+| A | camera | Sony A7S III — A full-frame mirrorless camera. (滤镜 #098) |
 | A | flare | ブルーストリーク — Horizontal blue streaks run off each neon tube and the out-of-focus lights behind her stretch into ovals. (S1과 쌍 1~4에서만 쓴다. S2는 구면 단렌즈라 쓰지 않는다) |
 | A, B | bloom | Black Pro-Mist — A black diffusion filter blooms the brightest signs into faint halos and lowers contrast slightly while her face stays clear. |
 | A, B, C | color | Cool Tone — The whole palette leans cold blue-white with the shadows tinted violet, quiet and slightly pale. |
-| B | camera | Sony FX3 — A compact cinema-line full-frame look with clean high-ISO files and neutral color, steady for handheld night street shooting. (滤镜 #092) |
-| B | camera | Leica SL2 — Crisp detail and deep, calm color drawn so the amber lamp and the white headlights stay cleanly separate with no purple fringing. (滤镜 #093) |
-| C | camera | Hasselblad X2D 100C — A medium-format digital look with smooth color and wide tonal range, the distant city lights kept delicate and unclipped. (滤镜 #096) |
-| C | camera | RED Komodo — A compact cinema-camera look with crisp detail and clean color, steady enough to shoot from inside a moving car. (滤镜 #099) |
+| B | camera | Sony FX3 — A compact full-frame cinema-line camera. (滤镜 #092) |
+| B | camera | Leica SL2 — A full-frame mirrorless camera. (滤镜 #093) |
+| C | camera | Hasselblad X2D 100C — A medium-format mirrorless digital camera. (滤镜 #096) |
+| C | camera | RED Komodo — A compact 6K cinema camera. (滤镜 #099) |
 | C | motion | 光跡 — Headlights and tail lights stretch into smooth colored streaks along the road while the buildings stay still and sharp. |
 | C | bokeh | Bokeh — Distant lights turn into big round overlapping discs behind her. |
-| D | camera | Leica M11 — Crisp micro-contrast, calm color and gentle highlight roll-off, so the blacks sink clean and the highlights stay pure. (滤镜 #100) |
+| D | camera | Leica M11 — A compact full-frame digital rangefinder camera. (滤镜 #100) |
 | D | key | Deep Blacks — The darkest parts of the frame sink to clean, deep black with no visible noise, and the highlights stay small and unclipped. |
 | D | color | Cool Grey Tone — A pale gray with a trace of blue and restrained contrast, the whites clean and cold. |
 
-## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 요청의 장소·소품·시간대·의상 가운데 둘 이상이 그 세트의 단서와 같으면 통째로 쓰고, 세트 값은 고정 사실보다 먼저다. 규칙은 image-brief.md §4 '룩 카드' 4항과 '비워 둔 층')
+## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 세트를 쓰는 조건은 규칙 4항이 정하고, 세트 값은 고정 사실보다 먼저다. 규칙은 image-brief.md §4 '룩 카드' 4항과 '비워 둔 층')
 켈빈 숫자(4200K 등)는 Iris 프리셋이 적은 연출 값이고 실측이 아니다. 이 룩에서 그 빛이 그렇게 보이게 쓰는 값이다.
 
 | 세트 | 갈래 | 묶음 |
 |---|---|---|
-| S1 歌舞伎町 雨夜 (滤镜 #091) | A | 단서: 장소 가부키초 일번가 아치, 괴수 조형 건물 / 소품 투명 우산 / 시간대 비 오는 밤 / 의상 칠피 재킷 / Hair 濡れ髪의 검은 단발, シースルーバング가 바람에 흔들린다 / Lip ガラスリップ(Iris 원본은 水润素唇) / Outfit 검은 칠피 짧은 재킷(エナメル) / Props ビニール傘, 큰 투명 우산을 쓴다 / Scene 歌舞伎町, 괴수 머리 조형이 얹힌 건물 아래 좁은 골목 / Light 4200K, 젖은 아스팔트가 보라·청록·분홍 네온을 거울처럼 되비춘다 / Optics ARRI Alexa Mini, 35mm 아나모픽 렌즈와 효과 줄 ブルーストリーク(Iris 원본은 Cooke S4/i 35mm로 적었지만 S4/i는 구면 렌즈이고 아나모픽은 Cooke Anamorphic/i 계열이다) / Expression 걸음이 느슨하고 시선이 렌즈를 스친다 / Pose 거리 한가운데를 걷는다 |
+| S1 歌舞伎町 雨夜 (滤镜 #091) | A | 단서: 장소 가부키초 일번가 아치, 괴수 조형 건물 / 소품 투명 우산 / 시간대 비 오는 밤 / 의상 칠피 재킷 / Hair 濡れ髪의 검은 단발, シースルーバング가 바람에 흔들린다 / Lip ガラスリップ / Outfit 검은 칠피 짧은 재킷(エナメル) / Props ビニール傘, 큰 투명 우산을 쓴다 / Scene 歌舞伎町, 괴수 머리 조형이 얹힌 건물 아래 좁은 골목 / Light 4200K, 젖은 아스팔트가 보라·청록·분홍 네온을 거울처럼 되비춘다 / Optics ARRI Alexa Mini, 35mm 아나모픽 렌즈와 효과 줄 ブルーストリーク / Expression 걸음이 느슨하고 시선이 렌즈를 스친다 / Pose 거리 한가운데를 걷는다 |
 | S2 秋葉原 (滤镜 #098) | A | 단서: 장소 아키하바라 보행교 아래, 거대 스크린 / 소품 - / 시간대 가는 비 오는 밤 / 의상 반사 재킷 / Hair 濡れ髪, シースルーバング / Outfit リフレクター, 은회색 반사 기능성 짧은 외투 / Scene 秋葉原, 중앙 도로 보행교 아래 / Light 6500K, 거대한 전자 스크린의 순청록과 차가운 흰빛이 가는 비를 뚫고 얼굴 반쪽을 비춘다(街頭ビジョン) / Optics Sony A7S III 35mm f/1.4, 극저조도에서도 깨끗한 암부 / Expression 睥睨, 냉소적이고 미래적인 얼굴 / Pose 스크린 아래에 서서 옆얼굴이 청색으로 잘린다 |
 | S3 渋谷 雨のスクランブル (滤镜 #092) | B | 단서: 장소 시부야 스크램블 교차로, 대형 스크린 / 소품 투명 우산 / 시간대 비 오는 밤 / 의상 발수 코트 / Hair 濡れ髪, シースルーバング / Outfit 깊은 회색 긴 코트(撥水コート) / Scene 渋谷スクランブル交差点, 青信号 순간 투명 우산의 바다 한가운데 / Light 5000K, 수십 미터 위 대형 스크린의 차가운 흰빛이 위에서 확산된다(街頭ビジョン) / Optics Sony FX3 24mm f/1.4, 높은 감도에서도 낮은 노이즈 / Expression Dispassionate Onlooker, 인파 속 혼자 멈춘다 / Pose 인파 한가운데서 걸음을 멈추고 돌아본다 |
 | S4 銀座 雨宿り (滤镜 #093) | B | 단서: 장소 긴자 쇼윈도 처마, 주철 가로등 / 소품 - / 시간대 비 오는 밤 / 의상 캐시미어 롱코트 / Hair 濡れ髪, シースルーバング / Outfit ダブルフェイスカシミヤ, 연한 귀리색 이중직 캐시미어 롱코트 / Props 금빛 귀걸이 / Scene 銀座, 고급 쇼윈도 처마 아래 비를 피하는 모퉁이 / Light 3800K~6000K, 주철 가로등의 호박색과 지나가는 차의 차가운 제논 헤드램프가 맞선다(Warm-Cool Contrast) / Optics Leica SL2 + 50mm f/2 APO, 보라 번짐 없는 고대비 / Expression 無垢な静寂, 품위 있는 시선 |
@@ -194,3 +194,7 @@
 
 ## 출처
 Iris (noahvisualsx/Iris b83de4c, MIT, © 2026 noahvisuals): 日本/滤镜/06 #091–100, 风格/01 #004 #008, 风格/03 #044 #045 #055 #057, 神态与微表情/02 #013 #019, 神态与微表情/05 #048, 神态与微表情/08 #079, 拍照姿势/02 #033, 道具与美甲/04 #036, 发型与妆容/01 #003. 낱말과 구성은 참고했고 문장은 MPW용으로 새로 썼다. 라이선스 전문은 [LICENSE-Iris.md](LICENSE-Iris.md).
+
+Iris 원문 값 기록(렌더링에는 쓰지 않는다):
+- S1 Lip: Iris 원본은 水润素唇.
+- S1 Optics: Iris 원본은 Cooke S4/i 35mm로 적었지만 S4/i는 구면 렌즈이고 아나모픽은 Cooke Anamorphic/i 계열이다.

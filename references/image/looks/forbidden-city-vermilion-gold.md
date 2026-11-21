@@ -123,16 +123,16 @@
 | A | detail | 鎏金铜缸 — A huge gilded bronze water vat with lion-mask ring handles stands on the paving, its gold worn thin into a dull old sheen. (滤镜 #087) |
 | A | place-axis | 皇家御道 — A broad central stone path pulls toward the distant halls in strong perspective. (滤镜 #090) |
 | B | place | 景山 — A hilltop pavilion with a white marble railing looks down a straight central axis over a sea of yellow roofs. (滤镜 #077, 风格 #024) |
-| B | detail | 琉璃瓦 — Glazed yellow roof tiles carry a hard sheen that picks up the low sun and lays bright stripes along each ridge. (滤镜 #077) |
-| B | place-stair | 汉白玉 — Carved white marble steps and balustrades glow faintly warm in low sun while their shadows stay cool grey-blue. (滤镜 #078) |
-| B | place-gate | 午门 — A monumental red gate tower with upturned eaves rises over a wide stone plaza, its dark outline cut against a red-orange sky. (滤镜 #085) |
-| B | place-moat | 角楼 — A multi-eaved corner tower of timber and yellow tile rises over a still moat, and its lit outline repeats in the dark water. (滤镜 #086, 风格 #021) |
-| C | detail | 金丝楠木 — Huge dark nanmu pillars give off a dim gold-brown glow in a low-lit hall. (滤镜 #083) |
-| C | place | 太庙 — A vast ancestral hall stands on rows of towering pillars over a deep floor, daylight reaching inside only through the open doors. (滤镜 #083) |
-| C | place-gallery | 珍宝馆 — A dim museum gallery holds lit display cases of antiques, with only the cases and the objects in them catching light. (滤镜 #084) |
-| D | place | 雍和宫 — Red walls and yellow roofs frame a courtyard drifting with incense smoke, warm light filtering through the haze. (滤镜 #079, 风格 #031) |
-| D | background | 古柏 — Old twisted cypress trunks in deep brown with warm patches of sun coming through the canopy. (滤镜 #081) |
-| D | detail | 漏窗 — A white wall holds a carved lattice window whose pattern throws a crisp matching shadow across the floor as side light passes through. (滤镜 #082) |
+| B | detail | 琉璃瓦 — Glazed yellow roof tiles with a hard glossy surface run along each ridge. (滤镜 #077) |
+| B | place-stair | 汉白玉 — Carved white marble steps and balustrades rise in stone terraces. (滤镜 #078) |
+| B | place-gate | 午门 — A monumental red gate tower with upturned eaves rises over a wide stone plaza. (滤镜 #085) |
+| B | place-moat | 角楼 — A multi-eaved corner tower of timber and yellow tile rises over a still moat, and its outline repeats in the water. (滤镜 #086, 风格 #021) |
+| C | detail | 金丝楠木 — Huge nanmu pillars of dark gold-brown wood stand in a hall. (滤镜 #083) |
+| C | place | 太庙 — A vast ancestral hall stands on rows of towering pillars over a deep floor. (滤镜 #083) |
+| C | place-gallery | 珍宝馆 — A museum gallery holds display cases of antiques. (滤镜 #084) |
+| D | place | 雍和宫 — Red walls and yellow roofs frame a courtyard drifting with incense smoke. (滤镜 #079, 风格 #031) |
+| D | background | 古柏 — Old twisted cypress trunks in deep brown under a dense canopy. (滤镜 #081) |
+| D | detail | 漏窗 — A white wall holds a carved lattice window. (滤镜 #082) |
 | D | place-dawn | 大觉寺 — A mountain-temple courtyard of flagstones lies before closed vermilion hall doors, morning mist still resting on the ground. (滤镜 #089, 风格 #032) |
 
 ## Light
@@ -155,22 +155,22 @@
 ## Optics
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
-| A | stock | Leica M11 — In this look the frame has crisp micro-contrast with calm warm colour and gentle highlight roll-off, so weathered plaster keeps its texture. (滤镜 #076 #087) |
-| B | stock | Canon EOS R5 — In this look the frame is crisp and high-resolution with natural colour and smooth tonal transitions that hold fine detail in the glazed-tile highlights. (滤镜 #077 #085) |
-| C, D | stock | Fujifilm GFX — A medium-format digital frame that in this look shows fine material texture and rich deep colour, so silk, wood and enamel keep distinct surfaces. (滤镜 #079 #088) |
-| C | stock | Sony A7R V — A high-resolution full-frame frame that in this look shows clean matte detail and cool grey-white tonality under a soft spot. (滤镜 #084) |
-| D | stock | Hasselblad X2D 100C — A medium-format digital frame that in this look shows natural, smooth colour, a wide tonal range and delicate gradation. (滤镜 #082) |
+| A | stock | Leica M11 — A full-frame 60-megapixel digital rangefinder body. (滤镜 #076 #087) |
+| B | stock | Canon EOS R5 — A full-frame 45-megapixel mirrorless body. (滤镜 #077 #085) |
+| C, D | stock | Fujifilm GFX — A medium-format digital body. (滤镜 #079 #088) |
+| C | stock | Sony A7R V — A 61-megapixel full-frame mirrorless body. (滤镜 #084) |
+| D | stock | Hasselblad X2D 100C — A 100-megapixel medium-format mirrorless body. (滤镜 #082) |
 | A, B | color | 朱红暖调 — A warm grade leaning reds toward cinnabar and golds toward amber, with shadows going ochre-brown and only a faint warm bounce reaching the skin. (滤镜 #076) |
 | C | color | 金褐暗调 — A low-key grade where deep shadows turn gold-brown like old resinous wood and the few highlights stay small and warm. (滤镜 #083) |
 | 전부 | grain | 胶片颗粒 — A fine film-style grain is laid over the digital file, even across the whole frame and slightly heavier in the shadows. |
 
-## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 단서는 찾기용이고 요청의 장소·소품·시간대·의상 가운데 둘 이상이 그 세트의 단서와 같으면 통째로 쓰고, 세트 값은 고정 사실보다 먼저다. 규칙은 image-brief.md §4 '룩 카드' 4항과 '비워 둔 층'. 이 표의 켈빈 숫자는 광원을 잰 값이 아니라 이 룩에서 정한 연출 값이다)
+## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 단서는 찾기용이고 세트를 쓰는 조건은 규칙 4항이 정하고, 세트 값은 고정 사실보다 먼저다. 규칙은 image-brief.md §4 '룩 카드' 4항과 '비워 둔 층'. 이 표의 켈빈 숫자는 광원을 잰 값이 아니라 이 룩에서 정한 연출 값이다)
 | 세트 | 갈래 | 묶음 |
 |---|---|---|
 | S1 宫墙朱红 (滤镜 #076) | A | 단서: 장소 红墙, 青砖 석판 길 / 소품 竹节簪 / 시간대 오후 햇빛 / 의상 검은 더블 코트 / Hair 一丝不乱的低盘发, 검은 머리를 뒤로 올린 고전적인 낮은 쪽, 竹节簪(순은 죽절 비녀) / Brow 野生眉 / Lip 正红唇(무광의 선명한 정통 레드, 豆沙 립은 얹지 않음) / Outfit 麦尔登呢(검은 중량 순양모 立领 더블 코트, 양손은 주머니에) / Pose 红墙 옆 青砖 석판 길을 천천히 걷는다 / Scene 红墙, 풍화한 주홍 담과 青砖 석판 길 / Light 柔和漫射光(5000K 오후, 낡은 붉은 회벽을 비추는 부드러운 햇빛, 그림자는 따뜻한 적갈색) / Optics Leica M11, 朱红暖调, 胶片颗粒 / Expression 波澜不惊, 붉은 담 끝을 바라본다 |
 | S2 太和冬雪 (滤镜 #080) | A | 단서: 장소 눈 쌓인 太和殿 광장, 红墙 / 소품 - / 시간대 눈 갠 날 / 의상 먹빛 캐시미어 롱코트 / Hair 黑长直, 몇 가닥이 찬바람에 날림(face-clear 완화) / Lip 正红唇 / Outfit 羊绒大衣(먹빛 더블페이스 순 캐시미어 롱코트) / Scene 红墙, 눈 쌓인 太和殿 광장의 주홍 담과 흰 눈 덮인 처마 / Light 雪地反光(6200K 눈 갠 뒤의 맑고 차가운 흰 하늘빛, 红·白·黑 세 색의 대비) / Optics Sony A1, 胶片颗粒 / Expression 不怒自威, 턱을 살짝 들고 렌즈를 본다 / Pose 肩颈放松 |
 | S3 景山金顶 (滤镜 #077) | B | 단서: 장소 景山 万春亭 난간, 琉璃瓦 지붕의 바다 / 소품 - / 시간대 낙조 / 의상 墨绿 코트 / Hair 微卷长发, 산정 바람에 흩날림(face-clear 완화) / Lip 枫叶红唇(무광) / Outfit 羊绒大衣, 墨绿(깊은 에메랄드 그린 더블페이스 롱코트, 열어 입음) / Pose 登高俯瞰, 景山 万春亭 汉白玉 난간 옆 / Scene 景山, 아래로 琉璃瓦 금빛 지붕의 바다 / Light 逆光金边(3800K 낙조, 머리카락과 코트 가장자리에 황금 윤곽, 얼굴 뼈대에 하이라이트) / Optics Canon EOS R5, 70-200mm 망원 / Expression 居高临下, 턱을 살짝 들고 내려다본다 / Camera 远景 |
-| S4 角楼蓝调 (滤镜 #086) | B | 단서: 장소 角楼, 해자 汉白玉 난간, 수면 반영 / 소품 - / 시간대 블루아워 / 의상 트렌치 / Hair 一丝不乱的低盘发 / Lip 正红唇 / Outfit 风衣(玄黑 중량 실크 더블브레스트 슬림핏 트렌치코트) / Scene 角楼, 해자 汉白玉 난간 곁, 수면에 누각의 금빛 윤곽이 거울처럼 비친다 / Light 蓝调时刻(6800K~3200K 혼합: 짙은 남색 황혼 하늘과 따뜻한 누각 조명, 옆에서 약한 부드러운 빛이 얼굴을 비춘다) / Optics Nikon Z8(24-70mm), 胶片颗粒 / Expression 침착하게 렌즈를 돌아본다 / Pose 回眸 |
+| S4 角楼蓝调 (滤镜 #086) | B | 단서: 장소 角楼, 해자 汉白玉 난간, 수면 반영 / 소품 - / 시간대 블루아워 / 의상 트렌치 / Hair 一丝不乱的低盘发 / Lip 正红唇 / Outfit 风衣(玄黑 중량 실크 더블브레스트 슬림핏 트렌치코트) / Scene 角楼, 해자 汉白玉 난간 곁, 수면에 누각의 윤곽이 거울처럼 비친다 / Light 蓝调时刻(6800K~3200K 혼합: 짙은 남색 황혼 하늘과 따뜻한 누각 조명, 옆에서 약한 부드러운 빛이 얼굴을 비춘다) / Optics Nikon Z8(24-70mm), 胶片颗粒 / Expression 침착하게 렌즈를 돌아본다 / Pose 回眸 |
 | S5 景泰蓝 (滤镜 #084) | C | 단서: 장소 珍宝馆, 골동 진열 / 소품 景泰蓝 귀걸이 / 시간대 - / 의상 孔雀蓝 旗袍 / Hair 높이 틀어 올린 우아한 현대식 쪽 / Props 景泰蓝 귀걸이(순금 掐丝 공작청 법랑) / Lip 正红唇(무광의 복고 붉은색) / Outfit 改良旗袍(깊은 孔雀蓝 중량 크레이프 새틴 立领 롱 드레스), 金线滚边(가장자리 순금 실 자수 파이핑) / Pose 双手叠放腹前(빈손으로 양손을 아랫배 앞에 포갠다) / Scene 珍宝馆, 어두운 배경의 골동 진열 앞 / Light 부드러운 스포트(5200K), 공작청 새틴이 법랑 같은 보석 광택을 내고 금사 자수가 반짝인다 / Optics Sony A7R V, 胶片颗粒 / Expression 不怒自威, 렌즈를 직시 |
 | S6 古刹香火 (滤镜 #079) | D | 단서: 장소 雍和宫, 古柏 / 소품 향 / 시간대 이른 아침 햇빛 / 의상 长衫 / Hair 碎发低发髻 / Lip 水光唇(연한 물분홍) / Outfit 长衫(素黑 중량 실크 对襟 장삼) / Props 三炷香(가는 향 세 대를 두 손으로 든다) / Scene 雍和宫, 큰 청동 향로 앞 / Light 丁达尔(4600K 이른 아침 햇빛이 古柏 가지를 지나 청남색 향 연기 속에 빛줄기를 만든다) / Optics Fujifilm GFX, 胶片颗粒 / Expression 闭目冥思, 눈을 거의 감는다(catchlight 끔) / Pose 双手持香 |
 

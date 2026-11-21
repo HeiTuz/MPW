@@ -104,22 +104,22 @@
 ## Scene
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
-| A | place | 下北沢 — A maze of narrow lanes with secondhand shops and racks spilling onto the street, leaf shadows moving across the pavement in the afternoon. (滤镜 #001) |
-| A | place | 渋谷スクランブル交差点 — A wide diagonal crossing under a flat gray sky, the crowd shadowless and the signs above it dull. (滤镜 #002) |
-| A | place-old | 下町 — Low timber houses, utility poles and potted plants line a narrow lane in mild morning light, shop shutters half raised. (滤镜 #012 #013) |
-| A | place-old | 神保町 — A narrow lane of secondhand book shops with shelves under the eaves, yellowed spines and hand-lettered boards in cool gray daylight. (滤镜 #014) |
-| A, B | park | 井の頭公園 — A lakeside park with a damp wooden bench, dark pine needles and maple leaves, the sun slanting low through the trees. (滤镜 #003) |
-| B | place | 代官山 — A quiet slope of low boutiques beside a white-walled building, soft spring light lying level on the plaster. (滤镜 #004) |
-| B | place | 代々木公園 — A wide lawn under tall trees with a linen picnic sheet in the shade and light moving in the leaves. (滤镜 #007) |
+| A | place | 下北沢 — A maze of narrow lanes with secondhand shops and racks spilling onto the street. (滤镜 #001) |
+| A | place | 渋谷スクランブル交差点 — A wide diagonal crossing with white stripes on dark asphalt, a crowd crossing from every corner and signs above it. (滤镜 #002) |
+| A | place-old | 下町 — Low timber houses, utility poles and potted plants line a narrow lane, shop shutters half raised. (滤镜 #012 #013) |
+| A | place-old | 神保町 — A narrow lane of secondhand book shops with shelves under the eaves, yellowed spines and hand-lettered boards. (滤镜 #014) |
+| A, B | park | 井の頭公園 — A lakeside park with a damp wooden bench, dark pine needles and maple leaves. (滤镜 #003) |
+| B | place | 代官山 — A quiet slope of low boutiques beside a white plastered building. (滤镜 #004) |
+| B | place | 代々木公園 — A wide lawn under tall trees with a linen picnic sheet spread on the grass. (滤镜 #007) |
 | B | background | 銀杏並木 — An avenue of ginkgo trees drops yellow fan-shaped leaves over a pale pavement in front of a red-brick hall. (滤镜 #009) |
-| C | place | 純喫茶 — A dim old wooden coffee parlor with a small marble table, a thick porcelain cup and one amber lamp. (滤镜 #005, 风格/02 #024) |
-| C | place | 新宿ゴールデン街 — Tiny bars packed into narrow wet alleys under red lanterns, neon and rain on the paving. (滤镜 #006) |
-| C | place-transit | 深夜タクシー — The back seat of a taxi at night, headlights and neon sliding along rain-spotted glass. (滤镜 #010) |
-| C, D | place-transit | 歩道橋 — A concrete footbridge stairway with a turning landing and a cross-hatched railing, throwing hard diagonal shadows over night traffic or a daytime underpass. (滤镜 #011 #016) |
+| C | place | 純喫茶 — An old wooden coffee parlor with a small marble table and a thick porcelain cup. (滤镜 #005, 风格/02 #024) |
+| C | place | 新宿ゴールデン街 — Tiny bars packed into narrow wet alleys under red lanterns, rain on the paving. (滤镜 #006) |
+| C | place-transit | 深夜タクシー — The back seat of a taxi at night, with rain-spotted glass along the window. (滤镜 #010) |
+| C, D | place-transit | 歩道橋 — A concrete footbridge stairway with a turning landing and a cross-hatched railing, over night traffic or a daytime underpass. (滤镜 #011 #016) |
 | D | place | 強羅 — A damp moss garden with stone lanterns, mist hanging between dark trees and vivid green on every stone. (滤镜 #017, 风格/04 #065) |
 | D | place | 紫陽花 — Dense blue-violet hydrangea blooms stand in a hedge before an old temple's stone wall, packed to the edges of the frame. (滤镜 #008) |
-| D | place-open | 七里ヶ浜 — A wide dusk beach with the sea's edge glowing and the dark outline of a far volcano on the horizon. (滤镜 #020) |
-| D | place-mono | 打ち放しコンクリート — Smooth bare concrete walls with narrow slits of daylight, cool gray and quiet, cut by sharp diagonal sun. (滤镜 #015) |
+| D | place-open | 七里ヶ浜 — A wide beach with the outline of a far volcano on the horizon. (滤镜 #020) |
+| D | place-mono | 打ち放しコンクリート — Smooth bare concrete walls with narrow slits, cool gray and quiet. (滤镜 #015) |
 
 ## Light
 | 갈래 | 슬롯 | 줄 |
@@ -138,7 +138,7 @@
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
 | A | stock | クラシックネガ — The Classic Neg film simulation, set for this look: cyan-green settles into the shadows and midtone grays while the highlights lean slightly warm and red, with saturation held low and contrast firm. |
-| A | camera | Fujifilm X-Pro3 — A rangefinder-style APS-C mirrorless body that applies the Classic Neg simulation in camera, so the frame is a digital file with the muted warm color and gentle street contrast of this look. (`クラシックネガ` 줄·S1 전용이다. 필름 스톡 줄(Superia 400·フジカラー 100·業務用 400)을 고르면 이 본체를 쓰지 않고 스톡 줄만 쓴다) |
+| A | camera | Fujifilm X-Pro3 — A rangefinder-style APS-C mirrorless body that applies the Classic Neg simulation in camera, so the frame is a digital file. (`クラシックネガ` 줄·S1 전용이다. 필름 스톡 줄(Superia 400·フジカラー 100·業務用 400)을 고르면 이 본체를 쓰지 않고 스톡 줄만 쓴다) |
 | A | stock | フジカラー Superia 400 — In this look, neutral grays turn a cool Fuji green under cloud, and reds and yellows stay full without getting loud. |
 | A | stock-clear | フジカラー 100 — In this look, daylight color stays clean and transparent: blue sky and white clothes render crisp over fine, even grain. |
 | A | stock-grit | 業務用 400 — In this look, the tones run dull gray-green with slightly muddy shadows and visible grain, plain and unpolished. |
@@ -146,7 +146,7 @@
 | B | stock | リアラ 100 — In this look, a faint flush stays on the cheeks and greens stay rich and natural, with no cast pulling the frame either way. |
 | B | stock-slide | アスティア 100F — In this look, a soft-contrast slide rendering gives translucent pink-leaning skin highlights and delicate pastel color. |
 | B | stock-slide | センシア 100 — In this look, mild slide contrast comes with gentle saturation and warm cream in the highlights. |
-| B | camera | Contax 645 — A medium-format frame that in this look shows very smooth tone transitions, the background melting into cream behind a silky focus plane. (120 필름 줄 PRO 400H·リアラ 100·アスティア 100F와만 묶는다. センシア 100은 135 필름이라 이 본체를 붙이지 않고 스톡 줄만 쓴다) |
+| B | camera | Contax 645 — A 6x4.5 medium-format film frame. (120 필름 줄 PRO 400H·リアラ 100·アスティア 100F와만 묶는다. センシア 100은 135 필름이라 이 본체를 붙이지 않고 스톡 줄만 쓴다) |
 | C | stock | ナチュラ 1600 — In this look, coarse high-speed grain and soft lamp-lit exposure without flash push the shadows toward red-gray. |
 | C | stock | フジカラー Venus 800 — In this look, a night snapshot leans red in the shadows and green in the neon, with heavy grain and a Showa-era warmth. |
 | C | stock-cine | ETERNA 250D — In this look, a flat cinema-negative rendering with low saturation, soft highlight roll-off and lifted gray-cyan shadows. |
@@ -162,15 +162,15 @@
 | D | grain | 粒状感 — On slide film and Acros the grain is very fine, almost invisible in lit areas and a little stronger in the shadows. |
 | D | grain-mono | 粒状感 — On Neopan 400 coarse silver grain covers the monochrome frame, with deep blacks and clipped highlights. |
 
-## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 단서는 찾기용이고 요청의 장소·소품·시간대·의상 가운데 둘 이상이 그 세트의 단서와 같으면 통째로 쓰고, 세트 값은 고정 사실보다 먼저다. 규칙은 image-brief.md §4 '룩 카드' 4항과 '비워 둔 층'. 이 표의 켈빈 숫자는 광원을 잰 값이 아니라 이 룩에서 정한 연출 값이다)
+## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 단서는 찾기용이고 세트를 쓰는 조건은 규칙 4항이 정하고, 세트 값은 고정 사실보다 먼저다. 규칙은 image-brief.md §4 '룩 카드' 4항과 '비워 둔 층'. 이 표의 켈빈 숫자는 광원을 잰 값이 아니라 이 룩에서 정한 연출 값이다)
 | 세트 | 갈래 | 묶음 |
 |---|---|---|
-| S1 街角 (滤镜 #001) | A | 단서: 장소 시모키타자와 오후 골목, 가로수 그늘 / 소품 - / 시간대 오후 / 의상 밴드칼라 셔츠 / 동작 걷기 / Hair 濡れ髪, 어깨 길이 검은 단발에 シースルーバング가 바람에 흔들린다 / Outfit バンドカラーシャツ(내추럴 아이보리색 면마 셔츠를 헐렁하게 걸침) / Scene 下北沢의 오후 길모퉁이, 가로수 잎 그림자가 얼룩진다 / Light 木漏れ日(5300K), 잎 그림자가 셔츠와 볼에 떨어진다 / Optics Fujifilm X-Pro3 + XF 35mm f/1.4에 クラシックネガ 시뮬레이션(디지털 본체), 그림자의 청록과 하이라이트의 붉은 온기, 입자는 `grain-sim`(첫 줄과 closer는 시뮬레이션용, 렌즈 줄은 세트의 35mm) / Expression 無防備, 렌즈를 의식하지 않는 시선과 숨 / Pose 느슨한 걸음으로 걷는다 |
+| S1 街角 (滤镜 #001) | A | 단서: 장소 시모키타자와 오후 골목, 가로수 그늘 / 소품 - / 시간대 오후 / 의상 밴드칼라 셔츠 / 동작 걷기 / Hair 濡れ髪, 어깨 길이 검은 단발에 シースルーバング가 바람에 흔들린다 / Outfit バンドカラーシャツ(내추럴 아이보리색 면마 셔츠를 헐렁하게 걸침) / Scene 下北沢의 길모퉁이와 가로수 / Light 木漏れ日(5300K), 잎 그림자가 셔츠와 볼에 떨어진다 / Optics Fujifilm X-Pro3 + XF 35mm f/1.4에 クラシックネガ 시뮬레이션(디지털 본체), 그림자의 청록과 하이라이트의 붉은 온기, 입자는 `grain-sim`(첫 줄과 closer는 시뮬레이션용, 렌즈 줄은 세트의 35mm) / Expression 無防備, 렌즈를 의식하지 않는 시선과 숨 / Pose 느슨한 걸음으로 걷는다 |
 | S2 渋谷 曇天 (滤镜 #002) | A | 단서: 장소 시부야 횡단보도 / 소품 - / 시간대 흐린 날, 바람 / 의상 트렌치코트 / Hair 濡れ髪, シースルーバング가 바람에 흔들린다 / Outfit トレンチコート(진회색 얇은 천) / Scene 渋谷スクランブル交差点 옆 보도, 바람 부는 흐린 날 / Light Overcast Light(5600K 부드러운 산란광), 중간 회색에 청록이 낀다 / Optics Nikon FM2 + Nikkor 50mm f/1.4에 フジカラー Superia 400을 넣는다, 어두운 쪽에 조금 굵은 입자(렌즈 줄은 세트의 50mm) / Expression 無防備, 바람에 머리가 날리다 문득 멈춘 순간 / Pose 걸음을 멈추고 선다 |
-| S3 代官山 白壁 (滤镜 #004) | B | 단서: 장소 다이칸야마 흰 벽 / 소품 - / 시간대 봄, 역광 / 의상 트렌치코트 / Hair 濡れ髪 + シースルーバング(Iris 원본 값. 세트 밖에서는 B의 切りっぱなしボブ) / Outfit トレンチコート(연한 꿀색 카키 얇은 천) / Scene 代官山의 흰 건축 외벽 앞, 봄 / Light 逆光(5400K), 부드러운 역광이 옆얼굴과 어깨를 감싼다 / Optics Contax 645 + Planar 80mm f/2에 フジカラー PRO 400H를 넣는다, 하이라이트의 박하 청록과 도자기 같은 피부(중형, 렌즈 줄은 세트의 80mm) / Expression 澄んだ瞳, 조용히 선 얼굴 / Pose 壁もたれ, 흰 벽에 가볍게 기댄다 / Camera Negative Space |
+| S3 代官山 白壁 (滤镜 #004) | B | 단서: 장소 다이칸야마 흰 벽 / 소품 - / 시간대 봄, 역광 / 의상 트렌치코트 / Hair 濡れ髪 + シースルーバング / Outfit トレンチコート(연한 꿀색 카키 얇은 천) / Scene 代官山의 흰 건축 외벽 앞, 봄 / Light 逆光(5400K), 부드러운 역광이 옆얼굴과 어깨를 감싼다 / Optics Contax 645 + Planar 80mm f/2에 フジカラー PRO 400H를 넣는다, 하이라이트의 박하 청록과 도자기 같은 피부(중형, 렌즈 줄은 세트의 80mm) / Expression 澄んだ瞳, 조용히 선 얼굴 / Pose 壁もたれ, 흰 벽에 가볍게 기댄다 / Camera Negative Space |
 | S4 純喫茶 (滤镜 #005) | C | 단서: 장소 킷사텐 / 소품 커피잔, 알전구 / 시간대 밤 / 의상 검정 터틀넥 / Hair 濡れ髪 / Outfit タートルネック(검정 니트) / Props ティーカップ(뜨거운 커피) / Scene 純喫茶의 어두운 구석, 오래된 목조 / Light 裸電球(3200~4000K), 호박색 펜던트 램프가 잔과 손에 따뜻한 빛을 얹는다, 플래시 없음 / Optics Fujifilm Natura Classica(내장 28–56mm 줌을 약 40mm 화각으로 쓴다)에 ナチュラ 1600을 넣는다, 굵은 입자와 어두운 쪽의 붉은·청회색(렌즈 줄은 세트의 내장 줌) / Expression 物思い, 잔 앞에서 조용히 생각에 잠긴다 / Pose 테이블에 앉아 잔을 앞에 둔다 |
-| S5 箱根 渓流 (滤镜 #018) | D | 단서: 장소 하코네 계곡, 급류, 젖은 바위 / 소품 - / 시간대 - / 의상 아노락 / Hair 濡れ髪 / Outfit アノラックパーカー(짙은 회색 셸) / Scene 箱根 깊은 계곡의 급류와 젖은 바위, 짙은 원시림 / Light 구름을 찢고 내려온 햇빛(5400K)이 깊은 못과 고목을 비춘다 / Optics Fuji GX680 III + EBC Fujinon GX M 100mm f/4(Iris 원문의 f/3.2는 이 렌즈에 없는 값이라 f/4로 고쳤다)에 ベルビア 50을 넣는다, 짙은 에메랄드 녹색과 강한 대비(중형, 렌즈 줄은 세트의 100mm) / Expression 芯のある眼差し / Pose 爪先立ち, 젖은 바위 위를 가볍게 딛는다 / Camera Extreme Wide Shot, 인물이 작게 나온다 |
-| S6 渋谷 高架下 (滤镜 #016) | D | 단서: 장소 육교, 고가 아래 콘크리트 통로 / 소품 - / 시간대 - / 의상 코치 재킷 / Hair 濡れ髪이 걸음에 흔들린다 / Outfit コーチジャケット(검정 작업 재킷) / Scene 歩道橋(渋谷 고가 아래 콘크리트 통로, 가파른 대각 그림자) / Light 逆光, 강한 측역광이 머리카락과 옆얼굴의 윤곽을 그린다 / Optics Ricoh GR21 21mm f/3.5에 ネオパン 400을 넣는다, 흑백, 굵은 입자와 눌린 그림자(렌즈 줄은 세트의 21mm) / Expression 流し目 / Pose Walking Shot, 빠른 걸음에 살짝 번진다 / Camera 広角スナップ |
+| S5 箱根 渓流 (滤镜 #018) | D | 단서: 장소 하코네 계곡, 급류, 젖은 바위 / 소품 - / 시간대 - / 의상 아노락 / Hair 濡れ髪 / Outfit アノラックパーカー(짙은 회색 셸) / Scene 箱根 깊은 계곡의 급류와 젖은 바위, 짙은 원시림 / Light 구름을 찢고 내려온 햇빛(5400K)이 깊은 못과 고목을 비춘다 / Optics Fuji GX680 III + EBC Fujinon GX M 100mm f/4에 ベルビア 50을 넣는다, 짙은 에메랄드 녹색과 강한 대비(중형, 렌즈 줄은 세트의 100mm) / Expression 芯のある眼差し / Pose 爪先立ち, 젖은 바위 위를 가볍게 딛는다 / Camera Extreme Wide Shot, 인물이 작게 나온다 |
+| S6 渋谷 高架下 (滤镜 #016) | D | 단서: 장소 육교, 고가 아래 콘크리트 통로 / 소품 - / 시간대 - / 의상 코치 재킷 / Hair 濡れ髪이 걸음에 흔들린다 / Outfit コーチジャケット(검정 작업 재킷) / Scene 歩道橋(渋谷 고가 아래 콘크리트 통로) / Light 逆光, 강한 측역광이 머리카락과 옆얼굴의 윤곽을 그린다 / Optics Ricoh GR21 21mm f/3.5에 ネオパン 400을 넣는다, 흑백, 굵은 입자와 눌린 그림자(렌즈 줄은 세트의 21mm) / Expression 流し目 / Pose Walking Shot, 빠른 걸음에 살짝 번진다 / Camera 広角スナップ |
 
 ## 포즈·구도 쌍
 | 번호 | 갈래 | Pose | Camera |
@@ -193,3 +193,7 @@
 
 ## 출처
 Iris (noahvisualsx/Iris b83de4c, MIT, © 2026 noahvisuals): 日本/滤镜/01 #001–#020, 日本/风格/02 #024 #027, 日本/风格/04 #065 #068, 日本/穿搭/04 #053 #065, 日本/拍照姿势/02 #021–#023 #030 #032. 낱말과 구성은 참고했고 문장은 MPW용으로 새로 썼다. 라이선스 전문은 [LICENSE-Iris.md](LICENSE-Iris.md).
+
+Iris 원문 값 기록(렌더링에는 쓰지 않는다):
+S3 Hair — Iris 원본 값 濡れ髪 + シースルーバング(세트 밖에서는 B의 切りっぱなしボブ).
+S5 Optics — Iris 원문의 f/3.2는 EBC Fujinon GX M 100mm에 없는 값이라 f/4로 고쳤다.

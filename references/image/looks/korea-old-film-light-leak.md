@@ -113,19 +113,19 @@
 ## Scene
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
-| A | place | 연남동 — A narrow brick lane of low houses with painted storefronts and potted plants, pale light reaching only the upper walls. |
-| A | wall | 홍대 — A wall covered in layered spray graffiti above a metal shutter, with a hard cobalt sky overhead. |
+| A | place | 연남동 — A narrow brick lane of low houses with painted storefronts and potted plants. |
+| A | wall | 홍대 — A wall covered in layered spray graffiti above a metal shutter, with a cobalt sky overhead. |
 | A, B | lawn | 한강 피크닉 잔디 — A grass slope beside the river with a yellow-and-white checked blanket and a light breeze moving the hair. |
-| A | coast | 데크로드 — A wooden boardwalk laid over the surf under a bright open sky, sea wind lifting loose hair and shirt hems. |
-| A, D | interior | 한남동 — A hillside street of minimal galleries and cafes with pale walls and floor-to-ceiling glass, daylight lying soft along the window. |
-| B | place | 성수동 — Board-marked concrete walls in a converted factory space, almost bare, with soft diffused light on the surface. |
-| B | wall | 코르크 보드 사진벽 — A wall of pale cork board pinned over with white-bordered instant prints at slightly different angles, a small shadow under each pin. |
-| B | corner | 갤러리 라운지 — A hushed white exhibition room with one bench and a spot-lit corner, spotless floors reflecting soft even light. |
-| C | place | 심야식당 — A tiny counter diner at night with paper lamps, warm amber light on wood and ceramic bowls. |
-| C | wall | 노출콘크리트 카페 — Raw poured-concrete walls in cool grey-beige, micro-textured and matte, lit softly from a side window. |
-| C | interior | 온돌 — A heated wooden floor room where she sits directly on the floor beside old photo albums, warm soft light on the boards. |
-| C | background | 한강 억새 — Reed grass at the riverside backlit by low gold sun, each feathered tip glowing against a warm hazy sky. |
-| D | place | 필름 암실 — A small photographic darkroom with an enlarger, trays and a line of drying prints, one red safelight over the bench. |
+| A | coast | 데크로드 — A wooden boardwalk laid over the surf under an open sky, sea wind lifting loose hair and shirt hems. |
+| A, D | interior | 한남동 — A hillside street of minimal galleries and cafes with pale walls and floor-to-ceiling glass. |
+| B | place | 성수동 — Board-marked concrete walls in a converted factory space, almost bare. |
+| B | wall | 코르크 보드 사진벽 — A wall of pale cork board pinned over with white-bordered instant prints at slightly different angles. |
+| B | corner | 갤러리 라운지 — A hushed white exhibition room with one bench in a corner and spotless floors. |
+| C | place | 심야식당 — A tiny counter diner at night with paper lamps, wooden counters and ceramic bowls. |
+| C | wall | 노출콘크리트 카페 — Raw poured-concrete walls in cool grey-beige, micro-textured and matte. |
+| C | interior | 온돌 — A heated wooden floor room where she sits directly on the floor beside old photo albums. |
+| C | background | 한강 억새 — Tall reed grass with feathered tips stands at the riverside. |
+| D | place | 필름 암실 — A small photographic darkroom with an enlarger, trays and a line of drying prints. |
 
 ## Light
 | 갈래 | 슬롯 | 줄 |
@@ -148,11 +148,11 @@
 | A | stock | Fujicolor Superia 400 — Everyday color film that in this look leans Fuji green in neutral areas and shadows, with restrained reds and yellows. |
 | A | stock-warm | Kodak Gold 200 — Saturated golden-yellow consumer film with warm orange highlights and reddish-brown shadows, sunlit patches glowing like honey. |
 | A | stock-contrast | Kodak Ultramax 400 — Everyday snapshot film with lively reds, a strong cobalt sky and warm tones that keep the face looking full and healthy rather than washed out. |
-| A | camera | Kodak FunSaver — A disposable-camera frame from a plastic lens, with soft corners, warm saturated colour and the weak radial smear of a cheap single element. |
+| A | camera | Kodak FunSaver — A disposable-camera frame from a single plastic lens element. |
 | A | color | 청록 색조 — Shadows lean ink green with restrained red and yellow. |
 | A | grain | 필름 그레인 — Visible film grain sits across the whole frame, finer on the 200-speed stock and coarser on the 400-speed ones, a little heavier in the shade. |
 | B | stock | Polaroid 600 — Brighter instant film with saturated reds and blues and a square image area, its glossy plastic film surface giving a faint sheen (on the full print, a thick white border that is widest at the bottom). |
-| B | camera | instax WIDE — A wide landscape instant image with a faint bloom in the highlights and a glossy film surface (on the full print, a white border yellowed at the edges). |
+| B | camera | instax WIDE — A wide landscape instant image (on the full print, a white border yellowed at the edges). |
 | B | leak | 폴라로이드 라이트 리크 — Red-orange light leaks wash over one edge of the instant image with soft contrast beside the border. |
 | B | leak-edge | 필름 첫 컷 빛샘 — One edge of the frame is scorched by a red-orange-yellow gradient where the start of the roll was exposed to light. |
 | B | lens | 플라스틱 렌즈 — A fixed plastic lens holds the face and the background in the same focus, with softer corners and a faint barrel curve at the edges. |
@@ -160,7 +160,7 @@
 | C | stock | Agfa Vista 200 — In this look, expired-stock softness with low saturation, violet-grey shadows and a hazy dreamlike air. |
 | C | aging | 유통기한 지난 필름 — In this look, years-expired film is rendered with gray-cyan shadows and creamy-yellow highlights and a faded postcard feel. |
 | C | dust | 필름 스크래치 — A few thin vertical white scratch lines and small grey dust specks mark the surface like an aged scan. |
-| C | camera | Olympus OM-1 — A compact film SLR with wide-open vintage Zuiko softness, glowing highlights and flare that spreads in strong backlight. |
+| C | camera | Olympus OM-1 — A compact film SLR with a vintage Zuiko lens. |
 | C | flare | 레인보우 플레어 — Faint rainbow streaks and colored ghost circles drift across the frame from the sun at the lens edge. |
 | C | tungsten | Daylight Film under Tungsten — Daylight-balanced film under bulb light turns every surface a heavy amber-orange and sinks the shadows to brown. |
 | C | soft | 소프트 포커스 — Slightly diffused sharpness, with edges and highlights glowing softly. |
@@ -168,11 +168,11 @@
 | D | stock | Kodak Tri-X 400 — Pure black-and-white tone with coarse grain, ink-deep blacks and brilliant highlights. |
 | D | grain | 흑백 필름 그레인 — Coarse silver grain over monochrome with deep blacks and bright clipped highlights, giving a gritty high-contrast texture. |
 
-## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 요청의 장소·소품·시간대·의상 가운데 둘 이상이 그 세트의 단서와 같으면 통째로 쓰고, 세트 값은 고정 사실보다 먼저다. 세트를 고르면 갈래는 그 세트의 갈래 열이다. 단서는 네 칸으로 판정한다. 묶음 속 K 숫자는 Iris 프리셋의 연출 값이고 프롬프트 문장에는 색으로 옮긴다. 규칙은 image-brief.md §4 '룩 카드' 4항과 '비워 둔 층')
+## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 세트를 쓰는 조건은 규칙 4항이 정하고, 세트 값은 고정 사실보다 먼저다. 세트를 고르면 갈래는 그 세트의 갈래 열이다. 단서는 네 칸으로 판정한다. 묶음 속 K 숫자는 Iris 프리셋의 연출 값이고 프롬프트 문장에는 색으로 옮긴다. 규칙은 image-brief.md §4 '룩 카드' 4항과 '비워 둔 층')
 | 세트 | 갈래 | 묶음 |
 |---|---|---|
 | S1 서울 옛 골목 (滤镜 #076. 단서: 장소 연남동·오래된 골목 / 소품 - / 시간대 흐린 낮 / 의상 보트넥 니트) | A | Outfit 보트넥(검정 슬림 긴소매 니트) / Scene 연남동, 서울 오래된 골목 / Light 흐린 날 빛, 그림자는 짙은 먹녹색 / Optics Fujicolor Superia 400, 청록 색조, 절제된 붉은색과 노란색, 어두운 곳의 촘촘한 입자 / Style 필름 일상 스냅 / Pose 3/4로 몸을 틀고 고개만 렌즈로 돌린다 / Expression 맑게 렌즈를 본다 |
-| S2 바닷가 일회용 (滤镜 #082. 단서: 장소 데크로드·바닷가 / 소품 일회용 카메라 / 시간대 한낮 / 의상 원피스 수영복) | A | Outfit 모카색 깊은 V 캐시미어 니트(Iris 원문, 해변 변형은 갈래 Outfit의 원피스 수영복과 남친 셔츠로 바꿔 써도 된다) / Scene 데크로드, 바닷가 휴양 스냅 / Light 한낮 직사광 / Optics Kodak FunSaver, 플라스틱 단렌즈의 가장자리 번짐과 약한 방사 코마, 고운 필름 입자 / Style 복고 청춘 / Pose 3/4로 몸을 틀고 고개만 렌즈로 돌린다 / Expression 맑게 렌즈를 본다 |
+| S2 바닷가 일회용 (滤镜 #082. 단서: 장소 데크로드·바닷가 / 소품 일회용 카메라 / 시간대 한낮 / 의상 원피스 수영복) | A | Outfit 모카색 깊은 V 캐시미어 니트(해변 변형은 갈래 Outfit의 원피스 수영복과 남친 셔츠로 바꿔 써도 된다) / Scene 데크로드, 바닷가 휴양 스냅 / Light 한낮 직사광 / Optics Kodak FunSaver, 플라스틱 단렌즈의 가장자리 번짐과 약한 방사 코마, 고운 필름 입자 / Style 복고 청춘 / Pose 3/4로 몸을 틀고 고개만 렌즈로 돌린다 / Expression 맑게 렌즈를 본다 |
 | S3 코르크 보드 폴라로이드 (滤镜 #077. 단서: 장소 성수동·코르크 보드 벽 / 소품 폴라로이드·실버 체인 / 시간대 - / 의상 스퀘어넥 니트) | B | Outfit 스퀘어넥(짙은 숯회색 슬림 긴소매 니트) + 실버 체인 레이어드 / Scene 성수동 노출콘크리트 정적 공간, 코르크 보드에 건 폴라로이드 수집 / Light 부드러운 확산광 / Optics Polaroid 600, 정사각 이미지 영역, 현상이 고르지 않아 모서리가 노랗고 따뜻하다 / Style 폴라로이드 빛 번짐 / Pose 3/4로 몸을 틀고 고개만 렌즈로 돌린다 / Expression 맑게 렌즈를 본다 |
 | S4 첫 컷 빛샘 (滤镜 #078. 단서: 장소 갤러리 라운지 / 소품 필름 통 / 시간대 - / 의상 캐시미어 니트. 첫 컷 빛샘·오른쪽 가장자리 빛무리는 광학 효과라 단서로 세지 않는다) | B | Outfit 캐시미어 니트(모카 깊은 V) / Scene 갤러리 라운지, 청담동 단색 갤러리 코너, 부드러운 얕은 흐림 배경 / Light 부드러운 확산광, 오른쪽 가장자리에 밝은 붉은 주황 빛무리 / Optics 필름 첫 컷 빛샘(필름 통 개봉으로 생긴 첫 컷 빛샘, 35mm) / Style 필름을 만지는 사람의 뜻밖의 선물 / Pose 3/4로 몸을 틀고 고개만 렌즈로 돌린다 / Expression 맑게 렌즈를 본다 |
 | S5 과기필름 (滤镜 #084. 단서: 장소 노출콘크리트 카페 / 소품 아그파 필름 / 시간대 - / 의상 보트넥. 과기필름·회보라 그림자는 광학 효과라 단서로 세지 않는다) | C | Outfit 보트넥(검정) / Scene 노출콘크리트 카페처럼 저채도 냉회색·미색의 미세 질감 실내 벽, 큰 조리개의 부드러운 흐림 / Light 부드러운 확산광, 얼굴은 냉백 빛으로 맑고 입술은 붉은 기운 / Optics Agfa Vista 200, 유통기한 지난 필름, 습기에 손상된 유제로 보이게 암부를 회보라로, 대비가 낮아 얇은 베일 / Style 드림코어, 방향 잃은 청춘 이야기 / Pose 3/4로 몸을 틀고 고개만 렌즈로 돌린다 / Expression 맑게 렌즈를 본다 |
@@ -199,3 +199,6 @@
 
 ## 출처
 Iris (noahvisualsx/Iris b83de4c, MIT, © 2026 noahvisuals): 韩国/滤镜/05 #076–090, 风格/05 #085·#089, 风格/04 #062·#073, 道具与美甲/02 #018, 拍照姿势/02 #039. 낱말과 구성은 참고했고 문장은 MPW용으로 새로 썼다. 라이선스 전문은 [LICENSE-Iris.md](LICENSE-Iris.md).
+
+Iris 원문 값 기록(렌더링에는 쓰지 않는다):
+- S2 Outfit: 모카색 깊은 V 캐시미어 니트는 Iris 원문 값이다(바닷가 장면과 어긋나 해변 변형을 허용했다).

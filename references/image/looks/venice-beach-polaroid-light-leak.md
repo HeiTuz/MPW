@@ -114,16 +114,16 @@
 ## Scene
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
-| A, C | place | Venice Beach — A seaside boardwalk and skate bowl in hard sun, with sand-colored pavement and a bright sky behind. |
-| A | place | Open-Air Beach Cafe — Wooden chairs and small tables under striped umbrellas on sun-bleached pavement beside the sand, glare bouncing up from the ground. |
-| A | place | Joshua Tree — A dry rocky desert of twisted spiky trees and pale boulders, a canvas tent pitched beside a fire ring as the light fades. |
+| A, C | place | Venice Beach — A seaside boardwalk and skate bowl with sand-colored pavement. |
+| A | place | Open-Air Beach Cafe — Wooden chairs and small tables under striped umbrellas on pale pavement beside the sand. |
+| A | place | Joshua Tree — A dry rocky desert of twisted spiky trees and pale boulders, a canvas tent pitched beside a fire ring. |
 | A | place | Golden Gate Bridge — A red bridge half-lost in sea fog, seen from a viewing platform with a rusted red rail. |
-| A, D | place | Palm Springs — A desert resort with pale mid-century buildings, tall palms and a turquoise pool under a dry bright sky and sharp-edged sun. |
-| B | place | Pacific Coast Highway — A coastal road with the ocean on one side and sun-baked hills on the other, long amber light and a cliff-edge fence. |
-| B | vehicle | Vintage Convertible — An open-top car with a chrome mirror and window glass that catch the low gold sun. |
+| A, D | place | Palm Springs — A desert resort with pale mid-century buildings, tall palms and a turquoise pool. |
+| B | place | Pacific Coast Highway — A coastal road with the ocean on one side and sun-baked hills on the other and a cliff-edge fence. |
+| B | vehicle | Vintage Convertible — An open-top car with a chrome mirror and window glass. |
 | B | place | Big Sur — Steep green cliffs plunging into a misty blue Pacific, a weathered white wooden fence along the edge. |
-| C | place | coastal bluff meadow — A grassy clifftop with wildflowers and the sea behind in soft daylight. |
-| D | place | Roadside Burger Stand — A small open-air burger stand with a lit counter window and red plastic picnic tables on bare pavement, the street beyond the light left black. |
+| C | place | coastal bluff meadow — A grassy clifftop with wildflowers and the sea behind. |
+| D | place | Roadside Burger Stand — A small open-air burger stand with a counter window and red plastic picnic tables on bare pavement. |
 | D | place | Route 66 — A long straight two-lane road with a double yellow line, faded roadside signs and a lone old motel on the shoulder. |
 
 ## Light
@@ -155,7 +155,7 @@
 | B | grain | grain — Visible 35mm film grain sits across the whole frame, heavier in the shadows and under the burn. |
 | C | camera | Holga 120N — A plastic toy-camera frame through its fixed plastic lens, with a sharp center, smeared soft edges, a heavy dark vignette and uneven light leaks. |
 | C | stock | Ilford HP5 Plus — Forgiving black-and-white film with wide grey-scale gradation, moderate contrast and detailed shadows. |
-| C | camera | Lomography Diana F+ — A dreamy toy-camera frame through its fixed plastic lens, with soft focus, dark corners and a soft pale leak along one edge. |
+| C | camera | Lomography Diana F+ — A toy-camera frame through its fixed plastic lens, with soft focus, dark corners and a soft pale leak along one edge. |
 | C | exposure | Double Exposure — Two exposures overlap in one frame, so a dark leafy silhouette lies over the face and clothing like a transparent layer. |
 | C | grain | grain — Coarse silver grain clumps across the whole frame and in the corners, heaviest in the dark vignette. |
 | D | stock | Kodak FunSaver — A disposable-camera frame from a plastic lens, with soft corners, warm saturated color and flat light from the built-in flash. |
@@ -163,13 +163,13 @@
 | D | stamp | Date Imprint — A glowing orange LED date sits in the lower right corner of the frame, like a printed snapshot from the early 2000s. |
 | D | grain | grain — Rough consumer-film grain sits across the whole frame, heavier in the dark areas behind the flash. |
 
-## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 요청의 장소·소품·시간대·의상 가운데 둘 이상이 그 세트의 단서와 같으면 통째로 쓰고, 세트 값은 고정 사실보다 먼저다. 규칙은 image-brief.md §4 '룩 카드' 4항과 '비워 둔 층')
+## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 세트를 쓰는 조건은 규칙 4항이 정하고, 세트 값은 고정 사실보다 먼저다. 규칙은 image-brief.md §4 '룩 카드' 4항과 '비워 둔 층')
 | 세트 | 갈래 | 묶음 |
 |---|---|---|
 | S1 베니스 카페 (滤镜 #086) | A | 단서: 장소 베니스 비치 카페 야외 나무 의자 / 소품 아이스바·폴라로이드 SX-70 / 시간대 낮 / 의상 줄무늬 크롭 탑 / Hair Half Bun, 헝클어진 금발을 뒤로 느슨하게 묶음 / Outfit Striped Crop Cami(컬러 줄무늬 끈 크롭 탑) / Props ice pop, 녹는 과일 아이스바를 든 채 / Scene Open-Air Beach Cafe, 베니스 비치 야외 나무 의자 / Light 4200K 낮 해에 하이라이트가 크림색으로 읽힌다 / Optics Polaroid SX-70, Chemical Spread Artifacts(테두리 현상 얼룩), 정사각 이미지 영역 아래가 두꺼운 흰 인화지 프레임 / Expression Candid Laugh, 렌즈를 향해 크게 웃음 / Pose Arm Over Chair Back, 나무 의자에 비스듬히 앉음 |
 | S2 산타모니카 해변 (滤镜 #087) | A | 단서: 장소 산타모니카 해변·파도 / 소품 폴라로이드 600 / 시간대 낮 / 의상 빨간 원피스 수영복 / Hair Wet-Look Waves, 젖은 금발 장발이 어깨 뒤로 / Makeup 이마와 콧등에 소금 알갱이 / Outfit Retro One-Piece Swimsuit(빨강) / Scene Santa Monica 나무 산책로로 파도에서 방금 뛰어나온 모래 / Light 5000K 햇빛에 Sun 660의 내장 전자 플래시가 섞임 / Optics Polaroid 600(Sun 660), 포화된 빨강·파랑 / Expression Americana Radiance, 친구의 카메라에 환호 / Pose Surf Splash Kick |
 | S3 컨버터블 빛샘 (滤镜 #088) | B | 단서: 장소 컨버터블 조수석·1번 국도 / 소품 선글라스·빛샘 필름 / 시간대 낙조 / 의상 흰 탱크 / Hair Windswept Waves, 금빛 큰 웨이브가 질주하는 바람에 날림 / Outfit white tank top(흰 끈 탱크) / Props Ray-Ban Aviator 계열 선글라스를 한 손으로 잡음 / Scene Vintage Convertible 조수석, Pacific Coast Highway / Light 5400K 낙조 / Optics Light Leak(화면 오른쪽 3분의 1에서 사선으로 흘러드는 적주황 광염), Kodak Portra 400, Nikon FM + Nikkor 50mm f/1.8 / Expression Sunglasses Wide Grin / Pose Convertible Windburst |
-| S4 롤 끝 번 (滤镜 #093) | B | 단서: 장소 낙조 해변·해안 산책로 / 소품 롤 끝 번 Gold 200 필름 / 시간대 낙조 / 의상 데님 재킷 / Hair Windswept Waves, 금발이 태평양 바람에 말려 올라감 / Outfit Denim Jacket(빈티지 워싱) / Scene Pacific Coast Highway 끝 낙조 해변, 해안 산책로 / Light 3000K 낙조 / Optics Film Burn(오른쪽 절반이 깊은 빨강에서 주황, 레몬 노랑으로), Kodak Gold 200, Canon New Canonet QL17(고정 40mm f/1.7 렌즈. Iris 원문은 `Canon Canonet QL17, 40mm f/1.7`인데 40mm f/1.7은 New Canonet 이후 모델이고 첫 Canonet QL17은 45mm다) / Expression Head-Tilted Laugh / Pose Windblown Hair, 렌즈 쪽으로 큰 걸음 |
+| S4 롤 끝 번 (滤镜 #093) | B | 단서: 장소 낙조 해변·해안 산책로 / 소품 롤 끝 번 Gold 200 필름 / 시간대 낙조 / 의상 데님 재킷 / Hair Windswept Waves, 금발이 태평양 바람에 말려 올라감 / Outfit Denim Jacket(빈티지 워싱) / Scene Pacific Coast Highway 끝 낙조 해변, 해안 산책로 / Light 3000K 낙조 / Optics Film Burn(오른쪽 절반이 깊은 빨강에서 주황, 레몬 노랑으로), Kodak Gold 200, Canon New Canonet QL17 고정 40mm f/1.7 렌즈 / Expression Head-Tilted Laugh / Pose Windblown Hair, 렌즈 쪽으로 큰 걸음 |
 | S5 홀가 팜 대로 (滤镜 #091) | C | 단서: 장소 야자수 대로 / 소품 홀가 / 시간대 한낮 / 의상 데님 컷오프 / Hair Windblown Hair, 흐트러진 연한 금발이 바다 바람에 날림 / Outfit tank top(검은 몸에 붙는 민소매) + Denim Cutoffs(낮은 허리) / Scene Venice Beach 야자수 대로 한가운데 / Light Noon Sunlight 5500K, 얼굴 중앙이 강한 햇빛에 뚫림 / Optics Holga 120N, Ilford HP5 Plus, 사방이 짙은 원형 비네팅, 굵은 은염 입자, 흑백 / Expression Cool Gaze, 렌즈를 직시 / Pose 대로 한가운데 서 있음 |
 | S6 버거집 날짜 각인 (滤镜 #097) | D | 단서: 장소 버거집 / 소품 치즈버거·날짜 각인 / 시간대 밤 / 의상 흰 탱크·데님 컷오프 / Hair Sea Salt Waves, 연한 금빛 곱슬이 어깨에 흐트러짐 / Lip Classic Red Lip(烈焰红唇) / Outfit white tank top + Denim Cutoffs / Props Cheeseburger / Scene Roadside Burger Stand, 베니스 비치의 밤, 빨간 플라스틱 야외 테이블 / Light Direct Flash 5500K, 배경은 짙은 검정 / Optics Minolta Freedom Zoom 90 Date(내장 38-90mm 줌을 약 38–50mm대로 쓴다), Kodak Gold 200, Date Imprint(오른쪽 아래 주황 LED 날짜) / Expression Candid Laugh, 렌즈 쪽으로 크게 웃음 / Pose Burger Bite |
 
@@ -194,3 +194,6 @@
 
 ## 출처
 Iris (noahvisualsx/Iris b83de4c, MIT, © 2026 noahvisuals): 美国/滤镜/06 #086–100, 美国/风格/02 #019–022, 美国/发型与妆容/02 #011 #013 #016 #018, 美国/拍照姿势/03 #041 #045 #049, 美国/拍照姿势/05 #070 #072 #079, 美国/神态与微表情/03 #036 #040, 美国/神态与微表情/06 #085 #088 #094, 美国/道具与美甲/02 #017 #020, 美国/道具与美甲/04 #045. 낱말과 구성은 참고했고 문장은 MPW용으로 새로 썼다. 라이선스 전문은 [LICENSE-Iris.md](LICENSE-Iris.md).
+
+Iris 원문 값 기록(렌더링에는 쓰지 않는다):
+- S4 롤 끝 번, Optics: Iris 원문은 `Canon Canonet QL17, 40mm f/1.7`인데 40mm f/1.7은 New Canonet 이후 모델이고 첫 Canonet QL17은 45mm라서 세트에는 New Canonet QL17로 옮겼다.

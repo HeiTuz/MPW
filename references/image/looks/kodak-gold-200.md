@@ -111,19 +111,19 @@
 ## Scene
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
-| A | place | Route 66 — A long straight two-lane road with a double yellow line, faded roadside signs and an old station under hard sun. |
-| A | place | roadside gas station — A sun-bleached gas station with vintage red and yellow pumps, a dusty forecourt and a hard shadow under the canopy. |
-| A | place | Skatepark — A sun-baked concrete bowl with rounded lips, chalky scuff marks and hard directional shadows from the high sun. |
-| A | place | Ballpark Bleachers — Rows of timber bleachers sit under bright sun with green grass and blue sky beyond, the wood warm brown and dark in its seams. |
-| A | place | Diving Board — A white diving board juts over bright blue pool water with the sun striking the wet end and a high tower rising behind. |
-| B | place | wheat field — Endless golden wheat moves like waves under low sun beside a rough white wooden fence. |
-| B | place | Grand Canyon — Red canyon walls split between gold light and deep-blue shade at sundown. |
-| B | place | redwood forest — Towering red trunks, ferns and mossy trails with beams of gold light. |
+| A | place | Route 66 — A long straight two-lane road with a double yellow line, faded roadside signs and an old station. |
+| A | place | roadside gas station — A sun-bleached gas station with vintage red and yellow pumps, a dusty forecourt and a canopy. |
+| A | place | Skatepark — A sun-baked concrete bowl with rounded lips and chalky scuff marks. |
+| A | place | Ballpark Bleachers — Rows of timber bleachers sit with green grass and blue sky beyond, the wood warm brown and dark in its seams. |
+| A | place | Diving Board — A white diving board juts over bright blue pool water with a high tower rising behind. |
+| B | place | wheat field — Endless golden wheat moves like waves beside a rough white wooden fence. |
+| B | place | Grand Canyon — A vast gorge between steep red canyon walls. |
+| B | place | redwood forest — Towering red trunks, ferns and mossy trails. |
 | B | place | VW T2 Camper — A yellow Volkswagen van stands at a cliff edge with its rear doors open on a warm wood-and-cloth interior. |
-| C | place | American Diner — A chrome-trimmed diner with red vinyl booths, formica tables and glossy counters, a window opening onto a sunlit street. |
-| C | place | Record Shop — A narrow independent record shop with oak crates, wooden louvre blinds and stripes of sun across stacked sleeves. |
-| D | place | Drive-in Theater — A grass lot of parked pickups faces a huge outdoor screen under a pink-orange sunset sky. |
-| D | place | Carousel — Gilded carved horses turn in warm bulb light and sunset glow. |
+| C | place | American Diner — A chrome-trimmed diner with red vinyl booths, formica tables and glossy counters, a window opening onto the street. |
+| C | place | Record Shop — A narrow independent record shop with oak crates, wooden louvre blinds and stacked sleeves. |
+| D | place | Drive-in Theater — A grass lot of parked pickups faces a huge outdoor screen. |
+| D | place | Carousel — Gilded carved horses turn on a round platform. |
 
 ## Light
 | 갈래 | 슬롯 | 줄 |
@@ -145,18 +145,18 @@
 |---|---|---|
 | 전부 | stock | Kodak Gold 200 — In this look, saturated golden-yellow consumer film: warm orange highlights and reddish-brown shadows, with reds, yellows and blues saturated the hardest. |
 | 전부 | grain | Visible Film Grain — A medium organic grain shows across the whole frame and runs a little rougher in the shadows, finer on the medium-format frame. |
-| A | body | Canon AE-1 — In this look, a 1970s film SLR with a standard 50mm lens renders warm, slightly soft vintage color and honest daylight exposure. |
-| A | body | Olympus XA — A pocket clamshell compact with a sharp fixed wide 35mm lens, rendered in this look as slightly soft vintage color with faintly darker corners. |
-| B | body | Mamiya 645 — A medium-format 6x4.5 frame with an 80mm f/2.8 lens, rendered in this look with rich texture, finer grain and smooth gradations across the red rock and sky. |
-| C | body | Canon Canonet QL17 — A QL17 G-III compact rangefinder with a 40mm f/1.7 lens, rendered in this look as soft, slightly low-contrast warm color that keeps the whole diner readable. |
-| D | body | Nikon FM — A mechanical film SLR with a Nikkor 50mm f/1.4, rendered in this look as airy dusk exposure and honest grain. |
-| A | body | Pentax K1000 — A mechanical 1970s film SLR with a 28mm f/2.8 wide lens takes in the whole running figure and the bowl or road around her with deep focus and mild edge stretching, in plain slightly rough documentary color. |
-| D | body | Pentax Spotmatic F — A vintage film SLR with a Super-Multi-Coated Takumar 50mm f/1.4 gives gentle three-dimensional pop on her face and a softly blended background of bulbs. |
+| A | body | Canon AE-1 — A 1970s film SLR with a standard 50mm lens. |
+| A | body | Olympus XA — A pocket clamshell compact with a fixed wide 35mm lens. |
+| B | body | Mamiya 645 — A medium-format 6x4.5 frame with an 80mm f/2.8 lens. |
+| C | body | Canon Canonet QL17 — A QL17 G-III compact rangefinder with a 40mm f/1.7 lens. |
+| D | body | Nikon FM — A mechanical film SLR with a Nikkor 50mm f/1.4. |
+| A | body | Pentax K1000 — A mechanical 1970s film SLR with a 28mm f/2.8 wide lens. |
+| D | body | Pentax Spotmatic F — A vintage film SLR with a Super-Multi-Coated Takumar 50mm f/1.4. |
 | A, B | flare | Sunburst Flare — The sun beams into the lens and spreads a small gold starburst with radial rays beside the figure. |
 | D | bloom | Halation — Each bright bulb bleeds a soft red-orange glow around its edges as light scatters in the film. |
 | D | bokeh | Bokeh Circles — Out-of-focus bulbs and sunset glints turn into smooth round gold discs behind her. |
 
-## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 요청의 장소·소품·시간대·의상 가운데 둘 이상이 그 세트의 단서와 같으면 통째로 쓰고, 세트 값은 고정 사실보다 먼저다. 세트를 고르면 갈래는 그 세트의 갈래 열이다. 단서는 네 칸으로 판정한다. 규칙은 image-brief.md §4 '룩 카드' 4항과 '비워 둔 층')
+## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 세트를 쓰는 조건은 규칙 4항이 정하고, 세트 값은 고정 사실보다 먼저다. 세트를 고르면 갈래는 그 세트의 갈래 열이다. 단서는 네 칸으로 판정한다. 규칙은 image-brief.md §4 '룩 카드' 4항과 '비워 둔 층')
 | 세트 | 갈래 | 묶음 |
 |---|---|---|
 | S1 해안 도로 (滤镜 #056) | A | 단서: 장소 해안 도로·노란 경고 표지판 / 소품 - / 시간대 한낮 / 의상 흰 탱크·데님 컷오프 / Hair Power Ponytail, 금발 포니테일이 걸음에 흔들림 / Lip 고정 몫(Glazed Lips) / Outfit Tank Top(흰색) + Denim Cutoffs(연한 파랑, 낡은 가공) / Scene Pacific Coast Highway, 노란 경고 표지판 옆 갓길 / Light Noon Sunlight, 아스팔트와 노란 중앙선이 선명 / Optics Canon AE-1 + FD 50mm f/1.4, Kodak Gold 200, 중간 유기 입자 / Expression Americana Radiance, 해를 맞고 활짝 웃음 / Pose Hands on Hips, 한 손은 허리 |

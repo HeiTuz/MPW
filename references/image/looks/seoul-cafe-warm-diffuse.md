@@ -103,21 +103,21 @@
 ## Scene
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
-| A | place | 베이커리 카페 — A spacious bakery cafe with glass cases of fresh bread and pastries, warm spotlights glowing on golden crusts and a few small tables by the window. (滤镜 #041 #054) |
-| A | place | 을지로 호두나무 카페 — An old Seoul cafe of dark oak and walnut tables, chairs and shelves under amber bulbs, the worn wood bouncing a deep reddish warmth into the shadows. (滤镜 #042) |
-| A | shop | 연남동 — A narrow lane of small cafes and shops with painted storefronts, a speckled terrazzo threshold and warm side daylight on brick. (滤镜 #053) |
-| A | shop | LP바 — A cafe with walnut shelves of vinyl sleeves and a turntable, warm lamp light glowing on brown wood. (滤镜 #058) |
-| B | place | 아침 침대 — White bedding under thin sheer curtains, bright morning light passing through the fabric and softening every shadow. (滤镜 #043) |
-| B | place | 한남동 — A hillside district interior of pale walls and floor-to-ceiling glass with soft diffuse side daylight. (滤镜 #059) |
-| C | place | 한남동 — A hillside district interior of pale walls and floor-to-ceiling glass at dusk, the glass holding a deep blue sky while one small warm lamp glows inside. (滤镜 #055) |
-| B | room | 선룸 온실 — A glass-walled plant room flooded with soft light, leaf shadows moving over pale floor tiles. (滤镜 #057) |
-| B | wall | 프렌치 몰딩 — White plaster cornice on cream walls where light bounces softly several times. (滤镜 #047) |
-| C | place | 노출콘크리트 카페 — Raw concrete walls and a single wooden counter, soft window light grazing the matte gray surfaces. (滤镜 #045) |
-| C | bedroom | 심야 침실 — A dark bedroom at night with one small candle on the bedside shelf, the white bedding faintly lit and the far wall lost in shadow. (滤镜 #049) |
-| C | furniture | 코듀로이 소파 — A deep caramel corduroy sofa whose soft ribbed pile swallows stray light and sets the lit side of her face off in warm white. (滤镜 #052) |
-| C | study | 심야 독서 — A dark desk lit by one desk lamp, a tight pool of warm light on the pages and hands with black surroundings. (滤镜 #060) |
-| D | place | 한강 억새 — Reed grass at the riverside backlit by low gold sun, each feathered tip glowing against a warm hazy sky. (滤镜 #048) |
-| D | place | 겨울 길모퉁이 카페 — A cold winter street corner outside a small cafe with bare trees, the low sun skimming along the pavement and breath and cup steam visible in the air. (滤镜 #046) |
+| A | place | 베이커리 카페 — A spacious bakery cafe with glass cases of fresh bread and pastries and a few small tables by the window. (滤镜 #041 #054) |
+| A | place | 을지로 호두나무 카페 — An old Seoul cafe of dark oak and walnut tables, chairs and shelves. (滤镜 #042) |
+| A | shop | 연남동 — A narrow lane of small cafes and shops with painted storefronts, a speckled terrazzo threshold and brick walls. (滤镜 #053) |
+| A | shop | LP바 — A cafe with walnut shelves of vinyl sleeves and a turntable. (滤镜 #058) |
+| B | place | 아침 침대 — White bedding under thin sheer curtains. (滤镜 #043) |
+| B | place | 한남동 — A hillside district interior of pale walls and floor-to-ceiling glass. (滤镜 #059) |
+| C | place | 한남동 — A hillside district interior of pale walls and floor-to-ceiling glass at dusk. (滤镜 #055) |
+| B | room | 선룸 온실 — A glass-walled plant room with pale floor tiles. (滤镜 #057) |
+| B | wall | 프렌치 몰딩 — White plaster cornice on cream walls. (滤镜 #047) |
+| C | place | 노출콘크리트 카페 — Raw concrete walls and a single wooden counter with matte gray surfaces. (滤镜 #045) |
+| C | bedroom | 심야 침실 — A bedroom at night with white bedding and a bedside shelf. (滤镜 #049) |
+| C | furniture | 코듀로이 소파 — A deep caramel corduroy sofa with a soft ribbed pile. (滤镜 #052) |
+| C | study | 심야 독서 — A desk with open pages and hands resting on them. (滤镜 #060) |
+| D | place | 한강 억새 — Reed grass with feathered tips at the riverside. (滤镜 #048) |
+| D | place | 겨울 길모퉁이 카페 — A cold winter street corner outside a small cafe with bare trees, breath and cup steam visible in the air. (滤镜 #046) |
 
 ## Light
 | 갈래 | 슬롯 | 줄 |
@@ -142,13 +142,13 @@
 ## Optics
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
-| A | camera | Fujifilm X100V — A fixed 23mm compact look with Fuji film-simulation colour, a soft wide-open glow and a casual snapshot feel. (滤镜 #041) |
-| A | camera | Leica M10 — A digital rangefinder look with sharp, calm colour, clean skin tones and subtle film-like contrast. (滤镜 #042) |
-| B | camera | Canon EOS R6 — A full-frame mirrorless look with clean low-light detail and warm, pleasing colour. (滤镜 #043) |
-| C | camera | Sony A7S III — A low-light full-frame look with clean shadows, steady colour and calm reflective night highlights. (滤镜 #049) |
-| C | camera | Leica Q — A fixed 28mm full-frame compact look with wide contextual framing, crisp edges and clean colour; the sofa room reads around her. (滤镜 #052) |
-| D | camera | Fujifilm X-T4 — An APS-C mirrorless look with warm film-simulation colour, soft highlights and a gentle glow in backlight. (滤镜 #046) |
-| D | camera | Canon EOS R5 — A crisp high-resolution full-frame rendering with natural colour and smooth tonal transitions. (滤镜 #048) |
+| A | camera | Fujifilm X100V — A compact APS-C camera with a fixed 23mm lens. (滤镜 #041) |
+| A | camera | Leica M10 — A full-frame digital rangefinder camera. (滤镜 #042) |
+| B | camera | Canon EOS R6 — A full-frame mirrorless camera. (滤镜 #043) |
+| C | camera | Sony A7S III — A full-frame mirrorless camera. (滤镜 #049) |
+| C | camera | Leica Q — A full-frame compact camera with a fixed 28mm lens. (滤镜 #052) |
+| D | camera | Fujifilm X-T4 — An APS-C mirrorless camera. (滤镜 #046) |
+| D | camera | Canon EOS R5 — A high-resolution full-frame mirrorless camera. (滤镜 #048) |
 | A, B | tone | 밀크티 톤 — A low-contrast warm grade that pulls colours toward off-white, oat and camel beige. (滤镜 #041) |
 | B | tone | 크림 톤 — Soft cream-white walls reflect light repeatedly into a smooth, fine, warm white. (滤镜 #047) |
 | A, C | grade | 호박색 톤 — The whole frame bathed in amber-honey warmth, from the wood to the highlights. |
@@ -157,7 +157,7 @@
 | C | grain | 고감도 노이즈 — At ISO 6400 the dark room shows real luminance noise across the shadows and the far wall, softly smearing fine detail with no night-mode lift. (滤镜 #049) |
 | D | lens | 85mm 인물 렌즈 — A short-telephoto portrait look that flatters the face with gentle compression and creamy blur. (滤镜 #048) |
 
-## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 요청의 장소·소품·시간대·의상 가운데 둘 이상이 그 세트의 단서와 같으면 통째로 쓰고, 세트 값은 고정 사실보다 먼저다. 규칙은 image-brief.md §4 '룩 카드' 4항과 '비워 둔 층')
+## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 세트를 쓰는 조건은 규칙 4항이 정하고, 세트 값은 고정 사실보다 먼저다. 규칙은 image-brief.md §4 '룩 카드' 4항과 '비워 둔 층')
 
 이 카드의 색온도 숫자(고정 사실 time 행과 세트의 4800K 같은 값)는 Iris 프리셋을 옮긴 이 룩의 연출 값이고 측정값이 아니다. 프롬프트의 영어 줄에는 숫자 대신 색 말(warm amber, golden)로 쓴다.
 
@@ -167,8 +167,8 @@
 | S2 을지로 복고 카페 (滤镜 #042. 단서: 장소 을지로 호두나무 카페(복고) / 소품 호박색 전구 / 시간대 - / 의상 모카 캐시미어 니트) | A | Outfit 캐시미어 니트(모카 브라운, 큰 V넥) / Scene 을지로 호두나무 카페, 짙은 오크·호두나무 가구와 복고 분위기 / Light 4200K 가구에서 되튄 깊고 따뜻한 빛, 그림자는 붉은 갈색 / Optics Leica M10-P + Summicron 35mm, 호박색 톤 / Style 힙지로 레트로 / Pose 어깨 너머로 돌아보기(쌍 12가 아니라 이 줄이 Pose다) |
 | S3 청명 침실 (滤镜 #043. 단서: 장소 아침 침대·흰 시트·커튼 틈 / 소품 - / 시간대 아침(커튼 틈 햇살) / 의상 귀리색 블레이저(베드헤드 머리)) | B | Hair 베드헤드 펌 / Outfit 오트 블레이저 튜브탑(검은 튜브탑 위에 연한 귀리색 블레이저를 앞 열고) / Scene 아침 침대, 흰 시트와 커튼 틈 / Light 아침 햇살 4500K, 막 뜬 해가 커튼 틈에서 흰 시트로 금빛 한 줄기 / Optics Canon EOS R6 50mm f/1.8 / Expression 졸린 눈, 막 깬 느슨함 |
 | S4 블라인드 줄무늬 (滤镜 #044. 단서: 장소 블라인드가 달린 복고풍 실내 / 소품 - / 시간대 오후 사선 햇빛(줄무늬 빛) / 의상 보트넥 니트) | B | Outfit 보트넥(검은 슬림 긴팔 니트) / Scene 블라인드가 달린 복고풍 실내(사전 토큰 없음, Light 줄이 공간을 만든다) / Light 블라인드 빛 4600K, 오후 사선 햇빛이 얼굴과 쇄골에 같은 간격의 줄무늬 / Optics Sony A7 III 50mm f/1.4 / Expression 내리깐 눈, 기하학적 줄무늬를 가만히 받는다 |
-| S5 아카리 밤 (滤镜 #045. 단서: 장소 성수동 노출콘크리트 실내 / 소품 아카리 램프·레코드 / 시간대 밤 / 의상 스퀘어넥 니트) | C | Outfit 스퀘어 넥 / Props 은 물방울 펜던트, LP판(책 보며 레코드 듣는 밤) / Scene 노출콘크리트 카페 계열의 성수동 콘크리트 실내, 배경은 어둡고 비어 있다 / Light Akari 1A 3200K, 얼굴 높이 탁자 위 종이 갓 탁상등(Iris 원문은 落地灯=바닥 램프지만 Akari 1A는 탁상등이다)의 주황빛이 얼굴 반쪽만 / Optics Iris의 카메라 칸이 램프 이름이라 갈래 C의 본체 줄(Sony A7S III)에 고감도 노이즈 / Expression 깊은 밤 혼자인 고요한 눈 |
-| S6 한강 억새 (滤镜 #048. 단서: 장소 한강 억새·갈대 / 소품 - / 시간대 노을(역광) / 의상 -) | D | Outfit 보트넥 / Scene 한강 억새, 갈대 이삭이 금빛으로 / Light 역광 금빛 테두리 3800K, 해 높이 15도의 금주황 역광이 몸 전체를 금빛 윤곽으로 감싼다 / Optics Canon EOS R5 85mm f/2, 85mm 인물 렌즈 / Expression 눈 감고 바람 느끼기, 낭만적인 황혼 / Pose 어깨 너머 시선 |
+| S5 아카리 밤 (滤镜 #045. 단서: 장소 성수동 노출콘크리트 실내 / 소품 아카리 램프·레코드 / 시간대 밤 / 의상 스퀘어넥 니트) | C | Outfit 스퀘어 넥 / Props 은 물방울 펜던트, LP판(책 보며 레코드 듣는 밤) / Scene 노출콘크리트 카페 계열의 성수동 콘크리트 실내, 배경은 어둡고 비어 있다 / Light Akari 1A 3200K, 얼굴 높이 탁자 위 종이 갓 탁상등의 주황빛이 얼굴 반쪽만 / Optics Iris의 카메라 칸이 램프 이름이라 갈래 C의 본체 줄(Sony A7S III)에 고감도 노이즈 / Expression 깊은 밤 혼자인 고요한 눈 |
+| S6 한강 억새 (滤镜 #048. 단서: 장소 한강 억새·갈대 / 소품 - / 시간대 노을(역광) / 의상 -) | D | Outfit 보트넥 / Scene 한강 억새, 갈대 이삭 / Light 역광 금빛 테두리 3800K, 해 높이 15도의 금주황 역광이 몸 전체를 금빛 윤곽으로 감싼다 / Optics Canon EOS R5 85mm f/2, 85mm 인물 렌즈 / Expression 눈 감고 바람 느끼기, 낭만적인 황혼 / Pose 어깨 너머 시선 |
 
 ## 포즈·구도 쌍
 | 번호 | 갈래 | Pose | Camera |
@@ -191,3 +191,6 @@
 
 ## 출처
 Iris (noahvisualsx/Iris b83de4c, MIT, © 2026 noahvisuals): 韩国/滤镜/03 #041–060, 韩国/风格/02 #021–040, 韩国/风格/06 #091–100, 韩国/拍照姿势/03 #041–060, 韩国/拍照姿势/06 #091–100. 낱말과 구성은 참고했고 문장은 MPW용으로 새로 썼다. 라이선스 전문은 [LICENSE-Iris.md](LICENSE-Iris.md).
+
+Iris 원문 값 기록(렌더링에는 쓰지 않는다):
+- S5 Light: Iris 원문은 落地灯=바닥 램프지만 Akari 1A는 탁상등이다.

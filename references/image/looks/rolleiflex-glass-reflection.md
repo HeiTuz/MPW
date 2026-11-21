@@ -111,18 +111,18 @@
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
 | A | place | Café de Flore — She sits just inside the street-front plate glass of a Saint-Germain café, a marble-topped table before her and a green awning beyond the reflected facades. |
-| A | window | Baie vitrée — A tall plate-glass window in a slim frame; the outside is brighter than the room, so the street lies over the interior as a pale transparent layer. |
+| A | window | Baie vitrée — A tall plate-glass window in a slim frame, the street lying over the interior as a transparent layer. |
 | A | place | Vitrine de galerie — The shopfront window of a Marais contemporary-art gallery showing white plinths and abstract sculpture, with cobbles and an old iron street lamp reflected over them. |
 | A | place | Shakespeare and Company — The dark-green painted wood shopfront of a Left Bank bookshop with small panes and a crate of old paperbacks outside, the glass holding the far bank of the river. |
-| A | place | Île Saint-Louis — A riverside bistro window on the island quay, with stone bridge arches and rippling Seine light reflected over the glass beside her. |
-| A | place | Palais-Royal — A heavy glazed door under the stone arcade in soft grey shade, the black-and-white striped Buren columns reflected behind her. |
+| A | place | Île Saint-Louis — A riverside bistro window on the island quay, with stone bridge arches reflected over the glass beside her. |
+| A | place | Palais-Royal — A heavy glazed door under the stone arcade, the black-and-white striped Buren columns reflected behind her. |
 | A | place | boulangerie — A century-old bakery window with golden croissants and baguettes on trays, her smiling reflection and the stone steps behind laid over them. |
 | A | place | Serre victorienne — An iron-framed Victorian greenhouse of old glass beside a museum garden, dense palms and vines inside and her profile reflected on the outer pane. |
 | A | background | Haussmannien — Pale cream limestone facades with iron balconies, plane-tree crowns and passers-by drifting across the reflection on the glass. |
 | A | background | Notre-Dame de Paris — The twin grey limestone towers of the cathedral across the Seine, mirrored small and hazy in a shop window. |
-| B | place | Les Deux Magots — A boulevard café with a green awning and bentwood rattan chairs, its large front windows beaded with rain and the street lamps outside turning gold. |
-| B | place | Bistrot — A century-old neighborhood bistro with dark red banquettes and brass fittings, the front door letting in cool dusk. |
-| C | place | Métro de Paris — An old carriage with white convex tiles streaking past outside the door glass and one dim lamp in the ceiling. |
+| B | place | Les Deux Magots — A boulevard café with a green awning and bentwood rattan chairs, its large front windows beaded with rain. |
+| B | place | Bistrot — A century-old neighborhood bistro with dark red banquettes and brass fittings. |
+| C | place | Métro de Paris — An old carriage with white convex tiles streaking past outside the door glass. |
 | C | place | Batobus — A glass-roofed Seine boat whose curved panoramic windows slide the stone quays and willows past the glass. |
 | C | place | Place Vendôme — A stately square of cream stone with a bronze column standing behind a thick, perfectly clear jeweller's window. |
 
@@ -144,15 +144,15 @@
 ## Optics
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
-| A, B | camera | Rolleiflex 2.8F — A square medium-format frame with fine tonal gradation and crisp center sharpness, shot from a calm, slightly low viewpoint. |
-| A | camera | Hasselblad 500C/M — A square 6x6 frame with very flat, razor-sharp planes and smooth tones, read through a waist-level finder. |
+| A, B | camera | Rolleiflex 2.8F — A 6x6 medium-format twin-lens reflex camera. |
+| A | camera | Hasselblad 500C/M — A 6x6 medium-format SLR camera with a waist-level finder. |
 | A, B | lens | Zeiss Planar 80mm f/2.8 — A standard medium-format lens that holds the face crisp and lets the reflected street fall softly behind it with no wide-angle stretch. |
 | A, B | viewfinder | Waist-Level Viewfinder — The camera is held at belly height and looks slightly up, so the figure stands a little tall and unhurried against the glass and the sky. |
 | A, B | format | 6x6 Square Frame — A square 6x6 frame with the face and the window reflection balanced inside it and calm margins on every side. |
 | A, C | stock | Kodak Portra 400 — Warm, low-contrast color negative with creamy midtones on lit skin, soft highlight roll-off and fine, even grain. |
 | B | stock | Kodak Portra 800 — Low-light color negative; in this look it leans lamplit skin toward warm tones and lets lamps and wet glass carry a soft glow. |
 | B | color | Vision3 500T-inspired grade — A tungsten cinema-negative look: in this look lamplit skin leans toward warm amber and the shadows toward a slightly green-cool tone. |
-| C | camera | Leica M6 — A 35mm rangefinder frame with a gentle Leica glow and an unobtrusive candid feel. |
+| C | camera | Leica M6 — A 35mm film rangefinder camera. |
 | C | lens | Summicron 35mm f/2 — A wide-normal lens that keeps the subject crisp and lets a little of the surrounding street stay in the frame. |
 | C | stock | Kodak Tri-X 400 — Pure black-and-white with ink-deep blacks and open highlights, used for the metro frame only. |
 | A, C | grain | Grain argentique — Fine color-film grain sits evenly over skin, sky and glass, a touch more visible in the darkest corners of the window. |
@@ -160,14 +160,14 @@
 | B | grain | Pellicule poussée — Pushed film with stronger grain and harder contrast, where lamps glow and spill softly into the dark. |
 | B | bloom | Halation — Lamps and street lights bleed a faint red-orange glow around their edges through the wet glass. |
 
-## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 요청의 장소·소품·시간대·의상 가운데 둘 이상이 그 세트의 단서와 같으면 통째로 쓰고, 세트 값은 고정 사실보다 먼저다. 규칙은 image-brief.md §4 '룩 카드' 4항과 '비워 둔 층')
+## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 세트를 쓰는 조건은 규칙 4항이 정하고, 세트 값은 고정 사실보다 먼저다. 규칙은 image-brief.md §4 '룩 카드' 4항과 '비워 둔 층')
 | 세트 | 갈래 | 묶음 |
 |---|---|---|
 | S1 카페 드 플로르 창가 (滤镜 #061) | A | 단서: 장소 카페 드 플로르 길가 큰 유리창, 유리에 비친 오스만 건물 / 소품 - / 시간대 흐린 낮 / 의상 줄무늬 상의 / Hair Coiffure effet saut du lit, 어깨 길이 짙은 갈색 머리가 약간 흐트러진다 + Frange rideau / Base Teint nu / Lip Beige rosé(`lip-satin` 줄, 물기 있는 천연 더스티 로즈색) / Outfit Marinière classique bretonne / Scene Café de Flore 길가 큰 유리창 안쪽에 앉는다, 유리에 Haussmannien 석조 건물·가로수·행인이 비친다 / Light Paris Overcast Light(5000K)가 안쪽 얼굴을 비춘다 / Optics Rolleiflex 2.8F, Zeiss Planar 80mm f/2.8, Kodak Portra 400, 6x6 Square Frame, 유리에 옅은 김 / Expression 창밖을 보는 사색, Regard dans le vague / Camera Reflets superposés |
 | S2 셰익스피어 서점 (滤镜 #065) | A | 단서: 장소 셰익스피어 서점, 유리에 비친 노트르담 / 소품 헌책, 펼친 책 / 시간대 - / 의상 코냑 스웨이드 재킷 / Hair 풀어 내린 긴 갈색 곱슬, 바람에 날리는 앞머리 / Base Teint nu, 맨 피부 / Lip 무색 립밤 Gloss transparent / Outfit Veste en daim(코냑) + Marinière / Props Collection Blanche 낡은 책을 펼쳐 든다 / Scene Shakespeare and Company 짙은 녹색 목재 창과 헌책 상자 옆, 유리에 센강 건너 Notre-Dame de Paris 쌍탑이 비친다 / Light Paris Overcast Light(5200K) / Optics Rolleiflex 2.8F, Planar 80mm f/2.8, Kodak Portra 400 / Expression 책장을 보며 입꼬리가 살짝 올라간다 / Pose Lire devant la vitrine / Camera Reflets superposés |
 | S3 향수 가게 쇼윈도 (滤镜 #071) | A | 단서: 장소 팔레 루아얄 향수 가게 쇼윈도 / 소품 수정 향수병, 무지개 빛 조각 / 시간대 오후 / 의상 아이보리 가디건 / Hair 허리까지 내려오는 갈색 곱슬이 풀려 있다 + Frange rideau / Base Teint nu / Lip 물기 있는 천연 분홍 / Outfit Cachemire(아이보리 더블 페이스 가디건) + 흰 실크 캐미솔 / Props Flacon de parfum / Scene Palais-Royal 아케이드의 향수 가게 쇼윈도, 19세기 수정 향수병이 줄지어 있다 / Light Crystal Prism Light, 4800K 오후 확산광이 수정병을 지나 볼·눈가·가디건에 무지개 빛 조각을 뿌린다 / Optics Rolleiflex 2.8F, Planar 80mm f/2.8, Kodak Portra 160 / Expression 호기심 어린 시선과 옅은 웃음 / Camera Reflets superposés, 유리에 놀란 얼굴이 비친다 |
 | S4 황혼 대로 테라스 (滤镜 #075) | B | 단서: 장소 대로 카페 테라스 / 소품 대리석 원탁 / 시간대 황혼 / 의상 줄무늬 상의, 데님 / Hair 어깨에 풀어 내린 갈색 곱슬 + Frange rideau / Base Teint nu / Lip 물기 있는 자연 베리색 / Outfit Marinière classique bretonne + 하이웨이스트 데님 / Props Guéridon, 대리석 상판의 물기 반사 / Scene Les Deux Magots 대로 야외 원탁 / Light crépuscule 4400K 노을이 옆얼굴에, 유리에 갓 켜진 호박빛 가로등과 분홍보라 구름이 비친다 / Optics Rolleiflex 2.8F, Waist-Level Viewfinder, Kodak Portra 800, 6x6 Square Frame / Expression 턱을 괴고 길모퉁이를 스치는 먼 시선 / Pose Coude en appui, menton dans la paume / Camera Contre-plongée |
-| S5 비 오는 밤 창가 (滤镜 #066) | B | 단서: 장소 큰 유리창, 빗방울, 가로등 불빛 / 소품 - / 시간대 비 오는 밤 / 의상 검정 터틀넥 / Hair 한쪽 어깨로 늘어진 긴 갈색 웨이브, 뺨 옆에 잔머리 / Lip Lie-de-vin(짙은 와인색 무광) / Outfit Col roulé(검정 가는 캐시미어) / Scene Les Deux Magots 거리 쪽 큰 유리창 안쪽, 비 내리는 저녁 / Light Lumière tungstène 3400K 실내광, 창밖 노란 가로등과 붉은 미등이 물방울 위에서 겹친 원형 빛 얼룩 Gouttes sur la vitre / Optics Kodak Portra 800, Vision3 500T-inspired grade, Pellicule poussée, 어두운 곳의 짙은 입자 (Iris 원본은 Contax RTS III와 Planar 50mm f/1.4, Kodak Vision3 500T, 3:4다. 이 카드의 B는 Rolleiflex 6x6 정방형으로 쓰고 6x6에는 Vision3 500T의 120 규격이 없어 그 색만 연출 값으로 옮긴다) / Expression Rêverie, 손으로 턱을 괴고 흐릿한 빗길을 본다 |
+| S5 비 오는 밤 창가 (滤镜 #066) | B | 단서: 장소 큰 유리창, 빗방울, 가로등 불빛 / 소품 - / 시간대 비 오는 밤 / 의상 검정 터틀넥 / Hair 한쪽 어깨로 늘어진 긴 갈색 웨이브, 뺨 옆에 잔머리 / Lip Lie-de-vin(짙은 와인색 무광) / Outfit Col roulé(검정 가는 캐시미어) / Scene Les Deux Magots 거리 쪽 큰 유리창 안쪽, 비 내리는 저녁 / Light Lumière tungstène 3400K 실내광, 창밖 노란 가로등과 붉은 미등이 물방울 위에서 겹친 원형 빛 얼룩 Gouttes sur la vitre / Optics Kodak Portra 800, Vision3 500T-inspired grade, Pellicule poussée, 어두운 곳의 짙은 입자 / Expression Rêverie, 손으로 턱을 괴고 흐릿한 빗길을 본다 |
 | S6 백미러 속 얼굴 (滤镜 #064) | C | 단서: 장소 생제르맹 거리 / 소품 백미러, 클래식 자동차 / 시간대 - / 의상 줄무늬 상의 / Hair 바람에 흔들리는 짙은 갈색 곱슬 잔머리 + Frange rideau / Base Teint nu / Lip 옅은 더스티 로즈색 / Outfit Marinière classique bretonne(남색과 흰색 가는 줄, 보트넥) / Props Citroën DS 짙은 녹색 차체의 둥근 크롬 사이드미러 / Scene 생제르맹 오래된 거리, 마주 선 오스만 건물과 플라타너스가 거울에 비친다 / Light 4800K 오후 부드러운 확산광 / Optics Leica M6, Summicron 35mm f/2, Kodak Portra 400, 초점은 거울에 비친 눈의 상이 보이는 거리에 맞고 거울 테두리와 차체는 부드럽게 녹는다 / Expression 거울 속 자신과 눈을 맞추며 장난스러운 옅은 미소 / Pose Penchée vers le rétroviseur / Camera Reflet dans le rétroviseur |
 
 ## 포즈·구도 쌍
@@ -191,3 +191,6 @@
 
 ## 출처
 Iris (noahvisualsx/Iris b83de4c, MIT, © 2026 noahvisuals): 法国/滤镜/04 #061–075, 风格/02 #021 #022 #026, 神态与微表情/05 #043 #049, 穿搭/01 #014, 拍照姿势/01 #001 #010. 낱말과 구성은 참고했고 문장은 MPW용으로 새로 썼다. 라이선스 전문은 [LICENSE-Iris.md](LICENSE-Iris.md).
+
+Iris 원문 값 기록(렌더링에는 쓰지 않는다):
+- S5 Optics: Iris 원본은 Contax RTS III와 Planar 50mm f/1.4, Kodak Vision3 500T, 3:4다. 이 카드의 B는 Rolleiflex 6x6 정방형으로 쓰고 6x6에는 Vision3 500T의 120 규격이 없어 그 색만 연출 값으로 옮긴다.

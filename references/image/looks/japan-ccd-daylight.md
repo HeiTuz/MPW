@@ -93,16 +93,16 @@
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
 | A | place | 商店街 — A narrow shopping street of two- and three-story shops with green and yellow 日除け awnings, signboards reduced to bands of color and bicycles leaning at the curb. |
-| A | place | 下町 — Low older houses and potted plants crowd the side lanes, with wires overhead under hard clear daylight. |
-| A | storefront | コンビニ — A convenience store whose glass front reflects the white sky, a short hard-edged shadow under its eave and its sign only a band of color. |
+| A | place | 下町 — Low older houses and potted plants crowd the side lanes, with wires overhead. |
+| A | storefront | コンビニ — A convenience store whose glass front reflects the white sky, with a short eave over it and its sign only a band of color. |
 | A | background | 電柱 — Concrete utility poles stand along both sides of the street with a tangle of 電線 slung between them. |
-| A | background | 軒先テント — Canvas tents project over the shop fronts, throwing sharp-edged shade across the displays and the pavement strip below. |
-| A | sky | 電線 — Black cables cut thin lines across the white-clipped sky, thickest where they meet the poles. |
+| A | background | 軒先テント — Canvas tents project over the shop fronts, above the displays and the pavement strip below. |
+| A | sky | 電線 — Black cables cut thin lines across the sky, thickest where they meet the poles. |
 | A | passersby | 通行人 — People with shopping bags walk the sidewalk and a man on a ママチャリ rides past at frame left, all small and sharp. |
-| A | ground | マンホール — A round iron manhole cover with a stamped pattern sits in the road, its raised pattern catching the sun. |
-| B | place | 代官山 — A quiet slope of low boutiques under keyaki trees, leaf shadows moving across a pale pavement. |
-| C | place | 窓際席 — A bar-height seat at a street-facing window, a white lace curtain between her and the glare and a wooden counter in front. |
-| D | place | 防波堤 — A long concrete seawall runs along the shore with the sea behind it, wide enough to sit on and bleached by the low sun. |
+| A | ground | マンホール — A round iron manhole cover with a raised stamped pattern sits in the road. |
+| B | place | 代官山 — A quiet slope of low boutiques under keyaki trees over a pale pavement. |
+| C | place | 窓際席 — A bar-height seat at a street-facing window with a white lace curtain and a wooden counter in front. |
+| D | place | 防波堤 — A long concrete seawall runs along the shore with the sea behind it, wide enough to sit on. |
 
 ## Light
 | 갈래 | 슬롯 | 줄 |
@@ -121,18 +121,18 @@
 | A, B | fringe | パープルフリンジ — A faint purple fringe runs along high-contrast edges such as wires, branches and hair against the white sky. |
 | A | flash | ストロボ直焚き — The built-in flash adds a flat daylight fill: a small white glint on the forehead and nose and a short hard shadow on the wall behind her. |
 | C | flash | ノンフラッシュ — The flash stays off, so only window light draws the picture, with soft contrast and faint grain in the dim corners. |
-| A | camera | ディマージュ Xt — A Konica Minolta folded-optics pocket compact with a 3.2-megapixel CCD: soft airy frame edges, fine pink-cyan noise in the shadows and a casual snapshot feel. |
-| B | camera | キヤノン PowerShot G2 — A 2000s CCD look: in this look the white balance leans warm, highlights clip slightly and the skin carries a smooth porcelain-like sheen. |
-| D | camera | サイバーショット DSC-P10 — A slim early-2000s small-sensor CCD compact, rendered in this look with a cool blue cast and sharp edges: shadows lean blue-gray while the sky stays clean and cold. |
+| A | camera | ディマージュ Xt — A Konica Minolta folded-optics pocket compact with a 3.2-megapixel CCD. |
+| B | camera | キヤノン PowerShot G2 — A Canon PowerShot G2, a 2000s compact digital camera with a CCD sensor. |
+| D | camera | サイバーショット DSC-P10 — A slim early-2000s small-sensor CCD compact. |
 
-## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 요청의 장소·소품·시간대·의상 가운데 둘 이상이 그 세트의 단서와 같으면 통째로 쓰고, 세트 값은 고정 사실보다 먼저다. 세트를 고르면 갈래는 그 세트의 갈래 열이다. 단서는 네 칸으로 판정한다. 묶음 속 K 숫자는 Iris 프리셋의 연출 값이고 프롬프트 문장에는 색으로 옮긴다. 규칙은 image-brief.md §4 '룩 카드' 4항과 '비워 둔 층')
+## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 세트를 쓰는 조건은 규칙 4항이 정하고, 세트 값은 고정 사실보다 먼저다. 세트를 고르면 갈래는 그 세트의 갈래 열이다. 단서는 네 칸으로 판정한다. 묶음 속 K 숫자는 Iris 프리셋의 연출 값이고 프롬프트 문장에는 색으로 옮긴다. 규칙은 image-brief.md §4 '룩 카드' 4항과 '비워 둔 층')
 | 세트 | 갈래 | 묶음 |
 |---|---|---|
 | S1 渋谷 信号待ち (滤镜 #069) | A | 단서: 장소 횡단보도·스크램블 교차로·인파 / 소품 - / 시간대 낮 / 의상 후드티 / Hair 濡れ髪의 검은 단발, シースルーバング / Lip シアーリップ / Outfit フーディー / Pose ポケットイン, 횡단보도에서 신호 대기 / Scene 渋谷スクランブル交差点의 인파 / Light 부드러운 낮빛(중립에 가까운 흰빛) / Optics ディマージュ Xt, 부드러운 화면 가장자리, 초기 CCD의 가는 노이즈 / Expression 친구가 꺼낸 카메라를 알아채고 힘 뺀 미소 / Camera 친구가 옆에서 불쑥 찍은 거리 |
 | S2 裏原宿 (滤镜 #070) | A | 단서: 장소 뒷골목 / 소품 - / 시간대 낮 / 의상 스타디움 재킷·카고 팬츠 / Hair 濡れ髪의 검은 단발, シースルーバング가 바람에 흔들린다 / Lip シアーリップ / Outfit スタジャン + カーゴパンツ / Pose 큰 걸음으로 걷는다 / Scene 裏原宿의 좁은 뒷골목 / Light 맑은 낮빛 / Optics ザクティ DMX-C1(2000年代の小型CCDデジタルカメラ), 선명한 발색, 중앙이 조금 밝은 플래시와 약한 비네팅 / Expression 無邪気な振り返り / Camera Dutch Angle, 한 손으로 찍은 듯 기운 화면 |
 | S3 代官山 カフェテラス (滤镜 #061) | B | 단서: 장소 카페 테라스·나무 테이블·가로수 / 소품 아이스커피 / 시간대 오후 / 의상 니트 / Hair 濡れ髪의 검은 단발, シースルーバング / Lip シアーリップ / Outfit 흰 ローゲージニット / Props アイスコーヒー, 나무 테이블 / Scene 代官山 카페의 야외 테라스 / Light 오후의 측광, 木漏れ日 / Optics キヤノン PowerShot G2, 둥글게 풀리는 하이라이트(고정 사실의 순백 하늘 예외), 피부 하이라이트에 앉는 따뜻한 도자기빛 윤기 / Expression 문득 눈을 주는 自然なカメラ目線 / Pose 유리잔에 손을 얹는다 |
-| S4 下北沢 窓辺 (滤镜 #073) | C | 단서: 장소 킷사텐 창가·레이스 커튼 / 소품 머그컵 / 시간대 낮 / 의상 니트 / Hair 濡れ髪의 검은 단발, シースルーバング / Lip シアーリップ / Outfit 연한 귀리색 ローゲージニット / Props マグカップ / Scene 下北沢 킷사텐의 창가, 흰 레이스 커튼 / Light 레이스 커튼을 거친 확산광, 그림자 경계 없음 / Optics ノンフラッシュ, 부드러운 하이키(Iris 원본 Contax AX + Planar 50mm f/1.4, 콤팩트로 바꿨다) / Expression 머그의 온기를 확인하는 조용한 얼굴 / Pose 창틀에 기댄다 |
-| S5 由比ヶ浜 夕暮れ (滤镜 #074) | D | 단서: 장소 해변·파도·젖은 모래 / 소품 - / 시간대 해 지기 전 / 의상 흰 리넨 원피스 / Hair 濡れ髪의 검은 단발, 바닷바람에 흔들린다 / Lip シアーリップ / Outfit ホワイトリネンワンピース / Scene 由比ヶ浜의 파도 가장자리, 젖은 모래 / Light 해 지기 15분 전의 따뜻한 호박빛, 바다의 금빛 반사가 전신을 감싼다 / Optics 따뜻한 금색 계조(Iris 원본 GFX 100S + 80mm f/1.7, 콤팩트로 바꿨다) / Expression 物思い, 지는 해를 보는 옆얼굴 / Pose 파도 가장자리에 서서 |
+| S4 下北沢 窓辺 (滤镜 #073) | C | 단서: 장소 킷사텐 창가·레이스 커튼 / 소품 머그컵 / 시간대 낮 / 의상 니트 / Hair 濡れ髪의 검은 단발, シースルーバング / Lip シアーリップ / Outfit 연한 귀리색 ローゲージニット / Props マグカップ / Scene 下北沢 킷사텐의 창가, 흰 레이스 커튼 / Light 레이스 커튼을 거친 확산광, 그림자 경계 없음 / Optics ノンフラッシュ, 부드러운 하이키 / Expression 머그의 온기를 확인하는 조용한 얼굴 / Pose 창틀에 기댄다 |
+| S5 由比ヶ浜 夕暮れ (滤镜 #074) | D | 단서: 장소 해변·파도·젖은 모래 / 소품 - / 시간대 해 지기 전 / 의상 흰 리넨 원피스 / Hair 濡れ髪의 검은 단발, 바닷바람에 흔들린다 / Lip シアーリップ / Outfit ホワイトリネンワンピース / Scene 由比ヶ浜의 파도 가장자리, 젖은 모래 / Light 해 지기 15분 전의 따뜻한 호박빛, 바다의 금빛 반사가 전신을 감싼다 / Optics 따뜻한 금색 계조 / Expression 物思い, 지는 해를 보는 옆얼굴 / Pose 파도 가장자리에 서서 |
 
 ## 포즈·구도 쌍
 | 번호 | 갈래 | Pose | Camera |
@@ -155,3 +155,7 @@
 
 ## 출처
 Iris (noahvisualsx/Iris b83de4c, MIT, © 2026 noahvisuals): 日本/滤镜/04 #061–075, 风格/01 #009, 风格/02 #021 #023, 风格/03 #041 #044 #045 #060, 穿搭/04 #051, 穿搭/06 #081, 发型与妆容/01 #001 #003 #006, 发型与妆容/02 #011 #016, 拍照姿势/02 #021 #023 #030 #034, 道具与美甲/01 #008 #013, 神态与微表情/01 #001 #010, 神态与微表情/03 #021. 낱말과 구성은 참고했고 문장은 MPW용으로 새로 썼다. 라이선스 전문은 [LICENSE-Iris.md](LICENSE-Iris.md).
+
+Iris 원문 값 기록(렌더링에는 쓰지 않는다):
+S4 Optics — Iris 원본 Contax AX + Planar 50mm f/1.4. 이 카드는 콤팩트로 바꿨다.
+S5 Optics — Iris 원본 GFX 100S + 80mm f/1.7. 이 카드는 콤팩트로 바꿨다.

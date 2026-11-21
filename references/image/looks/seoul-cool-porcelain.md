@@ -112,21 +112,21 @@
 ## Scene
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
-| A | place | 클린 콘크리트 카페 — A minimal cafe of bare concrete walls and floor with cool diffuse daylight from large windows and almost nothing on the tables. (滤镜 #034) |
-| A | place | 독립서점 — A small bookshop with pale wooden shelves and art books on a table, light pooled over the pages and one quiet corner left empty. (滤镜 #039) |
-| A | street | 출근길 커피 — A morning street of commuters with takeaway cups, a flat cool sky overhead and a glass office facade behind her. (滤镜 #029) |
+| A | place | 클린 콘크리트 카페 — A minimal cafe of bare concrete walls and floor with large windows and almost nothing on the tables. (滤镜 #034) |
+| A | place | 독립서점 — A small bookshop with pale wooden shelves and art books on a table and one quiet corner left empty. (滤镜 #039) |
+| A | street | 출근길 커피 — A morning street of commuters with takeaway cups and a glass office facade behind her. (滤镜 #029) |
 | A, C | background | 로우 새츄레이션 벽 — A lightly textured cool-gray and cream wall with almost no color and no objects, softly blurred behind her. (滤镜 #022 #032 #040) |
-| B | district | 한남동 — A hillside district of minimal galleries with pale walls, floor-to-ceiling glass and soft diffuse daylight. (滤镜 #023) |
-| B | place | 화이트 큐브 전시장 — A long white gallery corridor with bare walls, a polished floor and even light that casts almost no shadow. |
-| B | place | 미술관 — A tall glass-roofed exhibition hall where cold white daylight pours onto pale walls and floors from above. (滤镜 #037) |
+| B | district | 한남동 — A hillside district of minimal galleries with pale walls and floor-to-ceiling glass. (滤镜 #023) |
+| B | place | 화이트 큐브 전시장 — A long white gallery corridor with bare walls and a polished floor. |
+| B | place | 미술관 — A tall glass-roofed exhibition hall with pale walls and floors. (滤镜 #037) |
 | B | background | 성수동 — Board-marked bare concrete walls inside a converted factory gallery, soft gray and unmarked behind her. (滤镜 #024) |
-| C | place | 프라이빗 스튜디오 화보 — A closed photo studio with a seamless backdrop and one large soft source, set up for a single-subject portrait series. (滤镜 #033) |
-| C | background | 흰 배경지 — A seamless bright white paper backdrop with a clean silhouette and no stray light. |
-| D | place | 한강공원 — A wide riverside park beside a large bridge, a gray-blue sky open over the water and a thin wind coming off the river. (滤镜 #028) |
-| D | place | 루프탑 — A rooftop railing above the city at dusk, the skyline reduced to small points of light far below. (滤镜 #031) |
-| D | street | 강남 — A wet boulevard of glass towers under a low gray sky, reflections on the pavement and every sign kept out of focus. (滤镜 #025) |
+| C | place | 프라이빗 스튜디오 화보 — A closed photo studio with a seamless backdrop, set up for a single-subject portrait series. (滤镜 #033) |
+| C | background | 흰 배경지 — A seamless bright white paper backdrop with a clean silhouette. |
+| D | place | 한강공원 — A wide riverside park beside a large bridge, with a thin wind coming off the river. (滤镜 #028) |
+| D | place | 루프탑 — A rooftop railing above the city at dusk, the skyline far below. (滤镜 #031) |
+| D | street | 강남 — A wet boulevard of glass towers, with every sign kept out of focus. (滤镜 #025) |
 | D | trail | 북한산 — A forested granite trail with pale rock ridges and thin mist between the trees, the air crisp and cool. (滤镜 #035) |
-| D | snow-place | 대관령 양떼목장 — A snow-covered pasture with a wooden fence under a low white sky, flat light and very few features on the ground. (滤镜 #038) |
+| D | snow-place | 대관령 양떼목장 — A snow-covered pasture with a wooden fence and very few features on the ground. (滤镜 #038) |
 
 ## Light
 | 갈래 | 슬롯 | 줄 |
@@ -147,11 +147,11 @@
 ## Optics
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
-| A | camera | Sony A7R V — A high-resolution full-frame body, read here with cool gray-white tones, matte detail and crisp eyelashes under soft light. (滤镜 #021) |
-| B | camera | Hasselblad X2D 100C — A medium-format sensor, read here as a long, smooth tonal ramp from the lit cheek into the shadow side with no hard edge on the face. (滤镜 #023) |
-| B | camera | Phase One IQ4 — A medium-format digital back with an ultra-high-resolution file, read here as keeping the knit weave and the pale wall very clean in neutral color. (滤镜 #037) |
-| C | camera | Sony A7R IV — A 61-megapixel full-frame file resolves each lash and the fine vellus hair on the cheek with no skin smoothing applied. (滤镜 #040) |
-| D | camera | Canon EOS R5 — A crisp full-frame mirrorless rendering with natural color and smooth tonal transitions that holds wet highlights without clipping. (滤镜 #025) |
+| A | camera | Sony A7R V — A high-resolution full-frame mirrorless camera. (滤镜 #021) |
+| B | camera | Hasselblad X2D 100C — A medium-format mirrorless digital camera. (滤镜 #023) |
+| B | camera | Phase One IQ4 — A medium-format digital back with an ultra-high-resolution sensor. (滤镜 #037) |
+| C | camera | Sony A7R IV — A 61-megapixel full-frame mirrorless camera. (滤镜 #040) |
+| D | camera | Canon EOS R5 — A high-resolution full-frame mirrorless camera. (滤镜 #025) |
 | A, C | color | 쿨 화이트 밸런스 — Whites sit slightly cold and clean, so the base reads cool and porcelain-clear with no yellow cast. |
 | A | color | 차분한 티 톤 — A muted gray-brown grade at low contrast with a thin cool tea cast gives the shadows and the base a faint earl-grey undertone. (滤镜 #039) |
 | B | color | 뮤트 시안 — Desaturated color with a faint olive-cyan gray sits in the shadows of the concrete wall and the dark clothing. (滤镜 #024) |
@@ -159,7 +159,7 @@
 | D | tone | 쿨톤 — The whole palette leans cold blue-white with a slightly pale, quiet mood. |
 | A, B, D | bokeh | 아웃포커싱 — A wide aperture melts the background into soft blur while her face stays tack-sharp. |
 
-## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 요청의 장소·소품·시간대·의상 가운데 둘 이상이 그 세트의 단서와 같으면 통째로 쓰고, 세트 값은 고정 사실보다 먼저다. 규칙은 image-brief.md §4 '룩 카드' 4항과 '비워 둔 층')
+## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 세트를 쓰는 조건은 규칙 4항이 정하고, 세트 값은 고정 사실보다 먼저다. 규칙은 image-brief.md §4 '룩 카드' 4항과 '비워 둔 층')
 
 이 카드의 색온도 숫자(고정 사실 palette 행과 세트의 6500K 같은 값)는 Iris 프리셋을 옮긴 이 룩의 연출 값이고 측정값이 아니다. 프롬프트의 영어 줄에는 숫자 대신 색 말(cool gray-white, cold blue-white)로 쓴다.
 
@@ -168,9 +168,9 @@
 | S1 성수동 아침 (滤镜 #021. 단서: 장소 성수동 콘크리트 아트 스페이스 / 소품 - / 시간대 아침 흐린 날 / 의상 스퀘어넥 니트) | A | Hair 검은 긴 생머리, 한쪽을 귀 뒤로 넘겨 이마와 눈썹이 드러난다 / Base 쿨톤 무광 베이스, 광대뼈 광은 없다 / Lip 깨문 듯한 립 / Outfit 스퀘어넥(깊은 차콜 슬림 스퀘어넥 니트) / Props 쇄골 길이의 가는 실버 체인 목걸이 / Scene 성수동의 조용한 콘크리트 아트 스페이스, 배경은 비어 있다 / Light 흐린 날 빛 6500K, 직사 햇빛 없이 회백색 하늘이 만드는 확산 냉광, 피부는 무광에 기름기 없음 / Optics Sony A7R V + 50mm f/1.8 / Expression 맑은 눈에 캐치라이트가 하나, 막 세수한 듯 평온한 얼굴 / Pose 뒤돌아보기, 몸은 3/4로 비스듬하고 어깨가 내려간다 |
 | S2 커튼 너머 아침 독서 (滤镜 #022. 단서: 장소 창가 얇은 흰 커튼·미니멀 아파트 / 소품 책 / 시간대 아침 / 의상 모카 캐시미어 니트) | A | Hair 검은 긴 생머리 / Lip 깨문 듯한 립 / Outfit 캐시미어 니트(모카색 딥 브이넥 캐시미어) / Scene 로우 새츄레이션 벽의 군더더기 없는 미니멀 아파트, 조용한 아침 독서 / Light 창가 빛 6800K, 얇은 흰 커튼이 거른 회청빛이 실내로 퍼지고 머리카락 끝에 옅은 냉광 / Optics Leica SL2-S + Summilux 50mm / Expression 독서 몰입 / Pose 뒤돌아보기(고개만 어깨 쪽으로 돌리고 시선은 책에 남는다. 렌즈를 보지 않는다) |
 | S3 한남동 갤러리 (滤镜 #023. 단서: 장소 한남동 갤러리 천창 / 소품 - / 시간대 - / 의상 귀리색 블레이저(슬릭컷)) | B | Hair 슬릭컷 / Lip 쿨톤 매트의 회분홍 / Outfit 오버사이즈 블레이저(밝은 귀리색 외투, 안에 검은 스트랩리스, 깃을 연 채 목선과 쇄골이 드러난다) / Scene 한남동 갤러리의 깨끗한 실제 공간, 배경은 부드럽게 풀리고 비어 있다 / Light 천장 확산광 5800K, 순백의 천장 소프트박스라 얼굴에 보이는 딱딱한 그림자가 거의 없고 조각처럼 평평하다 / Optics Hasselblad X2D 100C / Style 한남동 룩, 지적이고 냉정한 인상 / Expression 눈썹 까딱 / Pose 뒤돌아보기, 허리 위 반신(Medium Shot) |
-| S4 매트 도자기 베이스 (滤镜 #027. 단서: 장소 통창 곁 소프트라이트 공간(뷰티 화보, 버터플라이 조명) / 소품 - / 시간대 - / 의상 귀리색 블레이저(로우포니테일)) | C | Hair 슬릭 로우포니테일, 얼굴이 완전히 드러난다 / Lip 시나몬 누드 립 / Outfit 오버사이즈 블레이저(귀리색 외투 + 검은 스트랩리스) / Scene 한남동 미니멀 통창 곁의 조용한 소프트라이트 공간, 배경에 아무것도 없다 / Light 버터플라이 조명 5600K, 전문 버터플라이 평면광이 팔자주름과 칙칙함을 없앤다 / Optics 카메라 지정 없음(Iris 원본의 장비 칸은 조명 `Studio Pro Head Flat Softbox`) / Style 뷰티 화보, 맑은 산소감 / Expression 무표정 / Pose 뒤돌아보기 |
+| S4 매트 도자기 베이스 (滤镜 #027. 단서: 장소 통창 곁 소프트라이트 공간(뷰티 화보, 버터플라이 조명) / 소품 - / 시간대 - / 의상 귀리색 블레이저(로우포니테일)) | C | Hair 슬릭 로우포니테일, 얼굴이 완전히 드러난다 / Lip 시나몬 누드 립 / Outfit 오버사이즈 블레이저(귀리색 외투 + 검은 스트랩리스) / Scene 한남동 미니멀 통창 곁의 조용한 소프트라이트 공간, 배경에 아무것도 없다 / Light 버터플라이 조명 5600K, 전문 버터플라이 평면광이 팔자주름과 칙칙함을 없앤다 / Optics 카메라 지정 없음 / Style 뷰티 화보, 맑은 산소감 / Expression 무표정 / Pose 뒤돌아보기 |
 | S5 비 오는 날 투명 우산 (滤镜 #025. 단서: 장소 강남 비 오는 거리 / 소품 투명 우산 / 시간대 비(안개비) / 의상 스퀘어넥 니트) | D | Hair 검은 긴 생머리, 비 오는 공기에 잔머리가 선다 / Lip 물광 립 / Outfit 스퀘어넥(차콜 슬림 스퀘어넥 니트) / Props 쇄골 길이의 가는 실버 체인 목걸이, 투명 우산 / Scene 강남의 비 오는 거리, 투명 우산 아래 / Light 안개비 6300K, 높은 습도가 만드는 촉촉한 광택, 얼굴에 고르고 부드러운 빛, 입술이 촉촉하다 / Optics Canon EOS R5 + 50mm f/1.2 / Expression 하늘 올려다보기, 우산 위로 흘러내리는 빗방울을 본다 / Pose 우산 쓰고 돌아보기 |
-| S6 블루 아워 옥상 (滤镜 #031. 단서: 장소 옥상 루프탑 난간 / 소품 - / 시간대 블루 아워 황혼 / 의상 -) | D | Hair 검은 긴 생머리 / Lip 물광 립 / Outfit 오버사이즈 블레이저(밝은 귀리색 외투 + 검은 스트랩리스) / Scene 루프탑 난간, 짙푸른 황혼에 잠긴 3/4로 돌린 얼굴 / Light 블루 아워 7200K, 해가 지평선 아래로 완전히 진 뒤 20분, 하늘이 순수한 차가운 사파이어 블루 / Optics Sony A7 IV, FE 35mm f/1.4 GM / Expression 뒤돌아 꽂히는 시선 / Pose 뒤돌아보기(Iris 원문은 몸 3/4, 고개를 돌려 렌즈를 본다. 완전한 옆모습이 아니다) |
+| S6 블루 아워 옥상 (滤镜 #031. 단서: 장소 옥상 루프탑 난간 / 소품 - / 시간대 블루 아워 황혼 / 의상 -) | D | Hair 검은 긴 생머리 / Lip 물광 립 / Outfit 오버사이즈 블레이저(밝은 귀리색 외투 + 검은 스트랩리스) / Scene 루프탑 난간, 짙푸른 황혼에 잠긴 3/4로 돌린 얼굴 / Light 블루 아워 7200K, 해가 지평선 아래로 완전히 진 뒤 20분, 하늘이 순수한 차가운 사파이어 블루 / Optics Sony A7 IV, FE 35mm f/1.4 GM / Expression 뒤돌아 꽂히는 시선 / Pose 뒤돌아보기, 몸은 3/4로 틀고 고개를 돌려 렌즈를 본다(완전한 옆모습이 아니다) |
 
 ## 포즈·구도 쌍
 | 번호 | 갈래 | Pose | Camera |
@@ -193,3 +193,7 @@
 
 ## 출처
 Iris (noahvisualsx/Iris b83de4c, MIT, © 2026 noahvisuals): 韩国/滤镜/02 #021–040, 发型与妆容/01 #001–010, 神态与微表情/01 #001–010, 穿搭/02 #016–035, 拍照姿势/02 #021–040. 낱말과 구성은 참고했고 문장은 MPW용으로 새로 썼다. 라이선스 전문은 [LICENSE-Iris.md](LICENSE-Iris.md).
+
+Iris 원문 값 기록(렌더링에는 쓰지 않는다):
+- S4 Optics: Iris 원본의 장비 칸은 조명 `Studio Pro Head Flat Softbox`.
+- S6 Pose: Iris 원문은 몸 3/4, 고개를 돌려 렌즈를 본다. 완전한 옆모습이 아니다.

@@ -116,21 +116,21 @@
 ## Scene
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
-| A | place | Baie des Anges — A wide curve of smooth pale pebbles where the water shifts from glassy green to deep indigo, palms along the promenade in hard noon sun. (滤镜 #092 #094) |
-| A | place | pont en teck — A white teak yacht deck over deep blue sea, hard sun scattering star-shaped glints off the waves. (滤镜 #097) |
-| A | place | Calanques de Cassis — Tall white limestone cliffs plunging into a clear turquoise inlet, the white stone and water bouncing the sun back up onto skin. (风格 #085) |
-| A | place | Corniche — A winding cliff road high above the sea with stone walls and hairpin turns, the water glittering below in bright light. (风格 #090) |
-| A | background | Côte d'Azur — Sapphire sea, a pebble beach and white yachts behind her, all glittering under a pale, almost white sky. |
-| B | place | Gordes — A hill village stacked in pale dry-laid stone, white-gold in fierce sun with razor-edged shadows down the stairs. (滤镜 #093) |
+| A | place | Baie des Anges — A wide curve of smooth pale pebbles where the water shifts from glassy green to deep indigo, palms along the promenade. (滤镜 #092 #094) |
+| A | place | pont en teck — A white teak yacht deck over deep blue sea. (滤镜 #097) |
+| A | place | Calanques de Cassis — Tall white limestone cliffs plunging into a clear turquoise inlet. (风格 #085) |
+| A | place | Corniche — A winding cliff road high above the sea with stone walls and hairpin turns, the water far below. (风格 #090) |
+| A | background | Côte d'Azur — Sapphire sea, a pebble beach and white yachts behind her. |
+| B | place | Gordes — A hill village stacked in pale dry-laid stone with narrow stairs. (滤镜 #093) |
 | B | place | Bastide — A Provençal stone farmhouse with pale shutters and a gravel court under plane trees, hot and still at midday. (滤镜 #099) |
-| B | place | Volets clos — A dim stone farmhouse room behind closed white wooden shutters, the midday sun leaking through the slats as a few almost-white beams across a cool plank floor. (滤镜 #099) |
+| B | place | Volets clos — A stone farmhouse room behind closed white wooden shutters with a cool plank floor. (滤镜 #099) |
 | B | background | Saint-Paul-de-Vence — A walled hill town with pebble-mosaic lanes and old stone galleries draped in bougainvillea, the paving polished pale by footsteps. (风格 #080) |
-| B | background | Menton — Terraced lemon trees behind a lime-washed yellow house with pale blue-grey shutters in clear Mediterranean sun. (风格 #084) |
-| C | place | Oliveraie — Twisted old olive trees with silver-green leaves over red-yellow dry soil, wild rosemary and flecks of sun on the ground. (滤镜 #096) |
-| C | place | Tournesols — A dense field of sunflower heads turned to the sun, saturated yellow against clear blue sky in hard noon light. (滤镜 #095) |
-| C | place | wheat field — Ripe wheat along a dirt track in full noon sun, the dry stalks pale gold and leaning one way in the wind. (滤镜 #091) |
-| D | place | Valensole — Rows of lavender curving across a pale plateau, the low gold sun skimming their tops into purple and gold. (滤镜 #098) |
-| D | place | Èze — A clifftop garden of huge cacti and agaves above the sea, with a marble lookout where the last sun lands. (滤镜 #100) |
+| B | background | Menton — Terraced lemon trees behind a lime-washed yellow house with pale blue-grey shutters. (风格 #084) |
+| C | place | Oliveraie — Twisted old olive trees with silver-green leaves over red-yellow dry soil and wild rosemary on the ground. (滤镜 #096) |
+| C | place | Tournesols — A dense field of sunflower heads turned to the sun, saturated yellow against clear blue sky. (滤镜 #095) |
+| C | place | wheat field — Ripe wheat along a dirt track, the dry stalks pale gold and leaning one way in the wind. (滤镜 #091) |
+| D | place | Valensole — Rows of lavender curving across a pale plateau. (滤镜 #098) |
+| D | place | Èze — A clifftop garden of huge cacti and agaves above the sea, with a marble lookout. (滤镜 #100) |
 
 ## Light
 | 갈래 | 슬롯 | 줄 |
@@ -152,10 +152,10 @@
 | A, C, D | stock | Kodak Portra 400 — Warm, low-contrast colour negative with creamy midtones on sunlit skin, honey highlights that roll off into white and fine even grain. |
 | B | stock | Kodak Portra 160 — A finer-grained negative with muted pastel colour and smooth midtones; in this look it leaves white stone reading cool-white instead of yellow. |
 | A | stock-slide | Kodak Ektachrome E100 — A fine-grained daylight reversal film, rendered in this look with vivid colour and deep, high-contrast shadows: cobalt sea, clean silver-white cotton and almost no visible grain. (滤镜 #092) |
-| C | camera-mf | Rolleiflex 2.8F — A square medium-format frame with fine tonal gradation and a slightly low, respectful viewpoint. (滤镜 #096) |
+| C | camera-mf | Rolleiflex 2.8F — A square 6x6 medium-format twin-lens reflex camera used at waist level. (滤镜 #096) |
 | C | lens-mf | Zeiss Planar 80mm f/2.8 — A standard medium-format lens that holds the face crisp and lets the silver-green leaves fall softly behind it with no wide-angle stretch. (Rolleiflex 2.8F의 렌즈. 이 줄을 쓰면 `Canon FD 50mm f/1.4` 줄은 쓰지 않는다) |
 | A | lens | Zeiss Planar 45mm f/2 — A clean-edged standard lens with clear colour and a tidy, natural perspective. (滤镜 #094) |
-| A | lens-wide | Zeiss Biogon 28mm f/2.8 — A wide lens that takes in the whole deck and the sea behind her with deep focus and mild edge stretching, the face staying central. (滤镜 #097, Iris 원문은 Planar 50mm 꼬리와 함께 적혀 있었다) |
+| A | lens-wide | Zeiss Biogon 28mm f/2.8 — A wide lens that takes in the whole deck and the sea behind her with deep focus and mild edge stretching, the face staying central. (滤镜 #097) |
 | B | lens | Summicron 35mm f/2 — A wide-normal lens with a crisp subject, soft smooth falloff and a bit of the surrounding place kept in the frame. (滤镜 #091 #093 #099) |
 | C | lens | Canon FD 50mm f/1.4 — A vintage standard lens with warm, slightly soft rendering and gently glowing highlights. (滤镜 #095 #098) |
 | D | lens | Summilux 50mm f/1.4 — A wide-aperture lens with a sharp focal plane and a creamy glow around the bright edges of hair and sea. (滤镜 #100) |
@@ -164,12 +164,12 @@
 | A, D | flare | Lens Flare — The high or low sun sends soft veils and a faint colour streak across one corner of the frame and lowers contrast near it. |
 | C | format | 6x6 Square Frame — A square 6x6 composition with the subject centered or lightly offset and calm, balanced margins. (滤镜 #096) |
 
-## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 요청의 장소·소품·시간대·의상 가운데 둘 이상이 그 세트의 단서와 같으면 통째로 쓰고, 세트 값은 고정 사실보다 먼저다. 규칙은 image-brief.md §4 '룩 카드' 4항과 '비워 둔 층')
+## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 세트를 쓰는 조건은 규칙 4항이 정하고, 세트 값은 고정 사실보다 먼저다. 규칙은 image-brief.md §4 '룩 카드' 4항과 '비워 둔 층')
 | 세트 | 갈래 | 묶음 |
 |---|---|---|
 | S1 자갈 해변 땀 광 (滤镜 #094) | A | 단서: 장소 자갈 해변, 니스 해안 / 소품 - / 시간대 한낮 / 의상 흰 캐미솔, 데님 컷오프 반바지 / Hair Effet mouillé, 깊은 갈색 장발이 바닷바람과 물기로 쇄골·어깨에 흩어짐 + Frange rideau / Base Teint nu, 꾸밈 없는 맨 피부에 코끝·이마·쇄골의 얇은 땀 광 / Lip 산호빛 분홍 촉촉한 입술(Lèvres corail) / Outfit Caraco côtelé(흰 가는 골지 면 캐미솔) + denim cutoff shorts / Scene Baie des Anges 회색 자갈 해변, 뒤로 부서지는 흰 파도와 파란 바다 / Light Plein soleil 5900K, 이마·쇄골에 금빛 하이라이트 / Optics Contax G2 + Zeiss Planar 45mm f/2, Kodak Portra 400, 고운 입자 / Expression 눈웃음, 시원한 바닷바람 쪽으로 얼굴을 살짝 든다 / Pose 자갈 위에 두 손을 짚고 뒤로 기대 앉는다(lean back on hands) |
 | S2 니스 프롬나드 슬라이드 (滤镜 #092) | A | 단서: 장소 니스 프롬나드, 코발트 바다 / 소품 - / 시간대 한낮 / 의상 흰 자수 셔츠 / Hair 바닷바람에 부풀어 날리는 갈색 웨이브 + Frange rideau / Base Teint nu / Lip 산호 오렌지 광택 입술(Lèvres corail) / Outfit Broderie anglaise(흰 자수 면 셔츠) + 하이웨이스트 denim cutoff shorts / Scene Baie des Anges 프롬나드, 뒤로 짙은 코발트 바다와 금빛 자갈 해변 / Light Plein soleil 5800K, 햇빛 받은 흰 천이 은백색으로 / Optics Canon New F-1 + FD 50mm f/1.4, Kodak Ektachrome E100, 짙은 포화와 강한 대비, 입자 거의 없음(grain 끔) / Expression Fou rire, 돌아보며 환하게 웃는다 / Pose 두 손으로 바람에 흐트러진 머리를 잡는다(Dégager ses cheveux du front) |
-| S3 고르드 석회암 골목 (滤镜 #093) | B | 단서: 장소 고르드 석회암 골목 / 소품 밀짚모자 / 시간대 한낮 / 의상 린넨 롱 드레스 / Hair 모자 챙 아래로 흩어지는 갈색 곱슬 + Frange rideau / Base 민낯(Teint nu) / Lip 물기 있는 자연 입술, 살짝 벌림(Gloss transparent) / Outfit Lin lavé(연한 귀리색 거친 워시드 린넨 끈 묶음 롱 드레스) / Props Chapeau de paille, 한 손으로 챙을 잡는다 / Scene Gordes 낮 햇볕에 달궈진 석회암 골목, 양쪽 흰 돌벽 / Light Plein soleil 6200K 직사, 흰 돌 하이라이트가 살짝 과노출된 열기, 챙 그림자가 성긴 무늬로 얼굴에 / Optics Leica MP + Summicron 35mm f/2, Kodak Portra 160, 고운 입자 / Expression Squint, 해를 향해 느긋하게 / Pose 한 손으로 모자를 누르고 천천히 걷는다 |
+| S3 고르드 석회암 골목 (滤镜 #093) | B | 단서: 장소 고르드 석회암 골목 / 소품 밀짚모자 / 시간대 한낮 / 의상 린넨 롱 드레스 / Hair 모자 챙 아래로 흩어지는 갈색 곱슬 + Frange rideau / Base 민낯(Teint nu) / Lip 물기 있는 자연 입술, 살짝 벌림(Gloss transparent) / Outfit Lin lavé(연한 귀리색 거친 워시드 린넨 끈 묶음 롱 드레스) / Props Chapeau de paille, 한 손으로 챙을 잡는다 / Scene Gordes 석회암 골목, 양쪽 흰 돌벽 / Light Plein soleil 6200K 직사, 흰 돌 하이라이트가 살짝 과노출된 열기, 챙 그림자가 성긴 무늬로 얼굴에 / Optics Leica MP + Summicron 35mm f/2, Kodak Portra 160, 고운 입자 / Expression Squint, 해를 향해 느긋하게 / Pose 한 손으로 모자를 누르고 천천히 걷는다 |
 | S4 농가 덧창 (滤镜 #099) | B | 단서: 장소 농가 덧창 침실, 덧창 틈 빛줄기 / 소품 - / 시간대 한낮 낮잠 / 의상 흰 캐미솔 / Hair 어깨선 길이의 헝클어진 갈색 머리 + Frange rideau / Base 민낯(Teint nu) / Lip 물기 있는 분홍 자연 입술 / Outfit Caraco côtelé(흰 가는 골지 면 캐미솔) + 같은 색 면 홈 쇼츠 / Scene Volets clos, 프로방스 석조 농가 침실, 시원한 소나무 마루에 맨발로 앉음 / Light Lumière à travers les volets 5600K, 거의 과노출된 흰 빛줄기가 어깨·쇄골·흰 면 위에, 방 안은 서늘한 어둠 / Optics Leica M6 + Summicron 35mm f/2, Kodak Portra 160, Soft Glow의 흰 광륜 / Expression Regard dans le vague, 빛 얼룩을 응시한다 / Pose 한 손으로 뺨을 괴고 앉는다(Coude en appui, menton dans la paume) |
 | S5 해바라기 밭 (滤镜 #095) | C | 단서: 장소 해바라기 밭, 흙길 / 소품 해바라기 꽃잎 / 시간대 한낮 / 의상 체크 원피스 / Hair 부드러운 갈색 곱슬 장발이 등 뒤로, 바람에 앞머리가 흔들림(Frange rideau) / Base Teint nu / Lip 복숭아빛 촉촉한 입술(Gloss transparent) / Outfit Vichy(하늘색 가는 체크 면 스퀘어넥 반팔 원피스) / Props 한 손으로 해바라기 꽃잎을 만진다 / Scene Tournesols 생레미 해바라기 밭 가장자리 흙길 / Light Plein soleil 5800K, 금빛 꽃과 파란 하늘의 선명한 대비 / Optics Canon New F-1 + FD 50mm f/1.4, Kodak Portra 400 / Expression Sourire franc, 고개를 돌려 맑게 웃는다 / Pose Doigt hésitant |
 | S6 에즈 절벽 마지막 빛 (滤镜 #100) | D | 단서: 장소 에즈 절벽, 지중해 전망대 / 소품 - / 시간대 석양 역광, 마지막 빛 / 의상 흰 오픈백 드레스 / Hair 허리까지 오는 곱슬 갈색 머리가 저녁 바람에 불타듯 날림(Balayage) + Frange rideau, 한 손으로 머리카락을 누른다 / Base Teint nu / Lip 복숭아 살구빛 촉촉한 입술 / Outfit Robe dos nu(흰 이중 린넨 오픈백 롱 드레스) / Scene Èze 절벽 정원의 대리석 전망대, 발아래로 반짝이는 지중해 / Light 4200K 해가 수평선에 닿기 3분 전, 호박빛 금색 속 강한 역광 / Optics Leica MP + Summilux 50mm f/1.4, Kodak Portra 400, Halation의 붉은 번짐 / Expression Iris d'ambre, 노을이 비친 눈, 감동 어린 얼굴 / Pose 옆으로 고개를 돌려 지는 해를 본다 |
@@ -195,3 +195,6 @@
 
 ## 출처
 Iris (noahvisualsx/Iris b83de4c, MIT, © 2026 noahvisuals): 法国/滤镜/06 #091–100, 风格/05 #076–090(#078 #079 #080 #081 #084 #085 #090를 주로), 穿搭/05 #066–080(#066 #067 #068 #070 #072 #075를 주로), 丝袜/05 #046, 发型与妆容/04 #031 #034 #037, 道具与美甲/03 #031. 낱말과 구성은 참고했고 문장은 MPW용으로 새로 썼다. 라이선스 전문은 [LICENSE-Iris.md](LICENSE-Iris.md).
+
+Iris 원문 값 기록(렌더링에는 쓰지 않는다):
+- Optics lens-wide(滤镜 #097): Iris 원문은 Planar 50mm 꼬리와 함께 적혀 있었다.

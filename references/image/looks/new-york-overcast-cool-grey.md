@@ -128,21 +128,21 @@
 ## Scene
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
-| A | place | SoHo — A cobbled downtown street between historic cast-iron and red-brick facades with loft windows, the stone underfoot dull grey under an even cloud ceiling. (滤镜 #041) |
-| A | place | Tribeca — A quiet block of old warehouse brick with black cast-iron fire escapes climbing the facade, the ironwork reading as a hard graphic grid in flat light. (滤镜 #042) |
+| A | place | SoHo — A cobbled downtown street between historic cast-iron and red-brick facades with loft windows, the stone underfoot dull grey. (滤镜 #041) |
+| A | place | Tribeca — A quiet block of old warehouse brick with black cast-iron fire escapes climbing the facade, the ironwork reading as a hard graphic grid. (滤镜 #042) |
 | A | place | Brooklyn Bridge Park — A waterfront railing above the East River faces the muted blue-grey skyline of Lower Manhattan through a thin haze. (滤镜 #046) |
-| A | place | Lower East Side — A narrow street of aged red-brick tenements with graffiti-covered shutters and a kerbside hydrant, the brick deep red-brown against slate-blue shadow. (滤镜 #047) |
-| A | place | Williamsburg — A derelict brick-and-steel warehouse lot covered in faded murals, with rusted frames and broken windows in cold grey light. (滤镜 #049) |
+| A | place | Lower East Side — A narrow street of aged red-brick tenements with graffiti-covered shutters and a kerbside hydrant, the brick deep red-brown. (滤镜 #047) |
+| A | place | Williamsburg — A derelict brick-and-steel warehouse lot covered in faded murals, with rusted frames and broken windows. (滤镜 #049) |
 | A | place | High Line — The elevated rail park with old rusted tracks, wild grasses and a weathered steel railing, the Hudson showing beyond the buildings. (滤镜 #050) |
 | A | place | Hudson River Park — A wooden pier runs out over the slate-grey river, the cold wind raking the water into fine ripples. (滤镜 #052) |
-| A | place | Columbia University — Broad limestone steps and Ionic columns in ivory-grey stone sit under a soft sky, a library facade rising behind. (滤镜 #053) |
+| A | place | Columbia University — Broad limestone steps and Ionic columns in ivory-grey stone, a library facade rising behind. (滤镜 #053) |
 | B | place | Brooklyn Bridge — A wooden pedestrian promenade lies in dense river fog, the great suspension cables fading from sharp near strands to pale ghosts in the white. (滤镜 #044) |
-| B | place | Wall Street — A narrow canyon of limestone towers where the street below falls almost to black and only a thin shaft of sky reaches the pavement. (滤镜 #045) |
+| B | place | Wall Street — A narrow canyon of limestone towers above the street. (滤镜 #045) |
 | B | place | Flatiron Building — The wedge-shaped limestone prow cuts into the grey sky at a windy corner, crosswalk stripes laid out in front of it. (滤镜 #054) |
 | B | place | Chelsea — A tall white gallery hall with seamless walls and a polished concrete floor, one huge bare canvas the only thing on show. (滤镜 #048) |
-| C | place | Midtown Glass Towers — Blue-coated glass curtain walls rise on every side and reflect the cloud ceiling as a pure cool cyan, doubling the street in their panes. (滤镜 #051) |
-| D | place | Bodega — A cramped corner store with stacked drink coolers and a fruit stand, its hand-lettered signs blurred past reading and cold white light spilling out. (滤镜 #055) |
-| D | place | Subway Platform — White glazed tiles and yellow safety poles stand under a flat tube-light ceiling on a late-night platform. (神态 #079) |
+| C | place | Midtown Glass Towers — Blue-coated glass curtain walls rise on every side, doubling the street in their panes. (滤镜 #051) |
+| D | place | Bodega — A cramped corner store with stacked drink coolers and a fruit stand, its hand-lettered signs blurred past reading. (滤镜 #055) |
+| D | place | Subway Platform — White glazed tiles and yellow safety poles stand on a late-night platform. (神态 #079) |
 
 ## Light
 | 갈래 | 슬롯 | 줄 |
@@ -166,12 +166,12 @@
 | A, C | stock | Kodak Portra 400 — Cool-shifted color negative with creamy highlights on the skin, soft highlight roll-off, blue-grey shadows and fine even grain. (滤镜 #043 #049 #050 #052) |
 | A | stock | Kodak Portra 160 — Finer-grained than Portra 400 and kept slightly cool in this look, with muted color and smooth mid-tones. (滤镜 #046 #053) |
 | A | stock | Kodak Gold 200 — Consumer color film kept on a cool, neutral color balance in this look, so the usual golden cast stays out and brick reds stay rich against slate-blue shadow. (滤镜 #047) |
-| A | stock | Leica M11 — A compact rangefinder digital frame with crisp micro-contrast, calm color and gentle highlight roll-off. (滤镜 #041) |
-| A | stock | Hasselblad 907X — A digital medium-format frame with extremely smooth gradients that step the greys finely and keep highlights restrained. (滤镜 #042) |
+| A | stock | Leica M11 — A compact rangefinder digital frame. (滤镜 #041) |
+| A | stock | Hasselblad 907X — A digital medium-format frame. (滤镜 #042) |
 | B | stock | Kodak T-Max — Modern fine-grain black-and-white film with smooth tones, crisp detail and clean luminous highlights. (滤镜 #044) |
 | B | stock | Kodak Tri-X 400 — Pure black-and-white tone with ink-deep blacks and brilliant highlights, the grain coarse and bold. (滤镜 #045 #054) |
-| B | stock | Leica Monochrom — A dedicated black-and-white sensor with rich tonal depth and razor-fine edge detail, a long clean grey ramp. (滤镜 #048) |
-| D | stock | Ricoh GR IIIx — A pocket digital frame with a 40mm view, crisp punchy street color and a deep dark falloff beyond the light. (滤镜 #055) |
+| B | stock | Leica Monochrom — A dedicated black-and-white sensor. (滤镜 #048) |
+| D | stock | Ricoh GR IIIx — A pocket digital frame with a 40mm view. (滤镜 #055) |
 | A | color | Cool Grey Tone — A pale grey palette with a trace of blue, restrained contrast and clean cold whites. |
 | C | color | Cool Cyan Shift — Colors lean cool cyan, as if lit by reflective blue glass and an overcast sky. (滤镜 #051) |
 | D | color | Cool White Balance — Whites sit slightly cold and clean, so the skin highlights read clean and neutral with no warm yellow cast. (滤镜 #055) |
@@ -184,14 +184,14 @@
 | A, C | grain | 胶片颗粒 — Fine, even color-film grain sits across the whole frame, slightly heavier in the shadows. |
 | B | grain | 胶片颗粒 — Crisp silver grain lies over the whole grey ramp, fine on T-Max and bold on Tri-X. |
 
-## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 요청의 장소·소품·시간대·의상 가운데 둘 이상이 그 세트의 단서와 같으면 통째로 쓰고, 세트 값은 고정 사실보다 먼저다. 규칙은 image-brief.md §4 '룩 카드' 4항과 '비워 둔 층')
+## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 세트를 쓰는 조건은 규칙 4항이 정하고, 세트 값은 고정 사실보다 먼저다. 규칙은 image-brief.md §4 '룩 카드' 4항과 '비워 둔 층')
 | 세트 | 갈래 | 묶음 |
 |---|---|---|
-| S1 SoHo Cobblestones (滤镜 #041) | A | 단서: 장소 소호 자갈길·주철 건물 / 소품 선글라스 / 시간대 흐린 낮 / 의상 숯회색 트렌치 코트 / Hair Glass Hair, 짙은 검은 직모가 어깨 위 코트로 떨어진다 / Lip Taupe Matte Lips(누드 무광, 입술을 살짝 다문다) / Outfit wool trench coat(숯회색 더블 브레스티드 울, 어깨선이 큼직) + Sunglasses(복고풍 검정 선글라스, 눈이 안 보이니 catchlight 끈다) / Scene SoHo, 자갈길과 주철·붉은 벽돌 건물 / Light Overcast Light(6500K 그림자 없는 확산 하늘빛) / Optics Leica M11, APO-Summicron-M 50mm f/2 ASPH, Cool Grey Tone(원본 Custom SoHo Cool Grey DNG) / Pose 자갈길을 걷는다 / Camera 허리 위, 눈높이 |
-| S2 Williamsburg Warehouse (滤镜 #049) | A | 단서: 장소 윌리엄스버그 폐창고·벽화 / 소품 - / 시간대 찬 바람 부는 흐린 낮 / 의상 M-65 재킷·전투화 / Hair Windblown Hair, 금색 장발이 찬 바람에 흩어진다 / Outfit M-65(올리브색 드롭 숄더 필드 재킷) + Parachute Pants(검정 와이드) + Combat Boots(두꺼운 밑창) / Scene Williamsburg, 색 바랜 벽화가 덮인 폐창고와 녹슨 철골, 깨진 유리창 / Light Storm Light(6800K 차가운 흐림, 청록 공기와 녹슨 철골의 주황이 맞선다) / Optics Olympus OM-4T, Zuiko 28mm f/2, Kodak Portra 400(원본 Tungsten Push), Cool Cyan Shift / Expression Cool Gaze, 냉정하고 단단한 눈 / Pose 창고 앞을 성큼 지난다 / Camera deep focus, 광각이라 얼굴은 화면 가운데에 둔다 |
+| S1 SoHo Cobblestones (滤镜 #041) | A | 단서: 장소 소호 자갈길·주철 건물 / 소품 선글라스 / 시간대 흐린 낮 / 의상 숯회색 트렌치 코트 / Hair Glass Hair, 짙은 검은 직모가 어깨 위 코트로 떨어진다 / Lip Taupe Matte Lips(누드 무광, 입술을 살짝 다문다) / Outfit wool trench coat(숯회색 더블 브레스티드 울, 어깨선이 큼직) + Sunglasses(복고풍 검정 선글라스, 눈이 안 보이니 catchlight 끈다) / Scene SoHo, 자갈길과 주철·붉은 벽돌 건물 / Light Overcast Light(6500K 그림자 없는 확산 하늘빛) / Optics Leica M11, APO-Summicron-M 50mm f/2 ASPH, Cool Grey Tone / Pose 자갈길을 걷는다 / Camera 허리 위, 눈높이 |
+| S2 Williamsburg Warehouse (滤镜 #049) | A | 단서: 장소 윌리엄스버그 폐창고·벽화 / 소품 - / 시간대 찬 바람 부는 흐린 낮 / 의상 M-65 재킷·전투화 / Hair Windblown Hair, 금색 장발이 찬 바람에 흩어진다 / Outfit M-65(올리브색 드롭 숄더 필드 재킷) + Parachute Pants(검정 와이드) + Combat Boots(두꺼운 밑창) / Scene Williamsburg, 색 바랜 벽화가 덮인 폐창고와 녹슨 철골, 깨진 유리창 / Light Storm Light(6800K 차가운 흐림, 청록 공기와 녹슨 철골의 주황이 맞선다) / Optics Olympus OM-4T, Zuiko 28mm f/2, Kodak Portra 400, Cool Cyan Shift / Expression Cool Gaze, 냉정하고 단단한 눈 / Pose 창고 앞을 성큼 지난다 / Camera deep focus, 광각이라 얼굴은 화면 가운데에 둔다 |
 | S3 Brooklyn Bridge Fog (滤镜 #044) | B | 단서: 장소 브루클린 브리지 보행로·짙은 안개 / 소품 - / 시간대 아침 / 의상 오버코트 / Hair Windblown Hair, 어두운 긴 머리가 강바람에 거세게 날린다 / Outfit wool overcoat(짙은 검정 두꺼운 더블 브레스티드 울) / Scene Brooklyn Bridge, 나무 보행로와 안개 속으로 사라지는 현수 케이블 / Light Atmospheric Haze(6000K 찬 안개, 가까운 케이블만 선명) / Optics Kodak T-Max 400(극세 은염 입자), Nikon F3 + AI Nikkor 50mm f/1.4S, Fog Filter / Expression Sharp Jawline Turn, 렌즈를 돌아본다 / Pose Over-the-Shoulder Glance, 두 손은 주머니에, 보행로 한가운데서 멈춘다 / Camera negative space, 인물만 칼처럼 선명 |
 | S4 Wall Street Canyon (滤镜 #045) | B | 단서: 장소 월스트리트 빌딩 협곡 / 소품 - / 시간대 한 줄기 빛이 드는 낮 / 의상 핀스트라이프 정장 / Hair Neat Pixie Cut, 짙은 갈색 짧은 머리를 귀 뒤로 / Outfit Pinstripe(가는 핀스트라이프 정장) / Scene Wall Street, 좁은 석회암 협곡 / Light Urban Canyon Light(6500K 수직 냉백 하늘빛 한 줄기, 양쪽 건물은 순흑) / Optics Kodak Tri-X 400, Canon EOS 1N + EF 24-70mm f/2.8L(줌 렌즈를 약 35–50mm대로 쓴다), 굵은 은염 입자 / Expression Boardroom Listener, 단호하고 흔들림 없는 눈 / Pose 빠른 걸음으로 협곡을 지난다 / Camera deep focus |
-| S5 Rain-Slicked Crosswalk (滤镜 #043) | C | 단서: 장소 비 갠 뒤 횡단보도·웅덩이·젖은 아스팔트 / 소품 선글라스 / 시간대 비 갠 뒤 낮 / 의상 카키 트렌치 코트 / Hair Half Bun, 짙은 금갈색 반묶음 / Outfit wool trench coat(연한 카키 더블 브레스티드, 허리끈은 느슨, 자락이 뒤로 날린다) + Sunglasses(검정, catchlight 끈다) + 뾰족한 검정 앵클부츠 / Scene 비 갠 뒤 젖은 아스팔트 횡단보도(SoHo 거리 기준) / Light Wet Street Reflection(5800K 비 갠 뒤 찬빛, 웅덩이가 하늘을 되비춘다) / Optics Leica M6, Summilux 35mm f/1.4, Kodak Portra 400(원본 Cool Shifted), Cool Cyan Shift / Expression 상쾌하고 자신 있는 얼굴(선글라스라 눈은 안 보인다) / Pose Crosswalk Stride, 웅덩이를 밟고 성큼 건넌다 / Camera Puddle Reflection |
+| S5 Rain-Slicked Crosswalk (滤镜 #043) | C | 단서: 장소 비 갠 뒤 횡단보도·웅덩이·젖은 아스팔트 / 소품 선글라스 / 시간대 비 갠 뒤 낮 / 의상 카키 트렌치 코트 / Hair Half Bun, 짙은 금갈색 반묶음 / Outfit wool trench coat(연한 카키 더블 브레스티드, 허리끈은 느슨, 자락이 뒤로 날린다) + Sunglasses(검정, catchlight 끈다) + 뾰족한 검정 앵클부츠 / Scene 비 갠 뒤 젖은 아스팔트 횡단보도(SoHo 거리 기준) / Light Wet Street Reflection(5800K 비 갠 뒤 찬빛, 웅덩이가 하늘을 되비춘다) / Optics Leica M6, Summilux 35mm f/1.4, Kodak Portra 400, Cool Cyan Shift / Expression 상쾌하고 자신 있는 얼굴(선글라스라 눈은 안 보인다) / Pose Crosswalk Stride, 웅덩이를 밟고 성큼 건넌다 / Camera Puddle Reflection |
 | S6 Bodega After Dark (滤镜 #055) | D | 단서: 장소 보데가 24시간 편의점·형광등 / 소품 체리 소다 캔 / 시간대 심야 / 의상 후디 / Hair Air-Dried Texture, 금갈색 긴 머리가 어깨에 엉켜 있다 / Outfit Hoodie(회색) + Leather Jacket(검정) / Props soda can(얼음처럼 찬 체리 소다) / Scene Bodega, 과일 진열대와 음료 냉장고가 보이는 24시간 편의점 앞 / Light Bodega Fluorescent Light(5000K 냉백 형광등이 문밖으로 번지고 길은 칠흑) / Optics Ricoh GR IIIx(내장 렌즈, 약 40mm 환산 시야), Cool White Balance, 디지털 노이즈 / Expression Half-Lidded Gaze, 무심하고 거침없다 / Pose Bodega Lean / Camera centered composition |
 
 ## 포즈·구도 쌍
@@ -215,3 +215,8 @@
 
 ## 출처
 Iris (noahvisualsx/Iris b83de4c, MIT, © 2026 noahvisuals): 美国/滤镜/03 #041–055, 美国/穿搭/03 #036 #038 #039 #045, 美国/穿搭/04 #054 #060 #061 #066 #067, 美国/拍照姿势/02 #019–035, 美国/神态与微表情/05 #069–082. 낱말과 구성은 참고했고 문장은 MPW용으로 새로 썼다. 라이선스 전문은 [LICENSE-Iris.md](LICENSE-Iris.md).
+
+Iris 원문 값 기록(렌더링에는 쓰지 않는다):
+- S1 Optics: Cool Grey Tone은 원본이 Custom SoHo Cool Grey DNG
+- S2 Optics: Kodak Portra 400은 원본이 Tungsten Push
+- S5 Optics: Kodak Portra 400은 원본이 Cool Shifted
