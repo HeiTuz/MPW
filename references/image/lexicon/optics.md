@@ -52,12 +52,10 @@ Optics 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다.
 | Hong Kong Noir | 홍콩 느와르; 홍콩 누아르; HK noir | CN | 느와르; 어두움; 붉은 빛; 네온; 영화적 | A dark frame with deep black shadows and narrow red and amber light catching edges and wet surfaces. | look |
 | 宣砚留芳 | 선연유방; 벼루 흑백; 따뜻한 흑백; ink stone monochrome; warm black-and-white | CN | 흑백; 따뜻함; 먹빛; 윤기 | Warm monochrome with glossy graphite blacks and finely stepped mid-greys, like the sheen of a polished ink stone. | look |
 | 松烟玄黑 | 송연현흑; 송연 먹빛; 로우키 먹빛; pine soot black; low-key ink black | CN | 흑백; 로우키; 깊은 그림자; 먹빛 | A low-key frame whose pure-black shadows still hold fine graphite steps, with highlights kept small and restrained. | look |
-| 玻璃窗倒影 | 유리창 이중 반사; 双重倒影; window double reflection; glass reflection overlay | CN | 도시; 새벽 안개; 고층; 몽환 | A tall window shows the figure overlapped with a ghost reflection and the misty skyline outside, the two layers equal in strength. | look |
 | 慢门 | 슬로우 셔터; 장노출 번짐; long shutter; slow shutter | CN | 움직임; 번짐; 야경; 군중; 정지 | Moving crowds and lights smear into ghostly streaks while the main subject stays crisp. | look |
 | 超广角畸变 | 초광각 왜곡; 광각 왜곡; wide-angle distortion; ultra-wide distortion | CN | 초광각; 왜곡; 클로즈업; 가장자리; 늘어남 | An ultra-wide lens held close that stretches the edges and gives a slight barrel curve. | look |
 | 石膏质感 | 석고 질감; plaster tone; 석고상 느낌 | CN | 차가운; 무광; 조각; 부드러운; 회색 | Cool, matte skin and soft grey shadows that look like a classical plaster bust. | look |
 | 微距特写 | 매크로; 접사; macro close-up; macro; 매크로 클로즈업; 大眼特写 | CN | 접사; 눈; 질감; 얕은; 심도; 뷰티; 클로즈업; 디테일; 플래시 | Extreme close focus at about life size with razor-thin depth, showing fine texture of lashes and iris. | look |
-| 长焦压缩 | 망원 압축; telephoto compression; 공간 압축 | CN | 망원; 압축; 겹친; 산; 평면; 두루마리; 新中式; 신중식 | A long telephoto that stacks foreground and distant buildings into one flat scroll-like plane. | look |
 | 王家卫 | 왕가위; Wong Kar-wai; Wong Kar Wai; 왕가위 영화 | CN | 홍콩; 영화적; 네온; 몽환; 복고 | Smeared neon colour and step-printed motion blur, with saturated red and green light and heavy grain. | person-style |
 | 车流光轨 | 라이트 트레일; light trails; long exposure; 长曝光 | CN | 야경; 도시; 장노출; 움직임 | Headlights and tail lights stretch into smooth coloured streaks along the road, while still buildings stay sharp. | look |
 | 莫兰迪色调 | 莫兰迪色; 莫兰迪色系; 모란디 톤; 모란디 색감; muted dusty palette; Morandi palette | CN | 저채도; 더스티; 차분함; 고급; 老钱风; 라오첸펑; 올드머니 | A low-saturation grade of greyed pink, sage, sand and dusty blue in which every colour carries some grey and contrast stays gentle. | look |

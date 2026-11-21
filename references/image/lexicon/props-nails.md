@@ -187,6 +187,10 @@ Props and nails 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토�
 | 腕表 | 手表; 机械表; 皮带腕表; 시계; 손목시계 스트랩; slim dress watch | CN | 시계; 손목; 클래식; 가죽; 老钱风; 라오첸펑; 올드머니 | A slim round dress watch with a thin gold case and plain cream dial on a dark leather strap, the sapphire glass catching a single streak of light. | item |
 | 印章戒指 | 家徽戒指; 小指戒; 시그넷 링; 인장 반지; signet ring | CN | 반지; 골드; 클래식; 손; 老钱风; 라오첸펑; 올드머니 | A flat oval gold band worn on the little finger, its engraved face polished to a small mirror that flashes when the hand moves. | item |
 | 皮手套 | 羊皮手套; 小羊皮手套; 양가죽 장갑; kid leather gloves | CN | 장갑; 가죽; 가을겨울; 클래식; 老钱风; 라오첸펑; 올드머니 | Close-fitting gloves in smooth kid leather with a thin seam along each finger and a small button at the wrist, the surface holding a soft satin shine. | item |
+| paper coffee cup | 종이 커피컵; 테이크아웃 컵; 纸杯咖啡; take-out coffee cup | CN | 홍콩; 港风; 王家卫; 왕가위; 重庆森林; 커피 | A white paper take-out cup with a plain sleeve and flat lid, steam rising from the lid slot. | item |
+| soda can | 소다 캔; 콜라 캔; 汽水罐; cold soda can | CN | 홍콩; 港风; 王家卫; 왕가위; 重庆森林; 음료 | A cold soda can with no visible lettering, beaded with condensation and held loosely at the side. | item |
+| tiffin carrier | 보온 도시락; 도시락통; 保温饭盒; stacked food carrier | CN | 홍콩; 港风; 王家卫; 왕가위; 花样年华; 국수; 도시락 | A stacked metal food carrier with a locking bar swings from one hand by its handle. | item |
+| whisky glass | 위스키 잔; 威士忌杯; cut-crystal whisky glass | CN | 홍콩; 港风; 王家卫; 왕가위; 花样年华; 위스키; 실내 | A cut-crystal tumbler of amber whisky catches the lamp in its facets. | item |
 
 ## JP
 

@@ -92,11 +92,11 @@ for (const [name, targets] of Object.entries(BUNDLES)) {
 // Lexicon: per-layer tables (references/image/lexicon/*.md), one row per token, plus the small index.
 const LAYER_FILES = {
   Optics: 'optics', Light: 'light', Pose: 'pose', Outfit: 'outfit', Legwear: 'legwear', Style: 'style',
-  'Hair and makeup': 'hair-makeup', Expression: 'expression', 'Props and nails': 'props-nails', Scene: 'scene',
+  'Hair and makeup': 'hair-makeup', Expression: 'expression', 'Props and nails': 'props-nails', Scene: 'scene', Camera: 'camera',
 };
 const splitRow = line => line.replace(/^\| | \|$/g, '').split(/(?<!\\) \| /);
 const index = read('references/image/layer-lexicon.md');
-assert.ok(Buffer.byteLength(index) <= 10340, `lexicon index is ${Buffer.byteLength(index)} bytes`);
+assert.ok(Buffer.byteLength(index) <= 11400, `lexicon index is ${Buffer.byteLength(index)} bytes`);
 const lexiconRows = {};
 for (const [layer, slug] of Object.entries(LAYER_FILES)) {
   const text = read(`references/image/lexicon/${slug}.md`);
@@ -118,7 +118,7 @@ for (const [layer, slug] of Object.entries(LAYER_FILES)) {
     seen.add(token.toLowerCase());
     lexiconRows[layer].push(token);
   }
-  assert.ok(lexiconRows[layer].length >= 50, `${slug}: ${lexiconRows[layer].length} rows`);
+  assert.ok(lexiconRows[layer].length >= (slug === 'camera' ? 20 : 50), `${slug}: ${lexiconRows[layer].length} rows`);
 }
 // The index counts and representative tokens must match the tables.
 for (const [layer, slug] of Object.entries(LAYER_FILES)) {
@@ -134,8 +134,9 @@ for (const [layer, slug] of Object.entries(LAYER_FILES)) {
 // ceilings are about 10% above the measurement. Raised for 4.0.5 (new 56992 measured) after the
 // photo extraction and token-fit rules grew sections 2-6. Raised again with fixed-lines.md and the
 // Finish layer (new, portrait and extract grew by the file itself; the edit route grew about 500 bytes through sections 1, 6 and 9).
-assert.ok(sizes['gpt-image-new'].utf8_bytes <= 77000);
-assert.ok(sizes['gpt-image-portrait'].utf8_bytes <= 84000);
+// Raised again with the look-card procedure (image-brief section 4), the Camera lexicon layer and the card lines in fixed-lines.md (new 81139, portrait 88028 measured).
+assert.ok(sizes['gpt-image-new'].utf8_bytes <= 82000, `gpt-image-new is ${sizes['gpt-image-new'].utf8_bytes} bytes`);
+assert.ok(sizes['gpt-image-portrait'].utf8_bytes <= 89000, `gpt-image-portrait is ${sizes['gpt-image-portrait'].utf8_bytes} bytes`);
 assert.ok(sizes['gpt-image-edit'].utf8_bytes <= 20900);
 
 const scenarios = JSON.parse(read('scripts/fixtures/behavioral/image-planning.json')).cases;

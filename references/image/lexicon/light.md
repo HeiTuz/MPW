@@ -86,6 +86,8 @@ Light 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다. 
 | 追光灯 | 剧院追光; 스포트라이트; 무대 조명; follow spot; theatre spotlight | CN | 무대; 강한 빛; 극장; 밤; 광학 | A narrow hard beam from above that isolates the figure in a bright cone against a dark stage. | gear |
 | 迷离幻梦 | 몽롱한 꿈결; 몽환적 네온 무드 | CN | 몽환; 네온; 홍콩; 조명 | Hazy multicolored neon reflections in the eyes and soft-focus background, giving a dreamy retro Hong Kong feel. | look |
 | 宫灯 | 궁등; 궁중 등롱; 중국식 육각 등; palace lantern; Chinese silk lantern | CN | 新中式; 신중식; 밤; 등불; 따뜻함; 실내 | A hexagonal or octagonal lantern with a carved wood frame and silk panels, glowing a soft warm amber from inside with tassels hanging below and a faint pool of light on nearby wood and fabric. | look |
+| green louvre light | 녹색 루버 빛; 绿色百叶窗光; green shutter light | CN | 홍콩; 港风; 王家卫; 왕가위; 阿飞正传; 습한 낮; 녹색 | Filtered daylight through green louvres lays a jade-green cast over the room and the shadow side of the face. | look |
+| lamp catchlight | 램프 캐치라이트; 램프 눈빛; 台灯眼神光; warm lamp catchlight | CN | 홍콩; 港风; 王家卫; 왕가위; 花样年华; 눈; 텅스텐 | One small warm point of light from a lamp sits in each eye. | look |
 
 ## JP
 

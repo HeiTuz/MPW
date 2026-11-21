@@ -385,6 +385,9 @@ Scene 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다. 
 | 游艇会 | 游艇俱乐部; 游艇码头; 요트 하버; marina | CN | 요트; 항구; 여름; 해안; 老钱风; 라오첸펑; 올드머니 | A harbour of moored white yachts with polished teak decks and coiled rope, a white-railed clubhouse behind and glassy water breaking the reflections into small bright pieces. | place |
 | 壁炉 | 壁炉前; 欧式壁炉; 大理石壁炉; 난로 벽; 벽난로 맨틀; fireplace mantel | CN | 벽난로; 실내; 저녁; 따뜻함; 老钱风; 라오첸펑; 올드머니 | A carved white-marble fireplace with a deep mantel and a low fire glowing orange in the grate, dark wood paneling and a framed painting above, flickering warm light on the nearby floor and armchairs. | item |
 | 英式庄园 | 英伦庄园; 乡村庄园; 영국 컨트리하우스; 영국 장원; English country house | CN | 저택; 정원; 잔디; 클래식; 老钱风; 라오첸펑; 올드머니 | A symmetrical red-brick or pale stone manor with tall sash windows, ivy on its walls and a gravel drive, set behind a wide clipped lawn under a soft grey-white sky. | place |
+| 骑楼 | 치러우; 기루; qilou; 骑楼街; 홍콩 아케이드; covered arcade street | CN | 홍콩; 港风; 王家卫; 왕가위; 九龙; 아케이드; 비; 밤 | A covered shop arcade runs along an old street on square tiled pillars, with a closed rolling shutter behind them. | place |
+| stone stair alley | 돌계단 골목; 石阶弄堂; stone steps alley; narrow stair alley | CN | 홍콩; 港风; 王家卫; 왕가위; 花样年华; 골목; 계단; 밤 | A narrow stone staircase between weathered plaster walls is lit from above by one old street lamp. | place |
+| 快餐店 | 콰이찬뎬; 패스트푸드점; 심야 패스트푸드점; fast-food shop; late-night fast-food booth | CN | 홍콩; 港风; 王家卫; 왕가위; 堕落天使; 형광등; 밤 | A fluorescent-lit booth sits by a dark window, with hard white light on red plastic seats. | place |
 
 ## JP
 

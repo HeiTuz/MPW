@@ -218,6 +218,8 @@ Hair and makeup 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토�
 | 花钿 | 额间花钿; 梅花钿; 화전; 이마 장식; 이마 화전; forehead decal; forehead floral mark; red forehead decal | CN | 国潮; 궈차오; 국조; 중국풍; 국풍 메이크업; 이마; 붉은 포인트 | A small sharp-edged flower or plum-blossom shape in red or gold foil pasted between the brows, sitting flat and glossy on bare skin. | look |
 | 红头绳 | 红发绳; 홍두승; 빨간 머리끈; 빨간 실 머리끈; red hair cord; red hair string | CN | 国潮; 궈차오; 국조; 중국풍; 빨강; 땋은 머리; 헤어 소품 | A bright red cotton cord wound several times around tied hair, its flat saturated red standing out against black hair with the loose ends hanging short. | item |
 | 发尾内扣 | 内扣; 内扣发尾; 内扣短发; 안말음; 안말음 단발; inward-curled ends | CN | 단발; 안말음; 단정; 클래식; 老钱风; 라오첸펑; 올드머니 | A jaw-length cut whose ends curve inward toward the neck, forming a smooth rounded bell with a glossy surface and no flyaways. | look |
+| 1960s bouffant chignon | 60년대 부팡; 60년대 올림머리; 六十年代高髻; 蜂窝头; 1960s bouffant updo | CN | 홍콩; 港风; 王家卫; 왕가위; 花样年华; 60년대; 올림머리 | Hair smoothed into a high rounded crown and gathered in a neat low chignon with every strand in place, the updo of 1960s Hong Kong film heroines. | look |
+| parted straight hair | 옆가르마 생머리; 偏分直发; side-part straight hair | CN | 홍콩; 港风; 王家卫; 왕가위; 阿飞正传; 생머리 | Straight dark hair with a soft side part, tucked around the ears. | look |
 
 ## JP
 

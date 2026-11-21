@@ -260,6 +260,7 @@ Outfit 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다.
 | Polo衫 | 保罗衫; 马球衫; 폴로 티셔츠; 피케 폴로; polo shirt; pique polo | CN | 클래식; 면; 여름; 프레피; 老钱风; 라오첸펑; 올드머니 | A short-sleeved piqué-cotton shirt with a soft turned-down collar and a short button placket left open at the chest, the fine dimpled weave staying matte in daylight. | item |
 | 海魂衫 | 海军条纹衫; 法式条纹衫; 条纹海魂衫; 스트라이프 보트넥; Breton top | CN | 줄무늬; 해양풍; 클래식; 면; 봄여름; 老钱风; 라오첸펑; 올드머니 | A boat-neck cotton top with even horizontal navy-and-white stripes that run unbroken across the chest and around the sleeves. | item |
 | 羊绒围巾 | 羊绒围脖; 羊绒披巾; 캐시미어 머플러; 캐시미어 스카프; cashmere scarf | CN | 스카프; 캐시미어; 가을겨울; 부드러움; 老钱风; 라오첸펑; 올드머니 | A wide cashmere scarf in solid camel or soft tartan draped loose around the neck with fringed ends hanging down the chest, its brushed nap catching light as a fine halo. | item |
+| oversized wool coat | 오버사이즈 울 코트; 남자 코트; 大码羊毛大衣; boxy wool coat; man's wool coat | CN | 홍콩; 港风; 王家卫; 왕가위; 重庆森林; 코트; 오버사이즈 | A boxy black wool coat cut a size too big hangs open from the shoulders, its heavy fabric falling in straight, loose folds. | item |
 
 ## JP
 

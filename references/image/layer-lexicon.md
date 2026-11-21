@@ -4,31 +4,32 @@
 
 ## 사용법
 
-1. 층을 정하고 아래 층 표에서 그 층 파일을 연다. Identity Reference 층은 표가 없고 [image-brief.md](image-brief.md) §5를 따른다.
-2. 검색: `node scripts/find_tokens.mjs --q "신중식,찻집" --layers outfit,scene --limit 6`. 음차·붙여 쓴 형태·태그·영어도 된다. `--culture KR`로 좁히고 `--random 1`로 층마다 하나 뽑는다. 빈 층은 모두 `--q "홍콩" --layers pose,optics,expression`처럼 찾는다(Camera는 optics). 못 돌리면 `grep -n "신중식" references/image/lexicon/*.md`로 찾는다.
+1. 층을 정하고 아래 층 표에서 그 층 파일을 연다. Identity Reference 층은 표가 없고 [image-brief.md](image-brief.md) §5를 따른다. 룩 이름이 요청에 있으면 층 표보다 먼저 `looks/`의 카드를 읽는다([looks/index.md](looks/index.md)).
+2. 검색: `node scripts/find_tokens.mjs --q "신중식,찻집" --layers outfit,scene --limit 6`. 음차·붙여 쓴 형태·태그·영어도 된다. `--culture KR`로 좁히고 `--random 1`로 층마다 하나 뽑는다. 빈 층은 모두 `--q "홍콩" --layers pose,optics,expression`처럼 찾는다. Camera는 `--layers camera`다. 못 돌리면 `grep -n "신중식" references/image/lexicon/*.md`로 찾는다.
 3. 열은 토큰, 별칭, 문화권, 태그, 화면에 보이는 모습, 종류다. 토큰은 원어 그대로 쓰고, 그 뒤 문장은 "화면에 보이는 모습"을 바탕으로 장면에 맞게 영어로 새로 쓴다. 문장을 통째로 되풀이하지 않는다.
 4. 표는 열린 예시다. 개수 할당은 없고 장면에 맞는 것만 쓴다. 일반 명사도 원어가 더 짧거나 그 문화권의 모습을 함께 부르면 원어로 쓴다. 표에 없어도 그 문화권에서 그 뜻으로 쓰이는 것을 확실히 알면 쓰고, 모르면 지어내지 않고 영어로 푼다.
 5. 사용자가 음차로 말하면(신중식, 코모레비) 표의 원어 표기(新中式, 木漏れ日)로 쓴다.
 6. 모델 아이덴티티가 있으면 외모 서술은 빼고 헤어·메이크업·표정 층은 쓴다([image-brief.md](image-brief.md) §5).
 7. 브랜드·제품명과 룩을 가리키는 실존 인물 이름(감독, 건축가, 스타일 아이콘)은 쓸 수 있다. 로고·상표 글자는 그리지 않고, 실존 인물의 얼굴·몸을 닮게 하는 용도로는 쓰지 않는다.
 
-아이·학생 항목은 태그 `아동·학생`이 붙고, `--random`에서만 빠지며 관능 어휘를 붙이지 않는다. 넣지 않은 것: 실존 인물의 얼굴·몸을 닮게 하는 항목. 출처: noahvisualsx/Iris b83de4c(MIT)에서 낱말만 참고했고 문장·프리셋은 옮기지 않았다.
+아이·학생 항목은 태그 `아동·학생`이 붙고, `--random`에서만 빠지며 관능 어휘를 붙이지 않는다. 넣지 않은 것: 실존 인물의 얼굴·몸을 닮게 하는 항목. 출처: noahvisualsx/Iris b83de4c(MIT)에서 낱말을 참고했고 문장은 새로 썼다. 룩 카드(`looks/`)는 Iris 프리셋의 구성과 디테일을 층별로 옮긴 것이라 고지 전문이 [looks/LICENSE-Iris.md](looks/LICENSE-Iris.md)에 있다.
 
 ## 층별 파일
 
 <!-- lexicon-counts:start -->
 | 층 | 파일 | 행 수 | KR | CN | JP | US | FR |
 |---|---|---|---|---|---|---|---|
-| Optics | [lexicon/optics.md](lexicon/optics.md) | 386 | 15 | 35 | 165 | 137 | 34 |
-| Light | [lexicon/light.md](lexicon/light.md) | 203 | 18 | 57 | 26 | 78 | 24 |
-| Pose | [lexicon/pose.md](lexicon/pose.md) | 386 | 27 | 122 | 55 | 113 | 69 |
-| Outfit | [lexicon/outfit.md](lexicon/outfit.md) | 615 | 135 | 114 | 160 | 98 | 108 |
+| Optics | [lexicon/optics.md](lexicon/optics.md) | 384 | 15 | 33 | 165 | 137 | 34 |
+| Light | [lexicon/light.md](lexicon/light.md) | 205 | 18 | 59 | 26 | 78 | 24 |
+| Pose | [lexicon/pose.md](lexicon/pose.md) | 389 | 27 | 125 | 55 | 113 | 69 |
+| Outfit | [lexicon/outfit.md](lexicon/outfit.md) | 616 | 135 | 115 | 160 | 98 | 108 |
 | Legwear | [lexicon/legwear.md](lexicon/legwear.md) | 268 | 43 | 56 | 64 | 70 | 35 |
 | Style | [lexicon/style.md](lexicon/style.md) | 649 | 122 | 63 | 138 | 191 | 135 |
-| Hair and makeup | [lexicon/hair-makeup.md](lexicon/hair-makeup.md) | 476 | 90 | 117 | 103 | 106 | 60 |
+| Hair and makeup | [lexicon/hair-makeup.md](lexicon/hair-makeup.md) | 478 | 90 | 119 | 103 | 106 | 60 |
 | Expression | [lexicon/expression.md](lexicon/expression.md) | 359 | 84 | 70 | 76 | 61 | 68 |
-| Props and nails | [lexicon/props-nails.md](lexicon/props-nails.md) | 576 | 66 | 110 | 168 | 124 | 108 |
-| Scene | [lexicon/scene.md](lexicon/scene.md) | 1033 | 179 | 195 | 214 | 260 | 185 |
+| Props and nails | [lexicon/props-nails.md](lexicon/props-nails.md) | 580 | 66 | 114 | 168 | 124 | 108 |
+| Scene | [lexicon/scene.md](lexicon/scene.md) | 1036 | 179 | 198 | 214 | 260 | 185 |
+| Camera | [lexicon/camera.md](lexicon/camera.md) | 28 | 0 | 11 | 5 | 8 | 4 |
 <!-- lexicon-counts:end -->
 
 ## 문화권 룩 묶음
@@ -42,6 +43,7 @@
 - Hair and makeup: KR 물광·시스루뱅 · CN 簪·冷白皮 · JP 涙袋·姫カット·透明感 · US 웨이브·립 · FR teint nu·bob
 - Expression: KR 눈웃음·무표정 · CN 似笑非笑·冷眼 · JP はにかみ·胸キュン · US 윙크·squint · FR moue·lassitude chic
 - Props and nails: KR 텀블러·네일 · CN 文房·茶器·玉 · JP 和小物·ネイル · US 소다·주얼리 · FR 베레·빵·향수
+- Camera: CN 前景遮挡·框架构图·过肩镜头·留白 · JP 日の丸構図·パンフォーカス · US Over the Shoulder·Cowboy Shot · FR Plan américain·Plongée
 - Scene: KR 성수·한강·한옥 · CN 胡同·园林·外滩 · JP 渋谷·喫茶店 · US 뉴욕·캘리포니아 · FR 파리 카페·다리
 
 ## 대표 토큰
@@ -167,3 +169,15 @@ Sourire en coin — one mouth corner, calm knowing eyes
 純喫茶 — dim coffee parlor, velvet, warm tungsten
 銭湯 — bathhouse wall painted with Mt. Fuji
 Route 66 — straight two-lane road, old gas station
+
+### Camera
+长焦压缩 — telephoto stacks the background flat
+前景遮挡 — blurred object across one corner
+框架构图 — door or window frame boxes the subject
+过肩镜头 — blurred shoulder in the foreground
+俯拍 — camera above, looking down
+仰拍 — camera below, looking up
+留白 — subject small, wide empty space
+玻璃窗倒影 — figure doubled with a window reflection
+パンフォーカス — foreground and background both sharp
+Cowboy Shot — frame cut at mid-thigh

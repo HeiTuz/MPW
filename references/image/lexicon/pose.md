@@ -160,6 +160,9 @@ Pose 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다. �
 | 闲庭信步 | 信步; 悠闲漫步; 느긋한 걸음; 여유로운 산책; unhurried stroll | CN | 걷기; 여유; 산책; 정원; 老钱风; 라오첸펑; 올드머니 | Walking at an easy pace with the arms swinging loosely, the head level and the gaze on the path ahead, caught between steps with the rear heel just lifting. | look |
 | 整理袖口 | 整理袖扣; 拉袖口; 소매 정리; 소매 단 만지기; adjusting a cuff | CN | 손동작; 단정; 정장; 디테일; 老钱风; 라오첸펑; 올드머니 | One hand turns the cuff of the opposite sleeve at waist height, the head slightly bowed and the eyes lowered to the wrist. | look |
 | 牵马 | 牵马缰; 勒马; 말고삐 잡기; 말 끌기; leading a horse | CN | 승마; 말; 야외; 걷기; 老钱风; 라오첸펑; 올드머니 | One hand holds the reins close to the horse's cheek while the body walks beside its shoulder, the animal's head level with the person's own. | look |
+| close lean | 렌즈 앞 기울이기; 카메라에 얼굴 들이밀기; 凑近镜头; leaning into the lens | CN | 홍콩; 港风; 王家卫; 왕가위; 堕落天使; 초광각; 클로즈업 | Leaning toward the lens with the chin up and one hand near the face, so the face fills the frame. | look |
+| tram window seat | 트램 창가 자리; 叮叮车窗边; 电车靠窗; tram upper-deck window seat | CN | 홍콩; 港风; 王家卫; 왕가위; 叮叮车; 창가; 이층 | Seated on the upper deck of a tram with the head resting against the window while the street slides by. | look |
+| standing at louvres | 덧창 옆에 서기; 百叶窗边站立; standing beside louvres | CN | 홍콩; 港风; 王家卫; 왕가위; 阿飞正传; 덧창; 비 | Standing beside half-closed louvres and looking out through them at rain on foliage. | look |
 
 ## JP
 
