@@ -6,7 +6,7 @@
 
 | slug | 이름 | 문화권 | 갈래 | 축 | 요약 |
 |---|---|---|---|---|---|
-| [wong-kar-wai](wong-kar-wai.md) | 王家卫 · 港风 | CN | A 重庆森林(기본); B 花样年华; C 堕落天使; D 阿飞正传 | 장면 | 텅스텐 시네마 네거티브의 90년대 홍콩 영화 스틸. 밤 네온, 붉은·호박 빛에 녹청 그림자 |
+| [wong-kar-wai](wong-kar-wai.md) | 王家卫 · 港风 | CN | A 重庆森林(기본); B 花样年华; C 堕落天使; D 阿飞正传 | 장면 | 텅스텐 시네마 네거티브의 홍콩 영화 스틸(A·C는 90년대, B·D는 60년대). 밤 네온, 붉은·호박 빛에 녹청 그림자 |
 | [california-golden-hour](california-golden-hour.md) | 加州 골든아워 · California golden hour | US | A 태평양 역광(기본); B 사막 로드트립; C 도시·리조트 낙조; D 포트라 데이라이트 | 장면 | 포트라 필름의 캘리포니아 낙조 스냅. 낮은 해 역광, 꿀빛 금색과 바다 남색 그림자 |
 | [forbidden-city-vermilion-gold](forbidden-city-vermilion-gold.md) | 故宫朱红暖金 · 宫廷历史胶片 | CN | A 朱红宫墙(기본); B 金顶落日; C 殿堂幽光; D 古柏古刹 | 장면 | 베이징 궁궐 앞 현대 인물 사진. 朱红 궁담과 금빛 기와, 따뜻한 시네마 톤 |
 | [fujifilm-classic-neg](fujifilm-classic-neg.md) | 富士经典负片 · クラシックネガ | JP | A 街角クラシックネガ(기본); B 空気感ハイキー; C 夜の高感度; D リバーサルと白黒 | 매체 | 후지 필름으로 찍은 일본 일상 스냅. 청록 그림자와 낮춘 채도 |
