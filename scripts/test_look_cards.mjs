@@ -45,7 +45,7 @@ const onlyCard = argOf('--card'), pendingFile = argOf('--pending');
 assert.ok(!pendingFile || onlyCard, '--pending needs --card <slug>');
 
 // A pending additions file lists dictionary rows and the index row a card worker has not merged yet:
-//   ### lexicon/scene.md CN   (rows under it start with "| ")      ### looks/index.md   (one table row)
+//   ### lexicon/scene.md CN   (rows under it start with "| ")      ### looks/index.md   (one table row: [slug](slug.md) | name | culture | branches | axis | summary)
 function readPending(file) {
   const rows = {}; const index = [];
   let target = null;
@@ -121,12 +121,12 @@ for (const look of looks) {
   assert.ok(layerIdx.every((i, k) => k === 0 || i > layerIdx[k - 1]) && Object.keys(LAYERS).map(has).filter((i) => i >= 0).length === layerIdx.length, `${where}: layer sections out of order`);
   assert.ok(titles.every((t) => [...HEAD, ...TAIL, ...Object.keys(LAYERS)].some((n) => t === n || t.startsWith(`${n} (`))), `${where}: unknown section in ${titles.join(' | ')}`);
 
-  // Meta table: names equal the index row; the do-not-call words are not names.
+  // Meta table: the only home of the names and do-not-call words (loadLooks reads them from here); the do-not-call words are not names.
   const head = text.split(/^## /m)[0];
   const meta = Object.fromEntries(tableRows(head).map(([k, v]) => [k, v]));
   for (const key of ['부르는 이름', '부르지 않는 말', '문화권', '기본 갈래']) assert.ok(meta[key], `${where}: meta ${key}`);
-  assert.deepEqual(list(meta['부르는 이름']), look.names, `${where}: names differ from looks/index.md`);
-  assert.deepEqual(list(meta['부르지 않는 말']), look.avoid, `${where}: avoid words differ from looks/index.md`);
+  assert.deepEqual(list(meta['부르는 이름']), look.names, `${where}: loadLooks names differ from the head table`);
+  assert.deepEqual(list(meta['부르지 않는 말']), look.avoid, `${where}: loadLooks avoid words differ from the head table`);
   assert.ok(['매체', '장면'].includes(look.axis), `${where}: index axis ${look.axis} must be 매체 or 장면`);
   assert.ok(look.avoid.length >= 1 && look.avoid.every((w) => !look.names.some((n) => norm(n) === norm(w))), `${where}: an avoid word is also a name`);
 

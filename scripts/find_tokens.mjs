@@ -94,7 +94,8 @@ function expandTerms(terms, rows, cardWords = new Set(), cardCalled = false) {
   });
 }
 
-// Look cards: references/image/looks/index.md lists one row per card (slug | names | words that must not call it | culture | branches | axis | summary).
+// Look cards: references/image/looks/index.md lists one row per card ([slug](slug.md) | name | culture | branches | axis | summary). The names that call a card and the
+// words that must not call it sit only in the card's own head table (rows `부르는 이름` and `부르지 않는 말`), so the index stays short for the model.
 // A card is called when the raw query contains one of its names, the reverse of the row search above. The match ignores how the query was cut:
 // commas, spaces and brackets are dropped between the characters of a name. Hangul and CJK names match as text; Latin names match whole words only,
 // so a short name like "WKW" never fires inside another word.
@@ -174,14 +175,19 @@ export function loadLooks(dir = LOOKS_DIR) {
   for (const line of fs.readFileSync(file, 'utf8').split('\n')) {
     if (!/^\| /.test(line) || /^\| (slug|---)/.test(line)) continue;
     const cells = splitRow(line);
-    if (cells.length !== 7) throw new Error(`looks/index.md: bad row: ${line.slice(0, 60)}`);
-    const [slug, names, avoid, culture, branches, axis, summary] = cells;
+    if (cells.length !== 6) throw new Error(`looks/index.md: bad row: ${line.slice(0, 60)}`);
+    const [slugCell, name, culture, branches, axis, summary] = cells;
+    const slug = slugCell.replace(/^\[([^\]]+)\]\(\1\.md\)$/, '$1');
     if (!['매체', '장면'].includes(axis)) throw new Error(`looks/index.md: ${slug} axis must be 매체 or 장면: ${axis}`);
     if (!summary.trim()) throw new Error(`looks/index.md: ${slug} has no summary`);
     if (!fs.existsSync(path.join(dir, `${slug}.md`))) throw new Error(`looks/index.md: ${slug}.md is missing`);
     const card = fs.readFileSync(path.join(dir, `${slug}.md`), 'utf8');
     const title = (card.match(/^# (.+?)(?: — .*)?$/m) ?? [])[1] ?? slug;
-    looks.push({ slug, title, names: list(names), avoid: list(avoid), culture, branches, axis, summary, file: `references/image/looks/${slug}.md` });
+    if (name !== title) throw new Error(`looks/index.md: ${slug} name ${name} is not the card title ${title}`);
+    const meta = Object.fromEntries(card.split(/^## /m)[0].split('\n').filter((l) => /^\| /.test(l)).map(splitRow).filter((c) => c.length === 2));
+    const names = list(meta['부르는 이름'] ?? ''), avoid = list(meta['부르지 않는 말'] ?? '');
+    if (!names.length) throw new Error(`looks/${slug}.md: head table has no 부르는 이름 row`);
+    looks.push({ slug, title, names, avoid, culture, branches, axis, summary, file: `references/image/looks/${slug}.md` });
   }
   return looks;
 }
