@@ -301,7 +301,11 @@ unchanged — Keep the room, the sofa's shape and position, the window light dir
 
 ## 10. 완성 예시
 
+### 10.0 읽는 법
+
 층의 모양과 채우는 정도만 본다. 장면, 문장, 층 이름을 결과에 옮기지 않는다.
+
+### 10.1 인물
 
 인물, 참조 없이 기본 인물(요청: 가을 성수동 카페 앞에서 찍은 패션 스냅, 전신):
 ```text
@@ -429,6 +433,8 @@ vertical frame — A vertical 3:4 frame from the top of her head to her waist, w
 超写实 — Ultra-realistic 8K photographic detail: real pores on the skin, real weave in the wool, real water on the tiles.
 真人实拍 — A real person photographed on location, never an illustration, anime frame, 3D render or plastic-skinned CGI.
 ```
+
+### 10.2 인물 없는 장면
 
 제품, 정확 문구(요청: 앰버 유리 세럼 병 제품컷. 라벨 문구 "LUMEN 01", 물결 그림자):
 ```text
