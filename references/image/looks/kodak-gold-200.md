@@ -3,7 +3,7 @@
 | 항목 | 값 |
 |---|---|
 | 부르는 이름 | Kodak Gold 200; Kodak Gold; Gold 200; 코닥 골드 200; 코닥 골드; 골드 200; 柯达Gold 200; 经典美式柯达Gold200与复古暖调 |
-| 부르지 않는 말 | 코닥; Kodak; 골드; Gold; 아메리카나; Americana; 로드트립; road trip; 필름 사진; film photo |
+| 부르지 않는 말 | 코닥; Kodak; 골드; Gold; 아메리카나; Americana; 로드트립; road trip; 필름 사진; film photo; 필카; 필카 감성; 필름 감성; 필름 느낌; 필름 카메라; 골드 필름; 미국 필름; 미국 감성; 미국 스냅; 복고 미국; 따뜻한 필름 |
 | 문화권 | US |
 | 기본 갈래 | A |
 
@@ -13,10 +13,10 @@
 | medium | 코닥 골드 200 컬러 네거티브로 찍은 소형 필름 카메라 스냅. 동네 현상소에서 뽑은 프린트 같은 짙은 원색이 정체이고, 스튜디오 조명 화보도 디지털 보정 사진도 아니다. 첫 줄은 `A sunlit Americana 35mm snapshot shot on Kodak Gold 200 color negative`로 시작한다(B 갈래 협곡 한 장은 `…shot on Kodak Gold 200 120 color negative`) |
 | closer | `Kodak Gold 200 snapshot` |
 | time | 낮에서 해질녘까지. A는 해가 높은 한낮~오후(3600~3800K 직사), B·D는 해가 낮은 금주황빛(3100~3400K), C는 실내 창가의 오후(3500K). 밤·흐린 날·플래시 없음 |
-| light-key | 해 하나가 주광이고 그림자는 짙고 단단하다. 앞면은 아스팔트·벽·차체가 되튀긴 빛이 채운다. D의 전구만 실용광이다. 네온·형광등·직부 플래시 없음 |
-| palette | 레몬 노랑, 벽돌·사과 빨강, 하늘 파랑, 데님 청색, 마른 풀 금색. 그림자는 따뜻한 적갈색으로 기운다(B의 협곡 암벽 그늘만 약간 푸르다). 파스텔·네온·차가운 회청 없음 |
+| light-key | 해 하나가 주광이고 그림자는 짙고 단단하다. 앞면은 아스팔트·벽·차체가 되튀긴 빛이 채운다. D의 전구만 실용광이다. 네온·형광등·직부 플래시 없음(S4 다이너 창가의 노란 형광 간판 빛은 세트 값) |
+| palette | 필름이 노랑·빨강·파랑을 가장 세게 포화시킨다(레몬 노랑, 벽돌·사과 빨강, 하늘 파랑, 데님 청색, 마른 풀 금색이 그 예). 그림자는 따뜻한 적갈색으로 기운다(B의 협곡 암벽 그늘만 약간 푸르다). 파스텔·네온·차가운 회청 없음 |
 | grain | 눈에 보이는 중간 굵기의 유기 입자가 화면 전체에, 그림자에서 조금 더. 120 중형(`Mamiya 645`) 한 장만 곱다 |
-| lens | 소형 필름 SLR·레인지파인더의 35~50mm 표준 렌즈, 눈높이, 얼굴 비례 자연. 심도는 중간이라 장소가 읽힌다. 28mm 광각은 A의 `Zeiss Biogon 28mm f/2.8` 줄이 있을 때만, 큰 구경 보케는 D의 `Zeiss Planar 50mm f/1.4` 줄과 쌍 12번뿐이다 |
+| lens | 소형 필름 SLR·레인지파인더의 35~50mm 표준 렌즈, 얼굴 비례 자연. 카메라 높이는 쌍이 정한다. 심도는 중간이라 장소가 읽힌다. 28mm 광각은 A의 `Zeiss Biogon 28mm f/2.8` 줄이 있을 때만, 큰 구경 보케는 D의 `Zeiss Planar 50mm f/1.4` 줄과 쌍 12번뿐이다 |
 | figure | 한 사람이 환한 햇빛 속에서 손에 뭔가를 쥐고 움직이거나 쉰다. 크게 웃거나 먼 곳을 본다. 정면 증명사진 자세 없음 |
 
 ## 갈래 고르기
@@ -34,8 +34,8 @@
 | catchlight | B에서 카드 줄(`Golden Sunset Arc Catchlight`)이 이긴다. A·C·D는 켠다 | Iris는 모든 블록에 점 하나를 넣었는데 B의 해 질 녘 장면은 눈 속의 해 모양이 곧 빛이다 |
 | face-clear | A·B·D에서 끈다. 바람과 달리기가 머리를 얼굴 반대쪽으로 날려도 눈과 눈썹은 열려 있다. C는 켠다 | #061의 질주 포니테일, #063 #067의 강풍 머리, #065의 회전 바람 머리가 이 룩의 특징인데 Iris 금지문(머리가 눈썹·눈을 가림)이 같은 프롬프트에 있었다 |
 | grain | 카드의 `Visible Film Grain` 줄이 이긴다 | Iris 꼬리의 `纯净胶片颗粒`·`细致微颗粒感`은 고운 입자로 읽히는데 골드 200은 중간 굵기 입자가 보이는 필름이다(원본 값: 고운 입자) |
-| lens | 켠다. `Zeiss Biogon 28mm f/2.8`·`Zeiss Planar 50mm f/1.4` 줄이 있는 프롬프트에서는 `无畸变` 줄을 끈다 | #061(28mm)·#065(f/1.4)가 50mm 무왜곡 꼬리와 같은 프롬프트에 있어 렌즈가 둘이었다(원본 값: 50mm 평시) |
-| framing | 켠다. 쌍 5·6·7·8·9는 프레임 범위를 직접 말하니 그 말과 부딪히지 않게 쓴다 | 나머지 쌍은 범위를 말하지 않는다 |
+| lens | 렌즈를 말하는 줄은 프롬프트마다 정확히 하나이고 앞에서부터 정한다. ① 쌍 3(deep focus)은 Camera 줄이 `A wide compact lens`로 렌즈를 말하니 그 줄이다. ② 쌍 12(Shallow Depth of Field)는 Camera 줄이 조리개만 말하니 D의 Optics `Zeiss Planar 50mm f/1.4` 줄이다. ③ 그 밖의 쌍이 Optics `body`·`lens` 줄이나 세트 Optics의 렌즈(AE-1·Nikon FM 50mm, XA 35mm, Canonet 40mm, 광각이면 A의 `Zeiss Biogon 28mm f/2.8`)를 쓰면 그 렌즈가 렌즈 줄이다. ④ 어느 것도 없으면(B의 Mamiya 645 등) `无畸变`이 렌즈 줄이다. 이 줄은 카메라 높이를 말하지 않으니 쌍 2(low-angle shot)·쌍 5(Bird's-eye View)의 시점과 부딪히지 않는다. ①~③에서는 `无畸变`을 붙이지 않는다 | #061(28mm)·#065(f/1.4)가 50mm 무왜곡 꼬리와 같은 프롬프트에 있어 렌즈가 둘이었다(원본 값: 50mm 평시). 쌍마다 렌즈 줄의 출처를 정해 둔다 |
+| framing | 켠다. 쌍 5·6·7·8·9는 프레임 범위를 직접 말하니 그 말과 부딪히지 않게 쓴다. 쌍 2(굽힌 다리)·3(두 발이 뜸)·4(늘어뜨린 다리)는 Pose가 낮은 몸을 말하니 framing 줄의 범위를 머리부터 발끝으로 쓴다 | 나머지 쌍은 범위를 말하지 않고 Pose가 허리 위에서 보인다 |
 | ratio | 켠다. 사용자 비율이 없으면 3:4 세로 | 쌍은 비율을 정하지 않는다 |
 
 ## Hair and makeup
@@ -55,7 +55,7 @@
 ## Expression
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
-| A | expression | Americana Radiance — Open, high-energy joy shows in the whole face: bright eyes, lifted cheeks and warm skin under direct sun. |
+| A | expression | Americana Radiance — Open, high-energy joy shows in the whole face: bright eyes, lifted cheeks and a warm flush from the direct sun. |
 | A | expression | Candid Laugh — A laugh breaks out mid-motion with the shoulders jolting and the face unarranged as she glances back toward the lens. |
 | A | eyes | Squint — The lids narrow against the hard light, the cheeks lift and the lashes gather into a dark line. |
 | B | expression | Pensive Gaze — The eyes rest on a far point past the horizon with the lips relaxed and the brow quiet. |
@@ -104,7 +104,7 @@
 | A | style-era | 1970s Road Movie — Primary-color roadside scenes under hard sun with deep shadows, as in a 1970s American road film. |
 | B | style-era | Road Trip — A sunny open-road feel built around a pickup or camper van, with hair and clothes moved by wind in warm film color. |
 | C | style-era | 50s Americana — Red vinyl, chrome and formica of a mid-century American diner, lit by daylight through the window rather than neon. |
-| 전부 | palette | palette — Lemon yellow, brick red and sky blue with denim blue and dry-grass gold; shadows lean warm red-brown and nothing pastel, neon or cool gray appears. |
+| 전부 | palette | palette — The film hits reds, yellows and blues the hardest (lemon yellow, brick red, sky blue, denim blue, dry-grass gold) while the shadows lean warm red-brown; nothing pastel, neon or cool gray appears. |
 
 ## Scene
 | 갈래 | 슬롯 | 줄 |
@@ -126,8 +126,8 @@
 ## Light
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
-| A | face-light | Noon Sunlight — High bright sun lays small crisp shadows under the brow and chin, with warm skin and the pale edges of cotton slightly clipped. |
-| A | rim | Rim Light — Low sun from behind draws a thin gold line along the hair and shoulders as she runs. |
+| A | face-light | Noon Sunlight — High bright sun lays small crisp shadows under the brow and chin, with a warm gleam on the cheekbones and the pale edges of cotton slightly clipped. |
+| A | rim | Rim Light — Afternoon sun from behind and above draws a thin gold line along the hair and shoulders as she runs. |
 | A, C | glint | Specular Flare — Chrome, glass and enamel throw sharp star-shaped glints of the sun back toward the lens. |
 | A | face-shadow | Peaked Cap Shadow — The cap brim throws a band of shadow across the eyes while one brow shows sharply beneath it. |
 | A | water-light | Caustics — Water bends the sun into moving net-like bright lines across skin and the pool wall, with drops flashing gold. |
@@ -154,15 +154,15 @@
 | D | bloom | Halation — Each bright bulb bleeds a soft red-orange glow around its edges as light scatters in the film. |
 | D | bokeh | Bokeh Circles — Out-of-focus bulbs and sunset glints turn into smooth round gold discs behind her. |
 
-## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 요청의 장소·소품·시간대·의상 가운데 둘 이상이 같으면 통째로 쓴다. 우선순위는 image-brief.md §4 '룩 카드' 4항)
+## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 요청의 장소·소품·시간대·의상 가운데 둘 이상이 그 세트의 단서와 같으면 통째로 쓰고, 세트 값은 고정 사실보다 먼저다. 규칙은 image-brief.md §4 '룩 카드' 4항과 '비워 둔 층')
 | 세트 | 갈래 | 묶음 |
 |---|---|---|
-| S1 해안 도로 (滤镜 #056) | A | Hair Power Ponytail, 금발 포니테일이 걸음에 흔들림 / Lip 고정 몫(Glazed Lips) / Outfit Tank Top(흰색) + Denim Cutoffs(연한 파랑, 낡은 가공) / Scene Pacific Coast Highway, 노란 경고 표지판 옆 갓길 / Light Noon Sunlight(3800K), 아스팔트와 노란 중앙선이 선명 / Optics Canon AE-1 + FD 50mm f/1.4, Kodak Gold 200, 중간 유기 입자 / Expression Americana Radiance, 해를 맞고 활짝 웃음 / Pose Hands on Hips, 한 손은 허리 |
-| S2 복고 주유소 (滤镜 #057) | A | Hair Hat Hair, 금갈색 웨이브가 트러커 캡 아래로 / Outfit 복고 티셔츠 + Denim Jacket / Props Trucker Hat, 금속 주유 노즐을 쥔 손 / Scene roadside gas station, 붉은 구식 주유기와 노란 간판 / Light Noon Sunlight(3600K), 얼굴 그늘이 깊고 단단함 / Optics Olympus OM-1 + Zuiko 35mm f/2, Kodak Gold 200 / Expression 해를 마주 보며 환하게 웃고 고개를 돌림 / Pose Refueling Stance, 햇빛 쪽으로 돌아본다 |
-| S3 텍사스 밀밭 (滤镜 #063) | B | Hair Windblown Hair, 깊은 금색 웨이브가 평원 바람에 / Outfit Chambray Shirt(연한 파랑) + 흰 면 롱스커트 / Scene wheat field, 거친 흰 나무 울타리 / Light Golden Hour Glow(3100K), 낙조가 이삭·울타리·흰 치마를 물들임 / Optics Canon A-1 + FD 50mm f/1.4, Kodak Gold 200 / Expression Pensive Gaze, 끝없는 밀밭을 먼 눈으로 / Pose 한 손을 울타리에 얹고 서서 바람을 맞는다 |
-| S4 복고 다이너 (滤镜 #060) | C | Hair Voluminous Curls, 연한 금발 큰 웨이브가 어깨 위로 / Outfit Baby Tee(흰 반팔) + Dad Jeans / Props Milkshake Glass, 빨강·흰 줄무늬 빨대가 꽂힌 바닐라 쉐이크 / Scene American Diner, 붉은 가죽 부스와 크롬 테이블 가장자리 / Light Window Light(3500K), 노란 형광 간판 빛이 섞이고 크롬에 금빛 반사 / Optics Canon Canonet QL17 G-III 40mm f/1.7, Kodak Gold 200 / Expression Paper Straw Peek, 빨대를 문 채 창밖 햇빛 거리를 봄 / Pose 부스에 앉아 한 손으로 잔을 잡고 고개를 돌려 창밖을 본다 |
-| S5 회전목마 (滤镜 #065) | D | Hair Windswept Waves, 금갈색 긴 웨이브가 회전 바람에 날림 / Outfit Floral Sundress(인쇄 면 스트랩 원피스) / Scene Carousel, 해변 오래된 놀이공원의 조각 목마 / Light 석양 잔광(3400K) + String Lights, 수많은 백열전구 / Optics Pentax Spotmatic F + Super-Takumar 50mm f/1.4(사전에 없는 본체라 Zeiss Planar 50mm f/1.4 줄로 대신한다), Kodak Gold 200, Bokeh Circles / Expression Head-Tilt Beaming Smile, 옆으로 고개를 기울여 크게 웃음 / Pose 목마에 앉아 한 손으로 금색 기둥을 잡는다 |
-| S6 다이빙대 (滤镜 #070) | A | Hair Wet-Look Waves, 젖은 금발이 바람에 날림 / Lip 고정 몫(Glazed Lips) / Outfit Retro One-Piece Swimsuit(짙은 빨강, 깊은 U넥 등판) / Scene Diving Board, 팜스프링스 공공 수영장 다이빙 판의 끝 / Light Caustics, 3700K 금빛 햇빛에 물방울이 금별처럼 반짝 / Optics Olympus XA + F.Zuiko 35mm f/2.8, Kodak Gold 200 / Expression Candid Laugh, 렌즈를 돌아보며 크게 웃음 / Pose Arms Outstretched, 판 끝에서 두 팔을 활짝 편다 |
+| S1 해안 도로 (滤镜 #056) | A | 단서: 해안 도로, 노란 경고 표지판, 한낮 직사광, 흰 탱크, 데님 컷오프 / Hair Power Ponytail, 금발 포니테일이 걸음에 흔들림 / Lip 고정 몫(Glazed Lips) / Outfit Tank Top(흰색) + Denim Cutoffs(연한 파랑, 낡은 가공) / Scene Pacific Coast Highway, 노란 경고 표지판 옆 갓길 / Light Noon Sunlight(3800K), 아스팔트와 노란 중앙선이 선명 / Optics Canon AE-1 + FD 50mm f/1.4, Kodak Gold 200, 중간 유기 입자 / Expression Americana Radiance, 해를 맞고 활짝 웃음 / Pose Hands on Hips, 한 손은 허리 |
+| S2 복고 주유소 (滤镜 #057) | A | 단서: 복고 주유소, 붉은 주유기, 트러커 캡, 주유 노즐, 한낮 / Hair Hat Hair, 금갈색 웨이브가 트러커 캡 아래로 / Outfit 복고 티셔츠 + Denim Jacket / Props Trucker Hat, 금속 주유 노즐을 쥔 손 / Scene roadside gas station, 붉은 구식 주유기와 노란 간판 / Light Noon Sunlight(3600K), 얼굴 그늘이 깊고 단단함 / Optics Olympus OM-1 + Zuiko 35mm f/2, Kodak Gold 200 / Expression 해를 마주 보며 환하게 웃고 고개를 돌림 / Pose Refueling Stance, 햇빛 쪽으로 돌아본다 |
+| S3 텍사스 밀밭 (滤镜 #063) | B | 단서: 텍사스 밀밭, 흰 나무 울타리, 샴브레이 셔츠, 낙조, 바람 / Hair Windblown Hair, 깊은 금색 웨이브가 평원 바람에 / Outfit Chambray Shirt(연한 파랑) + 흰 면 롱스커트 / Scene wheat field, 거친 흰 나무 울타리 / Light Golden Hour Glow(3100K), 낙조가 이삭·울타리·흰 치마를 물들임 / Optics Canon A-1 + FD 50mm f/1.4, Kodak Gold 200 / Expression Pensive Gaze, 끝없는 밀밭을 먼 눈으로 / Pose 한 손을 울타리에 얹고 서서 바람을 맞는다 |
+| S4 복고 다이너 (滤镜 #060) | C | 단서: 복고 다이너, 붉은 부스, 밀크셰이크, 빨대, 창가 오후, 베이비 티 / Hair Voluminous Curls, 연한 금발 큰 웨이브가 어깨 위로 / Outfit Baby Tee(흰 반팔) + Dad Jeans / Props Milkshake Glass, 빨강·흰 줄무늬 빨대가 꽂힌 바닐라 쉐이크 / Scene American Diner, 붉은 가죽 부스와 크롬 테이블 가장자리 / Light Window Light(3500K), 노란 형광 간판 빛이 섞이고 크롬에 금빛 반사 / Optics Canon Canonet QL17 G-III 40mm f/1.7, Kodak Gold 200 / Expression Paper Straw Peek, 빨대를 문 채 창밖 햇빛 거리를 봄 / Pose 부스에 앉아 한 손으로 잔을 잡고 고개를 돌려 창밖을 본다 |
+| S5 회전목마 (滤镜 #065) | D | 단서: 회전목마, 놀이공원, 전구, 황혼, 꽃무늬 원피스 / Hair Windswept Waves, 금갈색 긴 웨이브가 회전 바람에 날림 / Outfit Floral Sundress(인쇄 면 스트랩 원피스) / Scene Carousel, 해변 오래된 놀이공원의 조각 목마 / Light 석양 잔광(3400K) + String Lights, 수많은 백열전구 / Optics Pentax Spotmatic F + Super-Takumar 50mm f/1.4(사전에 없는 본체라 Zeiss Planar 50mm f/1.4 줄로 대신한다), Kodak Gold 200, Bokeh Circles / Expression Head-Tilt Beaming Smile, 옆으로 고개를 기울여 크게 웃음 / Pose 목마에 앉아 한 손으로 금색 기둥을 잡는다 |
+| S6 다이빙대 (滤镜 #070) | A | 단서: 다이빙대, 팜스프링스 수영장, 빨간 원피스 수영복, 젖은 머리, 물방울 / Hair Wet-Look Waves, 젖은 금발이 바람에 날림 / Lip 고정 몫(Glazed Lips) / Outfit Retro One-Piece Swimsuit(짙은 빨강, 깊은 U넥 등판) / Scene Diving Board, 팜스프링스 공공 수영장 다이빙 판의 끝 / Light Caustics, 3700K 금빛 햇빛에 물방울이 금별처럼 반짝 / Optics Olympus XA + F.Zuiko 35mm f/2.8, Kodak Gold 200 / Expression Candid Laugh, 렌즈를 돌아보며 크게 웃음 / Pose Arms Outstretched, 판 끝에서 두 팔을 활짝 편다 |
 
 ## 포즈·구도 쌍
 | 번호 | 갈래 | Pose | Camera |
@@ -181,7 +181,7 @@
 | 12 | D | Raising Cups — Both arms lift paper cups high in a cheer as she laughs toward friends outside the frame. | Shallow Depth of Field — A wide aperture holds only her in sharp focus while the bulbs and the screen behind melt into large soft discs. |
 
 ## 맞지 않는 것
-네온 간판, 형광등, 직부 플래시, 밤 장면, 흐린 하늘, 차가운 회청 그림자, 파스텔, 스튜디오 흰 배경, 디지털 HDR 색, 흑백, 정면 증명사진 자세, 읽히는 간판·로고·상표 글자.
+네온 간판, 형광등(S4 다이너 창가의 노란 형광 간판 빛은 예외), 직부 플래시, 밤 장면, 흐린 하늘, 차가운 회청 그림자, 파스텔, 스튜디오 흰 배경, 디지털 HDR 색, 흑백, 정면 증명사진 자세, 읽히는 간판·로고·상표 글자.
 
 ## 출처
 Iris (noahvisualsx/Iris b83de4c, MIT, © 2026 noahvisuals): 美国/滤镜/04 #056–070, 美国/拍照姿势/04 #053–068, 美国/拍照姿势/05 #069–084, 美国/道具与美甲/04 #036–050, 美国/神态与微表情/06 #085–100. 낱말과 구성은 참고했고 문장은 MPW용으로 새로 썼다. 라이선스 전문은 [LICENSE-Iris.md](LICENSE-Iris.md).

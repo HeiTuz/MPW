@@ -3,7 +3,7 @@
 | 항목 | 값 |
 |---|---|
 | 부르는 이름 | New York overcast cool grey; New York overcast cool gray; NYC overcast cool grey; Manhattan cool grey; Manhattan cool gray; SoHo overcast cool grey; 뉴욕 흐린 날 쿨 그레이; 뉴욕 쿨 그레이; 뉴욕 냉회색; 맨해튼 쿨 그레이; 맨해튼 냉회색; 소호 흐린 날 쿨톤; 纽约SOHO阴天冷调; 曼哈顿冷灰 |
-| 부르지 않는 말 | 뉴욕; New York; NYC; 맨해튼; Manhattan; 소호; SoHo; 뉴욕 여행; 뉴욕 스냅; 흐린 날; overcast; cool grey; 쿨톤; 纽约 |
+| 부르지 않는 말 | 뉴욕; New York; NYC; 맨해튼; Manhattan; 소호; SoHo; 뉴욕 여행; 뉴욕 스냅; 흐린 날; overcast; cool grey; 쿨톤; 纽约; 뉴욕 감성; 뉴욕 거리; 뉴욕 길거리; 뉴욕 사진; 뉴욕 스트리트; 맨해튼 감성; 흐린 날 스냅; 흐린 날 감성; 흐린 하늘; 회색 톤; 쿨 그레이; cool gray; 쿨톤 스냅 |
 | 문화권 | US(뉴욕 맨해튼·브루클린) |
 | 기본 갈래 | A |
 
@@ -14,9 +14,9 @@
 | closer | `New York street candid` |
 | time | 흐린 낮. 해가 두꺼운 구름·안개 뒤에 있어 직사광과 또렷한 그림자 윤곽이 없다(약 5800–6800K). 석양·황금빛·네온 핑크 없음. D 갈래만 밤이고 광원이 상점 형광등이다 |
 | light-key | 구름 한 겹이 하늘 전체를 소프트박스로 만든다. 얼굴과 건물 벽에 같은 밝기의 확산광이 고르게 닿는다. 예외는 B의 빌딩 협곡 한 줄기 빛(S4)과 D의 상점 형광등이다 |
-| palette | 주철 회색, 슬레이트 청회색, 아스팔트 검정, 석회암 흰색. 빛바랜 벽돌 적갈색은 벽에만 남고 그림자는 차가운 청회로 기운다. 차콜·카키·네이비·블랙 외투, 냉백 피부. 황금빛·네온·파스텔 없음. 채도 높은 색은 노란 택시나 편의점 포장 같은 작은 점 하나까지만 |
+| palette | 주철 회색, 슬레이트 청회색, 아스팔트 검정, 석회암 흰색. 빛바랜 벽돌 적갈색은 벽에만 남고 그림자는 차가운 청회로 기운다. 차콜·카키·네이비·블랙 외투. 찬 하늘빛이 얹혀 피부 하이라이트도 차갑게 읽힌다. 황금빛·네온·파스텔 없음. 채도 높은 색은 노란 택시나 편의점 포장 같은 작은 점 하나까지만(S2 녹슨 철골의 주황은 세트 값). B 흑백은 회색 단계만 남고 색이 없다 |
 | grain | 컬러 필름은 고운 입자가 화면 전체에, 그림자에서 조금 더. B는 은염 입자가 회색 단계 위에 또렷하다(T-Max는 곱고 Tri-X는 굵다). 디지털 stock은 입자가 거의 없고 어두운 곳에만 극미한 노이즈가 앉는다 |
-| lens | 35–50mm 표준 인물 렌즈를 눈높이에 둔다. 중간 심도라 인물 뒤 건축의 선과 질감이 읽힌다. 배경을 크게 녹이는 얕은 심도는 쓰지 않는다. 28mm 광각은 환경 인물(S2)에서만 쓰고 얼굴은 화면 가운데에 둔다 |
+| lens | 35–50mm 표준 인물 렌즈를 쓰고 카메라 높이는 쌍이 정한다(쌍 3은 올려다보고 쌍 9는 낮게 깐다). 쌍 1(telephoto compression)만 중망원 압축이다. 중간 심도라 인물 뒤 건축의 선과 질감이 읽힌다. 배경을 크게 녹이는 얕은 심도는 쓰지 않는다. 28mm 광각은 환경 인물(S2)에서만 쓰고 얼굴은 화면 가운데에 둔다 |
 | figure | 한 사람이 걷거나 멈춘다. 외투 자락과 머리가 바람에 한 방향으로 움직인다. 시선은 렌즈 직시, 먼 곳, 어깨 너머 중 하나다. 정면 증명사진 자세와 연출된 큰 웃음은 없다(A·C의 순간 웃음만 허용) |
 
 ## 갈래 고르기
@@ -36,8 +36,8 @@
 | lip | 카드 줄이 이긴다 | 고정 US 입술 줄은 복숭아빛 글로스인데 #041은 무광 누드 입술이고 B는 흑백이라 광택이 입술 모양을 흐린다 |
 | blush | A·B·C에서 카드 줄이 이긴다. D는 고정 몫이 그대로 붙는다 | 고정 US 코랄 블러셔는 따뜻한 색이라 냉회색 팔레트와 부딪힌다. 이 룩의 뺨 색은 찬 바람에 오른 홍조다 |
 | grain | 카드의 `胶片颗粒` 줄은 필름 stock(Portra·Gold·T-Max·Tri-X)일 때만 쓴다. 디지털 stock(`Leica M11`, `Hasselblad 907X`, `Ricoh GR IIIx`)이면 줄을 쓰지 않고 고정 몫의 디지털 노이즈 줄이 붙는다 | #044의 T-Max 극세 은염 입자와 고정 몫의 컬러 필름 입자 문장은 모양이 다르고, #041 #042 #055는 디지털이다 |
-| lens | 켠다. 세트·쌍·Optics `lens` 줄이 광각이나 35mm대를 말하면(S2의 28mm, `Summilux 35mm f/1.4`) 그 줄이 lens 슬롯을 대신하고 `无畸变` 줄은 끈다. 쌍 1번이면 쌍의 `telephoto compression` 줄이 렌즈다. 얕은 심도 문구는 쓰지 않는다 | Iris의 50mm 평시 꼬리가 #049(28mm) #043 #048 #051(35mm) #045(24-70mm)와 한 프롬프트에 공존했고, #042는 룩에 없는 얕은 심도를 요구했다 |
-| framing | 켠다. 쌍의 Camera 줄은 자리·각도·구도 기법을 정하고 프레임 범위는 fixed-lines.md의 framing 줄이 정한다. 쌍 2(Cowboy Shot)와 5(Extreme Wide Shot)는 범위를 직접 말하니 그 말과 부딪히지 않게 쓴다 | 나머지 쌍은 범위를 말하지 않는다 |
+| lens | 끈다. 렌즈를 말하는 줄은 프롬프트마다 정확히 하나이고 아래가 정한다. 쌍 1은 Camera 줄 `telephoto compression`이 렌즈 줄이다. D 갈래(쌍 11·12)는 Optics `Ricoh GR IIIx` 줄의 40mm 시야가 렌즈 줄이다. 나머지 쌍(2~10)은 Camera 줄이 렌즈를 말하지 않으니 Optics `lens` 줄 하나가 렌즈 줄이다(A·B `Summicron 50mm f/2`, C `Summilux 35mm f/1.4`, A의 `Zeiss Biogon 28mm f/2.8`은 S2나 사용자가 광각을 말할 때만). 세트를 쓰면 세트 Optics가 말한 렌즈가 렌즈 줄이다. `无畸变`은 어느 경우에도 붙이지 않는다. 얕은 심도 문구는 쓰지 않는다 | Iris의 50mm 평시 꼬리가 #049(28mm) #043 #048 #051(35mm) #045(24-70mm)와 한 프롬프트에 공존했고, #042는 룩에 없는 얕은 심도를 요구했다. 쌍마다 렌즈 줄의 출처를 정해 둔다 |
+| framing | 켠다. 쌍의 Camera 줄은 자리·각도·구도 기법을 정하고 프레임 범위는 fixed-lines.md의 framing 줄이 정한다. 쌍 2(Cowboy Shot)와 5(Extreme Wide Shot)는 범위를 직접 말하니 그 말과 부딪히지 않게 쓴다. 쌍 1(긴 걸음)·4(계단)·6(앞다리 체중)·9(부츠와 웅덩이)는 Pose가 낮은 몸을 말하니 framing 줄의 범위를 머리부터 발끝으로 쓴다 | 나머지 쌍은 범위를 말하지 않고 Pose가 허리 위에서 보인다 |
 | ratio | 켠다. 사용자 비율이 없으면 3:4 세로 | 쌍은 비율을 정하지 않는다 |
 
 ## Hair and makeup
@@ -119,7 +119,8 @@
 | B | style | Documentary Street Photography — An unposed black-and-white frame of someone passing through a real city scene, with sharp contrast and visible grain. (滤镜 #044 #054) |
 | B | style | Power Dressing — Strong-shouldered charcoal tailoring with sharp lapels and a clean drape. (滤镜 #045) |
 | C | style | NYC minimalist — Black-on-black tailoring in a bare city setting with no pattern or ornament drawing the eye. (滤镜 #051) |
-| 전부 | palette | palette — Cast-iron grey, slate blue-grey, asphalt black and limestone white, with weathered brick red kept to the walls and nothing golden, neon or pastel in the frame. |
+| A, C, D | palette | palette — Cast-iron grey, slate blue-grey, asphalt black and limestone white, with weathered brick red kept to the walls and nothing golden, neon or pastel in the frame. |
+| B | palette | palette — Cast-iron grey, slate grey, asphalt black and limestone white as one grey ramp, with no color anywhere in the frame. |
 
 ## Scene
 | 갈래 | 슬롯 | 줄 |
@@ -159,7 +160,7 @@
 ## Optics
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
-| A, C | stock | Kodak Portra 400 — Cool-shifted color negative with creamy skin, soft highlight roll-off, blue-grey shadows and fine even grain. (滤镜 #043 #049 #050 #052) |
+| A, C | stock | Kodak Portra 400 — Cool-shifted color negative with creamy highlights on the skin, soft highlight roll-off, blue-grey shadows and fine even grain. (滤镜 #043 #049 #050 #052) |
 | A | stock | Kodak Portra 160 — Finer-grained and slightly cooler than Portra 400, with muted color and smooth mid-tones. (滤镜 #046 #053) |
 | A | stock | Kodak Gold 200 — Consumer color film processed cold so the usual golden cast turns neutral, brick reds staying rich against slate-blue shadow. (滤镜 #047) |
 | A | stock | Leica M11 — A compact rangefinder digital frame with crisp micro-contrast, calm color and gentle highlight roll-off. (滤镜 #041) |
@@ -168,9 +169,9 @@
 | B | stock | Kodak Tri-X 400 — Pure black-and-white tone with ink-deep blacks and brilliant highlights, the grain coarse and bold. (滤镜 #045 #054) |
 | B | stock | Leica Monochrom — A dedicated black-and-white sensor with rich tonal depth and razor-fine edge detail, a long clean grey ramp. (滤镜 #048) |
 | D | stock | Ricoh GR IIIx — A pocket digital frame with a 40mm view, crisp punchy street color and a deep dark falloff beyond the light. (滤镜 #055) |
-| A, C | color | Cool Grey Tone — A pale grey palette with a trace of blue, restrained contrast and clean cold whites. |
+| A | color | Cool Grey Tone — A pale grey palette with a trace of blue, restrained contrast and clean cold whites. |
 | C | color | Cool Cyan Shift — Colors lean cool cyan, as if lit by reflective blue glass and an overcast sky. (滤镜 #051) |
-| D | color | Cool White Balance — Whites sit slightly cold and clean, giving skin a pale clarity without warm yellow. (滤镜 #055) |
+| D | color | Cool White Balance — Whites sit slightly cold and clean, so the skin highlights read clean and neutral with no warm yellow cast. (滤镜 #055) |
 | A, B | lens | Summicron 50mm f/2 — A standard lens with natural perspective and clean detail, kept at a middle aperture so the architecture behind her stays readable. (滤镜 #041 #054) |
 | A | lens | Zeiss Biogon 28mm f/2.8 — A wide lens with deep focus sets her inside the broad industrial lot, with mild edge stretching while the face stays near the centre. (滤镜 #049) |
 | C | lens | Summilux 35mm f/1.4 — A wide-normal lens at a middle aperture holds the avenue or glass wall around her instead of melting it. (滤镜 #043 #051) |
@@ -179,15 +180,15 @@
 | A, C | grain | 胶片颗粒 — Fine, even color-film grain sits across the whole frame, slightly heavier in the shadows. |
 | B | grain | 胶片颗粒 — Crisp silver grain lies over the whole grey ramp, fine on T-Max and bold on Tri-X. |
 
-## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 요청의 장소·소품·시간대·의상 가운데 둘 이상이 같으면 통째로 쓴다. 우선순위는 image-brief.md §4 '룩 카드' 4항)
+## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 요청의 장소·소품·시간대·의상 가운데 둘 이상이 그 세트의 단서와 같으면 통째로 쓰고, 세트 값은 고정 사실보다 먼저다. 규칙은 image-brief.md §4 '룩 카드' 4항과 '비워 둔 층')
 | 세트 | 갈래 | 묶음 |
 |---|---|---|
-| S1 SoHo Cobblestones (滤镜 #041) | A | Hair Glass Hair, 짙은 검은 직모가 어깨 위 코트로 떨어진다 / Lip Taupe Matte Lips(누드 무광, 입술을 살짝 다문다) / Outfit wool trench coat(숯회색 더블 브레스티드 울, 어깨선이 큼직) + Sunglasses(복고풍 검정 선글라스, 눈이 안 보이니 catchlight 끈다) / Scene SoHo, 자갈길과 주철·붉은 벽돌 건물 / Light Overcast Light(6500K 그림자 없는 확산 하늘빛) / Optics Leica M11, Summicron 50mm f/2(원본 APO-Summicron-M 50mm f/2 ASPH), Cool Grey Tone(원본 Custom SoHo Cool Grey DNG) / Pose 자갈길을 걷는다 / Camera 허리 위, 눈높이 |
-| S2 Williamsburg Warehouse (滤镜 #049) | A | Hair Windblown Hair, 금색 장발이 찬 바람에 흩어진다 / Outfit M-65(올리브 낙견 워크 재킷) + Parachute Pants(검정 와이드) + Combat Boots(두꺼운 밑창) / Scene Williamsburg, 색 바랜 벽화가 덮인 폐창고와 녹슨 철골, 깨진 유리창 / Light Storm Light(6800K 차가운 흐림, 청록 공기와 녹슨 철골의 주황이 맞선다) / Optics Olympus OM-4T, Zeiss Biogon 28mm f/2.8(원본 Zuiko 28mm f/2), Kodak Portra 400(원본 Tungsten Push), Cool Cyan Shift / Expression Cool Gaze, 냉정하고 단단한 눈 / Pose 창고 앞을 성큼 지난다 / Camera deep focus, 광각이라 얼굴은 화면 가운데에 둔다 |
-| S3 Brooklyn Bridge Fog (滤镜 #044) | B | Hair Windblown Hair, 어두운 긴 머리가 강바람에 거세게 날린다 / Outfit wool overcoat(짙은 검정 두꺼운 더블 브레스티드 울) / Scene Brooklyn Bridge, 나무 보행로와 안개 속으로 사라지는 현수 케이블 / Light Atmospheric Haze(6000K 찬 안개, 가까운 케이블만 선명) / Optics Kodak T-Max(극세 은염 입자), Nikon F3(원본 AI Nikkor 50mm f/1.4S), Fog Filter / Expression Sharp Jawline Turn, 렌즈를 돌아본다 / Pose Over-the-Shoulder Glance, 두 손은 주머니에, 보행로 한가운데서 멈춘다 / Camera negative space, 인물만 칼처럼 선명 |
-| S4 Wall Street Canyon (滤镜 #045) | B | Hair Neat Pixie Cut, 짙은 갈색 짧은 머리를 귀 뒤로 / Outfit Pinstripe(분필 줄무늬 정장) / Scene Wall Street, 좁은 석회암 협곡 / Light Urban Canyon Light(6500K 수직 냉백 하늘빛 한 줄기, 양쪽 건물은 순흑) / Optics Kodak Tri-X 400, Canon EOS 1N(원본 EF 24-70mm f/2.8L이지만 35–50mm대로 쓴다), 굵은 은염 입자 / Expression Boardroom Listener, 단호하고 흔들림 없는 눈 / Pose 빠른 걸음으로 협곡을 지난다 / Camera deep focus |
-| S5 Rain-Slicked Crosswalk (滤镜 #043) | C | Hair Half Bun, 짙은 금갈색 반묶음 / Outfit wool trench coat(연한 카키 더블 브레스티드, 허리끈은 느슨, 자락이 뒤로 날린다) + Sunglasses(검정, catchlight 끈다) + 뾰족한 검정 앵클부츠 / Scene 비 갠 뒤 젖은 아스팔트 횡단보도(SoHo 거리 기준) / Light Wet Street Reflection(5800K 비 갠 뒤 찬빛, 웅덩이가 하늘을 되비춘다) / Optics Leica M6, Summilux 35mm f/1.4, Kodak Portra 400(원본 Cool Shifted), Cool Cyan Shift / Expression 상쾌하고 자신 있는 얼굴(선글라스라 눈은 안 보인다) / Pose Crosswalk Stride, 웅덩이를 밟고 성큼 건넌다 / Camera Puddle Reflection |
-| S6 Bodega After Dark (滤镜 #055) | D | Hair Air-Dried Texture, 금갈색 긴 머리가 어깨에 엉켜 있다 / Outfit Hoodie(회색) + Leather Jacket(검정) / Props soda can(얼음처럼 찬 체리 소다) / Scene Bodega, 과일 진열대와 음료 냉장고가 보이는 24시간 편의점 앞 / Light Bodega Fluorescent Light(5000K 냉백 형광등이 문밖으로 번지고 길은 칠흑) / Optics Ricoh GR IIIx(원본 GR 40mm f/2.8), Cool White Balance, 디지털 노이즈 / Expression Half-Lidded Gaze, 무심하고 거침없다 / Pose Bodega Lean / Camera centered composition |
+| S1 SoHo Cobblestones (滤镜 #041) | A | 단서: 소호, 자갈길, 주철 건물, 숯회색 트렌치 코트, 선글라스, 흐린 낮 / Hair Glass Hair, 짙은 검은 직모가 어깨 위 코트로 떨어진다 / Lip Taupe Matte Lips(누드 무광, 입술을 살짝 다문다) / Outfit wool trench coat(숯회색 더블 브레스티드 울, 어깨선이 큼직) + Sunglasses(복고풍 검정 선글라스, 눈이 안 보이니 catchlight 끈다) / Scene SoHo, 자갈길과 주철·붉은 벽돌 건물 / Light Overcast Light(6500K 그림자 없는 확산 하늘빛) / Optics Leica M11, Summicron 50mm f/2(원본 APO-Summicron-M 50mm f/2 ASPH), Cool Grey Tone(원본 Custom SoHo Cool Grey DNG) / Pose 자갈길을 걷는다 / Camera 허리 위, 눈높이 |
+| S2 Williamsburg Warehouse (滤镜 #049) | A | 단서: 윌리엄스버그, 폐창고, 벽화, M-65 재킷, 전투화, 찬 바람 / Hair Windblown Hair, 금색 장발이 찬 바람에 흩어진다 / Outfit M-65(올리브 낙견 워크 재킷) + Parachute Pants(검정 와이드) + Combat Boots(두꺼운 밑창) / Scene Williamsburg, 색 바랜 벽화가 덮인 폐창고와 녹슨 철골, 깨진 유리창 / Light Storm Light(6800K 차가운 흐림, 청록 공기와 녹슨 철골의 주황이 맞선다) / Optics Olympus OM-4T, Zeiss Biogon 28mm f/2.8(원본 Zuiko 28mm f/2), Kodak Portra 400(원본 Tungsten Push), Cool Cyan Shift / Expression Cool Gaze, 냉정하고 단단한 눈 / Pose 창고 앞을 성큼 지난다 / Camera deep focus, 광각이라 얼굴은 화면 가운데에 둔다 |
+| S3 Brooklyn Bridge Fog (滤镜 #044) | B | 단서: 브루클린 브리지, 짙은 안개, 오버코트, 흑백, 보행로 / Hair Windblown Hair, 어두운 긴 머리가 강바람에 거세게 날린다 / Outfit wool overcoat(짙은 검정 두꺼운 더블 브레스티드 울) / Scene Brooklyn Bridge, 나무 보행로와 안개 속으로 사라지는 현수 케이블 / Light Atmospheric Haze(6000K 찬 안개, 가까운 케이블만 선명) / Optics Kodak T-Max(극세 은염 입자), Nikon F3(원본 AI Nikkor 50mm f/1.4S), Fog Filter / Expression Sharp Jawline Turn, 렌즈를 돌아본다 / Pose Over-the-Shoulder Glance, 두 손은 주머니에, 보행로 한가운데서 멈춘다 / Camera negative space, 인물만 칼처럼 선명 |
+| S4 Wall Street Canyon (滤镜 #045) | B | 단서: 월스트리트, 빌딩 협곡, 핀스트라이프 정장, 흑백, 한 줄기 빛 / Hair Neat Pixie Cut, 짙은 갈색 짧은 머리를 귀 뒤로 / Outfit Pinstripe(분필 줄무늬 정장) / Scene Wall Street, 좁은 석회암 협곡 / Light Urban Canyon Light(6500K 수직 냉백 하늘빛 한 줄기, 양쪽 건물은 순흑) / Optics Kodak Tri-X 400, Canon EOS 1N(원본 EF 24-70mm f/2.8L이지만 35–50mm대로 쓴다), 굵은 은염 입자 / Expression Boardroom Listener, 단호하고 흔들림 없는 눈 / Pose 빠른 걸음으로 협곡을 지난다 / Camera deep focus |
+| S5 Rain-Slicked Crosswalk (滤镜 #043) | C | 단서: 비 갠 뒤 횡단보도, 웅덩이, 카키 트렌치 코트, 선글라스, 젖은 아스팔트 / Hair Half Bun, 짙은 금갈색 반묶음 / Outfit wool trench coat(연한 카키 더블 브레스티드, 허리끈은 느슨, 자락이 뒤로 날린다) + Sunglasses(검정, catchlight 끈다) + 뾰족한 검정 앵클부츠 / Scene 비 갠 뒤 젖은 아스팔트 횡단보도(SoHo 거리 기준) / Light Wet Street Reflection(5800K 비 갠 뒤 찬빛, 웅덩이가 하늘을 되비춘다) / Optics Leica M6, Summilux 35mm f/1.4, Kodak Portra 400(원본 Cool Shifted), Cool Cyan Shift / Expression 상쾌하고 자신 있는 얼굴(선글라스라 눈은 안 보인다) / Pose Crosswalk Stride, 웅덩이를 밟고 성큼 건넌다 / Camera Puddle Reflection |
+| S6 Bodega After Dark (滤镜 #055) | D | 단서: 보데가, 24시간 편의점, 심야, 형광등, 체리 소다 캔, 후디 / Hair Air-Dried Texture, 금갈색 긴 머리가 어깨에 엉켜 있다 / Outfit Hoodie(회색) + Leather Jacket(검정) / Props soda can(얼음처럼 찬 체리 소다) / Scene Bodega, 과일 진열대와 음료 냉장고가 보이는 24시간 편의점 앞 / Light Bodega Fluorescent Light(5000K 냉백 형광등이 문밖으로 번지고 길은 칠흑) / Optics Ricoh GR IIIx(원본 GR 40mm f/2.8), Cool White Balance, 디지털 노이즈 / Expression Half-Lidded Gaze, 무심하고 거침없다 / Pose Bodega Lean / Camera centered composition |
 
 ## 포즈·구도 쌍
 | 번호 | 갈래 | Pose | Camera |
@@ -202,7 +203,7 @@
 | 8 | A, B | Coat Wind Blow — A gust throws her open coat wide to both sides while one hand lifts to hold her sunglasses or her hair. | Dutch angle — The camera tilts a few degrees so the vertical building edges lean and the flare of the coat seems to push the frame. |
 | 9 | C | Puddle Leap — She takes one long step over a puddle on the crosswalk, trench hem flying, one boot already across and the other still pushing off. | Puddle Reflection — The camera sits low over the wet asphalt so the puddle doubles her and the grey sky upside down beneath her feet. |
 | 10 | C | Revolving Door Exit — One hand pushes the brass bar of a revolving door as she steps out of the building mid-motion. | frame within a frame — The curved glass and brass framing of the door box her in as one lit panel against the dim lobby behind. |
-| 11 | D | Bodega Lean — One shoulder rests on the shopfront beside the fruit stand, a cold drink hanging from one hand and the light of the open door on her face. | centered composition — She sits at the centre of the frame at chest height, the shop's cold glow on one side and the dark street on the other. |
+| 11 | D | Bodega Lean — One shoulder rests on the shopfront beside the fruit stand, a cold drink hanging from one hand and the light of the open door on her face. | centered composition — She stands at the centre of the frame, the shop's cold glow on one side and the dark street on the other. |
 | 12 | D | Subway Door Lean — Her back rests against a closed subway door, the shoulders low and the eyes tired but steady. | glass reflection overlay — The door glass lays a faint ghost of the car's cool white lights over her face and shoulder. |
 
 ## 맞지 않는 것

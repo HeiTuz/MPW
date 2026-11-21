@@ -3,7 +3,7 @@
 | 항목 | 값 |
 |---|---|
 | 부르는 이름 | 日系CCD日光; 日系CCD; 일본 CCD; 일본 CCD 감성; コンデジ; コンパクトデジカメ; 콘데지; Japanese CCD; Japanese compact digital camera; PowerShot G2; 파워샷 G2; Coolpix 995; 쿨픽스 995; FinePix F401; 파인픽스 F401 |
-| 부르지 않는 말 | 도쿄; 일본 여행; 일본 스냅; 일본 감성; 디카; CCD |
+| 부르지 않는 말 | 도쿄; 일본 여행; 일본 스냅; 일본 감성; 디카; CCD; 똑딱이; 컴팩트 카메라; 콤팩트 카메라; 디지털카메라; 디지털 카메라; 일본 일상 스냅; 일본 일상 사진; 일본 길거리 사진; 일본 낮 스냅; 하얗게 날아간 하늘; digicam; compact camera; point-and-shoot |
 | 문화권 | JP |
 | 기본 갈래 | A |
 
@@ -14,7 +14,7 @@
 | closer | `コンデジ` |
 | time | 해가 하늘에 있는 낮. 맑은 낮에서 서쪽 햇빛까지이고 D만 해 진 직후의 푸른 하늘빛이 남는다. 네온·텅스텐 없음 |
 | light-key | 직사 햇빛(역광·사광·나뭇잎 사이 햇빛)과 그늘의 하늘빛. 실내는 낮의 큰 창 |
-| palette | 채도가 조금 높은 선명한 디지털 색. 하늘은 순백으로 날아가고, 그늘은 연한 청회색, 피부는 밝다. 필름의 녹·주황 쏠림, 네온 없음 |
+| palette | 채도가 조금 높은 선명한 디지털 색. 하늘은 순백으로 날아가고(S3만 Iris 원문대로 하이라이트가 조금 넘치되 둥글게 풀린다), 그늘은 연한 청회색, 햇빛을 받은 피부 하이라이트가 밝게 뜬다. 필름의 녹·주황 쏠림, 네온 없음 |
 | grain | 고운 디지털 노이즈가 어두운 곳에만. 필름 입자·할레이션 없음 |
 | lens | 소형 센서의 깊은 심도(パンフォーカス). 앞의 물건부터 먼 간판·하늘까지 모두 선명하고 배경 보케가 없다. 35mm 환산 28~38mm쯤 |
 | figure | 일상 동작 중인 한 사람(걷기, 신호 대기, 음료·봉지 들기, 자전거). 카메라를 의식하지 않거나 친구가 옆에서 찍은 시선. 정면 증명사진 자세 없음 |
@@ -31,11 +31,11 @@
 | 슬롯 | 처리 | 이유 |
 |---|---|---|
 | face-light | 모든 갈래에서 끈다. 얼굴 빛은 이 카드의 Light 줄이 정한다 | `立体光`의 위·옆 키라이트가 #072의 역광 림, #073의 확산 창빛과 부딪힌다 |
-| lens | 모든 갈래에서 끈다. `无畸变` 줄 대신 쌍의 Camera 줄이 lens 슬롯을 채우고, 모든 쌍의 문장이 앞뒤가 다 선명하다고 말한다 | Iris 고정 꼬리의 50mm 얕은 심도가 이 룩의 정체인 깊은 심도와 반대다. #071~#074의 비콤팩트 기종은 콤팩트로 바꿔 옮겼다 |
+| lens | 모든 갈래에서 끈다. 렌즈를 말하는 줄은 Optics의 `lens` 줄(`コンデジ`, 모든 갈래) 하나다: 35mm 환산 28~38mm 고정 렌즈와 앞뒤가 다 선명한 깊은 심도. 쌍 1~12의 Camera 줄은 렌즈 길이를 말하지 않고 구도와 심도만 말하니(쌍 12 `Extreme Wide Shot`도 인물이 작게 서는 구도일 뿐 렌즈가 아니다) 어느 쌍을 골라도 렌즈 줄은 이 하나다 | Iris 고정 꼬리의 50mm 얕은 심도가 이 룩의 정체인 깊은 심도와 반대다. #071~#074의 비콤팩트 기종은 콤팩트로 바꿔 옮겼다 |
 | grain | 켠다. 고정 몫의 `数码噪点` 줄이 그대로 맞다 | 이 룩의 입자는 디지털 노이즈다 |
 | realism | 모든 갈래에서 바꾼다. `8K`·땀구멍 줄 대신 `native resolution` 줄을 쓴다. 매체 구절은 `small-sensor CCD compact`, 질감은 `crisp but over-sharpened edges, clipped highlights and skin that shows no individual pores` | 소형 센서 콤팩트가 만드는 해상도에 8K 모공 묘사를 얹으면 룩의 정체인 하드한 디지털 엣지와 반대다 |
-| framing | 켠다. 12번만 전신이 작게 나온다고 직접 말하니 framing 줄과 부딪히지 않게 쓴다 | 쌍 대부분이 범위를 말하지 않는다 |
-| ratio | 켠다. 사용자 비율이 없으면 3:4 세로 | 콤팩트 본래 비율은 4:3 가로다. 가로 요청이면 사용자 값이 이긴다 |
+| framing | 켠다. 쌍 12는 전신이 작게 나온다고 직접 말하니 framing 줄과 부딪히지 않게 쓴다. 범위를 말하지 않는 쌍 가운데 걸음이나 다리·발 동작이 있는 1~7·11은 `from head to toe`로, 손과 얼굴이 중심인 8·9·10은 `from the top of the head to the waist`로 쓴다 | 쌍 대부분이 범위를 말하지 않는데 Pose가 발을 말하면 허리 위 프레임에서 그 동작이 안 보인다 |
+| ratio | 켠다. 사용자 비율이 없으면 4:3 가로이고 framing 줄은 `horizontal frame — A horizontal 4:3 frame from …` 꼴로 쓴다. 세로는 사용자가 말할 때만 쓴다 | 콤팩트 CCD의 본래 화면이 4:3 가로이고 쌍은 비율을 정하지 않는다 |
 
 ## Hair and makeup
 | 갈래 | 슬롯 | 줄 |
@@ -87,7 +87,7 @@
 | B | style | シティガール — A minimal wardrobe of muted solid pieces with flats or clean sneakers and a small bag, worn with a relaxed, unforced stance. |
 | C | style | 下北沢Vintage — A thrifted indie look of worn knitwear, a secondhand bag and wooden furniture lit by a white window. |
 | D | style | 青春映画 — A summer-evening youth-film mood of sea breeze, guardrail and low sun, kept in vivid digital color instead of faded film. |
-| 전부 | palette | palette — Clean, slightly oversaturated daylight color with a white-clipped sky, pale blue shade and bright warm skin, and no film teal-orange or neon tint anywhere. |
+| 전부 | palette | palette — Clean, slightly oversaturated daylight color with a white-clipped sky, pale blue shade and skin highlights that sun makes read bright and warm, and no film teal-orange or neon tint anywhere. |
 
 ## Scene
 | 갈래 | 슬롯 | 줄 |
@@ -116,23 +116,23 @@
 ## Optics
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
-| 전부 | sensor | コンデジ — A pocket compact with a tiny CCD sensor: sharp from front to back, slightly strong sharpening, saturated color and fine noise in the shadows. |
+| 전부 | lens | コンデジ — A pocket compact with a tiny CCD sensor and a fixed lens of about 28 to 38mm equivalent: sharp from front to back with no background blur, slightly strong sharpening, saturated color and fine noise in the shadows. |
 | 전부 | highlight | 白飛び — The sky and any bright wall clip to flat pure white with no cloud detail, and the white eats a little into hair and sleeve edges. |
 | A, B | fringe | パープルフリンジ — A faint purple fringe runs along high-contrast edges such as wires, branches and hair against the white sky. |
 | A | flash | ストロボ直焚き — The built-in flash adds a flat daylight fill: a small white glint on the forehead and nose and a short hard shadow on the wall behind her. |
 | C | flash | ノンフラッシュ — The flash stays off, so only window light draws the picture, with soft contrast and faint grain in the dim corners. |
 | A | camera | ディマージュ Xt — A folded-optics pocket compact: soft airy frame edges, fine pink-cyan noise in the shadows and a casual snapshot feel. |
-| B | camera | キヤノン PowerShot G2 — A 2000s CCD look: warm white balance, slightly clipped highlights and a smooth porcelain skin tone. |
+| B | camera | キヤノン PowerShot G2 — A 2000s CCD look: warm white balance, slightly clipped highlights and a smooth porcelain-like sheen on the skin. |
 | D | camera | サイバーショット DSC — A cool blue-cast CCD look with sharp edges: shadows lean blue-gray while the sky stays clean and cold. |
 
-## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 요청의 장소·소품·시간대·의상 가운데 둘 이상이 같으면 통째로 쓴다. 우선순위는 image-brief.md §4 '룩 카드' 4항)
+## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 요청의 장소·소품·시간대·의상 가운데 둘 이상이 그 세트의 단서와 같으면 통째로 쓰고, 세트 값은 고정 사실보다 먼저다. 규칙은 image-brief.md §4 '룩 카드' 4항과 '비워 둔 층')
 | 세트 | 갈래 | 묶음 |
 |---|---|---|
-| S1 渋谷 信号待ち (滤镜 #069) | A | Hair 濡れ髪의 검은 단발, シースルーバング / Lip 水紅 / Outfit フーディー / Pose ポケットイン, 횡단보도에서 신호 대기 / Scene 渋谷スクランブル交差点의 인파 / Light 5300K 부드러운 낮빛 / Optics ディマージュ Xt, 부드러운 화면 가장자리, 초기 CCD의 가는 노이즈 / Expression 친구가 꺼낸 카메라를 알아채고 힘 뺀 미소 / Camera 친구가 옆에서 불쑥 찍은 거리 |
-| S2 裏原宿 (滤镜 #070) | A | Hair 濡れ髪의 검은 단발, シースルーバング가 바람에 흔들린다 / Lip 水紅 / Outfit スタジャン + カーゴパンツ / Pose 큰 걸음으로 걷는다 / Scene 裏原宿의 좁은 뒷골목 / Light 5100K 중앙이 조금 밝은 플래시, 약한 비네팅 / Optics ザクティ, 선명한 발색 / Expression 無邪気な振り返り / Camera 荷兰角, 한 손으로 찍은 듯 기운 화면 |
-| S3 代官山 カフェテラス (滤镜 #061) | B | Hair 濡れ髪의 검은 단발, シースルーバング / Lip 水紅 / Outfit 흰 ローゲージニット / Props アイスコーヒー, 나무 테이블 / Scene 代官山 카페의 야외 테라스 / Light 5200K 오후의 측광, 木漏れ日 / Optics キヤノン PowerShot G2, 둥글게 풀리는 하이라이트, 따뜻한 도자기 피부 / Expression 문득 눈을 주는 自然平視 / Pose 유리잔에 손을 얹는다 |
-| S4 下北沢 窓辺 (滤镜 #073) | C | Hair 濡れ髪의 검은 단발, シースルーバング / Lip 水紅 / Outfit 연한 귀리색 ローゲージニット / Props マグカップ / Scene 下北沢 킷사텐의 창가, 흰 레이스 커튼 / Light 5100K 레이스 커튼을 거친 확산광, 그림자 경계 없음 / Optics ノンフラッシュ, 부드러운 하이키(Iris 원본 Contax AX + Planar 50mm f/1.4, 콤팩트로 바꿨다) / Expression 머그의 온기를 확인하는 조용한 얼굴 / Pose 창틀에 기댄다 |
-| S5 由比ヶ浜 夕暮れ (滤镜 #074) | D | Hair 濡れ髪의 검은 단발, 바닷바람에 흔들린다 / Lip 水紅 / Outfit ホワイトリネンワンピース / Scene 由比ヶ浜의 파도 가장자리, 젖은 모래 / Light 4800K에서 4500K, 해 지기 15분 전, 바다의 금빛 반사가 전신을 감싼다 / Optics 따뜻한 금색 계조(Iris 원본 GFX 100S + 80mm f/1.7, 콤팩트로 바꿨다) / Expression 物思い, 지는 해를 보는 옆얼굴 / Pose 파도 가장자리에 서서 |
+| S1 渋谷 信号待ち (滤镜 #069) | A | 단서: 횡단보도, 신호 대기, 스크램블 교차로, 후드티, 인파 / Hair 濡れ髪의 검은 단발, シースルーバング / Lip 水紅 / Outfit フーディー / Pose ポケットイン, 횡단보도에서 신호 대기 / Scene 渋谷スクランブル交差点의 인파 / Light 5300K 부드러운 낮빛 / Optics ディマージュ Xt, 부드러운 화면 가장자리, 초기 CCD의 가는 노이즈 / Expression 친구가 꺼낸 카메라를 알아채고 힘 뺀 미소 / Camera 친구가 옆에서 불쑥 찍은 거리 |
+| S2 裏原宿 (滤镜 #070) | A | 단서: 뒷골목, 스타디움 재킷, 카고 팬츠, 플래시, 걷기 / Hair 濡れ髪의 검은 단발, シースルーバング가 바람에 흔들린다 / Lip 水紅 / Outfit スタジャン + カーゴパンツ / Pose 큰 걸음으로 걷는다 / Scene 裏原宿의 좁은 뒷골목 / Light 5100K / Optics ザクティ, 선명한 발색, 중앙이 조금 밝은 플래시와 약한 비네팅 / Expression 無邪気な振り返り / Camera Dutch Angle, 한 손으로 찍은 듯 기운 화면 |
+| S3 代官山 カフェテラス (滤镜 #061) | B | 단서: 카페 테라스, 아이스커피, 니트, 나무 테이블, 가로수 / Hair 濡れ髪의 검은 단발, シースルーバング / Lip 水紅 / Outfit 흰 ローゲージニット / Props アイスコーヒー, 나무 테이블 / Scene 代官山 카페의 야외 테라스 / Light 5200K 오후의 측광, 木漏れ日 / Optics キヤノン PowerShot G2, 둥글게 풀리는 하이라이트(고정 사실의 순백 하늘 예외), 피부 하이라이트에 앉는 따뜻한 도자기빛 윤기 / Expression 문득 눈을 주는 自然平視 / Pose 유리잔에 손을 얹는다 |
+| S4 下北沢 窓辺 (滤镜 #073) | C | 단서: 창가, 레이스 커튼, 킷사텐, 머그컵, 니트 / Hair 濡れ髪의 검은 단발, シースルーバング / Lip 水紅 / Outfit 연한 귀리색 ローゲージニット / Props マグカップ / Scene 下北沢 킷사텐의 창가, 흰 레이스 커튼 / Light 5100K 레이스 커튼을 거친 확산광, 그림자 경계 없음 / Optics ノンフラッシュ, 부드러운 하이키(Iris 원본 Contax AX + Planar 50mm f/1.4, 콤팩트로 바꿨다) / Expression 머그의 온기를 확인하는 조용한 얼굴 / Pose 창틀에 기댄다 |
+| S5 由比ヶ浜 夕暮れ (滤镜 #074) | D | 단서: 해변, 파도, 젖은 모래, 흰 리넨 원피스, 해 지기 전 / Hair 濡れ髪의 검은 단발, 바닷바람에 흔들린다 / Lip 水紅 / Outfit ホワイトリネンワンピース / Scene 由比ヶ浜의 파도 가장자리, 젖은 모래 / Light 4800K에서 4500K, 해 지기 15분 전, 바다의 금빛 반사가 전신을 감싼다 / Optics 따뜻한 금색 계조(Iris 원본 GFX 100S + 80mm f/1.7, 콤팩트로 바꿨다) / Expression 物思い, 지는 해를 보는 옆얼굴 / Pose 파도 가장자리에 서서 |
 
 ## 포즈·구도 쌍
 | 번호 | 갈래 | Pose | Camera |
@@ -140,14 +140,14 @@
 | 1 | A | 小走り — She hurries across the crosswalk in short quick steps, torso leaning slightly forward and hair swinging behind her. | パンフォーカス — Chest height, a few meters ahead; crosswalk stripes, poles and shop signs behind her stay equally sharp. |
 | 2 | A | 振り返り — She walks away along the shopping street and turns her head back. | 三分割構図 — She stands on the right third while the street's long perspective and the wires fill the rest, all in focus. |
 | 3 | A | 自転車に跨がる — She sits on a city bicycle with one foot down and one hand on the handlebar. | 日の丸構図 — She sits dead center with the shop street converging behind her, the background still sharp. |
-| 4 | A | しゃがみ — She crouches at a vending machine and reaches into its outlet, one hand on her knee. | 仰拍 — Knee height, tilted up, so the machines, poles and a white sky fill the upper frame, all in focus. |
-| 5 | A | ポケットイン — She waits at the crossing with both hands deep in her pockets and her shoulders slightly lifted. | 荷兰角 — The frame is rotated a few degrees so the horizon and poles lean, as if shot one-handed in passing. |
+| 4 | A | しゃがみ — She crouches at a vending machine and reaches into its outlet, one hand on her knee. | Low Angle — Knee height, tilted up, so the machines, poles and a white sky fill the upper frame, all in focus. |
+| 5 | A | ポケットイン — She waits at the crossing with both hands deep in her pockets and her shoulders slightly lifted. | Dutch Angle — The frame is rotated a few degrees so the horizon and poles lean, as if shot one-handed in passing. |
 | 6 | B | Walking Shot — She is caught mid-stride on the tree-lined walk, arms swinging against the legs. | 手ぶれ — A slight handheld sway follows her walk while the whole avenue stays sharp. |
-| 7 | B | 斜め座り — She sits sideways on brick steps with her legs together and the ankles crossed. | 俯拍 — From a few steps above, the stair edges lead down to her and the dappled ground stays sharp. |
+| 7 | B | 斜め座り — She sits sideways on brick steps with her legs together and the ankles crossed. | High Angle — From a few steps above, the stair edges lead down to her and the dappled ground stays sharp. |
 | 8 | B | 髪を耳にかける — She combs a loose strand behind one ear with the elbow raised, showing the side of her face. | カメラ目線 — Close at eye level, she looks straight into the lens, the leafy street still sharp behind her. |
-| 9 | C | 頬杖 — She props her cheek on one hand at a window counter, looking out. | 玻璃窗倒影 — Shot partly through the glass, so the street outside and her faint reflection overlap, all sharp. |
-| 10 | C | 両手持ち — She holds a warm mug in both hands against her chest. | 框架构图 — The window frame and the darker room box her into one bright rectangle, everything inside sharp. |
-| 11 | D | 足をブラブラ — She sits on the seawall with her legs swinging, hands braced on the edge. | 留白 — She fills one third of the frame and the sky and sea take the rest, the horizon in sharp focus. |
+| 9 | C | 頬杖 — She props her cheek on one hand at a window counter, looking out. | Window Double Reflection — Shot partly through the glass, so the street outside and her faint reflection overlap, all sharp. |
+| 10 | C | 両手持ち — She holds a warm mug in both hands against her chest. | Frame Within a Frame — The window frame and the darker room box her into one bright rectangle, everything inside sharp. |
+| 11 | D | 足をブラブラ — She sits on the seawall with her legs swinging, hands braced on the edge. | Negative Space — She fills one third of the frame and the sky and sea take the rest, the horizon in sharp focus. |
 | 12 | D | 伸び — She stretches both arms straight up facing the low sun, her back arching. | Extreme Wide Shot — The whole figure is a small mark on a wide stretch of sand under a huge sky, all sharp. |
 
 ## 맞지 않는 것

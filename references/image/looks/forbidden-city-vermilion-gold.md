@@ -3,7 +3,7 @@
 | 항목 | 값 |
 |---|---|
 | 부르는 이름 | 故宫朱红暖金; 故宫朱红暖金与宫廷历史胶片; 宫廷历史胶片; 朱红暖金; 故宫朱红滤镜; 故宫人文大片; 고궁 주홍 웜골드; 고궁 주홍 웜골드 필름; 궁정 역사 필름; 궁중 역사 필름; Forbidden City vermilion and warm gold; Imperial palace film look |
-| 부르지 않는 말 | 故宫; 고궁; 紫禁城; 자금성; 红墙; 붉은 담장; 北京旅行; 베이징 여행; 베이징 스냅 |
+| 부르지 않는 말 | 故宫; 고궁; 紫禁城; 자금성; 红墙; 붉은 담장; 北京旅行; 베이징 여행; 베이징 스냅; 고궁 화보; 고궁 인물; 자금성 화보; 자금성 인물 사진; 故宫人像; 紫禁城人像; 红墙人像; 붉은 담 인물; 붉은 벽 인물; 중국 궁궐; 황궁; 태화전; 太和殿; Forbidden City; Forbidden City portrait |
 | 문화권 | CN(北京) |
 | 기본 갈래 | A |
 
@@ -16,7 +16,7 @@
 | light-key | 해가 붉은 담·汉白玉·琉璃瓦에 닿고 되돌아온 반사광이 얼굴을 채운다. 전각 안에서는 문과 창으로 들어온 빛 한 줄기가 전부다 |
 | palette | 宫墙 朱红, 琉璃 금황, 汉白玉 흰색, 묵흑. 그림자는 따뜻한 적갈색(A·B 낮)이거나 서늘한 청회색(대리석·눈·새벽). 한 장에 강조색 하나(C의 공작청 포함). 네온·파스텔·형광·진한 마젠타 없음 |
 | grain | 고운 필름 입자가 화면 전체에, 어두운 곳에서 조금 더 |
-| lens | 표준~중망원(35~85mm 환산), 얼굴 왜곡 없음. 인물 뒤에서 담·지붕·계단의 선이 또렷이 읽힌다. 쌍 1만 망원 압축, 쌍 3만 초광각 |
+| lens | 표준~중망원(35~85mm 환산), 얼굴 왜곡 없음. 인물 뒤에서 담·지붕·계단의 선이 또렷이 읽힌다. 쌍 1만 망원 압축, 쌍 3만 초광각(S3은 70–200mm 망원, S4는 24–70mm) |
 | figure | 한 사람이 거대한 건축 앞에 꼿꼿이 서거나 천천히 걷는다. 붉은 벽·금빛 기와·흰 대리석의 큰 색면이 화면을 채우고 인물은 어두운 옷 한 점이다. 시선은 먼 곳이나 렌즈를 조용히 지난다. 큰 웃음과 정면 증명사진 자세 없음 |
 
 ## 갈래 고르기
@@ -33,9 +33,9 @@
 | face-light | 모든 갈래에서 끈다. 얼굴 빛은 Light 줄이 정한다 | Iris 꼬리의 얼굴 입체광이 역광 윤곽(#077 #085), 어두운 전각(#083), 향 연기 빛줄기(#079), 격자 그림자(#082)와 한 프롬프트에서 부딪혔다 |
 | base, lip | 카드 줄이 이긴다 | Iris 메이크업 고정문의 豆沙红唇 위에 프리셋 입술색(正红, 枫叶红, 朱砂)이 또 얹혀 입술색이 둘이 됐다 |
 | face-clear | A·B에서 완화한다. 바람에 날린 가닥이 뺨·목·귀 옆을 지나가도 되고 눈썹과 눈만 덮지 않는다 | #077 #080 #085 #090은 바람에 머리가 날리는 장면인데 Iris 꼬리가 `严禁乱发遮挡眉眼`로 지웠다 |
-| catchlight | B는 카드의 `金色眼神光` 줄이 이긴다. S6(눈을 감는 세트)은 끈다 | 해를 등진 장면(#085)은 눈동자에 닿는 빛이 낙조 쪽이고, #079는 눈을 거의 감아 점을 찍을 수 없다 |
-| lens | 켠다(`无畸变` 줄). 쌍 1은 `长焦压缩` 줄이 lens 슬롯을 채우니 `无畸变`을 끄고, 쌍 3은 초광각이 렌즈를 정하니 끈다 | #077(70-200mm)·#085(100-500mm)·#090(16-35mm)이 각자 렌즈를 정하는데 Iris 꼬리의 50mm 평시 무왜곡이 한 프롬프트에 둘째 렌즈를 얹었다 |
-| framing | 켠다. 쌍 3·4·5는 프레임 범위를 직접 말하니 그 쌍에서는 끈다(3:4 비율은 그대로). 나머지 쌍의 Camera 줄은 자리·각도·구도 기법만 정한다 | Iris 꼬리의 `腰部以上` 구도가 광장·계단·전각 전경 구도와 갈렸다 |
+| catchlight | B는 카드의 `金色眼神光` 줄이 이긴다. 해가 진 S4(블루아워)와 눈을 감는 `闭目冥思`(S6 포함)는 끈다 | 해를 등진 장면(#085)은 눈동자에 닿는 빛이 낙조 쪽이고, #079는 눈을 거의 감아 점을 찍을 수 없다 |
+| lens | 켠다. 어느 쌍·세트를 골라도 렌즈를 말하는 줄은 정확히 하나다. 카드에 lens 줄이 없으니 기본은 고정 몫 `无畸变` 줄이다. 쌍 1은 Camera의 `长焦压缩` 줄이, 쌍 3은 Camera의 `一点透视` 줄(초광각)이 렌즈를 말하니 그 쌍에서는 `无畸变`을 붙이지 않는다. 세트가 렌즈를 말하면(S3 70–200mm 망원, S4 24–70mm) 그 값이 `无畸变`을 대신한다 | #077(70-200mm)·#085(100-500mm)·#090(16-35mm)이 각자 렌즈를 정하는데 Iris 꼬리의 50mm 평시 무왜곡이 한 프롬프트에 둘째 렌즈를 얹었다 |
+| framing | 켠다. 쌍 3·4·5·6은 프레임 범위를 직접 말하니 그 쌍에서는 끈다(3:4 비율은 그대로). 나머지 쌍의 Camera 줄은 자리·각도·구도 기법만 정한다 | Iris 꼬리의 `腰部以上` 구도가 광장·계단·전각 전경 구도와 갈렸다 |
 | ratio | 켠다. 사용자 비율이 없으면 3:4 세로 | 쌍은 비율을 정하지 않는다 |
 | grain | 카드 줄이 이긴다. 모든 갈래에서 Optics의 `胶片颗粒` 줄이 입자를 정하고 `数码噪点` 줄은 붙이지 않는다 | 디지털 본체로 찍지만 마감이 필름 톤이고 Iris 영문 블록도 `cinema 35mm grain`이라 디지털 노이즈 줄과 입자 문장이 둘이 된다 |
 
@@ -53,7 +53,7 @@
 | D | hair | 低马尾 — Hair is tied in a smooth low ponytail at the nape and tucked behind the ears, so the tail hangs straight down the back. (滤镜 #089) |
 | D | hair-pin | 如意簪 — A milky white jade pin topped with a ruyi cloud-head is pushed through a neat bun and glows softly against the dark hair. (滤镜 #082) |
 | A | brow | 野生眉 — Flat, straight brows are left unshaped with each hair visible, set level over the eyes. (滤镜 #076) |
-| 전부 | base | 冷白瓷肌 — A semi-matte cool porcelain base with a faint satin glow only on the high points, so the skin looks pale beside a red wall. |
+| 전부 | base | 冷白瓷肌 — A semi-matte cool porcelain base with a faint satin glow only on the high points, so the base reads as a clean cool porcelain finish beside a red wall. |
 | A, B | lip | 正红唇 — A saturated true-red lip with a clean peak and edge, matte and dense enough to hold its own beside the palace wall. |
 | C | lip | 枫叶红唇 — A deep maple-red lip with a faint brown tea undertone, velvety matte with a clean edge. (发型与妆容 #013) |
 | D | lip | 水光唇 — A sheer watery pink lip colour with a soft stain, shining a little at the centre. |
@@ -156,19 +156,19 @@
 | C, D | stock | Fujifilm GFX — A medium-format digital look with fine material texture and rich deep colour, so silk, wood and enamel keep distinct surfaces. (滤镜 #079 #088) |
 | C | stock | Sony A7R V — A high-resolution full-frame look with clean matte detail and cool grey-white tonality under a soft spot. (滤镜 #084) |
 | D | stock | Hasselblad X2D 100C — A medium-format digital look with natural, smooth colour, a wide tonal range and delicate gradation. (滤镜 #082) |
-| A, B | color | 朱红暖调 — A warm grade leaning reds toward cinnabar and golds toward amber, with shadows going ochre-brown and skin staying pale. (滤镜 #076) |
+| A, B | color | 朱红暖调 — A warm grade leaning reds toward cinnabar and golds toward amber, with shadows going ochre-brown and only a faint warm bounce reaching the skin. (滤镜 #076) |
 | C | color | 金褐暗调 — A low-key grade where deep shadows turn gold-brown like old resinous wood and the few highlights stay small and warm. (滤镜 #083) |
 | 전부 | grain | 胶片颗粒 — Fine, even film grain sits across the whole frame, slightly heavier in the shadows. |
 
-## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 요청의 장소·소품·시간대·의상 가운데 둘 이상이 같으면 통째로 쓴다. 우선순위는 image-brief.md §4 '룩 카드' 4항)
+## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 요청의 장소·소품·시간대·의상 가운데 둘 이상이 그 세트의 단서와 같으면 통째로 쓰고, 세트 값은 고정 사실보다 먼저다. 규칙은 image-brief.md §4 '룩 카드' 4항과 '비워 둔 층')
 | 세트 | 갈래 | 묶음 |
 |---|---|---|
-| S1 宫墙朱红 (滤镜 #076) | A | Hair 一丝不苟低盘发, 검은 머리를 뒤로 올린 고전적인 낮은 쪽, 竹节簪(순은 죽절 비녀) / Brow 野生眉 / Lip 正红唇(무광의 짙은 정궁 붉은색, 豆沙 립은 얹지 않음) / Outfit 麦尔登呢(검은 중량 순양모 立领 더블 코트, 양손은 주머니에) / Pose 红墙 옆 青砖 석판 길을 천천히 걷는다 / Scene 红墙, 풍화한 주홍 담과 青砖 석판 길 / Light 柔和漫射光(5000K 오후, 낡은 붉은 회벽을 비추는 부드러운 햇빛, 그림자는 따뜻한 적갈색) / Optics Leica M11, 朱红暖调, 胶片颗粒 / Expression 波澜不惊, 붉은 담 끝을 바라본다 |
-| S2 太和冬雪 (滤镜 #080) | A | Hair 黑长直, 몇 가닥이 찬바람에 날림(face-clear 완화) / Lip 正红唇 / Outfit 羊绒大衣(먹빛 더블페이스 순 캐시미어 롱코트) / Scene 红墙, 눈 쌓인 太和殿 광장의 주홍 담과 흰 눈 덮인 처마 / Light 雪地反光(6200K 눈 갠 뒤의 맑고 차가운 흰 하늘빛, 红·白·黑 세 색의 대비) / Optics Sony A1, 胶片颗粒 / Expression 不怒自威, 턱을 살짝 들고 렌즈를 본다 / Pose 天鹅颈松弛 |
-| S3 景山金顶 (滤镜 #077) | B | Hair 微卷长发, 산정 바람에 흩날림(face-clear 완화) / Lip 枫叶红唇(무광) / Outfit 羊绒大衣, 墨绿(깊은 에메랄드 그린 더블페이스 롱코트, 열어 입음) / Pose 登高俯瞰, 景山 万春亭 汉白玉 난간 옆 / Scene 景山, 아래로 琉璃瓦 금빛 지붕의 바다 / Light 逆光金边(3800K 낙조, 머리카락과 코트 가장자리에 황금 윤곽, 얼굴 뼈대에 하이라이트) / Optics Canon EOS R5, 70-200mm 망원 / Expression 居高临下, 턱을 살짝 들고 내려다본다 / Camera 远景 |
-| S4 角楼蓝调 (滤镜 #086) | B | Hair 一丝不苟低盘发 / Lip 正红唇 / Outfit 风衣(玄黑 중량 실크 더블 수정 트렌치) / Scene 角楼, 해자 汉白玉 난간 곁, 수면에 누각의 금빛 윤곽이 거울처럼 비친다 / Light 蓝调时刻(6800K~3200K 혼합: 짙은 남색 황혼 하늘과 따뜻한 누각 조명, 옆에서 약한 부드러운 빛이 얼굴을 비춘다) / Optics Nikon Z8(24-70mm), 胶片颗粒 / Expression 침착하게 렌즈를 돌아본다 / Pose 回眸 |
-| S5 景泰蓝 (滤镜 #084) | C | Hair 높이 틀어 올린 우아한 현대식 쪽 / Props 景泰蓝 귀걸이(순금 掐丝 공작청 법랑) / Lip 正红唇(무광의 복고 붉은색) / Outfit 改良旗袍(깊은 孔雀蓝 중량 크레이프 새틴 立领 롱 드레스), 织金(가장자리 순금 실 자수 파이핑) / Pose 双手叠放腹前 / Scene 珍宝馆, 어두운 배경의 골동 진열 앞 / Light 부드러운 스포트(5200K), 공작청 새틴이 법랑 같은 보석 광택을 내고 금사 자수가 반짝인다 / Optics Sony A7R V, 胶片颗粒 / Expression 不怒自威, 렌즈를 직시 |
-| S6 古刹香火 (滤镜 #079) | D | Hair 碎发低发髻 / Lip 水光唇(연한 물분홍) / Outfit 长衫(素黑 중량 실크 对襟 장삼) / Props 三炷香(가는 향 세 대를 두 손으로 든다) / Scene 雍和宫, 큰 청동 향로 앞 / Light 丁达尔(4600K 이른 아침 햇빛이 古柏 가지를 지나 청남색 향 연기 속에 빛줄기를 만든다) / Optics Fujifilm GFX, 胶片颗粒 / Expression 闭目冥思, 눈을 거의 감는다(catchlight 끔) / Pose 双手叠放腹前 |
+| S1 宫墙朱红 (滤镜 #076) | A | 단서: 红墙, 青砖 석판 길, 검은 더블 코트, 竹节簪, 오후 햇빛 / Hair 一丝不苟低盘发, 검은 머리를 뒤로 올린 고전적인 낮은 쪽, 竹节簪(순은 죽절 비녀) / Brow 野生眉 / Lip 正红唇(무광의 짙은 정궁 붉은색, 豆沙 립은 얹지 않음) / Outfit 麦尔登呢(검은 중량 순양모 立领 더블 코트, 양손은 주머니에) / Pose 红墙 옆 青砖 석판 길을 천천히 걷는다 / Scene 红墙, 풍화한 주홍 담과 青砖 석판 길 / Light 柔和漫射光(5000K 오후, 낡은 붉은 회벽을 비추는 부드러운 햇빛, 그림자는 따뜻한 적갈색) / Optics Leica M11, 朱红暖调, 胶片颗粒 / Expression 波澜不惊, 붉은 담 끝을 바라본다 |
+| S2 太和冬雪 (滤镜 #080) | A | 단서: 눈 쌓인 太和殿 광장, 红墙, 흰 눈, 먹빛 캐시미어 롱코트, 눈 갠 날 / Hair 黑长直, 몇 가닥이 찬바람에 날림(face-clear 완화) / Lip 正红唇 / Outfit 羊绒大衣(먹빛 더블페이스 순 캐시미어 롱코트) / Scene 红墙, 눈 쌓인 太和殿 광장의 주홍 담과 흰 눈 덮인 처마 / Light 雪地反光(6200K 눈 갠 뒤의 맑고 차가운 흰 하늘빛, 红·白·黑 세 색의 대비) / Optics Sony A1, 胶片颗粒 / Expression 不怒自威, 턱을 살짝 들고 렌즈를 본다 / Pose 天鹅颈松弛 |
+| S3 景山金顶 (滤镜 #077) | B | 단서: 景山, 万春亭 난간, 琉璃瓦 지붕의 바다, 낙조, 墨绿 코트, 70-200mm 망원 / Hair 微卷长发, 산정 바람에 흩날림(face-clear 완화) / Lip 枫叶红唇(무광) / Outfit 羊绒大衣, 墨绿(깊은 에메랄드 그린 더블페이스 롱코트, 열어 입음) / Pose 登高俯瞰, 景山 万春亭 汉白玉 난간 옆 / Scene 景山, 아래로 琉璃瓦 금빛 지붕의 바다 / Light 逆光金边(3800K 낙조, 머리카락과 코트 가장자리에 황금 윤곽, 얼굴 뼈대에 하이라이트) / Optics Canon EOS R5, 70-200mm 망원 / Expression 居高临下, 턱을 살짝 들고 내려다본다 / Camera 远景 |
+| S4 角楼蓝调 (滤镜 #086) | B | 단서: 角楼, 해자, 블루아워, 트렌치, 汉白玉 난간, 수면 반영 / Hair 一丝不苟低盘发 / Lip 正红唇 / Outfit 风衣(玄黑 중량 실크 더블 수정 트렌치) / Scene 角楼, 해자 汉白玉 난간 곁, 수면에 누각의 금빛 윤곽이 거울처럼 비친다 / Light 蓝调时刻(6800K~3200K 혼합: 짙은 남색 황혼 하늘과 따뜻한 누각 조명, 옆에서 약한 부드러운 빛이 얼굴을 비춘다) / Optics Nikon Z8(24-70mm), 胶片颗粒 / Expression 침착하게 렌즈를 돌아본다 / Pose 回眸 |
+| S5 景泰蓝 (滤镜 #084) | C | 단서: 珍宝馆, 골동 진열, 孔雀蓝 旗袍, 景泰蓝 귀걸이, 스포트 / Hair 높이 틀어 올린 우아한 현대식 쪽 / Props 景泰蓝 귀걸이(순금 掐丝 공작청 법랑) / Lip 正红唇(무광의 복고 붉은색) / Outfit 改良旗袍(깊은 孔雀蓝 중량 크레이프 새틴 立领 롱 드레스), 织金(가장자리 순금 실 자수 파이핑) / Pose 双手叠放腹前 / Scene 珍宝馆, 어두운 배경의 골동 진열 앞 / Light 부드러운 스포트(5200K), 공작청 새틴이 법랑 같은 보석 광택을 내고 금사 자수가 반짝인다 / Optics Sony A7R V, 胶片颗粒 / Expression 不怒自威, 렌즈를 직시 |
+| S6 古刹香火 (滤镜 #079) | D | 단서: 雍和宫, 향, 古柏, 长衫, 이른 아침 햇빛, 눈을 감음 / Hair 碎发低发髻 / Lip 水光唇(연한 물분홍) / Outfit 长衫(素黑 중량 실크 对襟 장삼) / Props 三炷香(가는 향 세 대를 두 손으로 든다) / Scene 雍和宫, 큰 청동 향로 앞 / Light 丁达尔(4600K 이른 아침 햇빛이 古柏 가지를 지나 청남색 향 연기 속에 빛줄기를 만든다) / Optics Fujifilm GFX, 胶片颗粒 / Expression 闭目冥思, 눈을 거의 감는다(catchlight 끔) / Pose 双手叠放腹前 |
 
 ## 포즈·구도 쌍
 | 번호 | 갈래 | Pose | Camera |
@@ -178,7 +178,7 @@
 | 3 | A | 迎风疾行 — She strides straight toward the lens along the stone avenue with her long coat flaring behind her and her hair pushed back. | 一点透视 — A low camera with an ultra-wide lens, set well back, runs the paving to one vanishing point at the far halls with her on the centre line. |
 | 4 | A | 天鹅颈松弛 — She stands loose-shouldered beside a snow-capped red wall with her chin lifted slightly and her neck long. | 留白 — She fills about one third of the vertical frame while the snow, the wall and the pale sky around her stay plain and quiet. |
 | 5 | B | 登高俯瞰 — She stands upright at the marble railing of a hilltop pavilion, her eyes looking down and out over the roofs below. | 远景 — The frame stays wide so she reads small beside the railing while the sea of yellow roofs fills the rest. |
-| 6 | B | 台阶驻足垂眸 — She stops on a carved marble step with one foot slightly ahead and her eyes lowered toward the lens below, one hand gathering the robe hem. | 对角线构图 — The stair edge and the balustrade run corner to corner of the frame and she stands where they cross. |
+| 6 | B | 台阶驻足垂眸 — She stops on a carved marble step with one foot slightly ahead and her eyes lowered toward the lens below, one hand gathering the robe hem. | 对角线构图 — The stair edge and the balustrade run corner to corner of the frame and she stands where they cross, the frame running from her head down to the step under her feet. |
 | 7 | B | 回眸 — She walks away along the moat balustrade and turns her head back over one shoulder toward the lens. | 三分法构图 — She stands on one vertical third line and the corner tower with its reflection fills the other two thirds. |
 | 8 | C | 单手扶柱 — One hand rests flat on a towering pillar beside her while her face turns into profile toward the light at the door. | 前景遮挡 — A blurred pillar edge crosses one side of the frame in front of her and deepens the dim hall. |
 | 9 | C | 凝望天际 — Her body turns sideways and her chin lifts so her eyes rest on the painted beams high overhead. | 仰拍 — The camera looks up from below so the brackets and beams close in above her head and her profile stands against them. |

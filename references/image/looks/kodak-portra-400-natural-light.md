@@ -3,7 +3,7 @@
 | 항목 | 값 |
 |---|---|
 | 부르는 이름 | 柯达Portra 400; 柯达Portra400人像传奇; 柯达人像传奇; 코닥 포트라 400; 포트라 400; Kodak Portra 400; Portra 400; Portra 400 portrait; 포트라 400 인물; 포트라 인물 사진; 포트라 자연광; Portra natural soft light |
-| 부르지 않는 말 | 코닥; Kodak; 코닥 필름; 필름 인물 사진; 필름 사진; 자연광 인물; 뉴욕 스냅; 센트럴파크; 부드러운 빛; film portrait; natural light portrait |
+| 부르지 않는 말 | 코닥; Kodak; 코닥 필름; 필름 인물 사진; 필름 사진; 자연광 인물; 뉴욕 스냅; 센트럴파크; 부드러운 빛; film portrait; natural light portrait; 포트라; Portra; 포트라 필름; 포트라 감성; 포트라 느낌; 필카; 필카 감성; 필름 감성; 필름 느낌; 필름 카메라; 인물 필름; 자연광 필름; 부드러운 자연광 인물 |
 | 문화권 | US(뉴욕·동부, 캘리포니아) |
 | 기본 갈래 | A |
 
@@ -14,9 +14,9 @@
 | closer | `Portra 400 portrait` |
 | time | 낮. 해가 떠 있어도 얼굴에는 직사가 닿지 않는다(창, 그늘, 흐린 하늘, 잎, 벽 반사가 걸러 준다). 아침 창광 5200K, 흐린 낮·그늘 5300~5600K, 가을 오후 5000K, 과수원 4800K. D 갈래의 블루아워만 일몰 직후(4000~6500K). 한밤·네온·한낮 하드 섀도 없음 |
 | light-key | 크고 부드러운 광원 하나(창, 흐린 하늘, 열린 그늘, 밝은 반사면, 잎에 걸러진 해)가 옆이나 아래에서 얼굴을 감싸고 그림자는 연하게 떨어진다. 플래시·인공 조명 없음. D의 블루아워에서만 먼 도시 불빛이 따뜻한 배경 빛이 된다 |
-| palette | 복숭아·살구빛 피부, 크림·상아 흰색, 벽돌·카멜·드랩, 이끼·세이지 녹색, 안개 낀 청회색 그림자. 채도가 낮고 전체가 따뜻하다. 네온·형광색·차가운 청록 낮빛·고채도 HDR 색 없음 |
+| palette | 필름이 색을 낮은 채도로 누르고 전체를 따뜻하게 만든다: 피부 하이라이트와 흰색은 복숭아·살구·크림 쪽으로, 중간색은 벽돌·카멜·드랩·이끼·세이지 쪽으로, 그림자는 안개 낀 청회색 쪽으로 기운다. 네온·형광색·차가운 청록 낮빛·고채도 HDR 색 없음(D의 블루아워는 짙은 남색 하늘과 금빛 도시 불빛이 예외) |
 | grain | 고운 컬러 네거티브 입자가 화면 전체에, 중간톤에서 조금 보인다. 하이라이트는 크림처럼 풀린다. 645·6x6·6x7 중형 바디는 입자가 거의 안 보인다 |
-| lens | 표준~중망원 인물 렌즈, 눈높이, 얼굴 비례 자연. 35mm 줄이 있으면 거리나 회랑이 조금 더 들어온다. 12번 쌍(close-up)만 얼굴이 화면을 채운다 |
+| lens | 표준~중망원 인물 렌즈, 얼굴 비례 자연. 카메라 높이는 쌍이 정한다. 35mm 줄이 있으면 거리나 회랑이 조금 더 들어온다. 12번 쌍(close-up)만 얼굴이 화면을 채운다 |
 | figure | 한 사람이 빛 속에서 멈추거나 천천히 움직인다. 고개를 빛 쪽이나 렌즈 쪽으로 돌린다. 정면 증명사진 자세 없음. 모든 인물은 성인 |
 
 ## 갈래 고르기
@@ -35,9 +35,9 @@
 | base, blush | 카드 줄이 이긴다. 전부 `Skin Tint`와 `Peach Blush`, A의 운동 장면만 `Post-Workout Flush` | #072의 땀 광택과 #083의 거의 맨 피부가 Iris 고정 메이크업문과 겹쳤다 |
 | lip | D에서 카드 줄(`ChapStick`)이 이긴다. A·B·C는 켠다 | #083은 맨 입술에 가까운데 고정문은 과즙 젤리 입술을 얹었다 |
 | grain | 카드의 `Fine Portra Grain` 줄이 이긴다 | Iris 꼬리가 35mm와 6x7 중형(#071 #073 #075 #081 #083 #084 #085)에 같은 입자 문구를 넣었다 |
-| lens | 켠다. Optics `lens` 줄(`Summicron 50mm f/2`, `Summicron 35mm f/2`, `Zeiss Planar 80mm f/2.8`)이 있는 프롬프트는 `无畸变` 줄을 끈다 | #076(38mm) #077 #078 #082(35mm)에 50mm 무왜곡 꼬리가 같이 있어 렌즈가 둘이었다 |
-| framing | 켠다. 쌍 10(Extreme Wide Shot)·11(Medium Close-Up)·12(close-up)는 프레임 범위를 직접 말하니 그 말과 부딪치지 않게 쓴다 | 나머지 쌍은 범위를 말하지 않는다 |
-| ratio | 켠다. 사용자 비율이 없으면 3:4 세로 | 쌍은 비율을 정하지 않는다. #084의 6x6 바디도 결과는 3:4다 |
+| lens | 끈다. 렌즈를 말하는 줄은 프롬프트마다 정확히 하나이고 아래가 정한다. 쌍 1은 Camera 줄 `telephoto compression`이 렌즈 줄이니 Optics `lens` 줄도 붙이지 않는다. 쌍 2~12는 Camera 줄이 렌즈를 말하지 않으니 갈래의 Optics `lens` 줄 하나가 렌즈 줄이다(A `Summicron 50mm f/2` 또는 `Summicron 35mm f/2`, B·D `Zeiss Planar 80mm f/2.8`, C `Summicron 35mm f/2`). 세트를 쓰면 세트 Optics가 말한 렌즈(S1·S2 Planar 80mm, S3 Sonnar 38mm, S4 Summicron 35mm, S5 Mamiya G 80mm, S6 Takumar 105mm)가 렌즈 줄이고 Optics `lens` 줄을 따로 두지 않는다. `无畸变`은 어느 경우에도 붙이지 않는다(카메라 높이를 쌍이 정한다: 쌍 6 low-angle shot, 쌍 5 Bird's-eye View) | #076(38mm) #077 #078 #082(35mm)에 50mm 무왜곡 꼬리가 같이 있어 렌즈가 둘이었다. 렌즈 줄의 출처를 쌍마다 정한다 |
+| framing | 켠다. 쌍 10(Extreme Wide Shot)·11(Medium Close-Up)·12(close-up)는 프레임 범위를 직접 말하니 그 말과 부딪치지 않게 쓴다. 쌍 1(걸음)·3(코트 자락)·5(뻗은 다리와 발목)·6(계단을 내려옴)·8(맨발)·9(옮긴 체중)은 Pose가 낮은 몸을 말하니 framing 줄의 범위를 머리부터 발끝으로 쓴다 | 나머지 쌍은 범위를 말하지 않고 Pose가 허리 위에서 보인다 |
+| ratio | 켠다. 사용자 비율이 없으면 3:4 세로. 6x6·6x7 바디(D의 `Rolleiflex 2.8F`·`Pentax 67`, S2의 Hasselblad 500C/M)도 이 카드는 3:4 세로 프린트로 쓴다. 정사각을 원하면 사용자가 말한다 | 쌍은 비율을 정하지 않는다. Iris 원본이 6x6 바디(#084)에도 3:4를 걸었다 |
 
 ## Hair and makeup
 | 갈래 | 슬롯 | 줄 |
@@ -98,7 +98,7 @@
 ## Style
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
-| 전부 | style-look | Portra Natural Light — Warm peach skin, creamy highlights and low-contrast pastel color under soft window, shade or overcast daylight on Kodak Portra 400. |
+| 전부 | style-look | Portra Natural Light — Warm peach tones in the skin highlights, creamy highlights and low-contrast pastel color under soft window, shade or overcast daylight on Kodak Portra 400. |
 | A | style | NYC Street Style — Tailored layers and quick walking in crisp daylight between stone buildings, the sidewalk lifting soft light into the face. |
 | A | style-cafe | Silver Lake Indie — Matte concrete, plain wooden chairs and an easy intellectual café mood in flat daylight. |
 | B | style | Raw Linen Minimalism — Undyed wrinkled cotton and linen in ivory, matte surfaces and quiet empty space around her. |
@@ -107,7 +107,7 @@
 | C | style-campus | Ivy League — Oxford shirts, cricket knits and navy blazers against old brick and ivy in soft autumn light. |
 | D | style | Sunlit Vitality — Warm clear light on glowing skin and fresh greens, with bright whites and soft green accents. |
 | D | style-pastoral | Cottagecore — A soft pastoral look of tiny florals and loose cotton gathers in warm leaf-filtered light. |
-| 전부 | palette | palette — Peach and apricot skin, cream and ivory whites, brick, camel and drab olive with misty blue-grey shadows; low saturation and warm overall, with no neon, no fluorescent color and no cold cyan daylight. |
+| 전부 | palette | palette — The film warms the skin highlights to peach and apricot and the whites to cream and ivory, with brick, camel and drab olive midtones and misty blue-grey shadows; low saturation and warm overall, and nothing neon, fluorescent or cold cyan appears in the daylight. |
 
 ## Scene
 | 갈래 | 슬롯 | 줄 |
@@ -131,7 +131,7 @@
 | A | face-light | Open Shade — Daylight in shade under an awning gives soft even light on the face with gentle shadows and clean neutral color. |
 | A | light-fill | Sidewalk Bounce Light — Pale granite pavement reflects soft fill upward into the jaw, collarbones and eye sockets without any hard shadow. |
 | A | sun | Noon Sunlight — Strong overhead sun lands on a white cotton shirt while the face sits in open shade, so the whites keep every thread instead of clipping. |
-| A, D | sky | Overcast Light — A grey cloud layer acts as one big softbox, giving shadowless even light and quiet, slightly cool skin tones. |
+| A, D | sky | Overcast Light — A grey cloud layer acts as one big softbox, giving shadowless even light and a quiet, slightly cool color on the skin. |
 | B | face-light | Window Light — Soft morning daylight from one window through a white sheer curtain models the face with a bright side and a gentle shadow side. |
 | B | light-fill | Venetian Blind Shadows — Sun through wooden blinds lays parallel soft-edged bands of gold and shadow across her face, shoulders and the white wall. |
 | C, D | face-light | dappled light — Sun filtered through yellow elm leaves or orchard canopy breaks into soft moving spots on her face, shoulders and the ground. |
@@ -142,11 +142,11 @@
 ## Optics
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
-| 전부 | stock | Kodak Portra 400 — Warm, low-contrast color negative with creamy peach skin, soft highlight roll-off and golden light that never turns harsh. |
+| 전부 | stock | Kodak Portra 400 — Warm, low-contrast color negative with creamy peach tones in the skin highlights, soft highlight roll-off and golden light that never turns harsh. |
 | 전부 | grain | Fine Portra Grain — Very fine, even grain stays soft in the midtones and nearly vanishes in the highlights, almost invisible on medium-format frames. |
 | 전부 | highlight | Highlight Roll-off — Bright areas fade gradually into white with no clipped edge, keeping thread detail in white cotton and a soft glow on skin highlights. |
 | 전부 | tone | Warm Peach Tones — Skin takes a healthy peach glow with a faint pink flush in the cheeks and soft lavender-grey shadows. |
-| B, D | exposure | Overexposed Highlights — The negative is exposed a little generously, so highlights push toward paper-white with softly bleeding edges while the midtones stay airy. |
+| B, D | exposure | Overexposed Highlights — The negative is exposed a little generously, so highlights push toward paper-white yet still roll off with no hard clipped edge while the midtones stay airy. |
 | C | color | Muted Low-Saturation — Colors pull back to soft greys, beiges and faded greens with gently lowered contrast. |
 | A | body | Leica M6 — A 35mm rangefinder frame with a soft Leica glow, rich micro-contrast and an unobtrusive candid feel. |
 | B | body | Contax 645 — A medium-format frame with very smooth tone transitions and a silky shallow focus plane. |
@@ -157,15 +157,15 @@
 | A, C | lens-wide | Summicron 35mm f/2 — A wide-normal lens keeps a little of the street or colonnade in the frame with a soft, smooth falloff behind her. |
 | A, B, D | lens-medium | Zeiss Planar 80mm f/2.8 — A medium-format portrait lens gives fine detail at the focus point and a slow, smooth fall into the soft background. |
 
-## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 요청의 장소·소품·시간대·의상 가운데 둘 이상이 같으면 통째로 쓴다. 우선순위는 image-brief.md §4 '룩 카드' 4항)
+## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 요청의 장소·소품·시간대·의상 가운데 둘 이상이 그 세트의 단서와 같으면 통째로 쓰고, 세트 값은 고정 사실보다 먼저다. 규칙은 image-brief.md §4 '룩 카드' 4항과 '비워 둔 층')
 | 세트 | 갈래 | 묶음 |
 |---|---|---|
-| S1 Manhattan Window Morning (滤镜 05 #071) | B | Hair Golden Balayage, 짙은 금빛 긴 머리가 가볍게 말려 흰 면 나이트셔츠 어깨 위에 내려앉음 / Outfit Cotton Nightshirt, 흰 면 나이트셔츠 / Scene Manhattan Loft, 동향 통창과 흰 시어 커튼, 창가에 앉음 / Light Window Light 5200K, 커튼을 거친 아침 확산광이 얼굴과 쇄골을 감싸고 딱딱한 그림자가 없음 / Optics Contax 645 + Zeiss Planar 80mm f/2, Kodak Portra 400(320으로 노출), Highlight Roll-off, 아주 고운 입자 / Expression 창의 빛 쪽으로 고개를 돌려 부드럽게 웃음 |
-| S2 SoHo Sidewalk Bounce (滤镜 05 #073) | A | Hair sleek bob, 짙은 밤색 단발을 귀 뒤로 넘김 / Outfit Wool Blazer, 검은 싱글 울 블레이저와 흰 티 / Scene SoHo, 회색 화강암 인도와 자갈 모퉁이, 흐린 하늘 / Light Sidewalk Bounce Light 5600K, 인도 반사가 턱·쇄골·눈두덩을 채움 / Optics Hasselblad 500C/M + Zeiss Planar 80mm f/2.8, Kodak Portra 400, 중형이라 입자가 거의 없음 / Expression Cool Gaze, 차분하고 지적인 응시 / Pose Walking Shot, 모퉁이를 걸어 지나감 |
-| S3 White Shirt Patio (滤镜 05 #076) | A | Hair 짙은 갈색 부드러운 단발을 귀 뒤로 / Outfit Oxford Shirt, 큰 흰 면 셔츠 단추 셋을 풀고 + Denim Jeans, 워시드 / Scene Sidewalk Cafe Patio, 콘크리트 카페 야외 좌석 / Light Noon Sunlight 5500K, 흰 셔츠에 직사해도 면의 올이 살아 있고 얼굴은 입체적으로 밝음 / Optics Contax T2 + Zeiss Sonnar 38mm f/2.8, Kodak Portra 400, Highlight Roll-off / Expression 한 손으로 턱을 괴고 돌아보며 편안히 / Pose Elbow Prop |
-| S4 Central Park Autumn Mall (滤镜 05 #077) | C | Hair Golden Balayage, 짙은 금빛 곧은 긴 머리가 카멜 코트 어깨 위로 / Outfit Camel Coat, 카멜 울 트렌치 코트 / Scene Central Park Mall, 노란 느릅나무 가로수 길과 푹신한 낙엽 / Light dappled light 5000K, 노란 수관을 지난 빛이 석판 길과 얼굴에 얼룩지고 바람이 머리카락을 살짝 흔듦 / Optics Leica M-A + Summicron 35mm f/2, Kodak Portra 400, 노란 낙엽과 혈색이 균형 / Expression Pensive Gaze, 지적이고 부드러운 표정 / Pose Walking Shot, 느릅나무 길을 걸음 |
-| S5 Hudson Valley Mist (滤镜 05 #081) | C | Hair Golden Balayage, 깊은 금빛 긴 머리를 어깨 뒤로 / Outfit shawl, 두꺼운 짙은 회색 스코틀랜드 울 프린지 숄, 안에 상아색 립 탱크와 열어 입은 차콜 블레이저 / Props Ceramic Diner Mug, 김 나는 도자 머그 / Scene Hudson Valley, 삼나무 데크와 안개 낀 강 / Light Atmospheric Haze 5100K, 새벽 안개가 대비를 눌러 줌 / Optics Mamiya 7 II + Mamiya G 80mm f/4, Kodak Portra 400, 옅은 파스텔 녹색 / Expression Coffee Cup Contemplation / Pose Mug Steam Blow, 맨발로 데크에 서서 안개를 봄 |
-| S6 Griffith Blue Hour (滤镜 05 #085) | D | Hair Voluminous Curls, 깊은 금빛 큰 컬이 저녁 바람에 날림 / Outfit cashmere knit, 상아색 오버사이즈 캐시미어 / Scene Griffith Observatory, 흰 대리석 난간과 놋쇠 관람 망원경, 아래로 로스앤젤레스의 불빛 / Light Blue Hour 4000~6500K, 짙은 남색 하늘과 따뜻한 금빛 도시 불빛이 균형 / Optics Pentax 67 II + SMC Takumar 105mm f/2.4, Kodak Portra 400, 차가운 파랑과 따뜻한 금빛이 한 장에 / Expression Sunset Serene Grin, 돌아보며 은은한 미소 / Pose Over-the-Shoulder Glance, 난간에 기대어 돌아봄 |
+| S1 Manhattan Window Morning (滤镜 05 #071) | B | 단서: 맨해튼 로프트, 창가 아침, 흰 시어 커튼, 흰 나이트셔츠, 동향 창 / Hair Golden Balayage, 짙은 금빛 긴 머리가 가볍게 말려 흰 면 나이트셔츠 어깨 위에 내려앉음 / Outfit Cotton Nightshirt, 흰 면 나이트셔츠 / Scene Manhattan Loft, 동향 통창과 흰 시어 커튼, 창가에 앉음 / Light Window Light 5200K, 커튼을 거친 아침 확산광이 얼굴과 쇄골을 감싸고 딱딱한 그림자가 없음 / Optics Contax 645 + Zeiss Planar 80mm f/2, Kodak Portra 400(320으로 노출), Highlight Roll-off, 아주 고운 입자 / Expression 창의 빛 쪽으로 고개를 돌려 부드럽게 웃음 |
+| S2 SoHo Sidewalk Bounce (滤镜 05 #073) | A | 단서: 소호, 화강암 인도, 검은 울 블레이저, 단발, 흐린 하늘 / Hair sleek bob, 짙은 밤색 단발을 귀 뒤로 넘김 / Outfit Wool Blazer, 검은 싱글 울 블레이저와 흰 티 / Scene SoHo, 회색 화강암 인도와 자갈 모퉁이, 흐린 하늘 / Light Sidewalk Bounce Light 5600K, 인도 반사가 턱·쇄골·눈두덩을 채움 / Optics Hasselblad 500C/M + Zeiss Planar 80mm f/2.8, Kodak Portra 400, 중형이라 입자가 거의 없음 / Expression Cool Gaze, 차분하고 지적인 응시 / Pose Walking Shot, 모퉁이를 걸어 지나감 |
+| S3 White Shirt Patio (滤镜 05 #076) | A | 단서: 소호 카페 야외 좌석, 흰 옥스퍼드 셔츠, 청바지, 한낮, 턱 괴기 / Hair 짙은 갈색 부드러운 단발을 귀 뒤로 / Outfit Oxford Shirt, 큰 흰 면 셔츠 단추 셋을 풀고 + Denim Jeans, 워시드 / Scene Sidewalk Cafe Patio, 콘크리트 카페 야외 좌석 / Light Noon Sunlight 5500K, 흰 셔츠에 직사해도 면의 올이 살아 있고 얼굴은 입체적으로 밝음 / Optics Contax T2 + Zeiss Sonnar 38mm f/2.8, Kodak Portra 400, Highlight Roll-off / Expression 한 손으로 턱을 괴고 돌아보며 편안히 / Pose Elbow Prop |
+| S4 Central Park Autumn Mall (滤镜 05 #077) | C | 단서: 센트럴파크 몰, 느릅나무 낙엽길, 카멜 코트, 가을, 낙엽 / Hair Golden Balayage, 짙은 금빛 곧은 긴 머리가 카멜 코트 어깨 위로 / Outfit Camel Coat, 카멜 울 트렌치 코트 / Scene Central Park Mall, 노란 느릅나무 가로수 길과 푹신한 낙엽 / Light dappled light 5000K, 노란 수관을 지난 빛이 석판 길과 얼굴에 얼룩지고 바람이 머리카락을 살짝 흔듦 / Optics Leica M-A + Summicron 35mm f/2, Kodak Portra 400, 노란 낙엽과 혈색이 균형 / Expression Pensive Gaze, 지적이고 부드러운 표정 / Pose Walking Shot, 느릅나무 길을 걸음 |
+| S5 Hudson Valley Mist (滤镜 05 #081) | C | 단서: 허드슨 밸리, 안개 낀 강, 삼나무 데크, 머그잔, 울 숄 / Hair Golden Balayage, 깊은 금빛 긴 머리를 어깨 뒤로 / Outfit shawl, 두꺼운 짙은 회색 스코틀랜드 울 프린지 숄, 안에 상아색 립 탱크와 열어 입은 차콜 블레이저 / Props Ceramic Diner Mug, 김 나는 도자 머그 / Scene Hudson Valley, 삼나무 데크와 안개 낀 강 / Light Atmospheric Haze 5100K, 새벽 안개가 대비를 눌러 줌 / Optics Mamiya 7 II + Mamiya G 80mm f/4, Kodak Portra 400, 옅은 파스텔 녹색 / Expression Coffee Cup Contemplation / Pose Mug Steam Blow, 맨발로 데크에 서서 안개를 봄 |
+| S6 Griffith Blue Hour (滤镜 05 #085) | D | 단서: 그리피스 천문대, 블루 아워, 대리석 난간, 캐시미어 니트, 로스앤젤레스 야경 / Hair Voluminous Curls, 깊은 금빛 큰 컬이 저녁 바람에 날림 / Outfit cashmere knit, 상아색 오버사이즈 캐시미어 / Scene Griffith Observatory, 흰 대리석 난간과 놋쇠 관람 망원경, 아래로 로스앤젤레스의 불빛 / Light Blue Hour 4000~6500K, 짙은 남색 하늘과 따뜻한 금빛 도시 불빛이 균형 / Optics Pentax 67 II + SMC Takumar 105mm f/2.4, Kodak Portra 400, 차가운 파랑과 따뜻한 금빛이 한 장에 / Expression Sunset Serene Grin, 돌아보며 은은한 미소 / Pose Over-the-Shoulder Glance, 난간에 기대어 돌아봄 |
 
 ## 포즈·구도 쌍
 | 번호 | 갈래 | Pose | Camera |
@@ -180,7 +180,7 @@
 | 8 | C | Mug Steam Blow — Standing barefoot at a deck rail with both hands around a steaming mug raised near her lips, blowing gently across it. | negative space — She fills only a third of the frame and the rest is empty, pale mist over the river. |
 | 9 | C | Post Lean — One hip against a brick column with her weight shifted off it and two heavy books held against the chest. | rule of thirds — She stands on the left third while the colonnade's repeating arches recede through the other two thirds. |
 | 10 | D | Twirl — Spinning on a grassy bluff with both arms out so the long skirt flares into a wide circle. | Extreme Wide Shot — She is a small bright figure on the edge of a huge green bluff, with sea and sky filling almost the whole frame. |
-| 11 | D | Over-the-Shoulder Glance — Leaning on a marble balustrade with her weight on the front leg as the torso twists back to look past one shoulder. | Medium Close-Up — The frame runs from the top of her head to mid-chest, with deep blue sky and softly blurred city lights behind her. |
+| 11 | D | Over-the-Shoulder Glance — Leaning on a marble balustrade as the torso twists back to look past one shoulder. | Medium Close-Up — The frame runs from the top of her head to mid-chest, with deep blue sky and softly blurred city lights behind her. |
 | 12 | D | Windblown Hair — Standing still and facing the lens while a light wind lifts a few strands across her forehead and cheek. | close-up — The frame holds only her face and a little hair, close enough to show pores, faint freckles and the sky reflected in her eyes. |
 
 ## 맞지 않는 것

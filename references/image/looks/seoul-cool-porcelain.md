@@ -3,21 +3,21 @@
 | 항목 | 값 |
 |---|---|
 | 부르는 이름 | 쿨톤 도자기 피부; 쿨톤 도자기 피부 화보; 블루 그레이 미니멀; 청랭 도자기 피부; 냉백 도자기 피부; 회청색 미니멀; Cool porcelain skin; Seoul cool porcelain; 清冷瓷肌; 极简灰蓝 |
-| 부르지 않는 말 | 쿨톤; 냉백피; 도자기 피부; 포슬린 스킨; 청량; 미니멀; 서울 화보; 성수동; 한남동 |
+| 부르지 않는 말 | 쿨톤; 냉백피; 도자기 피부; 포슬린 스킨; 청량; 미니멀; 서울 화보; 성수동; 한남동; 쿨톤 화보; 쿨톤 무드; 쿨톤 느낌; 쿨톤 메이크업; 차가운 느낌; 차가운 무드; 도자기 같은 피부; 미니멀 화보; 미니멀 인물 사진; 무채색 화보; 회청색; 블루 그레이; 흰 도자기; cool tone; cool-toned portrait; porcelain skin; minimal portrait |
 | 문화권 | KR(서울) |
 | 기본 갈래 | A |
 
 ## 고정 사실 (모든 갈래가 지킨다)
 | 슬롯 | 값 |
 |---|---|
-| medium | 풀프레임·중형 디지털 카메라로 찍은 서울의 인물 사진. 필름 스냅도 플래시 사진도 아니다. 첫 줄은 `A Seoul cool-white porcelain-skin portrait photograph shot on a full-frame mirrorless camera`로 시작한다(C 갈래는 끝에 `in a studio`를 붙이고, B 갈래의 Hasselblad·Phase One 줄은 Optics `camera`가 정한다) |
+| medium | 풀프레임·중형 디지털 카메라로 찍은 서울의 인물 사진. 필름 스냅도 플래시 사진도 아니다. 첫 줄은 `A Seoul cool-toned porcelain-finish portrait photograph shot on a full-frame mirrorless camera`로 시작한다(C 갈래는 끝에 `in a studio`를 붙이고, B 갈래의 Hasselblad·Phase One 줄은 Optics `camera`가 정한다) |
 | closer | `쿨톤 도자기 피부 사진` |
 | time | 해가 화면에 직접 보이지 않는 이른 아침에서 흐린 낮까지. D 갈래의 블루 아워(해 진 뒤 20분)만 예외이고 C 갈래는 시간을 말하지 않는다. 골든아워와 한낮 직사광은 없다 |
 | light-key | 큰 면광원의 확산광: 흐린 하늘, 얇은 커튼을 거친 창, 천창이나 천장 패널, 소프트박스. 점광원 플래시와 직사 햇빛은 없다 |
-| palette | 5500~7200K의 차가운 흰 하이라이트, 회청·차콜·모카·귀리색의 낮은 채도, 푸른 기가 도는 흰 피부. 주황·네온·파스텔 없음 |
+| palette | 5500~7200K의 차가운 흰 하이라이트(도자기 마감 베이스가 이 빛을 받아 푸르스름하게 식어 보인다), 회청·차콜·모카·귀리색의 낮은 채도. 주황·네온·파스텔 없음 |
 | grain | 어두운 곳에만 아주 고운 디지털 노이즈. 필름 입자와 할레이션 없음 |
-| lens | 풀프레임 표준~중망원(50~85mm, f/1.2~f/2.8)이 눈높이에서 본다. 배경은 부드럽게 풀리고 얼굴 비율에 왜곡이 없다. 광각 왜곡과 딥 포커스 없음 |
-| figure | 허리 위 반신의 한 사람. 몸은 3/4로 비스듬하고 어깨는 내려가 있으며 고개만 렌즈 쪽으로 돌린다. 정면 증명사진 자세 없음 |
+| lens | 풀프레임 표준~중망원(50~85mm, f/1.2~f/2.8). 카메라 높이는 쌍의 Camera 줄이 정하고(쌍 3 하이앵글, 쌍 6 로우앵글) 쌍이 높이를 말하지 않으면 눈높이다. 배경은 부드럽게 풀리고 얼굴 비율에 왜곡이 없다. 광각 왜곡과 딥 포커스 없음 |
+| figure | 허리 위 반신의 한 사람(범위는 쌍 10이 얼굴만, 쌍 12가 허벅지 중간까지로 바꾼다). 몸은 3/4로 비스듬하고 어깨는 내려가 있으며 고개만 렌즈 쪽으로 돌린다(쌍 4·9·10이 몸의 방향을 정하면 쌍이 이긴다). 정면 증명사진 자세 없음 |
 
 ## 갈래 고르기
 | 갈래 | 요청에 이 말이 있으면 | 성격 | Iris 근거 |
@@ -31,13 +31,13 @@
 | 슬롯 | 처리 | 이유 |
 |---|---|---|
 | face-light | 모든 갈래에서 끈다. 얼굴 빛은 이 카드의 Light 줄이 정한다 | `立体光`은 키라이트를 위·옆에 두는데 滤镜 #023 #027 #033은 무영 천장광과 평광이고 #036은 이중 흰 커튼 투광이라 그림자 방향이 갈린다 |
-| base | 모든 갈래에서 카드 줄이 이긴다 | KR `물광 피부`는 젖은 광택인데 滤镜 #021은 `哑光无油`, #027은 `哑光陶瓷底妆`, #040은 무보정을 말해 한 프리셋 안에서 매트와 물광이 부딪혔다. 촉촉한 쪽은 D의 `쿨 제이드 스킨`만 맡는다 |
-| lip | A·C·D는 카드 줄이 이긴다. B는 `쿨톤 매트` 줄이 입술색까지 정하니 고정 몫 입술을 끈다 | KR `그라데이션 립`이 더 붙으면 입술색이 둘이 된다. Iris 메이크업 고정문의 `珊瑚裸粉玻璃唇`도 B의 회분홍 벨벳 입술과 겹친다 |
+| base | 모든 갈래에서 카드 줄이 이긴다. 단 S1은 Light에서 무광(哑光 #021)을 정하니 A base 줄의 satin 마감과 광대뼈의 푸른 흰 광을 쓰지 않고 무광으로 쓴다(세트가 갈래 줄보다 이긴다) | KR `물광 피부`는 젖은 광택인데 滤镜 #021은 `哑光无油`, #027은 `哑光陶瓷底妆`, #040은 무보정을 말해 한 프리셋 안에서 매트와 물광이 부딪혔다. 촉촉한 쪽은 D의 `쿨 제이드 스킨`만 맡는다 |
+| lip | A·C·D는 카드 줄이 이긴다. B는 `쿨톤 매트` 줄이 회분홍 벨벳 입술까지 정하니 고정 몫 입술을 끈다 | KR `그라데이션 립`이 더 붙으면 입술색이 둘이 된다. Iris 메이크업 고정문의 `珊瑚裸粉玻璃唇`도 B의 회분홍 벨벳 입술과 겹친다 |
 | blush | 카드 줄이 이긴다 | KR `딸기우유 블러셔`는 넓은 우유빛 분홍이라 회청 팔레트에서 뺨만 따뜻해진다. Iris 원문은 맑은 장미빛 한 겹(`清透玫瑰粉腮红`)이다 |
 | catchlight | 켠다. A는 `창가 사각 캐치라이트`, B·C는 `캐치라이트` 줄이 대신한다. 눈이 안 보이는 장면(#036 이중 흰 커튼 뒤)에서는 끈다 | 창·패널 모양 반사를 줄마다 정해 두면 고정 몫의 `<창·램프·하늘>` 빈칸이 둘이 되지 않는다 |
-| lens | 켠다. 고정 몫 `无畸变`(표준~중망원, 눈높이)이 이 룩의 렌즈다. 35mm나 24-70mm가 적힌 #024 #029 #031 #034 #035는 카메라 본체만 쓰고 초점거리는 표준으로 둔다 | Iris 원문은 35mm 계열 렌즈와 `50mm 무왜곡` 꼬리가 한 프리셋에 섞여 있다 |
+| lens | 켠다. 렌즈를 말하는 줄은 쌍마다 정확히 하나다. 쌍 1~7·9~12는 Camera 줄이 렌즈를 말하지 않으니 고정 몫 `无畸变`(표준~중망원, 렌즈 종류만 말하고 높이는 정하지 않는다)이 그 줄이다. 쌍 8은 Camera 줄 `망원 압축`이 중망원 렌즈를 말하니 그 쌍에서는 `无畸变`을 붙이지 않는다. 카메라 높이는 쌍 3(하이앵글)·쌍 6(로우앵글)이 Camera 줄로 정하고 나머지 쌍은 눈높이다. 35mm나 24-70mm가 적힌 #024 #029 #031 #034 #035는 카메라 본체만 쓰고 초점거리는 표준으로 둔다 | Iris 원문은 35mm 계열 렌즈와 `50mm 무왜곡` 꼬리가 한 프리셋에 섞여 있다. 높이는 렌즈 줄에서 빼고 쌍이 맡아야 쌍 3·6의 높이와 부딪히지 않는다 |
 | grain | 켠다. 고정 몫 `数码噪点`이 그대로 맞다 | 매체가 풀프레임 디지털이다 |
-| framing | 켠다. 쌍 5(머리 위부터 가슴 중간), 쌍 10(얼굴만), 쌍 12(허벅지 중간)는 Camera 줄이 범위를 말하니 그 쌍이 정한다 | 나머지 쌍은 프레임 범위를 말하지 않는다 |
+| framing | 켠다. 쌍 5(머리 위부터 가슴 중간), 쌍 10(얼굴만), 쌍 12(허벅지 중간)는 Camera 줄이 범위를 말하니 그 쌍이 정한다. 쌍 12는 고정 사실 figure의 허리 위 범위보다 이 쌍이 이긴다 | 나머지 쌍은 프레임 범위를 말하지 않아 고정 몫 허리 위 줄이 범위를 정한다 |
 | ratio | 켠다. 사용자 비율이 없으면 3:4 세로 | 쌍은 비율을 정하지 않는다 |
 
 ## Hair and makeup
@@ -50,10 +50,10 @@
 | C | hair | 슬릭 로우포니테일 — Hair is pulled flat against the scalp into a low ponytail at the nape, so the forehead, ears, jaw and the whole face stay open to the flat light. (发型 #003) |
 | D | hair | 잔머리 — Fine short hairs along the hairline and temples lift in the damp air and catch the pale sky as a thin soft edge. |
 | A | base | 냉백피 — A cool pink-neutral base with a soft satin finish and a faint bluish-white sheen on the cheekbones, so the skin reads bright and cool in diffuse light. |
-| B | base | 쿨톤 매트 — A matte cool-toned base with a soft grey-brown shadow beside the nose bridge leaves the skin flat, pale and quiet under the overhead light. (发型 #002) |
+| B | base | 쿨톤 매트 — A matte cool-toned base with a soft grey-brown shadow beside the nose bridge leaves a flat, quiet finish under the overhead light, and a dusty grey-pink velvet lip absorbs the light without shine. (发型 #002) |
 | C | base | 도자기 피부 — An even, soft-matte base with only a faint cool sheen on the high points makes the skin look like glazed ceramic under the flat light. |
-| D | base | 쿨 제이드 스킨 — Cool, translucent skin with a faint inner glow, the highlights sitting softly on the upper cheeks like polished jade in the damp air. |
-| 전부 | brow | 야생 눈썹 — Flat, straight brows are left unshaped with every hair visible, in a soft grey-brown that stays quiet against the pale skin. |
+| D | base | 쿨 제이드 스킨 — A cool, translucent base leaves a faint inner glow, the highlights sitting softly on the upper cheeks like polished jade in the damp air. |
+| 전부 | brow | 야생 눈썹 — Flat, straight brows are left unshaped with every hair visible, in a soft grey-brown that stays quiet against the cool matte base. |
 | A | lip | 깨문 립 — Nude-pink color sits in the center of the lips and blurs outward so the edges melt into the skin, as if just bitten. (发型 #003) |
 | C | lip | 시나몬 누드 립 — A warm brown-beige lip with a faint reddish cast and a soft edge, slightly satin, the one warm note on the face. (发型 #001) |
 | D | lip | 물광 립 — A sheer, watery lip color with a fresh wet shine picks up the soft sky light. |
@@ -150,22 +150,22 @@
 | B | camera | Phase One IQ4 — An ultra-high-resolution medium-format file keeps the knit weave and the pale wall very clean in pure, neutral color. (滤镜 #037) |
 | C | camera | Sony A7R IV — A 61-megapixel full-frame file resolves each lash and the fine vellus hair on the cheek with no skin smoothing applied. (滤镜 #040) |
 | D | camera | Canon EOS R5 — A crisp full-frame mirrorless rendering with natural color and smooth tonal transitions that holds wet highlights without clipping. (滤镜 #025) |
-| A, C | color | 쿨 화이트 밸런스 — Whites sit slightly cold and clean, so the skin reads pale and porcelain-clear with no yellow cast. |
-| A | color | 차분한 티 톤 — A muted gray-brown grade at low contrast with a thin cool tea cast gives the pale skin a faint earl-grey undertone. (滤镜 #039) |
+| A, C | color | 쿨 화이트 밸런스 — Whites sit slightly cold and clean, so the base reads cool and porcelain-clear with no yellow cast. |
+| A | color | 차분한 티 톤 — A muted gray-brown grade at low contrast with a thin cool tea cast gives the shadows and the base a faint earl-grey undertone. (滤镜 #039) |
 | B | color | 뮤트 시안 — Desaturated color with a faint olive-cyan gray sits in the shadows of the concrete wall and the dark clothing. (滤镜 #024) |
-| C | color | 저채도 — Color purity is pulled back to near gray, leaving only a faint pink-white in the skin and lips. (滤镜 #032) |
+| C | color | 저채도 — Color purity is pulled back to near gray, leaving only a faint pink-white in the base and the lips. (滤镜 #032) |
 | D | tone | 쿨톤 — The whole palette leans cold blue-white with a slightly pale, quiet mood. |
 | A, B, D | bokeh | 아웃포커싱 — A wide aperture melts the background into soft blur while her face stays tack-sharp. |
 
-## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 요청의 장소·소품·시간대·의상 가운데 둘 이상이 같으면 통째로 쓴다. 우선순위는 image-brief.md §4 '룩 카드' 4항)
+## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 요청의 장소·소품·시간대·의상 가운데 둘 이상이 그 세트의 단서와 같으면 통째로 쓰고, 세트 값은 고정 사실보다 먼저다. 규칙은 image-brief.md §4 '룩 카드' 4항과 '비워 둔 층')
 | 세트 | 갈래 | 묶음 |
 |---|---|---|
-| S1 성수동 아침 (滤镜 #021) | A | Hair 검은 긴 생머리, 한쪽을 귀 뒤로 넘겨 이마와 눈썹이 드러난다 / Lip 깨문 립 / Outfit 스퀘어넥(깊은 차콜 슬림 스퀘어넥 니트) / Props 실버 쇄골 체인 / Scene 성수동의 조용한 콘크리트 아트 스페이스, 배경은 비어 있다 / Light 흐린 날 빛 6500K, 직사 햇빛 없이 회백색 하늘이 만드는 확산 냉광, 피부는 무광에 기름기 없음 / Optics Sony A7R V + 50mm f/1.8 / Expression 맑은 눈에 캐치라이트가 하나, 막 세수한 듯 평온한 얼굴 / Pose 뒤돌아보기, 몸은 3/4로 비스듬하고 어깨가 내려간다 |
-| S2 커튼 너머 아침 독서 (滤镜 #022) | A | Hair 검은 긴 생머리 / Lip 깨문 립 / Outfit 캐시미어 니트(모카색 딥 브이넥 캐시미어) / Scene 로우 새츄레이션 벽의 군더더기 없는 미니멀 아파트, 조용한 아침 독서 / Light 창가 빛 6800K, 얇은 흰 커튼이 거른 회청빛이 실내로 퍼지고 머리카락 끝에 옅은 냉광 / Optics Leica SL2-S + Summilux 50mm / Expression 독서 몰입 / Pose 뒤돌아보기 |
-| S3 한남동 갤러리 (滤镜 #023) | B | Hair 슬릭컷 / Lip 쿨톤 매트의 회분홍 / Outfit 오버사이즈 블레이저(밝은 귀리색 외투, 안에 검은 스트랩리스, 깃을 연 채 목선과 쇄골이 드러난다) / Scene 한남동 갤러리의 깨끗한 실제 공간, 배경은 부드럽게 풀리고 비어 있다 / Light 천창 빛 5800K, 순백의 천장 소프트박스라 얼굴에 보이는 딱딱한 그림자가 거의 없고 조각처럼 평평하다 / Optics Hasselblad X2D 100C / Style 한남동 룩, 지적이고 냉정한 인상 / Expression 눈썹 까딱 / Pose 뒤돌아보기, 허리 위 반신(Medium Shot) |
-| S4 매트 도자기 베이스 (滤镜 #027) | C | Hair 슬릭 로우포니테일, 얼굴이 완전히 드러난다 / Lip 시나몬 누드 립 / Outfit 오버사이즈 블레이저(귀리색 외투 + 검은 스트랩리스) / Scene 한남동 미니멀 통창 곁의 조용한 소프트라이트 공간, 배경에 아무것도 없다 / Light 버터플라이 조명 5600K, 전문 버터플라이 평면광이 팔자주름과 칙칙함을 없앤다 / Optics 카메라 지정 없음(Iris 원본의 장비 칸은 조명 `Studio Pro Head Flat Softbox`) / Style 뷰티 화보, 맑은 산소감 / Expression 무표정 / Pose 뒤돌아보기 |
-| S5 비 오는 날 투명 우산 (滤镜 #025) | D | Hair 검은 긴 생머리, 비 오는 공기에 잔머리가 선다 / Lip 물광 립 / Outfit 스퀘어넥(차콜 슬림 스퀘어넥 니트) / Props 실버 쇄골 체인, 투명 우산 / Scene 강남의 비 오는 거리, 투명 우산 아래 / Light 안개비 6300K, 높은 습도가 만드는 촉촉한 광택, 얼굴에 고르고 부드러운 빛, 입술이 촉촉하다 / Optics Canon EOS R5 + 50mm f/1.2 / Expression 하늘 올려다보기, 우산 위로 흘러내리는 빗방울을 본다 / Pose 우산 쓰고 돌아보기 |
-| S6 블루 아워 옥상 (滤镜 #031) | D | Hair 검은 긴 생머리 / Lip 물광 립 / Outfit 오버사이즈 블레이저(밝은 귀리색 외투 + 검은 스트랩리스) / Scene 루프탑 난간, 짙푸른 황혼에 잠긴 옆얼굴 / Light 블루 아워 7200K, 해가 지평선 아래로 완전히 진 뒤 20분, 하늘이 순수한 차가운 사파이어 블루 / Optics Sony A7 IV(Iris 원본 FE 35mm f/1.4 GM, 카드는 표준 시선으로 바꿨다) / Expression 뒤돌아 꽂히는 시선 / Pose 옆모습 |
+| S1 성수동 아침 (滤镜 #021. 단서: 성수동, 콘크리트 아트 스페이스, 아침, 흐린 날, 스퀘어넥 니트) | A | Hair 검은 긴 생머리, 한쪽을 귀 뒤로 넘겨 이마와 눈썹이 드러난다 / Base 냉백피, 마감은 무광이고 광대뼈 광은 없다 / Lip 깨문 립 / Outfit 스퀘어넥(깊은 차콜 슬림 스퀘어넥 니트) / Props 실버 쇄골 체인 / Scene 성수동의 조용한 콘크리트 아트 스페이스, 배경은 비어 있다 / Light 흐린 날 빛 6500K, 직사 햇빛 없이 회백색 하늘이 만드는 확산 냉광, 피부는 무광에 기름기 없음 / Optics Sony A7R V + 50mm f/1.8 / Expression 맑은 눈에 캐치라이트가 하나, 막 세수한 듯 평온한 얼굴 / Pose 뒤돌아보기, 몸은 3/4로 비스듬하고 어깨가 내려간다 |
+| S2 커튼 너머 아침 독서 (滤镜 #022. 단서: 얇은 흰 커튼, 창가, 아침 독서, 미니멀 아파트, 모카 캐시미어 니트) | A | Hair 검은 긴 생머리 / Lip 깨문 립 / Outfit 캐시미어 니트(모카색 딥 브이넥 캐시미어) / Scene 로우 새츄레이션 벽의 군더더기 없는 미니멀 아파트, 조용한 아침 독서 / Light 창가 빛 6800K, 얇은 흰 커튼이 거른 회청빛이 실내로 퍼지고 머리카락 끝에 옅은 냉광 / Optics Leica SL2-S + Summilux 50mm / Expression 독서 몰입 / Pose 뒤돌아보기 |
+| S3 한남동 갤러리 (滤镜 #023. 단서: 한남동, 갤러리, 천창, 귀리색 블레이저, 슬릭컷) | B | Hair 슬릭컷 / Lip 쿨톤 매트의 회분홍 / Outfit 오버사이즈 블레이저(밝은 귀리색 외투, 안에 검은 스트랩리스, 깃을 연 채 목선과 쇄골이 드러난다) / Scene 한남동 갤러리의 깨끗한 실제 공간, 배경은 부드럽게 풀리고 비어 있다 / Light 천창 빛 5800K, 순백의 천장 소프트박스라 얼굴에 보이는 딱딱한 그림자가 거의 없고 조각처럼 평평하다 / Optics Hasselblad X2D 100C / Style 한남동 룩, 지적이고 냉정한 인상 / Expression 눈썹 까딱 / Pose 뒤돌아보기, 허리 위 반신(Medium Shot) |
+| S4 매트 도자기 베이스 (滤镜 #027. 단서: 뷰티 화보, 버터플라이 조명, 로우포니테일, 통창 곁 소프트라이트, 귀리색 블레이저) | C | Hair 슬릭 로우포니테일, 얼굴이 완전히 드러난다 / Lip 시나몬 누드 립 / Outfit 오버사이즈 블레이저(귀리색 외투 + 검은 스트랩리스) / Scene 한남동 미니멀 통창 곁의 조용한 소프트라이트 공간, 배경에 아무것도 없다 / Light 버터플라이 조명 5600K, 전문 버터플라이 평면광이 팔자주름과 칙칙함을 없앤다 / Optics 카메라 지정 없음(Iris 원본의 장비 칸은 조명 `Studio Pro Head Flat Softbox`) / Style 뷰티 화보, 맑은 산소감 / Expression 무표정 / Pose 뒤돌아보기 |
+| S5 비 오는 날 투명 우산 (滤镜 #025. 단서: 비, 투명 우산, 강남, 안개비, 스퀘어넥 니트) | D | Hair 검은 긴 생머리, 비 오는 공기에 잔머리가 선다 / Lip 물광 립 / Outfit 스퀘어넥(차콜 슬림 스퀘어넥 니트) / Props 실버 쇄골 체인, 투명 우산 / Scene 강남의 비 오는 거리, 투명 우산 아래 / Light 안개비 6300K, 높은 습도가 만드는 촉촉한 광택, 얼굴에 고르고 부드러운 빛, 입술이 촉촉하다 / Optics Canon EOS R5 + 50mm f/1.2 / Expression 하늘 올려다보기, 우산 위로 흘러내리는 빗방울을 본다 / Pose 우산 쓰고 돌아보기 |
+| S6 블루 아워 옥상 (滤镜 #031. 단서: 블루 아워, 옥상, 루프탑 난간, 황혼, 옆얼굴) | D | Hair 검은 긴 생머리 / Lip 물광 립 / Outfit 오버사이즈 블레이저(밝은 귀리색 외투 + 검은 스트랩리스) / Scene 루프탑 난간, 짙푸른 황혼에 잠긴 옆얼굴 / Light 블루 아워 7200K, 해가 지평선 아래로 완전히 진 뒤 20분, 하늘이 순수한 차가운 사파이어 블루 / Optics Sony A7 IV(Iris 원본 FE 35mm f/1.4 GM, 카드는 표준 시선으로 바꿨다) / Expression 뒤돌아 꽂히는 시선 / Pose 옆모습 |
 
 ## 포즈·구도 쌍
 | 번호 | 갈래 | Pose | Camera |

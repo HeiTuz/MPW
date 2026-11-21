@@ -3,21 +3,21 @@
 | 항목 | 값 |
 |---|---|
 | 부르는 이름 | Nouvelle Vague; 누벨바그; 新浪潮; 法国新浪潮; French New Wave; 프렌치 뉴웨이브; 戈达尔; 고다르; Godard; 侯麦; 에릭 로메르; Rohmer; 特吕弗; 트뤼포; Truffaut; 瓦尔达; 아녜스 바르다; Varda; 雅克·德米; 자크 드미; Demy; 筋疲力尽; 네 멋대로 해라; À bout de souffle; 四百击; 400번의 구타; Les Quatre Cents Coups; 瑟堡的雨伞; 쉘부르의 우산; Les Parapluies de Cherbourg |
-| 부르지 않는 말 | 파리; Paris; 파리 여행; 파리 스냅; 프랑스; 프렌치 시크; French chic; 16mm 필름; 16mm film |
+| 부르지 않는 말 | 파리; Paris; 파리 여행; 파리 스냅; 프랑스; 프렌치 시크; French chic; 16mm 필름; 16mm film; 흑백 필름; 흑백 사진; 프랑스 영화; 60년대 파리; 60년대 프랑스; 영화 필름; French cinema; 1960s Paris; black and white film |
 | 문화권 | FR |
 | 기본 갈래 | A |
 
 ## 고정 사실 (모든 갈래가 지킨다)
 | 슬롯 | 값 |
 |---|---|
-| medium | 16mm 시네마 네거티브로 찍은 영화 스틸. 스냅·화보가 아니다. 첫 줄은 `A 1960s Paris French New Wave film still shot on handheld 16mm cinema negative`로 시작한다(B 갈래는 `…shot on handheld 16mm black-and-white negative`) |
+| medium | 16mm 시네마 네거티브로 찍은 영화 스틸. 스냅·화보가 아니다. 첫 줄은 `A 1960s Paris French New Wave film still shot on handheld 16mm cinema negative`로 시작한다(B 갈래는 `…shot on handheld black-and-white 16mm negative`) |
 | closer | `Photogramme Nouvelle Vague` |
-| time | 흐린 파리의 낮이 기본이다. 이른 아침, 늦은 오후, 황혼, 실내 저녁도 된다 |
-| light-key | 있는 빛: 흐린 하늘, 창빛, 실내 텅스텐 전구, 낮은 해 |
-| palette | 눌린 채도: 네이비, 에크뤼, 낙타색, 벽돌색, 병 녹색. 그림자는 따뜻한 청회색(B는 흑백) |
+| time | 흐린 파리의 낮이 기본이다(C는 맑은 여름 낮이나 비 갠 오후). 이른 아침, 늦은 오후, 황혼, 실내 저녁도 된다 |
+| light-key | 있는 빛: 흐린 하늘, 창빛, 실내 텅스텐 전구, 낮은 해(C는 잎·우산을 지나는 낮 햇빛과 비 갠 하늘빛) |
+| palette | 눌린 채도: 네이비, 에크뤼, 낙타색, 벽돌색, 병 녹색. 그림자는 따뜻한 청회색(B는 흑백, S2는 붉은 갈색 그림자, S5는 마카롱 파스텔) |
 | grain | 16mm 입자가 화면 전체에 보인다. A·B는 굵게, C·D는 곱고 살아 있게 |
-| lens | 눈높이의 50mm 안팎 표준 렌즈, 얕은 심도로 배경이 녹는다(D는 T1.3 개방 근접) |
-| figure | 한 사람이 걷기, 앉아 읽기, 기대기 같은 일상 동작 중에 잡힌다. 렌즈를 슬쩍 보거나 먼 곳을 본다 |
+| lens | 50mm 안팎 표준 렌즈, 얕은 심도로 배경이 녹는다(D는 T1.3 개방 근접). 카메라 높이는 쌍이 정한다 |
+| figure | 한 사람이 걷기, 앉아 읽기, 기대기 같은 일상 동작 중에 잡힌다. 렌즈를 슬쩍 보거나 먼 곳을 본다(D와 S1은 렌즈를 곧게 본다) |
 
 ## 갈래 고르기
 | 갈래 | 요청에 이 말이 있으면 | 성격 | Iris 근거 |
@@ -32,11 +32,11 @@
 |---|---|---|
 | face-light | 모든 갈래에서 끈다. 얼굴 빛은 Light 줄이 정한다 | Iris 꼬리의 위·옆 입체광이 #014 역광, #012 불빛, #017 추적광과 부딪혔다 |
 | face-clear | 모든 갈래에서 끈다. 앞머리가 이마·관자놀이에 닿아도 눈썹과 눈은 드러난다 | #001 #003의 헝클어진 머리·八字刘海가 귀 뒤로 넘긴 머리 줄과 공존했다 |
-| base, lip | 카드 줄이 이긴다 | Iris 고정문의 浆果玫瑰唇가 #006 #011 #013의 입술색 위에 둘째 입술색을 얹었다 |
+| base, lip | 카드 줄이 이긴다(base 줄은 FR 문화권 공식의 주근깨를 되풀이하지 않는다) | Iris 고정문의 浆果玫瑰唇가 #006 #011 #013의 입술색 위에 둘째 입술색을 얹었다 |
 | catchlight | 카드 줄이 이긴다 | #012의 불꽃 두 점이 고정 줄의 점 하나와 어긋난다 |
-| grain | 카드 줄이 이긴다 | 고정 줄의 고운 입자와 Iris의 굵은 16mm 입자(#001 #006 #017)가 어긋난다 |
-| lens | D에서 끈다. A·B·C는 켠다 | #010(T1.3 근접)과 `뒤로 물러선 표준~중망원` 문장이 공존했다 |
-| framing | 켠다. 쌍 3·11·12는 범위를 직접 말하니 그때는 3:4만 쓴다 | 나머지 쌍은 범위를 말하지 않는다 |
+| grain | 카드 줄이 이긴다(Optics의 `16mm` 줄은 입자를 말하지 않고 갈래별 grain 줄이 입자를 정한다) | 고정 줄의 고운 입자와 Iris의 굵은 16mm 입자(#001 #006 #017)가 어긋난다 |
+| lens | D에서 끈다(Optics의 `Zeiss Super Speed T1.3`이 렌즈 줄이고, 쌍 11·12의 Camera 줄은 렌즈를 말하지 않는다). A·B·C는 고정 `无畸变` 줄 하나가 렌즈 줄이다. 단 쌍 10은 Camera 줄 `telephoto compression`이 렌즈를 정하니 고정 줄을 붙이지 않는다. 쌍 1~9의 Camera 줄은 렌즈를 말하지 않는다(쌍 7·8은 카메라 각도만 말한다) | #010(T1.3 근접)과 `뒤로 물러선 표준~중망원` 문장이 공존했다 |
+| framing | 켠다. 쌍 3·5·8·11·12는 범위를 직접 말하니 그때는 3:4만 쓴다 | 나머지 쌍은 범위를 말하지 않는다 |
 | ratio | 켠다. 사용자 비율이 없으면 3:4 세로 | 쌍은 비율을 정하지 않는다 |
 
 ## Hair and makeup
@@ -45,7 +45,7 @@
 | A, B, C | hair | Cheveux saut du lit — Collarbone-length dark-brown waves with uneven ends and lifted, airy roots, looking slept-in and finger-tousled. |
 | D | hair | Coiffé-décoiffé — Dark curly strands scatter loosely along the cheeks and ears, finger-tousled and never set. |
 | A, B, C | bangs | Frange rideau — Centre-parted curtain bangs sweep in soft arcs over the temples and cheekbones while the brows and eyes stay visible. |
-| A, C, D | base | Taches de rousseur — A bare, light base that leaves faint freckles across the nose bridge uncovered. |
+| A, C, D | base | Teint nu — A bare, sheer base blended into the skin without a visible edge, so pores and the natural color of the cheeks stay readable in the available light. |
 | B | base | Teint nu — Bare skin with no powder, a plain natural sheen on the forehead and cheekbones and pores still visible. |
 | A, B | lip | Beige rosé — A greyed pink-beige matte lip close to the natural lip tone, the edge softly blurred. |
 | C, D | lip | Gloss transparent — A clear, watery gloss over the natural lip color with small bright highlights at the center. |
@@ -124,44 +124,44 @@
 ## Optics
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
-| 전부 | format | 16mm — Visible grain, softened highlights and slightly muted contrast of 16mm film stock. |
+| 전부 | format | 16mm film — Softened highlights and slightly muted contrast of 16mm cinema stock. |
 | A | stock | Kodak Vision3 500T — Tungsten-balanced cinema negative: red-orange skin in lamplight, shadows leaning slightly cool-green, blacks held deep. |
 | B | stock | Kodak Tri-X 400 — Pure black-and-white tone with ink-deep blacks and bright highlights that stay open. |
 | C | stock | Kodak Vision3 250D — Daylight cinema negative: neutral-warm natural color and supple highlights. |
-| A | camera | ARRI 16SR3 — Handheld 16mm frame with softly rolled-off highlights and slightly uneven corner sharpness. |
+| A | camera | ARRI 16SR3 — Handheld 16mm cinema frame with softly rolled-off highlights and slightly uneven corner sharpness. |
 | D | lens | Zeiss Super Speed T1.3 — A wide-open fast prime with a razor-thin focal plane on the near pupil, ears and hair melting into soft blur. |
-| A | grain | 粗颗粒 — Coarse, organic grain across the whole frame, heaviest in the shadows. |
-| B | grain | 흑백 필름 그레인 — Coarse silver grain over monochrome with deep blacks and a gritty texture. |
-| C, D | grain | 胶片颗粒 — Fine, lively grain across the whole frame, slightly heavier in the shadows. |
+| A | grain | Gros grain — Coarse, organic grain across the whole frame, heaviest in the shadows. |
+| B | grain | Grain argentique — Coarse silver grain over monochrome with deep blacks and a gritty texture. |
+| C, D | grain | Grain fin — Fine, lively grain across the whole frame, slightly heavier in the shadows. |
 | A | motion | Caméra à l'épaule — Shoulder-held sway: the frame drifts and re-corrects as the operator walks with her. |
 | A | bloom | Halation — The brightest lamps bleed a soft red-orange glow at their edges, as light scatters inside the film. |
 | C | flare | Lens Flare — The low sun spreads soft veils and a faint rainbow streak across the frame and lowers its contrast. |
 
-## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 요청의 장소·소품·시간대·의상 가운데 둘 이상이 같으면 통째로 쓴다. 우선순위는 image-brief.md §4 '룩 카드' 4항)
+## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 요청의 장소·소품·시간대·의상 가운데 둘 이상이 그 세트의 단서와 같으면 통째로 쓰고, 세트 값은 고정 사실보다 먼저다. 규칙은 image-brief.md §4 '룩 카드' 4항과 '비워 둔 층')
 | 세트 | 갈래 | 묶음 |
 |---|---|---|
-| S1 생제르맹 카페 모퉁이 (滤镜 #001) | A | Hair Cheveux saut du lit(깊은 갈색 곱슬 장발, 부스스) + Frange rideau / Base Taches de rousseur / Lip 베리 로즈 / Outfit Marinière classique bretonne / Scene Terrasse de Café, 모퉁이 등나무 의자에 앉는다 / Light Paris Overcast Light(오후 4800K) / Optics ARRI 16SR3, Kodak Vision3 500T, 粗颗粒, 암부는 따뜻한 청회색, 절제된 하이라이트 번짐 / Expression Nonchalance parisienne, 자신 있게 렌즈를 본다 |
-| S2 쌍둥이 카페 해 질 녘 (滤镜 #006) | A | Hair Coiffé-décoiffé(깊은 갈색 곱슬 중단발, 귀 뒤로) + Frange rideau / Lip 말린 장미색 무광 / Outfit 카라멜색 가는 니트 울 스웨터 / Props tasse d'expresso / Scene Banquette de café, 붉은 벨벳 의자와 큰 창 / Light Lumière tungstène(놋쇠 천장등 4200K)과 창밖 황혼의 짙은 파랑이 옆얼굴에서 만난다, 그림자는 붉은 갈색 / Optics ARRI 16SR3, Kodak Vision3 500T, 짙은 동적 粗颗粒 / Expression 창밖 행인을 보는 나른한 얼굴 / Pose 의자에 앉아 커피잔을 든다 |
-| S3 센강 다리 밑 흑백 (滤镜 #003) | B | Hair 깊은 갈색 흐트러진 어깨 길이 머리 + 이마를 스치는 八字刘海 / Lip 입술선만 또렷한 맨 입술 / Outfit pardessus(짙은 회색 헤링본) + Col roulé(검정) / Scene quai de Seine, 겨울 예술의 다리 아래 돌 제방 / Light Paris Overcast Light, 물안개와 찬 흐린 하늘 / Optics ARRI 16SB, Kodak Tri-X 400(7266 반전), 흑백 필름 그레인, 은회색 하이라이트, 촘촘한 회색 계조 / Expression 깊고 집중한 눈으로 앞을 보는 단단한 얼굴 / Pose 성큼성큼 걷는다 |
-| S4 프로방스 올리브 그늘 (滤镜 #002) | C | Hair 햇빛에 금갈색으로 바랜 깊은 갈색 곱슬 장발, 바람에 날리는 八字刘海 / Base 햇볕에 생긴 주근깨 / Lip 물기 있는 복숭아빛 옅은 붉은색 / Outfit Robe portefeuille(체리색 작은 꽃무늬 티 드레스) / Props 한 손으로 치맛자락을 잡는다 / Scene Oliveraie, 금빛 밀밭 옆 올리브 그늘 길 / Light 여름 오후 햇빛이 잎을 뚫고 쏟아진다(5400K) / Optics Aaton XTR Prod, Kodak Vision3 250D, 胶片颗粒, 우유빛 하이라이트, 올리브 잎과 꽃무늬가 진하지만 부드럽다 / Expression 웃으며 렌즈를 본다 / Pose 치맛자락을 잡고 걷는다 |
-| S5 쉘부르 우산 가게 (滤镜 #005) | C | Hair 연분홍 리본으로 느슨하게 묶은 깊은 갈색 장발 + Frange rideau / Lip 산호빛 분홍 주황 / Outfit 연한 거위 노랑 짧은 니트 가디건 + 하늘색 플리츠 스커트 / Props Parapluie transparent / Scene Rue Crémieux, 분홍·노랑 벽의 오래된 가게 앞 / Light 비 갠 오후 하늘빛이 우산을 지나 쏟아진다(5200K), 맑고 가벼운 그림자 / Optics ARRI 16SR2, Fuji Eterna 250D, 마카롱 파스텔, 꿈결 같은 광조 / Expression 눈웃음으로 하늘을 올려다보는 장난스러운 얼굴 |
-| S6 오디션 클로즈업 (滤镜 #010) | D | Hair Coiffé-décoiffé(곱슬 잔머리가 뺨에 흩어진다) / Base 파운데이션 느낌 없는 맨 피부, 코 위 옅은 주근깨 / Lip 물기 있는 살구빛 분홍, 살짝 다문다 / Outfit 숯회색 두툼한 깊은 브이넥 캐시미어, 쇄골이 보인다 / Scene 오디션 룸의 흰 천 배경 / Light 부드러운 옆면 확산광(4600K) / Optics Aaton XTR Prod, Zeiss Super Speed T1.3, 가까운 눈동자와 콧등에만 초점, 귀와 머리끝은 녹는다, 짙고 고운 胶片颗粒 / Camera Gros plan / Expression Arrêt sur image, 살피듯 무심하게 정면을 본다 |
+| S1 생제르맹 카페 모퉁이 (滤镜 #001) | A | 단서: 생제르맹, 카페 테라스, 등나무 의자, 줄무늬 상의, 오후 / Hair Cheveux saut du lit(깊은 갈색 곱슬 장발, 부스스) + Frange rideau / Base Teint nu / Lip 베리 로즈 / Outfit Marinière classique bretonne / Scene Terrasse de Café, 모퉁이 등나무 의자에 앉는다 / Light Paris Overcast Light(오후 4800K) / Optics ARRI 16SR3, Kodak Vision3 500T, Gros grain, 암부는 따뜻한 청회색, 절제된 하이라이트 번짐 / Expression Nonchalance parisienne, 자신 있게 렌즈를 본다 |
+| S2 쌍둥이 카페 해 질 녘 (滤镜 #006) | A | 단서: 카페 안 붉은 벨벳 의자, 큰 창, 커피잔, 황혼, 놋쇠 천장등 / Hair Coiffé-décoiffé(깊은 갈색 곱슬 중단발, 귀 뒤로) + Frange rideau / Lip 말린 장미색 무광 / Outfit 카라멜색 가는 니트 울 스웨터 / Props tasse d'expresso / Scene Banquette de café, 붉은 벨벳 의자와 큰 창 / Light Lumière tungstène(놋쇠 천장등 4200K)과 창밖 황혼의 짙은 파랑이 옆얼굴에서 만난다, 그림자는 붉은 갈색 / Optics ARRI 16SR3, Kodak Vision3 500T, 짙은 동적 Gros grain / Expression 창밖 행인을 보는 나른한 얼굴 / Pose 의자에 앉아 커피잔을 든다 |
+| S3 센강 다리 밑 흑백 (滤镜 #003) | B | 단서: 센강, 다리 밑 돌 제방, 흑백, 헤링본 롱코트, 안개 낀 겨울 / Hair 깊은 갈색 흐트러진 어깨 길이 머리 + 이마를 스치는 Frange rideau / Lip 입술선만 또렷한 맨 입술 / Outfit pardessus(짙은 회색 헤링본) + Col roulé(검정) / Scene quai de Seine, 겨울 예술의 다리 아래 돌 제방 / Light Paris Overcast Light, 물안개와 찬 흐린 하늘 / Optics ARRI 16SB, Kodak Tri-X 400(7266 반전), Grain argentique, 은회색 하이라이트, 촘촘한 회색 계조 / Expression 깊고 집중한 눈으로 앞을 보는 단단한 얼굴 / Pose 성큼성큼 걷는다 |
+| S4 프로방스 올리브 그늘 (滤镜 #002) | C | 단서: 올리브 나무 그늘, 밀밭, 여름 오후, 체리 꽃무늬 원피스, 치맛자락 / Hair 햇빛에 금갈색으로 바랜 깊은 갈색 곱슬 장발, 바람에 날리는 Frange rideau / Base Teint nu, 햇볕에 달아오른 맨 베이스 / Lip 물기 있는 복숭아빛 옅은 붉은색 / Outfit Robe portefeuille(체리색 작은 꽃무늬 티 드레스) / Props 한 손으로 치맛자락을 잡는다 / Scene Oliveraie, 금빛 밀밭 옆 올리브 그늘 길 / Light 여름 오후 햇빛이 잎을 뚫고 쏟아진다(5400K) / Optics Aaton XTR Prod, Kodak Vision3 250D, Grain fin, 우유빛 하이라이트, 올리브 잎과 꽃무늬가 진하지만 부드럽다 / Expression 웃으며 렌즈를 본다 / Pose 치맛자락을 잡고 걷는다 |
+| S5 쉘부르 우산 가게 (滤镜 #005) | C | 단서: 우산 가게, 쉘부르, 분홍·노랑 벽, 하늘색 플리츠 스커트, 비 갠 오후 / Hair 연분홍 리본으로 느슨하게 묶은 깊은 갈색 장발 + Frange rideau / Lip 산호빛 분홍 주황 / Outfit 연한 거위 노랑 짧은 니트 가디건 + 하늘색 플리츠 스커트 / Props Parapluie transparent / Scene Rue Crémieux, 분홍·노랑 벽의 오래된 가게 앞 / Light 비 갠 오후 하늘빛이 우산을 지나 쏟아진다(5200K), 맑고 가벼운 그림자 / Optics ARRI 16SR2, Fuji Eterna 250D, 마카롱 파스텔, 꿈결 같은 광조 / Expression 눈웃음으로 하늘을 올려다보는 장난스러운 얼굴 |
+| S6 오디션 클로즈업 (滤镜 #010) | D | 단서: 오디션, 클로즈업, 흰 천 배경, 숯회색 캐시미어 브이넥, 정면 시선 / Hair Coiffé-décoiffé(곱슬 잔머리가 뺨에 흩어진다) / Base Teint nu, 파운데이션 느낌 없는 맨 피부 / Lip 물기 있는 살구빛 분홍, 살짝 다문다 / Outfit 숯회색 두툼한 깊은 브이넥 캐시미어, 쇄골이 보인다 / Scene 오디션 룸의 흰 천 배경 / Light 부드러운 옆면 확산광(4600K) / Optics Aaton XTR Prod, Zeiss Super Speed T1.3, 가까운 눈동자와 콧등에만 초점, 귀와 머리끝은 녹는다, 짙고 고운 Grain fin / Camera Gros plan / Expression Arrêt sur image, 살피듯 무심하게 정면을 본다 |
 
 ## 포즈·구도 쌍
 | 번호 | 갈래 | Pose | Camera |
 |---|---|---|---|
 | 1 | A | Mains dans les poches — Both hands deep in the coat pockets, shoulders slightly raised, her gaze down on the pavement as she walks. | Travelling latéral — The camera tracks beside her at chest height and walking speed, the boulevard wall sliding past in parallax. |
-| 2 | A | Accoudée à la table en zinc — One elbow on a small zinc café table, her cheek in the palm and her eyes cutting toward the street. | 玻璃窗倒影 — Shot through the café window, the street and passers-by reflected over her face. |
+| 2 | A | Accoudée à la table en zinc — One elbow on a small zinc café table, her cheek in the palm and her eyes cutting toward the street. | Reflets superposés — Shot through the café window, the street and passers-by reflected over her face. |
 | 3 | A | Marcher d'un pas vif — A long fast stride toward the camera, the coat hem flicking behind and one arm swinging. | Plan américain — Head-on at eye level, the frame cut at the knees, swaying slightly as the camera backs away. |
-| 4 | A | Adossée à la vitrine — Her back against a shop window, one knee bent, her head turned slightly away. | 前景遮挡 — Shot from across the street past a blurred passer-by crossing one corner of the frame. |
-| 5 | A | Jambes croisées — Seated on a banquette with her knees crossed, the top foot hanging relaxed. | 过肩镜头 — Seated eye level, over the blurred shoulder of a companion across the table. |
-| 6 | B | Adossée à la pile de pierre — Leaning on a shaded stone bridge pier, hands in her pockets, her face in profile toward the distance. | 留白 — She fills a third of a vertical frame; empty river and sky fill the rest. |
+| 4 | A | Adossée à la vitrine — Her back and shoulders rest against a shop window, her head turned slightly away. | Amorce — Shot from across the street past a blurred passer-by crossing one corner of the frame. |
+| 5 | A | Jambes croisées — Seated on a banquette with her knees crossed, the top foot hanging relaxed. | Over the Shoulder — Seated at eye level, over the blurred shoulder of a companion across the table, the frame wide enough to take in her crossed legs. |
+| 6 | B | Adossée à la pile de pierre — Leaning on a shaded stone bridge pier, hands in her pockets, her face in profile toward the distance. | negative space — She fills a third of a vertical frame; empty river and sky fill the rest. |
 | 7 | B | Accoudée à la boîte de bouquiniste — An elbow on the metal lid edge while the other hand holds a book of poems open. | Plongée — From the quay above looking down, the cobbles leading the eye to her. |
-| 8 | C | Descendre l'escalier — A fast step down the stair, the skirt hem flaring and one hand skimming the rail. | Contre-plongée — From the foot of the steps looking up, the low sun behind plane-tree leaves. |
-| 9 | C | Main en visière — One flat hand shades her brow, the eyes narrowing as sunlight leaks around the fingers. | 三分割構図 — She sits on the left third line, and open field and trees fill the other two thirds. |
-| 10 | C | Presser un gros livre contre la poitrine — A thick hardcover hugged flat to her chest with both arms as she walks a leafy path. | 长焦压缩 — A long lens stacks the avenue of trees behind her into one flat band of leaves and light. |
-| 11 | D | Coude en appui, menton dans la paume — One elbow on the table edge, her chin cupped in the palm, the eyes cutting sideways. | Gros plan — The frame holds only her face, filling the picture edge to edge. |
-| 12 | D | 3/4侧颜 — The head turns three quarters away from the lens, the near cheek and one eye in sharp focus. | Medium Close-Up — The frame runs from the top of the head to mid-chest. |
+| 8 | C | Descendre l'escalier — A fast step down the stair, the skirt hem flaring and one hand skimming the rail. | Contre-plongée — From the foot of the steps looking up, the whole stair and her full figure against the low sun behind plane-tree leaves. |
+| 9 | C | Main en visière — One flat hand shades her brow, the eyes narrowing as sunlight leaks around the fingers. | Règle des tiers — She sits on the left third line, and open field and trees fill the other two thirds. |
+| 10 | C | Presser un gros livre contre la poitrine — A thick hardcover hugged flat to her chest with both arms as she walks a leafy path. | telephoto compression — A long lens stacks the avenue of trees behind her into one flat band of leaves and light. |
+| 11 | D | Coude en appui, menton dans la paume — Her chin is cupped in the palm of one hand, the eyes cutting sideways. | Gros plan — The frame holds her face and the hand cupping her chin, filling the picture edge to edge. |
+| 12 | D | Visage de trois quarts — The head turns three quarters away from the lens, the near cheek and one eye in sharp focus. | Plan rapproché — The frame runs from the top of the head to mid-chest. |
 
 ## 맞지 않는 것
 정오에 내리꽂는 직사광, 스트로브·링라이트 조명, 네온 간판의 밤거리, 디지털 청록-주황 보정, 파스텔 일색(S5 제외), 큰 웃음 포즈, 정면 증명사진 자세, 읽히는 간판·잡지 글자.

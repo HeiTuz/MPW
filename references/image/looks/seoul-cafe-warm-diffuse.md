@@ -3,7 +3,7 @@
 | 항목 | 값 |
 |---|---|
 | 부르는 이름 | 서울 카페 웜톤 확산광; 서울 카페 웜톤; 서울 카페 웜 디퓨즈; 웜톤 확산광; 카페 웜톤 확산광; 서울 홈카페 웜톤; Seoul cafe warm diffuse; Seoul warm diffuse light; 首尔咖啡馆与居家暖调漫射 |
-| 부르지 않는 말 | 서울 카페; 카페 감성; 홈카페; 웜톤; 따뜻한 조명; 카페 사진 |
+| 부르지 않는 말 | 서울 카페; 카페 감성; 홈카페; 웜톤; 따뜻한 조명; 카페 사진; 카페 인물 사진; 카페 스냅; 카페 분위기; 카페 인테리어; 카페 감성 사진; 홈카페 감성; 감성 카페; 따뜻한 감성; 따뜻한 느낌; 따뜻한 분위기; 웜톤 사진; 웜톤 인물; 웜톤 감성; 베이커리 카페; 빵집 카페; cozy cafe; cafe vibe; warm tone portrait; warm cafe light |
 | 문화권 | KR(서울) |
 | 기본 갈래 | A |
 
@@ -12,12 +12,12 @@
 |---|---|
 | medium | 미러리스·레인지파인더 디지털 카메라로 찍은 실내 일상 스냅. 필름 스틸도 스튜디오 화보도 플래시 스냅도 아니다. 첫 줄은 `A Seoul warm-diffuse everyday candid shot on a mirrorless digital camera`로 시작한다(카메라 이름은 Optics `camera` 줄이 정한다) |
 | closer | `서울 카페 웜톤` |
-| time | A는 해가 높은 오후, B는 아침부터 한낮까지 창으로 드는 빛, C는 해 진 뒤 저녁~밤(2700~3600K, 황혼 창이 있는 줄만 4500K), D는 해 높이 15도쯤의 해질녘(3800K 안팎). 한낮 야외 직사광 없음 |
-| light-key | 창·커튼·블라인드·석고벽·바닥·종이 갓에 걸러진 확산광과 따뜻한 실용광(전구·스탠드·촛불). 플래시 없음. 강한 직사는 D의 역광과 B의 블라인드 줄무늬뿐 |
-| palette | 오트, 크림, 카멜, 호두나무 갈색, 모카, 꿀빛 호박색, 살구 기운이 도는 따뜻한 흰 피부. 네온·형광 파스텔·차가운 청회색 없음(C의 황혼 창 한 줄만 푸른 빛이 들어온다) |
+| time | A는 해가 높은 오후, B는 아침부터 오후까지 창으로 드는 빛, C는 해 진 뒤 저녁~밤(2700~3600K, 황혼 창이 있는 줄만 4500K), D는 해 높이 15도쯤의 해질녘(3800K 안팎). 한낮 야외 직사광 없음 |
+| light-key | 창·커튼·블라인드·석고벽·바닥·종이 갓에 걸러진 확산광과 따뜻한 실용광(전구·스탠드·촛불). 플래시 없음. 강한 직사는 D의 역광, B의 블라인드 줄무늬와 커튼 틈 햇살 한 줄뿐 |
+| palette | 오트, 크림, 카멜, 호두나무 갈색, 모카, 꿀빛 호박색, 따뜻한 빛이 피부에 얹는 살구빛 하이라이트. 네온·형광 파스텔·차가운 청회색 없음(C의 황혼 창 한 줄만 푸른 빛이 들어온다) |
 | grain | 가장 어두운 곳에만 아주 고운 디지털 노이즈. C는 고감도라 어두운 벽과 그림자에서 눈에 띈다. 필름 입자·할레이션 없음 |
-| lens | 눈높이의 표준 시선, 35mm 환산 28~50mm쯤. 얼굴 비례는 자연스럽고 배경은 부드럽게 녹는다. D만 85mm 압축. 광각 왜곡도 딥포커스도 없다 |
-| figure | 한 사람이 따뜻한 빛 웅덩이 안에 머문다. 몸은 3/4로 틀고 어깨는 내려놓고 고개만 렌즈 쪽으로 돌린다(Iris 공통). 정면 증명사진 자세 없음, 빠른 움직임 없음 |
+| lens | 표준 시선, 35mm 환산 28~50mm쯤. 카메라 높이는 쌍의 Camera 줄이 정하고(쌍 5 하이앵글, 쌍 12 앙각 등) 쌍이 말하지 않으면 눈높이다. 얼굴 비례는 자연스럽고 배경은 부드럽게 녹는다. D만 85mm 압축. 광각 왜곡도 딥포커스도 없다 |
+| figure | 한 사람이 따뜻한 빛 웅덩이 안에 머문다. 몸은 3/4로 틀고 어깨는 내려놓고 고개만 렌즈 쪽으로 돌린다(Iris 공통. 쌍이 자세를 정하면 쌍이 이긴다). 정면 증명사진 자세 없음, 빠른 움직임 없음 |
 
 ## 갈래 고르기
 | 갈래 | 요청에 이 말이 있으면 | 성격 | Iris 근거 |
@@ -34,9 +34,9 @@
 | catchlight | 카드 줄이 이긴다. 눈이 감겼거나 가려진 쌍(3번의 눈 위만 보이는 줄 제외, 눈이 닫힌 표정 줄)이면 붙이지 않는다 | Iris는 모든 블록에 같은 단일 점 캐치라이트를 넣었는데 이 룩의 광원은 창·촛불·램프·석양으로 갈린다 |
 | face-clear | 켠다. 머리는 귀 뒤로 넘겨 눈썹과 눈이 열려 있다. B의 `베드헤드 펌` 줄도 눈 앞은 비운다 | Iris 모든 블록이 같은 문장으로 이마와 눈썹을 열어 이 룩과 충돌이 없다 |
 | base, lip | 카드 줄이 이긴다. D는 base 줄이 없으니 고정 몫 `물광 피부`가 붙는다 | Iris의 고정 메이크업은 모든 빛에 같은 코랄 누드 글래스 립과 수광 베이스였다. 이 룩은 창빛 속 속광, 촛불 아래 촉촉함, 역광 속 누드 글로스로 질감이 갈린다 |
-| lens | A·B는 켠다. C에서 `Leica Q`(28mm) 줄을 쓰거나 D에서 `85mm 인물 렌즈` 줄을 쓰면 `无畸变` 줄을 끄고 그 줄이 lens 슬롯을 채운다 | #052(28mm)와 #048(85mm)에 Iris 꼬리의 50mm 무왜곡이 같이 있어 렌즈가 둘이었다 |
+| lens | 쌍마다 렌즈를 말하는 줄이 정확히 하나다. 쌍 1~7(A·B)·9·10은 Camera 줄이 렌즈를 말하지 않으니 고정 몫 `无畸变`이 그 줄이다. 쌍 8(C)에서 Optics `Leica Q`(28mm) 줄을 고르면 그 줄이 렌즈 줄이라 `无畸变`을 끈다. 쌍 11(D)은 Camera 줄 `망원 압축`이 렌즈를 말하니 `无畸变`도 Optics `85mm 인물 렌즈`도 붙이지 않는다. 쌍 12(D)는 Camera 줄 `앙각`이 렌즈를 말하지 않으니 Optics `85mm 인물 렌즈`가 렌즈 줄이고 `无畸变`을 끈다. 카메라 높이는 `无畸变` 줄이 아니라 쌍 Camera 줄이 정한다 | #052(28mm)와 #048(85mm)에 Iris 꼬리의 50mm 무왜곡이 같이 있어 렌즈가 둘이었다 |
 | grain | A·B·D는 켠다(고정 몫의 `数码噪点` 줄이 맞다). C는 카드의 `고감도 노이즈` 줄이 이긴다 | #049(A7S III, ISO 6400)는 고정 문장보다 눈에 띄는 노이즈다 |
-| framing | 켠다. 쌍 4(Plan américain)·7(Medium Close-Up)·9(Gros plan)는 프레임 범위를 직접 말하니 그 말과 부딪치지 않게 쓴다 | 나머지 쌍은 범위를 말하지 않는다 |
+| framing | 켠다. 쌍 4(무릎 위 샷)·7(미디엄 클로즈업)·9(클로즈업)는 Camera 줄이 프레임 범위를 직접 말하니 그 쌍이 정한다 | 나머지 쌍은 범위를 말하지 않아 고정 몫 허리 위 줄이 범위를 정한다 |
 | ratio | 켠다. 사용자 비율이 없으면 3:4 세로 | 쌍은 비율을 정하지 않는다 |
 
 ## Hair and makeup
@@ -81,7 +81,7 @@
 |---|---|---|
 | A, D | hand-prop | 따뜻한 종이컵 — Both palms wrap a hot paper cup with steam rising in front of the face, the steam glowing white wherever light comes from behind. |
 | A | hand-prop | 크루아상 — A freshly baked golden croissant pinched between two fingers, its flaky layers lit by the warm shop spots. |
-| A | hand-prop | Vinyl LP — A black 12-inch record half-slid from a kraft sleeve, its fine grooves catching a thin curved line of lamp light. |
+| A | hand-prop | LP판 — A black 12-inch record half-slid from a kraft sleeve, its fine grooves catching a thin curved line of lamp light. |
 | B | hand-prop | 머그컵 — A heavy white ceramic mug held near the chin in both hands, steam curling up toward the nose and softening the edge of the lips. |
 | B | plant | 다육 화분 — A row of small succulent pots on the sill, their plump leaves glowing translucent green where the sun passes through. |
 | C | hand-prop | 향초 — A small scented candle in a glass jar, its low flame lighting the wax surface and warming the nearer hand. |
@@ -92,12 +92,12 @@
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
 | A, B, D | style | 힐링 무드 — A soft, warm and quiet everyday mood with gentle light and relaxed expressions. |
-| A | style | Hipjiro Retro Nostalgia — Worn wood, faded enamel and amber bulb light make every surface look aged and lived in. (滤镜 #042) |
-| B | style | Nordic Warm Wood — Light birch and oak with oatmeal wool, soft matte surfaces and gentle even daylight. |
+| A | style | 힙지로 레트로 — Worn wood, faded enamel and amber bulb light make every surface look aged and lived in. (滤镜 #042) |
+| B | style | 노르딕 우드 — Light birch and oak with oatmeal wool, soft matte surfaces and gentle even daylight. |
 | B | texture | 울 숄 — Coarse beige wool pressed against the cheek, the rough weave making the skin look very smooth by contrast. (滤镜 #056) |
-| C | style | Antique Writer's Study — Dark walnut, brass fittings and yellowed paper under a single warm desk lamp. (滤镜 #060) |
+| C | style | 앤티크 라이터 스터디 — Dark walnut, brass fittings and yellowed paper under a single warm desk lamp. (滤镜 #060) |
 | 전부 | style | 서울 카페 웜톤 — Soft warm indoor light diffused by windows, sheer curtains, plaster walls or lampshades, so edges and shadows stay gentle in Seoul cafes and homes. |
-| 전부 | palette | palette — Oat, cream and camel with walnut-brown and honey-amber shadows and warm apricot skin, nothing neon, pastel or cold gray in the frame except the one blue dusk window of 냉온 대비. |
+| 전부 | palette | palette — Oat, cream and camel with walnut-brown and honey-amber shadows and warm apricot light on the skin, nothing neon, pastel or cold gray in the frame except the one blue dusk window of 냉온 대비. |
 
 ## Scene
 | 갈래 | 슬롯 | 줄 |
@@ -108,11 +108,11 @@
 | A | shop | LP바 — A cafe with walnut shelves of vinyl sleeves and a turntable, warm lamp light glowing on brown wood. (滤镜 #058) |
 | B | place | 아침 침대 — White bedding under thin sheer curtains, bright morning light passing through the fabric and softening every shadow. (滤镜 #043) |
 | B, C | place | 한남동 — A hillside district interior of pale walls and floor-to-ceiling glass with soft diffuse side daylight. (滤镜 #055 #059) |
-| B | room | Solarium Greenhouse — A glass-walled plant room flooded with soft light, leaf shadows moving over pale floor tiles. (滤镜 #057) |
+| B | room | 선룸 온실 — A glass-walled plant room flooded with soft light, leaf shadows moving over pale floor tiles. (滤镜 #057) |
 | B | wall | 프렌치 몰딩 — White plaster cornice on cream walls where light bounces softly several times. (滤镜 #047) |
 | C | place | 노출콘크리트 카페 — Raw concrete walls and a single wooden counter, soft window light grazing the matte gray surfaces. (滤镜 #045) |
 | C | bedroom | 심야 침실 — A dark bedroom at night with one small candle on the bedside shelf, the white bedding faintly lit and the far wall lost in shadow. (滤镜 #049) |
-| C | furniture | 코듀로이 소파 — A deep caramel corduroy sofa whose soft ribbed pile swallows stray light and sets the skin off in warm white. (滤镜 #052) |
+| C | furniture | 코듀로이 소파 — A deep caramel corduroy sofa whose soft ribbed pile swallows stray light and sets the lit side of her face off in warm white. (滤镜 #052) |
 | C | study | 심야 독서 — A dark desk lit by one desk lamp, a tight pool of warm light on the pages and hands with black surroundings. (滤镜 #060) |
 | D | place | 한강 억새 — Reed grass at the riverside backlit by low gold sun, each feathered tip glowing against a warm hazy sky. (滤镜 #048) |
 | D | place | 겨울 길모퉁이 카페 — A cold winter street corner outside a small cafe with bare trees, the low sun skimming along the pavement and breath and cup steam visible in the air. (滤镜 #046) |
@@ -120,19 +120,19 @@
 ## Light
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
-| A | face-light | Window Light — Daylight from a window falls on her from one side, leaving a bright cheek and a soft shadow side that falls off gently. |
+| A | face-light | 창가 빛 — Daylight from a window falls on her from one side, leaving a bright cheek and a soft shadow side that falls off gently. |
 | A | face-light | 쇼윈도 스팟 빛 — Warm ceiling spots over a bakery display glow on the pastries and reach her cheek through the glass, with faint glass reflections laid over the skin. (滤镜 #054) |
 | A | light-fill | 텅스텐 조명 — Incandescent bulbs give warm amber-orange pools on the wood, the walls and the near cheek, leaving deeper amber in the corners. |
 | A, B | catchlight | 창문 눈빛 — A large window leaves a soft rectangular, sometimes pane-divided highlight in the upper part of each iris. |
 | B | face-light | 아침 햇살 — Low warm sun slips through a gap in the curtains as one golden band across white sheets, lighting one cheek and leaving the rest in pale shade. (滤镜 #043) |
 | B | face-light | 블라인드 빛 — Afternoon sun through window blinds falls in evenly spaced bright and dark bands over the face, collarbones and wall. (滤镜 #044) |
 | B | beam | 빛내림 — Light crossing a sheer curtain and dusty air shows as straight soft shafts with floating dust bright inside each one. (滤镜 #051) |
-| B | light-fill | Bounce Light — Light reflected up from a sunlit wooden floor softly fills the underside of the jaw, nose and brows in the warm colour of the wood. (滤镜 #050) |
+| B | light-fill | 바닥 반사광 — Light reflected up from a sunlit wooden floor softly fills the underside of the jaw, nose and brows in the warm colour of the wood. (滤镜 #050) |
 | C | face-light | Akari 1A — A paper-shaded floor lamp spreads a soft warm orange glow through its shade, lighting one half of the face and fading fast into the dark room. (滤镜 #045) |
-| C | face-light | Candlelight — A small flame close by casts warm amber light that falls off fast into darkness, flickers softly and leaves a tiny warm glint in the eyes. (滤镜 #049) |
+| C | face-light | 촛불 조명 — A small flame close by casts warm amber light that falls off fast into darkness, flickers softly and leaves a tiny warm glint in the eyes. (滤镜 #049) |
 | C | ambient | 냉온 대비 — Cool blue dusk light from the window and a small warm lamp inside meet on the face, one side reading blue and the other amber with a soft seam between. (滤镜 #055) |
-| C | backlight | Banker's Lamp — A green glass-shaded desk lamp behind and to one side traces a thin gold line along the hair and shoulder while its warm pool lights the desk. (滤镜 #060) |
-| C | catchlight | lamp catchlight — One small warm point of light from a lamp or flame sits in each eye. |
+| C | backlight | 뱅커스 램프 — A green glass-shaded desk lamp behind and to one side traces a thin gold line along the hair and shoulder while its warm pool lights the desk. (滤镜 #060) |
+| C | catchlight | 램프 캐치라이트 — One small warm point of light from a lamp or flame sits in each eye. |
 | D | face-light | 역광 금빛 테두리 — A low sun from behind rings the hair and shoulder outline in gold while the face stays in soft shadow lifted by sky and ground. (滤镜 #048) |
 | D | backlight | 역광 — Light from behind lifts the whole frame into a soft, airy brightness, and the steam from the cup glows white and blurs the background into a haze. (滤镜 #046) |
 | D | catchlight | 황금빛 눈동자 — The low setting sun puts fine amber sparkles in the irises and a warm gold edge along the cheek. |
@@ -155,15 +155,15 @@
 | C | grain | 고감도 노이즈 — At ISO 6400 the dark room shows real luminance noise across the shadows and the far wall, softly smearing fine detail with no night-mode lift. (滤镜 #049) |
 | D | lens | 85mm 인물 렌즈 — A short-telephoto portrait look that flatters the face with gentle compression and creamy blur. (滤镜 #048) |
 
-## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 요청의 장소·소품·시간대·의상 가운데 둘 이상이 같으면 통째로 쓴다. 우선순위는 image-brief.md §4 '룩 카드' 4항)
+## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 요청의 장소·소품·시간대·의상 가운데 둘 이상이 그 세트의 단서와 같으면 통째로 쓰고, 세트 값은 고정 사실보다 먼저다. 규칙은 image-brief.md §4 '룩 카드' 4항과 '비워 둔 층')
 | 세트 | 갈래 | 묶음 |
 |---|---|---|
-| S1 성수동 빵집 (滤镜 #041) | A | Outfit 스퀘어 넥(숯회색 슬림 긴팔 니트) / Props 은 물방울 펜던트(아주 가는 은 쇄골 체인) / Scene 베이커리 카페, 성수동 빵집의 한가한 오후 간식 자리 / Light 4800K 오트·카멜 톤의 낮은 대비 따뜻한 빛, 갓 내린 라떼의 온도 / Optics Fujifilm X100V 23mm f/2, 밀크티 톤 / Pose 어깨 너머 시선, 몸은 3/4로 틀고 어깨는 내려놓는다 / Expression 렌즈 쪽을 맑게 보는 눈 |
-| S2 을지로 복고 카페 (滤镜 #042) | A | Outfit 캐시미어 니트(모카 브라운, 큰 V넥) / Scene 을지로 호두나무 카페, 짙은 오크·호두나무 가구와 복고 분위기 / Light 4200K 가구에서 되튄 깊고 따뜻한 빛, 그림자는 붉은 갈색 / Optics Leica M10-P + Summicron 35mm, 호박색 톤 / Style Hipjiro Retro Nostalgia / Pose 어깨 너머 시선 |
-| S3 청명 침실 (滤镜 #043) | B | Hair 베드헤드 펌 / Outfit 오트 블레이저 튜브탑(검은 튜브탑 위에 연한 귀리색 블레이저를 앞 열고) / Scene 아침 침대, 흰 시트와 커튼 틈 / Light 아침 햇살 4500K, 막 뜬 해가 커튼 틈에서 흰 시트로 금빛 한 줄기 / Optics Canon EOS R6 50mm f/1.8 / Expression 졸린 눈, 막 깬 느슨함 |
-| S4 블라인드 줄무늬 (滤镜 #044) | B | Outfit 보트넥(검은 슬림 긴팔 니트) / Scene 블라인드가 달린 복고풍 실내(사전 토큰 없음, Light 줄이 공간을 만든다) / Light 블라인드 빛 4600K, 오후 사선 햇빛이 얼굴과 쇄골에 같은 간격의 줄무늬 / Optics Sony A7 III 50mm f/1.4 / Expression 내리깐 눈, 기하학적 줄무늬를 가만히 받는다 |
-| S5 아카리 밤 (滤镜 #045) | C | Outfit 스퀘어 넥 / Props 은 물방울 펜던트, Vinyl LP(책 보며 레코드 듣는 밤) / Scene 노출콘크리트 카페 계열의 성수동 콘크리트 실내, 배경은 어둡고 비어 있다 / Light Akari 1A 3200K, 종이 바닥 램프의 주황빛이 얼굴 반쪽만 / Optics Iris의 카메라 칸이 램프 이름이라 기본 미러리스에 고감도 노이즈 / Expression 깊은 밤 혼자인 고요한 눈 |
-| S6 한강 억새 (滤镜 #048) | D | Outfit 보트넥 / Scene 한강 억새, 갈대 이삭이 금빛으로 / Light 역광 금빛 테두리 3800K, 해 높이 15도의 금주황 역광이 몸 전체를 금빛 윤곽으로 감싼다 / Optics Canon EOS R5 85mm f/2, 85mm 인물 렌즈 / Expression 눈 감고 바람 느끼기, 낭만적인 황혼 / Pose 어깨 너머 시선 |
+| S1 성수동 빵집 (滤镜 #041. 단서: 성수동, 빵집, 베이커리 카페, 오후, 라떼) | A | Outfit 스퀘어 넥(숯회색 슬림 긴팔 니트) / Props 은 물방울 펜던트(아주 가는 은 쇄골 체인) / Scene 베이커리 카페, 성수동 빵집의 한가한 오후 간식 자리 / Light 4800K 오트·카멜 톤의 낮은 대비 따뜻한 빛, 갓 내린 라떼의 온도 / Optics Fujifilm X100V 23mm f/2, 밀크티 톤 / Pose 어깨 너머로 돌아보기(쌍 12가 아니라 이 줄이 Pose다), 몸은 3/4로 틀고 어깨는 내려놓는다 / Expression 렌즈 쪽을 맑게 보는 눈 |
+| S2 을지로 복고 카페 (滤镜 #042. 단서: 을지로, 호두나무 카페, 복고, 호박색 전구, 모카 캐시미어 니트) | A | Outfit 캐시미어 니트(모카 브라운, 큰 V넥) / Scene 을지로 호두나무 카페, 짙은 오크·호두나무 가구와 복고 분위기 / Light 4200K 가구에서 되튄 깊고 따뜻한 빛, 그림자는 붉은 갈색 / Optics Leica M10-P + Summicron 35mm, 호박색 톤 / Style 힙지로 레트로 / Pose 어깨 너머로 돌아보기(쌍 12가 아니라 이 줄이 Pose다) |
+| S3 청명 침실 (滤镜 #043. 단서: 아침 침대, 흰 시트, 커튼 틈 햇살, 베드헤드, 귀리색 블레이저) | B | Hair 베드헤드 펌 / Outfit 오트 블레이저 튜브탑(검은 튜브탑 위에 연한 귀리색 블레이저를 앞 열고) / Scene 아침 침대, 흰 시트와 커튼 틈 / Light 아침 햇살 4500K, 막 뜬 해가 커튼 틈에서 흰 시트로 금빛 한 줄기 / Optics Canon EOS R6 50mm f/1.8 / Expression 졸린 눈, 막 깬 느슨함 |
+| S4 블라인드 줄무늬 (滤镜 #044. 단서: 블라인드, 줄무늬 빛, 오후 사선 햇빛, 복고풍 실내, 보트넥 니트) | B | Outfit 보트넥(검은 슬림 긴팔 니트) / Scene 블라인드가 달린 복고풍 실내(사전 토큰 없음, Light 줄이 공간을 만든다) / Light 블라인드 빛 4600K, 오후 사선 햇빛이 얼굴과 쇄골에 같은 간격의 줄무늬 / Optics Sony A7 III 50mm f/1.4 / Expression 내리깐 눈, 기하학적 줄무늬를 가만히 받는다 |
+| S5 아카리 밤 (滤镜 #045. 단서: 아카리 램프, 노출콘크리트, 레코드 듣는 밤, 성수동, 스퀘어넥 니트) | C | Outfit 스퀘어 넥 / Props 은 물방울 펜던트, LP판(책 보며 레코드 듣는 밤) / Scene 노출콘크리트 카페 계열의 성수동 콘크리트 실내, 배경은 어둡고 비어 있다 / Light Akari 1A 3200K, 종이 바닥 램프의 주황빛이 얼굴 반쪽만 / Optics Iris의 카메라 칸이 램프 이름이라 기본 미러리스에 고감도 노이즈 / Expression 깊은 밤 혼자인 고요한 눈 |
+| S6 한강 억새 (滤镜 #048. 단서: 한강, 억새, 갈대, 노을, 역광) | D | Outfit 보트넥 / Scene 한강 억새, 갈대 이삭이 금빛으로 / Light 역광 금빛 테두리 3800K, 해 높이 15도의 금주황 역광이 몸 전체를 금빛 윤곽으로 감싼다 / Optics Canon EOS R5 85mm f/2, 85mm 인물 렌즈 / Expression 눈 감고 바람 느끼기, 낭만적인 황혼 / Pose 어깨 너머 시선 |
 
 ## 포즈·구도 쌍
 | 번호 | 갈래 | Pose | Camera |
@@ -171,8 +171,8 @@
 | 1 | A | 두 손으로 컵 감싸기 — Both hands wrap a paper cup at chest height with the elbows tucked in and the shoulders soft, her eyes on a friend just off the frame. | 오버 더 숄더 — Over the blurred shoulder of the friend across the table, her face sharp and lit from the window side. |
 | 2 | A | 턱 괴기 — Elbow planted on a dark walnut table, palm under the cheek and the head tipped slightly to one side, looking out of the window. | 삼분할 구도 — She sits on the left third beside the window and the soft window glow fills the right two thirds. |
 | 3 | A | 메뉴판으로 얼굴 가리기 — A kraft menu held up hides the lower half of her face, only the eyes and hair showing above its edge. | 전경 가림 — Shot past blurred pastries on a glass tray crossing one lower corner of the frame. |
-| 4 | A | 벽에 기대기 — One shoulder rests on a plaster wall beside a shop door, the weight on one hip and the other foot crossed in front. | 무릎 위 샷 — The frame cuts at the knees, so the whole stance, the hands and the shopfront threshold all read. |
-| 5 | B | 쿠션 끌어안기 — Cross-legged in the middle of a white bed with a big pillow hugged to the chest and the chin resting on it. | 하이앵글 — From above the bed edge looking down, the white sheets spreading around her in soft folds. |
+| 4 | A | 벽에 기대기 — One shoulder rests on a plaster wall beside a shop door, the weight on one hip. | 무릎 위 샷 — The frame cuts at the knees, so the whole stance, the hands and the shopfront threshold all read. |
+| 5 | B | 쿠션 끌어안기 — Sitting up in the middle of a white bed with a big pillow hugged to the chest and the chin resting on it. | 하이앵글 — From above the bed edge looking down, the white sheets spreading around her in soft folds. |
 | 6 | B | 기지개 — Standing at a window with both arms raised and the fingers interlaced, the spine arching in a slow stretch against the sheer curtain. | 여백 — She fills about a third of the vertical frame and the pale curtain and wall leave the rest as quiet empty space. |
 | 7 | B | 머그컵 후후 불기 — Both hands wrap a mug held near the lips while the mouth blows softly across the hot surface, the eyes lowered. | 미디엄 클로즈업 — The frame runs from the top of the head to mid-chest with the mug in the lower third and the window glow behind. |
 | 8 | C | 소파에 파묻히기 — Sunk deep into the corner of a corduroy sofa with the shoulders low and a cushion hugged to the chest. | 중앙 구도 — She sits dead centre and the warm folds of the sofa close around her on all sides. |
@@ -182,7 +182,7 @@
 | 12 | D | 어깨 너머 시선 — She walks away along the river path and turns her head back over one shoulder, the low sun behind her. | 앙각 — The camera sits low and looks up, so the sun skims her shoulder line and her figure stands tall against the glowing sky. |
 
 ## 맞지 않는 것
-형광등 백색 직광, 직부 플래시, 네온 간판, 차가운 청회색 낮빛, 한낮 직사광, 형광·파스텔 색, 필름 입자와 할레이션, 스튜디오 흰 배경, 하드한 그림자(B의 블라인드 줄무늬와 D의 역광 제외), 정면 증명사진 자세, 읽히는 간판·메뉴·상표 글자.
+형광등 백색 직광, 직부 플래시, 네온 간판, 차가운 청회색 낮빛, 한낮 직사광, 형광·파스텔 색, 필름 입자와 할레이션, 스튜디오 흰 배경, 하드한 그림자(B의 블라인드 줄무늬·커튼 틈 햇살과 D의 역광 제외), 정면 증명사진 자세, 읽히는 간판·메뉴·상표 글자.
 
 ## 출처
 Iris (noahvisualsx/Iris b83de4c, MIT, © 2026 noahvisuals): 韩国/滤镜/03 #041–060, 韩国/风格/02 #021–040, 韩国/风格/06 #091–100, 韩国/拍照姿势/03 #041–060, 韩国/拍照姿势/06 #091–100. 낱말과 구성은 참고했고 문장은 MPW용으로 새로 썼다. 라이선스 전문은 [LICENSE-Iris.md](LICENSE-Iris.md).
