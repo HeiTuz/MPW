@@ -37,7 +37,7 @@ Return its verified local path after the save succeeds.
 
 ## 검증기
 
-검증기는 프롬프트 텍스트 계약만 검사한다. 컴파일된 산출물에는 `--profile assembled`, 네이티브 GPT Image 문안에는 `--profile native --engine gpt-image`를 사용한다. 프로필별 입력·플래그·길이 층은 아래 검증기 코드 표와 `node scripts/check_prompt.mjs --test` 사례를 따른다. S1 기계 산출은 이 검사기 대신 `contracts/validate.py`를 반드시 실행한다.
+검증기는 프롬프트 텍스트 계약만 검사한다. 컴파일된 산출물에는 `--profile assembled`, 네이티브 GPT Image 문안에는 `--profile native --engine gpt-image`를 사용한다. 층 문안을 다른 엔진 형식으로 편 문안([engine-levers.md](engine-levers.md))은 `--engine seedream`·`nano-banana`·`soul`·`midjourney`로 돌려 길이와 `coherence/*`를 본다. 프로필별 입력·플래그·길이 층은 아래 검증기 코드 표와 `node scripts/check_prompt.mjs --test` 사례를 따른다. S1 기계 산출은 이 검사기 대신 `contracts/validate.py`를 반드시 실행한다.
 
 길이는 계약·전달 채널·대상 엔진 층 중 가장 좁은 상한으로 판정하며, 구속 층이 아니어도 계약 위반은 따로 보고한다. 채널을 지정하지 않은 S3에서는 ChatGPT 웹 입력창 기준 기본 채널 상한 10000을 가정한다. 이는 S3 자체의 상한 선언이 아니다. 상한을 모르는 메신저형 전달은 `--channel bounded`(상한 2000)로 지정한다. 상한 없는 CLI·데스크톱 전달은 `--channel unbounded`, 측정된 유한 상한은 `--channel-limit N`으로 지정한다. 기본 가정으로 실패한 경우 검증기 메시지의 전달 채널 안내를 확인한다.
 
@@ -76,7 +76,7 @@ manifest 검사는 한 행에 하나의 객체를 받는다. 필수 텍스트는
 | `phrasing/exclusion-list` | native 경고, assembled 오류 | 제외 구획 라벨 또는 부정 항목의 나열 |
 | `phrasing/negation` | 경고, assembled | 영어 부정문을 원하는 결과 상태로 바꿀 수 있음 |
 | `phrasing/ko-negation` | 경고, assembled | 한국어 지시형 부정문을 긍정형 결과로 바꿀 수 있음 |
-| `phrasing/quality-tag` | 오류, assembled | 품질 태그 사용. native 새 이미지 문안의 Finish `8K`([fixed-lines.md](fixed-lines.md))는 보지 않는다 |
+| `phrasing/quality-tag` | 오류, assembled | 품질 태그 사용. native 새 이미지 문안의 Finish `8K`([fixed-lines.md](fixed-lines.md))는 보지 않는다. assembled도 `## Finish` 층 안의 첫 `8K` 하나는 보지 않고, 다른 곳의 `8K`와 둘째 `8K`는 오류다 |
 | `phrasing/vague-adjective` | 경고, 공통 | 결과를 판정하기 어려운 평가형 수식어 |
 | `phrasing/noise-trigger` | 경고, gpt-image 엔진의 assembled와 `Edit the attached`로 시작하는 편집 문안(새 이미지 native 문안은 입자·`8K`를 [fixed-lines.md](fixed-lines.md)가 정하므로 보지 않는다) | 부정·제거 구문 밖에 [surface-contracts.md](surface-contracts.md) §3.2.4 표의 어휘가 있음. 입자·매체와 과잉 세부 행 전체, 부유 입자 행의 `particles` 계열, 거친 표면 행의 `paper grain`·`canvas texture`·`rough texture`·거친 질감만 본다. 사물로도 흔히 쓰는 `sparkles`·`glitter`·`textured background`와 한국어 먼지·종이 질감은 보지 않는다. 삭제 지시가 아니라 알림 후보 |
 | `portrait/skin-token` | 경고, assembled | 피부 어휘의 의도를 검토하되 요청 질감·부위·부분 수정 범위를 보존 |
@@ -90,6 +90,10 @@ manifest 검사는 한 행에 하나의 객체를 받는다. 필수 텍스트는
 | `coherence/decimal` | 오류, 공통 | 소수점이 `。`로 바뀜(`7。5`) |
 | `coherence/slot-dup` | 경고, 공통 | Hair and makeup에 입술 줄이 둘 이상이거나, 캐치라이트를 적은 줄이 둘 이상 |
 | `coherence/day-night` | 경고, 공통 | 밤 단서와 `noon`·`midday`가 한 문안에 함께 있음 |
+| `coherence/engine-layers` | 경고, 엔진 한정 | `--engine seedream·nano-banana·soul·midjourney`에서 `## 층` 제목이 둘 이상. GPT Image 층 문안을 그 엔진 모양으로 펴지 않았다([engine-levers.md](engine-levers.md) §4) |
+| `coherence/engine-flag` | 경고, 엔진 한정 | `--engine seedream·nano-banana·soul`의 본문에 `--ar`·`--no`·`--oref` 같은 Midjourney 플래그나 `AR 3:4`. 호출 설정으로 옮긴다 |
+| `coherence/engine-ban` | 경고, 엔진 한정 | `--engine nano-banana·soul·midjourney`에서 `never·not·no` + `illustration·anime·cartoon·3D render·CGI`. Midjourney는 `--no`, 나머지는 `a real photograph` 같은 긍정 매체로(Seedream 칸은 이 문장을 쓴다) |
+| `coherence/engine-brand` | 경고, 엔진 한정 | `--engine soul`에서 Kodak·Portra·Fujifilm·Vision3 같은 필름 상표명. 필름 테두리가 그려진 실측이 있다(soul-v2-director.md 실측 법칙 3) |
 | `manifest/parse` | 오류, manifest | JSON 행 파싱 실패 |
 | `manifest/not-object` | 오류, manifest | 행이 객체가 아님 |
 | `manifest/empty` | 오류, manifest | 매니페스트에 행이 없음 |

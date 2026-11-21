@@ -43,6 +43,10 @@ export const CODE_REGISTRY = Object.freeze({
   decimal: { code: "coherence/decimal", severity: { native: "error", assembled: "error" }, intent: "Reject a decimal point replaced by an ideographic full stop." },
   slotDup: { code: "coherence/slot-dup", severity: { native: "warning", assembled: "warning" }, intent: "Flag a slot filled twice: lips in Hair and makeup, or the catchlight." },
   dayNight: { code: "coherence/day-night", severity: { native: "warning", assembled: "warning" }, intent: "Flag a night cue next to midday light." },
+  engineLayers: { code: "coherence/engine-layers", severity: { native: "warning", assembled: "warning" }, intent: "Flag GPT Image layer headings left in a prompt for another engine." },
+  engineFlag: { code: "coherence/engine-flag", severity: { native: "warning", assembled: "warning" }, intent: "Flag a Midjourney flag or ratio token in the body of an engine that takes it as a setting." },
+  engineBan: { code: "coherence/engine-ban", severity: { native: "warning", assembled: "warning" }, intent: "Flag a spoken ban on illustration or CGI where the engine's cell says to state the medium or use its own exclusion syntax." },
+  engineBrand: { code: "coherence/engine-brand", severity: { native: "warning", assembled: "warning" }, intent: "Flag a film stock brand name in a Soul prompt, which draws the film border." },
   parse: { code: "manifest/parse", severity: { native: "error", assembled: "error" }, intent: "Report invalid JSON without losing subsequent rows." },
   notObject: { code: "manifest/not-object", severity: { native: "error", assembled: "error" }, intent: "Require an object for each manifest row." },
   manifestEmpty: { code: "manifest/empty", severity: { native: "error", assembled: "error" }, intent: "Require a nonblank manifest row." },
@@ -174,6 +178,19 @@ function measure(text, result, options) {
       `${names[layer.kind]}: ${codepoints} codepoints exceeds ${layer.limit}; surface=${result.surface}, engine=${result.engine}.${assumption}`,
       layer.assumed ? { hint: "Use --channel unbounded for an unlimited channel, or --channel-limit for its actual limit." } : {});
   }
+}
+
+// fixed-lines.md writes `8K` once, in the realism line of the closing "## Finish" layer.
+// That one occurrence is the documented exception to the quality-tag rule, so the
+// phrasing checks do not see it. Any other 8K or tag still counts.
+function withoutFinishEightK(instruction) {
+  const heading = /^##[ \t]+Finish[ \t]*$/imu.exec(instruction);
+  if (!heading) return instruction;
+  const start = heading.index + heading[0].length;
+  const next = /^##[ \t]/mu.exec(instruction.slice(start));
+  const end = next ? start + next.index : instruction.length;
+  const section = instruction.slice(start, end).replace(/(?<![\p{L}\p{N}_])8K(?![\p{L}\p{N}_])/iu, "  ");
+  return instruction.slice(0, start) + section + instruction.slice(end);
 }
 
 function copyViews(text) {
@@ -411,6 +428,34 @@ function inspectCoherence(result, text, instruction) {
   if (/\b(?:night(?:time)?|midnight|after dark)\b|深夜|夜晚|の夜/iu.test(instruction) && /\b(?:noon|midday|mid-day|noonday)\b|正午|中午|真昼/iu.test(instruction)) {
     emit(result, CODE_REGISTRY.dayNight, "A night cue and midday light appear in the same prompt.", { hint: "Pick one time of day and make Light and Optics agree." });
   }
+  inspectEngine(result, instruction);
+}
+
+// engine-levers.md §5: the cells that say "do not write this" for one engine. Text matching only.
+const LAYER_ENGINES = new Set(["seedream", "nano-banana", "soul", "midjourney"]);
+function inspectEngine(result, instruction) {
+  const engine = result.engine;
+  if (!LAYER_ENGINES.has(engine)) return;
+  const hint = "engine-levers.md §4 flattens a GPT Image layer prompt into this engine's form.";
+  const headings = instruction.split(/\r?\n/u).filter((line) => /^##\s+\S/u.test(line));
+  if (headings.length >= 2) emit(result, CODE_REGISTRY.engineLayers, `${headings.length} layer headings (## …) in a ${engine} prompt.`, { hint });
+  if (engine !== "midjourney") {
+    const flags = snippets(/(?<![\p{L}\p{N}_-])--(?:ar|no|oref|ow|sref|style|raw|stylize|q|v)(?![\p{L}\p{N}_-])|\bAR\s+\d{1,2}:\d{1,2}\b/giu, instruction);
+    if (flags.length) emit(result, CODE_REGISTRY.engineFlag, `${engine} takes this as a call setting, not body text: ${[...new Set(flags)].slice(0, 3).join(" | ")}`, { hint: "Move it to the call setting and name it outside the prompt block." });
+  }
+  if (engine !== "seedream") {
+    // A Midjourney exclusion lives in the --no flag, so only the body is scanned.
+    const body = engine === "midjourney" ? instruction.replace(/--no\s[^\n]*?(?=\s--[a-z]|$)/gimu, " ") : instruction;
+    const ban = snippets(/\b(?:never|not|no)\s+(?:an?\s+)?(?:illustration|anime|cartoon|3d\s+render|cgi)\b/giu, body);
+    if (ban.length) {
+      const where = engine === "midjourney" ? "Put it in --no illustration, anime, cgi." : "State the medium instead: a real photograph.";
+      emit(result, CODE_REGISTRY.engineBan, `${engine}: spoken ban on illustration or CGI (${[...new Set(ban)].slice(0, 2).join(" | ")}).`, { hint: where });
+    }
+  }
+  if (engine === "soul") {
+    const brands = snippets(/\b(?:kodak|portra|ektachrome|ektar|fujifilm|fuji\s+(?:superia|velvia|provia|pro)|cinestill|vision3|ilford|tri-x)\b/giu, instruction);
+    if (brands.length) emit(result, CODE_REGISTRY.engineBrand, `Soul: film brand in the prompt (${[...new Set(brands.map((name) => name.toLowerCase()))].slice(0, 3).join(" | ")}).`, { hint: "Say the color response instead: fine grain, softly lifted blacks (soul-v2-director.md, real-run rule 3)." });
+  }
 }
 
 function inspectSkinRepeat(result, instruction) {
@@ -440,7 +485,9 @@ export function checkText(input, options = {}) {
   const result = textResult(options);
   const text = input.startsWith("\uFEFF") ? input.slice(1) : input;
   measure(text, result, options);
-  const { quotes, instruction } = copyViews(text);
+  const views = copyViews(text);
+  const { quotes } = views;
+  const instruction = withoutFinishEightK(views.instruction);
   const structured = result.profile === "native" && structuredBody(text);
   if (isEmpty(text, quotes) && !structured) {
     emit(result, CODE_REGISTRY.empty, "The prompt has no depictable content or nonempty quoted copy.");

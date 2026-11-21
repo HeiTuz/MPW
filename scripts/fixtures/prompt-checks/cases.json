@@ -57,5 +57,15 @@
   {"case":"coherence runs for other engines","input":"pass/coherence-focal.txt","args":["--engine","seedream"],"expect":{"ok":true,"warnings_include":["coherence/focal"]}},
   {"case":"manifest row resilience","input":"fail/manifest-row-recovery.jsonl","args":["--manifest"],"expect":{"ok":false,"errors":["manifest/parse","manifest/not-object","manifest/missing-field","manifest/duplicate-id"]}},
   {"case":"blank manifest","input":"fail/manifest-blank.jsonl","args":["--manifest"],"expect":{"ok":false,"errors":["manifest/empty"]}},
-  {"case":"profile outside enumeration","input":"pass/input-rain-shelter.txt","args":["--profile","retired"],"expect":{"ok":false,"errors":["input/flag"]}}
+  {"case":"profile outside enumeration","input":"pass/input-rain-shelter.txt","args":["--profile","retired"],"expect":{"ok":false,"errors":["input/flag"]}},
+  {"case":"layer headings left in a seedream prompt","input":"pass/engine-layers.txt","args":["--engine","seedream"],"expect":{"ok":true,"warnings_include":["coherence/engine-layers"]}},
+  {"case":"layer headings are normal for gpt image","input":"pass/engine-layers.txt","args":[],"expect":{"ok":true,"warnings_exclude":["coherence/engine-layers"]}},
+  {"case":"midjourney flag in a nano banana body","input":"pass/engine-flag.txt","args":["--engine","nano-banana"],"expect":{"ok":true,"warnings_include":["coherence/engine-flag"]}},
+  {"case":"midjourney flag is syntax for midjourney","input":"pass/engine-midjourney-flags.txt","args":["--engine","midjourney"],"expect":{"ok":true,"warnings_exclude":["coherence/engine-flag","coherence/engine-ban"]}},
+  {"case":"spoken ban in a soul prompt","input":"pass/engine-ban.txt","args":["--engine","soul"],"expect":{"ok":true,"warnings_include":["coherence/engine-ban"]}},
+  {"case":"spoken ban is the seedream cell","input":"pass/engine-ban.txt","args":["--engine","seedream"],"expect":{"ok":true,"warnings_exclude":["coherence/engine-ban"]}},
+  {"case":"film brand in a soul prompt","input":"pass/engine-brand.txt","args":["--engine","soul"],"expect":{"ok":true,"warnings_include":["coherence/engine-brand"]}},
+  {"case":"film brand is allowed for nano banana","input":"pass/engine-brand.txt","args":["--engine","nano-banana"],"expect":{"ok":true,"warnings_exclude":["coherence/engine-brand"]}},
+  {"case":"finish eight k in an assembled prompt","input":"pass/phrasing-finish-eightk.txt","args":["--profile","assembled"],"expect":{"ok":true,"warnings_exclude":["phrasing/noise-trigger"]}},
+  {"case":"eight k outside finish stays an error","input":"fail/phrasing-eightk-body.txt","args":["--profile","assembled"],"expect":{"ok":false,"errors":["phrasing/quality-tag"]}}
 ]
