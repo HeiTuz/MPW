@@ -144,6 +144,8 @@ Outfit 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다.
 | 브이넥 캐시미어 니트 | 모카 V넥 니트; 딥브이 캐시미어 니트; deep-V cashmere knit | KR | 아이폰 원본 셀카; 아이폰 셀카; iPhone native selfie; 모카; 니트; 목선 | A slim mocha-brown cashmere knit with a deep V neckline, its soft nap catching light along the shoulders and lengthening the neck. | item |
 | 원피스 수영복 | 원피스 스윔웨어; 수영복; 해변 수영복; one-piece swimsuit | KR | 폴라로이드 빛샘; 코닥 펀세이버; 후지 퀵스냅; 古早胶片; 해변; 바닷가; 휴양; 여름; swimsuit; 泳装; 水着; 수영복 | A plain one-piece swimsuit with wide straps and a scooped back, the wet fabric holding small bright highlights along its seams. | item |
 | 오트 블레이저 튜브탑 | 튜브탑 블레이저; 오트 블레이저; 귀리색 블레이저; oat blazer tube top; 抹胸西装 | KR | 서울 카페 웜톤; 서울 카페 웜톤 확산광; 웜톤 확산광; 首尔咖啡馆与居家暖调漫射; 한남동; 아침 침실; 오트; 블랙 | A black strapless tube top under a pale oat boxy blazer worn open, the lapels folded back so the neckline and bare shoulders stay clear. | item |
+| 와이드 데님 | 와이드 청바지; 루즈핏 청바지; 와이드 팬츠 데님; wide-leg denim | KR | 데일리; 캐주얼; 청바지; 한강; 폴라로이드 빛샘; 필름 빛샘; 필카 감성 | Wide-leg washed denim hangs straight from the hip with a soft break over the shoe, the fabric faded at the knees. | item |
+| 조거 팬츠 | 조거; 트레이닝 팬츠; 스웨트팬츠; 집콕 바지; jogger pants | KR | 편한 옷; 집; 캐주얼; 아이폰 원본 셀카; 아이폰 셀카; iPhone native selfie | Soft grey cotton jogger pants with a drawstring waist and ribbed ankle cuffs, the loose fabric folding at the knees under an oversized tee. | item |
 
 ## CN
 
@@ -599,7 +601,7 @@ Outfit 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다.
 | Trench classique | 트렌치 코트; 트렌치코트; 파리지앵 트렌치; 베이지 트렌치; trench coat | FR | 봄가을; 비 오는 날; 파리; 클래식; Parisian Chic; 파리지앵 시크; 파리 소프트 그레이; 巴黎午后柔灰漫射; Lumière grise de Paris | A light khaki cotton-gabardine trench with a belted waist and storm flap, swinging loosely at the knee. | item |
 | Tweed chevron | 헤링본 트위드; 헤링본; 트위드 쉐브론; herringbone tweed | FR | 가을겨울; 클래식; 아카데미아; 트위드; 파리 소프트 그레이; 巴黎午后柔灰漫射; Lumière grise de Paris | A wool tweed woven in a ridged herringbone in flecked tones, its rough nubbed surface fuzzing at the edges. | item |
 | Tweed pied-de-poule | 하운즈투스 트위드; 피에드풀; 하운드투스 트위드; houndstooth tweed | FR | 가을; 빈티지; 모드; 체크 | A houndstooth tweed whose broken two-tone check seems to vibrate slightly at a distance. | item |
-| Veste universitaire | 유니버시티 재킷; 학자풍 재킷; 3버튼 울 재킷; academic jacket | FR | 가을; 클래식; 학구파; 트래드 | A charcoal herringbone three-button wool jacket with natural shoulders and slim lapels, the weave running in fine diagonal lines. | look |
+| Veste en tweed à chevrons | 유니버시티 재킷; 학자풍 재킷; 3버튼 울 재킷; academic jacket; Veste universitaire | FR | 가을; 클래식; 학구파; 트래드 | A charcoal herringbone three-button wool jacket with natural shoulders and slim lapels, the weave running in fine diagonal lines. | look |
 | Petite robe noire | 리틀 블랙 드레스; 쁘띠 로브 누아; LBD; 블랙 원피스; little black dress | FR | 클래식; 저녁; 미니멀; 블랙; Parisian Chic; 파리지앵 시크 | A short black dress in matte crepe with a clean neckline and fitted waist, a plain dark shape against its surroundings. | look |
 | Voilette de deuil | 검은 베일; veiled mourning; haute couture mourning; 망사 모자 | FR | 애도; 묘지; 비; 엄숙 | Black mesh veil over the eyes under a small hat, face composed and still in soft rain. | look |
 | Chaussures semelle rouge | 루부탱; 레드솔; red sole pumps; 빨간 밑창 구두; 크리스찬 루부탱; Louboutin | FR | 저녁; 하이힐; 명품; 빨강 | Black patent pointed pumps with a glossy surface and a flat, bright red sole flashing when the heel lifts. | brand |

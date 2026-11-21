@@ -208,6 +208,7 @@ Scene 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다. 
 | 동네 슈퍼 | 동네 마트; 슈퍼마켓; 구멍가게; neighborhood grocery store | KR | 가게; 간판; 일상; 동네 | A small neighborhood grocery with crates of fruit outside, a hand-lettered sign and a glass door covered with posters. | place |
 | 분식집 | 떡볶이집; 분식점; 포장마차 분식; Korean snack bar | KR | 분식; 떡볶이; 실내; 일상 | A small snack shop with a steaming tteokbokki pan at the counter, plastic stools, a laminated menu and bright overhead light. | place |
 | 가로수 | 가로수 그늘; roadside trees | KR | 가로수; 그늘; 거리; 초록 | Trees planted in a line along the road with trimmed trunks and canopies that shade the sidewalk below. | place |
+| 집 방 벽 거울 | 침실 거울; 방 전신거울; 집 거울 셀카; 벽 거울; bedroom wall mirror | KR | 거울 셀카; 침실; 집; OOTD; 아이폰 원본 셀카; 아이폰 셀카; iPhone native selfie | A bedroom with a tall wall mirror leaning against a pale wall, soft window daylight from one side and the bed and floor sharp in the reflection. | place |
 
 ## CN
 
@@ -1095,7 +1096,6 @@ Scene 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다. 
 | Amélie Poulain | 아멜리; 아멜리에; 아멜리 룩; Amélie; Le Fabuleux Destin d'Amélie Poulain | FR | 영화; 몽마르트; 따뜻함; 빈티지; 레드 | A film look of saturated red, green and amber, with a bright red café facade, zinc bar and warm tungsten glow. | look |
 | Coin du feu | 난롯가; 벽난로 앞; 쿠앙 뒤 푀; fireside; by the fireplace | FR | 겨울; 실내; 따뜻함; 벽난로 | A cozy room corner beside a lit fireplace, orange firelight playing over knitwear and a wooden floor. | place |
 | escalator du métro | 지하철 에스컬레이터; 메트로 에스컬레이터; metro escalator | FR | 지하철; 이동; 도시; 파리 | A long steel escalator with grooved steps, cold tube light and tiled walls sliding past. | place |
-| Escalier d'eau | 강가 계단; 물가 계단; 센강 계단; water steps | FR | 센강; 석계단; 이끼; 비 | Old stone steps running into the river, the lowest submerged, wet green moss in the joints and rippling reflections on the stone. | place |
 | escalier en colimaçon | 나선 계단; 오스만 계단; spiral staircase; helical stair | FR | 계단; 건축; 파리; 곡선 | A spiral wooden staircase with worn treads and a dark curved banister winding around a light well. | place |
 | Galerie photo | 사진 갤러리; 사진 전시장; photography gallery | FR | 화이트; 갤러리; 미니멀; 콘크리트 | A seamless white-wall gallery with matte grey concrete floor, black track spots and large black-and-white prints in neutral cool light. | place |
 | imposte | 문 위 채광창; 아치 문틀; transom; fanlight | FR | 건축; 아치; 클래식; 문 | An arched glazed transom above a tall doorway, framing a curved shape of light over the figure standing below. | place |
@@ -1175,3 +1175,4 @@ Scene 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다. 
 | Jardin public | 자르댕 퓌블릭; 시립 공원; 동네 공원; public garden | FR | 공원; 초록; 벤치; 낮 | A small municipal garden with raked gravel paths, trimmed lawns, green benches and tall trees. | place |
 | Banc public | 방 퓌블릭 | FR | 벤치; 휴식; 공원; 앉기 | A green slatted bench with cast-iron ends beside a gravel path, a trash bin and fallen leaves at its feet. | item |
 | Supérette | 쉬페레트; 작은 마트; small neighborhood grocery | FR | 가게; 간판; 일상; 동네 | A small neighborhood grocery with crates of fruit outside, a striped awning and a glass door covered with notices. | place |
+| Escalier de quai | 에스칼리에 드 케; 강가 계단; 물가 계단; 센강 계단; Escalier d'eau; water steps | FR | 센강; 석계단; 이끼; 비; 파리 소프트 그레이; 巴黎午后柔灰漫射; Lumière grise de Paris | Old stone steps running down a Seine quay to the river, the lowest submerged, wet green moss in the joints and rippling reflections on the stone. | place |

@@ -49,6 +49,7 @@ Legwear 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다
 | 니트 레그워머 | 케이블 레그워머; 麻花腿套; knit leg warmers | KR | 레그워머; 케이블 니트; 크림; 겨울; 보온 | Chunky cream cable-knit tubes worn over the calf, flaring slightly at the bottom edge over the shoe. | item |
 | 플레어 레그워머 | 미니 플레어 레그워머; 微喇叭口腿套; flared leg warmers | KR | 플레어; 레그워머; 울; 겨울; 키 커 보이는 | Wool leg warmers that widen into a soft bell shape at the hem and drape over the front of the shoe. | item |
 | 학생 양말 | 교복 양말; 흰 양말; school socks; 크루 삭스 | KR | 양말; 교복; 화이트; 학교; 아동·학생 | Plain white cotton crew socks worn with loafers or sneakers, folded neatly at the calf. | item |
+| 아주 얇은 스타킹 | 초박형 스타킹; 초박 스타킹; 얇은 스타킹; ultra-thin stockings | KR | 초박; 투명; 봄여름; 데일리 | Stockings so thin they nearly vanish, leaving only a faint pearly sheen where light slides along the shin. | item |
 
 ## CN
 
@@ -74,7 +75,7 @@ Legwear 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다
 | 真丝天丝肉丝 | 真丝肉丝; 天丝丝袜; 冰凉天丝; 실크 텐셀 스타킹; silk tencel sheer | CN | 실크; 시원함; 여름; 초박; 老钱风; 라오첸펑; 올드머니 | Ultra-fine sheer hosiery with a cool natural-fibre sheen that looks calm and faintly uneven, like silk in soft window light. | item |
 | 真丝缎面宽边 | 缎面宽边; 宽边防滑; 새틴 와이드 밴드 스타킹; silk satin wide band | CN | 새틴; 와이드 밴드; 밴드; 고급 | Thigh-high stockings topped with a broad satin band that lies flat against the leg with a soft even sheen. | item |
 | 竹节后中缝 | 竹节后线; 竹节中缝; 立体提花中缝; 대나무 마디 솔기; bamboo-joint back seam | CN | 대나무; 솔기; 엠보; 차분함; 新中式; 신중식 | A back seam broken into small evenly spaced raised bamboo nodes, each casting a tiny soft shadow up the calf. | item |
-| 红线中缝 | 红线后线; 红线中缝黑丝; 港风红线袜; 빨간 솔기 스타킹; Collant couture ligne rouge; red back seam | CN | 붉은 선; 솔기; 레트로; 밤; 홍콩; 港风 | A thin red seam running up the back of black sheer stockings, a bright line against the dark leg. | item |
+| 红色后缝丝袜 | 红线后线; 红线中缝黑丝; 港风红线袜; 빨간 솔기 스타킹; Collant couture ligne rouge; red back seam; 红线中缝 | CN | 붉은 선; 솔기; 레트로; 밤; 홍콩; 港风 | A thin red seam running up the back of black sheer stockings, a bright line against the dark leg. | item |
 | 苏绣平金 | 苏绣; 平金绣; 쑤저우 자수 스타킹; 평금 자수; Suzhou embroidery | CN | 자수; 금사; 전통; 고급; 新中式; 신중식; 国潮; 궈차오; 국조 | Fine silk-thread embroidery outlined in flat gold couching, raised slightly from the stocking and glinting in small patches. | look |
 | 虚线中缝 | 点阵后线; 几何点阵后线; 점선 솔기 스타킹; dash-dot back seam | CN | 점선; 기하; 미니멀; 솔기 | A back seam drawn as a row of evenly spaced dashes and dots, a clean graphic line on sheer hosiery. | item |
 | 不对称拼色 | 黑白拼色; 不对称; アシンメトリー; 비대칭 투톤 스타킹; 비대칭 타이즈; asymmetric tights | CN | 비대칭; 흑백; 해체주의; 그래픽 | Tights with the two legs in different colors or patterns, or split on a diagonal, drawing a hard graphic line down the body. | look |
@@ -179,6 +180,7 @@ Legwear 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다
 | つっかけ | 突っかけ; 쯧카케; 쓰카케; 슬리퍼 샌들; 집 앞 샌들; slip-on house sandals; casual slip-on sandals | JP | 昭和レトロ; 쇼와 레트로; 집 앞; 샌들; 주부; 여름; 쓰카케 | Flat slip-on sandals with a wide strap across the toes and an open heel, thin rubber or vinyl soles, worn bare-footed or over socks so the heel lifts clear of the sole with each step. | item |
 | 地下足袋 | 지카타비; jikatabi; split-toe work shoes; 分趾工作鞋 | JP | 昭和レトロ; 쇼와 레트로; 작업화; 농사; 건설; 분리 발가락; 노동 | Thin-soled cloth work shoes with a separated big toe, a row of small metal clasps up the ankle and a flexible rubber sole, hugging the foot closely like a sock. | item |
 | ももひき | 股引; 모모히키; 내복 바지; 긴 속바지; long johns; thermal long underwear | JP | 昭和レトロ; 쇼와 레트로; 내복; 겨울; 속옷; 아저씨; 모모히키 | Close-fitting beige cotton long underwear running from waist to ankle, showing as a thin pale layer with a gathered cuff where trouser hems ride up. | item |
+| 素足 | 스아시; 맨발; 맨다리; bare legs; barefoot | JP | 여름; 浴衣; 下駄; 축제; 샌들 | Bare lower legs and ankles with no hosiery, the skin showing naturally from hem to foot. | item |
 
 ## US
 

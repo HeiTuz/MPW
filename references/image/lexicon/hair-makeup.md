@@ -232,6 +232,7 @@ Hair and makeup 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토�
 | 素颜感 | 쑤옌간; 맨얼굴 느낌; bare-faced finish | CN | 쌩얼; 얇은 베이스; 자연스러움; 맨살 | A very light base lets the real skin tone and small texture show, with the brows and lips only faintly defined. | look |
 | 裸妆 | 뤄좡; 누드 메이크업; nude makeup | CN | 누드 톤; 내추럴; 베이스; 데일리 | Skin-toned base, a pale rosy lip and soft brown shading give a clean face that looks lightly made up rather than bare. | look |
 | 风吹发 | 펑추이파; 바람 맞은 머리; hair blown by the wind | CN | 바람; 머리; 흩날림; 야외 | Long hair is lifted by the wind and streams across the face and shoulder in uneven strands. | look |
+| 港风蓬松卷发 | 港风复古卷发; 王家卫卷发; 港风卷发; Hong Kong perm; 홍콩풍 볼륨 웨이브 | CN | 王家卫; 왕가위; 港风; 홍콩; 90년대; 파마; 웨이브 | A loose, voluminous 1990s Hong Kong perm grazing the collarbones, airy and slightly undone, with a few strands lifting off the crown. | look |
 
 ## JP
 
@@ -347,6 +348,7 @@ Hair and makeup 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토�
 | 寝ぐせ | 네구세; 까치집; 부스스한 머리 | JP | 부스스; 아침; 자연스러움; 일상 | Hair stands up or kinks sideways in uneven tufts as if just out of bed, with a few strands flattened against one side. | look |
 | 無造作ヘア | 무조사 헤어; 자연스럽게 흐트러진 머리; effortless messy hair | JP | 흐트러짐; 캐주얼; 자연스러움; 볼륨 | Hair falls in loose, uneven layers with a light tousled texture and no neat parting, looking casual rather than set. | look |
 | 内巻き | 우치마키; 끝 안말음 | JP | 안말음; 단정; 보브; 끝선 | The hair ends curl smoothly inward under the jaw or shoulder line and form a soft rounded edge. | look |
+| シアーリップ | 시어 립; sheer lip; シアーコーラルリップ; 시어 코랄 립; 투명 립 | JP | 립; 투명감; 코랄; 일본; 데일리 | A thin, translucent coral-red lip colour that lets the natural lip show through, soft at the edge and slightly sheer. | look |
 
 ## US
 
@@ -464,6 +466,7 @@ Hair and makeup 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토�
 | Baby Hairs | 얼굴 솜털 머리; 헤어라인 잔머리; edge wisps | US | 잔머리; 헤어라인; 솜털; 깔끔 | Very short fine hairs curl along the hairline at the temples and forehead, softening the edge where the hair meets skin. | look |
 | Tousled Waves | 자연스러운 웨이브; 흐트러진 컬; casual loose waves | US | 웨이브; 흐트러짐; 캐주얼; 볼륨 | Medium to long hair falls in loose uneven waves with a light messy texture and no neat set. | look |
 | Side Braid | 옆으로 땋은 머리; 한쪽 땋기; single side plait | US | 땋은 머리; 캐주얼; 어깨; 일상 | All the hair is gathered over one shoulder into a single loose braid tied with a plain elastic, a few strands loosened at the face. | look |
+| Matte Nude Lip | 매트 누드 립; 벨벳 누드 립; velvet nude lip; 裸色丝绒唇 | US | 누드; 매트; 밤; 플래시; 직부 플래시; Y2K; 千禧CCD直闪; 천희 CCD 직섬 | A beige-nude lip in a flat velvet matte with a softly pressed edge and no gloss. | look |
 
 ## FR
 
@@ -480,7 +483,7 @@ Hair and makeup 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토�
 | Carré plongeant | A-line bob; A라인 단발; 앞으로 기운 단발; 카레 플롱장; 前长后短波波头 | FR | 시크; 단발; 헤어; 모던 | Bob cut shorter at the nape and angled longer toward the front, so the hair dips forward along the jaw. | look |
 | Cerise noire | black cherry lip; 블랙 체리 립; 다크 체리 립; dark cherry lip; 深车厘子红 | FR | 밤; 립; 시크; 강렬 | A dark black-cherry red lip with a satin gloss and a crisp, cold outline. | look |
 | Cernes légers | undereye shadows; 다크서클 메이크업; 세른 레제; unconcealed circles; 黑眼圈妆 | FR | 무드; 밤; 메이크업; 내추럴; Parisian Chic; 파리지앵 시크 | Under-eye area left without concealer so a faint grey-violet shadow stays visible beneath an otherwise light base. | look |
-| Cheveux saut du lit | bedhead; 슈뵈 소 뒤 리; 프렌치 베드헤드; 갓 일어난 머리; French bedhead | FR | 내추럴; 데일리; 파리; 헤어; Parisian Chic; 파리지앵 시크; 파리 소프트 그레이; 巴黎午后柔灰漫射; Lumière grise de Paris; 남프랑스 한여름 과노출; 南法盛夏过曝; Soleil du Midi | Collarbone-length waves with uneven flicked ends and lifted, airy roots, looking slept-in and finger-tousled rather than styled. | look |
+| Coiffure effet saut du lit | bedhead; 슈뵈 소 뒤 리; 프렌치 베드헤드; 갓 일어난 머리; French bedhead; Cheveux saut du lit | FR | 내추럴; 데일리; 파리; 헤어; Parisian Chic; 파리지앵 시크; 파리 소프트 그레이; 巴黎午后柔灰漫射; Lumière grise de Paris; 남프랑스 한여름 과노출; 南法盛夏过曝; Soleil du Midi | Collarbone-length waves with uneven flicked ends and lifted, airy roots, looking slept-in and finger-tousled rather than styled. | look |
 | Chignon au crayon | pencil bun; 연필 번; 연필 꽂은 머리; 铅笔盘发 | FR | 지적; 보헤미안; 헤어; 내추럴; Parisian Chic; 파리지앵 시크; 다크 아카데미아; Dark Academia | Hair twisted into a spiral bun held by a single pencil pushed diagonally through it, with loose wisps at the nape. | look |
 | Coiffé-décoiffé | 코아페 데코아페; undone hair; 꾸안꾸 헤어; 프렌치 메시 헤어; messy French hair | FR | 시크; 데일리; 파리; 헤어; Parisian Chic; 파리지앵 시크 | Deliberately undone hair with uneven, finger-tousled texture that looks styled without effort. | look |
 | Coupe effilée | feathered cut; 페더 컷; 깃털 컷; 에필라주; effilage; 羽毛碎剪 | FR | 가벼움; 봄; 헤어; 페미닌 | Thinned, feathered ends that lift and float when the head moves, with a very sheer fringe that shows the brow peaks. | look |

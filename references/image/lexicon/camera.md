@@ -29,6 +29,7 @@ Camera 층에서 쓰는 원어 토큰 사전이다. 프레이밍·카메라 높�
 | 对角线构图 | 对角线; 대각선 구도; diagonal composition; 斜线构图 | CN | 故宫朱红暖金; 고궁 주홍 웜골드; 宫廷历史胶片; 궁정 역사 필름; 故宫人文大片; 계단; 담장; 江南烟雨柔焦; 강남 연우 소프트 포커스; 烟雨柔焦; 연우 소프트 포커스; 新中式水墨; 신중식 수묵; 水墨影调; 수묵 톤; 水墨宣纸; 수묵 선지; 회랑; 美人靠; 当代美术馆冷光极简; 当代美术馆冷光; 美术馆冷光; 冷光极简; 현대 미술관 냉광 미니멀; 미술관 냉광 미니멀; 미술관 냉광; 냉광 미니멀 | A strong line such as a stair edge or a wall runs from one corner of the frame toward the opposite one, and the subject stands where the lines cross. | look |
 | 低机位倒影 | 低机位水面倒影; 水洼倒影; 贴地倒影; 저각 물 반사; 낮은 앵글 반사; low-angle reflection | CN | 江南烟雨柔焦; 강남 연우 소프트 포커스; 烟雨柔焦; 연우 소프트 포커스; 青石板; 水洼; 倒影; 乌镇 | The camera sits just above wet paving or a pond surface, so the figure and the buildings behind her repeat upside-down in the glossy stone or water below. | look |
 | 大特写 | 极近特写; 大特写镜头; 익스트림 클로즈업; 초근접 클로즈업; extreme close-up | CN | 当代美术馆冷光极简; 当代美术馆冷光; 美术馆冷光; 冷光极简; 현대 미술관 냉광 미니멀; 미술관 냉광 미니멀; 미술관 냉광; 냉광 미니멀; 눈; 접사 | The frame holds only the eyes, the brow and the bridge of the nose, filling the picture edge to edge with nothing else in view. | look |
+| 自然透视 | 无畸变; 自然遠近; natural perspective; no wide-angle stretch; 표준 거리 렌즈 | CN | 인물; 자연스러운 비율; 구도; 렌즈 | The camera stands back with a standard-to-moderate telephoto lens, so the face keeps natural perspective with no wide-angle stretch on the nose or forehead. | item |
 
 ## JP
 
@@ -44,6 +45,7 @@ Camera 층에서 쓰는 원어 토큰 사전이다. 프레이밍·카메라 높�
 | ウエストレベル | 웨이스트 레벨; 허리 높이 촬영; 허리 높이 시점; waist-level; 腰位置; ウエストレベルファインダー; 腰平 | JP | 日系Provia; 高保真Provia; 日系高保真胶片; プロビア; 프로비아; アスティア; 아스티아; リバーサルフィルム; 중형; 낮은 시점 | The camera is held at waist height and looks slightly up at the subject, giving a low, respectful viewpoint with the chin line lifted. | look |
 | ローアングル | 로우앵글; 아래에서 촬영; low angle | JP | 각도; 다리 길이; 거리; 스트리트 | Camera held about 15 cm above the ground tilted upward, stretching the legs and foreshortening the face smaller against the sky or ceiling. | look |
 | ハイアングル | 하이앵글; 위에서 촬영; high angle | JP | 각도; 귀여움; 얼굴 작게; 셀카 | Camera 30 cm above the head tilted down 45 degrees, pushing the forehead closer to the lens, shrinking the chin and widening upturned eyes. | look |
+| 手持ち撮影 | 手持ち; handheld shooting; 핸드헬드 촬영; 손으로 든 카메라 | JP | 핸드헬드; 手持ち; 일상; 걷기; 선명; 日系CCD日光; 일본 CCD 감성; 古早DV梦核 | The camera is held in the hands and the framing shifts a little between frames, but every frame stays sharp with no motion blur. | item |
 
 ## US
 
@@ -66,7 +68,7 @@ Camera 층에서 쓰는 원어 토큰 사전이다. 프레이밍·카메라 높�
 
 | 토큰 | 별칭 | 문화권 | 태그 | 화면에 보이는 모습 | 종류 |
 |---|---|---|---|---|---|
-| Plan américain | 플랑 아메리캥; 무릎 위 샷; American shot; 美式镜头 | FR | 무릎 위; 구도; 영화적; 서 있기 | The frame cuts at the knees, so the whole body above them and the gesture of the hands both read. | look |
+| Plan américain | 플랑 아메리캥; 무릎 위 샷; American shot; 美式镜头 | FR | 무릎 위; 구도; 영화적; 서 있기 | The frame cuts at mid-thigh, so the whole body above them and the gesture of the hands both read. | look |
 | Gros plan | 그로 플랑; 클로즈업; close-up; 特写 | FR | 얼굴; 클로즈업; 구도; 영화적; 아이폰 원본 셀카; 아이폰 셀카; iPhone native selfie; 江南烟雨柔焦; 강남 연우 소프트 포커스; 烟雨柔焦; 연우 소프트 포커스 | The frame holds only the face or one detail, filling the picture edge to edge. | look |
 | Plongée | 플롱제; 부감; high-angle shot; 俯拍镜头 | FR | 높은 각도; 구도; 영화적; 부감 | The camera looks down from above, shortening the figure and pressing it toward the ground. | look |
 | Contre-plongée | 콩트르 플롱제; 앙각; low-angle shot; 仰拍镜头 | FR | 낮은 각도; 구도; 영화적; 앙각 | The camera looks up from below, making the figure tall against the sky or ceiling. | look |
