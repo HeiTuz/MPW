@@ -147,9 +147,14 @@
 | A | night-light | ハレーション — Warm light from the shopfront and street lamps spreads a faint red-orange glow around its brightest points, steam softening the air by the noren. (滤镜 #031) |
 | B | face-light | 逆光 — The sun stands behind her and wraps hair and shoulders in a glowing edge while the face is lit softly by the lawn and the open sky. (滤镜 #025) |
 | B | catchlight | キャッチライト — A small round point of bright sky between the leaves sits in each eye. |
+| B | shrine-light | 木漏れ日 — On the shrine approach, leaf shadows mottle the old stone steps in shifting patches of light and shade under the dense trees. (滤镜 #040) |
 | C | face-light | 窓明かり — Daylight from one window falls from the side, modeling the face with a bright side and a soft shadow side that fall off gently. (滤镜 #024 #037) |
 | C | face-light | Rembrandt Lighting — One large softbox about 45 degrees to the side lights one cheek and leaves a small triangle of light on the shadow cheek, the shadow deep but never black. (滤镜 #039) |
 | C | catchlight | Window Catchlight — A soft rectangular window shape sits in each eye. |
+| C | garden-light | 透明感 — In the dry garden, even bright daylight lies over the raked white gravel while a low side light draws the fine raked lines. (滤镜 #028) |
+| C | veranda-light | Open Shade — On the veranda, deep eaves keep the pale boards in soft open shade while the garden beyond stays bright. (滤镜 #028) |
+| C | shoji-light | Window Light — In the townhouse room, daylight from the garden side glows white through the paper screens and spreads over the tatami. (滤镜 #029) |
+| C | stair-light | Overhead Skylight — Inside the classical building, a soft skylight above falls down the spiral stair and along the one smooth curve of the pale balustrade. (滤镜 #030) |
 | D | face-light | 夕暮れ — Low orange sun from behind and the side lays a warm rim along the hair and shoulder and long soft shadows on the ground. (滤镜 #027) |
 | D | face-light | 逆光 — Strong sun from behind and above rims her hair and turns flying spray into bright white points while her face stays lit by the sand. (滤镜 #035) |
 | D | catchlight-sea | デュアルキャッチライト — Two small bright points of reflected sea glitter sit in each eye. |
@@ -165,11 +170,18 @@
 | C | stock | フジカラー PRO 400H — Pale airy color with soft teal-green highlights and creamy skin highlights in a high-key exposure. (滤镜 #029) |
 | D | stock | Kodak Portra 400 — A warm, low-contrast negative look with creamy skin highlights, soft highlight roll-off and fine even grain. (滤镜 #027) |
 | A | camera | CONTAX T3 — A titanium fixed-lens compact with Zeiss T* coating. (滤镜 #021) |
+| A | tone-t3 | Bokeh Circles — On the CONTAX T3, the centre stays crisp with natural colour and gently contrasty skin, and the sharp edge of her face stands against a softly melting background. (滤镜 #021) |
 | A | camera | コンタックス G2 — A Contax G rangefinder body. (滤镜 #038) |
+| A | tone-g2 | Zeiss Planar 45mm f/2 — On the Contax G2, sharpness stays very high even at open aperture, with clean saturated colour and a smooth soft background. (滤镜 #038) |
 | B | camera | オリンパス OM-1 — A compact 35mm SLR body shot wide open. (滤镜 #025) |
+| B | highlight-om1 | Soft Glow Bloom — On the Olympus OM-1 shot wide open, a gentle glow spreads through the highlights. (滤镜 #025) |
+| B | bokeh-om1 | Bokeh Circles — On the Olympus OM-1 shot wide open, background lights melt into large soft discs. (滤镜 #025) |
 | C | camera | Hasselblad 503CW — A square 6x6 medium-format frame with a Planar 80mm lens. (滤镜 #028) |
+| C | tone-503 | Zeiss Planar 80mm f/2.8 — On the Hasselblad 503CW, the Planar renders with clarity, transparent colour, smooth skin and calm edges. (滤镜 #028) |
 | C | camera | Rolleiflex 2.8F — A waist-level twin-lens square frame with a Planar 80mm lens. (滤镜 #030) |
+| C | tone-rollei | Zeiss Planar 80mm f/2.8 — On the Rolleiflex 2.8F, the Planar gives fine tonal gradation and crisp centre sharpness. (滤镜 #030) |
 | D | camera | ペンタックス 67 — A 6x7 medium-format film body. (滤镜 #027) |
+| D | tone-p67 | Amber Warm Grade — On the Pentax 67, a very thin focus plane lifts her off the background and the old glass adds a faint warm cast. (滤镜 #027) |
 | D | camera | Hasselblad XPan — A panoramic 65:24 frame nearly twice the width of 35mm through a 45mm lens. (滤镜 #034) |
 | A | vignette | 周辺減光 — The corners fall a little darker than the center without a heavy tunnel, like the mild vignetting of a compact's lens. (滤镜 #022 #023) |
 | 전부 | grain | 粒状感 — Very fine, even film grain across the whole frame, barely visible in the midtones and slightly heavier in the shadows. |

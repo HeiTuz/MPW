@@ -150,6 +150,7 @@
 | C | light-fill | Wet Street Reflections — Wet paving and stone mirror the bright sky as glossy patches that add a soft upward fill under the jaw and along the coat. |
 | D | face-light | Ombre douce — Open shade under an arch, ivy or awning lets sky light arrive from one wide side while the far cheek falls into a soft shadow that never goes black. |
 | D | light-fill | Lumière réfléchie — Brick, dark-green iron or ivy bounces a faint tint into the shadow side, warm neutral beside brick and cool emerald-grey beside leaves. |
+| D | cast | Ombre douce — Around the striped columns of the Palais-Royal courtyard, the columns throw only faint, elongated grey shadows across the paving under the flat sky. |
 | A, B, C | catchlight | Lumière du ciel gris — A soft crescent of pale sky sits at the top edge of each iris under the even grey sky. |
 | C | catchlight | Vaguelettes de la Seine — Rippling river light dances in the pupils and along the underside of the chin when she stands by the water. |
 
@@ -164,6 +165,7 @@
 | C, D | stock-mono | Kodak Tri-X 400 — Pure black-and-white tone with ink-deep blacks and open highlights, used only when the request asks for monochrome. |
 | D | push | Pellicule poussée — The film is overdeveloped for extra speed, giving stronger contrast and a deeper shadow tone in the arcade shade. |
 | A, D | camera | Leica M6 — A 35mm rangefinder camera. |
+| A, D | tone | Leica M6 — Leica rendering keeps rich micro-contrast, so the fine texture of stone, cloth and hair separates cleanly, with a faint soft glow around the brightest highlights. |
 | B | camera | Contax G2 — An autofocus 35mm rangefinder camera. |
 | C | camera | Canon New F-1 — A sturdy professional 35mm film SLR camera. |
 | A, D | lens | Summicron 35mm f/2 — A wide-normal lens with a crisp subject, a soft smooth falloff and a bit of the surrounding street kept in the frame. |

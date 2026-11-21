@@ -117,11 +117,14 @@
 | A, C | catchlight | Golden Sunset Arc Catchlight — A curved arc of warm orange sunlight shines across each iris, the horizon line bending in it. |
 | B | face-light | golden-hour sidelight — The low sun rakes in from the side, lighting one cheek amber and throwing long soft shadows across the ground. |
 | B | beam | God Rays — Dust in the dry air lights up as straight gold shafts with floating particles bright inside each beam. |
+| B | light-fill | 窗光光斑 — Inside the diner booth, the setting sun cuts through the dusty window glass in bright stripes that lie across the red vinyl, the table and her side. |
 | C | face-light | Palm Leaf Shadows — Low sun through palm fronds breaks into moving gold patches and feathery shadows on her shoulders, cheek and the street. |
 | C | face-light | Bounce Light — Sun reflected from a pale wall or red clay roof fills the jaw, neck and collarbones with warm light that picks up the wall's color. |
 | C | light-fill | Caustics — Pool-water light breaks into a moving net of bright gold lines that ripple across her shoulders, collarbones and the white wall behind her. |
+| C | shadow-edge | Hard Shadows — Around the Palm Springs pool and pale walls, the low sharp-edged sun draws crisp dark shadow lines beside the palms and along the white buildings. |
 | D | face-light | Window Light — Daylight from one window models the face with a bright side and a soft shadow side that falls off gently. |
 | D | light-fill | Venetian Blind Shadows — Sun through wooden blinds lays parallel gold stripes across her cheek, shoulders and the white bedding. |
+| D | light-fill | Dappled Shade — Inside the orange grove, warm afternoon light breaks into soft spots of sun between the leaves and drifts over her face, shoulders and the ground. |
 
 ## Optics
 `Bokeh Circles`는 얕은 심도를 고른 장면에서만 쓴다(쌍 8 Shallow Depth of Field, `Telephoto Compression`, `Zeiss Planar` 줄이거나 세트 렌즈가 얕은 심도인 S4). Biogon(deep focus)을 고른 쌍 6·10에서는 쓰지 않는다.

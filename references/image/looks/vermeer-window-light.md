@@ -139,16 +139,20 @@
 | A | face-light | Vermeer — Soft daylight from one tall side window warms the near cheek, brow and collarbone while the far side sinks into deep blue-brown shadow. |
 | A, C | light-shadow | clair-obscur — The lit side stays small and bright while most of the face and room falls into deep, soft-edged shadow that keeps its detail, like an oil painting. |
 | A, C | catchlight | Point lumineux de Vermeer — One narrow window highlight sits as a single bead of light in each dark eye. |
+| A, B, D | floor-light | Window Light — The light from the window spills across the floor in a wide beam, and the waxed oak boards carry a dull gleam of it along their length. |
 | B | face-light | Window Light — Sun softened by a sheer curtain wraps one side of the face evenly while the other side keeps a gentle gradient. |
 | B | backlight | Contre-jour — The sun sits behind her, so hair and the cheek edge glow gold while the face holds half a stop darker with its skin detail intact. |
 | B | pattern-light | Venetian Blind Shadows — Slats cut the sun into parallel bars that cross her cheek, collarbone and white shirt, with dust turning gold in the beams. |
 | B | beam | god rays — Low sun through lace curtains makes straight visible shafts in the air, bright inside the beam with dust specks floating through it. |
 | B | pattern-shadow | Wrought-Iron Shadow — Backlight through the scrolled iron rail lays a lace of curling black shadow across her white shirt and bare arms. |
 | B | catchlight | Fenêtres haussmanniennes — The paned window shows as a small gridded reflection in each iris. |
+| B | place-light-barge | Caustics — Light from the river outside comes through the round brass porthole and throws rippling bright lines across the wooden wall and ceiling. |
+| B | place-light-cafe | Contre-jour — At the café window the boulevard outside glows bright while the dark interior behind the table stays in shadow. |
 | C | face-light | Rembrandt lighting — A single window at 45 degrees leaves a small bright triangle on the shadowed cheek under the eye, framed by the shadow of the nose. |
 | C | top-light | Overhead Skylight — A pitched skylight above drops pale vertical light that outlines the forehead, nose bridge and collarbones and leaves the eye sockets dark. |
+| C | slit | Filet de lumière — Behind the old carriage door, one slit of daylight at the doorframe cuts a thin bright line into the stone hall while the rest stays dark. |
 | D | face-light | Lueur de bougie — One white candle lights the jaw and the near eye from below with a warm amber glow while everything behind falls to brown-black. |
-| D | fire | Firelight — Hearth flames throw flickering orange light across one cheek, the collarbone and the knees, with a heavy dark room behind. |
+| D | fire | Firelight — Hearth flames throw flickering orange light across one cheek, the collarbone and the knees and lighting the parquet and the marble hearth orange, with a heavy dark room behind. |
 | D | key | heure bleue — Cold blue dusk light from the window lays a silver-blue outline along one side of the face and body. |
 | D | slit | Filet de lumière — Nearly closed blinds let one narrow golden band cut across a single eye while the rest of the face stays blue-black. |
 | D | catchlight | Iris d'ambre — Two small warm points sit in each eye and turn the brown iris translucent amber, the light low and from the side. |
@@ -167,6 +171,9 @@
 | A | color | Bleu Outremer — Shadows and the apron lean toward a deep, calm French ultramarine set against warm ochre lights. |
 | C | color | High-Contrast Black and White — Bright silver highlights sit hard against deep black shadow with few mid-greys between them. |
 | B | bloom | Halation — The brightest backlit edges bleed a faint warm orange glow into the hair and fabric around them. |
+| A | tone-rts | Contax RTS III — The Zeiss rendering holds the lit eye in crisp focus while the fall-off behind it stays soft and creamy. |
+| B | tone-m6 | Leica M6 — Focus stays sharp where the light lands, and the brightest highlights glow gently. |
+| C | tone-mp | Leica MP — Fine micro-contrast shows the pores and the wool fibres in black and white. |
 | D | vignette | Film Vignette — The corners of the frame fall off into darkness and gather the light onto the face. |
 | C | grain | Grain argentique — Coarse, organic silver grain sits across the whole frame, heaviest in the dark tones. |
 | D | grain | Gros grain — Dense, visible low-light grain fills the shadows and thickens toward the dark edges. |

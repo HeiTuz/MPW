@@ -122,6 +122,7 @@
 | A, B | catchlight | Lumière du ciel gris — A soft crescent of pale sky glows at the top edge of each iris under even overcast light. |
 | C | face-light | heure dorée — Low warm sun from the side lays long shadows and a gold rim along hair and shoulders. |
 | C | backlight | Contre-jour — The low sun sits behind her, so hair and shoulders glow with a gold rim while the face reads slightly darker. |
+| C | dapple | Dappled Shade — Under the olive trees or the chestnut canopy, the leaves break the sun into shifting patches of bright and shade that scatter across the path, her skin and her clothes. |
 | D | face-light | Lumière du matin — Soft light from one tall window beside her falls gently from bright to shadow across the nose. |
 
 ## Optics
@@ -132,6 +133,7 @@
 | B | stock | Kodak Tri-X Reversal 7266 — A black-and-white reversal 16mm film with pure monochrome tone, ink-deep blacks and bright highlights that stay open. |
 | C | stock | Kodak Vision3 250D — Daylight cinema negative: neutral-warm natural color and supple highlights. |
 | A | camera | ARRI 16SR3 — A handheld 16mm cinema camera. |
+| A | corner | 16mm film — On the ARRI 16SR3 the frame holds sharp toward the centre while the corners soften slightly and unevenly. |
 | D | lens | Zeiss Super Speed T1.3 — A wide-open fast prime with a razor-thin focal plane on the near pupil, ears and hair melting into soft blur. |
 | A | grain | Gros grain — Coarse, organic grain across the whole frame, heaviest in the shadows. |
 | B | grain | Grain argentique — Coarse silver grain over monochrome with deep blacks and a gritty texture. |

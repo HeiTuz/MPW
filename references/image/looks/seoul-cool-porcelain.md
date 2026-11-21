@@ -134,6 +134,7 @@
 | A, D | face-light | 흐린 날 빛 — Cloud cover acts as one huge softbox, so shadowless, even light with slightly cool gray tones and soft contrast falls on her face. (滤镜 #021) |
 | A | face-light | 창가 빛 — Daylight from a window to one side models the face with a bright cheek and a soft shadow side that falls off gently. (滤镜 #022) |
 | A | sheer-light | 이중 시어 커튼 빛 — She stands behind two layers of white sheer curtain: the face glows softly through the gauze and the outline washes toward white. (滤镜 #036) |
+| A | book-light | 창가 빛 — In the bookshop, soft window light pools over the open pages of the art books on the table. |
 | A | catchlight | 창가 사각 캐치라이트 — A large window leaves a soft rectangular highlight in the upper part of each iris. |
 | B | face-light | 천장 확산광 — Cool white light falls from a large panel or glass roof above and lights the forehead, nose bridge and collarbones with only a soft shadow under the chin. (滤镜 #023 #037) |
 | B, C | catchlight | 캐치라이트 — A small wide-rectangle reflection of the overhead panel sits on each eye, making the eyes look clear and wet. |
@@ -143,15 +144,24 @@
 | D | weather | 옅은 안개 — Light haze scatters the daylight so contrast drops and distant shapes fade into pale layers. (滤镜 #026 #035) |
 | D | ambient | 블루 아워 — Just after sunset the sky turns a deep, pure blue that gives cool, shadowless ambient light across her profile. (滤镜 #031) |
 | D | light-fill | 눈 반사광 — Snow on the ground bounces even soft light upward into her face and makes the catchlights clear. (滤镜 #038) |
+| D | skyline | 블루 아워 — On the rooftop, the skyline far below is reduced to small points of light and the car lights melt into soft blurred bokeh. |
+| D | wet-pavement | Wet Street Reflections — On the boulevard, the wet pavement mirrors the low grey sky in pale glossy patches. |
 
 ## Optics
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
 | A | camera | Sony A7R V — A high-resolution full-frame mirrorless camera. (滤镜 #021) |
+| A | body-a7rv | Sony A7R V — Cool gray-white tones with clean matte detail, down to each crisp eyelash, under the soft light. |
+| A | body-sl2 | Leica SL2 — Crisp detail with calm, deep-toned colour held inside the muted palette. |
 | B | camera | Hasselblad X2D 100C — A medium-format mirrorless digital camera. (滤镜 #023) |
+| B | body-x2d | Hasselblad X2D 100C — A long, smooth tonal ramp runs from the lit cheek into the shadow side with no hard edge on the face. |
 | B | camera | Phase One IQ4 — A medium-format digital back with an ultra-high-resolution sensor. (滤镜 #037) |
+| B | body-iq4 | Phase One IQ4 — The knit weave and the pale wall stay very clean in neutral color. |
 | C | camera | Sony A7R IV — A 61-megapixel full-frame mirrorless camera. (滤镜 #040) |
+| C | body-a7r4 | Sony A7R IV — Each lash and the fine vellus hair on the cheek resolve cleanly, with no skin smoothing applied. |
 | D | camera | Canon EOS R5 — A high-resolution full-frame mirrorless camera. (滤镜 #025) |
+| D | body-r5 | Canon EOS R5 — Crisp rendering with natural color and smooth tonal transitions holds the wet highlights without clipping. |
+| D | body-a7iv | Sony A7 IV — Neutral rendering with clean low-saturation color and faint olive-grey shadows. |
 | A, C | color | 쿨 화이트 밸런스 — Whites sit slightly cold and clean, so the base reads cool and porcelain-clear with no yellow cast. |
 | A | color | 차분한 티 톤 — A muted gray-brown grade at low contrast with a thin cool tea cast gives the shadows and the base a faint earl-grey undertone. (滤镜 #039) |
 | B | color | 뮤트 시안 — Desaturated color with a faint olive-cyan gray sits in the shadows of the concrete wall and the dark clothing. (滤镜 #024) |

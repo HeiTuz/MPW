@@ -132,13 +132,16 @@
 | A | rim | Rim Light — Afternoon sun from behind and above draws a thin gold line along the hair and shoulders as she runs. |
 | A, C | glint | Specular Flare — Chrome, glass and enamel throw sharp star-shaped glints of the sun back toward the lens. |
 | A | face-shadow | Peaked Cap Shadow — The cap brim throws a band of shadow across the eyes while one brow shows sharply beneath it. |
+| A | sun-shadow | Hard Shadows — High bright sun draws short, sharp-edged, dark shadows across the road, the bowl, under the station canopy and between the bleacher rows while pale surfaces bleach in the glare. |
 | A | water-light | Caustics — Water bends the sun into moving net-like bright lines across skin and the pool wall, with drops flashing gold. |
 | B, D | face-light | Golden Hour Glow — Low sun from the side turns skin amber and runs a thin gold outline along the hair edges. |
 | B | beam | God Rays — Sunlight crossing dusty or misty air becomes straight shafts bright with floating particles. |
+| B | wall-light | Golden Hour — Where a vast gorge falls away, the low sundown sun lights the red canyon walls gold on their faces and leaves the folds in dark, slightly blue-leaning shade. |
 | B | catchlight | Golden Sunset Arc Catchlight — A curved arc of warm orange sunlight shines across each iris with the road falling away behind. |
 | C | face-light | Window Light — Daylight from the shop window models the face with a bright side and a soft shadow side. |
 | C | light-fill | Venetian Blind Shadows — Sun through wooden blinds lays parallel gold stripes across her shoulders, the records and the counter. |
 | D | light-fill | String Lights — Rows of bare incandescent bulbs strung over the ride glow amber, each bulb a warm point against the dusk sky. |
+| D | sky-glow | 노을빛 — Over the drive-in lot and the carousel the sunset sky turns warm orange and pink, tinting skin and gilded paint and softening every shadow. |
 
 ## Optics
 | 갈래 | 슬롯 | 줄 |
@@ -155,6 +158,13 @@
 | A, B | flare | Sunburst Flare — The sun beams into the lens and spreads a small gold starburst with radial rays beside the figure. |
 | D | bloom | Halation — Each bright bulb bleeds a soft red-orange glow around its edges as light scatters in the film. |
 | D | bokeh | Bokeh Circles — Out-of-focus bulbs and sunset glints turn into smooth round gold discs behind her. |
+| A | tone-ae1 | 필카 감성 — Warm, slightly soft vintage colour with an honest daylight exposure. |
+| A | tone-xa | Film Vignette — Soft vintage colour with the corners falling faintly darker toward the edge of the frame. |
+| A | tone-k1000 | 超广角畸变 — The wide view keeps deep focus from the running figure to the bowl or road around her with mild edge stretching, in plain, slightly rough documentary colour. |
+| B | tone-mamiya | Highlight Roll-off — Rich texture holds across the red rock while the sky and bright rock faces step smoothly toward white without a hard clipped edge. |
+| C | tone-canonet | 필카 감성 — Soft, slightly low-contrast warm colour keeps the whole diner readable. |
+| D | tone-fm | Overexposed Highlights — The dusk exposure stays open and airy through the midtones, with honest grain. |
+| D | tone-spotmatic | Takumar — The 50mm lens gives her face a gentle three-dimensional pop against a softly blended background of bulbs. |
 
 ## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 세트를 쓰는 조건은 규칙 4항이 정하고, 세트 값은 고정 사실보다 먼저다. 세트를 고르면 갈래는 그 세트의 갈래 열이다. 단서는 네 칸으로 판정한다. 규칙은 image-brief.md §4 '룩 카드' 4항과 '비워 둔 층')
 | 세트 | 갈래 | 묶음 |

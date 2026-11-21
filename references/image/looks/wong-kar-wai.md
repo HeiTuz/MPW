@@ -126,9 +126,14 @@
 |---|---|---|
 | A, C | face-light | 霓虹双色侧光 — A red neon sign on one side and green tube light on the other split her face into two colors that meet along the nose. |
 | A | light-fill | 荧光灯 — Green-tinged fluorescent light from a shop interior washes the background flat and cool. |
+| A | place-light-corridor | 荧光灯 — In the cramped shop corridor, uneven light from the signs and tubes bounces between the close walls and over the reflective floor. |
+| A | place-light-diner | 荧光灯 — In the diner, green-tinged fluorescent light hangs over the booths above the warmer lamps along the walls. |
 | B | face-light | 钨丝灯 — One low warm tungsten street lamp high above throws amber light across her shoulders and leaves the walls in deep shadow. |
 | B | face-light | 百叶窗光影 — Mixed warm bulb light and cool window light fall through louvres in parallel bars across her cheek. |
+| B | place-light-booth | 钨丝灯 — In the deep red booth, the warm light of the brass wall sconces leaves the corners in dark red shade. |
+| C | place-light-fastfood | 荧光灯 — At the fast-food booth, hard cool-white fluorescent light falls on the red plastic seats while the window beside it stays dark. |
 | D | face-light | green louvre light — Filtered daylight through green louvres lays a jade-green cast over the room and the shadow side of her face. |
+| D | place-light-room | 钨丝灯 — The room behind the half-closed louvres is lit warm from a lamp, and the louvres lay cool striped light across it. |
 | A, C | catchlight | 彩色霓虹眼神光 — Thin red and green neon strips mirror as colored streaks in her irises. |
 | B, D | catchlight | lamp catchlight — One small warm point from the lamp sits in each eye. |
 | A | weather | 雨夜 — Fine rain gives every sign a soft cold halo of mist and catches the neon as short bright streaks. |

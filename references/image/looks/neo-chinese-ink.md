@@ -142,18 +142,21 @@ B의 `月光`(밤)을 고르면 햇빛·새벽빛 줄(`竹影`, `幽篁深处`, 
 | B | night-light | 月光 — Dim cool blue light from a high moon leaves soft low-contrast shapes and a blue cast over the white wall and the bamboo shadows. |
 | C | face-light | 焦墨留白 — One hard light from the side leaves half the face bright and the other half sunk in pure black, like dense ink against bare paper. |
 | C | key | 低调布光 — A mostly dark frame with one small pool of light and rich blacks all around her. |
+| C | desk-light | Window Light — Soft daylight from the window frame rests on the paper and the desk while the rest of the study keeps to quiet grey. |
 | D | face-light | 羊脂温玉 — Very large diffused light with almost no hard shadow gives the skin a warm, matte, milky sheen like polished white jade. |
 | D | light-fill | 窗光光斑 — Sun through a window lays a sharp-edged patch of light on the table or floor, her hands striped by light and shade. |
 | D | catchlight | 窗格眼神光 — A large window leaves a soft rectangular, pane-divided highlight in the upper part of each iris. |
+| D | room-light | Window Light — Soft low natural light from a paper window settles over the low table, the tea tray and the warm matte wood. |
 
 ## Optics
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
 | A | stock | Leica M11 — A compact rangefinder frame. |
 | A | color | 水墨影调 — A low-contrast grey-cyan grade where the whites soften to matte paper and the shadows lean faintly cool. |
+| A | micro | Leica M11 — Crisp micro-contrast keeps the fine surface detail sharp while the colour stays calm. |
 | A, D | surface | 哑光相纸 — No glossy sheen, only a quiet matte photo-paper finish with slow, soft tonal fall-off. |
 | B | stock | Fujifilm GFX — A medium-format digital frame. |
-| B | color | 青绿偏色 — Shadows and midtones lean ink green with restrained red and yellow while the green shade leaves only a faint pale sheen on the skin. |
+| B | color | 青绿偏色 — Shadows and midtones lean ink green with restrained red and yellow while the green shade leaves only a faint pale sheen on the skin, and fine material texture and a deep, rich ink-green hold across leaves, moss and stone. |
 | B | lens | 85mm 人像 — A short-telephoto portrait look with gentle compression, the bamboo behind melting into creamy blur. |
 | C | mono | 黑白银盐 — Pure monochrome with a rich grey ramp, deep velvet blacks and clean highlights. |
 | C | tone | 松烟玄黑 — A low-key frame whose deep charcoal shadows retain fine graphite steps, with only the deepest areas reaching pure black and the highlights small and restrained. |

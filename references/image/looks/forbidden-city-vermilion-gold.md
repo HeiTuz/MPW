@@ -141,12 +141,14 @@
 | A | face-light | 柔和漫射光 — Even afternoon light bounced off the weathered red plaster fills the face with warm, soft shadows and no visible source. (滤镜 #076 #087) |
 | A | light-fill | 雪地反光 — Snow on the ground bounces cool even light upward and fills the underside of the brow and jaw. (滤镜 #080) |
 | B | face-light | 逆光金边 — A low sun from behind rings the hair and the coat edge in gold while the face stays in soft shadow. (滤镜 #077) |
-| B | face-light | 黄金时刻 — Warm light from a low sun skims the marble and her sleeve, outlining the figure and warming every surface it touches. (滤镜 #078) |
-| B | sky-light | 残阳如血 — A low sun in a deep red-orange sky floods the plaza with crimson light and throws one long dark shadow toward the camera. (滤镜 #085) |
+| B | face-light | 黄金时刻 — Warm light from a low sun skims the marble and her sleeve, outlining the figure and warming every surface it touches while the marble's own shadows stay cool grey-blue. (滤镜 #078) |
+| B | sky-light | 残阳如血 — A low sun in a deep red-orange sky floods the plaza with crimson light and throws one long dark shadow toward the camera, the gate tower's dark outline cut against that sky. (滤镜 #085) |
 | B | dusk-light | 蓝调时刻 — Deep blue twilight wraps the scene in cool soft light while the lit tower glows amber, its reflection laid on the still water. (滤镜 #086) |
+| B | tile-light | Tile Highlights — The low sun picks up the hard glaze of the yellow roof tiles and lays bright stripes of reflected light along each ridge. (滤镜 #077) |
 | B | catchlight | 金色眼神光 — Low setting sun puts fine amber sparkles in the irises and a warm gold edge along the cheek. |
 | C | face-light | 低调布光 — A mostly dark hall with one small pool of light leaves rich blacks around the figure and a dim gold gleam on the wood. (滤镜 #083 #084) |
 | C | light-fill | 柔和漫射光 — Daylight from outside reflects softly into the hall and fills the shade under the painted beams with no visible source. (滤镜 #088) |
+| C | case-light | Spotlight — Inside the gallery, soft spots catch only the display cases and the antiques in them while the rest of the room stays dark. (滤镜 #084) |
 | D | face-light | 丁达尔 — Early sun through the cypress branches turns the incense smoke into straight bright shafts with lit particles floating in them. (滤镜 #079) |
 | D | face-light | 窗棂光影 — Slanting sun through the carved lattice window lays a crisp lattice pattern across her cheek, collarbone and white silk. (滤镜 #082) |
 | D | dapple | 斑驳树影 — Sun filtered through cypress needles breaks into scattered soft-edged spots that move over her face and coat against cool shade. (滤镜 #081) |
@@ -161,6 +163,11 @@
 | C | stock | Sony A7R V — A 61-megapixel full-frame mirrorless body. (滤镜 #084) |
 | D | stock | Hasselblad X2D 100C — A 100-megapixel medium-format mirrorless body. (滤镜 #082) |
 | A, B | color | 朱红暖调 — A warm grade leaning reds toward cinnabar and golds toward amber, with shadows going ochre-brown and only a faint warm bounce reaching the skin. (滤镜 #076) |
+| A | tone-m11 | Highlight Roll-off — On the Leica M11, the frame keeps crisp micro-contrast with calm warm colour and a gentle highlight roll-off, so weathered plaster keeps its texture. (滤镜 #076 #087) |
+| B | tone-r5 | Highlight Roll-off — On the Canon EOS R5, the frame is crisp and high-resolution with smooth tonal transitions that hold fine detail in the glazed-tile highlights. (滤镜 #077 #085) |
+| C | tone-a7r | Cool Grey Tone — On the Sony A7R V, the frame keeps clean matte detail and a cool grey-white tonality under the soft spot. (滤镜 #084) |
+| D | tone-x2d | Highlight Roll-off — On the Hasselblad X2D 100C, the frame has natural, smooth colour with a wide tonal range and delicate gradation in the white silk and stone. (滤镜 #082) |
+| C, D | tone-gfx | Fujifilm GFX — On the Fujifilm GFX, the frame shows fine material texture and rich deep colour, so silk, wood and enamel keep distinct surfaces. (滤镜 #079 #088) |
 | C | color | 金褐暗调 — A low-key grade where deep shadows turn gold-brown like old resinous wood and the few highlights stay small and warm. (滤镜 #083) |
 | 전부 | grain | 胶片颗粒 — A fine film-style grain is laid over the digital file, even across the whole frame and slightly heavier in the shadows. |
 

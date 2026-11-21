@@ -125,30 +125,44 @@
 | A | face-light | 창가 빛 — Daylight from a window falls on her from one side, leaving a bright cheek and a soft shadow side that falls off gently. |
 | A | face-light | 쇼윈도 스팟 빛 — Warm ceiling spots over a bakery display glow on the pastries and reach her cheek through the glass, with faint glass reflections laid over the skin. (滤镜 #054) |
 | A | light-fill | 텅스텐 조명 — Incandescent bulbs give warm amber-orange pools on the wood, the walls and the near cheek, leaving deeper amber in the corners. |
+| A | bounce | 바닥 반사광 — In the old walnut cafe, the worn dark wood of the tables and shelves bounces a deep reddish warmth up into the shadows. |
+| A | lane-light | Sidelight — In the narrow lane, warm side daylight falls softly across the brick walls and the painted storefronts. |
 | A, B | catchlight | 창문 캐치라이트 — A large window leaves a soft rectangular, sometimes pane-divided highlight in the upper part of each iris. |
 | B | face-light | 아침 햇살 — Low warm sun slips through a gap in the curtains as one golden band across white sheets, lighting one cheek and leaving the rest in pale shade. (滤镜 #043) |
 | B | face-light | 블라인드 빛 — Afternoon sun through window blinds falls in evenly spaced bright and dark bands over the face, collarbones and wall. (滤镜 #044) |
 | B | beam | 빛내림 — Light crossing a sheer curtain and dusty air shows as straight soft shafts with floating dust bright inside each one. (滤镜 #051) |
 | B | light-fill | 바닥 반사광 — Light reflected up from a sunlit wooden floor softly fills the underside of the jaw, nose and brows in the warm colour of the wood. (滤镜 #050) |
+| B | sheer-light | 柔和漫射光 — In the bed by the window, bright morning light passes through the thin sheer curtains and spreads evenly over the white bedding, softening every shadow. |
+| B | glass-light | 落地窗柔光 — In the hillside room, soft diffuse daylight arrives from the side through the floor-to-ceiling glass and falls off gently across the pale walls. |
+| B | leaf-shadow | Dappled Shade — In the glass-walled plant room, soft light floods in and the leaf shadows of the plants move across the pale floor tiles. |
 | C | face-light | Akari 1A — A paper-shaded table lamp stands close beside her at face height and spreads a soft warm orange glow through its shade, lighting one half of the face and fading fast into the dark room. (滤镜 #045) |
 | C | face-light | 촛불 조명 — A small flame close by casts warm amber light that falls off fast into darkness, flickers softly and leaves a tiny warm glint in the eyes. (滤镜 #049) |
 | C | ambient | 냉온 대비 — Cool blue dusk light from the window and a small warm lamp inside meet on the face, one side reading blue and the other amber with a soft seam between. (滤镜 #055) |
 | C | backlight | 뱅커스 램프 — A green glass-shaded desk lamp behind and to one side traces a thin gold line along the hair and shoulder while its warm pool lights the desk. (滤镜 #060) |
+| C | pile | 低调布光 — On the corduroy sofa, the soft ribbed pile swallows stray light, so the lit side of her face is set off in warm white against the dark fabric. |
 | C | catchlight | 램프 캐치라이트 — One small warm point of light from a lamp or flame sits in each eye. |
 | D | face-light | 역광 금빛 테두리 — A low sun from behind rings the hair and shoulder outline in gold while the face stays in soft shadow lifted by sky and ground. (滤镜 #048) |
 | D | backlight | 역광 — Light from behind lifts the whole frame into a soft, airy brightness, and the steam from the cup glows white and blurs the background into a haze. (滤镜 #046) |
 | D | catchlight | 황금빛 눈동자 — The low setting sun puts fine amber sparkles in the irises and a warm gold edge along the cheek. |
+| D | reed-glow | 逆光 — At the riverside, low gold backlight makes each feathered reed tip glow against the warm hazy sky. |
 
 ## Optics
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
 | A | camera | Fujifilm X100V — A compact APS-C camera with a fixed 23mm lens. (滤镜 #041) |
+| A | body-x100v | 소프트 글로우 — On the Fujifilm X100V, a soft wide-open glow gathers around the lit highlights, giving the frame a casual snapshot feel. |
 | A | camera | Leica M10 — A full-frame digital rangefinder camera. (滤镜 #042) |
+| A | body-m10 | Leica M10 — Sharp, calm colour keeps skin tones clean, with subtle film-like contrast. |
 | B | camera | Canon EOS R6 — A full-frame mirrorless camera. (滤镜 #043) |
+| B | body-r6 | Canon EOS R6 — Clean detail holds in the dim corners of the room and the colour stays warm and pleasing. |
 | C | camera | Sony A7S III — A full-frame mirrorless camera. (滤镜 #049) |
+| C | body-a7s | Sony A7S III — Steady colour holds in the low light and the night highlights stay calm, reflecting softly off the glass and wood. |
 | C | camera | Leica Q — A full-frame compact camera with a fixed 28mm lens. (滤镜 #052) |
+| C | body-q | Leica Q — Crisp edges and clean colour keep the sofa room readable around her. |
 | D | camera | Fujifilm X-T4 — An APS-C mirrorless camera. (滤镜 #046) |
 | D | camera | Canon EOS R5 — A high-resolution full-frame mirrorless camera. (滤镜 #048) |
+| D | body-r5 | Canon EOS R5 — Crisp rendering with natural colour and smooth tonal transitions from the lit edge into the soft shadow. |
+| D | body-xt4 | Fujifilm X-T4 — Warm film-simulation colour and soft highlights give the backlit frame a gentle glow. |
 | A, B | tone | 밀크티 톤 — A low-contrast warm grade that pulls colours toward off-white, oat and camel beige. (滤镜 #041) |
 | B | tone | 크림 톤 — Soft cream-white walls reflect light repeatedly into a smooth, fine, warm white. (滤镜 #047) |
 | A, C | grade | 호박색 톤 — The whole frame bathed in amber-honey warmth, from the wood to the highlights. |

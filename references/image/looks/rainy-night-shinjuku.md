@@ -135,9 +135,13 @@
 | B | face-light | Warm-Cool Contrast — An amber street lamp lights one side of her face and the cold white of passing headlights lights the other, the two meeting at the cheek. (滤镜 #093) |
 | B | light-fill | 蛍光灯 — Flat cool-white fluorescent light from the shop window washes the wet pavement and the lower half of her coat. (风格/03 #045) |
 | B | catchlight | キャッチライト — A small rectangular patch of the big screen or the shop window sits in each eye. |
+| B | rain | 雨の夜 — Under the shop eave, the heavy rain curtain catches the glow of the signs and lamps and reads as a bright, pale veil against the dark street. |
 | C | face-light | 雨夜のテールランプ — Red tail lights streaming past the rain-streaked window rim her profile with dim red light while the car interior stays almost black. (滤镜 #099) |
 | C | through-glass | 水滴越し — Raindrops on the glass between the camera and her scatter the city lights into overlapping soft blobs and short streaks. (카메라가 유리 바깥에 있거나 유리를 사이에 둔 경로 전용이다. 차 안 시점(쌍 10, S5)에서는 창이 인물 뒤에 있으니 쓰지 않는다) |
 | C | light-trail | 車のライトの軌跡 — Long red and white streaks from the traffic far below run along the road like rivers of light. (滤镜 #096) |
+| C | cityscape | 雨の夜 — Beyond the glass of the observation corridor the lights of the city below spread as a sea of cold points, each wrapped in a soft halo of rain mist, while the interior stays black. |
+| C | haze | Atmospheric Haze — In the rain mist beyond the slope, the lit steel edges of the red-and-white tower glow and spread a soft deep-red haze across the sky. |
+| C | in-car | 雨夜のテールランプ — From the passenger seat, red and white lights from the road slide in bands across the dashboard, her cheek and the window glass. |
 | C | catchlight | キャッチライト — Tiny warm points of the city lights below sit in each eye. |
 | D | face-light | Streetlamp Pool — One old street lamp leaves a small hard pool of neutral-cool light on the wet crosswalk and a clean highlight on her cheek, everything else in black. (滤镜 #100) |
 | D | light-fill | 提灯 — Pale pink paper lanterns along the bank glow softly and repeat as shaky lines on the black water. (滤镜 #097) |
@@ -147,17 +151,22 @@
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
 | A | camera | ARRI Alexa Mini — A compact digital cinema camera with a Super 35 sensor. (滤镜 #091) |
+| A | tone-alexa | Highlight Roll-off — On the Alexa Mini the neon tubes fade gradually into white without a clipped edge, and the blacks around them hold a deep violet-blue. |
 | A | camera | Sony A7S III — A full-frame mirrorless camera. (滤镜 #098) |
 | A | flare | ブルーストリーク — Horizontal blue streaks run off each neon tube and the out-of-focus lights behind her stretch into ovals. (S1과 쌍 1~4에서만 쓴다. S2는 구면 단렌즈라 쓰지 않는다) |
 | A, B | bloom | Black Pro-Mist — A black diffusion filter blooms the brightest signs into faint halos and lowers contrast slightly while her face stays clear. |
 | A, B, C | color | Cool Tone — The whole palette leans cold blue-white with the shadows tinted violet, quiet and slightly pale. |
 | B | camera | Sony FX3 — A compact full-frame cinema-line camera. (滤镜 #092) |
 | B | camera | Leica SL2 — A full-frame mirrorless camera. (滤镜 #093) |
+| B | tone-sl2 | Leica SL2 — Crisp detail and deep, calm color keep the amber lamp and the white headlights cleanly separate, with no purple fringing. |
 | C | camera | Hasselblad X2D 100C — A medium-format mirrorless digital camera. (滤镜 #096) |
+| C | tone-x2d | Hasselblad X2D 100C — Smooth color and a wide tonal range keep the distant city lights delicate and unclipped. |
 | C | camera | RED Komodo — A compact 6K cinema camera. (滤镜 #099) |
+| C | tone-komodo | RED Komodo — Crisp detail and clean color hold up through the rain-streaked window. |
 | C | motion | 光跡 — Headlights and tail lights stretch into smooth colored streaks along the road while the buildings stay still and sharp. |
 | C | bokeh | Bokeh — Distant lights turn into big round overlapping discs behind her. |
 | D | camera | Leica M11 — A compact full-frame digital rangefinder camera. (滤镜 #100) |
+| D | tone-m11 | Highlight Roll-off — On the Leica M11, crisp micro-contrast keeps the wet crosswalk sharp while the lamp highlight rolls off gently and stays pure. |
 | D | key | Deep Blacks — The darkest parts of the frame sink to clean, deep black with no visible noise, and the highlights stay small and unclipped. |
 | D | color | Cool Grey Tone — A pale gray with a trace of blue and restrained contrast, the whites clean and cold. |
 

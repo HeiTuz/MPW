@@ -144,6 +144,7 @@ C의 `柔和漫射光`과 `水面焦散`은 둘 중 하나만 쓴다. `水面焦
 | D | light-fill | 煤油灯 — A small oil lamp burns on the table, its deep yellow flame lighting the knit sleeve and hands while the window behind stays cold blue. |
 | D | catchlight | 窗格眼神光 — The window leaves a soft rectangular highlight, split by the lattice, in the upper part of each iris. |
 | D | catchlight-lamp | lamp catchlight — One small warm point from the lamp flame sits in each eye. |
+| D | window-light | 窗光光斑 — When the tea room is lit by day, soft light through the carved windows breaks into scattered mottled patches over the mat and low table, their edges kept gentle by the haze. |
 
 ## Optics
 | 갈래 | 슬롯 | 줄 |
@@ -151,17 +152,20 @@ C의 `柔和漫射光`과 `水面焦散`은 둘 중 하나만 쓴다. `水面焦
 | A | stock | Fujifilm GFX — A medium-format digital frame. |
 | A | color | 冷灰 — A palette of pale grey with a trace of blue, restrained contrast and clean cold whites over the wet stone. |
 | A | bloom | 柔焦 — Rain mist in the air diffuses edges and highlights into a soft glow while the lashes and irises stay sharp. |
+| A | highlight | Highlight Roll-off — Pale highlights on the wet brick, stone and sky fade gradually into white without a hard clipped edge, keeping fine texture and small tonal steps in the damp surfaces. |
 | B | stock | Phase One IQ4 — An ultra-high-resolution medium-format frame. |
 | B | color | 低饱和 — Colour pulled back to near grey with a faint cyan-white cast, so fog, water and robe sit within a few quiet tones. |
 | B | surface | 哑光相纸 — No glossy sheen, only a quiet matte photo-paper finish with slow, soft tonal fall-off across the milky haze. |
 | C | stock | Leica M11 — A compact rangefinder frame. |
 | C | lens | Summilux 35mm f/1.4 — A fast 35mm lens look where bright points bloom softly and the white silk glows against the dim garden. |
 | C | bloom | 黑柔滤镜 — A 1/4-strength Black Pro-Mist blooms the brightest silk and sky into a faint halo and lowers contrast slightly, with fine detail left intact. |
+| C | highlight | Highlight Roll-off — Calm colour and crisp micro-contrast hold across the silk while bright areas fade gradually into white without a hard clipped edge, fine hair detail staying sharp. |
 | D | stock | Leica M11 — A compact rangefinder frame. |
 | D | lens | Summicron 50mm f/2 — A balanced 50mm look with crisp but gentle rendering and smooth blur, the slat stripes holding clean edges. |
 | D | macro | 微距特写 — Extreme close focus with razor-thin depth on a tight lower-face-and-hands frame, showing the skin texture of the jaw and the grain of the clay. |
 | D | bloom | 柔焦 — Steam and the haze around the selected warm source soften the brightest edges into a gentle glow while the eyes (when in frame) and fingertips stay clear. |
 | D | color | 冷茶色调 — A muted grey-brown grade with low contrast and a faint cool tea cast, the selected warm source (slat light or lamp) kept quiet. |
+| D | highlight | Highlight Roll-off — Bright areas of steam, cloth and skin fade gradually into white without a hard clipped edge, keeping texture in the white highlights. |
 
 ## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 단서는 찾기용이고 세트를 쓰는 조건은 규칙 4항이 정하고, 세트 값은 고정 사실보다 먼저다. 규칙은 image-brief.md §4 '룩 카드' 4항과 '비워 둔 층'. 이 표의 켈빈 숫자는 광원을 잰 값이 아니라 이 룩에서 정한 연출 값이다)
 | 세트 | 갈래 | 묶음 |

@@ -132,6 +132,7 @@
 | B | sky-light | 夕暮れ — Low dusk light from behind turns the sky cool pink and blue and lays a thin warm rim along her hair. |
 | C | face-light | 西日 — Low late-afternoon sun comes in sideways across the crossing, warming one side of her face and the edge of her coat. |
 | C | background-light | テールランプの光跡 — Passing red tail-lights stretch into thin horizontal streaks behind her while she holds one spot in the frame. |
+| C | screen-light | 街頭ビジョン — Under the tall screen, its glow pours a cold white light over the crowd and the crossing while the people streak slightly as they move. |
 | D | face-light | 水滴越し — Raindrops on the car window beside her scatter the city's lights into large soft overlapping circles, the drops themselves the clearest shapes in view. (카메라와 인물이 같은 차 안이라 창은 인물 옆에 있다. 렌즈와 인물 사이에 유리가 오게 쓰지 않는다) |
 | D | face-light | 夕暮れ — Strong low sun from behind melts her outline into a warm golden glow and washes her cheek to a soft peach. |
 | D | dust-light | God Rays — Slanting sun cuts the car into bands of gold and shadow, and dust specks drift visibly inside each beam. |
@@ -140,8 +141,11 @@
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
 | A | camera | ハンディカム — A palm-sized Sony Handycam DCR-PC100 MiniDV camcorder frame. |
+| A | tone-pc100 | Soft Glow Bloom — On the Sony Handycam DCR-PC100, colour sits low in contrast, the image smears slightly and bright highlights glow into a milky haze. |
 | A | camera | パナソニック NV-DS9 — A tiny Panasonic NV-DS9 MiniDV camcorder frame with plain standard-definition proportions. |
+| A | tone-ds9 | Muted Low-Saturation — On the Panasonic NV-DS9, the picture softens toward the edges and carries a muted pale-green cast. |
 | A | camera | ビクター ビデオカメラ — A JVC Victor GR-DVL9000 MiniDV camcorder frame. (A의 camera 줄 셋 가운데 하나만 고른다) |
+| A | tone-victor | Amber Warm Grade — On the JVC Victor GR-DVL9000, reds and golden yellows run saturated, contrast is slightly firmer and the skin highlights run warm. |
 | A | overlay | タイムスタンプ — A short pale-green dot-matrix date glows in the lower-right corner of the frame, flatter and cleaner than the picture under it. |
 | A, D | stock | MiniDV — A shaky handheld tape look with soft low resolution, faint comb teeth on moving edges and light that smears slightly when it moves. |
 | B | stock | VHS-C — Analog tape playback: a band of horizontal tracking noise rides the bottom edge and chroma smears sideways into soft halos around bright shapes. |

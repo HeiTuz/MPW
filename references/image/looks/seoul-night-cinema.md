@@ -145,20 +145,26 @@
 | D | face-light | 한강 야경 불빛 — Cold white lights from the bridge and the far bank ripple on the water and lay a faint cool glitter along her jaw and cheek while the rest of her stays dark. |
 | D | face-light | 형광등 — Overhead tube lighting gives flat, even cool-white light with a faint green cast and very few shadows. |
 | D | light-fill | 별 모양 반사광 — Stainless steel and glass throw sharp star-shaped glints of the tube lights back toward the camera. |
+| D | storefront | 蛍光灯 — From the convenience store, flat cool-white fluorescent light pours through the full glass front and washes the dark pavement outside. |
+| D | traffic | 車のライトの軌跡 — From the overpass, the car lights on the wide road far below run as long red and white streaks and melt into large round blurs behind her. |
 
 ## Optics
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
 | A | body | Sony A7 IV — A full-frame mirrorless camera. |
+| A | tone-a7iv | Sony A7 IV — Colour stays clean and the dark areas hold smooth. |
 | A | motion | 장노출 — A long exposure stretches the red tail lights and blue signs outside into dream-like streaks while she stays still and sharp. (滤镜 #092) |
 | A, D | bokeh | 보케 — Distant lights turn into big round overlapping discs behind her. |
 | A, B, D | color | 청보라 밤 색감 — Shadows lean cyan-teal while highlights from signs pick up violet and magenta, with the blacks held deep. (D의 형광등 실내 경로인 편의점·지하철에서는 쓰지 않는다) |
 | B, D | body | Sony A7S III — A full-frame mirrorless camera. (滤镜 #091 #095) |
+| B, D | tone-a7s | Sony A7S III — Steady color keeps the night highlights calm and softly reflective. |
 | B | bloom | 글로우 블룸 — Bright neon highlights spill softly into the surrounding shadows, wrapping the signs in a hazy glow. |
 | C | body | ARRI Alexa Mini — A compact digital cinema camera with a Super 35 sensor. |
+| C | tone-alexa | 하이라이트 롤오프 — On the Alexa Mini the lamp highlight fades gradually into white without a clipped edge and the skin it lights stays rich, with a filmic, slightly soft finish. |
 | C | key | 홍콩 누아르 — Most of the frame sits in deep black, with narrow amber light catching only the edges of her face and the wet road. |
 | C | color | 청록 그림자 — Dark areas lean cool teal-grey while the lamp highlights stay warm orange. |
 | D | body | Fujifilm X-H2S — An APS-C mirrorless camera. |
+| D | tone-xh2s | Fujifilm X-H2S — Crisp rendering keeps the white store light firm and clean, with fine detail held in the dark areas. |
 | D | lens | 85mm 인물 렌즈 — A short-telephoto lens compresses the far lights and blurs them softly behind her face. (滤镜 #091) |
 
 ## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 세트를 쓰는 조건은 규칙 4항이 정하고, 세트 값은 고정 사실보다 먼저다. 규칙은 image-brief.md §4 '룩 카드' 4항과 '비워 둔 층')

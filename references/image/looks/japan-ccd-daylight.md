@@ -108,6 +108,7 @@
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
 | A, B | face-light | 逆光 — The sun stands behind and above her, rimming her hair and shoulders with a bright edge while her face is lit softly by the pavement and the open sky. |
+| A | sun-light | Hard Shadows — Under hard clear daylight, short sharp-edged shadows fall under the eaves and the canvas tents across the shop fronts and the pavement, and the sun catches raised metal such as the manhole cover. |
 | B | face-light | 木漏れ日 — Sunlight through the leaves drops small soft-edged gold spots on her cheek and shoulder while the rest of the face stays in open shade. |
 | C | face-light | 透明感 — Daylight through the lace curtain spreads wide and even over her jaw and collarbone, with almost no shadow edge anywhere on the face. |
 | D | face-light | 西日 — Low orange sun from one side grazes her cheek and arm and stretches long shadows across the sand and the wall. |
@@ -122,8 +123,11 @@
 | A | flash | ストロボ直焚き — The built-in flash adds a flat daylight fill: a small white glint on the forehead and nose and a short hard shadow on the wall behind her. |
 | C | flash | ノンフラッシュ — The flash stays off, so only window light draws the picture, with soft contrast and faint grain in the dim corners. |
 | A | camera | ディマージュ Xt — A Konica Minolta folded-optics pocket compact with a 3.2-megapixel CCD. |
+| A | tone-xt | 柔焦 — On the Dimage Xt, the frame edges turn soft and airy, with fine pink-cyan noise in the shadows and a casual snapshot feel. |
 | B | camera | キヤノン PowerShot G2 — A Canon PowerShot G2, a 2000s compact digital camera with a CCD sensor. |
+| B | tone-g2 | Warm Peach Tones — On the Canon PowerShot G2, the white balance leans warm, highlights clip slightly and the skin carries a smooth porcelain-like sheen. |
 | D | camera | サイバーショット DSC-P10 — A slim early-2000s small-sensor CCD compact. |
+| D | tone-p10 | 冷调 — On the Cyber-shot DSC-P10, the frame carries a cool blue cast with sharp edges: shadows lean blue-gray while the sky stays clean and cold. |
 
 ## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 세트를 쓰는 조건은 규칙 4항이 정하고, 세트 값은 고정 사실보다 먼저다. 세트를 고르면 갈래는 그 세트의 갈래 열이다. 단서는 네 칸으로 판정한다. 묶음 속 K 숫자는 Iris 프리셋의 연출 값이고 프롬프트 문장에는 색으로 옮긴다. 규칙은 image-brief.md §4 '룩 카드' 4항과 '비워 둔 층')
 | 세트 | 갈래 | 묶음 |

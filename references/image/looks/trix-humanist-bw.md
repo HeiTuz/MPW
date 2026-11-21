@@ -133,11 +133,15 @@
 | B | catchlight | dual starburst catchlight — Two tiny bright flame points sit in each dark pupil like distant stars. |
 | B | backlight | Silhouette — She becomes a clean black outline against the much brighter rain-washed sky, with only a thin rim of light on the edges. |
 | B | reflect | Wet Street Reflections — Wet stone and puddles mirror the bright sky as glossy white patches beside deep black paving. |
+| B | reflect-puddle | Wet Street Reflections — In the shallow puddle the pale sky and the street lamps sit as clean mirror shapes of white and bright points in black water. |
+| C | face-light-overcast | Paris Overcast Light — Outdoors under the grey sky, soft even daylight lays pale highlights and mid-grey tones over the book boxes and her face with no hard shadow. |
+| C | face-light-arcade | Sidelight — Under the Sorbonne arcade, pale light enters from one side only and cuts deep shadow across the carved stone and half of her face. |
 | C | face-light-bulb | Lumière tungstène — One bare overhead bulb lights the forehead, nose bridge and the raised record from above in hard silver-white points while the sleeves and crates fall into deep grey shadow. |
 | C, D | face-light | Window Light — Daylight from one tall side window lights the near cheek, brow and nose bridge and falls off smoothly into the shadow on the far side of the face. |
 | C | catchlight-bulb | Catchlight — A small round point of the bare bulb sits at the top of each eye. |
 | C, D | catchlight | Fenêtres haussmanniennes — Tall paned window shapes appear as small gridded reflections in the iris, light falling from one side. |
-| D | shadow | geometric light and shadow — Strong afternoon side light is cut by a row of columns into parallel black bands across the floor and wall, leaving one clean strip of light on her face and shoulder. |
+| D | shadow | geometric light and shadow — Strong afternoon side light is cut by a row of columns into parallel black bands across the floor and wall, leaving one clean strip of light on her face and shoulder, and each flat column side splits into a clean vertical plane of light and a plane of dark. |
+| D | wall-light | Window Light — Soft curtain-filtered window light grazes the plaster mouldings and leaves only a faint gradient of light across the painted panels behind her. |
 
 ## Optics
 | 갈래 | 슬롯 | 줄 |

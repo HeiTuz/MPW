@@ -183,6 +183,10 @@
 | B | filter | Fog Filter — A diffusion filter spreads highlights into a hazy bloom and lifts the blacks to faint grey, so distant cables dissolve into the fog. (滤镜 #044) |
 | A, C | grain | 胶片颗粒 — Fine, even color-film grain sits across the whole frame, slightly heavier in the shadows. |
 | B | grain | 胶片颗粒 — Crisp silver grain lies over the whole grey ramp, fine on T-Max and bold on Tri-X. |
+| A | highlight-m11 | Highlight Roll-off — Crisp micro-contrast holds in the fine surfaces while bright areas fade gradually into white without a hard clipped edge. |
+| A | gradient-907x | Highlight Roll-off — Extremely smooth gradients step the greys finely and keep the highlights restrained. |
+| B | mono-monochrom | 黑白银盐 — Rich tonal depth and razor-fine edge detail run along a long, clean grey ramp. |
+| D | accent-ricoh | 彩度高め — Only the small accents, a yellow taxi or a snack wrapper, come out crisp and punchy against the cold white light, with a deep dark falloff beyond it. |
 
 ## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 세트를 쓰는 조건은 규칙 4항이 정하고, 세트 값은 고정 사실보다 먼저다. 규칙은 image-brief.md §4 '룩 카드' 4항과 '비워 둔 층')
 | 세트 | 갈래 | 묶음 |

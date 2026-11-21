@@ -168,6 +168,9 @@ S6(블루아워)는 `style-look` 줄 대신 D의 `style-look-dusk` 줄을 쓰고
 | B | lens-medium | Zeiss Planar 80mm f/2 — A fast 80mm medium-format portrait lens for the Contax 645 gives fine detail at the focus point and a slow, smooth fall into the soft background. |
 | C | lens-medium | Mamiya N 80mm f/4 — The standard 80mm lens of the Mamiya 7 II holds clean, even sharpness across the frame with a gentle, flat falloff behind her. |
 | D | lens-medium | SMC Takumar 105mm f/2.4 — A 105mm Pentax 67 portrait lens gives very shallow focus and a slow, creamy fall into the background. |
+| B | gradation-contax | Highlight Roll-off — Tones step very smoothly from skin through the white curtain into the softest highlights. |
+| D | gradation-rollei | Highlight Roll-off — Fine tonal steps run from the skin into the brightest areas of the frame. |
+| D | cast-p67 | Takumar — A faint warm cast from the vintage lens glass lies over the strong subject separation of the shallow focus. |
 
 ## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 세트를 쓰는 조건은 규칙 4항이 정하고, 세트 값은 고정 사실보다 먼저다. 규칙은 image-brief.md §4 '룩 카드' 4항과 '비워 둔 층')
 

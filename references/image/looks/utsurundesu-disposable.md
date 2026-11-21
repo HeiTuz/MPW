@@ -32,7 +32,7 @@
 |---|---|---|
 | face-light | 모든 갈래에서 끈다. 얼굴 빛은 이 카드의 Light 줄이 정한다 | `立体光`의 위·옆 키라이트가 렌즈 위 플래시(A·B), 역광 보충 플래시(C), 한낮 직사광(D)과 부딪힌다 |
 | catchlight | A·B는 카드 줄 `Direct Flash Pinpoint Catchlight`가 이긴다. C는 보충 플래시를 쓰는 장면(S5, 쌍 10)에서만 같은 줄을 쓰고, C의 노플래시 장면과 D는 켠다 | 플래시 반사는 눈동자 한가운데 흰 점 하나인데 고정 몫 catchlight는 창·램프 모양이다 |
-| lens | 모든 갈래에서 끈다. 렌즈를 말하는 줄은 프롬프트에서 하나이고 출처 순서는 세트의 렌즈 > 쌍의 렌즈 > 갈래의 본체·렌즈 줄 > 고정 몫 줄이다. 이 카드에서는 갈래의 Optics `lens` 줄(`プラスチックレンズ`, 모든 갈래) 하나다: 32mm 고정초점 플라스틱 렌즈, f/10쯤, 앞뒤가 다 선명하다. 쌍 1~12의 Camera 줄은 렌즈를 말하지 않고 구도와 심도만 말하니(쌍 12 `膝下フレーミング`도 구도다) 어느 쌍을 골라도 렌즈 줄은 이 하나다. 세트 S1은 Optics가 32mm f/10 렌즈를 직접 말하니 그 문장이 렌즈 줄이고 `プラスチックレンズ` 줄은 따로 쓰지 않는다(S2~S6은 `プラスチックレンズ` 줄이 렌즈 줄이다). Optics `body` 줄(`写ルンです`)은 모서리·비네팅·색·플래시만 말한다 | Iris 滤镜 #041~#060은 `相机/介质`에 32mm f/10 단일 플라스틱 렌즈를 적고서 본문 꼬리에 `50mm 단초점 얕은 심도`(원본 값)와 무왜곡을 얹어 한 프롬프트에 둘이 같이 있다. 이 룩의 정체는 앞쪽이다 |
+| lens | 모든 갈래에서 끈다. 렌즈를 말하는 줄은 프롬프트에서 하나이고 출처 순서는 세트의 렌즈 > 쌍의 렌즈 > 갈래의 본체·렌즈 줄 > 고정 몫 줄이다. 이 카드에서는 갈래의 Optics `lens` 줄(`プラスチックレンズ`, 모든 갈래) 하나다: 32mm 고정초점 플라스틱 렌즈, f/10쯤, 앞뒤가 다 선명하다. 쌍 1~12의 Camera 줄은 렌즈를 말하지 않고 구도와 심도만 말하니(쌍 12 `膝下フレーミング`도 구도다) 어느 쌍을 골라도 렌즈 줄은 이 하나다. 세트 S1은 Optics가 32mm f/10 렌즈를 직접 말하니 그 문장이 렌즈 줄이고 `プラスチックレンズ` 줄은 따로 쓰지 않는다(S2~S6은 `プラスチックレンズ` 줄이 렌즈 줄이다). Optics `body` 줄(`写ルンです`)은 35mm·ISO 400·내장 플래시 같은 사실만 말한다 | Iris 滤镜 #041~#060은 `相机/介质`에 32mm f/10 단일 플라스틱 렌즈를 적고서 본문 꼬리에 `50mm 단초점 얕은 심도`(원본 값)와 무왜곡을 얹어 한 프롬프트에 둘이 같이 있다. 이 룩의 정체는 앞쪽이다 |
 | grain | 카드 줄이 이긴다. 굵은 `粒状感` 줄을 쓴다 | 고정 몫 `胶片颗粒`는 가늘고 고른 입자인데 이 룩의 입자는 ISO 400 소형 카메라답게 거칠다 |
 | face-clear | D에서 끈다. C는 쌍 10(옥상 바람)에서만 끈다. 머리가 뺨과 입가 가장자리를 지나가도 되고 눈은 가리지 않는다 | 滤镜 #046은 바닷바람이 머리를 얼굴 반쯤에 붙이고 #050도 바람머리가 얼굴 앞을 지나는데 Iris 꼬리는 `乱发遮挡眉眼`을 금지한다 |
 | lip | D는 카드 줄 `ガラスリップ`가 이긴다. 나머지는 켠다. C의 교복 장면(S5와 교복·학교 줄을 고른 C)은 학생이라 끈다 | 물에 젖은 입술이 D 장면의 사실이라 `シアーリップ`와 입술색이 둘이 되지 않게 |
@@ -41,7 +41,7 @@
 | framing | 켠다. 쌍 5(두 사람), 쌍 6(가슴 위), 쌍 12(무릎 아래)는 Camera 줄이 범위를 말하니 그 쌍에서는 쌍이 정한다. 범위를 말하지 않는 쌍 가운데 다리·발 동작이 있는 1·2·3·4·8은 `from head to toe`로 쓴다 | 나머지 쌍은 범위를 말하지 않는데 Pose가 발이나 걸음을 말하면 허리 위 프레임에서 그 동작이 안 보인다 |
 | ratio | 켠다. 사용자 비율이 없으면 3:4 세로이고 가로는 사용자가 말할 때 3:2로 쓴다 | 35mm 일회용 카메라의 본래 프레임은 3:2이고 세로로 들면 2:3이다. 이 룩의 기본 3:4는 그 세로 프레임의 위아래를 조금 잘라 낸 크롭이다(2:3 그대로 쓰려면 사용자가 말한다). 쌍은 비율을 정하지 않는다 |
 
-**선택 줄:** Optics `周辺減光` 줄은 선택 줄이다. 본체 줄 `写ルンです`가 이미 비네팅을 말하니, 갈래 A에서 Optics가 6줄을 넘으면 이 줄부터 뺀다.
+**선택 줄:** Optics `周辺減光` 줄은 선택 줄이다. 갈래 A에서 Optics가 6줄을 넘으면 이 줄부터 뺀다.
 
 **모든 쌍에 해당하는 처리:** face-light·lens·grain은 어느 쌍에서도 같은 처리다(face-light 끈다, lens는 Optics `プラスチックレンズ` 줄이 렌즈 줄이라 끈다, grain은 카드 줄 `粒状感`), realism은 `native resolution` 줄로 바꾼다. 쌍 번호를 조건으로 건 것은 아래 framing과 위 catchlight·face-clear뿐이다
 
@@ -147,14 +147,26 @@
 | A | light-fill | 提灯 — Rows of red paper lanterns glow warm behind her, so the cold white flash on her face meets red-amber light in the background. |
 | A | weather | 雨の夜 — Fine rain under city lights gives every lamp a soft halo, and the flash freezes each drop in front of her as a tiny bright dot. |
 | A | spark | 線香花火の灯り — A hand-held sparkler's orange bead and fine gold sparks light the lowered eyelids, lips and fingers from below in a small warm pool while everything else falls to dark. |
+| A | place-store | 蛍光灯 — In front of the convenience store, the lit glass front spills a flat cool-white glow onto the pavement and the door glass reflects one small white flash glare. |
+| A | place-vending | 蛍光灯 — At the side-street corner, the lit vending machines glow and lay a cold white-cyan square of light on the bare concrete. |
+| A | place-crossing | Wet Street Reflection — The wet black asphalt mirrors the traffic signals in its puddles, and the flash lights every rain streak in front of her. |
+| A | place-passage | 日光灯 — Cold fluorescent tubes run along the ceiling of the white-tiled passage and lay a flat green-white light over it. |
+| A | place-river | 低调布光 — Under the dark sky only a faint sheen of water shows in the distance, and the ground beyond the flash sinks to near black. |
 | B | steam | 湯気 — Dense white steam rising off the bowl catches the flash and turns into a soft milky haze between the lens and her face. |
 | B | light-fill | Neon and Flash Mix — A cool white flash lights her face cleanly while pink and cyan karaoke light spots sweep the sofa and the walls behind. |
+| B | place-ramen | 日光灯 — Bright fluorescent light hangs right over the dark red counter and the steaming bowls, flat and white. |
+| B | place-table | 裸電球 — A warm tungsten bulb above the low izakaya table pools amber light over the plates, mugs and chopsticks. |
+| B | place-shop | 裸電球 — Dim warm ceiling bulbs light the basement record shop, leaving the crates and sleeves in a low amber glow. |
+| B | place-tatami | 行灯 — Soft low room light stays near the floor and glows through the white paper screen behind her. |
 | A, B, C | catchlight | Direct Flash Pinpoint Catchlight — One small hard white dot sits dead center in each pupil. |
 | C | face-light | 夕暮れ — The low sun stands behind her, rimming the hair and shoulders in gold while the sky burns to molten orange. (석양 장면 전용이다. 雪の朝에는 쓰지 않는다) |
 | C | face-light | 雪明かり — Soft diffuse light from the pale sky and the snowy ground wraps her face evenly with almost no shadow edge and a cool, clean tone. (雪の朝 전용) |
 | C | light-fill | 日中シンクロ — When the sun is behind her, a small on-camera flash fills the face so it reads clearly against the bright sky and a bright gold rim outlines the hair. |
+| C | place-train | 西日 — At dusk the low gold sun rakes along the train window and across the green moquette seats. |
+| C | place-school | Window Light — Slanting window light crosses the stair landing and picks out the dust floating in the air. |
 | D | face-light | Noon Sunlight — High hard sun gives small crisp shadows and pushes the skin and sand highlights slightly past white. |
 | D | light-fill | Backlit Sea Mist — Fine spray thrown up beside her glows as a translucent gold veil, and drops on the lens window catch the sun as hard sparks. |
+| D | place-sea | Caustics — In the clear turquoise shallows, sun ripples run in moving bright lines across the white sand of the sea floor. |
 
 ## Optics
 | 갈래 | 슬롯 | 줄 |
@@ -165,8 +177,10 @@
 | 전부 | grain | 粒状感 — Large, uneven grain sits across the whole frame, coarser in the dark areas the flash does not reach. |
 | A, B | flash | ストロボ直焚き — The built-in flash fires straight along the lens axis, so any glass, can or wet pavement in range throws back a round white glare. |
 | A, B, C | vignette | 周辺減光 — The corners fall into darkness while the center stays bright, so the frame reads as a lit middle inside a dark ring. |
+| D | vignette | 周辺減光 — Even in bright sun the four corners fall slightly darker while the sky and sea in the middle stay bright. |
 | A, B | motion | わずかな被写体ブレ — The flash freezes her sharp while a swinging arm or leg leaves only a faint, brief smear at its fastest point. |
 | C | flash-off | ノンフラッシュ — Where light comes from a window or from the side the flash stays off, so the sky or the glass draws the picture with soft contrast and heavier grain in the dim parts. |
+| C | flare | Lens Flare — The low sun at the train window sends a soft flare across the edge of the frame and lowers contrast near it. |
 | C, D | highlight | 白飛び — Fixed exposure lets the bright sky and any pale wall run to paper white with softly bleeding edges while the midtones stay airy. |
 | D | case | 水中写ルンです — A waterproof single-use film camera in a thick clear housing with ISO 800 film and no flash, the housing adding faint ripple refraction at the frame edge. (수중 모델 경로 전용) |
 

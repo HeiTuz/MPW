@@ -137,9 +137,12 @@
 |---|---|---|
 | A, B, C | face-light | Plein soleil — The sun stands high overhead with no cloud or shade between it and her, so skin, white cotton and pale stone push toward white while the shadows stay small and lavender-grey. |
 | A | light-fill | Scintillement de la mer — Sun on the moving sea breaks into thousands of tiny bright points behind her and throws faint rippling light back under her chin and onto her collarbones. (滤镜 #094 #097) |
+| A | light-fill-cliff | Lumière réfléchie — At the Calanques, pale limestone cliffs and the turquoise water throw the sun back up onto the chin, collarbones and shoulders as bright warm fill. |
+| A | sky-glare | Harsh Midday Sun — The sky over the bay is pale and almost white, so the sun, pebbles and sea all glitter under one hard bright glare. |
 | B | light-fill | Lumière réfléchie — Outdoors, sun thrown back from white limestone walls fills the jaw, the eyes under the hat brim and the neck with hot warm light, so nothing in shade goes dark. |
+| B | shadow-lane | Hard Shadows — In the Gordes lanes the high sun cuts thin crisp-edged lavender-grey shadows down the narrow stone stairs while the white-gold walls glare. |
 | B | face-light-beam | Lumière à travers les volets — Midday sun forces through the slats of closed wooden shutters as a few narrow, almost pure-white bands that cross the floor, the linen and one shoulder while the rest of the room stays cool and dark. (滤镜 #099) |
-| C | face-light-dapple | Lumière mouchetée — Sun through silver olive leaves breaks into moving gold spots over her face and dress, with cool olive-grey ambient shade between them. (滤镜 #096) |
+| C | face-light-dapple | Lumière mouchetée — Sun through silver olive leaves breaks into moving gold spots over her face and dress, with cool olive-grey ambient shade between them and a scatter of sun flecks on the dry ground. (滤镜 #096) |
 | D | face-light | heure dorée — Low amber sun from the side throws long shadows and lays a gold edge along hair and shoulders. |
 | D | backlight | Contre-jour — The sun sits behind her, so hair and shoulders burn gold while the face reads a shade darker against a blown-out bright sky. (滤镜 #098 #100) |
 | D | catchlight | Iris d'ambre — Low golden light passes through each iris and turns it translucent amber, with the setting sun mirrored as a warm crescent. |

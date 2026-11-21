@@ -132,13 +132,18 @@
 | A | face-light | Campfire Light — Low orange firelight from the fire pit lights her face and hands warmly from below and one side against the dark desert, with no sunlight and no flash in the frame. |
 | A, D | face-light | Direct Flash — A flat bright on-camera flash blows out the skin highlights and throws a crisp dark shadow on whatever stands behind her. |
 | A | light-fill | Parasol Shade — Beach umbrellas cast bands and patches of shade with bright spots of sun leaking across her shoulders and the table. |
+| A | place-glare | Bounce Light — Under the bright sky over the boardwalk and the cafe, glare bounces up from the sun-bleached pavement beside the sand and lifts the chin and the table in front of her. |
 | A | weather | Atmospheric Haze — Fine marine haze scatters the light so contrast drops and the far bridge fades toward the sky. |
 | A | catchlight | Campfire Flicker Catchlight — Moving orange-red firelight flickers across the irises as small gold points. |
 | B | face-light | Golden Hour Backlight — The low sun sits behind her and rims her hair and shoulders in gold while the face rests in soft shade filled by sea and sky. |
 | B | catchlight | Golden Sunset Arc Catchlight — A curved arc of warm orange sunlight shines across each iris with the road narrowing inside it. |
+| B | glint | Specular Flare — The chrome mirror and window glass of the open-top car catch the low gold sun and throw sharp glints back toward the lens. |
 | A, C | face-light | Noon Sunlight — High bright sun gives small crisp shadows and skin edges that clip slightly toward white. |
 | C | shadow | Palm Leaf Shadow Projection — Hard sun through palm fronds projects feathery black leaf shapes across her face, shoulders and shirt. |
+| C | place-soft | Open Shade — On the coastal bluff, soft daylight lies evenly over the meadow and the sea behind her. |
 | D | catchlight | Paparazzi Direct Flash Catchlight — The on-camera flash leaves a single hard white dot at the center of each pupil. |
+| D | sun | Noon Sunlight — Over the Palm Springs pool and along the Route 66 shoulder, a dry bright sky and hard sharp-edged sun lay crisp shadows while the small flash only fills her face. |
+| D | place-burger | Bodega Fluorescent Light — The lit counter window of the burger stand glows against the dark street, and the pavement beyond its light is left black. |
 
 ## Optics
 | 갈래 | 슬롯 | 줄 |

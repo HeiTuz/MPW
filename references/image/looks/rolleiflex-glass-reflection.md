@@ -139,13 +139,19 @@
 | A | catchlight | Fenêtres haussmanniennes — Tall paned window shapes sit as small gridded reflections in each iris, the light falling from one side. |
 | B | catchlight | Reflet de pluie — Streaks of rain on the glass slide as thin vertical lights across the iris and the cheek. |
 | A | accent | Crystal Prism Light — Faceted crystal flacons throw tiny spectral rainbow spots across the pane, the cheekbone and the cardigan. |
+| A | water-light | Vaguelettes de la Seine — At the island quay bistro, rippling Seine light is laid over the glass beside her and shimmers across the pane. |
+| A | shop-window | 쇼윈도 스팟 빛 — At the bakery, soft warm window light falls on the golden croissants and trays and reaches her cheek through the glass. |
 | B | weather | Gouttes sur la vitre — Raindrops on the pane scatter street lamps and ruby taillights into overlapping round blobs and short streaks that lie across her face and the glass. |
+| B | lamp-gold | Blue Hour — Through the rain-beaded front windows of the café, the street lamps outside turn gold against the deepening blue dusk. |
+| C | water-light | Vaguelettes de la Seine — On the Batobus, bright reflections from the river water glint and ripple across the curved panoramic glass. |
 
 ## Optics
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
 | A, B | camera | Rolleiflex 2.8F — A 6x6 medium-format twin-lens reflex camera. |
 | A | camera | Hasselblad 500C/M — A 6x6 medium-format SLR camera with a waist-level finder. |
+| A | tone-hassel | Hasselblad 500C/M — The planes stay very flat and razor-sharp across the frame, with smooth tones from skin to glass. |
+| A, B | tone-rollei | Rolleiflex 2.8F — The square frame holds fine tonal gradation from the lit skin through the glass reflection to the shaded room. |
 | A, B | lens | Zeiss Planar 80mm f/2.8 — A standard medium-format lens that holds the face crisp and lets the reflected street fall softly behind it with no wide-angle stretch. |
 | A, B | viewfinder | Waist-Level Viewfinder — The camera is held at belly height and looks slightly up, so the figure stands a little tall and unhurried against the glass and the sky. |
 | A, B | format | 6x6 Square Frame — A square 6x6 frame with the face and the window reflection balanced inside it and calm margins on every side. |
@@ -153,6 +159,7 @@
 | B | stock | Kodak Portra 800 — Low-light color negative; in this look it leans lamplit skin toward warm tones and lets lamps and wet glass carry a soft glow. |
 | B | color | Vision3 500T-inspired grade — A tungsten cinema-negative look: in this look lamplit skin leans toward warm amber and the shadows toward a slightly green-cool tone. |
 | C | camera | Leica M6 — A 35mm film rangefinder camera. |
+| C | glow | Soft Glow — The Leica M6 lets the brightest highlights spread a gentle glow into the surrounding shadow. |
 | C | lens | Summicron 35mm f/2 — A wide-normal lens that keeps the subject crisp and lets a little of the surrounding street stay in the frame. |
 | C | stock | Kodak Tri-X 400 — Pure black-and-white with ink-deep blacks and open highlights, used for the metro frame only. |
 | A, C | grain | Grain argentique — Fine color-film grain sits evenly over skin, sky and glass, a touch more visible in the darkest corners of the window. |

@@ -139,10 +139,15 @@
 | B | face-light | 다이렉트 플래시 — The phone's small rear flash fires toward the mirror and lights her face flat and bright, leaving a hot white spot in the glass that blooms into a faint star-shaped glare. |
 | B | face-light | 형광등 — Long overhead tubes spread flat cool-white light from above, leaving no dark corner and a clear shadow under each collarbone. |
 | B | face-light | 트랙 조명 — One narrow ceiling beam lights the forehead, nose bridge and collarbones in hard bright planes while the eye sockets sit in faint shadow. |
+| B | face-light | Window Light — In the bedroom mirror, soft window daylight from one side lights her face and the room, falling off gently across the pale wall. |
 | B | catchlight | 플래시 캐치라이트 — One small hard white dot from the flash sits in each pupil. |
 | C | face-light | 차창 빛 — Daylight through a moving vehicle's window lights half of her face and slides across it while the other half stays in shade. |
+| C | face-light | Overcast Light — Along the Hannam-dong street, soft diffuse daylight lies even over the pale gallery walls, the glass fronts and her face. |
+| C | face-light | Fluorescent Light — In the subway car and on the platform, flat cold tube light falls evenly from above and leaves almost no shadow on her. |
 | D | face-light | 스마트폰 화면빛 — Only the phone screen lights her face in the dark, a cold blue-white glow that falls from wherever the phone is held: on the chin and nose when it is held low, on the forehead and cheeks when it is held above her face. |
 | D | face-light | 손전등 조명 — A friend's phone flashlight from close at the side gives blunt, slightly overexposed light with a lively spontaneous feel. |
+| D | car-light | 차창 불빛 — In the taxi at night, streaks of city light sweep across the window and over her face. |
+| D | bulb-light | String Lights — Under the canopy of the street food tent, warm bulbs glow above the steaming counter against the dark street. |
 | D | catchlight | 폰 화면 반사 캐치라이트 — A tiny cool blue-white rectangle sits in the center of each pupil, only when the phone screen is the light.
 | D | catchlight | 플래시 캐치라이트 — One small hard white dot from the friend's flashlight sits at the side of each pupil, only when the flashlight is the light. |
 
@@ -150,6 +155,8 @@
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
 | A, D | body | iPhone 15 Pro — The front TrueDepth camera, a small built-in lens of about 23mm equivalent. |
+| A, D | highlight-front | 하이라이트 날림 — On the front camera, crisp computational sharpness keeps every hair edge and the nose bridge clean while bright highlights clip to flat white. |
+| B | sharp-rear | iPhone 16 Pro — On the rear camera, crisp computational sharpness keeps the room, the phone and the face in the glass all reading clean. |
 | B | body | iPhone 16 Pro — The rear main camera, a small built-in lens of about 24mm equivalent. |
 | C | wide | 초광각 — The ultra-wide camera, about 13mm equivalent, stretches the frame edges and exaggerates near-far scale while everything from her hand to the far street stays sharp. |
 | A | hdr | 스마트 HDR — Multi-frame HDR balances the bright window and her face in one frame, lifting the shadows and flattening contrast a little. |

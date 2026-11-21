@@ -134,11 +134,16 @@
 | A | midday | 한낮 직사광 — High bright sun throws small crisp shadows and clips the near-white edges of the cheeks and the wall behind. |
 | A | low-sun | 골든아워 글로우 — Low sun from the side lays a honey-amber glow across the skin and runs a thin gold line along the hair edge. |
 | A, D | window-light | 통창 자연광 — Soft daylight enters from the side through floor-to-ceiling glass and falls off gently across the face and wall with no hard shadow edge. |
+| A | lane-light | 그림자 — In a narrow lane the eaves of the low houses shade the ground, so pale light reaches only the upper walls. |
+| C | window-light | 통창 자연광 — Soft daylight from a side window grazes the raw concrete wall and falls off gently across the face with no hard shadow edge. |
 | B, C | face-light | 부드러운 확산광 — Even diffused light with wide soft shadows and no visible source keeps skin and wall tones gentle. |
 | B | face-light | 직광 플래시 — A flat bright on-camera flash evens the skin and throws a crisp dark shadow on the wall behind. |
 | B | catchlight | 플래시 캐치라이트 — A hard on-camera flash leaves one small white dot dead center on each pupil. |
+| B | pin-shadow | 그림자 — On the cork wall each pin leaves a small soft shadow beneath it. |
+| B | spot-light | Spotlight — A ceiling spot lights the bench corner in a soft pool while the spotless floor reflects the even light of the room. |
 | C | face-light | 텅스텐 조명 — Incandescent bulbs give warm amber-orange light in soft pools on the face and wall, deeper orange on daylight film. |
 | C | backlight | 역광 — The light source sits behind her, so hair and shoulders glow at the edge while the face reads slightly darker against the bright background. |
+| C | backlight-reed | 逆光金边 — At the riverside a low gold sun behind the reed grass rings each feathered tip in glowing gold against a warm hazy sky. |
 | D | face-light | 암실 안전등 — A single deep red safelight bathes everything in red and black with strong falloff and no other color in the frame. |
 | D | catchlight | 램프 캐치라이트 — One small deep-red point from the safelight sits in each eye. |
 
@@ -149,10 +154,12 @@
 | A | stock-warm | Kodak Gold 200 — Saturated golden-yellow consumer film with warm orange highlights and reddish-brown shadows, sunlit patches glowing like honey. |
 | A | stock-contrast | Kodak Ultramax 400 — Everyday snapshot film with lively reds, a strong cobalt sky and warm tones that keep the face looking full and healthy rather than washed out. |
 | A | camera | Kodak FunSaver — A disposable-camera frame from a single plastic lens element. |
+| A | smear | 플라스틱 렌즈 — Soft corners and a weak radial smear creep in from the edges of the frame where the single element loses sharpness. |
 | A | color | 청록 색조 — Shadows lean ink green with restrained red and yellow. |
 | A | grain | 필름 그레인 — Visible film grain sits across the whole frame, finer on the 200-speed stock and coarser on the 400-speed ones, a little heavier in the shade. |
 | B | stock | Polaroid 600 — Brighter instant film with saturated reds and blues and a square image area, its glossy plastic film surface giving a faint sheen (on the full print, a thick white border that is widest at the bottom). |
 | B | camera | instax WIDE — A wide landscape instant image (on the full print, a white border yellowed at the edges). |
+| B | bloom | Soft Glow — On the instax WIDE the highlights carry a faint bloom over the glossy film surface. |
 | B | leak | 폴라로이드 라이트 리크 — Red-orange light leaks wash over one edge of the instant image with soft contrast beside the border. |
 | B | leak-edge | 필름 첫 컷 빛샘 — One edge of the frame is scorched by a red-orange-yellow gradient where the start of the roll was exposed to light. |
 | B | lens | 플라스틱 렌즈 — A fixed plastic lens holds the face and the background in the same focus, with softer corners and a faint barrel curve at the edges. |

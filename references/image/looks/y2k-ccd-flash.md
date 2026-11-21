@@ -122,9 +122,14 @@
 | B | catchlight | 闪光灯眼神光 — One small hard white dot sits dead center in each pupil. |
 | C | catchlight | camera flash catchlight — One small hard white dot sits dead center in each pupil. |
 | A | light-fill | 형광등 — Cold green-white tube light behind her tints the background flat and cool while the flash keeps her skin neutral. |
+| A | place-flash-wall | 직격 플래시 — In the gallery, the bare board-marked concrete behind her takes the flash as a flat pale wash. |
+| A | place-flash-glass | 직격 플래시 — On the glass door of the drink cooler, the flash leaves one small white glare. |
 | B | light-fill | 雨后沥青倒影 — Wet pavement mirrors her and the street lights as long streaks, the puddles throwing a second glow up at her chin. |
 | B | weather | 雨夜 — A fast flash freezes each drop of fine rain into a tiny bright point against the black night. |
+| B | place-flash-brick | 直闪 — In the courtyard, the flash picks out the weathered texture of the grey brick behind her. |
+| B | place-bounce | Bounce Light — Inside the red-velvet box, the walls throw a rich red glow back onto her from every side. |
 | C | light-fill | Neon and Flash Mix — A cool white flash lights her face cleanly while saturated pink and violet neon tints the shadows and the wall behind. |
+| C | reflect | Wet Street Reflection — The red and blue neon signs smear into long streaks across the wet asphalt. |
 
 ## Optics
 | 갈래 | 슬롯 | 줄 |
@@ -132,8 +137,10 @@
 | A | body | Canon IXY 400 — An early-2000s small-sensor CCD compact (Canon IXY series, 1/1.8-inch CCD) with a built-in flash. |
 | A | lens | 카드형 디카 — A slim compact's built-in zoom, used at about 35mm equivalent, wide enough to show the wall behind her with no stretch on the nose or forehead. |
 | A | grain | 디지털 노이즈 — Very fine digital noise sits only in the darkest parts of the frame, with faint colored speckle where the flash does not reach. |
+| A | bloom | Soft Glow Bloom — On the Canon IXY compact, the flash-lit skin reads crisp while the brightest highlights bloom strongly into the dark around them. |
 | B | grain | 数码噪点 — Very fine digital noise sits only in the darkest parts of the frame, with faint colored speckle where the flash does not reach. |
 | B | flash | Canon Speedlite — A Canon hot-shoe flash (Speedlite series) fired straight on gives a clean, hard front burst and a fast fall-off behind her. |
+| B | bokeh | Bokeh Circles — At the Bund, the lights across the river and the warm windows along the far embankment stretch into soft ovals behind her. |
 | C | stock | Kodak Portra 400 — A color negative film that in this look leans warm and low-contrast, with creamy skin tones, soft highlight roll-off and fine even grain. |
 | C | stock | Kodak Tri-X 400 — A black-and-white negative film giving pure monochrome tone with coarse grain, ink-deep blacks and brilliant highlights. |
 | C | lens | CONTAX T3 — A 35mm Sonnar compact lens, crisp at the center with natural proportions on the face. |

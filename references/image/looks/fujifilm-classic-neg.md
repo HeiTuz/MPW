@@ -126,12 +126,15 @@
 |---|---|---|
 | A | face-light | Overcast Light — Even gray cloud light wraps her with almost no shadow edge, flat and cool, and the shade picks up a faint green. (滤镜 #002 #014) |
 | A, B | face-light | 木漏れ日 — Sunlight through leaves drops small soft-edged gold spots on cheek and shoulder while the rest of the face stays in open shade. (滤镜 #001 #003) |
+| A | lane-light | 朝の光 — In the narrow lane, mild morning light lies soft and even over the timber houses and the half-raised shutters. (滤镜 #012 #013) |
+| A, B | park-light | Long Shadows — Beside the park pond, the low sun slants through the trees and stretches long shadows over the bench and the damp ground, with a gentle light on the water. (滤镜 #003) |
 | B | face-light | 逆光 — Soft spring light from behind and above rims her hair and shoulders with a glowing edge, and the face is lit by the open sky and a pale wall. (滤镜 #004) |
 | B | window | 窓明かり — Daylight through a sheer curtain falls from one side, a bright cheek and a soft shadow side with no hard edge. (滤镜 #019) |
 | C | face-light | 裸電球 — One amber lamp above the table warms the cup and her hands and leaves the rest of the room dim. (滤镜 #005) |
 | C | weather | 雨の夜 — Fine rain gives every lamp a soft cold halo and leaves small bright beads on wet paving and glass. (滤镜 #006 #010) |
+| C | taxi-light | 雨夜のテールランプ — Inside the taxi, headlights and neon signs outside slide in bright bands along the rain-spotted window glass and across her. (滤镜 #010) |
 | C | bloom | ハレーション — Red-orange glow bleeds around the brightest lights against the dark. (滤镜 #011) |
-| D | face-light | 夕暮れ — Low orange sun from behind lays a warm rim along her hair and shoulder, and the sky leans faintly magenta. (滤镜 #020) |
+| D | face-light | 夕暮れ — Low orange sun from behind lays a warm rim along her hair and shoulder, and the sky leans faintly magenta while the sea's edge glows against the horizon. (滤镜 #020) |
 | D | face-light | Geometric Light and Shadow — Hard sun through architectural openings cuts crisp geometric shapes of light and shadow across the wall and her face. (滤镜 #015) |
 
 ## Optics
@@ -147,6 +150,7 @@
 | B | stock-slide | アスティア 100F — In this look, a soft-contrast slide rendering gives translucent pink-leaning skin highlights and delicate pastel color. |
 | B | stock-slide | センシア 100 — In this look, mild slide contrast comes with gentle saturation and warm cream in the highlights. |
 | B | camera | Contax 645 — A 6x4.5 medium-format film frame. (120 필름 줄 PRO 400H·リアラ 100·アスティア 100F와만 묶는다. センシア 100은 135 필름이라 이 본체를 붙이지 않고 스톡 줄만 쓴다) |
+| B | tone-contax | Highlight Roll-off — On the Contax 645, tone transitions run very smooth, and the background melts into cream behind a silky focus plane. (120 필름 줄 PRO 400H·リアラ 100·アスティア 100F와만 묶는다) |
 | C | stock | ナチュラ 1600 — In this look, coarse high-speed grain and soft lamp-lit exposure without flash push the shadows toward red-gray. |
 | C | stock | フジカラー Venus 800 — In this look, a night snapshot leans red in the shadows and green in the neon, with heavy grain and a Showa-era warmth. |
 | C | stock-cine | ETERNA 250D — In this look, a flat cinema-negative rendering with low saturation, soft highlight roll-off and lifted gray-cyan shadows. |

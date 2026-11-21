@@ -147,11 +147,14 @@ C의 유리 커튼월 역광(金鹰美术馆, 쌍 10)에서는 `key`의 `低调�
 | A | face-light | 雕塑切光 — One hard key light from above and to one side carves knife-edged shadows under the cheekbones, brow and jaw. (滤镜 #061) |
 | A, B | light-fill | 柔和漫射光 — Even skylight spreads with wide soft shadows and no visible source, keeping the tones on skin and concrete gentle. (滤镜 #063 #064 #070) |
 | A | corridor-light | 线性灯带 — A long line of cool white ceiling light drives the corridor into deep perspective and lays parallel reflections on the floor. (滤镜 #066) |
+| A | stair-light | Overhead Skylight — Cool skylight falls from above down the tall shaft and casts overlapping curved shadows under the two stair ribbons. (风格 #055) |
+| A | vault-light | Sidelight — Pale light slips down the curved concrete shells from the sides, leaving each vault bright along one flank and soft-shadowed along the other. (风格 #058) |
 | B | face-light | 几何光影 — Hard sun through a skylight cuts one slanted triangle of light across the white wall and the body, the rest falling away in grey steps. (滤镜 #062 #075) |
 | C | face-light | 硬聚光 — A narrow hard spot from one side lights half the face and one shoulder with sharp highlights while the rest drops to deep black. (滤镜 #065) |
 | C | beam | 狭缝光柱 — Daylight through a high slit falls as one thin hard-edged column across the dark floor and the figure, with dust drifting in it. (滤镜 #071, 风格 #054) |
-| C | rim-light | 逆光勾边 — Bright daylight from behind rings the hair, nose bridge and shoulders in one thin cold-white edge while the face stays in soft shadow. (滤镜 #067) |
+| C | rim-light | 逆光勾边 — Bright daylight from behind rings the hair, nose bridge and shoulders in one thin cold-white edge while the face stays in soft shadow, and beyond the glass a pale overcast sky blooms to near white above a floor bright with daylight. (滤镜 #067) |
 | C | key | 低调布光 — A mostly dark frame with one small pool of light and rich blacks all around the figure. |
+| C | curve-light | Raking Light — In the dim cave-like gallery, low light slides along the smooth curved walls and picks out their contours. (风格 #066) |
 | D | face-light | 无影棚拍 — Large soft boxes light the white background and the skin evenly, leaving almost no shadow anywhere. (滤镜 #068) |
 | D | ring-light | 环形灯 — A large circular light at the lens axis gives even, nearly shadowless frontal light and a thin white ring in each pupil. (滤镜 #073) |
 | D | catchlight | 柔光箱眼神光 — One crisp rectangular softbox highlight sits in the upper part of each iris. (滤镜 #074) |
