@@ -147,6 +147,42 @@ const mean = sum / fx.cases.length;
 assert.ok(mean >= fx.min_mean_recall, `mean recall ${mean.toFixed(3)} < ${fx.min_mean_recall}\n${misses.join('\n')}`);
 console.log(`find_tokens: ${fx.cases.length} cases, mean recall ${mean.toFixed(3)}${misses.length ? `; missed: ${misses.join(' / ')}` : ''}`);
 
+// Camera is a layer of its own: `--layers camera` finds composition rows, and the moved telephoto row lives there.
+assert.ok(SLUGS.includes('camera'));
+assert.ok(tokensOf(['过肩'], { layers: ['camera'] }).includes('过肩镜头'), 'camera layer finds over-the-shoulder');
+assert.ok(search({ terms: ['长焦压缩'], layers: ['optics'] })[0].matches.length === 0 && tokensOf(['长焦压缩'], { layers: ['camera'] }).includes('长焦压缩'), 'telephoto compression is a Camera row');
+
+// Phrase queries: brackets and slashes split a phrase, filler words (감성, 느낌, 스타일, 룩, vibe) are dropped, Latin words match whole words only.
+{
+  const hk = tokensOf(['90년대 홍콩영화(왕가위 감성)']);
+  assert.ok(hk.includes('王家卫'), 'bracketed phrase reaches 왕가위 rows');
+  const withFiller = search({ terms: ['왕가위 감성'], layers: ['hair-makeup'] })[0].matches.map((m) => m.token);
+  const without = search({ terms: ['왕가위'], layers: ['hair-makeup'] })[0].matches.map((m) => m.token);
+  assert.deepEqual(withFiller, without, 'a filler word does not change the rows');
+  assert.ok(tokensOf(['Nouvelle Vague']).every((t) => t !== 'Vaguelettes de la Seine'), 'a split Latin word does not match inside another word');
+  assert.deepEqual(tokensOf(['홍콩/왕가위'], { layers: ['hair-makeup'] }).slice(0, 1), tokensOf(['왕가위'], { layers: ['hair-makeup'] }).slice(0, 1), 'a slash splits a phrase');
+}
+
+// Look cards: the CLI prints a "## Look card" block first when the query names a look, and says so in JSON.
+for (const q of ['90년대 홍콩영화(왕가위 감성)', '왕가위', '港风', '홍콩 영화']) {
+  out = run(['--q', q, '--limit', '2']);
+  assert.equal(out.status, 0, out.stderr);
+  assert.match(out.stdout, /^## Look card\n.+ — references\/image\/looks\/wong-kar-wai\.md\nread: node scripts\/read_refs\.mjs references\/image\/looks\/wong-kar-wai\.md\n/, q);
+  assert.deepEqual(JSON.parse(run(['--q', q, '--json']).stdout).looks.map((l) => l.slug), ['wong-kar-wai'], q);
+}
+for (const q of ['홍콩', '신중식,찻집', 'Nouvelle Vague']) {
+  out = run(['--q', q]);
+  assert.ok(!out.stdout.includes('## Look card'), `${q} calls no card`);
+  assert.deepEqual(JSON.parse(run(['--q', q, '--json']).stdout).looks, []);
+}
+// The card path in the block is the path read_refs.mjs reads (documented command works as printed).
+{
+  const cmd = run(['--q', '왕가위']).stdout.match(/^read: node (scripts\/read_refs\.mjs) (\S+)$/m);
+  const read = spawnSync(process.execPath, [path.join(scripts, '..', cmd[1]), cmd[2]], { encoding: 'utf8', cwd: path.join(scripts, '..') });
+  assert.equal(read.status, 0, read.stderr);
+  assert.match(read.stdout, /^# 王家卫 · 港风/m);
+}
+
 // --help prints the usage and exits 0 instead of failing with "needs a value".
 const help = run(['--help']);
 assert.equal(help.status, 0, 'find_tokens --help exits 0');

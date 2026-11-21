@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 // Search the per-layer token tables in references/image/lexicon/*.md. No dependencies, no data file: the tables are parsed directly.
-// usage: node scripts/find_tokens.mjs --q "신중식,찻집" [--layers outfit,scene] [--culture KR|CN|JP|US|FR] [--limit 6] [--json] [--random N]
+// usage: node scripts/find_tokens.mjs --q "신중식,찻집" [--layers outfit,scene,camera] [--culture KR|CN|JP|US|FR] [--limit 6] [--json] [--random N]
+// A query that names a look (왕가위, 港风, 홍콩 영화) also prints a "## Look card" block first: read that card before the layer rows.
 import { randomInt } from 'node:crypto';
 import fs from 'node:fs';
 import path from 'node:path';
@@ -9,7 +10,8 @@ import { drawPortraitOptions } from './draw_portrait_options.mjs';
 
 const scriptsDir = path.dirname(fileURLToPath(import.meta.url));
 export const LEXICON_DIR = path.resolve(scriptsDir, '..', 'references', 'image', 'lexicon');
-export const SLUGS = ['optics', 'light', 'pose', 'outfit', 'legwear', 'style', 'hair-makeup', 'expression', 'props-nails', 'scene'];
+export const LOOKS_DIR = path.resolve(scriptsDir, '..', 'references', 'image', 'looks');
+export const SLUGS = ['optics', 'light', 'pose', 'outfit', 'legwear', 'style', 'hair-makeup', 'expression', 'props-nails', 'scene', 'camera'];
 export const CULTURES = ['KR', 'CN', 'JP', 'US', 'FR'];
 const COLS = 6;
 
@@ -39,40 +41,82 @@ export function loadLayer(slug, dir = LEXICON_DIR) {
 
 export const loadAll = (dir = LEXICON_DIR) => SLUGS.map((slug) => loadLayer(slug, dir));
 
-const same = (a, b) => a === b;
-const partial = (a, b) => a.includes(b);
+const escapeRe = (w) => w.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+const hasWord = (text, w) => new RegExp(`(?<![\\p{L}\\p{N}])${escapeRe(w)}(?![\\p{L}\\p{N}])`, 'u').test(text);
 // Per query term: token/alias exact 100/90, partial 60/50, tag 30, culture code 20, looks 10. A row scores the sum over terms.
 // A term given as {q, exact:true} (a one-character word from a split phrase) scores only on an exact token, alias or tag match.
+// A term given as {q, word:true} (a Latin word from a split phrase) matches inside a token, alias, tag or description only as a whole word ("vague" does not hit "Vaguelettes").
 function scoreRow(row, terms) {
   let total = 0;
+  const token = norm(row.token), sToken = squash(row.token);
+  const aliases = row.aliases.map(norm), sAliases = row.aliases.map(squash);
+  const tags = row.tags.map(norm), sTags = row.tags.map(squash);
   for (const item of terms) {
-    const q = item.q ?? item, exact = item.exact === true;
+    const q = item.q ?? item, exact = item.exact === true, word = item.word === true;
     const sq = squash(q);
-    const token = norm(row.token), sToken = squash(row.token);
-    const aliases = row.aliases.map(norm), sAliases = row.aliases.map(squash);
-    const hit = (plain, squashed, test) => test(plain, q) || (sq && (test === partial ? squashed.startsWith(sq) : test(squashed, sq)));
+    const same = (plain, squashed) => plain === q || (sq && squashed === sq);
+    // Plain terms match a substring (or the squashed start); word terms match a whole word only.
+    const part = word ? (plain) => hasWord(plain, q) : (plain, squashed) => plain.includes(q) || (sq && squashed.startsWith(sq));
     let best = 0;
-    if (hit(token, sToken, same)) best = 100;
-    else if (aliases.some((a, i) => hit(a, sAliases[i], same))) best = 90;
-    else if (exact) best = row.tags.some((t) => hit(norm(t), squash(t), same)) ? 30 : 0;
-    else if (hit(token, sToken, partial)) best = 60;
-    else if (aliases.some((a, i) => hit(a, sAliases[i], partial))) best = 50;
-    else if (row.tags.some((t) => hit(norm(t), squash(t), partial))) best = 30;
+    if (same(token, sToken)) best = 100;
+    else if (aliases.some((a, i) => same(a, sAliases[i]))) best = 90;
+    else if (exact) best = tags.some((t, i) => same(t, sTags[i])) ? 30 : 0;
+    else if (part(token, sToken)) best = 60;
+    else if (aliases.some((a, i) => part(a, sAliases[i]))) best = 50;
+    else if (tags.some((t, i) => part(t, sTags[i]))) best = 30;
     else if (row.culture.some((c) => c.toLowerCase() === q)) best = 20;
-    else if (q.length >= 2 && norm(row.looks).includes(q)) best = 10;
+    else if (q.length >= 2 && (word ? hasWord(norm(row.looks), q) : norm(row.looks).includes(q))) best = 10;
     total += best;
   }
   return total;
 }
 
-// Decided per layer: a spaced term that matches nothing in that layer's rows is retried word by word there ("90년대 홍콩" -> 홍콩).
-// Digit-only words and one-character Latin words are skipped; a one-character Hangul or CJK word (비, 눈, 雨) is kept but scores on exact matches only.
+// Decided per layer: a phrase (spaces, brackets or slashes inside) that matches nothing in that layer's rows is retried word by word there ("90년대 홍콩" -> 홍콩, "홍콩영화(왕가위 감성)" -> 홍콩영화, 왕가위).
+// Digit-only words, one-character Latin words and filler words (감성, 느낌, 스타일, 룩, vibe) are dropped; a one-character Hangul or CJK word (비, 눈, 雨) is kept but scores on exact matches only; a Latin word matches whole words only.
+const PHRASE_BREAK = /[\s()（）[\]【】「」『』/／]+/;
+const FILLER_WORDS = new Set(['감성', '느낌', '스타일', '룩', 'vibe']);
 function expandTerms(terms, rows) {
   return terms.flatMap((t) => {
-    if (!/\s/.test(t) || rows.some((r) => scoreRow(r, [t]) > 0)) return [t];
-    return t.split(/\s+/)
-      .filter((w) => w && !/^\d+$/.test(w) && !(w.length === 1 && /[a-z0-9]/.test(w)))
-      .map((w) => (w.length === 1 ? { q: w, exact: true } : w));
+    if (!PHRASE_BREAK.test(t) || rows.some((r) => scoreRow(r, [t]) > 0)) return [t];
+    return t.split(PHRASE_BREAK)
+      .filter((w) => w && !/^\d+$/.test(w) && !FILLER_WORDS.has(w) && !(w.length === 1 && /[a-z0-9]/.test(w)))
+      .map((w) => (w.length === 1 ? { q: w, exact: true } : /^[a-z0-9'.-]+$/.test(w) ? { q: w, word: true } : w));
+  });
+}
+
+// Look cards: references/image/looks/index.md lists one row per card (slug | names | words that must not call it | culture | branches).
+// A card is called when the raw query contains one of its names, the reverse of the row search above. Hangul and CJK names match as text
+// (spaces and brackets ignored); Latin names match whole words only, so a short name like "WKW" never fires inside another word.
+const nameWords = (alias) => norm(alias).split(/[\s\-\u2010-\u2015\u00b7\u30fb]+/).filter(Boolean);
+export function loadLooks(dir = LOOKS_DIR) {
+  const file = path.join(dir, 'index.md');
+  if (!fs.existsSync(file)) return [];
+  const looks = [];
+  for (const line of fs.readFileSync(file, 'utf8').split('\n')) {
+    if (!/^\| /.test(line) || /^\| (slug|---)/.test(line)) continue;
+    const cells = splitRow(line);
+    if (cells.length !== 5) throw new Error(`looks/index.md: bad row: ${line.slice(0, 60)}`);
+    const [slug, names, avoid, culture, branches] = cells;
+    if (!fs.existsSync(path.join(dir, `${slug}.md`))) throw new Error(`looks/index.md: ${slug}.md is missing`);
+    const card = fs.readFileSync(path.join(dir, `${slug}.md`), 'utf8');
+    const title = (card.match(/^# (.+?)(?: — .*)?$/m) ?? [])[1] ?? slug;
+    looks.push({ slug, title, names: list(names), avoid: list(avoid), culture, branches, file: `references/image/looks/${slug}.md` });
+  }
+  return looks;
+}
+
+export function findLookCards(terms, dir = LOOKS_DIR) {
+  const raw = norm(terms.join(','));
+  const squashed = squash(raw);
+  return loadLooks(dir).flatMap((look) => {
+    const name = look.names.find((n) => {
+      if (/^[a-z0-9\s\-\u00b7.']+$/.test(norm(n))) {
+        const body = nameWords(n).map(escapeRe).join('[\\s\\-\\u00b7]*');
+        return new RegExp(`(?<![a-z0-9])${body}(?![a-z0-9])`).test(raw);
+      }
+      return squashed.includes(squash(n));
+    });
+    return name ? [{ ...look, matched: name }] : [];
   });
 }
 
@@ -109,11 +153,17 @@ export function drawRandom(results, count, pickIndex = randomInt) {
   });
 }
 
-export function formatText(results) {
+const cardBlock = (cards) => (cards.length
+  ? `## Look card\n${cards.map((c) => `${c.title} — ${c.file}\nread: node scripts/read_refs.mjs ${c.file}`).join('\n')}\n(read the card before the layer rows below; it fills the layers this look carries)\n\n`
+  : '');
+
+export function formatText(results, cards = []) {
   if (results.every((l) => l.matches.length === 0)) {
-    return 'no match in any layer. Use English tokens and sentences unless you know an original-language term for sure (image-brief.md §2, §4).\n';
+    return cards.length
+      ? `${cardBlock(cards)}no layer rows matched; the card above carries the look.\n`
+      : 'no match in any layer. Use English tokens and sentences unless you know an original-language term for sure (image-brief.md §2, §4).\n';
   }
-  return results.map((l) => {
+  return cardBlock(cards) + results.map((l) => {
     const body = l.matches.length
       ? l.matches.map((m) => `${m.token} — ${m.looks}${m.aliases.length ? ` (${m.aliases.slice(0, 4).join(', ')})` : ''} [${m.kind}]`).join('\n')
       : 'no match';
@@ -121,12 +171,12 @@ export function formatText(results) {
   }).join('\n');
 }
 
-export function formatJson(results, terms) {
+export function formatJson(results, terms, cards = []) {
   const layers = {};
   for (const l of results) {
     layers[l.slug] = l.matches.map(({ token, aliases, culture, tags, looks, kind, score }) => ({ token, aliases, culture, tags, looks, kind, score }));
   }
-  return { query: terms, layers };
+  return { query: terms, looks: cards.map(({ slug, title, file, matched }) => ({ slug, title, file, matched })), layers };
 }
 
 function parseArgs(argv) {
@@ -174,7 +224,8 @@ if (isMainModule()) {
     const opts = parseArgs(argv);
     let results = search(opts);
     results = opts.random ? drawRandom(results, opts.random) : results.map((l) => ({ ...l, matches: l.matches.slice(0, opts.limit) }));
-    process.stdout.write(opts.json ? JSON.stringify(formatJson(results, opts.terms)) + '\n' : formatText(results));
+    const cards = findLookCards(opts.terms);
+    process.stdout.write(opts.json ? JSON.stringify(formatJson(results, opts.terms, cards)) + '\n' : formatText(results, cards));
   } catch (error) {
     console.error(`find_tokens: ${error.message}`);
     process.exitCode = 2;
