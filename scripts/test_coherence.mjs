@@ -35,6 +35,13 @@ has(`${identity}## Hair and makeup\nbase — A base that leaves warm golden skin
 has(`${identity}## Style\nlook — Tan skin against white linen.`, "coherence/identity-skin");
 lacks(`${identity}## Hair and makeup\nbase — A semi-matte porcelain finish with a faint satin glow only on the high points.`, "coherence/identity-skin");
 lacks(`${identity}## Hair and makeup\nbase — A glass skin finish: a thin glossy base with a soft wet sheen.`, "coherence/identity-skin");
+// A porcelain base token inside Hair and makeup is a makeup finish; porcelain or the natural cold white outside it, or 冷白皮 anywhere, is still a skin color.
+lacks(`${identity}## Hair and makeup\n冷白瓷肌 — A semi-matte cool porcelain base with a faint satin glow only on the high points.`, "coherence/identity-skin");
+lacks(`${identity}## Hair and makeup\n微光冷瓷肌 — A cool porcelain base with a faint satin glow.`, "coherence/identity-skin");
+lacks(`${identity}## Hair and makeup\nbase — A cool-toned porcelain skin finish with a faint satin glow.`, "coherence/identity-skin");
+lacks(`${identity}## Hair and makeup\n도자기 피부 — A cool porcelain-skin base with a faint satin glow.`, "coherence/identity-skin");
+has(`${identity}## Style\nlook — Porcelain skin against white linen.`, "coherence/identity-skin");
+has(`${identity}## Hair and makeup\n冷白皮 — Cool fair skin with a faint glow.`, "coherence/identity-skin");
 lacks(`${identity}## Light\nlow sun — A sun-warmed glow lies on the skin of her shoulders, and a neon tint falls on the cheek.`, "coherence/identity-skin");
 lacks(`${identity}## Light\nwarm light — Warm light on her skin turns the shadow side amber.`, "coherence/identity-skin");
 

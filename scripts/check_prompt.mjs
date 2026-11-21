@@ -412,9 +412,12 @@ function inspectCoherence(result, text, instruction) {
     emit(result, CODE_REGISTRY.focal, "Focal lengths disagree: two different lenses, or a wide lens beside an undistorted-face line.", { hint: "Keep one lens statement in the Camera layer." });
   }
   const sections = layerSections(instruction);
-  const outsideIdentity = sections.filter((section) => section.name !== "Identity Reference").flatMap((section) => section.lines).join("\n");
+  // A porcelain base is makeup (the CN base line is 冷白瓷肌), so it passes inside Hair and makeup; the same word elsewhere still reads as a natural color.
+  const porcelainBase = /瓷肌|瓷肤|도자기 피부|포슬린 스킨|\bporcelain[- ](?:skin|finish)\b/giu;
+  const outsideIdentity = sections.filter((section) => section.name !== "Identity Reference")
+    .flatMap((section) => (/^Hair and makeup$/iu.test(section.name ?? "") ? section.lines.map((line) => line.replace(porcelainBase, "")) : section.lines)).join("\n");
   const keepsTone = /\bkeeps?\s+(?:her|his|their)\s+own\s+skin\s+tone\b/iu.test(instruction);
-  // Only the natural skin color (fair, pale, tan, 冷白皮) is flagged. A finish the makeup makes (porcelain finish, glass skin) and light on the skin
+  // Only the natural skin color (fair, pale, tan, 冷白皮) is flagged. A finish the makeup makes (porcelain finish, 瓷肌, glass skin; porcelain only inside Hair and makeup) and light on the skin
   // (sun-warmed glow on the skin, a neon tint on the cheek) pass: the color word must be a whole word next to "skin", at most one word between.
   const skinColor = snippets(/\b(?:fair|pale|porcelain|ivory|olive|tan(?:ned)?|golden|bronzed?|deep|dark|brown|cool|warm|milky)\b[ -]?(?:[\w-]+[ -]){0,1}skin\b|冷白皮|白皙|瓷肌/giu, outsideIdentity);
   if (keepsTone && skinColor.length) {

@@ -27,6 +27,7 @@ GPT Image(웹·API)·대상 미정인 새 이미지(인물 사진과 인물 없�
 - 사용자가 나이·인종·외모 값을 줬으면 그 값만 바꾸고 나머지는 이 표를 쓴다. 숫자 나이를 정하지 말라고 했으면 `an adult`, 인종이나 체형을 정하지 말라고 했으면 그 말을 뺀다.
 - 문화권 공식과 문단 끝의 비율 문장(`In either case…`)은 **성인 인물에만** 붙는다. 아이·학생으로 요청됐거나 그렇게 보이면(판정은 image-brief.md §5) 공식 대신 `a child`·`a student` 같은 말만 쓰고, 비율 문장과 아래 Hair and makeup의 미화 줄(base·under-eye·liner·blush·lip)을 모두 끈다. 룩 카드의 메이크업 줄(입술·블러셔·아이 메이크업)과 Legwear의 스타킹류 줄도 쓰지 않고 헤어·의상·장소·빛·Optics 줄만 쓴다. 아이·학생에게는 관능 어휘와 노출 연출을 붙이지 않는다.
 - 남성 인물: `a 22-year-old <culture> man with a defined jawline and a lean build`만 쓴다. 고정 몫의 메이크업 줄과 룩 카드의 메이크업·Legwear 줄은 사용자가 원할 때만 붙인다.
+- `identity`: 카드가 `끄는 고정 몫`의 `identity` 행에 덧붙임 구절을 주면, 참조가 없을 때 쓰는 인물 문장(`If none is provided, …`) 끝에 그 구절을 붙인다. 참조가 있을 때는 붙지 않는다(조건절이 참조의 피부색을 지킨다).
 - 모델 참조가 첨부되면 문단의 조건절 덕에 문화권 공식은 저절로 무시되고, `keep her own skin tone`이 참조의 피부색을 지킨다.
 - 실존 인물을 닮게 하는 이름·얼굴 기하는 쓰지 않는다.
 
