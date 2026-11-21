@@ -38,7 +38,8 @@ assert.doesNotMatch(route('delegation'), /GPT Image|팩트체크 축/);
 // Starting context only; task inputs, tool wrappers, extra dependencies,
 // reasoning and output are deliberately excluded. Exceeding a budget fails for
 // review rather than trimming required guidance or claiming a runtime cap.
-const ceilings = { extraction: 3000, batch: 1500, research: 7500, delegation: 4000, 'gpt-image-edit': 20800 };
+// gpt-image-edit raised 20800 -> 21300 (step 7a: 20911 measured) for the natural-skin-color wording in section 1 and the machine-contract note in section 9.
+const ceilings = { extraction: 3000, batch: 1500, research: 7500, delegation: 4000, 'gpt-image-edit': 21300 };
 const measurements = { kernel: { bytes: kernelBytes, codepoints: [...kernel].length } };
 for (const [name, ceiling] of Object.entries(ceilings)) {
   const text = route(name);
