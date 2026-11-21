@@ -10,7 +10,7 @@
 ## 고정 사실 (모든 갈래가 지킨다)
 | 슬롯 | 값 |
 |---|---|
-| medium | 일본제 고급 렌즈 필름 카메라로 찍은 낮의 인물 사진. 색의 기준은 후지 슬라이드 필름(Provia 100F, Astia 100F)의 곱고 정확한 색이다. 보정한 디지털 화보도 CG도 아니다. 첫 줄은 `A Japanese premium-lens film portrait shot on fine-grain Fujifilm slide film`로 시작한다(세트나 Optics stock 줄이 다른 필름을 정하면 `shot on` 뒤만 그 필름으로 바꾼다) |
+| medium | 일본제 고급 렌즈 필름 카메라로 찍은 낮의 인물 사진. 색의 기준은 후지 슬라이드 필름(Provia 100F, Astia 100F)의 곱고 정확한 색이다. 보정한 디지털 화보도 CG도 아니다. 첫 줄은 `A premium-lens film photograph shot on fine-grain Fujifilm slide film`로 시작한다(세트나 Optics stock 줄이 다른 필름을 정하면 `shot on` 뒤만 그 필름으로 바꾼다). 혼자 쓸 때: `A Japanese premium-lens film portrait shot on fine-grain Fujifilm slide film` |
 | closer | `リバーサルフィルム` |
 | time | 낮. 맑은 낮이나 얇은 구름 낀 부드러운 낮, 늦은 오전에서 오후 빛(연출 값 5200~5500K)이고 D는 해 지기 직전의 서쪽 빛까지다. 실내는 창과 장지문이 거른 낮빛이다(C의 町屋 장면은 창밖에 비가 오는 흐린 낮이다). 밤은 A의 S3(심야 라멘집) 하나뿐이다 |
 | light-key | 자연광 하나: 직사 햇빛, 나뭇잎·창·장지문이 거른 빛, 구름 낀 하늘의 확산광. C의 스튜디오 줄만 소프트박스 사이드라이트다. 직사 플래시와 네온은 없다 |
@@ -30,20 +30,23 @@
 ## 끄는 고정 몫 (fixed-lines.md의 슬롯)
 | 슬롯 | 처리 | 이유 |
 |---|---|---|
-| face-light | 모든 갈래에서 끈다. 얼굴 빛은 이 카드의 Light 줄이 정한다 | `立体光`의 위·옆 키라이트가 木漏れ日의 점빛, 역광 림, 창빛, 소프트박스 사이드라이트와 부딪힌다 |
+| face-light | 모든 갈래에서 끈다. 얼굴 빛은 이 카드의 Light 줄이 정한다 | 고정 몫의 face-light 줄의 위·옆 키라이트가 木漏れ日의 점빛, 역광 림, 창빛, 소프트박스 사이드라이트와 부딪힌다 |
 | closer | 스톡 줄이나 세트가 네거티브 필름을 정하면(A의 `フジカラー 100`, C의 `フジカラー PRO 400H`, D의 `Kodak Portra 400`, 세트 S2·S3·S6) closer 토큰을 `リバーサルフィルム` 대신 JP 기본 `写真`으로 쓴다. 나머지는 그대로 | `リバーサルフィルム`는 반전 필름이라 네거티브 필름 장면의 첫 줄 매체와 부딪힌다 |
 | catchlight | B·C·D는 카드 줄이 이긴다. A는 고정 줄(창이나 하늘 모양 한 점)이 그대로 맞다. D는 `夕暮れ` 줄이면 `Golden Hour Catchlight`(slot `catchlight-sunset`), `逆光` 줄이면 `デュアルキャッチライト`(slot `catchlight-sea`) 하나만 짝으로 쓴다 | 카드가 장소별 캐치라이트(나뭇잎 사이 하늘, 창, 바다의 반짝임, 석양)를 정한다 |
-| face-clear | A·B·D는 끈다. C는 켠다 | 바람에 흩어진 앞머리와 시스루뱅이 이마와 뺨을 지나가는 것이 이 룩의 숨결인데 Iris 꼬리가 금지문으로 지웠다. 눈썹과 눈은 가리지 않는다 |
+| face-clear | D는 끈다. A·B·C는 켠다. 쌍 11의 Pose와 세트 S6은 갈래와 상관없이 끈다(쌍 11의 Camera 줄만 빌린 경우는 켠다) | D의 `hair` 줄(濡れ髪)과 쌍 11·S6의 Pose(`Windblown Hair`)는 바람에 날린 머리가 뺨을 가로지르는 것이 정체라 얼굴을 가린다. A·B·C의 앞머리(`シースルーバング`)는 이마가 비치고 눈썹과 눈이 보이며 濡れ髪도 얼굴을 가로지르지 않으니 켠 채로 둔다 |
 | base | C는 카드 줄(きめ細かなマット肌)이 이긴다. 나머지는 JP 고정 줄 `透明感`이 그대로 맞다 | C는 장지문·창빛 아래 매트하고 진주빛 도는 피부가 정체다 |
 | blush | B는 카드 줄(頬染め)이 이긴다. 나머지는 고정 줄이 맞다 | Astia의 분홍기 도는 피부는 뺨의 따뜻한 분홍이 정한다 |
-| lens | 모든 갈래에서 끈다. `自然透视` 줄은 어느 쌍에서도 붙이지 않는다. 렌즈를 말하는 줄은 프롬프트에서 하나이고 출처 순서는 세트의 렌즈 > 쌍의 렌즈 > 갈래의 본체·렌즈 줄 > 고정 몫 줄이다. 쌍 1~7·11은 Camera 줄이 mm를 말하니 그 줄이 렌즈 줄이고 갈래의 Optics `camera` 줄(A의 `CONTAX T3`·`コンタックス G2`, B의 `オリンパス OM-1`, D의 `ペンタックス 67`)은 본체만 말한다. 쌍 8·9·10(C)은 Camera 줄이 렌즈를 말하지 않으니 C의 Optics `camera` 줄(`Hasselblad 503CW`·`Rolleiflex 2.8F` 둘 다 Planar 80mm)이 렌즈 줄이다. 쌍 12(D)는 Optics `Hasselblad XPan` 줄(45mm)이 렌즈 줄이다. 세트가 렌즈를 말하면 그것이 렌즈 줄이다(S1 CONTAX T3 35mm, S2 ミノルタ TC-1의 28mm, S3 コニカ ヘキサー 35mm, S4 Zuiko 50mm f/1.2, S5 `Hasselblad 503CW` 줄, S6 Camera `標準レンズの遠近感`의 105mm). 본체와 렌즈는 짝이 맞게 쓴다: A의 `CONTAX T3`는 35mm 고정 렌즈라 35mm를 말하는 쌍 2·5와 세트 S1에서 쓰고, 28mm 쌍 1·3과 45mm 쌍 4에는 교환식 `コンタックス G2`(Biogon 28mm, Planar 45mm)를 쓴다. B의 `オリンパス OM-1` 줄은 쌍 6(85mm)과 세트 S4에서 쓰고, 쌍 7의 45mm 팬케이크는 Iris #040에서 Nikon FM3A의 렌즈라 OM-1과 마운트가 맞지 않으니 쌍 7에는 OM-1 줄을 쓰지 않는다 | Iris 고정 꼬리의 50mm 얕은 심도가 컴팩트(28~38mm, 중간 깊이), 중형 6x6·6x7, 65:24 파노라마와 부딪힌다. 원본 프리셋이 컴팩트·레인지파인더에도 일안리플렉스 50mm 얕은 심도를 적은 곳은 카메라의 실제 시야로 바꿨다 |
-| grain | 켠다. 카드의 Optics `粒状感` 줄이 슬롯을 채우고 고정 몫 `胶片颗粒`는 붙이지 않는다. S3만 굵게 | 슬라이드 필름의 입자는 거의 안 보이는 것이 정체다 |
+| lens | 모든 갈래에서 끈다. 고정 몫의 lens 줄은 어느 쌍에서도 붙이지 않는다. 렌즈를 말하는 줄은 프롬프트에서 하나이고 출처 순서는 세트의 렌즈 > 쌍의 렌즈 > 갈래의 본체·렌즈 줄 > 고정 몫 줄이다. 세트 없이 쓸 때: 쌍 1~7·11은 Camera 줄이 mm를 말하니 그 줄이 렌즈 줄이고 갈래의 Optics `camera` 줄(A의 `CONTAX T3`·`コンタックス G2`, B의 `オリンパス OM-1`, D의 `ペンタックス 67`)은 본체만 말한다. 쌍 8·9·10(C)은 Camera 줄이 렌즈를 말하지 않으니 C의 Optics `camera` 줄(`Hasselblad 503CW`·`Rolleiflex 2.8F` 둘 다 Planar 80mm)이 렌즈 줄이다. 쌍 12(D)는 Optics `Hasselblad XPan` 줄(45mm)이 렌즈 줄이다. 세트를 쓸 때: 세트가 정한 렌즈는 세트에서 그 렌즈를 말하는 절의 문장 안에 한 번만 쓰고 다른 줄에 되풀이하지 않는다. S1(35mm)·S3(35mm)·S6(105mm)은 세트의 Camera 절 문장 안에서 렌즈를 말하고 Optics 본체 줄(`CONTAX T3`·コニカ ヘキサー·`ペンタックス 67`)은 본체만 말한다. S2(G-Rokkor 28mm f/3.5)·S4(Zuiko 50mm f/1.2)·S5(`Hasselblad 503CW` 줄의 Planar 80mm)는 세트의 Optics 본체 줄 문장 안에서 렌즈를 말하고 세트의 Camera 절은 거리와 구도만 말한다(S2의 `28mm를 2.5m 이상 물러서서`는 거리만 쓰고 mm를 되풀이하지 않는다). 본체와 렌즈는 짝이 맞게 쓴다: A의 `CONTAX T3`는 35mm 고정 렌즈라 35mm를 말하는 쌍 2·5와 세트 S1에서 쓰고, 28mm 쌍 1·3과 45mm 쌍 4에는 교환식 `コンタックス G2`(Biogon 28mm, Planar 45mm)를 쓴다. B의 `オリンパス OM-1` 줄은 쌍 6(85mm)과 세트 S4에서 쓰고, 쌍 7의 45mm 팬케이크는 Iris #040에서 Nikon FM3A의 렌즈라 OM-1과 마운트가 맞지 않으니 쌍 7에는 OM-1 줄을 쓰지 않는다 | Iris 고정 꼬리의 50mm 얕은 심도가 컴팩트(28~38mm, 중간 깊이), 중형 6x6·6x7, 65:24 파노라마와 부딪힌다. 원본 프리셋이 컴팩트·레인지파인더에도 일안리플렉스 50mm 얕은 심도를 적은 곳은 카메라의 실제 시야로 바꿨다 |
+| grain | 켠다. 카드의 Optics `粒状感` 줄이 슬롯을 채우고 고정 몫의 grain 줄은 붙이지 않는다. S3만 굵게 | 슬라이드 필름의 입자는 거의 안 보이는 것이 정체다 |
 | framing | 켠다. 쌍 8(정사각)과 쌍 12(파노라마)는 Camera 줄이 화면 모양과 범위를 말하니 framing 줄을 붙이지 않는다. 쌍 6(가슴 위)은 범위를 직접 말하니 3:4만 쓰고, 쌍 9(프레임의 3분의 1)도 범위를 직접 말하니 비율(1:1)만 쓴다. 범위를 말하지 않는 쌍 가운데 다리·발 동작이 있는 2·3·5·7·10은 `from head to toe`로, 주머니에 두 손을 넣는 1·11은 손이 프레임에 들어오도록 `from the top of the head to the upper thigh`로, 4는 `from the top of the head to the waist`로 쓴다 | 나머지 쌍은 프레임 범위를 말하지 않는데 Pose가 발이나 계단 걸음을 말하면 허리 위 프레임에서 그 동작이 안 보인다 |
 | ratio | 켠다. 사용자 비율이 없으면 3:4 세로. 쌍 8(1:1)과 쌍 12(65:24)는 Camera 줄이 모양을 정하니 붙이지 않는다. C의 쌍 9·10과 세트 S5는 Optics `camera` 줄(`Hasselblad 503CW`·`Rolleiflex 2.8F`)이 정사각 프레임이라 비율을 1:1로 쓴다(3:4로 자르려면 정사각이라는 말을 줄에서 뺀다). 사용자 비율이 있으면 그 값이 이긴다 | 정사각 중형과 XPan은 화면 모양이 룩의 일부다 |
 
 **모든 쌍에 해당하는 처리:** face-light는 끈다, lens는 끈다(쌍 또는 Optics 줄이 렌즈 줄), grain은 Optics `粒状感` 줄이 채운다. 쌍 번호를 조건으로 건 것은 framing·ratio뿐이다
 
 ## Hair and makeup
+**하나만 고르는 슬롯:** `hair`(갈래마다 한 줄, C는 `前下がりボブ`·`タイトシニヨン` 중 하나)
+**함께 쓰는 슬롯:** `bangs`(어느 갈래든 `hair` 줄에 앞머리로 더한다)
+
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
 | A | hair | 濡れ髪 — Shoulder-length black hair with a faintly damp look, a few strands clumped into thin glossy ribbons that lift a little in the breeze. (发型与妆容/01 #001) |
@@ -70,6 +73,8 @@
 | D | expression | ほろ甘い幸福感 — A quiet half-smile with the lids slightly lowered, content and a little wistful as the day ends. (滤镜 #027) |
 
 ## Outfit
+**함께 쓰는 슬롯:** `outfit`·`outfit-outer`·`outfit-bottom`(겉옷은 속옷 위에, 하의는 함께. 슬롯마다 갈래의 후보 중 한 줄)
+
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
 | A | outfit | 白シャツ — A crisp white cotton shirt worn untucked with the sleeves pushed to the elbows, the sunlit side bright white and the shaded side pale blue-gray. (滤镜 #032) |
@@ -139,6 +144,8 @@
 | D | shore | 鎌倉 — A pale sand beach where small waves break and spray around ankles. (风格/04 #061, 滤镜 #035) |
 
 ## Light
+**하나만 고르는 슬롯:** `face-light`(갈래의 후보 중 하나), `catchlight`·`catchlight-sea`·`catchlight-sunset`(눈의 빛점 하나, 장면의 빛과 맞는 줄), `shrine-light`·`garden-light`·`veranda-light`·`shoji-light`·`stair-light`(Scene에서 고른 장소의 줄 하나)
+
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
 | A | face-light | 木漏れ日 — Sunlight through the leaves drops small soft-edged gold spots on her shoulder and the table while her face stays in soft open shade. (滤镜 #021) |
@@ -161,6 +168,9 @@
 | D | catchlight-sunset | Golden Hour Catchlight — Low setting sun puts fine amber sparkles in the irises and a warm gold edge along the cheek. |
 
 ## Optics
+**하나만 고르는 슬롯:** `stock`(갈래의 필름 줄 하나), `camera`(갈래의 본체 줄 하나), `tone-*`(고른 `camera` 줄의 본체가 문장에 나오는 줄만: `tone-t3`는 `CONTAX T3`, `tone-g2`는 `コンタックス G2`, `tone-503`은 `Hasselblad 503CW`, `tone-rollei`는 `Rolleiflex 2.8F`, `tone-p67`은 `ペンタックス 67`)
+**함께 쓰는 슬롯:** `highlight-om1`·`bokeh-om1`(`オリンパス OM-1` 줄을 골랐을 때 둘 다)
+
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
 | A | stock | プロビア 100F — Fine-grain neutral slide film with true-to-nature color, clean contrast and deep emerald greens, skin highlights bright with the faintest pink. (滤镜 #021 #038) |
@@ -170,18 +180,18 @@
 | C | stock | フジカラー PRO 400H — Pale airy color with soft teal-green highlights and creamy skin highlights in a high-key exposure. (滤镜 #029) |
 | D | stock | Kodak Portra 400 — A warm, low-contrast negative look with creamy skin highlights, soft highlight roll-off and fine even grain. (滤镜 #027) |
 | A | camera | CONTAX T3 — A titanium fixed-lens compact with Zeiss T* coating. (滤镜 #021) |
-| A | tone-t3 | Bokeh Circles — On the CONTAX T3, the centre stays crisp with natural colour and gently contrasty skin, and the sharp edge of her face stands against a softly melting background. (滤镜 #021) |
+| A | tone-t3 | Crisp Center Natural Color — On the CONTAX T3, the centre stays crisp with natural colour and gently contrasty skin, and the sharp edge of her face stands against a softly melting background. (滤镜 #021) |
 | A | camera | コンタックス G2 — A Contax G rangefinder body. (滤镜 #038) |
-| A | tone-g2 | Zeiss Planar 45mm f/2 — On the Contax G2, sharpness stays very high even at open aperture, with clean saturated colour and a smooth soft background. (滤镜 #038) |
+| A | tone-g2 | Sharp Wide-Open Clarity — On the Contax G2, sharpness stays very high even at open aperture, with clean saturated colour and a smooth soft background. (滤镜 #038) |
 | B | camera | オリンパス OM-1 — A compact 35mm SLR body shot wide open. (滤镜 #025) |
 | B | highlight-om1 | Soft Glow Bloom — On the Olympus OM-1 shot wide open, a gentle glow spreads through the highlights. (滤镜 #025) |
 | B | bokeh-om1 | Bokeh Circles — On the Olympus OM-1 shot wide open, background lights melt into large soft discs. (滤镜 #025) |
 | C | camera | Hasselblad 503CW — A square 6x6 medium-format frame with a Planar 80mm lens. (滤镜 #028) |
-| C | tone-503 | Zeiss Planar 80mm f/2.8 — On the Hasselblad 503CW, the Planar renders with clarity, transparent colour, smooth skin and calm edges. (滤镜 #028) |
+| C | tone-503 | Transparent Medium-Format Clarity — On the Hasselblad 503CW, the frame renders with clarity, transparent colour, smooth skin and calm edges. (滤镜 #028) |
 | C | camera | Rolleiflex 2.8F — A waist-level twin-lens square frame with a Planar 80mm lens. (滤镜 #030) |
-| C | tone-rollei | Zeiss Planar 80mm f/2.8 — On the Rolleiflex 2.8F, the Planar gives fine tonal gradation and crisp centre sharpness. (滤镜 #030) |
-| D | camera | ペンタックス 67 — A 6x7 medium-format film body. (滤镜 #027) |
-| D | tone-p67 | Amber Warm Grade — On the Pentax 67, a very thin focus plane lifts her off the background and the old glass adds a faint warm cast. (滤镜 #027) |
+| C | tone-rollei | Fine Tonal Gradation — On the Rolleiflex 2.8F, the frame gives fine tonal gradation and crisp centre sharpness. (滤镜 #030) |
+| D | camera | ペンタックス 67 — A 6x7 medium-format film body whose very thin focus plane lifts her off the background. (滤镜 #027) |
+| D | tone-p67 | Amber Warm Grade — On the Pentax 67, the old glass adds a faint warm cast. (滤镜 #027) |
 | D | camera | Hasselblad XPan — A panoramic 65:24 frame nearly twice the width of 35mm through a 45mm lens. (滤镜 #034) |
 | A | vignette | 周辺減光 — The corners fall a little darker than the center without a heavy tunnel, like the mild vignetting of a compact's lens. (滤镜 #022 #023) |
 | 전부 | grain | 粒状感 — Very fine, even film grain across the whole frame, barely visible in the midtones and slightly heavier in the shadows. |
@@ -201,18 +211,20 @@
 ## 포즈·구도 쌍
 | 번호 | 갈래 | Pose | Camera |
 |---|---|---|---|
-| 1 | A | ポケットイン — She stands at the bridge rail in profile with both hands in her coat pockets and her chin slightly lifted toward the wind. | 三分割構図 — A 28mm view from about 2.5 m at eye level puts her on the right third with the crossing and skyline filling the rest, her face free of wide-angle stretch. |
+| 1 | A | ポケットイン — She stands at a railing in profile with both hands in her pockets and her chin slightly lifted toward the wind. | 三分割構図 — A 28mm view from about 2.5 m at eye level puts her on the right third with the street and the skyline beyond filling the rest, her face free of wide-angle stretch. |
 | 2 | A | 振り返り — She walks away along the pavement and turns her head back over one shoulder, the free hand loose at her side. | カメラ目線 — Chest height from about 2 m with a 35mm lens; she looks straight into the lens while the street behind stays readable but a little softer. |
-| 3 | A | 小走り — She runs down a flight of concrete steps toward the camera on a diagonal, her shirt hem flying in the low sun. | Low Angle — Knee height from the foot of the steps with a 28mm lens tilted up, standing 3 m back so the steps lead to her and clear sky fills the top of the frame. |
-| 4 | A | 襟を直す — She faces the lens square-on and straightens her jacket collar with one hand, the other arm relaxed. | 日の丸構図 — A 45mm view at eye level centers her against the symmetrical facade and tree trunks, the vertical lines held straight. |
-| 5 | A | 壁もたれ — She leans one shoulder against the wall beside a shop curtain with her weight on one leg, laughing at something out of frame. | Frame Within a Frame — The dark edge of the noren and the wall frame her in a narrow warm slot at 35mm, steam drifting across the lit opening. |
-| 6 | B | 髪を耳にかける — She tucks a loose strand behind one ear with the elbow lifted, showing the side of her face against the light. | Medium Close-Up — Chest-up at eye level with an 85mm lens wide open, bright leaf spots melting into large soft discs behind her head. |
-| 7 | B | Pausing on Mossy Stone Steps — She pauses on a mossy stone step with the body still and the head turned slightly toward the lens, one hand on her skirt. | Foreground Obstruction — Shot from the side with a pancake 45mm, a blurred cluster of leaves crossing one corner of the frame while she stays clear. |
-| 8 | C | 正座 — She sits upright in seiza on the veranda with both hands resting on her thighs and the body completely still. | スクエア構図 — A square 1:1 frame from waist level places her low in the lower left, raked gravel filling the rest in calm empty space. |
-| 9 | C | 斜め座り — She sits sideways on the tatami with her legs folded to one side and her head turned toward the garden. | Negative Space — She fills about a third of the frame at one side while the plain pale paper screen fills the rest, the light soft and even. |
-| 10 | C | Descending Stairs — She descends a curved stone stair with one hand on the rail, head lowered so her eyes meet the lens below. | ウエストレベル — The camera is held at waist height and looks slightly up at her, the curve of the stair rising behind her. |
-| 11 | D | Windblown Hair — She faces the camera on the seawall with the wind throwing her hair sideways across one cheek, hands deep in her coat pockets. | 標準レンズの遠近感 — A 105mm lens, the standard lens of 6x7 medium format (about 52mm in 35mm terms), from about 4 m with natural perspective and no telephoto stacking holds the sea and horizon as one calm band, a thin focus plane separating her from it. |
-| 12 | D | Unhurried Stroll — She strolls along the coast road at an easy pace with her arms swinging loosely, a small green tram passing far behind her. | Extreme Wide Shot — A wide 65:24 panoramic frame shows her small at the left, with the road, the tram and the open sea running away to the right. |
+| 3 | A | 小走り — She runs down a flight of steps toward the camera on a diagonal, her shirt hem flying. | Low Angle — Knee height from the foot of the steps with a 28mm lens tilted up, standing 3 m back so the steps lead to her and open sky fills the top of the frame. |
+| 4 | A | 襟を直す — She faces the lens square-on and straightens her jacket collar with one hand, the other arm relaxed. | 日の丸構図 — A 45mm view at eye level centers her against a symmetrical background of vertical lines, which are held straight. |
+| 5 | A | 壁もたれ — She leans one shoulder against the wall beside a doorway with her weight on one leg, laughing at something out of frame. | Frame Within a Frame — The dark edges of the doorway and the wall frame her in a narrow slot at 35mm. |
+| 6 | B | 髪を耳にかける — She tucks a loose strand behind one ear with the elbow lifted, showing the side of her face against the light. | Medium Close-Up — Chest-up at eye level with an 85mm lens wide open, bright background points melting into large soft discs behind her head. |
+| 7 | B | Pausing on Mossy Stone Steps — She pauses on a stone step with the body still and the head turned slightly toward the lens, one hand on her skirt. | Foreground Obstruction — Shot from the side with a pancake 45mm, a blurred foreground shape crossing one corner of the frame while she stays clear. |
+| 8 | C | 正座 — She sits upright in seiza on a wooden floor with both hands resting on her thighs and the body completely still. | スクエア構図 — A square 1:1 frame from waist level places her low in the lower left, calm empty space filling the rest. |
+| 9 | C | 斜め座り — She sits sideways on the floor with her legs folded to one side and her head turned to one side. | Negative Space — She fills about a third of the frame at one side while a plain pale wall fills the rest. |
+| 10 | C | Descending Stairs — She descends a curved staircase with one hand on the rail, head lowered so her eyes meet the lens below. | ウエストレベル — The camera is held at waist height and looks slightly up at her, the curve of the stair rising behind her. |
+| 11 | D | Windblown Hair — She faces the camera with the wind throwing her hair sideways across one cheek, hands deep in her pockets. | 標準レンズの遠近感 — A 105mm lens, the standard lens of 6x7 medium format (about 52mm in 35mm terms), from about 4 m with natural perspective and no telephoto stacking holds the sea and horizon as one calm band, a thin focus plane separating her from it. |
+| 12 | D | Unhurried Stroll — She strolls along a road at an easy pace with her arms swinging loosely, a vehicle passing far behind her. | Extreme Wide Shot — A wide 65:24 panoramic frame shows her small at the left, with the road and the open water running away to the right. |
+
+장소 조건: 쌍 3은 장소에 계단이 있을 때, 쌍 5는 벽 옆에 출입구가 있을 때, 쌍 7은 돌계단이 있을 때, 쌍 10은 곡선 계단이 있을 때, 쌍 11·12는 수평선이 보이는 바다나 해안길일 때.
 
 ## 맞지 않는 것
 순백으로 날아간 하늘, 필름의 녹·주황 쏠림, 네온과 텅스텐의 밤 조명(S3 제외), 직사 플래시, 소프트 포커스 확산 필터와 안개 낀 화면, 굵은 필름 입자(S3 제외), 하얀 무영 스튜디오 배경, 연출한 모델 포즈, 정면 증명사진 자세, 얼굴을 늘리는 광각 근접 왜곡, 읽히는 간판·상표 글자.

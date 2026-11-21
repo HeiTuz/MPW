@@ -32,15 +32,17 @@
 |---|---|---|
 | face-light | 모든 갈래에서 끈다. 얼굴 빛은 갈래의 Light 줄이 정한다 | Iris 꼬리의 얼굴 입체광이 天井 직하광(#005)·반쪽 하드 광(#007)·대숲 한 줄기(#018)와 한 프롬프트에서 부딪혔다 |
 | base, lip | 카드 줄이 이긴다 | Iris 메이크업 고정문의 豆沙红唇 위에 프리셋 입술색이 또 얹혔다(#001 #007 #019) |
-| face-clear | B에서 완화한다. 바람에 흩날린 가닥이 뺨·목·코끝 옆을 지나가도 되고 눈썹과 눈만 덮지 않는다 | #002 #008 #013은 바람 머리가 얼굴 옆을 스치는데 Iris가 금지문으로 지웠다 |
+| face-clear | B에서 끈다(`半扎半披`와 S2). A·C·D는 켠다 | B의 바람에 흩날린 가닥이 뺨·목·코끝 옆을 스치고 눈썹과 눈만 열려 있는 것이 #002 #008 #013의 특징인데 face-clear의 `tucked behind one ear`와 부딪힌다. A·C의 쪽 머리와 D의 `松散低髻`(귀 옆의 부드러운 가닥)는 얼굴을 가로지르지 않아 켠 채로 둔다 |
 | blush | C에서 끈다 | 흑백이라 뺨 색이 안 보이고 장밋빛 번짐이 회색 단계를 흐린다 |
 | catchlight | B·C는 끈다. D는 카드 줄이 이긴다 | B는 대숲 한 줄기가 눈에 닿고(#018) C는 한쪽 얼굴이 암전이라(#007) 따로 점을 찍으면 부딪힌다 |
 | grain | C는 카드 줄이 이긴다. A·B·D는 고정 몫이 그대로 붙는다 | 흑백 은염 입자는 디지털 노이즈 문장과 모양이 다르다 |
-| lens | 켠다. 어느 쌍·세트를 골라도 렌즈를 말하는 줄은 정확히 하나이고 출처 순서는 세트의 렌즈 > 쌍의 렌즈 > 갈래의 본체·렌즈 줄 > 고정 몫이다. B(쌍 6·7·8, S2·S3 포함)는 Optics의 `85mm 人像` 줄이 lens 줄이라 고정 몫 `自然透视`를 붙이지 않는다. A·C·D는 갈래 줄에 lens 줄이 없으니 고정 몫 `自然透视` 줄이 lens 줄이다. 단 쌍 3(A)은 Camera의 `长焦压缩` 줄이 lens 줄이라 `自然透视`를 붙이지 않는다. 세트가 렌즈를 말하면 그 값이 lens 줄이다(S6은 Leica Q2의 내장 Summilux 28mm f/1.7이 렌즈 줄이라 `自然透视`를 붙이지 않는다). S1·S4·S5는 Optics에 본체만 쓰고 렌즈를 말하지 않으니 같이 고른 쌍도 렌즈를 말하지 않을 때에만 `自然透视` 줄이 렌즈 줄이다(쌍 3의 `长焦压缩`을 같이 고르면 쌍 3의 줄이 렌즈 줄이고 `自然透视`를 붙이지 않는다) | Iris의 50mm 평시 꼬리와 카드의 렌즈 줄이 한 프롬프트에 공존했고, 쌍마다 lens 줄의 출처를 몰라 추론이 갈렸다 |
+| lens | 켠다. 어느 쌍·세트를 골라도 렌즈를 말하는 줄은 정확히 하나이고 출처 순서는 세트의 렌즈 > 쌍의 렌즈 > 갈래의 본체·렌즈 줄 > 고정 몫이다. B(쌍 6·7·8, S2·S3 포함)는 Optics의 `85mm 人像` 줄이 lens 줄이라 고정 몫 `自然透视`를 붙이지 않는다. A·C·D는 갈래 줄에 lens 줄이 없으니 고정 몫 `自然透视` 줄이 lens 줄이다. 단 쌍 3(A)은 Camera의 `长焦压缩` 줄이 lens 줄이라 `自然透视`를 붙이지 않는다. 세트가 렌즈를 말하면 그 값이 lens 줄이다(S6은 Leica Q2의 내장 Summilux 28mm f/1.7이 렌즈 줄이라 `自然透视`를 붙이지 않는다). 그 렌즈는 세트가 정한 본체의 Optics `stock` 줄 문장 안에 한 번만 쓴다(S6은 카드에 `Leica Q2` 줄이 없어 세트의 본체 이름과 내장 렌즈로 `stock` 줄 한 줄). S1·S4·S5는 Optics에 본체만 쓰고 렌즈를 말하지 않으니 같이 고른 쌍도 렌즈를 말하지 않을 때에만 `自然透视` 줄이 렌즈 줄이다(쌍 3의 `长焦压缩`을 같이 고르면 쌍 3의 줄이 렌즈 줄이고 `自然透视`를 붙이지 않는다) | Iris의 50mm 평시 꼬리와 카드의 렌즈 줄이 한 프롬프트에 공존했고, 쌍마다 lens 줄의 출처를 몰라 추론이 갈렸다 |
 | framing | 켠다. 쌍의 Camera 줄은 자리·각도·구도 기법만 정하고 프레임 범위는 fixed-lines.md의 framing 줄이 정한다. 쌍 1·9·10의 Camera 줄은 프레임 범위를 직접 말한다. 그 세 쌍에서는 기본 framing 줄의 위·아래 범위를 쓰지 않고 `vertical frame — A vertical 3:4 frame.` 한 문장만 쓰며, 범위는 쌍의 Camera 줄에서 한 번만 낸다 | 쌍 대부분이 프레임 범위를 말하지 않는다 |
 | ratio | 켠다. 사용자 비율이 없으면 3:4 세로 | 쌍은 비율을 정하지 않는다 |
 
 ## Hair and makeup
+**함께 쓰는 슬롯:** `hair`·`hair-pin`(갈래의 머리 모양 줄에 그 갈래의 비녀 줄을 꽂는다)
+
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
 | A | hair | 一丝不乱的低盘发 — Hair combed into a precise low bun at the nape, every strand laid flat so the long neck line stays clear against the wall. |
@@ -77,6 +79,9 @@
 | D | expression | 茶道入定 — The lowered eyes rest on the cup below, steam rising across the face and the shoulders loose. |
 
 ## Outfit
+**하나만 고르는 슬롯:** `outfit`(갈래의 옷 후보 하나)
+**함께 쓰는 슬롯:** `outfit-outer`(A의 羊绒大衣는 `outfit` 长衫 위에 걸친다)
+
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
 | A | outfit | 长衫 — A black heavy-silk robe falls straight to the shin with side slits that swing, its sheen only a thin line along each fold. |
@@ -130,6 +135,9 @@
 | D | background | 博古架 — A dark wood shelf of open compartments, each holding one vase, bowl or stone with plenty of empty space between. |
 
 ## Light
+**하나만 고르는 슬롯:** `face-light`(갈래의 얼굴 빛 후보 하나), `light-fill`·`room-light`(D의 창빛은 해가 든 날의 또렷한 光斑 `light-fill` 窗光光斑과 종이창의 부드러운 `room-light` Window Light 가운데 하나)
+**함께 쓰는 슬롯:** `desk-light`·`room-light`(Scene에서 C의 书斋, D의 茶室를 골랐을 때만 그 갈래의 얼굴 빛 줄에 더한다)
+
 B의 `月光`(밤)을 고르면 햇빛·새벽빛 줄(`竹影`, `幽篁深处`, `晨曦竹雾`)은 모두 쓰지 않고 달빛 하나로 쓴다. 대나무 그림자는 달빛이 만든 흐린 그림자로 쓴다.
 
 | 갈래 | 슬롯 | 줄 |
@@ -153,7 +161,7 @@ B의 `月光`(밤)을 고르면 햇빛·새벽빛 줄(`竹影`, `幽篁深处`, 
 |---|---|---|
 | A | stock | Leica M11 — A compact rangefinder frame. |
 | A | color | 水墨影调 — A low-contrast grey-cyan grade where the whites soften to matte paper and the shadows lean faintly cool. |
-| A | micro | Leica M11 — Crisp micro-contrast keeps the fine surface detail sharp while the colour stays calm. |
+| A | micro | Crisp Micro-Contrast — Crisp micro-contrast keeps the fine surface detail sharp while the colour stays calm. |
 | A, D | surface | 哑光相纸 — No glossy sheen, only a quiet matte photo-paper finish with slow, soft tonal fall-off. |
 | B | stock | Fujifilm GFX — A medium-format digital frame. |
 | B | color | 青绿偏色 — Shadows and midtones lean ink green with restrained red and yellow while the green shade leaves only a faint pale sheen on the skin, and fine material texture and a deep, rich ink-green hold across leaves, moss and stone. |
@@ -177,18 +185,20 @@ B의 `月光`(밤)을 고르면 햇빛·새벽빛 줄(`竹影`, `幽篁深处`, 
 | 번호 | 갈래 | Pose | Camera |
 |---|---|---|---|
 | 1 | A | 极简雕塑立姿 — She stands upright and still against a bare wall, legs together and arms hanging straight, like a statue. | 留白 — She fills about one third of the vertical frame and the plain wall around her stays quiet and empty. |
-| 2 | A | 穿过月亮门 — Caught mid-step through a round gate in a white wall, the dark robe swinging, her body turned a little toward the lens. | 框架构图 — The round opening boxes her into a circle of light with the dim garden wall around it. |
-| 3 | A | 撑伞回眸 — She walks away along a wet lane with an umbrella over one shoulder and turns her head back beneath its rim. | 长焦压缩 — A moderate telephoto down the lane stacks the grey eaves and walls behind her into one flat scroll-like plane. |
+| 2 | A | 穿过月亮门 — Caught mid-step through a round gate in a white wall, the dark robe swinging, her body turned a little toward the lens. | 框架构图 — The round opening boxes her into a circle with the garden wall around it. |
+| 3 | A | 撑伞回眸 — She walks away along a lane with an umbrella over one shoulder and turns her head back beneath its rim. | 长焦压缩 — A moderate telephoto down the lane stacks the grey eaves and walls behind her into one flat scroll-like plane. |
 | 4 | A | 凭桥看水 — Her forearms rest on a stone bridge rail, torso leaning forward and eyes on the water below. | 俯拍 — The camera looks down from above and behind her so the bridge and water lead the eye and her head sits nearest the lens. |
 | 5 | A | 漏窗侧立 — She stands in profile beside a carved lattice window, shoulder close to the white wall. | 对角线构图 — The wall edge and the line of the corridor run corner to corner, and she stands where they cross. |
-| 6 | B | 竹林穿行 — She walks slowly along a narrow path between tall bamboo stems, small among the vertical trunks. | 前景遮挡 — A blurred bamboo leaf crosses one corner of the frame in front of her. |
-| 7 | B | 手拈竹枝 — One hand holds a thin bamboo branch at chest height, fingers loose, eyes lowered to the leaves. | 仰拍 — The camera looks up from below, the stems converging toward a pale sky and the leaf canopy setting off her head. |
-| 8 | B | 凭栏远眺 — Her forearms rest on a hilltop railing, weight leaning forward and the gaze carried out over layered mountains. | 三分法构图 — She stands on one vertical third line and the misty hills fill the other two thirds. |
+| 6 | B | 竹林穿行 — She walks slowly along a narrow path between tall bamboo stems, small among the vertical trunks. | 前景遮挡 — A blurred leaf crosses one corner of the frame in front of her. |
+| 7 | B | 手拈竹枝 — One hand holds a thin bamboo branch at chest height, fingers loose, eyes lowered to the leaves. | 仰拍 — The camera looks up from below, the stems converging toward the sky and the leaf canopy setting off her head. |
+| 8 | B | 凭栏远眺 — Her forearms rest on a hilltop railing, weight leaning forward and the gaze carried out over layered mountains. | 三分法构图 — She stands on one vertical third line and the layered hills fill the other two thirds. |
 | 9 | C | 端坐 — She sits upright on a dark armchair with both hands flat on her lap. | 对称构图 — The wall, the desk and the chair split evenly left and right of a central axis, with her on the line and the frame running from her head down to her lap. |
-| 10 | C | 纯侧颜 — Her head turns a full ninety degrees so one eye, the nose line and the jaw form a clean outline against the hard side light. | Medium Close-Up — The frame runs from the top of her head to mid-chest, the face filling most of it. |
+| 10 | C | 纯侧颜 — Her head turns a full ninety degrees so one eye, the nose line and the jaw form a clean outline against a plain background. | Medium Close-Up — The frame runs from the top of her head to mid-chest, the face filling most of it. |
 | 11 | D | 斟茶 — Seated at a low table, she tilts a small teapot so a thin stream arcs into a cup, her other hand holding the sleeve back. | 过肩镜头 — The camera looks past the blurred shoulder of an unseen tea host across the table to her sharp figure beyond. |
-| 12 | D | 窗前端茶杯 — She holds a cup near her chin beside a window, her face in profile toward the glass. | 玻璃窗倒影 — Shot through the window glass, her outline overlaps a ghost reflection of the garden bamboo outside. |
-| 13 | D | 翻阅古籍 — Seated at a low desk, she holds an old thread-bound book open with one hand while two fingers of the other lift a page corner, her head bowed over the page. | 三分法构图 — She sits on one vertical third line and the shelf wall and the paper-soft window light fill the other two thirds. |
+| 12 | D | 窗前端茶杯 — She holds a cup near her chin beside a window, her face in profile toward the glass. | 玻璃窗倒影 — Shot through the window glass, her outline overlaps a ghost reflection of the view outside. |
+| 13 | D | 翻阅古籍 — Seated at a low desk, she holds an old thread-bound book open with one hand while two fingers of the other lift a page corner, her head bowed over the page. | 三分法构图 — She sits on one vertical third line and the shelf wall and the window fill the other two thirds. |
+
+장소 조건: 쌍 2는 둥근 문이 있을 때, 쌍 3은 좁은 골목이 있을 때, 쌍 4는 다리가 있을 때, 쌍 5는 격자창이 있는 벽이 있을 때, 쌍 6·7은 대숲이나 줄기가 늘어선 숲일 때, 쌍 8은 난간과 먼 산이 보일 때, 쌍 9는 책상이 있는 방일 때, 쌍 12는 창가일 때, 쌍 13은 낮은 책상이 있을 때.
 
 ## 맞지 않는 것
 네온과 형광색, 파스텔 분홍, 무한 흰 스튜디오 배경, 직사 한낮의 해(대숲 틈새 빛은 제외), 큰 웃음, 정면 증명사진 자세, 읽히는 편액·낙관 글자, 오색 자수와 화려한 궁정 의상.

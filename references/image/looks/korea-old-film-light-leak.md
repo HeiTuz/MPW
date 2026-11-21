@@ -10,7 +10,7 @@
 ## 고정 사실 (모든 갈래가 지킨다)
 | 슬롯 | 값 |
 |---|---|
-| medium | 값싼 필름과 즉석사진 인화지로 찍은 낡은 스냅이고 깨끗한 디지털 화보가 아니다. 첫 줄은 갈래마다 다르고, 앞의 `Seoul`은 장소 구절이라 사용자가 다른 장소를 말하면 그 장소로 바꾼다(매체 구절은 그대로): A는 `A Seoul everyday snapshot shot on 35mm consumer color film`, B는 `A Seoul instant-print snapshot shot on a Polaroid 600 camera`, C는 `A faded Seoul snapshot printed from years-expired 35mm color film`, D는 `A Seoul black-and-white portrait shot on Tri-X 400 35mm film`로 시작한다. D의 암실(S6과 `암실 안전등` 줄)만 예외다: 흑백 필름에는 붉은색이 찍히지 않으니 첫 줄을 `A Seoul portrait shot on 35mm color film under a single red darkroom safelight`로 시작하고 `Kodak Tri-X 400`·`흑백 필름 그레인` 줄은 쓰지 않는다(Iris #088은 붉은 안전등 아래 장면이고 흑백은 별개의 #083 프리셋이다). B 갈래의 S4(첫 컷 빛샘)도 예외다: Iris 원본이 35mm 필름의 첫 컷이라 그 장면은 첫 줄을 A의 35mm 줄로 시작하고 grain·lens·ratio·realism 행에서 A 갈래 처리를 따른다 |
+| medium | 값싼 필름과 즉석사진 인화지로 찍은 낡은 스냅이고 깨끗한 디지털 화보가 아니다. 첫 줄은 갈래마다 다르고 매체만 말한다: A는 `A photograph shot on 35mm consumer color film`, B는 `An instant-print photograph shot on a Polaroid 600 camera`, C는 `A faded photograph printed from years-expired 35mm color film`, D는 `A black-and-white photograph shot on Tri-X 400 35mm film`로 시작한다. 혼자 쓸 때(이 카드만 불릴 때)는 앞에 장소·장르 구절이 붙는다: A `A Seoul everyday snapshot shot on 35mm consumer color film`, B `A Seoul instant-print snapshot shot on a Polaroid 600 camera`, C `A faded Seoul snapshot printed from years-expired 35mm color film`, D `A Seoul black-and-white portrait shot on Tri-X 400 35mm film`(앞의 `Seoul`은 장소 구절이라 사용자가 다른 장소를 말하면 그 장소로 바꾼다). D의 암실(S6과 `암실 안전등` 줄)만 예외다: 흑백 필름에는 붉은색이 찍히지 않으니 첫 줄을 `A photograph shot on 35mm color film`으로 시작하고(혼자 쓸 때 `A Seoul portrait shot on 35mm color film under a single red darkroom safelight`) `Kodak Tri-X 400`·`흑백 필름 그레인` 줄은 쓰지 않는다(Iris #088은 붉은 안전등 아래 장면이고 흑백은 별개의 #083 프리셋이다). B 갈래의 S4(첫 컷 빛샘)도 예외다: Iris 원본이 35mm 필름의 첫 컷이라 그 장면은 첫 줄을 A의 35mm 줄로 시작하고 grain·lens·ratio·realism 행에서 A 갈래 처리를 따른다 |
 | closer | `필카 감성` |
 | time | 낮이 기본이다(흐린 낮, 한낮, 낮은 오후 해). C는 해 질 녘과 밤 실내 전구, D는 창가나 암실도 된다 |
 | light-key | 있는 빛: 해, 흐린 하늘, 창빛, 실내 전구. B의 `직광 플래시` 장면만 카메라에 달린 작은 플래시가 정면에서 한 발 터진다. D의 암실은 붉은 안전등 하나다(컬러 필름에 찍힌 붉은 조명) |
@@ -33,10 +33,10 @@
 | face-light | 모든 갈래에서 끈다. 얼굴 빛은 이 카드의 Light 줄이 정한다 | Iris 꼬리의 위·옆 입체광이 #078의 가장자리 빛샘, #085의 역광, #088의 붉은 단색 안전등과 부딪혔다 |
 | catchlight | B는 카드 줄이 이긴다. D는 암실(S6)에서만 카드의 `램프 캐치라이트` 줄(붉은 점)이 이기고, 흑백 장면의 D는 고정 몫 catchlight를 켠다(흑백에는 붉은 점이 찍히지 않는다). A·C는 켠다. 쌍 4(눈을 감음)와 쌍 9(역광으로 눈이 어두움)는 끈다 | #089의 직광 플래시는 동공에 흰 점 하나를 남기고 #088의 안전등은 컬러 장면에 붉은 점 하나를 남긴다 |
 | grain | A·C·D는 카드 줄이 이긴다. B는 끈다(S4만 35mm 필름이라 A의 `필름 그레인` 줄을 쓴다) | 고정 줄의 고운 균일 입자가 Iris의 ISO 400(#076), 굵은 Tri-X(#083)와 어긋나고 인화지(#077)는 입자보다 종이 질감이 보인다 |
-| lens | 켠다. 렌즈를 말하는 줄은 쌍과 세트의 어느 조합에서도 정확히 하나이고, 출처는 세트의 렌즈 > 쌍의 렌즈 > 갈래의 본체·렌즈 줄 > 고정 몫 `自然透视` 줄이다. 쌍 1~12의 Camera 줄은 렌즈를 말하지 않는다(쌍 3·9는 카메라 높이, 쌍 6 `팬포커스`는 심도). 세트: S2는 Optics `Kodak FunSaver` 줄(플라스틱 단렌즈)이 렌즈 줄이다. 갈래 줄: A의 일회용 장면은 Optics `Kodak FunSaver` 줄이 렌즈 줄이다. 이 줄은 사진을 찍는 카메라이고, 손에 든 소품인 Props의 `Fujifilm QuickSnap` 줄(쌍 1에서 얼굴에 대는 카메라)과는 다른 줄이다. B(쌍 6~8과 S3)는 Optics `플라스틱 렌즈` 줄이 렌즈 줄이다(S4는 35mm에 얕은 흐림 배경이라 `플라스틱 렌즈` 줄을 쓰지 않는다). C에서 Optics `Olympus OM-1` 줄(Zuiko 개방)을 고르면 그 줄이 렌즈 줄이다. 이 줄들을 고르지 않은 조합(A의 일반 스냅, B의 S4, C의 그 밖, D 전부)은 고정 몫 `自然透视` 줄이 렌즈 줄이다. 카메라 높이는 `自然透视`가 아니라 쌍 Camera 줄(로우앵글·하이앵글·앙각)이 정한다 | #082의 플라스틱 단렌즈(가장자리 해상력 저하)와 #077·#089의 고정 렌즈가 `自然透视` 표준~중망원 줄과 어긋나고, 찍는 카메라와 손에 든 소품 줄이 헷갈렸다 |
+| lens | 켠다. 렌즈를 말하는 줄은 쌍과 세트의 어느 조합에서도 정확히 하나이고, 출처는 세트의 렌즈 > 쌍의 렌즈 > 갈래의 본체·렌즈 줄 > 고정 몫의 lens 줄이다. 쌍 1~12의 Camera 줄은 렌즈를 말하지 않는다(쌍 3·9는 카메라 높이, 쌍 6 `팬포커스`는 심도). 세트: S2는 Optics `Kodak FunSaver` 줄(플라스틱 단렌즈)이 렌즈 줄이고 세트의 플라스틱 단렌즈 말은 그 `camera` 줄 문장 안에 한 번만 들어간다(A의 `smear` 줄은 가장자리 번짐만 말하고 렌즈를 새로 정하지 않으니 `Kodak FunSaver` 줄과 함께 쓴다). 나머지 세트의 Optics는 렌즈를 말하지 않는다. 갈래 줄: A의 일회용 장면은 Optics `Kodak FunSaver` 줄이 렌즈 줄이다. 이 줄은 사진을 찍는 카메라이고, 손에 든 소품인 Props의 `Fujifilm QuickSnap` 줄(쌍 1에서 얼굴에 대는 카메라)과는 다른 줄이다. B(쌍 6~8과 S3)는 Optics `플라스틱 렌즈` 줄이 렌즈 줄이다(S4는 35mm에 얕은 흐림 배경이라 `플라스틱 렌즈` 줄을 쓰지 않는다). C에서 Optics `Olympus OM-1` 줄(Zuiko 개방)을 고르면 그 줄이 렌즈 줄이다. 이 줄들을 고르지 않은 조합(A의 일반 스냅, B의 S4, C의 그 밖, D 전부)은 고정 몫의 lens 줄이 렌즈 줄이다. 카메라 높이는 고정 몫의 lens 줄이 아니라 쌍 Camera 줄(로우앵글·하이앵글·앙각)이 정한다 | #082의 플라스틱 단렌즈(가장자리 해상력 저하)와 #077·#089의 고정 렌즈가 고정 몫 lens 줄의 표준~중망원과 어긋나고, 찍는 카메라와 손에 든 소품 줄이 헷갈렸다 |
 | base, lip | 카드 줄이 이긴다. base는 C·D만, lip은 A·B·C·D 모두 | Iris 메이크업 고정문의 산호빛 누드 핑크 글래스 립이 #084의 붉은 기운 입술과 갈린다. 가공된 피부는 과기필름의 베일과 안 어울린다 |
 | blush | A에서 카드 줄이 이긴다. B·C·D는 켠다 | A는 꿀색 햇빛 아래 코랄 한 줄로 정한다 |
-| face-clear | 켠다. 쌍 4(바닷바람)에서만 끈다. 머리가 얼굴 가장자리를 지나가도 눈은 가리지 않는다 | #073의 바닷바람에 휘날리는 머리가 가림 금지문과 부딪혔다 |
+| face-clear | 켠다. 쌍 4(바닷바람)의 Pose를 쓸 때만 끈다(쌍 4의 Camera 줄만 빌린 경우는 켠다). A·B의 `시스루뱅`은 이마가 비치고 눈썹과 눈이 보이니 켠 채로 둔다. A의 `레이어드 컷`은 헤어 줄이 이미 귀 뒤로 넘겼으니 face-clear 줄을 다시 붙이지 않는다 | #073의 바닷바람이 머리를 얼굴 가장자리 너머로 날리는 것이 쌍 4의 정체라 face-clear와 부딪혔다. 머리가 얼굴 가장자리를 지나가도 눈은 가리지 않는다 |
 | realism | B에서 바꾼다(S4 제외). A는 `Kodak FunSaver` 줄(찍는 카메라)을 쓰는 일회용 장면에서만 바꾸고 C는 켠다. D의 흑백 장면(암실 제외)은 굵은 은염 입자가 정체라 바꾼다. 바꿀 때 `8K`·땀구멍 줄 대신 `native resolution` 줄을 쓴다. 매체 구절은 B `instant print`, A `single-use film camera`, D `coarse-grained Tri-X black-and-white frame`이고 질감은 B·A `a soft print grain, faded corners and skin that shows no individual pores`, D `coarse silver grain over fine texture and skin that shows no individual pores` | 인화지와 일회용 플라스틱 렌즈, 굵은 은염 입자가 만드는 해상도에 8K 모공 묘사를 얹으면 빛바램·번짐·거친 입자라는 룩의 정체와 반대다 |
 | framing | 켠다. 쌍 3(머리부터 신발까지)·4(익스트림 와이드 샷)·5(앉은 전신)·7(미디엄 클로즈업)·11(클로즈업)·12(카우보이 샷)는 Camera 줄이 프레임 범위를 직접 말하니 그 쌍이 정한다 | 나머지 쌍은 범위를 말하지 않아 고정 몫 허리 위 줄이 범위를 정한다. 쌍 3의 쪼그려 앉기와 쌍 5의 양반다리가 보이게 두 쌍의 Camera 줄이 범위를 말한다 |
 | ratio | 켠다. 사용자 비율이 없으면 A·C·D는 3:4 세로이고, B는 인화지가 아니라 이미지 영역만 그린 프레임이다: Polaroid 600은 1:1 정사각이고 `instax WIDE` 줄을 고르면 첫 줄 카메라를 instax WIDE로 바꾸고 이미지 영역은 가로 약 8:5다. 흰 테두리까지 인화지째 그리는 것은 사용자가 테두리를 말할 때뿐이고, 그때 Polaroid 인화지는 세로로 긴 모양(이미지는 정사각, 아래 테두리가 넓다)이고 instax WIDE 인화지는 약 5:4다. S4는 35mm 필름이라 3:4다 | 즉석 필름은 이미지 영역과 테두리를 포함한 인화지 전체의 모양이 다르다. Polaroid 600 줄이 정사각 이미지를 말하니 3:4와 부딪히고, instax WIDE 이미지는 정사각이 아니라 가로로 넓다 |
@@ -69,6 +69,9 @@
 | D | expression | 꿰뚫는 시선 — The face squares to the lens and the eyes lock on it without blinking, so the gaze seems to come through the frame. |
 
 ## Outfit
+**하나만 고르는 슬롯:** `outfit`(갈래의 옷 후보 하나: A는 보트넥·원피스 수영복, B는 캐시미어 니트·스퀘어넥)
+**함께 쓰는 슬롯:** `outfit-bottom`(와이드 데님은 보트넥과), `outfit-outer`(겉옷은 속옷 위에, A는 데님 재킷·남친 셔츠 중 하나)
+
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
 | A, C, D | outfit | 보트넥 — A slim black long-sleeve knit with a straight boat neckline across the collarbones, its matte weave soaking up the dull light. |
@@ -128,6 +131,8 @@
 | D | place | 필름 암실 — A small photographic darkroom with an enlarger, trays and a line of drying prints. |
 
 ## Light
+**하나만 고르는 슬롯:** `backlight`·`backlight-reed`(C의 역광 줄 하나, `backlight-reed`는 Scene에서 한강 억새를 골랐을 때 `backlight` 대신)
+
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
 | A | face-light | 흐린 날 빛 — Cloud cover acts as one huge softbox, giving shadowless even light, soft contrast and slightly cool grey-green shade. |
@@ -139,15 +144,18 @@
 | B, C | face-light | 부드러운 확산광 — Even diffused light with wide soft shadows and no visible source keeps skin and wall tones gentle. |
 | B | face-light | 직광 플래시 — A flat bright on-camera flash evens the skin and throws a crisp dark shadow on the wall behind. |
 | B | catchlight | 플래시 캐치라이트 — A hard on-camera flash leaves one small white dot dead center on each pupil. |
-| B | pin-shadow | 그림자 — On the cork wall each pin leaves a small soft shadow beneath it. |
-| B | spot-light | Spotlight — A ceiling spot lights the bench corner in a soft pool while the spotless floor reflects the even light of the room. |
+| B | pin-shadow | Soft Pin Shadows — On the cork wall each pin leaves a small soft shadow beneath it. |
+| B | spot-light | 갤러리 스팟 조명 — A ceiling spot lights the bench corner in a soft pool while the spotless floor reflects the even light of the room. |
 | C | face-light | 텅스텐 조명 — Incandescent bulbs give warm amber-orange light in soft pools on the face and wall, deeper orange on daylight film. |
 | C | backlight | 역광 — The light source sits behind her, so hair and shoulders glow at the edge while the face reads slightly darker against the bright background. |
-| C | backlight-reed | 逆光金边 — At the riverside a low gold sun behind the reed grass rings each feathered tip in glowing gold against a warm hazy sky. |
+| C | backlight-reed | 억새 역광 — At the riverside a low gold sun behind the reed grass rings each feathered tip in glowing gold against a warm hazy sky. |
 | D | face-light | 암실 안전등 — A single deep red safelight bathes everything in red and black with strong falloff and no other color in the frame. |
 | D | catchlight | 램프 캐치라이트 — One small deep-red point from the safelight sits in each eye. |
 
 ## Optics
+**하나만 고르는 슬롯:** `stock`·`stock-warm`·`stock-contrast`(A의 필름 후보 하나), `leak`·`leak-edge`(B의 빛샘 후보 하나, `leak-edge`는 S4 첫 컷)
+**함께 쓰는 슬롯:** `smear`·`bloom`(각각 `camera` 줄을 골랐을 때만: `smear`는 A의 Kodak FunSaver, `bloom`은 B의 instax WIDE)
+
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
 | A | stock | Fujicolor Superia 400 — Everyday color film that in this look leans Fuji green in neutral areas and shadows, with restrained reds and yellows. |
@@ -183,23 +191,25 @@
 | S3 코르크 보드 폴라로이드 (滤镜 #077. 단서: 장소 성수동·코르크 보드 벽 / 소품 폴라로이드·실버 체인 / 시간대 - / 의상 스퀘어넥 니트) | B | Outfit 스퀘어넥(짙은 숯회색 슬림 긴소매 니트) + 실버 체인 레이어드 / Scene 성수동 노출콘크리트 정적 공간, 코르크 보드에 건 폴라로이드 수집 / Light 부드러운 확산광 / Optics Polaroid 600, 정사각 이미지 영역, 현상이 고르지 않아 모서리가 노랗고 따뜻하다 / Style 폴라로이드 빛 번짐 / Pose 3/4로 몸을 틀고 고개만 렌즈로 돌린다 / Expression 맑게 렌즈를 본다 |
 | S4 첫 컷 빛샘 (滤镜 #078. 단서: 장소 갤러리 라운지 / 소품 필름 통 / 시간대 - / 의상 캐시미어 니트. 첫 컷 빛샘·오른쪽 가장자리 빛무리는 광학 효과라 단서로 세지 않는다) | B | Outfit 캐시미어 니트(모카 깊은 V) / Scene 갤러리 라운지, 청담동 단색 갤러리 코너, 부드러운 얕은 흐림 배경 / Light 부드러운 확산광, 오른쪽 가장자리에 밝은 붉은 주황 빛무리 / Optics 필름 첫 컷 빛샘(필름 통 개봉으로 생긴 첫 컷 빛샘, 35mm) / Style 필름을 만지는 사람의 뜻밖의 선물 / Pose 3/4로 몸을 틀고 고개만 렌즈로 돌린다 / Expression 맑게 렌즈를 본다 |
 | S5 과기필름 (滤镜 #084. 단서: 장소 노출콘크리트 카페 / 소품 아그파 필름 / 시간대 - / 의상 보트넥. 과기필름·회보라 그림자는 광학 효과라 단서로 세지 않는다) | C | Outfit 보트넥(검정) / Scene 노출콘크리트 카페처럼 저채도 냉회색·미색의 미세 질감 실내 벽, 큰 조리개의 부드러운 흐림 / Light 부드러운 확산광, 얼굴은 냉백 빛으로 맑고 입술은 붉은 기운 / Optics Agfa Vista 200, 유통기한 지난 필름, 습기에 손상된 유제로 보이게 암부를 회보라로, 대비가 낮아 얇은 베일 / Style 드림코어, 방향 잃은 청춘 이야기 / Pose 3/4로 몸을 틀고 고개만 렌즈로 돌린다 / Expression 맑게 렌즈를 본다 |
-| S6 암실 안전등 (滤镜 #088. 단서: 장소 필름 암실 / 소품 확대기·현상 트레이 / 시간대 - / 의상 보트넥. 이 세트는 컬러 필름에 찍힌 붉은 안전등 장면이라 `흑백`·`Tri-X`가 요청에 있으면 흑백 D의 다른 장소(창가)를 쓴다) | D | Outfit 보트넥(검정 슬림 긴소매 니트) / Scene 필름 암실, 배경은 부드럽게 흐리고 깨끗하다 / Light 암실 안전등(단색 적색), 붉은 빛이 이목구비를 조각한다 / Medium 첫 줄 `A Seoul portrait shot on 35mm color film under a single red darkroom safelight` / Optics 컬러 필름에 담긴 붉은 안전등의 단색 조명(흑백 필름 줄은 쓰지 않는다) / Style 전위적인 예술 필름 사진 / Pose 3/4로 몸을 틀고 고개만 렌즈로 돌린다 / Expression 맑게 렌즈를 본다 |
+| S6 암실 안전등 (滤镜 #088. 단서: 장소 필름 암실 / 소품 확대기·현상 트레이 / 시간대 - / 의상 보트넥. 이 세트는 컬러 필름에 찍힌 붉은 안전등 장면이라 `흑백`·`Tri-X`가 요청에 있으면 흑백 D의 다른 장소(창가)를 쓴다) | D | Outfit 보트넥(검정 슬림 긴소매 니트) / Scene 필름 암실, 배경은 부드럽게 흐리고 깨끗하다 / Light 암실 안전등(단색 적색), 붉은 빛이 이목구비를 조각한다 / Medium 첫 줄 `A photograph shot on 35mm color film` / Optics 컬러 필름에 담긴 붉은 안전등의 단색 조명(흑백 필름 줄은 쓰지 않는다) / Style 전위적인 예술 필름 사진 / Pose 3/4로 몸을 틀고 고개만 렌즈로 돌린다 / Expression 맑게 렌즈를 본다 |
 
 ## 포즈·구도 쌍
 | 번호 | 갈래 | Pose | Camera |
 |---|---|---|---|
-| 1 | A | 카메라 들여다보기 — Both hands raise a disposable camera to her face with one eye pressed to the viewfinder and the other shut, the lens facing the viewer. | 중앙 구도 — She sits dead center in the frame with a plain, evenly lit wall behind her. |
-| 2 | A | 뒤돌아보기 — She walks away along the lane while her head turns back over one shoulder so the eyes land near the lens. | 핸드헬드 — Gentle handheld sway with natural breathing movement and slightly shifting framing. |
-| 3 | A | 쪼그려 앉기 — A deep squat on a concrete step beside the graffiti wall with the forearms resting on the knees. | 로우앵글 — The camera looks up from below, lengthening the legs and setting the head against the sky, the full figure from head to shoes inside the frame. |
-| 4 | A | 눈 감고 바람 맞기 — The head tips back slightly with the eyes closed while wind lifts the hair and the shirt hem to one side. | 익스트림 와이드 샷 — She is a small mark on the boardwalk with the sea and sky filling almost the whole frame. |
-| 5 | A | 양반다리 — Seated on the checked blanket with both legs folded and crossed, the spine upright and the hands on the knees. | 삼분할 구도 — She sits on the left third line with her whole seated figure inside the frame, and the grass slope and river fill the other two thirds. |
-| 6 | B | 벽에 기대기 — One shoulder rests against the concrete wall, the weight easy and the head turned toward the lens. | 팬포커스 — Foreground and background are both in focus, so every part of the frame reads sharp and flat. |
+| 1 | A | 카메라 들여다보기 — Both hands raise a disposable camera to her face with one eye pressed to the viewfinder and the other shut, the lens facing the viewer. | 중앙 구도 — She sits dead center in the frame with a plain wall behind her. |
+| 2 | A | 뒤돌아보기 — She walks away along a street while her head turns back over one shoulder so the eyes land near the lens. | 핸드헬드 — Gentle handheld sway with natural breathing movement and slightly shifting framing. |
+| 3 | A | 쪼그려 앉기 — A deep squat on a concrete step beside a wall with the forearms resting on the knees. | 로우앵글 — The camera looks up from below, lengthening the legs and setting the head against the sky, the full figure from head to shoes inside the frame. |
+| 4 | A | 눈 감고 바람 맞기 — The head tips back slightly with the eyes closed while wind lifts the hair and the shirt hem to one side. | 익스트림 와이드 샷 — She is a small mark in a huge open space with the sky filling almost the whole frame. |
+| 5 | A | 양반다리 — Seated on a blanket with both legs folded and crossed, the spine upright and the hands on the knees. | 삼분할 구도 — She sits on the left third line with her whole seated figure inside the frame, and the open ground around her fills the other two thirds. |
+| 6 | B | 벽에 기대기 — One shoulder rests against a wall, the weight easy and the head turned toward the lens. | 팬포커스 — Foreground and background are both in focus, so every part of the frame reads sharp and flat. |
 | 7 | B | 두 손으로 컵 감싸기 — Both hands wrap a cup held at chest height with the elbows tucked in and the shoulders softened. | 미디엄 클로즈업 — The frame runs from the top of the head to mid-chest, so the face fills most of it. |
 | 8 | B | 귀 뒤로 머리 넘기기 — The fingertips draw a loose strand behind the ear, the elbow lifted and the head turning to show the side profile. | 하이앵글 — The camera looks down from above, so the floor leads the eye in and the head sits nearer the lens. |
-| 9 | C | 어깨 너머 시선 — The torso twists back and the face turns toward the lens past one shoulder. | 앙각 — The camera looks up from below, setting her tall against the low sun and the sky. |
-| 10 | C | 책상에 엎드리기 — The upper body folds flat onto the counter, the cheek resting on a sleeve and the eyes unfocused. | 전경 가림 — A blurred lantern edge crosses one corner of the frame in front of her. |
+| 9 | C | 어깨 너머 시선 — The torso twists back and the face turns toward the lens past one shoulder. | 앙각 — The camera looks up from below, setting her tall against the sky. |
+| 10 | C | 책상에 엎드리기 — The upper body folds flat onto a table or counter, the cheek resting on a sleeve and the eyes unfocused. | 전경 가림 — A blurred foreground edge crosses one corner of the frame in front of her. |
 | 11 | D | 옆모습 — The head turns fully to the side so the forehead, nose, lips and jaw read as one clean profile line. | 클로즈업 — The frame holds only the face, filling the picture edge to edge. |
-| 12 | D | 주머니에 손 넣기 — Both hands are pushed into the blazer pockets, the elbows slightly out and the shoulders lifted. | 카우보이 샷 — The frame cuts at mid-thigh, showing the whole torso and the hands near the pockets. |
+| 12 | D | 주머니에 손 넣기 — Both hands are pushed into her pockets, the elbows slightly out and the shoulders lifted. | 카우보이 샷 — The frame cuts at mid-thigh, showing the whole torso and the hands near the pockets. |
+
+장소 조건: 쌍 3은 장소에 낮은 단이나 계단과 벽이 있을 때, 쌍 4는 탁 트인 바닷가·산책로·들판일 때, 쌍 5는 담요를 펼 수 있는 풀밭이 있을 때, 쌍 10은 카운터나 탁자가 있을 때.
 
 ## 맞지 않는 것
 디지털 CCD 정면 플래시(Y2K CCD 플래시 카드의 몫), 선명한 디지털 색과 피부 보정, 청록-주황 영화 보정, 네온 간판의 밤거리, 스튜디오 조명과 흰 배경, 읽히는 필름 슬리브·인화지·엽서·간판 글자, 큰 웃음 포즈(A의 `돌아보며 활짝 웃기`의 짧은 웃음은 제외), 정면 증명사진 자세.

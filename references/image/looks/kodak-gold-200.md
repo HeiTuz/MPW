@@ -10,7 +10,7 @@
 ## 고정 사실 (모든 갈래가 지킨다)
 | 슬롯 | 값 |
 |---|---|
-| medium | 코닥 골드 200 컬러 네거티브로 찍은 소형 필름 카메라 스냅. 동네 현상소에서 뽑은 프린트 같은 짙은 원색이 정체이고, 스튜디오 조명 화보도 디지털 보정 사진도 아니다. 35mm 장면의 첫 줄은 `A sunlit Americana 35mm snapshot shot on Kodak Gold 200 color negative`로 시작한다. 매체 구절은 `35mm snapshot shot on Kodak Gold 200 color negative`이고 `sunlit Americana`는 장면 구절이라 이 카드가 매체 카드로 불리거나 장면이 다를 때는 쓰지 않는다. 120 장면(B 갈래 협곡 한 장, `Mamiya 645`)은 35mm 접두까지 빼고 첫 줄 전체를 `A medium-format snapshot shot on Kodak Gold 200 120 color negative`로 쓴다 |
+| medium | 코닥 골드 200 컬러 네거티브로 찍은 소형 필름 카메라 스냅. 동네 현상소에서 뽑은 프린트 같은 짙은 원색이 정체이고, 스튜디오 조명 화보도 디지털 보정 사진도 아니다. 35mm 장면의 첫 줄은 `A photograph shot on Kodak Gold 200 color negative`로 시작한다(매체만 말하는 구절. 35mm 포맷은 Optics의 본체 줄이 말하고, 첫 줄에 `35mm`를 쓰면 렌즈 mm와 같은 낱말로 읽혀 검사기가 렌즈 둘로 센다). 혼자 쓸 때: `A sunlit Americana 35mm snapshot shot on Kodak Gold 200 color negative`(`sunlit Americana`는 장면 구절이라 이 카드가 매체 카드로 불리거나 장면이 다를 때는 쓰지 않는다). 120 장면(B 갈래 협곡 한 장, `Mamiya 645`)은 35mm 접두까지 빼고 첫 줄 전체를 `A medium-format photograph shot on Kodak Gold 200 120 color negative`로 쓴다(혼자 쓸 때: `A medium-format snapshot shot on Kodak Gold 200 120 color negative`) |
 | closer | `Kodak Gold 200 snapshot` |
 | time | 낮에서 해질녘까지. A는 해가 높은 한낮~오후(흰빛에 가까운 강한 직사), B·D는 해가 낮은 금주황빛, C는 실내 창가의 오후. 밤·흐린 날·플래시 없음. 세트 묶음의 K 숫자는 Iris 프리셋의 연출 값이다 |
 | light-key | 해 하나가 주광이고 그림자는 짙고 단단하다. 앞면은 아스팔트·벽·차체가 되튀긴 빛이 채운다. D의 전구만 실용광이다. 네온·형광등·직부 플래시 없음(S4 다이너 창가의 노란 형광 간판 빛은 세트 값) |
@@ -32,15 +32,17 @@
 |---|---|---|
 | face-light | 모든 갈래에서 끈다. 얼굴 빛은 이 카드의 Light 줄이 정한다 | Iris 꼬리의 위·옆 입체광이 #057의 직사 짙은 얼굴 그늘, #061의 역광 금빛 고리, #062의 빛내림과 부딪혔다 |
 | catchlight | B에서 카드 줄(`Golden Sunset Arc Catchlight`)이 이긴다. A·C·D는 켠다 | Iris는 모든 블록에 점 하나를 넣었는데 B의 해 질 녘 장면은 눈 속의 해 모양이 곧 빛이다 |
-| face-clear | A·B·D에서 끈다. 바람과 달리기가 머리를 얼굴 반대쪽으로 날려도 눈과 눈썹은 열려 있다. C는 켠다 | #061의 질주 포니테일, #063 #067의 강풍 머리, #065의 회전 바람 머리가 이 룩의 특징인데 Iris 금지문(머리가 눈썹·눈을 가림)이 같은 프롬프트에 있었다 |
+| face-clear | 모든 갈래·쌍·세트에서 켠다. C의 `Ear-Tucked Bob`은 헤어 줄이 이미 귀 뒤로 넘겼으니 face-clear 줄을 다시 붙이지 않는다 | #061의 질주 포니테일, #063 #067의 강풍 머리, #065의 회전 바람 머리는 모두 머리가 얼굴 반대쪽(뒤·옆)으로 날리고 눈과 눈썹을 덮지 않아 face-clear와 부딪히지 않는다(`Windblown Hair`도 가닥이 얼굴에서 멀어진다). 얼굴을 가로지르는 머리를 원하는 줄이 이 카드에 없다 |
 | grain | 카드의 `Visible Film Grain` 줄이 이긴다 | Iris 꼬리의 `纯净胶片颗粒`·`细致微颗粒感`은 고운 입자로 읽히는데 골드 200은 중간 굵기 입자가 보이는 필름이다(원본 값: 고운 입자) |
-| lens | 켠다. 렌즈를 말하는 줄은 프롬프트마다 정확히 하나이고 출처는 세트의 렌즈 > 쌍의 렌즈 > 갈래의 본체·렌즈 줄 > 고정 몫 `自然透视` 줄 순이다. ① 세트: S1~S6은 Optics에 본체와 렌즈를 한 벌로 적었다(AE-1+FD 50mm, OM-1+Zuiko 35mm, A-1+FD 50mm, Canonet QL17 G-III 40mm, Spotmatic F+Takumar 50mm, XA 35mm). 세트를 고르면 그 줄이 렌즈 줄이고 쌍이나 갈래 줄의 렌즈 말은 쓰지 않는다(S1에 쌍 3을 붙여도 `A wide compact lens`가 아니라 S1의 FD 50mm). ② 세트가 없으면 쌍: 쌍 3(deep focus)은 Camera 줄이 `A wide compact lens`로 렌즈를 말하니 그 줄이 렌즈 줄이고, 이때 갈래 본체 줄은 렌즈 말 없이 본체 이름과 색감만 쓴다. ③ 둘 다 없으면 갈래 줄: Optics `body` 줄이 본체와 렌즈를 함께 말하니 그 줄이 렌즈 줄이다(A는 `Canon AE-1` 50mm·`Olympus XA` 35mm·`Pentax K1000` 28mm, B는 `Mamiya 645` 80mm, C는 `Canon Canonet QL17` 40mm, D는 `Nikon FM`·`Pentax Spotmatic F` 50mm f/1.4). 쌍 12(Shallow Depth of Field)는 Camera 줄이 조리개만 말하니 D 본체 줄의 50mm f/1.4가 렌즈 줄이다. ④ 본체 줄을 고르지 않았으면 `自然透视`가 렌즈 줄이다. 이 줄은 카메라 높이를 말하지 않으니 쌍 2(low-angle shot)·쌍 5(Bird's-eye View)의 시점과 부딪히지 않는다. ①~③에서는 `自然透视`를 붙이지 않는다 | #061(28mm)·#065(f/1.4)가 50mm 무왜곡 꼬리와 같은 프롬프트에 있어 렌즈가 둘이었다(원본 값: 50mm 평시). 쌍 3과 세트가 함께 걸리면 값 우선순위(세트가 먼저)와 거꾸로였다 |
+| lens | 켠다. 렌즈를 말하는 줄은 프롬프트마다 정확히 하나이고 출처는 세트의 렌즈 > 쌍의 렌즈 > 갈래의 본체·렌즈 줄 > 고정 몫의 lens 줄 순이다. ① 세트: S1~S6은 Optics에 본체와 렌즈를 한 벌로 적었다(AE-1+FD 50mm, OM-1+Zuiko 35mm, A-1+FD 50mm, Canonet QL17 G-III 40mm, Spotmatic F+Takumar 50mm, XA 35mm). 세트를 고르면 세트의 본체+렌즈 한 벌이 Optics `body` 줄 하나의 문장이 되고(예: S1 `Canon AE-1 — A 1970s film SLR with an FD 50mm f/1.4 lens.`) 그 줄이 렌즈 줄이다. 갈래 `body` 줄 문장·쌍 Camera 줄의 렌즈 말은 쓰지 않는다(S1에 쌍 3을 붙여도 `A wide compact lens`가 아니라 S1의 FD 50mm). 본체별 `tone-*` 줄은 렌즈를 말하지 않는다. ② 세트가 없으면 쌍: 쌍 3(deep focus)은 Camera 줄이 `A wide compact lens`로 렌즈를 말하니 그 줄이 렌즈 줄이고, 이때 갈래 본체 줄은 렌즈 말 없이 본체 이름과 색감만 쓴다. ③ 둘 다 없으면 갈래 줄: Optics `body` 줄이 본체와 렌즈를 함께 말하니 그 줄이 렌즈 줄이다(A는 `Canon AE-1` 50mm·`Olympus XA` 35mm·`Pentax K1000` 28mm, B는 `Mamiya 645` 80mm, C는 `Canon Canonet QL17` 40mm, D는 `Nikon FM`·`Pentax Spotmatic F` 50mm f/1.4). 쌍 12(Shallow Depth of Field)는 Camera 줄이 조리개만 말하니 D 본체 줄의 50mm f/1.4가 렌즈 줄이다. ④ 본체 줄을 고르지 않았으면 고정 몫의 lens 줄이 렌즈 줄이다. 이 줄은 카메라 높이를 말하지 않으니 쌍 2(low-angle shot)·쌍 5(Bird's-eye View)의 시점과 부딪히지 않는다. ①~③에서는 고정 몫의 lens 줄을 붙이지 않는다 | #061(28mm)·#065(f/1.4)가 50mm 무왜곡 꼬리와 같은 프롬프트에 있어 렌즈가 둘이었다(원본 값: 50mm 평시). 쌍 3과 세트가 함께 걸리면 값 우선순위(세트가 먼저)와 거꾸로였다 |
 | framing | 켠다. 쌍 5·6·7·8·9는 프레임 범위를 직접 말하니 그 말과 부딪히지 않게 쓴다. 쌍 2(굽힌 다리)·3(두 발이 뜸)·4(늘어뜨린 다리)는 Pose가 낮은 몸을 말하니 framing 줄의 범위를 머리부터 발끝으로 쓴다 | 나머지 쌍은 범위를 말하지 않고 Pose가 허리 위에서 보인다 |
 | ratio | 켠다. 사용자 비율이 없으면 3:4 세로 | 쌍은 비율을 정하지 않는다 |
 
 모든 쌍에 해당하는 처리: face-light 끔, grain은 카드 줄, ratio 3:4, lens는 위 출처 순서. 이 카드를 매체 카드로 다른 장면 카드와 함께 쓸 때 쌍 번호는 장면 카드의 것이라 위 쌍 3·12 조건은 적용하지 않고 이 한 줄만 쓴다.
 
 ## Hair and makeup
+**하나만 고르는 슬롯:** `hair`(갈래마다 후보 중 하나)
+
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
 | A | hair | Power Ponytail — A high ponytail tied off the crown whips behind her as she moves, loose wisps lifting at the temples and the ends lit gold by the sun. |
@@ -66,11 +68,14 @@
 | D | expression | Head-Tilt Beaming Smile — The head tips to one side with a broad smile, the cheeks plump and lifted in the bulb light. |
 
 ## Outfit
+**하나만 고르는 슬롯:** `outfit-top`·`outfit-top-sport`(윗옷 후보 하나), `outfit-dress`·`outfit-swim`(`outfit-top`·`outfit-bottom` 대신 입는 한 벌), `outfit`(B·D의 한 벌 후보 하나: B는 `Chambray Shirt`·`Jumpsuit`, D는 `Cable-Knit Sweater`이고 D는 `outfit-dress`와도 하나만)
+**함께 쓰는 슬롯:** `outfit-top`·`outfit-top-sport` 중 하나에 `outfit-bottom`(하의), `outfit-outer`(겉옷은 속옷 위에, A는 `Denim Jacket`·`Baseball Jersey` 중 하나)
+
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
 | A | outfit-top | Tank Top — A fitted white ribbed cotton tank on thin straps, the weave catching sun along the shoulders. |
 | A, C | outfit-top | Baby Tee — A short snug white cotton tee ends at the waist, its small crew neckline sitting at the collarbones. |
-| A | outfit-sport | Oversized Graphic Tee — A loose cotton tee with a faded print and no readable lettering whips against the torso as she runs. |
+| A | outfit-top-sport | Oversized Graphic Tee — A loose cotton tee with a faded print and no readable lettering whips against the torso as she runs. |
 | A | outfit-bottom | Denim Cutoffs — Light-blue distressed denim shorts with raw frayed hems, the loose threads lit white against the leg. |
 | A | outfit-outer | Denim Jacket — A boxy faded-blue denim jacket worn open, pale at the seams and creased at the elbows, its brass buttons throwing small glints. |
 | A | outfit-outer | Baseball Jersey — A vintage button-front cotton baseball jersey worn open over a tank, its mesh-like weave and trim crisp in direct sun. |
@@ -100,6 +105,8 @@
 | D | hand-prop | Paper Soda Cup — A tall waxed paper cup with a lid and a striped straw, printed with no lettering, beads cold in both hands. |
 
 ## Style
+**함께 쓰는 슬롯:** `style`·`style-era`(`Americana`에 갈래의 시대 줄을 더한다)
+
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
 | 전부 | style | Americana — Mid-century American nostalgia of faded denim, worn leather and chrome in warm, slightly faded film color. |
@@ -126,6 +133,9 @@
 | D | place | Carousel — Gilded carved horses turn on a round platform. |
 
 ## Light
+**하나만 고르는 슬롯:** `face-light`(갈래의 얼굴 빛 하나)
+**함께 쓰는 슬롯:** `face-shadow`(A에서 `Trucker Hat`을 썼을 때 `face-light`에 더한다)
+
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
 | A | face-light | Noon Sunlight — High bright sun lays small crisp shadows under the brow and chin, with a warm gleam on the cheekbones and the pale edges of cotton slightly clipped. |
@@ -141,9 +151,11 @@
 | C | face-light | Window Light — Daylight from the shop window models the face with a bright side and a soft shadow side. |
 | C | light-fill | Venetian Blind Shadows — Sun through wooden blinds lays parallel gold stripes across her shoulders, the records and the counter. |
 | D | light-fill | String Lights — Rows of bare incandescent bulbs strung over the ride glow amber, each bulb a warm point against the dusk sky. |
-| D | sky-glow | 노을빛 — Over the drive-in lot and the carousel the sunset sky turns warm orange and pink, tinting skin and gilded paint and softening every shadow. |
+| D | sky-glow | Sunset Sky Glow — Over the drive-in lot and the carousel the sunset sky turns warm orange and pink, tinting skin and gilded paint and softening every shadow. |
 
 ## Optics
+**하나만 고르는 슬롯:** `body`(갈래의 본체 줄 하나), `tone-*`(고른 `body` 줄의 본체 것만: `tone-ae1`은 `Canon AE-1`, `tone-xa`는 `Olympus XA`, `tone-k1000`은 `Pentax K1000`, `tone-mamiya`는 `Mamiya 645`, `tone-canonet`은 `Canon Canonet QL17`, `tone-fm`은 `Nikon FM`, `tone-spotmatic`은 `Pentax Spotmatic F`)
+
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
 | 전부 | stock | Kodak Gold 200 — In this look, saturated golden-yellow consumer film: warm orange highlights and reddish-brown shadows, with reds, yellows and blues saturated the hardest. |
@@ -158,13 +170,13 @@
 | A, B | flare | Sunburst Flare — The sun beams into the lens and spreads a small gold starburst with radial rays beside the figure. |
 | D | bloom | Halation — Each bright bulb bleeds a soft red-orange glow around its edges as light scatters in the film. |
 | D | bokeh | Bokeh Circles — Out-of-focus bulbs and sunset glints turn into smooth round gold discs behind her. |
-| A | tone-ae1 | 필카 감성 — Warm, slightly soft vintage colour with an honest daylight exposure. |
+| A | tone-ae1 | Warm Vintage Daylight Color — Warm, slightly soft vintage colour with an honest daylight exposure. |
 | A | tone-xa | Film Vignette — Soft vintage colour with the corners falling faintly darker toward the edge of the frame. |
-| A | tone-k1000 | 超广角畸变 — The wide view keeps deep focus from the running figure to the bowl or road around her with mild edge stretching, in plain, slightly rough documentary colour. |
+| A | tone-k1000 | Deep Focus Wide View — The wide view keeps deep focus from the running figure to the bowl or road around her with mild edge stretching, in plain, slightly rough documentary colour. |
 | B | tone-mamiya | Highlight Roll-off — Rich texture holds across the red rock while the sky and bright rock faces step smoothly toward white without a hard clipped edge. |
-| C | tone-canonet | 필카 감성 — Soft, slightly low-contrast warm colour keeps the whole diner readable. |
-| D | tone-fm | Overexposed Highlights — The dusk exposure stays open and airy through the midtones, with honest grain. |
-| D | tone-spotmatic | Takumar — The 50mm lens gives her face a gentle three-dimensional pop against a softly blended background of bulbs. |
+| C | tone-canonet | Soft Low-Contrast Warm Color — Soft, slightly low-contrast warm colour keeps the whole diner readable. |
+| D | tone-fm | Open Airy Exposure — The dusk exposure stays open and airy through the midtones, with honest grain. |
+| D | tone-spotmatic | Takumar — The coated glass gives her face a gentle three-dimensional pop against a softly blended background of bulbs. |
 
 ## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 세트를 쓰는 조건은 규칙 4항이 정하고, 세트 값은 고정 사실보다 먼저다. 세트를 고르면 갈래는 그 세트의 갈래 열이다. 단서는 네 칸으로 판정한다. 규칙은 image-brief.md §4 '룩 카드' 4항과 '비워 둔 층')
 | 세트 | 갈래 | 묶음 |
@@ -180,17 +192,19 @@
 | 번호 | 갈래 | Pose | Camera |
 |---|---|---|---|
 | 1 | A | Refueling Stance — She stands side-on at an old pump with one hand on the nozzle and the other on her hip, looking back toward the sun. | rule of thirds — The pump fills the right third of the frame and she stands on the left third under a wide empty sky. |
-| 2 | A | Car Lean — Her hip rests on a car's red fender with one leg bent and a hand flat on the paint, eyes on the far road. | low-angle shot — The camera sits near the bumper and looks up past the grille so the sky fills the space behind her head. |
+| 2 | A | Car Lean — Her hip rests on a car's red fender with one leg bent and a hand flat on the paint, eyes on the far distance. | low-angle shot — The camera sits near the bumper and looks up past the grille so the sky fills the space behind her head. |
 | 3 | A | Airborne Glance — Both feet leave the ground mid-run while her face snaps back over one shoulder, a board in one hand and the ponytail trailing. | deep focus — A wide compact lens keeps the whole sprint from the board in her hand to the sky behind sharp at once. |
 | 4 | A, D | Tailgate Sit — She sits on a lowered pickup tailgate with her legs dangling and her hands braced beside her hips. | centered composition — She sits dead center in the frame with the truck bed and the open land evenly around her. |
 | 5 | A | Prone Pose — She lies face-down on a red-and-white checked blanket, chin in her hands and her lower legs lifted behind her. | Bird's-eye View — The camera hangs directly above the blanket so the check pattern fills the frame around her. |
-| 6 | A | Arms Outstretched — At the end of a diving board she spreads both arms wide with her chest open, head turned toward the lens. | Cowboy Shot — The frame cuts at mid-thigh so the full spread of her arms and the bright pool read together. |
-| 7 | B | Truck Bed Rail Lean — She stands in the bed of an old pickup with both hands on the side rail, facing out across open land. | Extreme Wide Shot — She is a small shape in a huge field of gold with the low sun just above the horizon. |
-| 8 | B | Hands on Hips — Her palms rest on her hips with the elbows out and the chin lifted as she surveys the canyon. | negative space — She fills one third of the frame and the rest stays as red rock and open sky. |
+| 6 | A | Arms Outstretched — At the end of a diving board she spreads both arms wide with her chest open, head turned toward the lens. | Cowboy Shot — The frame cuts at mid-thigh so the full spread of her arms and the pool below read together. |
+| 7 | B | Truck Bed Rail Lean — She stands in the bed of an old pickup with both hands on the side rail, facing out across open land. | Extreme Wide Shot — She is a small shape in a huge open landscape with the horizon low in the frame. |
+| 8 | B | Hands on Hips — Her palms rest on her hips with the elbows out and the chin lifted as she surveys the open view. | negative space — She fills one third of the frame and the rest stays as open landscape and sky. |
 | 9 | B | Mug Steam Blow — She holds an enamel mug near her lips and blows softly across the steaming coffee at the open door of a van. | Medium Close-Up — The frame runs from the top of her head to mid-chest so the mug, steam and face read together. |
-| 10 | C | Elbow Prop — One elbow rests on the formica tabletop and her chin sits in her palm, eyes soft on something off to the side. | frame within a frame — The booth back and the window edge box her into a warm slot while the sunlit street fills the glass. |
-| 11 | C | Jukebox Lean — One shoulder leans on the frame of a jukebox while a finger rests on its buttons and she looks at a friend. | Two Shot — She and her friend share the frame at equal size, the jukebox glowing between them. |
-| 12 | D | Raising Cups — Both arms lift paper cups high in a cheer as she laughs toward friends outside the frame. | Shallow Depth of Field — A wide aperture holds only her in sharp focus while the bulbs and the screen behind melt into large soft discs. |
+| 10 | C | Elbow Prop — One elbow rests on a tabletop and her chin sits in her palm, eyes soft on something off to the side. | frame within a frame — The seat back and the window edge box her into a narrow slot while the street fills the glass. |
+| 11 | C | Jukebox Lean — One shoulder leans on the frame of a jukebox while a finger rests on its buttons and she looks at a friend. | Two Shot — She and her friend share the frame at equal size, the jukebox between them. |
+| 12 | D | Raising Cups — Both arms lift paper cups high in a cheer as she laughs toward friends outside the frame. | Shallow Depth of Field — A wide aperture holds only her in sharp focus while the points of light behind her melt into large soft discs. |
+
+장소 조건: 쌍 1은 장소에 구식 주유기가 있을 때, 쌍 2는 자동차가 있을 때, 쌍 4는 픽업 트럭이 있을 때, 쌍 6은 다이빙대가 있는 수영장일 때, 쌍 7은 픽업 트럭 짐칸과 넓은 들판이 있을 때, 쌍 9는 밴이나 캠핑카의 열린 문이 있을 때, 쌍 10은 창과 좌석 등받이가 있는 자리일 때, 쌍 11은 주크박스가 있을 때.
 
 ## 맞지 않는 것
 네온 간판, 형광등(S4 다이너 창가의 노란 형광 간판 빛은 예외), 직부 플래시, 밤 장면, 흐린 하늘, 차가운 회청 그림자, 파스텔, 스튜디오 흰 배경, 디지털 HDR 색, 흑백, 정면 증명사진 자세, 읽히는 간판·로고·상표 글자.

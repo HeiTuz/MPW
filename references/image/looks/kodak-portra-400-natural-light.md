@@ -10,11 +10,11 @@
 ## 고정 사실 (모든 갈래가 지킨다)
 | 슬롯 | 값 |
 |---|---|
-| medium | 포트라 400 컬러 네거티브로 찍은 자연광 인물 사진. 스튜디오 조명 화보도 디지털 보정 사진도 아니다. 첫 줄은 `A soft natural-light portrait photograph shot on Kodak Portra 400 color negative`로 시작한다(바디 이름은 Optics `body` 줄이 정한다). 첫 줄은 매체 구절 `A portrait photograph shot on Kodak Portra 400 color negative`와 장면 구절 `soft natural-light`로 나뉜다(매체 카드로 불릴 때는 매체 구절만 쓰고, 장면 구절과 요청과 다른 시간·빛 낱말은 요청의 것으로 바꾼다). 장소는 Scene 줄이 정한다(사용자가 다른 장소를 말하면 그 장소가 이긴다) |
+| medium | 포트라 400 컬러 네거티브로 찍은 자연광 인물 사진. 스튜디오 조명 화보도 디지털 보정 사진도 아니다. 첫 줄은 `A photograph shot on Kodak Portra 400 color negative`로 시작한다(매체만 말하는 구절. 바디 이름은 Optics `body` 줄이 정한다). 혼자 쓸 때: `A soft natural-light portrait photograph shot on Kodak Portra 400 color negative`(`portrait`와 `soft natural-light`는 장르·장면 구절이라 요청과 다른 시간·빛 낱말은 요청의 것으로 바꾼다). 장소는 Scene 줄이 정한다(사용자가 다른 장소를 말하면 그 장소가 이긴다) |
 | closer | `Portra 400 portrait` |
 | time | 낮. 해가 떠 있어도 얼굴에는 직사가 닿지 않는다(창, 그늘, 흐린 하늘, 잎, 벽 반사가 걸러 준다). 이 카드의 K 숫자(아침 창광 5200K, 흐린 낮·그늘 5300~5600K, 가을 오후 5000K, 과수원 4800K)는 이 룩의 연출 값이다. D 갈래의 블루아워만 일몰 직후(연출 값 4000~6500K). 한밤·네온·한낮 하드 섀도 없음 |
 | light-key | 크고 부드러운 광원 하나(창, 흐린 하늘, 열린 그늘, 밝은 반사면, 잎에 걸러진 해)가 옆이나 아래에서 얼굴을 감싸고 그림자는 연하게 떨어진다. 플래시·인공 조명 없음. D의 블루아워에서만 먼 도시 불빛이 따뜻한 배경 빛이 된다 |
-| palette | 이 룩에서는 색이 낮은 채도로 눌리고 전체가 따뜻한 쪽으로 기운다: 피부 하이라이트와 흰색은 복숭아·살구·크림 쪽으로, 중간색은 벽돌·카멜·드랩·이끼·세이지 쪽으로, 그림자는 안개 낀 청회색 쪽으로 기운다. 네온·형광색·차가운 청록 낮빛·고채도 HDR 색 없음(D의 블루아워는 짙은 남색 하늘과 금빛 도시 불빛이 예외) |
+| palette | 이 룩에서는 포트라 필름의 색 반응이 낮은 채도로 눌리고 따뜻한 쪽으로 기운다(장면 빛의 색이 아니라 필름이 피부와 하이라이트에 입히는 색이다): 피부 하이라이트와 흰색은 복숭아·살구·크림 쪽으로, 중간색은 벽돌·카멜·드랩·이끼·세이지 쪽으로, 그림자는 안개 낀 청회색 쪽으로 기운다. 네온·형광색·차가운 청록 낮빛·고채도 HDR 색 없음(D의 블루아워는 짙은 남색 하늘과 금빛 도시 불빛이 예외) |
 | grain | 고운 컬러 네거티브 입자가 화면 전체에, 중간톤에서 조금 보인다. 하이라이트는 크림처럼 풀린다. 645·6x6·6x7 중형 바디는 입자가 거의 안 보인다 |
 | lens | 표준~중망원 인물 렌즈, 얼굴 비례 자연. 카메라 높이는 쌍이 정한다. 35mm 줄이 있으면 거리나 회랑이 조금 더 들어온다. 12번 쌍(close-up)만 얼굴이 화면을 채운다 |
 | figure | 한 사람이 빛 속에서 멈추거나 천천히 움직인다. 고개를 빛 쪽이나 렌즈 쪽으로 돌린다. 정면 증명사진 자세 없음. 모든 인물은 성인 |
@@ -31,15 +31,17 @@
 | 슬롯 | 처리 | 이유 |
 |---|---|---|
 | face-light | 모든 갈래에서 끈다. 얼굴 빛은 이 카드의 Light 줄이 정한다 | Iris 꼬리의 위·옆 입체광이 #073의 아래서 올라오는 인도 반사, #079의 블라인드 줄무늬, #085의 청·금 이중 색온도와 부딪혔다 |
-| face-clear | D에서 끈다. hair 줄(`Windblown Hair`)이 가닥을 볼과 이마 위로 보내고 눈과 눈썹은 열린 채다. A·B·C는 켠다 | #083 #084의 바람에 날린 잔머리가 이 룩의 특징인데 Iris 금지문(머리가 눈썹·눈을 가림)이 같은 블록에 있었다 |
+| face-clear | D의 `hair` 줄(`Windblown Hair`)과 쌍 12의 Pose(`Windblown Hair`)를 쓸 때 끈다(쌍 12의 Camera 줄만 빌린 경우는 켠다). D의 `hair-curl`·세트 S6과 A·B·C는 켠다. A의 `hair-short`는 헤어 줄이 이미 귀 뒤로 넘겼으니 face-clear 줄을 다시 붙이지 않는다 | `Windblown Hair`와 쌍 12는 바람에 날린 가닥이 볼과 이마를 가로지르는 것이 #083 #084의 특징이고 눈과 눈썹은 열린 채라 face-clear의 `tucked behind one ear`와 부딪힌다. 곱슬(`hair-curl`)은 어깨에서 흔들릴 뿐 얼굴을 가로지르지 않는다 |
 | base, blush | 카드 줄이 이긴다. 전부 `Skin Tint`와 `Peach Blush`, A의 운동 장면만 `Post-Workout Flush` | #072의 땀 광택과 #083의 거의 맨 피부가 Iris 고정 메이크업문과 겹쳤다 |
 | lip | D에서 카드 줄(`ChapStick`)이 이긴다. A·B·C는 켠다 | #083은 맨 입술에 가까운데 고정문은 과즙 젤리 입술을 얹었다 |
 | grain | 카드의 `Fine Portra Grain` 줄이 이긴다 | Iris 꼬리가 35mm와 6x7 중형(#071 #073 #075 #081 #083 #084 #085)에 같은 입자 문구를 넣었다 |
-| lens | 끈다. 렌즈를 말하는 줄은 프롬프트마다 정확히 하나이고 출처 순서는 세트의 렌즈 > 쌍의 렌즈 > 갈래의 Optics 렌즈 줄 > 고정 몫 줄이다. 이 카드는 갈래마다 본체와 렌즈가 짝이라 고정 몫 `自然透视`은 어느 경우에도 붙이지 않는다(카메라 높이를 쌍이 정한다: 쌍 6 low-angle shot, 쌍 5 Bird's-eye View). 세트를 쓰면 세트 Optics가 말한 렌즈(S1 Planar 80mm f/2, S2 Planar 80mm f/2.8, S3 Sonnar 38mm f/2.8, S4 Summicron 35mm f/2, S5 Mamiya N 80mm f/4, S6 Takumar 105mm f/2.4)가 렌즈 줄이고 Optics 렌즈 줄을 따로 두지 않는다. 세트를 쓰고 쌍 1을 고르면 Camera 줄에서 `with a long lens`를 빼고 거리와 층쌓임만 쓴다(렌즈는 세트가 정한다). 세트가 없으면 쌍 1은 Camera 줄 `telephoto compression`이 렌즈 줄이니 Optics 렌즈 줄도 붙이지 않는다. 쌍 2~12는 Camera 줄이 렌즈를 말하지 않으니 본체와 마운트가 맞는 갈래의 Optics 렌즈 줄 하나가 렌즈 줄이다(A Leica M6 + `Summicron 50mm f/2` 또는 `Summicron 35mm f/2`, B Contax 645 + `Zeiss Planar 80mm f/2`, C Mamiya 7 II + `Mamiya N 80mm f/4` 또는 Leica M6 + `Summicron 35mm f/2`, D Pentax 67 + `SMC Takumar 105mm f/2.4` 또는 Rolleiflex 2.8F + `Zeiss Planar 80mm f/2.8`) | #076(38mm) #077 #078 #082(35mm)에 50mm 무왜곡 꼬리가 같이 있어 렌즈가 둘이었다. 렌즈 줄의 출처를 쌍마다 정한다 |
+| lens | 끈다. 렌즈를 말하는 줄은 프롬프트마다 정확히 하나이고 출처 순서는 세트의 렌즈 > 쌍의 렌즈 > 갈래의 Optics 렌즈 줄 > 고정 몫 줄이다. 이 카드는 갈래마다 본체와 렌즈가 짝이라 고정 몫의 lens 줄은 어느 경우에도 붙이지 않는다(카메라 높이를 쌍이 정한다: 쌍 6 low-angle shot, 쌍 5 Bird's-eye View). 세트를 쓰면 세트 Optics가 말한 렌즈(S1 Planar 80mm f/2, S2 Planar 80mm f/2.8, S3 Sonnar 38mm f/2.8, S4 Summicron 35mm f/2, S5 Mamiya N 80mm f/4, S6 Takumar 105mm f/2.4)를 Optics 렌즈 줄(`lens`·`lens-wide`·`lens-medium`) 하나의 문장에 한 번만 쓴다. 카드에 그 렌즈 줄이 있으면 그 줄을 쓰고(S1·S2·S5·S6은 `lens-medium`, S4는 `lens-wide`) 없으면(S3) 세트의 렌즈 이름으로 렌즈 줄 한 줄을 쓰며, 갈래의 다른 렌즈 줄은 따로 두지 않는다. 세트를 쓰고 쌍 1을 고르면 Camera 줄 `telephoto compression`의 `with a long lens` 구절 대신 위 렌즈 줄이 렌즈를 말하니 Camera 줄은 거리와 층쌓임만 쓴다. 세트가 없으면 쌍 1은 Camera 줄 `telephoto compression`이 렌즈 줄이니 Optics 렌즈 줄도 붙이지 않는다. 쌍 2~12는 Camera 줄이 렌즈를 말하지 않으니 본체와 마운트가 맞는 갈래의 Optics 렌즈 줄 하나가 렌즈 줄이다(A Leica M6 + `Summicron 50mm f/2` 또는 `Summicron 35mm f/2`, B Contax 645 + `Zeiss Planar 80mm f/2`, C Mamiya 7 II + `Mamiya N 80mm f/4` 또는 Leica M6 + `Summicron 35mm f/2`, D Pentax 67 + `SMC Takumar 105mm f/2.4` 또는 Rolleiflex 2.8F + `Zeiss Planar 80mm f/2.8`) | #076(38mm) #077 #078 #082(35mm)에 50mm 무왜곡 꼬리가 같이 있어 렌즈가 둘이었다. 렌즈 줄의 출처를 쌍마다 정한다 |
 | framing | 켠다. 쌍 10(Extreme Wide Shot)·11(Medium Close-Up)·12(close-up)는 프레임 범위를 직접 말하니 그 말과 부딪치지 않게 쓴다. 쌍 1(걸음)·3(코트 자락)·5(뻗은 다리와 발목)·6(계단을 내려옴)·8(맨발)·9(옮긴 체중)은 Pose가 낮은 몸을 말하니 framing 줄의 범위를 머리부터 발끝으로 쓴다 | 나머지 쌍은 범위를 말하지 않고 Pose가 허리 위에서 보인다 |
-| ratio | 켠다. 모든 쌍 처리(어느 쌍을 골라도 같다): face-light 끈다, base·blush·grain은 카드 줄이 이긴다, 고정 몫 `自然透视`은 붙이지 않는다, framing은 켠다. 쌍 번호를 조건으로 건 위 처리(framing의 쌍 번호, lens의 쌍 1)는 이 카드의 쌍 표를 쓸 때만 닿는다. 사용자 비율이 없으면 3:4 세로. 6x6·6x7 바디(D의 `Rolleiflex 2.8F`·`Pentax 67`, S2의 Hasselblad 500C/M)도 이 카드는 3:4 세로 프린트로 쓴다. 정사각을 원하면 사용자가 말한다 | 쌍은 비율을 정하지 않는다. Iris 원본이 6x6 바디(#084)에도 3:4를 걸었다 |
+| ratio | 켠다. 모든 쌍 처리(어느 쌍을 골라도 같다): face-light 끈다, base·blush·grain은 카드 줄이 이긴다, 고정 몫의 lens 줄은 붙이지 않는다, framing은 켠다. 쌍 번호를 조건으로 건 위 처리(framing의 쌍 번호, lens의 쌍 1)는 이 카드의 쌍 표를 쓸 때만 닿는다. 사용자 비율이 없으면 3:4 세로. 6x6·6x7 바디(D의 `Rolleiflex 2.8F`·`Pentax 67`, S2의 Hasselblad 500C/M)도 이 카드는 3:4 세로 프린트로 쓴다. 정사각을 원하면 사용자가 말한다 | 쌍은 비율을 정하지 않는다. Iris 원본이 6x6 바디(#084)에도 3:4를 걸었다 |
 
 ## Hair and makeup
+**하나만 고르는 슬롯:** `hair`·`hair-short`·`hair-loose`·`hair-tied`·`hair-curl`(머리 모양 후보, 머리는 한 줄이다), `blush`·`blush-sport`(운동 직후 장면은 `blush-sport`, 그 밖은 `blush`)
+
 머리는 한 줄이다. A는 `hair`·`hair-short`·`hair-loose` 가운데 하나, B·C는 `hair`(Golden Balayage)와 C의 `hair-tied` 가운데 하나, D는 `hair`(Windblown Hair)와 `hair-curl` 가운데 하나만 쓰고 둘 이상을 겹쳐 쓰지 않는다.
 
 | 갈래 | 슬롯 | 줄 |
@@ -58,7 +60,7 @@
 | D | lip | ChapStick — A pale clear film of balm on bare lips leaves a faint satin sheen down the center and lets the natural lip color show through. |
 
 ## Expression
-표정은 한 줄이다. `expression`·`expression-*` 슬롯은 서로 대신하는 후보라서 한 장면에 한 줄만 쓰고 겹쳐 쓰지 않는다.
+**하나만 고르는 슬롯:** `expression`·`expression-*`(서로 대신하는 후보라서 한 장면에 한 줄만 쓰고 겹쳐 쓰지 않는다. 표정은 한 줄이다)
 
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
@@ -73,24 +75,29 @@
 | D | expression-dusk | Sunset Serene Grin — The lips part just enough to show a thin line of teeth in a calm smile, the face turned a little over one shoulder in the cool dusk. |
 
 ## Outfit
+**하나만 고르는 슬롯:** `outfit`·`outfit-alt-*`(갈래의 옷 후보, 하나만 입는다. A는 `outfit` Oxford Shirt·`outfit-alt-top` tank top 중 하나이거나 한 벌인 `outfit-alt-sport` Sports Bra Set, B는 `outfit` Cotton Nightshirt·`outfit-alt-silk` Silk Slip Dress, C는 `outfit` Camel Coat·`outfit-alt-jacket` Double-Breasted Blazer·`outfit-alt-knit` Argyle Cardigan, D는 `outfit` white linen dress·`outfit-alt-floral` ditsy floral dress·`outfit-alt-knit` cashmere knit)
+**함께 쓰는 슬롯:** `outfit-bottom`(A의 Denim Jeans는 윗옷과 함께이고 한 벌인 `outfit-alt-sport`와는 쓰지 않는다), `outfit-outer`(겉옷은 속옷 위에), `outfit-wrap`(C의 shawl은 다른 옷 위에)
+
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
 | A | outfit | Oxford Shirt — A large crisp white cotton shirt with the collar open and the cuffs pushed back, its weave and creases visible in strong sun with no clipped white. |
 | A | outfit-bottom | Denim Jeans — Mid-blue washed jeans with stitched pockets and soft faded creases at the knee sit under the loose shirt hem. |
-| A | outfit-top | tank top — A plain white ribbed cotton tank sits close to the torso, its ribs and fine wrinkles catching the soft light of open shade. |
+| A | outfit-alt-top | tank top — A plain white ribbed cotton tank sits close to the torso, its ribs and fine wrinkles catching the soft light of open shade. |
 | A, C | outfit-outer | Wool Blazer — A tailored wool blazer in black or charcoal is worn open over a plain white tee, the structured shoulders and lapel edges holding clean lines. |
-| A | outfit-sport | Sports Bra Set — A gray sports bra and high-waisted leggings in matte stretch fabric hug the torso with a faint sheen along the seams, a white terry towel around the neck. |
+| A | outfit-alt-sport | Sports Bra Set — A gray sports bra and high-waisted leggings in matte stretch fabric hug the torso with a faint sheen along the seams, a white terry towel around the neck. |
 | B | outfit | Cotton Nightshirt — A loose white cotton nightshirt with a soft collar and fine creases at the elbows slips slightly off one shoulder. |
-| B | outfit-silk | Silk Slip Dress — A narrow-strap ivory silk dress slips straight down the body, a liquid sheen running along each fold. |
+| B | outfit-alt-silk | Silk Slip Dress — A narrow-strap ivory silk dress slips straight down the body, a liquid sheen running along each fold. |
 | C | outfit | Camel Coat — A long camel wool coat with a soft brushed surface hangs open over a dark knit, its drape catching dappled gold light. |
-| C | outfit-jacket | Double-Breasted Blazer — A navy worsted wool blazer with two rows of buttons sits over a crisp white shirt, the weave visible and the brass buttons throwing small glints. |
-| C | outfit-knit | Argyle Cardigan — A knit cardigan with an oatmeal diamond lattice in navy and burgundy hangs loose over a white collared shirt, its wool loops soft and slightly fuzzy. |
+| C | outfit-alt-jacket | Double-Breasted Blazer — A navy worsted wool blazer with two rows of buttons sits over a crisp white shirt, the weave visible and the brass buttons throwing small glints. |
+| C | outfit-alt-knit | Argyle Cardigan — A knit cardigan with an oatmeal diamond lattice in navy and burgundy hangs loose over a white collared shirt, its wool loops soft and slightly fuzzy. |
 | C | outfit-wrap | shawl — A heavy charcoal wool shawl with a fringed edge wraps the shoulders, its coarse weave and fringe softened by mist. |
 | D | outfit | white linen dress — A white linen dress on thin straps with a long skirt billows in the sea wind, soft slubs and creases glowing at the edges. |
-| D | outfit-floral | ditsy floral dress — A light cotton dress printed with small scattered flowers falls from thin straps in loose gathers over the chest. |
-| D | outfit-knit | cashmere knit — An ivory oversized cashmere knit with a soft fuzzy nap drapes in loose folds, its fibers glowing faintly along the edges. |
+| D | outfit-alt-floral | ditsy floral dress — A light cotton dress printed with small scattered flowers falls from thin straps in loose gathers over the chest. |
+| D | outfit-alt-knit | cashmere knit — An ivory oversized cashmere knit with a soft fuzzy nap drapes in loose folds, its fibers glowing faintly along the edges. |
 
 ## Props and nails
+**하나만 고르는 슬롯:** `hand-prop`·`hand-glass`·`hand-book`(손에 든 것 하나. A는 Hydro Flask·iced coffee, C는 Ceramic Diner Mug·Leather-bound Book 중 하나)
+
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
 | A | hand-prop | Hydro Flask — A matte powder-coated steel bottle is held loosely in one hand, small water beads on its sides catching the light and no readable logo. |
@@ -100,6 +107,9 @@
 | C | earrings | Pearl Stud Earrings — Small cultured pearls sit flat on the earlobes, each with a single soft highlight. |
 
 ## Style
+**하나만 고르는 슬롯:** `style`·`style-cafe`·`style-room`·`style-campus`·`style-pastoral`(갈래의 스타일 후보, 장소에 맞는 하나), `style-look`·`style-look-dusk`(블루아워만 `style-look-dusk`)
+**함께 쓰는 슬롯:** `style-look`(또는 `style-look-dusk`)는 갈래의 스타일 후보 하나와 함께 쓴다
+
 S6(블루아워)는 `style-look` 줄 대신 D의 `style-look-dusk` 줄을 쓰고, 낮빛을 말하는 D의 `Sunlit Vitality`·`Cottagecore` 줄은 쓰지 않는다.
 
 | 갈래 | 슬롯 | 줄 |
@@ -114,10 +124,10 @@ S6(블루아워)는 `style-look` 줄 대신 D의 `style-look-dusk` 줄을 쓰고
 | C | style-campus | Ivy League — Oxford shirts, cricket knits and navy blazers against old brick and ivy in soft autumn light. |
 | D | style | Sunlit Vitality — Warm clear light on glowing skin and fresh greens, with bright whites and soft green accents. |
 | D | style-pastoral | Cottagecore — A soft pastoral look of tiny florals and loose cotton gathers in warm leaf-filtered light. |
-| 전부 | palette | palette — The color leans warm in this look, with skin highlights toward peach and apricot and whites toward cream and ivory, with brick, camel and drab olive midtones and misty blue-grey shadows; low saturation and warm overall, and nothing neon, fluorescent or cold cyan appears in the daylight. |
+| 전부 | palette | palette — The film's color response leans warm in this look: skin highlights hold a peach to apricot tone and whites turn cream and ivory, with brick, camel and drab olive midtones and misty blue-grey shadows; saturation stays low, and nothing neon, fluorescent or cold cyan appears in the daylight. |
 
 ## Scene
-장소는 한 줄이다. `place`·`place-*` 슬롯은 서로 대신하는 후보라서 장소 줄 하나만 쓴다.
+**하나만 고르는 슬롯:** `place`·`place-*`(서로 대신하는 후보라서 장소 줄 하나만 쓴다. 장소는 한 줄이다)
 
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
@@ -149,9 +159,11 @@ S6(블루아워)는 `style-look` 줄 대신 D의 `style-look-dusk` 줄을 쓰고
 | D | ambient | Blue Hour — A deep indigo sky after sunset gives cool shadowless light on her face while the city below glows warm gold. |
 
 ## Optics
+**하나만 고르는 슬롯:** `body`·`body-tlr`(갈래의 본체 하나), `lens`·`lens-wide`·`lens-medium`(렌즈 줄 하나, 본체와 마운트가 맞는 것), `gradation-*`·`cast-p67`(고른 본체의 것 하나만: `gradation-contax`는 `Contax 645`, `gradation-rollei`는 `Rolleiflex 2.8F`, `cast-p67`은 `Pentax 67` 본체와 `SMC Takumar 105mm f/2.4` 줄을 골랐을 때)
+
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
-| 전부 | stock | Kodak Portra 400 — Warm, low-contrast color negative with creamy peach tones in the skin highlights, soft highlight roll-off and golden light that never turns harsh. |
+| 전부 | stock | Kodak Portra 400 — A low-contrast color negative whose film response holds a peach tone in the skin highlights, with creamy highlights and soft highlight roll-off that never turns harsh. |
 | 전부 | grain | Fine Portra Grain — Very fine, even grain stays soft in the midtones and nearly vanishes in the highlights, almost invisible on medium-format frames. |
 | 전부 | highlight | Highlight Roll-off — Bright areas fade gradually into white with no clipped edge, keeping thread detail in white cotton and a soft glow on skin highlights. |
 | 전부 | tone | Warm Peach Tones — Skin leans toward a healthy peach glow with a faint pink flush in the cheeks and soft lavender-grey shadows. |
@@ -168,8 +180,8 @@ S6(블루아워)는 `style-look` 줄 대신 D의 `style-look-dusk` 줄을 쓰고
 | B | lens-medium | Zeiss Planar 80mm f/2 — A fast 80mm medium-format portrait lens for the Contax 645 gives fine detail at the focus point and a slow, smooth fall into the soft background. |
 | C | lens-medium | Mamiya N 80mm f/4 — The standard 80mm lens of the Mamiya 7 II holds clean, even sharpness across the frame with a gentle, flat falloff behind her. |
 | D | lens-medium | SMC Takumar 105mm f/2.4 — A 105mm Pentax 67 portrait lens gives very shallow focus and a slow, creamy fall into the background. |
-| B | gradation-contax | Highlight Roll-off — Tones step very smoothly from skin through the white curtain into the softest highlights. |
-| D | gradation-rollei | Highlight Roll-off — Fine tonal steps run from the skin into the brightest areas of the frame. |
+| B | gradation-contax | Smooth Tonal Gradation — Tones step very smoothly from skin through white fabric into the softest highlights. |
+| D | gradation-rollei | Fine Tonal Steps — Fine tonal steps run from the skin into the brightest areas of the frame. |
 | D | cast-p67 | Takumar — A faint warm cast from the vintage lens glass lies over the strong subject separation of the shallow focus. |
 
 ## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 세트를 쓰는 조건은 규칙 4항이 정하고, 세트 값은 고정 사실보다 먼저다. 규칙은 image-brief.md §4 '룩 카드' 4항과 '비워 둔 층')
@@ -188,18 +200,20 @@ S6(블루아워)는 `style-look` 줄 대신 D의 `style-look-dusk` 줄을 쓰고
 ## 포즈·구도 쌍
 | 번호 | 갈래 | Pose | Camera |
 |---|---|---|---|
-| 1 | A | Tote Strap Stride — Walking toward the lens along a sunny sidewalk with one hand on the strap of a canvas tote at her collarbone, the stride easy and unhurried. | telephoto compression — The camera stands far back at eye level with a long lens, so storefronts and passers-by stack into soft layers behind her. |
-| 2 | A | Elbow Prop — Seated at an outdoor café table with one elbow down and her chin in her palm, laughing at someone just out of frame. | Over the Shoulder — The shot passes the blurred shoulder and hair of a friend across the table, with her face sharp in the open shade beyond. |
-| 3 | A | Hem Twirl Stop — Stopped mid-turn on a street corner with the coat hem still swinging and her head glancing back over one shoulder. | foreground obstruction — A soft blur of a leaf or a passing sleeve crosses one corner of the frame in front of her. |
-| 4 | B | Arm Over Chair Back — Seated sideways on a chair with one arm draped over its back, the torso turned toward the window and the head turned into the light. | frame within a frame — The window frame and the curtain edge box her into a bright, soft slot of the room. |
-| 5 | B | Propped on an Elbow — Lying on a wooden floor propped on one elbow with the legs extended and the ankles crossed, looking toward the window. | Bird's-eye View — The camera hangs straight above and looks down, so floorboards and blind shadows run across the lower frame like stripes. |
-| 6 | C | Stoop Stroll — Walking down the front steps of a brick townhouse with one hand sliding along the iron railing and her eyes on the next step. | low-angle shot — The camera stands at the foot of the steps and looks up, so railing and brick rise behind her as she descends toward the lens. |
-| 7 | C | Coat Wind Blow — A gust of autumn wind opens her coat while one hand lifts to hold her hair, leaves skittering across the path. | centered composition — She stands in the exact center of the frame at the vanishing point of the elm-lined promenade, the trunks symmetrical on both sides. |
-| 8 | C | Mug Steam Blow — Standing barefoot at a deck rail with both hands around a steaming mug raised near her lips, blowing gently across it. | negative space — She fills only a third of the frame and the rest is empty, pale mist over the river. |
-| 9 | C | Post Lean — One hip against a brick column with her weight shifted off it and two heavy books held against the chest. | rule of thirds — She stands on the left third while the colonnade's repeating arches recede through the other two thirds. |
-| 10 | D | Twirl — Spinning on a grassy bluff with both arms out so the long skirt flares into a wide circle. | Extreme Wide Shot — She is a small bright figure on the edge of a huge green bluff, with sea and sky filling almost the whole frame. |
-| 11 | D | Over-the-Shoulder Glance — Leaning on a marble balustrade as the torso twists back to look past one shoulder. | Medium Close-Up — The frame runs from the top of her head to mid-chest, with deep blue sky and softly blurred city lights behind her. |
-| 12 | D | Windblown Hair — Standing still and facing the lens while a light wind lifts a few strands across her forehead and cheek. | close-up — The frame holds only her face and a little hair, close enough to show pores, faint freckles and the sky reflected in her eyes. |
+| 1 | A | Tote Strap Stride — Walking toward the lens along a sidewalk with one hand on the strap of a canvas tote at her collarbone, the stride easy and unhurried. | telephoto compression — The camera stands far back at eye level with a long lens, so buildings and passers-by stack into soft layers behind her. |
+| 2 | A | Elbow Prop — Seated at a table with one elbow down and her chin in her palm, laughing at someone just out of frame. | Over the Shoulder — The shot passes the blurred shoulder and hair of a friend across the table, with her face sharp beyond it. |
+| 3 | A | Hem Twirl Stop — Stopped mid-turn on a corner with the coat hem still swinging and her head glancing back over one shoulder. | foreground obstruction — A soft blur of a leaf or a passing sleeve crosses one corner of the frame in front of her. |
+| 4 | B | Arm Over Chair Back — Seated sideways on a chair with one arm draped over its back, the torso turned toward the window and the head turned into the light. | frame within a frame — The window frame and the curtain edge box her into a narrow slot of the room. |
+| 5 | B | Propped on an Elbow — Lying on a wooden floor propped on one elbow with the legs extended and the ankles crossed, looking toward the window. | Bird's-eye View — The camera hangs straight above and looks down, so the floorboards run across the lower frame like stripes. |
+| 6 | C | Stoop Stroll — Walking down the front steps of a townhouse with one hand sliding along the railing and her eyes on the next step. | low-angle shot — The camera stands at the foot of the steps and looks up, so railing and facade rise behind her as she descends toward the lens. |
+| 7 | C | Coat Wind Blow — A gust of wind opens her coat while one hand lifts to hold her hair. | centered composition — She stands in the exact center of the frame at the vanishing point of a tree-lined path, the trunks symmetrical on both sides. |
+| 8 | C | Mug Steam Blow — Standing barefoot at a deck rail with both hands around a steaming mug raised near her lips, blowing gently across it. | negative space — She fills only a third of the frame and the rest is empty space. |
+| 9 | C | Post Lean — One hip against a column with her weight shifted off it and two heavy books held against the chest. | rule of thirds — She stands on the left third while the colonnade's repeating arches recede through the other two thirds. |
+| 10 | D | Twirl — Spinning on open grass with both arms out so the long skirt flares into a wide circle. | Extreme Wide Shot — She is a small bright figure at the edge of a huge green expanse, with sky filling almost the whole frame. |
+| 11 | D | Over-the-Shoulder Glance — Leaning on a balustrade as the torso twists back to look past one shoulder. | Medium Close-Up — The frame runs from the top of her head to mid-chest, with a softly blurred background behind her. |
+| 12 | D | Windblown Hair — Standing still and facing the lens while a light wind lifts a few strands across her forehead and cheek. | close-up — The frame holds only her face and a little hair, close enough to show pores and faint freckles. |
+
+장소 조건: 쌍 1은 장소에 걸을 수 있는 인도가 있을 때, 쌍 4·5는 창이 있는 방일 때, 쌍 6은 현관 계단과 난간이 있는 건물 앞일 때, 쌍 7은 양쪽에 가로수가 있는 길일 때, 쌍 8은 난간이 있는 데크일 때, 쌍 9는 기둥과 아치 회랑이 있을 때, 쌍 10은 탁 트인 풀밭이나 언덕일 때, 쌍 11은 난간이 있는 전망 자리일 때.
 
 ## 맞지 않는 것
 플래시, 네온 간판, 비 오는 밤, 형광등, 한낮 하드 섀도와 날아간 흰색, 스튜디오 흰 배경, 차가운 청회색 낮빛, 고채도 청록·형광 파스텔, 디지털 HDR 색, 플라스틱 피부와 과한 보정, 정면 증명사진 자세, 읽히는 간판·로고 글자.

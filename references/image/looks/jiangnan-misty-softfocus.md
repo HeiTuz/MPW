@@ -30,18 +30,20 @@
 ## 끄는 고정 몫 (fixed-lines.md의 슬롯)
 | 슬롯 | 처리 | 이유 |
 |---|---|---|
-| face-light | 모든 갈래에서 끈다. 얼굴 빛은 갈래의 Light 줄이 정한다. D는 오후 조합(`百叶窗光影`·`茶烟逆光`·`窗格眼神光`)과 황혼 조합(`冷暖对冲`·`煤油灯`·`lamp catchlight`) 가운데 하나만 쓴다 | Iris 꼬리의 얼굴 입체광이 그림자 없는 안개광(#093)·창살 줄무늬(#094)·냉난 반분할광(#099)·차 김 역광(#097)과 한 프롬프트에서 부딪혔다 |
+| face-light | 모든 갈래에서 끈다. 얼굴 빛은 갈래의 Light 줄이 정한다. D는 오후 조합(`百叶窗光影`·`茶烟逆光`·`窗格眼神光`)과 황혼 조합(`冷暖对冲`·`煤油灯`·`lamp catchlight`) 가운데 하나만 쓴다. 오후 조합에서 `window-light` 줄(`Soft Lattice Window Light`)은 `百叶窗光影`과 둘 중 하나만 쓴다(직사 사광이 아니라 부드러운 낮 창빛일 때) | Iris 꼬리의 얼굴 입체광이 그림자 없는 안개광(#093)·창살 줄무늬(#094)·냉난 반분할광(#099)·차 김 역광(#097)과 한 프롬프트에서 부딪혔다 |
 | base, lip | 카드 줄이 이긴다 | Iris 메이크업 고정문의 豆沙红唇 위에 프리셋 입술색이 또 얹혔고(#091 #092 #095 #099), #093은 素颜无修饰이 반무광 베이스 고정문과 한 문단에 같이 적혔다 |
 | blush | B에서 끈다. 뺨 색은 안개의 차가운 빛이 정한다 | #093은 素颜无修饰인데 고정 블러셔 문장이 뺨에 색을 얹는다 |
-| face-clear | A·B에서 완화한다. 젖거나 바람에 날린 가닥이 귀·턱선·목·뺨 가장자리를 지나가도 되고 눈썹과 눈만 덮지 않는다 | #092는 젖은 머리카락이 귀 옆에 붙고 #100은 머리가 바람에 날리는데 Iris가 금지문으로 지웠다 |
+| face-clear | 켠다. 세트 S6만 끈다 | A의 젖은 가닥(`雨后微湿长发`, S2)은 귀 옆·턱선·목에 붙을 뿐 눈썹과 눈을 덮지 않고, B의 `黑长直`은 끝만 호수 바람에 흔들리니 켠 채로 둔다. #100(S6)은 머리가 바람에 날려 뺨 가장자리를 지나는 것이 정체라 face-clear와 부딪힌다 |
 | catchlight | D에서 카드 줄이 이긴다(오후 조합이면 `窗格眼神光`, 황혼 조합이면 `lamp catchlight` 하나만). 눈을 내리뜬 쌍 10에서는 끈다. 그 밖은 켠다 | #094는 창살 빛, #099는 불꽃 점이 눈에 맺히고, #097은 눈을 내리떠 점이 보이지 않는다 |
 | grain | 켠다. 매체가 디지털이라 고정 몫의 디지털 노이즈 줄이 붙는다 | Iris 영어 블록의 필름 입자 문구가 중문 블록의 노이즈 없는 화질과 갈렸다 |
-| lens | 켠다. 어느 쌍·세트를 골라도 렌즈를 말하는 줄은 정확히 하나이고 출처 순서는 세트의 렌즈 > 쌍의 렌즈 > 갈래의 본체·렌즈 줄 > 고정 몫이다. A·B는 갈래 줄에 렌즈 줄이 없으니 고정 몫 `自然透视` 줄이 lens 줄이다. 단 쌍 6(B)은 Camera의 `长焦压缩` 줄이 lens 줄이라 `自然透视`를 붙이지 않는다. C는 Optics의 `Summilux 35mm f/1.4` 줄, D는 Optics의 `Summicron 50mm f/2` 줄이 lens 줄이고(쌍 10 `特写`은 D의 `微距特写` 줄이 그 자리를 대신한다) C·D에는 `自然透视`를 붙이지 않는다. 세트가 렌즈를 말하면(S2 GF 80mm, S3 Schneider 80mm, S5 XF 33mm) 그 값이 lens 줄이고 카드 줄과 쌍의 렌즈 말은 쓰지 않는다(S3에 쌍 6을 붙이면 쌍의 Camera 줄에서 400mm 말을 뺀다). S6은 세트의 Camera `长焦压缩`(쌍 6) 줄이 400mm를 말하니 그 줄이 lens 줄이고 Optics는 본체 Sony A7R V만 쓴다(S1·S4는 카드 줄과 같다). `仰拍`·`俯拍`·`低机位倒影`의 각도는 렌즈 줄과 상관없이 쌍의 Camera 줄이 정한다 | Iris 꼬리의 50mm 평시가 #100(400mm)·#098(28mm 저각)·#097(100mm 접사)과 한 프롬프트에서 공존했다 |
+| lens | 켠다. 어느 쌍·세트를 골라도 렌즈를 말하는 줄은 정확히 하나이고 출처 순서는 세트의 렌즈 > 쌍의 렌즈 > 갈래의 본체·렌즈 줄 > 고정 몫이다. A·B는 갈래 줄에 렌즈 줄이 없으니 고정 몫 `自然透视` 줄이 lens 줄이다. 단 쌍 6(B)은 Camera의 `长焦压缩` 줄이 lens 줄이라 `自然透视`를 붙이지 않는다. C는 Optics의 `Summilux 35mm f/1.4` 줄, D는 Optics의 `Summicron 50mm f/2` 줄이 lens 줄이고(쌍 10 `特写`은 D의 `微距特写` 줄이 그 자리를 대신한다) C·D에는 `自然透视`를 붙이지 않는다. 세트가 렌즈를 말하면(S2 GF 80mm, S3 Schneider 80mm, S5 XF 33mm) 그 값이 lens 줄이다. 세트가 정한 본체의 Optics 줄 문장 안에 그 렌즈를 쓰고(S2는 `Fujifilm GFX` 줄, S3은 `Phase One IQ4` 줄, S5는 세트의 `Fujifilm X-T5` 본체 줄) 갈래의 `自然透视`·`lens`·`macro` 줄과 쌍의 렌즈 말은 쓰지 않는다. S3에 쌍 6을 붙이면 쌍 6 Camera 줄 문장에서 `400 mm` 렌즈 말을 쓰지 않고 먼 거리에서 한 평면으로 눌리는 구도만 말한다(렌즈는 세트의 Schneider 80mm가 말한다). S5에 쌍 10의 Camera를 빌리면 `微距特写` 줄은 쓰지 않는다(렌즈 줄은 세트의 XF 33mm). S6은 세트의 Camera `长焦压缩`(쌍 6) 줄이 400mm를 말하니 그 줄이 lens 줄이고 Optics는 본체 Sony A7R V만 쓴다(S1·S4는 카드 줄과 같다). `仰拍`·`俯拍`·`低机位倒影`의 각도는 렌즈 줄과 상관없이 쌍의 Camera 줄이 정한다 | Iris 꼬리의 50mm 평시가 #100(400mm)·#098(28mm 저각)·#097(100mm 접사)과 한 프롬프트에서 공존했다 |
 | framing | 켠다. 쌍의 Camera 줄은 자리·각도·구도 기법만 정하고 프레임 범위는 fixed-lines.md의 framing 줄이 정한다. 쌍 10의 Camera 줄은 프레임 범위(턱·입술·손끝만)를 직접 말한다. 쌍 10에서는 기본 framing 줄의 위·아래 범위를 쓰지 않고 `vertical frame — A vertical 3:4 frame.` 한 문장만 쓰며, 범위는 쌍의 Camera 줄에서 한 번만 낸다 | 쌍 대부분이 프레임 범위를 말하지 않는다 |
 | ratio | 켠다. 사용자 비율이 없으면 3:4 세로 | 쌍은 비율을 정하지 않는다 |
 
 ## Hair and makeup
-머리 상태는 한 줄이다. A는 `hair`(雨后微湿长发)와 `hair-tied`(贴头皮盘发) 가운데 하나, C는 `hair`(低丸子头)와 `hair-side`(碎发低发髻) 가운데 하나, D는 `hair`(发簪으로 묶은 낮은 쪽)와 `hair-wave`(法式大波浪) 가운데 하나만 쓴다. `发簪`은 쪽 머리(`hair`)에만 꽂고 법식 큰 웨이브에는 꽂지 않는다.
+**하나만 고르는 슬롯:** `hair`·`hair-tied`·`hair-side`·`hair-wave`(머리 모양 후보. 머리 상태는 한 줄이다)
+
+A는 `hair`(雨后微湿长发)와 `hair-tied`(贴头皮盘发) 가운데 하나, C는 `hair`(低丸子头)와 `hair-side`(碎发低发髻) 가운데 하나, D는 `hair`(发簪으로 묶은 낮은 쪽)와 `hair-wave`(法式大波浪) 가운데 하나만 쓴다. `发簪`은 쪽 머리(`hair`)에만 꽂고 법식 큰 웨이브에는 꽂지 않는다.
 
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
@@ -77,18 +79,21 @@
 | D | expression | 凝视灯火 — The eyes rest on the small lamp flame, a tiny warm point reflected in each pupil, the face calm and the shoulders loose. |
 
 ## Outfit
+**하나만 고르는 슬롯:** `outfit`·`outfit-alt-*`(갈래의 옷 후보, 하나만 입는다. A는 `outfit` 改良旗袍·`outfit-alt-coat` 风衣·`outfit-alt-robe` 长衫, C는 `outfit` 雪纺·`outfit-alt-cheongsam` 改良旗袍, D는 `outfit` 交领·`outfit-alt-blouse` 真丝·`outfit-alt-knit` 高领针织衫)
+**함께 쓰는 슬롯:** `outfit-outer`(B의 斗篷는 `outfit` 月白 위에 걸친다)
+
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
 | A | outfit | 改良旗袍 — A celadon heavy-silk cheongsam dress with a stand collar and side placket, rain-spotted at the hem and its sheen dulled to a damp satin line along each fold. |
-| A | outfit-coat | 风衣 — A floor-length black wool trench hangs straight and heavy, the dark cloth giving back only a thin pale line along the lapel and hem. |
-| A | outfit-robe | 长衫 — A black worsted-wool crossover robe falls straight to the shin, its fine weave matte and its folds sharp against the pale wall. |
+| A | outfit-alt-coat | 风衣 — A floor-length black wool trench hangs straight and heavy, the dark cloth giving back only a thin pale line along the lapel and hem. |
+| A | outfit-alt-robe | 长衫 — A black worsted-wool crossover robe falls straight to the shin, its fine weave matte and its folds sharp against the pale wall. |
 | B | outfit | 月白 — A moon-white double-layered washed-silk robe falls to the ankle, its pale blue-white nearly lost in the fog except where soft creases catch the light. |
 | B | outfit-outer | 斗篷 — An ink-black heavy-silk cloak falls from the shoulders in one wide swing and lifts in the pond breeze, a hard dark shape against the white wall. |
 | C | outfit | 雪纺 — A white double-layer silk chiffon gown lifts in the air and lets haze show through its layers, its highlights blooming softly. |
-| C | outfit-alt | 改良旗袍 — A pale celadon heavy-silk cheongsam dress holds a soft satin sheen that picks up the moving water light across the bodice. |
+| C | outfit-alt-cheongsam | 改良旗袍 — A pale celadon heavy-silk cheongsam dress holds a soft satin sheen that picks up the moving water light across the bodice. |
 | D | outfit | 交领 — A tea-white raw dupioni silk robe crosses right over left and ties at the waist, its slubby weave catching the slats of sun as fine bumps. |
-| D | outfit-blouse | 真丝 — A moon-white heavy silk V-neck blouse drapes in soft folds that lengthen the neck, a fine sheen moving along each fold. |
-| D | outfit-knit | 高领针织衫 — A fine-knit earth-brown wool turtleneck folds once at the collar, its soft fuzz catching the amber lamp in a thin halo. |
+| D | outfit-alt-blouse | 真丝 — A moon-white heavy silk V-neck blouse drapes in soft folds that lengthen the neck, a fine sheen moving along each fold. |
+| D | outfit-alt-knit | 高领针织衫 — A fine-knit earth-brown wool turtleneck folds once at the collar, its soft fuzz catching the amber lamp in a thin halo. |
 
 ## Props and nails
 | 갈래 | 슬롯 | 줄 |
@@ -128,6 +133,9 @@
 | D | background | 水乡 — A canal village of stone bridges and mossy walls seen through the window. |
 
 ## Light
+**하나만 고르는 슬롯:** `face-light`·`water-light`(C는 `柔和漫射光`과 `水面焦散` 둘 중 하나), `catchlight`·`catchlight-lamp`(D의 눈의 빛점 하나: 오후 조합은 `catchlight`, 황혼 조합은 `catchlight-lamp`), `face-light`·`window-light`(D 오후 조합에서 `百叶窗光影`과 `Soft Lattice Window Light` 중 하나)
+**함께 쓰는 슬롯:** `light-fill`(같은 갈래의 `face-light` 줄에 보탠다. D는 황혼 조합의 `煤油灯`)
+
 C의 `柔和漫射光`과 `水面焦散`은 둘 중 하나만 쓴다. `水面焦散`을 고르면 하늘의 확산광 줄은 쓰지 않고, 얼굴에는 해가 아니라 수면에 튄 빛이 그물 무늬로 떨어진다.
 
 | 갈래 | 슬롯 | 줄 |
@@ -144,7 +152,7 @@ C의 `柔和漫射光`과 `水面焦散`은 둘 중 하나만 쓴다. `水面焦
 | D | light-fill | 煤油灯 — A small oil lamp burns on the table, its deep yellow flame lighting the knit sleeve and hands while the window behind stays cold blue. |
 | D | catchlight | 窗格眼神光 — The window leaves a soft rectangular highlight, split by the lattice, in the upper part of each iris. |
 | D | catchlight-lamp | lamp catchlight — One small warm point from the lamp flame sits in each eye. |
-| D | window-light | 窗光光斑 — When the tea room is lit by day, soft light through the carved windows breaks into scattered mottled patches over the mat and low table, their edges kept gentle by the haze. |
+| D | window-light | Soft Lattice Window Light — When the tea room is lit by day, soft light through the carved windows breaks into scattered mottled patches over the mat and low table, their edges kept gentle by the haze. |
 
 ## Optics
 | 갈래 | 슬롯 | 줄 |
@@ -180,18 +188,20 @@ C의 `柔和漫射光`과 `水面焦散`은 둘 중 하나만 쓴다. `水面焦
 ## 포즈·구도 쌍
 | 번호 | 갈래 | Pose | Camera |
 |---|---|---|---|
-| 1 | A | 撑伞回眸 — She walks away along a wet flagstone lane with an umbrella over one shoulder and turns her head back beneath its rim. | 前景遮挡 — A blurred leaf or the edge of a passer-by's umbrella crosses one corner of the frame in front of her. |
+| 1 | A | 撑伞回眸 — She walks away along a lane with an umbrella over one shoulder and turns her head back beneath its rim. | 前景遮挡 — A blurred leaf or the edge of a passer-by's umbrella crosses one corner of the frame in front of her. |
 | 2 | A | 凭桥看水 — Her forearms rest on a stone bridge rail, the torso leaning forward and the eyes on the water below. | 俯拍 — The camera looks down from above and behind her so the bridge and water lead the eye and her head sits nearest the lens. |
-| 3 | A | 仰望屋檐 — She turns side-on beside a courtyard puddle and lifts her chin slightly, her eyes resting on the roofline above. | 仰拍 — The camera looks up from below so the tile eaves and stepped gables close in over her head toward a pale sky. |
-| 4 | A, C | 天鹅颈 — She faces the lens with the chin lifted a few degrees, the neck long and the shoulders pressed down. | 低机位倒影 — The camera sits low above the wet paving or pond so her upright figure repeats in the glossy surface below. |
-| 5 | B | 背手 — She stands still with both hands clasped behind her back, the chest open and the shoulders settled. | 三分法构图 — She stands on one vertical third line and the fog-filled lake fills the other two thirds. |
-| 6 | B | 纯侧颜 — Her head turns a full ninety degrees so one eye, the nose line and the jaw read as a clean outline against pale haze. | 长焦压缩 — A 400 mm telephoto from far across the pond flattens her, the water and the stacked white-and-black houses into one scroll-like plane. |
-| 7 | B | 闲庭信步 — She walks along the water's edge at an easy pace with the arms loose and the gaze on the path ahead. | 留白 — She fills about a third of the frame and the rest stays as empty fog and still water. |
-| 8 | C | 穿过月亮门 — Caught mid-step through a round gate in a white wall, the gown lifting and her body turned a little toward the lens. | 框架构图 — The round opening boxes her into a pale circle with the soft haze of the garden around it. |
-| 9 | C | 美人靠 — She leans sideways on the curved pavilion rail over the pond with one arm resting on the top and the head bowed. | 对角线构图 — The rail and the pond edge run corner to corner and she sits where they cross. |
+| 3 | A | 仰望屋檐 — She turns side-on beside a puddle and lifts her chin slightly, her eyes resting on the roofline above. | 仰拍 — The camera looks up from below so the eaves and rooflines close in over her head toward the sky. |
+| 4 | A, C | 天鹅颈 — She faces the lens with the chin lifted a few degrees, the neck long and the shoulders pressed down. | 低机位倒影 — The camera sits low above a reflective surface such as paving or pond water so her upright figure repeats in it below. |
+| 5 | B | 背手 — She stands still with both hands clasped behind her back, the chest open and the shoulders settled. | 三分法构图 — She stands on one vertical third line and the open water fills the other two thirds. |
+| 6 | B | 纯侧颜 — Her head turns a full ninety degrees so one eye, the nose line and the jaw read as a clean outline against a pale background. | 长焦压缩 — A 400 mm telephoto from far across the water flattens her, the water and the buildings behind into one scroll-like plane. |
+| 7 | B | 闲庭信步 — She walks along the water's edge at an easy pace with the arms loose and the gaze on the path ahead. | 留白 — She fills about a third of the frame and the rest stays as empty space and still water. |
+| 8 | C | 穿过月亮门 — Caught mid-step through a round gate in a white wall, the gown lifting and her body turned a little toward the lens. | 框架构图 — The round opening boxes her into a pale circle with the garden softly out of focus around it. |
+| 9 | C | 美人靠 — She leans sideways on a curved rail over the water with one arm resting on the top and the head bowed. | 对角线构图 — The rail and the water's edge run corner to corner and she sits where they cross. |
 | 10 | D | 双手捧杯 — Both hands cradle a lidded tea bowl at chest height with the lid tilted just open, the elbows tucked in. | 特写 — The frame holds only her jaw, lips and fingers, a thin plane of sharp focus with everything else melting into steam. |
-| 11 | D | 斟茶 — Seated on a mat, she tilts a small teapot so a thin stream arcs into a cup, her other hand holding the sleeve back. | 过肩镜头 — Shot past the blurred shoulder of an unseen tea host across the low table to her sharp figure beyond. |
-| 12 | D | 托腮 — She sits at a window table with her chin in one hand and her eyes on the small lamp flame. | 玻璃窗倒影 — Shot through the window glass, her outline overlaps a faint reflection of the dusk canal outside. |
+| 11 | D | 斟茶 — Seated at a low table, she tilts a small teapot so a thin stream arcs into a cup, her other hand holding the sleeve back. | 过肩镜头 — Shot past the blurred shoulder of an unseen tea host across the low table to her sharp figure beyond. |
+| 12 | D | 托腮 — She sits at a window table with her chin in one hand and her gaze resting on something on the table. | 玻璃窗倒影 — Shot through the window glass, her outline overlaps a faint reflection of the view outside. |
+
+장소 조건: 쌍 2는 장소에 다리나 물 위로 내민 난간이 있을 때, 쌍 3은 위로 처마나 지붕선이 보일 때, 쌍 4는 반사하는 바닥이나 수면이 있을 때, 쌍 5·6·7은 물가나 수면이 보일 때, 쌍 8은 둥근 문이 있을 때, 쌍 9는 물가에 난간 벤치가 있을 때, 쌍 11은 낮은 탁자가 있을 때, 쌍 12는 창가 탁자가 있을 때.
 
 ## 맞지 않는 것
 네온과 형광색, 직사 한낮의 해와 날카로운 그림자(창살·수면 반사로 걸러진 빛은 제외), 쨍한 고대비 디지털 색, 파스텔 분홍과 채도 높은 빨강(D의 램프 호박빛과 입술 색은 제외), 스튜디오 흰 배경, 큰 웃음, 정면 증명사진 자세, 필름 입자와 빛샘, 읽히는 편액·간판 글자, 눈과 속눈썹까지 흐리게 만드는 과한 블러.

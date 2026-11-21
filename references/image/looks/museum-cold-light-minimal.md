@@ -31,16 +31,18 @@
 | 슬롯 | 처리 | 이유 |
 |---|---|---|
 | face-light | 모든 갈래에서 끈다. 얼굴 빛은 갈래의 Light 줄이 정한다. A는 `雕塑切光`이면 `柔和漫射光` 줄을 쓰지 않고(칼 그림자와 넓은 부드러운 그림자가 부딪힌다), D는 `无影棚拍`과 `环形灯` 가운데 하나만 쓴다. C의 유리 커튼월 역광(金鹰美术馆, 쌍 10)에서는 `低调布光`(거의 어두운 방) 줄을 쓰지 않는다. 바닥이 낮빛으로 밝아 어두운 방이 아니다 | Iris 꼬리의 얼굴 입체광이 단일 스포트(#065)·광속 한 줄기(#071)·역광(#067)·환형 정면광(#073)과 한 프롬프트에서 부딪혔다 |
-| face-clear | C에서 완화한다. 바람에 날린 가닥이 귀 옆·뺨 옆을 지나가도 되고 눈썹과 눈만 덮지 않는다 | #067 #071은 머리 가닥이 날리는데 Iris가 가림 금지문으로 지웠다 |
+| face-clear | 켠다. 어느 갈래·쌍·세트에서도 끄지 않는다. B의 `波波头`와 D의 `低马尾`는 헤어 줄이 이미 귀 뒤로 넘겼으니 face-clear 줄을 다시 붙이지 않는다 | 얼굴을 가로지르는 머리를 원하는 줄이 이 카드에 없다(C의 `高马尾`는 관자놀이와 목을 드러내고 `黑长直`는 잔머리가 없다). #067 #071의 날리는 가닥은 카드 줄이 가져오지 않았다 |
 | base, lip | 카드 줄이 이긴다 | Iris 메이크업 고정문의 豆沙红唇이 프리셋 입술색(#061 冷调红, #065 深红, #075 黑唇) 위에 또 얹혔고, 광택 정도도 프리셋마다 갈렸다(#072 석고 무광, #073 물광) |
 | blush | A·B·C에서 끈다. D는 고정 몫이 그대로 붙는다 | 장밋빛 번짐이 냉백 마감 베이스와 석고 무광(#072)을 따뜻하게 만들고, 흑백(B)에서는 회색 단계를 흐린다 |
 | catchlight | C는 끈다. D는 카드 줄이 이기고 눈의 빛점 모양은 고른 광원이 정한다: `环形灯`를 고르면 그 줄의 동공 링이 캐치라이트이고 `柔光箱眼神光` 줄은 쓰지 않는다. `无影棚拍`이면 `柔光箱眼神光` 줄 하나만 쓴다. 쌍 11(`微距特写`)은 빛점의 크기만 키울 뿐 광원이 정한 모양(링 또는 직사각형)을 바꾸지 않는다 | C는 빛 줄기가 눈에 닿거나 눈이 암전이라 따로 점을 찍으면 부딪히고(#065 #067), D는 점의 모양이 광원 모양(환형·직사각형)이라 고정 줄의 창 모양 점과 다르다(#073 #074) |
 | grain | B는 카드 줄이 이긴다. A·C·D는 고정 몫이 그대로 붙는다 | #070의 은염 입자와 고정 몫의 디지털 노이즈 문장은 모양이 다르다 |
-| lens | 켠다. 어느 쌍·세트를 골라도 렌즈를 말하는 줄은 정확히 하나이고 출처 순서는 세트의 렌즈 > 쌍의 렌즈 > 갈래의 본체·렌즈 줄 > 고정 몫이다. A·D는 Optics의 `85mm 人像` 줄이 lens 줄이라 고정 몫 `自然透视`를 붙이지 않는다. B·C는 갈래 줄에 lens 줄이 없으니 고정 몫 `自然透视` 줄이 lens 줄이다. 예외: 쌍 8(B)은 Camera의 `长焦压缩` 줄이 lens 줄이라 `自然透视`를 붙이지 않고, 쌍 11(D)은 D의 `微距特写` 줄이 `85mm 人像` 대신 lens 줄이다. 세트가 렌즈를 말하면(S2 광각 24mm, S3 망원 90–280mm, S4 Summicron 35mm, S5 Nikkor 50mm) 그 값이 위 줄을 대신하고, S2는 얼굴을 프레임 가장자리에 두지 않는다. S1·S6은 `85mm 人像`이 세트 값과 같다. 세트와 쌍이 함께 렌즈를 말하면 세트가 이긴다(S3은 쌍을 붙이지 않고 세트의 Pose·Camera를 그대로 쓴다. 쌍 8은 B 갈래라 A 세트와 짝이 아니다) | Iris의 50mm 평시 꼬리와 #066(24mm)·#074(90mm 접사)가 한 프롬프트에 공존했다 |
+| lens | 켠다. 어느 쌍·세트를 골라도 렌즈를 말하는 줄은 정확히 하나이고 출처 순서는 세트의 렌즈 > 쌍의 렌즈 > 갈래의 본체·렌즈 줄 > 고정 몫이다. A·D는 Optics의 `85mm 人像` 줄이 lens 줄이라 고정 몫 `自然透视`를 붙이지 않는다. B·C는 갈래 줄에 lens 줄이 없으니 고정 몫 `自然透视` 줄이 lens 줄이다. 예외: 쌍 8(B)은 Camera의 `长焦压缩` 줄이 lens 줄이라 `自然透视`를 붙이지 않고, 쌍 11(D)은 D의 `微距特写` 줄이 `85mm 人像` 대신 lens 줄이다. 세트가 렌즈를 말하면(S2 광각 24mm, S3 망원 90–280mm, S4 Summicron 35mm, S5 Nikkor 50mm) 그 렌즈를 세트가 정한 본체의 Optics `stock` 줄 문장 안에 한 번만 쓰고(S2는 `Sony A7R V` 줄, S4는 `Leica Monochrom` 줄, S5는 `Nikon Z8` 줄, S3의 Leica SL2는 카드에 줄이 없어 세트의 본체 이름으로 `stock` 줄 한 줄) 갈래의 `85mm 人像` 줄과 고정 몫 `自然透视` 줄은 쓰지 않는다. S2는 얼굴을 프레임 가장자리에 두지 않는다. S1·S6은 `85mm 人像`이 세트 값과 같아 그 줄이 렌즈 줄이다. 세트와 쌍이 함께 렌즈를 말하면 세트가 이긴다(S3은 쌍을 붙이지 않고 세트의 Pose·Camera를 그대로 쓴다. 쌍 8은 B 갈래라 A 세트와 짝이 아니다) | Iris의 50mm 평시 꼬리와 #066(24mm)·#074(90mm 접사)가 한 프롬프트에 공존했다 |
 | framing | 켠다. 쌍의 Camera 줄은 자리·각도·구도 기법을 정하고 프레임 범위는 fixed-lines.md의 framing 줄이 정한다. 쌍 3·4·5·7·11·12의 Camera 줄은 프레임 범위를 직접 말한다. 그 여섯 쌍에서는 기본 framing 줄의 위·아래 범위를 쓰지 않고 `vertical frame — A vertical 3:4 frame.` 한 문장만 쓰며, 범위는 쌍의 Camera 줄에서 한 번만 낸다 | 쌍 대부분이 프레임 범위를 말하지 않는다 |
 | ratio | 켠다. 사용자 비율이 없으면 3:4 세로 | 쌍은 비율을 정하지 않는다 |
 
 ## Hair and makeup
+**하나만 고르는 슬롯:** `hair`·`hair-down`(머리 모양 후보, 머리는 한 줄이다)
+
 머리는 한 줄이다. A는 `hair`(贴头皮盘发)와 `hair-down`(黑长直) 가운데 하나, C는 `hair`(高马尾)와 `hair-down`(黑长直) 가운데 하나만 쓰고 둘을 함께 쓰지 않는다.
 
 | 갈래 | 슬롯 | 줄 |
@@ -72,17 +74,20 @@
 | D | expression | 目光深邃 — The eyes fix on the lens in a motionless face, the gaze deep and unreadable. |
 
 ## Outfit
+**하나만 고르는 슬롯:** `outfit`·`outfit-alt-*`(갈래의 옷 후보, 하나만 입는다. A는 `outfit` 无领西装外套·白衬衫 또는 `outfit-alt-gown` 缎面礼服, B는 `outfit` 双面呢·西装套装, C는 `outfit` 斜襟·吊带裙 또는 `outfit-alt-robe` 长衫, D는 `outfit` 抹胸礼服·一字领)
+**함께 쓰는 슬롯:** `outfit-outer`(겉옷은 `outfit` 위에 걸친다: A의 风衣, D의 双面呢 코트)
+
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
 | A | outfit | 无领西装外套 — A collarless black worsted jacket with square dropped shoulders and a clean round neckline, closed by one hidden fastening with no hardware showing. (穿搭 #054 #063) |
 | A | outfit | 白衬衫 — A crisp white poplin shirt whose stiff, sculpted collar stands away from the neck, its folds cut sharp like folded paper. (穿搭 #052) |
 | A | outfit-outer | 风衣 — A black double-breasted wool trench worn buttoned and belted, its hem swinging with each stride while the shoulders keep a hard outline. (穿搭 #051) |
-| A | outfit-gown | 缎面礼服 — A floor-length black silk-satin gown with a high side slit, the satin throwing one long highlight down each fold. (滤镜 #069) |
+| A | outfit-alt-gown | 缎面礼服 — A floor-length black silk-satin gown with a high side slit, the satin throwing one long highlight down each fold. (滤镜 #069) |
 | B | outfit | 双面呢 — A double-faced cashmere cape, black on one side and cold white on the other, draped loose over the shoulders so its cut edges fold into hard black and white blocks. (穿搭 #061) |
 | B | outfit | 西装套装 — A double-breasted black worsted suit with sharp lapels and a defined waist, every seam pressed flat. (滤镜 #070) |
 | C | outfit | 斜襟 — A black wool blazer whose diagonal placket runs from the neck to the side seam and draws one hard line across the chest. (滤镜 #065) |
 | C | outfit | 吊带裙 — A thin-strapped black silk slip dress that falls straight, its sheen reduced to a thin bright edge where the backlight reaches. (滤镜 #067) |
-| C | outfit-robe | 长衫 — A white heavy-silk robe falls to the shin with side slits that swing, taking the beam as the brightest shape in the dark room. (滤镜 #071) |
+| C | outfit-alt-robe | 长衫 — A white heavy-silk robe falls to the shin with side slits that swing, taking the beam as the brightest shape in the dark room. (滤镜 #071) |
 | D | outfit | 抹胸礼服 — A strapless black silk evening gown cut straight across above the bust, leaving the shoulders and collarbones bare in a smooth column. (滤镜 #073) |
 | D | outfit | 一字领 — A fitted dark velvet top with a straight neckline running across the collarbones, so shoulders and neck form one horizontal line. (滤镜 #074) |
 | D | outfit-outer | 双面呢 — A collarless black double-faced wool coat belted at the waist, its clean unlined edges reading as one dark shape against the white backdrop. (滤镜 #068) |
@@ -110,6 +115,9 @@ S3(맨발)에서는 `尖头漆皮高跟鞋` 줄을 쓰지 않는다.
 | 전부 | nails | 哑光美甲 — Short squared nails in a flat velvet finish, cold nude or black, so the hands read as quiet matte shapes. |
 
 ## Style
+**하나만 고르는 슬롯:** `style`(갈래의 스타일 후보 하나: A는 极简, B는 极简·解构 중 하나, C는 大女主, D는 高岭之花)
+**함께 쓰는 슬롯:** `style-core`(룩 전체를 부르는 한 줄, 갈래의 `style` 후보 하나와 함께), `architecture`·`mood`
+
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
 | 전부 | style-core | 当代美术馆冷光极简 — A contemporary-museum look: one person, one cold clean light (architectural in A to C, a studio light in D), and planes of white, grey and black with nothing else in the frame. |
@@ -140,6 +148,9 @@ S3(맨발)에서는 `尖头漆皮高跟鞋` 줄을 쓰지 않는다.
 | D | place | 白色无缝背景 — A seamless white backdrop curving into the floor with no horizon line, so nothing but the figure stands in it. (滤镜 #068 #073) |
 
 ## Light
+**하나만 고르는 슬롯:** `face-light`·`beam`·`rim-light`(C의 빛은 하나라서 스포트 `face-light`, 틈새 기둥 `beam`, 유리 역광 `rim-light` 가운데 택일)
+**함께 쓰는 슬롯:** `corridor-light`·`stair-light`·`vault-light`·`curve-light`(Scene에서 그 장소를 골랐을 때만 그 갈래의 얼굴 빛 줄에 더한다: `corridor-light`는 私人美术馆长廊, `stair-light`는 双螺旋楼梯, `vault-light`는 龙美术馆, `curve-light`는 山中天艺术中心)
+
 C의 유리 커튼월 역광(金鹰美术馆, 쌍 10)에서는 `key`의 `低调布光`(거의 어두운 방) 줄을 쓰지 않는다.
 
 | 갈래 | 슬롯 | 줄 |
@@ -160,6 +171,8 @@ C의 유리 커튼월 역광(金鹰美术馆, 쌍 10)에서는 `key`의 `低调�
 | D | catchlight | 柔光箱眼神光 — One crisp rectangular softbox highlight sits in the upper part of each iris. (滤镜 #074) |
 
 ## Optics
+**하나만 고르는 슬롯:** `lens`·`lens-macro`(렌즈 줄 하나, `lens-macro`는 쌍 11의 `微距特写`일 때 `lens` 대신)
+
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
 | A | stock | Sony A7R V — A high-resolution full-frame body. |
@@ -187,18 +200,20 @@ C의 유리 커튼월 역광(金鹰美术馆, 쌍 10)에서는 `key`의 `低调�
 ## 포즈·구도 쌍
 | 번호 | 갈래 | Pose | Camera |
 |---|---|---|---|
-| 1 | A | 极简雕塑立姿 — She stands upright and still at the centre of the hall, shoulders square and arms hanging straight, like a statue. | 对称构图 — The frame divides evenly left and right of a central axis, with her on the line and the walls, floor seams and light mirrored on both sides. |
-| 2 | A | 疾步前行 — She strides straight toward the lens with her hands in her pockets, the coat flaring a little and a long shadow running ahead of her. | 一点透视 — Wall, floor and ceiling lines all run to one vanishing point behind her while she walks the centre line. |
+| 1 | A | 极简雕塑立姿 — She stands upright and still at the centre of the hall, shoulders square and arms hanging straight, like a statue. | 对称构图 — The frame divides evenly left and right of a central axis, with her on the line and the walls and floor seams mirrored on both sides. |
+| 2 | A | 疾步前行 — She strides straight toward the lens with her hands in her pockets and her clothes flaring a little. | 一点透视 — Wall, floor and ceiling lines all run to one vanishing point behind her while she walks the centre line. |
 | 3 | A | 展厅长凳独坐 — She sits alone at the centre of a long bench, back straight and hands on her knees, wide empty floor all around. | Extreme Wide Shot — The camera stands far back so she becomes a small dark mark inside the huge white hall, the architecture filling almost the whole frame. |
 | 4 | A | 台阶驻足垂眸 — She stops at the top of a concrete stair with one foot slightly forward on the last step and her eyes lowered toward the lens below. | 仰拍 — The camera looks up from the foot of the stair, so the steps rise to her and her head sits against the pale ceiling, the frame running from her head down to her feet on the step. |
 | 5 | A | 单脚点地倚柱 — Her shoulder rests against a concrete column while one foot touches down only on its toe, making a long diagonal from head to foot. | 对角线构图 — A wall edge runs from one corner of the frame to the opposite one, and she stands where it crosses the column, the frame running from her head down to her toes. |
-| 6 | B | 3/4侧颜 — Her head turns into a three-quarter view with the far cheek just visible and her eyes lowered, the light carving the jaw and cheekbone edge. | 三分法构图 — She stands on one vertical third line while the bare white wall with its slanted shadow fills the other two thirds. |
-| 7 | B | 纯侧颜 — Her head turns a full ninety degrees so brow, nose line and jaw form one clean outline against the light wall. | Medium Close-Up — The frame runs from the top of her head to mid-chest, the profile filling most of it. |
-| 8 | B | 背影巡展 — She walks away from the lens down a long gallery corridor, back straight and arms relaxed, the coat hem swinging. | 长焦压缩 — A moderate telephoto down the corridor stacks the repeating walls and openings behind her into one flat graphic plane. |
-| 9 | C | 顶光孤立 — She stands alone in the middle of a black room under one narrow vertical beam, head and shoulders lit white and the rest swallowed by darkness. | 留白 — She fills about a third of the vertical frame and the black space around her stays empty. |
-| 10 | C | 逆光勾边 — She stands in profile before a floor-to-ceiling glass wall with the sky behind her, her face in soft shadow and her outline edged with light. | 框架构图 — The tall dark mullions of the glass wall box her profile into one lit panel between two shadowed ones. |
+| 6 | B | 3/4侧颜 — Her head turns into a three-quarter view with the far cheek just visible and her eyes lowered, the jaw and cheekbone edge drawn as clean lines. | 三分法构图 — She stands on one vertical third line while the bare white wall fills the other two thirds. |
+| 7 | B | 纯侧颜 — Her head turns a full ninety degrees so brow, nose line and jaw form one clean outline against the pale wall. | Medium Close-Up — The frame runs from the top of her head to mid-chest, the profile filling most of it. |
+| 8 | B | 背影巡展 — She walks away from the lens down a long gallery corridor, back straight and arms relaxed, the hem swinging. | 长焦压缩 — A moderate telephoto down the corridor stacks the repeating walls and openings behind her into one flat graphic plane. |
+| 9 | C | 顶光孤立 — She stands alone in the middle of a black room, upright and still with the head and shoulders squared and the rest of the room empty. | 留白 — She fills about a third of the vertical frame and the black space around her stays empty. |
+| 10 | C | 逆光勾边 — She stands in profile before a floor-to-ceiling glass wall. | 框架构图 — The tall dark mullions of the glass wall box her profile into one panel between two others. |
 | 11 | D | 微扬下颌 — The chin lifts about ten degrees and the face squares to the lens, the brow and cheek line set at a slight upward tilt. | 大特写 — The frame holds the eyes, the brow and the bridge of the nose, filling the picture edge to edge with nothing else in view. |
 | 12 | D | 双手叠放腹前 — She stands straight with level shoulders and both hands resting one over the other at her lower stomach, facing the lens. | Cowboy Shot — The frame cuts at mid-thigh, so her folded hands and the line of the gown or coat both read against the white. |
+
+장소 조건: 쌍 2는 소실점으로 이어지는 긴 통로가 있을 때, 쌍 3은 긴 벤치와 넓은 홀이 있을 때, 쌍 4는 계단이 있을 때, 쌍 5는 기둥이 있을 때, 쌍 8은 긴 복도가 있을 때, 쌍 10은 바닥부터 천장까지 유리벽이 있을 때.
 
 ## 맞지 않는 것
 따뜻한 전구·촛불·네온 빛, 황금빛 석양 풍경, 파스텔과 채도 높은 색 면, 장식 많은 가구와 소품, 큰 웃음, 정면 증명사진 자세, 읽히는 전시 설명판과 작품 위 글자, 피부를 지운 듯한 과한 보정.
