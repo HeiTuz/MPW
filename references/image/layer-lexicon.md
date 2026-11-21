@@ -15,13 +15,13 @@
 <!-- lexicon-counts:start -->
 | 층 | 파일 | 행 수 | KR | CN | JP | US | FR |
 |---|---|---|---|---|---|---|---|
-| Optics | [lexicon/optics.md](lexicon/optics.md) | 451 | 23 | 43 | 188 | 153 | 44 |
-| Light | [lexicon/light.md](lexicon/light.md) | 267 | 32 | 70 | 38 | 84 | 43 |
+| Optics | [lexicon/optics.md](lexicon/optics.md) | 480 | 24 | 47 | 195 | 169 | 45 |
+| Light | [lexicon/light.md](lexicon/light.md) | 278 | 36 | 71 | 40 | 86 | 45 |
 | Pose | [lexicon/pose.md](lexicon/pose.md) | 452 | 36 | 134 | 69 | 121 | 92 |
 | Outfit | [lexicon/outfit.md](lexicon/outfit.md) | 653 | 140 | 117 | 169 | 115 | 112 |
 | Legwear | [lexicon/legwear.md](lexicon/legwear.md) | 272 | 44 | 58 | 65 | 70 | 35 |
 | Style | [lexicon/style.md](lexicon/style.md) | 662 | 126 | 64 | 140 | 195 | 137 |
-| Hair and makeup | [lexicon/hair-makeup.md](lexicon/hair-makeup.md) | 523 | 101 | 127 | 112 | 113 | 70 |
+| Hair and makeup | [lexicon/hair-makeup.md](lexicon/hair-makeup.md) | 525 | 102 | 127 | 113 | 113 | 70 |
 | Expression | [lexicon/expression.md](lexicon/expression.md) | 368 | 85 | 72 | 76 | 61 | 74 |
 | Props and nails | [lexicon/props-nails.md](lexicon/props-nails.md) | 638 | 80 | 124 | 182 | 133 | 119 |
 | Scene | [lexicon/scene.md](lexicon/scene.md) | 1151 | 203 | 218 | 243 | 280 | 207 |

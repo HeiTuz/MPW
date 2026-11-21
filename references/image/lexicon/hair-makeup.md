@@ -107,6 +107,7 @@ Hair and makeup 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토�
 | 결을 살린 일자 눈썹 | 야생 눈썹; 일자 눈썹; 내추럴 브로우; wild brows | KR | 내추럴; 시크; 미니멀; 눈썹; 当代美术馆冷光极简; 当代美术馆冷光; 美术馆冷光; 冷光极简; 현대 미술관 냉광 미니멀; 미술관 냉광 미니멀; 미술관 냉광; 냉광 미니멀; 쿨톤 도자기 피부; 블루 그레이 미니멀; 냉백 도자기 피부; 회청색 미니멀; 清冷瓷肌; 极简灰蓝 | Flat, straight brows left unshaped with visible individual hairs and a faintly extended tail. | look |
 | 운동 후 땀 광택 | 운동 후 땀; 땀 광택; 운동 후 물광 | KR | 운동; 땀; 광택; 건강; 필라테스; 아이폰 원본 셀카; 아이폰 셀카; iPhone native selfie | A thin film of sweat beads on the forehead and cheekbones after exercise while the pores stay visible. | look |
 | 자다 일어난 머리 | 베드헤어; 눌린 머리; 잠자리 머리 | KR | 나른; 내추럴; 아침; 침대; 아이폰 원본 셀카; 아이폰 셀카; iPhone native selfie | Hair flattened on one side and puffed on the other as if just slept on, a few strands lying loose across the face or bedding. | look |
+| 점막 아이라인 | 점막 라인 | KR | 아이; 미니멀; 또렷; 데일리 | A hair-thin dark line along the upper lash roots defines the eye with no visible wing. | look |
 
 ## CN
 
@@ -356,6 +357,7 @@ Hair and makeup 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토�
 | 内巻き | 우치마키; 끝 안말음 | JP | 안말음; 단정; 보브; 끝선 | The hair ends curl smoothly inward under the jaw or shoulder line and form a soft rounded edge. | look |
 | シアーリップ | 시어 립; sheer lip; シアーコーラルリップ; 시어 코랄 립; 투명 립 | JP | 립; 투명감; 코랄; 일본; 데일리 | A thin, translucent coral-red lip colour that lets the natural lip show through, soft at the edge and slightly sheer. | look |
 | 素の唇 | 스노 쿠치비루; 맨입술; 맨 입술; 민낯 입술; bare lips; 素唇; 水润素唇; すっぴんの唇 | JP | 립; 맨얼굴; 촉촉; 일본; 데일리; 日系Provia; 高保真Provia; Provia; 프로비아; プロビア; 写ルンです; 일회용 카메라 | Bare lips in their own natural colour with a faint moist sheen, the lip line left plain. | look |
+| インライン | インラインを引く; 粘膜ライン; 인라인 | JP | アイメイク; ナチュラル; 目力; 日常 | A hair-thin dark line along the upper lash roots defines the eye with no visible wing. | look |
 
 ## US
 
@@ -408,7 +410,7 @@ Hair and makeup 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토�
 | Half Bun | 하프번; 하프 번; 반묶음 번; half-up bun; Half-Bun Beach Hair; 반 묶음 번 | US | 반묶음; 여름; 캐주얼; 웨이브 | The top section knotted loosely on the crown with the rest of the hair falling free and a few strands escaping at the temples. | look |
 | Half-Up Claw Clip | 하프업 집게핀; 반묶음 집게핀; half up clip | US | 반묶음; 캐주얼; 데일리; 모던 | The top half of the hair twisted up and clipped at the crown while the rest falls loose over the shoulders. | look |
 | Holographic Highlighter | 홀로그램 하이라이터; 홀로그래픽 스트로브; 프리즘 하이라이터; 무지개 하이라이터; iridescent highlight; Holographic Strobe; 홀로 하이라이터 | US | Y2K; 홀로그램; 광채; 메이크업 | A highlighter that shifts between pink, violet and green as the angle changes, bright on the cheekbones and eye corners. | look |
-| Tightline | 타이트라인; 타이트라이닝; 점막 아이라인; inner rim liner; 隐形眼线; Inner Corner Tightline; 눈 안쪽 라인 | US | 아이; 미니멀; 또렷; 데일리 | Black liner pressed into the waterline and between the lash roots so the lash line looks denser without a visible line on the lid. | look |
+| Tightline | 타이트라인; 타이트라이닝; inner rim liner; 隐形眼线; Inner Corner Tightline; 눈 안쪽 라인 | US | 아이; 미니멀; 또렷; 데일리 | Black liner pressed into the waterline and between the lash roots so the lash line looks denser without a visible line on the lid. | look |
 | Jelly Lips | 젤리 립; 젤리 글로스; 크리스탈 젤리 립; jelly gloss | US | Y2K; 글로시; 젤리; 립 | Plump lips in a translucent coloured gel gloss, rounded and shiny like glass candy. | look |
 | Kitten Eye | 키튼 아이; 고양이 눈 메이크업; 스머지 키튼; smudged kitten eye | US | 아이; 스모키; 그런지; 밤 | A smudged liner flicked slightly upward at the outer corner with soft edges, giving the eye a small catlike lift. | look |
 | Kohl Eyeliner | 콜 아이라이너; 콜 라이너; 검은 아이라이너; kohl liner | US | 아이; 스모키; 저녁; 클래식; 다크 아카데미아; Dark Academia | Thick soft black liner on the lash lines of both lids, slightly smudged and darkening the frame of the eye. | look |

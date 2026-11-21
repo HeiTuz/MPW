@@ -13,7 +13,6 @@ Optics 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다.
 | 폴라로이드 라이트 리크 | 폴라로이드 빛샘; 폴라로이드 누광; Polaroid light leak; 拍立得漏光 | KR | 인스턴트; 빛샘; 따뜻함; 레트로; 폴라로이드 빛샘; 유통기한 지난 필름; 과기필름; 古早胶片 | Red-orange light leaks wash over the edges of an instant print, with soft contrast and a thick white border. | look |
 | 홀로그램 프리즘 | 프리즘 필터; 프리즘 렌즈; prism filter; 棱镜滤镜 | KR | 프리즘; 무지개빛; 플레어; 실험적 | A prism held at the lens throws rainbow-edged refractions and doubled, iridescent flares across part of the frame. | look |
 | 흑백 필름 그레인 | 흑백 그레인; 고감도 흑백 필름; B&W film grain; high ISO grain; 黑白颗粒 | KR | 흑백; 거친 입자; 고대비; 야간; 그런지; Grunge; 폴라로이드 빛샘; 유통기한 지난 필름; 과기필름; 古早胶片; 흑백 인문 사진 | Coarse silver grain over monochrome with deep blacks and bright clipped highlights, giving a gritty high-contrast texture. | look |
-| 胶片颗粒 | 필름 그레인; grain; 细腻颗粒 | KR | 필름; 질감; 빈티지; 저조도; 当代美术馆冷光极简; 当代美术馆冷光; 美术馆冷光; 冷光极简; 현대 미술관 냉광 미니멀; 미술관 냉광 미니멀; 미술관 냉광; 냉광 미니멀 | Fine, even film grain across dark areas and midtones. | look |
 | 柔焦 | 소프트 포커스; soft focus; 몽글 포커스; 柔化 | KR | 몽환; 화사함; 부드러움; 창가; 森ガール; 모리걸; Old Hollywood; 올드 할리우드; 老好莱坞; 글래머 소프트 포커스; 江南烟雨柔焦; 강남 연우 소프트 포커스; 烟雨柔焦; 연우 소프트 포커스; 폴라로이드 빛샘; 유통기한 지난 필름; 과기필름; 古早胶片 | Slightly diffused sharpness, with edges and highlights glowing softly. | look |
 | 冷调 | 쿨톤; cool tone; 차가운 톤; 冷白色调 | KR | 쿨; 차가움; 미니멀; 청량; 雨夜新宿; 비 오는 신주쿠 밤; 東京ノワール; 도쿄 누아르; 歌舞伎町ネオン; 가부키초 네온; 쿨톤 도자기 피부; 블루 그레이 미니멀; 냉백 도자기 피부; 회청색 미니멀; 清冷瓷肌; 极简灰蓝 | The whole palette leans cold blue-white with a slightly pale and quiet mood. | look |
 | 低饱和 | 로우 새츄레이션; 저채도; desaturated; 低饱和微青 | KR | 미니멀; 무채색; 차분함; 콘크리트; 江南烟雨柔焦; 강남 연우 소프트 포커스; 烟雨柔焦; 연우 소프트 포커스; 쿨톤 도자기 피부; 블루 그레이 미니멀; 냉백 도자기 피부; 회청색 미니멀; 清冷瓷肌; 极简灰蓝 | Color purity is pulled back to near grey with pale pink-white and a faint olive cast. | look |
@@ -21,7 +20,7 @@ Optics 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다.
 | 光斑虚化 | 보케; bokeh; 원형 보케; 车流光斑 | KR | 야간; 도시; 고속도로; 135mm; 雨夜新宿; 비 오는 신주쿠 밤; 東京ノワール; 도쿄 누아르; 歌舞伎町ネオン; 가부키초 네온; 서울 밤 시네마; 서울 나이트 시네마; 차창 불빛 시네마; Seoul night cinema; 首尔夜生活电影感; 车内流光 | Distant lights turn into big round overlapping discs behind the subject. | look |
 | 长曝光 | 장노출; light trails; 라이트 트레일; 光轨 | KR | 야경; 택시; 잔상; 네온; 서울 밤 시네마; 서울 나이트 시네마; 차창 불빛 시네마; Seoul night cinema; 首尔夜生活电影感; 车内流光 | A long exposure stretches red tail lights and blue signs into dream-like light streaks. | look |
 | Slow-Sync Flash Party Blur | 슬로우 싱크로 플래시; 후막 싱크 파티; 슬로우셔터 플래시 | KR | 잔상; 파티; 플래시; 광궤적 | Sharp flash-lit subject against streaked colored light trails from a long shutter exposure. | look |
-| 디지털 노이즈 | 컬러 노이즈; 数码噪点; 感光噪点; digital noise; CCD 노이즈 | KR, CN | 아이폰 원본 셀카; 아이폰 셀카; iPhone native selfie; 폰카; 밤; 노이즈; 千禧CCD直闪; 밀레니엄 CCD 직광 플래시; Y2K CCD; 직부 플래시 | Very fine digital noise sits only in the darkest parts of the frame and leaves the lit areas clean. | look |
+| 디지털 노이즈 | 컬러 노이즈; CCD 노이즈 | KR | 아이폰 원본 셀카; 아이폰 셀카; iPhone native selfie; 폰카; 밤; 노이즈; 千禧CCD直闪; 밀레니엄 CCD 직광 플래시; Y2K CCD; 직부 플래시 | Very fine digital noise sits only in the darkest parts of the frame and leaves the lit areas clean. | look |
 | Daylight Film under Tungsten | 일광 필름 텅스텐; 텅스텐 조명 일광 필름; 텅스텐 오렌지 캐스트; daylight-balanced film under bulbs; 日光型胶片钨丝灯 | KR | 유통기한 지난 필름; 과기필름; 古早胶片; 심야식당; 전구; 호박색; 필름 | Daylight-balanced film under bulb light turns every surface a heavy amber-orange and sinks the shadows to brown. | look |
 | 청보라 밤 색감 | 청보라 야경 색감; 시안 퍼플 톤; 시안 마젠타 톤; 青紫夜色; 青紫霓虹电影感; cyan-violet night grade | KR | 서울 밤 시네마; 서울 나이트 시네마; 청보라 네온 시네마; Seoul night cinema; 首尔夜生活电影感; 네온; 야경; 색감 | Shadows lean cyan-teal while highlights from signs pick up violet and magenta, with the blacks held deep and no warm daylight tint. | look |
 | 화이트 날림 | 하늘 날림; 하얗게 날아감; blown-out whites | KR | 노출; 하이라이트; 하늘; 밝음 | The brightest areas, such as sky and sunlit skin edges, clip to flat white with no tone or detail left. | look |
@@ -29,6 +28,8 @@ Optics 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다.
 | 노출 오버 | 오버 노출; 노출 과다; overexposure | KR | 노출; 밝음; 하이라이트; 맑은 날 | The frame runs bright and washed out, with whites spreading and skin highlights and sky losing their last tones. | look |
 | 노출 언더 | 언더 노출; 저노출 | KR | 노출; 어두움; 암부; 밤 | The frame runs dark and muddy, with midtones sinking toward shadow and fine detail lost in the low end. | look |
 | 핀 나감 | 핀이 나감; 핀 안 맞음; missed focus | KR | 초점; 흐림; 스냅; 실수 | The focus lands slightly in front of or behind the subject, so edges stay soft and fine detail is smeared. | look |
+| Crisp Computational Sharpness | 폰 연산 선명도; 폰 카메라 샤프닝; phone computational sharpening | KR | 아이폰 원본 셀카; 아이폰 셀카; iPhone native selfie; 아이폰 후면 카메라; 아이폰 16 프로; 거울 셀카 | On a phone camera, computational processing keeps every hair edge, the face and the whole scene crisp and clean at once. | look |
+| 필름 그레인 | 필름 입자; 그레인 | KR | 필름; 질감; 빈티지; 저조도 | Fine, even film grain sits across the whole frame, slightly heavier in the shadows. | look |
 
 ## CN
 
@@ -77,6 +78,10 @@ Optics 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다.
 | 锐化过度 | 루이화 궈두; 과한 샤프닝; 선명도 과다; over-sharpening | CN | 샤프닝; 디지털; 윤곽; 휴대폰 | Edges carry thin bright halos and fine textures look etched, giving a crisp, slightly brittle digital finish. | look |
 | 手抖 | 서우더우; 흔들림; camera shake | CN | 흔들림; 번짐; 저속; 스냅 | The whole frame carries a small directional smear from a shaky hand, doubling edges while larger shapes stay recognizable. | look |
 | Leica Q2 | 라이카 Q2; Q2; 徕卡Q2; Leica Q2 28mm | CN | 레인지파인더; 단렌즈 콤팩트; 28mm; 디지털; 水墨影调; 新中式水墨; 신중식 수묵; 수묵 톤 | A full-frame compact with a built-in Summilux 28mm f/1.7 lens, crisp micro-contrast and a wide field that keeps the room around the figure readable. | gear |
+| Crisp Micro-Contrast | crisp micro contrast; 크리스프 마이크로 콘트라스트; 선명한 미세 대비 | CN | 新中式水墨; 신중식 수묵; 水墨影调; 수묵 톤; 水墨宣纸; 수묵 선지; Leica M11; 라이카 M11 | Crisp micro-contrast keeps the fine surface detail sharp while the color stays calm. | look |
+| Rich Material Texture | Fine Material Texture; 풍부한 질감; 소재 질감과 깊은 색 | CN | 故宫朱红暖金; 고궁 주홍 웜골드; 宫廷历史胶片; 궁정 역사 필름; 故宫人文大片; 중형; 질감; 풍부한 색 | Fine material texture and rich, deep colour, so silk, wood and enamel each keep a distinct surface. | look |
+| 数码噪点 | 感光噪点 | CN | 数码; 手机; 夜景; 噪点; 暗部 | Very fine digital noise sits only in the darkest parts of the frame and leaves the lit areas clean. | look |
+| 胶片颗粒 | 细腻颗粒 | CN | 필름; 질감; 빈티지; 저조도; 当代美术馆冷光极简; 当代美术馆冷光; 美术馆冷光; 冷光极简; 현대 미술관 냉광 미니멀; 미술관 냉광 미니멀; 미술관 냉광; 냉광 미니멀 | Fine, even film grain across dark areas and midtones. | look |
 
 ## JP
 
@@ -270,6 +275,13 @@ Optics 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다.
 | ビデオライトなし | ビデオライトオフ; 비디오 라이트 끔; 라이트 없음; no video light; camcorder light off | JP | 캠코더; 저조도; 자연광; 노이즈; 古早DV梦核; 古早DV; 梦核; 夢核; 低保真录像带; 몽핵; 드림코어; 올드 DV | The camcorder's own video light stays off, so only the room's own light draws the picture, with softer contrast and more visible noise in the dim parts. | look |
 | ブルーストリーク | ブルーストリークフレア; アナモルフィックフレア; 가로 청색 플레어; 블루 스트릭; blue streak flare; horizontal blue flare | JP, US | 가로 플레어; 시네마; 네온; 타원 보케; 雨夜新宿; 비 오는 신주쿠 밤; 東京ノワール; 도쿄 누아르; 歌舞伎町ネオン; 가부키초 네온 | Horizontal blue streaks run off bright lights and the out-of-focus highlights behind the subject stretch into ovals. | look |
 | Minolta Freedom Zoom 90 Date | 미놀타 프리덤 줌 90 데이트; Freedom Zoom 90 Date; Minolta Freedom Zoom 90; Freedom Zoom 90 | JP | 콤팩트; 플래시; 날짜 각인; 밀레니엄; Venice Beach Polaroid; 베니스 비치 폴라로이드; road trip light leak; 로드트립 빛샘 | Plastic zoom compact with a built-in 38-90mm zoom, harsh direct flash and an orange LED date stamp in the lower right corner. | gear |
+| Crisp Center Natural Color | crisp center; 크리스프 센터; 중심 선명 자연색 | JP | 日系Provia; 日系高保真胶片; Provia; 프로비아; プロビア; CONTAX T3; 콘탁스 T3; コンタックス T3; 일본 컴팩트 | The center of the frame stays crisp with natural color and gently contrasty skin, while the sharp edge of the face stands against a softly melting background. | look |
+| Fine Tonal Gradation | fine gradation; 섬세한 계조; 파인 톤 그라데이션 | JP | 日系Provia; Provia; プロビア; Rolleiflex 2.8F; 롤라이플렉스; 中判; 중형 | Tones step finely from skin to shadow while the center of the frame stays crisp. | look |
+| Sharp Wide-Open Clarity | wide-open sharpness; 개방 선명; 샤프 와이드 오픈 | JP | 日系Provia; Provia; プロビア; Contax G2; 콘탁스 G2; コンタックス G2; 레인지파인더 | Sharpness stays very high even at the widest aperture, with clean saturated color and a smooth, soft background. | look |
+| Silky Tonal Transitions | 부드러운 톤 이행; 크림 같은 배경과 매끈한 계조; smooth tone with creamy background | JP | 富士经典负片; 후지 클래식 네거티브; クラシックネガ; Contax 645; 중형; 空気感ハイキー; 크림 | Tone transitions run very smooth, and the background melts into cream behind a silky focus plane. | look |
+| Soft Airy Edges | 부드러운 가장자리; 공기감 있는 화면 가장자리; early CCD soft corners | JP | 日系CCD日光; 日系CCD; 일본 CCD; コンデジ; ディマージュ Xt; 商店街スナップ; 柔らかい | Early compact optics leave the frame edges soft and airy, with fine pink-cyan noise in the shadows and a casual snapshot feel. | look |
+| Transparent Medium-Format Clarity | medium-format clarity; 중형 투명 선명; 투명한 중형 | JP | 日系Provia; Provia; プロビア; Hasselblad 503CW; 하셀블라드 503CW; 中判; 중형 | A square medium-format frame renders with clarity, transparent color, smooth skin and calm edges. | look |
+| デジタルノイズ | ノイズ; ISOノイズ | JP | コンデジ; 携帯カメラ; 夜; ノイズ; 暗部 | Very fine digital noise sits only in the darkest parts of the frame and leaves the lit areas clean. | look |
 
 ## US
 
@@ -428,6 +440,22 @@ Optics 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다.
 | XCD 45mm f/4 P | Hasselblad XCD 45mm; XCD 45mm; 哈苏 XCD 45mm | US | 45mm 렌즈; 중형 디지털; 정밀; 뉴욕 쿨 그레이; 맨해튼 쿨 그레이; New York overcast cool grey; 纽约SOHO阴天冷调; 曼哈顿冷灰 | A 45mm medium-format lens (about 36mm in 35mm terms) with clean straight lines and a natural view of the subject. | gear |
 | APO-Summicron-M 50mm f/2 ASPH | 아포 서미크론 50mm; APO-Summicron 50; APO-Summicron-M 50mm | US | 50mm 렌즈; 표준 렌즈; 선명; 뉴욕 쿨 그레이; 맨해튼 쿨 그레이; New York overcast cool grey; 纽约SOHO阴天冷调; 曼哈顿冷灰 | A standard 50mm Leica M lens with very high sharpness, natural perspective and low color fringing. | gear |
 | Vision3 500T-inspired grade | Vision3 500T 풍 색감; 500T 풍 그레이드; 시네 네거티브 풍 색감; tungsten cinema-negative grade | US | 시네마; 텅스텐; 야간; 실내; 따뜻함; 롤라이플렉스; Rolleiflex; 禄来双反; 双反双重倒影; 유리 이중 반사; Reflet de vitrine | A tungsten cinema-negative look in which lamplit skin leans toward warm amber and the shadows toward a slightly green-cool tone. | look |
+| Calm Night Highlights | 차분한 밤 하이라이트; 잔잔한 야경 하이라이트 | US | 서울 밤 시네마; Seoul night cinema; 투톤 네온; 소니 A7S III; 야경 | Bright signs and lamps hold steady with no harsh clipping, and their highlights stay calm and softly reflective. | look |
+| Clean Neutral Colour | 클린 뉴트럴 색감; 깨끗한 중립 색감; Clean Neutral Color | US | 서울 밤 시네마; Seoul night cinema; 차창 불빛; 소니 A7 IV; 밤 색감 | Colour stays clean and neutral with no added cast, and the dark areas stay smooth and quiet. | look |
+| Crisp Eye Soft Falloff | 선명한 눈 부드러운 번짐; 또렷한 눈과 부드러운 배경 | US | 베르메르; Vermeer; 페르메이르; 维米尔; 창가 빛; 콘탁스 RTS III | The lit eye holds crisp focus while the blur behind it falls off soft and creamy. | look |
+| Crisp White Rendering | 선명한 화이트 렌더링; 또렷한 흰빛 | US | 서울 밤 시네마; Seoul night cinema; 냉백 야경; 후지필름 X-H2S; 편의점 | Bright white light stays firm and clean with crisp edges, and fine detail is held in the shadow areas. | look |
+| Deep Focus Wide View | deep focus wide; 딥 포커스 광각; 광각 딥포커스 | US | Kodak Gold 200; 코닥 골드 200; Gold 200; 골드 200; 柯达Gold 200; Pentax K1000; 펜탁스 K1000 | A wide view keeps deep focus from the nearest figure to the surroundings, with mild edge stretching and plain, slightly rough documentary color. | look |
+| digital noise | sensor noise | US | 디카; 폰카; 밤; 노이즈; 어두운 곳 | Very fine digital noise sits only in the darkest parts of the frame and leaves the lit areas clean. | look |
+| film grain | sensor-free grain | US | 필름; 질감; 빈티지 | Fine, even film grain sits across the whole frame, slightly heavier in the shadows. | look |
+| Fine Micro-Contrast | 미세 대비; 미세한 마이크로 콘트라스트 | US | 베르메르; Vermeer; 페르메이르; 维米尔; 흑백; 라이카 MP | Fine tonal contrast between neighbouring details shows pores and wool fibres in black and white. | look |
+| Fine Tonal Steps | 섬세한 톤 단계; 촘촘한 계조 | US | 柯达Portra 400; Kodak Portra 400; 코닥 포트라 400; 포트라 400; Portra 400 portrait; Rolleiflex 2.8F; 롤라이플렉스; 중형 | Fine tonal steps run from the skin into the brightest areas of the frame. | look |
+| Monochrome Tonal Depth | 모노크롬 톤 깊이; Monochrome Grey Ramp | US | 뉴욕 쿨 그레이; New York overcast cool grey; 흑백; Leica Monochrom | Rich tonal depth and razor-fine edge detail run along a long, clean grey ramp from a dedicated black-and-white sensor. | look |
+| Open Airy Exposure | airy exposure; 열린 노출; 에어리 익스포저 | US | Kodak Gold 200; 코닥 골드 200; Gold 200; 골드 200; 柯达Gold 200; Nikon FM; 니콘 FM; 황혼 | The exposure stays open and airy through the midtones, with honest film grain still showing. | look |
+| Punchy Accent Colour | 포인트 컬러; Pop of Colour | US | 뉴욕 쿨 그레이; New York overcast cool grey; 보데가; Ricoh GR IIIx | Only small colour accents, such as a yellow taxi or a snack wrapper, come out crisp and punchy against an otherwise cold, near-neutral frame. | look |
+| Sharp Focus Glowing Highlights | 초점 선명 하이라이트 글로우; 초점 위치 선명 | US | 베르메르; Vermeer; 페르메이르; 维米尔; 역광; 라이카 M6 | Focus stays sharp where the light lands, and the brightest highlights glow gently. | look |
+| Smooth Tonal Gradation | smooth gradation; 부드러운 계조; 매끈한 톤 이행 | US | 柯达Portra 400; Kodak Portra 400; 코닥 포트라 400; 포트라 400; Portra 400 portrait; Contax 645; 콘탁스 645; 중형; 뉴욕 쿨 그레이; New York overcast cool grey; 뉴욕 흐린 날; Hasselblad 907X | Tones step very smoothly across the frame, from skin and fabric through grey into the softest highlights without a hard edge. | look |
+| Soft Low-Contrast Warm Color | soft warm color; 부드러운 저대비 웜 컬러; 저대비 따뜻한 색 | US | Kodak Gold 200; 코닥 골드 200; Gold 200; 골드 200; 柯达Gold 200; Canonet QL17; 캐논 카노넷; 다이너 | Soft, slightly low-contrast warm color that keeps a whole interior readable. | look |
+| Warm Vintage Daylight Color | warm vintage color; 따뜻한 빈티지 주광색; 따뜻한 빈티지 컬러 | US | Kodak Gold 200; 코닥 골드 200; Gold 200; 골드 200; 柯达Gold 200; Canon AE-1; 캐논 AE-1 | Warm, slightly soft vintage color with an honest daylight exposure. | look |
 
 ## FR
 
@@ -477,3 +505,4 @@ Optics 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다.
 | Flou de bougé | 플루 드 부제; 흔들림 번짐; camera-shake blur | FR | 흔들림; 번짐; 저속; 스냅 | The whole frame carries a small directional smear from a shaky hand, doubling edges while larger shapes stay recognizable. | look |
 | Vignettage | 비네타주; 비네팅 효과; edge darkening | FR | 비네팅; 가장자리; 렌즈; 필름 | The corners of the frame fall off darker than the center in a smooth round gradient. | look |
 | Dominante de couleur | 도미낭트 드 쿨뢰르; 색조 쏠림; 색 캐스트 | FR | 색조; 화이트밸런스; 형광등; 필름 | One hue tints the whole frame and shows most on whites and grays, which lean green, magenta or orange. | look |
+| Soft Corner Falloff | 모서리 소프트; 구석 흐림; Corner Softness | FR | 누벨바그; Nouvelle Vague; 16mm; ARRI 16SR3 | The frame holds sharp toward the centre while the corners soften slightly and unevenly, as with an old cine lens. | look |

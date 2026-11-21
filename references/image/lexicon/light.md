@@ -38,6 +38,10 @@ Light 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다. 
 | 별 모양 반사광 | 반사 플레어; 반사 하이라이트; 금속 반사광; star-shaped glints | KR | 금속; 반사; 석양; 자동차; Kodak Gold 200; 코닥 골드 200; 柯达Gold 200 | Chrome, steel and glass surfaces throw sharp star-shaped glints of the lights back toward the camera. | look |
 | 네온 캐치라이트 | 네온 눈빛; 네온사인 반사 눈빛; 네온 반사 눈빛; neon catchlight; neon reflection in eyes | KR | 눈; 네온; 밤; 거리; 홍콩; 서울 밤 시네마; 서울 나이트 시네마; 차창 불빛 시네마; Seoul night cinema; 首尔夜生活电影感; 车内流光 | Thin red, pink, green or blue neon strips mirror as colored streaks in the irises while the face picks up colored light from the signs. | look |
 | 창문 캐치라이트 | 창문 눈빛; 사각 눈빛; 창가 사각 캐치라이트; 창가 사각 캣치라이트; 창문 하이라이트; window catchlight | KR | 눈; 창가; 자연광; 아침; 부드러움; 新中式; 신중식; 아이폰 원본 셀카; 아이폰 셀카; iPhone native selfie; 日系Provia; 高保真Provia; Provia; 프로비아; プロビア; Astia; 아스티아; アスティア; リバーサルフィルム; 江南烟雨柔焦; 강남 연우 소프트 포커스; 烟雨柔焦; 연우 소프트 포커스; 晨雾茶室漫射光; 새벽안개 다실 확산광; 当代美术馆冷光极简; 当代美术馆冷光; 美术馆冷光; 冷光极简; 현대 미술관 냉광 미니멀; 미술관 냉광 미니멀; 미술관 냉광; 냉광 미니멀; 新中式水墨; 신중식 수묵; 水墨影调; 수묵 톤; 서울 카페 웜톤; 서울 카페 웜톤 확산광; 웜톤 확산광; 首尔咖啡馆与居家暖调漫射; 쿨톤 도자기 피부; 블루 그레이 미니멀; 냉백 도자기 피부; 회청색 미니멀; 清冷瓷肌; 极简灰蓝 | A large window leaves a soft rectangular, sometimes pane-divided highlight in the upper part of each iris while side light falls gently off the cheek. | look |
+| Soft Pin Shadows | soft pin shadow; 핀 그림자; 압정 그림자 | KR | 폴라로이드 빛샘; 폴라로이드 라이트 리크; 필름 빛샘; 필름 라이트 리크; 古早胶片; 코르크 보드; 성수동 | Each pin on a cork wall leaves a small soft shadow beneath it, so the pinned prints sit slightly off the surface. | look |
+| 갤러리 스팟 조명 | soft gallery ceiling spot; 갤러리 스팟; 전시장 스팟 | KR | 폴라로이드 빛샘; 폴라로이드 라이트 리크; 필름 빛샘; 필름 라이트 리크; 古早胶片; 갤러리 라운지; 성수동 | A ceiling spot lights one corner of a hushed white room in a soft pool while the pale floor and walls stay evenly bright. | look |
+| 야경 보케 | 도시 야경 불빛; 불빛 보케; city lights bokeh | KR | 쿨톤 도자기 피부; 清冷瓷肌; 블루 그레이 미니멀; 냉백 도자기 피부; 루프탑; 블루 아워 | The city far below is reduced to small points of light, and passing car lights melt into soft blurred discs behind her. | look |
+| 억새 역광 | 억새 금빛 역광; 한강 억새 역광; reed backlight; 갈대 역광; 억새 빛; backlit reeds | KR | 폴라로이드 빛샘; 폴라로이드 라이트 리크; 필름 빛샘; 필름 라이트 리크; 古早胶片; 한강; 억새; 과기필름; 서울 카페 웜톤; 서울 카페 웜톤 확산광; 웜톤 확산광; 갈대; 노을 | A low gold sun behind tall reed grass rings each feathered tip in glowing gold against a warm hazy sky. | look |
 
 ## CN
 
@@ -113,6 +117,7 @@ Light 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다. 
 | 柔光箱眼神光 | 矩形眼神光; 柔光箱反光; softbox catchlight; rectangular catchlight | CN | 눈; 스튜디오; 부드러움; 직사각형; 当代美术馆冷光极简; 当代美术馆冷光; 美术馆冷光; 冷光极简; 현대 미술관 냉광 미니멀; 미술관 냉광 미니멀; 미술관 냉광; 냉광 미니멀 | One crisp rectangular softbox highlight sits in the upper part of each iris. | look |
 | 逆光勾边 | 冷白轮廓光; 发丝勾边; 逆光轮廓光; cold rim light; backlit rim outline | CN | 역광; 윤곽; 차가운 빛; 영화적; 当代美术馆冷光极简; 当代美术馆冷光; 美术馆冷光; 冷光极简; 현대 미술관 냉광 미니멀; 미술관 냉광 미니멀; 미술관 냉광; 냉광 미니멀 | Bright daylight from behind rings the hair, nose bridge and shoulders in one thin cold-white edge while the face stays in soft shadow. | look |
 | 窗棂光影 | 窗格光影; 漏窗光影; 창살 그림자; 격자창 그림자; lattice window shadow | CN | 정원; 햇빛; 그림자 무늬; 측면; 故宫朱红暖金; 고궁 주홍 웜골드; 宫廷历史胶片; 궁정 역사 필름; 故宫人文大片 | Slanting sun through a carved lattice window lays a crisp lattice pattern across the figure and the floor. | look |
+| Soft Lattice Window Light | soft lattice light; 부드러운 격자창 빛; 격자창 빛 얼룩; 다실 창빛 | CN | 江南烟雨柔焦; 강남 연우 소프트 포커스; 晨雾茶室漫射光; 새벽안개 다실 확산광; 茶室; 다실; 江南 | Gentle daylight through carved lattice windows breaks into scattered mottled patches over a mat and a low table, their edges softened by haze. | look |
 
 ## JP
 
@@ -156,6 +161,8 @@ Light 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다. 
 | 雪明かり | 雪あかり; 유키아카리; 설빛; 눈빛; snow light; 雪の朝 | JP | 겨울; 눈; 확산광; 부드러움; 입김; 写ルンです; 우츠룬데스; 일회용 카메라 | Soft diffuse light from the pale sky and the snowy ground wraps the face evenly with almost no shadow edge and a cool, clean tone. | look |
 | テールランプの光跡 | テールランプの軌跡; 미등 궤적; 붉은 미등 광선; red tail-light streaks | JP | 야경; 도로; 붉은 빛; 미등; 장노출; 古早DV梦核; 古早DV; 梦核; 夢核; 低保真录像带; 몽핵; 드림코어; 올드 DV | Long red streaks stretched from the tail lights of passing cars, running thin and horizontal across the frame. | look |
 | 雨夜のテールランプ | Rainy-Night Taillights; rainy night taillights; 비 오는 밤 테일램프; 빗속 미등; 雨夜のテールライト | JP | 비; 밤; 테일램프; 차창; 붉은 빛; 雨夜新宿; 비 오는 신주쿠 밤; 東京ノワール; 도쿄 누아르; 歌舞伎町ネオン; 가부키초 네온 | Red tail lights streaming past the rain-streaked window rim the profile with dim red light while the car interior stays almost black. | look |
+| Taxi Window Lights | 택시 창밖 불빛; 택시 창 불빛 띠; headlights and neon on a taxi window | JP | 富士经典负片; 후지 클래식 네거티브; クラシックネガ; 深夜タクシー; 택시; 夜の高感度; 비 오는 밤 | Headlights and neon signs outside slide in bright bands along the rain-spotted window of a night taxi and across the person inside. | look |
+| 土砂降り | 도샤부리; 폭우; downpour; heavy rain | JP | 雨夜新宿; 비 오는 신주쿠 밤; 東京ノワール; 도쿄 누아르; 처마 | A heavy downpour falls as a dense curtain that catches the glow of signs and lamps and reads as a pale bright veil against the dark street. | look |
 
 ## US
 
@@ -245,6 +252,8 @@ Light 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다. 
 | Sidelight | 측광; 옆빛; 사이드 라이트; side-on light | US | 측광; 입체감; 대비; 얼굴 | Light arrives from one side so one half of the face and body is bright and the other half falls into soft shadow. | look |
 | Long Shadows | 저녁 그림자; low-sun shadows | US | 저녁; 낮은 해; 그림자; 길 | Low sunlight stretches the shadows of the body and nearby objects far across the ground in dark bands. | look |
 | Harsh Midday Sun | noon glare | US | 한낮; 강한 빛; 짧은 그림자; 여름 | The sun stands almost overhead and drops short hard shadows under the brow, nose and chin while whites and pavement glare. | look |
+| Sunset Sky Glow | 석양 하늘빛; 노을 하늘; afterglow sky | US | Kodak Gold 200; 코닥 골드 200; Gold 200; 골드 200; 柯达Gold 200; 드라이브인 극장; 회전목마; 황혼 | After the sun drops, the whole sky glows warm orange and pink, tinting skin and gilded surfaces and softening every shadow. | look |
+| Window Sun Patches | Window Sun Stripes; 창가 햇살 줄무늬; 다이너 창 햇살; sunlit diner window | US | 加州 골든아워; 加州黄金时刻; California golden hour; 캘리포니아 골든아워; 다이너; Diner; 모하비; Mojave; 낙조; 창가 | Low sun cuts through a dusty window and lays bright stripes and patches of light across seats, a table and the person beside them. | look |
 
 ## FR
 
@@ -293,3 +302,5 @@ Light 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다. 
 | Lumière de fin d'après-midi | 뤼미에르 드 팽 다프레미디; late afternoon light | FR | 오후; 따뜻함; 낮은 해; 자연광 | A low warm sun from the side gives clean golden light with long soft shadows and gentle contrast. | look |
 | Ciel voilé | 시엘 부알레; 옅게 흐린 하늘; veiled sky | FR | 흐림; 부드러움; 낮; 자연광 | A thin veil of cloud softens the sun into an even pale light with faint, wide-edged shadows. | look |
 | Ombre et soleil | 옴브르 에 솔레이; 해와 그늘 | FR | 양지; 음지; 대비; 거리 | The street splits into bright sunlit patches and open shade, so skin and clothes jump between a clean bright exposure and a cool soft one. | look |
+| Faint Cast Shadows | 옅은 투영 그림자; 흐릿한 그림자 | FR | 파리 소프트 그레이; Lumière grise de Paris; 흐린 파리; 팔레루아얄 기둥; 아케이드 | Standing objects throw only faint, soft-edged shadows across the ground under a flat overcast sky. | look |
+| Shop Window Lighting | 진열창 조명; Shop Window Spotlights | FR | 롤라이플렉스; Rolleiflex; 유리 이중 반사; 빵집; boulangerie; 쇼윈도 | Soft warm lights inside a shop window fall on the displayed goods and reach her cheek through the glass. | look |
