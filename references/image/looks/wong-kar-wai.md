@@ -33,17 +33,18 @@
 | face-light | 모든 갈래에서 끈다. 얼굴 빛은 이 카드의 Light 줄이 정한다 | Iris 꼬리의 얼굴 입체광이 네온 분할광을 덮었다 |
 | base, lip | 카드 줄이 이긴다 | Iris 메이크업 고정문이 저자 입술색에 둘째 입술색을 얹었다 |
 | face-clear | A·C는 카메라 쪽만 귀 뒤로, 먼 쪽 머리는 흘러내려도 된다 | 滤镜 #045의 얼굴 가리는 머리가 이 룩의 특징인데 Iris가 금지문으로 지웠다 |
-| lens | 켠다. 어느 쌍·세트를 골라도 렌즈를 말하는 줄은 정확히 하나다. A·B·D: 쌍 1은 Camera의 `长焦压缩` 줄이 lens 줄이다. 그 밖의 쌍(2~7, 9, 10)은 Camera 줄이 렌즈를 말하지 않고 카드에 lens 줄도 없으니 고정 몫 `无畸变` 줄이 lens 줄이다. C(쌍 8·9): Optics의 `超广角畸变` 줄이 lens 줄이고 `无畸变`은 끈다. 쌍 8은 Camera 줄이 같은 토큰으로 렌즈를 말하니 Optics 줄을 빼고 Camera 줄 하나만 쓴다. S5는 Optics의 `超广角畸变` 한 줄에 '렌즈가 얼굴에서 약 30cm'를 합쳐 쓴다 | #048(9.8mm)과 무왜곡 꼬리가 한 프롬프트에 공존했고, 쌍마다 lens 줄의 출처를 몰라 추론이 갈렸다 |
+| lens | 켠다. 렌즈를 말하는 줄은 프롬프트에서 정확히 하나이고, 출처는 세트의 렌즈 > 쌍의 렌즈 > 갈래의 렌즈 줄 > 고정 몫 `自然透视` 줄 순이다. 세트: S5만 렌즈를 말한다(Optics의 `超广角畸变` 한 줄에 '렌즈가 얼굴에서 약 30cm'를 합친 줄). S5를 고르면 쌍 8의 Camera 줄은 쓰지 않고 이 Optics 줄이 lens 줄이다. S1~S4·S6은 렌즈를 말하지 않으니 아래로 내려간다. 쌍: 쌍 1은 Camera의 `长焦压缩` 줄이, 쌍 8은 Camera의 `超广角畸变` 줄이 lens 줄이다(쌍 8은 S5 없이 고른 경우이고, 이때 C의 Optics `超广角畸变` 줄은 빼서 하나만 남긴다). 갈래: 쌍 9를 C 갈래로 고르면 C의 Optics `超广角畸变` 줄이 lens 줄이다. 고정 몫: 그 밖(쌍 2~7, 10, A 갈래의 쌍 9)은 `自然透视` 줄이 lens 줄이다 | 쌍마다 lens 줄의 출처를 몰라 추론이 갈렸고, 세트와 쌍이 함께 걸리면 렌즈 줄이 둘이 되었다 |
 | under-eye, liner | 켠다. 줄 하나로 합쳐 `卧蚕` 토큰에 쓴다 | 한 슬롯 줄이 둘이면 줄 수만 늘어난다 |
 | blush | 끈다. 뺨 색은 Light 줄의 네온·텅스텐 빛이 정한다 | 이 룩의 줄에 블러셔가 없다 |
 | framing | 켠다. 쌍의 Camera 줄은 카메라 자리·각도·구도 기법을 정하고, 프레임 범위(위에서 아래까지)는 fixed-lines.md의 framing 줄이 정한다. 쌍이 범위를 직접 말하면(7·10번) 그 말과 부딪치지 않게 쓴다 | 쌍 대부분이 프레임 범위를 말하지 않는다 |
 | ratio | 켠다. 사용자 비율이 없으면 3:4 세로 | 쌍은 비율을 정하지 않는다 |
 | grain | 카드 줄이 이긴다. Optics의 `胶片颗粒` 줄(A·B·D는 고운 35mm, C는 굵게)이 입자를 정하고 고정 몫의 `胶片颗粒` 줄은 붙이지 않는다. S3은 세트의 굵은 16mm가 이긴다 | 입자 줄이 둘이 되지 않게 한다 |
+| realism | S3은 굵고 촘촘한 16mm 입자가 정체라 8K 모공 줄 대신 `native resolution` 줄을 쓴다(`The frame holds the resolution of a grainy 16mm film frame and no more: …`) | 16mm 거친 은염 입자에 모공이 보이는 8K 줄이 붙으면 룩과 반대가 된다 |
 
 ## Hair and makeup
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
-| A | hair | 王家卫 — A loose 1990s perm grazing the collarbones, airy and slightly undone, a few strands lifting off the crown. |
+| A | hair | 港风蓬松卷发 — A loose, voluminous 1990s Hong Kong perm grazing the collarbones, airy and slightly undone, a few strands lifting off the crown. |
 | A, C | hair | 港风大波浪 — Big side-parted curls with a lifted crown falling past the shoulders, glossy where the curls bend. |
 | B | hair | 1960s bouffant chignon — Hair smoothed into a high rounded crown and a neat low chignon, every strand in place. |
 | D | hair | parted straight hair — Straight dark hair with a soft side part, tucked around the ears. |
@@ -84,7 +85,7 @@
 |---|---|---|
 | A | legwear | 极透黑丝 — Very sheer black stockings where the skin shows through as a smoky cool gray. |
 | B | legwear | 后中缝 — Sheer stockings with a single thin seam running straight up the back of each leg. |
-| C | legwear | 红线中缝 — Black sheer stockings with a thin red seam up the back of the leg. |
+| C | legwear | 红色后缝丝袜 — Black sheer stockings with a thin red seam running up the back of each calf. |
 
 ## Props and nails
 | 갈래 | 슬롯 | 줄 |
@@ -123,7 +124,7 @@
 ## Light
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
-| A, C | face-light | 霓虹切光 — A red neon sign on one side and green tube light on the other split her face into two colors that meet along the nose. |
+| A, C | face-light | 霓虹双色侧光 — A red neon sign on one side and green tube light on the other split her face into two colors that meet along the nose. |
 | A | light-fill | 荧光灯 — Green-tinged fluorescent light from a shop interior washes the background flat and cool. |
 | B | face-light | 钨丝灯 — One low warm tungsten street lamp high above throws amber light across her shoulders and leaves the walls in deep shadow. |
 | B | face-light | 百叶窗光影 — Mixed warm bulb light and cool window light fall through louvres in parallel bars across her cheek. |
@@ -135,8 +136,8 @@
 ## Optics
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
-| 전부 | stock | Kodak Vision3 500T — Tungsten-balanced cinema negative: red-orange highlights on skin, shadows leaning teal-green, blacks pressed deep. |
-| A | motion | 抽帧 — Passing people and rain smear into stuttering ghost trails while she stays sharp, as if step-printed. |
+| 전부 | stock | Kodak Vision3 500T — A tungsten-balanced cinema negative look: in this look skin highlights lean red-orange, shadows lean teal-green and the blacks are pressed deep. |
+| A | motion | 抽帧 — Shot with a slow shutter and printed with repeated frames, so passing people and rain smear into stuttering step-printed ghost trails while she stays sharp. |
 | A | motion | 慢门 — Moving crowds and lights stretch into soft streaks around her held, still body. |
 | A, C | bloom | 红色光晕 — Each bright neon tube blooms a soft red halation glow around its edges. |
 | B | key | Hong Kong Noir — Most of the frame sits in deep black, with narrow amber light catching only edges and faces. |
@@ -146,15 +147,15 @@
 | A, B, D | grain | 胶片颗粒 — Fine, even 35mm film grain sits across the whole frame, slightly heavier in the shadows. |
 | C | grain | 胶片颗粒 — Coarse, visible film grain across the whole frame, heaviest in the dark window. |
 
-## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 요청의 장소·소품·시간대·의상 가운데 둘 이상이 그 세트의 단서와 같으면 통째로 쓰고, 세트 값은 고정 사실보다 먼저다. 규칙은 image-brief.md §4 '룩 카드' 4항과 '비워 둔 층')
+## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 요청의 장소·소품·시간대·의상 가운데 둘 이상이 그 세트의 단서와 같으면 통째로 쓰고, 세트 값은 고정 사실보다 먼저다. 세트를 고르면 갈래는 그 세트의 갈래 열이다. 단서는 네 칸으로 판정하고 찾기용 낱말이 아니라 장소·소품·시간대·의상이 맞는지로 본다. 묶음 속 K 숫자는 Iris 프리셋의 연출 값이고 프롬프트 문장에는 색으로 옮긴다. 규칙은 image-brief.md §4 '룩 카드' 4항과 '비워 둔 층')
 | 세트 | 갈래 | 묶음 |
 |---|---|---|
-| S1 公寓客厅 (滤镜 #041) | B | 단서: 아파트 거실, 녹색 가죽 소파, 위스키 잔, 와인색 치파오, 탁상 램프 / Hair 港风大波浪, 짙고 풍성한 검은 곱슬이 한쪽 어깨로 / Lip 丝绒唇 / Outfit 改良旗袍(와인색 실크 벨벳) / Props whisky glass / Scene 녹색 가죽 소파 옆 오래된 홍콩 아파트 거실 / Light 탁상 텅스텐 등(3200K)이 옆얼굴을, 그림자는 녹색 쪽으로 / Optics Kodak Vision3 500T, 胶片颗粒 / Expression 렌즈 밖을 보는 깊은 시선 |
-| S2 弄堂 (滤镜 #044) | B | 단서: 돌계단 골목, 보온 도시락, 墨绿 치파오, 가로등, 젖은 돌계단 / Hair 1960s bouffant chignon / Lip 豆沙唇 / Outfit 旗袍(墨绿 자카드 실크, 높은 칼라) / Props tiffin carrier / Scene stone stair alley, 이끼 낀 젖은 돌계단과 얼룩진 시멘트 벽 / Light 钨丝灯(2800K 가로등)이 위에서 / Optics Kodak Vision3 500T, 胶片颗粒 / Expression 落寞, 고개를 숙이고 렌즈를 스쳐 지나감 / Pose 계단 안쪽으로 천천히 걷는다 |
-| S3 重庆大厦 (滤镜 #045) | A | 단서: 상가 복도, 형광등, 선글라스, 소다 캔, 카키 트렌치 / Hair 바람에 흐트러져 얼굴을 가리는 검은 생머리(face-clear 끔) / Lip 물기 있는 맨 입술(립 줄 없음) / Outfit 风衣 / Props 墨镜, soda can / Scene 重庆大厦, 혼잡한 실내 상가 복도 / Light 荧光灯(4500K, 깜빡임) / Optics 抽帧, Handheld Jitter, 굵고 촘촘한 16mm 입자 / Expression 예민하고 경계하는 눈, 선글라스 아래로 렌즈를 흘끗 / Pose 혼잡한 복도를 빠르게 걷는다 |
-| S4 霓虹眼神光 (神态 #079) | A | 단서: 네온 간판 거리, 젖은 아스팔트, 슬립 드레스, 큰 코트, 네온 분할광 / Hair 港风大波浪, 긴 검은 곱슬이 양 어깨에 / Lip 车厘子红 / Outfit 吊带裙 + oversized wool coat / Scene 九龙霓虹 아래 젖은 아스팔트 거리 / Light 霓虹切光, 彩色霓虹眼神光 / Optics 胶片颗粒 / Expression 眼神迷离, 턱을 살짝 든다 |
-| S5 快餐店 (滤镜 #048) | C | 단서: 패스트푸드점, 빨간 플라스틱 테이블, 턱 괴기, 초광각 클로즈업, 단발 / Hair 이마 앞에 흩어진 살짝 젖은 검은 단발(face-clear 끔), 크고 복고풍인 금속 귀걸이 / Lip 正红唇 / Outfit 검은 V넥 실크 슬리브리스 드레스 / Pose 托腮, 빨간 플라스틱 식탁에 엎드려 / Scene 快餐店 / Light 荧光灯 직사(4000K) / Optics 超广角畸变, 굵은 입자 / Camera 렌즈가 얼굴에서 30cm / Expression 冷眼, 렌즈를 직시 |
-| S6 百叶窗 (滤镜 #047) | D | 단서: 녹색 덧창, 습한 낮, 열대 식물, 숲 녹색 치파오, 비 오는 창밖 / Hair parted straight hair, 귀 옆으로 자연스럽게 / Lip 豆沙唇, 무광 깊은 톤 / Outfit 旗袍(숲 녹색 크레이프 새틴, 반팔 긴 원피스) / Pose standing at louvres / Scene 绿色百叶窗, 반쯤 열린 낡은 녹색 덧창과 창밖의 젖은 활엽 식물 / Light green louvre light(4800K 열대 흐린 하늘) / Optics 青绿偏色 / Expression 落寞, 소원하고 담담하게 창밖을 본다 |
+| S1 公寓客厅 (滤镜 #041) | B | 단서: 장소 아파트 거실·녹색 가죽 소파 / 소품 위스키 잔·탁상 램프 / 시간대 밤 실내 / 의상 와인색 치파오 / Hair 港风大波浪, 짙고 풍성한 검은 곱슬이 한쪽 어깨로 / Lip 丝绒唇 / Outfit 改良旗袍(와인색 실크 벨벳) / Props whisky glass / Scene 녹색 가죽 소파 옆 오래된 홍콩 아파트 거실 / Light 탁상 텅스텐 등이 옆얼굴을, 그림자는 녹색 쪽으로 / Optics Kodak Vision3 500T, 胶片颗粒 / Expression 렌즈 밖을 보는 깊은 시선 |
+| S2 弄堂 (滤镜 #044) | B | 단서: 장소 돌계단 골목·젖은 돌계단 / 소품 보온 도시락 / 시간대 밤(가로등) / 의상 墨绿 치파오 / Hair 1960s bouffant chignon / Lip 豆沙唇 / Outfit 旗袍(墨绿 자카드 실크, 높은 칼라) / Props tiffin carrier / Scene stone stair alley, 이끼 낀 젖은 돌계단과 얼룩진 시멘트 벽 / Light 钨丝灯(낮은 호박색 가로등)이 위에서 / Optics Kodak Vision3 500T, 胶片颗粒 / Expression 落寞, 고개를 숙이고 렌즈를 스쳐 지나감 / Pose 계단 안쪽으로 천천히 걷는다 |
+| S3 重庆大厦 (滤镜 #045) | A | 단서: 장소 상가 복도(형광등) / 소품 선글라스·소다 캔 / 시간대 - / 의상 카키 트렌치 / Hair 바람에 흐트러져 얼굴을 가리는 검은 생머리(face-clear 끔) / Lip 물기 있는 맨 입술(립 줄 없음) / Outfit 风衣 / Props 墨镜, soda can / Scene 重庆大厦, 혼잡한 실내 상가 복도 / Light 荧光灯(차갑고 푸른 흰빛, 깜빡임) / Optics 抽帧, Handheld Jitter, 굵고 촘촘한 16mm 입자 / Expression 예민하고 경계하는 눈, 선글라스 아래로 렌즈를 흘끗 / Pose 혼잡한 복도를 빠르게 걷는다 |
+| S4 霓虹眼神光 (神态 #079) | A | 단서: 장소 네온 간판 거리·젖은 아스팔트 / 소품 - / 시간대 밤 / 의상 슬립 드레스·큰 코트 / Hair 港风大波浪, 긴 검은 곱슬이 양 어깨에 / Lip 车厘子红 / Outfit 吊带裙 + oversized wool coat / Scene 九龙霓虹 아래 젖은 아스팔트 거리 / Light 霓虹双色侧光, 彩色霓虹眼神光 / Optics 胶片颗粒 / Expression 眼神迷离, 턱을 살짝 든다 |
+| S5 快餐店 (滤镜 #048) | C | 단서: 장소 패스트푸드점·빨간 플라스틱 테이블 / 소품 - / 시간대 - / 의상 검은 V넥 슬리브리스 드레스 (턱 괴기·초광각 클로즈업·단발은 포즈·카메라·헤어라 단서로 세지 않는다) / Hair 이마 앞에 흩어진 살짝 젖은 검은 단발(face-clear 끔), 크고 복고풍인 금속 귀걸이 / Lip 正红唇 / Outfit 검은 V넥 실크 슬리브리스 드레스 / Pose 托腮, 빨간 플라스틱 식탁에 엎드려 / Scene 快餐店 / Light 荧光灯 직사(차가운 청백색) / Optics 超广角畸变, 굵은 입자 / Camera 렌즈가 얼굴에서 30cm / Expression 冷眼, 렌즈를 직시 |
+| S6 百叶窗 (滤镜 #047) | D | 단서: 장소 녹색 덧창 방·열대 식물 / 소품 - / 시간대 습한 낮(비 오는 창밖) / 의상 숲 녹색 치파오 / Hair parted straight hair, 귀 옆으로 자연스럽게 / Lip 豆沙唇, 무광 깊은 톤 / Outfit 旗袍(숲 녹색 크레이프 새틴, 반팔 긴 원피스) / Pose standing at louvres / Scene 绿色百叶窗, 반쯤 열린 낡은 녹색 덧창과 창밖의 젖은 활엽 식물 / Light green louvre light(열대 흐린 하늘의 차가운 청백빛) / Optics 青绿偏色 / Expression 落寞, 소원하고 담담하게 창밖을 본다 |
 
 ## 포즈·구도 쌍
 | 번호 | 갈래 | Pose | Camera |
