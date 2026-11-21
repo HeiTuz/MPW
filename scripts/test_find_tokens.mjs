@@ -167,7 +167,7 @@ assert.ok(search({ terms: ['长焦压缩'], layers: ['optics'] })[0].matches.len
 for (const q of ['90년대 홍콩영화(왕가위 감성)', '왕가위', '港风', '홍콩 영화']) {
   out = run(['--q', q, '--limit', '2']);
   assert.equal(out.status, 0, out.stderr);
-  assert.match(out.stdout, /^## Look card\n.+ — references\/image\/looks\/wong-kar-wai\.md\nread: node scripts\/read_refs\.mjs references\/image\/looks\/wong-kar-wai\.md\n/, q);
+  assert.match(out.stdout, /^## Look card\n.+ — references\/image\/looks\/wong-kar-wai\.md\nread: node scripts\/read_look\.mjs wong-kar-wai --outline\nbranch: node scripts\/read_look\.mjs wong-kar-wai --branch /, q);
   assert.deepEqual(JSON.parse(run(['--q', q, '--json']).stdout).looks.map((l) => l.slug), ['wong-kar-wai'], q);
 }
 for (const q of ['홍콩', '신중식,찻집', '老钱风', '홍콩 여행 스냅']) {
@@ -187,7 +187,7 @@ for (const [q, slug] of [['필카 감성, 한강', 'korea-old-film-light-leak'],
   const json = JSON.parse(run(['--q', q, '--json']).stdout);
   assert.deepEqual(json.looks, [], q);
   assert.ok(json.candidates.some((c) => c.slug === slug && c.summary && c.file === `references/image/looks/${slug}.md`), `${q} offers ${slug}`);
-  assert.ok(out.stdout.includes(`read: node scripts/read_refs.mjs references/image/looks/${slug}.md`), q);
+  assert.ok(out.stdout.includes(`read: node scripts/read_look.mjs ${slug} --outline`), q);
 }
 // Candidates come out closest to the request first: a culture cue (한강, 도쿄) puts that culture's card first, and the cap of 6 cuts after sorting.
 {
@@ -209,7 +209,7 @@ assert.ok(!run(['--q', '老钱风']).stdout.includes('candidates'));
 for (const q of ['캘리포니아 골든아워, Kodak Gold 200', '캘리포니아 골든아워 코닥 골드 200']) {
   const both = JSON.parse(run(['--q', q, '--json']).stdout).looks;
   assert.deepEqual(both.map((l) => [l.slug, l.axis]), [['california-golden-hour', '장면'], ['kodak-gold-200', '매체']], q);
-  assert.match(run(['--q', q, '--limit', '1']).stdout, /^## Look card\n.+ \[장면\] — .+\nread: .+\n.+ \[매체\] — .+\nread: /, q);
+  assert.match(run(['--q', q, '--limit', '1']).stdout, /^## Look card\n.+ \[장면\] — .+\nread: .+\nbranch: .+\n.+ \[매체\] — .+\nread: /, q);
 }
 // A name's words that are scattered over the query call nothing (they stay candidates); a comma or one other word between them is fine.
 {
@@ -231,16 +231,18 @@ for (const q of ['no Kodak Gold, clean digital color', 'Kodak Gold 말고 디지
   const order = (q) => JSON.parse(run(['--q', q, '--json']).stdout).looks.map((l) => l.slug);
   assert.deepEqual(order('Kodak Gold 200, 캘리포니아 골든아워'), ['kodak-gold-200', 'california-golden-hour']);
   assert.deepEqual(order('캘리포니아 골든아워, Kodak Gold 200'), ['california-golden-hour', 'kodak-gold-200']);
-  assert.match(run(['--q', 'Kodak Gold 200, 캘리포니아 골든아워', '--limit', '1']).stdout, /^## Look card\n.+ \[매체\] — .+\nread: .+\n.+ \[장면\] — .+\nread: /);
+  assert.match(run(['--q', 'Kodak Gold 200, 캘리포니아 골든아워', '--limit', '1']).stdout, /^## Look card\n.+ \[매체\] — .+\nread: .+\nbranch: .+\n.+ \[장면\] — .+\nread: /);
 }
 // Nouvelle Vague has its own card now.
 assert.deepEqual(JSON.parse(run(['--q', 'Nouvelle Vague', '--json']).stdout).looks.map((l) => l.slug), ['nouvelle-vague-16mm']);
 // The card path in the block is the path read_refs.mjs reads (documented command works as printed).
 {
-  const cmd = run(['--q', '왕가위']).stdout.match(/^read: node (scripts\/read_refs\.mjs) (\S+)$/m);
-  const read = spawnSync(process.execPath, [path.join(scripts, '..', cmd[1]), cmd[2]], { encoding: 'utf8', cwd: path.join(scripts, '..') });
+  const cmd = run(['--q', '왕가위']).stdout.match(/^read: node (scripts\/read_look\.mjs) (\S+) (--outline)$/m);
+  const read = spawnSync(process.execPath, [path.join(scripts, '..', cmd[1]), cmd[2], cmd[3]], { encoding: 'utf8', cwd: path.join(scripts, '..') });
   assert.equal(read.status, 0, read.stderr);
   assert.match(read.stdout, /^# 王家卫 · 港风/m);
+  const branch = spawnSync(process.execPath, [path.join(scripts, '..', cmd[1]), cmd[2], '--branch', 'A'], { encoding: 'utf8', cwd: path.join(scripts, '..') });
+  assert.equal(branch.status, 0, branch.stderr);
 }
 
 // A tag that is a look card's calling name matches only a term equal to it: the medium word "폴라로이드" does not pull the swimsuit rows the Polaroid cards use,

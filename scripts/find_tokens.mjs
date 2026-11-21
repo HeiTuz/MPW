@@ -284,11 +284,11 @@ export function drawRandom(results, count, pickIndex = randomInt) {
 }
 
 const cardBlock = (cards) => (cards.length
-  ? `## Look card\n${cards.map((c) => `${c.title} [${c.axis}] — ${c.file}\nread: node scripts/read_refs.mjs ${c.file}`).join('\n')}\n(read the card before the layer rows below; it fills the layers this look carries)\n\n`
+  ? `## Look card\n${cards.map((c) => `${c.title} [${c.axis}] — ${c.file}\nread: node scripts/read_look.mjs ${c.slug} --outline\nbranch: node scripts/read_look.mjs ${c.slug} --branch <A|B|C|D> [--set S<n>] [--pair <n>]`).join('\n')}\n(read the outline first and choose the branch, set and pair; then run the branch command for that branch only. Read the card before the layer rows below; it fills the layers this look carries. Without a shell, open the card file whole.)\n\n`
   : '');
 
 const candidateBlock = (candidates) => (candidates.length
-  ? `## Look card candidates\n(no card was named exactly; these cards list a word of your query as a general word. Pick the first one whose summary fits the medium or look the request asks for and read it; if none fits, or the request names no medium or look, write without a card.)\n${candidates.map((c) => `- ${c.title} [${c.axis}, ${c.culture}] — ${c.summary}\n  read: node scripts/read_refs.mjs ${c.file}`).join('\n')}\n\n`
+  ? `## Look card candidates\n(no card was named exactly; these cards list a word of your query as a general word. Pick the first one whose summary fits the medium or look the request asks for and read it; if none fits, or the request names no medium or look, write without a card.)\n${candidates.map((c) => `- ${c.title} [${c.axis}, ${c.culture}] — ${c.summary}\n  read: node scripts/read_look.mjs ${c.slug} --outline`).join('\n')}\n\n`
   : '');
 
 export function formatText(results, cards = [], candidates = []) {
