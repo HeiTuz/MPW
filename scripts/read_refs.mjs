@@ -8,6 +8,7 @@
 //   node scripts/read_refs.mjs --toc references/image/lanes.md
 //   node scripts/read_refs.mjs --bundle gpt-image-portrait references/image/from-image.md#1
 //   node scripts/read_refs.mjs --bundles
+//   node scripts/read_refs.mjs --bundle gpt-image-portrait --part 1/3
 //
 // A section runs from its heading to the next heading of the same or higher
 // level. "#A,B" reads several sections, "#A~B" reads from A through the end of B,
@@ -21,6 +22,11 @@
 // targets after a bundle are read in order. "--bundles" lists every bundle with
 // its targets and current character count. BUNDLES is the only definition of
 // these sets; SKILL.md refers to them by name.
+//
+// "--part n/m" prints only the n-th of m pieces of the output, cut at section
+// boundaries so the pieces have about the same size. The first line says
+// "part n of m, next: <command>", so a long bundle can be read piece by piece
+// when one tool output cannot hold it.
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
@@ -276,7 +282,52 @@ function listBundles() {
     .join("\n");
 }
 
-function main(argv) {
+// "--part n/m" (or "--part=n/m") leaves argv and is returned apart from the other arguments.
+export function parsePart(argv) {
+  const rest = [];
+  let part = null;
+  for (let index = 0; index < argv.length; index += 1) {
+    const arg = argv[index];
+    let value;
+    if (arg === "--part") {
+      index += 1;
+      value = argv[index] ?? "";
+    } else if (arg.startsWith("--part=")) {
+      value = arg.slice("--part=".length);
+    } else {
+      rest.push(arg);
+      continue;
+    }
+    const match = /^(\d+)\/(\d+)$/.exec(value);
+    if (!match || Number(match[1]) < 1 || Number(match[1]) > Number(match[2])) {
+      return { error: `bad --part ${JSON.stringify(value)} (use n/m with 1 <= n <= m, for example 1/3)` };
+    }
+    part = { n: Number(match[1]), m: Number(match[2]) };
+  }
+  return { rest, part };
+}
+
+// Give each chunk to the part that holds the middle of it, so the parts stay in order and about equal in size.
+export function partitionChunks(chunks, m) {
+  const sizes = chunks.map((chunk) => [...chunk].length);
+  const total = sizes.reduce((sum, size) => sum + size, 0);
+  let before = 0;
+  return chunks.map((_, index) => {
+    const middle = before + sizes[index] / 2;
+    before += sizes[index];
+    return total === 0 ? 0 : Math.min(m - 1, Math.floor((middle * m) / total));
+  });
+}
+
+const shellQuote = (arg) => (/^[\w@%+=:,./#~-]+$/.test(arg) ? arg : `"${arg.replace(/(["\\$`])/g, "\\$1")}"`);
+
+function main(rawArgv) {
+  const parsed = parsePart(rawArgv);
+  if (parsed.error) {
+    console.error(`read_refs: ${parsed.error}`);
+    return 2;
+  }
+  const argv = parsed.rest;
   if (argv.includes("--bundles")) {
     console.log(listBundles());
     return 0;
@@ -288,19 +339,27 @@ function main(argv) {
     return 2;
   }
   if (targets.length === 0) {
-    console.error("usage: read_refs.mjs [--toc] [--bundle <name>] <file>[#section[,section|~section]] ...  |  --bundles");
+    console.error("usage: read_refs.mjs [--toc] [--bundle <name>] [--part n/m] <file>[#section[,section|~section]] ...  |  --bundles");
     return 2;
   }
   let failed = 0;
-  for (const result of targetChunks(targets, readSource, toc)) {
-    if (result.error) {
-      console.error(`read_refs: ${result.error}`);
-      if (result.toc) console.error(result.toc);
-      failed += 1;
-    } else {
-      console.log(result.chunk);
-    }
+  const results = [...targetChunks(targets, readSource, toc)];
+  for (const result of results.filter((item) => item.error)) {
+    console.error(`read_refs: ${result.error}`);
+    if (result.toc) console.error(result.toc);
+    failed += 1;
   }
+  const chunks = results.filter((item) => !item.error).map((item) => item.chunk);
+  if (!parsed.part) {
+    for (const chunk of chunks) console.log(chunk);
+    return failed ? 1 : 0;
+  }
+  const { n, m } = parsed.part;
+  const owner = partitionChunks(chunks, m);
+  const mine = chunks.filter((_, index) => owner[index] === n - 1);
+  const next = n < m ? `next: node scripts/read_refs.mjs ${[...argv, "--part", `${n + 1}/${m}`].map(shellQuote).join(" ")}` : "last part";
+  console.log(`part ${n} of ${m}, ${next}${mine.length ? "" : " (no section falls in this part)"}\n`);
+  for (const chunk of mine) console.log(chunk);
   return failed ? 1 : 0;
 }
 
