@@ -15,7 +15,7 @@
 <!-- lexicon-counts:start -->
 | 층 | 파일 | 행 수 | KR | CN | JP | US | FR |
 |---|---|---|---|---|---|---|---|
-| Optics | [lexicon/optics.md](lexicon/optics.md) | 445 | 23 | 43 | 183 | 152 | 44 |
+| Optics | [lexicon/optics.md](lexicon/optics.md) | 446 | 23 | 43 | 184 | 152 | 44 |
 | Light | [lexicon/light.md](lexicon/light.md) | 257 | 28 | 67 | 35 | 84 | 43 |
 | Pose | [lexicon/pose.md](lexicon/pose.md) | 444 | 36 | 129 | 69 | 121 | 89 |
 | Outfit | [lexicon/outfit.md](lexicon/outfit.md) | 652 | 140 | 116 | 169 | 115 | 112 |

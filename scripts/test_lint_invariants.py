@@ -480,6 +480,25 @@ drifted rule\n"""
         self.assertTrue(any("compiler.md" in error and catalog in error for error in errors), errors)
         self.assertFalse(any("soul-v2-director.md" in error for error in errors), errors)
 
+    def test_i22b_allows_hyphenated_camera_models_only_in_cards_and_lexicon(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            image = root / "references" / "image"
+            (image / "looks").mkdir(parents=True)
+            (image / "lexicon").mkdir()
+            model = "DSC-P" + str(10)
+            other = "DMX-C" + str(1)
+            bare = "P" + str(10)
+            (image / "looks" / "card.md").write_text(f"Sony Cyber-shot {model} and {other}\n", encoding="utf-8")
+            (image / "lexicon" / "optics.md").write_text(f"| {model} |\n", encoding="utf-8")
+            (image / "looks" / "bare.md").write_text(f"catalog {bare} row\n", encoding="utf-8")
+            (image / "compiler.md").write_text(f"camera {model}\n", encoding="utf-8")
+            errors = []
+            lint.check_code_family_shapes(root, errors)
+        self.assertFalse(any("card.md" in error or "optics.md" in error for error in errors), errors)
+        self.assertTrue(any("bare.md" in error for error in errors), errors)
+        self.assertTrue(any("compiler.md" in error for error in errors), errors)
+
     def test_i23_requires_named_anchor_when_file_exists(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)

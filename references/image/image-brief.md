@@ -412,7 +412,7 @@ palette — Crimson silk, black wool, wet black asphalt, with red and green neon
 wet street — Rain sheets off the arcade edge in a bright curtain, and the asphalt beyond is black and mirror-wet.
 
 ## Light
-霓虹切光 — A red neon sign at camera left lights the left side of her face and the silk, while green tube light from farther down the street edges her right cheek and shoulder, the two colors meeting along her nose.
+霓虹双色侧光 — A red neon sign at camera left lights the left side of her face and the silk, while green tube light from farther down the street edges her right cheek and shoulder, the two colors meeting along her nose.
 彩色霓虹眼神光 — Thin red and green neon strips mirror as colored streaks in her irises.
 雨夜 — Every sign and lamp wears a soft cold halo of mist, and the falling rain catches the neon as short bright streaks.
 

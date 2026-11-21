@@ -10,7 +10,7 @@
 ## 고정 사실 (모든 갈래가 지킨다)
 | 슬롯 | 값 |
 |---|---|
-| medium | 16mm 시네마 네거티브로 찍은 영화 스틸. 스냅·화보가 아니다. 첫 줄은 `A 1960s Paris French New Wave film still shot on handheld 16mm cinema negative`로 시작한다(B 갈래는 `…shot on handheld black-and-white 16mm negative`). 매체 구절은 `French New Wave film still shot on handheld 16mm cinema negative`이고 `1960s Paris`는 시대·장소 구절이라 사용자가 다른 도시나 시대를 말하면 그것으로 바꾼다 |
+| medium | 16mm 시네마 네거티브로 찍은 영화 스틸. 스냅·화보가 아니다. 첫 줄은 `A 1960s Paris French New Wave film still shot on handheld 16mm cinema negative`로 시작한다(B 갈래는 반전 필름이라 `…shot on handheld black-and-white reversal 16mm film`). 매체 구절은 `French New Wave film still shot on handheld 16mm cinema negative`이고 `1960s Paris`는 시대·장소 구절이라 사용자가 다른 도시나 시대를 말하면 그것으로 바꾼다 |
 | closer | `Photogramme Nouvelle Vague` |
 | time | 흐린 파리의 낮이 기본이다(C는 맑은 여름 낮이나 비 갠 오후). 이른 아침, 늦은 오후, 황혼, 실내 저녁도 된다 |
 | light-key | 있는 빛: 흐린 하늘, 창빛, 실내 텅스텐 전구, 낮은 해(C는 잎·우산을 지나는 낮 햇빛과 비 갠 하늘빛) |
@@ -23,7 +23,7 @@
 | 갈래 | 요청에 이 말이 있으면 | 성격 | Iris 근거 |
 |---|---|---|---|
 | A Rive Gauche (기본) | 좌안, 생제르맹, 카페, 마리니에르, 트렌치, 지하철, 고다르, 흐린 날, 비 오는 밤, 벽난로 | 흐린 하늘과 텅스텐 실내, 굵은 입자, 어깨에 멘 카메라 | 滤镜 #001 #006 #007 #009 #011 #012 #015~#017 #019, 风格 #021~#023 |
-| B Noir et Blanc | 흑백(카페 장면의 흑백도 B), 은염, 센강, 다리 아래, 헤링본 코트, 트뤼포, 400번의 구타, 카르티에 브레송 | 16mm 흑백 네거티브, 깊은 검정과 회색 계조 | 滤镜 #003, 风格 #006 #031 |
+| B Noir et Blanc | 흑백(카페 장면의 흑백도 B), 은염, 센강, 다리 아래, 헤링본 코트, 트뤼포, 400번의 구타, 카르티에 브레송 | 16mm 흑백 반전 필름, 깊은 검정과 회색 계조 | 滤镜 #003, 风格 #006 #031 |
 | C Plein jour | 여름, 올리브, 밀밭, 몽마르트 계단, 역광, 라벤더, 아침 발코니, 로메르, 바르다, 쉘부르의 우산 | 맑은 낮빛과 곱고 살아 있는 입자, 낮은 해와 플레어 | 滤镜 #002 #004 #005 #008 #013 #014 #018 #020 |
 | D Gros plan | 클로즈업, 오디션, 스크린 테스트, 얕은 심도, 정면 시선 | T1.3 개방, 눈동자에만 초점, 귀와 머리가 녹는 근접 얼굴 | 滤镜 #010 |
 
@@ -37,7 +37,7 @@
 | base, lip | 카드 줄이 이긴다(base 줄은 FR 문화권 공식의 주근깨를 되풀이하지 않는다) | Iris 고정문의 浆果玫瑰唇가 #006 #011 #013의 입술색 위에 둘째 입술색을 얹었다 |
 | catchlight | 카드 줄이 이긴다 | #012의 불꽃 두 점이 고정 줄의 점 하나와 어긋난다 |
 | grain | 카드 줄이 이긴다(Optics의 `16mm` 줄은 입자를 말하지 않고 갈래별 grain 줄이 입자를 정한다) | 고정 줄의 고운 입자와 Iris의 굵은 16mm 입자(#001 #006 #017)가 어긋난다 |
-| realism | 모든 갈래에서 바꾼다. `8K`·땀구멍 줄 대신 `native resolution` 줄을 쓴다. 매체 구절은 `16mm cinema negative frame`, 질감은 `visible 16mm grain, softened highlights and skin that shows no individual pores` | 16mm 필름의 입자와 해상도에 8K 모공 묘사를 얹으면 룩의 정체와 반대다 |
+| realism | 모든 갈래에서 바꾼다. `8K`·땀구멍 줄 대신 `native resolution` 줄을 쓴다. 매체 구절은 `16mm cinema negative frame`(B 갈래는 `black-and-white reversal 16mm film frame`), 질감은 `visible 16mm grain, softened highlights and skin that shows no individual pores` | 16mm 필름의 입자와 해상도에 8K 모공 묘사를 얹으면 룩의 정체와 반대다 |
 | lens | 켠다. 렌즈를 말하는 줄은 정확히 하나이고 출처는 세트의 렌즈 > 쌍의 렌즈 > 갈래의 렌즈 줄 > 고정 몫 `自然透视` 줄 순이다. 세트: S6만 렌즈를 말한다(Optics `Zeiss Super Speed T1.3` 줄). 쌍: 쌍 10은 Camera 줄 `telephoto compression`이 렌즈 줄이다(S4·S5의 본체 줄은 렌즈를 말하지 않는다). 갈래 줄: D는 Optics `Zeiss Super Speed T1.3` 줄(쌍 11·12의 Camera 줄은 렌즈를 말하지 않는다). A·B·C는 갈래 렌즈 줄이 없다. 고정 몫: 그 밖의 모든 조합(쌍 1~9, 쌍 10이 아닌 C, S1~S5의 A·B·C)은 `自然透视` 줄이 렌즈 줄이다. 쌍 7·8은 카메라 각도만 말한다 | #010(T1.3 근접)과 `뒤로 물러선 표준~중망원` 문장이 공존했다. 세트·쌍·갈래가 함께 걸릴 때 어느 줄이 렌즈 줄인지 한 가지로 정했다 |
 | framing | 켠다. 쌍 3·5·8·11·12는 범위를 직접 말하니 그때는 3:4만 쓴다 | 나머지 쌍은 범위를 말하지 않는다 |
 | ratio | 켠다. 사용자 비율이 없으면 3:4 세로 | 쌍은 비율을 정하지 않는다 |
@@ -129,7 +129,7 @@
 |---|---|---|
 | 전부 | format | 16mm film — In this look, the softened highlights and slightly muted contrast of 16mm cinema stock. |
 | A | stock | Kodak Vision3 500T — A tungsten-balanced cinema negative that in this look reads as red-orange skin in lamplight, shadows leaning slightly cool-green and blacks held deep. |
-| B | stock | Eastman Double-X 7222 — A black-and-white 16mm negative with pure monochrome tone, ink-deep blacks and bright highlights that stay open. |
+| B | stock | Kodak Tri-X Reversal 7266 — A black-and-white reversal 16mm film with pure monochrome tone, ink-deep blacks and bright highlights that stay open. |
 | C | stock | Kodak Vision3 250D — Daylight cinema negative: neutral-warm natural color and supple highlights. |
 | A | camera | ARRI 16SR3 — A handheld 16mm cinema camera, rendered in this look with softly rolled-off highlights and slightly uneven corner sharpness. |
 | D | lens | Zeiss Super Speed T1.3 — A wide-open fast prime with a razor-thin focal plane on the near pupil, ears and hair melting into soft blur. |
@@ -145,7 +145,7 @@
 |---|---|---|
 | S1 생제르맹 카페 모퉁이 (滤镜 #001) | A | 단서: 장소 생제르맹 카페 테라스·등나무 의자 / 소품 - / 시간대 오후 / 의상 줄무늬 상의 / Hair Coiffure effet saut du lit(깊은 갈색 곱슬 장발, 부스스) + Frange rideau / Base Teint nu / Lip 베리 로즈 / Outfit Marinière classique bretonne / Scene Terrasse de Café, 모퉁이 등나무 의자에 앉는다 / Light Paris Overcast Light(오후) / Optics ARRI 16SR3, Kodak Vision3 500T, Gros grain, 암부는 따뜻한 청회색, 절제된 하이라이트 번짐 / Expression Nonchalance parisienne, 자신 있게 렌즈를 본다 |
 | S2 쌍둥이 카페 해 질 녘 (滤镜 #006) | A | 단서: 장소 카페 안 붉은 벨벳 의자·큰 창 / 소품 커피잔 / 시간대 황혼 / 의상 카라멜 니트 스웨터 / Hair Coiffé-décoiffé(깊은 갈색 곱슬 중단발, 귀 뒤로) + Frange rideau / Lip 말린 장미색 무광 / Outfit 카라멜색 가는 니트 울 스웨터 / Props tasse d'expresso / Scene Banquette de café, 붉은 벨벳 의자와 큰 창 / Light Lumière tungstène(놋쇠 천장등의 따뜻한 호박빛)과 창밖 황혼의 짙은 파랑이 옆얼굴에서 만난다, 그림자는 붉은 갈색 / Optics ARRI 16SR3, Kodak Vision3 500T, 짙은 동적 Gros grain / Expression 창밖 행인을 보는 나른한 얼굴 / Pose 의자에 앉아 커피잔을 든다 |
-| S3 센강 다리 밑 흑백 (滤镜 #003) | B | 단서: 장소 센강 다리 밑 돌 제방 / 소품 - / 시간대 안개 낀 겨울 낮 / 의상 헤링본 롱코트 (흑백은 매체 단서라 갈래 B를 정한다) / Hair 깊은 갈색 흐트러진 어깨 길이 머리 + 이마를 스치는 Frange rideau / Lip 입술선만 또렷한 맨 입술 / Outfit pardessus(짙은 회색 헤링본) + Col roulé(검정) / Scene quai de Seine, 겨울 예술의 다리 아래 돌 제방 / Light Paris Overcast Light, 물안개와 찬 흐린 하늘 / Optics ARRI 16SB, Eastman Double-X 7222(16mm 흑백 네거티브), Grain argentique, 은회색 하이라이트, 촘촘한 회색 계조 / Expression 깊고 집중한 눈으로 앞을 보는 단단한 얼굴 / Pose 성큼성큼 걷는다 |
+| S3 센강 다리 밑 흑백 (滤镜 #003) | B | 단서: 장소 센강 다리 밑 돌 제방 / 소품 - / 시간대 안개 낀 겨울 낮 / 의상 헤링본 롱코트 (흑백은 매체 단서라 갈래 B를 정한다) / Hair 깊은 갈색 흐트러진 어깨 길이 머리 + 이마를 스치는 Frange rideau / Lip 입술선만 또렷한 맨 입술 / Outfit pardessus(짙은 회색 헤링본) + Col roulé(검정) / Scene quai de Seine, 겨울 예술의 다리 아래 돌 제방 / Light Paris Overcast Light, 물안개와 찬 흐린 하늘 / Optics ARRI 16SB, Kodak Tri-X Reversal 7266(16mm 흑백 반전 필름), Grain argentique, 은회색 하이라이트, 촘촘한 회색 계조 / Expression 깊고 집중한 눈으로 앞을 보는 단단한 얼굴 / Pose 성큼성큼 걷는다 |
 | S4 프로방스 올리브 그늘 (滤镜 #002) | C | 단서: 장소 올리브 나무 그늘·밀밭 / 소품 - / 시간대 여름 오후 / 의상 체리 꽃무늬 원피스 / Hair 햇빛에 금갈색으로 바랜 깊은 갈색 곱슬 장발, 바람에 날리는 Frange rideau / Base Teint nu, 햇볕에 달아오른 맨 베이스 / Lip 물기 있는 복숭아빛 옅은 붉은색 / Outfit Robe portefeuille(체리색 작은 꽃무늬 티 드레스) / Props 한 손으로 치맛자락을 잡는다 / Scene Oliveraie, 금빛 밀밭 옆 올리브 그늘 길 / Light 여름 오후 햇빛이 잎을 뚫고 쏟아진다 / Optics Aaton XTR Prod, Kodak Vision3 250D, Grain fin, 우유빛 하이라이트, 올리브 잎과 꽃무늬가 진하지만 부드럽다 / Expression 웃으며 렌즈를 본다 / Pose 치맛자락을 잡고 걷는다 |
 | S5 쉘부르 우산 가게 (滤镜 #005) | C | 단서: 장소 쉘부르 우산 가게·분홍·노랑 벽 / 소품 투명 우산 / 시간대 비 갠 오후 / 의상 하늘색 플리츠 스커트 / Hair 연분홍 리본으로 느슨하게 묶은 깊은 갈색 장발 + Frange rideau / Lip 산호빛 분홍 주황 / Outfit 연노랑 짧은 니트 가디건 + 하늘색 플리츠 스커트 / Props Parapluie transparent / Scene Rue Crémieux, 분홍·노랑 벽의 오래된 가게 앞 / Light 비 갠 오후 하늘빛이 우산을 지나 쏟아진다, 맑고 가벼운 그림자 / Optics ARRI 16SR2, Fuji Eterna 250D, 마카롱 파스텔, 꿈결 같은 광조 / Expression 눈웃음으로 하늘을 올려다보는 장난스러운 얼굴 |
 | S6 오디션 클로즈업 (滤镜 #010) | D | 단서: 장소 오디션 룸·흰 천 배경 / 소품 - / 시간대 - / 의상 숯회색 캐시미어 브이넥 (클로즈업·정면 시선은 구도·표정이라 단서로 세지 않는다) / Hair Coiffé-décoiffé(곱슬 잔머리가 뺨에 흩어진다) / Base Teint nu, 파운데이션 느낌 없는 맨 피부 / Lip 물기 있는 살구빛 분홍, 살짝 다문다 / Outfit 숯회색 두툼한 깊은 브이넥 캐시미어, 쇄골이 보인다 / Scene 오디션 룸의 흰 천 배경 / Light 부드러운 옆면 확산광 / Optics Aaton XTR Prod, Zeiss Super Speed T1.3, 가까운 눈동자와 콧등에만 초점, 귀와 머리끝은 녹는다, 짙고 고운 Grain fin / Camera Gros plan / Expression Regard fixe vers l'objectif, 살피듯 무심하게 정면을 본다 |
