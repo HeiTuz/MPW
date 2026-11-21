@@ -13,7 +13,7 @@
 | medium | 고해상 디지털 카메라로 찍은 현대 중국 미술관 인물 사진. 스냅도 패션 룩북도 아니다. 첫 줄은 `A contemporary Chinese art-museum portrait shot on a high-resolution digital camera`로 시작한다(B 갈래는 끝에 `in pure monochrome`을 붙인다) |
 | closer | `美术馆人像` |
 | time | 낮의 실내이거나 불 꺼진 어두운 홀. 건축 밖 풍경이 읽히지 않는다(C의 유리 커튼월 역광만 하늘이 약하게 보인다). 해는 천창·틈·유리로만 들어오고 황혼·야경은 없다 |
-| light-key | 건축이 만든 차가운 광원 하나: 천창 확산광, 측상방 단일 광, 천정 선형 등, 좁은 틈이나 스포트(약 5000–6500K). 백열 전구색과 촛불은 없다 |
+| light-key | 건축이 만든 차가운 광원 하나: 천창 확산광, 측상방 단일 광, 천정 선형 등, 좁은 틈이나 스포트(약 5000–6500K, 광원을 잰 값이 아니라 이 룩에서 정한 연출 값이다). 백열 전구색과 촛불은 없다 |
 | palette | 순백, 콘크리트 회색, 석고 흰색, 먹빛 검정. 채도 높은 색은 입술 하나(D에서만 비취 녹색 점이 하나 더 붙을 수 있다). B는 완전한 무채색. 따뜻한 노랑·파스텔 없음 |
 | grain | 맑은 화질. 극미한 디지털 노이즈가 가장 어두운 곳에만 앉는다(B는 아주 가는 은염 입자가 회색 단계 위에 얹힌다) |
 | lens | 표준~중망원 단초점(약 35–110mm). 얼굴 모서리까지 선명해서 모공과 직물 결이 보이고, 인물 뒤 건축은 읽힌다. 왜곡 없음(S2는 24mm 광각, S3는 90–280mm 망원) |
@@ -36,7 +36,7 @@
 | blush | A·B·C에서 끈다. D는 고정 몫이 그대로 붙는다 | 장밋빛 번짐이 냉백 마감 베이스와 석고 무광(#072)을 따뜻하게 만들고, 흑백(B)에서는 회색 단계를 흐린다 |
 | catchlight | C는 끈다. D는 카드 줄이 이긴다: `环形灯`를 고르면 그 줄의 동공 링이 캐치라이트이고 `窗格眼神光` 줄은 쓰지 않는다. `无影棚拍`이나 쌍 11(`微距特写`)이면 `窗格眼神光` 줄 하나만 쓴다 | C는 빛 줄기가 눈에 닿거나 눈이 암전이라 따로 점을 찍으면 부딪히고(#065 #067), D는 점의 모양이 광원 모양(환형·직사각형)이라 고정 줄의 창 모양 점과 다르다(#073 #074) |
 | grain | B는 카드 줄이 이긴다. A·C·D는 고정 몫이 그대로 붙는다 | #070의 은염 입자와 고정 몫의 디지털 노이즈 문장은 모양이 다르다 |
-| lens | 켠다. 어느 쌍·세트를 골라도 렌즈를 말하는 줄은 정확히 하나다. A·D는 Optics의 `85mm 人像` 줄이 lens 줄이라 고정 몫 `无畸变`을 붙이지 않는다. B·C는 카드에 lens 줄이 없으니 고정 몫 `无畸变` 줄이 lens 줄이다. 예외: 쌍 8(B)은 Camera의 `长焦压缩` 줄이 lens 줄이라 `无畸变`을 붙이지 않고, 쌍 11(D)은 D의 `微距特写` 줄이 `85mm 人像` 대신 lens 줄이다. 세트가 렌즈를 말하면(S2 광각 24mm, S3 망원 90–280mm, S4 Summicron 35mm, S5 Nikkor 50mm) 그 값이 위 줄을 대신하고, S2는 얼굴을 프레임 가장자리에 두지 않는다. S1·S6은 `85mm 人像`이 세트 값과 같다 | Iris의 50mm 평시 꼬리와 #066(24mm)·#074(90mm 접사)가 한 프롬프트에 공존했다 |
+| lens | 켠다. 어느 쌍·세트를 골라도 렌즈를 말하는 줄은 정확히 하나이고 출처 순서는 세트의 렌즈 > 쌍의 렌즈 > 갈래의 본체·렌즈 줄 > 고정 몫이다. A·D는 Optics의 `85mm 人像` 줄이 lens 줄이라 고정 몫 `自然透视`를 붙이지 않는다. B·C는 갈래 줄에 lens 줄이 없으니 고정 몫 `自然透视` 줄이 lens 줄이다. 예외: 쌍 8(B)은 Camera의 `长焦压缩` 줄이 lens 줄이라 `自然透视`를 붙이지 않고, 쌍 11(D)은 D의 `微距特写` 줄이 `85mm 人像` 대신 lens 줄이다. 세트가 렌즈를 말하면(S2 광각 24mm, S3 망원 90–280mm, S4 Summicron 35mm, S5 Nikkor 50mm) 그 값이 위 줄을 대신하고, S2는 얼굴을 프레임 가장자리에 두지 않는다. S1·S6은 `85mm 人像`이 세트 값과 같다. 세트와 쌍이 함께 렌즈를 말하면 세트가 이긴다(S3에 쌍 8을 붙이면 쌍의 Camera 줄에서 망원 말을 뺀다) | Iris의 50mm 평시 꼬리와 #066(24mm)·#074(90mm 접사)가 한 프롬프트에 공존했다 |
 | framing | 켠다. 쌍의 Camera 줄은 자리·각도·구도 기법을 정하고 프레임 범위는 fixed-lines.md의 framing 줄이 정한다. 쌍이 범위를 직접 말하면(3·4·5·7·11·12번) 그 말과 부딪히지 않게 쓴다 | 쌍 대부분이 프레임 범위를 말하지 않는다 |
 | ratio | 켠다. 사용자 비율이 없으면 3:4 세로 | 쌍은 비율을 정하지 않는다 |
 
@@ -150,27 +150,27 @@
 ## Optics
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
-| A | stock | Sony A7R V — A high-resolution full-frame body rendering cool grey-white tones and clean matte detail under soft light. |
+| A | stock | Sony A7R V — A high-resolution full-frame body that in this look shows cool grey-white tones and clean matte detail under soft light. |
 | A | color | 冷灰 — A pale grey palette with a trace of blue, restrained contrast and clean cold whites. |
 | A, D | lens | 85mm 人像 — An 85mm prime held sharp to the corners so pores and fabric weave read crisply, the architecture behind the figure softening only slightly. |
 | D | lens-macro | 微距特写 — Close focus at about life size with a razor-thin plane set on the iris, so lash roots and iris fibres show. (滤镜 #074) |
-| B | stock | Leica Monochrom — A dedicated black-and-white sensor with deep tonal range and very fine edge detail. |
+| B | stock | Leica Monochrom — A dedicated black-and-white digital sensor, which in this look gives a deep tonal range and very fine edge detail. |
 | B | mono | 黑白银盐 — Pure monochrome with a long grey ramp, velvet blacks and clean highlights. |
-| B | grain | 胶片颗粒 — Very fine silver-style grain lies evenly over the grey midtones, barely visible and never coarse. (滤镜 #070) |
-| C | stock | Nikon Z8 — A high-resolution mirrorless body with crisp detail, wide tonal range and clean deep shadows. |
+| B | grain | 胶片颗粒 — Very fine silver-style grain is laid over the digital monochrome file, evenly across the grey midtones, barely visible and never coarse. (滤镜 #070) |
+| C | stock | Nikon Z8 — A high-resolution mirrorless body that in this look shows crisp detail, a wide tonal range and clean deep shadows. |
 | C | tone | 松烟玄黑 — A low-key frame whose black shadows still hold fine graphite steps, with small, restrained highlights. |
-| D | stock | Phase One IQ4 — An ultra-high-resolution medium-format body with pure colour and very clean detail. |
+| D | stock | Phase One IQ4 — An ultra-high-resolution medium-format body that in this look shows pure colour and very clean detail. |
 | D | color | 冷白 — Whites sit slightly cold and clean, so the skin reads with a clear porcelain finish and no warm yellow. |
 
-## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 요청의 장소·소품·시간대·의상 가운데 둘 이상이 그 세트의 단서와 같으면 통째로 쓰고, 세트 값은 고정 사실보다 먼저다. 규칙은 image-brief.md §4 '룩 카드' 4항과 '비워 둔 층')
+## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 단서는 찾기용이고 요청의 장소·소품·시간대·의상 가운데 둘 이상이 그 세트의 단서와 같으면 통째로 쓰고, 세트 값은 고정 사실보다 먼저다. 규칙은 image-brief.md §4 '룩 카드' 4항과 '비워 둔 층'. 이 표의 켈빈 숫자는 광원을 잰 값이 아니라 이 룩에서 정한 연출 값이다)
 | 세트 | 갈래 | 묶음 |
 |---|---|---|
-| S1 雕塑切光 (滤镜 #061) | A | 단서: 흰 전시 벽, 화이트 큐브, 무광 홍색 립, 无领 블레이저, 측상방 단일 광 / Hair 贴头皮盘发, 중분 낮은 쪽 / Lip 正红唇(무광 냉색 홍색) / Outfit 无领西装外套(墨黑 精纺 울, 수축 허리) / Scene 白盒子美术馆, 순백 전시 벽 앞에 선다 / Light 雕塑切光(5600K, 측상방 45도 단일 방향 광이 광대·콧대·턱선을 칼로 깎은 듯 나눈다) / Optics Sony A7R V, 85mm 人像(원본 85mm f/1.4), 모공과 직물 결까지 선명 / Expression 冷艳, 렌즈를 직시 / Pose 极简雕塑立姿 |
-| S2 线性灯带 (滤镜 #066) | A | 단서: 긴 복도, 흰 지하 통로, 대리석 바닥, 트렌치, 천정 LED 소실점 / Hair 黑长直, 어깨 위로 곧게 / Lip 丝绒唇(무광 红棕; 원본 红棕唇) / Outfit 风衣(墨黑 精纺 울 더블 브레스트, 수축 허리) / Scene 私人美术馆长廊, 곧게 뻗은 흰 지하 통로와 대리석 바닥 / Light 线性灯带(6200K 천정 LED가 소실점까지 이어지고 바닥에 평행한 냉광 반사) / Optics Sony A7R V, 광각 건축 거리(원본 FE 24mm f/1.4 GM이므로 얼굴은 프레임 중앙 축에 두어 가장자리 늘어남을 피한다) / Expression 清冷感, 단호하고 흔들림 없는 눈 / Pose 疾步前行, 양손은 주머니에 / Camera 一点透视 |
-| S3 黑色大理石 (滤镜 #069) | A | 단서: 검은 대리석 바닥, 거울 반사, 새틴 드레스, 맨발, 천창 / Hair 黑长直, 폭포처럼 등 뒤로 / Lip 正红唇(무광 深红; 원본 正宫唇) / Outfit 缎面礼服(纯黑 真丝 새틴, 높은 사이드 슬릿) / Legwear 冷白瓷肌, 맨발로 선다 / Scene 黑色大理石倒影, 거울처럼 광택 나는 검은 대리석 바닥 한가운데 / Light 天窗光(5800K 冷白 천창 광, 바닥에 다리와 드레스가 선명하게 거꾸로 비친다) / Optics Leica SL2(원본 APO-Vario-Elmarit-SL 90-280mm 망원), 입자는 고정 몫 / Expression 睥睨, 시선은 렌즈 쪽 / Pose 한 손으로 치맛자락을 가볍게 쥔다 / Camera 仰拍, 바닥 가까운 낮은 자리 |
-| S4 黑白几何投影 (滤镜 #062) | B | 단서: 콘크리트 복도, 落地窗, 사선 그림자, 흑백, 단발 보브 / Hair 波波头, 귀 뒤로 넘김 / Brow 野生眉(깊은 검정 일자) / Outfit 真丝(纯黑 重磅 真丝 无袖 长袍) / Scene 清水混凝土 긴 복도, 큰 落地窗 앞에 옆으로 선다 / Light 几何光影(천창의 직사광이 흰 벽과 몸에 기울어진 날카로운 삼각형을 긋고, 밝은 쪽은 날리지 않으며 어두운 쪽은 숯회색에서 순흑까지 열 단계 넘게 이어진다) / Optics Leica Monochrom, Leica Summicron(원본 APO-Summicron-M 35mm f/2), 黑白银盐 / Expression 垂眸, 고개를 살짝 돌려 빛을 본다 / Pose 3/4侧颜 / Camera 三分法构图 |
-| S5 舞台硬聚光 (滤镜 #065) | C | 단서: 검은 무대, 극장, 스포트라이트, 높은 포니테일, 칠흑 / Hair 高马尾, 두피에 붙여 뒤로 / Lip 车厘子红(무광 深红; 원본 正宫唇) / Outfit 斜襟(纯黑 精纺 울 斜门襟 수축 재킷) / Scene 黑匣子剧场, 전부 검은 무대 한가운데 / Light 硬聚光(5400K 단일 스누트 광이 한쪽 45도에서 얼굴과 어깨 한쪽만 비추고 반대쪽은 칠흑, 명암 경계가 칼로 벤 듯) / Optics Nikon Z8, Nikkor(원본 Z 50mm f/1.2 S), 松烟玄黑 / Expression 睥睨, 매 같은 눈으로 렌즈를 내려다본다 / Pose 정면으로 서서 양손은 아래로 |
-| S6 环形柔光 (滤镜 #073) | D | 단서: 흰 무한 배경, 환형광, 링 라이트, 검은 이브닝 드레스, 비취 귀걸이 / Hair 低马尾, 귀 뒤로 매끈히 / Brow 野生眉(毛流 짙은 검정) / Lip 正红唇(수분감 있는 무광) / Outfit 抹胸礼服(黑 真丝 晚礼服) / Props 翡翠耳钉(天然 冰种 蛋面 한 쌍) / Scene 白色无缝背景, 극단적으로 비운 흰 공간 / Light 环形灯(5500K 환형 정면광, 얼굴에 딱딱한 그림자가 없고 검은 동공 한가운데 가는 흰 링) / Optics Canon EOS R5, 85mm 人像(원본 RF 85mm f/1.2) / Expression 穿透性凝视, 단정하고 자신 있게 / Camera Medium Close-Up |
+| S1 雕塑切光 (滤镜 #061) | A | 단서: 장소 흰 전시 벽, 화이트 큐브 / 소품 - / 시간대 낮의 실내 / 의상 无领 블레이저 / Hair 贴头皮盘发, 중분 낮은 쪽 / Lip 正红唇(무광 냉색 홍색) / Outfit 无领西装外套(墨黑 精纺 울, 수축 허리) / Scene 白盒子美术馆, 순백 전시 벽 앞에 선다 / Light 雕塑切光(5600K, 측상방 45도 단일 방향 광이 광대·콧대·턱선을 칼로 깎은 듯 나눈다) / Optics Sony A7R V, 85mm 人像(원본 85mm f/1.4), 모공과 직물 결까지 선명 / Expression 冷艳, 렌즈를 직시 / Pose 极简雕塑立姿 |
+| S2 线性灯带 (滤镜 #066) | A | 단서: 장소 긴 복도, 흰 지하 통로, 대리석 바닥 / 소품 - / 시간대 낮의 실내 / 의상 트렌치 / Hair 黑长直, 어깨 위로 곧게 / Lip 丝绒唇(무광 红棕; 원본 红棕唇) / Outfit 风衣(墨黑 精纺 울 더블 브레스트, 수축 허리) / Scene 私人美术馆长廊, 곧게 뻗은 흰 지하 통로와 대리석 바닥 / Light 线性灯带(6200K 천정 LED가 소실점까지 이어지고 바닥에 평행한 냉광 반사) / Optics Sony A7R V, 광각 건축 거리(원본 FE 24mm f/1.4 GM이므로 얼굴은 프레임 중앙 축에 두어 가장자리 늘어남을 피한다) / Expression 清冷感, 단호하고 흔들림 없는 눈 / Pose 疾步前行, 양손은 주머니에 / Camera 一点透视 |
+| S3 黑色大理石 (滤镜 #069) | A | 단서: 장소 검은 대리석 바닥, 천창 / 소품 - / 시간대 낮의 실내 / 의상 새틴 드레스, 맨발 / Hair 黑长直, 폭포처럼 등 뒤로 / Lip 正红唇(무광 深红; 원본 正宫唇) / Outfit 缎面礼服(纯黑 真丝 새틴, 높은 사이드 슬릿) / Legwear 冷白瓷肌, 맨발로 선다 / Scene 黑色大理石倒影, 거울처럼 광택 나는 검은 대리석 바닥 한가운데 / Light 天窗光(5800K 冷白 천창 광, 바닥에 다리와 드레스가 선명하게 거꾸로 비친다) / Optics Leica SL2(원본 APO-Vario-Elmarit-SL 90-280mm 망원), 입자는 고정 몫 / Expression 睥睨, 시선은 렌즈 쪽 / Pose 한 손으로 치맛자락을 가볍게 쥔다 / Camera 仰拍, 바닥 가까운 낮은 자리 |
+| S4 黑白几何投影 (滤镜 #062) | B | 단서: 장소 콘크리트 복도, 落地窗 / 소품 - / 시간대 낮 / 의상 真丝 무소매 长袍 / Hair 波波头, 귀 뒤로 넘김 / Brow 野生眉(깊은 검정 일자) / Outfit 真丝(纯黑 重磅 真丝 无袖 长袍) / Scene 清水混凝土 긴 복도, 큰 落地窗 앞에 옆으로 선다 / Light 几何光影(천창의 직사광이 흰 벽과 몸에 기울어진 날카로운 삼각형을 긋고, 밝은 쪽은 날리지 않으며 어두운 쪽은 숯회색에서 순흑까지 열 단계 넘게 이어진다) / Optics Leica Monochrom, Leica Summicron(원본 APO-Summicron-M 35mm f/2), 黑白银盐 / Expression 垂眸, 고개를 살짝 돌려 빛을 본다 / Pose 3/4侧颜 / Camera 三分法构图 |
+| S5 舞台硬聚光 (滤镜 #065) | C | 단서: 장소 검은 무대, 극장 / 소품 - / 시간대 암전 / 의상 검은 斜襟 재킷 / Hair 高马尾, 두피에 붙여 뒤로 / Lip 车厘子红(무광 深红; 원본 正宫唇) / Outfit 斜襟(纯黑 精纺 울 斜门襟 수축 재킷) / Scene 黑匣子剧场, 전부 검은 무대 한가운데 / Light 硬聚光(5400K 단일 스누트 광이 한쪽 45도에서 얼굴과 어깨 한쪽만 비추고 반대쪽은 칠흑, 명암 경계가 칼로 벤 듯) / Optics Nikon Z8, Nikkor(원본 Z 50mm f/1.2 S), 松烟玄黑 / Expression 睥睨, 매 같은 눈으로 렌즈를 내려다본다 / Pose 정면으로 서서 양손은 아래로 |
+| S6 环形柔光 (滤镜 #073) | D | 단서: 장소 흰 무한 배경 스튜디오 / 소품 링 라이트, 비취 귀걸이 / 시간대 - / 의상 검은 이브닝 드레스 / Hair 低马尾, 귀 뒤로 매끈히 / Brow 野生眉(毛流 짙은 검정) / Lip 正红唇(수분감 있는 무광) / Outfit 抹胸礼服(黑 真丝 晚礼服) / Props 翡翠耳钉(天然 冰种 蛋面 한 쌍) / Scene 白色无缝背景, 극단적으로 비운 흰 공간 / Light 环形灯(5500K 환형 정면광, 얼굴에 딱딱한 그림자가 없고 검은 동공 한가운데 가는 흰 링) / Optics Canon EOS R5, 85mm 人像(원본 RF 85mm f/1.2) / Expression 穿透性凝视, 단정하고 자신 있게 / Camera Medium Close-Up |
 
 ## 포즈·구도 쌍
 | 번호 | 갈래 | Pose | Camera |
@@ -180,7 +180,7 @@
 | 3 | A | 展厅长凳独坐 — She sits alone at the centre of a long bench, back straight and hands on her knees, wide empty floor all around. | Extreme Wide Shot — The camera stands far back so she becomes a small dark mark inside the huge white hall, the architecture filling almost the whole frame. |
 | 4 | A | 台阶驻足垂眸 — She stops at the top of a concrete stair with one foot slightly forward on the last step and her eyes lowered toward the lens below. | 仰拍 — The camera looks up from the foot of the stair, so the steps rise to her and her head sits against the pale ceiling, the frame running from her head down to her feet on the step. |
 | 5 | A | 单脚点地倚柱 — Her shoulder rests against a concrete column while one foot touches down only on its toe, making a long diagonal from head to foot. | 对角线构图 — A wall edge runs from one corner of the frame to the opposite one, and she stands where it crosses the column, the frame running from her head down to her toes. |
-| 6 | B | 3/4侧颜 — Her head turns three quarters from the lens with the far cheek just visible and her eyes lowered, the light carving the jaw and cheekbone edge. | 三分法构图 — She stands on one vertical third line while the bare white wall with its slanted shadow fills the other two thirds. |
+| 6 | B | 3/4侧颜 — Her head turns into a three-quarter view with the far cheek just visible and her eyes lowered, the light carving the jaw and cheekbone edge. | 三分法构图 — She stands on one vertical third line while the bare white wall with its slanted shadow fills the other two thirds. |
 | 7 | B | 纯侧颜 — Her head turns a full ninety degrees so brow, nose line and jaw form one clean outline against the light wall. | Medium Close-Up — The frame runs from the top of her head to mid-chest, the profile filling most of it. |
 | 8 | B | 背影巡展 — She walks away from the lens down a long gallery corridor, back straight and arms relaxed, the coat hem swinging. | 长焦压缩 — A moderate telephoto down the corridor stacks the repeating walls and openings behind her into one flat graphic plane. |
 | 9 | C | 顶光孤立 — She stands alone in the middle of a black room under one narrow vertical beam, head and shoulders lit white and the rest swallowed by darkness. | 留白 — She fills about a third of the vertical frame and the black space around her stays empty. |

@@ -10,7 +10,7 @@
 ## 고정 사실 (모든 갈래가 지킨다)
 | 슬롯 | 값 |
 |---|---|
-| medium | 밤 도심에서 저조도 디지털 카메라로 찍은 영화 스틸. 스냅·화보가 아니다. 첫 줄은 `A contemporary Seoul night cinematic still shot on a low-light digital camera with a fast prime lens`로 시작한다(C 갈래는 `digital cinema camera with a wide-aperture prime`으로 바꿔도 된다) |
+| medium | 밤 도심에서 저조도 디지털 카메라로 찍은 영화 스틸. 스냅·화보가 아니다. 첫 줄은 `A contemporary night cinematic still shot on a low-light digital camera with a fast prime lens`로 시작한다(C 갈래는 `digital cinema camera with a wide-aperture prime`으로 바꿔도 된다). 매체 구절과 장소 구절을 나눠 쓴다. 장소 구절은 기본이 `in Seoul`이고 `still` 뒤에 붙인다(`… cinematic still in Seoul shot on …`). 사용자가 장소를 말하면 이 구절만 그 장소로 바꾸고 Style 줄의 `Seoul`도 같은 장소 구절이니 같이 바꾼다 |
 | closer | `영화 스틸컷` |
 | time | 밤이다. 해가 화면에 없다. 깊은 밤, 비 갠 직후, 막차 시간이 모두 된다 |
 | light-key | 장면 속 실용광: 차 후미등·헤드라이트, 네온 간판, 가로등, 형광등, 먼 건물 불빛. 얼굴은 한두 개의 색광에만 닿고 나머지는 어둠이다(D의 형광등 실내인 편의점·지하철만 예외로, 냉백 형광 하나가 얼굴과 공간을 고르게 비춘다) |
@@ -32,7 +32,7 @@
 |---|---|---|
 | face-light | 모든 갈래에서 끈다. 얼굴 빛은 이 카드의 Light 줄이 정한다 | `立体光`은 위·옆의 한 방향 키라이트인데, 차창 불빛(A)·좌우 이색 네온(B)·머리 위 가로등(C)·냉백 형광(D)이 이미 얼굴 빛을 정한다 |
 | catchlight | A·B·C는 카드 줄이 이긴다. D는 켠다. 단 D의 `체념의 한숨`처럼 눈을 감으면 끈다 | 눈에 맺히는 빛이 차창, 네온 띠, 가로등 한 점으로 갈린다 |
-| lens | 쌍마다 렌즈를 말하는 줄이 정확히 하나다. 쌍 1~9(A·B·C)는 Camera 줄이 렌즈를 말하지 않으니 고정 몫 `无畸变`이 그 줄이다. D는 고정 몫을 끄고 쌍 11·12는 Optics `85mm 인물 렌즈` 줄이 그 줄이며, 쌍 10은 Camera 줄 `망원 압축`이 렌즈를 말하니 `85mm 인물 렌즈`도 붙이지 않는다(S5 묶음의 Optics `Sony A7S III, 85mm`는 카메라 본체 줄이다). 카메라 높이는 쌍 7(로우앵글)처럼 쌍 Camera 줄이 정하고 렌즈 줄은 높이를 정하지 않는다 | 滤镜 #098은 135mm 압축 보케, #091은 85mm인데 Iris 꼬리는 50mm 무왜곡 시선이라 한 프리셋에 렌즈가 둘이다 |
+| lens | 쌍마다 렌즈를 말하는 줄이 정확히 하나다. 출처 순서는 세트의 렌즈 > 쌍 Camera 줄의 렌즈 > 갈래의 본체·렌즈 줄 > 고정 몫 `自然透视`이다. (1) 세트가 렌즈를 말하면 그 렌즈가 렌즈 줄이다: S2의 50mm f/1.2 GM, S5의 85mm f/1.4 GM(`85mm 인물 렌즈`), S6의 33mm f/1.4. 이때 쌍의 Camera 줄은 렌즈 이름 없이 구도만 쓰고(S5와 쌍 10을 같이 고르면 `망원 압축` 문장에서 '망원' 말을 빼고 다리와 먼 타워가 한 띠로 겹친다는 구도만 쓴다), S5·S6의 갈래 D `85mm 인물 렌즈` 줄은 따로 붙이지 않는다. (2) 세트가 렌즈를 말하지 않고 쌍 Camera 줄이 말하면 그것이다(쌍 10의 `망원 압축`). (3) 둘 다 아니면 갈래의 렌즈 줄이다: D 쌍 11·12는 Optics `85mm 인물 렌즈`다. A `Sony A7 IV`·B `Sony A7S III`·C `ARRI Alexa Mini`·D 본체 줄은 렌즈를 말하지 않는 카메라 본체 줄이다. (4) 그 밖의 쌍 1~9는 고정 몫 `自然透视`가 렌즈 줄이다. 카메라 높이는 쌍 7(로우앵글)처럼 쌍 Camera 줄이 정하고 렌즈 줄은 높이를 정하지 않는다 | 滤镜 #098은 135mm 압축 보케, #091은 85mm인데 Iris 꼬리는 50mm 무왜곡 시선이라 한 프리셋에 렌즈가 둘이다. A의 본체 줄이 'fast 50mm prime'을 말하던 것도 고정 몫 렌즈 줄과 겹쳐 둘이 되어, 본체 줄에서 렌즈 말을 뺐다 |
 | base | 카드 줄이 이긴다 | Iris 메이크업 꼬리의 쿨톤 도자기 피부 문구 위에 KR 물광 줄을 얹으면 베이스가 둘이다 |
 | lip | 카드 줄이 이긴다 | Iris 꼬리의 산호 누드 핑크 글래스 립 위에 KR 그라데이션 립을 얹으면 입술색이 둘이다 |
 | blush | B에서 끈다. A·C·D는 켠다 | B는 `Cyber Nude Makeup` 줄이 광대의 금속 광택을 정하고 뺨 색은 네온이 정한다 |
@@ -147,7 +147,7 @@
 ## Optics
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
-| A | body | Sony A7 IV — A full-frame body with a fast 50mm prime: clean neutral color and a soft focus falloff behind her. (원본 滤镜 #093: 50mm f/1.2 GM) |
+| A | body | Sony A7 IV — A full-frame low-light body, read here as clean and neutral in color with the dark areas held smooth. (원본 滤镜 #093: 50mm f/1.2 GM, 렌즈는 S2 세트가 말한다) |
 | A | motion | 장노출 — A long exposure stretches the red tail lights and blue signs outside into dream-like streaks while she stays still and sharp. (滤镜 #092) |
 | A, D | bokeh | 보케 — Distant lights turn into big round overlapping discs behind her. |
 | A, B, D | color | 청보라 밤 색감 — Shadows lean cyan-teal while highlights from signs pick up violet and magenta, with the blacks held deep. |
@@ -160,14 +160,17 @@
 | D | lens | 85mm 인물 렌즈 — A short-telephoto lens compresses the far lights and blurs them softly behind her face. (滤镜 #091) |
 
 ## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 요청의 장소·소품·시간대·의상 가운데 둘 이상이 그 세트의 단서와 같으면 통째로 쓰고, 세트 값은 고정 사실보다 먼저다. 규칙은 image-brief.md §4 '룩 카드' 4항과 '비워 둔 층')
+
+이 카드의 색온도 숫자(세트의 4500K 같은 값)는 Iris 프리셋을 옮긴 이 룩의 연출 값이고 측정값이 아니다. 프롬프트의 영어 줄에는 숫자 대신 색 말(warm amber, cold white)로 쓴다.
+
 | 세트 | 갈래 | 묶음 |
 |---|---|---|
-| S1 택시 뒷좌석 차창 (滤镜 #092. 단서: 택시 뒷좌석, 차창, 후미등, 광궤적, 장노출, 깊은 밤) | A | Hair 검은 긴 생머리, 한쪽 옆머리를 귀 뒤로 / Lip 글래스 립(산호 누드 핑크 글래스) / Outfit 보트넥(순흑 슬림 긴소매 니트) / Scene 택시 뒷좌석, 깊은 밤 / Light 차창 불빛(4500K), 서울 번화가의 붉은 후미등과 푸른 간판이 몽환적 광궤적으로 / Optics 장노출(Long Exposure Rear Window Seat) / Expression 시선 회피, 청랭한 눈으로 창밖을 본다 / Pose 차 뒷좌석에 옆으로 앉기, 몸은 3/4 |
-| S2 비 오는 밤 택시 (滤镜 #093. 단서: 비 오는 밤, 택시, 창문 빗방울, 퇴근길, 스퀘어넥 니트) | A | Hair 검은 긴 생머리 / Lip 글래스 립 / Outfit 스퀘어넥(깊은 숯회색 슬림 긴소매 니트) / Props 실버 쇄골 체인(극세 은 체인) / Scene 택시 뒷좌석, 창문 빗방울(빗방울 가득한 유리 밖 신호등이 번지는 빛망울) / Light 빗방울 창(4200K) / Optics Sony A7 IV, 50mm f/1.2 GM, 보케 / Expression 쓸쓸함, 비 오는 밤 퇴근길의 근심 / Pose 차 뒷좌석에 옆으로 앉기, 몸은 3/4 |
-| S3 성수동 네온 (滤镜 #095. 단서: 네온, 마젠타와 청색 투톤, 통유리창, 귀리색 블레이저, 사이버 패션) | B | Hair 검은 긴 생머리 / Lip 글래스 립 / Outfit 오버핏(연한 귀리색 블레이저 + 순흑 튜브톱, 트인 칼라) / Scene 한남동, 통유리창 옆 고요한 연한 빛의 미니멀 공간, 잡동사니 없음 / Light 투톤 네온(왼쪽 간판의 깊은 마젠타 핑크, 오른쪽 가게의 얼음빛 청색이 얼굴을 두 색으로 새긴다) / Optics 청보라 밤 색감, Dual Neon Sign Ambient / Style 사이버펑크, 서울 사이버 패션 / Expression 도도한 표정, 렌즈를 돌아본다 |
-| S4 가로등 한 개 (滤镜 #096. 단서: 가로등, 심야 주택가 골목, 서스펜스, 보트넥 니트, 텅 빈 길) | C | Hair 검은 긴 생머리 / Lip 글래스 립 / Outfit 보트넥(순흑 슬림 긴소매 니트) / Scene 심야 주택가 골목, 텅 빈 길 / Light 가로등 불빛(3500K, 머리 위 가로등 하나, 턱과 가슴에 깊은 그림자, 정면에서 약한 빛이 이목구비를 윤곽 짓는다) / Optics Single Sodium Street Light(Overhead) / Style 네오누아르, 조용한 서스펜스 영화의 분위기 / Expression 차가운 분위기 |
-| S5 한강 야경 (滤镜 #091. 단서: 한강, 대교, 난간, 냉백 야경, 귀리색 블레이저) | D | Hair 검은 긴 생머리, 한쪽을 귀 뒤로, 미풍에 머리카락이 흐트러진다 / Lip 글래스 립 / Outfit 오버핏(연한 귀리색 블레이저 + 순흑 튜브톱, 트인 칼라) / Scene 한강 야경, 한강공원 옥상 / Light 한강 야경 불빛(6500K, 한강대교와 강남 오피스 타워의 냉백 네온, 수면의 반짝이는 냉광) / Optics Sony A7S III, 85mm f/1.4 GM(`85mm 인물 렌즈`) / Expression 맑고 또렷한 눈 / Pose 난간 기대 바라보기, 몸은 3/4 |
-| S6 편의점 (滤镜 #094. 단서: 편의점, 새벽 두 시, 형광등, 컵라면, 모카 니트) | D | Hair 검은 긴 생머리 / Lip 글래스 립 / Outfit 캐시미어 니트(모카 딥브라운, 슬림 와이드 V넥) / Props 컵라면, 생수병 / Scene 편의점, 새벽 두 시, 유리 너머로 보인다 / Light 형광등(5800K 고색온 형광등이 실내를 새하얗게 비춰 유리 너머 쇼윈도 모델처럼) / Optics Fujifilm X-H2S, 33mm f/1.4 / Expression 무표정, 새벽 두 시의 담담한 얼굴 |
+| S1 택시 뒷좌석 차창 (滤镜 #092. 단서: 장소 택시 뒷좌석·차창 밖 후미등 광궤적(장노출) / 소품 - / 시간대 깊은 밤 / 의상 -) | A | Hair 검은 긴 생머리, 한쪽 옆머리를 귀 뒤로 / Lip 글래스 립(산호 누드 핑크 글래스) / Outfit 보트넥(순흑 슬림 긴소매 니트) / Scene 택시 뒷좌석, 깊은 밤 / Light 차창 불빛(4500K), 서울 번화가의 붉은 후미등과 푸른 간판이 몽환적 광궤적으로 / Optics 장노출(Long Exposure Rear Window Seat) / Expression 시선 회피, 청랭한 눈으로 창밖을 본다 / Pose 차 뒷좌석에 옆으로 앉기, 몸은 3/4 |
+| S2 비 오는 밤 택시 (滤镜 #093. 단서: 장소 택시 창문 빗방울 / 소품 - / 시간대 비 오는 밤 퇴근길 / 의상 스퀘어넥 니트) | A | Hair 검은 긴 생머리 / Lip 글래스 립 / Outfit 스퀘어넥(깊은 숯회색 슬림 긴소매 니트) / Props 실버 쇄골 체인(극세 은 체인) / Scene 택시 뒷좌석, 창문 빗방울(빗방울 가득한 유리 밖 신호등이 번지는 빛망울) / Light 빗방울 창(4200K) / Optics Sony A7 IV, 50mm f/1.2 GM, 보케 / Expression 쓸쓸함, 비 오는 밤 퇴근길의 근심 / Pose 차 뒷좌석에 옆으로 앉기, 몸은 3/4 |
+| S3 성수동 네온 (滤镜 #095. 단서: 장소 통유리창 옆 마젠타·청색 투톤 네온 / 소품 - / 시간대 - / 의상 귀리색 블레이저(사이버 패션)) | B | Hair 검은 긴 생머리 / Lip 글래스 립 / Outfit 오버핏(연한 귀리색 블레이저 + 순흑 튜브톱, 트인 칼라) / Scene 한남동, 통유리창 옆 고요한 연한 빛의 미니멀 공간, 잡동사니 없음 / Light 투톤 네온(왼쪽 간판의 깊은 마젠타 핑크, 오른쪽 가게의 얼음빛 청색이 얼굴을 두 색으로 새긴다) / Optics 청보라 밤 색감, Dual Neon Sign Ambient / Style 사이버펑크, 서울 사이버 패션 / Expression 도도한 표정, 렌즈를 돌아본다 |
+| S4 가로등 한 개 (滤镜 #096. 단서: 장소 심야 주택가 골목 가로등·텅 빈 길 / 소품 - / 시간대 심야 / 의상 보트넥 니트) | C | Hair 검은 긴 생머리 / Lip 글래스 립 / Outfit 보트넥(순흑 슬림 긴소매 니트) / Scene 심야 주택가 골목, 텅 빈 길 / Light 가로등 불빛(3500K, 머리 위 가로등 하나, 턱과 가슴에 깊은 그림자, 정면에서 약한 빛이 이목구비를 윤곽 짓는다) / Optics Single Sodium Street Light(Overhead) / Style 네오누아르, 조용한 서스펜스 영화의 분위기 / Expression 차가운 분위기 |
+| S5 한강 야경 (滤镜 #091. 단서: 장소 한강 대교 난간 / 소품 - / 시간대 냉백 야경(밤) / 의상 귀리색 블레이저) | D | Hair 검은 긴 생머리, 한쪽을 귀 뒤로, 미풍에 머리카락이 흐트러진다 / Lip 글래스 립 / Outfit 오버핏(연한 귀리색 블레이저 + 순흑 튜브톱, 트인 칼라) / Scene 한강 야경, 한강공원 옥상 / Light 한강 야경 불빛(6500K, 한강대교와 강남 오피스 타워의 냉백 네온, 수면의 반짝이는 냉광) / Optics Sony A7S III, 85mm f/1.4 GM(`85mm 인물 렌즈`) / Expression 맑고 또렷한 눈 / Pose 난간 기대 바라보기, 몸은 3/4 |
+| S6 편의점 (滤镜 #094. 단서: 장소 편의점(형광등) / 소품 컵라면 / 시간대 새벽 두 시 / 의상 모카 니트) | D | Hair 검은 긴 생머리 / Lip 글래스 립 / Outfit 캐시미어 니트(모카 딥브라운, 슬림 와이드 V넥) / Props 컵라면, 생수병 / Scene 편의점, 새벽 두 시, 유리 너머로 보인다 / Light 형광등(5800K 고색온 형광등이 실내를 새하얗게 비춰 유리 너머 쇼윈도 모델처럼) / Optics Fujifilm X-H2S, 33mm f/1.4 / Expression 무표정, 새벽 두 시의 담담한 얼굴 |
 
 ## 포즈·구도 쌍
 | 번호 | 갈래 | Pose | Camera |

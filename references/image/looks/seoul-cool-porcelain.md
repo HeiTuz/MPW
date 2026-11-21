@@ -10,11 +10,11 @@
 ## 고정 사실 (모든 갈래가 지킨다)
 | 슬롯 | 값 |
 |---|---|
-| medium | 풀프레임·중형 디지털 카메라로 찍은 서울의 인물 사진. 필름 스냅도 플래시 사진도 아니다. 첫 줄은 `A Seoul cool-toned porcelain-finish portrait photograph shot on a full-frame mirrorless camera`로 시작한다(C 갈래는 끝에 `in a studio`를 붙이고, B 갈래의 Hasselblad·Phase One 줄은 Optics `camera`가 정한다) |
+| medium | 풀프레임·중형 디지털 카메라로 찍은 서울의 인물 사진. 필름 스냅도 플래시 사진도 아니다. 첫 줄은 `A cool-toned porcelain-finish portrait photograph shot on a full-frame mirrorless camera`로 시작한다(C 갈래는 끝에 `in a studio`를 붙이고, B 갈래의 Hasselblad·Phase One 줄은 Optics `camera`가 정한다). 매체 구절과 장소 구절을 나눠 쓴다. 장소 구절은 기본이 `in Seoul`이고 `photograph` 뒤에 붙인다(`A cool-toned porcelain-finish portrait photograph in Seoul shot on …`). C는 장소 구절 자리에 `in a studio`를 쓴다. 사용자가 장소를 말하면 이 구절만 그 장소로 바꾼다 |
 | closer | `쿨톤 도자기 피부 사진` |
 | time | 해가 화면에 직접 보이지 않는 이른 아침에서 흐린 낮까지. D 갈래의 블루 아워(해 진 뒤 20분)만 예외이고 C 갈래는 시간을 말하지 않는다. 골든아워와 한낮 직사광은 없다 |
 | light-key | 큰 면광원의 확산광: 흐린 하늘, 얇은 커튼을 거친 창, 천창이나 천장 패널, 소프트박스. 점광원 플래시와 직사 햇빛은 없다 |
-| palette | 5500~7200K의 차가운 흰 하이라이트(도자기 마감 베이스가 이 빛을 받아 푸르스름하게 식어 보인다), 회청·차콜·모카·귀리색의 낮은 채도. 주황·네온·파스텔 없음 |
+| palette | 차가운 흰 하이라이트(연출 값 5500~7200K. 이 룩에서는 도자기 마감 베이스가 이 빛 아래 푸르스름하게 식어 보이게 한다), 회청·차콜·모카·귀리색의 낮은 채도. 주황·네온·파스텔 없음 |
 | grain | 어두운 곳에만 아주 고운 디지털 노이즈. 필름 입자와 할레이션 없음 |
 | lens | 풀프레임 표준~중망원(50~85mm, f/1.2~f/2.8). 카메라 높이는 쌍의 Camera 줄이 정하고(쌍 3 하이앵글, 쌍 6 로우앵글) 쌍이 높이를 말하지 않으면 눈높이다. 배경은 부드럽게 풀리고 얼굴 비율에 왜곡이 없다. 광각 왜곡과 딥 포커스 없음 |
 | figure | 허리 위 반신의 한 사람(범위는 쌍 10이 얼굴만, 쌍 12가 허벅지 중간까지로 바꾼다). 몸은 3/4로 비스듬하고 어깨는 내려가 있으며 고개만 렌즈 쪽으로 돌린다(쌍 4·9·10이 몸의 방향을 정하면 쌍이 이긴다). 정면 증명사진 자세 없음 |
@@ -35,7 +35,7 @@
 | lip | A·C·D는 카드 줄이 이긴다. B는 `쿨톤 매트` 줄이 회분홍 벨벳 입술까지 정하니 고정 몫 입술을 끈다 | KR `그라데이션 립`이 더 붙으면 입술색이 둘이 된다. Iris 메이크업 고정문의 `珊瑚裸粉玻璃唇`도 B의 회분홍 벨벳 입술과 겹친다 |
 | blush | 카드 줄이 이긴다 | KR `딸기우유 블러셔`는 넓은 우유빛 분홍이라 회청 팔레트에서 뺨만 따뜻해진다. Iris 원문은 맑은 장미빛 한 겹(`清透玫瑰粉腮红`)이다 |
 | catchlight | 켠다. A는 `창가 사각 캐치라이트`, B·C는 `캐치라이트` 줄이 대신한다. 눈이 안 보이는 장면(#036 이중 흰 커튼 뒤)에서는 끈다 | 창·패널 모양 반사를 줄마다 정해 두면 고정 몫의 `<창·램프·하늘>` 빈칸이 둘이 되지 않는다 |
-| lens | 켠다. 렌즈를 말하는 줄은 쌍마다 정확히 하나다. 쌍 1~7·9~12는 Camera 줄이 렌즈를 말하지 않으니 고정 몫 `无畸变`(표준~중망원, 렌즈 종류만 말하고 높이는 정하지 않는다)이 그 줄이다. 쌍 8은 Camera 줄 `망원 압축`이 중망원 렌즈를 말하니 그 쌍에서는 `无畸变`을 붙이지 않는다. 카메라 높이는 쌍 3(하이앵글)·쌍 6(로우앵글)이 Camera 줄로 정하고 나머지 쌍은 눈높이다. 35mm나 24-70mm가 적힌 #024 #029 #031 #034 #035는 카메라 본체만 쓰고 초점거리는 표준으로 둔다 | Iris 원문은 35mm 계열 렌즈와 `50mm 무왜곡` 꼬리가 한 프리셋에 섞여 있다. 높이는 렌즈 줄에서 빼고 쌍이 맡아야 쌍 3·6의 높이와 부딪히지 않는다 |
+| lens | 켠다. 렌즈를 말하는 줄은 쌍마다 정확히 하나다. 출처 순서는 세트의 렌즈 > 쌍 Camera 줄의 렌즈 > 갈래의 본체·렌즈 줄 > 고정 몫 `自然透视`이다. (1) 세트가 렌즈를 말하면 그 렌즈가 렌즈 줄이고 `自然透视`는 붙이지 않는다: S1의 50mm f/1.8, S2의 Summilux 50mm, S5의 50mm f/1.2, S6의 FE 35mm f/1.4 GM(Iris 원본 그대로). 이 세트들이 속한 갈래 A·D의 쌍 Camera 줄(쌍 1~4·11·12)은 렌즈를 말하지 않아 겹치지 않는다. (2) 세트가 렌즈를 말하지 않고 쌍 Camera 줄이 말하면 그것이다: 쌍 8의 `망원 압축`(중망원). (3) 갈래의 Optics `camera` 줄(`Sony A7R V`·`Hasselblad X2D 100C`·`Phase One IQ4`·`Sony A7R IV`·`Canon EOS R5`)은 본체만 말하고 렌즈를 말하지 않는다. (4) 위가 모두 없으면(쌍 1~7·9~12 가운데 세트가 렌즈를 말하지 않는 것) 고정 몫 `自然透视`(표준~중망원, 렌즈 종류만 말하고 높이는 정하지 않는다)이 렌즈 줄이다. 카메라 높이는 쌍 3(하이앵글)·쌍 6(로우앵글)이 Camera 줄로 정하고 나머지 쌍은 눈높이다. 세트가 없는 #024 #029 #034 #035의 Iris 렌즈(35mm, 24-70mm)는 카드가 옮기지 않으니 그 경우 본체 줄만 쓴다 | Iris 원문은 35mm 계열 렌즈와 `50mm 무왜곡` 꼬리가 한 프리셋에 섞여 있다. 높이는 렌즈 줄에서 빼고 쌍이 맡아야 쌍 3·6의 높이와 부딪히지 않는다. S6의 35mm는 이전에 카드가 표준 시선으로 바꿨던 것을 Iris 원본으로 되돌렸다 |
 | grain | 켠다. 고정 몫 `数码噪点`이 그대로 맞다 | 매체가 풀프레임 디지털이다 |
 | framing | 켠다. 쌍 5(머리 위부터 가슴 중간), 쌍 10(얼굴만), 쌍 12(허벅지 중간)는 Camera 줄이 범위를 말하니 그 쌍이 정한다. 쌍 12는 고정 사실 figure의 허리 위 범위보다 이 쌍이 이긴다 | 나머지 쌍은 프레임 범위를 말하지 않아 고정 몫 허리 위 줄이 범위를 정한다 |
 | ratio | 켠다. 사용자 비율이 없으면 3:4 세로 | 쌍은 비율을 정하지 않는다 |
@@ -145,9 +145,9 @@
 ## Optics
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
-| A | camera | Sony A7R V — A high-resolution full-frame body renders cool gray-white tones, matte detail and crisp eyelashes under soft light. (滤镜 #021) |
-| B | camera | Hasselblad X2D 100C — A medium-format sensor gives a long, smooth tonal ramp from the lit cheek into the shadow side with no hard edge on the face. (滤镜 #023) |
-| B | camera | Phase One IQ4 — An ultra-high-resolution medium-format file keeps the knit weave and the pale wall very clean in pure, neutral color. (滤镜 #037) |
+| A | camera | Sony A7R V — A high-resolution full-frame body, read here with cool gray-white tones, matte detail and crisp eyelashes under soft light. (滤镜 #021) |
+| B | camera | Hasselblad X2D 100C — A medium-format sensor, read here as a long, smooth tonal ramp from the lit cheek into the shadow side with no hard edge on the face. (滤镜 #023) |
+| B | camera | Phase One IQ4 — A medium-format digital back with an ultra-high-resolution file, read here as keeping the knit weave and the pale wall very clean in neutral color. (滤镜 #037) |
 | C | camera | Sony A7R IV — A 61-megapixel full-frame file resolves each lash and the fine vellus hair on the cheek with no skin smoothing applied. (滤镜 #040) |
 | D | camera | Canon EOS R5 — A crisp full-frame mirrorless rendering with natural color and smooth tonal transitions that holds wet highlights without clipping. (滤镜 #025) |
 | A, C | color | 쿨 화이트 밸런스 — Whites sit slightly cold and clean, so the base reads cool and porcelain-clear with no yellow cast. |
@@ -158,14 +158,17 @@
 | A, B, D | bokeh | 아웃포커싱 — A wide aperture melts the background into soft blur while her face stays tack-sharp. |
 
 ## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 요청의 장소·소품·시간대·의상 가운데 둘 이상이 그 세트의 단서와 같으면 통째로 쓰고, 세트 값은 고정 사실보다 먼저다. 규칙은 image-brief.md §4 '룩 카드' 4항과 '비워 둔 층')
+
+이 카드의 색온도 숫자(고정 사실 palette 행과 세트의 6500K 같은 값)는 Iris 프리셋을 옮긴 이 룩의 연출 값이고 측정값이 아니다. 프롬프트의 영어 줄에는 숫자 대신 색 말(cool gray-white, cold blue-white)로 쓴다.
+
 | 세트 | 갈래 | 묶음 |
 |---|---|---|
-| S1 성수동 아침 (滤镜 #021. 단서: 성수동, 콘크리트 아트 스페이스, 아침, 흐린 날, 스퀘어넥 니트) | A | Hair 검은 긴 생머리, 한쪽을 귀 뒤로 넘겨 이마와 눈썹이 드러난다 / Base 냉백피, 마감은 무광이고 광대뼈 광은 없다 / Lip 깨문 립 / Outfit 스퀘어넥(깊은 차콜 슬림 스퀘어넥 니트) / Props 실버 쇄골 체인 / Scene 성수동의 조용한 콘크리트 아트 스페이스, 배경은 비어 있다 / Light 흐린 날 빛 6500K, 직사 햇빛 없이 회백색 하늘이 만드는 확산 냉광, 피부는 무광에 기름기 없음 / Optics Sony A7R V + 50mm f/1.8 / Expression 맑은 눈에 캐치라이트가 하나, 막 세수한 듯 평온한 얼굴 / Pose 뒤돌아보기, 몸은 3/4로 비스듬하고 어깨가 내려간다 |
-| S2 커튼 너머 아침 독서 (滤镜 #022. 단서: 얇은 흰 커튼, 창가, 아침 독서, 미니멀 아파트, 모카 캐시미어 니트) | A | Hair 검은 긴 생머리 / Lip 깨문 립 / Outfit 캐시미어 니트(모카색 딥 브이넥 캐시미어) / Scene 로우 새츄레이션 벽의 군더더기 없는 미니멀 아파트, 조용한 아침 독서 / Light 창가 빛 6800K, 얇은 흰 커튼이 거른 회청빛이 실내로 퍼지고 머리카락 끝에 옅은 냉광 / Optics Leica SL2-S + Summilux 50mm / Expression 독서 몰입 / Pose 뒤돌아보기 |
-| S3 한남동 갤러리 (滤镜 #023. 단서: 한남동, 갤러리, 천창, 귀리색 블레이저, 슬릭컷) | B | Hair 슬릭컷 / Lip 쿨톤 매트의 회분홍 / Outfit 오버사이즈 블레이저(밝은 귀리색 외투, 안에 검은 스트랩리스, 깃을 연 채 목선과 쇄골이 드러난다) / Scene 한남동 갤러리의 깨끗한 실제 공간, 배경은 부드럽게 풀리고 비어 있다 / Light 천창 빛 5800K, 순백의 천장 소프트박스라 얼굴에 보이는 딱딱한 그림자가 거의 없고 조각처럼 평평하다 / Optics Hasselblad X2D 100C / Style 한남동 룩, 지적이고 냉정한 인상 / Expression 눈썹 까딱 / Pose 뒤돌아보기, 허리 위 반신(Medium Shot) |
-| S4 매트 도자기 베이스 (滤镜 #027. 단서: 뷰티 화보, 버터플라이 조명, 로우포니테일, 통창 곁 소프트라이트, 귀리색 블레이저) | C | Hair 슬릭 로우포니테일, 얼굴이 완전히 드러난다 / Lip 시나몬 누드 립 / Outfit 오버사이즈 블레이저(귀리색 외투 + 검은 스트랩리스) / Scene 한남동 미니멀 통창 곁의 조용한 소프트라이트 공간, 배경에 아무것도 없다 / Light 버터플라이 조명 5600K, 전문 버터플라이 평면광이 팔자주름과 칙칙함을 없앤다 / Optics 카메라 지정 없음(Iris 원본의 장비 칸은 조명 `Studio Pro Head Flat Softbox`) / Style 뷰티 화보, 맑은 산소감 / Expression 무표정 / Pose 뒤돌아보기 |
-| S5 비 오는 날 투명 우산 (滤镜 #025. 단서: 비, 투명 우산, 강남, 안개비, 스퀘어넥 니트) | D | Hair 검은 긴 생머리, 비 오는 공기에 잔머리가 선다 / Lip 물광 립 / Outfit 스퀘어넥(차콜 슬림 스퀘어넥 니트) / Props 실버 쇄골 체인, 투명 우산 / Scene 강남의 비 오는 거리, 투명 우산 아래 / Light 안개비 6300K, 높은 습도가 만드는 촉촉한 광택, 얼굴에 고르고 부드러운 빛, 입술이 촉촉하다 / Optics Canon EOS R5 + 50mm f/1.2 / Expression 하늘 올려다보기, 우산 위로 흘러내리는 빗방울을 본다 / Pose 우산 쓰고 돌아보기 |
-| S6 블루 아워 옥상 (滤镜 #031. 단서: 블루 아워, 옥상, 루프탑 난간, 황혼, 옆얼굴) | D | Hair 검은 긴 생머리 / Lip 물광 립 / Outfit 오버사이즈 블레이저(밝은 귀리색 외투 + 검은 스트랩리스) / Scene 루프탑 난간, 짙푸른 황혼에 잠긴 옆얼굴 / Light 블루 아워 7200K, 해가 지평선 아래로 완전히 진 뒤 20분, 하늘이 순수한 차가운 사파이어 블루 / Optics Sony A7 IV(Iris 원본 FE 35mm f/1.4 GM, 카드는 표준 시선으로 바꿨다) / Expression 뒤돌아 꽂히는 시선 / Pose 옆모습 |
+| S1 성수동 아침 (滤镜 #021. 단서: 장소 성수동 콘크리트 아트 스페이스 / 소품 - / 시간대 아침 흐린 날 / 의상 스퀘어넥 니트) | A | Hair 검은 긴 생머리, 한쪽을 귀 뒤로 넘겨 이마와 눈썹이 드러난다 / Base 냉백피, 마감은 무광이고 광대뼈 광은 없다 / Lip 깨문 립 / Outfit 스퀘어넥(깊은 차콜 슬림 스퀘어넥 니트) / Props 실버 쇄골 체인 / Scene 성수동의 조용한 콘크리트 아트 스페이스, 배경은 비어 있다 / Light 흐린 날 빛 6500K, 직사 햇빛 없이 회백색 하늘이 만드는 확산 냉광, 피부는 무광에 기름기 없음 / Optics Sony A7R V + 50mm f/1.8 / Expression 맑은 눈에 캐치라이트가 하나, 막 세수한 듯 평온한 얼굴 / Pose 뒤돌아보기, 몸은 3/4로 비스듬하고 어깨가 내려간다 |
+| S2 커튼 너머 아침 독서 (滤镜 #022. 단서: 장소 창가 얇은 흰 커튼·미니멀 아파트 / 소품 책 / 시간대 아침 / 의상 모카 캐시미어 니트) | A | Hair 검은 긴 생머리 / Lip 깨문 립 / Outfit 캐시미어 니트(모카색 딥 브이넥 캐시미어) / Scene 로우 새츄레이션 벽의 군더더기 없는 미니멀 아파트, 조용한 아침 독서 / Light 창가 빛 6800K, 얇은 흰 커튼이 거른 회청빛이 실내로 퍼지고 머리카락 끝에 옅은 냉광 / Optics Leica SL2-S + Summilux 50mm / Expression 독서 몰입 / Pose 뒤돌아보기 |
+| S3 한남동 갤러리 (滤镜 #023. 단서: 장소 한남동 갤러리 천창 / 소품 - / 시간대 - / 의상 귀리색 블레이저(슬릭컷)) | B | Hair 슬릭컷 / Lip 쿨톤 매트의 회분홍 / Outfit 오버사이즈 블레이저(밝은 귀리색 외투, 안에 검은 스트랩리스, 깃을 연 채 목선과 쇄골이 드러난다) / Scene 한남동 갤러리의 깨끗한 실제 공간, 배경은 부드럽게 풀리고 비어 있다 / Light 천창 빛 5800K, 순백의 천장 소프트박스라 얼굴에 보이는 딱딱한 그림자가 거의 없고 조각처럼 평평하다 / Optics Hasselblad X2D 100C / Style 한남동 룩, 지적이고 냉정한 인상 / Expression 눈썹 까딱 / Pose 뒤돌아보기, 허리 위 반신(Medium Shot) |
+| S4 매트 도자기 베이스 (滤镜 #027. 단서: 장소 통창 곁 소프트라이트 공간(뷰티 화보, 버터플라이 조명) / 소품 - / 시간대 - / 의상 귀리색 블레이저(로우포니테일)) | C | Hair 슬릭 로우포니테일, 얼굴이 완전히 드러난다 / Lip 시나몬 누드 립 / Outfit 오버사이즈 블레이저(귀리색 외투 + 검은 스트랩리스) / Scene 한남동 미니멀 통창 곁의 조용한 소프트라이트 공간, 배경에 아무것도 없다 / Light 버터플라이 조명 5600K, 전문 버터플라이 평면광이 팔자주름과 칙칙함을 없앤다 / Optics 카메라 지정 없음(Iris 원본의 장비 칸은 조명 `Studio Pro Head Flat Softbox`) / Style 뷰티 화보, 맑은 산소감 / Expression 무표정 / Pose 뒤돌아보기 |
+| S5 비 오는 날 투명 우산 (滤镜 #025. 단서: 장소 강남 비 오는 거리 / 소품 투명 우산 / 시간대 비(안개비) / 의상 스퀘어넥 니트) | D | Hair 검은 긴 생머리, 비 오는 공기에 잔머리가 선다 / Lip 물광 립 / Outfit 스퀘어넥(차콜 슬림 스퀘어넥 니트) / Props 실버 쇄골 체인, 투명 우산 / Scene 강남의 비 오는 거리, 투명 우산 아래 / Light 안개비 6300K, 높은 습도가 만드는 촉촉한 광택, 얼굴에 고르고 부드러운 빛, 입술이 촉촉하다 / Optics Canon EOS R5 + 50mm f/1.2 / Expression 하늘 올려다보기, 우산 위로 흘러내리는 빗방울을 본다 / Pose 우산 쓰고 돌아보기 |
+| S6 블루 아워 옥상 (滤镜 #031. 단서: 장소 옥상 루프탑 난간 / 소품 - / 시간대 블루 아워 황혼 / 의상 -) | D | Hair 검은 긴 생머리 / Lip 물광 립 / Outfit 오버사이즈 블레이저(밝은 귀리색 외투 + 검은 스트랩리스) / Scene 루프탑 난간, 짙푸른 황혼에 잠긴 옆얼굴 / Light 블루 아워 7200K, 해가 지평선 아래로 완전히 진 뒤 20분, 하늘이 순수한 차가운 사파이어 블루 / Optics Sony A7 IV, FE 35mm f/1.4 GM / Expression 뒤돌아 꽂히는 시선 / Pose 옆모습 |
 
 ## 포즈·구도 쌍
 | 번호 | 갈래 | Pose | Camera |

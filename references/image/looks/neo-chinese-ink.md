@@ -2,7 +2,7 @@
 
 | 항목 | 값 |
 |---|---|
-| 부르는 이름 | 新中式水墨; 신중식 수묵; 新中式水墨影调; 신중식 수묵 톤; 水墨影调; 수묵 톤; 水墨人像; 수묵 인물 사진; 青绿竹影; 청록 죽영; 水墨宣纸; 수묵 선지; Neo-Chinese ink wash |
+| 부르는 이름 | 新中式水墨; 신중식 수묵; 新中式水墨影调; 신중식 수묵 톤; 水墨影调; 수묵 톤; 水墨人像; 수묵 인물 사진; 青绿竹影; 청록 죽영; 水墨宣纸; 수묵 선지; 수묵 화선지; Neo-Chinese ink wash |
 | 부르지 않는 말 | 新中式; 신중식; 수묵화; 水墨画; 国风; 국풍; 旗袍; 치파오; 汉服; 한푸; 중국 여행; 중국 스냅; 수묵; 水墨; 수묵 느낌; 먹 느낌; 신중식 감성; 신중식 화보; 신중식 인물; New Chinese style; Neo-Chinese; 뉴 차이니즈; 新国风; 중국풍; 중국 감성; 동양풍; 동양 감성; 국풍 화보; 국풍 인물 사진 |
 | 문화권 | CN(江南) |
 | 기본 갈래 | A |
@@ -13,8 +13,8 @@
 | medium | 중형 디지털로 찍은 현대 중국 수묵풍 인물 사진. 코스튬 스튜디오 사진도 스냅도 아니다. 첫 줄은 `A contemporary Chinese ink-wash portrait shot on a medium-format digital camera`로 시작한다(C 갈래는 끝에 `in monochrome`을 붙인다) |
 | closer | `东方写意人像` |
 | time | 낮의 흐린 확산광이 기본. 직사광은 C의 한 줄기, B의 대숲 틈(S3은 저녁 사광 약 5000K), D의 창 틈 光斑으로만 들어온다. 밤은 달밤을 요청한 B(`月光` 줄)에서만 |
-| light-key | 하늘·천정·창이 만드는 크고 부드러운 확산광(약 4800–6500K) |
-| palette | 먹 검정, 선지 흰색, 청회색, 월백, 청록(石青·石绿). 채도가 낮고 강조색은 한 장에 하나. 네온·형광·파스텔 분홍 없음 |
+| light-key | 하늘·천정·창이 만드는 크고 부드러운 확산광(약 4800–6500K, 켈빈 숫자는 광원을 잰 값이 아니라 이 룩에서 정한 연출 값이다) |
+| palette | 먹 검정, 화선지 흰색, 청회색, 월백(푸른기 도는 연한 흰색), 청록(石青·石绿). 채도가 낮고 강조색은 한 장에 하나. 네온·형광·파스텔 분홍 없음 |
 | grain | 군더더기 없이 맑은 화질. 노이즈는 가장 어두운 곳에만 극미하게(C는 은염 입자가 보인다) |
 | lens | 표준~중망원, 왜곡 없음, 인물 뒤 배경이 읽히는 심도(B는 85mm 압축이라 대숲이 부드럽게 녹는다) |
 | figure | 한 사람이 화면 한가운데나 삼분선에 고요히 서거나 앉고, 흰 벽·안개·물·대숲이 여백이 된다. 시선은 렌즈를 조용히 지나가거나 정면에서 멈춘다. 정면 증명사진 자세와 큰 웃음 없음 |
@@ -22,10 +22,10 @@
 ## 갈래 고르기
 | 갈래 | 요청에 이 말이 있으면 | 성격 | Iris 근거 |
 |---|---|---|---|
-| A 水墨宣纸 (기본) | 선지, 흰 벽, 먹, 수묵, 흐린 날, 정원, 사합원, 천정, 비 오는 골목, 우산, 겨울 강, 검은 장삼 | 흰 벽 앞에 검은 옷 한 점, 청회색 그림자, 종이 같은 무광 | 滤镜 #001 #005 #006 #010 #011 #014, 风格01 #001 #005 |
+| A 水墨宣纸 (기본) | 화선지, 선지, 흰 벽, 먹, 수묵, 흐린 날, 정원, 사합원, 천정, 비 오는 골목, 우산, 겨울 강, 검은 장삼 | 흰 벽 앞에 검은 옷 한 점, 청회색 그림자, 종이 같은 무광 | 滤镜 #001 #005 #006 #010 #011 #014, 风格01 #001 #005 |
 | B 青绿竹影 | 대숲, 죽림, 대나무 그림자, 석록, 석청, 청록, 안개, 달밤, 눈 덮인 대, 물가 정자, 산수 | 대잎 그늘과 광물성 청록, 빛이 가늘게 들어온다 | 滤镜 #002 #003 #008 #012 #013 #015 #017 #018 #019 |
 | C 焦墨黑白 | 흑백, 먹빛, 焦墨, 하드 라이트, 반쪽 얼굴, 서재, 벼루, 먹 갈기, 朱红 대문 | 한 줄기 사광, 순흑과 흑연 단계, 은염 입자 | 滤镜 #007 #009 #020 |
-| D 素绢茶室 | 찻집, 다실, 고서, 누런 비단, 소견, 따뜻한 창빛, 양지옥, 차 | 실내의 따뜻한 창빛(약 4200–4800K), 무광 질감 | 滤镜 #004 #016, 风格05 #069 #073 #081 |
+| D 素绢茶室 | 찻집, 다실, 고서, 누런 비단, 흰 비단, 따뜻한 창빛, 양지옥(양기름빛 백옥), 차 | 실내의 따뜻한 창빛(약 4200–4800K), 무광 질감 | 滤镜 #004 #016, 风格05 #069 #073 #081 |
 
 ## 끄는 고정 몫 (fixed-lines.md의 슬롯)
 | 슬롯 | 처리 | 이유 |
@@ -36,7 +36,7 @@
 | blush | C에서 끈다 | 흑백이라 뺨 색이 안 보이고 장밋빛 번짐이 회색 단계를 흐린다 |
 | catchlight | B·C는 끈다. D는 카드 줄이 이긴다 | B는 대숲 한 줄기가 눈에 닿고(#018) C는 한쪽 얼굴이 암전이라(#007) 따로 점을 찍으면 부딪힌다 |
 | grain | C는 카드 줄이 이긴다. A·B·D는 고정 몫이 그대로 붙는다 | 흑백 은염 입자는 디지털 노이즈 문장과 모양이 다르다 |
-| lens | 켠다. 어느 쌍·세트를 골라도 렌즈를 말하는 줄은 정확히 하나다. B(쌍 6·7·8)는 Optics의 `85mm 人像` 줄이 lens 줄이라 고정 몫 `无畸变`을 붙이지 않는다. A·C·D는 카드에 lens 줄이 없으니 고정 몫 `无畸变` 줄이 lens 줄이다. 단 쌍 3(A)은 Camera의 `长焦压缩` 줄이 lens 줄이라 `无畸变`을 붙이지 않는다 | Iris의 50mm 평시 꼬리와 카드의 렌즈 줄이 한 프롬프트에 공존했고, 쌍마다 lens 줄의 출처를 몰라 추론이 갈렸다 |
+| lens | 켠다. 어느 쌍·세트를 골라도 렌즈를 말하는 줄은 정확히 하나이고 출처 순서는 세트의 렌즈 > 쌍의 렌즈 > 갈래의 본체·렌즈 줄 > 고정 몫이다. B(쌍 6·7·8, S2·S3 포함)는 Optics의 `85mm 人像` 줄이 lens 줄이라 고정 몫 `自然透视`를 붙이지 않는다. A·C·D는 갈래 줄에 lens 줄이 없으니 고정 몫 `自然透视` 줄이 lens 줄이다. 단 쌍 3(A)은 Camera의 `长焦压缩` 줄이 lens 줄이라 `自然透视`를 붙이지 않는다. 세트가 렌즈를 말하면 그 값이 lens 줄이다(S6은 Leica Q2의 내장 Summilux 28mm f/1.7이 렌즈 줄이라 `自然透视`를 붙이지 않는다). S1·S4·S5는 Optics에 본체만 쓰고 렌즈를 말하지 않으니 `自然透视` 줄이 렌즈 줄이다 | Iris의 50mm 평시 꼬리와 카드의 렌즈 줄이 한 프롬프트에 공존했고, 쌍마다 lens 줄의 출처를 몰라 추론이 갈렸다 |
 | framing | 켠다. 쌍의 Camera 줄은 자리·각도·구도 기법만 정하고 프레임 범위는 fixed-lines.md의 framing 줄이 정한다. 쌍이 범위를 직접 말하면(1·9·10번) 그 말과 부딪치지 않게 쓴다 | 쌍 대부분이 프레임 범위를 말하지 않는다 |
 | ratio | 켠다. 사용자 비율이 없으면 3:4 세로 | 쌍은 비율을 정하지 않는다 |
 
@@ -145,26 +145,26 @@
 ## Optics
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
-| A | stock | Leica M11 — Crisp micro-contrast with calm colour and gentle highlight roll-off. |
+| A | stock | Leica M11 — In this look the frame has crisp micro-contrast with calm colour and gentle highlight roll-off. |
 | A | color | 水墨影调 — A low-contrast grey-cyan grade where the whites soften to matte paper and the shadows lean faintly cool. |
-| A, D | surface | 哑光相纸 — No glossy sheen, only a quiet cotton-paper matte finish with slow, soft tonal fall-off. |
-| B | stock | Fujifilm GFX — Medium-format digital with fine material texture and rich colour in the greens. |
+| A, D | surface | 哑光相纸 — No glossy sheen, only a quiet matte photo-paper finish with slow, soft tonal fall-off. |
+| B | stock | Fujifilm GFX — A medium-format digital frame that in this look shows fine material texture and rich colour in the greens. |
 | B | color | 青绿偏色 — Shadows and midtones lean ink green with restrained red and yellow while the green shade leaves only a faint pale sheen on the skin. |
 | B | lens | 85mm 人像 — A short-telephoto portrait look with gentle compression, the bamboo behind melting into creamy blur. |
 | C | mono | 黑白银盐 — Pure monochrome with a rich grey ramp, deep velvet blacks and clean highlights. |
 | C | tone | 松烟玄黑 — A low-key frame whose pure-black shadows still hold fine graphite steps, with the highlights small and restrained. |
-| C | grain | 胶片颗粒 — Visible silver-style grain across the whole frame, heaviest in the black shadow side. |
+| C | grain | 胶片颗粒 — Visible silver-style grain is laid over the monochrome digital file across the whole frame, heaviest in the black shadow side. |
 | D | color | 奶茶色调 — A low-contrast warm grade pulling the colours toward off-white, oat and camel beige. |
 
-## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 요청의 장소·소품·시간대·의상 가운데 둘 이상이 그 세트의 단서와 같으면 통째로 쓰고, 세트 값은 고정 사실보다 먼저다. 규칙은 image-brief.md §4 '룩 카드' 4항과 '비워 둔 층')
+## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 단서는 찾기용이고 요청의 장소·소품·시간대·의상 가운데 둘 이상이 그 세트의 단서와 같으면 통째로 쓰고, 세트 값은 고정 사실보다 먼저다. 규칙은 image-brief.md §4 '룩 카드' 4항과 '비워 둔 층'. 이 표의 켈빈 숫자는 광원을 잰 값이 아니라 이 룩에서 정한 연출 값이다)
 | 세트 | 갈래 | 묶음 |
 |---|---|---|
-| S1 水墨宣纸 (滤镜 #001) | A | 단서: 苏州 정원, 흰 분벽, 玄黑 장삼, 흐린 날, 목선 / Hair 一丝不苟低盘发, 긴 머리를 뒤로 올려 목선이 살짝 드러남 / Brow 野生眉 / Lip 옅은 朱红 립(淡雅朱红唇, 광택 없음) / Outfit 长衫(玄黑 重磅 真丝 개량 장삼) / Scene 苏州园林의 흰 분벽 앞에 단정히 선다 / Light 5800K 흐린 날 확산광, 그림자는 청회색 먹 번짐 / Optics Leica M11, 水墨影调, 어두운 곳에 고운 입자 / Expression 清冷感, 렌즈를 조용히 응시 / Composition 흰 벽과 검은 옷의 留白 |
-| S2 竹影 (滤镜 #002) | B | 단서: 대숲 오솔길, 월백 민소매 드레스, 대잎 그림자, 안개, 뒤돌아봄 / Hair 긴 머리를 어깨에 풀고 몇 가닥이 바람에 날림(半扎半披) / Lip 水光唇(물기 있는 누드 톤) / Outfit 月白 真丝 민소매 立领 롱 드레스 / Scene 云栖竹径, 강남 대숲 오솔길을 걷는다 / Light 竹影 5400K, 얼굴과 흰 옷에 흔들리는 대잎 그림자와 서늘한 녹색 반사 / Optics Hasselblad X2D 100C 자연색, 극히 낮은 노이즈 / Expression 云淡风轻, 생각에 잠겨 뒤돌아본다 / Pose 竹林穿行 |
-| S3 青绿山水 (滤镜 #003) | B | 단서: 太湖石 가산, 黛绿 마면군, 저녁 사광, 석청·석록, 은 죽절 비녀 / Hair 높이 틀어 올린 현대식 쪽, 纯银 竹节簪(竹节簪) / Lip 砖红唇(단풍잎 砖红 무광) / Outfit 黛绿 重磅 素绉缎 개량 马面裙 투피스 / Scene 太湖石 假山 석벽에 옆으로 기댄다 / Light 5000K 저녁 사광, 그림자는 石青·石绿, 하이라이트는 호박빛(冷暖对冲) / Optics Fujifilm GFX, 青绿偏色 / Expression 庄严肃穆, 턱을 살짝 들고 렌즈를 본다 |
-| S4 天井冷白 (滤镜 #005) | A | 단서: 徽派 천정, 青砖 안뜰, 墨黑 장삼, 천정 직하광, 턱을 든 시선 / Hair 黑长直, 귀 뒤로 가지런히 / Lip 차가운 누드 립(冷调裸色唇) / Outfit 长衫(墨黑 精纺 울 개량 立领 장삼) / Scene 徽派建筑의 青砖 天井 바로 아래에 선다 / Light 天井冷白 6200K, 눈썹뼈·콧대·턱선에 조각 같은 단단한 그림자 / Optics 水墨影调, 높은 미세 대비 / Expression 不怒自威, 턱을 살짝 들고 천정 위를 본다 / Pose 天鹅颈 |
-| S5 焦墨留白 (滤镜 #007) | C | 단서: 朱红 대문, 흑백, 한 줄기 사광, 立领 袍, 반쪽 얼굴 / Hair 贴头皮盘发 / Brow 剑眉 / Lip 浆果唇(무광 깊은 붉은색) / Outfit 立领(玄黑 重磅 真丝 立领 袍) / Scene 중국식 朱红 대문의 틈 앞에 선다 / Light 焦墨留白 5600K 단일 강한 사광, 반쪽 얼굴은 순흑 / Optics 黑白银盐, 松烟玄黑 / Expression 不怒自威, 睥睨(칼날 같은 시선으로 렌즈를 내려다봄) |
-| S6 素绢古画 (滤镜 #016) | D | 단서: 古籍 서재, 누런 고서, 紫檀 안궤, 宋制 罗衫, 따뜻한 창빛 / Hair 단정한 쪽, 조각한 白玉簪(梅花簪) / Brow 가늘고 긴 远山眉 / Lip 肉桂唇(온기 있는 붉은 립) / Outfit 宋制(茶褐色 对襟 真丝 罗衫) / Props 线装书, 紫檀 안궤 위에 펼친 누런 고서 / Scene 古籍 修复室 분위기의 书斋, 紫檀 안궤 곁에 앉는다 / Light 4200K 따뜻한 창빛 확산, 琥珀빛 古绢 색 / Optics 奶茶色调(누렇게 바랜 포장 톤) / Expression 垂眸, 고개를 살짝 돌려 책을 본다 / Pose 端坐 |
+| S1 水墨宣纸 (滤镜 #001) | A | 단서: 장소 苏州 정원, 흰 분벽 / 소품 - / 시간대 흐린 날 / 의상 玄黑 장삼 / Hair 一丝不苟低盘发, 긴 머리를 뒤로 올려 목선이 살짝 드러남 / Brow 野生眉 / Lip 옅은 朱红 립(淡雅朱红唇, 광택 없음) / Outfit 长衫(玄黑 重磅 真丝 개량 장삼) / Scene 苏州园林의 흰 분벽 앞에 단정히 선다 / Light 5800K 흐린 날 확산광, 그림자는 청회색 먹 번짐 / Optics Leica M11, 水墨影调, 어두운 곳에 고운 입자 / Expression 清冷感, 렌즈를 조용히 응시 / Composition 흰 벽과 검은 옷의 留白 |
+| S2 竹影 (滤镜 #002) | B | 단서: 장소 대숲 오솔길, 대잎 그림자 / 소품 - / 시간대 안개 낀 낮 / 의상 월백 민소매 드레스 / Hair 긴 머리를 어깨에 풀고 몇 가닥이 바람에 날림(半扎半披) / Lip 水光唇(물기 있는 누드 톤) / Outfit 月白 真丝 민소매 立领 롱 드레스 / Scene 云栖竹径, 장강 남쪽 지방의 대숲 오솔길을 걷는다 / Light 竹影 5400K, 얼굴과 흰 옷에 흔들리는 대잎 그림자와 서늘한 녹색 반사 / Optics Hasselblad X2D 100C 자연색, 극히 낮은 노이즈 / Expression 云淡风轻, 생각에 잠겨 뒤돌아본다 / Pose 竹林穿行 |
+| S3 青绿山水 (滤镜 #003) | B | 단서: 장소 太湖石 가산 / 소품 은 죽절 비녀 / 시간대 저녁 사광 / 의상 黛绿 마면군 / Hair 높이 틀어 올린 현대식 쪽, 纯银 竹节簪(竹节簪) / Lip 砖红唇(단풍잎 砖红 무광) / Outfit 黛绿 重磅 素绉缎 개량 马面裙 투피스 / Scene 太湖石 假山 석벽에 옆으로 기댄다 / Light 5000K 저녁 사광, 그림자는 石青·石绿, 하이라이트는 호박빛(冷暖对冲) / Optics Fujifilm GFX, 青绿偏色 / Expression 庄严肃穆, 턱을 살짝 들고 렌즈를 본다 |
+| S4 天井冷白 (滤镜 #005) | A | 단서: 장소 徽派 천정, 青砖 안뜰 / 소품 - / 시간대 흐린 낮 / 의상 墨黑 장삼 / Hair 黑长直, 귀 뒤로 가지런히 / Lip 차가운 누드 립(冷调裸色唇) / Outfit 长衫(墨黑 精纺 울 개량 立领 장삼) / Scene 徽派建筑의 青砖 天井 바로 아래에 선다 / Light 天井冷白 6200K, 눈썹뼈·콧대·턱선에 조각 같은 단단한 그림자 / Optics Sony A7R V, 水墨影调, 높은 미세 대비 / Expression 不怒自威, 턱을 살짝 들고 천정 위를 본다 / Pose 天鹅颈 |
+| S5 焦墨留白 (滤镜 #007) | C | 단서: 장소 朱红 대문 / 소품 - / 시간대 한 줄기 사광 / 의상 立领 袍 / Hair 贴头皮盘发 / Brow 剑眉 / Lip 浆果唇(무광 깊은 붉은색) / Outfit 立领(玄黑 重磅 真丝 立领 袍) / Scene 중국식 朱红 대문의 틈 앞에 선다 / Light 焦墨留白 5600K 단일 강한 사광, 반쪽 얼굴은 순흑 / Optics Nikon Z8의 단색 모드, 黑白银盐, 松烟玄黑 / Expression 不怒自威, 睥睨(칼날 같은 시선으로 렌즈를 내려다봄) |
+| S6 素绢古画 (滤镜 #016) | D | 단서: 장소 古籍 서재, 紫檀 안궤 / 소품 누런 고서 / 시간대 따뜻한 창빛 / 의상 宋制 罗衫 / Hair 단정한 쪽, 조각한 白玉簪(梅花簪) / Brow 가늘고 긴 远山眉 / Lip 肉桂唇(온기 있는 붉은 립) / Outfit 宋制(茶褐色 对襟 真丝 罗衫) / Props 线装书, 紫檀 안궤 위에 펼친 누런 고서 / Scene 古籍 修复室 분위기의 书斋, 紫檀 안궤 곁에 앉는다 / Light 4200K 따뜻한 창빛 확산, 琥珀빛 古绢 색 / Optics Leica Q2(내장 Summilux 28mm f/1.7), 奶茶色调(누렇게 바랜 포장 톤) / Expression 垂眸, 고개를 살짝 돌려 책을 본다 / Pose 端坐 |
 
 ## 포즈·구도 쌍
 | 번호 | 갈래 | Pose | Camera |

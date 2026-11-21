@@ -10,12 +10,12 @@
 ## 고정 사실 (모든 갈래가 지킨다)
 | 슬롯 | 값 |
 |---|---|
-| medium | 고해상 풀프레임 또는 중형 디지털로 찍고 따뜻한 시네마 네거티브 톤으로 마감한 베이징 궁궐 유산 인물 사진. 사극 코스튬 사진도 여행 스냅도 아니다. 첫 줄은 `A contemporary Beijing palace-heritage portrait shot on a full-frame or medium-format digital camera`로 시작한다. Iris 제목의 `胶片`은 색조와 입자를 뜻하고 카메라 필드는 전부 디지털 본체다. 필름 스톡 이름은 쓰지 않는다 |
+| medium | 고해상 풀프레임 또는 중형 디지털로 찍고 따뜻한 시네마 네거티브 톤으로 마감한 베이징 궁궐 유산 인물 사진. 사극 코스튬 사진도 여행 스냅도 아니다. 첫 줄은 `A contemporary Chinese palace-heritage portrait shot on a full-frame or medium-format digital camera`로 시작한다. 장소 구절 `in Beijing`은 매체 구절과 따로 두고, 사용자가 다른 궁궐(심양 고궁 등)을 말하면 그 장소로 바꾼다. Iris 제목의 `胶片`은 색조와 입자를 뜻하고 카메라 필드는 전부 디지털 본체다. 필름 스톡 이름은 쓰지 않는다 |
 | closer | `故宫人文大片` |
-| time | 낮이 기본이다(오후 약 4200~5400K, 눈 갠 날 약 6200K). 해가 낮은 황혼은 B(약 3000~3800K), 해 진 뒤 블루아워는 B의 角楼 한 장면뿐이다. C는 전각 안(약 3500~5200K), D는 이른 아침(약 4600~6500K). 한밤 없음 |
+| time | 낮이 기본이다(오후 약 4200~5400K, 눈 갠 날 약 6200K. 켈빈 숫자는 광원을 잰 값이 아니라 이 룩에서 정한 연출 값이다). 해가 낮은 황혼은 B(약 3000~3800K), 해 진 뒤 블루아워는 B의 角楼 한 장면뿐이다. C는 전각 안(약 3500~5200K), D는 이른 아침(약 4600~6500K). 한밤 없음 |
 | light-key | 해가 붉은 담·汉白玉·琉璃瓦에 닿고 되돌아온 반사광이 얼굴을 채운다. 전각 안에서는 문과 창으로 들어온 빛 한 줄기가 전부다 |
 | palette | 宫墙 朱红, 琉璃 금황, 汉白玉 흰색, 묵흑. 그림자는 따뜻한 적갈색(A·B 낮)이거나 서늘한 청회색(대리석·눈·새벽). 한 장에 강조색 하나(C의 공작청 포함). 네온·파스텔·형광·진한 마젠타 없음 |
-| grain | 고운 필름 입자가 화면 전체에, 어두운 곳에서 조금 더 |
+| grain | 디지털 파일에 후처리로 얹은 고운 필름풍 입자가 화면 전체에, 어두운 곳에서 조금 더 |
 | lens | 표준~중망원(35~85mm 환산), 얼굴 왜곡 없음. 인물 뒤에서 담·지붕·계단의 선이 또렷이 읽힌다. 쌍 1만 망원 압축, 쌍 3만 초광각(S3은 70–200mm 망원, S4는 24–70mm) |
 | figure | 한 사람이 거대한 건축 앞에 꼿꼿이 서거나 천천히 걷는다. 붉은 벽·금빛 기와·흰 대리석의 큰 색면이 화면을 채우고 인물은 어두운 옷 한 점이다. 시선은 먼 곳이나 렌즈를 조용히 지난다. 큰 웃음과 정면 증명사진 자세 없음 |
 
@@ -34,7 +34,7 @@
 | base, lip | 카드 줄이 이긴다 | Iris 메이크업 고정문의 豆沙红唇 위에 프리셋 입술색(正红, 枫叶红, 朱砂)이 또 얹혀 입술색이 둘이 됐다 |
 | face-clear | A·B에서 완화한다. 바람에 날린 가닥이 뺨·목·귀 옆을 지나가도 되고 눈썹과 눈만 덮지 않는다 | #077 #080 #085 #090은 바람에 머리가 날리는 장면인데 Iris 꼬리가 `严禁乱发遮挡眉眼`로 지웠다 |
 | catchlight | B는 카드의 `金色眼神光` 줄이 이긴다. 해가 진 S4(블루아워)와 눈을 감는 `闭目冥思`(S6 포함)는 끈다 | 해를 등진 장면(#085)은 눈동자에 닿는 빛이 낙조 쪽이고, #079는 눈을 거의 감아 점을 찍을 수 없다 |
-| lens | 켠다. 어느 쌍·세트를 골라도 렌즈를 말하는 줄은 정확히 하나다. 카드에 lens 줄이 없으니 기본은 고정 몫 `无畸变` 줄이다. 쌍 1은 Camera의 `长焦压缩` 줄이, 쌍 3은 Camera의 `一点透视` 줄(초광각)이 렌즈를 말하니 그 쌍에서는 `无畸变`을 붙이지 않는다. 세트가 렌즈를 말하면(S3 70–200mm 망원, S4 24–70mm) 그 값이 `无畸变`을 대신한다 | #077(70-200mm)·#085(100-500mm)·#090(16-35mm)이 각자 렌즈를 정하는데 Iris 꼬리의 50mm 평시 무왜곡이 한 프롬프트에 둘째 렌즈를 얹었다 |
+| lens | 켠다. 어느 쌍·세트를 골라도 렌즈를 말하는 줄은 정확히 하나이고 출처 순서는 세트의 렌즈 > 쌍의 렌즈 > 갈래의 본체·렌즈 줄 > 고정 몫이다. 갈래 줄(Optics의 본체 줄)에는 렌즈 길이를 말하는 줄이 없으니 기본은 고정 몫 `自然透视` 줄이다. 쌍 1은 Camera의 `长焦压缩` 줄이, 쌍 3은 Camera의 `一点透视` 줄(초광각)이 렌즈를 말하니 그 쌍에서는 `自然透视`를 붙이지 않는다. 세트가 렌즈를 말하면(S3 70–200mm 망원, S4 24–70mm 줌) 그 값이 `自然透视`를 대신하고 세트와 쌍이 함께 렌즈를 말하면 세트가 이긴다(S3에 쌍 3을 붙이면 쌍의 Camera 줄에서 초광각 말을 뺀다). 세트가 렌즈를 말하지 않는 S1·S2·S5·S6은 Iris 원본 렌즈(S1 Summilux-M 50mm, S2 FE 85mm, S5 FE 50mm, S6 GF 80mm)가 모두 표준~중망원이라 `自然透视` 줄이 렌즈 줄이다 | #077(70-200mm)·#085(100-500mm)·#090(16-35mm)이 각자 렌즈를 정하는데 Iris 꼬리의 50mm 평시 무왜곡이 한 프롬프트에 둘째 렌즈를 얹었다 |
 | framing | 켠다. 쌍 3·4·5·6은 프레임 범위를 직접 말하니 그 쌍에서는 끈다(3:4 비율은 그대로). 나머지 쌍의 Camera 줄은 자리·각도·구도 기법만 정한다 | Iris 꼬리의 `腰部以上` 구도가 광장·계단·전각 전경 구도와 갈렸다 |
 | ratio | 켠다. 사용자 비율이 없으면 3:4 세로 | 쌍은 비율을 정하지 않는다 |
 | grain | 카드 줄이 이긴다. 모든 갈래에서 Optics의 `胶片颗粒` 줄이 입자를 정하고 `数码噪点` 줄은 붙이지 않는다 | 디지털 본체로 찍지만 마감이 필름 톤이고 Iris 영문 블록도 `cinema 35mm grain`이라 디지털 노이즈 줄과 입자 문장이 둘이 된다 |
@@ -151,24 +151,24 @@
 ## Optics
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
-| A | stock | Leica M11 — Crisp micro-contrast with calm warm colour and gentle highlight roll-off, so weathered plaster keeps its texture. (滤镜 #076 #087) |
-| B | stock | Canon EOS R5 — Crisp high-resolution full-frame rendering with natural colour and smooth tonal transitions that hold fine detail in the glazed-tile highlights. (滤镜 #077 #085) |
-| C, D | stock | Fujifilm GFX — A medium-format digital look with fine material texture and rich deep colour, so silk, wood and enamel keep distinct surfaces. (滤镜 #079 #088) |
-| C | stock | Sony A7R V — A high-resolution full-frame look with clean matte detail and cool grey-white tonality under a soft spot. (滤镜 #084) |
-| D | stock | Hasselblad X2D 100C — A medium-format digital look with natural, smooth colour, a wide tonal range and delicate gradation. (滤镜 #082) |
+| A | stock | Leica M11 — In this look the frame has crisp micro-contrast with calm warm colour and gentle highlight roll-off, so weathered plaster keeps its texture. (滤镜 #076 #087) |
+| B | stock | Canon EOS R5 — In this look the frame is crisp and high-resolution with natural colour and smooth tonal transitions that hold fine detail in the glazed-tile highlights. (滤镜 #077 #085) |
+| C, D | stock | Fujifilm GFX — A medium-format digital frame that in this look shows fine material texture and rich deep colour, so silk, wood and enamel keep distinct surfaces. (滤镜 #079 #088) |
+| C | stock | Sony A7R V — A high-resolution full-frame frame that in this look shows clean matte detail and cool grey-white tonality under a soft spot. (滤镜 #084) |
+| D | stock | Hasselblad X2D 100C — A medium-format digital frame that in this look shows natural, smooth colour, a wide tonal range and delicate gradation. (滤镜 #082) |
 | A, B | color | 朱红暖调 — A warm grade leaning reds toward cinnabar and golds toward amber, with shadows going ochre-brown and only a faint warm bounce reaching the skin. (滤镜 #076) |
 | C | color | 金褐暗调 — A low-key grade where deep shadows turn gold-brown like old resinous wood and the few highlights stay small and warm. (滤镜 #083) |
-| 전부 | grain | 胶片颗粒 — Fine, even film grain sits across the whole frame, slightly heavier in the shadows. |
+| 전부 | grain | 胶片颗粒 — A fine film-style grain is laid over the digital file, even across the whole frame and slightly heavier in the shadows. |
 
-## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 요청의 장소·소품·시간대·의상 가운데 둘 이상이 그 세트의 단서와 같으면 통째로 쓰고, 세트 값은 고정 사실보다 먼저다. 규칙은 image-brief.md §4 '룩 카드' 4항과 '비워 둔 층')
+## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 단서는 찾기용이고 요청의 장소·소품·시간대·의상 가운데 둘 이상이 그 세트의 단서와 같으면 통째로 쓰고, 세트 값은 고정 사실보다 먼저다. 규칙은 image-brief.md §4 '룩 카드' 4항과 '비워 둔 층'. 이 표의 켈빈 숫자는 광원을 잰 값이 아니라 이 룩에서 정한 연출 값이다)
 | 세트 | 갈래 | 묶음 |
 |---|---|---|
-| S1 宫墙朱红 (滤镜 #076) | A | 단서: 红墙, 青砖 석판 길, 검은 더블 코트, 竹节簪, 오후 햇빛 / Hair 一丝不苟低盘发, 검은 머리를 뒤로 올린 고전적인 낮은 쪽, 竹节簪(순은 죽절 비녀) / Brow 野生眉 / Lip 正红唇(무광의 짙은 정궁 붉은색, 豆沙 립은 얹지 않음) / Outfit 麦尔登呢(검은 중량 순양모 立领 더블 코트, 양손은 주머니에) / Pose 红墙 옆 青砖 석판 길을 천천히 걷는다 / Scene 红墙, 풍화한 주홍 담과 青砖 석판 길 / Light 柔和漫射光(5000K 오후, 낡은 붉은 회벽을 비추는 부드러운 햇빛, 그림자는 따뜻한 적갈색) / Optics Leica M11, 朱红暖调, 胶片颗粒 / Expression 波澜不惊, 붉은 담 끝을 바라본다 |
-| S2 太和冬雪 (滤镜 #080) | A | 단서: 눈 쌓인 太和殿 광장, 红墙, 흰 눈, 먹빛 캐시미어 롱코트, 눈 갠 날 / Hair 黑长直, 몇 가닥이 찬바람에 날림(face-clear 완화) / Lip 正红唇 / Outfit 羊绒大衣(먹빛 더블페이스 순 캐시미어 롱코트) / Scene 红墙, 눈 쌓인 太和殿 광장의 주홍 담과 흰 눈 덮인 처마 / Light 雪地反光(6200K 눈 갠 뒤의 맑고 차가운 흰 하늘빛, 红·白·黑 세 색의 대비) / Optics Sony A1, 胶片颗粒 / Expression 不怒自威, 턱을 살짝 들고 렌즈를 본다 / Pose 天鹅颈松弛 |
-| S3 景山金顶 (滤镜 #077) | B | 단서: 景山, 万春亭 난간, 琉璃瓦 지붕의 바다, 낙조, 墨绿 코트, 70-200mm 망원 / Hair 微卷长发, 산정 바람에 흩날림(face-clear 완화) / Lip 枫叶红唇(무광) / Outfit 羊绒大衣, 墨绿(깊은 에메랄드 그린 더블페이스 롱코트, 열어 입음) / Pose 登高俯瞰, 景山 万春亭 汉白玉 난간 옆 / Scene 景山, 아래로 琉璃瓦 금빛 지붕의 바다 / Light 逆光金边(3800K 낙조, 머리카락과 코트 가장자리에 황금 윤곽, 얼굴 뼈대에 하이라이트) / Optics Canon EOS R5, 70-200mm 망원 / Expression 居高临下, 턱을 살짝 들고 내려다본다 / Camera 远景 |
-| S4 角楼蓝调 (滤镜 #086) | B | 단서: 角楼, 해자, 블루아워, 트렌치, 汉白玉 난간, 수면 반영 / Hair 一丝不苟低盘发 / Lip 正红唇 / Outfit 风衣(玄黑 중량 실크 더블 수정 트렌치) / Scene 角楼, 해자 汉白玉 난간 곁, 수면에 누각의 금빛 윤곽이 거울처럼 비친다 / Light 蓝调时刻(6800K~3200K 혼합: 짙은 남색 황혼 하늘과 따뜻한 누각 조명, 옆에서 약한 부드러운 빛이 얼굴을 비춘다) / Optics Nikon Z8(24-70mm), 胶片颗粒 / Expression 침착하게 렌즈를 돌아본다 / Pose 回眸 |
-| S5 景泰蓝 (滤镜 #084) | C | 단서: 珍宝馆, 골동 진열, 孔雀蓝 旗袍, 景泰蓝 귀걸이, 스포트 / Hair 높이 틀어 올린 우아한 현대식 쪽 / Props 景泰蓝 귀걸이(순금 掐丝 공작청 법랑) / Lip 正红唇(무광의 복고 붉은색) / Outfit 改良旗袍(깊은 孔雀蓝 중량 크레이프 새틴 立领 롱 드레스), 织金(가장자리 순금 실 자수 파이핑) / Pose 双手叠放腹前 / Scene 珍宝馆, 어두운 배경의 골동 진열 앞 / Light 부드러운 스포트(5200K), 공작청 새틴이 법랑 같은 보석 광택을 내고 금사 자수가 반짝인다 / Optics Sony A7R V, 胶片颗粒 / Expression 不怒自威, 렌즈를 직시 |
-| S6 古刹香火 (滤镜 #079) | D | 단서: 雍和宫, 향, 古柏, 长衫, 이른 아침 햇빛, 눈을 감음 / Hair 碎发低发髻 / Lip 水光唇(연한 물분홍) / Outfit 长衫(素黑 중량 실크 对襟 장삼) / Props 三炷香(가는 향 세 대를 두 손으로 든다) / Scene 雍和宫, 큰 청동 향로 앞 / Light 丁达尔(4600K 이른 아침 햇빛이 古柏 가지를 지나 청남색 향 연기 속에 빛줄기를 만든다) / Optics Fujifilm GFX, 胶片颗粒 / Expression 闭目冥思, 눈을 거의 감는다(catchlight 끔) / Pose 双手叠放腹前 |
+| S1 宫墙朱红 (滤镜 #076) | A | 단서: 장소 红墙, 青砖 석판 길 / 소품 竹节簪 / 시간대 오후 햇빛 / 의상 검은 더블 코트 / Hair 一丝不苟低盘发, 검은 머리를 뒤로 올린 고전적인 낮은 쪽, 竹节簪(순은 죽절 비녀) / Brow 野生眉 / Lip 正红唇(무광의 짙은 정궁 붉은색, 豆沙 립은 얹지 않음) / Outfit 麦尔登呢(검은 중량 순양모 立领 더블 코트, 양손은 주머니에) / Pose 红墙 옆 青砖 석판 길을 천천히 걷는다 / Scene 红墙, 풍화한 주홍 담과 青砖 석판 길 / Light 柔和漫射光(5000K 오후, 낡은 붉은 회벽을 비추는 부드러운 햇빛, 그림자는 따뜻한 적갈색) / Optics Leica M11, 朱红暖调, 胶片颗粒 / Expression 波澜不惊, 붉은 담 끝을 바라본다 |
+| S2 太和冬雪 (滤镜 #080) | A | 단서: 장소 눈 쌓인 太和殿 광장, 红墙 / 소품 - / 시간대 눈 갠 날 / 의상 먹빛 캐시미어 롱코트 / Hair 黑长直, 몇 가닥이 찬바람에 날림(face-clear 완화) / Lip 正红唇 / Outfit 羊绒大衣(먹빛 더블페이스 순 캐시미어 롱코트) / Scene 红墙, 눈 쌓인 太和殿 광장의 주홍 담과 흰 눈 덮인 처마 / Light 雪地反光(6200K 눈 갠 뒤의 맑고 차가운 흰 하늘빛, 红·白·黑 세 색의 대비) / Optics Sony A1, 胶片颗粒 / Expression 不怒自威, 턱을 살짝 들고 렌즈를 본다 / Pose 天鹅颈松弛 |
+| S3 景山金顶 (滤镜 #077) | B | 단서: 장소 景山 万春亭 난간, 琉璃瓦 지붕의 바다 / 소품 - / 시간대 낙조 / 의상 墨绿 코트 / Hair 微卷长发, 산정 바람에 흩날림(face-clear 완화) / Lip 枫叶红唇(무광) / Outfit 羊绒大衣, 墨绿(깊은 에메랄드 그린 더블페이스 롱코트, 열어 입음) / Pose 登高俯瞰, 景山 万春亭 汉白玉 난간 옆 / Scene 景山, 아래로 琉璃瓦 금빛 지붕의 바다 / Light 逆光金边(3800K 낙조, 머리카락과 코트 가장자리에 황금 윤곽, 얼굴 뼈대에 하이라이트) / Optics Canon EOS R5, 70-200mm 망원 / Expression 居高临下, 턱을 살짝 들고 내려다본다 / Camera 远景 |
+| S4 角楼蓝调 (滤镜 #086) | B | 단서: 장소 角楼, 해자 汉白玉 난간, 수면 반영 / 소품 - / 시간대 블루아워 / 의상 트렌치 / Hair 一丝不苟低盘发 / Lip 正红唇 / Outfit 风衣(玄黑 중량 실크 더블 수정 트렌치) / Scene 角楼, 해자 汉白玉 난간 곁, 수면에 누각의 금빛 윤곽이 거울처럼 비친다 / Light 蓝调时刻(6800K~3200K 혼합: 짙은 남색 황혼 하늘과 따뜻한 누각 조명, 옆에서 약한 부드러운 빛이 얼굴을 비춘다) / Optics Nikon Z8(24-70mm), 胶片颗粒 / Expression 침착하게 렌즈를 돌아본다 / Pose 回眸 |
+| S5 景泰蓝 (滤镜 #084) | C | 단서: 장소 珍宝馆, 골동 진열 / 소품 景泰蓝 귀걸이 / 시간대 - / 의상 孔雀蓝 旗袍 / Hair 높이 틀어 올린 우아한 현대식 쪽 / Props 景泰蓝 귀걸이(순금 掐丝 공작청 법랑) / Lip 正红唇(무광의 복고 붉은색) / Outfit 改良旗袍(깊은 孔雀蓝 중량 크레이프 새틴 立领 롱 드레스), 织金(가장자리 순금 실 자수 파이핑) / Pose 双手叠放腹前 / Scene 珍宝馆, 어두운 배경의 골동 진열 앞 / Light 부드러운 스포트(5200K), 공작청 새틴이 법랑 같은 보석 광택을 내고 금사 자수가 반짝인다 / Optics Sony A7R V, 胶片颗粒 / Expression 不怒自威, 렌즈를 직시 |
+| S6 古刹香火 (滤镜 #079) | D | 단서: 장소 雍和宫, 古柏 / 소품 향 / 시간대 이른 아침 햇빛 / 의상 长衫 / Hair 碎发低发髻 / Lip 水光唇(연한 물분홍) / Outfit 长衫(素黑 중량 실크 对襟 장삼) / Props 三炷香(가는 향 세 대를 두 손으로 든다) / Scene 雍和宫, 큰 청동 향로 앞 / Light 丁达尔(4600K 이른 아침 햇빛이 古柏 가지를 지나 청남색 향 연기 속에 빛줄기를 만든다) / Optics Fujifilm GFX, 胶片颗粒 / Expression 闭目冥思, 눈을 거의 감는다(catchlight 끔) / Pose 双手叠放腹前 |
 
 ## 포즈·구도 쌍
 | 번호 | 갈래 | Pose | Camera |

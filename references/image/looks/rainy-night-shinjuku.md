@@ -10,14 +10,14 @@
 ## 고정 사실 (모든 갈래가 지킨다)
 | 슬롯 | 값 |
 |---|---|
-| medium | 큰 센서 디지털 카메라로 찍은 비 오는 밤 도쿄의 영화 스틸. 필름 스냅도 화보도 아니다. 첫 줄은 `A rainy-night Tokyo noir film still shot on a large-sensor digital camera`로 시작한다 |
+| medium | 큰 센서 디지털 카메라로 찍은 비 오는 밤 도쿄의 영화 스틸. 필름 스냅도 화보도 아니다. 첫 줄은 `A rainy-night Tokyo noir film still shot on a large-sensor digital camera`로 시작한다. 매체 구절은 `noir film still shot on a large-sensor digital camera`이고 장소 구절 `Tokyo`는 사용자가 다른 도시나 장소를 말하면 그 말로 바꾼다(예: `A rainy-night Osaka noir film still shot on …`) |
 | closer | `ノワール映画スチール` |
 | time | 한밤중(D 갈래는 새벽 2시 무렵). 비가 오는 중이거나 막 갠 뒤라 노면이 젖어 있다. 해가 화면에 없다 |
 | light-key | 장면 속 실용광: 네온 간판, 대형 LED 스크린, 가로등, 차량 헤드램프와 테일램프. 젖은 노면과 유리가 그 빛을 되비춘다 |
 | palette | 차가운 보라, 시안, 얼음 같은 흰색, 광택 있는 검정. 붉은색은 테일램프나 도쿄타워 같은 작은 점으로만(C 갈래는 붉은 빛줄기와 도쿄타워의 옅은 붉은 안개까지), 호박색은 긴자 가로등 한 줄기로만 들어온다. A의 歌舞伎町는 분홍·마젠타 네온이 보라 곁에 섞인다. 파스텔, 낮빛, 텅스텐이 화면을 덮는 장면 없음 |
 | grain | 디지털 시네마 계열이라 입자가 거의 없다. 어두운 곳에만 아주 고운 노이즈가 있고(D 갈래는 노이즈도 없다) 필름 입자와 할레이션은 없다 |
 | lens | 대구경 단렌즈. 네온과 먼 간판은 큰 보케로 풀리고 인물은 또렷하다. A 갈래는 35mm 아나모픽(타원 보케), B 갈래는 24~85mm, C 갈래는 50~90mm, D 갈래는 50mm(세트가 정한 렌즈가 이긴다: S2는 35mm 구면 단렌즈, S5는 28~70mm 줌) |
-| figure | 한 사람이 젖은 길이나 유리 앞에 홀로 서거나 걷는다. 카메라를 의식하지 않고 시선이 렌즈를 스친다(B·D의 `自然平視` 줄과 쌍 7은 렌즈를 똑바로 본다). 정면 증명사진 자세 없음 |
+| figure | 한 사람이 젖은 길이나 유리 앞에 홀로 서거나 걷는다. 카메라를 의식하지 않고 시선이 렌즈를 스친다(B·D의 `自然なカメラ目線` 줄과 쌍 7은 렌즈를 똑바로 본다). 정면 증명사진 자세 없음 |
 
 ## 갈래 고르기
 | 갈래 | 요청에 이 말이 있으면 | 성격 | Iris 근거 |
@@ -32,10 +32,10 @@
 |---|---|---|
 | face-light | 모든 갈래에서 끈다. 얼굴 빛은 이 카드의 Light 줄이 정한다 | 위·옆 키라이트(`立体光`)가 네온 분할광, 대형 스크린의 위광, 가로등 한 점, 차창 반사와 부딪힌다 |
 | catchlight | 카드 줄이 이긴다 | 눈에 비치는 빛이 네온 링, 스크린 사각형, 도시 불빛, 가로등 점으로 갈래마다 다르다 |
-| base, lip, blush | 카드 줄이 이긴다 | 고정 몫의 `水紅`(코랄)과 `桜色チーク`(벚꽃 분홍)가 차가운 보라·시안 빛 아래서 혼자 따뜻하게 떠 보인다. 뺨은 비바람이 만든 차가운 홍조, 입술은 갈래별 줄로 간다 |
+| base, lip, blush | 카드 줄이 이긴다 | 고정 몫의 `シアーリップ`(코랄)과 `桜色チーク`(벚꽃 분홍)가 차가운 보라·시안 빛 아래서 혼자 따뜻하게 떠 보인다. 뺨은 비바람이 만든 차가운 홍조, 입술은 갈래별 줄로 간다 |
 | under-eye, liner | 켠다. 고정 몫 그대로 | 이 룩은 눈 화장을 따로 정하지 않는다 |
 | face-clear | B 갈래에서 끈다. A·C·D는 켠다 | B 갈래의 젖은 머리 가닥이 뺨과 턱선에 붙는 것이 이 룩의 특징이다(神态 #079). 눈썹과 눈은 계속 보인다 |
-| lens | 모든 갈래에서 끈다(`无畸变` 줄은 붙이지 않는다). 렌즈를 말하는 줄은 하나다: 세트를 쓰지 않으면 쌍의 Camera 줄이다(열두 쌍이 모두 mm를 말한다). 세트를 쓰면 세트 Optics의 렌즈(S1 35mm 아나모픽, S2 35mm f/1.4, S3 24mm, S4 50mm, S5 28~70mm 줌, S6 50mm)가 렌즈 줄이고 쌍의 Camera 줄은 mm와 `anamorphic`을 빼고 구도와 시점만 쓴다. Optics의 `camera` 줄과 `アナモルフィック` 줄은 렌즈 길이를 말하지 않는다 | #091 아나모픽 35mm, #092 24mm와 `无畸变` 줄의 표준~중망원이 갈린다 |
+| lens | 모든 갈래에서 끈다(`自然透视` 줄은 붙이지 않는다). 렌즈를 말하는 줄은 프롬프트에서 하나이고 출처 순서는 세트의 렌즈 > 쌍의 렌즈 > 갈래의 본체·렌즈 줄 > 고정 몫 줄이다. 세트를 쓰지 않으면 쌍의 Camera 줄이다(열두 쌍이 모두 mm를 말한다). 세트를 쓰면 세트 Optics의 렌즈(S1 35mm 아나모픽, S2 35mm f/1.4, S3 24mm, S4 50mm, S5 28~70mm 줌, S6 50mm)가 렌즈 줄이고 쌍의 Camera 줄은 mm와 `anamorphic`을 빼고 구도와 시점만 쓴다. Optics의 `camera` 줄과 `アナモルフィック` 줄은 렌즈 길이를 말하지 않는다 | #091 아나모픽 35mm, #092 24mm와 `自然透视` 줄의 표준~중망원이 갈린다 |
 | grain | A·B·C는 켠다(`数码噪点` 줄이 그대로 맞다). D는 끈다 | #100의 어두운 곳은 노이즈가 없다. D의 Optics `key` 줄이 그 사실을 정한다 |
 | framing | 켠다. 쌍 8·12는 인물이 프레임의 3분의 1이라고 직접 말하니 framing 줄과 부딪히지 않게 쓴다. 범위를 말하지 않는 쌍 가운데 걸음·서 있는 전신이 보이는 1·3·4·5·11은 `from head to toe`로, 상체와 손이 중심인 2·6·7·9·10은 `from the top of the head to the waist`로 쓴다 | 나머지 쌍은 프레임 범위를 말하지 않는데 Pose가 걸음이나 서 있는 자세를 말하면 허리 위 프레임에서 안 보인다 |
 | ratio | 켠다. 사용자 비율이 없으면 3:4 세로 | Iris 원본이 3:4다. 시네마스코프 가로를 요청하면 사용자 값이 이긴다 |
@@ -51,7 +51,7 @@
 | A | lip | ガラスリップ — A glassy translucent lip with fine pearl shimmer that mirrors small points of violet and cyan neon. |
 | B | lip | Dusty Rose Lip — A muted rosy-brown matte lip with a soft edge and no gloss, taking the amber lamp light flat. |
 | C | lip | Berry Lip — A dark berry lip with a slightly stained edge that reads almost black in the dim light of the glass or the car. |
-| D | lip | 水紅 — A sheer watery lip color with a soft stain and one thin wet sheen, the only warm note against the cold light on her face. |
+| D | lip | シアーリップ — A sheer coral lip color with a soft stain and one thin wet sheen, the only warm note against the cold light on her face. |
 | 전부 | blush | 頬染め — A cold pink flush sits on the nose tip and cheeks as if the rain and the night wind had just touched them. |
 
 ## Expression
@@ -61,7 +61,7 @@
 | A | expression | 睥睨 — The lids half lower and the chin lifts so the eyes pass over the street from above, cyan screen light running along the cheekbone. (滤镜 #098) |
 | B | expression | Dispassionate Onlooker — The eyes follow the crowd without reacting and the body stays still while umbrellas stream past on both sides. (滤镜 #092) |
 | B | expression | 無垢な静寂 — A still face with level unhurried eyes and closed lips, so the amber lamp beside her is the only warm thing in the frame. (滤镜 #093) |
-| B, D | gaze | 自然平視 — The face squares to the lens and the eyes hold on it without blinking, level and clear, with rain or an empty street quiet behind. (神态 #079) |
+| B, D | gaze | 自然なカメラ目線 — The face squares to the lens and the eyes hold on it without blinking, level and clear, with rain or an empty street quiet behind. (神态 #079) |
 | C | expression | Taxi Backseat Gaze — Passing lights slide over her cheek and the window glass while the eyes follow one rain streak down the pane. (神态 #019) |
 | C, D | expression | 物思い — The lids lower and the gaze drifts unfocused over the lights below or the black water, the mouth relaxed and the head tilted slightly. (滤镜 #096 #097) |
 | D | expression | 流し目 — The eyes rest on a point about fifteen degrees to the side of the lens, as if something out of frame had her attention. |
@@ -142,13 +142,13 @@
 ## Optics
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
-| A | camera | ARRI Alexa Mini — Cinema-camera color with smooth highlight roll-off, so neon tubes stay unclipped and the blacks hold a deep violet-blue. (滤镜 #091) |
+| A | camera | ARRI Alexa Mini — A cinema-camera look for this frame: smooth highlight roll-off that keeps the neon tubes unclipped and blacks held in a deep violet-blue. (滤镜 #091) |
 | A | camera | Sony A7S III — A low-light full-frame look with clean shadows and steady cyan, the screen light reflected calmly in the wet street. (滤镜 #098) |
 | A | flare | アナモルフィック — Horizontal blue streaks run off each neon tube and the out-of-focus lights behind her stretch into ovals. |
 | A, B | bloom | Black Pro-Mist — A black diffusion filter blooms the brightest signs into faint halos and lowers contrast slightly while her face stays clear. |
 | A, B, C | color | Cool Tone — The whole palette leans cold blue-white with the shadows tinted violet, quiet and slightly pale. |
 | B | camera | Sony FX3 — A compact cinema-line full-frame look with clean high-ISO files and neutral color, steady for handheld night street shooting. (滤镜 #092) |
-| B | camera | Leica SL2 — Crisp detail and deep, calm color that keep the amber lamp and the white headlights cleanly separate with no purple fringing. (滤镜 #093) |
+| B | camera | Leica SL2 — Crisp detail and deep, calm color drawn so the amber lamp and the white headlights stay cleanly separate with no purple fringing. (滤镜 #093) |
 | C | camera | Hasselblad X2D 100C — A medium-format digital look with smooth color and wide tonal range, the distant city lights kept delicate and unclipped. (滤镜 #096) |
 | C | camera | RED Komodo — A compact cinema-camera look with crisp detail and clean color, steady enough to shoot from inside a moving car. (滤镜 #099) |
 | C | motion | 光跡 — Headlights and tail lights stretch into smooth colored streaks along the road while the buildings stay still and sharp. |
@@ -158,14 +158,16 @@
 | D | color | Cool Grey Tone — A pale gray with a trace of blue and restrained contrast, the whites clean and cold. |
 
 ## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 요청의 장소·소품·시간대·의상 가운데 둘 이상이 그 세트의 단서와 같으면 통째로 쓰고, 세트 값은 고정 사실보다 먼저다. 규칙은 image-brief.md §4 '룩 카드' 4항과 '비워 둔 층')
+켈빈 숫자(4200K 등)는 Iris 프리셋이 적은 연출 값이고 실측이 아니다. 이 룩에서 그 빛이 그렇게 보이게 쓰는 값이다.
+
 | 세트 | 갈래 | 묶음 |
 |---|---|---|
-| S1 歌舞伎町 雨夜 (滤镜 #091) | A | 단서: 가부키초, 일번가 아치, 괴수 조형, 투명 우산, 칠피 재킷 / Hair 濡れ髪의 검은 단발, シースルーバング가 바람에 흔들린다 / Lip ガラスリップ(Iris 원본은 水润素唇) / Outfit 검은 칠피 짧은 재킷(漆皮) / Props ビニール傘, 큰 투명 우산을 쓴다 / Scene 歌舞伎町, 괴수 머리 조형이 얹힌 건물 아래 좁은 골목 / Light 4200K, 젖은 아스팔트가 보라·청록·분홍 네온을 거울처럼 되비춘다 / Optics ARRI Alexa Mini, アナモルフィック(Iris 원본 Cooke S4/i 35mm 아나모픽) / Expression 걸음이 느슨하고 시선이 렌즈를 스친다 / Pose 거리 한가운데를 걷는다 |
-| S2 秋葉原 (滤镜 #098) | A | 단서: 아키하바라, 보행교 아래, 거대 스크린, 반사 재킷, 가는 비 / Hair 濡れ髪, シースルーバング / Outfit リフレクター, 은회색 반사 기능성 짧은 외투 / Scene 秋葉原, 중앙 도로 보행교 아래 / Light 6500K, 거대한 전자 스크린의 순청록과 차가운 흰빛이 가는 비를 뚫고 얼굴 반쪽을 비춘다(街頭ビジョン) / Optics Sony A7S III 35mm f/1.4, 극저조도에서도 깨끗한 암부 / Expression 睥睨, 냉소적이고 미래적인 얼굴 / Pose 스크린 아래에 서서 옆얼굴이 청색으로 잘린다 |
-| S3 渋谷 雨のスクランブル (滤镜 #092) | B | 단서: 시부야, 스크램블 교차로, 투명 우산의 바다, 발수 코트, 대형 스크린 / Hair 濡れ髪, シースルーバング / Outfit 깊은 회색 긴 코트(撥水コート) / Scene 渋谷スクランブル交差点, 青信号 순간 투명 우산의 바다 한가운데 / Light 5000K, 수십 미터 위 대형 스크린의 차가운 흰빛이 위에서 확산된다(街頭ビジョン) / Optics Sony FX3 24mm f/1.4, 높은 감도에서도 낮은 노이즈 / Expression Dispassionate Onlooker, 인파 속 혼자 멈춘다 / Pose 인파 한가운데서 걸음을 멈추고 돌아본다 |
-| S4 銀座 雨宿り (滤镜 #093) | B | 단서: 긴자, 쇼윈도 처마, 주철 가로등, 헤드램프, 캐시미어 롱코트 / Hair 濡れ髪, シースルーバング / Outfit ダブルフェイスカシミヤ, 연한 귀리색 이중직 캐시미어 롱코트 / Props 금빛 귀걸이 / Scene 銀座, 고급 쇼윈도 처마 아래 비를 피하는 모퉁이 / Light 3800K~6000K, 주철 가로등의 호박색과 지나가는 차의 차가운 제논 헤드램프가 맞선다(Warm-Cool Contrast) / Optics Leica SL2 + 50mm f/2 APO, 보라 번짐 없는 고대비 / Expression 無垢な静寂, 품위 있는 시선 |
-| S5 首都高 助手席 (滤镜 #099) | C | 단서: 수도고속, 조수석, 차창, 붉은 테일램프, 라이더 가죽 / Hair 濡れ髪, シースルーバング / Outfit Moto Jacket, 검은 라이더 가죽 / Scene 首都高 심야, 조수석 / Light 4000K, 차창 밖 비바람 속 붉은 테일램프가 빗물에 끌려 붉은 호를 그린다(고정 사실 palette의 C 예외) / Optics RED Komodo 6K 28-70mm f/2, 차 안 이동 촬영 / Pose 머리받침에 비스듬히 기대고 옆얼굴이 붉은 빛과 노란 가로등에 번갈아 밝아진다 / Expression 시선이 렌즈를 스친다 |
-| S6 新宿東口 2時 (滤镜 #100) | D | 단서: 신주쿠 동쪽 출구, 새벽 2시, 빈 횡단보도, 가로등 한 줄기, 울 롱코트 / Hair 濡れ髪, シースルーバング / Outfit 炭黑 울 롱코트(ダブルフェイスカシミヤ) / Scene 新宿東口, 새벽 2시 인적 없는 횡단보도 한가운데 / Light 5200K, 번잡한 조명이 모두 꺼지고 낡은 가로등만 남는다(Streetlamp Pool) / Optics Leica M11 50mm f/1.4, Deep Blacks, 노이즈 없는 깊은 검정 / Expression 自然平視, 돌아보며 렌즈를 본다 / Pose 횡단보도 중앙에 서서 돌아본다 |
+| S1 歌舞伎町 雨夜 (滤镜 #091) | A | 단서: 장소 가부키초 일번가 아치, 괴수 조형 건물 / 소품 투명 우산 / 시간대 비 오는 밤 / 의상 칠피 재킷 / Hair 濡れ髪의 검은 단발, シースルーバング가 바람에 흔들린다 / Lip ガラスリップ(Iris 원본은 水润素唇) / Outfit 검은 칠피 짧은 재킷(エナメル) / Props ビニール傘, 큰 투명 우산을 쓴다 / Scene 歌舞伎町, 괴수 머리 조형이 얹힌 건물 아래 좁은 골목 / Light 4200K, 젖은 아스팔트가 보라·청록·분홍 네온을 거울처럼 되비춘다 / Optics ARRI Alexa Mini, アナモルフィック(Iris 원본은 Cooke S4/i 35mm로 적었지만 S4/i는 구면 렌즈이고 아나모픽은 Cooke Anamorphic/i 계열이다) / Expression 걸음이 느슨하고 시선이 렌즈를 스친다 / Pose 거리 한가운데를 걷는다 |
+| S2 秋葉原 (滤镜 #098) | A | 단서: 장소 아키하바라 보행교 아래, 거대 스크린 / 소품 - / 시간대 가는 비 오는 밤 / 의상 반사 재킷 / Hair 濡れ髪, シースルーバング / Outfit リフレクター, 은회색 반사 기능성 짧은 외투 / Scene 秋葉原, 중앙 도로 보행교 아래 / Light 6500K, 거대한 전자 스크린의 순청록과 차가운 흰빛이 가는 비를 뚫고 얼굴 반쪽을 비춘다(街頭ビジョン) / Optics Sony A7S III 35mm f/1.4, 극저조도에서도 깨끗한 암부 / Expression 睥睨, 냉소적이고 미래적인 얼굴 / Pose 스크린 아래에 서서 옆얼굴이 청색으로 잘린다 |
+| S3 渋谷 雨のスクランブル (滤镜 #092) | B | 단서: 장소 시부야 스크램블 교차로, 대형 스크린 / 소품 투명 우산 / 시간대 비 오는 밤 / 의상 발수 코트 / Hair 濡れ髪, シースルーバング / Outfit 깊은 회색 긴 코트(撥水コート) / Scene 渋谷スクランブル交差点, 青信号 순간 투명 우산의 바다 한가운데 / Light 5000K, 수십 미터 위 대형 스크린의 차가운 흰빛이 위에서 확산된다(街頭ビジョン) / Optics Sony FX3 24mm f/1.4, 높은 감도에서도 낮은 노이즈 / Expression Dispassionate Onlooker, 인파 속 혼자 멈춘다 / Pose 인파 한가운데서 걸음을 멈추고 돌아본다 |
+| S4 銀座 雨宿り (滤镜 #093) | B | 단서: 장소 긴자 쇼윈도 처마, 주철 가로등 / 소품 - / 시간대 비 오는 밤 / 의상 캐시미어 롱코트 / Hair 濡れ髪, シースルーバング / Outfit ダブルフェイスカシミヤ, 연한 귀리색 이중직 캐시미어 롱코트 / Props 금빛 귀걸이 / Scene 銀座, 고급 쇼윈도 처마 아래 비를 피하는 모퉁이 / Light 3800K~6000K, 주철 가로등의 호박색과 지나가는 차의 차가운 제논 헤드램프가 맞선다(Warm-Cool Contrast) / Optics Leica SL2 + 50mm f/2 APO, 보라 번짐 없는 고대비 / Expression 無垢な静寂, 품위 있는 시선 |
+| S5 首都高 助手席 (滤镜 #099) | C | 단서: 장소 수도고속 차 안 조수석, 차창 / 소품 - / 시간대 심야 / 의상 라이더 가죽 / Hair 濡れ髪, シースルーバング / Outfit Moto Jacket, 검은 라이더 가죽 / Scene 首都高 심야, 조수석 / Light 4000K, 차창 밖 비바람 속 붉은 테일램프가 빗물에 끌려 붉은 호를 그린다(고정 사실 palette의 C 예외) / Optics RED Komodo 6K 28-70mm f/2, 차 안 이동 촬영 / Pose 머리받침에 비스듬히 기대고 옆얼굴이 붉은 빛과 노란 가로등에 번갈아 밝아진다 / Expression 시선이 렌즈를 스친다 |
+| S6 新宿東口 2時 (滤镜 #100) | D | 단서: 장소 신주쿠 동쪽 출구 빈 횡단보도, 가로등 한 줄기 / 소품 - / 시간대 새벽 2시 / 의상 울 롱코트 / Hair 濡れ髪, シースルーバング / Outfit 차콜 블랙 울 롱코트(ダブルフェイスカシミヤ) / Scene 新宿東口, 새벽 2시 인적 없는 횡단보도 한가운데 / Light 5200K, 번잡한 조명이 모두 꺼지고 낡은 가로등만 남는다(Streetlamp Pool) / Optics Leica M11 50mm f/1.4, Deep Blacks, 노이즈 없는 깊은 검정 / Expression 自然なカメラ目線, 돌아보며 렌즈를 본다 / Pose 횡단보도 중앙에 서서 돌아본다 |
 
 ## 포즈·구도 쌍
 | 번호 | 갈래 | Pose | Camera |
@@ -175,7 +177,7 @@
 | 3 | A | 振り返り — Walking away from the camera, she holds the umbrella over one shoulder and turns her head back beneath its rim. | Foreground Obstruction — A 35mm anamorphic lens sees her past a blurred umbrella edge and a passer-by crossing one corner of the frame. |
 | 4 | A | Sovereign Stance — She stands upright with the chin tipped up and the eyes looking down along the nose, the hands loose at her sides. | Dutch Angle — A 35mm anamorphic lens held a few degrees off level, so the screens and rooflines lean and the wet street tilts with them. |
 | 5 | B | ポケットイン — She stands still in the middle of the green-light crowd, both hands sunk into the coat pockets and the shoulders relaxed. | High Angle — A 24mm lens from a raised walkway looks down at her, the clear umbrellas around her reading as small bright discs. |
-| 6 | B | 整理衣领 — Under the awning she smooths the coat collar with one hand, the chin dipped toward it. | Telephoto Compression — An 85mm lens across the street stacks the amber lamps and passing headlights behind her into one band of glow. |
+| 6 | B | 襟を直す — Under the awning she smooths the coat collar with one hand, the chin dipped toward it. | Telephoto Compression — An 85mm lens across the street stacks the amber lamps and passing headlights behind her into one band of glow. |
 | 7 | B | 傘を払う — She shakes a closed umbrella downward under the shop eave so drops arc through the air, the body leaning to one side. | カメラ目線 — A 35mm lens close at eye level, she glances straight into it while the shop window glows behind her. |
 | 8 | C | Leaning on a Railing Gazing Out — Her forearms rest on the footbridge railing with the weight leaning forward and the chin sunk into a scarf. | Negative Space — A 50mm lens frames her on one third of the vertical frame, the dark road and its light streaks filling the rest. |
 | 9 | C | Summit Overlook — She stands at the glass edge of the observation corridor, the forehead near the cold pane and the eyes down over the city. | Window Double Reflection — A 90mm lens shoots at the tall window, where her ghost reflection overlaps the sea of city lights beyond the glass. |
