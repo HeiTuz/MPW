@@ -178,9 +178,11 @@ for (const [layer, slug] of Object.entries(LAYER_FILES)) {
 // the pair-borrowing order and the Optics/Light line cap (new 104138, portrait 111066, edit 20536, extract 126048 measured, ceilings about 2.5% above).
 // Lowered (step 13) after the step 12a rules were cut where one decision stood in two places or a paragraph restated what the script prints
 // (new 102540, portrait 109468, edit 20501, extract 124450 measured, ceilings about 2% above).
-assert.ok(sizes['gpt-image-new'].utf8_bytes <= 104600, `gpt-image-new is ${sizes['gpt-image-new'].utf8_bytes} bytes`);
-assert.ok(sizes['gpt-image-portrait'].utf8_bytes <= 111700, `gpt-image-portrait is ${sizes['gpt-image-portrait'].utf8_bytes} bytes`);
-assert.ok(sizes['gpt-image-edit'].utf8_bytes <= 20800, `gpt-image-edit is ${sizes['gpt-image-edit'].utf8_bytes} bytes`);
+// Lowered (step 14) after the request-wins rules replaced overlapping card sentences and the card-authoring paragraph moved to looks/index.md
+// (new 102083, portrait 109011, edit 20303, extract 124463 measured, ceilings about 2% above).
+assert.ok(sizes['gpt-image-new'].utf8_bytes <= 104100, `gpt-image-new is ${sizes['gpt-image-new'].utf8_bytes} bytes`);
+assert.ok(sizes['gpt-image-portrait'].utf8_bytes <= 111200, `gpt-image-portrait is ${sizes['gpt-image-portrait'].utf8_bytes} bytes`);
+assert.ok(sizes['gpt-image-edit'].utf8_bytes <= 20700, `gpt-image-edit is ${sizes['gpt-image-edit'].utf8_bytes} bytes`);
 assert.ok(sizes['gpt-image-extract'].utf8_bytes <= 126900, `gpt-image-extract is ${sizes['gpt-image-extract'].utf8_bytes} bytes`);
 
 const scenarios = JSON.parse(read('scripts/fixtures/behavioral/image-planning.json')).cases;
