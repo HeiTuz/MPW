@@ -204,8 +204,43 @@ if (!onlyCard) {
   for (const q of ['90년대 홍콩영화(왕가위 감성)', '왕가위', '港风', '홍콩 영화', '신중식,왕가위', '90s Hong Kong film (Wong Kar-wai vibe)']) {
     assert.ok(findLookCards([q]).some((c) => c.slug === WKW), `query ${q} should call ${WKW}`);
   }
+  // Every other card is reached by one Korean and one native-language name inside a sentence.
+  const CALLS = {
+    'california-golden-hour': ['캘리포니아 골든아워 느낌의 인물 사진', 'California golden hour portrait'],
+    'forbidden-city-vermilion-gold': ['고궁 주홍 웜골드 인물', '故宫朱红暖金 人像'],
+    'fujifilm-classic-neg': ['후지 클래식 네거티브로 찍은 듯한 스냅', 'Fujifilm Classic Neg street snap'],
+    'iphone-native-selfie': ['아이폰 원본 셀카 느낌', 'iPhone native selfie look'],
+    'japan-ccd-daylight': ['일본 CCD 감성 스냅', '日系CCD日光 人像'],
+    'japan-dv-dreamcore': ['몽핵 캠코더 장면', '古早DV梦核'],
+    'japan-provia-astia-film': ['프로비아 슬라이드 필름 인물', 'Fujichrome Astia portrait'],
+    'jiangnan-misty-softfocus': ['강남 연우 소프트 포커스 인물', '江南烟雨柔焦'],
+    'kodak-gold-200': ['코닥 골드 200으로 찍은 여름 사진', 'Kodak Gold 200 snapshot'],
+    'kodak-portra-400-natural-light': ['포트라 400 자연광 인물', '柯达Portra 400 人像'],
+    'korea-old-film-light-leak': ['폴라로이드 빛샘 인물', '古早胶片 漏光'],
+    'museum-cold-light-minimal': ['현대 미술관 냉광 미니멀 화보', '当代美术馆冷光极简'],
+    'neo-chinese-ink': ['신중식 수묵 인물 사진', '新中式水墨影调'],
+    'new-york-overcast-cool-grey': ['뉴욕 쿨 그레이 거리 스냅', 'New York overcast cool grey street'],
+    'nouvelle-vague-16mm': ['누벨바그 느낌의 파리 스틸', 'Nouvelle Vague'],
+    'paris-soft-grey-diffuse': ['파리 소프트 그레이 확산광', 'Lumière grise de Paris'],
+    'rainy-night-shinjuku': ['비 오는 신주쿠 밤 인물', '雨夜新宿'],
+    'rolleiflex-glass-reflection': ['롤라이플렉스 유리 이중 반사', 'Reflet de vitrine'],
+    'seoul-cafe-warm-diffuse': ['서울 카페 웜톤 확산광', '首尔咖啡馆与居家暖调漫射'],
+    'seoul-cool-porcelain': ['청랭 도자기 피부 화보', 'Cool porcelain skin portrait'],
+    'seoul-night-cinema': ['서울 밤 시네마 택시 장면', 'Seoul night cinema'],
+    'south-france-summer-overexposure': ['남프랑스 한여름 과노출 사진', 'Soleil du Midi'],
+    'trix-humanist-bw': ['트라이엑스 흑백 인문 사진', 'Tri-X humanist street'],
+    'utsurundesu-disposable': ['우츠룬데스 일회용 카메라 사진', '写ルンです'],
+    'venice-beach-polaroid-light-leak': ['베니스 비치 폴라로이드 인물', 'Venice Beach Polaroid'],
+    'vermeer-window-light': ['베르메르 창가 빛 인물', 'Vermeer window light'],
+    'y2k-ccd-flash': ['천희 CCD 직섬 야간 스냅', '千禧CCD直闪'],
+  };
+  for (const [slug, queries] of Object.entries(CALLS)) {
+    assert.ok(looks.some((l) => l.slug === slug), `CALLS lists unknown card ${slug}`);
+    for (const q of queries) assert.ok(findLookCards([q]).some((c) => c.slug === slug), `query ${q} should call ${slug}`);
+  }
+  assert.deepEqual(looks.map((l) => l.slug).filter((s) => s !== WKW && !(s in CALLS)), [], 'every card has a CALLS entry');
   // Latin names match whole words, and a city name alone calls nothing.
-  for (const q of ['wkwk', 'twkwt', '홍콩', 'Hong Kong', '홍콩 여행 스냅', '신중식,찻집', '老钱风', 'Nouvelle Vague']) {
+  for (const q of ['wkwk', 'twkwt', '홍콩', 'Hong Kong', '홍콩 여행 스냅', '신중식,찻집', '老钱风']) {
     assert.deepEqual(findLookCards([q]).map((c) => c.slug), [], `query ${q} should call no card`);
   }
 }

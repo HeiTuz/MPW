@@ -158,10 +158,11 @@ for (const [layer, slug] of Object.entries(LAYER_FILES)) {
 // Raised again with the look-card procedure (image-brief section 4), the Camera lexicon layer and the card lines in fixed-lines.md (new 81139, portrait 88028 measured).
 // Raised again for photo extraction (step 4): fixed-lines.md gained the two extraction columns, the closer note and the Korean Finish form
 // (new 82733, portrait 89622 measured); the extraction bundle now carries image-brief section 12 in full and the look-card index (93598 measured).
+// Raised again for the extraction bundle only: looks/index.md carries 28 card rows (22503 bytes, was 1 row) and the bundle measured 114072; the other bundles do not include the index.
 assert.ok(sizes['gpt-image-new'].utf8_bytes <= 83500, `gpt-image-new is ${sizes['gpt-image-new'].utf8_bytes} bytes`);
 assert.ok(sizes['gpt-image-portrait'].utf8_bytes <= 90500, `gpt-image-portrait is ${sizes['gpt-image-portrait'].utf8_bytes} bytes`);
 assert.ok(sizes['gpt-image-edit'].utf8_bytes <= 20900);
-assert.ok(sizes['gpt-image-extract'].utf8_bytes <= 95000, `gpt-image-extract is ${sizes['gpt-image-extract'].utf8_bytes} bytes`);
+assert.ok(sizes['gpt-image-extract'].utf8_bytes <= 125000, `gpt-image-extract is ${sizes['gpt-image-extract'].utf8_bytes} bytes`);
 
 const scenarios = JSON.parse(read('scripts/fixtures/behavioral/image-planning.json')).cases;
 assert.deepEqual(scenarios.map(c => c.id), [

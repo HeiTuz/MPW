@@ -19,17 +19,17 @@
 <!-- lexicon-counts:start -->
 | 층 | 파일 | 행 수 | KR | CN | JP | US | FR |
 |---|---|---|---|---|---|---|---|
-| Optics | [lexicon/optics.md](lexicon/optics.md) | 384 | 15 | 33 | 165 | 137 | 34 |
-| Light | [lexicon/light.md](lexicon/light.md) | 205 | 18 | 59 | 26 | 78 | 24 |
-| Pose | [lexicon/pose.md](lexicon/pose.md) | 389 | 27 | 125 | 55 | 113 | 69 |
-| Outfit | [lexicon/outfit.md](lexicon/outfit.md) | 616 | 135 | 115 | 160 | 98 | 108 |
+| Optics | [lexicon/optics.md](lexicon/optics.md) | 409 | 18 | 37 | 174 | 141 | 39 |
+| Light | [lexicon/light.md](lexicon/light.md) | 230 | 22 | 62 | 29 | 79 | 38 |
+| Pose | [lexicon/pose.md](lexicon/pose.md) | 413 | 28 | 125 | 62 | 116 | 82 |
+| Outfit | [lexicon/outfit.md](lexicon/outfit.md) | 646 | 138 | 117 | 165 | 114 | 112 |
 | Legwear | [lexicon/legwear.md](lexicon/legwear.md) | 268 | 43 | 56 | 64 | 70 | 35 |
-| Style | [lexicon/style.md](lexicon/style.md) | 649 | 122 | 63 | 138 | 191 | 135 |
-| Hair and makeup | [lexicon/hair-makeup.md](lexicon/hair-makeup.md) | 478 | 90 | 119 | 103 | 106 | 60 |
-| Expression | [lexicon/expression.md](lexicon/expression.md) | 359 | 84 | 70 | 76 | 61 | 68 |
-| Props and nails | [lexicon/props-nails.md](lexicon/props-nails.md) | 580 | 66 | 114 | 168 | 124 | 108 |
-| Scene | [lexicon/scene.md](lexicon/scene.md) | 1036 | 179 | 198 | 214 | 260 | 185 |
-| Camera | [lexicon/camera.md](lexicon/camera.md) | 28 | 0 | 11 | 5 | 8 | 4 |
+| Style | [lexicon/style.md](lexicon/style.md) | 661 | 126 | 64 | 139 | 195 | 137 |
+| Hair and makeup | [lexicon/hair-makeup.md](lexicon/hair-makeup.md) | 488 | 91 | 121 | 104 | 108 | 64 |
+| Expression | [lexicon/expression.md](lexicon/expression.md) | 364 | 84 | 70 | 76 | 61 | 73 |
+| Props and nails | [lexicon/props-nails.md](lexicon/props-nails.md) | 606 | 71 | 118 | 175 | 130 | 112 |
+| Scene | [lexicon/scene.md](lexicon/scene.md) | 1084 | 189 | 206 | 227 | 270 | 192 |
+| Camera | [lexicon/camera.md](lexicon/camera.md) | 56 | 1 | 17 | 8 | 12 | 18 |
 <!-- lexicon-counts:end -->
 
 ## 문화권 룩 묶음

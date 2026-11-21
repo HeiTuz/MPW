@@ -170,11 +170,13 @@ for (const q of ['90년대 홍콩영화(왕가위 감성)', '왕가위', '港风
   assert.match(out.stdout, /^## Look card\n.+ — references\/image\/looks\/wong-kar-wai\.md\nread: node scripts\/read_refs\.mjs references\/image\/looks\/wong-kar-wai\.md\n/, q);
   assert.deepEqual(JSON.parse(run(['--q', q, '--json']).stdout).looks.map((l) => l.slug), ['wong-kar-wai'], q);
 }
-for (const q of ['홍콩', '신중식,찻집', 'Nouvelle Vague']) {
+for (const q of ['홍콩', '신중식,찻집']) {
   out = run(['--q', q]);
   assert.ok(!out.stdout.includes('## Look card'), `${q} calls no card`);
   assert.deepEqual(JSON.parse(run(['--q', q, '--json']).stdout).looks, []);
 }
+// Nouvelle Vague has its own card now.
+assert.deepEqual(JSON.parse(run(['--q', 'Nouvelle Vague', '--json']).stdout).looks.map((l) => l.slug), ['nouvelle-vague-16mm']);
 // The card path in the block is the path read_refs.mjs reads (documented command works as printed).
 {
   const cmd = run(['--q', '왕가위']).stdout.match(/^read: node (scripts\/read_refs\.mjs) (\S+)$/m);
