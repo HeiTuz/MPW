@@ -10,7 +10,7 @@
 ## 고정 사실 (모든 갈래가 지킨다)
 | 슬롯 | 값 |
 |---|---|
-| medium | 소형 센서 CCD 콤팩트로 찍은 일상 스냅. 화보도 필름도 아니다. 첫 줄은 `A Japanese everyday compact digital camera snapshot shot on a small-sensor CCD compact`로 시작한다 |
+| medium | 소형 센서 CCD 콤팩트로 찍은 일상 스냅. 화보도 필름도 아니다. 첫 줄은 매체만 말하는 `A photograph shot on a small-sensor CCD compact`로 시작한다. 혼자 쓸 때(이 카드만 불렸을 때): `A Japanese everyday compact digital camera snapshot shot on a small-sensor CCD compact` |
 | closer | `コンデジ` |
 | time | 해가 하늘에 있는 낮. 맑은 낮에서 서쪽 햇빛까지이고 D만 해 진 직후의 푸른 하늘빛이 남는다. 네온·텅스텐 없음 |
 | light-key | 직사 햇빛(역광·사광·나뭇잎 사이 햇빛)과 그늘의 하늘빛. 실내는 낮의 큰 창 |
@@ -30,9 +30,10 @@
 ## 끄는 고정 몫 (fixed-lines.md의 슬롯)
 | 슬롯 | 처리 | 이유 |
 |---|---|---|
-| face-light | 모든 갈래에서 끈다. 얼굴 빛은 이 카드의 Light 줄이 정한다 | `立体光`의 위·옆 키라이트가 #072의 역광 림, #073의 확산 창빛과 부딪힌다 |
-| lens | 모든 갈래에서 끈다(고정 몫 `自然透视` 줄은 붙이지 않는다). 렌즈를 말하는 줄은 Optics의 `lens` 줄(`コンデジ`, 모든 갈래) 하나다: 35mm 환산 28~38mm의 내장 줌과 앞뒤가 다 선명한 깊은 심도. 출처 순서(세트 > 쌍 > 갈래 줄 > 고정 몫)로 봐도 세트(S1~S5의 Optics는 본체·노이즈·플래시만 말한다)와 쌍 1~12의 Camera 줄(구도와 심도만 말하고, 쌍 12 `Extreme Wide Shot`도 인물이 작게 서는 구도일 뿐 렌즈가 아니다)은 렌즈를 말하지 않으니 어느 조합을 골라도 이 갈래 줄 하나가 렌즈 줄이다. 본체 줄(`ディマージュ Xt`·`キヤノン PowerShot G2`·`サイバーショット DSC`)은 렌즈 길이를 말하지 않는다 | Iris 고정 꼬리의 50mm 얕은 심도가 이 룩의 정체인 깊은 심도와 반대다. #071~#074의 비콤팩트 기종은 콤팩트로 바꿔 옮겼다 |
-| grain | 켠다. 고정 몫의 `数码噪点` 줄이 그대로 맞다 | 이 룩의 입자는 디지털 노이즈다 |
+| face-light | 모든 갈래에서 끈다. 얼굴 빛은 이 카드의 Light 줄이 정한다 | 고정 몫 face-light 줄의 위·옆 키라이트가 #072의 역광 림, #073의 확산 창빛과 부딪힌다 |
+| face-clear | 켠다. 단 A의 Expression `無邪気な振り返り`(S2 포함)를 쓰면 끈다: 가닥 하나가 뺨에 붙는다. `シースルーバング`는 이마가 비쳐 얼굴을 가리지 않으니 끌 이유가 아니다 | `無邪気な振り返り` 줄은 가닥 하나가 뺨에 붙는다고 말하는데 고정 줄은 머리를 귀 뒤로 넘기라고 한다 |
+| lens | 모든 갈래에서 끈다(고정 몫 lens 줄은 붙이지 않는다). 렌즈를 말하는 줄은 Optics의 `lens` 줄(`コンデジ`, 모든 갈래) 하나다: 35mm 환산 28~38mm의 내장 줌과 앞뒤가 다 선명한 깊은 심도. 출처 순서(세트 > 쌍 > 갈래 줄 > 고정 몫)로 봐도 세트(S1~S5의 Optics는 본체·노이즈·플래시만 말한다)와 쌍 1~12의 Camera 줄(구도와 심도만 말하고, 쌍 12 `Extreme Wide Shot`도 인물이 작게 서는 구도일 뿐 렌즈가 아니다)은 렌즈를 말하지 않으니 어느 조합을 골라도 이 갈래 줄 하나가 렌즈 줄이다. 본체 줄(`ディマージュ Xt`·`キヤノン PowerShot G2`·`サイバーショット DSC`)은 렌즈 길이를 말하지 않는다 | Iris 고정 꼬리의 50mm 얕은 심도가 이 룩의 정체인 깊은 심도와 반대다. #071~#074의 비콤팩트 기종은 콤팩트로 바꿔 옮겼다 |
+| grain | 켠다. 고정 몫의 grain(디지털 노이즈) 줄이 그대로 맞다 | 이 룩의 입자는 디지털 노이즈다 |
 | realism | 모든 갈래에서 바꾼다. `8K`·땀구멍 줄 대신 `native resolution` 줄을 쓴다. 매체 구절은 `small-sensor CCD compact`, 질감은 `crisp but over-sharpened edges, clipped highlights and skin that shows no individual pores` | 소형 센서 콤팩트가 만드는 해상도에 8K 모공 묘사를 얹으면 룩의 정체인 하드한 디지털 엣지와 반대다 |
 | framing | 켠다. 쌍 12는 전신이 작게 나온다고 직접 말하니 framing 줄과 부딪히지 않게 쓴다. 범위를 말하지 않는 쌍 가운데 걸음이나 다리·발 동작이 있는 1~7·11은 `from head to toe`로, 손과 얼굴이 중심인 8·9·10은 `from the top of the head to the waist`로 쓴다 | 쌍 대부분이 범위를 말하지 않는데 Pose가 발을 말하면 허리 위 프레임에서 그 동작이 안 보인다 |
 | ratio | 켠다. 사용자 비율이 없으면 4:3 가로이고 framing 줄은 `horizontal frame — A horizontal 4:3 frame from …` 꼴로 쓴다. 세로는 사용자가 말할 때만 쓴다 | 콤팩트 CCD의 본래 화면이 4:3 가로이고 쌍은 비율을 정하지 않는다 |
@@ -58,6 +59,8 @@
 | D | expression | 物思い — The lids lower and the gaze rests on the horizon, the mouth relaxed and the head tilted slightly toward the light. |
 
 ## Outfit
+**함께 쓰는 슬롯:** `outfit`·`outfit-bottom`(하의는 `outfit`의 상의 아래에 따로 입는다. 같은 이름의 줄이 여럿이면 장면에 맞는 하나)
+
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
 | A | outfit | 白シャツ — A crisp white cotton shirt worn untucked with the sleeves pushed to the elbows; the sunlit front clips toward pure white while the shaded side stays pale blue-gray. |
@@ -115,6 +118,8 @@
 | D | rim-light | 夕暮れ — A warm rim runs along her hair edge and the shoulder away from the sun, and the wet sand reflects gold. |
 
 ## Optics
+**하나만 고르는 슬롯:** `tone-*`(고른 `camera` 본체 줄의 것 하나)
+
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
 | 전부 | lens | コンデジ — A pocket compact with a tiny CCD sensor and a built-in zoom lens used at about 28 to 38mm equivalent: sharp from front to back with no background blur, slightly strong sharpening, saturated color and fine noise in the shadows. |
@@ -123,11 +128,11 @@
 | A | flash | ストロボ直焚き — The built-in flash adds a flat daylight fill: a small white glint on the forehead and nose and a short hard shadow on the wall behind her. |
 | C | flash | ノンフラッシュ — The flash stays off, so only window light draws the picture, with soft contrast and faint grain in the dim corners. |
 | A | camera | ディマージュ Xt — A Konica Minolta folded-optics pocket compact with a 3.2-megapixel CCD. |
-| A | tone-xt | 柔焦 — On the Dimage Xt, the frame edges turn soft and airy, with fine pink-cyan noise in the shadows and a casual snapshot feel. |
+| A | tone-xt | Soft Airy Edges — On the Dimage Xt, the frame edges turn soft and airy, with fine pink-cyan noise in the shadows and a casual snapshot feel. |
 | B | camera | キヤノン PowerShot G2 — A Canon PowerShot G2, a 2000s compact digital camera with a CCD sensor. |
-| B | tone-g2 | Warm Peach Tones — On the Canon PowerShot G2, the white balance leans warm, highlights clip slightly and the skin carries a smooth porcelain-like sheen. |
+| B | tone-g2 | キャノン パワーショット G2 — On the Canon PowerShot G2, the white balance leans warm, the skin highlights clip slightly and the skin carries a smooth, brightened sheen. |
 | D | camera | サイバーショット DSC-P10 — A slim early-2000s small-sensor CCD compact. |
-| D | tone-p10 | 冷调 — On the Cyber-shot DSC-P10, the frame carries a cool blue cast with sharp edges: shadows lean blue-gray while the sky stays clean and cold. |
+| D | tone-p10 | サイバーショット DSC — On the Cyber-shot DSC-P10, the frame carries a cool blue cast with sharp edges: shadows lean blue-gray while the whites stay clean and cold. |
 
 ## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 세트를 쓰는 조건은 규칙 4항이 정하고, 세트 값은 고정 사실보다 먼저다. 세트를 고르면 갈래는 그 세트의 갈래 열이다. 단서는 네 칸으로 판정한다. 묶음 속 K 숫자는 Iris 프리셋의 연출 값이고 프롬프트 문장에는 색으로 옮긴다. 규칙은 image-brief.md §4 '룩 카드' 4항과 '비워 둔 층')
 | 세트 | 갈래 | 묶음 |
@@ -142,17 +147,19 @@
 | 번호 | 갈래 | Pose | Camera |
 |---|---|---|---|
 | 1 | A | 小走り — She hurries across the crosswalk in short quick steps, torso leaning slightly forward and hair swinging behind her. | パンフォーカス — Chest height, a few meters ahead; crosswalk stripes, poles and shop signs behind her stay equally sharp. |
-| 2 | A | 振り返り — She walks away along the shopping street and turns her head back. | 三分割構図 — She stands on the right third while the street's long perspective and the wires fill the rest, all in focus. |
-| 3 | A | 自転車に跨がる — She sits on a city bicycle with one foot down and one hand on the handlebar. | 日の丸構図 — She sits dead center with the shop street converging behind her, the background still sharp. |
-| 4 | A | しゃがみ — She crouches at a vending machine and reaches into its outlet, one hand on her knee. | Low Angle — Knee height, tilted up, so the machines, poles and a white sky fill the upper frame, all in focus. |
+| 2 | A | 振り返り — She walks away along the street and turns her head back. | 三分割構図 — She stands on the right third while the street's long perspective and the wires fill the rest, all in focus. |
+| 3 | A | 自転車に跨がる — She sits on a city bicycle with one foot down and one hand on the handlebar. | 日の丸構図 — She sits dead center with the street converging behind her, the background still sharp. |
+| 4 | A | しゃがみ — She crouches at a vending machine and reaches into its outlet, one hand on her knee. | Low Angle — Knee height, tilted up, so the machines, poles and the sky fill the upper frame, all in focus. |
 | 5 | A | ポケットイン — She waits at the crossing with both hands deep in her pockets and her shoulders slightly lifted. | Dutch Angle — The frame is rotated a few degrees so the horizon and poles lean, as if shot one-handed in passing. |
 | 6 | B | Walking Shot — She is caught mid-stride on the tree-lined walk, arms swinging against the legs. | 手持ち撮影 — The camera is held in the hands and follows her walk with a slightly shifting frame, while the whole avenue stays sharp with no motion blur. |
-| 7 | B | 斜め座り — She sits sideways on brick steps with her legs together and the ankles crossed. | High Angle — From a few steps above, the stair edges lead down to her and the dappled ground stays sharp. |
-| 8 | B | 髪を耳にかける — She combs a loose strand behind one ear with the elbow raised, showing the side of her face. | カメラ目線 — Close at eye level, she looks straight into the lens, the leafy street still sharp behind her. |
+| 7 | B | 斜め座り — She sits sideways on brick steps with her legs together and the ankles crossed. | High Angle — From a few steps above, the stair edges lead down to her and the ground stays sharp. |
+| 8 | B | 髪を耳にかける — She combs a loose strand behind one ear with the elbow raised, showing the side of her face. | カメラ目線 — Close at eye level, she looks straight into the lens, the street still sharp behind her. |
 | 9 | C | 頬杖 — She props her cheek on one hand at a window counter, looking out. | Window Double Reflection — Shot partly through the glass, so the street outside and her faint reflection overlap, all sharp. |
-| 10 | C | 両手持ち — She holds a warm mug in both hands against her chest. | Frame Within a Frame — The window frame and the darker room box her into one bright rectangle, everything inside sharp. |
+| 10 | C | 両手持ち — She holds a warm mug in both hands against her chest. | Frame Within a Frame — The window frame and the room around it box her into one rectangle, everything inside sharp. |
 | 11 | D | 足をブラブラ — She sits on the seawall with her legs swinging, hands braced on the edge. | Negative Space — She fills one third of the frame and the sky and sea take the rest, the horizon in sharp focus. |
-| 12 | D | 伸び — She stretches both arms straight up facing the low sun, her back arching. | Extreme Wide Shot — The whole figure is a small mark on a wide stretch of sand under a huge sky, all sharp. |
+| 12 | D | 伸び — She stretches both arms straight up facing the sky, her back arching. | Extreme Wide Shot — The whole figure is a small mark on a wide stretch of sand under a huge sky, all sharp. |
+
+장소: 쌍 1·5는 횡단보도가 있는 곳일 때; 쌍 2는 긴 거리와 머리 위 전선이 보이는 곳일 때; 쌍 3은 자전거를 놓을 거리일 때; 쌍 4는 자판기가 있는 곳일 때; 쌍 6은 가로수길일 때; 쌍 7은 벽돌 계단이 있는 곳일 때; 쌍 9·10은 창가일 때; 쌍 11은 방파제나 해안 턱이 있는 곳일 때; 쌍 12는 넓은 모래사장일 때. 쌍 8은 장소를 가리지 않는다.
 
 ## 맞지 않는 것
 얕은 심도와 배경 보케, 필름 입자와 할레이션, 텅스텐·네온 밤 조명, 스튜디오 조명과 흰 배경, 소프트 포커스 확산 필터, 연출한 모델 포즈, 정면 증명사진 자세, 읽히는 간판·상표 글자.

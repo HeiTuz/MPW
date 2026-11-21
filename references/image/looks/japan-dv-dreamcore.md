@@ -10,7 +10,7 @@
 ## 고정 사실 (모든 갈래가 지킨다)
 | 슬롯 | 값 |
 |---|---|
-| medium | 저해상 홈비디오 캠코더(MiniDV·VHS-C)에서 뽑은 한 프레임. 선명한 사진도 필름 스틸도 아니다. 첫 줄은 갈래마다 다르다: A는 `A 2000s Japanese home-video frame shot on a MiniDV camcorder`, B는 `A Japanese analog-tape frame shot on a VHS-C camcorder`, C는 `An early-2000s Japanese interlaced video frame shot on a 3CCD DV camcorder`, D는 `A Japanese dreamcore video frame shot on a MiniDV camcorder`로 시작한다 |
+| medium | 저해상 홈비디오 캠코더(MiniDV·VHS-C)에서 뽑은 한 프레임. 선명한 사진도 필름 스틸도 아니다. 첫 줄은 매체만 말하는 구절이고 갈래마다 다르다: A는 `A video frame shot on a MiniDV camcorder`, B는 `An analog-tape video frame shot on a VHS-C camcorder`, C는 `An interlaced video frame shot on a 3CCD DV camcorder`, D는 `A video frame shot on a MiniDV camcorder`로 시작한다. 혼자 쓸 때(이 카드만 불렸을 때)의 첫 줄은 A `A 2000s Japanese home-video frame shot on a MiniDV camcorder`, B `A Japanese analog-tape frame shot on a VHS-C camcorder`, C `An early-2000s Japanese interlaced video frame shot on a 3CCD DV camcorder`, D `A Japanese dreamcore video frame shot on a MiniDV camcorder`다 |
 | closer | `ホームビデオ` |
 | time | 장소가 가진 빛 그대로. 낮 햇빛에서 해 질 녘, 밤의 형광등·알전구·가로등까지 쓴다. 스튜디오 조명과 카메라 플래시는 없다. A·C는 낮이나 밤 거리, B는 저조도 실내와 황혼, D는 비 오는 낮과 해 질 녘 역광 |
 | light-key | 현장 빛 하나(햇빛, 창빛, 형광등, 알전구, 차 불빛). 비디오 노출이 알아서 맞춰져 밝은 곳은 흰 안개처럼 번지고 어두운 곳은 노이즈로 가라앉는다 |
@@ -30,10 +30,10 @@
 ## 끄는 고정 몫 (fixed-lines.md의 슬롯)
 | 슬롯 | 처리 | 이유 |
 |---|---|---|
-| face-light | 모든 갈래에서 끈다. 얼굴 빛은 이 카드의 Light 줄이 정한다 | `立体光`의 위·옆 키라이트가 알전구(#080), 형광등(#083), 석양 역광(#089), 차창 물방울 빛(#085)과 부딪힌다 |
-| face-clear | 켠다. 바람이 부는 쌍(3, 8, 11)에서는 끈다. 머리카락이 뺨과 이마를 지나가도 되고 눈은 가리지 않는다 | Iris 프리셋은 바람에 흔들리는 시스루 뱅과 달리기를 쓰는데 고정문의 가림 금지가 이를 지운다. シースルーバング는 이마 틈이 보이는 앞머리라 켠 상태와 부딪히지 않는다 |
-| lens | 렌즈를 말하는 줄은 프롬프트에서 하나다. 출처 순서는 세트의 렌즈 > 쌍의 렌즈 > 갈래의 본체·렌즈 줄 > 고정 몫 줄이다. 세트 S1~S4는 세트 Optics와 Camera가 렌즈(어댑터·망원 줌)를 말하지 않으니 고정 몫 `自然透视` 줄이 렌즈 줄이다(켠다). 세트 S5(C)와 S6(D)은 Optics가 어댑터 없는 표준 화각을 직접 말하니(세트 렌즈 > 갈래 렌즈) C의 `ワイコン`·D의 `望遠ズーム` 줄은 쓰지 않고 `自然透视` 줄이 렌즈 줄이다(켠다). 쌍 1~7(A·B)은 Camera 줄이 렌즈를 말하지 않고 갈래의 Optics 줄(`ハンディカム` 등 본체 줄)도 렌즈 길이를 말하지 않으니 `自然透视` 줄이 렌즈 줄이다(켠다). 쌍 8(C)은 끈다: Camera `Dutch Angle`은 렌즈를 말하지 않으니 갈래의 Optics `ワイコン` 줄이 렌즈 줄이다. 쌍 9(C)는 끈다: Camera `Ultra-Wide Distortion` 줄이 같은 어댑터를 말하니 그 줄이 렌즈 줄이고 `ワイコン` 줄은 쓰지 않는다. 쌍 10(D)은 켠다: Camera `Window Double Reflection`이 렌즈를 말하지 않으니 `自然透视` 줄이 렌즈 줄이고, 이때 Optics `望遠ズーム` 줄은 쓰지 않는다. 쌍 11(D)은 끈다: Camera `Telephoto Compression` 줄이 렌즈 줄이고 Optics `望遠ズーム` 줄은 쓰지 않는다. 쌍 12(D, 모노레일 안)는 켠다: Camera `Negative Space`는 렌즈를 말하지 않으니 `自然透视` 줄이 렌즈 줄이고 Optics `望遠ズーム` 줄은 쓰지 않는다(그 줄은 屋上 경로 전용이다). 쌍 10과 세트 S6(D의 비 오는 차창)을 뺀 어느 쌍이든 화면 전체가 같은 정도로 부드럽고 배경 보케를 말하지 않는다(S6·쌍 10은 초점이 유리 위 물방울에 있고 창밖 불빛이 큰 반투명 원이 된다) | Iris 고정 꼬리의 50mm 얕은 심도는 옮기지 않았다(소형 센서의 깊은 심도가 이 룩의 정체다). `自然透视` 줄은 렌즈 길이만 말해 A·B와 부딪히지 않지만, C의 광각 컨버터(#077 0.7x, #082 0.3x 어안)와 D의 20배 줌 망원단(#089)은 카드가 렌즈를 따로 정한다 |
-| grain | 끈다. 필름용 `胶片颗粒`과 디카용 `数码噪点`을 모두 붙이지 않고 Optics의 `grain`(`ビデオノイズ`, B는 `ゲイン`) 줄이 채운다 | 이 룩의 입자는 필름도 디카도 아닌 비디오 노이즈이고 주사선과 함께 온다 |
+| face-light | 모든 갈래에서 끈다. 얼굴 빛은 이 카드의 Light 줄이 정한다 | 고정 몫 face-light 줄의 위·옆 키라이트가 알전구(#080), 형광등(#083), 석양 역광(#089), 차창 물방울 빛(#085)과 부딪힌다 |
+| face-clear | 켠다. 끄는 경우: 바람이 부는 쌍 3·8·11의 Pose를 쓸 때(Camera 줄만 빌린 경우는 켠다), A의 Expression `無邪気な振り返り`(가닥 하나가 뺨에 붙음)와 Hair `おくれ毛`(귀 옆 가닥이 턱선을 따라감)를 쓸 때. 끄면 머리카락이 뺨과 이마를 지나가도 되고 눈은 가리지 않는다 | Iris 프리셋은 바람에 흔들리는 시스루 뱅과 달리기를 쓰는데 고정문의 가림 금지가 이를 지운다. シースルーバング는 이마 틈이 보이는 앞머리라 켠 상태와 부딪히지 않는다 |
+| lens | 렌즈를 말하는 줄은 프롬프트에서 하나다. 출처 순서는 세트의 렌즈 > 쌍의 렌즈 > 갈래의 본체·렌즈 줄 > 고정 몫 줄이다. 세트 S1~S4는 세트 Optics와 Camera가 렌즈(어댑터·망원 줌)를 말하지 않으니 고정 몫 lens 줄이 렌즈 줄이다(켠다). 세트 S5(C)와 S6(D)은 Optics가 어댑터 없는 표준 화각을 직접 말하니(세트 렌즈 > 갈래 렌즈) C의 `ワイコン`·D의 `望遠ズーム` 줄은 쓰지 않고 고정 몫 lens 줄이 렌즈 줄이다(켠다). 쌍 1~7(A·B)은 Camera 줄이 렌즈를 말하지 않고 갈래의 Optics 줄(`ハンディカム` 등 본체 줄)도 렌즈 길이를 말하지 않으니 고정 몫 lens 줄이 렌즈 줄이다(켠다). 쌍 8(C)은 끈다: Camera `Dutch Angle`은 렌즈를 말하지 않으니 갈래의 Optics `ワイコン` 줄이 렌즈 줄이다. 쌍 9(C)는 끈다: Camera `Ultra-Wide Distortion` 줄이 같은 어댑터를 말하니 그 줄이 렌즈 줄이고 `ワイコン` 줄은 쓰지 않는다. 쌍 10(D)은 켠다: Camera `Window Double Reflection`이 렌즈를 말하지 않으니 고정 몫 lens 줄이 렌즈 줄이고, 이때 Optics `望遠ズーム` 줄은 쓰지 않는다. 쌍 11(D)은 끈다: Camera `Telephoto Compression` 줄이 렌즈 줄이고 Optics `望遠ズーム` 줄은 쓰지 않는다. 쌍 12(D, 모노레일 안)는 켠다: Camera `Negative Space`는 렌즈를 말하지 않으니 고정 몫 lens 줄이 렌즈 줄이고 Optics `望遠ズーム` 줄은 쓰지 않는다(그 줄은 屋上 경로 전용이다). 쌍 10과 세트 S6(D의 비 오는 차창)을 뺀 어느 쌍이든 화면 전체가 같은 정도로 부드럽고 배경 보케를 말하지 않는다(S6·쌍 10은 초점이 유리 위 물방울에 있고 창밖 불빛이 큰 반투명 원이 된다) | Iris 고정 꼬리의 50mm 얕은 심도는 옮기지 않았다(소형 센서의 깊은 심도가 이 룩의 정체다). 고정 몫 lens 줄은 렌즈 길이만 말해 A·B와 부딪히지 않지만, C의 광각 컨버터(#077 0.7x, #082 0.3x 어안)와 D의 20배 줌 망원단(#089)은 카드가 렌즈를 따로 정한다 |
+| grain | 끈다. 필름용과 디카용 고정 몫 grain 줄을 모두 붙이지 않고 Optics의 `grain`(`ビデオノイズ`, B는 `ゲイン`) 줄이 채운다 | 이 룩의 입자는 필름도 디카도 아닌 비디오 노이즈이고 주사선과 함께 온다 |
 | realism | 모든 갈래에서 바꾼다. `8K`·땀구멍 줄 대신 `native resolution` 줄을 쓴다. 매체 구절은 `480-line camcorder`, 질감은 `soft edges, smeared fine texture and skin that shows no individual pores` | 480줄급 화면에 8K 모공 묘사를 얹으면 번짐이라는 룩의 정체와 반대다. 사실감은 medium과 closer가 맡는다 |
 | ratio | 켠다. 사용자 비율이 없으면 4:3 가로이고, 세로는 사용자가 말할 때만 쓴다. 이때 framing 줄은 `horizontal frame — A horizontal 4:3 frame from …` 꼴로 쓴다. 타임스탬프를 쓰는 장면은 어느 비율이든 오른쪽 아래 모서리에 둔다 | DV 본래 프레임이 4:3 가로이고 Iris 원문은 3:4로 잘랐다. 매체의 본래 프레임을 기본으로 둔다 |
 | framing | 켠다. 쌍 2(가슴 위), 6(전신이 작게), 7(위에서 전신), 9(얼굴 30cm), 12(화면의 3분의 1)는 Camera 줄이 범위를 직접 말하니 그 쌍에서는 쌍이 정한다. 범위를 말하지 않는 쌍 가운데 걸음·다리 동작이 있는 1·3·5·8은 `from head to toe`로 쓴다 | 나머지 쌍은 범위를 말하지 않는데 Pose가 걸음을 말하면 허리 위 프레임에서 그 동작이 안 보인다 |
@@ -41,6 +41,8 @@
 **모든 쌍에 해당하는 처리:** face-light는 끈다, grain은 끈다(Optics `ビデオノイズ`·`ゲイン` 줄이 채운다), realism은 `native resolution` 줄로 바꾼다, ratio는 4:3 가로다. 쌍 번호를 조건으로 건 것은 lens·face-clear·framing뿐이다
 
 ## Hair and makeup
+**함께 쓰는 슬롯:** `hair`·`hair-detail`(`おくれ毛`는 `hair` 줄 위에 얹는 귀 옆 가닥 디테일)
+
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
 | A | hair | 濡れ髪 — A shoulder-length black bob looks freshly damp, its strands clumping into glossy ribbons that lift and drift in the breeze. |
@@ -66,6 +68,8 @@
 | D | expression | 物思い — The lids lower and the gaze rests on something far off, the mouth relaxed and the head tilted slightly toward the light. |
 
 ## Outfit
+**함께 쓰는 슬롯:** `outfit`·`outfit-outer`(겉옷은 `outfit` 위에 걸친다. 같은 이름의 줄이 여럿이면 장면에 맞는 하나)
+
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
 | A | outfit | カレッジスウェット — A faded heavy crewneck with a cracked print on the chest hangs loose over the hips, its worn cotton taking the soft light. |
@@ -93,6 +97,8 @@
 | 전부 | nails | シアーヌード — Short nails in sheer milky pink let the nail bed show with a soft flush at the tip. |
 
 ## Style
+**하나만 고르는 슬롯:** `palette`·`palette-victor`(camera `ビクター ビデオカメラ` 줄을 고른 A는 `palette-victor`, 그 밖은 `palette`)
+
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
 | A | style | スナップ — An unplanned snapshot taken by someone walking beside her, the framing a little off-center and no styled pose. |
@@ -132,12 +138,14 @@
 | B | sky-light | 夕暮れ — Low dusk light from behind turns the sky cool pink and blue and lays a thin warm rim along her hair. |
 | C | face-light | 西日 — Low late-afternoon sun comes in sideways across the crossing, warming one side of her face and the edge of her coat. |
 | C | background-light | テールランプの光跡 — Passing red tail-lights stretch into thin horizontal streaks behind her while she holds one spot in the frame. |
-| C | screen-light | 街頭ビジョン — Under the tall screen, its glow pours a cold white light over the crowd and the crossing while the people streak slightly as they move. |
+| C | screen-light | 街頭ビジョン — Under the tall screen, its glow pours a cold white light over the crowd and the crossing. |
 | D | face-light | 水滴越し — Raindrops on the car window beside her scatter the city's lights into large soft overlapping circles, the drops themselves the clearest shapes in view. (카메라와 인물이 같은 차 안이라 창은 인물 옆에 있다. 렌즈와 인물 사이에 유리가 오게 쓰지 않는다) |
 | D | face-light | 夕暮れ — Strong low sun from behind melts her outline into a warm golden glow and washes her cheek to a soft peach. |
 | D | dust-light | God Rays — Slanting sun cuts the car into bands of gold and shadow, and dust specks drift visibly inside each beam. |
 
 ## Optics
+**하나만 고르는 슬롯:** `tone-*`(고른 `camera` 본체 줄의 것 하나)
+
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
 | A | camera | ハンディカム — A palm-sized Sony Handycam DCR-PC100 MiniDV camcorder frame. |
@@ -178,17 +186,19 @@
 | 번호 | 갈래 | Pose | Camera |
 |---|---|---|---|
 | 1 | A | Hand Blocking Lens — She stops mid-stride and raises one hand to cover part of the lens, laughing, her face still visible behind it. | 日の丸構図 — She stands dead center while the walls and wires of the lane converge behind her, every layer equally soft. |
-| 2 | A | あーん — She holds half of a steaming sweet potato out toward the lens with a bright, eager look. | Medium Close-Up — Chest-up from about a meter away, the outstretched hand with the food entering the frame edge, face and hand equally soft. |
-| 3 | A | 手を振る — She runs backward along the seawall waving one hand at the lens, her body leaning slightly away. | 手ぶれ — A slight handheld sway follows her backward steps, the frame drifting and re-centering with the camera person's breathing. |
-| 4 | A | 水やり — She tips a watering can over potted plants on the balcony and turns her head back toward the camera person. | Frame Within a Frame — The sliding balcony door frames her in a bright rectangle, the plants and white curtain filling the sides, all equally soft. |
-| 5 | B | 冷凍ケースを覗き込む — She stands at an open freezer case and leans forward from the waist, hands behind her back, scanning the shelf. | 三分割構図 — She stands on the left third beside the case while its pale glow fills the other two thirds, the whole frame evenly soft. |
+| 2 | A | あーん — She holds a bite of warm food out toward the lens with a bright, eager look. | Medium Close-Up — Chest-up from about a meter away, the outstretched hand with the food entering the frame edge, face and hand equally soft. |
+| 3 | A | 手を振る — She runs backward along the road waving one hand at the lens, her body leaning slightly away. | 手ぶれ — A slight handheld sway follows her backward steps, the frame drifting and re-centering with the camera person's breathing. |
+| 4 | A | 水やり — She tips a watering can over potted plants on the balcony and turns her head back toward the camera person. | Frame Within a Frame — The sliding balcony door frames her in a rectangle, the plants and white curtain filling the sides, all equally soft. |
+| 5 | B | 冷凍ケースを覗き込む — She stands at an open freezer case and leans forward from the waist, hands behind her back, scanning the shelf. | 三分割構図 — She stands on the left third beside the case while the case fills the other two thirds, the whole frame evenly soft. |
 | 6 | B | ブランコに座る — She sits on a swing with both hands wrapped around the chains, toes barely touching the sand, drifting slowly. | Extreme Wide Shot — The camera stands far back at the park gate so she is a small figure on the swing in a wide, nearly empty frame. |
-| 7 | B | 仰向けで昼寝 — She lies on her back on the mats with one hand tucked behind her head and her eyes closed. | Bird's-eye View — The camera is held directly above her, looking straight down at the tatami and her stretched-out body. |
+| 7 | B | 仰向けで昼寝 — She lies on her back on the mats with one hand tucked behind her head and her eyes closed. | Bird's-eye View — The camera is held directly above her, looking straight down at the mats and her stretched-out body. |
 | 8 | C | 小走り — She dashes across the crosswalk in short quick steps, torso leaning forward and her coat flaring behind. | Dutch Angle — The frame is rotated a few degrees so the crosswalk stripes and building edges tilt, as if the camcorder swung while she ran. |
 | 9 | C | しゃがみ — She crouches at the lip of the bowl and leans toward the lens, laughing. | Ultra-Wide Distortion — The adapter sits about 30 cm from her face, centering and enlarging it while the bowl walls and sky curl around her in a swirl. |
-| 10 | D | Window Rain Lean — She rests one shoulder against the rain-streaked car window and looks out at the city lights. | Window Double Reflection — Shot across the side window so her faint reflection overlaps the drops and the lights beyond. |
+| 10 | D | Window Rain Lean — She rests one shoulder against the car window and looks out at the passing scene. | Window Double Reflection — Shot across the side window so her faint reflection overlaps the glass and the view beyond. |
 | 11 | D | フェンスにもたれる — She leans her back and one elbow against the rooftop fence with her face in profile to the far skyline. | Telephoto Compression — A long zoom from across the roof stacks the skyline and the tower right behind her and flattens the depth. |
-| 12 | D | tram window seat — She sits at the monorail window with her head resting against the glass as the track slides by. | Negative Space — She fills about one third of the frame at lower left and the sunlit window and golden air take the rest. |
+| 12 | D | tram window seat — She sits at the monorail window with her head resting against the glass as the track slides by. | Negative Space — She fills about one third of the frame at lower left and the window and the empty space around it take the rest. |
+
+장소: 쌍 1은 벽과 전선이 모이는 좁은 길일 때; 쌍 3은 뒤로 달릴 수 있는 길(방파제 옆 도로 같은)일 때; 쌍 4는 베란다와 화분이 있는 곳일 때; 쌍 5는 열린 냉동 쇼케이스가 있는 곳일 때; 쌍 6은 작은 공원의 그네일 때; 쌍 7은 다다미방처럼 바닥에 누울 수 있는 곳일 때; 쌍 8은 횡단보도일 때; 쌍 9는 스케이트 볼이 있는 곳일 때; 쌍 10은 차 안 창가일 때; 쌍 11은 옥상 난간이 있는 곳일 때; 쌍 12는 모노레일·전차 창가일 때. 쌍 2는 먹을 것을 든 장면이면 장소를 가리지 않는다.
 
 ## 맞지 않는 것
 선명하고 날카로운 디지털 사진 질감, 8K 모공과 직물 올을 세는 클로즈업, 얕은 심도와 배경 보케(D의 비 오는 차창 제외), 필름 입자와 필름 영화 색조(주황·청록, 깊은 흑), 스튜디오 조명과 카메라 플래시, 네온 분할광, 연출한 모델 포즈, 정면 증명사진 자세, 읽히는 간판·상표 글자.

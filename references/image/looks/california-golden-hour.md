@@ -16,7 +16,7 @@
 | light-key | A·B·C는 낮은 해 하나가 주광. 역광이나 측광이고 앞면은 하늘·모래·흰 벽·붉은 기와가 되튀긴 빛이 채운다. D는 예외로 해가 높은 오전~이른 오후의 부드러운 자연광(창빛·잎 그늘)이 주광이다. 플래시·인공 조명 없음 |
 | palette | 꿀빛 금색, 호박색, 살구, 테라코타, 바다 남색 그림자(바다가 없는 B 사막은 적갈색 그림자), 바랜 흰색, 데님 청색. 낮은 해의 금빛이 어깨와 뺨 위에 얹힌다. 네온·차가운 회청 낮빛·형광 파스텔 없음(S7 Superia의 옅은 청록 기운은 세트 값) |
 | grain | 고운 컬러 네거티브 입자가 화면 전체에, 그림자에서 조금 더(S1은 중간 입자, S2는 Gold 200의 보이는 입자). B 갈래는 입자가 화면 전체에 아주 옅게 깔려 거의 안 보인다 |
-| lens | 표준~중망원 인물 렌즈, 얼굴 비례 자연. 카메라 높이는 쌍이 정한다. 환경 인물(쌍 6·10)만 28mm대 광각이고 얼굴은 화면 가운데다(`Zeiss Biogon 28mm f/2.8` 줄도 쌍 6·10에서만 쓴다). 렌즈 줄의 출처 순서는 세트 > 쌍 > 갈래 Optics 줄 > 고정 몫 `自然透视`이다. 세트는 자기 Optics의 렌즈를 쓴다(S1 35mm, S2 40mm, S3 90mm 6x9, S4 50mm f/0.95, S5 내장 줌 55-90mm, S6 90mm, S7 50mm) |
+| lens | 표준~중망원 인물 렌즈, 얼굴 비례 자연. 카메라 높이는 쌍이 정한다. 환경 인물(쌍 6·10)만 28mm대 광각이고 얼굴은 화면 가운데다(`Zeiss Biogon 28mm f/2.8` 줄도 쌍 6·10에서만 쓴다). 렌즈 줄의 출처 순서는 세트 > 쌍 > 갈래 Optics 줄 > 고정 몫 lens 줄이다. 세트는 자기 Optics의 렌즈를 쓴다(S1 35mm, S2 40mm, S3 90mm 6x9, S4 50mm f/0.95, S5 내장 줌 55-90mm, S6 90mm, S7 50mm) |
 | figure | 한 사람이 빛 속에서 움직이거나 쉰다. 바람이 머리카락과 천을 한 방향으로 날린다. 정면 증명사진 자세 없음. 시선은 렌즈·해·먼 곳 중 하나 |
 
 ## 갈래 고르기
@@ -32,11 +32,11 @@
 |---|---|---|
 | face-light | 모든 갈래에서 끈다. 얼굴 빛은 이 카드의 Light 줄이 정한다 | Iris 꼬리의 위·옆 입체광이 #001 #003 #080류 역광(얼굴은 그늘, 가장자리만 금빛)과 부딪혔다 |
 | catchlight | 카드 줄이 이긴다. 선글라스·감은 눈이면(세트 S4, `Ray-Ban Aviator`, `Sun-Worshipping Bliss`) 붙이지 않는다 | Iris는 모든 블록에 캐치라이트를 넣었는데 #008 #010 #014는 선글라스라 눈이 안 보인다 |
-| face-clear | A·B에서 끈다. 바람이 머리를 얼굴 반대쪽으로 날려 눈과 턱선은 열린 채이고 hair 줄이 방향을 정한다 | #001 #007 #013 #080의 바람머리가 이 룩의 특징인데 Iris 금지문(머리가 눈썹·눈을 가림)이 같은 프롬프트에 있었다 |
+| face-clear | 켠다. 끄는 경우는 가닥이 얼굴을 가로지를 때뿐이다: A의 Expression `Windswept Coastal Laugh`(가닥이 뺨을 가로지름)와 쌍 1의 Pose(머리가 한쪽으로 흩날림)를 쓸 때(쌍 1의 Camera 줄만 빌린 경우는 켠다). A·B의 바람맞은 머리(`Windswept Waves`·`Voluminous Curls`, 쌍 2의 머리를 뒤로 날리는 자세)는 얼굴 반대쪽으로 날려 눈과 턱선이 열린 채이니 켠 채로 둔다. S7의 젖은 머리도 켠다. D의 `Slick Low Bun`은 얼굴을 이미 드러내니 `face clear`를 다시 붙이지 않는다 | #001 #007 #013 #080의 바람머리가 이 룩의 특징인데 Iris 금지문(머리가 눈썹·눈을 가림)이 같은 프롬프트에 있었다 |
 | base, blush | D에서 카드 줄(`Dewy Makeup`, `Post-Workout Flush`)이 이긴다. A·B·C는 켠다 | #072 #083의 땀·선크림 광과 자연 홍조가 Iris 고정 메이크업과 겹쳤다 |
 | lip | C에서 카드 줄(`Classic Red Lip`)이 이긴다. 나머지는 켠다 | #014의 烈焰红唇과 고정문의 玫瑰裸色果冻唇이 한 프롬프트에 둘 다 있었다 |
 | grain | 카드의 grain 줄이 이긴다(B 줄은 입자가 거의 안 보이게 쓴다). 세트가 입자를 말하면 세트가 이긴다(S1 중간 입자, S2 Gold 200의 실제 입자). `Kodak Gold 200` stock 줄은 입자를 말하지 않는다 | #013(Ektar)과 #017(4x5)은 입자가 거의 없는데 고정 꼬리는 입자를 넣었다. Iris #001은 중간 입자, #003은 실제 필름 입자다 |
-| lens | 렌즈를 말하는 줄은 프롬프트마다 정확히 하나이고 출처 순서는 세트의 렌즈 > 쌍의 렌즈 > 갈래의 Optics 렌즈 줄 > 고정 몫 `自然透视`이다. 세트를 쓰면 세트 Optics가 말한 렌즈가 렌즈 줄이고 갈래의 Optics 렌즈 줄과 `自然透视`은 붙이지 않는다(쌍 6·10과 세트를 함께 쓰면 세트 렌즈가 먼저라 28mm대 광각 문구는 쓰지 않는다). 세트가 없으면 쌍 6(Extreme Wide Shot)·10(Environmental Portrait)은 Camera 줄이 거리만 말하니 Optics `Zeiss Biogon 28mm f/2.8` 줄이 렌즈 줄이고 `自然透视`은 끈다. 나머지 쌍(1~5, 7, 8, 9, 11, 12)의 Camera 줄은 렌즈를 말하지 않으니 갈래의 Optics 렌즈 줄(A `Telephoto Compression`, D `Zeiss Planar 80mm f/2.8`)을 골랐으면 그 줄이, 고르지 않았으면 `自然透视`이 렌즈 줄이다. B·C의 `Zeiss Biogon 28mm f/2.8`은 쌍 6·10이 아닌 쌍에서는 쓰지 않고 `自然透视`이 렌즈 줄이다(이 줄은 카메라 높이를 말하지 않아 쌍 1의 knee-high, 쌍 9의 Plongée와 부딪히지 않는다). 쌍 8(Shallow Depth of Field)은 Biogon의 deep focus와 심도가 반대라 Biogon 줄을 고르지 않고 `自然透视`을 렌즈 줄로 쓴다 | #009(43mm) #010 #018(28mm)에 50mm 무왜곡 꼬리가 같이 있어 렌즈가 둘이었다. 쌍 1(knee-high)·쌍 9(Plongée)와 렌즈 줄의 출처를 시험에서 추론해야 했다 |
+| lens | 렌즈를 말하는 줄은 프롬프트마다 정확히 하나이고 출처 순서는 세트의 렌즈 > 쌍의 렌즈 > 갈래의 Optics 렌즈 줄 > 고정 몫 lens 줄이다. 세트를 쓰면 세트 Optics가 말한 렌즈가 렌즈 줄이고(세트의 `<본체> + <렌즈>` 값, 예: S1 `Leica M6 + Summilux 35mm f/1.4`는 Optics에 본체·렌즈 줄 한 줄로 쓰고 그 줄이 렌즈 줄이다. `stock` 줄에는 렌즈를 쓰지 않는다) 갈래의 Optics 렌즈 줄과 고정 몫 lens 줄은 붙이지 않는다(쌍 6·10과 세트를 함께 쓰면 세트 렌즈가 먼저라 28mm대 광각 문구는 쓰지 않는다). 세트가 없으면 쌍 6(Extreme Wide Shot)·10(Environmental Portrait)은 Camera 줄이 거리만 말하니 Optics `Zeiss Biogon 28mm f/2.8` 줄이 렌즈 줄이고 고정 몫 lens 줄은 끈다. 나머지 쌍(1~5, 7, 8, 9, 11, 12)의 Camera 줄은 렌즈를 말하지 않으니 갈래의 Optics 렌즈 줄(A `Telephoto Compression`, D `Zeiss Planar 80mm f/2.8`)을 골랐으면 그 줄이, 고르지 않았으면 고정 몫 lens 줄이 렌즈 줄이다. B·C의 `Zeiss Biogon 28mm f/2.8`은 쌍 6·10이 아닌 쌍에서는 쓰지 않고 고정 몫 lens 줄이 렌즈 줄이다(이 줄은 카메라 높이를 말하지 않아 쌍 1의 knee-high, 쌍 9의 Plongée와 부딪히지 않는다). 쌍 8(Shallow Depth of Field)은 Biogon의 deep focus와 심도가 반대라 Biogon 줄을 고르지 않고 고정 몫 lens 줄을 렌즈 줄로 쓴다 | #009(43mm) #010 #018(28mm)에 50mm 무왜곡 꼬리가 같이 있어 렌즈가 둘이었다. 쌍 1(knee-high)·쌍 9(Plongée)와 렌즈 줄의 출처를 시험에서 추론해야 했다 |
 | framing | 켠다. 쌍 6(Extreme Wide Shot)·7(Cowboy Shot)·10(Environmental Portrait)·11(Medium Close-Up)은 프레임 범위를 직접 말하니 그 말과 부딪치지 않게 쓴다. 쌍 1(걷는 걸음)·4(부츠)·9(다리와 발목)·12(다리)는 Pose가 낮은 몸을 말하니 framing 줄의 범위를 머리부터 발끝으로 쓴다 | 나머지 쌍은 범위를 말하지 않고 Pose가 허리 위에서 보인다 |
 | ratio | 켠다. 사용자 비율이 없으면 3:4 세로(S3의 6x9는 2:3 세로) | 쌍은 비율을 정하지 않는다 |
 
@@ -64,6 +64,8 @@
 | D | expression | Duchenne Smile — A smile that reaches the eyes: the outer corners crease, the lower lids rise and the cheeks lift in soft light. |
 
 ## Outfit
+**함께 쓰는 슬롯:** `outfit`·`outfit-outer`·`outfit-bottom`(겉옷은 속옷 위에, 하의는 따로 입는다. 같은 이름의 줄이 여럿이면 장면에 맞는 하나)
+
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
 | A, C | outfit | Linen Sundress — A white linen dress on thin straps whose hem lifts in the wind and turns faintly translucent where low sun passes through it. |
@@ -117,12 +119,12 @@
 | A, C | catchlight | Golden Sunset Arc Catchlight — A curved arc of warm orange sunlight shines across each iris, the horizon line bending in it. |
 | B | face-light | golden-hour sidelight — The low sun rakes in from the side, lighting one cheek amber and throwing long soft shadows across the ground. |
 | B | beam | God Rays — Dust in the dry air lights up as straight gold shafts with floating particles bright inside each beam. |
-| B | light-fill | 窗光光斑 — Inside the diner booth, the setting sun cuts through the dusty window glass in bright stripes that lie across the red vinyl, the table and her side. |
+| B | light-fill | Window Sun Patches — Inside the diner booth, the setting sun cuts through the dusty window glass in bright stripes that lie across the red vinyl, the table and her side. |
 | C | face-light | Palm Leaf Shadows — Low sun through palm fronds breaks into moving gold patches and feathery shadows on her shoulders, cheek and the street. |
 | C | face-light | Bounce Light — Sun reflected from a pale wall or red clay roof fills the jaw, neck and collarbones with warm light that picks up the wall's color. |
 | C | light-fill | Caustics — Pool-water light breaks into a moving net of bright gold lines that ripple across her shoulders, collarbones and the white wall behind her. |
 | C | shadow-edge | Hard Shadows — Around the Palm Springs pool and pale walls, the low sharp-edged sun draws crisp dark shadow lines beside the palms and along the white buildings. |
-| D | face-light | Window Light — Daylight from one window models the face with a bright side and a soft shadow side that falls off gently. |
+| D | face-light | Window Light — Indoors, daylight from one window models the face with a bright side and a soft shadow side that falls off gently. |
 | D | light-fill | Venetian Blind Shadows — Sun through wooden blinds lays parallel gold stripes across her cheek, shoulders and the white bedding. |
 | D | light-fill | Dappled Shade — Inside the orange grove, warm afternoon light breaks into soft spots of sun between the leaves and drifts over her face, shoulders and the ground. |
 
@@ -139,8 +141,8 @@
 | A | lens | Telephoto Compression — A long lens squeezes distance so waves, cliffs and sun stack into close golden layers behind her. |
 | B, C | lens | Zeiss Biogon 28mm f/2.8 — A wide lens takes in the whole place around her with deep focus and mild edge stretching while the face stays central. |
 | D | lens | Zeiss Planar 80mm f/2.8 — A medium-format portrait lens look: fine detail at the focus point and a slow, smooth fall into soft background. |
-| A, C, D | grain | 胶片颗粒 — Fine, even film grain sits across the whole frame, slightly heavier in the shadows. |
-| B | grain | 胶片颗粒 — Grain stays very faint and even across the whole frame, barely visible even in the deepest shadows. |
+| A, C, D | grain | film grain — Fine, even film grain sits across the whole frame, slightly heavier in the shadows. |
+| B | grain | film grain — Grain stays very faint and even across the whole frame, barely visible even in the deepest shadows. |
 
 ## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 세트를 쓰는 조건은 규칙 4항이 정하고, 세트 값은 고정 사실보다 먼저다. 규칙은 image-brief.md §4 '룩 카드' 4항과 '비워 둔 층')
 
@@ -159,18 +161,20 @@
 ## 포즈·구도 쌍
 | 번호 | 갈래 | Pose | Camera |
 |---|---|---|---|
-| 1 | A | Windblown Hair — She walks along the edge of the coast, on a cliff-top path beside the rail or along the wet-sand waterline, with an easy stride into the cross-wind, shoulders square and hair streaming to one side. | low-angle shot — The camera sits knee-high and looks up so the low sun lands just behind her head and rings the hair in gold. |
+| 1 | A | Windblown Hair — She walks along the edge of the coast, on a cliff-top path beside the rail or along the wet-sand waterline, with an easy stride into the cross-wind, shoulders square and hair streaming to one side. | low-angle shot — The camera sits knee-high and looks up so her head rises against the open sky. |
 | 2 | A | Convertible Windburst — Seated sideways in the passenger seat of an open car, one arm along the door, hair blown straight back. | Leading Lines — Shot from the road ahead; the lane edge and guardrail run toward her and lead the eye to the seat. |
-| 3 | A | Surfboard Lean — In profile beside an upright board on wet sand, one forearm on its rail, eyes on the surf. | rule of thirds — She stands on the left third and the sun-glare on open water fills the right two thirds. |
-| 4 | A, C | Guardrail Perch — One boot on a roadside rail, the body rising above the pavement and turned back with a laugh. | foreground obstruction — Blurred grass tips and poppies cross the bottom edge of the frame in front of her. |
-| 5 | B | Booth Knee Up — Sideways in a diner booth, one knee drawn up with an arm resting on it, face turned to the window. | frame within a frame — The window and doorway edges box her in while dusty light beams cross the room. |
-| 6 | B | Hood Sit — Sitting on the hood of a parked car, feet on the bumper, leaning back on both hands. | Extreme Wide Shot — She is a small shape at the edge of a huge desert plain with the low sun just over the horizon. |
-| 7 | B | Refueling Stance — Standing side-on at a rusty roadside pump, one hand on the nozzle and the other on her hip. | Cowboy Shot — The frame cuts at mid-thigh so torso, hands and pump read together against the dusk sky. |
-| 8 | C | Over-the-Shoulder Glance — Walking away along a hillside terrace, the torso twisting back to look over one shoulder. | Shallow Depth of Field — A wide aperture melts the city lights behind her into big soft discs while her face stays sharp. |
-| 9 | C | Chaise Longue Recline — Semi-reclined on a poolside lounger, propped on one elbow with legs stretched out and ankles crossed. | Plongée — The camera looks down from a high deck so the pool's moving light fills the lower frame. |
+| 3 | A | Surfboard Lean — In profile beside an upright board on wet sand, one forearm on its rail, eyes on the surf. | rule of thirds — She stands on the left third and open water fills the right two thirds. |
+| 4 | A, C | Guardrail Perch — One boot on a roadside rail, the body rising above the pavement and turned back with a laugh. | foreground obstruction — Blurred grass tips and flowers cross the bottom edge of the frame in front of her. |
+| 5 | B | Booth Knee Up — Sideways in a diner booth, one knee drawn up with an arm resting on it, face turned to the window. | frame within a frame — The window and doorway edges box her in within the frame. |
+| 6 | B | Hood Sit — Sitting on the hood of a parked car, feet on the bumper, leaning back on both hands. | Extreme Wide Shot — She is a small shape at the edge of a huge open plain under a wide empty sky. |
+| 7 | B | Refueling Stance — Standing side-on at a rusty roadside pump, one hand on the nozzle and the other on her hip. | Cowboy Shot — The frame cuts at mid-thigh so torso, hands and pump read together against the open sky. |
+| 8 | C | Over-the-Shoulder Glance — Walking away along a terrace or walkway, the torso twisting back to look over one shoulder. | Shallow Depth of Field — A wide aperture melts the lights and shapes behind her into big soft discs while her face stays sharp. |
+| 9 | C | Chaise Longue Recline — Semi-reclined on a poolside lounger, propped on one elbow with legs stretched out and ankles crossed. | Plongée — The camera looks down from a high deck so the pool fills the lower frame. |
 | 10 | C | Crosswalk Stride — Crossing a wide street at a quick pace, the jacket swinging open and slow traffic piled up behind her. | Environmental Portrait — The camera stands back so street, cars and sky read as her setting while her face stays natural at the center. |
 | 11 | D | Athleisure Morning Run — Pausing after a run with her chest rising, breathing visibly and looking toward the light. | Medium Close-Up — The frame holds head to mid-chest with a flat horizon blurred behind. |
-| 12 | D | Cross-Legged Barstool — Seated sideways on a café stool, one leg crossed over the other, laughing toward someone across the table. | Over the Shoulder — The shot passes the blurred shoulder of a friend sitting across from her under the awning. |
+| 12 | D | Cross-Legged Barstool — Seated sideways on a café stool, one leg crossed over the other, laughing toward someone across the table. | Over the Shoulder — The shot passes the blurred shoulder of a friend sitting across from her. |
+
+장소: 쌍 1은 해안(절벽길이나 물가)일 때; 쌍 2는 도로 위 열린 차량(컨버터블)이 있을 때; 쌍 3은 서프보드가 있는 해변일 때; 쌍 4는 도로변 난간·울타리가 있을 때; 쌍 5는 다이너 박스석 창가일 때; 쌍 6은 주차된 차와 탁 트인 평원이 있을 때; 쌍 7은 도로변 주유기가 있을 때; 쌍 8은 테라스·산책로가 있을 때; 쌍 9는 수영장 라운저가 있을 때; 쌍 10은 넓은 도로나 횡단보도일 때; 쌍 11은 야외 길일 때; 쌍 12는 카페 야외 의자가 있을 때.
 
 ## 맞지 않는 것
 네온 간판, 비 오는 밤, 형광등, 플래시, 스튜디오 흰 배경, 차가운 회청 낮빛, 형광 파스텔, 디지털 HDR 색, 정면 증명사진 자세, 읽히는 간판·로고 글자.

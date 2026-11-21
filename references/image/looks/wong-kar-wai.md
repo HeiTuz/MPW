@@ -32,7 +32,7 @@
 |---|---|---|
 | face-light | 모든 갈래에서 끈다. 얼굴 빛은 이 카드의 Light 줄이 정한다 | Iris 꼬리의 얼굴 입체광이 네온 분할광을 덮었다 |
 | base, lip | 카드 줄이 이긴다 | Iris 메이크업 고정문이 저자 입술색에 둘째 입술색을 얹었다 |
-| face-clear | A·C는 카메라 쪽만 귀 뒤로, 먼 쪽 머리는 흘러내려도 된다 | 滤镜 #045의 얼굴 가리는 머리가 이 룩의 특징인데 Iris가 금지문으로 지웠다 |
+| face-clear | 켠다. A·C는 카메라 쪽만 귀 뒤로 넘기고 먼 쪽 머리는 흘러내려도 된다. S3(바람에 흐트러져 얼굴을 가리는 생머리)과 S5(이마 앞에 흩어진 단발)는 세트의 Hair가 얼굴을 가리는 머리라 끈다. 쌍의 Pose는 머리를 건드리지 않으니 쌍 때문에 끄지 않는다. B는 켠다. D는 Hair 줄이 이미 머리를 귀 옆으로 넘겼으니 다시 붙이지 않는다 | 滤镜 #045의 얼굴 가리는 머리가 이 룩의 특징인데 Iris가 금지문으로 지웠다 |
 | lens | 켠다. 렌즈를 말하는 줄은 프롬프트에서 정확히 하나이고, 출처는 세트의 렌즈 > 쌍의 렌즈 > 갈래의 렌즈 줄 > 고정 몫 `自然透视` 줄 순이다. 세트: S5만 렌즈를 말한다(Optics의 `超广角畸变` 한 줄에 '렌즈가 얼굴에서 약 30cm'를 합친 줄). S5를 고르면 쌍 8의 Camera 줄은 쓰지 않고 이 Optics 줄이 lens 줄이다. S1~S4·S6은 렌즈를 말하지 않으니 아래로 내려간다. 쌍: 쌍 1은 Camera의 `长焦压缩` 줄이, 쌍 8은 Camera의 `超广角畸变` 줄이 lens 줄이다(쌍 8은 S5 없이 고른 경우이고, 이때 C의 Optics `超广角畸变` 줄은 빼서 하나만 남긴다). 갈래: 쌍 9를 C 갈래로 고르면 C의 Optics `超广角畸变` 줄이 lens 줄이다. 고정 몫: 그 밖(쌍 2~7, 10, A 갈래의 쌍 9)은 `自然透视` 줄이 lens 줄이다 | 쌍마다 lens 줄의 출처를 몰라 추론이 갈렸고, 세트와 쌍이 함께 걸리면 렌즈 줄이 둘이 되었다 |
 | under-eye, liner | 켠다. 줄 하나로 합쳐 `卧蚕` 토큰에 쓴다 | 한 슬롯 줄이 둘이면 줄 수만 늘어난다 |
 | blush | 끈다. 뺨 색은 Light 줄의 네온·텅스텐 빛이 정한다 | 이 룩의 줄에 블러셔가 없다 |
@@ -68,6 +68,8 @@
 | C | expression | 玩世不恭 — Chin slightly raised, one brow lifted and a lopsided half-smile aimed past the viewer. |
 
 ## Outfit
+**함께 쓰는 슬롯:** `outfit`·`outfit-outer`(겉옷은 `outfit` 위에 걸친다)
+
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
 | A | outfit | 吊带裙 — A deep crimson silk slip dress with thin straps; the satin throws a long liquid highlight wherever neon reaches it. |
@@ -122,11 +124,13 @@
 | D | place | 绿色百叶窗 — A room behind half-closed green wooden louvres. (滤镜 #047) |
 
 ## Light
+**하나만 고르는 슬롯:** `place-*`(장소별 줄, 장면의 장소와 맞는 하나)
+
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
 | A, C | face-light | 霓虹双色侧光 — A red neon sign on one side and green tube light on the other split her face into two colors that meet along the nose. |
 | A | light-fill | 荧光灯 — Green-tinged fluorescent light from a shop interior washes the background flat and cool. |
-| A | place-light-corridor | 荧光灯 — In the cramped shop corridor, uneven light from the signs and tubes bounces between the close walls and over the reflective floor. |
+| A | place-light-corridor | 荧光灯 — In the cramped shop corridor, mixed light from the signs and tubes bounces between the close walls and over the reflective floor. |
 | A | place-light-diner | 荧光灯 — In the diner, green-tinged fluorescent light hangs over the booths above the warmer lamps along the walls. |
 | B | face-light | 钨丝灯 — One low warm tungsten street lamp high above throws amber light across her shoulders and leaves the walls in deep shadow. |
 | B | face-light | 百叶窗光影 — Mixed warm bulb light and cool window light fall through louvres in parallel bars across her cheek. |
@@ -165,16 +169,18 @@
 ## 포즈·구도 쌍
 | 번호 | 갈래 | Pose | Camera |
 |---|---|---|---|
-| 1 | A | 单手插兜 — She stands perfectly still, one hand deep in a pocket and the other hand free for any cup or bag she holds, while the crowd smears past her. | 长焦压缩 — A moderate telephoto across the street stacks the signs behind her into one glowing wall. |
-| 2 | A | 靠墙斜倚 — One shoulder against a pillar, weight sunk into one hip, any cup or bag she holds in the hand away from the pillar. | 前景遮挡 — Shot past a blurred umbrella or passer-by crossing one corner of the frame. |
-| 3 | A | 回眸 — She walks away down the street and turns her head back over the shoulder, any cup or bag she holds swinging in the hand nearer the lens. | Handheld Jitter — Slight handheld sway, the frame tilting a little as if the camera followed her. |
-| 4 | A, B | 倚门而立 — She leans in a doorway with one shoulder on the frame, any cup or glass she holds in the hand on the room side. | 框架构图 — The door frame and the dark room around it box her into a narrow lit slot. |
-| 5 | A | 托腮 — She props her chin on one hand at a diner counter by the window, any cup she holds in the other hand. | 玻璃窗倒影 — Shot through rain-streaked glass, the street neon reflected over her face. |
+| 1 | A | 单手插兜 — She stands perfectly still, one hand deep in a pocket and the other hand free for any cup or bag she holds, while the crowd smears past her. | 长焦压缩 — A moderate telephoto from a distance stacks the signs behind her into one glowing wall. |
+| 2 | A | 靠墙斜倚 — One shoulder against a pillar or wall, weight sunk into one hip, any cup or bag she holds in the hand away from the pillar. | 前景遮挡 — Shot past a blurred passer-by or foreground object crossing one corner of the frame. |
+| 3 | A | 回眸 — She walks away and turns her head back over the shoulder, any cup or bag she holds swinging in the hand nearer the lens. | Handheld Jitter — Slight handheld sway, the frame tilting a little as if the camera followed her. |
+| 4 | A, B | 倚门而立 — She leans in a doorway with one shoulder on the frame, any cup or glass she holds in the hand on the room side. | 框架构图 — The door frame and the wall around it box her into a narrow slot in the frame. |
+| 5 | A | 托腮 — She props her chin on one hand at a counter or table by the window, any cup she holds in the other hand. | 玻璃窗倒影 — Shot through window glass, the view outside reflected over her face. |
 | 6 | B | 下楼梯 — She walks down a narrow stair carrying something in one hand (a requested cup or bag goes in that hand), eyes lowered. | 俯拍 — From the top of the stair looking down, the steps leading the eye to her. |
 | 7 | B | 二郎腿 — Seated in a booth, one leg crossed over the other, one hand resting on the knee and any glass or cup she holds in the other. | 过肩镜头 — Over the blurred shoulder of an unseen companion across the table, the frame running from her head down to the knees so the crossed leg shows. |
-| 8 | C | close lean — She leans toward the lens, chin up, one hand near the face with a lighter (any other held prop takes that hand). | 超广角畸变 — The lens is about 30 cm from her face; the room bends away behind her. |
-| 9 | A, C | tram window seat — She sits on the tram's upper deck with her head against the window, any cup she holds resting in one hand in her lap. | reflection frame — The street slides by in the glass beside her, doubling her outline. |
-| 10 | D | standing at louvres — She stands beside half-closed louvres, looking out at rain on foliage, any glass or cup she holds in the hand away from the window. | 留白 — She fills one third of a vertical frame; the green wall and louvres fill the rest. |
+| 8 | C | close lean — She leans toward the lens, chin up, one hand near the face with a lighter (any other held prop takes that hand). | 超广角畸变 — The lens is about 30 cm from her face; the background bends away behind her. |
+| 9 | A, C | tram window seat — She sits at a window seat of a moving tram or bus with her head against the glass, any cup she holds resting in one hand in her lap. | reflection frame — The passing view slides by in the glass beside her, doubling her outline. |
+| 10 | D | standing at louvres — She stands beside half-closed louvres, looking out at the foliage outside, any glass or cup she holds in the hand away from the window. | 留白 — She fills one third of a vertical frame; the wall and louvres fill the rest. |
+
+장소: 쌍 1은 간판·네온이 뒤에 겹치는 곳일 때; 쌍 4는 문틀·출입구가 있는 곳일 때; 쌍 5는 창가 카운터·테이블이 있는 곳일 때; 쌍 6은 계단이 있는 곳일 때; 쌍 7은 부스석이 있는 곳일 때; 쌍 9는 전차·버스 같은 움직이는 차량 안일 때; 쌍 10은 덧창(루버)이 있는 방일 때. 쌍 2·3·8은 장소를 가리지 않는다.
 
 ## 맞지 않는 것
 한낮의 해, 스튜디오 흰 배경, 깨끗한 디지털 색, 파스텔, 애슬레저, 큰 웃음, 정면 증명사진 자세, 읽히는 간판 글자.

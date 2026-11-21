@@ -10,7 +10,7 @@
 ## 고정 사실 (모든 갈래가 지킨다)
 | 슬롯 | 값 |
 |---|---|
-| medium | 후지 필름으로 찍은 일본 일상 필름 스냅. 디지털 사진도 화보도 아니다. 첫 줄은 `A Japanese everyday film snapshot shot on Fujifilm color film`로 시작한다(D 갈래는 반전 필름이면 `…shot on Fujifilm slide film`, 흑백이면 `…shot on Fujifilm black-and-white film`). 단 `クラシックネガ`는 필름이 아니라 후지 디지털 카메라의 필름 시뮬레이션이다. A의 stock `クラシックネガ` 줄이나 camera `Fujifilm X-Pro3` 줄이나 세트 S1(Fujifilm X-Pro3)을 고르면 첫 줄은 `A Japanese everyday snapshot shot on a Fujifilm digital camera with the Classic Neg film simulation`, closer는 `銀塩写真` 대신 `写真`(필름이 아니므로), 입자는 `grain-sim` 줄이 맡는다 |
+| medium | 후지 필름으로 찍은 일본 일상 필름 스냅. 디지털 사진도 화보도 아니다. 첫 줄은 매체만 말하는 `A photograph shot on Fujifilm color film`로 시작한다(D 갈래는 반전 필름이면 `…shot on Fujifilm slide film`, 흑백이면 `…shot on Fujifilm black-and-white film`). 혼자 쓸 때(이 카드만 불렸을 때): `A Japanese everyday film snapshot shot on Fujifilm color film`(반전·흑백은 같은 자리만 바꾼다). 단 `クラシックネガ`는 필름이 아니라 후지 디지털 카메라의 필름 시뮬레이션이다. A의 stock `クラシックネガ` 줄이나 camera `Fujifilm X-Pro3` 줄이나 세트 S1(Fujifilm X-Pro3)을 고르면 첫 줄은 `A photograph shot on a Fujifilm digital camera with the Classic Neg film simulation`(혼자 쓸 때: `A Japanese everyday snapshot shot on a Fujifilm digital camera with the Classic Neg film simulation`), closer는 `銀塩写真` 대신 `写真`(필름이 아니므로), 입자는 `grain-sim` 줄이 맡는다 |
 | closer | `銀塩写真` |
 | time | 해가 있는 낮이 기본이고 흐린 낮도 된다. C만 밤과 실내 저녁이다. D는 해질녘도 된다 |
 | light-key | 있는 빛: 직사광, 흐린 하늘, 나뭇잎 사이 햇빛, 창빛. C는 실내 전구·홍등·네온·창밖 불빛 |
@@ -31,14 +31,14 @@
 | 슬롯 | 처리 | 이유 |
 |---|---|---|
 | face-light | 모든 갈래에서 끈다. 얼굴 빛은 이 카드의 Light 줄이 정한다 | Iris 꼬리의 위·옆 입체광이 #002 #014의 흐린 하늘 확산광, #004의 부드러운 역광, #016의 강한 측역광과 부딪힌다 |
-| face-clear | 모든 갈래에서 끈다. 앞머리와 바람에 날린 머리가 이마·뺨에 닿아도 눈썹과 눈은 드러난다 | 프리셋마다 시스루 앞머리가 바람에 흔들리는데 고정 줄은 머리를 귀 뒤로 넘기라고 한다 |
+| face-clear | 모든 갈래·세트·쌍에서 켠다. `シースルーバング`는 이마가 비치고 눈썹과 눈이 앞머리 사이로 읽히며 `濡れ髪`도 얼굴을 가리지 않으니 끌 이유가 아니다(face clear 줄은 옆머리를 귀 뒤로 정하고 앞머리는 `bangs` 줄이 정한다). 바람에 머리가 흔들리는 쌍 1·4·9와 세트 S1·S2도 눈썹·눈·턱선을 덮는 가닥이 없다 | 프리셋마다 시스루 앞머리가 바람에 흔들리지만 이마가 비치고 눈썹과 눈이 읽혀 얼굴을 가리지 않는다. 앞머리는 `bangs` 줄이, 옆머리는 face clear 줄이 정한다 |
 | under-eye, liner | 모든 갈래에서 끈다 | Iris 滤镜 프리셋의 화장 문장은 투명한 베이스, 혈색 있는 볼, 물기 있는 입술이 전부고 눈 화장 줄이 없다 |
 | base | B는 카드 줄(`もち肌`)이 이긴다. 나머지는 고정 몫 `透明感`을 쓴다 | #004 #019의 도자기 같은 피부 마감은 `透明感`보다 한 단계 더 부드럽다 |
 | lip, blush | D의 흑백 세트(아크로스·네오판)에서 끈다. 나머지는 켠다 | 흑백 필름에는 분홍·코랄 색이 찍히지 않는다. 입술과 볼은 명암으로만 읽힌다 |
 | grain | 모든 갈래에서 카드 줄이 이긴다. D에서는 슬라이드·아크로스를 고르면 `grain` 줄만, 네오판을 고르면 `grain-mono` 줄만 쓴다(둘을 함께 쓰지 않는다). `クラシックネガ` 줄이나 S1을 고르면 A의 `grain` 줄 대신 `grain-sim` 줄만 쓴다. 스톡 줄(Superia 400, 業務用 400 등)은 입자 양을 말하지 않고 입자는 이 줄 하나가 정한다 | 고정 줄의 고운 입자가 #005 #006의 굵은 입자, #014 #016의 거친 입자와 어긋난다 |
-| lens | 켠다. 렌즈를 말하는 줄은 하나이고 출처 순서는 세트의 렌즈 > 쌍의 렌즈 > 갈래의 본체·렌즈 줄 > 고정 몫이다. 이 카드의 갈래 줄(Optics의 stock·camera 줄)에는 렌즈 길이를 말하는 줄이 없다. 세트를 고르면 세트의 Iris 원본 렌즈가 렌즈 줄이고 `自然透视`는 붙이지 않는다(S1 XF 35mm f/1.4, S2 Nikkor 50mm f/1.4, S3 Planar 80mm f/2, S4 내장 28–56mm 줌을 약 40mm로, S5 EBC Fujinon GX M 100mm f/4, S6 21mm). 세트 없이 쌍만 고르면 쌍 2(`Telephoto Compression`, 중망원)와 쌍 12(`広角スナップ`, 21mm)는 Camera 줄이 렌즈를 정하니 `自然透视`를 끄고, 쌍 1·3~11은 `自然透视` 줄 하나만 렌즈를 말한다(쌍 11은 `Extreme Wide Shot`이 구도일 뿐 렌즈가 아니다). 세트와 쌍을 함께 고르면 세트가 이긴다(S1에 쌍 2를 붙이면 S1의 35mm 위에 중망원을 얹지 말고 쌍의 Camera 줄에서 렌즈 말을 뺀다) | Iris 꼬리의 `50mm 얕은 심도`는 옮기지 않았다. 원본 기종은 35mm 위주이고 #005는 28mm 컴팩트, #016은 21mm다 |
+| lens | 켠다. 렌즈를 말하는 줄은 하나이고 출처 순서는 세트의 렌즈 > 쌍의 렌즈 > 갈래의 본체·렌즈 줄 > 고정 몫이다. 이 카드의 갈래 줄(Optics의 stock·camera 줄)에는 렌즈 길이를 말하는 줄이 없다. 세트를 고르면 세트의 Iris 원본 렌즈가 렌즈 줄이고 고정 몫 lens 줄은 붙이지 않는다(S1 XF 35mm f/1.4, S2 Nikkor 50mm f/1.4, S3 Planar 80mm f/2, S4 내장 28–56mm 줌을 약 40mm로, S5 EBC Fujinon GX M 100mm f/4, S6 21mm). 세트 없이 쌍만 고르면 쌍 2(`Telephoto Compression`, 중망원)와 쌍 12(`広角スナップ`, 21mm)는 Camera 줄이 렌즈를 정하니 고정 몫 lens 줄을 끄고, 쌍 1·3~11은 고정 몫 lens 줄 하나만 렌즈를 말한다(쌍 11은 `Extreme Wide Shot`이 구도일 뿐 렌즈가 아니다). 세트와 쌍을 함께 고르면 세트가 이긴다. 세트의 렌즈는 세트 Optics가 말하는 본체 줄(`camera`: S1 `Fujifilm X-Pro3`, S3 `Contax 645`. 카드에 줄이 없는 S2 Nikon FM2·S4 Natura Classica·S5 Fuji GX680 III·S6 Ricoh GR21은 세트의 본체 값으로 쓴 줄)의 문장 끝에 `with an XF 35mm f/1.4 lens`처럼 붙이고 그 줄이 렌즈 줄이다. 그래서 세트에 쌍 2나 쌍 12의 Camera 줄을 빌려 붙일 때는 그 줄에서 렌즈 말(`Telephoto Compression`의 중망원, `広角スナップ`의 21mm)을 빼고 카메라 높이·자리만 쓴다. S6의 Camera `広角スナップ`도 같다(21mm는 Ricoh GR21 줄이 말하고 Camera 줄은 허리 높이와 기운 가장자리만 말한다) | Iris 꼬리의 `50mm 얕은 심도`는 옮기지 않았다. 원본 기종은 35mm 위주이고 #005는 28mm 컴팩트, #016은 21mm다 |
 | framing | 켠다. 쌍 7(가슴 위)과 쌍 11(인물이 작게)은 범위를 직접 말하니 그때는 3:4만 쓴다. 범위를 말하지 않는 쌍 가운데 다리·발 동작이 있는 1·2·3·5·6·9·12는 `from head to toe`로, 4·8·10은 `from the top of the head to the waist`로 쓴다 | 나머지 쌍은 프레임 범위를 말하지 않는데 Pose가 발이나 무릎을 말하면 허리 위 프레임에서 그 동작이 안 보인다 |
-| ratio | 켠다. 사용자 비율이 없으면 3:4 세로. 모든 쌍에 해당하는 처리(쌍 번호와 무관): face-light·face-clear·under-eye·liner 끔, grain은 카드 줄(필름 줄이나 `grain-sim`)이 정함, 렌즈 줄은 `自然透视`가 기본(Camera 줄이 렌즈를 말하는 쌍은 위 lens 행) | 쌍은 비율을 정하지 않는다 |
+| ratio | 켠다. 사용자 비율이 없으면 3:4 세로. 모든 쌍에 해당하는 처리(쌍 번호와 무관): face-light·face-clear·under-eye·liner 끔, grain은 카드 줄(필름 줄이나 `grain-sim`)이 정함, 렌즈 줄은 고정 몫 lens 줄이 기본(Camera 줄이 렌즈를 말하는 쌍은 위 lens 행) | 쌍은 비율을 정하지 않는다 |
 
 ## Hair and makeup
 | 갈래 | 슬롯 | 줄 |
@@ -62,6 +62,8 @@
 | D | expression | ペーソス — Low golden light on a tired, relaxed face and a faint closed-mouth smile. |
 
 ## Outfit
+**함께 쓰는 슬롯:** `outfit`·`outfit-outer`(겉옷은 `outfit` 위에 걸친다. 같은 이름의 줄이 여럿이면 장면에 맞는 하나)
+
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
 | A | outfit | バンドカラーシャツ — A washed ivory linen band-collar shirt hangs long and loose with soft creases, its slubs catching small bright patches where leaf shadow breaks. (滤镜 #001, 穿搭/04 #053) |
@@ -102,6 +104,8 @@
 | D | palette | palette — Slide film greens run deep emerald and saturation follows the stock, very high on Velvia and Fortia and medium on Provia, while the black-and-white sets run gray with no color. |
 
 ## Scene
+**하나만 고르는 슬롯:** `place`·`place-*`(장소 후보, 장면과 맞는 하나)
+
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
 | A | place | 下北沢 — A maze of narrow lanes with secondhand shops and racks spilling onto the street. (滤镜 #001) |
@@ -132,12 +136,14 @@
 | B | window | 窓明かり — Daylight through a sheer curtain falls from one side, a bright cheek and a soft shadow side with no hard edge. (滤镜 #019) |
 | C | face-light | 裸電球 — One amber lamp above the table warms the cup and her hands and leaves the rest of the room dim. (滤镜 #005) |
 | C | weather | 雨の夜 — Fine rain gives every lamp a soft cold halo and leaves small bright beads on wet paving and glass. (滤镜 #006 #010) |
-| C | taxi-light | 雨夜のテールランプ — Inside the taxi, headlights and neon signs outside slide in bright bands along the rain-spotted window glass and across her. (滤镜 #010) |
+| C | taxi-light | Taxi Window Lights — Inside the taxi, headlights and neon signs outside slide in bright bands along the rain-spotted window glass and across her. (滤镜 #010) |
 | C | bloom | ハレーション — Red-orange glow bleeds around the brightest lights against the dark. (滤镜 #011) |
-| D | face-light | 夕暮れ — Low orange sun from behind lays a warm rim along her hair and shoulder, and the sky leans faintly magenta while the sea's edge glows against the horizon. (滤镜 #020) |
+| D | face-light | 夕暮れ — Low orange sun from behind lays a warm rim along her hair and shoulder, and the sky leans faintly magenta, and at the beach the sea's edge glows against the horizon. (滤镜 #020) |
 | D | face-light | Geometric Light and Shadow — Hard sun through architectural openings cuts crisp geometric shapes of light and shadow across the wall and her face. (滤镜 #015) |
 
 ## Optics
+**하나만 고르는 슬롯:** `stock`·`stock-*`(필름 스톡 후보, 하나), `grain`·`grain-*`(고른 스톡이나 시뮬레이션에 맞는 입자 줄 하나)
+
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
 | A | stock | クラシックネガ — The Classic Neg film simulation, set for this look: cyan-green settles into the shadows and midtone grays while the highlights lean slightly warm and red, with saturation held low and contrast firm. |
@@ -150,7 +156,7 @@
 | B | stock-slide | アスティア 100F — In this look, a soft-contrast slide rendering gives translucent pink-leaning skin highlights and delicate pastel color. |
 | B | stock-slide | センシア 100 — In this look, mild slide contrast comes with gentle saturation and warm cream in the highlights. |
 | B | camera | Contax 645 — A 6x4.5 medium-format film frame. (120 필름 줄 PRO 400H·リアラ 100·アスティア 100F와만 묶는다. センシア 100은 135 필름이라 이 본체를 붙이지 않고 스톡 줄만 쓴다) |
-| B | tone-contax | Highlight Roll-off — On the Contax 645, tone transitions run very smooth, and the background melts into cream behind a silky focus plane. (120 필름 줄 PRO 400H·リアラ 100·アスティア 100F와만 묶는다) |
+| B | tone-contax | Silky Tonal Transitions — On the Contax 645, tone transitions run very smooth, and the background melts into cream behind a silky focus plane. (120 필름 줄 PRO 400H·リアラ 100·アスティア 100F와만 묶는다) |
 | C | stock | ナチュラ 1600 — In this look, coarse high-speed grain and soft lamp-lit exposure without flash push the shadows toward red-gray. |
 | C | stock | フジカラー Venus 800 — In this look, a night snapshot leans red in the shadows and green in the neon, with heavy grain and a Showa-era warmth. |
 | C | stock-cine | ETERNA 250D — In this look, a flat cinema-negative rendering with low saturation, soft highlight roll-off and lifted gray-cyan shadows. |
@@ -181,16 +187,18 @@
 |---|---|---|---|
 | 1 | A | 小走り — She hurries across a crosswalk in short quick steps, torso leaning slightly forward and hair swinging behind her. | 三分割構図 — She stands on the right third while the crosswalk stripes and the far end of the street fill the rest, the background soft but readable. |
 | 2 | A | ポケットイン — She waits at the kerb with both hands in her coat pockets, shoulders raised a little and weight on one leg. | Telephoto Compression — A moderate telephoto from across the street stacks poles and shopfronts into one flat plane behind her. |
-| 3 | A | しゃがみ — She crouches at a vending machine and reaches into its outlet, one hand on her knee. | Low Angle — The camera sits at knee height and looks up, so the glowing machine and a gray sky fill the upper frame. |
+| 3 | A | しゃがみ — She crouches at a vending machine and reaches into its outlet, one hand on her knee. | Low Angle — The camera sits at knee height and looks up, so the machine and the sky fill the upper frame. |
 | 4 | A, B, D | 髪を耳にかける — She faces the wind and combs a loose strand behind one ear with the elbow raised, eyes narrowed a little. | カメラ目線 — Close at eye level she looks straight into the lens, the lane or the sea behind her softly out of focus. |
 | 5 | B, D | 壁もたれ — She leans back against a plain wall with one knee bent and the sole pressed to it, eyes drifting to the side. | Negative Space — She fills one third of the frame and the wall takes the rest, white plaster or bare concrete. |
 | 6 | B | 斜め座り — She sits sideways on a linen sheet or a bench with her legs together and ankles crossed, looking down at an open book. | High Angle — From a few steps above, the edge of the sheet and the grass lead the eye down to her. |
-| 7 | B, C | 頬杖 — She props her cheek on one hand at a window table and looks out. | Medium Close-Up — The frame runs from the top of the head to mid-chest, with window or lamp light on the near side of her face. |
-| 8 | C | 両手持ち — She holds a warm cup in both hands under a pendant lamp, eyes lowered. | Foreground Obstruction — Shot past the blurred rim of a cup or a lamp cord crossing one corner of the frame. |
-| 9 | C | 振り返り — She walks away down a narrow alley and turns her head back over the shoulder. | 手ぶれ — A slight handheld sway at a slow shutter speed softens the lanterns while her face stays readable. |
-| 10 | C | Window Rain Lean — She rests one shoulder on the taxi window with her face turned toward the passing street. | Window Double Reflection — Shot partly through the rain-streaked glass, so the neon street and her faint reflection overlap. |
+| 7 | B, C | 頬杖 — She props her cheek on one hand at a window table and looks out. | Medium Close-Up — The frame runs from the top of the head to mid-chest. |
+| 8 | C | 両手持ち — She holds a warm cup in both hands at her table, eyes lowered. | Foreground Obstruction — Shot past the blurred rim of a cup or a lamp cord crossing one corner of the frame. |
+| 9 | C | 振り返り — She walks away down a narrow alley and turns her head back over the shoulder. | 手ぶれ — A slight handheld sway at a slow shutter speed softens the background while her face stays readable. |
+| 10 | C | Window Rain Lean — She rests one shoulder on the taxi window with her face turned toward the passing street. | Window Double Reflection — Shot partly through the window glass, so the street outside and her faint reflection overlap. |
 | 11 | D | 爪先立ち — She steps lightly from stone to stone with her heels lifted and arms out a little for balance. | Extreme Wide Shot — She is a small figure in a huge green valley or moss garden that fills almost the whole frame. |
-| 12 | D | Walking Shot — She strides through a concrete underpass with her arms swinging, hard side light cutting her profile. | 広角スナップ — A 21mm lens held near hip height tilts the frame edges and stretches the near wall, with a trace of motion blur. |
+| 12 | D | Walking Shot — She strides through a concrete underpass with her arms swinging. | 広角スナップ — A 21mm lens held near hip height tilts the frame edges and stretches the near wall, with a trace of motion blur. |
+
+장소: 쌍 1은 횡단보도가 있는 곳일 때; 쌍 2는 연석이 있는 길가일 때; 쌍 3은 자판기가 있는 곳일 때; 쌍 5는 평평한 벽(흰 회벽이나 맨 콘크리트)이 있는 곳일 때; 쌍 6은 리넨 시트나 벤치를 놓을 풀밭·공원일 때; 쌍 7은 창가 테이블이 있는 곳일 때; 쌍 8은 테이블과 컵이 있는 곳일 때; 쌍 9는 좁은 골목일 때; 쌍 10은 택시나 차 안 창가일 때; 쌍 11은 돌과 이끼가 있는 정원일 때; 쌍 12는 콘크리트 통로일 때. 쌍 4는 장소를 가리지 않는다.
 
 ## 맞지 않는 것
 디지털 샤프닝과 선명한 디지털 색, 스튜디오 조명과 흰 배경, 정면 플래시, 연출한 모델 포즈, 정면 증명사진 자세, 과한 소프트 포커스 필터, 큰 보케의 얕은 심도(B의 중형 제외), 낮 장면의 네온 간판(C 제외), 읽히는 간판·상표 글자.

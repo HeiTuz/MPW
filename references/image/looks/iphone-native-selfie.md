@@ -10,7 +10,7 @@
 ## 고정 사실 (모든 갈래가 지킨다)
 | 슬롯 | 값 |
 |---|---|
-| medium | 아이폰 본체 카메라(전면 TrueDepth, 후면 메인, 후면 초광각)로 찍은 일상 셀카·스냅. 화보도 필름도 카메라 전용기 사진도 아니다. 첫 줄은 갈래마다 다르다: A는 `A casual selfie shot on an iPhone front camera`, B는 `A mirror selfie shot on an iPhone rear camera`, C는 `A casual snapshot shot on an iPhone`(첫 줄은 렌즈를 말하지 않는다. 렌즈 줄은 아래 `끄는 고정 몫`의 lens 행이 하나만 정한다), D는 `A late-night snapshot shot on an iPhone with night mode off`로 시작한다. 매체 구절과 장소 구절을 나눠 쓴다. 장소 구절은 기본이 `in Seoul`이고 `selfie`·`snapshot` 뒤에 붙인다(`A casual selfie in Seoul shot on …`). 사용자가 장소를 말하면 이 구절만 그 장소로 바꾼다 |
+| medium | 아이폰 본체 카메라(전면 TrueDepth, 후면 메인, 후면 초광각)로 찍은 일상 셀카·스냅. 화보도 필름도 카메라 전용기 사진도 아니다. 첫 줄은 매체만 말하는 구절이고 갈래마다 다르다: A는 `A photograph shot on an iPhone front camera`, B는 `A photograph shot on an iPhone rear camera`, C는 `A photograph shot on an iPhone`(첫 줄은 렌즈를 말하지 않는다. 렌즈 줄은 아래 `끄는 고정 몫`의 lens 행이 하나만 정한다), D는 `A photograph shot on an iPhone with night mode off`로 시작한다. 혼자 쓸 때(이 카드만 불렸을 때)의 첫 줄은 A `A casual selfie shot on an iPhone front camera`, B `A mirror selfie shot on an iPhone rear camera`, C `A casual snapshot shot on an iPhone`, D `A late-night snapshot shot on an iPhone with night mode off`다. 장소 구절은 매체 구절에 넣지 않는다. 혼자 쓸 때만 기본이 `in Seoul`이고 `selfie`·`snapshot` 뒤에 붙인다(`A casual selfie in Seoul shot on …`). 사용자가 장소를 말하면 이 구절만 그 장소로 바꾼다 |
 | closer | `아이폰 원본 사진` |
 | time | 낮도 밤도 된다. 빛은 그 자리에 실제로 있는 빛(창, 형광등, 천장 스포트, 플래시, 화면, 손전등)이고 스튜디오 조명은 없다 |
 | light-key | 장소의 실용광과 폰 자체의 빛(후면 LED 플래시, 화면 빛, 친구의 손전등) |
@@ -30,19 +30,19 @@
 ## 끄는 고정 몫 (fixed-lines.md의 슬롯)
 | 슬롯 | 처리 | 이유 |
 |---|---|---|
-| face-light | 모든 갈래에서 끈다. 얼굴 빛은 이 카드의 Light 줄이 정한다 | `立体光`의 위·옆 키라이트가 #072의 창 역광, #062의 렌즈 축 플래시, #068의 천장 스포트, #071의 아래서 오는 화면 빛과 부딪힌다 |
-| catchlight | 카드 줄이 이기되, 눈에 맺히는 빛은 고른 Light의 광원이 정한다. A 통창은 창 사각 캐치라이트, A 역광은 붙이지 않는다(창이 사람 뒤에 있어 눈에 창이 비치지 않으니 `창가 사각 캐치라이트`를 쓰지 않는다). B 다이렉트 플래시는 `플래시 캐치라이트`, B 형광등·트랙 조명은 카드 줄 없이 고정 몫 `catchlight`(램프 모양 빛점)를 켠다. D 스마트폰 화면빛은 사각형 반사, D 손전등은 손전등 점이다. C는 고정 몫을 켠다. 쌍 5(플래시 거울 셀카)는 Light를 다이렉트 플래시로 고를 때만 쓴다 | Iris 고정문의 단일 눈빛이 갈래마다 다른 광원의 모양과 어긋난다. 렌즈·플래시를 본체 줄이 대신 정하지 않고 광원이 정한다 |
-| lens | 모든 갈래에서 고정 몫 `自然透视`를 끈다. 렌즈를 말하는 줄은 어느 선택에서도 정확히 하나이고, 첫 줄(매체 구절)과 쌍 Camera 문장은 렌즈 이름을 말하지 않는다. 출처 순서는 세트의 렌즈 > 갈래의 본체·렌즈 줄이다. (1) 세트가 렌즈를 말하는 곳은 S3의 Optics `초광각`뿐이고, S3은 쌍 7과만 짝이니(장면 세트 절) 렌즈 줄은 이 줄 하나다. (2) 그 밖은 갈래의 줄이다: A·B·D의 모든 쌍·세트는 Optics `body` 줄(`iPhone 15 Pro` 전면 약 23mm 환산, `iPhone 16 Pro` 후면 약 24mm 환산)이 렌즈 줄이고, C의 모든 쌍(7~9)은 Optics `초광각` 줄(약 13mm 환산)이 렌즈 줄이다. 쌍 7의 Camera 문장은 머리 크기와 거리의 선명도만 쓴다. 카메라 높이는 쌍이 정하고 모든 쌍의 Camera 문장은 앞뒤가 다 선명하다고 말한다 | Iris 꼬리의 50mm 무왜곡 평시선(포즈 트랙은 얕은 심도 보케까지)이 이 룩의 정체인 폰 광각·깊은 심도와 반대다. #063은 13mm 초광각과 50mm 꼬리가 한 프리셋에 같이 있었다 |
-| grain | A·B·C는 Optics `디지털 노이즈` 줄이 입자 줄이니 고정 몫 `数码噪点`을 따로 붙이지 않는다(같은 문장이라 한 줄만). D는 카드 줄(`고감도 노이즈`)이 이긴다 | D만 야간 모드를 꺼서 노이즈가 어두운 곳 전체로 번진다 |
+| face-light | 모든 갈래에서 끈다. 얼굴 빛은 이 카드의 Light 줄이 정한다 | 고정 몫 face-light 줄의 위·옆 키라이트가 #072의 창 역광, #062의 렌즈 축 플래시, #068의 천장 스포트, #071의 아래서 오는 화면 빛과 부딪힌다 |
+| catchlight | 카드 줄이 이기되, 눈에 맺히는 빛은 고른 Light의 광원이 정한다. A 통창은 창 사각 캐치라이트, A 역광은 붙이지 않는다(창이 사람 뒤에 있어 눈에 창이 비치지 않으니 `창가 사각 캐치라이트`를 쓰지 않는다). B 다이렉트 플래시는 `플래시 캐치라이트`, B 형광등·트랙 조명·Window Light는 카드 줄 없이 고정 몫 `catchlight`(램프·창 모양 빛점)를 켠다. D 스마트폰 화면빛은 사각형 반사, D 손전등은 손전등 점이고, D 차창 불빛은 고정 몫 `catchlight`(창 모양 빛점)를 켠다. C는 고정 몫을 켠다. 쌍 5(플래시 거울 셀카)는 Light를 다이렉트 플래시로 고를 때만 쓴다 | Iris 고정문의 단일 눈빛이 갈래마다 다른 광원의 모양과 어긋난다. 렌즈·플래시를 본체 줄이 대신 정하지 않고 광원이 정한다 |
+| lens | 모든 갈래에서 고정 몫 lens 줄을 끈다. 렌즈를 말하는 줄은 어느 선택에서도 정확히 하나이고, 첫 줄(매체 구절)과 쌍 Camera 문장은 렌즈 이름을 말하지 않는다. 출처 순서는 세트의 렌즈 > 갈래의 본체·렌즈 줄이다. (1) 세트가 렌즈를 말하는 곳은 S3의 Optics `초광각`뿐이고, S3은 쌍 7과만 짝이니(장면 세트 절) 렌즈 줄은 이 줄 하나다. (2) 그 밖은 갈래의 줄이다: A·B·D의 모든 쌍·세트는 Optics `body` 줄(`iPhone 15 Pro` 전면 약 23mm 환산, `iPhone 16 Pro` 후면 약 24mm 환산)이 렌즈 줄이고, C의 모든 쌍(7~9)은 Optics `초광각` 줄(약 13mm 환산)이 렌즈 줄이다. 쌍 7의 Camera 문장은 머리 크기와 거리의 선명도만 쓴다. 카메라 높이는 쌍이 정하고 모든 쌍의 Camera 문장은 앞뒤가 다 선명하다고 말한다 | Iris 꼬리의 50mm 무왜곡 평시선(포즈 트랙은 얕은 심도 보케까지)이 이 룩의 정체인 폰 광각·깊은 심도와 반대다. #063은 13mm 초광각과 50mm 꼬리가 한 프리셋에 같이 있었다 |
+| grain | A·B·C는 Optics `디지털 노이즈` 줄이 입자 줄이니 고정 몫 grain(디지털 노이즈) 줄을 따로 붙이지 않는다(같은 문장이라 한 줄만). D는 카드 줄(`고감도 노이즈`)이 이긴다 | D만 야간 모드를 꺼서 노이즈가 어두운 곳 전체로 번진다 |
 | lip | 모든 갈래에서 카드 줄(`과즙 립`)이 이긴다 | 고정 몫의 `그라데이션 립`이 더 붙으면 Iris 저자의 코랄 누드 글로스와 입술색이 둘이 된다 |
 | base, blush | A의 운동 후 장면에서만 카드 줄(`운동 후 땀 광택`, `운동 후 홍조`)이 이긴다. 나머지는 켠다 | #073의 땀 광택과 운동 홍조가 일반 물광·딸기우유 뺨과 겹친다 |
-| face-clear | 켠다. 쌍 8(횡단보도)에서만 끈다. 머리가 바람에 얼굴 가장자리를 지나가도 눈은 가리지 않는다 | Iris 모든 프리셋이 귀 뒤로 넘긴 머리를 쓰지만 걷는 장면은 머리가 날린다 |
+| face-clear | 켠다(`face clear` 줄을 붙인다). 단 A·B의 `hair` 줄(검은 긴 생머리)은 이미 한쪽을 귀 뒤로 넘겨 이마와 두 눈이 드러나니 그 줄이 이 슬롯을 채운 것이라 다시 붙이지 않는다. 쌍 8(횡단보도 걷기)의 Pose를 쓸 때는 끈다(Camera 줄만 빌린 경우는 켠다). 머리가 바람에 얼굴 가장자리를 지나가도 눈은 가리지 않는다 | Iris 모든 프리셋이 귀 뒤로 넘긴 머리를 쓰지만 걷는 장면은 머리가 날린다 |
 | realism | 모든 갈래에서 바꾼다. `8K`·땀구멍 줄 대신 `native resolution` 줄을 쓴다. 매체 구절은 `an iPhone camera`, 질감은 `clean computational sharpness, softly smoothed skin and bright highlights that clip`(D는 `coarse high-ISO noise and smeared shadow detail`) | 폰 카메라의 자체 해상도와 HDR 보정이 그리는 피부에 8K 모공 묘사를 얹으면 원본 사진이라는 룩의 정체와 반대다 |
 | framing | 켠다. 쌍 1(미디엄 클로즈업)·4(머리부터 신발까지)·6(클로즈업)·8(머리부터 발끝)·10(조감)은 Camera 줄이 프레임 범위를 말하니 그 쌍에서는 쌍이 정한다 | 나머지 쌍은 범위를 말하지 않아 고정 몫 허리 위 줄이 범위를 정한다. 쌍 4의 옷 전체, 쌍 8의 걸음이 프레임 밖으로 잘리지 않게 이 두 쌍의 Camera 줄이 범위를 말한다 |
-| ratio | 켠다. 사용자 비율이 없으면 3:4 세로. 모든 쌍에 해당하는 처리(쌍 번호와 무관): face-light 끔, `自然透视` 끔, lip은 카드 줄 `과즙 립`, realism은 `native resolution`. 위 행의 쌍 번호 조건은 이 카드의 쌍을 고를 때만 쓴다. | 폰 본래 비율은 4:3이지만 셀카는 세로로 든다. 가로 요청이면 사용자 값이 이긴다 |
+| ratio | 켠다. 사용자 비율이 없으면 3:4 세로. 모든 쌍에 해당하는 처리(쌍 번호와 무관): face-light 끔, 고정 몫 lens 줄 끔, lip은 카드 줄 `과즙 립`, realism은 `native resolution`. 위 행의 쌍 번호 조건은 이 카드의 쌍을 고를 때만 쓴다. | 폰 본래 비율은 4:3이지만 셀카는 세로로 든다. 가로 요청이면 사용자 값이 이긴다 |
 
 ## Hair and makeup
-머리 슬롯은 하나만 쓴다. `hair-up`(똥머리·집게핀)이나 `hair-bed`를 고르면 그 줄이 같은 갈래의 `hair`(검은 긴 생머리) 줄을 대신하고 둘을 함께 쓰지 않는다.
+**하나만 고르는 슬롯:** `hair`·`hair-up`·`hair-bed`(머리 모양 후보. `hair-up`(똥머리·집게핀)이나 `hair-bed`를 고르면 그 줄이 같은 갈래의 `hair`(검은 긴 생머리) 줄을 대신하고 둘을 함께 쓰지 않는다)
 
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
@@ -69,6 +69,8 @@
 | B | gaze | 나른한 곁눈질 — Heavy lids and a sideways glance toward the mirror image, as if checking the outfit between other thoughts. |
 
 ## Outfit
+**함께 쓰는 슬롯:** `outfit`·`outfit-bottom`(하의는 `outfit`의 상의 아래에 따로 입는다. 같은 이름의 줄이 여럿이면 장면에 맞는 하나)
+
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
 | A | outfit | 스퀘어넥 — A slim charcoal long-sleeve knit with a clean square neckline that bares both collarbones, its matte weave catching no glare. |
@@ -131,6 +133,9 @@
 | D | place | 침대 — A bedroom with rumpled white bedding. |
 
 ## Light
+**하나만 고르는 슬롯:** `face-light`·`car-light`(얼굴에 닿는 주된 빛 후보. D 택시 안에서는 `car-light`를 `face-light` 대신 쓴다)
+**함께 쓰는 슬롯:** `face-light`·`bulb-light`(포장마차의 주변 전구 빛은 얼굴 빛과 함께)
+
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
 | A | face-light | 통창 자연광 — Soft daylight from a large side window falls across her face and fades gently into the wall, with no hard shadow edge. |
@@ -152,18 +157,20 @@
 | D | catchlight | 플래시 캐치라이트 — One small hard white dot from the friend's flashlight sits at the side of each pupil, only when the flashlight is the light. |
 
 ## Optics
+**하나만 고르는 슬롯:** `highlight-front`·`highlight-rear`(쓰는 카메라에 맞는 하나. 전면은 `highlight-front`, 후면(B·C)은 `highlight-rear`)
+
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
 | A, D | body | iPhone 15 Pro — The front TrueDepth camera, a small built-in lens of about 23mm equivalent. |
 | A, D | highlight-front | 하이라이트 날림 — On the front camera, crisp computational sharpness keeps every hair edge and the nose bridge clean while bright highlights clip to flat white. |
-| B | sharp-rear | iPhone 16 Pro — On the rear camera, crisp computational sharpness keeps the room, the phone and the face in the glass all reading clean. |
+| B | sharp-rear | Crisp Computational Sharpness — On the rear camera, crisp computational sharpness keeps the room, the phone and the face in the glass all reading clean. |
 | B | body | iPhone 16 Pro — The rear main camera, a small built-in lens of about 24mm equivalent. |
 | C | wide | 초광각 — The ultra-wide camera, about 13mm equivalent, stretches the frame edges and exaggerates near-far scale while everything from her hand to the far street stays sharp. |
 | A | hdr | 스마트 HDR — Multi-frame HDR balances the bright window and her face in one frame, lifting the shadows and flattening contrast a little. |
 | A | motion | 라이브 포토 — A still from a live clip catches slight motion blur in a hand or swinging hair while the face stays sharp. |
 | D | noise | 고감도 노이즈 — With night mode off the dark frame carries real high-ISO grain and slight smearing, with no lifted shadows. |
 | 전부 | fringe | 색수차 — A faint red-cyan fringe runs along high-contrast edges, strongest toward the corners. |
-| B, C | highlight | 하이라이트 날림 — Bright patches such as a lamp or window hotspot (a flash hotspot only when a direct flash fires) and a clipped sky push to flat white with softly bleeding edges. |
+| B, C | highlight-rear | 하이라이트 날림 — Bright patches such as a lamp or window hotspot (a flash hotspot only when a direct flash fires) and a clipped sky push to flat white with softly bleeding edges. |
 | A, B, C | grain | 디지털 노이즈 — Very fine digital noise sits only in the darkest parts of the frame. |
 
 ## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 세트를 쓰는 조건은 규칙 4항이 정하고, 세트 값은 고정 사실보다 먼저다. 규칙은 image-brief.md §4 '룩 카드' 4항과 '비워 둔 층')
@@ -192,8 +199,10 @@
 | 8 | C | 횡단보도 걷기 — She takes a long step across the crosswalk stripes with the body angled across the road and her hair lifting behind. | 기울어진 프레이밍 — The frame tilts slightly off level and runs from her head to her feet, as if a friend walked beside her, while the whole street stays sharp. |
 | 9 | C | 손으로 렌즈 가리기 — One palm reaches toward the lens and covers a corner of the frame while she laughs behind it. | 카메라 응시 — She looks straight into the lens from arm's length, and the street behind her is as sharp as her eyes. |
 | 10 | D | 누워서 폰 보기 — She lies on her back in bed holding the phone above her face with both hands. | 조감 — The phone looks straight down from directly above, so the pillow and bedding fill the frame flat and sharp around her face. |
-| 11 | D | 지하철 문에 기대기 — Her back rests against the closed car door, the posture steady and the eyes tired. | 유리창 이중 반사 — Shot partly through the window glass, her faint reflection overlaps the dark tunnel and the car interior, both layers sharp. |
-| 12 | D | 턱 괴기 — She props her chin on one hand at a stall table with her head tilting into the palm. | 프레임 속 프레임 — The tent opening and the dark street box her into a narrow lit slot, the stall and the street beyond both in focus. |
+| 11 | D | 지하철 문에 기대기 — Her back rests against the closed car door, the posture steady and the eyes tired. | 유리창 이중 반사 — Shot partly through the window glass, her faint reflection overlaps the view outside and the car interior, both layers sharp. |
+| 12 | D | 턱 괴기 — She props her chin on one hand at a stall table with her head tilting into the palm. | 프레임 속 프레임 — The tent opening and the street beyond box her into a narrow slot, the stall and the street both in focus. |
+
+장소: 쌍 2·3은 천장·창·바닥·가구가 보이는 실내일 때; 쌍 4·5·6은 거울이 있는 곳일 때(쌍 5는 다이렉트 플래시 Light와만); 쌍 7·9는 하늘과 거리가 보이는 야외일 때; 쌍 8은 횡단보도일 때; 쌍 10은 침대일 때; 쌍 11은 지하철 문 앞일 때; 쌍 12는 포장마차 같은 텐트 가게의 테이블일 때. 쌍 1은 장소를 가리지 않는다.
 
 ## 맞지 않는 것
 얕은 심도와 인물 모드 보케, 필름 입자와 할레이션, 스튜디오 조명과 소프트박스, 정면 증명사진 자세, 미러리스·필름 카메라의 렌즈 느낌, 과한 보정으로 매끈해진 피부, 화면에 읽히는 글자와 로고.
