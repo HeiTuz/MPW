@@ -77,7 +77,7 @@
 | 축 | 규칙 |
 |---|---|
 | 팔레트 | 정확 색·색 관계가 필요할 때만 지정하고 색 이름으로 되면 코드값은 생략. 전문 레인은 그 레인의 색 계약을 따른다. |
-| 색온도 | 켈빈 숫자 또는 `warm-3200 feel` / `neutral white` / `cool bias` |
+| 색온도 | 켈빈 숫자 대신 색(`warm amber` / `neutral white` / `cool blue-white`)으로 쓴다. 사용자가 숫자를 정했으면 그대로 둔다 |
 | 조화 | 반대색 / 이웃색 / 세 점 삼각 |
 | 룩 | 청록-주황 분리, 블리치 바이패스 대비, 채도 낮춘 뮤트, 하이라이트가 따뜻하게 꺾임 |
 | 스킨 보호 기본 | `warm grade applied to background and negative space, skin left neutral and true to its own undertone` |

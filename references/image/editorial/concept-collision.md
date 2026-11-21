@@ -21,7 +21,7 @@
 
 | 축 | 한쪽 | 다른쪽 |
 |---|---|---|
-| 조명 | `soft high-key strobe, near-shadowless 5500K` — 평면·공기·지면 클린 | `hard side strobe, long cast shadow` — 방향이 강한 드라마 |
+| 조명 | `soft high-key strobe, near-shadowless neutral white` — 평면·공기·지면 클린 | `hard side strobe, long cast shadow` — 방향이 강한 드라마 |
 | 구도 | `subject offset with generous negative space` — 카피·호흡 | `centered symmetrical composition` — 정면 아이콘 |
 
 한 컷에서 두 빛을 겹치면 그림자가 모순된다. 각 축에서 하나만 고른다.
