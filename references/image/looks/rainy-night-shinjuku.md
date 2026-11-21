@@ -73,7 +73,7 @@
 | A | outfit | リフレクター — Reflective strips and panels on a silver-gray cropped technical jacket flare cold white and cyan under the screens and stay flat gray in the shade. (滤镜 #098) |
 | B | outfit | 撥水コート — A long dark-gray water-repellent coat with taped seams, rain sitting on the matte surface as round beads that glint under the screen light. (滤镜 #092) |
 | B | outfit | ダブルフェイスカシミヤ — A long light-oat double-faced cashmere coat with a soft matte nap that reads warm on the lamp side and cool white on the headlight side. (滤镜 #093) |
-| C | outfit | 露背针织裙 — A fitted black knit dress open across the back, the rib stretching over the shoulder blades in the dim light of the glass. (滤镜 #096) |
+| C | outfit | 背中開きニットワンピース — A fitted black knit dress open across the back, the rib stretching over the shoulder blades in the dim light of the glass. (滤镜 #096) |
 | C | outfit | Moto Jacket — A heavy black leather jacket with an asymmetric zip and snap lapels, small hard red reflections sliding along the zip as tail lights pass. (滤镜 #099) |
 | C | outfit-outer | 羊绒大衣 — A long black cashmere coat with wide lapels falling in heavy folds, a fuzzy halo along its edge under the faint red glow of the tower. (滤镜 #095) |
 | C | scarf | 羊绒围巾 — A thick soft scarf wound loose with her chin sunk into it, its fuzz catching a thin line of red tail light on the edge. (风格/03 #055) |
@@ -154,7 +154,7 @@
 | C | motion | 车流光轨 — Headlights and tail lights stretch into smooth colored streaks along the road while the buildings stay still and sharp. |
 | C | bokeh | 光斑虚化 — Distant lights turn into big round overlapping discs behind her. |
 | D | camera | Leica M11 — Crisp micro-contrast, calm color and gentle highlight roll-off, so the blacks sink clean and the highlights stay pure. (滤镜 #100) |
-| D | key | 深邃黑阶 — The darkest parts of the frame sink to clean, deep black with no visible noise, and the highlights stay small and unclipped. |
+| D | key | Deep Blacks — The darkest parts of the frame sink to clean, deep black with no visible noise, and the highlights stay small and unclipped. |
 | D | color | Cool Grey Tone — A pale gray with a trace of blue and restrained contrast, the whites clean and cold. |
 
 ## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 요청이 세트와 맞으면 통째로 쓰고, 세트 값이 같은 슬롯의 갈래 줄보다 먼저다)
@@ -165,7 +165,7 @@
 | S3 渋谷 雨のスクランブル (滤镜 #092) | B | Hair 濡れ髪, シースルーバング / Outfit 깊은 회색 긴 코트(撥水コート) / Scene 渋谷スクランブル交差点, 青信号 순간 투명 우산의 바다 한가운데 / Light 5000K, 수십 미터 위 대형 스크린의 차가운 흰빛이 위에서 확산된다(街頭ビジョン) / Optics Sony FX3 24mm f/1.4, 높은 감도에서도 낮은 노이즈 / Expression 冷眼旁观, 인파 속 혼자 멈춘다 / Pose 인파 한가운데서 걸음을 멈추고 돌아본다 |
 | S4 銀座 雨宿り (滤镜 #093) | B | Hair 濡れ髪, シースルーバング / Outfit ダブルフェイスカシミヤ, 연한 귀리색 이중직 캐시미어 롱코트 / Props 금빛 귀걸이 / Scene 銀座, 고급 쇼윈도 처마 아래 비를 피하는 모퉁이 / Light 3800K~6000K, 주철 가로등의 호박색과 지나가는 차의 차가운 제논 헤드램프가 맞선다(冷暖对冲) / Optics Leica SL2 + 50mm f/2 APO, 보라 번짐 없는 고대비 / Expression 清冷感, 품위 있는 시선 |
 | S5 首都高 助手席 (滤镜 #099) | C | Hair 濡れ髪, シースルーバング / Outfit Moto Jacket, 검은 라이더 가죽 / Scene 首都高 심야, 조수석 / Light 4000K, 차창 밖 비바람 속 붉은 테일램프가 빗물에 끌려 붉은 호를 그린다 / Optics RED Komodo 6K 28-70mm f/2, 차 안 이동 촬영 / Pose 머리받침에 비스듬히 기대고 옆얼굴이 붉은 빛과 노란 가로등에 번갈아 밝아진다 / Expression 시선이 렌즈를 스친다 |
-| S6 新宿東口 2時 (滤镜 #100) | D | Hair 濡れ髪, シースルーバング / Outfit 炭黑 울 롱코트(羊绒大衣) / Scene 新宿東口, 새벽 2시 인적 없는 횡단보도 한가운데 / Light 5200K, 번잡한 조명이 모두 꺼지고 낡은 가로등만 남는다(Streetlamp Pool) / Optics Leica M11 50mm f/1.4, 深邃黑阶, 노이즈 없는 깊은 검정 / Expression 穿透性凝视, 돌아보며 렌즈를 본다 / Pose 횡단보도 중앙에 서서 돌아본다 |
+| S6 新宿東口 2時 (滤镜 #100) | D | Hair 濡れ髪, シースルーバング / Outfit 炭黑 울 롱코트(羊绒大衣) / Scene 新宿東口, 새벽 2시 인적 없는 횡단보도 한가운데 / Light 5200K, 번잡한 조명이 모두 꺼지고 낡은 가로등만 남는다(Streetlamp Pool) / Optics Leica M11 50mm f/1.4, Deep Blacks, 노이즈 없는 깊은 검정 / Expression 穿透性凝视, 돌아보며 렌즈를 본다 / Pose 횡단보도 중앙에 서서 돌아본다 |
 
 ## 포즈·구도 쌍
 | 번호 | 갈래 | Pose | Camera |

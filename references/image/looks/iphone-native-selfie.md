@@ -144,8 +144,8 @@
 ## Optics
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
-| A, D | body | 아이폰 15 프로 — The front TrueDepth camera renders with crisp computational sharpness, so every hair edge and the nose bridge read clean and bright highlights clip. |
-| B | body | 아이폰 16 프로 — The rear camera's small flash bursts into a star-shaped glare on the mirror while the face near it stays bright. |
+| A, D | body | iPhone 15 Pro — The front TrueDepth camera renders with crisp computational sharpness, so every hair edge and the nose bridge read clean and bright highlights clip. |
+| B | body | iPhone 16 Pro — The rear camera's small flash bursts into a star-shaped glare on the mirror while the face near it stays bright. |
 | C | wide | 초광각 — The ultra-wide camera stretches the frame edges and exaggerates near-far scale while everything from her hand to the far street stays sharp. |
 | A | hdr | 스마트 HDR — Multi-frame HDR balances the bright window and her face in one frame, lifting the shadows and flattening contrast a little. |
 | A | motion | 라이브 포토 — A still from a live clip catches slight motion blur in a hand or swinging hair while the face stays sharp. |
@@ -157,12 +157,12 @@
 ## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 요청이 세트와 맞으면 통째로 쓰고, 세트 값이 같은 슬롯의 갈래 줄보다 먼저다)
 | 세트 | 갈래 | 묶음 |
 |---|---|---|
-| S1 성수동 전면 셀카 (滤镜 #061) | A | Hair 검은 긴 생머리, 풍성한 어두운 머리가 어깨 뒤와 가슴 옆으로, 한쪽은 귀 뒤로 / Outfit 스퀘어넥(숯회색 슬림 긴소매 니트) / Props 은 물방울 펜던트(아주 가는 은 체인) / Scene 클린 콘크리트 카페, 노출 콘크리트와 부드러운 확산광의 조용한 예술 공간, 잡동사니 없음 / Light 5200K 낮의 확산광 / Optics 아이폰 15 프로 전면 TrueDepth, 머리카락 결과 콧대가 선명하다 / Pose 전면 카메라, 몸은 3/4로 비스듬히 / Camera 미디엄 클로즈업, 팔 길이(Iris 원본: 50mm 평시선) / Expression 무심히 돌아보는 눈빛, 맑은 눈으로 렌즈를 돌아봄 |
-| S2 거울 플래시 (滤镜 #062) | B | Hair 검은 긴 생머리, 한쪽을 귀 뒤로 / Outfit 브이넥 캐시미어 니트(모카 브라운, 깊은 V) / Scene 피팅룸 거울 앞 OOTD 기록(Iris 장소: 청담동 갤러리 코너, 배경 보케) / Light 5600K 후면 LED 플래시가 거울에서 육각 별빛으로 터지고 얼굴은 밝다 / Optics 아이폰 16 프로 후면 카메라 / Pose 플래시 거울 셀카, 거울 속 렌즈 쪽을 보며 / Expression 차가운 눈길, 플래시 눈부심 너머로 자신을 본다 / Camera 중앙 구도, 거울 속 방까지 모두 선명 |
+| S1 성수동 전면 셀카 (滤镜 #061) | A | Hair 검은 긴 생머리, 풍성한 어두운 머리가 어깨 뒤와 가슴 옆으로, 한쪽은 귀 뒤로 / Outfit 스퀘어넥(숯회색 슬림 긴소매 니트) / Props 은 물방울 펜던트(아주 가는 은 체인) / Scene 클린 콘크리트 카페, 노출 콘크리트와 부드러운 확산광의 조용한 예술 공간, 잡동사니 없음 / Light 5200K 낮의 확산광 / Optics iPhone 15 Pro 전면 TrueDepth, 머리카락 결과 콧대가 선명하다 / Pose 전면 카메라, 몸은 3/4로 비스듬히 / Camera 미디엄 클로즈업, 팔 길이(Iris 원본: 50mm 평시선) / Expression 무심히 돌아보는 눈빛, 맑은 눈으로 렌즈를 돌아봄 |
+| S2 거울 플래시 (滤镜 #062) | B | Hair 검은 긴 생머리, 한쪽을 귀 뒤로 / Outfit 브이넥 캐시미어 니트(모카 브라운, 깊은 V) / Scene 피팅룸 거울 앞 OOTD 기록(Iris 장소: 청담동 갤러리 코너, 배경 보케) / Light 5600K 후면 LED 플래시가 거울에서 육각 별빛으로 터지고 얼굴은 밝다 / Optics iPhone 16 Pro 후면 카메라 / Pose 플래시 거울 셀카, 거울 속 렌즈 쪽을 보며 / Expression 차가운 눈길, 플래시 눈부심 너머로 자신을 본다 / Camera 중앙 구도, 거울 속 방까지 모두 선명 |
 | S3 초광각 거리 (滤镜 #063) | C | Hair 검은 긴 생머리 / Outfit 오버핏(연한 귀리색 블레이저, 안은 검은 튜브탑, 열린 깃으로 쇄골과 목선) / Scene 한남동, 서울 거리의 반신 스냅 / Light 5000K 낮빛 / Optics 초광각, 가장자리가 가볍게 늘어난다(Iris 원본: 50mm 무왜곡 꼬리) / Pose 위에서 찍는 셀카, 팔을 높이 들어 / Camera 초광각 왜곡, 머리가 조금 크게 보이고 거리가 모두 선명(Iris 원본: 머리는 크고 몸은 작아 보이는 귀여운 시선) / Expression 무심함, 젊고 활기찬 얼굴 |
 | S4 어두운 택시 (滤镜 #064) | D | Hair 검은 긴 생머리, 시트 헤드레스트에 눌려 한쪽이 납작하다 / Outfit 보트넥(검은 슬림 긴소매 니트) / Scene 택시 뒷좌석, 심야 귀갓길 / Light 5400K 어두운 차 안, 창밖 도시 빛이 얼굴을 스친다 / Optics 고감도 노이즈, 야간 모드를 끄고 굵은 노이즈와 약한 뭉개짐을 남긴다 / Pose 전면 카메라, 몸을 시트에 묻고 / Camera 팔 길이 전면 카메라, 가까운 창과 먼 불빛이 함께 선명 / Expression 졸린 눈, 피곤한데 맑은 얼굴 |
-| S5 화면 빛 침실 (滤镜 #071) | D | Hair 베드헤드 펌 / Outfit 슬립 원피스 파자마(Iris 원본: 오버핏 블레이저와 검은 튜브탑) / Scene 침대, 불 꺼진 침실의 불면 / Light 7500K 스마트폰 화면빛, 검은 방 안에서 폰 화면만 얼굴을 비춘다 / Catchlight 폰 화면 반사 캣치라이트, 동공에 사각형 반사 / Optics 아이폰 15 프로 전면, 고감도 노이즈 / Pose 누워서 폰 보기 / Camera 조감, 폰이 얼굴 바로 위에서 내려다본다 / Expression 멍때리기 |
-| S6 운동 후 땀 (滤镜 #073) | A | Hair 똥머리(Iris 원본: 긴 생머리) / Base 하이드로 글로우, 이마와 광대에 운동 후 땀 광택 / Blush 취한 듯한 블러셔, 운동 홍조 / Outfit 레깅스 룩(Iris 원본: 방령 니트) / Scene 연습실, 필라테스·헬스 후 인증 / Light 5300K 낮의 창빛 / Optics 아이폰 15 프로 전면, 자연스러운 낮빛 스냅 / Pose 전면 카메라 / Expression 눈웃음, 숨이 아직 가쁜 밝은 얼굴 |
+| S5 화면 빛 침실 (滤镜 #071) | D | Hair 베드헤드 펌 / Outfit 슬립 원피스 파자마(Iris 원본: 오버핏 블레이저와 검은 튜브탑) / Scene 침대, 불 꺼진 침실의 불면 / Light 7500K 스마트폰 화면빛, 검은 방 안에서 폰 화면만 얼굴을 비춘다 / Catchlight 폰 화면 반사 캣치라이트, 동공에 사각형 반사 / Optics iPhone 15 Pro 전면, 고감도 노이즈 / Pose 누워서 폰 보기 / Camera 조감, 폰이 얼굴 바로 위에서 내려다본다 / Expression 멍때리기 |
+| S6 운동 후 땀 (滤镜 #073) | A | Hair 똥머리(Iris 원본: 긴 생머리) / Base 하이드로 글로우, 이마와 광대에 운동 후 땀 광택 / Blush 취한 듯한 블러셔, 운동 홍조 / Outfit 레깅스 룩(Iris 원본: 방령 니트) / Scene 연습실, 필라테스·헬스 후 인증 / Light 5300K 낮의 창빛 / Optics iPhone 15 Pro 전면, 자연스러운 낮빛 스냅 / Pose 전면 카메라 / Expression 눈웃음, 숨이 아직 가쁜 밝은 얼굴 |
 
 ## 포즈·구도 쌍
 | 번호 | 갈래 | Pose | Camera |

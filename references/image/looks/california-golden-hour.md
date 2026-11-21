@@ -72,6 +72,8 @@
 | A, B | outfit-outer | Denim Jacket — A washed, slightly distressed denim jacket with a worn collar and pale seams, the brass buttons throwing small sun glints. |
 | A, B | outfit-bottom | denim cutoff shorts — Frayed-hem blue denim shorts bleached pale at the thighs, the loose threads lit white along the edge. |
 | B | outfit | Utility Jumpsuit — A faded khaki cotton jumpsuit belted at the waist, the heavy twill creasing at elbows and knees and glowing ochre in the last light. |
+| C | outfit | Halter Swimsuit — A black halter-neck one-piece with a high-cut leg and an open back, the satin fabric throwing a long gold highlight along the hip where the low sun reaches it. |
+| C | outfit | High-Waisted Bikini — A retro lemon-yellow high-waisted two-piece with a plain bandeau top, the ribbed knit glowing saturated against blue pool water and white plaster. |
 | C | outfit-outer | Moto Jacket — A black leather moto jacket with a worn collar, hard highlights on the zips and creased elbows. |
 | D | outfit | Oxford Shirt — A large white cotton oxford shirt with the collar open and cuffs rolled, its weave and folds visible with no blown-out white. |
 
@@ -116,6 +118,7 @@
 | B | beam | 丁达尔 — Dust in the dry air lights up as straight gold shafts with floating particles bright inside each beam. |
 | C | face-light | Palm Leaf Shadows — Low sun through palm fronds breaks into moving gold patches and feathery shadows on her shoulders, cheek and the street. |
 | C | face-light | Bounce Light — Sun reflected from a pale wall or red clay roof fills the jaw, neck and collarbones with warm light that picks up the wall's color. |
+| C | light-fill | Caustics — Pool-water light breaks into a moving net of bright gold lines that ripple across her shoulders, collarbones and the white wall behind her. |
 | D | face-light | Window Light — Daylight from one window models the face with a bright side and a soft shadow side that falls off gently. |
 | D | light-fill | Venetian Blind Shadows — Sun through wooden blinds lays parallel gold stripes across her cheek, shoulders and the white bedding. |
 
@@ -141,6 +144,7 @@
 | S4 日落大道 (滤镜 #014) | C | Hair 짙은 금색 웨이브 장발이 어깨 위로 / Lip Classic Red Lip(烈焰红唇) / Outfit Moto Jacket(검은 가죽 라이더) / Props Ray-Ban Aviator 계열 복고풍 선글라스 / Scene Sunset Boulevard 퇴근길 차량 행렬 앞 횡단보도 / Light 3200K 낙조가 차창과 크롬에 직사해 배경이 금빛 원형 보케 바다로 / Optics Leica MP + Noctilux 50mm f/0.95, Kodak Vision3 500T(85B 필터), 부드러운 할레이션 / Pose 快步穿过人行道 |
 | S5 圣巴巴拉 (滤镜 #011) | C | Hair 짙은 갈색 웨이브가 자연스럽게 어깨 위로 / Outfit 순백 린넨 랩 원피스(Linen Sundress 계열) / Scene Santa Barbara 스페인풍 아치 회랑, 붉은 기와지붕과 흰 회벽, 옆에 핫핑크 부겐빌레아 / Light 3600K 붉은 기와와 흰 벽에서 되튄 붉은 금빛이 얼굴과 쇄골로 / Optics Fuji GA645Zi 55-90mm + Kodak Portra 400 / Expression 고요하고 매혹적인 눈빛 / Pose 아치 아래를 천천히 걷는다 |
 | S6 柑橘园 (05 #075) | D | Hair 연한 금발이 꽃무늬 면 캐미솔 원피스 어깨 위로 흩어짐 / Outfit 꽃무늬 면 슬립 원피스 / Props 열매 가득한 귤나무 가지를 한 손으로 잡음 / Scene Orange Grove 남가주 오래된 과수원, 초록 잎 사이 / Light 4800K 잎 틈으로 부서진 햇살이 얼굴에 빛점, 초록 잎의 난반사 / Optics Pentax 67 Takumar 90mm f/2.8, Kodak Portra 400, 크림 보케 / Expression 옆으로 고개를 돌려 환하게 미소 / Pose 가지를 잡고 돌아본다 |
+| S7 棕榈泉泳池 (滤镜 #006) | C | Hair 젖은 짙은 금발이 맨 어깨 위로 흘러내림 / Outfit Halter Swimsuit(검은 홀터넥 원피스 수영복) / Props 없음, 한 손은 풀 가장자리를 짚는다 / Scene Palm Springs 중세기 모더니즘 평층 빌라, 하얀 콘크리트 벽과 푸른 수영장 / Light Caustics 3800K 오후 해가 수면에서 꺾여 어깨와 얼굴 위로 금빛 물결 그물이 흐른다 / Optics Olympus OM-1 + Zuiko 50mm f/1.4, Fujifilm Superia 400, 옅은 청록 기운과 필름 입자 / Expression 나른하고 편안한 미소 / Pose 풀 가장자리에 앉아 다리를 물에 담근다 |
 
 ## 포즈·구도 쌍
 | 번호 | 갈래 | Pose | Camera |

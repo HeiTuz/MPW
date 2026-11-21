@@ -11,7 +11,7 @@
 | 슬롯 | 값 |
 |---|---|
 | medium | 포트라 계열 컬러 네거티브로 찍은 한여름 스냅. 노출을 넉넉히 줘서 햇빛 받은 돌·천·어깨가 흰색 쪽으로 밀린다. 디지털 HDR 사진도 스튜디오 화보도 아니다. 첫 줄은 `A Southern France midsummer film photograph shot on Kodak Portra 400 color negative`로 시작한다(B 갈래는 `…Kodak Portra 160 color negative`, 슬라이드 세트 S2는 `…shot on Kodak Ektachrome E100 slide film`) |
-| closer | `photo argentique d'été` |
+| closer | `Photographie argentique` |
 | time | 해가 높은 한낮~이른 오후(5400~6200K)가 기본이다. D 갈래만 해가 수평선 가까운 저녁(4200~5000K). 흐린 날·비·밤 없음 |
 | light-key | 직사 태양 하나. 흰 석회암·바다·흰 천이 되튀겨 그림자를 채운다. 플래시·인공 조명 없음 |
 | palette | 금빛 노랑, 오커, 석회암 흰색, 지중해 코발트와 터키옥, 올리브 회녹. 그림자는 옅은 라벤더 회색. 네온·차가운 흐린 날 회청색 없음 |

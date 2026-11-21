@@ -148,6 +148,11 @@ for (const look of looks) {
     for (const name of slot.split(/,\s*/)) assert.ok(FIXED_SLOTS.has(name), `${where}: 끄는 고정 몫 slot ${name} is not a fixed-lines slot`);
   }
 
+  // A card that switches the realism slot off says which line replaces it.
+  for (const [slot, how] of tableRows(secs[has('끄는 고정 몫')].body)) {
+    if (slot.split(/,\s*/).includes('realism')) assert.ok(/native resolution/.test(how), `${where}: realism row names the native resolution line`);
+  }
+
   // Layer lines: 갈래 | 슬롯 | `토큰 — 영어 문장`, a dictionary token, branches that exist.
   let lines = 0;
   for (const [layer, slug] of Object.entries(LAYERS)) {
@@ -169,9 +174,9 @@ for (const look of looks) {
   }
   assert.ok(lines >= 40, `${where}: ${lines} layer lines`);
 
-  // Scene sets: 4 to 6, one branch each, bundles of at least three layer values.
+  // Scene sets: 4 to 7, one branch each, bundles of at least three layer values.
   const sets = tableRows(secs[has('장면 세트')].body);
-  assert.ok(sets.length >= 4 && sets.length <= 6, `${where}: ${sets.length} scene sets`);
+  assert.ok(sets.length >= 4 && sets.length <= 7, `${where}: ${sets.length} scene sets`);
   for (const [name, br, bundle] of sets) {
     assert.ok(name && letters.includes(br), `${where}: set ${name} branch ${br}`);
     assert.ok(bundle.split(' / ').length >= 3, `${where}: set ${name} has fewer than 3 values`);
@@ -221,12 +226,12 @@ if (!onlyCard) {
     'museum-cold-light-minimal': ['현대 미술관 냉광 미니멀 화보', '当代美术馆冷光极简'],
     'neo-chinese-ink': ['신중식 수묵 인물 사진', '新中式水墨影调'],
     'new-york-overcast-cool-grey': ['뉴욕 쿨 그레이 거리 스냅', 'New York overcast cool grey street'],
-    'nouvelle-vague-16mm': ['누벨바그 느낌의 파리 스틸', 'Nouvelle Vague'],
+    'nouvelle-vague-16mm': ['누벨바그 느낌의 파리 스틸', 'Nouvelle Vague', '新浪潮 风格人像'],
     'paris-soft-grey-diffuse': ['파리 소프트 그레이 확산광', 'Lumière grise de Paris'],
     'rainy-night-shinjuku': ['비 오는 신주쿠 밤 인물', '雨夜新宿'],
     'rolleiflex-glass-reflection': ['롤라이플렉스 유리 이중 반사', 'Reflet de vitrine'],
     'seoul-cafe-warm-diffuse': ['서울 카페 웜톤 확산광', '首尔咖啡馆与居家暖调漫射'],
-    'seoul-cool-porcelain': ['청랭 도자기 피부 화보', 'Cool porcelain skin portrait'],
+    'seoul-cool-porcelain': ['쿨톤 도자기 피부 화보', '블루 그레이 미니멀 인물', '청랭 도자기 피부 화보', 'Cool porcelain skin portrait'],
     'seoul-night-cinema': ['서울 밤 시네마 택시 장면', 'Seoul night cinema'],
     'south-france-summer-overexposure': ['남프랑스 한여름 과노출 사진', 'Soleil du Midi'],
     'trix-humanist-bw': ['트라이엑스 흑백 인문 사진', 'Tri-X humanist street'],

@@ -2,7 +2,7 @@
 
 | 항목 | 값 |
 |---|---|
-| 부르는 이름 | Nouvelle Vague; 누벨바그; 法国新浪潮; French New Wave; 프렌치 뉴웨이브; 戈达尔; 고다르; Godard; 侯麦; 에릭 로메르; Rohmer; 特吕弗; 트뤼포; Truffaut; 瓦尔达; 아녜스 바르다; Varda; 雅克·德米; 자크 드미; Demy; 筋疲力尽; 네 멋대로 해라; À bout de souffle; 四百击; 400번의 구타; Les Quatre Cents Coups; 瑟堡的雨伞; 쉘부르의 우산; Les Parapluies de Cherbourg |
+| 부르는 이름 | Nouvelle Vague; 누벨바그; 新浪潮; 法国新浪潮; French New Wave; 프렌치 뉴웨이브; 戈达尔; 고다르; Godard; 侯麦; 에릭 로메르; Rohmer; 特吕弗; 트뤼포; Truffaut; 瓦尔达; 아녜스 바르다; Varda; 雅克·德米; 자크 드미; Demy; 筋疲力尽; 네 멋대로 해라; À bout de souffle; 四百击; 400번의 구타; Les Quatre Cents Coups; 瑟堡的雨伞; 쉘부르의 우산; Les Parapluies de Cherbourg |
 | 부르지 않는 말 | 파리; Paris; 파리 여행; 파리 스냅; 프랑스; 프렌치 시크; French chic; 16mm 필름; 16mm film |
 | 문화권 | FR |
 | 기본 갈래 | A |
@@ -11,7 +11,7 @@
 | 슬롯 | 값 |
 |---|---|
 | medium | 16mm 시네마 네거티브로 찍은 영화 스틸. 스냅·화보가 아니다. 첫 줄은 `A 1960s Paris French New Wave film still shot on handheld 16mm cinema negative`로 시작한다(B 갈래는 `…shot on handheld 16mm black-and-white negative`) |
-| closer | `新浪潮剧照` |
+| closer | `Photogramme Nouvelle Vague` |
 | time | 흐린 파리의 낮이 기본이다. 이른 아침, 늦은 오후, 황혼, 실내 저녁도 된다 |
 | light-key | 있는 빛: 흐린 하늘, 창빛, 실내 텅스텐 전구, 낮은 해 |
 | palette | 눌린 채도: 네이비, 에크뤼, 낙타색, 벽돌색, 병 녹색. 그림자는 따뜻한 청회색(B는 흑백) |

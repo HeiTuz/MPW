@@ -33,13 +33,13 @@
 | face-light | 모든 갈래에서 끈다. 얼굴 빛은 이 카드의 Light 줄이 정한다 | Iris 꼬리의 위·옆 입체광이 #078의 가장자리 빛샘, #085의 역광, #088의 붉은 단색 안전등과 부딪혔다 |
 | catchlight | B·D는 카드 줄이 이긴다. A·C는 켠다. 쌍 4(눈을 감음)와 쌍 9(역광으로 눈이 어두움)는 끈다 | #089의 직광 플래시는 동공에 흰 점 하나를 남기고 #088의 안전등은 붉은 점 하나를 남긴다 |
 | grain | A·C·D는 카드 줄이 이긴다. B는 끈다 | 고정 줄의 고운 균일 입자가 Iris의 ISO 400(#076), 굵은 Tri-X(#083)와 어긋나고 인화지(#077)는 입자보다 종이 질감이 보인다 |
-| lens | B에서 끈다. A는 `코닥 펀세이버`·`후지 퀵스냅` 줄을 쓸 때도 끈다. C·D는 켠다 | #082의 플라스틱 단렌즈(가장자리 해상력 저하)와 #077·#089의 고정 렌즈가 `无畸变` 표준~중망원 줄과 어긋난다 |
+| lens | B에서 끈다. A는 `Kodak FunSaver`·`写ルンです` 줄을 쓸 때도 끈다. C·D는 켠다 | #082의 플라스틱 단렌즈(가장자리 해상력 저하)와 #077·#089의 고정 렌즈가 `无畸变` 표준~중망원 줄과 어긋난다 |
 | base, lip | 카드 줄이 이긴다. base는 C·D만, lip은 A·B·C·D 모두 | Iris 메이크업 고정문의 산호빛 누드 핑크 글래스 립이 #084의 붉은 기운 입술과 갈린다. 가공된 피부는 과기필름의 베일과 안 어울린다 |
 | blush | A에서 카드 줄이 이긴다. B·C·D는 켠다 | A는 꿀색 햇빛 아래 코랄 한 줄로 정한다 |
 | face-clear | 켠다. 쌍 4(바닷바람)에서만 끈다. 머리가 얼굴 가장자리를 지나가도 눈은 가리지 않는다 | #073의 바닷바람에 휘날리는 머리가 가림 금지문과 부딪혔다 |
 | realism | B에서 바꾼다. A는 `Kodak FunSaver`·`写ルンです` 줄을 쓰는 일회용 장면에서만 바꾸고 C·D는 켠다. `8K`·땀구멍 줄 대신 `native resolution` 줄을 쓴다. 매체 구절은 B `instant print`, A `single-use film camera`이고 질감은 `a soft print grain, faded corners and skin that shows no individual pores` | 인화지와 일회용 플라스틱 렌즈가 만드는 해상도에 8K 모공 묘사를 얹으면 빛바램과 번짐이라는 룩의 정체와 반대다 |
 | framing | 켠다. 쌍 4(익스트림 와이드 샷)·7(미디엄 클로즈업)·11(클로즈업)·12(카우보이 샷)는 프레임 범위를 직접 말하니 그 말과 부딪히지 않게 쓴다 | 나머지 쌍은 범위를 말하지 않는다 |
-| ratio | 켠다. 사용자 비율이 없으면 A·C·D는 3:4 세로, B는 1:1 | 폴라로이드 600 줄이 정사각 흰 테두리 인화지를 말하니 3:4와 부딪힌다 |
+| ratio | 켠다. 사용자 비율이 없으면 A·C·D는 3:4 세로, B는 1:1 | Polaroid 600 줄이 정사각 흰 테두리 인화지를 말하니 3:4와 부딪힌다 |
 | under-eye, liner | 켠다 | 이 룩의 줄에 눈 화장이 없다 |
 
 ## Hair and makeup
@@ -90,7 +90,7 @@
 ## Props and nails
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
-| A | hand-prop | 후지 퀵스냅 — A small plastic single-use film camera in a green-and-yellow paper sleeve with no readable lettering, thumb on its ridged wheel and its flash window facing out. |
+| A | hand-prop | 写ルンです — A small plastic single-use film camera in a green-and-yellow paper sleeve with no readable lettering, thumb on its ridged wheel and its flash window facing out. |
 | B | hand-prop | 폴라로이드 사진 — A freshly ejected white-bordered print held by its edge between two fingers, the picture still pale and developing. |
 | B | hand-prop | 빈티지 엽서 — A vintage postcard with a faded photograph on the front and handwritten ink on the back beside a stamp, its edges softly worn. |
 | B | jewelry | 실버 체인 레이어드 — Several fine silver necklaces of different lengths glint against the collarbones. |
@@ -144,36 +144,36 @@
 ## Optics
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
-| A | stock | 후지 슈페리아 400 — Everyday color film with the Fuji green in neutral areas and shadows, restrained reds and yellows and visible 400-speed grain. |
-| A | stock-warm | 코닥 골드 200 — Saturated golden-yellow consumer film with warm orange highlights and reddish-brown shadows, sunlit patches glowing like honey. |
-| A | stock-contrast | 코닥 울트라맥스 — Everyday snapshot film with lively reds, a strong cobalt sky and skin that stays full and healthy rather than pale. |
-| A | camera | 코닥 펀세이버 — A disposable-camera frame from a plastic lens, with soft corners, warm saturated colour and the weak radial smear of a cheap single element. |
+| A | stock | フジカラー Superia 400 — Everyday color film with the Fuji green in neutral areas and shadows, restrained reds and yellows and visible 400-speed grain. |
+| A | stock-warm | Kodak Gold 200 — Saturated golden-yellow consumer film with warm orange highlights and reddish-brown shadows, sunlit patches glowing like honey. |
+| A | stock-contrast | Kodak Ultramax 400 — Everyday snapshot film with lively reds, a strong cobalt sky and skin that stays full and healthy rather than pale. |
+| A | camera | Kodak FunSaver — A disposable-camera frame from a plastic lens, with soft corners, warm saturated colour and the weak radial smear of a cheap single element. |
 | A | color | 청록 색조 — Shadows lean ink green with restrained red and yellow. |
 | A | grain | 필름 그레인 — Visible 400-speed grain sits across the whole frame, a little heavier in the shade. |
-| B | stock | 폴라로이드 600 — Brighter instant film with saturated reds and blues, a square frame and a thick white border. |
-| B | camera | 인스탁스 와이드 — A wide instant print with a clean white border, flat on-camera flash and a faint bloom in the highlights. |
+| B | stock | Polaroid 600 — Brighter instant film with saturated reds and blues, a square frame and a thick white border. |
+| B | camera | instax WIDE — A wide instant print with a clean white border, flat on-camera flash and a faint bloom in the highlights. |
 | B | leak | 폴라로이드 라이트 리크 — Red-orange light leaks wash over one edge of the instant print with soft contrast beside the white border. |
 | B | leak-edge | 필름 첫 컷 빛샘 — One edge of the frame is scorched by a red-orange-yellow gradient where the start of the roll was exposed to light. |
 | B | paper | 무광 인화지 — No glossy sheen; a quiet cotton-paper matte surface with slow, soft tonal fall-off. |
-| C | stock | 아그파 비스타 — Expired-stock softness with low saturation, violet-grey shadows and a hazy dreamlike air. |
+| C | stock | Agfa Vista 200 — Expired-stock softness with low saturation, violet-grey shadows and a hazy dreamlike air. |
 | C | aging | 유통기한 지난 필름 — Years-expired film shifts to gray-cyan shadows and creamy-yellow highlights with a faded postcard feel. |
 | C | dust | 필름 스크래치 — A few thin vertical white scratch lines and small grey dust specks mark the surface like an aged scan. |
-| C | camera | 올림푸스 OM-1 — A compact film SLR with wide-open vintage Zuiko softness, glowing highlights and flare that spreads in strong backlight. |
+| C | camera | オリンパス OM-1 — A compact film SLR with wide-open vintage Zuiko softness, glowing highlights and flare that spreads in strong backlight. |
 | C | flare | 레인보우 플레어 — Faint rainbow streaks and colored ghost circles drift across the frame from the sun at the lens edge. |
 | C | tungsten | Daylight Film under Tungsten — Daylight-balanced film under bulb light turns every surface a heavy amber-orange and sinks the shadows to brown. |
 | C | soft | 소프트 포커스 — Slightly diffused sharpness, with edges and highlights glowing softly. |
 | C | grain | 필름 그레인 — The grain looks clumped and hazy over lifted blacks, finer in the highlights. |
-| D | stock | 코닥 트라이엑스 — Pure black-and-white tone with coarse grain, ink-deep blacks and brilliant highlights. |
+| D | stock | Kodak Tri-X 400 — Pure black-and-white tone with coarse grain, ink-deep blacks and brilliant highlights. |
 | D | grain | 흑백 필름 그레인 — Coarse silver grain over monochrome with deep blacks and bright clipped highlights, giving a gritty high-contrast texture. |
 
 ## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 요청이 세트와 맞으면 통째로 쓰고, 세트 값이 같은 슬롯의 갈래 줄보다 먼저다)
 | 세트 | 갈래 | 묶음 |
 |---|---|---|
-| S1 서울 옛 골목 (滤镜 #076) | A | Outfit 보트넥(검정 슬림 긴소매 니트) / Scene 연남동, 서울 오래된 골목 / Light 흐린 날 빛(5500K), 그림자는 짙은 먹녹색 / Optics 후지 슈페리아 400, 청록 색조, 절제된 붉은색과 노란색, 어두운 곳의 촘촘한 입자 / Style 필름 생활지 / Pose 3/4로 몸을 틀고 고개만 렌즈로 돌린다 / Expression 맑게 렌즈를 본다 |
-| S2 바닷가 일회용 (滤镜 #082) | A | Outfit 모카색 깊은 V 캐시미어 니트(Iris 원문, 해변 변형은 갈래 Outfit의 원피스 수영복과 남친 셔츠로 바꿔 써도 된다) / Scene 데크로드, 바닷가 휴양 스냅 / Light 한낮 직사광(5300K) / Optics 코닥 펀세이버, 플라스틱 단렌즈의 가장자리 번짐과 약한 방사 코마, 고운 필름 입자 / Style 복고 청춘 / Pose 3/4로 몸을 틀고 고개만 렌즈로 돌린다 / Expression 맑게 렌즈를 본다 |
-| S3 코르크 보드 폴라로이드 (滤镜 #077) | B | Outfit 스퀘어넥(짙은 숯회색 슬림 긴소매 니트) + 실버 체인 레이어드 / Scene 성수동 노출콘크리트 정적 공간, 코르크 보드에 건 폴라로이드 수집 / Light 부드러운 확산광(5000K) / Optics 폴라로이드 600, 정사각 구도, 현상이 고르지 않아 모서리가 노랗고 따뜻하다 / Style 폴라로이드 빛 번짐 / Pose 3/4로 몸을 틀고 고개만 렌즈로 돌린다 / Expression 맑게 렌즈를 본다 |
+| S1 서울 옛 골목 (滤镜 #076) | A | Outfit 보트넥(검정 슬림 긴소매 니트) / Scene 연남동, 서울 오래된 골목 / Light 흐린 날 빛(5500K), 그림자는 짙은 먹녹색 / Optics フジカラー Superia 400, 청록 색조, 절제된 붉은색과 노란색, 어두운 곳의 촘촘한 입자 / Style 필름 생활지 / Pose 3/4로 몸을 틀고 고개만 렌즈로 돌린다 / Expression 맑게 렌즈를 본다 |
+| S2 바닷가 일회용 (滤镜 #082) | A | Outfit 모카색 깊은 V 캐시미어 니트(Iris 원문, 해변 변형은 갈래 Outfit의 원피스 수영복과 남친 셔츠로 바꿔 써도 된다) / Scene 데크로드, 바닷가 휴양 스냅 / Light 한낮 직사광(5300K) / Optics Kodak FunSaver, 플라스틱 단렌즈의 가장자리 번짐과 약한 방사 코마, 고운 필름 입자 / Style 복고 청춘 / Pose 3/4로 몸을 틀고 고개만 렌즈로 돌린다 / Expression 맑게 렌즈를 본다 |
+| S3 코르크 보드 폴라로이드 (滤镜 #077) | B | Outfit 스퀘어넥(짙은 숯회색 슬림 긴소매 니트) + 실버 체인 레이어드 / Scene 성수동 노출콘크리트 정적 공간, 코르크 보드에 건 폴라로이드 수집 / Light 부드러운 확산광(5000K) / Optics Polaroid 600, 정사각 구도, 현상이 고르지 않아 모서리가 노랗고 따뜻하다 / Style 폴라로이드 빛 번짐 / Pose 3/4로 몸을 틀고 고개만 렌즈로 돌린다 / Expression 맑게 렌즈를 본다 |
 | S4 첫 컷 빛샘 (滤镜 #078) | B | Outfit 캐시미어 니트(모카 깊은 V) / Scene 갤러리 라운지, 청담동 단색 갤러리 코너, 부드러운 얕은 흐림 배경 / Light 부드러운 확산광 4500K, 오른쪽 가장자리에 밝은 붉은 주황 빛무리 / Optics 필름 첫 컷 빛샘(필름 통 개봉으로 생긴 첫 컷 빛샘, 35mm) / Style 필름을 만지는 사람의 뜻밖의 선물 / Pose 3/4로 몸을 틀고 고개만 렌즈로 돌린다 / Expression 맑게 렌즈를 본다 |
-| S5 과기필름 (滤镜 #084) | C | Outfit 보트넥(검정) / Scene 노출콘크리트 카페처럼 저채도 냉회색·미색의 미세 질감 실내 벽, 큰 조리개의 부드러운 흐림 / Light 부드러운 확산광(4900K), 얼굴은 냉백으로 맑고 입술은 붉은 기운 / Optics 아그파 비스타, 유통기한 지난 필름, 습기에 간 유제 때문에 암부가 회보라, 대비가 낮아 얇은 베일 / Style 드림코어, 방향 잃은 청춘 이야기 / Pose 3/4로 몸을 틀고 고개만 렌즈로 돌린다 / Expression 맑게 렌즈를 본다 |
+| S5 과기필름 (滤镜 #084) | C | Outfit 보트넥(검정) / Scene 노출콘크리트 카페처럼 저채도 냉회색·미색의 미세 질감 실내 벽, 큰 조리개의 부드러운 흐림 / Light 부드러운 확산광(4900K), 얼굴은 냉백으로 맑고 입술은 붉은 기운 / Optics Agfa Vista 200, 유통기한 지난 필름, 습기에 간 유제 때문에 암부가 회보라, 대비가 낮아 얇은 베일 / Style 드림코어, 방향 잃은 청춘 이야기 / Pose 3/4로 몸을 틀고 고개만 렌즈로 돌린다 / Expression 맑게 렌즈를 본다 |
 | S6 암실 안전등 (滤镜 #088) | D | Outfit 보트넥(검정 슬림 긴소매 니트) / Scene 필름 암실, 배경은 부드럽게 흐리고 깨끗하다 / Light 암실 안전등(단색 적색), 붉은 빛이 이목구비를 조각한다 / Optics 붉은 안전등 아래 단색 / Style 전위적인 예술 필름 사진 / Pose 3/4로 몸을 틀고 고개만 렌즈로 돌린다 / Expression 맑게 렌즈를 본다 |
 
 ## 포즈·구도 쌍
