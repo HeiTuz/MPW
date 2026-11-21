@@ -1,6 +1,6 @@
 # 고정 몫: 층마다 늘 붙는 줄
 
-GPT Image 웹·대상 미정인 새 이미지(인물 사진과 인물 없는 사진)에서 사용자가 말하지 않은 칸을 채우는 줄이다. 사진 추출에는 아래 '입력 용도별로 붙는 것'의 사진 추출 열이 정한 줄만 붙는다. 층의 모양·첫 줄·채우는 순서는 [image-brief.md](image-brief.md)가 정하고, 이 파일은 그 위에 붙는 줄과 끄는 조건만 정한다. 이 파일의 토큰(`立体光`, `数码噪点`, `无畸变`과 Finish 표의 토큰)은 사전에 없어도 그대로 쓴다. `<…>` 자리는 장면에 맞게 채운다. 요청한 룩에 카드가 있으면([looks/index.md](looks/index.md)) 아래 끄는 조건의 '룩'은 그 카드의 `끄는 고정 몫`을 뜻한다.
+GPT Image(웹·API)·대상 미정인 새 이미지(인물 사진과 인물 없는 사진)와, 층 문안을 먼저 쓰고 엔진으로 펴는 다른 엔진의 새 이미지([engine-levers.md](engine-levers.md))에서 사용자가 말하지 않은 칸을 채우는 줄이다. 사진 추출에는 아래 '입력 용도별로 붙는 것'의 사진 추출 열이 정한 줄만 붙는다. 층의 모양·첫 줄·채우는 순서는 [image-brief.md](image-brief.md)가 정하고, 이 파일은 그 위에 붙는 줄과 끄는 조건만 정한다. 이 파일의 토큰(`立体光`, `数码噪点`, `无畸变`과 Finish 표의 토큰)은 사전에 없어도 그대로 쓴다. `<…>` 자리는 장면에 맞게 채운다. 요청한 룩에 카드가 있으면([looks/index.md](looks/index.md)) 아래 끄는 조건의 '룩'은 그 카드의 `끄는 고정 몫`을 뜻한다.
 
 ## 절차
 
@@ -51,7 +51,7 @@ GPT Image 웹·대상 미정인 새 이미지(인물 사진과 인물 없는 사
   - JP `桜色チーク — A soft sakura-pink wash of blush between the cheeks and temples melts into the base.`
   - US `Coral Blush — Coral-pink color on the cheeks with a slight shimmer that reads fresh and warm.`
   - FR `Rougeur naturelle — A soft pink flush on the cheeks and the tops of the ears melts into the base with no powder edge.`
-  - 장면의 빛이 차가우면(흐린 날, 형광등, 푸른 시간, 회청 팔레트) 어느 문화권이든 위 줄 대신 `muted rose blush — A low-saturation dusty-rose wash sits high on the cheeks and melts into the base with no visible edge.`를 쓴다. 따뜻한 분홍·코랄 뺨이 차가운 장면 속에서 혼자 떠 보이기 때문이다.
+  - 장면의 빛이 차가우면(흐린 날, 형광등, 푸른 시간, 회청 팔레트) 어느 문화권이든 위 줄 대신 `muted rose blush — A low-saturation dusty-rose wash sits high on the cheeks and melts into the base with no visible edge.`를 쓴다. 따뜻한 분홍·코랄 뺨이 차가운 장면 속에서 혼자 떠 보이기 때문이다. 후속 수정에서 Light만 차갑게 바꿀 때도 이 줄로 블러셔를 고친다.
 - `lip`: 끄는 조건은 사용자나 카드가 입술을 정함, 맨얼굴.
   - KR `그라데이션 립 — Lip color is pressed into the center of the lips and blurred outward so it fades softly toward the edges.`
   - CN `豆沙唇 — A muted rosy-brown matte lip with a softly blurred edge and no gloss.`

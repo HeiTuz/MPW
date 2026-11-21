@@ -25,7 +25,7 @@ MPW(프롬프트 작성 스킬)의 **정본이자 유일한 실제 트리**다. 
 
 ```sh
 npm test                      # lint.py → scripts/test_*.py, test_*.mjs 전부 → check_prompt.mjs --test (현재 지원 범위)
-npm run lint                  # python3 scripts/lint.py — 실측 라벨·2000자 상한(image-brief 예시 블록만 10,000자)·frontmatter 스탬프 등 하드라인 검사
+npm run lint                  # python3 scripts/lint.py — 실측 라벨·2000자 상한(image-brief·portrait-variations·engine-levers의 예시 블록과 examples/*.prompt.txt만 10,000자)·frontmatter 스탬프 등 하드라인 검사
 python3 scripts/test_contracts.py        # 단일 테스트: 해당 파일을 직접 실행 (Python)
 node scripts/test_examples.mjs           # 단일 테스트: 해당 파일을 직접 실행 (Node)
 node scripts/check_prompt.mjs --test     # 검증기 자체 케이스

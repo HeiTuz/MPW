@@ -52,7 +52,7 @@ metadata:
 | 대상 미정·GPT Image 새 이미지에서 사람이 화면의 주인공일 때(셀피·화보가 아니어도) | `gpt-image-portrait` |
 | 사진(첨부 이미지)을 보고 그 사진을 다시 만들 프롬프트를 쓰는 요청("사진 프롬프트 뽑아/추출해 줘") | `gpt-image-extract` (다른 엔진을 지정했으면 뒤에 `references/image/engine-levers.md`를 읽고 그 엔진에 편다. 그 엔진 문서의 문법은 `map`으로 읽는다. 입력이 사용자가 만든 생성물이면 `references/image/from-image.md#4.2,4.4,4.5`를 덧붙인다) |
 | 대상 미정·GPT Image 원본 편집 | `gpt-image-edit` (도해·슬라이드·UI·만화·로고는 `gpt-image-edit-structured`). 참조 사진의 역할·관찰이 필요하면 `references/image/from-image.md#1`을 덧붙인다 |
-| 다른 엔진을 지정한 새 이미지 | `image-other-engine` (층 문안을 쓰고 `references/image/engine-levers.md`로 그 엔진에 편다. 그 엔진 문서의 문법은 `map`으로 읽는다) |
+| 다른 엔진을 지정한 새 이미지 | `image-other-engine` (층 문안을 쓰고 `references/image/engine-levers.md`로 그 엔진에 편다. 그 엔진 어댑터는 묶음의 model-routing §6 색인으로 읽는다) |
 | 영상 생성 | `video` |
 | 실행 작업·자동화·코딩 지시 | `delegation`. 자동화 잡·API 통합·응답형 시스템·도구 정의는 [contract.md](references/templates/contract.md), UI·페이지 구현은 [design.md](references/templates/design.md), 장기 실행은 [goal.md](references/templates/goal.md) |
 | 여러 에이전트의 팀 작업 지시 | `team` ([team.md](references/templates/team.md) 골격과 역할 라우팅 포함) |

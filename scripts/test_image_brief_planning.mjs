@@ -162,7 +162,7 @@ for (const [layer, slug] of Object.entries(LAYER_FILES)) {
 // (new 85545, portrait 92434, extract 117544 measured). The ceilings are about 1.7% above the measurement.
 // Raised again for the extraction bundle only: looks/index.md carries 28 card rows (22503 bytes, was 1 row) and the bundle measured 114072; the other bundles do not include the index.
 // Raised again (step 7a) for the single value order, the scene-set rule, the candidate-card rule, the two-card split, the Korean Finish form, the no-cue makeup rule
-// and the card-summary column in looks/index.md (new 92846, portrait 99735, edit 20911, extract 128860 measured). The ceilings are about 1.7% above the measurement.
+// and the card-summary column in looks/index.md (new 93260, portrait 100321, edit 20934, extract 129204 measured; image-other-engine 111707 has no ceiling). The ceilings are about 1.7% above the measurement.
 assert.ok(sizes['gpt-image-new'].utf8_bytes <= 94400, `gpt-image-new is ${sizes['gpt-image-new'].utf8_bytes} bytes`);
 assert.ok(sizes['gpt-image-portrait'].utf8_bytes <= 101500, `gpt-image-portrait is ${sizes['gpt-image-portrait'].utf8_bytes} bytes`);
 assert.ok(sizes['gpt-image-edit'].utf8_bytes <= 21300);
