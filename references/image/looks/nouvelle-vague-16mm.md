@@ -33,12 +33,12 @@
 | 슬롯 | 처리 | 이유 |
 |---|---|---|
 | face-light | 모든 갈래에서 끈다. 얼굴 빛은 Light 줄이 정한다 | Iris 꼬리의 위·옆 입체광이 #014 역광, #012 불빛, #017 추적광과 부딪혔다 |
-| face-clear | 켠다: A·B·C의 `hair`(`Coiffure effet saut du lit`)와 `bangs`의 `Frange rideau`는 이마와 관자놀이 위로 쓸릴 뿐 눈썹과 눈을 열어 둔다(세트 S1·S3·S5). 끈다: D의 `Coiffé-décoiffé`(곱슬 가닥이 뺨과 귀를 따라 흩어진다)와 세트 S4(바람에 날리는 앞머리)·S6(곱슬 잔머리가 뺨에 흩어진다). S2는 hair 줄이 머리를 귀 뒤로 넘긴다고 말하니 `face clear`를 다시 붙이지 않는다. 끄는 경우에도 눈썹과 눈은 드러난다(`bangs` 줄이 그렇게 쓴다) | #001 #003의 헝클어진 머리·八字刘海가 귀 뒤로 넘긴 머리 줄과 공존했다 |
+| face-clear | 켠다. 켬: A·B·C의 `hair`(`Coiffure effet saut du lit`)와 `bangs`의 `Frange rideau`, 세트 S1·S3·S5. 끔: D의 `Coiffé-décoiffé`, 세트 S4·S6. 다시 붙이지 않음: S2(hair 줄이 머리를 귀 뒤로 넘긴다). 끄는 경우에도 눈썹과 눈은 드러난다(`bangs` 줄이 그렇게 쓴다) | #001 #003의 헝클어진 머리·八字刘海가 귀 뒤로 넘긴 머리 줄과 공존했다 |
 | base, lip | 카드 줄이 이긴다(base 줄은 FR 문화권 공식의 주근깨를 되풀이하지 않는다) | Iris 고정문의 浆果玫瑰唇가 #006 #011 #013의 입술색 위에 둘째 입술색을 얹었다 |
 | catchlight | 카드 줄이 이긴다 | #012의 불꽃 두 점이 고정 줄의 점 하나와 어긋난다 |
 | grain | 카드 줄이 이긴다(Optics의 `16mm` 줄은 입자를 말하지 않고 갈래별 grain 줄이 입자를 정한다) | 고정 줄의 고운 입자와 Iris의 굵은 16mm 입자(#001 #006 #017)가 어긋난다 |
 | realism | 모든 갈래에서 바꾼다. `8K`·땀구멍 줄 대신 `native resolution` 줄을 쓴다. 매체 구절은 `16mm cinema negative frame`(B 갈래는 `black-and-white reversal 16mm film frame`), 질감은 `visible 16mm grain, softened highlights and skin that shows no individual pores` | 16mm 필름의 입자와 해상도에 8K 모공 묘사를 얹으면 룩의 정체와 반대다 |
-| lens | 켠다. 렌즈를 말하는 줄은 정확히 하나이고 출처는 세트의 렌즈 > 쌍의 렌즈 > 갈래의 렌즈 줄 > 고정 몫 lens 줄 순이다. 세트: S6만 렌즈를 말하고 그 렌즈는 D의 Optics `Zeiss Super Speed T1.3` 줄이 그대로 쓴다(S1~S5의 Optics는 본체·필름만 말한다). 쌍: 쌍 10은 Camera 줄 `telephoto compression`이 렌즈 줄이다(S4·S5의 본체 줄은 렌즈를 말하지 않는다). 갈래 줄: D는 Optics `Zeiss Super Speed T1.3` 줄(쌍 11·12의 Camera 줄은 렌즈를 말하지 않는다). A·B·C는 갈래 렌즈 줄이 없다. 고정 몫: 그 밖의 모든 조합(쌍 1~9, 쌍 10이 아닌 C, S1~S5의 A·B·C)은 고정 몫 lens 줄이 렌즈 줄이다. 쌍 7·8은 카메라 각도만 말한다 | #010(T1.3 근접)과 `뒤로 물러선 표준~중망원` 문장이 공존했다. 세트·쌍·갈래가 함께 걸릴 때 어느 줄이 렌즈 줄인지 한 가지로 정했다 |
+| lens | 켠다. 렌즈 줄 — S6: D의 Optics `Zeiss Super Speed T1.3` 줄 그대로. 쌍 10(S4·S5와 함께여도): Camera `telephoto compression`. D(쌍 11·12 포함): Optics `Zeiss Super Speed T1.3` 줄. 그 밖(쌍 1~9, 쌍 10이 아닌 C, S1~S5의 A·B·C): 고정 몫 lens 줄 | #010(T1.3 근접)과 `뒤로 물러선 표준~중망원` 문장이 공존했다. 세트·쌍·갈래가 함께 걸릴 때 어느 줄이 렌즈 줄인지 한 가지로 정했다 |
 | framing | 켠다. 쌍 3·5·8·11·12는 범위를 직접 말하니 그때는 3:4만 쓴다. 나머지 쌍은 고정 몫 기준이다(범위는 fixed-lines.md의 중심 층) | 나머지 쌍은 범위를 말하지 않는다 |
 | ratio | 켠다. 사용자 비율이 없으면 3:4 세로 | 쌍은 비율을 정하지 않는다 |
 

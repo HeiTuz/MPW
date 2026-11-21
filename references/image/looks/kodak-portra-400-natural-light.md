@@ -16,7 +16,7 @@
 | light-key | 크고 부드러운 광원 하나(창, 흐린 하늘, 열린 그늘, 밝은 반사면, 잎에 걸러진 해)가 옆이나 아래에서 얼굴을 감싸고 그림자는 연하게 떨어진다. 플래시·인공 조명 없음. D의 블루아워에서만 먼 도시 불빛이 따뜻한 배경 빛이 된다 |
 | palette | 이 룩에서는 포트라 필름의 색 반응이 낮은 채도로 눌리고 따뜻한 쪽으로 기운다(장면 빛의 색이 아니라 필름이 피부와 하이라이트에 입히는 색이다): 피부 하이라이트와 흰색은 복숭아·살구·크림 쪽으로, 중간색은 벽돌·카멜·드랩·이끼·세이지 쪽으로, 그림자는 안개 낀 청회색 쪽으로 기운다. 네온·형광색·차가운 청록 낮빛·고채도 HDR 색 없음(D의 블루아워는 짙은 남색 하늘과 금빛 도시 불빛이 예외) |
 | grain | 고운 컬러 네거티브 입자가 화면 전체에, 중간톤에서 조금 보인다. 하이라이트는 크림처럼 풀린다. 645·6x6·6x7 중형 바디는 입자가 거의 안 보인다 |
-| lens | 표준~중망원 인물 렌즈, 얼굴 비례 자연. 카메라 높이는 쌍이 정한다. 35mm 줄이 있으면 거리나 회랑이 조금 더 들어온다. 12번 쌍(close-up)만 얼굴이 화면을 채운다 |
+| lens | 표준~중망원 인물 렌즈, 얼굴 비례 자연. 35mm 줄이 있으면 거리나 회랑이 조금 더 들어온다. 12번 쌍(close-up)만 얼굴이 화면을 채운다 |
 | figure | 한 사람이 빛 속에서 멈추거나 천천히 움직인다. 고개를 빛 쪽이나 렌즈 쪽으로 돌린다. 정면 증명사진 자세 없음. 모든 인물은 성인 |
 
 ## 갈래 고르기
@@ -35,9 +35,9 @@
 | base, blush | 카드 줄이 이긴다. 전부 `Skin Tint`와 `Peach Blush`, A의 운동 장면만 `Post-Workout Flush` | #072의 땀 광택과 #083의 거의 맨 피부가 Iris 고정 메이크업문과 겹쳤다 |
 | lip | D에서 카드 줄(`ChapStick`)이 이긴다. A·B·C는 켠다 | #083은 맨 입술에 가까운데 고정문은 과즙 젤리 입술을 얹었다 |
 | grain | 카드의 `Fine Portra Grain` 줄이 이긴다 | Iris 꼬리가 35mm와 6x7 중형(#071 #073 #075 #081 #083 #084 #085)에 같은 입자 문구를 넣었다 |
-| lens | 끈다. 렌즈를 말하는 줄은 프롬프트마다 정확히 하나이고 출처 순서는 세트의 렌즈 > 쌍의 렌즈 > 갈래의 Optics 렌즈 줄 > 고정 몫 줄이다. 이 카드는 갈래마다 본체와 렌즈가 짝이라 고정 몫의 lens 줄은 어느 경우에도 붙이지 않는다(카메라 높이를 쌍이 정한다: 쌍 6 low-angle shot, 쌍 5 Bird's-eye View). 세트를 쓰면 세트 Optics가 말한 렌즈(S1 Planar 80mm f/2, S2 Planar 80mm f/2.8, S3 Sonnar 38mm f/2.8, S4 Summicron 35mm f/2, S5 Mamiya N 80mm f/4, S6 Takumar 105mm f/2.4)를 Optics 렌즈 줄(`lens`·`lens-wide`·`lens-medium`) 하나의 문장에 한 번만 쓴다. 카드에 그 렌즈 줄이 있으면 그 줄을 쓰고(S1·S2·S5·S6은 `lens-medium`, S4는 `lens-wide`) 없으면(S3) 세트의 렌즈 이름으로 렌즈 줄 한 줄을 쓰며, 갈래의 다른 렌즈 줄은 따로 두지 않는다. 세트를 쓰고 쌍 1을 고르면 Camera 줄 `telephoto compression`의 `with a long lens` 구절 대신 위 렌즈 줄이 렌즈를 말하니 Camera 줄은 거리와 층쌓임만 쓴다. 세트가 없으면 쌍 1은 Camera 줄 `telephoto compression`이 렌즈 줄이니 Optics 렌즈 줄도 붙이지 않는다. 쌍 2~12는 Camera 줄이 렌즈를 말하지 않으니 본체와 마운트가 맞는 갈래의 Optics 렌즈 줄 하나가 렌즈 줄이다(A Leica M6 + `Summicron 50mm f/2` 또는 `Summicron 35mm f/2`, B Contax 645 + `Zeiss Planar 80mm f/2`, C Mamiya 7 II + `Mamiya N 80mm f/4` 또는 Leica M6 + `Summicron 35mm f/2`, D Pentax 67 + `SMC Takumar 105mm f/2.4` 또는 Rolleiflex 2.8F + `Zeiss Planar 80mm f/2.8`) | #076(38mm) #077 #078 #082(35mm)에 50mm 무왜곡 꼬리가 같이 있어 렌즈가 둘이었다. 렌즈 줄의 출처를 쌍마다 정한다 |
-| framing | 켠다. 쌍 10(Extreme Wide Shot)·11(Medium Close-Up)·12(close-up)는 프레임 범위를 직접 말하니 그 말과 부딪치지 않게 쓴다. 쌍 1(걸음)·3(코트 자락)·5(뻗은 다리와 발목)·6(계단을 내려옴)·8(맨발)·9(옮긴 체중)은 Pose가 낮은 몸을 말하니 framing 줄의 범위를 머리부터 발끝으로 쓴다. 나머지 쌍은 고정 몫 기준이다(범위는 fixed-lines.md의 중심 층) | 나머지 쌍은 범위를 말하지 않고 Pose가 허리 위에서 보인다 |
-| ratio | 켠다. 모든 쌍 처리(어느 쌍을 골라도 같다): face-light 끈다, base·blush·grain은 카드 줄이 이긴다, 고정 몫의 lens 줄은 붙이지 않는다, framing은 켠다. 쌍 번호를 조건으로 건 위 처리(framing의 쌍 번호, lens의 쌍 1)는 이 카드의 쌍 표를 쓸 때만 닿는다. 사용자 비율이 없으면 3:4 세로. 6x6·6x7 바디(D의 `Rolleiflex 2.8F`·`Pentax 67`, S2의 Hasselblad 500C/M)도 이 카드는 3:4 세로 프린트로 쓴다. 정사각을 원하면 사용자가 말한다 | 쌍은 비율을 정하지 않는다. Iris 원본이 6x6 바디(#084)에도 3:4를 걸었다 |
+| lens | 끈다(고정 몫 lens 줄은 어느 경우에도 없음). 렌즈 줄 — 세트: 세트 렌즈를 Optics 렌즈 줄 하나에 쓴다. S1 Planar 80mm f/2·S2 Planar 80mm f/2.8·S5 Mamiya N 80mm f/4·S6 Takumar 105mm f/2.4는 `lens-medium`, S4 Summicron 35mm f/2는 `lens-wide`, S3 Sonnar 38mm f/2.8은 카드에 줄이 없어 그 렌즈 이름으로 한 줄. 세트+쌍 1: Camera `telephoto compression`에서 `with a long lens`를 빼고 거리와 층쌓임만. 세트 없음+쌍 1: Camera `telephoto compression`. 그 밖(쌍 2~12): 본체와 마운트가 맞는 갈래 Optics 렌즈 줄 하나 — A Leica M6 + `Summicron 50mm f/2` 또는 `Summicron 35mm f/2`, B Contax 645 + `Zeiss Planar 80mm f/2`, C Mamiya 7 II + `Mamiya N 80mm f/4` 또는 Leica M6 + `Summicron 35mm f/2`, D Pentax 67 + `SMC Takumar 105mm f/2.4` 또는 Rolleiflex 2.8F + `Zeiss Planar 80mm f/2.8`. | #076(38mm) #077 #078 #082(35mm)에 50mm 무왜곡 꼬리가 같이 있어 렌즈가 둘이었다. 렌즈 줄의 출처를 쌍마다 정한다 |
+| framing | 켠다. 범위 — 쌍 10·11·12: 쌍 Camera가 말한 범위. 쌍 1·3·5·6·8·9: 머리부터 발끝. 그 밖 쌍: 중심 층(고정 몫). | 나머지 쌍은 범위를 말하지 않고 Pose가 허리 위에서 보인다 |
+| ratio | 켠다. 6x6·6x7 바디(D의 `Rolleiflex 2.8F`·`Pentax 67`, S2의 Hasselblad 500C/M)도 이 카드는 3:4 세로 프린트로 쓴다. | 쌍은 비율을 정하지 않는다. Iris 원본이 6x6 바디(#084)에도 3:4를 걸었다 |
 
 ## Hair and makeup
 **하나만 고르는 슬롯:** `hair`·`hair-short`·`hair-loose`·`hair-tied`·`hair-curl`(머리 모양 후보, 머리는 한 줄이다), `blush`·`blush-sport`(운동 직후 장면은 `blush-sport`, 그 밖은 `blush`)

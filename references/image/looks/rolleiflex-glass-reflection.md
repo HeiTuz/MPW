@@ -31,13 +31,13 @@
 | 슬롯 | 처리 | 이유 |
 |---|---|---|
 | face-light | 모든 갈래에서 끈다. 얼굴 빛은 Light 줄이 정한다 | #061 #062의 흐린 하늘 확산광과 #066 #070의 실내 램프·거리 불빛은 방향이 제각각이라 위·옆 입체광 한 줄과 겹친다 |
-| face-clear | 켠다: `hair`의 `Coiffure effet saut du lit`·`French Bob`과 `bangs`의 `Frange rideau`는 이마와 관자놀이 위에 얹힐 뿐 눈썹과 눈을 열어 둔다(A·B·C 기본, 세트 S1·S3·S4). `hair-up`의 `Chignon bas`는 머리를 묶어 올려 얼굴을 이미 열었으니 `face clear`를 다시 붙이지 않는다. 끈다: 가닥이 뺨에 붙거나 바람에 얼굴을 가로지르는 세트 S2(바람에 날리는 앞머리)·S5(뺨 옆 잔머리)·S6(바람에 흔들리는 잔머리). 끄는 경우에도 눈썹과 눈은 드러난다 | #061 #063 #067 #075의 八字刘海와 #064 #066의 흩어진 잔머리가 귀 뒤로 넘긴 머리 줄과 공존했다 |
+| face-clear | 켠다. 켬: `hair`의 `Coiffure effet saut du lit`·`French Bob`과 `bangs`의 `Frange rideau`(A·B·C 기본, 세트 S1·S3·S4). 다시 붙이지 않음: `hair-up`의 `Chignon bas`. 끔: 세트 S2·S5·S6. 끄는 경우에도 눈썹과 눈은 드러난다 | #061 #063 #067 #075의 八字刘海와 #064 #066의 흩어진 잔머리가 귀 뒤로 넘긴 머리 줄과 공존했다 |
 | base, lip | 카드 줄이 이긴다(base 줄은 FR 문화권 공식의 주근깨를 되풀이하지 않는다) | #061 #066 #074에서 Iris 고정문의 浆果玫瑰唇妆와 프리셋 입술색(豆沙·酒红·深梅子)이 한 프롬프트에 둘 다 적혔다 |
 | catchlight | 카드 줄이 이긴다 | 고정문의 清澈单点眼神光이 유리창의 이중 반사(#061)·빗물 다중 반사(#066)와 어긋난다 |
 | grain | 카드 줄이 이긴다 | 고정 줄의 고운 입자가 B의 증감 현상의 거친 입자(#066 #075)와 어긋난다 |
-| lens | 모든 갈래에서 끈다(갈래마다 Optics lens 줄이 있어 고정 몫 lens 줄까지 내려올 일이 없다). 렌즈를 말하는 줄은 하나이고 출처 순서는 세트의 렌즈 > 쌍의 렌즈 > 갈래의 Optics lens 줄이다. 세트 S1~S3은 Planar 80mm, S6은 Summicron 35mm를 주고, 그 렌즈는 같은 이름의 Optics `lens` 줄(S1~S3은 A의 `Zeiss Planar 80mm f/2.8`, S6은 C의 `Summicron 35mm f/2`)이 말한다. S4·S5는 렌즈를 말하지 않아 갈래 줄(A·B Zeiss Planar 80mm, C Summicron 35mm)이 렌즈 줄이다. 쌍 1~12의 Camera 줄은 모두 렌즈를 말하지 않으니 어느 쌍을 골라도 이 순서의 한 줄이 렌즈 줄이다 | #061 등은 Planar 80mm와 `50mm黄金人像定焦镜头平视无畸变视角`를 한 프롬프트에 함께 적었고, 허리 높이 파인더의 낮은 시점은 눈높이 줄과 맞지 않는다. C도 Optics에 Summicron 35mm 줄이 있어 고정 몫 lens 줄을 같이 붙이면 렌즈 줄이 둘이 된다 |
+| lens | 끈다(고정 몫 lens 줄은 어느 경우에도 없음). 렌즈 줄(쌍 1~12 어느 쌍이든 같다) — S1~S3: A의 Optics `Zeiss Planar 80mm f/2.8` 줄. S6: C의 Optics `Summicron 35mm f/2` 줄. S4·S5와 세트 없음: 갈래의 Optics `lens` 줄(A·B Zeiss Planar 80mm, C Summicron 35mm) | #061 등은 Planar 80mm와 `50mm黄金人像定焦镜头平视无畸变视角`를 한 프롬프트에 함께 적었고, 허리 높이 파인더의 낮은 시점은 눈높이 줄과 맞지 않는다. C도 Optics에 Summicron 35mm 줄이 있어 고정 몫 lens 줄을 같이 붙이면 렌즈 줄이 둘이 된다 |
 | framing | 켠다. A·B는 `vertical frame` 줄의 방향·비율 구절 전체(`A vertical 3:4 frame`)를 `A square 1:1 frame`으로 바꾸고 `vertical`을 남기지 않는다. 쌍 4·6·10은 프레임 범위를 직접 말하니 그때는 비율만 쓴다. 나머지 쌍은 고정 몫 기준이다(범위는 fixed-lines.md의 중심 층) | 쌍 대부분이 프레임 범위를 말하지 않는다 |
-| ratio | A·B는 사용자 비율이 없으면 1:1 정방형으로 바꾼다. 3:4 세로를 붙이지 않는다. C는 켠다(3:4 세로). 모든 쌍에 해당하는 처리: face-light·face-clear는 끄고 base·lip·catchlight·grain은 카드 줄이 이기며, lens는 세트 > 갈래의 Optics 줄 하나이고, ratio는 A·B 1:1·C 3:4다 | #061 등이 `1:1正方形` 구도 문장과 끝의 `3:4`를 함께 적었다. A·B의 정체는 6x6 정방형이다 |
+| ratio | A·B는 1:1 정방형으로 바꾼다(3:4 세로를 붙이지 않는다). C는 켠다(3:4 세로) | #061 등이 `1:1正方形` 구도 문장과 끝의 `3:4`를 함께 적었다. A·B의 정체는 6x6 정방형이다 |
 
 ## Hair and makeup
 **하나만 고르는 슬롯:** `hair`·`hair-up`(A의 머리 모양 후보, `hair-up`이 `hair`를 대신한다), `lip`·`lip-satin`(A의 입술 마감 후보, 물기 있는 입술이면 `lip-satin`)

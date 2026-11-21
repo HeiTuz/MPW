@@ -196,8 +196,8 @@ assert.equal(run("--help").status, 0);
 }
 
 // Output size regression: the largest printed read over the 28 cards stays under the measured size plus 5%.
-// (facts 8629, outline 10253, branch 14897, branch --no-pairs 13116 when these ceilings were set.) A card that grows past one needs a look at what it added.
-const ceilings = { facts: 9100, outline: 10800, branch: 15700, branchNoPairs: 13800 };
+// (facts 8629, outline 10253, branch 13888, branch --no-pairs 12107 when these ceilings were set.) A card that grows past one needs a look at what it added.
+const ceilings = { facts: 9100, outline: 10800, branch: 14600, branchNoPairs: 12800 };
 for (const [name, limit] of Object.entries(ceilings)) assert.ok(biggest[name] <= limit, `${name}: largest read ${biggest[name]} bytes is over ${limit}`);
 
 console.log(`read_look: ${cards.length} cards, outline, facts and every branch read; ${namedChecks} set-named tokens all printed with --set; image output NOT RUN.`);
