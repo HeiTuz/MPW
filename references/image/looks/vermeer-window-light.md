@@ -10,7 +10,7 @@
 ## 고정 사실 (모든 갈래가 지킨다)
 | 슬롯 | 값 |
 |---|---|
-| medium | 파리 실내에서 창 하나(또는 한 방향의 작은 광원)의 빛으로 찍은 35mm 필름 포트레이트. 이 룩에서는 빛이 닿은 쪽이 따뜻하고 반대쪽이 유화의 그림자처럼 깊다. 스튜디오 뷰티 컷·화보가 아니다. 첫 줄은 `A present-day window-light portrait in a Paris interior shot on Kodak Portra 400 35mm film`로 시작한다. 매체 구절과 장소 구절 `in a Paris interior`를 나눠 적은 것이라, 사용자가 다른 도시나 방을 말하면 장소 구절만 바꾼다(C 갈래는 `…shot on Kodak Tri-X 400 black-and-white 35mm film`, D 갈래는 `…shot on Kodak Vision3 500T 35mm cinema negative`) |
+| medium | 파리 실내에서 창 하나(또는 한 방향의 작은 광원)의 빛으로 찍은 35mm 필름 포트레이트. 이 룩에서는 빛이 닿은 쪽이 따뜻하고 반대쪽이 유화의 그림자처럼 깊다. 스튜디오 뷰티 컷·화보가 아니다. 첫 줄은 `A present-day window-light portrait in a Paris interior shot on Kodak Portra 400 35mm film`로 시작한다. 매체 구절과 장소 구절 `in a Paris interior`를 나눠 적은 것이라, 사용자가 다른 도시나 방을 말하면 장소 구절만 바꾼다(C 갈래는 `…shot on Kodak Tri-X 400 black-and-white 35mm film`, D 갈래는 `A present-day available-light portrait in a Paris interior shot on Kodak Vision3 500T 35mm cinema negative`로 시작해 `window-light`를 `available-light`로 바꾼다. 촛불·벽난로·창밖 황혼 같은 D의 빛이 창 하나가 아니기 때문이다) |
 | closer | `Portrait argentique` |
 | time | 낮의 창빛이 기본이다(A는 오전~오후, B는 이른 아침부터 낮은 오후 해까지). D만 황혼·비 오는 저녁·밤의 불빛이다. 세트 표의 K 숫자는 측정값이 아니라 이 룩의 연출 값이다 |
 | light-key | 창 하나 또는 한 방향의 작은 광원. 반대쪽은 채우지 않고 어둡게 둔다(채움광·스트로브 없음. 예외: D는 창밖 청색과 실내 불빛 둘이 한 얼굴에서 만나고, S3은 실내 반사광이 얼굴을 받친다) |
@@ -43,7 +43,7 @@
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
 | A, B, D | hair | Coiffure effet saut du lit — Long dark-brown waves lie loosely over one shoulder, slept-in and finger-tousled, with lifted roots and uneven ends. |
-| C | hair | mèche derrière l'oreille — Shoulder-length dark hair is tucked behind both ears, leaving the temple, cheekbone and jaw line fully readable. |
+| C | hair | Cheveux derrière les oreilles — Shoulder-length dark hair is tucked behind both ears, leaving the temple, cheekbone and jaw line fully readable. |
 | A, B, D | bangs | Frange rideau — Centre-parted curtain bangs sweep in soft arcs over the temples and cheekbones while the brows and eyes stay open. |
 | 전부 | hair-color | Brun chocolat — A cool, deep chocolate brown that reads almost black in shade and turns velvety brown only where the window light grazes it. |
 | A | hair-wrap | Fichu en lin — In place of the loose waves, a faded blue coarse-linen kerchief wraps the hair at the back of the head and leaves a few loose strands along the neck. |
@@ -56,6 +56,7 @@
 ## Expression
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
+| A | expression | Regard baissé sur le lait — The eyes drop fully to the thin stream of milk, the lids relaxed and the long lashes laying a fan of shadow under the eye, the lips closed and slack. |
 | A | expression | Regard baissé sur les pages — The eyes drop fully to the open book, the lids relaxed and the long lashes laying a fan of shadow under the eye, the lips closed and slack. |
 | A | expression | Regard dans le vague — The gaze hangs on a point in the air beside the window, the pupils slightly unfocused and the mouth barely parted. |
 | B | expression | Regard embrumé du réveil — Half-lowered lids and a drowsy, unfocused gaze drift up toward the light, the whole face slack and unguarded. |
@@ -120,7 +121,7 @@
 | A | place | porte-fenêtre — A tall paned casement window in a Haussmann apartment, one sash open to the glass and letting in all the light of the room. |
 | A | place | stone kitchen — An old kitchen with bare stone walls and a rough wooden table under a high casement window, bread and an earthenware jug on the wood. |
 | A | place | Boudoir — A bedroom corner with a gilded antique dressing table beside a tall window and a mirror above it. |
-| A, B, D | floor | parquet point de Hongrie — Waxed herringbone oak boards carry a dull gleam of the window light along their length. |
+| A, B, D | floor | parquet point de Hongrie — Waxed oak boards laid in a chevron pattern carry a dull gleam of the window light along their length. |
 | B | place | Péniche — The cabin of a moored barge bookshop, a round brass porthole throwing river light onto the wooden walls. |
 | B | place | Café de Flore — A round marble-topped table beside the tall café window, the dark interior behind it and the boulevard glowing outside. |
 | B | place | balcon haussmannien — A black wrought-iron balcony of a Haussmann apartment, scrolled railings standing above the zinc roofs of the street. |
@@ -174,9 +175,9 @@
 | 세트 | 갈래 | 묶음 |
 |---|---|---|
 | S1 창가 독서 (滤镜 #041) | A | 단서: 장소 오스만 아파트 키 큰 창, 마루 / 소품 펼친 책 / 시간대 낮 / 의상 귀리색 카디건 / Hair Coiffure effet saut du lit(깊은 갈색 장발이 한쪽 어깨로) + Frange rideau / Base Teint nu / Lip 자연스러운 살구 분홍 / Outfit Gilet(연한 귀리색 굵은 캐시미어 카디건)와 안에 실크 캐미솔 / Props Collection Blanche(펼친 책) / Scene porte-fenêtre, 오스만 아파트의 키 큰 창과 마루 / Light Vermeer(4200K, 창 한쪽 빛이 한쪽 얼굴만 금빛으로), clair-obscur / Optics Canon New F-1 FD 50mm f/1.4, Kodak Portra 400, 35mm 입자 / Expression Regard baissé sur les pages / Pose Assise de profil devant la fenêtre |
-| S2 우유 따르는 부엌 (滤镜 #049) | A | 단서: 장소 석조 부엌, 나무 탁자 / 소품 우유 항아리, 푸른 두건 / 시간대 - / 의상 군청 앞치마 / Hair 연한 푸른 Fichu en lin으로 머리를 감싸고 목덜미에 잔머리 / Lip 자연스러운 살구 분홍 / Outfit Lin lavé(오커 노랑 굵은 린넨 반소매) + Tablier de lin(깊은 군청 앞치마) / Props Grès brut 우유 항아리에서 흰 우유가 흐른다, Baguette de tradition / Scene stone kitchen, 오래된 석조 부엌의 나무 탁자 / Light Vermeer(4400K, 왼쪽 높은 창, 그림자는 군청과 번트 엄버로 가라앉는다) / Optics Contax RTS III Planar 50mm f/1.4, Kodak Portra 400, Bleu Outremer / Expression Regard baissé sur les pages(눈은 쏟아지는 우유에) / Pose Verser le lait |
-| S3 카페 유리창 역광 (滤镜 #045) | B | 단서: 장소 카페 큰 유리창, 창밖 보케 / 소품 - / 시간대 오후 / 의상 줄무늬 마리니에르 / Hair Coiffure effet saut du lit(깊은 갈색 곱슬이 역광에 금빛 테두리) + Frange rideau(빛 속에서 금실처럼) / Base Teint nu / Lip 물기 있는 복숭아빛 분홍 / Outfit Marinière classique bretonne / Scene 오후 파리 카페의 큰 유리창 앞, 창밖 거리는 따뜻한 보케 / Light Contre-jour(4800K 강한 역광, 얼굴은 반 스톱 언더, 실내 반사광이 얼굴을 받친다) / Optics Leica M6 Summicron 35mm f/2, Kodak Portra 400, Halation / Expression Nonchalance parisienne, 옆으로 돌린 얼굴로 졸린 듯 렌즈를 본다 / Pose 한 손으로 턱을 짚고 창을 등지고 앉는다 |
-| S4 대문 안 흑백 (滤镜 #043) | C | 단서: 장소 대문 안 석조 현관, 한쪽 창 / 소품 - / 시간대 - / 의상 검은 터틀넥 / Hair mèche derrière l'oreille(어깨 길이 짙은 갈색을 귀 뒤로) + Frange rideau / Base Teint nu / Lip 입술선이 또렷한 맨 입술 / Outfit Col roulé(검은 가는 울 터틀넥) / Scene porte cochère, 오래된 나무 문과 돌 현관 / Light Rembrandt lighting(45도 옆 창 하나, 그늘진 뺨에 삼각 하이라이트) / Optics Leica MP Summicron 50mm f/2, Kodak Tri-X 400, High-Contrast Black and White, Grain argentique / Expression Regard fixe vers l'objectif / Pose Visage de trois quarts |
+| S2 우유 따르는 부엌 (滤镜 #049) | A | 단서: 장소 석조 부엌, 나무 탁자 / 소품 우유 항아리, 푸른 두건 / 시간대 - / 의상 군청 앞치마 / Hair 연한 푸른 Fichu en lin으로 머리를 감싸고 목덜미에 잔머리 / Lip 자연스러운 살구 분홍 / Outfit Lin lavé(오커 노랑 굵은 린넨 반소매) + Tablier de lin(깊은 군청 앞치마) / Props Grès brut 우유 항아리에서 흰 우유가 흐른다, Baguette de tradition / Scene stone kitchen, 오래된 석조 부엌의 나무 탁자 / Light Vermeer(4400K, 왼쪽 높은 창, 그림자는 군청과 번트 엄버로 가라앉는다) / Optics Contax RTS III Planar 50mm f/1.4, Kodak Portra 400, Bleu Outremer / Expression Regard baissé sur le lait(눈은 쏟아지는 우유에) / Pose Verser le lait |
+| S3 카페 유리창 역광 (滤镜 #045) | B | 단서: 장소 카페 큰 유리창, 창밖 보케 / 소품 - / 시간대 오후 / 의상 줄무늬 마리니에르 / Hair Coiffure effet saut du lit(깊은 갈색 곱슬이 역광에 금빛 테두리) + Frange rideau(빛 속에서 금실처럼) / Base Teint nu / Lip 물기 있는 복숭아빛 분홍 / Outfit Marinière classique bretonne / Scene 오후 파리 카페의 큰 유리창 앞, 창밖 거리는 따뜻한 보케 / Light Contre-jour(4800K 강한 역광, 얼굴은 반 스톱 언더, 실내 반사광이 얼굴을 받친다) / Optics Leica M6 Summicron 35mm f/2, Kodak Portra 400, Halation / Expression Nonchalance parisienne, 옆으로 돌린 얼굴로 졸린 듯 렌즈 옆 한 점을 본다(Iris 원문은 졸린 눈으로 렌즈를 보지만 이 카드는 토큰의 렌즈 옆 시선에 맞춘다) / Pose 한 손으로 턱을 짚고 창을 등지고 앉는다 |
+| S4 대문 안 흑백 (滤镜 #043) | C | 단서: 장소 대문 안 석조 현관, 한쪽 창 / 소품 - / 시간대 - / 의상 검은 터틀넥 / Hair Cheveux derrière les oreilles(어깨 길이 짙은 갈색을 양쪽 귀 뒤로) + Frange rideau / Base Teint nu / Lip 입술선이 또렷한 맨 입술 / Outfit Col roulé(검은 가는 울 터틀넥) / Scene porte cochère, 오래된 나무 문과 돌 현관 / Light Rembrandt lighting(45도 옆 창 하나, 그늘진 뺨에 삼각 하이라이트) / Optics Leica MP Summicron 50mm f/2, Kodak Tri-X 400, High-Contrast Black and White, Grain argentique / Expression Regard fixe vers l'objectif / Pose Visage de trois quarts |
 | S5 비 오는 다락방 (滤镜 #046) | D | 단서: 장소 다락방 / 소품 촛불 한 자루, 일기장, 만년필 / 시간대 비 오는 황혼 / 의상 검은 터틀넥 / Hair 어깨 길이 짙은 갈색을 등 뒤로, 귀 옆에 가는 몇 가닥 / Lip 복고 무광 짙은 더스티 로즈 / Outfit Col roulé(검은 가는 캐시미어 터틀넥) / Props stylo plume à piston과 일기장 / Scene Mansarde, 좌안 다락방의 낡은 나무 책상, 비 오는 황혼 / Light heure bleue(창밖 6000K 차가운 청색, 한쪽)와 Lueur de bougie(3000K 흰 초 한 자루, 반대쪽)가 코 중심선에서 만난다 / Optics Contax G2 Planar 45mm f/2, Kodak Vision3 500T, Gros grain / Expression Rêverie, 일기장에서 눈을 들어 생각에 잠긴다 / Pose 책상에서 쓰던 손을 멈춘다 |
 | S6 벽난로 앞 (滤镜 #055) | D | 단서: 장소 벽난로 앞 / 소품 뱅쇼 머그, 장작불 / 시간대 - / 의상 큼직한 카디건, 맨발 / Hair 긴 곱슬이 등 뒤로 + Frange rideau / Lip 불빛에 상기된 자연스러운 입술 / Outfit Gilet(큼직한 귀리색 굵은 캐시미어 카디건), 맨발 / Props Verre de bordeaux 자리에 뱅쇼 머그를 두 손으로 / Scene cheminée haussmannienne, 크림 회색 판벽의 방 / Light Firelight(2800K 장작불이 옆얼굴·쇄골·무릎을 비춘다), 눈에 불꽃 두 점 / Optics Contax RTS III Planar 50mm f/1.4, Kodak Vision3 500T, 짙고 따뜻한 입자(Iris 원본은 16mm 입자) / Expression 불꽃을 조용히 응시 / Pose Pieds nus devant la cheminée |
 

@@ -10,7 +10,7 @@
 ## 고정 사실 (모든 갈래가 지킨다)
 | 슬롯 | 값 |
 |---|---|
-| medium | 아이폰 본체 카메라(전면 TrueDepth, 후면 메인, 후면 초광각)로 찍은 일상 셀카·스냅. 화보도 필름도 카메라 전용기 사진도 아니다. 첫 줄은 갈래마다 다르다: A는 `A casual selfie shot on an iPhone front camera`, B는 `A mirror selfie shot on an iPhone rear camera`, C는 `A casual snapshot shot on an iPhone ultra-wide camera`, D는 `A late-night snapshot shot on an iPhone with night mode off`로 시작한다. 매체 구절과 장소 구절을 나눠 쓴다. 장소 구절은 기본이 `in Seoul`이고 `selfie`·`snapshot` 뒤에 붙인다(`A casual selfie in Seoul shot on …`). 사용자가 장소를 말하면 이 구절만 그 장소로 바꾼다 |
+| medium | 아이폰 본체 카메라(전면 TrueDepth, 후면 메인, 후면 초광각)로 찍은 일상 셀카·스냅. 화보도 필름도 카메라 전용기 사진도 아니다. 첫 줄은 갈래마다 다르다: A는 `A casual selfie shot on an iPhone front camera`, B는 `A mirror selfie shot on an iPhone rear camera`, C는 `A casual snapshot shot on an iPhone`(첫 줄은 렌즈를 말하지 않는다. 렌즈 줄은 아래 `끄는 고정 몫`의 lens 행이 하나만 정한다), D는 `A late-night snapshot shot on an iPhone with night mode off`로 시작한다. 매체 구절과 장소 구절을 나눠 쓴다. 장소 구절은 기본이 `in Seoul`이고 `selfie`·`snapshot` 뒤에 붙인다(`A casual selfie in Seoul shot on …`). 사용자가 장소를 말하면 이 구절만 그 장소로 바꾼다 |
 | closer | `아이폰 원본 사진` |
 | time | 낮도 밤도 된다. 빛은 그 자리에 실제로 있는 빛(창, 형광등, 천장 스포트, 플래시, 화면, 손전등)이고 스튜디오 조명은 없다 |
 | light-key | 장소의 실용광과 폰 자체의 빛(후면 LED 플래시, 화면 빛, 친구의 손전등) |
@@ -31,26 +31,28 @@
 | 슬롯 | 처리 | 이유 |
 |---|---|---|
 | face-light | 모든 갈래에서 끈다. 얼굴 빛은 이 카드의 Light 줄이 정한다 | `立体光`의 위·옆 키라이트가 #072의 창 역광, #062의 렌즈 축 플래시, #068의 천장 스포트, #071의 아래서 오는 화면 빛과 부딪힌다 |
-| catchlight | 카드 줄이 이긴다(A 창, B 플래시 점, D 화면 사각형). A의 `역광`(창이 사람 뒤에 있다)에서는 눈에 창이 비치지 않으니 `창가 사각 캐치라이트`를 붙이지 않는다. C는 켠다 | Iris 고정문의 단일 눈빛이 갈래마다 다른 광원의 모양과 어긋난다 |
-| lens | 모든 갈래에서 고정 몫 `自然透视`를 끈다. 렌즈를 말하는 줄은 쌍마다 정확히 하나다. 출처 순서는 세트의 렌즈 > 쌍 Camera 줄의 렌즈 > 갈래의 본체·렌즈 줄이다. (1) 세트가 렌즈를 말하는 곳은 S3의 Optics `초광각`뿐이다. S3과 쌍 7을 같이 고르면 렌즈 줄은 이 줄 하나이고, 쌍 7의 Camera 문장은 렌즈 이름 없이 '머리가 조금 크게 보이고 거리가 가장자리까지 선명하다'만 쓴다. (2) 세트가 렌즈를 말하지 않고 쌍 Camera 줄이 말하면 그것이다: 쌍 7의 `초광각 왜곡`이 렌즈 줄이고 Optics `초광각` 줄은 붙이지 않는다. (3) 그 밖은 갈래의 줄이다: A·B·D의 쌍(1~6, 10~12)은 Camera 줄이 렌즈 종류를 말하지 않으니 Optics `body` 줄(`iPhone 15 Pro` 전면 약 23mm 환산, `iPhone 16 Pro` 후면 약 24mm 환산)이 그 줄이고, C의 쌍 8·9는 Optics `초광각` 줄(약 13mm 환산)이 그 줄이다. 카메라 높이는 쌍이 정하고 모든 쌍의 Camera 문장은 앞뒤가 다 선명하다고 말한다 | Iris 꼬리의 50mm 무왜곡 평시선(포즈 트랙은 얕은 심도 보케까지)이 이 룩의 정체인 폰 광각·깊은 심도와 반대다. #063은 13mm 초광각과 50mm 꼬리가 한 프리셋에 같이 있었다 |
+| catchlight | 카드 줄이 이기되, 눈에 맺히는 빛은 고른 Light의 광원이 정한다. A 통창은 창 사각 캐치라이트, A 역광은 붙이지 않는다(창이 사람 뒤에 있어 눈에 창이 비치지 않으니 `창가 사각 캐치라이트`를 쓰지 않는다). B 다이렉트 플래시는 `플래시 캐치라이트`, B 형광등·트랙 조명은 카드 줄 없이 고정 몫 `catchlight`(램프 모양 빛점)를 켠다. D 스마트폰 화면빛은 사각형 반사, D 손전등은 손전등 점이다. C는 고정 몫을 켠다. 쌍 5(플래시 거울 셀카)는 Light를 다이렉트 플래시로 고를 때만 쓴다 | Iris 고정문의 단일 눈빛이 갈래마다 다른 광원의 모양과 어긋난다. 렌즈·플래시를 본체 줄이 대신 정하지 않고 광원이 정한다 |
+| lens | 모든 갈래에서 고정 몫 `自然透视`를 끈다. 렌즈를 말하는 줄은 어느 선택에서도 정확히 하나이고, 첫 줄(매체 구절)과 쌍 Camera 문장은 렌즈 이름을 말하지 않는다. 출처 순서는 세트의 렌즈 > 갈래의 본체·렌즈 줄이다. (1) 세트가 렌즈를 말하는 곳은 S3의 Optics `초광각`뿐이고, S3은 쌍 7과만 짝이니(장면 세트 절) 렌즈 줄은 이 줄 하나다. (2) 그 밖은 갈래의 줄이다: A·B·D의 모든 쌍·세트는 Optics `body` 줄(`iPhone 15 Pro` 전면 약 23mm 환산, `iPhone 16 Pro` 후면 약 24mm 환산)이 렌즈 줄이고, C의 모든 쌍(7~9)은 Optics `초광각` 줄(약 13mm 환산)이 렌즈 줄이다. 쌍 7의 Camera 문장은 머리 크기와 거리의 선명도만 쓴다. 카메라 높이는 쌍이 정하고 모든 쌍의 Camera 문장은 앞뒤가 다 선명하다고 말한다 | Iris 꼬리의 50mm 무왜곡 평시선(포즈 트랙은 얕은 심도 보케까지)이 이 룩의 정체인 폰 광각·깊은 심도와 반대다. #063은 13mm 초광각과 50mm 꼬리가 한 프리셋에 같이 있었다 |
 | grain | A·B·C는 Optics `디지털 노이즈` 줄이 입자 줄이니 고정 몫 `数码噪点`을 따로 붙이지 않는다(같은 문장이라 한 줄만). D는 카드 줄(`고감도 노이즈`)이 이긴다 | D만 야간 모드를 꺼서 노이즈가 어두운 곳 전체로 번진다 |
 | lip | 모든 갈래에서 카드 줄(`과즙 립`)이 이긴다 | 고정 몫의 `그라데이션 립`이 더 붙으면 Iris 저자의 코랄 누드 글로스와 입술색이 둘이 된다 |
-| base, blush | A의 운동 후 장면에서만 카드 줄(`하이드로 글로우`, `취한 듯한 블러셔`)이 이긴다. 나머지는 켠다 | #073의 땀 광택과 운동 홍조가 일반 물광·딸기우유 뺨과 겹친다 |
+| base, blush | A의 운동 후 장면에서만 카드 줄(`운동 후 땀 광택`, `운동 후 홍조`)이 이긴다. 나머지는 켠다 | #073의 땀 광택과 운동 홍조가 일반 물광·딸기우유 뺨과 겹친다 |
 | face-clear | 켠다. 쌍 8(횡단보도)에서만 끈다. 머리가 바람에 얼굴 가장자리를 지나가도 눈은 가리지 않는다 | Iris 모든 프리셋이 귀 뒤로 넘긴 머리를 쓰지만 걷는 장면은 머리가 날린다 |
 | realism | 모든 갈래에서 바꾼다. `8K`·땀구멍 줄 대신 `native resolution` 줄을 쓴다. 매체 구절은 `an iPhone camera`, 질감은 `clean computational sharpness, softly smoothed skin and bright highlights that clip`(D는 `coarse high-ISO noise and smeared shadow detail`) | 폰 카메라의 자체 해상도와 HDR 보정이 그리는 피부에 8K 모공 묘사를 얹으면 원본 사진이라는 룩의 정체와 반대다 |
 | framing | 켠다. 쌍 1(미디엄 클로즈업)·4(머리부터 신발까지)·6(클로즈업)·8(머리부터 발끝)·10(조감)은 Camera 줄이 프레임 범위를 말하니 그 쌍에서는 쌍이 정한다 | 나머지 쌍은 범위를 말하지 않아 고정 몫 허리 위 줄이 범위를 정한다. 쌍 4의 옷 전체, 쌍 8의 걸음이 프레임 밖으로 잘리지 않게 이 두 쌍의 Camera 줄이 범위를 말한다 |
 | ratio | 켠다. 사용자 비율이 없으면 3:4 세로. 모든 쌍에 해당하는 처리(쌍 번호와 무관): face-light 끔, `自然透视` 끔, lip은 카드 줄 `과즙 립`, realism은 `native resolution`. 위 행의 쌍 번호 조건은 이 카드의 쌍을 고를 때만 쓴다. | 폰 본래 비율은 4:3이지만 셀카는 세로로 든다. 가로 요청이면 사용자 값이 이긴다 |
 
 ## Hair and makeup
+머리 슬롯은 하나만 쓴다. `hair-up`(똥머리·집게핀)이나 `hair-bed`를 고르면 그 줄이 같은 갈래의 `hair`(검은 긴 생머리) 줄을 대신하고 둘을 함께 쓰지 않는다.
+
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
 | A, B | hair | 검은 긴 생머리 — Long dark hair falls straight behind the shoulders and over the chest, one side tucked behind the ear so the forehead and both eyes stay clear. |
 | C, D | hair | 검은 긴 생머리 — Long dark hair hangs loose, lifted by the street air in C or pressed flat on one side by the seat headrest in D, with both eyes still clear. |
 | A | hair-up | 똥머리 — Hair is gathered into a loose high bun after the workout, a few damp strands clinging at the nape and temples. |
 | B | hair-up | 집게핀 — A large claw clip holds the hair up loosely at the back of the head, loose ends spilling from the top and the neck bare. |
-| D | hair-bed | 베드헤드 펌 — Hair is flattened on one side and puffed on the other from the pillow, a few strands lying across the bedding. |
-| A | base | 하이드로 글로우 — After a workout a thin film of sweat beads on the forehead and cheekbones while the pores stay visible. |
-| A | blush | 취한 듯한 블러셔 — Warm pink spreads wide over the cheekbones and nose bridge as a real post-exercise flush rather than applied color. |
+| D | hair-bed | 자다 일어난 머리 — Hair is flattened on one side and puffed on the other from the pillow, a few strands lying across the bedding. |
+| A | base | 운동 후 땀 광택 — After a workout a thin film of sweat beads on the forehead and cheekbones while the pores stay visible. |
+| A | blush | 운동 후 홍조 — Warm pink spreads wide over the cheekbones and nose bridge as a real post-exercise flush rather than applied color. |
 | 전부 | lip | 과즙 립 — A glassy peach-coral lip gloss with a wet syrupy shine and no visible edge. |
 
 ## Expression
@@ -103,7 +105,7 @@
 | A | style | 미니멀 — The room is cut down to clean planes and one soft light, leaving wide empty wall around her. |
 | A | style | 클린걸 — Fresh dewy skin, a tidy bun and neutral fitted basics read as an everyday polish after the workout. |
 | A, C | style | 한남동 룩 — Camel, cream and grey layers with small silver jewelry and no visible logo, calm and quietly expensive. |
-| B | style | OOTD — A mirror record of the whole outfit from head to shoes, the room behind kept plain and uncluttered. |
+| B | style | OOTD — A mirror record of the outfit in a plain, uncluttered room, shown from head to shoes only when the frame runs full length. |
 | C | style | 스트릿 스냅 — A candid street frame with her caught mid-step against a plain city backdrop in available light. |
 | C | style | 인증샷 — A casual snapshot posted to friends, with a real unstaged feeling and a slightly careless crop. |
 | D | style | 밤 감성 일기 — A dim, quiet late-night mood with a half-turned face, like an intimate diary entry. |
@@ -134,26 +136,27 @@
 | A | face-light | 통창 자연광 — Soft daylight from a large side window falls across her face and fades gently into the wall, with no hard shadow edge. |
 | A | face-light | 역광 — A bright window behind her rims her hair and shoulders with a glowing edge while the phone's HDR keeps her face readable. |
 | A | catchlight | 창가 사각 캐치라이트 — A soft rectangular window highlight sits in the upper part of each iris. |
-| B | face-light | 다이렉트 플래시 — The phone's small rear flash fires toward the mirror and lights her face flat and bright, leaving a hot white spot where it reflects in the glass. |
+| B | face-light | 다이렉트 플래시 — The phone's small rear flash fires toward the mirror and lights her face flat and bright, leaving a hot white spot in the glass that blooms into a faint star-shaped glare. |
 | B | face-light | 형광등 — Long overhead tubes spread flat cool-white light from above, leaving no dark corner and a clear shadow under each collarbone. |
 | B | face-light | 트랙 조명 — One narrow ceiling beam lights the forehead, nose bridge and collarbones in hard bright planes while the eye sockets sit in faint shadow. |
 | B | catchlight | 플래시 캐치라이트 — One small hard white dot from the flash sits in each pupil. |
 | C | face-light | 차창 빛 — Daylight through a moving vehicle's window lights half of her face and slides across it while the other half stays in shade. |
-| D | face-light | 스마트폰 화면빛 — Only a phone screen lights her face from below in the dark, cold blue-white on the chin, nose and cheeks. |
+| D | face-light | 스마트폰 화면빛 — Only the phone screen lights her face in the dark, a cold blue-white glow that falls from wherever the phone is held: on the chin and nose when it is held low, on the forehead and cheeks when it is held above her face. |
 | D | face-light | 손전등 조명 — A friend's phone flashlight from close at the side gives blunt, slightly overexposed light with a lively spontaneous feel. |
-| D | catchlight | 폰 화면 반사 캐치라이트 — A tiny cool blue-white rectangle sits in the center of each pupil. |
+| D | catchlight | 폰 화면 반사 캐치라이트 — A tiny cool blue-white rectangle sits in the center of each pupil, only when the phone screen is the light.
+| D | catchlight | 플래시 캐치라이트 — One small hard white dot from the friend's flashlight sits at the side of each pupil, only when the flashlight is the light. |
 
 ## Optics
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
 | A, D | body | iPhone 15 Pro — The front TrueDepth camera, a small built-in lens of about 23mm equivalent, renders with crisp computational sharpness, so every hair edge and the nose bridge read clean and bright highlights clip. |
-| B | body | iPhone 16 Pro — The rear main camera, a small built-in lens of about 24mm equivalent, sends its small flash bursting into a star-shaped glare on the mirror while the face near it stays bright. |
+| B | body | iPhone 16 Pro — The rear main camera, a small built-in lens of about 24mm equivalent, renders the mirror scene with crisp computational sharpness, so the room, the phone and the face in the glass all read clean. |
 | C | wide | 초광각 — The ultra-wide camera, about 13mm equivalent, stretches the frame edges and exaggerates near-far scale while everything from her hand to the far street stays sharp. |
 | A | hdr | 스마트 HDR — Multi-frame HDR balances the bright window and her face in one frame, lifting the shadows and flattening contrast a little. |
 | A | motion | 라이브 포토 — A still from a live clip catches slight motion blur in a hand or swinging hair while the face stays sharp. |
 | D | noise | 고감도 노이즈 — With night mode off the dark frame carries real high-ISO grain and slight smearing, with no lifted shadows. |
 | 전부 | fringe | 색수차 — A faint red-cyan fringe runs along high-contrast edges, strongest toward the corners. |
-| B, C | highlight | 하이라이트 날림 — Bright patches such as the flash hotspot and a clipped sky push to flat white with softly bleeding edges. |
+| B, C | highlight | 하이라이트 날림 — Bright patches such as a lamp or window hotspot (a flash hotspot only when a direct flash fires) and a clipped sky push to flat white with softly bleeding edges. |
 | A, B, C | grain | 디지털 노이즈 — Very fine digital noise sits only in the darkest parts of the frame. |
 
 ## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 요청의 장소·소품·시간대·의상 가운데 둘 이상이 그 세트의 단서와 같으면 통째로 쓰고, 세트 값은 고정 사실보다 먼저다. 규칙은 image-brief.md §4 '룩 카드' 4항과 '비워 둔 층')
@@ -162,12 +165,12 @@
 
 | 세트 | 갈래 | 묶음 |
 |---|---|---|
-| S1 성수동 전면 셀카 (滤镜 #061. 단서: 장소 성수동 콘크리트 카페 / 소품 - / 시간대 낮 확산광 / 의상 스퀘어넥 니트 (매체: 전면 카메라)) | A | Hair 검은 긴 생머리, 풍성한 어두운 머리가 어깨 뒤와 가슴 옆으로, 한쪽은 귀 뒤로 / Outfit 스퀘어넥(숯회색 슬림 긴소매 니트) / Props 은 물방울 펜던트(아주 가는 은 체인) / Scene 클린 콘크리트 카페, 노출 콘크리트와 부드러운 확산광의 조용한 예술 공간, 잡동사니 없음 / Light 5200K 낮의 확산광 / Optics iPhone 15 Pro 전면 TrueDepth, 머리카락 결과 콧대가 선명하다 / Pose 전면 카메라, 몸은 3/4로 비스듬히 / Camera 미디엄 클로즈업, 팔 길이(Iris 원본: 50mm 평시선) / Expression 무심히 돌아보는 눈빛, 맑은 눈으로 렌즈를 돌아봄 |
-| S2 거울 플래시 (滤镜 #062. 단서: 장소 피팅룸 거울 앞(거울 셀카) / 소품 플래시 / 시간대 - / 의상 모카 캐시미어 니트(OOTD)) | B | Hair 검은 긴 생머리, 한쪽을 귀 뒤로 / Outfit 브이넥 캐시미어 니트(모카 브라운, 깊은 V) / Scene 피팅룸 거울 앞 OOTD 기록(Iris 장소: 청담동 갤러리 코너, 배경 보케) / Light 5600K 후면 LED 플래시가 거울에서 육각 별빛으로 터지고 얼굴은 밝다 / Optics iPhone 16 Pro 후면 카메라 / Pose 플래시 거울 셀카, 거울 속 렌즈 쪽을 보며 / Expression 차가운 눈길, 플래시 눈부심 너머로 자신을 본다 / Camera 중앙 구도, 거울 속 방까지 모두 선명 |
-| S3 초광각 거리 (滤镜 #063. 단서: 장소 한남동 길거리 / 소품 - / 시간대 - / 의상 귀리색 블레이저 (매체: 초광각, 팔을 높이 든 셀카)) | C | Hair 검은 긴 생머리 / Outfit 오버핏(연한 귀리색 블레이저, 안은 검은 튜브탑, 열린 깃으로 쇄골과 목선) / Scene 한남동, 서울 거리의 반신 스냅 / Light 5000K 낮빛 / Optics 초광각, 가장자리가 가볍게 늘어난다(쌍 7과 함께 쓰면 세트의 렌즈가 먼저라 렌즈 줄은 이 `초광각` 하나이고 쌍 7의 Camera 문장은 렌즈 이름 없이 구도만 쓴다)(Iris 원본: 50mm 무왜곡 꼬리) / Pose 위에서 찍는 셀카, 팔을 높이 들어 / Camera 초광각 왜곡, 머리가 조금 크게 보이고 거리가 모두 선명(Iris 원본: 머리는 크고 몸은 작아 보이는 귀여운 시선) / Expression 무심함, 젊고 활기찬 얼굴 |
-| S4 어두운 택시 (滤镜 #064. 단서: 장소 택시 뒷좌석 / 소품 - / 시간대 심야 귀갓길 / 의상 보트넥 니트 (매체: 야간 모드 끔)) | D | Hair 검은 긴 생머리, 시트 헤드레스트에 눌려 한쪽이 납작하다 / Outfit 보트넥(검은 슬림 긴소매 니트) / Scene 택시 뒷좌석, 심야 귀갓길 / Light 5400K 어두운 차 안, 창밖 도시 빛이 얼굴을 스친다 / Optics 고감도 노이즈, 야간 모드를 끄고 굵은 노이즈와 약한 뭉개짐을 남긴다 / Pose 전면 카메라, 몸을 시트에 묻고 / Camera 팔 길이 전면 카메라, 가까운 창과 먼 불빛이 함께 선명 / Expression 졸린 눈, 피곤한데 맑은 얼굴 |
-| S5 화면 빛 침실 (滤镜 #071. 단서: 장소 침대·불 꺼진 방 / 소품 폰 화면 빛 / 시간대 불면의 밤 / 의상 -) | D | Hair 베드헤드 펌 / Outfit 슬립 원피스 파자마(Iris 원본: 오버핏 블레이저와 검은 튜브탑) / Scene 침대, 불 꺼진 침실의 불면 / Light 7500K 스마트폰 화면빛, 검은 방 안에서 폰 화면만 얼굴을 비춘다 / Catchlight 폰 화면 반사 캐치라이트, 동공에 사각형 반사 / Optics iPhone 15 Pro 전면, 고감도 노이즈 / Pose 누워서 폰 보기 / Camera 조감, 폰이 얼굴 바로 위에서 내려다본다 / Expression 멍때리기 |
-| S6 운동 후 땀 (滤镜 #073. 단서: 장소 연습실(필라테스) / 소품 - / 시간대 운동 후(땀) / 의상 레깅스) | A | Hair 똥머리(Iris 원본: 긴 생머리) / Base 하이드로 글로우, 이마와 광대에 운동 후 땀 광택 / Blush 취한 듯한 블러셔, 운동 홍조 / Outfit 레깅스 룩(Iris 원본: 방령 니트) / Scene 연습실, 필라테스·헬스 후 인증 / Light 5300K 낮의 창빛 / Optics iPhone 15 Pro 전면, 자연스러운 낮빛 스냅 / Pose 전면 카메라 / Expression 눈웃음, 숨이 아직 가쁜 밝은 얼굴 |
+| S1 성수동 전면 셀카 (滤镜 #061. 단서: 장소 성수동 콘크리트 카페 / 소품 - / 시간대 낮 확산광 / 의상 스퀘어넥 니트 (매체: 전면 카메라)) | A | Hair 검은 긴 생머리, 풍성한 어두운 머리가 어깨 뒤와 가슴 옆으로, 한쪽은 귀 뒤로 / Outfit 스퀘어넥(숯회색 슬림 긴소매 니트) / Props 은 물방울 펜던트(아주 가는 은 체인) / Scene 클린 콘크리트 카페, 노출 콘크리트와 부드러운 확산광의 조용한 예술 공간, 잡동사니 없음 / Light 5200K 낮의 확산광 / Optics iPhone 15 Pro 전면 TrueDepth, 머리카락 결과 콧대가 선명하다 / Pose 전면 카메라, 몸은 3/4로 비스듬히 / Camera 미디엄 클로즈업, 팔 길이 / Expression 무심히 돌아보는 눈빛, 맑은 눈으로 렌즈를 돌아봄 |
+| S2 거울 플래시 (滤镜 #062. 단서: 장소 피팅룸 거울 앞(거울 셀카) / 소품 플래시 / 시간대 - / 의상 모카 캐시미어 니트(OOTD)) | B | Hair 검은 긴 생머리, 한쪽을 귀 뒤로 / Outfit 브이넥 캐시미어 니트(모카 브라운, 깊은 V) / Scene 피팅룸 거울 앞 OOTD 기록 / Light 5600K 후면 LED 플래시가 거울에서 육각 별빛으로 터지고 얼굴은 밝다 / Optics iPhone 16 Pro 후면 카메라 / Pose 플래시 거울 셀카, 거울 속 렌즈 쪽을 보며 / Expression 차가운 눈길, 플래시 눈부심 너머로 자신을 본다 / Camera 중앙 구도, 거울 속 방까지 모두 선명 |
+| S3 초광각 거리 (滤镜 #063. 단서: 장소 한남동 길거리 / 소품 - / 시간대 - / 의상 귀리색 블레이저 (매체: 초광각, 팔을 높이 든 셀카)) | C | Hair 검은 긴 생머리 / Outfit 오버핏(연한 귀리색 블레이저, 안은 검은 튜브탑, 열린 깃으로 쇄골과 목선) / Scene 한남동, 서울 거리의 반신 스냅 / Light 5000K 낮빛 / Optics 초광각, 가장자리가 가볍게 늘어난다(이 세트의 렌즈 줄은 이 `초광각` 하나이고 쌍 7의 Camera 문장은 렌즈 이름 없이 구도만 쓴다) / Pose 위에서 찍는 셀카, 팔을 높이 들어 / Camera 하이앵글, 머리가 조금 크게 보이고 거리가 모두 선명 / Expression 무심함, 젊고 활기찬 얼굴 / 쌍 7만(다른 C 쌍을 붙이지 않는다) |
+| S4 어두운 택시 (滤镜 #064. 단서: 장소 택시 뒷좌석 / 소품 - / 시간대 심야 귀갓길 / 의상 보트넥 니트 (매체: 야간 모드 끔)) | D | Hair 검은 긴 생머리, 시트 헤드레스트에 눌려 한쪽이 납작하다 / Outfit 보트넥(검은 슬림 긴소매 니트) / Scene 택시 뒷좌석, 심야 귀갓길 / Light 5400K 어두운 차 안, 창밖 도시 빛이 얼굴을 스친다 / Optics 고감도 노이즈, 야간 모드를 끄고 굵은 노이즈와 약한 뭉개짐을 남긴다 / Pose 전면 카메라, 몸을 시트에 묻고 / Camera 팔 길이 전면 카메라, 가까운 창과 먼 불빛이 함께 선명 / Expression 졸린 눈, 피곤한데 맑은 얼굴 / 쌍 없음(세트의 Pose·Camera를 그대로 쓰고 쌍 10~12를 붙이지 않는다) |
+| S5 화면 빛 침실 (滤镜 #071. 단서: 장소 침대·불 꺼진 방 / 소품 폰 화면 빛 / 시간대 불면의 밤 / 의상 -) | D | Hair 자다 일어난 머리 / Outfit 슬립 원피스 파자마 / Scene 침대, 불 꺼진 침실의 불면 / Light 7500K 스마트폰 화면빛, 검은 방 안에서 폰 화면만 얼굴을 비춘다 / Catchlight 폰 화면 반사 캐치라이트, 동공에 사각형 반사 / Optics iPhone 15 Pro 전면, 고감도 노이즈 / Pose 누워서 폰 보기 / Camera 조감, 폰이 얼굴 바로 위에서 내려다본다 / Expression 멍때리기 / 쌍 10만(다른 D 쌍을 붙이지 않는다) |
+| S6 운동 후 땀 (滤镜 #073. 단서: 장소 연습실(필라테스) / 소품 - / 시간대 운동 후(땀) / 의상 레깅스) | A | Hair 똥머리 / Base 운동 후 땀 광택, 이마와 광대에 / Blush 운동 후 홍조 / Outfit 레깅스 룩 / Scene 연습실, 필라테스·헬스 후 인증 / Light 5300K 낮의 창빛 / Optics iPhone 15 Pro 전면, 자연스러운 낮빛 스냅 / Pose 전면 카메라 / Expression 눈웃음, 숨이 아직 가쁜 밝은 얼굴 |
 
 ## 포즈·구도 쌍
 | 번호 | 갈래 | Pose | Camera |
@@ -177,9 +180,9 @@
 | 3 | A | 45도 셀카 — The phone is raised diagonally above eye level at about 45 degrees with the head tilted toward it and the free hand relaxed. | 하이앵글 — The lens looks down from above, so the forehead sits nearer the lens while the floor and furniture behind stay just as sharp. |
 | 4 | B | 거울 셀카 — She holds the phone toward the mirror at chest height with her weight on one leg, so the reflection shows the whole outfit. | 중앙 구도 — Her full-length reflection from head to shoes sits dead center in the mirror, and the room behind it, the phone and the mirror edge all stay sharp. |
 | 5 | B | 플래시 거울 셀카 — The back of the phone faces the mirror with its flash firing and her eyes look through the glare. | 삼분할 구도 — Her reflection stands on one third line with the flash hotspot near the upper edge and the rest of the mirrored room fully sharp. |
-| 6 | B | 얼굴에 폰 붙이기 — Her cheek presses against the back of the phone with the head tilted into it and the eyes glancing toward the mirror. | 클로즈업 — The frame holds only the face and the phone back edge to edge, the case, the lens bump and every pore equally sharp. |
-| 7 | C | 위에서 찍는 셀카 — Her arm stretches high above her head holding the phone angled down, her face tipped up toward the lens. | 초광각 왜곡 — The ultra-wide lens is held close, so the head reads a little large and the street and sky behind stay sharp to the frame edge. |
-| 8 | C | 횡단보도 걷기 — She takes a long step across the crosswalk stripes with the body angled across the road and her hair lifting behind. | 손떨림 — A slight handheld sway tilts the frame, which runs from her head to her feet, as if a friend walked beside her, while the whole street stays sharp. |
+| 6 | B | 얼굴에 폰 붙이기 — Her cheek presses against the back of the phone with the head tilted into it and the eyes glancing toward the mirror. | 클로즈업 — The frame holds only the face and the phone back edge to edge, the case, the lens bump and the whole face equally sharp at the phone's own resolution. |
+| 7 | C | 위에서 찍는 셀카 — Her arm stretches high above her head holding the phone angled down, her face tipped up toward the lens. | 하이앵글 — The phone is held close above her, so the head reads a little large and the street and sky behind stay sharp to the frame edge. |
+| 8 | C | 횡단보도 걷기 — She takes a long step across the crosswalk stripes with the body angled across the road and her hair lifting behind. | 기울어진 프레이밍 — The frame tilts slightly off level and runs from her head to her feet, as if a friend walked beside her, while the whole street stays sharp. |
 | 9 | C | 손으로 렌즈 가리기 — One palm reaches toward the lens and covers a corner of the frame while she laughs behind it. | 카메라 응시 — She looks straight into the lens from arm's length, and the street behind her is as sharp as her eyes. |
 | 10 | D | 누워서 폰 보기 — She lies on her back in bed holding the phone above her face with both hands. | 조감 — The phone looks straight down from directly above, so the pillow and bedding fill the frame flat and sharp around her face. |
 | 11 | D | 지하철 문에 기대기 — Her back rests against the closed car door, the posture steady and the eyes tired. | 유리창 이중 반사 — Shot partly through the window glass, her faint reflection overlaps the dark tunnel and the car interior, both layers sharp. |
@@ -190,3 +193,5 @@
 
 ## 출처
 Iris (noahvisualsx/Iris b83de4c, MIT, © 2026 noahvisuals): 韩国/滤镜/04 #061–075, 拍照姿势/01 #001–020, 拍照姿势/02 #022 #023 #024 #027 #028 #031 #034 #038 #039 #040, 风格/03 #044 #045 #048 #049 #050 #055 #057 #058, 风格/06 #092 #095, 穿搭/06 #081 #083 #089, 道具与美甲/01 #001 #008, 道具与美甲/02 #016 #017 #019 #020 #022 #023, 神态与微表情/03 #025 #029, 神态与微表情/05 #041 #042 #050, 发型与妆容/02 #012 #013. 낱말과 구성은 참고했고 문장은 MPW용으로 새로 썼다. 라이선스 전문은 [LICENSE-Iris.md](LICENSE-Iris.md).
+
+세트의 Iris 원문 값(출처 기록이고 프롬프트에 쓰지 않는다. 위 세트·쌍의 값이 이긴다): S1 Camera 50mm 평시선, S2 장소 청담동 갤러리 코너와 배경 보케, S3 Optics 50mm 무왜곡 꼬리와 Camera 머리는 크고 몸은 작아 보이는 귀여운 시선, S5 의상 오버핏 블레이저와 검은 튜브탑, S6 머리 긴 생머리와 의상 方领 니트(深炭灰, 스퀘어넥 니트. #073 원문에서 확인했고 이 카드는 운동 후 장면에 맞춰 레깅스 룩으로 바꿨다).

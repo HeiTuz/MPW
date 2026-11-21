@@ -10,11 +10,11 @@
 ## 고정 사실 (모든 갈래가 지킨다)
 | 슬롯 | 값 |
 |---|---|
-| medium | 후지 필름으로 찍은 일본 일상 필름 스냅. 디지털 사진도 화보도 아니다. 첫 줄은 `A Japanese everyday film snapshot shot on Fujifilm color film`로 시작한다(D 갈래는 반전 필름이면 `…shot on Fujifilm slide film`, 흑백이면 `…shot on Fujifilm black-and-white film`). 단 `クラシックネガ`는 필름이 아니라 후지 디지털 카메라의 필름 시뮬레이션이다. A의 stock `クラシックネガ` 줄이나 세트 S1(Fujifilm X-Pro3)을 고르면 첫 줄은 `A Japanese everyday snapshot shot on a Fujifilm digital camera with the Classic Neg film simulation`, closer는 `銀塩写真` 대신 `写真`(필름이 아니므로), 입자는 `grain-sim` 줄이 맡는다 |
+| medium | 후지 필름으로 찍은 일본 일상 필름 스냅. 디지털 사진도 화보도 아니다. 첫 줄은 `A Japanese everyday film snapshot shot on Fujifilm color film`로 시작한다(D 갈래는 반전 필름이면 `…shot on Fujifilm slide film`, 흑백이면 `…shot on Fujifilm black-and-white film`). 단 `クラシックネガ`는 필름이 아니라 후지 디지털 카메라의 필름 시뮬레이션이다. A의 stock `クラシックネガ` 줄이나 camera `Fujifilm X-Pro3` 줄이나 세트 S1(Fujifilm X-Pro3)을 고르면 첫 줄은 `A Japanese everyday snapshot shot on a Fujifilm digital camera with the Classic Neg film simulation`, closer는 `銀塩写真` 대신 `写真`(필름이 아니므로), 입자는 `grain-sim` 줄이 맡는다 |
 | closer | `銀塩写真` |
 | time | 해가 있는 낮이 기본이고 흐린 낮도 된다. C만 밤과 실내 저녁이다. D는 해질녘도 된다 |
 | light-key | 있는 빛: 직사광, 흐린 하늘, 나뭇잎 사이 햇빛, 창빛. C는 실내 전구·홍등·네온·창밖 불빛 |
-| palette | A는 그림자에 청록이 깔리고 하이라이트는 조금 따뜻한 붉은 쪽, 채도는 낮춘다. B는 박하색 하이라이트와, 밝게 노출한 피부에 뺨과 코끝의 분홍 홍조가 비치는 빛. C는 붉고 초록으로 기운 어둠. D 슬라이드는 짙은 에메랄드 녹색이고 벨비아·포르티아는 채도가 매우 높고 프로비아는 중간이다(흑백 세트만 무채색). 형광 파스텔과 디지털 선명색 없음 |
+| palette | A는 그림자에 청록이 깔리고 하이라이트는 조금 따뜻한 붉은 쪽, 채도는 낮춘다. B는 박하색 하이라이트와, 밝게 노출한 피부에 뺨과 코끝의 분홍 홍조가 비치는 빛. C는 붉고 초록으로 기운 어둠이고 네온·홍등·램프는 필름에 찍힌 불빛의 색이다. D 슬라이드는 짙은 에메랄드 녹색이고 벨비아·포르티아는 채도가 매우 높고 프로비아는 중간이다(흑백 세트만 무채색). 디지털 선명색과 형광 파스텔은 어느 갈래에도 없다(C의 네온과 D 슬라이드의 높은 채도는 필름이 만든 색이다) |
 | grain | 필름 입자가 화면 전체에 보이고 어두운 곳에서 더 보인다. A·B는 곱게(S2 Superia 400은 어두운 쪽이 조금 굵다), C와 네오판은 굵게, 슬라이드와 아크로스는 아주 곱게. 시뮬레이션 줄(`クラシックネガ`, S1)은 필름 입자가 아니라 카메라의 입자 효과가 고운 입자를 얹는다 |
 | lens | 35~50mm 표준 화각(쌍 2는 중망원 압축, 쌍 12와 S6은 21mm 광각, S3 중형은 표준, S5 중형은 100mm). 배경은 읽힐 만큼만 부드럽다(B 중형은 크림처럼 풀리고 D 풍경은 심도가 깊다) |
 | figure | 일상 동작 중인 한 사람. 카메라를 의식하지 않고 시선이 렌즈를 스쳐 지나간다. 정면 증명사진 자세 없음 |
@@ -36,7 +36,7 @@
 | base | B는 카드 줄(`もち肌`)이 이긴다. 나머지는 고정 몫 `透明感`을 쓴다 | #004 #019의 도자기 같은 피부 마감은 `透明感`보다 한 단계 더 부드럽다 |
 | lip, blush | D의 흑백 세트(아크로스·네오판)에서 끈다. 나머지는 켠다 | 흑백 필름에는 분홍·코랄 색이 찍히지 않는다. 입술과 볼은 명암으로만 읽힌다 |
 | grain | 모든 갈래에서 카드 줄이 이긴다. D에서는 슬라이드·아크로스를 고르면 `grain` 줄만, 네오판을 고르면 `grain-mono` 줄만 쓴다(둘을 함께 쓰지 않는다). `クラシックネガ` 줄이나 S1을 고르면 A의 `grain` 줄 대신 `grain-sim` 줄만 쓴다. 스톡 줄(Superia 400, 業務用 400 등)은 입자 양을 말하지 않고 입자는 이 줄 하나가 정한다 | 고정 줄의 고운 입자가 #005 #006의 굵은 입자, #014 #016의 거친 입자와 어긋난다 |
-| lens | 켠다. 렌즈를 말하는 줄은 하나이고 출처 순서는 세트의 렌즈 > 쌍의 렌즈 > 갈래의 본체·렌즈 줄 > 고정 몫이다. 이 카드의 갈래 줄(Optics의 stock·camera 줄)에는 렌즈 길이를 말하는 줄이 없다. 세트를 고르면 세트의 Iris 원본 렌즈가 렌즈 줄이고 `自然透视`는 붙이지 않는다(S1 XF 35mm f/1.4, S2 Nikkor 50mm f/1.4, S3 Planar 80mm f/2, S4 내장 28–56mm 줌을 약 40mm로, S5 EBC Fujinon 100mm f/3.2, S6 21mm). 세트 없이 쌍만 고르면 쌍 2(`Telephoto Compression`, 중망원)와 쌍 12(`広角スナップ`, 21mm)는 Camera 줄이 렌즈를 정하니 `自然透视`를 끄고, 쌍 1·3~11은 `自然透视` 줄 하나만 렌즈를 말한다(쌍 11은 `Extreme Wide Shot`이 구도일 뿐 렌즈가 아니다). 세트와 쌍을 함께 고르면 세트가 이긴다(S1에 쌍 2를 붙이면 S1의 35mm 위에 중망원을 얹지 말고 쌍의 Camera 줄에서 렌즈 말을 뺀다) | Iris 꼬리의 `50mm 얕은 심도`는 옮기지 않았다. 원본 기종은 35mm 위주이고 #005는 28mm 컴팩트, #016은 21mm다 |
+| lens | 켠다. 렌즈를 말하는 줄은 하나이고 출처 순서는 세트의 렌즈 > 쌍의 렌즈 > 갈래의 본체·렌즈 줄 > 고정 몫이다. 이 카드의 갈래 줄(Optics의 stock·camera 줄)에는 렌즈 길이를 말하는 줄이 없다. 세트를 고르면 세트의 Iris 원본 렌즈가 렌즈 줄이고 `自然透视`는 붙이지 않는다(S1 XF 35mm f/1.4, S2 Nikkor 50mm f/1.4, S3 Planar 80mm f/2, S4 내장 28–56mm 줌을 약 40mm로, S5 EBC Fujinon GX M 100mm f/4, S6 21mm). 세트 없이 쌍만 고르면 쌍 2(`Telephoto Compression`, 중망원)와 쌍 12(`広角スナップ`, 21mm)는 Camera 줄이 렌즈를 정하니 `自然透视`를 끄고, 쌍 1·3~11은 `自然透视` 줄 하나만 렌즈를 말한다(쌍 11은 `Extreme Wide Shot`이 구도일 뿐 렌즈가 아니다). 세트와 쌍을 함께 고르면 세트가 이긴다(S1에 쌍 2를 붙이면 S1의 35mm 위에 중망원을 얹지 말고 쌍의 Camera 줄에서 렌즈 말을 뺀다) | Iris 꼬리의 `50mm 얕은 심도`는 옮기지 않았다. 원본 기종은 35mm 위주이고 #005는 28mm 컴팩트, #016은 21mm다 |
 | framing | 켠다. 쌍 7(가슴 위)과 쌍 11(인물이 작게)은 범위를 직접 말하니 그때는 3:4만 쓴다. 범위를 말하지 않는 쌍 가운데 다리·발 동작이 있는 1·2·3·5·6·9·12는 `from head to toe`로, 4·8·10은 `from the top of the head to the waist`로 쓴다 | 나머지 쌍은 프레임 범위를 말하지 않는데 Pose가 발이나 무릎을 말하면 허리 위 프레임에서 그 동작이 안 보인다 |
 | ratio | 켠다. 사용자 비율이 없으면 3:4 세로. 모든 쌍에 해당하는 처리(쌍 번호와 무관): face-light·face-clear·under-eye·liner 끔, grain은 카드 줄(필름 줄이나 `grain-sim`)이 정함, 렌즈 줄은 `自然透视`가 기본(Camera 줄이 렌즈를 말하는 쌍은 위 lens 행) | 쌍은 비율을 정하지 않는다 |
 
@@ -55,9 +55,9 @@
 | A | expression | 無邪気な振り返り — A quick glance over the shoulder mid-step, the hair still moving and an unguarded half-smile on the lips. |
 | A, D | squint | まぶしげ — The lids narrow against the sun and the brows pinch slightly, lifting the cheeks into a faint squint. |
 | B | expression | 澄んだ瞳 — The eyes rest level and bright with no posed charm in the lids or brows, and the skin around them looks clear. |
-| B | expression | 温潤な眼差し — Slightly moist eyes carry a soft shine along the lower lids, the brows relaxed and the gaze warm and gentle. |
+| B | expression | 潤んだまなざし — Slightly moist eyes carry a soft shine along the lower lids, the brows relaxed and the gaze warm and gentle. |
 | C | expression | 物思い — The lids lower and the gaze drifts to one side, the mouth relaxed and the head tilted a little toward the lamp. |
-| C | expression | 振り返る瞳 — The head turns back with the hair still swinging, the pupils small and the eyes alert in the dim light. |
+| C | expression | 振り向きざまの視線 — The head turns back with the hair still swinging, the pupils small and the eyes alert in the dim light. |
 | D | expression | 芯のある眼差し — A steady level gaze with still brows and a relaxed jaw, calm and unhurried against the large scene behind her. |
 | D | expression | ペーソス — Low golden light on a tired, relaxed face and a faint closed-mouth smile. |
 
@@ -95,8 +95,11 @@
 | A, C | style | 下北沢Vintage — A thrifted, worn-in look of secondhand knits and jackets with an indie vintage mood. |
 | B | style | 透け感 — Thin fabrics show the faint edge of a layer behind them and stay matte in the pale light. |
 | C | style | 東京ノワール — A dark city frame with wet reflections and deep shadows, cold cyan set against warm lamp light. |
-| D | style | 侘び寂び — Quiet imperfection in moss, stone and weathered concrete, with muted tea-green and clay tones. |
-| 전부 | palette | palette — Film color with green in the shadows and restrained saturation, and no digitally vivid color, neon or fluorescent pastel anywhere; the pale mint highlights of B are film color, the slide film of D runs deep emerald and its black-and-white sets run gray. |
+| D | style | 侘び寂び — Quiet imperfection in moss, stone and weathered concrete. |
+| A | palette | palette — Film color with cyan-green in the shadows, slightly warm red highlights and restrained saturation, with no digitally vivid color or fluorescent pastel. |
+| B | palette | palette — Bright film color with pale mint highlights, a soft pink flush in the skin and restrained saturation, with no digitally vivid color or fluorescent pastel. |
+| C | palette | palette — Film color that leans red and green in the dark, where neon, lantern and lamp lights keep the color film records for them and nothing turns digitally vivid. |
+| D | palette | palette — Slide film greens run deep emerald and saturation follows the stock, very high on Velvia and Fortia and medium on Provia, while the black-and-white sets run gray with no color. |
 
 ## Scene
 | 갈래 | 슬롯 | 줄 |
@@ -116,7 +119,7 @@
 | D | place | 強羅 — A damp moss garden with stone lanterns, mist hanging between dark trees and vivid green on every stone. (滤镜 #017, 风格/04 #065) |
 | D | place | 紫陽花 — Dense blue-violet hydrangea blooms stand in a hedge before an old temple's stone wall, packed to the edges of the frame. (滤镜 #008) |
 | D | place-open | 七里ヶ浜 — A wide dusk beach with the sea's edge glowing and the dark outline of a far volcano on the horizon. (滤镜 #020) |
-| D | place-mono | 安藤忠雄 — Smooth bare concrete walls with narrow slits of daylight, cool gray and quiet, cut by sharp diagonal sun. (滤镜 #015) |
+| D | place-mono | 打ち放しコンクリート — Smooth bare concrete walls with narrow slits of daylight, cool gray and quiet, cut by sharp diagonal sun. (滤镜 #015) |
 
 ## Light
 | 갈래 | 슬롯 | 줄 |
@@ -135,7 +138,7 @@
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
 | A | stock | クラシックネガ — The Classic Neg film simulation, set for this look: cyan-green settles into the shadows and midtone grays while the highlights lean slightly warm and red, with saturation held low and contrast firm. |
-| A | camera | Fujifilm X-Pro3 — A rangefinder-style APS-C mirrorless body that applies the Classic Neg simulation in camera, so the frame is a digital file with the muted warm color and gentle street contrast of this look. |
+| A | camera | Fujifilm X-Pro3 — A rangefinder-style APS-C mirrorless body that applies the Classic Neg simulation in camera, so the frame is a digital file with the muted warm color and gentle street contrast of this look. (`クラシックネガ` 줄·S1 전용이다. 필름 스톡 줄(Superia 400·フジカラー 100·業務用 400)을 고르면 이 본체를 쓰지 않고 스톡 줄만 쓴다) |
 | A | stock | フジカラー Superia 400 — In this look, neutral grays turn a cool Fuji green under cloud, and reds and yellows stay full without getting loud. |
 | A | stock-clear | フジカラー 100 — In this look, daylight color stays clean and transparent: blue sky and white clothes render crisp over fine, even grain. |
 | A | stock-grit | 業務用 400 — In this look, the tones run dull gray-green with slightly muddy shadows and visible grain, plain and unpolished. |
@@ -143,7 +146,7 @@
 | B | stock | リアラ 100 — In this look, a faint flush stays on the cheeks and greens stay rich and natural, with no cast pulling the frame either way. |
 | B | stock-slide | アスティア 100F — In this look, a soft-contrast slide rendering gives translucent pink-leaning skin highlights and delicate pastel color. |
 | B | stock-slide | センシア 100 — In this look, mild slide contrast comes with gentle saturation and warm cream in the highlights. |
-| B | camera | Contax 645 — A medium-format frame that in this look shows very smooth tone transitions, the background melting into cream behind a silky focus plane. |
+| B | camera | Contax 645 — A medium-format frame that in this look shows very smooth tone transitions, the background melting into cream behind a silky focus plane. (120 필름 줄 PRO 400H·リアラ 100·アスティア 100F와만 묶는다. センシア 100은 135 필름이라 이 본체를 붙이지 않고 스톡 줄만 쓴다) |
 | C | stock | ナチュラ 1600 — In this look, coarse high-speed grain and soft lamp-lit exposure without flash push the shadows toward red-gray. |
 | C | stock | フジカラー Venus 800 — In this look, a night snapshot leans red in the shadows and green in the neon, with heavy grain and a Showa-era warmth. |
 | C | stock-cine | ETERNA 250D — In this look, a flat cinema-negative rendering with low saturation, soft highlight roll-off and lifted gray-cyan shadows. |
@@ -162,11 +165,11 @@
 ## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 단서는 찾기용이고 요청의 장소·소품·시간대·의상 가운데 둘 이상이 그 세트의 단서와 같으면 통째로 쓰고, 세트 값은 고정 사실보다 먼저다. 규칙은 image-brief.md §4 '룩 카드' 4항과 '비워 둔 층'. 이 표의 켈빈 숫자는 광원을 잰 값이 아니라 이 룩에서 정한 연출 값이다)
 | 세트 | 갈래 | 묶음 |
 |---|---|---|
-| S1 街角 (滤镜 #001) | A | 단서: 장소 시모키타자와 오후 골목, 가로수 그늘 / 소품 - / 시간대 오후 / 의상 밴드칼라 셔츠 / 동작 걷기 / Hair 濡れ髪, 어깨 길이 검은 단발에 シースルーバング가 바람에 흔들린다 / Outfit バンドカラーシャツ(생성색 면마 셔츠를 헐렁하게 걸침) / Scene 下北沢의 오후 길모퉁이, 가로수 잎 그림자가 얼룩진다 / Light 木漏れ日(5300K), 잎 그림자가 셔츠와 볼에 떨어진다 / Optics Fujifilm X-Pro3 + XF 35mm f/1.4에 クラシックネガ 시뮬레이션(디지털 본체), 그림자의 청록과 하이라이트의 붉은 온기, 입자는 `grain-sim`(첫 줄과 closer는 시뮬레이션용, 렌즈 줄은 세트의 35mm) / Expression 無防備, 렌즈를 의식하지 않는 시선과 숨 / Pose 느슨한 걸음으로 걷는다 |
+| S1 街角 (滤镜 #001) | A | 단서: 장소 시모키타자와 오후 골목, 가로수 그늘 / 소품 - / 시간대 오후 / 의상 밴드칼라 셔츠 / 동작 걷기 / Hair 濡れ髪, 어깨 길이 검은 단발에 シースルーバング가 바람에 흔들린다 / Outfit バンドカラーシャツ(내추럴 아이보리색 면마 셔츠를 헐렁하게 걸침) / Scene 下北沢의 오후 길모퉁이, 가로수 잎 그림자가 얼룩진다 / Light 木漏れ日(5300K), 잎 그림자가 셔츠와 볼에 떨어진다 / Optics Fujifilm X-Pro3 + XF 35mm f/1.4에 クラシックネガ 시뮬레이션(디지털 본체), 그림자의 청록과 하이라이트의 붉은 온기, 입자는 `grain-sim`(첫 줄과 closer는 시뮬레이션용, 렌즈 줄은 세트의 35mm) / Expression 無防備, 렌즈를 의식하지 않는 시선과 숨 / Pose 느슨한 걸음으로 걷는다 |
 | S2 渋谷 曇天 (滤镜 #002) | A | 단서: 장소 시부야 횡단보도 / 소품 - / 시간대 흐린 날, 바람 / 의상 트렌치코트 / Hair 濡れ髪, シースルーバング가 바람에 흔들린다 / Outfit トレンチコート(진회색 얇은 천) / Scene 渋谷スクランブル交差点 옆 보도, 바람 부는 흐린 날 / Light Overcast Light(5600K 부드러운 산란광), 중간 회색에 청록이 낀다 / Optics Nikon FM2 + Nikkor 50mm f/1.4에 フジカラー Superia 400을 넣는다, 어두운 쪽에 조금 굵은 입자(렌즈 줄은 세트의 50mm) / Expression 無防備, 바람에 머리가 날리다 문득 멈춘 순간 / Pose 걸음을 멈추고 선다 |
 | S3 代官山 白壁 (滤镜 #004) | B | 단서: 장소 다이칸야마 흰 벽 / 소품 - / 시간대 봄, 역광 / 의상 트렌치코트 / Hair 濡れ髪 + シースルーバング(Iris 원본 값. 세트 밖에서는 B의 切りっぱなしボブ) / Outfit トレンチコート(연한 꿀색 카키 얇은 천) / Scene 代官山의 흰 건축 외벽 앞, 봄 / Light 逆光(5400K), 부드러운 역광이 옆얼굴과 어깨를 감싼다 / Optics Contax 645 + Planar 80mm f/2에 フジカラー PRO 400H를 넣는다, 하이라이트의 박하 청록과 도자기 같은 피부(중형, 렌즈 줄은 세트의 80mm) / Expression 澄んだ瞳, 조용히 선 얼굴 / Pose 壁もたれ, 흰 벽에 가볍게 기댄다 / Camera Negative Space |
 | S4 純喫茶 (滤镜 #005) | C | 단서: 장소 킷사텐 / 소품 커피잔, 알전구 / 시간대 밤 / 의상 검정 터틀넥 / Hair 濡れ髪 / Outfit タートルネック(검정 니트) / Props ティーカップ(뜨거운 커피) / Scene 純喫茶의 어두운 구석, 오래된 목조 / Light 裸電球(3200~4000K), 호박색 펜던트 램프가 잔과 손에 따뜻한 빛을 얹는다, 플래시 없음 / Optics Fujifilm Natura Classica(내장 28–56mm 줌을 약 40mm 화각으로 쓴다)에 ナチュラ 1600을 넣는다, 굵은 입자와 어두운 쪽의 붉은·청회색(렌즈 줄은 세트의 내장 줌) / Expression 物思い, 잔 앞에서 조용히 생각에 잠긴다 / Pose 테이블에 앉아 잔을 앞에 둔다 |
-| S5 箱根 渓流 (滤镜 #018) | D | 단서: 장소 하코네 계곡, 급류, 젖은 바위 / 소품 - / 시간대 - / 의상 아노락 / Hair 濡れ髪 / Outfit アノラックパーカー(짙은 회색 셸) / Scene 箱根 깊은 계곡의 급류와 젖은 바위, 짙은 원시림 / Light 구름을 찢고 내려온 햇빛(5400K)이 깊은 못과 고목을 비춘다 / Optics Fuji GX680 III + EBC Fujinon 100mm f/3.2에 ベルビア 50을 넣는다, 짙은 에메랄드 녹색과 강한 대비(중형, 렌즈 줄은 세트의 100mm) / Expression 芯のある眼差し / Pose 爪先立ち, 젖은 바위 위를 가볍게 딛는다 / Camera Extreme Wide Shot, 인물이 작게 나온다 |
+| S5 箱根 渓流 (滤镜 #018) | D | 단서: 장소 하코네 계곡, 급류, 젖은 바위 / 소품 - / 시간대 - / 의상 아노락 / Hair 濡れ髪 / Outfit アノラックパーカー(짙은 회색 셸) / Scene 箱根 깊은 계곡의 급류와 젖은 바위, 짙은 원시림 / Light 구름을 찢고 내려온 햇빛(5400K)이 깊은 못과 고목을 비춘다 / Optics Fuji GX680 III + EBC Fujinon GX M 100mm f/4(Iris 원문의 f/3.2는 이 렌즈에 없는 값이라 f/4로 고쳤다)에 ベルビア 50을 넣는다, 짙은 에메랄드 녹색과 강한 대비(중형, 렌즈 줄은 세트의 100mm) / Expression 芯のある眼差し / Pose 爪先立ち, 젖은 바위 위를 가볍게 딛는다 / Camera Extreme Wide Shot, 인물이 작게 나온다 |
 | S6 渋谷 高架下 (滤镜 #016) | D | 단서: 장소 육교, 고가 아래 콘크리트 통로 / 소품 - / 시간대 - / 의상 코치 재킷 / Hair 濡れ髪이 걸음에 흔들린다 / Outfit コーチジャケット(검정 작업 재킷) / Scene 歩道橋(渋谷 고가 아래 콘크리트 통로, 가파른 대각 그림자) / Light 逆光, 강한 측역광이 머리카락과 옆얼굴의 윤곽을 그린다 / Optics Ricoh GR21 21mm f/3.5에 ネオパン 400을 넣는다, 흑백, 굵은 입자와 눌린 그림자(렌즈 줄은 세트의 21mm) / Expression 流し目 / Pose Walking Shot, 빠른 걸음에 살짝 번진다 / Camera 広角スナップ |
 
 ## 포즈·구도 쌍

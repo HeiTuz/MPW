@@ -2,7 +2,7 @@
 
 | 항목 | 값 |
 |---|---|
-| 부르는 이름 | 千禧CCD直闪; 千禧CCD; 천희 CCD 직섬; 천희 CCD; 밀레니엄 CCD; 밀레니엄 CCD 플래시; Y2K CCD flash; Y2K CCD 플래시; Y2K 디카 플래시; CCD 직부 플래시; CCD 직광 플래시; 夜间硬闪; 小红书夜间硬闪; 狗仔直闪; 狗仔硬闪; 파파라치 플래시; Paparazzi Flash |
+| 부르는 이름 | 千禧CCD直闪; 千禧CCD; 밀레니엄 CCD; 밀레니엄 CCD 플래시; Y2K CCD flash; Y2K CCD 플래시; Y2K 디카 플래시; CCD 직부 플래시; CCD 직광 플래시; 밀레니엄 CCD 직광 플래시; 夜间硬闪; 小红书夜间硬闪; 狗仔直闪; 狗仔硬闪; 파파라치 플래시; Paparazzi Flash |
 | 부르지 않는 말 | Y2K; 디카; CCD; 플래시; 야간 스냅; 디카 감성; 디카 느낌; 디카 사진; CCD 감성; CCD 느낌; 똑딱이; 레트로 디카; 컴팩트 디지털 카메라; 플래시 사진; 플래시 스냅; 야간 플래시; 정면 플래시; 밤 스냅; 밤 플래시 사진; 플래시 터진 사진; 파파라치; 파파라치 사진; 千禧; 小红书; 2000년대 감성; 2000년대 디카; 밀레니엄 감성; Y2K 감성; digicam; point-and-shoot; direct flash; on-camera flash; paparazzi |
 | 문화권 | KR / CN / US |
 | 기본 갈래 | A |
@@ -14,7 +14,7 @@
 | closer | `直闪` |
 | culture | 문화권 공식(fixed-lines.md의 Identity Reference·base·under-eye·blush)은 A는 KR, B는 CN, C는 US를 쓴다. 사용자가 인물의 문화권을 말하면 그쪽이 이긴다 |
 | time | 밤 또는 해가 안 드는 어두운 실내. 플래시가 주광이고 주변 빛은 배경에만 약하게 남는다 |
-| light-key | 카메라 위에서 정면으로 한 발 터지는 플래시(A·C는 본체 내장, B는 핫슈 외장 또는 내장) |
+| light-key | 카메라 위에서 정면으로 한 발 터지는 플래시(A·C는 본체 내장, B는 핫슈 외장 또는 내장). C의 S6 Leica M6만 예외다: 내장 플래시가 없는 레인지파인더라 카메라 위 핫슈에 얹은 외장 플래시를 쓴다 |
 | palette | 가까운 면은 차가운 흰색으로 평평하게 밝고 배경은 순흑에 가깝게 떨어진다. 짙은 색은 입술·의상 한 곳에만 둔다. A는 청록 그림자, B는 흑·정홍·냉백, C는 컬러와 흑백 세트. 파스텔·낮빛 없음. 배경에 색이 남는 예외는 A의 편의점 형광, B의 红丝绒包厢(붉은 벽의 반사광)와 四合院의 주홍 대문, C의 Sunset Strip 네온이다 |
 | grain | A·B는 어두운 곳에만 아주 고운 디지털 노이즈. C는 필름 입자가 화면 전체에 고르게(흑백 세트는 굵게) |
 | lens | A는 소형 센서 컴팩트의 내장 줌을 35mm 환산 약 35mm에 둔 렌즈, B는 미러리스의 표준 시선, C는 35mm 필름 컴팩트 렌즈 |
@@ -23,7 +23,7 @@
 ## 갈래 고르기
 | 갈래 | 요청에 이 말이 있으면 | 성격 | Iris 근거 |
 |---|---|---|---|
-| A 首尔CCD (기본) | 디카, CCD, 천희, 밀레니엄, 서울, 성수동, 편의점, 엘리베이터, 지하주차장, 첫눈, IXY, Cyber-shot, FinePix | 소형 센서 컴팩트의 내장 플래시. 얼굴이 평평하게 밝고 배경은 급히 어두워지며 청록 그림자가 낀다 | KR 滤镜 #001–#020 |
+| A 首尔CCD (기본) | 디카, CCD, 밀레니엄, 서울, 성수동, 편의점, 엘리베이터, 지하주차장, 첫눈, IXY, Cyber-shot, FinePix | 소형 센서 컴팩트의 내장 플래시. 얼굴이 평평하게 밝고 배경은 급히 어두워지며 청록 그림자가 낀다 | KR 滤镜 #001–#020 |
 | B 夜间硬闪 | 小红书, 夜间硬闪, 冷白皮, 红唇, 名媛, 외탄, 사합원, 회원제 클럽, 비 오는 밤, 옥상 바, Speedlite | 미러리스에 얹은 외장 플래시가 얼굴을 정면에서 치고 뒷벽에 단단한 검은 그림자. 정홍 입술과 검은 의상 | CN 滤镜 #021–#040 |
 | C 狗仔直闪 | 파파라치, 狗仔, 할리우드, 뉴욕, 레드카펫, 클럽 뒷문, 필름 컴팩트, Contax T3, Tri-X, 지하철 승강장 | 35mm 필름 컴팩트의 직부 플래시. 필름 입자, 가운데만 밝고 사방이 순흑, 컬러와 흑백 | US 滤镜 #021–#040 |
 
@@ -32,7 +32,7 @@
 |---|---|---|
 | face-light | 모든 갈래에서 끈다. 얼굴 빛은 이 카드의 Light 줄이 정한다 | `立体光`은 키라이트를 위·옆에 두는데 플래시는 렌즈 축에서 나와 그림자 방향이 갈린다 |
 | catchlight | 모든 갈래에서 카드 줄이 이긴다 | 정면 플래시의 반사는 동공 한가운데 흰 점 하나다. 선글라스 세트는 눈이 안 보여 둘 다 끈다 |
-| lens | 쌍마다 렌즈를 말하는 줄이 정확히 하나다. 출처 순서는 세트의 렌즈 > 쌍 Camera 줄의 렌즈 > 갈래의 렌즈 줄 > 고정 몫 `自然透视`이다. 이 카드의 세트(S1~S6)는 Optics에 본체·필름 이름만 적고 렌즈를 말하지 않으며, 쌍 Camera 줄도 렌즈를 말하지 않는다(쌍 1의 가슴 높이, 쌍 7의 하이앵글은 높이만 정한다). 그래서 A(쌍 1~3)·C(쌍 8~10)는 고정 몫을 끄고 갈래의 Optics `lens` 줄(A `카드형 디카`, C `CONTAX T3`)이 렌즈 줄이다. 단 C의 S6는 Optics가 `Leica M6`이라 `CONTAX T3` 줄을 쓰지 않고 고정 몫 `自然透视`가 렌즈 줄이다. B(쌍 4~7)는 갈래의 렌즈 줄이 없으니 고정 몫 `自然透视`가 렌즈 줄이다. 카메라 높이는 쌍 Camera 줄(쌍 1의 가슴 높이, 쌍 7의 하이앵글)이 정하고 렌즈 줄은 높이를 정하지 않는다 | KR 滤镜 #004는 28mm 환산 카드기와 50mm 무왜곡 꼬리가 한 프리셋에 같이 있어 부딪혔다. B의 미러리스 인물은 표준 시선이라 `自然透视`이 맞는다 |
+| lens | 쌍마다 렌즈를 말하는 줄이 정확히 하나다. 출처 순서는 세트의 렌즈 > 쌍 Camera 줄의 렌즈 > 갈래의 렌즈 줄 > 고정 몫 `自然透视`이다. 이 카드의 세트(S1~S6)는 Optics에 본체·필름 이름만 적고 렌즈를 말하지 않으며, 쌍 Camera 줄도 렌즈를 말하지 않는다(쌍 1의 가슴 높이, 쌍 7의 하이앵글은 높이만 정한다). 거리는 쌍 Camera 줄이 정하고(figure의 1~2 m) 렌즈 줄은 거리를 말하지 않는다. 그래서 A(쌍 1~3)·C(쌍 8~10)는 고정 몫을 끄고 갈래의 Optics `lens` 줄(A `카드형 디카`, C `CONTAX T3`)이 렌즈 줄이다. 단 C의 S6는 Optics가 `Leica M6`이라 `CONTAX T3` 줄을 쓰지 않고 고정 몫 `自然透视`가 렌즈 줄이다. B(쌍 4~7)는 갈래의 렌즈 줄이 없으니 고정 몫 `自然透视`가 렌즈 줄이다. 카메라 높이는 쌍 Camera 줄(쌍 1의 가슴 높이, 쌍 7의 하이앵글)이 정하고 렌즈 줄은 높이를 정하지 않는다 | KR 滤镜 #004는 28mm 환산 카드기와 50mm 무왜곡 꼬리가 한 프리셋에 같이 있어 부딪혔다. B의 미러리스 인물은 표준 시선이라 `自然透视`이 맞는다 |
 | grain | 카드 줄이 이긴다. A는 `디지털 노이즈`, B는 `数码噪点`, C는 `grain`(흑백 세트는 `B&W film grain`) | 매체가 디지털(A·B)과 필름(C)으로 갈린다 |
 | lip | B·C는 카드 줄이 이긴다. A는 켠다 | 문화권 입술 줄이 더 붙으면 B의 정홍·C의 붉은 입술과 입술색이 둘이 된다 |
 | blush | 켠다. 카드 줄(A `동상 메이크업`, B `微醺妆`)을 고른 장면에서만 그 줄이 대신한다 | 뺨 색이 둘이 되지 않게 |
@@ -58,7 +58,7 @@
 ## Expression
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
-| A | expression | 염세안 — The upper lids sag over a third of each pupil and the gaze rests just past the lens, the mouth shut and slack. |
+| A | expression | 나른한 무표정 — The upper lids sag over a third of each pupil and the gaze rests just past the lens, the mouth shut and slack. |
 | B | expression | 决绝眼神 — The chin lifts a little, the lips press into a straight line and the eyes hold the lens without blinking. |
 | B | expression | 微醺 — The eyes look glossy and slow to focus under heavy lids, with a loose warm smile on the lips. |
 | C | expression | Off-Camera Gaze — The eyes rest on a point beside the lens with relaxed lids, as if she has not noticed the camera. |
@@ -110,6 +110,8 @@
 | C | place | Subway Platform — White glazed tile and yellow safety poles on a late-night platform, the flash landing as bright spots on the wall tiles. |
 
 ## Light
+흑백(Tri-X, S6)이면 색이 든 줄은 쓰지 않는다. C의 `Neon and Flash Mix`(분홍·보라 네온)는 건너뛰고 `direct flash noir`만 쓰며, 팔레트의 포인트색 말도 명암의 말(가장 짙은 검정과 가장 밝은 흰 면)로 바꾼다.
+
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
 | A | face-light | 직격 플래시 — A flash on the camera fires straight at her face, flattening it into bright even light and leaving a short hard shadow on the wall behind. |
@@ -128,13 +130,13 @@
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
 | A | body | Canon IXY 400 — An early-2000s small-sensor CCD compact (Canon IXY series, 1/1.8-inch CCD): in this look the flash-lit skin reads crisp, with strong highlight bloom and a deep black falloff behind her. |
-| A | lens | 카드형 디카 — A slim compact's built-in zoom, used at about 35mm equivalent, sits about arm's length away, wide enough to show the wall behind her with no stretch on the nose or forehead. |
+| A | lens | 카드형 디카 — A slim compact's built-in zoom, used at about 35mm equivalent, wide enough to show the wall behind her with no stretch on the nose or forehead. |
 | A | grain | 디지털 노이즈 — Very fine digital noise sits only in the darkest parts of the frame, with faint colored speckle where the flash does not reach. |
 | B | grain | 数码噪点 — Very fine digital noise sits only in the darkest parts of the frame, with faint colored speckle where the flash does not reach. |
 | B | flash | Canon Speedlite — A Canon hot-shoe flash (Speedlite series) fired straight on gives a clean, hard front burst and a fast fall-off behind her. |
 | C | stock | Kodak Portra 400 — A color negative film that in this look leans warm and low-contrast, with creamy skin tones, soft highlight roll-off and fine even grain. |
 | C | stock | Kodak Tri-X 400 — A black-and-white negative film giving pure monochrome tone with coarse grain, ink-deep blacks and brilliant highlights. |
-| C | lens | CONTAX T3 — A 35mm Sonnar compact lens a little over an arm's length from her, crisp at the center with natural proportions on the face. |
+| C | lens | CONTAX T3 — A 35mm Sonnar compact lens, crisp at the center with natural proportions on the face. |
 | C | key | Paparazzi Flash — A hard on-camera flash at close range flattens the background to black and throws bright glints on any shiny surface. |
 | C | grain | grain — Fine, even film grain sits across the whole frame, slightly heavier in the shadows. |
 | C | grain | B&W film grain — Coarse silver grain sits over the monochrome frame with deep blacks and clipped bright highlights. |
@@ -148,9 +150,9 @@
 | S1 圣水洞 (KR 滤镜 #001. 단서: 장소 성수동 콘크리트 아트 스페이스 / 소품 은 펜던트 / 시간대 - / 의상 숯회색 니트) | A | Hair 검은 긴 생머리, 한쪽 옆머리를 귀 뒤로 / Outfit 스퀘어넥(숯회색 슬림 긴소매 니트) / Props 은 물방울 펜던트(가는 은 체인) / Scene 성수동, 노출 콘크리트와 부드러운 확산광의 조용한 예술 공간, 잡동사니 없음 / Light 직격 플래시(5600K), 국소 하이라이트 번짐, 배경은 순흑으로 낙하, 뺨·콧날의 수광 하이라이트 / Optics Canon IXY 400, 디지털 노이즈 / Pose 뒤돌아보기, 몸은 3/4, 어깨를 내림 / Expression 맑고 또렷한 눈으로 렌즈를 돌아봄 |
 | S2 便利店 (KR 滤镜 #012. 단서: 장소 편의점 심야 음료 냉장고(형광등) / 소품 캔 음료 / 시간대 심야 / 의상 순흑 니트) | A | Hair 검은 긴 생머리 / Outfit 보트넥(순흑 슬림 니트) / Props 음료 한 캔(`투명캔`) / Scene 편의점, 서울 CU 심야 음료 냉장고 앞 / Light 냉장 진열대의 차가운 형광(6000K)과 직격 플래시, 유리에 작은 흰 광반 / Optics Canon IXY Digital 900 IS, 디지털 노이즈 / Pose 뒤돌아보기, 냉장고 유리문 앞에서 3/4 / Expression 맑은 눈으로 렌즈를 돌아봄 |
 | S3 会所外廊 (CN 滤镜 #021. 단서: 장소 회원제 클럽 노천 외랑 / 소품 비취 귀걸이 / 시간대 한밤 / 의상 개량 드레스(정홍 립)) | B | Hair 黑长直, 한쪽 어깨로 넘겨 몇 가닥이 바람에 뜸 / Brow 野生眉 / Lip 正红唇(매트) / Outfit 검은 실크 削肩·挂脖 개량 드레스 / Props 水滴耳坠(翡翠) / Scene 한밤 회원제 클럽의 노천 외랑 / Light 直闪(5600K, 1.2 m), 배경 순흑 낙하, 뒷벽의 단단한 그림자, 코끝·광대의 피지 광택 / Optics Canon EOS R5 + `Canon Speedlite` / Expression 决绝眼神, 턱을 들어 렌즈 응시 |
-| S4 雨夜街角 (CN 滤镜 #032. 단서: 장소 비 오는 길모퉁이(물웅덩이) / 소품 투명 우산 / 시간대 비 오는 밤 / 의상 발수 롱코트) | B | Hair 검은 곱슬머리, 비에 젖어 어깨에 흩어짐 / Lip 正红唇 / Outfit 机能风衣(검은 발수 롱코트) / Props 透明雨伞 / Scene 도심 깊은 밤, 가랑비에 젖은 길모퉁이 / Light 직사 5600K, 1/250초 플래시가 빗줄기를 광점으로 얼리고 물웅덩이가 얼굴을 비춤 / Optics Canon EOS R5 + EL-1, 数码噪点 / Expression 단단하고 침착한 눈 / Pose 투명 우산을 들고 모퉁이에 섬 |
+| S4 雨夜街角 (CN 滤镜 #032. 단서: 장소 비 오는 길모퉁이(물웅덩이) / 소품 투명 우산 / 시간대 비 오는 밤 / 의상 발수 롱코트) | B | Hair 검은 곱슬머리, 비에 젖어 어깨에 흩어짐 / Lip 正红唇 / Outfit 机能风衣(검은 발수 롱코트) / Props 透明雨伞 / Scene 도심 깊은 밤, 가랑비에 젖은 길모퉁이 / Light 직사 5600K, 짧은 플래시 펄스가 빗줄기를 광점으로 얼리고 물웅덩이가 얼굴을 비춤 / Optics Canon EOS R5 + EL-1, 数码噪点 / Expression 단단하고 침착한 눈 / Pose 투명 우산을 들고 모퉁이에 섬 |
 | S5 后巷 (US 滤镜 #021. 단서: 장소 할리우드 클럽 뒷문 벽돌 골목 / 소품 선글라스 / 시간대 - / 의상 가죽 재킷) | C | Hair California Beach Waves, 금갈색 곱슬이 어깨 앞으로 / Lip Matte Nude Lip(`glossy nude lip`의 광택 없는 매트판), 살짝 다묾 / Outfit Leather Jacket + 흰 리브 탱크 / Props 墨镜 / Scene 서부 할리우드 클럽 뒷문 밖 벽돌 골목 / Light on-camera flash(5500K) 정면 한 발, 뒷벽의 날카로운 그림자, 나머지 순흑, 선글라스라 catchlight 끔 / Optics CONTAX T3 + Kodak Portra 400 / Expression 무심하고 냉정한 입, 렌즈를 외면 / Pose 문을 나서 어두운 골목으로 걸어감 |
-| S6 地铁站台 (US 滤镜 #039. 단서: 장소 지하철 승강장(노란 안전 기둥) / 소품 - / 시간대 - / 의상 가죽 블레이저 (매체: 흑백 Tri-X)) | C | Hair 짙은 금발 긴 직모가 가죽 블레이저 위로 / Outfit 검은 대형 가죽 블레이저 + 워크 데님 / Props Wire-rim glasses(평광 금속 테) / Scene Subway Platform, 흰 타일과 노란 안전 기둥 / Light direct flash noir(5500K), 타일에 눈부신 흰 반사점 여럿 / Optics Leica M6 + Kodak Tri-X 400, 은염 입자, 흑백 / Expression 冷眼 / Pose 노란 기둥에 기대 두 손을 주머니에 |
+| S6 地铁站台 (US 滤镜 #039. 단서: 장소 지하철 승강장(노란 안전 기둥) / 소품 - / 시간대 - / 의상 가죽 블레이저 (매체: 흑백 Tri-X)) | C | Hair 짙은 금발 긴 직모가 가죽 블레이저 위로 / Outfit 검은 대형 가죽 블레이저 + 워크 데님 / Props Wire-rim glasses(무도수 금속테 안경) / Scene Subway Platform, 흰 타일과 노란 안전 기둥 / Light direct flash noir(5500K), 타일에 눈부신 흰 반사점 여럿 / Optics Leica M6 + Kodak Tri-X 400, 은염 입자, 흑백 / Expression 冷眼 / Pose 노란 기둥에 기대 두 손을 주머니에 |
 
 ## 포즈·구도 쌍
 | 번호 | 갈래 | Pose | Camera |
@@ -171,3 +173,5 @@
 
 ## 출처
 Iris (noahvisualsx/Iris b83de4c, MIT, © 2026 noahvisuals): 韩国/滤镜/01 #001–#020, 中国/滤镜/02 #021–#040, 美国/滤镜/02 #021–#040. 낱말과 구성은 참고했고 문장은 MPW용으로 새로 썼다. 라이선스 전문은 [LICENSE-Iris.md](LICENSE-Iris.md).
+
+세트의 Iris 원문 값(출처 기록이고 프롬프트에 쓰지 않는다): S4의 `Canon EOS R5 + Speedlite EL-1 (1/250s Fast Flash)`와 `1/250秒高速瞬间闪耀`는 셔터·동기 값이지 플래시 펄스의 길이가 아니라서 세트에는 `짧은 플래시 펄스`로 옮겼다. S6의 `平光眼镜`은 도수 없는 안경이라 `무도수 금속테 안경`으로 옮겼다.

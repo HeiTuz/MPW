@@ -14,8 +14,8 @@
 | closer | `Photographie argentique` |
 | time | A는 흐린 파리의 낮(5000~5600K, S3은 4800K)이다. B는 해 질 녘에서 밤(3400~4400K)이고 비가 와도 된다. C는 낮이나 실내이고 흑백 한 컷이 있다. 이 카드의 K 숫자는 측정값이 아니라 이 룩의 연출 값이다 |
 | light-key | 유리 한 장을 사이에 둔 두 빛: 바깥의 흐린 하늘·거리 불빛과 안쪽의 창빛·실내 램프. 직사광과 스튜디오 조명은 없다(A의 `Lumière du matin` 줄만 낮은 아침 햇살) |
-| palette | 눌린 포트라 톤: 에크뤼, 크림, 해군 청색 줄무늬, 병 녹색 잎, 코냑, 석회암 회색. B는 호박색 불빛과 짙은 와인색이 더해진다. 네온과 청록-주황 보정은 없다(S3 수정 향수병의 무지개 빛 조각만 예외) |
-| grain | 중형 필름의 가는 입자가 화면 전체에 고르다(C는 35mm의 가는 은염 입자). B는 밀어 현상한 입자로 조금 거칠다 |
+| palette | 눌린 포트라 톤: 에크뤼, 크림, 네이비 줄무늬, 병 녹색 잎, 코냑, 석회암 회색. B는 호박색 불빛과 짙은 와인색이 더해진다. 네온과 청록-주황 보정은 없다(S3 수정 향수병의 무지개 빛 조각만 예외) |
+| grain | 중형 필름의 가는 입자가 화면 전체에 고르다(C의 컬러 컷도 35mm의 가는 컬러 필름 입자이고, 흑백 지하철 컷만 가는 은염 입자다). B는 푸시 현상으로 도드라진 입자가 조금 거칠다 |
 | lens | A·B는 Planar 80mm 표준 렌즈를 허리 높이 파인더로 살짝 올려다보듯 쓴다. 광각 왜곡이 없다. C는 35mm 렌즈를 쓴다. 쌍이 카메라 높이를 따로 말하면(쌍 9·11·12) 쌍을 따른다 |
 | figure | 한 사람이 유리 한 장을 사이에 두고 앉거나 서 있다. 얼굴과 유리에 비친 거리가 비슷한 세기로 겹친다. 정면 증명사진 자세 없이 렌즈를 슬쩍 보거나 먼 곳을 본다 |
 | format | A·B는 1:1 정방형(6x6)이다. C는 3:4 세로(35mm)다 |
@@ -24,7 +24,7 @@
 | 갈래 | 요청에 이 말이 있으면 | 성격 | Iris 근거 |
 |---|---|---|---|
 | A Reflet de vitrine (기본) | 카페 창가, 쇼윈도, 유리에 비친, 이중 반사, 서점, 갤러리, 온실, 빵집, 향수 가게, 팔레 루아얄, 센강, 정사각, 6x6, 중형 필름, 흐린 낮, 하셀블라드 | 흐린 하늘 아래 정사각 프레임. 유리 안의 얼굴과 바깥 거리가 한 면에 투명하게 겹친다. camera 줄은 하나다: 기본은 `Rolleiflex 2.8F`이고 요청이 하셀블라드를 말하면 `Hasselblad 500C/M` 줄이 대신한다 | 滤镜 #061 #062 #063 #065 #067 #069 #071 #073, 风格 #021 #022 #026, 神态 #043 |
-| B Heure bleue | 황혼, 해 질 녘, 비 오는 밤, 빗방울 맺힌 창, 가로등, 실내 불빛, 비스트로, 와인, 낡은 거울, 포트라 800 | 따뜻한 실내광과 푸른 저녁 거리. 물방울과 불빛이 얼굴 위에 겹친다. 같은 6x6 정방형. stock 줄은 하나다: 황혼 거리는 `Kodak Portra 800`, 실내 램프·비 오는 밤 창가는 `Kodak Vision3 500T`가 대신한다 | 滤镜 #066 #070 #075, 神态 #049 |
+| B Heure bleue | 황혼, 해 질 녘, 비 오는 밤, 빗방울 맺힌 창, 가로등, 실내 불빛, 비스트로, 와인, 낡은 거울, 포트라 800 | 따뜻한 실내광과 푸른 저녁 거리. 물방울과 불빛이 얼굴 위에 겹친다. 같은 6x6 정방형. stock 줄은 하나로 `Kodak Portra 800`이고, 실내 램프·비 오는 밤 창가는 그 위에 `Vision3 500T-inspired grade` 색 줄이 더해진다(Iris 원문은 `Kodak Vision3 500T`이지만 6x6에는 쓸 수 있는 120 규격이 없어 시네 네거티브의 색을 연출 값으로 옮긴다) | 滤镜 #066 #070 #075, 神态 #049 |
 | C Miroirs de rue | 백미러, 자동차 거울, 지하철 창, 유람선, 곡면 유리, 보석상 유리, 35mm, 라이카, 흑백, 3:4 | 곡면 거울과 움직이는 유리에 비친 얼굴. 35mm 레인지파인더와 3:4 세로 | 滤镜 #064 #068 #072 #074 |
 
 ## 끄는 고정 몫 (fixed-lines.md의 슬롯)
@@ -34,9 +34,9 @@
 | face-clear | 모든 갈래에서 끈다. 앞머리와 잔머리가 이마와 뺨에 닿아도 눈썹과 눈은 드러난다 | #061 #063 #067 #075의 八字刘海와 #064 #066의 흩어진 잔머리가 귀 뒤로 넘긴 머리 줄과 공존했다 |
 | base, lip | 카드 줄이 이긴다(base 줄은 FR 문화권 공식의 주근깨를 되풀이하지 않는다) | #061 #066 #074에서 Iris 고정문의 浆果玫瑰唇妆와 프리셋 입술색(豆沙·酒红·深梅子)이 한 프롬프트에 둘 다 적혔다 |
 | catchlight | 카드 줄이 이긴다 | 고정문의 清澈单点眼神光이 유리창의 이중 반사(#061)·빗물 다중 반사(#066)와 어긋난다 |
-| grain | 카드 줄이 이긴다 | 고정 줄의 고운 입자가 B의 밀어 현상 입자(#066 #075)와 어긋난다 |
+| grain | 카드 줄이 이긴다 | 고정 줄의 고운 입자가 B의 증감 현상의 거친 입자(#066 #075)와 어긋난다 |
 | lens | 모든 갈래에서 끈다(갈래마다 Optics lens 줄이 있어 고정 `自然透视` 줄까지 내려올 일이 없다). 렌즈를 말하는 줄은 하나이고 출처 순서는 세트의 렌즈 > 쌍의 렌즈 > 갈래의 Optics lens 줄이다. 세트 S1~S3은 Planar 80mm, S6은 Summicron 35mm를 주고, S4·S5는 렌즈를 말하지 않아 갈래 줄(A·B Zeiss Planar 80mm, C Summicron 35mm)이 렌즈 줄이다. 쌍 1~12의 Camera 줄은 모두 렌즈를 말하지 않으니 어느 쌍을 골라도 이 순서의 한 줄이 렌즈 줄이다 | #061 등은 Planar 80mm와 `50mm黄金人像定焦镜头平视无畸变视角`를 한 프롬프트에 함께 적었고, 허리 높이 파인더의 낮은 시점은 눈높이 줄과 맞지 않는다. C도 Optics에 Summicron 35mm 줄이 있어 고정 `自然透视` 줄을 같이 붙이면 렌즈 줄이 둘이 된다 |
-| framing | 켠다. A·B는 `vertical frame` 문장의 `3:4` 자리에 `1:1` 정방형을 쓴다. 쌍 4·6·10은 프레임 범위를 직접 말하니 그때는 비율만 쓴다 | 쌍 대부분이 프레임 범위를 말하지 않는다 |
+| framing | 켠다. A·B는 `vertical frame` 줄의 방향·비율 구절 전체(`A vertical 3:4 frame`)를 `A square 1:1 frame`으로 바꾸고 `vertical`을 남기지 않는다. 쌍 4·6·10은 프레임 범위를 직접 말하니 그때는 비율만 쓴다 | 쌍 대부분이 프레임 범위를 말하지 않는다 |
 | ratio | A·B는 사용자 비율이 없으면 1:1 정방형으로 바꾼다. 3:4 세로를 붙이지 않는다. C는 켠다(3:4 세로). 모든 쌍에 해당하는 처리: face-light·face-clear는 끄고 base·lip·catchlight·grain은 카드 줄이 이기며, lens는 세트 > 갈래의 Optics 줄 하나이고, ratio는 A·B 1:1·C 3:4다 | #061 등이 `1:1正方形` 구도 문장과 끝의 `3:4`를 함께 적었다. A·B의 정체는 6x6 정방형이다 |
 
 ## Hair and makeup
@@ -49,6 +49,7 @@
 | A, B | base | Teint nu — A bare base with almost no coverage, the pores visible in the soft glass-filtered light. |
 | C | base | Teint nu — Skin with almost no coverage and natural color on the cheeks, the pores plainly visible. |
 | A, C | lip | Beige rosé — A greyed pink-beige matte lip close to the natural lip tone, its edge softly blurred. |
+| A | lip-satin | Beige rosé — A moist, satin-finish dusty pink-beige lip close to the natural lip tone, its edge softly blurred; it replaces the matte lip when the scene asks for a wet natural lip. |
 | B | lip | Lie-de-vin — A deep burgundy-wine lip in a semi-matte finish that reads almost black in dim corners and glows dark red under the lamp. |
 
 ## Expression
@@ -75,7 +76,7 @@
 | A | outfit-outer | Veste en daim — A cognac suede jacket cropped at the waist over a striped top, its napped matte surface darkening where the hand rubs it. |
 | A | outfit-outer | Blazer oversize — A charcoal wool blazer cut long and boxy with structured shoulders, falling in sharp planes against pale gallery walls. |
 | C | outfit-outer | pardessus — A long black double-breasted wool overcoat with a felted surface that holds straight vertical creases and takes a pale cold edge of light along the lapel. |
-| A, C | outfit-bottom | Jean droit — Mid-blue straight denim at the natural waist with a plain hem, only the belt line showing in a waist-up frame. |
+| A, C | outfit-bottom | Jean droit — Mid-blue straight denim at the natural waist with a plain hem. |
 
 ## Props and nails
 | 갈래 | 슬롯 | 줄 |
@@ -95,12 +96,14 @@
 ## Style
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
-| A, B, C | style | Reflet de vitrine — Glass-reflection street photography: the figure and the street laid on one pane at nearly equal strength, held in the quiet balance of a medium-format camera. |
+| A, B | style | Reflet de vitrine — Glass-reflection street photography: the figure and the street laid on one pane at nearly equal strength, held in the quiet balance of a medium-format camera. |
+| C | style | Reflet de vitrine — Glass-reflection street photography: the figure seen through a pane and the street laid over it at nearly equal strength, caught in a quick 35mm frame. |
+| C | style-mirror | Reflet de vitrine — Mirror street photography: her face and the street appear together only as one small bent picture inside the opaque mirror, caught in a quick 35mm frame. |
 | A, B, C | wardrobe | Parisian Chic — Undone layering of a striped knit, plain denim, a coat and flat shoes, slightly rumpled and never matched too carefully. |
 | A | mood | Left Bank Intellectual — Dark neutral layers, a book in hand and an unhurried attention to what the window shows. |
 | B | mood | Existentialist Patina — A muted grey-beige palette with worn surfaces and dark wool, introspective in the way of a 1950s Left Bank street photograph. |
 | C | mood | Instantané spontané — A candid mid-motion frame, slightly off-centre, caught before she has settled for the camera. |
-| C | mood | Photographie Humaniste — A quiet street photograph of a plain gesture in rich black-and-white, warm and unposed rather than staged. |
+| C | mood | Photographie Humaniste — A quiet street photograph of a plain gesture, warm and unposed rather than staged. |
 | A, B | palette | palette — Muted Portra pastels of ecru, cream, navy stripes, bottle-green foliage, cognac and limestone grey, with warm amber and deep wine added at night, and no neon or digital teal-orange anywhere. |
 | C | palette | palette — Cool grey, navy, black and cream, all muted; the metro frame goes fully black-and-white. |
 
@@ -114,7 +117,7 @@
 | A | place | Île Saint-Louis — A riverside bistro window on the island quay, with stone bridge arches and rippling Seine light reflected over the glass beside her. |
 | A | place | Palais-Royal — A heavy glazed door under the stone arcade in soft grey shade, the black-and-white striped Buren columns reflected behind her. |
 | A | place | boulangerie — A century-old bakery window with golden croissants and baguettes on trays, her smiling reflection and the stone steps behind laid over them. |
-| A | place | Verrière — An iron-framed Victorian greenhouse of old glass beside a museum garden, dense palms and vines inside and her profile reflected on the outer pane. |
+| A | place | Serre victorienne — An iron-framed Victorian greenhouse of old glass beside a museum garden, dense palms and vines inside and her profile reflected on the outer pane. |
 | A | background | Haussmannien — Pale cream limestone facades with iron balconies, plane-tree crowns and passers-by drifting across the reflection on the glass. |
 | A | background | Notre-Dame de Paris — The twin grey limestone towers of the cathedral across the Seine, mirrored small and hazy in a shop window. |
 | B | place | Les Deux Magots — A boulevard café with a green awning and bentwood rattan chairs, its large front windows beaded with rain and the street lamps outside turning gold. |
@@ -148,23 +151,24 @@
 | A, B | format | 6x6 Square Frame — A square 6x6 frame with the face and the window reflection balanced inside it and calm margins on every side. |
 | A, C | stock | Kodak Portra 400 — Warm, low-contrast color negative with creamy midtones on lit skin, soft highlight roll-off and fine, even grain. |
 | B | stock | Kodak Portra 800 — Low-light color negative; in this look it leans lamplit skin toward warm tones and lets lamps and wet glass carry a soft glow. |
-| B | stock | Kodak Vision3 500T — Tungsten-balanced cinema negative; in this look lamplit skin leans toward warm amber and the shadows toward a slightly green-cool tone. (Iris 원문의 값이다. 원문은 35mm Contax 3:4이고 이 카드의 6x6에는 120 규격이 없어, 6x6 컷에서는 이 줄을 시네 필름 풍 연출 값으로 쓴다) |
+| B | color | Vision3 500T-inspired grade — A tungsten cinema-negative look: in this look lamplit skin leans toward warm amber and the shadows toward a slightly green-cool tone. |
 | C | camera | Leica M6 — A 35mm rangefinder frame with a gentle Leica glow and an unobtrusive candid feel. |
 | C | lens | Summicron 35mm f/2 — A wide-normal lens that keeps the subject crisp and lets a little of the surrounding street stay in the frame. |
 | C | stock | Kodak Tri-X 400 — Pure black-and-white with ink-deep blacks and open highlights, used for the metro frame only. |
-| A, C | grain | Grain argentique — Fine silver-halide grain sits evenly over skin, sky and glass, a touch more visible in the darkest corners of the window. |
+| A, C | grain | Grain argentique — Fine color-film grain sits evenly over skin, sky and glass, a touch more visible in the darkest corners of the window. |
+| C | grain-mono | Grain argentique — Fine silver grain sits evenly over skin and glass, a touch more visible in the darkest corners of the carriage window; it replaces the color-film grain on the Tri-X metro frame only. |
 | B | grain | Pellicule poussée — Pushed film with stronger grain and harder contrast, where lamps glow and spill softly into the dark. |
 | B | bloom | Halation — Lamps and street lights bleed a faint red-orange glow around their edges through the wet glass. |
 
 ## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 요청의 장소·소품·시간대·의상 가운데 둘 이상이 그 세트의 단서와 같으면 통째로 쓰고, 세트 값은 고정 사실보다 먼저다. 규칙은 image-brief.md §4 '룩 카드' 4항과 '비워 둔 층')
 | 세트 | 갈래 | 묶음 |
 |---|---|---|
-| S1 화신 카페 창가 (滤镜 #061) | A | 단서: 장소 카페 드 플로르(화신 카페) 길가 큰 유리창, 유리에 비친 오스만 건물 / 소품 - / 시간대 흐린 낮 / 의상 줄무늬 상의 / Hair Coiffure effet saut du lit, 어깨 길이 짙은 갈색 머리가 약간 흐트러진다 + Frange rideau / Base Teint nu / Lip Beige rosé, 물기 있는 천연 더스티 로즈색 / Outfit Marinière classique bretonne / Scene Café de Flore 길가 큰 유리창 안쪽에 앉는다, 유리에 Haussmannien 석조 건물·가로수·행인이 비친다 / Light Paris Overcast Light(5000K)가 안쪽 얼굴을 비춘다 / Optics Rolleiflex 2.8F, Zeiss Planar 80mm f/2.8, Kodak Portra 400, 6x6 Square Frame, 유리에 옅은 김 / Expression 창밖을 보는 사색, Regard dans le vague / Camera Reflets superposés |
+| S1 카페 드 플로르 창가 (滤镜 #061) | A | 단서: 장소 카페 드 플로르 길가 큰 유리창, 유리에 비친 오스만 건물 / 소품 - / 시간대 흐린 낮 / 의상 줄무늬 상의 / Hair Coiffure effet saut du lit, 어깨 길이 짙은 갈색 머리가 약간 흐트러진다 + Frange rideau / Base Teint nu / Lip Beige rosé(`lip-satin` 줄, 물기 있는 천연 더스티 로즈색) / Outfit Marinière classique bretonne / Scene Café de Flore 길가 큰 유리창 안쪽에 앉는다, 유리에 Haussmannien 석조 건물·가로수·행인이 비친다 / Light Paris Overcast Light(5000K)가 안쪽 얼굴을 비춘다 / Optics Rolleiflex 2.8F, Zeiss Planar 80mm f/2.8, Kodak Portra 400, 6x6 Square Frame, 유리에 옅은 김 / Expression 창밖을 보는 사색, Regard dans le vague / Camera Reflets superposés |
 | S2 셰익스피어 서점 (滤镜 #065) | A | 단서: 장소 셰익스피어 서점, 유리에 비친 노트르담 / 소품 헌책, 펼친 책 / 시간대 - / 의상 코냑 스웨이드 재킷 / Hair 풀어 내린 긴 갈색 곱슬, 바람에 날리는 앞머리 / Base Teint nu, 맨 피부 / Lip 무색 립밤 Gloss transparent / Outfit Veste en daim(코냑) + Marinière / Props Collection Blanche 낡은 책을 펼쳐 든다 / Scene Shakespeare and Company 짙은 녹색 목재 창과 헌책 상자 옆, 유리에 센강 건너 Notre-Dame de Paris 쌍탑이 비친다 / Light Paris Overcast Light(5200K) / Optics Rolleiflex 2.8F, Planar 80mm f/2.8, Kodak Portra 400 / Expression 책장을 보며 입꼬리가 살짝 올라간다 / Pose Lire devant la vitrine / Camera Reflets superposés |
 | S3 향수 가게 쇼윈도 (滤镜 #071) | A | 단서: 장소 팔레 루아얄 향수 가게 쇼윈도 / 소품 수정 향수병, 무지개 빛 조각 / 시간대 오후 / 의상 아이보리 가디건 / Hair 허리까지 내려오는 갈색 곱슬이 풀려 있다 + Frange rideau / Base Teint nu / Lip 물기 있는 천연 분홍 / Outfit Cachemire(아이보리 더블 페이스 가디건) + 흰 실크 캐미솔 / Props Flacon de parfum / Scene Palais-Royal 아케이드의 향수 가게 쇼윈도, 19세기 수정 향수병이 줄지어 있다 / Light Crystal Prism Light, 4800K 오후 확산광이 수정병을 지나 볼·눈가·가디건에 무지개 빛 조각을 뿌린다 / Optics Rolleiflex 2.8F, Planar 80mm f/2.8, Kodak Portra 160 / Expression 호기심 어린 시선과 옅은 웃음 / Camera Reflets superposés, 유리에 놀란 얼굴이 비친다 |
 | S4 황혼 대로 테라스 (滤镜 #075) | B | 단서: 장소 대로 카페 테라스 / 소품 대리석 원탁 / 시간대 황혼 / 의상 줄무늬 상의, 데님 / Hair 어깨에 풀어 내린 갈색 곱슬 + Frange rideau / Base Teint nu / Lip 물기 있는 자연 베리색 / Outfit Marinière classique bretonne + 하이웨이스트 데님 / Props Guéridon, 대리석 상판의 물기 반사 / Scene Les Deux Magots 대로 야외 원탁 / Light crépuscule 4400K 노을이 옆얼굴에, 유리에 갓 켜진 호박빛 가로등과 분홍보라 구름이 비친다 / Optics Rolleiflex 2.8F, Waist-Level Viewfinder, Kodak Portra 800, 6x6 Square Frame / Expression 턱을 괴고 길모퉁이를 스치는 먼 시선 / Pose Coude en appui, menton dans la paume / Camera Contre-plongée |
-| S5 비 오는 밤 창가 (滤镜 #066) | B | 단서: 장소 큰 유리창, 빗방울, 가로등 불빛 / 소품 - / 시간대 비 오는 밤 / 의상 검정 터틀넥 / Hair 한쪽 어깨로 늘어진 긴 갈색 웨이브, 뺨 옆에 잔머리 / Lip Lie-de-vin(짙은 와인색 무광) / Outfit Col roulé(검정 가는 캐시미어) / Scene Les Deux Magots 거리 쪽 큰 유리창 안쪽, 비 내리는 저녁 / Light Lumière tungstène 3400K 실내광, 창밖 노란 가로등과 붉은 미등이 물방울 위에서 겹친 원형 빛 얼룩 Gouttes sur la vitre / Optics Kodak Vision3 500T, Pellicule poussée, 어두운 곳의 짙은 입자 (Iris 원본은 Contax RTS III와 Planar 50mm f/1.4, 3:4다. 이 카드의 B는 Rolleiflex 6x6 정방형으로 쓴다. Vision3 500T는 원문 값 그대로이며 120 규격이 없어 6x6에서는 필름 풍 연출 값이다) / Expression Rêverie, 손으로 턱을 괴고 흐릿한 빗길을 본다 |
-| S6 백미러 속 얼굴 (滤镜 #064) | C | 단서: 장소 생제르맹 거리 / 소품 백미러, 클래식 자동차 / 시간대 - / 의상 줄무늬 상의 / Hair 바람에 흔들리는 짙은 갈색 곱슬 잔머리 + Frange rideau / Base Teint nu / Lip 옅은 더스티 로즈색 / Outfit Marinière classique bretonne(남색과 흰색 가는 줄, 보트넥) / Props Citroën DS 짙은 녹색 차체의 둥근 크롬 사이드미러 / Scene 생제르맹 오래된 거리, 마주 선 오스만 건물과 플라타너스가 거울에 비친다 / Light 4800K 오후 부드러운 확산광 / Optics Leica M6, Summicron 35mm f/2, Kodak Portra 400, 초점은 거울 알에 맞고 차체는 부드럽게 녹는다 / Expression 거울 속 자신과 눈을 맞추며 장난스러운 옅은 미소 / Pose Penchée vers le rétroviseur / Camera Reflet dans le rétroviseur |
+| S5 비 오는 밤 창가 (滤镜 #066) | B | 단서: 장소 큰 유리창, 빗방울, 가로등 불빛 / 소품 - / 시간대 비 오는 밤 / 의상 검정 터틀넥 / Hair 한쪽 어깨로 늘어진 긴 갈색 웨이브, 뺨 옆에 잔머리 / Lip Lie-de-vin(짙은 와인색 무광) / Outfit Col roulé(검정 가는 캐시미어) / Scene Les Deux Magots 거리 쪽 큰 유리창 안쪽, 비 내리는 저녁 / Light Lumière tungstène 3400K 실내광, 창밖 노란 가로등과 붉은 미등이 물방울 위에서 겹친 원형 빛 얼룩 Gouttes sur la vitre / Optics Kodak Portra 800, Vision3 500T-inspired grade, Pellicule poussée, 어두운 곳의 짙은 입자 (Iris 원본은 Contax RTS III와 Planar 50mm f/1.4, Kodak Vision3 500T, 3:4다. 이 카드의 B는 Rolleiflex 6x6 정방형으로 쓰고 6x6에는 Vision3 500T의 120 규격이 없어 그 색만 연출 값으로 옮긴다) / Expression Rêverie, 손으로 턱을 괴고 흐릿한 빗길을 본다 |
+| S6 백미러 속 얼굴 (滤镜 #064) | C | 단서: 장소 생제르맹 거리 / 소품 백미러, 클래식 자동차 / 시간대 - / 의상 줄무늬 상의 / Hair 바람에 흔들리는 짙은 갈색 곱슬 잔머리 + Frange rideau / Base Teint nu / Lip 옅은 더스티 로즈색 / Outfit Marinière classique bretonne(남색과 흰색 가는 줄, 보트넥) / Props Citroën DS 짙은 녹색 차체의 둥근 크롬 사이드미러 / Scene 생제르맹 오래된 거리, 마주 선 오스만 건물과 플라타너스가 거울에 비친다 / Light 4800K 오후 부드러운 확산광 / Optics Leica M6, Summicron 35mm f/2, Kodak Portra 400, 초점은 거울에 비친 눈의 상이 보이는 거리에 맞고 거울 테두리와 차체는 부드럽게 녹는다 / Expression 거울 속 자신과 눈을 맞추며 장난스러운 옅은 미소 / Pose Penchée vers le rétroviseur / Camera Reflet dans le rétroviseur |
 
 ## 포즈·구도 쌍
 | 번호 | 갈래 | Pose | Camera |
@@ -173,14 +177,14 @@
 | 2 | A | Mains dans les poches — She stands side-on to a gallery window with both hands deep in the pockets of her coat, the shoulders slightly raised. | Cadre dans le cadre — The window mullions and the dark wall around the glass box her into a narrow bright slot, shot from a few steps back. |
 | 3 | A | Lire devant la vitrine — She stands at a shopfront with an open book held in both hands and her head bowed over the page. | Premier plan flou — The soft edge of a book crate crosses the lower corner of the frame in front of her, adding a layer of depth. |
 | 4 | A | Inhaler le parfum du croissant — She bows her face toward a warm croissant held near her chin, her eyes half-closed. | Gros plan — The frame holds only her face and the croissant, edge to edge, with the window reflection at the margin. |
-| 5 | A | Paume contre la vitre — One flat palm rests on the cool iron frame in profile, the body quite still. | À travers la vitre — The camera shoots across old greenhouse glass, so a trace of fog and the leaves inside lie between lens and face. |
-| 6 | A | Main sur la poignée — One hand holds a brass door handle and she glances back over her shoulder, ready to push the door. | Plan américain — Head-on, the frame cut at mid-thigh so the whole door and the arcade behind her read. |
+| 5 | A | Paume contre le cadre de la vitre — One flat palm rests on the cool iron frame in profile, the body quite still. | À travers la vitre — The camera shoots across old greenhouse glass, so a trace of fog and the leaves inside lie between lens and face. |
+| 6 | A | Main sur la poignée — One hand holds a brass door handle and she glances back over her shoulder, ready to push the door. | Plan américain — Head-on, the frame cut at mid-thigh so the upper doorway and the arcade behind her read. |
 | 7 | B | Coude en appui, menton dans la paume — An elbow on the table and her chin cupped in the palm, seated at the window with the eyes drifting to the rain. | À travers la vitre — The camera shoots from outside through the rain-streaked pane, the street lights spread over her face. |
-| 8 | B | Faire tourner le verre — A wine glass turns slowly between two fingers on the table while she looks off to one side. | Reflets superposés — The gilt mirror on the wall and the street door beyond lay a second, hazier picture of the room beside her profile. |
+| 8 | B | Faire tourner le verre — A wine glass turns slowly between two fingers on the table while she looks off to one side. | Reflet dans un miroir ancien — The gilt mirror on the wall and the street door beyond lay a second, hazier picture of the room beside her profile. |
 | 9 | B | Bras tendu sur le guéridon — One arm braced on the marble table as she leans back in the chair, the free hand resting loose. | Contre-plongée — Held at waist height looking a little up, the dusk sky and the lit street lamps stand behind her head. |
-| 10 | C | Penchée vers le rétroviseur — Her face tips toward a car's side mirror as one hand smooths a strand of hair, her eyes on her own reflection. | Reflet dans le rétroviseur — The frame is filled by the round chrome mirror, her small face and the street behind bent into one picture. |
+| 10 | C | Penchée vers le rétroviseur — Her face tips toward a car's side mirror as one hand smooths a strand of hair, her eyes on her own reflection. | Reflet dans le rétroviseur — The frame is filled by the round chrome mirror, her small face and the street behind bent into one picture, focus resting on the reflected eyes at their apparent image distance while the mirror rim and the car body soften. |
 | 11 | C | Subway Door Lean — She leans back against the carriage door with both hands in her pockets, her face turned to the glass. | Plongée — A slight look down from the aisle side, the tunnel tiles blurring behind her and her face repeated in the window. |
-| 12 | C | Mains dans les poches — One hand sits in her coat pocket as she stands before the clear window, her gaze level and distant. | Contre-plongée — A low position looking up so the bronze column behind her glass rises beside her figure. |
+| 12 | C | Une main dans la poche — One hand sits in her coat pocket as she stands before the clear window, her gaze level and distant. | Contre-plongée — A low position looking up so the bronze column behind her glass rises beside her figure. |
 
 ## 맞지 않는 것
 한낮의 직사광, 스튜디오 조명과 링라이트, 흰 배경 스튜디오, 네온 간판의 밤거리, 청록-주황 디지털 보정, 폰 거울 셀카, 광각으로 얼굴에 바짝 붙은 구도, 정면 증명사진 자세, 큰 웃음 포즈, 읽히는 간판·책 표지·유리 글씨.

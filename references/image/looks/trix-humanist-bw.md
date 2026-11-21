@@ -10,10 +10,10 @@
 ## 고정 사실 (모든 갈래가 지킨다)
 | 슬롯 | 값 |
 |---|---|
-| medium | 35mm 흑백 네거티브(은염)로 찍은 거리 인문 사진. 영화 스틸·화보·디지털 흑백 변환이 아니다. 첫 줄은 `A humanist street photograph in Paris shot on Kodak Tri-X 400 black-and-white 35mm negative`로 시작한다. 매체 구절과 장소 구절 `in Paris`를 나눠 적은 것이라, 사용자가 다른 도시를 말하면 장소 구절만 바꾼다(B는 `…shot on pushed Kodak Tri-X 400 black-and-white 35mm negative`, 촛불 세트 S4는 `…shot on Ilford Delta 3200 black-and-white 35mm negative`, C는 `…shot on Ilford HP5 Plus black-and-white 35mm negative`, D는 `…shot on Kodak T-Max 400 black-and-white 35mm negative`) |
+| medium | 35mm 흑백 네거티브(은염)로 찍은 거리 인문 사진. 영화 스틸·화보·디지털 흑백 변환이 아니다. 첫 줄은 `A humanist street photograph in Paris shot on Kodak Tri-X 400 black-and-white 35mm negative`로 시작한다. 매체 구절과 장소 구절 `in Paris`를 나눠 적은 것이라, 사용자가 다른 도시를 말하면 장소 구절만 바꾼다(B는 `…shot on pushed Kodak Tri-X 400 black-and-white 35mm negative`, B에서 `Ilford Delta 3200` stock 줄을 고르면(촛불 세트 S4가 아니어도 촛불 식탁 요청이면) 첫 줄 끝은 세트 번호와 상관없이 `…shot on Ilford Delta 3200 black-and-white 35mm negative`, C는 `…shot on Ilford HP5 Plus black-and-white 35mm negative`, D는 `…shot on Kodak T-Max 400 black-and-white 35mm negative`) |
 | closer | `Photographie humaniste` |
 | time | 흐린 파리의 낮이 기본(A, C). B는 밤과 비 오는 낮, D는 낮은 해의 측광이나 한쪽 창빛. 스튜디오 조명과 플래시가 없다 |
-| light-key | 있는 빛 하나: 흐린 하늘, 한쪽 창, 낮은 측광, 가로등 하나, 촛불 하나 |
+| light-key | 있는 빛 하나: 흐린 하늘, 한쪽 창, 낮은 측광, 가로등 하나, 촛불 하나. C의 Record Store(쌍 10)는 창이 아니라 알전구 하나가 빛이라 `face-light-bulb`·`catchlight-bulb` 줄이 `face-light`·`catchlight`(창빛·창틀 눈빛)를 대신한다 |
 | palette | 색이 없다. 순흑, 순백, 은회색 계조 전체. 입술·데님·줄무늬의 색은 밝거나 어두운 회색으로만 읽힌다. 세피아·부분 채색 없음 |
 | grain | 은염 입자가 화면 전체에 보인다. A는 굵게, B는 가장 거칠게, C는 곱고 촉촉하게, D는 거의 보이지 않게 |
 | lens | A·B는 35mm 레인지파인더 광각 표준(주변 거리가 읽힌다. S4만 SLR에 50mm f/1.2 개방), C·D는 50mm 표준. 인물은 선명하고 배경은 읽히거나 부드럽게 녹는다(D는 가까운 기둥까지 또렷하고 먼 회랑만 부드럽다). 카메라 높이는 쌍이 정한다 |
@@ -23,7 +23,7 @@
 | 갈래 | 요청에 이 말이 있으면 | 성격 | Iris 근거 |
 |---|---|---|---|
 | A Le moment décisif (기본) | 센강, 다리, 강변, 카페 테라스 신문, 몽마르트 계단, 광장 벤치, 낙엽, 바람, 롱코트, 낮 거리, 결정적 순간, 흐린 날 | 흐린 낮의 거리, Tri-X 400, 35mm 표준, 굵은 입자, 동작의 정점 | 滤镜 #076 #078 #080 #085 #087 |
-| B Nuit et pluie | 밤, 비, 웅덩이, 가로등, 촛불, 실루엣, 푸시 현상, 고감도, 델타 3200 | EI 1600~3200 푸시나 고감도 필름, 점광원 하나, 딱딱한 그림자, 거친 입자. stock 줄은 하나다: 가로등·비는 `Kodak Tri-X 400`, 촛불 식탁은 `Ilford Delta 3200`이 Tri-X 줄을 대신한다 | 滤镜 #082 #088 #089 #090 |
+| B Nuit et pluie | 밤, 비, 웅덩이, 가로등, 촛불, 실루엣, 푸시 현상, 고감도, 델타 3200 | EI 1600~3200 푸시나 고감도 필름, 점광원 하나, 딱딱한 그림자, 거친 입자. stock 줄은 하나다: 가로등·비는 `Kodak Tri-X 400`, 촛불 식탁은 `Ilford Delta 3200`이 Tri-X 줄을 대신하고 이때 `Pellicule poussée` 줄은 쓰지 않는다(Tri-X를 푸시한다는 문장이라 Delta에 붙으면 틀린다) | 滤镜 #082 #088 #089 #090 |
 | C Demi-teintes | 서점, 헌책, 레코드 가게, 독서, 소르본, 창가, 안경, HP5 | HP5 Plus의 긴 회색 계조, 실내 창빛, 책과 레코드, 촘촘한 입자 | 滤镜 #077 #081 #084 #086 |
 | D Grain fin | 티맥스, 극세립, 입자 없는, 창가 초상, 기둥 그림자, 루브르, 건축 | T-Max, 입자가 거의 없는 은회색, 한쪽 빛과 건축 선 | 滤镜 #079 #083 |
 
@@ -39,7 +39,7 @@
 | lens | 모든 갈래에서 끈다(갈래마다 Optics lens 줄이 있어 고정 `自然透视` 줄까지 내려올 일이 없다). 렌즈를 말하는 줄은 하나이고 출처 순서는 세트의 렌즈 > 쌍의 렌즈 > 갈래의 Optics lens 줄이다. 세트는 모두 렌즈를 준다(S1·S2 Summicron 35mm, S3 Summilux 35mm, S4 Canon FD 50mm f/1.2L, S5 Summilux 50mm, S6 Summicron 50mm). 세트 없이 쓰면 갈래의 줄(A Summicron 35mm, B Summilux 35mm, C Canon FD 50mm, D Summicron 50mm)이다. 쌍 1~12의 Camera 줄은 모두 렌즈를 말하지 않으니 어느 쌍을 골라도 이 순서의 한 줄이 렌즈 줄이다(쌍 5는 심도 대신 낮은 카메라 자리를 말한다) | 고정 줄의 `뒤로 물러선 표준~중망원`이 35mm 레인지파인더(#076 #080 #085 #088)와 부딪히고, 계단 이음새와 기둥 그림자가 또렷해야 하는 #080 #083에 Iris 꼬리가 얕은 심도를 요구했다(원본 값: 浅景深自然虚化背景) |
 | framing | 켠다. 쌍 5·6·7·8·11은 프레임 범위를 직접 말하니 그때는 3:4만 쓴다 | 나머지 쌍은 범위를 말하지 않는다 |
 | ratio | 켠다. 사용자 비율이 없으면 3:4 세로. 모든 쌍에 해당하는 처리: face-light·blush는 끄고 catchlight·grain·base·lip은 카드 줄이 이기며, lens는 세트 > 갈래의 Optics 줄 하나, ratio는 3:4 세로다 | 쌍은 비율을 정하지 않는다 |
-| realism | 모든 갈래에서 끄고 `native resolution` 줄을 넣는다: `native resolution — The frame holds the resolution of a heavily grained black-and-white 35mm negative and no more: coarse silver grain, soft edges and skin that shows no individual pores.` | 강하게 푸시한 흑백과 굵은 은염 입자가 이 룩의 정체라 8K 모공 줄과 부딪힌다. `anti-cg` 줄은 그대로 붙는다 |
+| realism | 모든 갈래에서 `8K` 줄 대신 `native resolution` 줄을 넣되 입자 굵기로 둘로 나눈다. A·B(굵은 입자): `native resolution — The frame holds the resolution of a heavily grained black-and-white 35mm negative and no more: coarse silver grain over softened fine detail.` C·D(곱고 촘촘한 입자): `native resolution — The frame holds the resolution of a fine-grained black-and-white 35mm negative and no more: tight, almost invisible silver grain over clean, crisp detail.` 어느 쪽에도 모공을 말하는 구절을 넣지 않는다(A·C의 `Teint nu` 줄이 모공을 톤의 작은 점으로 읽히게 한다) | 강하게 푸시한 흑백과 굵은 은염 입자(A·B)는 8K 모공 줄과 부딪히고, 입자가 곱거나 거의 없는 C·D에 굵은 입자와 부드러운 가장자리를 씌우면 이 갈래의 Optics 줄과 어긋난다. `anti-cg` 줄은 그대로 붙는다 |
 
 ## Hair and makeup
 | 갈래 | 슬롯 | 줄 |
@@ -51,9 +51,10 @@
 | 전부 | bangs | Frange rideau — Centre-parted curtain bangs fall in soft arcs over the temples and cheekbones while the brows and both eyes stay visible. |
 | A, C | base | Teint nu — Bare skin with no coverage, its pores and fine hairs reading as small tonal marks in the grey. |
 | B | base | Teint nu — Bare skin with a plain natural sheen on the forehead and cheekbones, which the harsh light turns into small white highlights. |
-| D | base | Peau diaphane — A sheer satin-finish base with a translucent, glassy finish, so the cheekbones and forehead pick up the side light as clean silver-white against dark hair. |
+| D | base | Base légère au fini satiné — A sheer satin-finish base with a soft glassy sheen, so the cheekbones and forehead pick up the side light as clean silver-white against dark hair. |
 | A, D | lip | Beige rosé — A soft matte lip close to the natural lip tone, rendered a shade darker than the cheek with a blurred edge. |
 | B | lip | Lie-de-vin — A deep wine lip that the film renders as a near-black shape against the lit skin, matte with a clear outline. |
+| B | lip-wet | Lie-de-vin — A deep wine-stain lip with a wet satin sheen that the film renders as a near-black shape with one small bright highlight; it replaces the matte lip for the candlelit table. |
 | C | lip | Gloss transparent — Clear gloss over the natural lip colour leaves a small bright highlight at the centre of each lip. |
 
 ## Expression
@@ -132,7 +133,9 @@
 | B | catchlight | dual starburst catchlight — Two tiny bright flame points sit in each dark pupil like distant stars. |
 | B | backlight | Silhouette — She becomes a clean black outline against the much brighter rain-washed sky, with only a thin rim of light on the edges. |
 | B | reflect | Wet Street Reflections — Wet stone and puddles mirror the bright sky as glossy white patches beside deep black paving. |
+| C | face-light-bulb | Lumière tungstène — One bare overhead bulb lights the forehead, nose bridge and the raised record from above in hard silver-white points while the sleeves and crates fall into deep grey shadow. |
 | C, D | face-light | Window Light — Daylight from one tall side window lights the near cheek, brow and nose bridge and falls off smoothly into the shadow on the far side of the face. |
+| C | catchlight-bulb | Catchlight — A small round point of the bare bulb sits at the top of each eye. |
 | C, D | catchlight | Fenêtres haussmanniennes — Tall paned window shapes appear as small gridded reflections in the iris, light falling from one side. |
 | D | shadow | geometric light and shadow — Strong afternoon side light is cut by a row of columns into parallel black bands across the floor and wall, leaving one clean strip of light on her face and shoulder. |
 
@@ -145,24 +148,24 @@
 | C | stock | Ilford HP5 Plus — A forgiving film with a long scale of greys, moderate contrast and shadows that keep their detail in cloth and hair. |
 | D | stock | Kodak T-Max — A modern fine-grain film with smooth tones, crisp detail and clean luminous highlights. |
 | A | lens | Summicron 35mm f/2 — A wide-normal lens keeps her sharp and holds enough of the street around her to read the place, with a smooth falloff behind. |
-| B | lens | Summilux 35mm f/1.4 — A fast wide-normal lens opened wide: pinpoint lamps bloom into soft glows and the figure stands bright against a black background. |
+| B | lens | Summilux 35mm f/1.4 — A fast wide-normal lens; opened wide in the dark, pinpoint lamps bloom into soft glows around the figure. |
 | C | lens | Canon FD 50mm f/1.4 — A vintage standard lens with gentle rendering and softly glowing highlights, the background melting away behind a sharp face. |
 | D | lens | Summicron 50mm f/2 — A standard lens with natural perspective and clean detail that keeps her and the nearest columns crisp, with only the far arcade softening. |
 | A | grain | Grain argentique — Large uneven silver grain covers the whole frame, roughening the edges and sitting heaviest in the shadows. |
 | B | grain | Gros grain — Rough sand-like grain tumbles over the whole frame with hard blacks and bright clipped highlights. |
 | C | grain | Grain fin — Fine, tight silver grain that stays tactile in the shadows but lets wool and skin read smoothly. |
 | D | grain | Grain fin — Almost no grain shows at normal size, so skin and stone move from white to black in clean smooth steps. |
-| B | push | Pellicule poussée — The film is pushed two to three stops, giving harder contrast and deeper blacks than the stock gives at its normal speed. |
+| B | push | Pellicule poussée — The Tri-X is pushed two to three stops, giving harder contrast and deeper blacks than the stock gives at its normal speed. |
 | A | motion | 1/1000s Shutter — The coat hem and hair freeze mid-gust with crisp edges while the background stays perfectly still. |
 
 ## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 요청의 장소·소품·시간대·의상 가운데 둘 이상이 그 세트의 단서와 같으면 통째로 쓰고, 세트 값은 고정 사실보다 먼저다. 규칙은 image-brief.md §4 '룩 카드' 4항과 '비워 둔 층')
 | 세트 | 갈래 | 묶음 |
 |---|---|---|
-| S1 센강 둑 (滤镜 #076) | A | 단서: 장소 센강 둑, 청석 둑길 / 소품 - / 시간대 흐린 낮 / 의상 줄무늬 면 상의 / Hair Coiffure effet saut du lit(깊은 갈색 어깨 길이, 헝클어진 결) + Frange rideau / Base Teint nu(맨 피부) / Lip 입술선만 자연스럽게 보이는 맨 입술(립 줄 없음) / Outfit Marinière classique bretonne(두툼한 면 줄무늬) + 짙은 하이웨이스트 Jean droit / Scene quai de Seine, 오래된 청석 둑길 옆 강물과 건너편 건물 실루엣 / Light Paris Overcast Light / Optics Leica M6 + Summicron 35mm f/2, Kodak Tri-X 400(D-76 현상), Grain argentique, 하이라이트는 순백이고 그림자는 두툼한 검정 / Expression Nonchalance parisienne, 느긋하게 렌즈를 본다 / Pose Marcher d'un pas vif, 렌즈를 향해 성큼성큼 걷는다 / Camera Instant décisif |
+| S1 센강 둑 (滤镜 #076) | A | 단서: 장소 센강 둑, 청석 둑길 / 소품 - / 시간대 흐린 낮 / 의상 줄무늬 면 상의 / Hair Coiffure effet saut du lit(깊은 갈색 어깨 길이, 헝클어진 결) + Frange rideau / Base Teint nu(맨 피부) / Lip 입술선만 자연스럽게 보이는 맨 입술(립 줄 없음) / Outfit Marinière classique bretonne(두툼한 면 줄무늬) + 짙은 하이웨이스트 Jean droit / Scene quai de Seine, 오래된 청석 둑길 옆 강물과 건너편 건물 실루엣 / Light Paris Overcast Light / Optics Leica M6 + Summicron 35mm f/2, Kodak Tri-X 400(D-76 현상), Grain argentique, 하이라이트는 순백이고 그림자는 두툼한 검정 / Expression Nonchalance parisienne, 느긋하게 렌즈 옆 한 점을 본다(Iris 원문은 렌즈를 보지만 이 카드는 토큰의 렌즈 옆 시선에 맞춘다) / Pose Marcher d'un pas vif, 렌즈를 향해 성큼성큼 걷는다 / Camera Instant décisif |
 | S2 퐁뇌프 강풍 (滤镜 #085) | A | 단서: 장소 퐁뇌프, 강변 / 소품 - / 시간대 흐린 하늘, 강바람 / 의상 더블 롱코트 / Hair 긴 곱슬이 겨울 강바람에 격하게 휘날려 눈을 스친다(face-clear 끔) / Base 맨 피부, 찬바람에 튼 뺨 / Lip 다문 입술 / Outfit pardessus(짙은 회색 더블 울 롱코트, 밑단이 뒤로 크게 휘날린다) + 검은 짧은 부츠 / Scene Pont Neuf 거대한 석조 교각 옆 바람 부는 강변 / Light 흐린 하늘이 하이라이트를 대고 검은 코트와 극적으로 맞선다 / Optics Leica MP + Summicron 35mm f/2, Kodak Tri-X 400, 1/1000s Shutter(머리끝과 코트 천이 정지), 굵은 은염 입자 / Expression Regard glacial, 굳은 눈으로 바람을 마주한다 / Pose Coat Wind Blow, 바람을 거슬러 큰 걸음 / Camera Contre-plongée, 폭풍 하늘을 배경으로 |
 | S3 심야 가로등 (滤镜 #088) | B | 단서: 장소 심야 골목, 주철 가로등 / 소품 - / 시간대 심야 / 의상 오버사이즈 블레이저, 검은 슬립 / Hair Coiffé-décoiffé(어깨 길이 헝클어진 곱슬, 뺨 옆 잔머리) + Frange rideau / Lip Lie-de-vin(차가운 어두운 무광) / Outfit Robe caraco(검은 실크 슬립) 위에 헐렁한 남성 핏 Blazer oversize / Props 없음, 양손은 블레이저 주머니 / Scene pavés parisiens, 인적 없는 한밤 골목의 주철 가로등 바로 아래 / Light Réverbère(정수리·콧날·쇄골은 흰 하이라이트, 눈 밑과 턱 밑은 딱딱한 검은 그림자, 사방은 먹빛 어둠, 눈빛 점 없음) / Optics Leica MP + Summilux 35mm f/1.4, Kodak Tri-X 400 Pellicule poussée EI 3200, 모래알 같은 굵은 입자 / Expression Femme fatale, 어깨 너머로 렌즈를 본다 / Pose Mains dans les poches, 몸을 옆으로 튼다 / Camera Plan américain |
-| S4 촛불 식당 (滤镜 #089) | B | 단서: 장소 좌안 비스트로, 나무 식탁 / 소품 촛불 / 시간대 밤 / 의상 검은 슬립 드레스 / Hair 허리까지 닿는 짙은 곱슬이 한쪽 가슴 앞으로 + Frange rideau / Base 밤의 맨 피부 / Lip Lie-de-vin(어두운 물기 있는 입술) / Outfit Robe nuisette(검은 가는 끈, 등이 파인 발목 길이 드레스) / Props 식탁 위 흰 양초 하나 / Scene Bistrot, 좌안의 어둡고 작은 식당 나무 식탁 / Light Lueur de bougie가 오른뺨·속눈썹·쇄골을 아래에서 비추고 눈동자에 불꽃 두 점, 나머지는 몽환적인 어둠 / Optics Canon New F-1 + FD 50mm f/1.2L 개방, Ilford Delta 3200, 큰 빛망울 보케, 푹신한 굵은 입자 / Expression Pompette, 한 손으로 턱을 괴고 맞은편을 본다 / Pose Coude en appui, menton dans la paume / Camera Plan rapproché |
-| S5 소르본 석조 아치 (滤镜 #077) | C | 학생 세트(소르본이라는 학교 장소라 메이크업 줄이 없다). 단서: 장소 소르본 석조 아치 / 소품 둥근 안경, 양장 철학 선집 / 시간대 - / 의상 헤링본 재킷 / Hair chignon flou(깊은 갈색, 낮게 느슨한 쪽머리, 뺨 옆 잔머리) + Frange rideau / Outfit Veste en tweed à chevrons(짙은 회색 헤링본 단추 세 개 재킷) / Props Lunettes rondes(가는 금속테 원형 안경), 두꺼운 양장 철학 선집 / Scene Sorbonne, 오래된 석조 아치 아래 긴 의자 / Light 아치로 비스듬히 들어오는 부드러운 측광이 뺨과 책을 훑는다 / Optics Leica MP + Summilux 50mm f/1.4, Ilford HP5 Plus(ID-11 현상), Grain fin, 길게 이어지는 회색 계조와 살아 있는 그림자 / Expression Lecture absorbée, 조용히 앞을 응시하는 차분한 얼굴 / Pose turning an old book page / Camera Cadre dans le cadre |
+| S4 촛불 식당 (滤镜 #089) | B | 단서: 장소 좌안 비스트로, 나무 식탁 / 소품 촛불 / 시간대 밤 / 의상 검은 슬립 드레스 / Hair 허리까지 닿는 짙은 곱슬이 한쪽 가슴 앞으로 + Frange rideau / Base 밤의 맨 피부 / Lip Lie-de-vin(`lip-wet` 줄, 어두운 물기 있는 입술) / Outfit Robe nuisette(검은 가는 끈, 등이 파인 발목 길이 드레스) / Props 식탁 위 흰 양초 하나 / Scene Bistrot, 좌안의 어둡고 작은 식당 나무 식탁 / Light Lueur de bougie가 오른뺨·속눈썹·쇄골을 아래에서 비추고 눈동자에 불꽃 두 점, 나머지는 몽환적인 어둠 / Optics Canon New F-1 + FD 50mm f/1.2L 개방, Ilford Delta 3200, 큰 빛망울 보케, 푹신한 굵은 입자 / Expression Pompette, 한 손으로 턱을 괴고 맞은편을 본다 / Pose Coude en appui, menton dans la paume / Camera Plan rapproché |
+| S5 소르본 석조 아치 (滤镜 #077) | C | 학생 세트(소르본이라는 학교 장소라 메이크업 줄이 없다). 단서: 장소 소르본 석조 아치 / 소품 둥근 안경, 양장 철학 선집 / 시간대 - / 의상 헤링본 재킷 / Hair chignon flou(깊은 갈색, 낮게 느슨한 쪽머리, 뺨 옆 잔머리) + Frange rideau / Outfit Veste en tweed à chevrons(짙은 회색 헤링본 단추 세 개 재킷) / Props Lunettes rondes(가는 금속테 원형 안경), 두꺼운 양장 철학 선집 / Scene Sorbonne, 오래된 석조 아치 아래 긴 의자 / Light 아치로 비스듬히 들어오는 부드러운 측광이 뺨과 책을 훑는다 / Optics Leica MP + Summilux 50mm f/1.4, Ilford HP5 Plus(ID-11 현상), Grain fin, 길게 이어지는 회색 계조와 살아 있는 그림자 / Expression Lecture absorbée, 조용히 책장을 내려다보는 차분한 얼굴(Iris 원문은 앞을 응시하지만 이 카드는 토큰의 아래 시선과 책에 숙인 포즈에 맞춘다) / Pose turning an old book page / Camera Cadre dans le cadre |
 | S6 루브르 기둥 그림자 (滤镜 #083) | D | 단서: 장소 루브르 리슐리외 회랑, 석주 기둥 그림자 / 소품 - / 시간대 오후 측광 / 의상 검은 하이넥 니트 / Hair Chignon bas(정돈된 낮은 쪽머리, 뺨 옆 잔머리) + Frange rideau / Base 맨 피부 / Lip 선이 또렷한 차가운 입술(Beige rosé) / Outfit Col roulé(검은 하이넥 울 니트) + Pantalon à pinces(하이웨이스트 투턱) / Scene Palais du Louvre 리슐리외 회랑의 거대한 석주 옆, 몸을 옆으로 기댄다 / Light geometric light and shadow, 오후 측광이 기둥에 잘려 평행한 검은 띠가 되고 얼굴 옆선·직각 어깨·목에만 빛이 닿는다 / Optics Leica M6 + Summicron 50mm f/2, Kodak T-Max 400, Grain fin / Expression Dédain, 조각상처럼 눈을 살짝 내리고 앞을 본다 / Pose Adossée à un pilier de pierre / Camera Règle des tiers |
 
 ## 포즈·구도 쌍

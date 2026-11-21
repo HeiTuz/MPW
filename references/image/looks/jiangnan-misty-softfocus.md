@@ -10,19 +10,19 @@
 ## 고정 사실 (모든 갈래가 지킨다)
 | 슬롯 | 값 |
 |---|---|
-| medium | 중형·풀프레임 디지털로 찍은 현대 중국 장강 남쪽 지방(江南)의 인물 사진. 비·안개·차에서 오르는 김·수면 반사, 또는 `黑柔滤镜`가 하이라이트를 번지게 한다. 필름 스틸도 스냅도 아니다. 첫 줄은 `A contemporary Chinese soft-focus portrait shot on a medium-format or full-frame digital camera`로 시작한다. 장소 구절 `in the Jiangnan region`은 매체 구절과 따로 두고, 사용자가 다른 장소(청두의 비, 항저우 말고 다른 호수 등)를 말하면 그 장소로 바꾼다 |
+| medium | 중형·풀프레임 디지털(S5만 APS-C)로 찍은 현대 중국 장강 남쪽 지방(江南)의 인물 사진. 비·안개·차에서 오르는 김·수면 반사, 또는 `黑柔滤镜`가 하이라이트를 번지게 한다. 필름 스틸도 스냅도 아니다. 첫 줄은 `A contemporary Chinese soft-focus portrait shot on a medium-format or full-frame digital camera`로 시작한다. S5만 예외다: Optics가 Fujifilm X-T5(APS-C)라 `medium-format or full-frame` 자리에 `an APS-C`를 쓴다(`A contemporary Chinese soft-focus portrait shot on an APS-C digital camera`). 장소 구절 `in the Jiangnan region`은 매체 구절과 따로 두고, 사용자가 다른 장소(청두의 비, 항저우 말고 다른 호수 등)를 말하면 그 장소로 바꾼다 |
 | closer | `江南烟雨人像` |
 | time | 흐린 낮, 새벽 안개, 해 질 녘 박명이 기본. 해 자체는 화면에 없다. 직사광은 수면 반사(C)와 나무 격자창(D)을 거쳐서만 들어온다 |
 | light-key | 하늘·안개·빗구름·수면이 만드는 크고 부드러운 확산광(약 5400–6400K). D 갈래만 실내의 따뜻한 창빛과 등불(약 2800–4800K). 켈빈 숫자는 광원을 잰 값이 아니라 이 룩에서 정한 연출 값이다 |
 | palette | 월백(푸른기 도는 연한 흰색), 청회색, 청자색, 청석 회색, 먹 검정. 채도가 낮고 젖은 면의 흰 하이라이트가 포인트. D만 호박빛 한 점(램프나 창살 빛), C의 수면 반사만 옅은 금빛 그물 무늬를 얹는다. 네온·형광·파스텔 분홍 없음 |
 | grain | 군더더기 없는 맑은 화질. 노이즈는 가장 어두운 곳에만 극미하게. 번짐은 입자가 아니라 필터·수분·김이 만든다 |
-| lens | 표준~중망원 눈높이(약 35–100mm). 눈과 속눈썹은 선명하고 하이라이트만 부드럽게 번진다. 예외는 B의 400mm 압축과 쌍 3·4의 낮은 각도 |
-| figure | 한 사람이 조용히 서거나 앉고, 물·안개·벽·비가 여백이 된다. 시선은 렌즈를 비켜 멀리 또는 아래로 간다. 정면 증명사진 자세와 큰 웃음 없음 |
+| lens | 표준~중망원 눈높이(약 35–100mm). 눈과 속눈썹은 선명하고 하이라이트만 부드럽게 번진다(쌍 10의 `特写`은 눈이 프레임 밖이라 이 구절을 쓰지 않고 입술·손끝·찻그릇이 선명한 쪽이다). 예외는 B의 400mm 압축과 쌍 3·4의 낮은 각도 |
+| figure | 한 사람이 조용히 서거나 앉고, 물·안개·벽·비가 여백이 된다. 시선은 렌즈를 비켜 멀리 또는 아래로 간다(A의 `矜持`만 예외로 시선이 렌즈에 머문다). 정면 증명사진 자세와 큰 웃음 없음 |
 
 ## 갈래 고르기
 | 갈래 | 요청에 이 말이 있으면 | 성격 | Iris 근거 |
 |---|---|---|---|
-| A 梅雨青砖 (기본) | 비, 이슬비, 장마, 우산, 젖은 돌바닥, 청석, 물웅덩이 반사, 우전, 천정, 비 갠 뒤, 황혼 골목 | 이슬비 속에서 젖은 벽돌과 돌판이 하늘을 받아 부드럽게 빛나고 우산·옷·벽이 바닥에 겹쳐 비친다 | 滤镜 #092 #096 #098, 发型与妆容05 #049, 拍照姿势03 #038 #043 |
+| A 梅雨青砖 (기본) | 비, 이슬비, 장마, 우산, 젖은 돌바닥, 청석, 물웅덩이 반사, 우전, 중정, 天井, 비 갠 뒤, 황혼 골목 | 이슬비 속에서 젖은 벽돌과 돌판이 하늘을 받아 부드럽게 빛나고 우산·옷·벽이 바닥에 겹쳐 비친다 | 滤镜 #092 #096 #098, 发型与妆容05 #049, 拍照姿势03 #038 #043 |
 | B 晨雾漫散 | 안개, 새벽 호수, 서호, 마을 맞은편 연못, 초망원, 공간 압축, 그림자 없는 빛 | 그림자도 하이라이트 반점도 없는 우윳빛 회색 확산광, 먼 풍경이 안개에 녹는다 | 滤镜 #093 #100 |
 | C 黑柔水光 | 黑柔, Black Pro-Mist, 필터 번짐, 월동문(둥근 달문), 하얀 실크, 물가 정자, 수면 물결 빛, 연못 | 필터가 흰 실크와 하늘을 은은하게 번지게 하거나 수면이 금빛 그물 무늬를 얼굴에 던진다 | 滤镜 #091 #095 |
 | D 茶室微光 | 찻집, 다실, 차 김, 증기, 紫砂, 개완, 창살, 등불, 황혼 창가, 차 | 창살 사광, 역광으로 비친 차 김, 해 질 녘 창가의 등불과 푸른 박명이 빚는 실내 빛 | 滤镜 #094 #097 #099, 神态与微表情03 #021, 道具与美甲03 #028 #030 |
@@ -37,10 +37,12 @@
 | catchlight | D에서 카드 줄이 이긴다(오후 조합이면 `窗格眼神光`, 황혼 조합이면 `lamp catchlight` 하나만). 눈을 내리뜬 쌍 10에서는 끈다. 그 밖은 켠다 | #094는 창살 빛, #099는 불꽃 점이 눈에 맺히고, #097은 눈을 내리떠 점이 보이지 않는다 |
 | grain | 켠다. 매체가 디지털이라 고정 몫의 디지털 노이즈 줄이 붙는다 | Iris 영어 블록의 필름 입자 문구가 중문 블록의 노이즈 없는 화질과 갈렸다 |
 | lens | 켠다. 어느 쌍·세트를 골라도 렌즈를 말하는 줄은 정확히 하나이고 출처 순서는 세트의 렌즈 > 쌍의 렌즈 > 갈래의 본체·렌즈 줄 > 고정 몫이다. A·B는 갈래 줄에 렌즈 줄이 없으니 고정 몫 `自然透视` 줄이 lens 줄이다. 단 쌍 6(B)은 Camera의 `长焦压缩` 줄이 lens 줄이라 `自然透视`를 붙이지 않는다. C는 Optics의 `Summilux 35mm f/1.4` 줄, D는 Optics의 `Summicron 50mm f/2` 줄이 lens 줄이고(쌍 10 `特写`은 D의 `微距特写` 줄이 그 자리를 대신한다) C·D에는 `自然透视`를 붙이지 않는다. 세트가 렌즈를 말하면(S2 GF 80mm, S3 Schneider 80mm, S5 XF 33mm) 그 값이 lens 줄이고 카드 줄과 쌍의 렌즈 말은 쓰지 않는다(S3에 쌍 6을 붙이면 쌍의 Camera 줄에서 400mm 말을 뺀다). S6은 세트의 Camera `长焦压缩`(쌍 6) 줄이 400mm를 말하니 그 줄이 lens 줄이고 Optics는 본체 Sony A7R V만 쓴다(S1·S4는 카드 줄과 같다). `仰拍`·`俯拍`·`低机位倒影`의 각도는 렌즈 줄과 상관없이 쌍의 Camera 줄이 정한다 | Iris 꼬리의 50mm 평시가 #100(400mm)·#098(28mm 저각)·#097(100mm 접사)과 한 프롬프트에서 공존했다 |
-| framing | 켠다. 쌍의 Camera 줄은 자리·각도·구도 기법만 정하고 프레임 범위는 fixed-lines.md의 framing 줄이 정한다. 쌍이 범위를 직접 말하면(10번) 그 말과 부딪치지 않게 쓴다 | 쌍 대부분이 프레임 범위를 말하지 않는다 |
+| framing | 켠다. 쌍의 Camera 줄은 자리·각도·구도 기법만 정하고 프레임 범위는 fixed-lines.md의 framing 줄이 정한다. 쌍 10의 Camera 줄은 프레임 범위(턱·입술·손끝만)를 직접 말한다. 쌍 10에서는 기본 framing 줄의 위·아래 범위를 쓰지 않고 `vertical frame — A vertical 3:4 frame.` 한 문장만 쓰며, 범위는 쌍의 Camera 줄에서 한 번만 낸다 | 쌍 대부분이 프레임 범위를 말하지 않는다 |
 | ratio | 켠다. 사용자 비율이 없으면 3:4 세로 | 쌍은 비율을 정하지 않는다 |
 
 ## Hair and makeup
+머리 상태는 한 줄이다. A는 `hair`(雨后微湿长发)와 `hair-tied`(贴头皮盘发) 가운데 하나, C는 `hair`(低丸子头)와 `hair-side`(碎发低发髻) 가운데 하나, D는 `hair`(发簪으로 묶은 낮은 쪽)와 `hair-wave`(法式大波浪) 가운데 하나만 쓴다. `发簪`은 쪽 머리(`hair`)에만 꽂고 법식 큰 웨이브에는 꽂지 않는다.
+
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
 | A | hair | 雨后微湿长发 — Long hair is half pinned with a plain wooden pin, a few damp strands clumped against the jaw and neck with a faint wet sheen along each clump. |
@@ -59,6 +61,8 @@
 | B | lip | 水光唇 — A barely-there pale pink wet lip, close to the bare mouth and almost lost in the cool fog light. |
 
 ## Expression
+쌍 10(`特写`)을 고르면 눈이 프레임 밖이라 눈·속눈썹을 말하는 줄은 쓰지 않고, 표정은 입술과 턱의 말로만 쓴다.
+
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
 | A | expression | 波澜不惊 — The eyes stay steady and the brows and mouth stay still as the head turns a few degrees toward the water, showing nothing for the camera. |
@@ -68,9 +72,9 @@
 | B | expression | 失神 — The eyes rest on nothing in the middle distance, the lids still and the lips parted a fraction. |
 | C | expression | 云淡风轻 — A faint ease sits around the mouth and the shoulders hang loose, the eyes resting on the far distance as if nothing weighs on her. |
 | C | expression | 莞尔 — A small closed-lip smile lifts only the mouth corners while her eyes follow the lilies drifting on the water. |
-| D | expression | 茶道入定 — The lowered eyes follow the cup or lid in her hands while steam climbs across the face and the shoulders stay loose. |
+| D | expression | 茶道入定 — The lowered eyes rest on the tea below while steam climbs across the face and the shoulders stay loose. |
 | D | expression | 垂眸 — The eyes lower toward the tea things with the lashes resting toward the cheek, the mouth closed and the face quiet. |
-| D | expression | 凝视烛光 — The eyes rest on the small lamp flame, a tiny warm point reflected in each pupil, the face calm and the shoulders loose. |
+| D | expression | 凝视灯火 — The eyes rest on the small lamp flame, a tiny warm point reflected in each pupil, the face calm and the shoulders loose. |
 
 ## Outfit
 | 갈래 | 슬롯 | 줄 |
@@ -124,6 +128,8 @@
 | D | background | 水乡 — A canal village of stone bridges and mossy walls seen through the window in damp dusk light. |
 
 ## Light
+C의 `柔和漫射光`과 `水面焦散`은 둘 중 하나만 쓴다. `水面焦散`을 고르면 하늘의 확산광 줄은 쓰지 않고, 얼굴에는 해가 아니라 수면에 튄 빛이 그물 무늬로 떨어진다.
+
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
 | A | face-light | 烟雨 — Fine continuous drizzle and mist soften the cool light into one broad pale wash with no hard shadow, greying the distance and leaving a sheen on wet surfaces. |
@@ -153,33 +159,33 @@
 | C | bloom | 黑柔滤镜 — A 1/4-strength Black Pro-Mist blooms the brightest silk and sky into a faint halo and lowers contrast slightly, with fine detail left intact. |
 | D | stock | Leica M11 — A compact rangefinder frame that in this look shows crisp micro-contrast, calm colour and gentle highlight roll-off. |
 | D | lens | Summicron 50mm f/2 — A balanced 50mm look with crisp but gentle rendering and smooth blur, the slat stripes holding clean edges. |
-| D | macro | 微距特写 — Extreme close focus at about life size with razor-thin depth, showing the skin texture of the jaw and the grain of the clay. |
-| D | bloom | 柔焦 — Steam and lamp haze soften the brightest edges into a gentle glow while the eyes and fingertips stay clear. |
-| D | color | 冷茶色调 — A muted grey-brown grade with low contrast and a faint cool tea cast, the warm lamp and slat light kept quiet. |
+| D | macro | 微距特写 — Extreme close focus with razor-thin depth on a tight lower-face-and-hands frame, showing the skin texture of the jaw and the grain of the clay. |
+| D | bloom | 柔焦 — Steam and the haze around the selected warm source soften the brightest edges into a gentle glow while the eyes (when in frame) and fingertips stay clear. |
+| D | color | 冷茶色调 — A muted grey-brown grade with low contrast and a faint cool tea cast, the selected warm source (slat light or lamp) kept quiet. |
 
 ## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 단서는 찾기용이고 요청의 장소·소품·시간대·의상 가운데 둘 이상이 그 세트의 단서와 같으면 통째로 쓰고, 세트 값은 고정 사실보다 먼저다. 규칙은 image-brief.md §4 '룩 카드' 4항과 '비워 둔 층'. 이 표의 켈빈 숫자는 광원을 잰 값이 아니라 이 룩에서 정한 연출 값이다)
 | 세트 | 갈래 | 묶음 |
 |---|---|---|
 | S1 月洞门黑柔 (滤镜 #091) | C | 단서: 장소 월동문, 흐린 날 정원 / 소품 黑柔 필터 / 시간대 흐린 날 / 의상 흰 실크 롱 드레스 / Hair 低丸子头, 뒤통수에 느슨하게 올린 검은 머리 / Lip 水光唇(자연스러운 水粉) / Outfit 雪纺(素白 双层 真丝 雪纺 개량 롱 드레스) / Scene 月洞门, 苏州 고전 정원의 한백옥 월동문 앞에 선다 / Light 柔和漫射光 5500K 흐린 날 확산광, 흰 실크 하이라이트에 은은한 光晕 / Optics Leica M11 + Summilux 35mm f/1.4, 黑柔滤镜 1/4(하이라이트가 번지고 속눈썹과 홍채는 선명) / Expression 云淡风轻, 담담히 먼 곳을 응시 / Pose 월동문 앞에 가만히 서서 먼 곳을 본다 |
 | S2 乌镇梅雨 (滤镜 #092) | A | 단서: 장소 青石板 골목, 돌다리 / 소품 油纸伞 / 시간대 가랑비 / 의상 天青 旗袍 / Hair 雨后微湿长发, 뒤로 올리고 젖은 몇 가닥이 귀 옆에 붙음 / Lip 水光唇(樱粉) / Outfit 改良旗袍(天青色 重磅 真丝) / Props 油纸伞(素白) / Scene 乌镇, 가랑비 속 青石板 古道와 젖은 青砖 담, 돌다리 / Light 烟雨 6000K, 湿润反光, 공기 중 水汽가 만드는 자연스러운 柔焦감 / Optics Fujifilm GFX(GF 80mm f/1.7), 冷灰 / Expression 波澜不惊, 고개를 살짝 돌려 河道 水面의 倒影을 본다 / Pose 우산을 들고 천천히 걷는다 |
-| S3 西湖晨雾 (滤镜 #093) | B | 단서: 장소 西湖 石矶, 새벽 호수 / 소품 - / 시간대 새벽 안개 / 의상 월백 장포 / Hair 黑长直, 등 뒤로 느슨하게 / Lip 水光唇(淡粉润唇) / Base 伪素颜(素颜, blush 끔) / Outfit 月白(月白色 双层 水洗 真丝 长袍, 아침 바람에 가볍게 날림) / Scene 西湖 曲院风荷 아침 湖畔의 石矶, 먼 산과 雷峰塔이 乳白 水汽 속으로 사라진다 / Light 晨雾漫散光 6400K, 그림자 없는 차갑고 옅은 회색 / Optics Phase One IQ4(Schneider 80mm LS), 低饱和, 노이즈 없는 맑은 화질 / Expression 清冷感, 湖心 쪽을 보는 공허하고 깊은 눈 / Pose 石矶 위에 단정히 선다 |
+| S3 西湖晨雾 (滤镜 #093) | B | 단서: 장소 西湖 石矶, 새벽 호수 / 소품 - / 시간대 새벽 안개 / 의상 월백 장포 / Hair 黑长直, 등 뒤로 느슨하게 / Lip 水光唇(淡粉润唇) / Base 伪素颜(blush 끔) / Outfit 月白(月白色 双层 水洗 真丝 长袍, 아침 바람에 가볍게 날림) / Scene 西湖 曲院风荷 아침 湖畔의 石矶, 먼 산과 雷峰塔이 乳白 水汽 속으로 사라진다 / Light 晨雾漫散光 6400K, 그림자 없는 차갑고 옅은 회색 / Optics Phase One IQ4(Schneider 80mm LS), 低饱和, 노이즈 없는 맑은 화질 / Expression 清冷感, 湖心 쪽을 보는 공허하고 깊은 눈 / Pose 石矶 위에 단정히 선다 |
 | S4 茶室木格 (滤镜 #094) | D | 단서: 장소 다실, 木格 창살, 草席 / 소품 紫砂壶 / 시간대 오후 사광 / 의상 交领 장포 / Hair 发簪(檀香木簪으로 微挽한 검은 긴 머리) / Lip 水光唇(水润 裸唇) / Outfit 交领(茶白 天然 双宫 真丝 系带 长袍) / Props 紫砂壶(提梁壶로 茶盅에 끓는 물을 붓는다) / Scene 茶舍의 蔺草席에 盘腿으로 앉는다, 木格栅窗 / Light 百叶窗光影 4600K 오후 斜阳이 草席·长袍·옆얼굴에 금빛 가로 줄무늬를 던지고 茶香이 감돈다 / Optics Leica M11 + Summicron 50mm f/2, 冷茶色调 / Expression 垂眸, 茶具를 보며 고요하고 집중 / Pose 盘腿坐 斟茶 |
-| S5 暮色油灯 (滤镜 #099) | D | 단서: 장소 水乡 찻집 창가 / 소품 석유등 / 시간대 해 질 녘 / 의상 갈색 터틀넥 / Hair 法式大波浪, 검은 곱슬이 어깨에 자연스럽게 / Lip 砖红唇(哑光 枫叶红) / Outfit 高领针织衫(深褐 纯羊毛) / Props 煤油灯(작은 기름등, 불꽃이 가볍게 흔들림) / Scene 水乡 茶舍 창가의 木桌, 해 질 녘 / Light 冷暖对冲 2800K 등불과 6500K 창밖 暮色, 煤油灯이 얼굴 한쪽을 금빛으로, 다른 쪽을 청색으로 / Optics Fujifilm X-T5(XF 33mm f/1.4), 冷茶色调 / Expression 凝视烛光, 깊고 집중한 시선 / Catchlight lamp catchlight / Pose 端坐 |
-| S6 宏村长焦 (滤镜 #100) | B | 단서: 장소 宏村 月沼, 马头墙, 호숫가 돌 제방 / 소품 - / 시간대 - / 의상 玄黑 披风 / Hair 黑长直, 바람에 날림 / Lip 朱砂唇(자연스러운 淡朱砂) / Outfit 斗篷(玄黑 重磅 真丝 개량 披风 长袍) / Scene 宏村 月沼 호숫가 돌 제방, 馬頭墙 흰 벽과 黛瓦 / Light 柔和漫射光 5800K 흐린 날 균일한 확산 / Optics Sony A7R V, 冷灰(렌즈 줄은 아래 Camera 줄의 400mm) / Camera 长焦压缩, 먼 거리에서 인물·수면·마두장이 한 평면으로 눌린다 / Expression 清冷感, 먼 곳을 담담히 / Pose 纯侧颜, 돌 제방 위에 선다 |
+| S5 暮色油灯 (滤镜 #099) | D | 단서: 장소 水乡 찻집 창가 / 소품 석유등 / 시간대 해 질 녘 / 의상 갈색 터틀넥 / Hair 法式大波浪, 검은 곱슬이 어깨에 자연스럽게 / Lip 砖红唇(哑光 枫叶红) / Outfit 高领针织衫(深褐 纯羊毛) / Props 煤油灯(작은 기름등, 불꽃이 가볍게 흔들림) / Scene 水乡 茶舍 창가의 木桌, 해 질 녘 / Light 冷暖对冲 2800K 등불과 6500K 창밖 暮色, 煤油灯이 얼굴 한쪽을 금빛으로, 다른 쪽을 청색으로 / Optics Fujifilm X-T5(XF 33mm f/1.4), 冷茶色调 / Expression 凝视灯火, 깊고 집중한 시선 / Catchlight lamp catchlight / Pose 端坐 |
+| S6 宏村长焦 (滤镜 #100) | B | 단서: 장소 宏村 月沼, 马头墙, 호숫가 돌 제방 / 소품 - / 시간대 - / 의상 玄黑 披风 / Hair 黑长直, 바람에 날림 / Lip 朱砂唇(자연스러운 淡朱砂) / Outfit 斗篷(玄黑 重磅 真丝 개량 披风 长袍) / Scene 宏村 月沼 호숫가 돌 제방, 马头墙 흰 벽과 黛瓦 / Light 柔和漫射光 5800K 흐린 날 균일한 확산 / Optics Sony A7R V, 冷灰(렌즈 줄은 아래 Camera 줄의 400mm) / Camera 长焦压缩, 먼 거리에서 인물·수면·마두장이 한 평면으로 눌린다 / Expression 清冷感, 먼 곳을 담담히 / Pose 纯侧颜, 돌 제방 위에 선다 |
 
 ## 포즈·구도 쌍
 | 번호 | 갈래 | Pose | Camera |
 |---|---|---|---|
 | 1 | A | 撑伞回眸 — She walks away along a wet flagstone lane with an umbrella over one shoulder and turns her head back beneath its rim. | 前景遮挡 — A blurred leaf or the edge of a passer-by's umbrella crosses one corner of the frame in front of her. |
 | 2 | A | 凭桥看水 — Her forearms rest on a stone bridge rail, the torso leaning forward and the eyes on the water below. | 俯拍 — The camera looks down from above and behind her so the bridge and water lead the eye and her head sits nearest the lens. |
-| 3 | A | 凝望天际 — She turns side-on beside a courtyard puddle and lifts her chin slightly, her eyes resting on the roofline above. | 仰拍 — The camera looks up from below so the tile eaves and stepped gables close in over her head toward a pale sky. |
+| 3 | A | 仰望屋檐 — She turns side-on beside a courtyard puddle and lifts her chin slightly, her eyes resting on the roofline above. | 仰拍 — The camera looks up from below so the tile eaves and stepped gables close in over her head toward a pale sky. |
 | 4 | A, C | 天鹅颈 — She faces the lens with the chin lifted a few degrees, the neck long and the shoulders pressed down. | 低机位倒影 — The camera sits low above the wet paving or pond so her upright figure repeats in the glossy surface below. |
 | 5 | B | 背手 — She stands still with both hands clasped behind her back, the chest open and the shoulders settled. | 三分法构图 — She stands on one vertical third line and the fog-filled lake fills the other two thirds. |
 | 6 | B | 纯侧颜 — Her head turns a full ninety degrees so one eye, the nose line and the jaw read as a clean outline against pale haze. | 长焦压缩 — A 400 mm telephoto from far across the pond flattens her, the water and the stacked white-and-black houses into one scroll-like plane. |
 | 7 | B | 闲庭信步 — She walks along the water's edge at an easy pace with the arms loose and the gaze on the path ahead. | 留白 — She fills about a third of the frame and the rest stays as empty fog and still water. |
 | 8 | C | 穿过月亮门 — Caught mid-step through a round gate in a white wall, the gown lifting and her body turned a little toward the lens. | 框架构图 — The round opening boxes her into a pale circle with the soft haze of the garden around it. |
 | 9 | C | 美人靠 — She leans sideways on the curved pavilion rail over the pond with one arm resting on the top and the head bowed. | 对角线构图 — The rail and the pond edge run corner to corner and she sits where they cross. |
-| 10 | D | 双手捧杯 — Both hands lift the lid of a lidded tea bowl held at chest height, the elbows tucked in. | 特写 — The frame holds only her jaw, lips and fingers, a thin plane of sharp focus with everything else melting into steam. |
+| 10 | D | 双手捧杯 — Both hands cradle a lidded tea bowl at chest height with the lid tilted just open, the elbows tucked in. | 特写 — The frame holds only her jaw, lips and fingers, a thin plane of sharp focus with everything else melting into steam. |
 | 11 | D | 斟茶 — Seated on a mat, she tilts a small teapot so a thin stream arcs into a cup, her other hand holding the sleeve back. | 过肩镜头 — Shot past the blurred shoulder of an unseen tea host across the low table to her sharp figure beyond. |
 | 12 | D | 托腮 — She sits at a window table with her chin in one hand and her eyes on the small lamp flame. | 玻璃窗倒影 — Shot through the window glass, her outline overlaps a faint reflection of the dusk canal outside. |
 

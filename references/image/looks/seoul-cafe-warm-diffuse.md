@@ -50,19 +50,19 @@
 | A, B | base | 속광 메이크업 — A base that looks lit from inside, with a soft diffused sheen on the forehead and nose bridge and no visible powder, so window light spreads smoothly over the skin. |
 | C | base | 촉촉피부 — A dewy finish with a thin moist sheen over the cheeks and nose that catches one small warm highlight from the lamp or flame without turning oily. |
 | A, B | lip | 과즙 립 — A glassy peach-pink gloss with a wet shine and no hard edge, brightest where it catches the window. |
-| C | lip | 깨문 립 — Colour pressed into the centre of the lips and blended outward until the edges dissolve into bare skin, quiet in low light. |
+| C | lip | 깨문 듯한 립 — Colour pressed into the centre of the lips and blended outward until the edges dissolve into bare skin, quiet in low light. |
 | D | lip | 글로시 누드 — A beige-nude lip under clear gloss that picks up the warm backlight as one soft highlight. |
 
 ## Expression
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
-| A | expression | 커피잔 사색 — Both hands wrap a coffee cup, the brows stay relaxed and the eyes rest on a far point. |
+| A | expression | 커피잔 사색 — The brows stay relaxed and the eyes rest on a far point, the face still in thought. |
 | A | mouth | 살짝 벌어진 입술 — The lips part by a few millimetres with the lower lip catching a soft highlight, as if mid-breath before a bite or a sip. |
 | B | expression | 졸린 눈 — The lids sit half open and a little puffy, the gaze unfocused and the cheek resting near soft white bedding. (滤镜 #043) |
 | B | eyes | 내리깐 눈 — The upper lids drop over part of the irises and the lashes cast thin shadows on the lower lids while she reads or looks down. |
 | B, D | expression | 햇빛 향한 황홀 — The face tips toward the light with the eyes closed and a warm glow washes over the forehead and cheeks. |
-| C | expression | 촛불 응시 — The eyes rest on a small flame below the face, one tiny orange point in each pupil and the face calm. (滤镜 #049) |
-| C | expression | 헤드폰 끼고 음미 — Headphones sit over the ears, the eyes closed and the lips loose, the head swaying a little with the music. |
+| C | expression | 촛불 응시 — The eyes rest on a small flame below the face, one tiny orange point in each pupil and the face calm. (滤镜 #049. 쌍 9와 짝이다) |
+| C | expression | 헤드폰 끼고 음미 — Headphones sit over the ears, the eyes closed and the lips loose, the head swaying a little with the music. (눈이 감기는 줄이라 쌍 8과 짝이다. 눈이 불꽃을 보는 쌍 9와 옆얼굴로 창을 보는 쌍 10에는 쓰지 않는다) |
 | D | expression | 눈 감고 바람 느끼기 — The eyes close and the chin lifts slightly into the cold air, the face relaxed while loose strands stream sideways. |
 
 ## Outfit
@@ -95,8 +95,9 @@
 | A | style | 힙지로 레트로 — Worn wood, faded enamel and amber bulb light make every surface look aged and lived in. (滤镜 #042) |
 | B | style | 노르딕 우드 — Light birch and oak with oatmeal wool, soft matte surfaces and gentle even daylight. |
 | B | texture | 울 숄 — Coarse beige wool pressed against the cheek, the rough weave making the skin look very smooth by contrast. (滤镜 #056) |
-| C | style | 앤티크 라이터 스터디 — Dark walnut, brass fittings and yellowed paper under a single warm desk lamp. (滤镜 #060) |
-| 전부 | style | 서울 카페 웜톤 — Soft warm indoor light diffused by windows, sheer curtains, plaster walls or lampshades, so edges and shadows stay gentle in Seoul cafes and homes. |
+| C | style | 앤티크 서재 — Dark walnut, brass fittings and yellowed paper under a single warm desk lamp. (滤镜 #060) |
+| A, B, C | style | 서울 카페 웜톤 — Soft warm indoor light diffused by windows, sheer curtains, plaster walls or lampshades, so edges and shadows stay gentle in Seoul cafes and homes. |
+| D | style | 서울 카페 웜톤 — Soft warm low-sun light diffused by haze, reed heads and cup steam, so edges and shadows stay gentle on a Seoul riverside path or street corner. |
 | 전부 | palette | palette — Oat, cream and camel with walnut-brown and honey-amber shadows and warm apricot light on the skin, nothing neon, pastel or cold gray in the frame except the one blue dusk window of 냉온 대비. |
 
 ## Scene
@@ -107,7 +108,8 @@
 | A | shop | 연남동 — A narrow lane of small cafes and shops with painted storefronts, a speckled terrazzo threshold and warm side daylight on brick. (滤镜 #053) |
 | A | shop | LP바 — A cafe with walnut shelves of vinyl sleeves and a turntable, warm lamp light glowing on brown wood. (滤镜 #058) |
 | B | place | 아침 침대 — White bedding under thin sheer curtains, bright morning light passing through the fabric and softening every shadow. (滤镜 #043) |
-| B, C | place | 한남동 — A hillside district interior of pale walls and floor-to-ceiling glass with soft diffuse side daylight. (滤镜 #055 #059) |
+| B | place | 한남동 — A hillside district interior of pale walls and floor-to-ceiling glass with soft diffuse side daylight. (滤镜 #059) |
+| C | place | 한남동 — A hillside district interior of pale walls and floor-to-ceiling glass at dusk, the glass holding a deep blue sky while one small warm lamp glows inside. (滤镜 #055) |
 | B | room | 선룸 온실 — A glass-walled plant room flooded with soft light, leaf shadows moving over pale floor tiles. (滤镜 #057) |
 | B | wall | 프렌치 몰딩 — White plaster cornice on cream walls where light bounces softly several times. (滤镜 #047) |
 | C | place | 노출콘크리트 카페 — Raw concrete walls and a single wooden counter, soft window light grazing the matte gray surfaces. (滤镜 #045) |
@@ -123,12 +125,12 @@
 | A | face-light | 창가 빛 — Daylight from a window falls on her from one side, leaving a bright cheek and a soft shadow side that falls off gently. |
 | A | face-light | 쇼윈도 스팟 빛 — Warm ceiling spots over a bakery display glow on the pastries and reach her cheek through the glass, with faint glass reflections laid over the skin. (滤镜 #054) |
 | A | light-fill | 텅스텐 조명 — Incandescent bulbs give warm amber-orange pools on the wood, the walls and the near cheek, leaving deeper amber in the corners. |
-| A, B | catchlight | 창문 눈빛 — A large window leaves a soft rectangular, sometimes pane-divided highlight in the upper part of each iris. |
+| A, B | catchlight | 창문 캐치라이트 — A large window leaves a soft rectangular, sometimes pane-divided highlight in the upper part of each iris. |
 | B | face-light | 아침 햇살 — Low warm sun slips through a gap in the curtains as one golden band across white sheets, lighting one cheek and leaving the rest in pale shade. (滤镜 #043) |
 | B | face-light | 블라인드 빛 — Afternoon sun through window blinds falls in evenly spaced bright and dark bands over the face, collarbones and wall. (滤镜 #044) |
 | B | beam | 빛내림 — Light crossing a sheer curtain and dusty air shows as straight soft shafts with floating dust bright inside each one. (滤镜 #051) |
 | B | light-fill | 바닥 반사광 — Light reflected up from a sunlit wooden floor softly fills the underside of the jaw, nose and brows in the warm colour of the wood. (滤镜 #050) |
-| C | face-light | Akari 1A — A paper-shaded floor lamp spreads a soft warm orange glow through its shade, lighting one half of the face and fading fast into the dark room. (滤镜 #045) |
+| C | face-light | Akari 1A — A paper-shaded table lamp stands close beside her at face height and spreads a soft warm orange glow through its shade, lighting one half of the face and fading fast into the dark room. (滤镜 #045) |
 | C | face-light | 촛불 조명 — A small flame close by casts warm amber light that falls off fast into darkness, flickers softly and leaves a tiny warm glint in the eyes. (滤镜 #049) |
 | C | ambient | 냉온 대비 — Cool blue dusk light from the window and a small warm lamp inside meet on the face, one side reading blue and the other amber with a soft seam between. (滤镜 #055) |
 | C | backlight | 뱅커스 램프 — A green glass-shaded desk lamp behind and to one side traces a thin gold line along the hair and shoulder while its warm pool lights the desk. (滤镜 #060) |
@@ -161,11 +163,11 @@
 
 | 세트 | 갈래 | 묶음 |
 |---|---|---|
-| S1 성수동 빵집 (滤镜 #041. 단서: 장소 성수동 빵집·베이커리 카페 / 소품 라떼 / 시간대 오후 / 의상 -) | A | Outfit 스퀘어 넥(숯회색 슬림 긴팔 니트) / Props 은 물방울 펜던트(아주 가는 은 쇄골 체인) / Scene 베이커리 카페, 성수동 빵집의 한가한 오후 간식 자리 / Light 4800K 오트·카멜 톤의 낮은 대비 따뜻한 빛, 갓 내린 라떼의 온도 / Optics Fujifilm X100V 23mm f/2, 밀크티 톤 / Pose 어깨 너머로 돌아보기(쌍 12가 아니라 이 줄이 Pose다), 몸은 3/4로 틀고 어깨는 내려놓는다 / Expression 렌즈 쪽을 맑게 보는 눈 |
+| S1 성수동 빵집 (滤镜 #041. 단서: 장소 성수동 빵집·베이커리 카페 / 소품 라떼 / 시간대 오후 / 의상 -) | A | Outfit 스퀘어 넥(숯회색 슬림 긴팔 니트) / Props 은 물방울 펜던트(쇄골 길이의 가는 실버 체인 목걸이) / Scene 베이커리 카페, 성수동 빵집의 한가한 오후 간식 자리 / Light 4800K 오트·카멜 톤의 낮은 대비 따뜻한 빛, 갓 내린 라떼의 온도 / Optics Fujifilm X100V 23mm f/2, 밀크티 톤 / Pose 어깨 너머로 돌아보기(쌍 12가 아니라 이 줄이 Pose다), 몸은 3/4로 틀고 어깨는 내려놓는다 / Expression 렌즈 쪽을 맑게 보는 눈 |
 | S2 을지로 복고 카페 (滤镜 #042. 단서: 장소 을지로 호두나무 카페(복고) / 소품 호박색 전구 / 시간대 - / 의상 모카 캐시미어 니트) | A | Outfit 캐시미어 니트(모카 브라운, 큰 V넥) / Scene 을지로 호두나무 카페, 짙은 오크·호두나무 가구와 복고 분위기 / Light 4200K 가구에서 되튄 깊고 따뜻한 빛, 그림자는 붉은 갈색 / Optics Leica M10-P + Summicron 35mm, 호박색 톤 / Style 힙지로 레트로 / Pose 어깨 너머로 돌아보기(쌍 12가 아니라 이 줄이 Pose다) |
 | S3 청명 침실 (滤镜 #043. 단서: 장소 아침 침대·흰 시트·커튼 틈 / 소품 - / 시간대 아침(커튼 틈 햇살) / 의상 귀리색 블레이저(베드헤드 머리)) | B | Hair 베드헤드 펌 / Outfit 오트 블레이저 튜브탑(검은 튜브탑 위에 연한 귀리색 블레이저를 앞 열고) / Scene 아침 침대, 흰 시트와 커튼 틈 / Light 아침 햇살 4500K, 막 뜬 해가 커튼 틈에서 흰 시트로 금빛 한 줄기 / Optics Canon EOS R6 50mm f/1.8 / Expression 졸린 눈, 막 깬 느슨함 |
 | S4 블라인드 줄무늬 (滤镜 #044. 단서: 장소 블라인드가 달린 복고풍 실내 / 소품 - / 시간대 오후 사선 햇빛(줄무늬 빛) / 의상 보트넥 니트) | B | Outfit 보트넥(검은 슬림 긴팔 니트) / Scene 블라인드가 달린 복고풍 실내(사전 토큰 없음, Light 줄이 공간을 만든다) / Light 블라인드 빛 4600K, 오후 사선 햇빛이 얼굴과 쇄골에 같은 간격의 줄무늬 / Optics Sony A7 III 50mm f/1.4 / Expression 내리깐 눈, 기하학적 줄무늬를 가만히 받는다 |
-| S5 아카리 밤 (滤镜 #045. 단서: 장소 성수동 노출콘크리트 실내 / 소품 아카리 램프·레코드 / 시간대 밤 / 의상 스퀘어넥 니트) | C | Outfit 스퀘어 넥 / Props 은 물방울 펜던트, LP판(책 보며 레코드 듣는 밤) / Scene 노출콘크리트 카페 계열의 성수동 콘크리트 실내, 배경은 어둡고 비어 있다 / Light Akari 1A 3200K, 종이 바닥 램프의 주황빛이 얼굴 반쪽만 / Optics Iris의 카메라 칸이 램프 이름이라 갈래 C의 본체 줄(Sony A7S III)에 고감도 노이즈 / Expression 깊은 밤 혼자인 고요한 눈 |
+| S5 아카리 밤 (滤镜 #045. 단서: 장소 성수동 노출콘크리트 실내 / 소품 아카리 램프·레코드 / 시간대 밤 / 의상 스퀘어넥 니트) | C | Outfit 스퀘어 넥 / Props 은 물방울 펜던트, LP판(책 보며 레코드 듣는 밤) / Scene 노출콘크리트 카페 계열의 성수동 콘크리트 실내, 배경은 어둡고 비어 있다 / Light Akari 1A 3200K, 얼굴 높이 탁자 위 종이 갓 탁상등(Iris 원문은 落地灯=바닥 램프지만 Akari 1A는 탁상등이다)의 주황빛이 얼굴 반쪽만 / Optics Iris의 카메라 칸이 램프 이름이라 갈래 C의 본체 줄(Sony A7S III)에 고감도 노이즈 / Expression 깊은 밤 혼자인 고요한 눈 |
 | S6 한강 억새 (滤镜 #048. 단서: 장소 한강 억새·갈대 / 소품 - / 시간대 노을(역광) / 의상 -) | D | Outfit 보트넥 / Scene 한강 억새, 갈대 이삭이 금빛으로 / Light 역광 금빛 테두리 3800K, 해 높이 15도의 금주황 역광이 몸 전체를 금빛 윤곽으로 감싼다 / Optics Canon EOS R5 85mm f/2, 85mm 인물 렌즈 / Expression 눈 감고 바람 느끼기, 낭만적인 황혼 / Pose 어깨 너머 시선 |
 
 ## 포즈·구도 쌍
@@ -179,7 +181,7 @@
 | 6 | B | 기지개 — Standing at a window with both arms raised and the fingers interlaced, the spine arching in a slow stretch against the sheer curtain. | 여백 — She fills about a third of the vertical frame and the pale curtain and wall leave the rest as quiet empty space. |
 | 7 | B | 머그컵 후후 불기 — Both hands wrap a mug held near the lips while the mouth blows softly across the hot surface, the eyes lowered. | 미디엄 클로즈업 — The frame runs from the top of the head to mid-chest with the mug in the lower third and the window glow behind. |
 | 8 | C | 소파에 파묻히기 — Sunk deep into the corner of a corduroy sofa with the shoulders low and a cushion hugged to the chest. | 중앙 구도 — She sits dead centre and the warm folds of the sofa close around her on all sides. |
-| 9 | C | 팔꿈치 괴기 — One elbow rests on the bedside surface and the chin sits in the palm, the eyes soft on the candle flame. | 클로즈업 — The frame holds only the face and the flame, filling the picture edge to edge. |
+| 9 | C | 팔꿈치 괴기 — One elbow rests on the bedside surface and the chin sits in the palm, the eyes soft on the candle flame. | 클로즈업 — The frame holds the face, the hand cupping the chin and the flame, filling the picture edge to edge. |
 | 10 | C | 창가 찻잔 — One hand holds a cup near the chin beside a window, the face in profile toward the glass. | 유리창 이중 반사 — A faint ghost of her face and the small warm lamp lies over the dusk-blue glass beside the live profile. |
 | 11 | D | 하늘 바라보기 — Her body turns sideways and the chin lifts slightly so the eyes rest on the far horizon above the reeds. | 망원 압축 — A moderate telephoto stacks the reed heads and the far bridge into one glowing golden layer behind her. |
 | 12 | D | 어깨 너머 시선 — She walks away along the river path and turns her head back over one shoulder, the low sun behind her. | 앙각 — The camera sits low and looks up, so the sun skims her shoulder line and her figure stands tall against the glowing sky. |

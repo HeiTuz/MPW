@@ -35,7 +35,7 @@
 | base, lip, blush | 카드 줄이 이긴다 | 고정 몫의 `シアーリップ`(코랄)과 `桜色チーク`(벚꽃 분홍)가 차가운 보라·시안 빛 아래서 혼자 따뜻하게 떠 보인다. 뺨은 비바람이 만든 차가운 홍조, 입술은 갈래별 줄로 간다 |
 | under-eye, liner | 켠다. 고정 몫 그대로 | 이 룩은 눈 화장을 따로 정하지 않는다 |
 | face-clear | B 갈래에서 끈다. A·C·D는 켠다 | B 갈래의 젖은 머리 가닥이 뺨과 턱선에 붙는 것이 이 룩의 특징이다(神态 #079). 눈썹과 눈은 계속 보인다 |
-| lens | 모든 갈래에서 끈다(`自然透视` 줄은 붙이지 않는다). 렌즈를 말하는 줄은 프롬프트에서 하나이고 출처 순서는 세트의 렌즈 > 쌍의 렌즈 > 갈래의 본체·렌즈 줄 > 고정 몫 줄이다. 세트를 쓰지 않으면 쌍의 Camera 줄이다(열두 쌍이 모두 mm를 말한다). 세트를 쓰면 세트 Optics의 렌즈(S1 35mm 아나모픽, S2 35mm f/1.4, S3 24mm, S4 50mm, S5 28~70mm 줌, S6 50mm)가 렌즈 줄이고 쌍의 Camera 줄은 mm와 `anamorphic`을 빼고 구도와 시점만 쓴다. Optics의 `camera` 줄과 `アナモルフィック` 줄은 렌즈 길이를 말하지 않는다 | #091 아나모픽 35mm, #092 24mm와 `自然透视` 줄의 표준~중망원이 갈린다 |
+| lens | 모든 갈래에서 끈다(`自然透视` 줄은 붙이지 않는다). 렌즈를 말하는 줄은 프롬프트에서 하나이고 출처 순서는 세트의 렌즈 > 쌍의 렌즈 > 갈래의 본체·렌즈 줄 > 고정 몫 줄이다. 세트를 쓰지 않으면 쌍의 Camera 줄이다(열두 쌍이 모두 mm를 말한다). 세트를 쓰면 세트 Optics의 렌즈(S1 35mm 아나모픽, S2 35mm f/1.4, S3 24mm, S4 50mm, S5 28~70mm 줌, S6 50mm)가 렌즈 줄이고 쌍의 Camera 줄은 mm와 `anamorphic`을 빼고 구도와 시점만 쓴다. Optics의 `camera` 줄과 `ブルーストリーク` 줄은 렌즈 길이와 렌즈 종류를 말하지 않고 효과만 말한다(S2는 구면 단렌즈라 `ブルーストリーク` 줄을 쓰지 않는다) | #091 아나모픽 35mm, #092 24mm와 `自然透视` 줄의 표준~중망원이 갈린다 |
 | grain | A·B·C는 켠다(`数码噪点` 줄이 그대로 맞다). D는 끈다 | #100의 어두운 곳은 노이즈가 없다. D의 Optics `key` 줄이 그 사실을 정한다 |
 | framing | 켠다. 쌍 8·12는 인물이 프레임의 3분의 1이라고 직접 말하니 framing 줄과 부딪히지 않게 쓴다. 범위를 말하지 않는 쌍 가운데 걸음·서 있는 전신이 보이는 1·3·4·5·11은 `from head to toe`로, 상체와 손이 중심인 2·6·7·9·10은 `from the top of the head to the waist`로 쓴다 | 나머지 쌍은 프레임 범위를 말하지 않는데 Pose가 걸음이나 서 있는 자세를 말하면 허리 위 프레임에서 안 보인다 |
 | ratio | 켠다. 사용자 비율이 없으면 3:4 세로 | Iris 원본이 3:4다. 시네마스코프 가로를 요청하면 사용자 값이 이긴다 |
@@ -65,6 +65,8 @@
 | C | expression | Taxi Backseat Gaze — Passing lights slide over her cheek and the window glass while the eyes follow one rain streak down the pane. (神态 #019) |
 | C, D | expression | 物思い — The lids lower and the gaze drifts unfocused over the lights below or the black water, the mouth relaxed and the head tilted slightly. (滤镜 #096 #097) |
 | D | expression | 流し目 — The eyes rest on a point about fifteen degrees to the side of the lens, as if something out of frame had her attention. |
+
+**시선 슬롯은 하나다:** `自然なカメラ目線`·`流し目`·`物思い`·`Dispassionate Onlooker`처럼 시선을 정하는 Expression 줄은 하나만 쓴다. 쌍이나 세트가 시선을 직접 정하면(쌍 7·11과 S6의 렌즈 응시) 그 값이 Expression의 다른 시선 줄을 대신한다.
 
 ## Outfit
 | 갈래 | 슬롯 | 줄 |
@@ -97,10 +99,12 @@
 | A | style | サイバーパンク — Electric cyan and ice-blue screen light on dark glossy surfaces, with reflective clothing and a cold, lonely future-city mood. |
 | B | style | ネオンノワール — Long dark coats moving through rain and crowds under cold colored city light, with a single amber lamp as the only warm counterpoint. |
 | B | style | GINZA — A restrained Tokyo mode look of clean cuts, cool matte makeup and quiet editorial composure under the Ginza lamps. |
-| C | style | Sensual Minimal — A restrained evening look in one dark piece with bare shoulders and low light, almost no accessories, in a high quiet room above the city. |
+| C | style | Sensual Minimal — A restrained evening look in one dark piece with bare shoulders and low light, almost no accessories, in a high quiet room above the city. (六本木ヒルズ 전망 복도 경로 전용이다. S5와 차 안 경로에는 쓰지 않는다) |
+| C | style | ナイトドライブ — A quiet night-drive mood in the car, a dark jacket zipped against the cold and the road and its lights sliding past the window, nothing styled. |
 | D | style | クール系 — A low-saturation gray and blue palette with sharp tailored lines and a straight composed stance under cold night light. |
 | D | style | 東京モード — Clean urban styling in understated tones and sharp, simple silhouettes, nothing decorative in the frame. |
-| 전부 | palette | palette — Cold violet, cyan and ice white over glossy black, with red and amber only as small points and nothing pastel or daylight-white in the frame. |
+| A, B, D | palette | palette — Cold violet, cyan and ice white over glossy black, with red and amber only as small points and nothing pastel or daylight-white in the frame. |
+| C | palette | palette — Cold violet, cyan and ice white over glossy black, with red allowed as long traffic streaks and the soft deep-red haze around the tower, amber only as small points and nothing pastel or daylight-white in the frame. |
 
 ## Scene
 | 갈래 | 슬롯 | 줄 |
@@ -131,9 +135,9 @@
 | B | face-light | Warm-Cool Contrast — An amber street lamp lights one side of her face and the cold white of passing headlights lights the other, the two meeting at the cheek. (滤镜 #093) |
 | B | light-fill | 蛍光灯 — Flat cool-white fluorescent light from the shop window washes the wet pavement and the lower half of her coat. (风格/03 #045) |
 | B | catchlight | キャッチライト — A small rectangular patch of the big screen or the shop window sits in each eye. |
-| C | face-light | Rainy Night Headlights — Red tail lights streaming past the rain-streaked window rim her profile with dim red light while the car interior stays almost black. (滤镜 #099) |
-| C | through-glass | 水滴越し — Raindrops on the glass between the camera and her scatter the city lights into overlapping soft blobs and short streaks. |
-| C | light-trail | トレイルライト — Long red and white streaks from the traffic far below run along the road like rivers of light. (滤镜 #096) |
+| C | face-light | 雨夜のテールランプ — Red tail lights streaming past the rain-streaked window rim her profile with dim red light while the car interior stays almost black. (滤镜 #099) |
+| C | through-glass | 水滴越し — Raindrops on the glass between the camera and her scatter the city lights into overlapping soft blobs and short streaks. (카메라가 유리 바깥에 있거나 유리를 사이에 둔 경로 전용이다. 차 안 시점(쌍 10, S5)에서는 창이 인물 뒤에 있으니 쓰지 않는다) |
+| C | light-trail | 車のライトの軌跡 — Long red and white streaks from the traffic far below run along the road like rivers of light. (滤镜 #096) |
 | C | catchlight | キャッチライト — Tiny warm points of the city lights below sit in each eye. |
 | D | face-light | Streetlamp Pool — One old street lamp leaves a small hard pool of neutral-cool light on the wet crosswalk and a clean highlight on her cheek, everything else in black. (滤镜 #100) |
 | D | light-fill | 提灯 — Pale pink paper lanterns along the bank glow softly and repeat as shaky lines on the black water. (滤镜 #097) |
@@ -144,7 +148,7 @@
 |---|---|---|
 | A | camera | ARRI Alexa Mini — A cinema-camera look for this frame: smooth highlight roll-off that keeps the neon tubes unclipped and blacks held in a deep violet-blue. (滤镜 #091) |
 | A | camera | Sony A7S III — A low-light full-frame look with clean shadows and steady cyan, the screen light reflected calmly in the wet street. (滤镜 #098) |
-| A | flare | アナモルフィック — Horizontal blue streaks run off each neon tube and the out-of-focus lights behind her stretch into ovals. |
+| A | flare | ブルーストリーク — Horizontal blue streaks run off each neon tube and the out-of-focus lights behind her stretch into ovals. (S1과 쌍 1~4에서만 쓴다. S2는 구면 단렌즈라 쓰지 않는다) |
 | A, B | bloom | Black Pro-Mist — A black diffusion filter blooms the brightest signs into faint halos and lowers contrast slightly while her face stays clear. |
 | A, B, C | color | Cool Tone — The whole palette leans cold blue-white with the shadows tinted violet, quiet and slightly pale. |
 | B | camera | Sony FX3 — A compact cinema-line full-frame look with clean high-ISO files and neutral color, steady for handheld night street shooting. (滤镜 #092) |
@@ -162,7 +166,7 @@
 
 | 세트 | 갈래 | 묶음 |
 |---|---|---|
-| S1 歌舞伎町 雨夜 (滤镜 #091) | A | 단서: 장소 가부키초 일번가 아치, 괴수 조형 건물 / 소품 투명 우산 / 시간대 비 오는 밤 / 의상 칠피 재킷 / Hair 濡れ髪의 검은 단발, シースルーバング가 바람에 흔들린다 / Lip ガラスリップ(Iris 원본은 水润素唇) / Outfit 검은 칠피 짧은 재킷(エナメル) / Props ビニール傘, 큰 투명 우산을 쓴다 / Scene 歌舞伎町, 괴수 머리 조형이 얹힌 건물 아래 좁은 골목 / Light 4200K, 젖은 아스팔트가 보라·청록·분홍 네온을 거울처럼 되비춘다 / Optics ARRI Alexa Mini, アナモルフィック(Iris 원본은 Cooke S4/i 35mm로 적었지만 S4/i는 구면 렌즈이고 아나모픽은 Cooke Anamorphic/i 계열이다) / Expression 걸음이 느슨하고 시선이 렌즈를 스친다 / Pose 거리 한가운데를 걷는다 |
+| S1 歌舞伎町 雨夜 (滤镜 #091) | A | 단서: 장소 가부키초 일번가 아치, 괴수 조형 건물 / 소품 투명 우산 / 시간대 비 오는 밤 / 의상 칠피 재킷 / Hair 濡れ髪의 검은 단발, シースルーバング가 바람에 흔들린다 / Lip ガラスリップ(Iris 원본은 水润素唇) / Outfit 검은 칠피 짧은 재킷(エナメル) / Props ビニール傘, 큰 투명 우산을 쓴다 / Scene 歌舞伎町, 괴수 머리 조형이 얹힌 건물 아래 좁은 골목 / Light 4200K, 젖은 아스팔트가 보라·청록·분홍 네온을 거울처럼 되비춘다 / Optics ARRI Alexa Mini, 35mm 아나모픽 렌즈와 효과 줄 ブルーストリーク(Iris 원본은 Cooke S4/i 35mm로 적었지만 S4/i는 구면 렌즈이고 아나모픽은 Cooke Anamorphic/i 계열이다) / Expression 걸음이 느슨하고 시선이 렌즈를 스친다 / Pose 거리 한가운데를 걷는다 |
 | S2 秋葉原 (滤镜 #098) | A | 단서: 장소 아키하바라 보행교 아래, 거대 스크린 / 소품 - / 시간대 가는 비 오는 밤 / 의상 반사 재킷 / Hair 濡れ髪, シースルーバング / Outfit リフレクター, 은회색 반사 기능성 짧은 외투 / Scene 秋葉原, 중앙 도로 보행교 아래 / Light 6500K, 거대한 전자 스크린의 순청록과 차가운 흰빛이 가는 비를 뚫고 얼굴 반쪽을 비춘다(街頭ビジョン) / Optics Sony A7S III 35mm f/1.4, 극저조도에서도 깨끗한 암부 / Expression 睥睨, 냉소적이고 미래적인 얼굴 / Pose 스크린 아래에 서서 옆얼굴이 청색으로 잘린다 |
 | S3 渋谷 雨のスクランブル (滤镜 #092) | B | 단서: 장소 시부야 스크램블 교차로, 대형 스크린 / 소품 투명 우산 / 시간대 비 오는 밤 / 의상 발수 코트 / Hair 濡れ髪, シースルーバング / Outfit 깊은 회색 긴 코트(撥水コート) / Scene 渋谷スクランブル交差点, 青信号 순간 투명 우산의 바다 한가운데 / Light 5000K, 수십 미터 위 대형 스크린의 차가운 흰빛이 위에서 확산된다(街頭ビジョン) / Optics Sony FX3 24mm f/1.4, 높은 감도에서도 낮은 노이즈 / Expression Dispassionate Onlooker, 인파 속 혼자 멈춘다 / Pose 인파 한가운데서 걸음을 멈추고 돌아본다 |
 | S4 銀座 雨宿り (滤镜 #093) | B | 단서: 장소 긴자 쇼윈도 처마, 주철 가로등 / 소품 - / 시간대 비 오는 밤 / 의상 캐시미어 롱코트 / Hair 濡れ髪, シースルーバング / Outfit ダブルフェイスカシミヤ, 연한 귀리색 이중직 캐시미어 롱코트 / Props 금빛 귀걸이 / Scene 銀座, 고급 쇼윈도 처마 아래 비를 피하는 모퉁이 / Light 3800K~6000K, 주철 가로등의 호박색과 지나가는 차의 차가운 제논 헤드램프가 맞선다(Warm-Cool Contrast) / Optics Leica SL2 + 50mm f/2 APO, 보라 번짐 없는 고대비 / Expression 無垢な静寂, 품위 있는 시선 |
@@ -178,7 +182,7 @@
 | 4 | A | Sovereign Stance — She stands upright with the chin tipped up and the eyes looking down along the nose, the hands loose at her sides. | Dutch Angle — A 35mm anamorphic lens held a few degrees off level, so the screens and rooflines lean and the wet street tilts with them. |
 | 5 | B | ポケットイン — She stands still in the middle of the green-light crowd, both hands sunk into the coat pockets and the shoulders relaxed. | High Angle — A 24mm lens from a raised walkway looks down at her, the clear umbrellas around her reading as small bright discs. |
 | 6 | B | 襟を直す — Under the awning she smooths the coat collar with one hand, the chin dipped toward it. | Telephoto Compression — An 85mm lens across the street stacks the amber lamps and passing headlights behind her into one band of glow. |
-| 7 | B | 傘を払う — She shakes a closed umbrella downward under the shop eave so drops arc through the air, the body leaning to one side. | カメラ目線 — A 35mm lens close at eye level, she glances straight into it while the shop window glows behind her. |
+| 7 | B | 傘の水を切る — She shakes a closed umbrella downward under the shop eave so drops arc through the air, the body leaning to one side. | カメラ目線 — A 35mm lens close at eye level, she glances straight into it while the shop window glows behind her. |
 | 8 | C | Leaning on a Railing Gazing Out — Her forearms rest on the footbridge railing with the weight leaning forward and the chin sunk into a scarf. | Negative Space — A 50mm lens frames her on one third of the vertical frame, the dark road and its light streaks filling the rest. |
 | 9 | C | Summit Overlook — She stands at the glass edge of the observation corridor, the forehead near the cold pane and the eyes down over the city. | Window Double Reflection — A 90mm lens shoots at the tall window, where her ghost reflection overlaps the sea of city lights beyond the glass. |
 | 10 | C | Window Rain Lean — Seated in the passenger seat, one shoulder and the head rest against the rain-streaked window, the face turned toward the glass. | reflection frame — A 50mm lens from the driver's side, where the expressway lights slide past in the glass and double her outline. |
@@ -186,7 +190,7 @@
 | 12 | D | Leaning on a Bridge Rail — Her forearms rest on the bridge railing with the torso leaning over and the eyes on the black water below. | 三分割構図 — A 50mm lens sets her on the right third of the vertical frame, the lantern reflections on the water filling the other two thirds. |
 
 ## 맞지 않는 것
-한낮의 해, 텅스텐 호박색이 화면을 덮는 장면, 붉은 네온 일색의 색조, 스텝 프린팅 잔상과 느린 셔터 번짐, 필름 입자와 할레이션, 파스텔, 스튜디오 흰 배경, 마른 노면, 큰 웃음, 정면 증명사진 자세, 읽히는 간판·상표 글자.
+한낮의 해, 텅스텐 호박색이 화면을 덮는 장면, 붉은 네온 일색의 색조, 스텝 프린팅 잔상과 카메라나 인물이 흔들려 번지는 느린 셔터 번짐(C의 `光跡`·`車のライトの軌跡`처럼 지나가는 차 불빛이 늘어나는 줄은 예외), 필름 입자와 할레이션, 파스텔, 스튜디오 흰 배경, 마른 노면, 큰 웃음, 정면 증명사진 자세, 읽히는 간판·상표 글자.
 
 ## 출처
 Iris (noahvisualsx/Iris b83de4c, MIT, © 2026 noahvisuals): 日本/滤镜/06 #091–100, 风格/01 #004 #008, 风格/03 #044 #045 #055 #057, 神态与微表情/02 #013 #019, 神态与微表情/05 #048, 神态与微表情/08 #079, 拍照姿势/02 #033, 道具与美甲/04 #036, 发型与妆容/01 #003. 낱말과 구성은 참고했고 문장은 MPW용으로 새로 썼다. 라이선스 전문은 [LICENSE-Iris.md](LICENSE-Iris.md).

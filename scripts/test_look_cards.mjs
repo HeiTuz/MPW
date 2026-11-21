@@ -231,14 +231,14 @@ if (!onlyCard) {
     'rainy-night-shinjuku': ['비 오는 신주쿠 밤 인물', '雨夜新宿'],
     'rolleiflex-glass-reflection': ['롤라이플렉스 유리 이중 반사', 'Reflet de vitrine'],
     'seoul-cafe-warm-diffuse': ['서울 카페 웜톤 확산광', '首尔咖啡馆与居家暖调漫射'],
-    'seoul-cool-porcelain': ['쿨톤 도자기 피부 화보', '블루 그레이 미니멀 인물', '청랭 도자기 피부 화보', 'Cool porcelain skin portrait'],
+    'seoul-cool-porcelain': ['쿨톤 도자기 피부 화보', '블루 그레이 미니멀 인물', 'Cool porcelain skin portrait'],
     'seoul-night-cinema': ['서울 밤 시네마 택시 장면', 'Seoul night cinema'],
     'south-france-summer-overexposure': ['남프랑스 한여름 과노출 사진', 'Soleil du Midi'],
     'trix-humanist-bw': ['트라이엑스 흑백 인문 사진', 'Tri-X humanist street'],
     'utsurundesu-disposable': ['우츠룬데스 일회용 카메라 사진', '写ルンです'],
     'venice-beach-polaroid-light-leak': ['베니스 비치 폴라로이드 인물', 'Venice Beach Polaroid'],
     'vermeer-window-light': ['베르메르 창가 빛 인물', 'Vermeer window light'],
-    'y2k-ccd-flash': ['천희 CCD 직섬 야간 스냅', '千禧CCD直闪'],
+    'y2k-ccd-flash': ['밀레니엄 CCD 직광 플래시 야간 스냅', '千禧CCD直闪'],
   };
   for (const [slug, queries] of Object.entries(CALLS)) {
     assert.ok(looks.some((l) => l.slug === slug), `CALLS lists unknown card ${slug}`);

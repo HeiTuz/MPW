@@ -10,12 +10,12 @@
 ## 고정 사실 (모든 갈래가 지킨다)
 | 슬롯 | 값 |
 |---|---|
-| medium | 포트라 계열 컬러 네거티브로 찍은 한여름 스냅. 노출을 넉넉히 줘서 햇빛 받은 돌·천·어깨가 흰색 쪽으로 밀린다. 디지털 HDR 사진도 스튜디오 화보도 아니다. 첫 줄은 `A midsummer film photograph in Southern France shot on Kodak Portra 400 color negative`로 시작한다. 매체 구절과 장소 구절 `in Southern France`를 나눠 적은 것이라, 사용자가 다른 장소를 말하면 장소 구절만 바꾼다(B 갈래는 `…Kodak Portra 160 color negative`, 슬라이드 세트 S2는 `…shot on Kodak Ektachrome E100 slide film`) |
+| medium | 포트라 계열 컬러 네거티브로 찍은 한여름 스냅. 노출을 넉넉히 줘서 햇빛 받은 돌·천·어깨가 흰색 쪽으로 밀린다. 디지털 HDR 사진도 스튜디오 화보도 아니다. 첫 줄은 `A midsummer film photograph in Southern France shot on Kodak Portra 400 color negative`로 시작한다. 매체 구절과 장소 구절 `in Southern France`를 나눠 적은 것이라, 사용자가 다른 장소를 말하면 장소 구절만 바꾼다(B 갈래는 `…Kodak Portra 160 color negative`, `Kodak Ektachrome E100` stock 줄을 고르면 슬라이드 세트 S2가 아니어도 `…shot on Kodak Ektachrome E100 slide film`) |
 | closer | `Photographie argentique` |
 | time | 해가 높은 한낮~이른 오후(5400~6200K)가 기본이다. D 갈래만 해가 수평선 가까운 저녁(4200~5000K). 흐린 날·비·밤 없음. 이 카드의 K 숫자는 측정값이 아니라 이 룩의 연출 값이다 |
-| light-key | 직사 태양 하나. 흰 석회암·바다·흰 천이 되튀겨 그림자를 채운다. 플래시·인공 조명 없음 |
-| palette | 금빛 노랑, 오커, 석회암 흰색, 지중해 코발트와 터키옥, 올리브 회녹. 그림자는 옅은 라벤더 회색. 네온·차가운 흐린 날 회청색 없음(슬라이드 세트 S2는 짙은 포화와 깊은 그림자) |
-| grain | 고운 네거티브 입자가 화면 전체에, 그림자에서 조금 더. 슬라이드 세트 S2는 입자가 거의 안 보인다 |
+| light-key | 직사 태양 하나. 흰 석회암·바다·흰 천이 되튀겨 그림자를 채운다. 플래시·인공 조명 없음. 얼굴 빛은 서로 대신하는 세 경로 가운데 하나만 쓴다: 노출된 직사광(`Plein soleil`), 닫힌 덧창을 지난 빛줄기(B 덧창 방, `face-light-beam`), 올리브 잎을 지난 얼룩빛(C 올리브 숲, `face-light-dapple`). 뒤의 둘을 고르면 `Plein soleil`을 쓰지 않고, 덧창 방에서는 B의 `Lumière réfléchie`(그늘도 검어지지 않는다는 보강 문장)도 쓰지 않는다 |
+| palette | 금빛 노랑, 오커, 석회암 흰색, 지중해 코발트와 터키옥, 올리브 회녹. 그림자는 옅은 라벤더 회색. 네온·차가운 흐린 날 회청색 없음(`Kodak Ektachrome E100`을 고르면 짙은 포화와 깊은 그림자) |
+| grain | 고운 네거티브 입자가 화면 전체에, 그림자에서 조금 더. `Kodak Ektachrome E100`을 고르면(슬라이드 세트 S2 포함) 입자가 거의 안 보인다 |
 | lens | 35~50mm 표준 렌즈, 얼굴 비례 자연(카메라 높이는 쌍이 정한다). 환경 광각(28mm)은 A 갑판 장면만, 6x6 정방형은 C 일부만. 심도는 인물 면이 또렷하고 먼 배경만 부드러운 얕은~중간 정도다(Iris 원문은 모든 프리셋에 얕은 심도 문구가 있는데 정오 직사광에서는 조리개를 조여 쓴 그림이 자연스럽다) |
 | figure | 한 사람이 햇빛 속에서 쉬거나 느리게 걷는다. 바람이 머리카락과 천을 한 방향으로 날린다. 눈은 해를 향해 가늘게 뜨거나 렌즈·먼 곳을 본다. 정면 증명사진 자세 없음 |
 
@@ -96,7 +96,7 @@
 | A | nails | Nacre — Pale pink polish holding fine mother-of-pearl that flashes faint pink and green iridescence as the hand turns in strong sun. (道具 #031) |
 | B, C, D | nails | Ongles courts arrondis — Short round unpainted nails trimmed to the fingertip, with long rosy nail beds and a pale half-moon. |
 | B | hat | Chapeau de paille — A wide-brimmed straw hat with a frayed edge, its open weave throwing a semi-transparent lattice of shadow over the brow and cheek. (滤镜 #093) |
-| B | hand-prop | Jane Birkin — A round hand-woven willow market basket with a thick arched handle, carried on the forearm, honey-brown in the sun. (穿搭 #066) |
+| B | hand-prop | Panier rond en osier — A round hand-woven willow market basket with a thick arched handle, carried on the forearm, honey-brown in the sun. (穿搭 #066) |
 | C | hand-prop | figue — A ripe fig split open to show pink seeds and glossy flesh in the fingers, a pale bloom dusting the fruit's dark rind. (滤镜 #096) |
 | D | hand-prop | Sac seau — A drawstring wicker bucket bag, round and upright, held at the hip with its weave lit gold from behind. (穿搭 #075) |
 | D | jewelry | Perles d'eau douce — Small irregular freshwater pearls on a fine chain at the collarbone, glowing softly in the gold light without sharp glints. (穿搭 #075) |
@@ -137,9 +137,9 @@
 |---|---|---|
 | A, B, C | face-light | Plein soleil — The sun stands high overhead with no cloud or shade between it and her, so skin, white cotton and pale stone push toward white while the shadows stay small and lavender-grey. |
 | A | light-fill | Scintillement de la mer — Sun on the moving sea breaks into thousands of tiny bright points behind her and throws faint rippling light back under her chin and onto her collarbones. (滤镜 #094 #097) |
-| B | light-fill | Lumière réfléchie — Sun thrown back from white limestone walls fills the jaw, the eyes under the hat brim and the neck with hot warm light, so nothing in shade goes dark. |
-| B | beam | Lumière à travers les volets — Midday sun forces through the slats of closed wooden shutters as a few narrow, almost pure-white bands that cross the floor, the linen and one shoulder while the rest of the room stays cool and dark. (滤镜 #099) |
-| C | dapple | Lumière mouchetée — Sun through silver olive leaves breaks into moving gold spots over her face and dress, with cool olive-grey ambient shade between them. (滤镜 #096) |
+| B | light-fill | Lumière réfléchie — Outdoors, sun thrown back from white limestone walls fills the jaw, the eyes under the hat brim and the neck with hot warm light, so nothing in shade goes dark. |
+| B | face-light-beam | Lumière à travers les volets — Midday sun forces through the slats of closed wooden shutters as a few narrow, almost pure-white bands that cross the floor, the linen and one shoulder while the rest of the room stays cool and dark. (滤镜 #099) |
+| C | face-light-dapple | Lumière mouchetée — Sun through silver olive leaves breaks into moving gold spots over her face and dress, with cool olive-grey ambient shade between them. (滤镜 #096) |
 | D | face-light | heure dorée — Low amber sun from the side throws long shadows and lays a gold edge along hair and shoulders. |
 | D | backlight | Contre-jour — The sun sits behind her, so hair and shoulders burn gold while the face reads a shade darker against a blown-out bright sky. (滤镜 #098 #100) |
 | D | catchlight | Iris d'ambre — Low golden light passes through each iris and turns it translucent amber, with the setting sun mirrored as a warm crescent. |
@@ -151,7 +151,7 @@
 | 전부 | color | Warm Peach Tones — Skin takes a warm honey glow under strong warm light, with soft lavender-grey in the shadows. |
 | A, C, D | stock | Kodak Portra 400 — Warm, low-contrast colour negative with creamy midtones on sunlit skin, honey highlights that roll off into white and fine even grain. |
 | B | stock | Kodak Portra 160 — A finer-grained negative with muted pastel colour and smooth midtones; in this look it leaves white stone reading cool-white instead of yellow. |
-| A | stock-slide | Kodak Ektachrome E100 — Slide-film colour with vivid saturation and hard contrast: cobalt sea, clean silver-white cotton, deep rich shadows and almost no visible grain. (滤镜 #092) |
+| A | stock-slide | Kodak Ektachrome E100 — A fine-grained daylight reversal film, rendered in this look with vivid colour and deep, high-contrast shadows: cobalt sea, clean silver-white cotton and almost no visible grain. (滤镜 #092) |
 | C | camera-mf | Rolleiflex 2.8F — A square medium-format frame with fine tonal gradation and a slightly low, respectful viewpoint. (滤镜 #096) |
 | C | lens-mf | Zeiss Planar 80mm f/2.8 — A standard medium-format lens that holds the face crisp and lets the silver-green leaves fall softly behind it with no wide-angle stretch. (Rolleiflex 2.8F의 렌즈. 이 줄을 쓰면 `Canon FD 50mm f/1.4` 줄은 쓰지 않는다) |
 | A | lens | Zeiss Planar 45mm f/2 — A clean-edged standard lens with clear colour and a tidy, natural perspective. (滤镜 #094) |
@@ -181,11 +181,11 @@
 | 2 | A | Main en visière — One flat hand shades her brow and her eyes narrow as the glare leaks around the fingers. | Contre-plongée — Shot from below with the sun just above her head, so the sky blows out to white behind her. |
 | 3 | A | Jambes dans le vide — She sits on a harbour wall or yacht rail with both legs hanging free over the water, one foot swinging, laughing at someone off-frame. | Plan d'ensemble — She is a small bright figure at the edge of a huge glittering bay with white boats along the horizon. |
 | 4 | A | Tremper les pieds — Seated at the sea's edge with bare feet in the shallows, her hands braced behind her and ripples spreading around the ankles. | Règle des tiers — The horizon sits on the upper third line and she sits whole, feet in the shallows, on the lower left intersection with open sea filling the rest. |
-| 5 | B | Adossée à un pilier de pierre — One shoulder against a sun-bleached limestone pillar, one hand holding the straw hat brim down against the glare. | telephoto compression — A long lens from down the alley stacks the pale stone houses behind her into one flat white-gold wall. |
+| 5 | B | Appuyée de côté contre un pilier de pierre — One shoulder against a sun-bleached limestone pillar, one hand holding the straw hat brim down against the glare. | telephoto compression — A long lens from down the alley stacks the pale stone houses behind her into one flat white-gold wall. |
 | 6 | B | Pieds nus sur le seuil — Barefoot with one leg on each side of the farmhouse doorsill, half her body in dim shade and half in a bar of hard sun. | Cadre dans le cadre — The dark door frame boxes her full figure, bare feet on the sill, into a narrow bright slot while white beams cross the room behind her. |
 | 7 | B | Couchée sur le côté — Lying on her side on creased linen with one hand trailing through a narrow beam of light and dust floating in it. | Bird's-eye View — The camera looks straight down at the bed, the shutter bars of light laid across the sheet like white ribbons. |
 | 8 | C | Doigt hésitant — A fingertip hovers over a sunflower head as she leans toward it, the other hand holding her hair back. | Plan rapproché — The frame runs from the top of her head to mid-chest with a wall of yellow petals soft behind her. |
-| 9 | C | Tenir le bas de sa robe — One hand lifts the hem of her dress at the edge of the field, her body half-turned back toward the lens. | Plan américain — Head-on at eye level with the frame cut at mid-thigh, wheat and sky filling the space around her. |
+| 9 | C | Tenir le bas de sa robe — One hand lifts the hem of her dress to thigh height at the edge of the field, so the hand and the hem sit inside the frame, her body half-turned back toward the lens. | Plan américain — Head-on at eye level with the frame cut at mid-thigh, wheat and sky filling the space around her. |
 | 10 | C | Allongée de tout son long — Lying full length on dry grass under an olive tree with her arms flung wide, flecks of sun moving across her face. | Amorce — Blurred silver-green leaves cross one corner of the frame in front of her. |
 | 11 | D | Over-the-Shoulder Glance — She walks away between lavender rows and turns her head back over one shoulder, one hand gathering the skirt. | negative space — She stands at the lower left while purple rows and a huge pale gold sky fill the rest of the frame. |
 | 12 | D | Mains jointes sur la rambarde — Her hands are clasped on a marble rail and her chin rests on her fingers, the face turned in profile toward the sinking sun. | Gros plan — The frame holds her profile and the clasped fingers under her chin edge to edge, the sun beyond her cheek flaring a red halation around the hair. |

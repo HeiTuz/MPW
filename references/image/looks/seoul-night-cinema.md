@@ -10,11 +10,11 @@
 ## 고정 사실 (모든 갈래가 지킨다)
 | 슬롯 | 값 |
 |---|---|
-| medium | 밤 도심에서 저조도 디지털 카메라로 찍은 영화 스틸. 스냅·화보가 아니다. 첫 줄은 `A contemporary night cinematic still shot on a low-light digital camera with a fast prime lens`로 시작한다(C 갈래는 `digital cinema camera with a wide-aperture prime`으로 바꿔도 된다). 매체 구절과 장소 구절을 나눠 쓴다. 장소 구절은 기본이 `in Seoul`이고 `still` 뒤에 붙인다(`… cinematic still in Seoul shot on …`). 사용자가 장소를 말하면 이 구절만 그 장소로 바꾸고 Style 줄의 `Seoul`도 같은 장소 구절이니 같이 바꾼다 |
+| medium | 밤 도심에서 저조도 디지털 카메라로 찍은 영화 스틸. 스냅·화보가 아니다. 첫 줄은 `A contemporary night cinematic still shot on a low-light digital camera`로 시작한다(C 갈래는 `digital cinema camera`로 바꿔도 된다). 렌즈는 첫 줄에 쓰지 않는다(렌즈를 말하는 줄은 lens 행이 정하는 하나다). 매체 구절과 장소 구절을 나눠 쓴다. 장소 구절은 기본이 `in Seoul`이고 `still` 뒤에 붙인다(`… cinematic still in Seoul shot on …`). 사용자가 장소를 말하면 이 구절만 그 장소로 바꾸고 Style 줄의 `Seoul`도 같은 장소 구절이니 같이 바꾼다 |
 | closer | `영화 스틸컷` |
 | time | 밤이다. 해가 화면에 없다. 깊은 밤, 비 갠 직후, 막차 시간이 모두 된다 |
 | light-key | 장면 속 실용광: 차 후미등·헤드라이트, 네온 간판, 가로등, 형광등, 먼 건물 불빛. 얼굴은 한두 개의 색광에만 닿고 나머지는 어둠이다(D의 형광등 실내인 편의점·지하철만 예외로, 냉백 형광 하나가 얼굴과 공간을 고르게 비춘다) |
-| palette | 시안·청록 그림자, 마젠타·보라 네온, 후미등의 붉은색, 나트륨 가로등의 호박색은 따뜻한 포인트로 한 곳. 깊은 검정. 파스텔·낮빛·따뜻한 확산광 없음 |
+| palette | A·B는 시안·청록 그림자와 마젠타·보라 네온, C는 나트륨 가로등의 호박색 한 곳과 청록 회색 그림자, D는 냉백 빛과 먼 도시 불빛(형광등 아래는 옅은 녹색 기)이다. 후미등의 붉은색이나 가로등의 호박색은 따뜻한 포인트로 한 곳. 깊은 검정. 파스텔·낮빛·따뜻한 확산광 없음 |
 | grain | 어두운 곳에만 아주 고운 디지털 노이즈. 필름 입자 없음 |
 | lens | 표준에서 중망원(35~135 mm 환산), 큰 조리개. 배경 불빛은 큰 원형 보케. 광각 왜곡 없음 |
 | figure | 한 사람이 어두운 공간의 가장자리에 있고 시선은 렌즈 밖(창밖, 먼 곳)에 있거나 어깨 너머로 돌아보며 렌즈를 본다. 몸은 3/4. 도시의 빛은 사람 뒤와 옆으로 흐른다. 정면 증명사진 자세 없음 |
@@ -32,13 +32,13 @@
 |---|---|---|
 | face-light | 모든 갈래에서 끈다. 얼굴 빛은 이 카드의 Light 줄이 정한다 | `立体光`은 위·옆의 한 방향 키라이트인데, 차창 불빛(A)·좌우 이색 네온(B)·머리 위 가로등(C)·냉백 형광(D)이 이미 얼굴 빛을 정한다 |
 | catchlight | A·B·C는 카드 줄이 이긴다. D는 켠다. 단 D의 `체념의 한숨`처럼 눈을 감으면 끈다 | 눈에 맺히는 빛이 차창, 네온 띠, 가로등 한 점으로 갈린다 |
-| lens | 쌍마다 렌즈를 말하는 줄이 정확히 하나다. 출처 순서는 세트의 렌즈 > 쌍 Camera 줄의 렌즈 > 갈래의 본체·렌즈 줄 > 고정 몫 `自然透视`이다. (1) 세트가 렌즈를 말하면 그 렌즈가 렌즈 줄이다: S2의 50mm f/1.2 GM, S5의 85mm f/1.4 GM(`85mm 인물 렌즈`), S6의 33mm f/1.4. 이때 쌍의 Camera 줄은 렌즈 이름 없이 구도만 쓰고(S5와 쌍 10을 같이 고르면 `망원 압축` 문장에서 '망원' 말을 빼고 다리와 먼 타워가 한 띠로 겹친다는 구도만 쓴다), S5·S6의 갈래 D `85mm 인물 렌즈` 줄은 따로 붙이지 않는다. (2) 세트가 렌즈를 말하지 않고 쌍 Camera 줄이 말하면 그것이다(쌍 10의 `망원 압축`). (3) 둘 다 아니면 갈래의 렌즈 줄이다: D 쌍 11·12는 Optics `85mm 인물 렌즈`다. A `Sony A7 IV`·B `Sony A7S III`·C `ARRI Alexa Mini`·D 본체 줄은 렌즈를 말하지 않는 카메라 본체 줄이다. (4) 그 밖의 쌍 1~9는 고정 몫 `自然透视`가 렌즈 줄이다. 카메라 높이는 쌍 7(로우앵글)처럼 쌍 Camera 줄이 정하고 렌즈 줄은 높이를 정하지 않는다 | 滤镜 #098은 135mm 압축 보케, #091은 85mm인데 Iris 꼬리는 50mm 무왜곡 시선이라 한 프리셋에 렌즈가 둘이다. A의 본체 줄이 'fast 50mm prime'을 말하던 것도 고정 몫 렌즈 줄과 겹쳐 둘이 되어, 본체 줄에서 렌즈 말을 뺐다 |
+| lens | 쌍마다 렌즈를 말하는 줄이 정확히 하나다. 출처 순서는 세트의 렌즈 > 쌍 Camera 줄의 렌즈 > 갈래의 본체·렌즈 줄 > 고정 몫 `自然透视`이다. (1) 세트가 렌즈를 말하면 그 렌즈가 렌즈 줄이다: S2의 50mm f/1.2 GM, S5의 85mm f/1.4 GM(`85mm 인물 렌즈`), S6의 33mm f/1.4. 이때 쌍의 Camera 줄은 렌즈 이름 없이 구도만 쓰고(S5와 쌍 10을 같이 고르면 `망원 압축` 문장에서 '망원' 말을 빼고 다리와 먼 타워가 한 띠로 겹친다는 구도만 쓴다), S5·S6의 갈래 D `85mm 인물 렌즈` 줄은 따로 붙이지 않는다. (2) 세트가 렌즈를 말하지 않고 쌍 Camera 줄이 말하면 그것이다(쌍 10의 `망원 압축`). (3) 둘 다 아니면 갈래의 렌즈 줄이다: D 쌍 11·12는 Optics `85mm 인물 렌즈`다. A `Sony A7 IV`·B `Sony A7S III`·C `ARRI Alexa Mini`·D 본체 줄은 렌즈를 말하지 않는 카메라 본체 줄이다. (4) 그 밖의 쌍 1~9와 13은 고정 몫 `自然透视`가 렌즈 줄이다(쌍 13을 S6과 고르면 S6의 33mm가 렌즈 줄이다). 카메라 높이는 쌍 7(로우앵글)처럼 쌍 Camera 줄이 정하고 렌즈 줄은 높이를 정하지 않는다 | 滤镜 #098은 135mm 압축 보케, #091은 85mm인데 Iris 꼬리는 50mm 무왜곡 시선이라 한 프리셋에 렌즈가 둘이다. A의 본체 줄이 'fast 50mm prime'을 말하던 것도 고정 몫 렌즈 줄과 겹쳐 둘이 되어, 본체 줄에서 렌즈 말을 뺐다 |
 | base | 카드 줄이 이긴다 | Iris 메이크업 꼬리의 쿨톤 도자기 피부 문구 위에 KR 물광 줄을 얹으면 베이스가 둘이다 |
 | lip | 카드 줄이 이긴다 | Iris 꼬리의 산호 누드 핑크 글래스 립 위에 KR 그라데이션 립을 얹으면 입술색이 둘이다 |
 | blush | B에서 끈다. A·C·D는 켠다 | B는 `Cyber Nude Makeup` 줄이 광대의 금속 광택을 정하고 뺨 색은 네온이 정한다 |
 | face-clear | 켠다. 쌍 10에서만 먼 쪽 머리가 바람에 얼굴 가장자리를 지나가도 되고 눈은 가리지 않는다 | 滤镜 #091의 미풍에 흐트러지는 머리카락과 눈을 가리지 않는다는 꼬리가 한 프리셋에서 부딪혔다 |
 | grain | 켠다. 어두운 곳에만 고운 `数码噪点`, C의 시네마 카메라도 같다 | 필름 입자 줄은 이 룩에 없다 |
-| framing | 켠다. 쌍 5(가슴 위)와 쌍 8(허벅지 중간)은 Camera 줄이 범위를 말하니 그 쌍에서는 쌍이 정한다 | 나머지 쌍은 범위를 말하지 않아 고정 몫 허리 위 줄이 범위를 정한다 |
+| framing | 켠다. 쌍 5(허벅지 중간, 주머니의 손까지)와 쌍 8(머리부터 발끝, 걸음까지)은 Camera 줄이 범위를 말하니 그 쌍에서는 쌍이 정한다 | 나머지 쌍은 범위를 말하지 않아 고정 몫 허리 위 줄이 범위를 정한다 |
 | ratio | 켠다. 사용자 비율이 없으면 3:4 세로 | 쌍은 비율을 정하지 않는다 |
 
 ## Hair and makeup
@@ -56,13 +56,13 @@
 | C | hair | 검은 긴 생머리 — Long black hair hangs straight, a few fine strands lifting in the night air and glinting orange against the dark wall behind. (滤镜 #100) |
 | D | hair | 검은 긴 생머리 — Long black hair blows loose in the river breeze, a few strands streaming sideways across the lit night behind her. (滤镜 #091) |
 | D | hair | 로우 포니테일 — Hair is tied in a smooth low ponytail at the nape and tucked behind the ears, leaving the face open to the cold light. |
-| 전부 | base | 쿨톤 하얀 피부 — A cool pink-neutral base with a satin finish keeps a faint bluish-white highlight on the cheekbones, so the face holds a cool, bright finish under colored light. |
+| 전부 | base | 쿨톤 새틴 베이스 — A cool pink-neutral base with a satin finish keeps a soft highlight on the cheekbones that takes the color of the nearest light, so the face holds a cool, bright finish under colored light. |
 
 ## Expression
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
 | A | expression | 차가운 분위기 — A still face with level, unhurried eyes and closed lips, so the passing colored light moves across a calm, cool expression. |
-| A | expression | 비 오는 창가 멍하니 — The forehead rests near the glass and the eyes follow rain beads down the pane, the face cool and still. (滤镜 #093) |
+| A | expression | 빗방울을 따라가는 시선 — The forehead rests near the glass and the eyes follow rain beads down the pane, the face cool and still. (滤镜 #093) |
 | A | expression | 시선 회피 — The eyes slide off toward the window and away from the lens and the head follows a little, leaving a half-turned, unposed look. (滤镜 #092) |
 | B | expression | 도도한 표정 — A level, unsmiling look turned back toward the lens, lids still and mouth closed, with two neon colors cutting across the face. |
 | B | expression | 몽롱한 눈빛 — Half-lowered lids and an unfocused gaze drifting past the lens, the mouth slightly slack. |
@@ -88,7 +88,7 @@
 ## Props and nails
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
-| A | jewelry | 실버 쇄골 체인 — An extra-fine silver chain lies along the collarbones and throws one tiny cold point of light each time a bright streak passes. (滤镜 #093) |
+| A | jewelry | 쇄골 길이의 가는 실버 체인 목걸이 — An extra-fine silver chain lies along the collarbones and throws one tiny cold point of light each time a bright streak passes. (滤镜 #093) |
 | A | hand-prop | 무선 이어폰 — One white earbud is pinched between thumb and finger and hovers at the ear, lit by the streaks outside. |
 | B | jewelry | 심플 실버 링 귀걸이 — Ultra-fine silver hoops swing slightly and catch one pink point and one blue point on the same curve. |
 | C | hand-prop | 비닐우산 — A clear plastic long umbrella hangs closed from one hand, rain beads sliding down its spokes and holding small orange points of the lamp. |
@@ -106,7 +106,9 @@
 | B | style | Neon Metropolis Candid — Candid street framing lit by mixed pink, red and cyan signs, glowing edges and deep dark gaps between the lights. (风格 #011) |
 | C | style | 네오누아르 — Dark clothes and matte surfaces in deep shadow on a wet street under one hard light, a quiet suspense in a still frame. |
 | D | style | 도시 엘리트 여성 — A sleek, calm city-night look in simple dark tailoring, standing apart from the cold public space around her. |
-| 전부 | palette | palette — Cyan-teal and violet-magenta light over deep black, with red tail lights or one amber lamp as the only warm accent and nothing pastel or daylight-bright anywhere in the frame. |
+| A, B | palette | palette — Cyan-teal and violet-magenta light over deep black, with red tail lights or one amber lamp as the only warm accent and nothing pastel or daylight-bright anywhere in the frame. |
+| C | palette | palette — One orange-yellow sodium lamp over deep black with teal-grey shadows, the lamp's amber the only strong color and nothing pastel or daylight-bright anywhere in the frame. |
+| D | palette | palette — Cold white light over deep black with a faint green cast under tube lights and cyan-teal in the far city lights, red tail lights the only warm accent and nothing pastel or daylight-bright anywhere in the frame. |
 
 ## Scene
 | 갈래 | 슬롯 | 줄 |
@@ -129,12 +131,12 @@
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
 | A | face-light | 차창 불빛 — Red tail lights, blue signs and green road signs outside the moving car stretch into bright bands that slide across her cheek, jaw and the window glass. |
-| A | window | 빗방울 창 — Raindrops on the glass between the camera and her scatter street and car lights into soft overlapping round blobs. |
+| A | window | 빗방울 창 — Raindrops on the window glass beside and behind her scatter street and car lights into soft overlapping round blobs. |
 | A | catchlight | 이중 반사 — Street lights and passing cars mirror faintly in her pupils, layered over the reflections in the window glass. |
 | A | weather | 비 오는 밤 — Fine rain gives every lamp outside a cold halo of mist and leaves tiny bright beads on the wet glass. |
 | B | face-light | 투톤 네온 — A magenta sign on her left and an ice-blue shop sign on her right carve the face into two hues with a dark seam along the nose. |
 | B | light-fill | 네온사인 — Glass-tube neon signs spill saturated color onto the wall and floor behind her. |
-| B | catchlight | 네온 눈빛 — Thin magenta and blue neon strips mirror as colored streaks in her irises. |
+| B | catchlight | 네온 캐치라이트 — Thin magenta and blue neon strips mirror as colored streaks in her irises. |
 | C | face-light | 가로등 불빛 — One sodium street lamp overhead gives heavy orange-yellow light that flattens color and leaves deep shadows under the brow and chin. |
 | C | light-fill | 젖은 길 반사 — Wet asphalt turns into a dark mirror that stretches the lamp and far signs into long glossy streaks below her. |
 | C | bounce | 보도 반사광 — Light thrown up from the pale pavement softly fills the underside of her jaw and nose so the shadow under the chin keeps a little detail. |
@@ -142,7 +144,7 @@
 | C | weather | 비 오는 밤 — Mist left after the rain rings the lamp in a faint cold halo and bright beads sit on the wet road. |
 | D | face-light | 한강 야경 불빛 — Cold white lights from the bridge and the far bank ripple on the water and lay a faint cool glitter along her jaw and cheek while the rest of her stays dark. |
 | D | face-light | 형광등 — Overhead tube lighting gives flat, even cool-white light with a faint green cast and very few shadows. |
-| D | light-fill | 반사 플레어 — Stainless steel and glass throw sharp star-shaped glints of the tube lights back toward the camera. |
+| D | light-fill | 별 모양 반사광 — Stainless steel and glass throw sharp star-shaped glints of the tube lights back toward the camera. |
 
 ## Optics
 | 갈래 | 슬롯 | 줄 |
@@ -150,11 +152,11 @@
 | A | body | Sony A7 IV — A full-frame low-light body, read here as clean and neutral in color with the dark areas held smooth. (원본 滤镜 #093: 50mm f/1.2 GM, 렌즈는 S2 세트가 말한다) |
 | A | motion | 장노출 — A long exposure stretches the red tail lights and blue signs outside into dream-like streaks while she stays still and sharp. (滤镜 #092) |
 | A, D | bokeh | 보케 — Distant lights turn into big round overlapping discs behind her. |
-| A, B, D | color | 청보라 밤 색감 — Shadows lean cyan-teal while highlights from signs pick up violet and magenta, with the blacks held deep. |
+| A, B, D | color | 청보라 밤 색감 — Shadows lean cyan-teal while highlights from signs pick up violet and magenta, with the blacks held deep. (D의 형광등 실내 경로인 편의점·지하철에서는 쓰지 않는다) |
 | B, D | body | Sony A7S III — A low-light full-frame look with clean shadows, steady color and calm reflective night highlights. (滤镜 #091 #095) |
 | B | bloom | 글로우 블룸 — Bright neon highlights spill softly into the surrounding shadows, wrapping the signs in a hazy glow. |
 | C | body | ARRI Alexa Mini — A cinema camera with smooth highlight roll-off and a filmic, slightly soft finish. (원본 滤镜 #100: Alexa Mini LF, Master Prime 35mm) |
-| C | key | 홍콩 느와르 — Most of the frame sits in deep black, with narrow amber light catching only the edges of her face and the wet road. |
+| C | key | 홍콩 누아르 — Most of the frame sits in deep black, with narrow amber light catching only the edges of her face and the wet road. |
 | C | color | 청록 그림자 — Dark areas lean cool teal-grey while the lamp highlights stay warm orange. |
 | D | body | Fujifilm X-H2S — A crisp mirrorless rendering of white store light with firm whites and fine shadow noise. (滤镜 #094: 33mm f/1.4) |
 | D | lens | 85mm 인물 렌즈 — A short-telephoto lens compresses the far lights and blurs them softly behind her face. (滤镜 #091) |
@@ -166,27 +168,28 @@
 | 세트 | 갈래 | 묶음 |
 |---|---|---|
 | S1 택시 뒷좌석 차창 (滤镜 #092. 단서: 장소 택시 뒷좌석·차창 밖 후미등 광궤적(장노출) / 소품 - / 시간대 깊은 밤 / 의상 -) | A | Hair 검은 긴 생머리, 한쪽 옆머리를 귀 뒤로 / Lip 글래스 립(산호 누드 핑크 글래스) / Outfit 보트넥(순흑 슬림 긴소매 니트) / Scene 택시 뒷좌석, 깊은 밤 / Light 차창 불빛(4500K), 서울 번화가의 붉은 후미등과 푸른 간판이 몽환적 광궤적으로 / Optics 장노출(Long Exposure Rear Window Seat) / Expression 시선 회피, 청랭한 눈으로 창밖을 본다 / Pose 차 뒷좌석에 옆으로 앉기, 몸은 3/4 |
-| S2 비 오는 밤 택시 (滤镜 #093. 단서: 장소 택시 창문 빗방울 / 소품 - / 시간대 비 오는 밤 퇴근길 / 의상 스퀘어넥 니트) | A | Hair 검은 긴 생머리 / Lip 글래스 립 / Outfit 스퀘어넥(깊은 숯회색 슬림 긴소매 니트) / Props 실버 쇄골 체인(극세 은 체인) / Scene 택시 뒷좌석, 창문 빗방울(빗방울 가득한 유리 밖 신호등이 번지는 빛망울) / Light 빗방울 창(4200K) / Optics Sony A7 IV, 50mm f/1.2 GM, 보케 / Expression 쓸쓸함, 비 오는 밤 퇴근길의 근심 / Pose 차 뒷좌석에 옆으로 앉기, 몸은 3/4 |
-| S3 성수동 네온 (滤镜 #095. 단서: 장소 통유리창 옆 마젠타·청색 투톤 네온 / 소품 - / 시간대 - / 의상 귀리색 블레이저(사이버 패션)) | B | Hair 검은 긴 생머리 / Lip 글래스 립 / Outfit 오버핏(연한 귀리색 블레이저 + 순흑 튜브톱, 트인 칼라) / Scene 한남동, 통유리창 옆 고요한 연한 빛의 미니멀 공간, 잡동사니 없음 / Light 투톤 네온(왼쪽 간판의 깊은 마젠타 핑크, 오른쪽 가게의 얼음빛 청색이 얼굴을 두 색으로 새긴다) / Optics 청보라 밤 색감, Dual Neon Sign Ambient / Style 사이버펑크, 서울 사이버 패션 / Expression 도도한 표정, 렌즈를 돌아본다 |
+| S2 비 오는 밤 택시 (滤镜 #093. 단서: 장소 택시 창문 빗방울 / 소품 - / 시간대 비 오는 밤 퇴근길 / 의상 스퀘어넥 니트) | A | Hair 검은 긴 생머리 / Lip 글래스 립 / Outfit 스퀘어넥(깊은 숯회색 슬림 긴소매 니트) / Props 쇄골 길이의 가는 실버 체인 목걸이(극세 은 체인) / Scene 택시 뒷좌석, 창문 빗방울(빗방울 가득한 유리 밖 신호등이 번지는 빛망울) / Light 빗방울 창(4200K) / Optics Sony A7 IV, 50mm f/1.2 GM, 보케 / Expression 쓸쓸함, 비 오는 밤 퇴근길의 근심 / Pose 차 뒷좌석에 옆으로 앉기, 몸은 3/4 |
+| S3 한남동 네온 (滤镜 #095. 단서: 장소 한남동 통유리창 옆 마젠타·청색 투톤 네온 / 소품 - / 시간대 - / 의상 귀리색 블레이저(사이버 패션)) | B | Hair 검은 긴 생머리 / Lip 글래스 립 / Outfit 오버핏(연한 귀리색 블레이저 + 순흑 튜브톱, 트인 칼라) / Scene 한남동, 통유리창 옆 고요한 연한 빛의 미니멀 공간, 잡동사니 없음 / Light 투톤 네온(왼쪽 간판의 깊은 마젠타 핑크, 오른쪽 가게의 얼음빛 청색이 얼굴을 두 색으로 새긴다) / Optics 청보라 밤 색감, Dual Neon Sign Ambient / Style 사이버펑크, 서울 사이버 패션 / Expression 도도한 표정, 렌즈를 돌아본다 |
 | S4 가로등 한 개 (滤镜 #096. 단서: 장소 심야 주택가 골목 가로등·텅 빈 길 / 소품 - / 시간대 심야 / 의상 보트넥 니트) | C | Hair 검은 긴 생머리 / Lip 글래스 립 / Outfit 보트넥(순흑 슬림 긴소매 니트) / Scene 심야 주택가 골목, 텅 빈 길 / Light 가로등 불빛(3500K, 머리 위 가로등 하나, 턱과 가슴에 깊은 그림자, 정면에서 약한 빛이 이목구비를 윤곽 짓는다) / Optics Single Sodium Street Light(Overhead) / Style 네오누아르, 조용한 서스펜스 영화의 분위기 / Expression 차가운 분위기 |
-| S5 한강 야경 (滤镜 #091. 단서: 장소 한강 대교 난간 / 소품 - / 시간대 냉백 야경(밤) / 의상 귀리색 블레이저) | D | Hair 검은 긴 생머리, 한쪽을 귀 뒤로, 미풍에 머리카락이 흐트러진다 / Lip 글래스 립 / Outfit 오버핏(연한 귀리색 블레이저 + 순흑 튜브톱, 트인 칼라) / Scene 한강 야경, 한강공원 옥상 / Light 한강 야경 불빛(6500K, 한강대교와 강남 오피스 타워의 냉백 네온, 수면의 반짝이는 냉광) / Optics Sony A7S III, 85mm f/1.4 GM(`85mm 인물 렌즈`) / Expression 맑고 또렷한 눈 / Pose 난간 기대 바라보기, 몸은 3/4 |
-| S6 편의점 (滤镜 #094. 단서: 장소 편의점(형광등) / 소품 컵라면 / 시간대 새벽 두 시 / 의상 모카 니트) | D | Hair 검은 긴 생머리 / Lip 글래스 립 / Outfit 캐시미어 니트(모카 딥브라운, 슬림 와이드 V넥) / Props 컵라면, 생수병 / Scene 편의점, 새벽 두 시, 유리 너머로 보인다 / Light 형광등(5800K 고색온 형광등이 실내를 새하얗게 비춰 유리 너머 쇼윈도 모델처럼) / Optics Fujifilm X-H2S, 33mm f/1.4 / Expression 무표정, 새벽 두 시의 담담한 얼굴 |
+| S5 한강 야경 (滤镜 #091. 단서: 장소 한강공원 강변 테라스 난간 / 소품 - / 시간대 냉백 야경(밤) / 의상 귀리색 블레이저) | D | Hair 검은 긴 생머리, 한쪽을 귀 뒤로, 미풍에 머리카락이 흐트러진다 / Lip 글래스 립 / Outfit 오버핏(연한 귀리색 블레이저 + 순흑 튜브톱, 트인 칼라) / Scene 한강 야경, 한강공원 강변 테라스 / Light 한강 야경 불빛(6500K, 한강대교와 강남 오피스 타워의 냉백 네온, 수면의 반짝이는 냉광) / Optics Sony A7S III, 85mm f/1.4 GM(`85mm 인물 렌즈`) / Expression 맑고 또렷한 눈 / Pose 난간 기대 바라보기, 몸은 3/4 |
+| S6 편의점 (滤镜 #094. 단서: 장소 편의점(형광등) / 소품 컵라면 / 시간대 새벽 두 시 / 의상 모카 니트) | D | Hair 검은 긴 생머리 / Lip 글래스 립 / Outfit 캐시미어 니트(모카 딥브라운, 슬림 와이드 V넥) / Props 컵라면, 생수병 / Scene 편의점, 새벽 두 시, 유리 너머로 보인다 / Light 형광등(5800K 차가운 흰빛의 형광등이 실내를 새하얗게 비춰 유리 너머 쇼윈도 모델처럼) / Optics Fujifilm X-H2S, 33mm f/1.4 / Expression 무표정, 새벽 두 시의 담담한 얼굴 |
 
 ## 포즈·구도 쌍
 | 번호 | 갈래 | Pose | Camera |
 |---|---|---|---|
-| 1 | A | 차 뒷좌석에 옆으로 앉기 — She sits sideways in the back seat with a hand under her chin and the face turned toward the window. | 유리창 이중 반사 — The camera sits across the cabin and shoots her through the glass, her face doubled by a ghost reflection over the passing street lights. |
+| 1 | A | 차 뒷좌석에 옆으로 앉기 — She sits sideways in the back seat with a hand under her chin and the face turned toward the window. | 유리창 이중 반사 — The camera sits across the cabin and shoots her directly, while the side window beside her holds a ghost reflection of her face doubled over the passing street lights. |
 | 2 | A | 유리창에 기대기 — One shoulder rests on the window glass while her face turns toward the rain outside. | 프레임 속 프레임 — The window frame and the door pillar box her into a narrow lit slot in the dark cabin. |
-| 3 | A | 옆모습 — Her head turns fully to the side so forehead, nose, lips and jaw read as one clean line against the moving lights. | 백미러 구도 — Only a narrow rearview-mirror strip holds her eyes, the cold road behind it streaked with light. |
+| 3 | A | 옆모습 — Her head turns fully to the side so forehead, nose, lips and jaw read as one clean line against the moving lights. | 삼분할 구도 — She sits on the right third line in full profile while the left two thirds hold the dark window and its streaking lights. |
 | 4 | B | 벽에 기대기 — One shoulder rests on a glass wall and her upper body leans into it, the head turned toward the street. | 삼분할 구도 — She stands on the left third line and the right two thirds are left to the dark street and its signs. |
-| 5 | B | 주머니에 손 넣기 — The elbows draw slightly in and the shoulders hang relaxed and still, the head turned a little toward one sign. | Medium Close-Up — The frame runs from the top of the head to mid-chest so the face fills most of it and the two neon colors sit on either cheek. |
+| 5 | B | 주머니에 손 넣기 — Both hands slide into the pockets with the elbows drawn slightly in and the shoulders hanging relaxed and still, the head turned a little toward one sign. | Cowboy Shot — The frame cuts at mid-thigh so the hands in the pockets stay in the picture, and the two neon colors still sit on either cheek of her turned face. |
 | 6 | B | 문에 기대 서기 — She leans in a doorway with one shoulder on the frame and her head tipped slightly toward the street. | 더치 앵글 — The whole frame is tilted a few degrees so the signs and the door lean, giving the neon night an off-balance edge. |
 | 7 | C | 한 손 주머니 — One hand slides into a pocket while her body angles slightly away from the lamp. | 로우앵글 — The camera looks up from chest height so the lamp sits in the frame above her and the shadow under her chin deepens. |
-| 8 | C | 횡단보도 걷기 — A long step across the painted stripes with her body angled across the wet road. | Cowboy Shot — The frame cuts at mid-thigh, showing the torso and the hand near a pocket above the shining stripes. |
+| 8 | C | 횡단보도 걷기 — A long step across the painted stripes with her body angled across the wet road. | Environmental Portrait — The frame runs from head to toe so the whole stride and the shining stripes of the wet crossing stay in the picture, her face still readable at the center. |
 | 9 | C | 돌아보기 — Her head turns back over the shoulder while the torso keeps facing away and the hair swings. | 여백 — She fills about a third of a vertical frame and the rest stays plain wall and dark space. |
 | 10 | D | 난간 기대 바라보기 — Her forearms rest on a railing with the weight leaning forward and the gaze carried out over the water. | 망원 압축 — A moderate telephoto across the river stacks the bridge and the far towers into one band of cold lights behind her. |
 | 11 | D | 난간에 엎드리기 — She leans forward with forearms crossed on a metal guard rail and her chin on the back of one hand. | 전경 가림 — A blurred edge of the overpass rail crosses one corner of the frame while huge round headlight discs glow behind her. |
 | 12 | D | 지하철 문에 기대기 — Her back rests against a closed subway door, the posture steady and the eyes tired. | 중앙 구도 — She stands dead center in the frame and the empty steel carriage with its tube lights mirrors itself evenly around her. |
+| 13 | D | 멈춰 서기 — She stands still facing the lit shelves inside the store with a paper cup of noodles in one hand and the weight on one leg. | 유리 너머 촬영 — The camera stands on the pavement outside the storefront glass and shoots her through it, the white interior lighting her like a shop-window model and a faint trace of the dark street reflected on the pane. |
 
 ## 맞지 않는 것
 한낮의 해, 따뜻한 낮 카페 확산광, 소프트박스 스튜디오 조명, 정면 직부 플래시, 굵은 필름 입자, 파스텔, 정면 증명사진 자세, 읽히는 간판 글자와 상호 로고.

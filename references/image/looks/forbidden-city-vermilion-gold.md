@@ -17,7 +17,7 @@
 | palette | 宫墙 朱红, 琉璃 금황, 汉白玉 흰색, 묵흑. 그림자는 따뜻한 적갈색(A·B 낮)이거나 서늘한 청회색(대리석·눈·새벽). 한 장에 강조색 하나(C의 공작청 포함). 네온·파스텔·형광·진한 마젠타 없음 |
 | grain | 디지털 파일에 후처리로 얹은 고운 필름풍 입자가 화면 전체에, 어두운 곳에서 조금 더 |
 | lens | 표준~중망원(35~85mm 환산), 얼굴 왜곡 없음. 인물 뒤에서 담·지붕·계단의 선이 또렷이 읽힌다. 쌍 1만 망원 압축, 쌍 3만 초광각(S3은 70–200mm 망원, S4는 24–70mm) |
-| figure | 한 사람이 거대한 건축 앞에 꼿꼿이 서거나 천천히 걷는다. 붉은 벽·금빛 기와·흰 대리석의 큰 색면이 화면을 채우고 인물은 어두운 옷 한 점이다. 시선은 먼 곳이나 렌즈를 조용히 지난다. 큰 웃음과 정면 증명사진 자세 없음 |
+| figure | 한 사람이 거대한 건축 앞에 꼿꼿이 서거나 천천히 걷는다. 붉은 벽·금빛 기와·흰 대리석의 큰 색면이 화면을 채우고 인물은 옷 한 점이다(옷 색은 고른 Outfit 줄이 정한다. A의 검은 코트, B의 墨绿 코트, C의 공작청, D의 아이보리처럼 줄마다 다르다). 시선은 먼 곳이나 렌즈를 조용히 지난다. 큰 웃음과 정면 증명사진 자세 없음 |
 
 ## 갈래 고르기
 | 갈래 | 요청에 이 말이 있으면 | 성격 | Iris 근거 |
@@ -34,15 +34,17 @@
 | base, lip | 카드 줄이 이긴다 | Iris 메이크업 고정문의 豆沙红唇 위에 프리셋 입술색(正红, 枫叶红, 朱砂)이 또 얹혀 입술색이 둘이 됐다 |
 | face-clear | A·B에서 완화한다. 바람에 날린 가닥이 뺨·목·귀 옆을 지나가도 되고 눈썹과 눈만 덮지 않는다 | #077 #080 #085 #090은 바람에 머리가 날리는 장면인데 Iris 꼬리가 `严禁乱发遮挡眉眼`로 지웠다 |
 | catchlight | B는 카드의 `金色眼神光` 줄이 이긴다. 해가 진 S4(블루아워)와 눈을 감는 `闭目冥思`(S6 포함)는 끈다 | 해를 등진 장면(#085)은 눈동자에 닿는 빛이 낙조 쪽이고, #079는 눈을 거의 감아 점을 찍을 수 없다 |
-| lens | 켠다. 어느 쌍·세트를 골라도 렌즈를 말하는 줄은 정확히 하나이고 출처 순서는 세트의 렌즈 > 쌍의 렌즈 > 갈래의 본체·렌즈 줄 > 고정 몫이다. 갈래 줄(Optics의 본체 줄)에는 렌즈 길이를 말하는 줄이 없으니 기본은 고정 몫 `自然透视` 줄이다. 쌍 1은 Camera의 `长焦压缩` 줄이, 쌍 3은 Camera의 `一点透视` 줄(초광각)이 렌즈를 말하니 그 쌍에서는 `自然透视`를 붙이지 않는다. 세트가 렌즈를 말하면(S3 70–200mm 망원, S4 24–70mm 줌) 그 값이 `自然透视`를 대신하고 세트와 쌍이 함께 렌즈를 말하면 세트가 이긴다(S3에 쌍 3을 붙이면 쌍의 Camera 줄에서 초광각 말을 뺀다). 세트가 렌즈를 말하지 않는 S1·S2·S5·S6은 Iris 원본 렌즈(S1 Summilux-M 50mm, S2 FE 85mm, S5 FE 50mm, S6 GF 80mm)가 모두 표준~중망원이라 `自然透视` 줄이 렌즈 줄이다 | #077(70-200mm)·#085(100-500mm)·#090(16-35mm)이 각자 렌즈를 정하는데 Iris 꼬리의 50mm 평시 무왜곡이 한 프롬프트에 둘째 렌즈를 얹었다 |
+| lens | 켠다. 어느 쌍·세트를 골라도 렌즈를 말하는 줄은 정확히 하나이고 출처 순서는 세트의 렌즈 > 쌍의 렌즈 > 갈래의 본체·렌즈 줄 > 고정 몫이다. 갈래 줄(Optics의 본체 줄)에는 렌즈 길이를 말하는 줄이 없으니 기본은 고정 몫 `自然透视` 줄이다. 쌍 1은 Camera의 `长焦压缩` 줄이, 쌍 3은 Camera의 `一点透视` 줄(초광각)이 렌즈를 말하니 그 쌍에서는 `自然透视`를 붙이지 않는다. 세트가 렌즈를 말하면(S3 70–200mm 망원, S4 24–70mm 줌) 그 값이 `自然透视`를 대신하고 세트와 쌍이 함께 렌즈를 말하면 세트가 이긴다(이 카드에서 쌍의 Camera 줄이 렌즈를 말하는 것은 A 갈래의 쌍 1·3뿐이고 A 세트 S1·S2는 렌즈를 말하지 않으니 부딪히지 않는다. 렌즈를 말하는 B 세트 S3·S4에는 A의 쌍을 붙이지 않고 B의 쌍 5~7만 붙인다). 세트가 렌즈를 말하지 않는 S1·S2·S5·S6은 Iris 원본 렌즈(S1 Summilux-M 50mm, S2 FE 85mm, S5 FE 50mm, S6 GF 80mm)가 모두 표준~중망원이라 `自然透视` 줄이 렌즈 줄이다 | #077(70-200mm)·#085(100-500mm)·#090(16-35mm)이 각자 렌즈를 정하는데 Iris 꼬리의 50mm 평시 무왜곡이 한 프롬프트에 둘째 렌즈를 얹었다 |
 | framing | 켠다. 쌍 3·4·5·6은 프레임 범위를 직접 말하니 그 쌍에서는 끈다(3:4 비율은 그대로). 나머지 쌍의 Camera 줄은 자리·각도·구도 기법만 정한다 | Iris 꼬리의 `腰部以上` 구도가 광장·계단·전각 전경 구도와 갈렸다 |
 | ratio | 켠다. 사용자 비율이 없으면 3:4 세로 | 쌍은 비율을 정하지 않는다 |
 | grain | 카드 줄이 이긴다. 모든 갈래에서 Optics의 `胶片颗粒` 줄이 입자를 정하고 `数码噪点` 줄은 붙이지 않는다 | 디지털 본체로 찍지만 마감이 필름 톤이고 Iris 영문 블록도 `cinema 35mm grain`이라 디지털 노이즈 줄과 입자 문장이 둘이 된다 |
 
 ## Hair and makeup
+머리는 한 줄이다. A·B의 `hair`(低盘发)와 `hair-wind`(黑长直·微卷长发) 가운데 하나만 고르고 바람 구절은 고른 머리 뒤에 덧붙인다. D의 `hair`(碎发低发髻·低马尾)도 하나만 쓴다. `hair-pin`(竹节簪·发簪·如意簪)은 쪽 머리(低盘发·碎发低发髻)에만 꽂고 黑长直·微卷长发·低马尾에는 꽂지 않는다.
+
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
-| A, B | hair | 一丝不苟低盘发 — Hair is combed into a low bun at the nape with every strand laid flat, so the long neck line stays clear against the wall or the dusk sky. (滤镜 #076 #086) |
+| A, B | hair | 一丝不乱的低盘发 — Hair is combed into a low bun at the nape with every strand laid flat, so the long neck line stays clear against the wall or the dusk sky. (滤镜 #076 #086) |
 | A, D | hair-wind | 黑长直 — Long, blunt black hair falls straight past the shoulders, and where there is wind a few strands lift sideways across the cheek and neck. (滤镜 #080 #081 #090) |
 | B | hair-wind | 微卷长发 — Long dark hair with a loose natural curl streams sideways in the wind off the hilltop, its ends catching the low sun as a thin gold edge. (滤镜 #077 #085) |
 | A | hair-pin | 竹节簪 — A plain silver pin shaped like a bamboo stalk is pushed through the bun, one thin cool line of light running along its raised joints. (滤镜 #076) |
@@ -79,7 +81,7 @@
 | B | outfit-dusk | 风衣 — A black heavy-silk double-breasted trench hangs straight to the knee, its dark sheen picking up the last warm light along each fold. (滤镜 #086) |
 | C, D | outfit | 长衫 — A long black silk robe falls straight to the shin with side slits, its sheen only a thin line along each fold. (滤镜 #079 #083) |
 | C | outfit-gown | 改良旗袍 — A peacock-blue crepe satin dress with a stand collar and a side placket skims the body, its glassy sheen turning enamel-bright under a spot. (滤镜 #084) |
-| C | outfit-trim | 织金 — Gold thread is worked as piping along the hem and the placket edge, giving a low metallic glint at each curve. (滤镜 #084) |
+| C | outfit-trim | 金线滚边 — Gold thread is worked as piping along the hem and the placket edge, giving a low metallic glint at each curve. (滤镜 #084) |
 | D | outfit | 对襟 — An ivory heavy-silk tunic with a stand collar closes straight down the centre and hangs plain, so patterned light reads cleanly on its flat white. (滤镜 #082) |
 | D | outfit-color | 烟草棕 — A warm dark brown with a golden-amber undertone, close to the bark colour of the old trees behind her. (滤镜 #081) |
 | D | outfit-inner | 羊绒针织衫 — A heavyweight ivory cashmere knit with a smooth rib at the neck shows as a pale band under the black coat. (滤镜 #089) |
@@ -92,9 +94,11 @@
 | C | legwear | 回字纹 — Tights woven tone-on-tone with a continuous squared key pattern whose ridges catch light at their edges. (丝袜 #036) |
 
 ## Props and nails
+쌍 2(양손이 등 뒤)에서는 손이 보이지 않으니 `扳指` 줄을 쓰지 않는다.
+
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
-| A | jewelry | 扳指 — A heavy stone thumb ring on the hand resting at the vat's handle shows one long soft highlight along its polished band. (道具与美甲 #005) |
+| A | jewelry | 扳指 — A heavy stone thumb ring sits on the thumb and shows one long soft highlight along its polished band wherever the hand is in view. (道具与美甲 #005) |
 | B | jewelry | 香囊压襟 — A pierced-carved white jade scent ball hangs by a tassel from the placket, light showing through its openwork. (道具与美甲 #013) |
 | C | jewelry | 景泰蓝 — Cloisonne earrings of deep blue enamel held in thin gold wire swing at the jaw, their glassy surface throwing small bright points. (滤镜 #084) |
 | D | hand-prop | 三炷香 — Three thin burning incense sticks are held upright between the hands, a thread of blue smoke rising from each glowing tip. (滤镜 #079) |
@@ -144,7 +148,7 @@
 | C | face-light | 低调布光 — A mostly dark hall with one small pool of light leaves rich blacks around the figure and a dim gold gleam on the wood. (滤镜 #083 #084) |
 | C | light-fill | 柔和漫射光 — Daylight from outside reflects softly into the hall and fills the shade under the painted beams with no visible source. (滤镜 #088) |
 | D | face-light | 丁达尔 — Early sun through the cypress branches turns the incense smoke into straight bright shafts with lit particles floating in them. (滤镜 #079) |
-| D | face-light | 屏风花影 — Slanting sun through the carved lattice window lays a crisp lattice pattern across her cheek, collarbone and white silk. (滤镜 #082) |
+| D | face-light | 窗棂光影 — Slanting sun through the carved lattice window lays a crisp lattice pattern across her cheek, collarbone and white silk. (滤镜 #082) |
 | D | dapple | 斑驳树影 — Sun filtered through cypress needles breaks into scattered soft-edged spots that move over her face and coat against cool shade. (滤镜 #081) |
 | D | dawn-light | 破晓冷光 — Clear cool blue-cyan light just before sunrise lies on the flagstones and turns the vermilion doors a quiet cold red. (滤镜 #089) |
 
@@ -163,12 +167,12 @@
 ## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 단서는 찾기용이고 요청의 장소·소품·시간대·의상 가운데 둘 이상이 그 세트의 단서와 같으면 통째로 쓰고, 세트 값은 고정 사실보다 먼저다. 규칙은 image-brief.md §4 '룩 카드' 4항과 '비워 둔 층'. 이 표의 켈빈 숫자는 광원을 잰 값이 아니라 이 룩에서 정한 연출 값이다)
 | 세트 | 갈래 | 묶음 |
 |---|---|---|
-| S1 宫墙朱红 (滤镜 #076) | A | 단서: 장소 红墙, 青砖 석판 길 / 소품 竹节簪 / 시간대 오후 햇빛 / 의상 검은 더블 코트 / Hair 一丝不苟低盘发, 검은 머리를 뒤로 올린 고전적인 낮은 쪽, 竹节簪(순은 죽절 비녀) / Brow 野生眉 / Lip 正红唇(무광의 짙은 정궁 붉은색, 豆沙 립은 얹지 않음) / Outfit 麦尔登呢(검은 중량 순양모 立领 더블 코트, 양손은 주머니에) / Pose 红墙 옆 青砖 석판 길을 천천히 걷는다 / Scene 红墙, 풍화한 주홍 담과 青砖 석판 길 / Light 柔和漫射光(5000K 오후, 낡은 붉은 회벽을 비추는 부드러운 햇빛, 그림자는 따뜻한 적갈색) / Optics Leica M11, 朱红暖调, 胶片颗粒 / Expression 波澜不惊, 붉은 담 끝을 바라본다 |
-| S2 太和冬雪 (滤镜 #080) | A | 단서: 장소 눈 쌓인 太和殿 광장, 红墙 / 소품 - / 시간대 눈 갠 날 / 의상 먹빛 캐시미어 롱코트 / Hair 黑长直, 몇 가닥이 찬바람에 날림(face-clear 완화) / Lip 正红唇 / Outfit 羊绒大衣(먹빛 더블페이스 순 캐시미어 롱코트) / Scene 红墙, 눈 쌓인 太和殿 광장의 주홍 담과 흰 눈 덮인 처마 / Light 雪地反光(6200K 눈 갠 뒤의 맑고 차가운 흰 하늘빛, 红·白·黑 세 색의 대비) / Optics Sony A1, 胶片颗粒 / Expression 不怒自威, 턱을 살짝 들고 렌즈를 본다 / Pose 天鹅颈松弛 |
+| S1 宫墙朱红 (滤镜 #076) | A | 단서: 장소 红墙, 青砖 석판 길 / 소품 竹节簪 / 시간대 오후 햇빛 / 의상 검은 더블 코트 / Hair 一丝不乱的低盘发, 검은 머리를 뒤로 올린 고전적인 낮은 쪽, 竹节簪(순은 죽절 비녀) / Brow 野生眉 / Lip 正红唇(무광의 선명한 정통 레드, 豆沙 립은 얹지 않음) / Outfit 麦尔登呢(검은 중량 순양모 立领 더블 코트, 양손은 주머니에) / Pose 红墙 옆 青砖 석판 길을 천천히 걷는다 / Scene 红墙, 풍화한 주홍 담과 青砖 석판 길 / Light 柔和漫射光(5000K 오후, 낡은 붉은 회벽을 비추는 부드러운 햇빛, 그림자는 따뜻한 적갈색) / Optics Leica M11, 朱红暖调, 胶片颗粒 / Expression 波澜不惊, 붉은 담 끝을 바라본다 |
+| S2 太和冬雪 (滤镜 #080) | A | 단서: 장소 눈 쌓인 太和殿 광장, 红墙 / 소품 - / 시간대 눈 갠 날 / 의상 먹빛 캐시미어 롱코트 / Hair 黑长直, 몇 가닥이 찬바람에 날림(face-clear 완화) / Lip 正红唇 / Outfit 羊绒大衣(먹빛 더블페이스 순 캐시미어 롱코트) / Scene 红墙, 눈 쌓인 太和殿 광장의 주홍 담과 흰 눈 덮인 처마 / Light 雪地反光(6200K 눈 갠 뒤의 맑고 차가운 흰 하늘빛, 红·白·黑 세 색의 대비) / Optics Sony A1, 胶片颗粒 / Expression 不怒自威, 턱을 살짝 들고 렌즈를 본다 / Pose 肩颈放松 |
 | S3 景山金顶 (滤镜 #077) | B | 단서: 장소 景山 万春亭 난간, 琉璃瓦 지붕의 바다 / 소품 - / 시간대 낙조 / 의상 墨绿 코트 / Hair 微卷长发, 산정 바람에 흩날림(face-clear 완화) / Lip 枫叶红唇(무광) / Outfit 羊绒大衣, 墨绿(깊은 에메랄드 그린 더블페이스 롱코트, 열어 입음) / Pose 登高俯瞰, 景山 万春亭 汉白玉 난간 옆 / Scene 景山, 아래로 琉璃瓦 금빛 지붕의 바다 / Light 逆光金边(3800K 낙조, 머리카락과 코트 가장자리에 황금 윤곽, 얼굴 뼈대에 하이라이트) / Optics Canon EOS R5, 70-200mm 망원 / Expression 居高临下, 턱을 살짝 들고 내려다본다 / Camera 远景 |
-| S4 角楼蓝调 (滤镜 #086) | B | 단서: 장소 角楼, 해자 汉白玉 난간, 수면 반영 / 소품 - / 시간대 블루아워 / 의상 트렌치 / Hair 一丝不苟低盘发 / Lip 正红唇 / Outfit 风衣(玄黑 중량 실크 더블 수정 트렌치) / Scene 角楼, 해자 汉白玉 난간 곁, 수면에 누각의 금빛 윤곽이 거울처럼 비친다 / Light 蓝调时刻(6800K~3200K 혼합: 짙은 남색 황혼 하늘과 따뜻한 누각 조명, 옆에서 약한 부드러운 빛이 얼굴을 비춘다) / Optics Nikon Z8(24-70mm), 胶片颗粒 / Expression 침착하게 렌즈를 돌아본다 / Pose 回眸 |
-| S5 景泰蓝 (滤镜 #084) | C | 단서: 장소 珍宝馆, 골동 진열 / 소품 景泰蓝 귀걸이 / 시간대 - / 의상 孔雀蓝 旗袍 / Hair 높이 틀어 올린 우아한 현대식 쪽 / Props 景泰蓝 귀걸이(순금 掐丝 공작청 법랑) / Lip 正红唇(무광의 복고 붉은색) / Outfit 改良旗袍(깊은 孔雀蓝 중량 크레이프 새틴 立领 롱 드레스), 织金(가장자리 순금 실 자수 파이핑) / Pose 双手叠放腹前 / Scene 珍宝馆, 어두운 배경의 골동 진열 앞 / Light 부드러운 스포트(5200K), 공작청 새틴이 법랑 같은 보석 광택을 내고 금사 자수가 반짝인다 / Optics Sony A7R V, 胶片颗粒 / Expression 不怒自威, 렌즈를 직시 |
-| S6 古刹香火 (滤镜 #079) | D | 단서: 장소 雍和宫, 古柏 / 소품 향 / 시간대 이른 아침 햇빛 / 의상 长衫 / Hair 碎发低发髻 / Lip 水光唇(연한 물분홍) / Outfit 长衫(素黑 중량 실크 对襟 장삼) / Props 三炷香(가는 향 세 대를 두 손으로 든다) / Scene 雍和宫, 큰 청동 향로 앞 / Light 丁达尔(4600K 이른 아침 햇빛이 古柏 가지를 지나 청남색 향 연기 속에 빛줄기를 만든다) / Optics Fujifilm GFX, 胶片颗粒 / Expression 闭目冥思, 눈을 거의 감는다(catchlight 끔) / Pose 双手叠放腹前 |
+| S4 角楼蓝调 (滤镜 #086) | B | 단서: 장소 角楼, 해자 汉白玉 난간, 수면 반영 / 소품 - / 시간대 블루아워 / 의상 트렌치 / Hair 一丝不乱的低盘发 / Lip 正红唇 / Outfit 风衣(玄黑 중량 실크 더블브레스트 슬림핏 트렌치코트) / Scene 角楼, 해자 汉白玉 난간 곁, 수면에 누각의 금빛 윤곽이 거울처럼 비친다 / Light 蓝调时刻(6800K~3200K 혼합: 짙은 남색 황혼 하늘과 따뜻한 누각 조명, 옆에서 약한 부드러운 빛이 얼굴을 비춘다) / Optics Nikon Z8(24-70mm), 胶片颗粒 / Expression 침착하게 렌즈를 돌아본다 / Pose 回眸 |
+| S5 景泰蓝 (滤镜 #084) | C | 단서: 장소 珍宝馆, 골동 진열 / 소품 景泰蓝 귀걸이 / 시간대 - / 의상 孔雀蓝 旗袍 / Hair 높이 틀어 올린 우아한 현대식 쪽 / Props 景泰蓝 귀걸이(순금 掐丝 공작청 법랑) / Lip 正红唇(무광의 복고 붉은색) / Outfit 改良旗袍(깊은 孔雀蓝 중량 크레이프 새틴 立领 롱 드레스), 金线滚边(가장자리 순금 실 자수 파이핑) / Pose 双手叠放腹前(빈손으로 양손을 아랫배 앞에 포갠다) / Scene 珍宝馆, 어두운 배경의 골동 진열 앞 / Light 부드러운 스포트(5200K), 공작청 새틴이 법랑 같은 보석 광택을 내고 금사 자수가 반짝인다 / Optics Sony A7R V, 胶片颗粒 / Expression 不怒自威, 렌즈를 직시 |
+| S6 古刹香火 (滤镜 #079) | D | 단서: 장소 雍和宫, 古柏 / 소품 향 / 시간대 이른 아침 햇빛 / 의상 长衫 / Hair 碎发低发髻 / Lip 水光唇(연한 물분홍) / Outfit 长衫(素黑 중량 실크 对襟 장삼) / Props 三炷香(가는 향 세 대를 두 손으로 든다) / Scene 雍和宫, 큰 청동 향로 앞 / Light 丁达尔(4600K 이른 아침 햇빛이 古柏 가지를 지나 청남색 향 연기 속에 빛줄기를 만든다) / Optics Fujifilm GFX, 胶片颗粒 / Expression 闭目冥思, 눈을 거의 감는다(catchlight 끔) / Pose 双手持香 |
 
 ## 포즈·구도 쌍
 | 번호 | 갈래 | Pose | Camera |
@@ -176,14 +180,14 @@
 | 1 | A | 单手插兜 — She walks slowly along the foot of a tall red wall with one hand in her coat pocket, the coat hem lifting a little at each step. | 长焦压缩 — A moderate telephoto along the wall flattens its tiled coping and the paving into one band of red and grey behind her. |
 | 2 | A | 双手背后 — She stands square before a gilded bronze vat with both hands clasped behind her back, chest open and chin level. | 对称构图 — The frame divides evenly left and right of a central axis, with the vat and the red wall mirrored on both sides and her on the line. |
 | 3 | A | 迎风疾行 — She strides straight toward the lens along the stone avenue with her long coat flaring behind her and her hair pushed back. | 一点透视 — A low camera with an ultra-wide lens, set well back, runs the paving to one vanishing point at the far halls with her on the centre line. |
-| 4 | A | 天鹅颈松弛 — She stands loose-shouldered beside a snow-capped red wall with her chin lifted slightly and her neck long. | 留白 — She fills about one third of the vertical frame while the snow, the wall and the pale sky around her stay plain and quiet. |
+| 4 | A | 肩颈放松 — She stands loose-shouldered beside a snow-capped red wall with her chin lifted slightly and her neck long. | 留白 — She fills about one third of the vertical frame while the snow, the wall and the pale sky around her stay plain and quiet. |
 | 5 | B | 登高俯瞰 — She stands upright at the marble railing of a hilltop pavilion, her eyes looking down and out over the roofs below. | 远景 — The frame stays wide so she reads small beside the railing while the sea of yellow roofs fills the rest. |
 | 6 | B | 台阶驻足垂眸 — She stops on a carved marble step with one foot slightly ahead and her eyes lowered toward the lens below, one hand gathering the robe hem. | 对角线构图 — The stair edge and the balustrade run corner to corner of the frame and she stands where they cross, the frame running from her head down to the step under her feet. |
 | 7 | B | 回眸 — She walks away along the moat balustrade and turns her head back over one shoulder toward the lens. | 三分法构图 — She stands on one vertical third line and the corner tower with its reflection fills the other two thirds. |
 | 8 | C | 单手扶柱 — One hand rests flat on a towering pillar beside her while her face turns into profile toward the light at the door. | 前景遮挡 — A blurred pillar edge crosses one side of the frame in front of her and deepens the dim hall. |
-| 9 | C | 凝望天际 — Her body turns sideways and her chin lifts so her eyes rest on the painted beams high overhead. | 仰拍 — The camera looks up from below so the brackets and beams close in above her head and her profile stands against them. |
+| 9 | C | 仰望梁枋 — Her body turns sideways and her chin lifts so her eyes rest on the painted beams high overhead. | 仰拍 — The camera looks up from below so the brackets and beams close in above her head and her profile stands against them. |
 | 10 | D | 漏窗侧立 — She stands in profile beside a carved lattice window with her shoulder close to the wall and patterned light falling on her. | 框架构图 — The lattice window and the dark wall around it box her into a narrow lit slot. |
-| 11 | D | 双手叠放腹前 — She stands straight with level shoulders and both hands joined in front of her, three incense sticks held between them. | 俯拍 — From a raised step the camera looks down so the smoke and the light shafts lead the eye to her and the censer. |
+| 11 | D | 双手持香 — She stands straight with level shoulders and both hands joined in front of her around three incense sticks held between them. | 俯拍 — From a raised step the camera looks down so the smoke and the light shafts lead the eye to her and the censer. |
 | 12 | D | 倚立古柏 — Her shoulder leans against a thick old cypress trunk, her body still and one hand resting on the bark. | 三分法构图 — She stands on one vertical third line while the gnarled trunks and the dappled ground fill the rest. |
 
 ## 맞지 않는 것
