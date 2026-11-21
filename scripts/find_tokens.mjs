@@ -45,8 +45,14 @@ export const loadAll = (dir = LEXICON_DIR) => SLUGS.map((slug) => loadLayer(slug
 const escapeRe = (w) => w.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 const hasWord = (text, w) => new RegExp(`(?<![\\p{L}\\p{N}])${escapeRe(w)}(?![\\p{L}\\p{N}])`, 'u').test(text);
 // Per query term: token/alias exact 100/90, partial 60/50, tag 30, culture code 20, looks 10. A row scores the sum over terms.
+// A tag that is a look card's calling name (폴라로이드 빛샘, Kodak FunSaver) matches only a term equal to it, so "폴라로이드" does not pull every row linked to a Polaroid card.
 // A term given as {q, exact:true} (a one-character word from a split phrase) scores only on an exact token, alias or tag match.
 // A term given as {q, word:true} (a Latin word from a split phrase) matches inside a token, alias, tag or description only as a whole word ("vague" does not hit "Vaguelettes").
+let lookNameTags = null;
+const isLookNameTag = (tag) => {
+  lookNameTags ??= new Set(loadLooks().flatMap((l) => l.names.map(squash)));
+  return lookNameTags.has(squash(tag));
+};
 function scoreRow(row, terms) {
   let total = 0;
   const token = norm(row.token), sToken = squash(row.token);
@@ -64,7 +70,7 @@ function scoreRow(row, terms) {
     else if (exact) best = tags.some((t, i) => same(t, sTags[i])) ? 30 : 0;
     else if (part(token, sToken)) best = 60;
     else if (aliases.some((a, i) => part(a, sAliases[i]))) best = 50;
-    else if (tags.some((t, i) => part(t, sTags[i]))) best = 30;
+    else if (tags.some((t, i) => (isLookNameTag(t) ? same(t, sTags[i]) : part(t, sTags[i])))) best = 30;
     else if (row.culture.some((c) => c.toLowerCase() === q)) best = 20;
     else if (q.length >= 2 && (word ? hasWord(norm(row.looks), q) : norm(row.looks).includes(q))) best = 10;
     total += best;
@@ -74,14 +80,17 @@ function scoreRow(row, terms) {
 
 // Decided per layer: a phrase (spaces, brackets or slashes inside) that matches nothing in that layer's rows is retried word by word there ("90년대 홍콩" -> 홍콩, "홍콩영화(왕가위 감성)" -> 홍콩영화, 왕가위).
 // Digit-only words, one-character Latin words and filler words (감성, 느낌, 스타일, 룩, vibe) are dropped; a one-character Hangul or CJK word (비, 눈, 雨) is kept but scores on exact matches only; a Latin word matches whole words only.
+// When the query called a look card, the card carries its own name and era: the words of the called name score on exact matches only
+// ("Kodak Gold 200" must not hit a "gold thread" row), and era words (90년대, 90s, 1990s) are dropped from the split because the card sets the era.
 const PHRASE_BREAK = /[\s()（）[\]【】「」『』/／]+/;
 const FILLER_WORDS = new Set(['감성', '느낌', '스타일', '룩', 'vibe']);
-function expandTerms(terms, rows) {
+const ERA_WORD = /^(\d{2,4}년대|\d{2,4}s|\d{2,4}代|\d{2,4}年代)$/;
+function expandTerms(terms, rows, cardWords = new Set(), cardCalled = false) {
   return terms.flatMap((t) => {
     if (!PHRASE_BREAK.test(t) || rows.some((r) => scoreRow(r, [t]) > 0)) return [t];
     return t.split(PHRASE_BREAK)
-      .filter((w) => w && !/^\d+$/.test(w) && !FILLER_WORDS.has(w) && !(w.length === 1 && /[a-z0-9]/.test(w)))
-      .map((w) => (w.length === 1 ? { q: w, exact: true } : /^[a-z0-9'.-]+$/.test(w) ? { q: w, word: true } : w));
+      .filter((w) => w && !/^\d+$/.test(w) && !FILLER_WORDS.has(w) && !(w.length === 1 && /[a-z0-9]/.test(w)) && !(cardCalled && ERA_WORD.test(w)))
+      .map((w) => (w.length === 1 || cardWords.has(w) ? { q: w, exact: true } : /^[a-z0-9'.-]+$/.test(w) ? { q: w, word: true } : w));
   });
 }
 
@@ -133,7 +142,7 @@ export function findLookCards(terms, dir = LOOKS_DIR) {
   });
 }
 
-const MAX_CANDIDATES = 4;
+const MAX_CANDIDATES = 6;
 export function findLookCandidates(terms, called = [], dir = LOOKS_DIR) {
   const raw = norm(terms.join(','));
   const stripped = strip(raw);
@@ -149,12 +158,14 @@ export function findLookCandidates(terms, called = [], dir = LOOKS_DIR) {
 }
 
 // Returns [{slug, title, matches:[row+score]}] with every match (sorted); callers cut to a limit or draw at random.
-export function search({ terms, layers = SLUGS, culture = null, dir = LEXICON_DIR }) {
+// `cards` are the look cards the query called (findLookCards); their matched names feed expandTerms.
+export function search({ terms, layers = SLUGS, culture = null, dir = LEXICON_DIR, cards = [] }) {
   const picked = loadAll(dir).filter((l) => layers.includes(l.slug));
   const base = terms.map(norm).filter(Boolean);
+  const cardWords = new Set(cards.flatMap((c) => nameWords(c.matched)));
   return picked.map(({ slug, title, rows }) => {
     const pool = rows.filter((r) => !culture || r.culture.includes(culture));
-    const q = expandTerms(base, pool);
+    const q = expandTerms(base, pool, cardWords, cards.length > 0);
     const matches = pool
       .map((r) => ({ ...r, score: scoreRow(r, q) }))
       .filter((r) => r.score > 0)
@@ -259,9 +270,9 @@ if (isMainModule()) {
       process.exit(0);
     }
     const opts = parseArgs(argv);
-    let results = search(opts);
-    results = opts.random ? drawRandom(results, opts.random) : results.map((l) => ({ ...l, matches: l.matches.slice(0, opts.limit) }));
     const cards = findLookCards(opts.terms);
+    let results = search({ ...opts, cards });
+    results = opts.random ? drawRandom(results, opts.random) : results.map((l) => ({ ...l, matches: l.matches.slice(0, opts.limit) }));
     const candidates = findLookCandidates(opts.terms, cards);
     process.stdout.write(opts.json ? JSON.stringify(formatJson(results, opts.terms, cards, candidates)) + '\n' : formatText(results, cards, candidates));
   } catch (error) {

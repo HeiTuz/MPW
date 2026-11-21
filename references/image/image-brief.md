@@ -375,7 +375,7 @@ paper coffee cup — A white paper take-out cup with a plain brown sleeve and fl
 红指甲 — Glossy opaque red polish on medium oval nails, each nail holding a small sharp highlight against the cup.
 
 ## Pose
-靠墙斜倚 — Her left shoulder and back rest against a tiled arcade pillar, her weight sunk into the left hip and the right foot crossed loosely over the left ankle.
+靠墙斜倚 — Her left shoulder and back rest against a tiled arcade pillar, her weight sunk into the left hip.
 still body — She does not move: the coffee stays at her chest, the left hand stays deep in the coat pocket, and only the steam and the rain around her are in motion.
 
 ## Style
@@ -390,7 +390,7 @@ wet street — Rain sheets off the arcade edge in a bright curtain, and the asph
 ## Light
 霓虹切光 — A red neon sign at camera left lights the left side of her face and the silk, while green tube light from farther down the street edges her right cheek and shoulder, the two colors meeting along her nose.
 彩色霓虹眼神光 — Thin red and green neon strips mirror as colored streaks in her irises.
-雨の夜 — Every sign and lamp wears a soft cold halo of mist, and the falling rain catches the neon as short bright streaks.
+雨夜 — Every sign and lamp wears a soft cold halo of mist, and the falling rain catches the neon as short bright streaks.
 
 ## Optics
 Kodak Vision3 500T — Tungsten-balanced cinema negative color: red-orange highlights on skin and silk, shadows leaning teal-green, blacks pressed deep with only a little detail left in them.
@@ -400,7 +400,7 @@ Kodak Vision3 500T — Tungsten-balanced cinema negative color: red-orange highl
 
 ## Camera
 前景遮挡 — Shot from across the arcade with a passing black umbrella edge blurred across the lower right corner of the frame.
-长焦压缩 — A moderate telephoto about four meters away at chest height stacks the neon signs behind her into one flat glowing wall.
+无畸变 — The camera stands back with a standard-to-moderate telephoto lens, so the face keeps natural proportions with no wide-angle stretch on the nose or forehead.
 vertical frame — A vertical 3:4 frame from the top of her head to her waist, with her in the left third and the street glow filling the rest.
 
 ## Finish
@@ -581,7 +581,7 @@ After:
    | `background` | `商店街` |
 
    영어로 쓸 때도 `cast shadows`, `wind-blown strands`처럼 그 대상의 이름을 쓴다.
-4. **문장 안에도 원어 명사를 섞는다.** 문장은 영어 뼈대로 쓰되, 이름이 따로 있는 사물이 나오면 그 원어 명사를 그대로 둔다. 한 문장에 둘까지, 풀이는 덧붙이지 않는다. 예(§12.9 본보기에서): `Concrete poles stand on both sides of the street, a tangle of 電線 cables slung across the bright sky between them.` `A narrow shopping street of two- and three-story shops with green and yellow 日除け awnings …` `… a man on a ママチャリ rides past at frame left …`
+4. **문장 안에도 원어 명사를 섞는다.** 문장은 영어 뼈대로 쓰되, 이름이 따로 있는 사물이 나오면 그 원어 명사를 그대로 둔다. 한 문장에 둘까지, 풀이는 덧붙이지 않는다. 예(§12.9 본보기에서): `Concrete poles line the right side and recede down the street, with 電線 cables criss-crossing the white sky between them.` `A narrow street of small two- and three-story shops recedes behind her, with a yellow 日除け awning at left …` `… a person in a dark hoodie rides a ママチャリ left of center …`
 
 문장은 이렇게 쓴다.
 
@@ -634,70 +634,72 @@ After:
 
 고칠 때는 어긋난 층 하나만 다시 쓰고 나머지는 글자 그대로 둔다(§7). 가로 400px 썸네일에서 보이지 않는 차이는 고치지 않는다. 머리색의 미세한 차이, 손에 든 물건의 높이, 행인의 위치, 머리 가닥 수는 모델의 한계로 보고 문장을 더 붙여 쫓지 않는다. 같은 문안으로 다시 뽑아 고른다.
 
-### 12.9 본보기: 일본 下町 상점가 낮 스냅
+### 12.9 본보기: 일본 상점가 낮 스냅 (카드를 맞춰 쓴 판)
 
-4:3 비율, 깊은 심도, 하얗게 날아간 하늘, 선명한 디지털 엣지가 보이는 사진이다. 아래는 §12.0~12.3을 차례로 따라 쓴 결과다. 읽는 순서만 따르고 장면, 문장, 층 이름을 다른 사진에 옮기지 않는다.
+4:3 비율, 깊은 심도, 하얗게 날아간 하늘, 선명한 디지털 엣지가 보이는 사진이다. 아래는 §12.0~12.3을 차례로 따라, 맞는 룩 카드를 붙여 쓴 결과다. 읽는 순서만 따르고 장면, 문장, 층 이름을 다른 사진에 옮기지 않는다.
 
 - 매체: 4:3, 깊은 심도, 하늘의 白飛び, 선명한 엣지가 모두 콤팩트 디카를 가리킨다. 첫 줄과 Optics와 Finish가 이 매체를 부른다.
-- 룩 카드: 이 본보기는 카드 없이 쓴 것이다. 일본 거리 낮 카드가 있고 §12.0의 대조가 맞으면 첫 줄 매체와 closer 토큰을 카드의 것으로 바꾸고, 이름은 카드 줄에서 먼저 가져온다.
-- 이름 목록: 商店街, 電柱, 電線, 通行人, マンホール, 黒髪ロング, 白シャツ, ニットベスト, スマホ, 素爪, カメラ目線, 振り返り, 逆光, コンデジ, 白飛び, パンフォーカス, 日常スナップ를 일본어로 먼저 적고 한 번에 검색했다. 사전에 없는 것은 확실한 일본어라 그대로 썼다.
-- 사람은 젊은 성인으로 읽혀 기본 성인 공식을 썼다. 흰 셔츠와 검은 니트 베스트, 숄더백은 교복풍으로 읽힐 수 있어 `制服` 같은 말은 쓰지 않았다. 사진 속 인물이 학생으로 보이면 §12.3의 학생 처리로 바꾼다. 편의점 로고는 색 띠만 남겼고 얼굴 생김새는 옮기지 않았다. 좌우는 헷갈리는 곳만 화면 기준으로 썼다.
+- 룩 카드: `find_tokens --q "コンデジ,商店街,逆光,日本"`의 맨 위에 `日系CCD日光 · コンデジ`가 떴다. §12.0의 다섯 항목 대조가 모두 맞았다: medium은 소형 센서 콤팩트 스냅, time은 해가 하늘에 있는 낮, light-key는 직사 역광과 그늘, palette는 채도 높은 색과 순백의 하늘, lens는 깊은 심도다. 갈래는 A 商店街スナップ로 읽었다. 카드에서 가져온 것: 첫 줄 문구, closer `コンデジ`, realism 자리의 `native resolution` 줄(`8K`와 모공 줄은 쓰지 않는다), 입자 `数码噪点`, 끈 `lens` 몫(Optics의 `コンデジ`가 렌즈를 말한다), JP 문화권의 Finish 토큰(`実写`). 카드의 장면 세트와 쌍은 이 사진과 맞지 않아 쓰지 않았고, 보이는 칸은 모두 사진 값이다.
+- 이름 목록: 商店街, コンビニ, 電柱, 通行人, マンホール, 落ち葉, 黒髪ロング, ほつれ毛, 素肌感, 白シャツ, ベスト, ショルダーバッグ, スマホ, 素爪, カメラ目線, 半開き唇, 立ち止まり, 逆光, 影, コンデジ, 白飛び, 黒つぶれ, パンフォーカス, 日常スナップ를 일본어로 먼저 적고 층별로 검색했다. 사전에 있는 것은 그 표기로, 없는 것은 확실한 일본어라 그대로 썼다.
+- 사람은 젊은 성인으로 읽혀 기본 성인 공식을 썼다. 흰 셔츠와 검은 베스트, 숄더백은 교복풍으로 읽힐 수 있지만 학교 표식과 학교 장소가 없어 `制服` 같은 말은 쓰지 않았다. 사진 속 인물이 학생으로 보이면 §12.3의 학생 처리로 바꾼다. 편의점 로고는 색 띠만 남겼고 얼굴 생김새는 옮기지 않았다. 좌우는 헷갈리는 곳만 화면 기준으로 썼다.
 
 ```text
-A compact digital camera snapshot on a sunny day in a Japanese 下町 shopping street: a woman with long wind-blown hair, a phone held in both hands, turns back to look into the camera while the sky behind her blows out to white.
+A Japanese everyday compact digital camera snapshot shot on a small-sensor CCD compact: a woman with long wind-tossed dark hair stands stopped on a sunlit shopping street, a silver phone held low in both hands, her eyes meeting the lens while the sky behind her clips to white.
 
 ## Identity Reference
 If a model reference is provided, the woman in this photo is that model: take only the face shape and facial features from it, adapting them naturally to this scene's expression, angle and light, and keep her own skin tone. Hair, makeup and everything else follow this prompt. If none is provided, she is a 22-year-old Japanese woman with a soft 透明感 look: a small face, gentle features and clear, fair skin. In either case she has 7.5-head proportions, a small head over level shoulders and a long neck.
 
 ## Hair and makeup
-黒髪ロング — Long straight black hair falls past the chest with a loose center part and no fringe, turning warm dark brown wherever the sun shines through it.
-wind-blown strands — The breeze lifts loose strands across the frame-left side of her face and down over the shoulder at frame right, their edges glowing brown-gold against the bright street.
-透明感 — A sheer, barely-there base: the skin reads clear with a faint sheen on the cheekbones, no visible blush edge, and the eyes left almost bare.
-水紅 — A thin, translucent coral-pink lip color like a stain, on lips slightly parted.
+黒髪ロング — Long dark hair, black with a brown cast, falls well past the chest in loose layers with a soft center part, and turns lighter brown wherever the sun passes through its edges.
+ほつれ毛 — Fine flyaway strands lift sideways at frame left of her face and drift across her cheek, while a longer lock swings off her shoulder at frame right.
+素肌感 — A sheer, natural base that leaves the skin looking bare and evenly bright, with the eyes left almost unmade and only a thin soft pink tint on the lips.
 
 ## Expression
-カメラ目線 — Her eyes look straight into the lens, calm and a little guarded, as if a friend just called her name and pressed the shutter.
-半開き唇 — The lips part slightly and the brows stay level, with no smile.
+カメラ目線 — Her dark eyes look straight into the lens under level lids and level brows, calm and slightly wary, as if she glanced up from her phone just as the shutter went.
+半開き唇 — The lips part by a thin gap with the jaw relaxed and no smile, and the chin dips very slightly toward the lens.
 
 ## Outfit
-白シャツ — A crisp white cotton shirt with a pointed collar and long sleeves, the sunlit sleeve bright but still showing its folds.
-ニットベスト — A black fine-knit V-neck vest over the shirt, matte and soft, swallowing the light.
-black shoulder bag — A black faux-leather bag with a zip top hangs from her left shoulder on a long strap, one soft highlight running along its upper edge.
+白シャツ — A white cotton shirt with an open collar and long sleeves, the sunlit sleeve and shoulder nearly clipping to white while the folds in shade stay pale blue-gray.
+ベスト — A black sleeveless V-neck vest over the shirt, smooth and matte, its plain unmarked front sinking to flat black in shade.
+ショルダーバッグ — A black boxy bag hangs at her hip from a long strap over her shoulder at frame right, with a zip pocket on its front, a small metal buckle and one soft highlight along its top edge.
 
 ## Props and nails
-スマホ — A silver smartphone with rounded edges, held in both hands at chest height with the screen toward her, its metal frame throwing a small sun glint.
-素爪 — Short bare nails with a faint natural gloss.
+スマホ — A silver smartphone with rounded edges is held low in both hands at frame left, tilted so its glossy back and metal rim face the camera and catch one small hard sun glint.
+素爪 — Short natural nails with a faint pink tone and no polish.
 
 ## Pose
-振り返り — Her body faces frame left down the street while her head turns back over her left shoulder toward the camera.
-hands at the phone — Both elbows stay close to her body and both thumbs rest on the screen, as if she was typing a message a second ago.
+立ち止まり — She stands still in the street with her torso angled about 30 degrees toward frame left and her shoulders nearly level, her head turned back toward the lens.
+両手持ち — Both elbows stay bent close to her ribs and both hands hold the phone at waist-to-chest height at frame left, well below the chin and clear of her face.
 
 ## Style
-日常スナップ — An everyday street snapshot: ordinary clothes on an ordinary afternoon, nothing staged or styled for the camera.
-palette — White shirt, black knit and bag, gray asphalt, green and yellow awnings, and a sky washed out to white.
+日常スナップ — An everyday snapshot of an ordinary person caught between errands, in plain clothes and an unposed stance.
+palette — White shirt, black vest and bag, gray asphalt, yellow and green awnings, an orange, green and red striped sign and a sky washed out to white.
 
 ## Scene
-商店街 — A narrow shopping street of two- and three-story shops with green and yellow 日除け awnings, and on the left a convenience store with a plain orange, green and red striped sign and no logo or readable lettering.
-電柱 — Concrete poles stand on both sides of the street, a tangle of 電線 cables slung across the bright sky between them.
-通行人 — People with shopping bags walk the sidewalk, a man on a ママチャリ rides past at frame left, and a silver car comes up the far end of the street.
-マンホール — A round iron manhole cover sits in the gray asphalt at lower left beside a white lane line, and a few fallen leaves lie on the paving stones near her.
+商店街 — A narrow street of small two- and three-story shops recedes behind her, with a yellow 日除け awning at left, green awnings on both sides, shuttered fronts at frame right and a parked bicycle with a basket beside an outdoor air-conditioner unit.
+コンビニ — A convenience store at upper left has a sign reduced to bands of orange, green and red with no readable mark or lettering.
+電柱 — Concrete poles line the right side and recede down the street, with 電線 cables criss-crossing the white sky between them.
+通行人 — About eight small, sharp pedestrians in dark jackets walk the street and the sidewalks, several carrying white plastic bags or backpacks, a person in a dark hoodie rides a ママチャリ left of center, and a silver minivan comes up the far end of the street.
+マンホール — A round iron manhole cover sits in the gray asphalt at lower left beside diagonal white lane lines and a strip of green paint at the far left edge.
+落ち葉 — A few brown maple leaves lie on the paving stones at lower right beside her bag, the only sign of the season.
 
 ## Light
-逆光 — The midday sun is high behind her toward frame left, rimming her hair and shoulders with a thin bright edge while her face sits in open shade, filled evenly by light bouncing off the street.
-cast shadows — The passersby throw short, hard-edged shadows toward the camera across the sidewalk.
-catchlight — A small soft bright patch from the open street sits in each eye.
+逆光 — The sun stands high behind her toward frame right, rimming her hair and the shoulders of her white shirt with a bright edge while her face stays in soft open shade, lit by the pavement and the sky.
+影 — The buildings at right throw a wide dark shadow across the sidewalk, and the pedestrians and the cyclist cast short hard-edged shadows toward the camera and frame left.
+catchlight — A faint small bright point from the open sky sits in each eye.
 
 ## Optics
-コンデジ — An early-2000s compact digital camera rendering: crisp, slightly over-sharpened edges, bright saturated awnings and clean daylight white balance.
-白飛び — The sky and the far end of the street clip to flat white, and the brightest edges of the white sleeve clip with them.
-数码噪点 — Very fine digital noise sits only in the dark shop interiors and under the awnings.
+コンデジ — A pocket compact with a tiny CCD sensor: sharp from front to back, slightly strong sharpening and slightly oversaturated yellow and green awnings under clean daylight white balance.
+白飛び — The sky above the roofs and the sunlit edge of her shirt sleeve clip to flat white with no detail left in them.
+黒つぶれ — The black vest and bag sink to near-flat black with almost no fold detail.
+数码噪点 — Very fine digital noise sits only in the darkest shop interiors and under the awnings.
 
 ## Camera
-パンフォーカス — Everything from her face to the far end of the street stays in focus, the deep depth of field of a small sensor.
-horizontal frame — A horizontal 4:3 frame cut at her hips, her figure in the right half and the street receding through the left half, shot at her eye level from about two meters.
+パンフォーカス — Everything from her hands to the car at the far end of the street stays in focus, with no background blur.
+horizontal frame — A horizontal 4:3 frame cut at her hips, her face on the vertical center line and the shoulder and bag filling the right half while the street recedes through the left, shot at about her eye level from roughly 1.5 meters with a slightly wide lens.
 
 ## Finish
-実写スナップ — The whole frame reads as an unretouched compact-camera snapshot a friend took on the street, not a fashion shoot.
-高精細 — Ultra-realistic 8K photographic detail: real skin texture, real cotton weave, real grit on the asphalt.
-実写 — A real person photographed on a real street, never an illustration, anime frame, 3D render or plastic-skinned CGI.
+コンデジ — The whole frame reads as an everyday compact digital camera snapshot, not a fashion shoot.
+native resolution — The frame holds the resolution of a small-sensor CCD compact and no more: crisp but over-sharpened edges, clipped highlights and skin that shows no individual pores.
+実写 — A real person photographed on location, never an illustration, anime frame, 3D render or plastic-skinned CGI.
 ```
