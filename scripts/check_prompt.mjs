@@ -414,9 +414,11 @@ function inspectCoherence(result, text, instruction) {
   const sections = layerSections(instruction);
   const outsideIdentity = sections.filter((section) => section.name !== "Identity Reference").flatMap((section) => section.lines).join("\n");
   const keepsTone = /\bkeeps?\s+(?:her|his|their)\s+own\s+skin\s+tone\b/iu.test(instruction);
-  const skinColor = snippets(/\b(?:fair|pale|porcelain|ivory|olive|tan(?:ned)?|golden|bronzed?|deep|dark|brown|cool|warm|milky)[ -]?(?:[\w-]+\s+){0,2}skin\b|冷白皮|白皙|瓷肌/giu, outsideIdentity);
+  // Only the natural skin color (fair, pale, tan, 冷白皮) is flagged. A finish the makeup makes (porcelain finish, glass skin) and light on the skin
+  // (sun-warmed glow on the skin, a neon tint on the cheek) pass: the color word must be a whole word next to "skin", at most one word between.
+  const skinColor = snippets(/\b(?:fair|pale|porcelain|ivory|olive|tan(?:ned)?|golden|bronzed?|deep|dark|brown|cool|warm|milky)\b[ -]?(?:[\w-]+[ -]){0,1}skin\b|冷白皮|白皙|瓷肌/giu, outsideIdentity);
   if (keepsTone && skinColor.length) {
-    emit(result, CODE_REGISTRY.identitySkin, `A skin color is written outside the identity paragraph: ${[...new Set(skinColor)].slice(0, 3).join(" | ")}`, { hint: "Skin color belongs in the identity condition only; a reference keeps its own tone." });
+    emit(result, CODE_REGISTRY.identitySkin, `A skin color is written outside the identity paragraph: ${[...new Set(skinColor)].slice(0, 3).join(" | ")}`, { hint: "The natural skin color belongs in the identity condition only; a reference keeps its own tone. Makeup finish and light on the skin are fine elsewhere." });
   }
   const ratios = instruction.match(new RegExp(`(?<![\\d:.])${KNOWN_RATIOS}(?![\\d:])`, "gu")) ?? [];
   if (ratios.length >= 2) emit(result, CODE_REGISTRY.ratioDup, `An aspect ratio is written ${ratios.length} times: ${[...new Set(ratios)].join(" | ")}`, { hint: "Write the ratio once, in the Camera layer." });
@@ -433,8 +435,8 @@ function inspectCoherence(result, text, instruction) {
   inspectEngine(result, instruction);
 }
 
-// image-brief.md §12.2: a token names the thing shown, never the slot it fills. Only the `token — sentence` lines inside a layer are read.
-const SLOT_NAMES = new Set(["hair color", "hair colour", "hair", "hairstyle", "makeup", "outfit", "clothing", "clothes", "pose", "expression", "background", "foreground", "scene", "setting", "location", "passersby", "passers-by", "people", "crowd", "road surface", "ground", "floor", "sky", "lighting", "light", "shadow", "shadows", "mood", "atmosphere", "color", "colors", "colour", "camera", "camera angle", "composition", "style", "medium"]);
+// image-brief.md §12.2: a token names the thing shown, never a layer or category name. Slot tokens that fixed-lines.md and the look-card frame define (face clear, catchlight, palette, vertical frame, horizontal frame, focus, hands) are allowed. Only the `token — sentence` lines inside a layer are read.
+const SLOT_NAMES = new Set(["hair color", "hair colour", "hair", "hairstyle", "makeup", "outfit", "clothing", "clothes", "pose", "expression", "background", "foreground", "scene", "setting", "location", "passersby", "passers-by", "people", "crowd", "road surface", "ground", "floor", "sky", "lighting", "light", "shadow", "shadows", "mood", "atmosphere", "color", "colors", "colour", "camera", "camera angle", "composition", "style", "medium", "nails", "nail", "props", "legwear", "optics"]);
 function inspectSlotNames(result, sections) {
   const names = [];
   for (const section of sections) {

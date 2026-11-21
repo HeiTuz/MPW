@@ -161,10 +161,11 @@ for (const [layer, slug] of Object.entries(LAYER_FILES)) {
 // Raised again (step 5b) for the Finish culture table, the realism replacement line and the cool-light blush line in fixed-lines.md plus the card-pair rule in image-brief section 4
 // (new 85545, portrait 92434, extract 117544 measured). The ceilings are about 1.7% above the measurement.
 // Raised again for the extraction bundle only: looks/index.md carries 28 card rows (22503 bytes, was 1 row) and the bundle measured 114072; the other bundles do not include the index.
-assert.ok(sizes['gpt-image-new'].utf8_bytes <= 87000, `gpt-image-new is ${sizes['gpt-image-new'].utf8_bytes} bytes`);
-assert.ok(sizes['gpt-image-portrait'].utf8_bytes <= 94000, `gpt-image-portrait is ${sizes['gpt-image-portrait'].utf8_bytes} bytes`);
+// Raised again (step 7a) for the single value order, the candidate-card rule, the Korean Finish form and the no-cue makeup rule (new 89202, portrait 96091, extract 124384 measured at the fixed-lines step).
+assert.ok(sizes['gpt-image-new'].utf8_bytes <= 91000, `gpt-image-new is ${sizes['gpt-image-new'].utf8_bytes} bytes`);
+assert.ok(sizes['gpt-image-portrait'].utf8_bytes <= 98000, `gpt-image-portrait is ${sizes['gpt-image-portrait'].utf8_bytes} bytes`);
 assert.ok(sizes['gpt-image-edit'].utf8_bytes <= 20900);
-assert.ok(sizes['gpt-image-extract'].utf8_bytes <= 125000, `gpt-image-extract is ${sizes['gpt-image-extract'].utf8_bytes} bytes`);
+assert.ok(sizes['gpt-image-extract'].utf8_bytes <= 127000, `gpt-image-extract is ${sizes['gpt-image-extract'].utf8_bytes} bytes`);
 
 const scenarios = JSON.parse(read('scripts/fixtures/behavioral/image-planning.json')).cases;
 assert.deepEqual(scenarios.map(c => c.id), [

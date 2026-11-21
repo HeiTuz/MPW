@@ -30,6 +30,13 @@ const identity = "## Identity Reference\nIf a model reference is provided, keep 
 has(`${identity}## Hair and makeup\nbase — A pale skin finish with a faint glow.`, "coherence/identity-skin");
 lacks(`${identity}## Hair and makeup\nbase — A matte finish with a faint glow.`, "coherence/identity-skin");
 lacks("## Hair and makeup\nbase — A pale skin finish with a faint glow.", "coherence/identity-skin");
+// The natural color is flagged; a finish the makeup makes and light on the skin are not.
+has(`${identity}## Hair and makeup\nbase — A base that leaves warm golden skin with a faint glow.`, "coherence/identity-skin");
+has(`${identity}## Style\nlook — Tan skin against white linen.`, "coherence/identity-skin");
+lacks(`${identity}## Hair and makeup\nbase — A semi-matte porcelain finish with a faint satin glow only on the high points.`, "coherence/identity-skin");
+lacks(`${identity}## Hair and makeup\nbase — A glass skin finish: a thin glossy base with a soft wet sheen.`, "coherence/identity-skin");
+lacks(`${identity}## Light\nlow sun — A sun-warmed glow lies on the skin of her shoulders, and a neon tint falls on the cheek.`, "coherence/identity-skin");
+lacks(`${identity}## Light\nwarm light — Warm light on her skin turns the shadow side amber.`, "coherence/identity-skin");
 
 // ratio-dup: known ratios only, counted over the whole prompt; times and ratios in quotes are not ratios.
 has("A vertical 3:4 frame. The 3:4 frame leaves space above.", "coherence/ratio-dup");
@@ -62,5 +69,13 @@ lacks("## Hair and makeup\n黒髪ロング — Long straight black hair.\nwind-b
 lacks("## Light\ncast shadows — Short hard shadows fall toward the camera.\ncatchlight — A small bright patch sits in each eye.", "token/slot-name");
 lacks("A woman with hair color — dark brown — stands in the street.", "token/slot-name");
 lacks("hair color — Long straight black hair, before any layer heading.", "token/slot-name");
+// The slot tokens fixed-lines.md and the card frame define are allowed; the layer and category names are not.
+has("## Props and nails\nnails — Short bare nails with a faint gloss.", "token/slot-name");
+has("## Outfit\noutfit — A white shirt.", "token/slot-name");
+has("## Scene\nbackground — A narrow shopping street.", "token/slot-name");
+has("## Light\nlighting — Midday sun from behind.", "token/slot-name");
+for (const token of ["face clear", "catchlight", "palette", "vertical frame", "horizontal frame", "focus", "hands"]) {
+  lacks(`## Camera\n${token} — A line that fills the ${token} slot.`, "token/slot-name");
+}
 
 console.log("Coherence matching: occlusion, focal, identity-skin, ratio-dup, decimal, slot-dup, day-night and token/slot-name cases pass; image output NOT RUN.");
