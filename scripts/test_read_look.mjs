@@ -70,6 +70,42 @@ for (const file of cards) {
   assert.ok(one.text.includes(pairs.at(-1)) && one.text.split("\n").filter((l) => /^\| \d+ \|/.test(l)).length === 1, `${file}: --pair gives that pair only`);
 }
 
+// --set: every card line whose head token the bundle names is in the output, whichever branch row holds it.
+// Checked without read_look's matcher: a plain substring test with a letter/digit guard on the edges.
+const isAlnum = (c) => c !== undefined && /[a-z0-9]/.test(c);
+const names = (text, token) => {
+  const t = token.normalize("NFKC").toLowerCase();
+  const x = text.normalize("NFKC").toLowerCase();
+  if (t.length < 2) return false;
+  for (let i = x.indexOf(t); i !== -1; i = x.indexOf(t, i + 1)) {
+    if (!(isAlnum(t[0]) && isAlnum(x[i - 1])) && !(isAlnum(t.at(-1)) && isAlnum(x[i + t.length]))) return true;
+  }
+  return false;
+};
+const headOf = (cell) => cell.match(/^(.+?) — /)?.[1] ?? null;
+let namedChecks = 0;
+for (const file of cards) {
+  const text = fs.readFileSync(path.join(looks, file), "utf8");
+  const card = parseCard(text);
+  const heads = [];
+  for (const layer of card.layers) for (const row of rowsOf(layer)) heads.push(headOf(row.replace(/^\| /, "").split(" | ")[2]));
+  for (const row of rowsOf(card.find("포즈·구도 쌍"))) { const c = row.replace(/^\| /, "").split(" | "); heads.push(headOf(c[2]), headOf(c[3])); }
+  for (const row of rowsOf(card.find("장면 세트"))) {
+    const cells = row.replace(/^\| /, "").split(" | ");
+    const id = cells[0].split(" ")[0];
+    const bundle = cells.slice(2).join(" | ").replace(/ \|$/, "").split(" / ").filter((seg) => !/^(단서:\s*)?(장소|소품|시간대|의상)(\s|$)/.test(seg)).join(" / ");
+    const out = readBranch(text, { branch: cells[1].match(/[A-Z]/)[0], set: id });
+    assert.equal(out.error, undefined, `${file} ${id}`);
+    const printedHeads = out.text.split("\n").filter((l) => l.startsWith("| ")).flatMap((l) => l.replace(/^\| /, "").split(" | ").map(headOf));
+    for (const head of new Set(heads.filter(Boolean))) {
+      if (!names(bundle, head)) continue;
+      namedChecks++;
+      assert.ok(printedHeads.includes(head), `${file} ${id}: the bundle names ${head} but --set does not print its line`);
+    }
+  }
+}
+assert.ok(namedChecks > 300, `${namedChecks} set-token checks`);
+
 // Bad input is an error, not an empty read.
 const text = fs.readFileSync(path.join(looks, cards[0]), "utf8");
 assert.match(readBranch(text, { branch: "Z" }).error, /branch not found/);
@@ -87,4 +123,4 @@ assert.equal(run(slug).status, 2);
 assert.equal(run("no-such-card", "--outline").status, 2);
 assert.equal(run(slug, "--branch", "Z").status, 2);
 
-console.log(`read_look: ${cards.length} cards, outline and every branch read; image output NOT RUN.`);
+console.log(`read_look: ${cards.length} cards, outline and every branch read; ${namedChecks} set-named tokens all printed with --set; image output NOT RUN.`);

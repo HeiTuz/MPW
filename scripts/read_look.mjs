@@ -10,7 +10,8 @@
 // --branch   끄는 고정 몫 whole, the rows of every layer table whose 갈래 cell holds that branch
 //            (or 전부), the chosen set's whole bundle, the chosen pair (all pairs of the branch when
 //            --pair is left out). 출처 is never printed. --set alone also gives the branch; --pair
-//            may name a pair of another branch (a borrowed pair).
+//            may name a pair of another branch (a borrowed pair). With --set, the lines the bundle names
+//            by token (a lip, a prop, a Pose) come out too, whichever branch row holds them.
 // A bare slug resolves to references/image/looks/<slug>.md under the skill root.
 import fs from "node:fs";
 import path from "node:path";
@@ -45,6 +46,19 @@ export function parseCard(text) {
   const layers = sections.filter((s) => s.lines.some((l) => /^\| 갈래 \| 슬롯 \| 줄 \|/.test(l)));
   return { head, sections, find, layers };
 }
+
+// Does the text name this token? Case and width are ignored; a token that starts or ends with a Latin
+// letter or digit must not sit inside a longer word.
+const mentions = (text, token) => {
+  const t = token.normalize("NFKC").toLowerCase().trim();
+  if (t.length < 2) return false;
+  const esc = t.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  const before = /^[a-z0-9]/.test(t) ? "(?<![a-z0-9])" : "";
+  const after = /[a-z0-9]$/.test(t) ? "(?![a-z0-9])" : "";
+  return new RegExp(before + esc + after).test(text.normalize("NFKC").toLowerCase());
+};
+// The bundle without its clue segments (장소·소품·시간대·의상), which are plain description.
+const bundleBody = (bundle) => bundle.split(" / ").filter((seg) => !/^(단서:\s*)?(장소|소품|시간대|의상)(?=\s|$)/.test(seg)).join(" / ");
 
 const body = (section) => section.lines.join("\n").replace(/\s+$/, "");
 const block = (section) => `## ${section.title}\n${body(section)}`;
@@ -120,12 +134,30 @@ export function readBranch(text, { branch = null, set = null, pair = null } = {}
     out.push(`## 장면 세트 (고른 세트)\n${[...header, setRow].join("\n")}`);
   }
   const pairsSection = card.find("포즈·구도 쌍");
+  let pairRows = [];
   if (pairsSection) {
     const header = pairsSection.lines.filter((l) => /^\| (번호|---)/.test(l)).slice(0, 2);
     const all = pairsSection.lines.filter((l) => isRow(l) && !isHeadOrRule(l));
     const picked = pair === null ? all.filter((l) => covers(splitRow(l)[1], branch)) : all.filter((l) => splitRow(l)[0] === String(pair));
     if (pair !== null && picked.length === 0) return { error: `pair not found: ${pair} (pairs: ${all.map((l) => splitRow(l)[0]).join(", ")})` };
     if (picked.length) out.push(`## 포즈·구도 쌍 (${pair === null ? `갈래 ${branch} 전부` : `쌍 ${pair}`})\n${[...header, ...picked].join("\n")}`);
+    pairRows = all.filter((l) => !picked.includes(l));
+  }
+  if (setRow) {
+    // Lines the bundle names by token that the branch read above did not print (another branch's row, another pair).
+    const text = bundleBody(splitRow(setRow)[2] ?? "");
+    const named = [];
+    // A token the branch read already prints (濡れ髪 for A) is not repeated from another branch's row, whose sentence is that branch's variant.
+    const printed = new Set(card.layers.flatMap((layer) => layer.lines.filter((l) => isRow(l) && !isHeadOrRule(l) && covers(splitRow(l)[0], branch)).map((l) => tokenOf(splitRow(l)[2] ?? "").toLowerCase())));
+    for (const layer of card.layers) {
+      const header = layer.lines.filter((l) => /^\| (갈래|---)/.test(l)).slice(0, 2);
+      const rows = layer.lines.filter((l) => isRow(l) && !isHeadOrRule(l) && !covers(splitRow(l)[0], branch) && !printed.has(tokenOf(splitRow(l)[2] ?? "").toLowerCase()) && mentions(text, tokenOf(splitRow(l)[2] ?? "")));
+      if (rows.length) named.push(`### ${layer.key}\n${[...header, ...rows].join("\n")}`);
+    }
+    const pairHeader = pairsSection ? pairsSection.lines.filter((l) => /^\| (번호|---)/.test(l)).slice(0, 2) : [];
+    const pairNamed = pairRows.filter((l) => [2, 3].some((i) => mentions(text, tokenOf(splitRow(l)[i] ?? ""))));
+    if (pairNamed.length) named.push(`### 포즈·구도 쌍\n${[...pairHeader, ...pairNamed].join("\n")}`);
+    if (named.length) out.push(`## 세트가 가리키는 줄 (묶음이 토큰 이름으로 부른 줄 가운데 위에 없는 것)\n${named.join("\n\n")}`);
   }
   return { text: `${[...notes, ...out].join("\n\n")}\n` };
 }
