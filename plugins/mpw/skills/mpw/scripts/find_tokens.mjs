@@ -284,7 +284,7 @@ export function drawRandom(results, count, pickIndex = randomInt) {
 }
 
 const cardBlock = (cards) => (cards.length
-  ? `## Look card\n${cards.map((c) => `${c.title} [${c.axis}] — ${c.file}\nread: node scripts/read_look.mjs ${c.slug} --outline\nbranch: node scripts/read_look.mjs ${c.slug} --branch <A|B|C|D> [--set S<n>] [--pair <n>]`).join('\n')}\n(read the outline first and choose the branch, set and pair; then run the branch command for that branch only. Read the card before the layer rows below; it fills the layers this look carries. Without a shell, open the card file whole.)\n\n`
+  ? `## Look card\n${cards.map((c) => `${c.title} [${c.axis}] — ${c.file}\nread: node scripts/read_look.mjs ${c.slug} --outline\nbranch: node scripts/read_look.mjs ${c.slug} --branch <A|B|C|D> [--set S<n>] [--pair <n>]`).join('\n')}\n(read the outline first and choose the branch, set and pair; then run the branch command for that branch only. Use a scene set only when the request names that set's specific place or prop; a city name or a kind of place (cafe, alley, street) alone is not enough, and what the request says beats the card. Read the card before the layer rows below; it fills the layers this look carries. Without a shell, open the card file whole.)\n\n`
   : '');
 
 const candidateBlock = (candidates) => (candidates.length

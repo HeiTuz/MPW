@@ -23,9 +23,9 @@
 ## 갈래 고르기
 | 갈래 | 요청에 이 말이 있으면 | 성격 | Iris 근거 |
 |---|---|---|---|
-| A 首尔CCD (기본) | 디카, CCD, 밀레니엄, 서울, 성수동, 편의점, 엘리베이터, 지하주차장, 첫눈, IXY, Cyber-shot, FinePix | 소형 센서 컴팩트의 내장 플래시. 얼굴이 평평하게 밝고 배경은 급히 어두워지며 청록 그림자가 낀다 | KR 滤镜 #001–#020 |
-| B 夜间硬闪 | 小红书, 夜间硬闪, 冷白皮, 红唇, 名媛, 외탄, 사합원, 회원제 클럽, 비 오는 밤, 옥상 바, Speedlite | 미러리스에 얹은 외장 플래시가 얼굴을 정면에서 치고 뒷벽에 단단한 검은 그림자. 정홍 입술과 검은 의상 | CN 滤镜 #021–#040 |
-| C 狗仔直闪 | 파파라치, 狗仔, 할리우드, 뉴욕, 레드카펫, 클럽 뒷문, 필름 컴팩트, Contax T3, Tri-X, 지하철 승강장 | 35mm 필름 컴팩트의 직부 플래시. 필름 입자, 가운데만 밝고 사방이 순흑, 컬러와 흑백 | US 滤镜 #021–#040 |
+| A 首尔CCD (기본) | 디카, CCD, 밀레니엄, 서울, 성수동, 편의점, 엘리베이터, 지하주차장, 첫눈, IXY, Cyber-shot, FinePix, 방, 거리 밤, 낮 디카 | 소형 센서 컴팩트의 내장 플래시. 얼굴이 평평하게 밝고 배경은 급히 어두워지며 청록 그림자가 낀다 | KR 滤镜 #001–#020 |
+| B 夜间硬闪 | 小红书, 夜间硬闪, 冷白皮, 红唇, 名媛, 외탄, 사합원, 회원제 클럽, 비 오는 밤, 옥상 바, Speedlite, 실내 밤, 파티 | 미러리스에 얹은 외장 플래시가 얼굴을 정면에서 치고 뒷벽에 단단한 검은 그림자. 정홍 입술과 검은 의상 | CN 滤镜 #021–#040 |
+| C 狗仔直闪 | 파파라치, 狗仔, 할리우드, 뉴욕, 레드카펫, 클럽 뒷문, 필름 컴팩트, Contax T3, Tri-X, 지하철 승강장, 밤 외출, 길거리 플래시 | 35mm 필름 컴팩트의 직부 플래시. 필름 입자, 가운데만 밝고 사방이 순흑, 컬러와 흑백 | US 滤镜 #021–#040 |
 
 ## 끄는 고정 몫 (fixed-lines.md의 슬롯)
 | 슬롯 | 처리 | 이유 |
@@ -96,7 +96,7 @@
 ## Style
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
-| A | style | Y2K — Early-2000s dressing reduced to one plain fitted knit and a single small chain, with the digicam flash doing the rest of the styling. |
+| A | style | Y2K — Early-2000s dressing reduced to one plain fitted knit and a single small chain, with the digicam flash doing the rest of the styling. (2000년대 스냅 장면일 때) |
 | B | style | 大女主 — Commanding dark tailoring and unsmiling poise, the flash treating her like a magazine cover shot after midnight. |
 | C | style | Paparazzi Candid — A mid-stride look at the lens, caught off guard by a flash with a casual, composed face. |
 | C | style | Indie Sleaze — Night-out black leather and vintage layers under harsh camera flash, the hair slightly undone. |

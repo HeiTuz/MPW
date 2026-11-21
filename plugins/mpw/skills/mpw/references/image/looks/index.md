@@ -2,11 +2,11 @@
 
 룩 하나가 모든 층에 무엇을 넣는지 한 파일에 적은 것이 룩 카드다. 사용자가 룩 이름을 말했으면 층을 채우기 전에 그 룩의 카드를 읽는다. 카드를 찾는 길은 `node scripts/find_tokens.mjs --q "<요청 문구>"`다. 질의에 카드 머리 표의 `부르는 이름`이 하나라도 들어 있으면 출력 맨 위에 `## Look card` 블록이 카드 경로와 읽는 명령을 요청에서 이름이 먼저 나온 순서로 내고, `부르지 않는 말`만 걸린 카드는 `## Look card candidates`로 낸다. 이름의 낱말이 질의에서 서로 붙어 있거나 사이에 한 낱말 이내일 때만 부른 것으로 치고(쉼표로 끊겨도 된다), 흩어져 있으면 후보로 내린다. 이름 바로 앞뒤에 부정 표현(`no`, `not`, `without`, `말고`, `없이`, `빼고`, `아닌`, `不要`, `なし`)이 있으면 그 이름은 카드를 부르지 않는다. 카드는 두 단계로 읽는다. `node scripts/read_look.mjs <slug> --outline`으로 갈래·세트·쌍을 정하고, `--branch <갈래> [--set S<n>] [--pair <n>]`로 그 갈래만 읽는다(카드 한 장이 30KB를 넘는다). 통째로 읽으려면 `node scripts/read_refs.mjs references/image/looks/<slug>.md`나 아래 표의 링크를 연다.
 
-카드 한 장의 절 구성, 층별 줄을 쓰는 방식, 우선순위는 [image-brief.md](../image-brief.md) §4 '룩 카드'가 정본이다. 카드 안의 `끄는 고정 몫`은 [fixed-lines.md](../fixed-lines.md)의 슬롯 이름으로 적는다.
+카드 한 장의 절 구성, 층별 줄을 쓰는 방식, 우선순위는 [image-brief.md](../image-brief.md) §4 '룩 카드'가 정본이다. 카드 안의 `끄는 고정 몫`은 [fixed-lines.md](../fixed-lines.md)의 슬롯 이름으로 적는다. 카드를 새로 쓰거나 고칠 때는 palette를 갈래·필름별 행으로 쓰고 예외 구절을 한 행에 합치지 않으며, Scene 줄은 건축·재료·배치만 말하고 빛은 Light 층이 말하게 하고, 세트 묶음에는 쓰는 값만 두고 Iris 원문 값은 `출처` 절에 두며, Optics의 본체 줄은 센서·포맷·렌즈 같은 사실만 말하고 연출(soft glow, warm cast)은 입자·톤 슬롯에 쓴다.
 
 | slug | 이름 | 문화권 | 갈래 | 축 | 요약 |
 |---|---|---|---|---|---|
-| [wong-kar-wai](wong-kar-wai.md) | 王家卫 · 港风 | CN | A 重庆森林(기본); B 花样年华; C 堕落天使; D 阿飞正传 | 장면 | 텅스텐 시네마 네거티브의 90년대 홍콩 영화 스틸. 밤 네온, 붉은·호박 빛에 녹청 그림자 |
+| [wong-kar-wai](wong-kar-wai.md) | 王家卫 · 港风 | CN | A 重庆森林(기본); B 花样年华; C 堕落天使; D 阿飞正传 | 장면 | 텅스텐 시네마 네거티브의 홍콩 영화 스틸(A·C는 90년대, B·D는 60년대). 밤 네온, 붉은·호박 빛에 녹청 그림자 |
 | [california-golden-hour](california-golden-hour.md) | 加州 골든아워 · California golden hour | US | A 태평양 역광(기본); B 사막 로드트립; C 도시·리조트 낙조; D 포트라 데이라이트 | 장면 | 포트라 필름의 캘리포니아 낙조 스냅. 낮은 해 역광, 꿀빛 금색과 바다 남색 그림자 |
 | [forbidden-city-vermilion-gold](forbidden-city-vermilion-gold.md) | 故宫朱红暖金 · 宫廷历史胶片 | CN | A 朱红宫墙(기본); B 金顶落日; C 殿堂幽光; D 古柏古刹 | 장면 | 베이징 궁궐 앞 현대 인물 사진. 朱红 궁담과 금빛 기와, 따뜻한 시네마 톤 |
 | [fujifilm-classic-neg](fujifilm-classic-neg.md) | 富士经典负片 · クラシックネガ | JP | A 街角クラシックネガ(기본); B 空気感ハイキー; C 夜の高感度; D リバーサルと白黒 | 매체 | 후지 필름으로 찍은 일본 일상 스냅. 청록 그림자와 낮춘 채도 |

@@ -22,10 +22,10 @@
 ## 갈래 고르기
 | 갈래 | 요청에 이 말이 있으면 | 성격 | Iris 근거 |
 |---|---|---|---|
-| A Highway Daylight (기본) | 66번 도로, 주유소, 픽업, 컨버터블, 스케이트, 야구장, 수영장, 다이빙대, 피크닉, 한낮, 직사광, 여름 | 해가 높아 그림자가 짧고 단단하다. 빨강·노랑이 가장 세게 찍힌다 | 滤镜 #056 #057 #059 #061 #066 #069 #070, 拍照姿势 #069~#084 |
-| B Amber Open Country | 밀밭, 농장, 대협곡, 레드우드, 캠핑카, 해질녘 들판, 빛내림, 흙길 | 해가 낮아 금주황빛이 들판과 암벽을 태우고 적갈색 그림자가 길다 | 滤镜 #062 #063 #064 #067 |
-| C Main Street Interior | 다이너, 부스, 카운터, 주크박스, 밀크셰이크, 레코드점, 음반, 가게 창가 | 창으로 든 오후빛이 빨간 비닐·크롬·원목에 기름지게 번진다 | 滤镜 #060 #068, 拍照姿势 #053~#068 |
-| D Dusk Fairground | 드라이브인 극장, 회전목마, 놀이공원, 전구, 황혼, 해 진 직후 | 해 진 직후의 분홍 주황 잔광과 백열전구가 같이 있고 둥근 보케가 생긴다 | 滤镜 #058 #065 |
+| A Highway Daylight (기본) | 66번 도로, 주유소, 픽업, 컨버터블, 스케이트, 야구장, 수영장, 다이빙대, 피크닉, 한낮, 직사광, 여름, 거리, 낮 야외, 70년대, 로드무비 | 해가 높아 그림자가 짧고 단단하다. 빨강·노랑이 가장 세게 찍힌다 | 滤镜 #056 #057 #059 #061 #066 #069 #070, 拍照姿势 #069~#084 |
+| B Amber Open Country | 밀밭, 농장, 대협곡, 레드우드, 캠핑카, 해질녘 들판, 빛내림, 흙길, 시골, 저녁 들판 | 해가 낮아 금주황빛이 들판과 암벽을 태우고 적갈색 그림자가 길다 | 滤镜 #062 #063 #064 #067 |
+| C Main Street Interior | 다이너, 부스, 카운터, 주크박스, 밀크셰이크, 레코드점, 음반, 가게 창가, 식당, 카페 안, 실내 | 창으로 든 오후빛이 빨간 비닐·크롬·원목에 기름지게 번진다 | 滤镜 #060 #068, 拍照姿势 #053~#068 |
+| D Dusk Fairground | 드라이브인 극장, 회전목마, 놀이공원, 전구, 황혼, 해 진 직후, 저녁, 야외 밤 | 해 진 직후의 분홍 주황 잔광과 백열전구가 같이 있고 둥근 보케가 생긴다 | 滤镜 #058 #065 |
 
 ## 끄는 고정 몫 (fixed-lines.md의 슬롯)
 | 슬롯 | 처리 | 이유 |
@@ -110,7 +110,7 @@
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
 | 전부 | style | Americana — Mid-century American nostalgia of faded denim, worn leather and chrome in warm, slightly faded film color. |
-| A | style-era | 1970s Road Movie — Primary-color roadside scenes under hard sun with deep shadows, as in a 1970s American road film. |
+| A | style-era | 1970s Road Movie — Primary-color roadside scenes under hard sun with deep shadows, as in a 1970s American road film. (1970년대 로드무비 장면일 때) |
 | B | style-era | Road Trip — A sunny open-road feel built around a pickup or camper van, with hair and clothes moved by wind in warm film color. |
 | C | style-era | 50s Americana — Red vinyl, chrome and formica of a mid-century American diner, lit by daylight through the window rather than neon. |
 | 전부 | palette | palette — In this look reds, yellows and blues are saturated the hardest (lemon yellow, brick red, sky blue, denim blue, dry-grass gold) while the shadows lean warm red-brown; nothing pastel, neon or cool gray appears. |

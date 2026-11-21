@@ -22,10 +22,10 @@
 ## 갈래 고르기
 | 갈래 | 요청에 이 말이 있으면 | 성격 | Iris 근거 |
 |---|---|---|---|
-| A Venice Beach Polaroid (기본) | 폴라로이드, 즉석사진, SX-70, Polaroid 600, Sun 660, 스펙트라, 인스탁스 와이드, 흰 테두리, 베니스 비치, 산타모니카, 팜스프링스 수영장, 조슈아 트리 캠핑, 금문교 안개, 사용 기한이 지난 즉석필름 | 흰 테두리 인화지, 크림빛 하이라이트, 해변의 포화된 빨강·파랑, `Polaroid 600`일 때 정면에서 터지는 작은 플래시, 평평하게 선명한 배경 | 滤镜 #086 #087 #090 #092 #096 |
-| B Road-Trip Light Leak | 빛샘, 카메라 뒷판, 필름 끝, 첫 컷·마지막 컷, 컨버터블, 1번 국도, 빅서, 낙조 정면 플레어, 포트라 400, 골드 200 | 화면 한쪽에서 적주황 광염이 흘러들거나 롤 끝이 레몬 노랑까지 타오른다. 바람에 날리는 머리와 낙조 | 滤镜 #088 #093 #100, 风格 #019 |
-| C Toy Camera Dream | 홀가, 다이애나 F+, 로모, 비네팅, 이중 노출, 소프트 포커스, 흑백 로모, 해안 절벽 피크닉, 야자수 실루엣 | 플라스틱 단렌즈의 짙은 원형 암부와 흐린 가장자리, 흑백 굵은 입자 또는 꿈결 같은 소프트 포커스, 겹쳐 찍은 야자 그림자 | 滤镜 #091 #095 #099 |
-| D Roadside Flash Snapshot | 파티, 빨간 컵, 직사 플래시, 날짜 각인, 버거, 66번 국도 모텔, 컬러플러스, 프로이미지, 수영장 비키니, 한낮 열기 | 값싼 필름과 컴팩트 카메라의 직사 플래시, 중앙만 센 얼굴과 검은 배경, 오른쪽 아래 주황 날짜, 한낮 모텔 아스팔트와 뜨거운 수영장 | 滤镜 #089 #094 #097 #098, 风格 #022 |
+| A Venice Beach Polaroid (기본) | 폴라로이드, 즉석사진, SX-70, Polaroid 600, Sun 660, 스펙트라, 인스탁스 와이드, 흰 테두리, 베니스 비치, 산타모니카, 팜스프링스 수영장, 조슈아 트리 캠핑, 금문교 안개, 사용 기한이 지난 즉석필름, 해변, 바닷가, 해질녘 | 흰 테두리 인화지, 크림빛 하이라이트, 해변의 포화된 빨강·파랑, `Polaroid 600`일 때 정면에서 터지는 작은 플래시, 평평하게 선명한 배경 | 滤镜 #086 #087 #090 #092 #096 |
+| B Road-Trip Light Leak | 빛샘, 카메라 뒷판, 필름 끝, 첫 컷·마지막 컷, 컨버터블, 1번 국도, 빅서, 낙조 정면 플레어, 포트라 400, 골드 200, 여행, 자동차, 도로 | 화면 한쪽에서 적주황 광염이 흘러들거나 롤 끝이 레몬 노랑까지 타오른다. 바람에 날리는 머리와 낙조 | 滤镜 #088 #093 #100, 风格 #019 |
+| C Toy Camera Dream | 홀가, 다이애나 F+, 로모, 비네팅, 이중 노출, 소프트 포커스, 흑백 로모, 해안 절벽 피크닉, 야자수 실루엣, 소풍, 야외 몽환 | 플라스틱 단렌즈의 짙은 원형 암부와 흐린 가장자리, 흑백 굵은 입자 또는 꿈결 같은 소프트 포커스, 겹쳐 찍은 야자 그림자 | 滤镜 #091 #095 #099 |
+| D Roadside Flash Snapshot | 파티, 빨간 컵, 직사 플래시, 날짜 각인, 버거, 66번 국도 모텔, 컬러플러스, 프로이미지, 수영장 비키니, 한낮 열기, 밤 플래시, Y2K, 2000년대 | 값싼 필름과 컴팩트 카메라의 직사 플래시, 중앙만 센 얼굴과 검은 배경, 오른쪽 아래 주황 날짜, 한낮 모텔 아스팔트와 뜨거운 수영장 | 滤镜 #089 #094 #097 #098, 风格 #022 |
 
 ## 끄는 고정 몫 (fixed-lines.md의 슬롯)
 | 슬롯 | 처리 | 이유 |
@@ -108,7 +108,7 @@
 | A | style | Venice Beach Polaroid — Sun-bleached beach-town snapshots on white-bordered instant prints: creamy highlights, saturated reds and blues and unguarded laughter under hard sun. |
 | B | style | Road-Trip Light Leak — A coast-road snapshot where stray light burns red, orange and yellow across one side of the frame and over her hair. |
 | C | style | Venice Beach Grunge — Faded tees and worn denim with sun-bleached beach-town grit and a direct stare. |
-| D | style | Y2K Snapshot — A grainy early-2000s snapshot with hard on-camera flash and saturated color. |
+| D | style | Y2K Snapshot — A grainy early-2000s snapshot with hard on-camera flash and saturated color. (2000년대 스냅 장면일 때) |
 | A | palette | palette — Cream yellow and milk amber with faded white borders, saturated red and blue, and nothing neon, cold grey or fluorescent pastel anywhere in the frame (only Expired Instant Color Shift may turn the shadows grey-cyan). |
 | B | palette | palette — Cream yellow and milk amber with flame-orange and red leaks and a lemon-yellow burn, and nothing neon, cold grey or fluorescent pastel anywhere in the frame. |
 | C | palette | palette — Faded cream yellow and milk amber with saturated sea-and-sky color, and nothing neon, cold grey or fluorescent pastel anywhere in the frame. |
@@ -174,7 +174,7 @@
 | C | grain | B&W film grain — Coarse silver grain clumps across the whole frame and in the corners, heaviest in the dark vignette. |
 | D | stock | Kodak FunSaver — A disposable-camera frame from a plastic lens, with soft corners, warm saturated color and flat light from the built-in flash. |
 | D | stock | Kodak ColorPlus 200 — Budget film that in this look carries a thick yellow cast, faint red and cyan color noise and rough grain in the shadows. |
-| D | stamp | Date Imprint — A glowing orange LED date sits in the lower right corner of the frame, like a printed snapshot from the early 2000s. |
+| D | stamp | Date Imprint — A glowing orange LED date sits in the lower right corner of the frame, like a printed snapshot from the early 2000s. (2000년대 스냅 장면일 때) |
 | D | grain | Visible Film Grain — Rough consumer-film grain sits across the whole frame, heavier in the dark areas behind the flash. |
 
 ## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 세트를 쓰는 조건은 규칙 4항이 정하고, 세트 값은 고정 사실보다 먼저다. 규칙은 image-brief.md §4 '룩 카드' 4항과 '비워 둔 층')

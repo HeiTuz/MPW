@@ -22,10 +22,10 @@
 ## 갈래 고르기
 | 갈래 | 요청에 이 말이 있으면 | 성격 | Iris 근거 |
 |---|---|---|---|
-| A 태평양 역광 (기본) | 해안 도로, 1번 국도, 절벽, 말리부, 서핑, 컨버터블, 바닷바람, 역광, 금빛 테두리, 스케이트보드, 베니스 비치, 보드워크 | 낮은 해가 머리 뒤에서 금빛 테를 두르고 바다가 반짝인다. 플레어와 블룸이 번진다 | 滤镜 #001 #002 #003 #009 #010 #015, 05 #074 #080 |
-| B 사막 로드트립 | 사막, 조슈아 트리, 모하비, 66번 국도, 다이너, 솔턴 호수, 데스밸리, 먼지, 서부 | 마른 공기에 먼지가 빛 줄기를 만들고 붉은 흙과 암석이 호박색으로 탄다 | 滤镜 #007 #013 #017 #019, 风格 #020 #022 #034 |
-| C 도시·리조트 낙조 | 산타모니카, 할리우드, 비벌리힐스, 야자수, 팜스프링스, 수영장, 요트, 산타바바라, 선셋 대로 | 야자 그림자·물결·붉은 기와가 빛을 되튀기는 도시와 휴양지의 해질녘 | 滤镜 #004 #005 #006 #008 #011 #012 #014 #018 #020, 05 #085 |
-| D 포트라 데이라이트 | 아침, 창가, 클린걸, 오렌지 과수원, 브런치, 카페 야외 좌석, 운동 후, 흰 셔츠 | 해가 높아 부드러운 자연광. 포트라가 피부 하이라이트에 얹는 살구빛과 하이라이트 롤오프가 중심이다 | 05 #072 #075 #076 #078 #079 #083 #084, 风格 01 #002 #004 #006 #013 #016 |
+| A 태평양 역광 (기본) | 해안 도로, 1번 국도, 절벽, 말리부, 서핑, 컨버터블, 바닷바람, 역광, 금빛 테두리, 스케이트보드, 베니스 비치, 보드워크, 해변, 바닷가, 바다 산책 | 낮은 해가 머리 뒤에서 금빛 테를 두르고 바다가 반짝인다. 플레어와 블룸이 번진다 | 滤镜 #001 #002 #003 #009 #010 #015, 05 #074 #080 |
+| B 사막 로드트립 | 사막, 조슈아 트리, 모하비, 66번 국도, 다이너, 솔턴 호수, 데스밸리, 먼지, 서부, 도로 여행, 자동차 여행, 황야 | 마른 공기에 먼지가 빛 줄기를 만들고 붉은 흙과 암석이 호박색으로 탄다 | 滤镜 #007 #013 #017 #019, 风格 #020 #022 #034 |
+| C 도시·리조트 낙조 | 산타모니카, 할리우드, 비벌리힐스, 야자수, 팜스프링스, 수영장, 요트, 산타바바라, 선셋 대로, 호텔, 루프톱, 도시 해질녘 | 야자 그림자·물결·붉은 기와가 빛을 되튀기는 도시와 휴양지의 해질녘 | 滤镜 #004 #005 #006 #008 #011 #012 #014 #018 #020, 05 #085 |
+| D 포트라 데이라이트 | 아침, 창가, 클린걸, 오렌지 과수원, 브런치, 카페 야외 좌석, 운동 후, 흰 셔츠, 낮 야외, 공원, 산책 | 해가 높아 부드러운 자연광. 포트라가 피부 하이라이트에 얹는 살구빛과 하이라이트 롤오프가 중심이다 | 05 #072 #075 #076 #078 #079 #083 #084, 风格 01 #002 #004 #006 #013 #016 |
 
 ## 끄는 고정 몫 (fixed-lines.md의 슬롯)
 | 슬롯 | 처리 | 이유 |
@@ -50,7 +50,7 @@
 | 전부 | brow | Brow Lamination — Full natural brows brushed upward with every hair visible and a faint sheen where the sun grazes them. |
 | A, C | glow | Gilded Glow — Warm honey-gold shimmer on the cheekbones and lids that picks up the warm light like fine gold leaf. |
 | D | base | Dewy Makeup — Almost no visible color, only a damp sheen across the skin so the face looks freshly washed in morning light. |
-| D | blush | Post-Workout Flush — A pink flush over the cheeks and nose with a light sheen on the forehead, as if from a run rather than from product. |
+| D | blush | Post-Workout Flush — A faint pink flush over the cheeks and nose with a light sheen on the forehead, as if from a run rather than from product. |
 | C | lip | Classic Red Lip — A saturated, slightly cool red lip with a crisp outline and a glossy-satin spot at the center, bold against warm gold light. |
 
 ## Expression
