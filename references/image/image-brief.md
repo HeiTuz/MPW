@@ -20,14 +20,14 @@
 <토큰> — <영어 문장.>
 ```
 
-- 첫 줄은 제목 없이 맨 위에 두는, 이 사진의 이름을 말하는 한 문장이다. 어떤 사진인가(매체·장르), 누가 무엇을 하는 어떤 순간인가(사람은 성별 정도만), 이 사진을 다른 사진과 가르는 것(핵심 자세·소품·장소 가운데 가장 강한 것)을 쓴다. 국적·피부색·얼굴 서술은 쓰지 않는다. 층끼리 부딪치면 첫 줄이 기준이다.
+- 첫 줄은 제목 없이 맨 위에 두는, 이 사진의 이름을 말하는 한 문장이다. 어떤 사진인가(매체·장르), 누가 무엇을 하는 어떤 순간인가(사람은 성별 정도만), 이 사진을 다른 사진과 가르는 것(핵심 자세·소품·장소 가운데 가장 강한 것)을 쓴다. 국적·피부색·얼굴 서술은 쓰지 않는다. 층끼리 부딪치면 첫 줄이 기준이다. 새 이미지의 첫 줄은 매체 이름으로 시작한다(§3).
 - 층은 `## 영어 이름`으로 시작하고, 층 사이는 빈 줄 하나로 띄운다. 사용자가 프롬프트 언어를 지정하면 층 이름도 그 언어로 쓴다.
 - 층 안의 줄은 모두 `토큰 — 문장` 꼴이다(`## Identity Reference` 층만 예외다. 문단 하나를 쓴다, §5). 토큰은 원어 토큰(§2)이나 짧은 영어 이름이다. 문장은 영어 한두 문장이다. 대상을 묘사하는 명사구로 시작해도 되지만, 무엇이 어디에 어떻게 보이는지까지 이어 쓴다.
 - 단어를 쉼표로 늘어놓지 않는다. `soft light, film look, warm tone` 같은 나열은 엔진이 제멋대로 읽는다.
-- 층마다 2~5줄(§3 표가 1줄을 허용한 층, `## Keep`, `## Identity Reference`만 예외). 첫눈에 읽혀야 할 층(사용자가 가장 공들여 말한 것)은 4~5줄로 가장 자세히 쓴다. 단순 장면도 층은 셋 이상이다.
-- 한 사실은 한 층에만 쓴다. 피부 마감은 Hair and makeup 한 곳에서만 말한다.
+- 층마다 2~6줄(§3 표가 1줄을 허용한 층, `## Keep`, `## Identity Reference`만 예외). 가장 공들인 층(사용자가 가장 공들여 말한 것)은 4~6줄로 가장 자세히 쓴다. 단순 장면도 층은 셋 이상이다.
+- 한 슬롯은 주인 층이 한 번 정한다(§3 슬롯 표). 피부 마감은 Hair and makeup 한 곳에서만 말한다.
 - 길이는 10,000자 이하다(공백·줄바꿈 포함, ChatGPT 웹 입력창에 붙여 넣는 기본 경로의 상한, 근거는 [surfaces.md](surfaces.md) §0-1). 인물은 보통 3,000~6,000자, 단순 장면은 1,000~2,500자가 된다. 넘으면 같은 말 반복, 화면에 안 보이는 줄, 덜 중요한 층의 셋째 줄부터 지운다. 층 자체는 지우지 않는다. 호출자가 더 좁은 상한이나 다른 단위(바이트)를 정했으면 그것이 먼저이고, 그 단위로 직접 재어 맞춘다.
-- 결과를 PromptBundle·ImageProductionHandoff 같은 기계 계약으로 넘기면 그 계약의 2,000자가 이긴다. 줄 수를 줄여 맞추고, 잘라 내지 않는다. 줄이는 순서: Legwear와 Props and nails를 1줄로 → Style을 1줄로 → 나머지 층의 둘째 줄부터 뒤에서 앞으로. 이 순서로도 안 맞을 때만 §3 표가 '빼는 경우'로 허용한 층부터 뺀다. 이 경우 §9-2의 '기본 층이 다 있는가'보다 이 줄이 우선한다.
+- 결과를 PromptBundle·ImageProductionHandoff 같은 기계 계약으로 넘기면 그 계약의 2,000자가 이긴다. 줄 수를 줄여 맞추고, 잘라 내지 않는다. 줄이는 순서: `## Finish`와 고정 몫 줄 모두 → Legwear와 Props and nails를 1줄로 → Style을 1줄로 → 나머지 층의 둘째 줄부터 뒤에서 앞으로. 이 순서로도 안 맞을 때만 §3 표가 '빼는 경우'로 허용한 층부터 뺀다. 이 경우 §9-2의 '기본 층이 다 있는가'보다 이 줄이 우선한다.
 
 ## 2. 언어와 원어 토큰
 
@@ -73,11 +73,34 @@
 | Scene | 장소, 표면 재료, 배경의 물건·사람, 시간대가 보이는 단서 | 단색 배경이면 1줄 |
 | Light | 장면 속 광원(해, 창, 가로등, 간판)의 방향과 그 빛이 만든 하이라이트·그림자·반사, 날씨와 안개 | 빼지 않는다 |
 | Optics | 매체가 만드는 모습: 카메라에 달린 플래시, 필름·디카의 색 반응, 하이라이트 처리, 렌즈 플레어·비네팅, 입자 | 빼지 않는다 |
-| Camera | 프레이밍, 카메라 높이와 거리, 초점과 심도, 사용자가 요청한 비율 | 빼지 않는다 |
+| Camera | 프레이밍, 카메라 높이와 거리, 초점과 심도, 비율 | 빼지 않는다 |
+| Finish | 마지막 층. 첫 줄의 매체를 다시 부르는 닫는 말, 실사·품질 줄, 금지 한 줄([fixed-lines.md](fixed-lines.md)) | 그림·3D 매체를 요청했을 때 |
 
 - 빛 둘을 가르는 기준: 장면 안에 있는 광원은 Light, 카메라와 매체가 만드는 것(직광 플래시, 빛샘, 색 쏠림)은 Optics다. 하이라이트가 날아가거나 그림자가 잠기는 정도는 광원이 어디 있든 Optics에 쓰고, Light에는 하이라이트·그림자의 자리와 모양만 쓴다.
 - Style에는 계열과 팔레트만 쓴다. 옷 하나하나는 Outfit, 장소는 Scene에 쓴다.
-- 더 잘게 나눈다: 한 층에 사용자가 따로 바꿀 만한 것이 둘 들어 있거나, 그 층이 요청의 중심이라 5줄을 넘으면 둘로 나눈다. 예: 뷰티 클로즈업은 Hair / Makeup, 레이어드 패션은 Outerwear / Inner layers, 네일이 주인공이면 Props / Nails. 나눈 층도 2~5줄이다.
+- 더 잘게 나눈다: 한 층에 사용자가 따로 바꿀 만한 것이 둘 들어 있거나, 그 층이 요청의 중심이라 5줄을 넘으면 둘로 나눈다. 예: 뷰티 클로즈업은 Hair / Makeup, 레이어드 패션은 Outerwear / Inner layers, 네일이 주인공이면 Props / Nails. 나눈 층도 2~6줄이다.
+
+새 이미지의 매체는 첫 줄과 마지막 층 `## Finish`가 두 번 붙잡는다. 첫 줄은 매체 이름으로 시작하고(`A candid street-style photograph`, `A 35mm film still`, `A studio portrait photograph`), Optics는 그 매체가 화면에 만드는 결과를 쓰고, Finish의 closer가 같은 매체 이름을 한 번 더 부른다. Finish에는 빛에 관한 사실을 쓰지 않는다. 층마다 붙는 고정 몫과 Finish의 줄은 [fixed-lines.md](fixed-lines.md)가 정하고, 고정 몫은 슬롯당 한 줄을 넘지 않는다.
+
+한 슬롯(한 사실이 들어가는 자리)은 아래 주인 층이 정한다. 다른 층은 그 값을 결과로 되받아 쓸 수 있고, 남의 층에 슬롯 값이 새로 생기면 주인 층으로 옮긴다.
+
+| 슬롯 | 주인 층 |
+|---|---|
+| 매체 이름 | 첫 줄과 Finish |
+| 장소 | Scene |
+| 시간대·날씨 | Light |
+| 장면 속 광원·얼굴 빛 | Light |
+| 캐치라이트 | Light |
+| 매체가 만드는 빛(플래시·할레이션·빛샘) | Optics |
+| 손에 든 물건 | Props and nails (손의 자세는 Pose) |
+| 시선 대상 | Expression |
+| 입술·베이스·눈썹 | Hair and makeup |
+| 얼굴·체형·나이 | Identity Reference |
+| 표정 낱말 | Expression |
+| 입자 | Optics |
+| 프레이밍·렌즈·심도·비율 | Camera |
+| 실사·품질·금지 | Finish |
+| 팔레트 | Style |
 
 ### 인물이 아닌 이미지
 
@@ -94,7 +117,7 @@
 
 도해·슬라이드·UI·만화·로고는 [surface-contracts.md](surface-contracts.md) §3.4의 형식을 이 모양 위에 얹는다.
 
-- `Details`, `Quality`, `Style notes`, `Constraints`, `Negative`처럼 대상이 아닌 이름은 쓰지 않는다. 금지만 모은 층은 만들지 않는다.
+- `Details`, `Quality`, `Style notes`, `Constraints`, `Negative`처럼 대상이 아닌 이름의 층은 쓰지 않는다. 예외는 마지막 층 `## Finish` 하나다: 매체 닫는 말, 실사·품질 줄, 금지 한 줄을 둔다([fixed-lines.md](fixed-lines.md)). 사진이면 인물이 없어도 둔다.
 - 빛은 거의 항상 따로 층으로 둔다. 시간대·안개처럼 빛을 바꾸는 것도 빛 층에 넣는다. 가장 자주 바꾸는 단위라서다.
 
 ## 4. 층 채우기
@@ -120,7 +143,7 @@
 ### 비워 둔 층
 
 - 비워 둔 층은 이미지의 목적과 이미 정해진 층에 맞게 구체적으로 지어 채운다. 화면에 보이는 층은 비워 두지 않는다.
-- 고르는 순서: ① 사용자가 준 룩·장소·문화권과 맞는 것 ② 위 '토큰 찾기'로 찾은(층별 재검색 포함) 그 층 표의 행 ③ 그 장면에서 자연스러운 것.
+- 슬롯마다 고르는 순서: ① 사용자가 준 값(룩·장소·문화권 포함)과 맞는 것 ② [fixed-lines.md](fixed-lines.md)의 고정 몫 줄(그 슬롯이 비어 있고 끄는 조건에 안 걸릴 때) ③ 위 '토큰 찾기'로 찾은(층별 재검색 포함) 그 층 표의 행 ④ 그 장면에서 자연스러운 것.
 - 층끼리 맞춘다. 밤이면 Light와 Optics가 같은 밤이고, 비가 오면 Outfit의 원단이 젖고, Style의 팔레트가 Outfit과 Scene의 색과 같다.
 - 사용자 말과 지어 채운 것이 부딪치면 사용자 말이 이긴다.
 
@@ -132,8 +155,8 @@
 - 포즈: 체중이 실린 다리, 손이 닿는 물건이나 몸의 자리, 어깨와 고개의 방향.
 - 재질: 빛을 받았을 때 반사하는지, 흩는지, 비치는지, 어떻게 접히고 늘어지는지.
 - 표정: 시선이 닿는 곳, 눈꺼풀과 입꼬리가 움직인 정도.
-- beautiful, stunning, perfect 같은 형용사 대신 그렇게 보이는 원인을 쓴다. 8K, ultra-detailed, masterpiece 같은 품질 태그는 쓰지 않는다.
-- film grain, grainy, noise texture 같은 말은 GPT Image에서 화면 전체에 입자를 깔 수 있다. 입자가 필요하면 Optics 한 줄에서 어디에 얼마나 있는지 쓴다(fine grain only in the dark shadows). 세부는 [surface-contracts.md](surface-contracts.md) §3.2.4.
+- beautiful, stunning, perfect 같은 형용사 대신 그렇게 보이는 원인을 쓴다. 품질 태그(8K, ultra-detailed, masterpiece)는 `## Finish`의 `超写实` 줄에 `8K` 한 번만 두고 다른 층에는 쓰지 않는다.
+- 필름·디카 매체면 입자는 Optics 한 줄에서 화면 전체에 고르게 쓴다([fixed-lines.md](fixed-lines.md)의 `grain`). 양은 사용자가 정하고, 사용자가 입자를 빼 달라고 하면 쓰지 않는다. GPT Image에서 입자 어휘가 화면 노이즈를 부른다는 보고는 [surface-contracts.md](surface-contracts.md) §3.2.4에 있고, 생성 대조가 없어 새 문안의 금지 근거로 쓰지 않는다.
 
 라벨을 모습으로 푸는 예:
 
@@ -162,31 +185,24 @@
 
 ```
 ## Identity Reference
-If a model reference is provided, the person in this photo is that model: take only the face shape and facial features from it, adapting them naturally to this scene's expression, angle and light. Hair, makeup and everything else follow this prompt. If none is provided, <인물 설정>.
+If a model reference is provided, the woman in this photo is that model: take only the face shape and facial features from it, adapting them naturally to this scene's expression, angle and light, and keep her own skin tone. Hair, makeup and everything else follow this prompt. If none is provided, <인물 설정>. In either case she has 7.5-head proportions, a small head over level shoulders and a long neck.
 ```
 
-- 참조에서 가져오는 것은 얼굴형과 이목구비뿐이다. 헤어·메이크업과 그 밖의 전부는 프롬프트가 정한다. 얼굴을 지나치게 고정하지 않고 장면의 표정·각도·빛에 자연스럽게 맞춘다.
-- `<인물 설정>`이 인물을 정하는 자리다. 사용자가 인물을 지정했으면 그 설정을, 지정하지 않았으면 아래 기본 인물을 쓴다. 문단의 "the person in this photo"는 첫 줄의 지칭에 맞춰 "the woman in this photo"처럼 바꿔 써도 된다. 인물 프롬프트의 기본은 항상 기본 인물 문장이다(요청에 없으면 Iris 기본: 22세 동아시아 여성, 룩의 문화권에 맞춰 조정). `create a new person suited to the scene` 원문은 사용자가 인물을 정하지 않은 범용 템플릿을 달라고 했을 때만 쓴다.
+- 참조에서 가져오는 것은 얼굴형과 이목구비뿐이고 피부색은 참조의 것을 지킨다(`keep her own skin tone`). 헤어·메이크업과 그 밖의 전부는 프롬프트가 정한다. 얼굴을 지나치게 고정하지 않고 장면의 표정·각도·빛에 자연스럽게 맞춘다. 마지막 비율 문장(`In either case…`)은 성인 인물에만 쓰고, 아이·학생이면 뺀다.
+- `<인물 설정>`이 인물을 정하는 자리다. 사용자가 인물을 지정했으면 그 설정을, 지정하지 않았으면 아래 기본 인물을 쓴다. 문단의 "woman"·"her"·"she"는 남성이거나 성별을 정하지 않았으면 첫 줄의 지칭에 맞춰 "man"·"his"·"he"나 "person"·"their"·"they"로 바꿔 쓴다. 요청에 인물이 없으면 [fixed-lines.md](fixed-lines.md)의 문화권 공식(기본은 22세 여성, 룩의 문화권에 맞춘다)을 쓴다. `create a new person suited to the scene` 원문은 사용자가 인물을 정하지 않은 범용 템플릿을 달라고 했을 때만 쓴다.
 - 호출자·사용자가 그대로 붙여 넣으라고 완성 문단(저장된 아이덴티티 문단 등)을 주면 그 문단을 글자 그대로 이 구획에 넣는다. 그 문단에 나이가 없어도 나이를 덧붙이거나 고치지 않는다(§9-2의 나이 확인은 내가 지은 인물에만 해당한다). 외모·분위기 값만 준 경우는 이 예외가 아니라 아래 기본 인물 규칙을 따른다. 아이·학생에 관한 §6의 지킴은 이 예외와 무관하게 그대로다.
-- 조건절 밖의 층에는 얼굴형·이목구비·피부색·체형·나이 서술을 쓰지 않는다. 타고난 생김새(애교살의 볼록함 자체, 입술 두께, 눈매)도 쓰지 않는다. Hair and makeup과 Expression은 항상 쓴다. 화장과 스타일링으로 만든 것(블러셔, 립 색과 마감, 아이라인, 눈썹을 채운 모양, 헤어 커트와 색)은 쓰고, 눈빛 반사(캐치라이트)는 Light에 쓴다.
+- 얼굴형·이목구비·피부색·나이는 조건절 안에만 쓴다. 체형 비율은 같은 문단의 `In either case` 문장 한 곳에만 쓴다. 타고난 생김새(애교살의 볼록함 자체, 입술 두께, 눈매)도 쓰지 않는다. Hair and makeup과 Expression은 항상 쓴다. 화장과 스타일링으로 만든 것(블러셔, 립 색과 마감, 아이라인, 눈썹을 채운 모양, 헤어 커트와 색)은 쓰고, 눈빛 반사(캐치라이트)는 Light에 쓴다.
 - 참조의 고개 각도와 시선을 그대로 따르지 않도록 Expression이나 Pose에 장면에 맞는 각도와 시선을 쓴다.
 - 사용자가 모델 사진을 첨부한다고 했는데 이 대화에 이미지가 없으면 블록 밖에 한 줄로 인물 사진을 함께 첨부하라고 알린다.
 - 따로 `## Person` 층은 두지 않는다.
 
 ### 기본 인물
 
-요청에 성별·나이·외모가 없으면 조건절의 마지막 문장에 아래 기본 인물을 쓴다(Iris 프리셋이 기본으로 잡는 인물 설정을 따른 것이다: 22세 동아시아 여성). 사용자가 준 값(성별, 나이, 분위기, 외모의 일부)은 그 값만 바꾸고 나머지는 기본값을 쓴다.
+요청에 성별·나이·외모가 없으면 조건절의 마지막 문장에 [fixed-lines.md](fixed-lines.md)의 문화권 공식을 쓴다(기본은 22세 여성이다). 사용자가 준 값(성별, 나이, 분위기, 외모의 일부)은 그 값만 바꾸고 나머지는 그 표를 쓴다.
 
-| 요청한 룩의 문화권 | `If none is provided,` 뒤에 쓸 문장 |
-|---|---|
-| 한국·중국·일본, 또는 단서 없음 | she is a 22-year-old East Asian woman with a small face and a slender build. |
-| 미국 | she is a 22-year-old American woman with defined cheekbones and a healthy, balanced build. |
-| 프랑스 | she is a 22-year-old French woman with clean defined bone structure and a slender build. |
-| 그 밖의 문화권 | 그 지역의 22세 여성. 얼굴은 골격이 또렷하다는 정도, 체형은 날씬하다는 정도만 쓴다 |
-
-- 외모 서술은 조건절 한 곳에만 둔다. 다른 층에서 얼굴형이나 체형을 다시 말하지 않는다.
+- 외모 서술은 조건절(과 비율 문장) 한 곳에만 둔다. 다른 층에서 얼굴형이나 체형을 다시 말하지 않는다.
 - 헤어·메이크업·의상의 기본값은 조건절이 아니라 각 층에서 장면에 맞게 지어 채운다(§4).
-- 기본 인물과 사용자가 요청한 값 밖에서 flawless·porcelain-perfect 같은 미화어나 얼굴 비율 이상형 문구를 더하지 않는다.
+- 미화는 [fixed-lines.md](fixed-lines.md)의 문화권 공식과 메이크업 슬롯 줄로만 넣는다. 성인 인물에만 넣고, 아이·학생에는 넣지 않는다.
 - 인물을 지어 채울 때 나이는 20세 이상으로 쓴다(기본 22세). 비성적인 어린이·청소년 인물 요청을 임의로 성인으로 바꾸지 않는다. 미성년을 가리키는 요청에 성인 라벨만 덧붙여 허용 가능한 요청으로 취급하지 않는다(나이 숫자만 덧붙이는 것도 같다). 기본 인물은 요청에 나이가 없을 때만 쓴다. 사용자가 숫자 나이를 정하지 말라고 했으면 숫자 대신 `an adult`로 쓴다(사용자 말이 이긴다).
 - "랜덤 인물", "다양하게"처럼 인물 자체를 맡기면 기본 인물을 되풀이하지 않고 [editorial/portrait-variations.md](editorial/portrait-variations.md)를 따른다. 이때도 조건절의 인물 나이는 20~35세 안에서 고른다. 성별·나이대·문화권은 사용자 말, 룩 단서, 없으면 여성·20~35세·동아시아 순으로 정한다. 인물을 지어 채우는 모든 경로(기본 인물, 랜덤, 변주, 자동 확장)가 같다.
 
@@ -197,13 +213,13 @@ If a model reference is provided, the person in this photo is that model: take o
 - 브랜드·제품명(카메라, 필름, 패션, 소품 등)은 룩을 가리키는 말로 쓸 수 있다. 로고와 상표 글자는 새로 그리지 않는다(사용자가 지키라고 한 제품·의상 참조의 실제 로고·라벨은 그대로 둔다). 실존 인물의 이름은 스타일을 가리킬 때만 쓰고(예: Godard, Jane Birkin), 그 사람의 얼굴이나 몸을 닮게 하는 용도로는 쓰지 않는다.
 - 첨부하지 않은 참조를 말하지 않는다(reference, same face). `## Identity Reference` 구획만 예외다.
 - 아이·학생이 나오는 이미지도 만든다. 교복과 학생 연출도 쓸 수 있고, 스쿨룩·프레피·하이틴은 성인 패션 장르다. 지키는 것은 둘이다: 미성년을 성적으로 그리지 않는다(아이·학생이 나오는 이미지에는 관능 어휘와 노출 연출을 붙이지 않는다), 실존 인물의 얼굴·몸을 닮게 하지 않는다.
-- 금지 문장은 세 경우에만 쓴다: 사용자가 빼 달라고 한 것, 정확 문구 밖의 글자, 편집에서 지킬 것. 관련 층 안에 한 문장으로 쓰고, `no X, no Y`처럼 늘어놓지 않는다. 그 밖에 비워 두고 싶은 것은 보이는 상태로 쓴다("the table is bare", "the street is empty").
-- 비율은 사용자가 요청했을 때만 Camera 층에 한 번 쓴다(다른 엔진은 그 엔진의 비율·배제 표기가 먼저. Midjourney는 `--ar`·`--no`). 모델명, API 설정, 로컬 파일 경로, 검수 절차는 쓰지 않는다.
+- 금지 문장은 네 경우에 쓴다: 사용자가 빼 달라고 한 것, 정확 문구 밖의 글자, 편집에서 지킬 것, `## Finish`의 금지 한 줄. 관련 층 안에 한 문장으로 쓰고, `no X, no Y`처럼 늘어놓지 않는다. 그 밖에 비워 두고 싶은 것은 보이는 상태로 쓴다("the table is bare", "the street is empty").
+- 비율은 Camera 층에 한 번 쓴다(인물 사진의 기본 비율은 [fixed-lines.md](fixed-lines.md)가 정한다. 다른 엔진은 그 엔진의 비율·배제 표기가 먼저. Midjourney는 `--ar`·`--no`). 모델명, API 설정, 로컬 파일 경로, 검수 절차는 쓰지 않는다.
 
 ## 7. 후속 수정: 한 층만 바꾸기
 
 1. 직전 프롬프트가 원문이다([../templates/common.md](../templates/common.md) §기준 원문과 누적 수정).
-2. 바꾸라는 층만 새로 쓴다. 그 층도 2~5줄이다.
+2. 바꾸라는 층만 새로 쓴다. 그 층도 2~6줄이다.
 3. 첫 줄과 다른 층은 글자 그대로 둔다. 단어 하나, 쉼표 하나도 바꾸지 않는다. 사진의 이름 자체가 바뀌는 요청(장소나 핵심 자세를 바꾸는 요청)일 때만 첫 줄을 고친다.
 4. 다른 층에 새 층과 부딪치는 문장이 있으면 그 문장만 고치고, 블록 밖에 어느 문장을 왜 고쳤는지 한 줄 쓴다. 그래서 시간대·안개는 처음부터 Light에 둔다.
 5. 층을 더해 달라고 하면 맞는 자리에 층 하나를 넣고 나머지는 그대로 둔다.
@@ -240,11 +256,12 @@ unchanged — Keep the room, the sofa's shape and position, the window light dir
 3. 사용자가 준 문구·수량·비율·지킬 것·뺄 것·룩 이름이 다 있는가?
 4. 빛마다 방향과 그 결과(하이라이트, 그림자, 반사)가 있는가? 층끼리 시간대와 날씨가 맞는가?
 5. 원어 토큰마다 사전에 있거나 확실히 아는 말인가? 음차를 원어 표기로 바꿨는가? 뒤 문장이 번역이 아니라 화면 결과인가?
-6. 사람이 나오면 `## Identity Reference`의 조건문이 있고 조건절 밖에 얼굴·체형·나이·피부색 서술이 하나도 없으며, Hair and makeup과 Expression은 있는가?
-7. 한 사실을 두 층에 쓰지 않았는가? 피부 마감이 한 층에만 있는가?
-8. §6을 어겼는가(지어낸 글자, 새 로고·상표 글자, 얼굴·몸을 닮게 하는 실존 인물 이름, 품질 태그, 늘어놓은 금지)?
+6. 사람이 나오면 `## Identity Reference`의 조건문이 있고 조건절 밖에 얼굴형·이목구비·피부색·나이 서술이 없으며 체형은 `In either case` 문장 한 곳뿐이고, Hair and makeup과 Expression은 있는가?
+7. 같은 슬롯을 두 층에 쓰지 않았는가(입술·베이스·캐치라이트·얼굴 빛·장소·시간대·화면비·입자)? 피부 마감이 한 층에만 있는가?
+8. §6을 어겼는가(지어낸 글자, 새 로고·상표 글자, 얼굴·몸을 닮게 하는 실존 인물 이름, `## Finish` 밖의 품질 태그·금지, 늘어놓은 금지)?
 9. 후속 수정이면 바꾸라는 층 밖의 줄이 글자 그대로인가?
 10. 10,000자 이하인가? 기계 계약으로 넘기면 그 계약의 상한 안인가?
+11. 새 이미지면 첫 줄이 매체 이름으로 시작하고 마지막 층 `## Finish`가 그 매체를 다시 부르는가?
 
 ## 10. 완성 예시
 
@@ -252,15 +269,17 @@ unchanged — Keep the room, the sofa's shape and position, the window light dir
 
 인물, 참조 없이 기본 인물(요청: 가을 성수동 카페 앞에서 찍은 패션 스냅, 전신):
 ```text
-A full-length autumn street-style photograph of a woman pausing outside a converted red-brick café in Seongsu-dong, a stone-beige trench open over a charcoal skirt.
+A clean digital street-style photograph: a woman pausing outside a converted red-brick café in Seongsu-dong on an autumn afternoon, a stone-beige trench open over a charcoal skirt, shot full-length.
 
 ## Identity Reference
-If a model reference is provided, the woman in this photo is that model: take only the face shape and facial features from it, adapting them naturally to this scene's expression, angle and light. Hair, makeup and everything else follow this prompt. If none is provided, she is a 22-year-old East Asian woman with a small face and a slender build.
+If a model reference is provided, the woman in this photo is that model: take only the face shape and facial features from it, adapting them naturally to this scene's expression, angle and light, and keep her own skin tone. Hair, makeup and everything else follow this prompt. If none is provided, she is a 22-year-old Korean woman with a 청순 face: soft, low-contrast features, a small face, a defined nose bridge, a clean jawline and fair, cool-toned skin. In either case she has 7.5-head proportions, a small head over level shoulders and a long neck.
 
 ## Hair and makeup
 시스루뱅 — A thin fringe of separated strands falls just above the brows, and the forehead shows between the strands.
 long hair — Dark brown hair falls straight past the shoulders, tucked behind the left ear so the earlobe and jawline show, with a few fine strands lifting in the breeze.
 촉촉피부 — A thin dewy base leaves a soft sheen on the cheekbones and the bridge of the nose, and fine pores still show through it.
+애교살 — A soft pearly band under the lower lashes with a faint shadow line beneath it.
+内眼线 — A hair-thin dark line along the upper lash roots defines the eye with no visible wing.
 lips and cheeks — A sheer coral-pink lip tint with a little gloss at the center of the lower lip, and a diffuse rose blush that fades into the cheeks with no visible edge.
 
 ## Expression
@@ -301,66 +320,78 @@ highlights — The sun turns the ice in the cup bright and puts a small white ca
 ## Optics
 clean digital color — Natural color with gently lifted shadows, and highlights on the trench that roll off smoothly instead of clipping to white.
 white balance — Daylight white balance keeps the ivory knit neutral and the brick a true red-brown.
+数码噪点 — Very fine digital noise sits only in the darkest parts of the frame.
 
 ## Camera
-full-length frame — A vertical frame from the top of her head to her shoes, shot from chest height about four meters away with a moderate telephoto lens, so the brick wall stays flat and straight behind her.
+full-length frame — A vertical 3:4 frame from the top of her head to her shoes, shot from chest height about four meters away with a moderate telephoto lens, so the brick wall stays flat and straight behind her.
 focus — She is sharp from hair to loafers; the door and the bench at the frame edges soften slightly.
+
+## Finish
+实拍 — The whole frame reads as a real clean digital street-style photograph.
+超写实 — Ultra-realistic 8K photographic detail: real pores on the skin, real weave in the wool and knit, real wear on the brick.
+真人实拍 — A real person photographed on location, never an illustration, anime frame, 3D render or plastic-skinned CGI.
 ```
 
-인물, 참조를 첨부하는 경우와 중국어 토큰(요청: 내 캐릭터 사진 첨부할게. 신중식 느낌 찻집 화보, 허리 위까지):
+인물, 참조 없이 필름 룩과 중국어 토큰(요청: 90년대 홍콩영화 여주인공. 비 오는 밤, 네온 처마 밑에서 커피 한 잔 들고 멀리 보는 한 장면):
 ```text
-A magazine portrait of a woman in an ink-black stand-collar jacket sitting by a lattice window in a quiet Chinese tearoom, holding a small white teacup, framed from the waist up.
+A 1990s Hong Kong film still shot on tungsten cinema negative: a woman sheltering under a neon-lit shop arcade in the night rain, a paper coffee cup in her hand, looking far down the street while the city smears past her.
 
 ## Identity Reference
-If a model reference is provided, the woman in this photo is that model: take only the face shape and facial features from it, adapting them naturally to this scene's expression, angle and light. Hair, makeup and everything else follow this prompt. If none is provided, she is a 22-year-old East Asian woman with a small face and a slender build.
+If a model reference is provided, the woman in this photo is that model: take only the face shape and facial features from it, adapting them naturally to this scene's expression, angle and light, and keep her own skin tone. Hair, makeup and everything else follow this prompt. If none is provided, she is a 22-year-old Chinese woman with 清冷 bone structure: a small 巴掌脸 face, a straight defined nose bridge, a clean jawline and cool fair 冷白皮 skin. In either case she has 7.5-head proportions, a small head over level shoulders and a long neck.
 
 ## Hair and makeup
-低发髻 — Dark hair is combed smoothly back from the face and coiled into a small flat bun low at the nape, leaving the neck and ears bare.
-发簪 — A slim pale-green jade hairpin passes through the bun and catches a narrow highlight along its length.
-平直眉 — The brows are filled in soft gray-brown along a level, straight line with a slightly longer tail.
-无粉感底妆 — A powder-free base: the face looks smooth and soft, with a faint satin glow only on the cheekbones and the bridge of the nose.
-豆沙唇 — A dusty rose-brown lip color with a soft powdery finish and no gloss.
+王家卫 — A loose 1990s perm grazing the collarbones, airy and slightly undone, the rain-damp ends clumping into soft ropes.
+face clear — The near side is tucked behind her right ear so the eye, brow and cheekbone stay clear, while a few damp strands fall loose on the far side of her face.
+无粉感底妆 — A matte, shine-free base that still reads as skin, even under the colored light.
+野生眉 — Full, natural brows brushed up with the hairs left visible, slightly darker than the hair.
+卧蚕 — A soft pearly band under the lower lashes and a hair-thin dark line along the upper lash roots make the eyes look bright and defined.
+豆沙唇 — A muted rosy-brown matte lip with a softly blurred edge and no gloss.
 
 ## Expression
-垂眸 — Her eyelids are lowered toward the teacup, and the lashes cast a thin shadow on the upper cheeks.
-似笑非笑 — The corners of her lips lift barely a millimeter while the eyes stay calm, so it is hard to tell whether she is smiling.
-head angle — Her face turns three-quarters to the camera's right with the chin slightly lowered, toward the light from the lattice window.
+惆怅 — The inner brows lift a little and the eyes look far off, the lips pressed lightly together.
+far gaze — Her eyes are fixed on something at the far end of the street to frame right, not on the lens, as if waiting for someone who is late.
 
 ## Outfit
-立领 — A crisp stand collar rises close around the neck of a clean, straight-cut jacket in heavy ink-black silk.
-盘扣 — Three small knot buttons of twisted fabric cord fasten a front panel that crosses diagonally from the collar to the right underarm.
-香云纱 — The silk has a faintly crinkled surface and a dark brown sheen where it folds at the elbows and waist.
+吊带裙 — A deep crimson silk slip dress with thin straps; the satin throws a long liquid highlight down the front wherever the neon reaches it.
+oversized wool coat — A man's boxy black wool coat hangs open from her shoulders, a size too big, its shoulders dark and beaded where the rain caught them.
 
 ## Props and nails
-紫砂壶 — A small unglazed reddish-brown clay teapot with a fine, dry, sandy-looking surface sits on the table beside her right hand.
-teacup — She holds a small white porcelain cup with both hands at chest height, pale green tea inside and a thin line of steam rising from it.
-冰透美甲 — Short rounded nails in a sheer nude-pink gloss that lets the natural nail show through.
+paper coffee cup — A white paper take-out cup with a plain brown sleeve and flat lid, held in her right hand at chest height, a thin curl of steam rising and catching red light.
+红指甲 — Glossy opaque red polish on medium oval nails, each nail holding a small sharp highlight against the cup.
 
 ## Pose
-seated lean — She sits upright on a low wooden stool, forearms resting on the edge of a dark wooden table and her weight tipped slightly forward.
-shoulders — Shoulders level and relaxed, elbows close to the body, both hands around the cup.
+靠墙斜倚 — Her left shoulder and back rest against a tiled arcade pillar, her weight sunk into the left hip and the right foot crossed loosely over the left ankle.
+still body — She does not move: the coffee stays at her chest, the left hand stays deep in the coat pocket, and only the steam and the rain around her are in motion.
 
 ## Style
-新中式 — A modern Chinese-inspired look: traditional details kept small so it reads as current clothing rather than costume.
-静奢风 — Quiet modern Chinese luxury: a restrained palette of black, ivory and celadon, heavy matte fabrics and almost no ornament.
-清冷感 — A cool, still mood with a composed face and no warm color cast anywhere in the frame.
+重庆森林 — Chungking Express city mood: saturated neon color, a lone still figure, and everything around her streaking past.
+palette — Crimson silk, black wool, wet black asphalt, with red and green neon light and nothing pastel or daylight-white anywhere in the frame.
 
 ## Scene
-茶室 — A small wood-paneled tearoom with a low dark table, a paper-shaded lamp off to one side and a single branch of white plum in a celadon vase.
-漏窗 — Behind her, a white plaster wall holds a round window filled with a carved stone lattice, with green bamboo leaves showing through the openings.
+骑楼 — A covered shop arcade along an old Kowloon street, square pillars clad in small worn tiles, a closed rolling shutter behind her.
+九龙霓虹 — Across the street, dense overlapping neon signs stack up the face of an old tenement, red and green tubes clashing in the haze, every sign blurred past reading.
+wet street — Rain sheets off the arcade edge in a bright curtain, and the asphalt beyond is black and mirror-wet.
 
 ## Light
-几何光影 — Late-morning sun comes through the lattice window behind her left shoulder and lays a pattern of small diamond shapes across the table, her shoulder and one sleeve.
-wall bounce — Daylight reflected off the white plaster fills her face softly.
-steam — The backlight catches the steam above the cup as a pale, glowing curl.
+霓虹切光 — A red neon sign at camera left lights the left side of her face and the silk, while green tube light from farther down the street edges her right cheek and shoulder, the two colors meeting along her nose.
+彩色霓虹眼神光 — Thin red and green neon strips mirror as colored streaks in her irises.
+雨の夜 — Every sign and lamp wears a soft cold halo of mist, and the falling rain catches the neon as short bright streaks.
 
 ## Optics
-黑柔滤镜 — A gentle diffusion filter puts a faint halo around the brightest lattice openings while her face stays clear.
-muted color — Low-contrast color with slightly lifted blacks and a cool celadon tone in the shadows.
+Kodak Vision3 500T — Tungsten-balanced cinema negative color: red-orange highlights on skin and silk, shadows leaning teal-green, blacks pressed deep with only a little detail left in them.
+抽帧 — The rain, the passing umbrellas and a cyclist behind her smear into stuttering ghost trails while she stays sharp, as if step-printed.
+红色光晕 — Each bright neon tube blooms a soft red halation glow around its edges.
+胶片颗粒 — Fine, even 35mm film grain sits across the whole frame, a little heavier in the shadows of the street.
 
 ## Camera
-留白 — A vertical waist-up frame with her in the right third and the left third left as open plaster wall.
-eye level — The camera sits at her eye level about two meters away, focused on her eyes and hands; the lattice window softens slightly behind her.
+前景遮挡 — Shot from across the arcade with a passing black umbrella edge blurred across the lower right corner of the frame.
+长焦压缩 — A moderate telephoto about four meters away at chest height stacks the neon signs behind her into one flat glowing wall.
+vertical frame — A vertical 3:4 frame from the top of her head to her waist, with her in the left third and the street glow filling the rest.
+
+## Finish
+港片剧照 — The whole frame reads as a still from a 1990s Hong Kong feature film, not a street snapshot or a fashion shoot.
+超写实 — Ultra-realistic 8K photographic detail: real pores on the skin, real weave in the wool, real water on the tiles.
+真人实拍 — A real person photographed on location, never an illustration, anime frame, 3D render or plastic-skinned CGI.
 ```
 
 제품, 정확 문구(요청: 앰버 유리 세럼 병 제품컷. 라벨 문구 "LUMEN 01", 물결 그림자):
@@ -392,11 +423,16 @@ contact shadow — A thin dark line where the base meets the stone keeps the bot
 ## Camera
 product view — The camera is level with the label, the bottle centered with even space on both sides and a little more space above than below.
 focus — The label and the front edge of the bottle are sharp, and the wall behind softens into a smooth gradient.
+
+## Finish
+实拍 — The whole frame reads as a real clean product photograph.
+超写实 — Ultra-realistic 8K photographic detail: real amber glass, real brushed metal and real pits in the travertine.
+real photograph — A real photograph of a real bottle on a real stone slab, never an illustration, 3D render or CGI.
 ```
 
 단순 장면, 일본어 토큰(요청: 일본 시골집 툇마루에서 낮잠 자는 고양이 사진):
 ```text
-A quiet photograph of a cat napping on the wooden veranda of an old Japanese country house in early summer.
+A quiet natural-light photograph of a cat napping on the wooden veranda of an old Japanese country house in early summer.
 
 ## Cat
 curled sleep — A gray tabby sleeps curled on its side, chin resting on one front paw and the tail wrapped around its hind feet.
@@ -414,6 +450,11 @@ paper door glow — The sliding doors behind glow soft white, lit from windows o
 ## Camera
 low angle — The camera sits at board height about a meter and a half from the cat, with the cat in the lower left third and the veranda running toward the upper right.
 focus — The cat's face is sharp; the garden and the far end of the veranda soften.
+
+## Finish
+实拍 — The whole frame reads as a real natural-light photograph.
+超写实 — Ultra-realistic 8K photographic detail: real fur on the cat, real grain in the boards and real wear on the paper doors.
+real photograph — A real photograph of a real cat on a real veranda, never an illustration, 3D render or CGI.
 ```
 
 ## 11. 기존 프롬프트를 정제·교정할 때

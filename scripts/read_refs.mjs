@@ -28,21 +28,22 @@ import { fileURLToPath } from "node:url";
 const skillRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 
 export const BUNDLES = {
-  // 대상 미정·GPT Image 새 이미지. 작성 규칙은 image-brief.md(§1~§7·§9~§11)와 층별 사전 색인. 도해·슬라이드·UI·만화·로고는 -structured.
-  "gpt-image-new": ["references/image/surfaces.md#0", "references/image/image-brief.md#1,2,3,4,5,6,7,9,10,11", "references/image/layer-lexicon.md"],
+  // 대상 미정·GPT Image 새 이미지. 작성 규칙은 image-brief.md(§1~§7·§9~§11), 층마다 붙는 고정 몫 fixed-lines.md, 층별 사전 색인. 도해·슬라이드·UI·만화·로고는 -structured.
+  "gpt-image-new": ["references/image/surfaces.md#0", "references/image/image-brief.md#1,2,3,4,5,6,7,9,10,11", "references/image/fixed-lines.md", "references/image/layer-lexicon.md"],
   "gpt-image-new-structured": ["references/image/surfaces.md#0", "references/image/image-brief.md#1,2,3,4,5,6,7,9,10,11", "references/image/layer-lexicon.md", "references/image/surface-contracts.md#3.4"],
   // 대상 미정·GPT Image 인물·셀피·패션 화보 새 이미지. 층 사전은 색인(layer-lexicon.md)만 읽는다. 층별 표는 find_tokens.mjs나 lexicon/ 절 읽기로 따로 찾는다. compiler.md 피부·재질은 GPT Image 새 이미지에 적용하지 않으므로 이 묶음에 넣지 않는다.
   "gpt-image-portrait": [
     "references/image/surfaces.md#0",
     "references/image/image-brief.md#1,2,3,4,5,6,7,9,10,11",
     "references/image/editorial/portrait-brief.md",
+    "references/image/fixed-lines.md",
     "references/image/layer-lexicon.md",
   ],
   // 대상 미정·GPT Image 원본 편집(image-brief §1·§2·§6~§9 + 편집 패턴 §3.3). 참조 사진의 역할·관찰이 필요하면 from-image.md#1을 덧붙인다.
   "gpt-image-edit": ["references/image/surfaces.md#0", "references/image/image-brief.md#1,2,6,7,8,9", "references/image/surface-contracts.md#3.3"],
   "gpt-image-edit-structured": ["references/image/surfaces.md#0", "references/image/image-brief.md#1,2,6,7,8,9", "references/image/surface-contracts.md#3.3,3.4"],
   // 대상 미정·GPT Image로 사진(첨부 이미지)을 보고 그 사진을 다시 만들 프롬프트를 쓸 때. 새 이미지 규칙에 §12 추출 규칙을 얹는다(§7 후속 수정·§8 편집·§10 예시·§11 정제는 뺀다).
-  "gpt-image-extract": ["references/image/surfaces.md#0", "references/image/image-brief.md#1,2,3,4,5,6,9,12", "references/image/layer-lexicon.md"],
+  "gpt-image-extract": ["references/image/surfaces.md#0", "references/image/image-brief.md#1,2,3,4,5,6,9,12", "references/image/fixed-lines.md", "references/image/layer-lexicon.md"],
   // 영상 생성.
   video: ["references/image/surfaces.md#0", "references/image/lanes.md#영상 공통 규칙,이미지 슬롯 기본값"],
   // 실행 작업·자동화 지시.

@@ -132,9 +132,10 @@ for (const [layer, slug] of Object.entries(LAYER_FILES)) {
 // Review ceilings for reference-loading cost, not output length or API caps.
 // Measured after the full lexicon merge: new 51655, portrait 58261, edit 18996 UTF-8 bytes;
 // ceilings are about 10% above the measurement. Raised for 4.0.5 (new 56992 measured) after the
-// photo extraction and token-fit rules grew sections 2-6.
-assert.ok(sizes['gpt-image-new'].utf8_bytes <= 60000);
-assert.ok(sizes['gpt-image-portrait'].utf8_bytes <= 67000);
+// photo extraction and token-fit rules grew sections 2-6. Raised again with fixed-lines.md and the
+// Finish layer (new, portrait and extract grew by the file itself; the edit route grew about 500 bytes through sections 1, 6 and 9).
+assert.ok(sizes['gpt-image-new'].utf8_bytes <= 77000);
+assert.ok(sizes['gpt-image-portrait'].utf8_bytes <= 84000);
 assert.ok(sizes['gpt-image-edit'].utf8_bytes <= 20900);
 
 const scenarios = JSON.parse(read('scripts/fixtures/behavioral/image-planning.json')).cases;
