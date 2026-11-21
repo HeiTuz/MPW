@@ -456,6 +456,21 @@ Optics 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다.
 | Smooth Tonal Gradation | smooth gradation; 부드러운 계조; 매끈한 톤 이행 | US | 柯达Portra 400; Kodak Portra 400; 코닥 포트라 400; 포트라 400; Portra 400 portrait; Contax 645; 콘탁스 645; 중형; 뉴욕 쿨 그레이; New York overcast cool grey; 뉴욕 흐린 날; Hasselblad 907X | Tones step very smoothly across the frame, from skin and fabric through grey into the softest highlights without a hard edge. | look |
 | Soft Low-Contrast Warm Color | soft warm color; 부드러운 저대비 웜 컬러; 저대비 따뜻한 색 | US | Kodak Gold 200; 코닥 골드 200; Gold 200; 골드 200; 柯达Gold 200; Canonet QL17; 캐논 카노넷; 다이너 | Soft, slightly low-contrast warm color that keeps a whole interior readable. | look |
 | Warm Vintage Daylight Color | warm vintage color; 따뜻한 빈티지 주광색; 따뜻한 빈티지 컬러 | US | Kodak Gold 200; 코닥 골드 200; Gold 200; 골드 200; 柯达Gold 200; Canon AE-1; 캐논 AE-1 | Warm, slightly soft vintage color with an honest daylight exposure. | look |
+| Crisp Detail Calm Colour | crisp calm colour; 선명한 디테일 차분한 색 | US | 雨夜新宿; 비 오는 신주쿠 밤; 東京ノワール; 도쿄 누아르; 쿨톤 도자기 피부; 블루 그레이 미니멀; 청량 도자기; Leica SL2; 라이카 SL2 | Crisp detail and deep, calm colour keep bright lights and fine surfaces cleanly separate, with no colour fringing. | look |
+| Wide Tonal Range | 넓은 톤 범위 | US | 雨夜新宿; 비 오는 신주쿠 밤; 東京ノワール; 도쿄 누아르; Hasselblad X2D 100C; 핫셀블라드 X2D | Smooth colour and a wide tonal range keep distant lights delicate and unclipped. | look |
+| Clean Colour Detail | 깨끗한 색 디테일 | US | 雨夜新宿; 비 오는 신주쿠 밤; 東京ノワール; 도쿄 누아르; RED Komodo; 레드 코모도 | Crisp detail and clean colour hold up even through a rain-streaked window. | look |
+| Micro-Contrast With Soft Glow | micro-contrast soft glow; 마이크로 콘트라스트 소프트 글로우 | US | 파리 소프트 그레이; Lumière grise de Paris; 흐린 파리; Leica M6; 라이카 M6 | Rich micro-contrast separates the fine texture of stone, cloth and hair, with a faint soft glow around the brightest highlights. | look |
+| Razor-Flat Planes | razor flat planes; 면이 또렷한 평면 선명도 | US | 롤라이플렉스; Rolleiflex; 유리 이중 반사; Hasselblad 500C/M; 하셀블라드 500C/M | The planes of the frame stay very flat and razor-sharp edge to edge, with smooth tones from skin to glass. | look |
+| Sharp Calm Colour | 샤프 차분한 색 | US | 서울 카페 웜톤; 웜톤 확산광; 서울 카페; Leica M10; 라이카 M10 | Sharp, calm colour keeps skin tones clean, with subtle film-like contrast. | look |
+| Clean Detail Warm Colour | 깨끗한 디테일 따뜻한 색 | US | 서울 카페 웜톤; 웜톤 확산광; 서울 카페; Canon EOS R6; 캐논 R6 | Clean detail holds in the dim corners of the room and the colour stays warm and pleasing. | look |
+| Crisp Edges Clean Colour | 또렷한 윤곽 깨끗한 색 | US | 서울 카페 웜톤; 웜톤 확산광; 서울 카페; Leica Q; 라이카 Q | Crisp edges and clean colour keep the whole room readable around the person. | look |
+| Crisp Natural Rendering | 또렷한 자연색 렌더링 | US | 서울 카페 웜톤; 웜톤 확산광; 서울 카페; 쿨톤 도자기 피부; 블루 그레이 미니멀; 청량 도자기; Canon EOS R5; 캐논 EOS R5 | Crisp rendering with natural colour and smooth tonal transitions from the lit edge into the soft shadow. | look |
+| Warm Film-Simulation Colour | warm film simulation colour; 따뜻한 필름 시뮬레이션 색 | US | 서울 카페 웜톤; 웜톤 확산광; 서울 카페; Fujifilm X-T4; 후지 X-T4 | Warm film-simulation colour and soft highlights give a backlit frame a gentle glow. | look |
+| Cool Matte Detail | 차가운 매트 디테일 | US | 쿨톤 도자기 피부; 블루 그레이 미니멀; 청량 도자기; Sony A7R V; 소니 A7R V | Cool gray-white tones with clean matte detail, down to each crisp eyelash. | look |
+| Long Smooth Tonal Ramp | 긴 매끈한 톤 이행 | US | 쿨톤 도자기 피부; 블루 그레이 미니멀; 청량 도자기; Hasselblad X2D 100C; 핫셀블라드 X2D | A long, smooth tonal ramp runs from the lit side into the shadow side with no hard edge. | look |
+| Clean Neutral Texture | 깨끗한 중립 질감 | US | 쿨톤 도자기 피부; 블루 그레이 미니멀; 청량 도자기; Phase One IQ4; 페이즈원 IQ4 | Fine weave and pale surfaces stay very clean in neutral colour. | look |
+| Unsmoothed Fine Detail | 매끄럽게 지우지 않은 잔디테일 | US | 쿨톤 도자기 피부; 블루 그레이 미니멀; 청량 도자기; Sony A7R IV; 소니 A7R4 | Each lash and the fine vellus hair on the cheek resolve cleanly, with no skin smoothing applied. | look |
+| Neutral Low-Saturation Rendering | neutral low saturation rendering; 중립 저채도 렌더링 | US | 쿨톤 도자기 피부; 블루 그레이 미니멀; 청량 도자기; Sony A7 IV; 소니 A7 IV | Neutral rendering with clean low-saturation colour and faint olive-grey shadows. | look |
 
 ## FR
 

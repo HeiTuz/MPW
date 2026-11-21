@@ -159,8 +159,8 @@
 |---|---|---|
 | A, B | camera | Rolleiflex 2.8F — A 6x6 medium-format twin-lens reflex camera. |
 | A | camera | Hasselblad 500C/M — A 6x6 medium-format SLR camera with a waist-level finder. |
-| A | tone-hassel | Hasselblad 500C/M — On the Hasselblad 500C/M, the planes stay very flat and razor-sharp across the frame, with smooth tones from skin to glass. |
-| A, B | tone-rollei | Rolleiflex 2.8F — On the Rolleiflex 2.8F, the square frame holds fine tonal gradation from the lit skin through the glass reflection to the shaded room. |
+| A | tone-hassel | Razor-Flat Planes — On the Hasselblad 500C/M, the planes stay very flat and razor-sharp across the frame, with smooth tones from skin to glass. |
+| A, B | tone-rollei | Fine Tonal Gradation — On the Rolleiflex 2.8F, the square frame holds fine tonal gradation from the lit skin through the glass reflection to the shaded room. |
 | A, B | lens | Zeiss Planar 80mm f/2.8 — A standard medium-format lens that holds the face crisp and lets the reflected street fall softly behind it with no wide-angle stretch. |
 | A, B | viewfinder | Waist-Level Viewfinder — The camera is held at belly height and looks slightly up, so the figure stands a little tall and unhurried against the glass and the sky. |
 | A, B | format | 6x6 Square Frame — A square 6x6 frame with the face and the window reflection balanced inside it and calm margins on every side. |

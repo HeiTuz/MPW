@@ -157,17 +157,17 @@
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
 | A | camera | Sony A7R V — A high-resolution full-frame mirrorless camera. (滤镜 #021) |
-| A | body-a7rv | Sony A7R V — Cool gray-white tones with clean matte detail, down to each crisp eyelash, under the soft light. |
-| A | body-sl2 | Leica SL2 — Crisp detail with calm, deep-toned colour held inside the muted palette. |
+| A | body-a7rv | Cool Matte Detail — Cool gray-white tones with clean matte detail, down to each crisp eyelash, under the soft light. |
+| A | body-sl2 | Crisp Detail Calm Colour — Crisp detail with calm, deep-toned colour held inside the muted palette. |
 | B | camera | Hasselblad X2D 100C — A medium-format mirrorless digital camera. (滤镜 #023) |
-| B | body-x2d | Hasselblad X2D 100C — A long, smooth tonal ramp runs from the lit cheek into the shadow side with no hard edge on the face. |
+| B | body-x2d | Long Smooth Tonal Ramp — A long, smooth tonal ramp runs from the lit cheek into the shadow side with no hard edge on the face. |
 | B | camera | Phase One IQ4 — A medium-format digital back with an ultra-high-resolution sensor. (滤镜 #037) |
-| B | body-iq4 | Phase One IQ4 — The knit weave and the pale wall stay very clean in neutral color. |
+| B | body-iq4 | Clean Neutral Texture — The knit weave and the pale wall stay very clean in neutral color. |
 | C | camera | Sony A7R IV — A 61-megapixel full-frame mirrorless camera. (滤镜 #040) |
-| C | body-a7r4 | Sony A7R IV — Each lash and the fine vellus hair on the cheek resolve cleanly, with no skin smoothing applied. |
+| C | body-a7r4 | Unsmoothed Fine Detail — Each lash and the fine vellus hair on the cheek resolve cleanly, with no skin smoothing applied. |
 | D | camera | Canon EOS R5 — A high-resolution full-frame mirrorless camera. (滤镜 #025) |
-| D | body-r5 | Canon EOS R5 — Crisp rendering with natural color and smooth tonal transitions holds the wet highlights without clipping. |
-| D | body-a7iv | Sony A7 IV — Neutral rendering with clean low-saturation color and faint olive-grey shadows. |
+| D | body-r5 | Crisp Natural Rendering — Crisp rendering with natural color and smooth tonal transitions holds the wet highlights without clipping. |
+| D | body-a7iv | Neutral Low-Saturation Rendering — Neutral rendering with clean low-saturation color and faint olive-grey shadows. |
 | A, C | color | 쿨 화이트 밸런스 — Whites sit slightly cold and clean, so the base reads cool and porcelain-clear with no yellow cast. |
 | A | color | 차분한 티 톤 — A muted gray-brown grade at low contrast with a thin cool tea cast gives the shadows and the base a faint earl-grey undertone. (滤镜 #039) |
 | B | color | 뮤트 시안 — Desaturated color with a faint olive-cyan gray sits in the shadows of the concrete wall and the dark clothing. (滤镜 #024) |

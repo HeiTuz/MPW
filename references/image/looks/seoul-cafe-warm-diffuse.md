@@ -157,17 +157,17 @@
 | A | camera | Fujifilm X100V — A compact APS-C camera with a fixed 23mm lens. (滤镜 #041) |
 | A | body-x100v | 소프트 글로우 — On the Fujifilm X100V, a soft wide-open glow gathers around the lit highlights, giving the frame a casual snapshot feel. |
 | A | camera | Leica M10 — A full-frame digital rangefinder camera. (滤镜 #042) |
-| A | body-m10 | Leica M10 — Sharp, calm colour keeps skin tones clean, with subtle film-like contrast. |
+| A | body-m10 | Sharp Calm Colour — Sharp, calm colour keeps skin tones clean, with subtle film-like contrast. |
 | B | camera | Canon EOS R6 — A full-frame mirrorless camera. (滤镜 #043) |
-| B | body-r6 | Canon EOS R6 — Clean detail holds in the dim corners of the room and the colour stays warm and pleasing. |
+| B | body-r6 | Clean Detail Warm Colour — Clean detail holds in the dim corners of the room and the colour stays warm and pleasing. |
 | C | camera | Sony A7S III — A full-frame mirrorless camera. (滤镜 #049) |
-| C | body-a7s | Sony A7S III — Steady colour holds in the low light and the night highlights stay calm, reflecting softly off the glass and wood. |
+| C | body-a7s | Calm Night Highlights — Steady colour holds in the low light and the night highlights stay calm, reflecting softly off the glass and wood. |
 | C | camera | Leica Q — A full-frame compact camera with a fixed 28mm lens. (滤镜 #052) |
-| C | body-q | Leica Q — Crisp edges and clean colour keep the sofa room readable around her. |
+| C | body-q | Crisp Edges Clean Colour — Crisp edges and clean colour keep the sofa room readable around her. |
 | D | camera | Fujifilm X-T4 — An APS-C mirrorless camera. (滤镜 #046) |
 | D | camera | Canon EOS R5 — A high-resolution full-frame mirrorless camera. (滤镜 #048) |
-| D | body-r5 | Canon EOS R5 — Crisp rendering with natural colour and smooth tonal transitions from the lit edge into the soft shadow. |
-| D | body-xt4 | Fujifilm X-T4 — Warm film-simulation colour and soft highlights give the backlit frame a gentle glow. |
+| D | body-r5 | Crisp Natural Rendering — Crisp rendering with natural colour and smooth tonal transitions from the lit edge into the soft shadow. |
+| D | body-xt4 | Warm Film-Simulation Colour — Warm film-simulation colour and soft highlights give the backlit frame a gentle glow. |
 | A, B | tone | 밀크티 톤 — A low-contrast warm grade that pulls colours toward off-white, oat and camel beige. (滤镜 #041) |
 | B | tone | 크림 톤 — Soft cream-white walls reflect light repeatedly into a smooth, fine, warm white. (滤镜 #047) |
 | A, C | grade | 호박색 톤 — The whole frame bathed in amber-honey warmth, from the wood to the highlights. |

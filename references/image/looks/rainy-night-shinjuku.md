@@ -162,11 +162,11 @@
 | A, B, C | color | Cool Tone — The whole palette leans cold blue-white with the shadows tinted violet, quiet and slightly pale. |
 | B | camera | Sony FX3 — A compact full-frame cinema-line camera. (滤镜 #092) |
 | B | camera | Leica SL2 — A full-frame mirrorless camera. (滤镜 #093) |
-| B | tone-sl2 | Leica SL2 — On the Leica SL2, crisp detail and deep, calm color keep the amber lamp and the white headlights cleanly separate, with no purple fringing. |
+| B | tone-sl2 | Crisp Detail Calm Colour — On the Leica SL2, crisp detail and deep, calm color keep the amber lamp and the white headlights cleanly separate, with no purple fringing. |
 | C | camera | Hasselblad X2D 100C — A medium-format mirrorless digital camera. (滤镜 #096) |
-| C | tone-x2d | Hasselblad X2D 100C — On the Hasselblad X2D 100C, smooth color and a wide tonal range keep the distant city lights delicate and unclipped. |
+| C | tone-x2d | Wide Tonal Range — On the Hasselblad X2D 100C, smooth color and a wide tonal range keep the distant city lights delicate and unclipped. |
 | C | camera | RED Komodo — A compact 6K cinema camera. (滤镜 #099) |
-| C | tone-komodo | RED Komodo — On the RED Komodo, crisp detail and clean color hold up through the rain-streaked window. |
+| C | tone-komodo | Clean Colour Detail — On the RED Komodo, crisp detail and clean color hold up through the rain-streaked window. |
 | C | motion | 光跡 — Headlights and tail lights stretch into smooth colored streaks along the road while the buildings stay still and sharp. |
 | C | bokeh | Bokeh — Distant lights turn into big round overlapping discs behind her. |
 | D | camera | Leica M11 — A compact full-frame digital rangefinder camera. (滤镜 #100) |

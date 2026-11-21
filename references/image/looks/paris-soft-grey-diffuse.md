@@ -173,7 +173,7 @@
 | C, D | stock-mono | Kodak Tri-X 400 — Pure black-and-white tone with ink-deep blacks and open highlights, used only when the request asks for monochrome. |
 | D | push | Pellicule poussée — The film is overdeveloped for extra speed, giving stronger contrast and a deeper shadow tone in the arcade shade. |
 | A, D | camera | Leica M6 — A 35mm rangefinder camera. |
-| A, D | tone-m6 | Leica M6 — On the Leica M6, the rendering keeps rich micro-contrast, so the fine texture of stone, cloth and hair separates cleanly, with a faint soft glow around the brightest highlights. |
+| A, D | tone-m6 | Micro-Contrast With Soft Glow — On the Leica M6, the rendering keeps rich micro-contrast, so the fine texture of stone, cloth and hair separates cleanly, with a faint soft glow around the brightest highlights. |
 | B | camera | Contax G2 — An autofocus 35mm rangefinder camera. |
 | C | camera | Canon New F-1 — A sturdy professional 35mm film SLR camera. |
 | A, D | lens | Summicron 35mm f/2 — A wide-normal lens with a crisp subject, a soft smooth falloff and a bit of the surrounding street kept in the frame. |
