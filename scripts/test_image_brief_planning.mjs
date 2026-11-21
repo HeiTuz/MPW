@@ -30,7 +30,14 @@ assert.match(evidence.body, /의미를 정독하거나 결과 이미지를 대�
 assert.match(evidence.body, /원문 프롬프트·이미지 모음은 재배포하지 않는다/);
 
 const sizes = {};
-const generation = [s1, s2, s3, s4, s5, s6, s7, s9, s10];
+// §10 is read by part: 10.0 (how to read the examples) with 10.1 (person examples, portrait bundle) or 10.2 (no-person examples, new bundles).
+const generation = [s1, s2, s3, s4, s5, s6, s7, s9];
+const [s10read, s10person, s10scene] = ['10.0', '10.1', '10.2'].map(sec);
+const expectedExamples = {
+  'gpt-image-new': [s10read, s10scene],
+  'gpt-image-new-structured': [s10read, s10scene],
+  'gpt-image-portrait': [s10read, s10person],
+};
 const expectedSections = {
   'gpt-image-new': generation,
   'gpt-image-new-structured': generation,
@@ -47,6 +54,9 @@ for (const [name, targets] of Object.entries(BUNDLES)) {
   for (const id of ids) {
     const wanted = expectedSections[name].includes(sec(id));
     assert.equal(result.text.includes(sec(id)), wanted, `${name}: image-brief §${id} routing`);
+  }
+  for (const part of [s10read, s10person, s10scene]) {
+    assert.equal(result.text.includes(part), (expectedExamples[name] ?? []).includes(part), `${name}: image-brief §10 part routing`);
   }
   assert.ok(!result.text.includes(legacyPlanning), `${name}: §3.2.2 body must not be bundled`);
   assert.ok(!result.text.includes(legacyNoise), `${name}: §3.2.4 body must not be bundled`);
@@ -180,10 +190,12 @@ for (const [layer, slug] of Object.entries(LAYER_FILES)) {
 // (new 102540, portrait 109468, edit 20501, extract 124450 measured, ceilings about 2% above).
 // Lowered (step 14) after the request-wins rules replaced overlapping card sentences and the card-authoring paragraph moved to looks/index.md
 // (new 102083, portrait 109011, edit 20303, extract 124463 measured, ceilings about 2% above).
-assert.ok(sizes['gpt-image-new'].utf8_bytes <= 104100, `gpt-image-new is ${sizes['gpt-image-new'].utf8_bytes} bytes`);
-assert.ok(sizes['gpt-image-portrait'].utf8_bytes <= 111200, `gpt-image-portrait is ${sizes['gpt-image-portrait'].utf8_bytes} bytes`);
+// Lowered (token stage 1) with no rule text changed: bundles read layer-lexicon.md by 사용법 and 문화권 룩 묶음 only, fixed-lines.md ends with the 한국어 문안 section that no bundle reads by default,
+// the extraction bundle skips fixed-lines Camera, and image-brief section 10 is read by part (new 81289, portrait 94914, edit 20303, extract 112588 measured, ceilings about 2% above).
+assert.ok(sizes['gpt-image-new'].utf8_bytes <= 82900, `gpt-image-new is ${sizes['gpt-image-new'].utf8_bytes} bytes`);
+assert.ok(sizes['gpt-image-portrait'].utf8_bytes <= 96800, `gpt-image-portrait is ${sizes['gpt-image-portrait'].utf8_bytes} bytes`);
 assert.ok(sizes['gpt-image-edit'].utf8_bytes <= 20700, `gpt-image-edit is ${sizes['gpt-image-edit'].utf8_bytes} bytes`);
-assert.ok(sizes['gpt-image-extract'].utf8_bytes <= 126900, `gpt-image-extract is ${sizes['gpt-image-extract'].utf8_bytes} bytes`);
+assert.ok(sizes['gpt-image-extract'].utf8_bytes <= 114800, `gpt-image-extract is ${sizes['gpt-image-extract'].utf8_bytes} bytes`);
 
 const scenarios = JSON.parse(read('scripts/fixtures/behavioral/image-planning.json')).cases;
 assert.deepEqual(scenarios.map(c => c.id), [
