@@ -4,7 +4,7 @@ GPT Image(웹·API)·대상 미정인 새 이미지(인물 사진과 인물 없�
 
 ## 절차
 
-1. 사용자 값과 요청한 룩으로 층을 먼저 채운다. 슬롯 하나에 값이 둘 이상일 때 무엇이 이기는지는 [image-brief.md](image-brief.md) §4 '비워 둔 층'의 한 줄 순서가 정한다(이 파일의 줄은 그 순서의 '고정 몫' 자리다). 룩 카드가 채웠거나 `끄는 고정 몫`으로 끈 슬롯에는 아래 줄을 붙이지 않는다(카드가 `realism`을 끄면 그 자리에 Finish의 `native resolution` 줄이 들어간다). 카드의 `끄는 고정 몫`이 슬롯을 켠다·끈다고 적었으면 그 처리가 아래 각 줄의 일반 끄는 조건보다 먼저다(카드가 `face-clear`를 켠다고 했으면 카드의 헤어 줄이 앞머리나 젖은 머리여도 켠다).
+1. 사용자 값과 요청한 룩으로 층을 먼저 채운다. 슬롯 하나에 값이 둘 이상일 때 무엇이 이기는지는 [image-brief.md](image-brief.md) §4 '비워 둔 층'의 한 줄 순서가 정한다(이 파일의 줄은 그 순서의 '고정 몫' 자리다). 룩 카드가 채웠거나 `끄는 고정 몫`으로 끈 슬롯에는 아래 줄을 붙이지 않는다(카드가 `realism`을 끄면 그 자리에 Finish의 `native resolution` 줄이 들어간다). 카드가 슬롯을 켠다고 적었으면 아래 각 줄의 일반 끄는 조건보다 그 처리가 먼저다.
 2. 아래 표를 위에서 아래로 내려가며 줄마다 묻는다. 이 줄의 슬롯이 이미 채워졌나(카드·세트·사용자 줄이 그 줄의 사실을 이미 말했으면 채워진 것이다. 헤어 줄이 머리를 귀 뒤로 넘겼다고 썼으면 `face-clear`를 다시 쓰지 않는다)? 예면 건너뛴다. 끄는 조건에 걸리나? 예면 건너뛴다. 둘 다 아니면 그 층에 줄을 붙인다. 사용자가 그 줄의 내용을 빼 달라거나 정하지 말라고 했으면 그 줄도 건너뛴다(맨얼굴, "입자는 필요 없어", "나이는 정하지 마").
 3. 다 쓴 뒤 [image-brief.md](image-brief.md) §9-7의 슬롯(입술·베이스·캐치라이트·얼굴 빛·장소·시간대·화면비·입자)이 하나씩인지 머릿속으로 훑는다. 둘이면 뒤에 붙인 것을 지운다.
 
@@ -25,10 +25,10 @@ GPT Image(웹·API)·대상 미정인 새 이미지(인물 사진과 인물 없�
 | 그 밖 | she is a 22-year-old woman from <지역> with clearly defined bone structure and a slender build |
 
 - 사용자가 나이·인종·외모 값을 줬으면 그 값만 바꾸고 나머지는 이 표를 쓴다. 숫자 나이를 정하지 말라고 했으면 `an adult`, 인종이나 체형을 정하지 말라고 했으면 그 말을 뺀다.
-- 문화권 단서가 없을 때의 한 벌: 인물 공식은 '한·중·일 단서도 없음' 행(`East Asian`)이고, 메이크업 줄(base·under-eye·liner·blush·lip)과 grain 토큰과 Finish는 모두 KR 행이다. 인물 공식만 나라를 못 박지 않을 뿐 같은 기본이다.
-- 문화권 공식과 문단 끝의 비율 문장(`In either case…`)은 **성인 인물에만** 붙는다. 아이·학생으로 요청됐거나 그렇게 보이면(판정은 image-brief.md §5: 아이, 초·중·고 학생, 교복, 초·중·고 학교 장소) 공식 대신 `a child`·`a student` 같은 말만 쓰고(남성이면 같은 자리에 `a boy`·`a schoolboy`처럼 한 구절), 비율 문장과 아래 Hair and makeup의 미화 줄(base·under-eye·liner·blush·lip)을 모두 끈다. 룩 카드의 메이크업 줄(입술·블러셔·아이 메이크업)과 Legwear의 스타킹류 줄도 쓰지 않는다(양말은 쓴다). 그 밖의 층(Pose, Camera, Finish 포함)은 평소대로 쓴다(관능 어휘·노출은 image-brief.md §6).
-- 대학생·대학원생(대학 캠퍼스·대학 도서관 포함)은 성인이다. 공식을 그대로 쓰고 `woman`·`man` 뒤에 `and university student`만 덧붙인다(`a 22-year-old Korean man and university student with a defined jawline and a lean build`). 비율 문장과 메이크업 줄도 성인대로 붙는다.
-- 남성 인물: `a 22-year-old <culture> man with a defined jawline and a lean build`만 쓰고, 문단 끝 비율 문장은 `In either case he has natural 7.5-head proportions and level shoulders.`로 바꾼다(작은 머리·긴 목은 여성 문구다). 고정 몫의 메이크업 줄과 룩 카드의 메이크업·네일 색·Legwear 줄은 사용자가 원할 때만 붙인다. 남성이 아이·학생이면 위 학생 처리가 먼저다.
+- 문화권 단서가 없으면 인물 공식은 '한·중·일 단서도 없음' 행(`East Asian`)이고 메이크업 줄(base·under-eye·liner·blush·lip)·grain 토큰·Finish는 KR 행이다.
+- 문화권 공식과 문단 끝의 비율 문장(`In either case…`)은 **성인 인물에만** 붙는다. 아이·학생으로 요청됐거나 그렇게 보이면(판정은 image-brief.md §5) 공식 대신 `a child`·`a student` 같은 말만 쓰고(남성이면 같은 자리에 `a boy`·`a schoolboy`처럼 한 구절), 비율 문장과 아래 Hair and makeup의 미화 줄(base·under-eye·liner·blush·lip)을 모두 끈다. 룩 카드의 메이크업 줄(입술·블러셔·아이 메이크업)과 Legwear의 스타킹류 줄도 쓰지 않는다(양말은 쓴다). 그 밖의 층(Pose, Camera, Finish 포함)은 평소대로 쓴다(관능 어휘·노출은 image-brief.md §6).
+- 대학생·대학원생은 성인이다(판정은 image-brief.md §5). 공식을 그대로 쓰고 `woman`·`man` 뒤에 `and university student`만 덧붙인다(`a 22-year-old Korean man and university student with a defined jawline and a lean build`). 비율 문장과 메이크업 줄도 성인대로 붙는다.
+- 남성 인물: `a 22-year-old <culture> man with a defined jawline and a lean build`만 쓰고, 문단 끝 비율 문장은 `In either case he has natural 7.5-head proportions and level shoulders.`로 바꾼다. 고정 몫의 메이크업 줄과 룩 카드의 메이크업·네일 색·Legwear 줄은 사용자가 원할 때만 붙인다. 남성이 아이·학생이면 위 학생 처리가 먼저다.
 - `identity`: 카드가 `끄는 고정 몫`의 `identity` 행에 덧붙임 구절을 주면, 참조가 없을 때 쓰는 인물 문장(`If none is provided, …`) 끝에 그 구절을 붙인다. 참조가 있을 때는 붙지 않는다(조건절이 참조의 피부색을 지킨다).
 
 ## Hair and makeup
@@ -37,7 +37,7 @@ GPT Image(웹·API)·대상 미정인 새 이미지(인물 사진과 인물 없�
 
 `base`·`under-eye`·`blush`·`lip`은 문화권마다 줄이 다르다. 문화권 단서가 없으면(위 Identity 표의 '한·중·일 단서도 없음' 행, 인물이 East Asian 기본이다) KR 줄을 토큰 그대로 쓴다. 인물이 `그 밖` 행이면 US 줄을 쓴다(영어 토큰). 아래 Finish 행 고르기와 같은 한 벌이다.
 
-- `face-clear`: `face clear — The hair falls away from the face, tucked behind one ear, so the brows, eyes and jawline stay clear.` 끄는 조건: 사용자나 룩 카드가 얼굴을 가리는 머리(눈을 덮는 앞머리, 얼굴을 가로지르는 가닥, 얼굴에 붙는 바람맞은 머리)를 원함, 뒷모습. 이마가 비치는 시스루뱅과 젖은 머리는 얼굴을 가리지 않으니 이 조건에 걸리지 않는다.
+- `face-clear`: `face clear — The hair falls away from the face, tucked behind one ear, so the brows, eyes and jawline stay clear.` 끄는 조건: 사용자나 룩 카드가 얼굴을 가리는 머리(눈을 덮는 앞머리, 얼굴을 가로지르는 가닥, 얼굴에 붙는 바람맞은 머리)를 원함, 뒷모습. 이마가 비치는 시스루뱅과 젖은 머리는 걸리지 않는다.
 - `base`: 문화권마다 한 줄(위 단서 없음·그 밖 규칙 포함). 끄는 조건: 사용자나 카드가 베이스를 정함, 맨얼굴.
   - KR `물광 피부 — A thin glossy base leaves a soft wet sheen on the cheekbones and nose bridge while pores still show.`
   - CN `冷白瓷肌 — A semi-matte cool porcelain base with a faint satin glow only on the high points.`
@@ -45,7 +45,7 @@ GPT Image(웹·API)·대상 미정인 새 이미지(인물 사진과 인물 없�
   - US `Skin Tint — A sheer tint that evens the color but leaves freckles and texture, with a soft glow on the cheekbones.`
   - FR `Teint nu — A bare-looking base with almost no coverage and natural color left on the cheeks.`
 - `under-eye`: KR `애교살`, CN `卧蚕`, JP `涙袋メイク` 가운데 문화권에 맞는 토큰으로 `<토큰> — A soft pearly band under the lower lashes with a faint shadow line beneath it.` US·FR은 이 줄이 없다. 끄는 조건: 사용자나 카드가 눈 화장을 정함, 맨얼굴.
-- `liner`: `<토큰> — A hair-thin dark line along the upper lash roots defines the eye with no visible wing.` 토큰은 CN `内眼线`, KR `점막 아이라인`, JP `インライン`, US·FR·그 밖 `tightline`(프랑스어로 확실한 말이 없어 영어다). 끄는 조건: 사용자나 카드가 아이라인을 정함, 맨얼굴.
+- `liner`: `<토큰> — A hair-thin dark line along the upper lash roots defines the eye with no visible wing.` 토큰은 CN `内眼线`, KR `점막 아이라인`, JP `インライン`, US·FR·그 밖 `tightline`. 끄는 조건: 사용자나 카드가 아이라인을 정함, 맨얼굴.
 - `blush`: 끄는 조건은 사용자가 블러셔를 정함, 카드가 블러셔를 정하거나 끔, 맨얼굴.
   - KR `딸기우유 블러셔 — A soft milky pink blush spreads wide across the cheeks and nose and fades into the base with no hard edge.`
   - CN `rose blush — A soft rose wash sits high on the cheekbones and melts into the base with no visible edge.`
