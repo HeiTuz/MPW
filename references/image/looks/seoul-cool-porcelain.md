@@ -30,13 +30,14 @@
 ## 끄는 고정 몫 (fixed-lines.md의 슬롯)
 | 슬롯 | 처리 | 이유 |
 |---|---|---|
-| face-light | 모든 갈래에서 끈다. 얼굴 빛은 이 카드의 Light 줄이 정한다 | `立体光`은 키라이트를 위·옆에 두는데 滤镜 #023 #027 #033은 무영 천장광과 평광이고 #036은 이중 흰 커튼 투광이라 그림자 방향이 갈린다 |
+| face-light | 모든 갈래에서 끈다. 얼굴 빛은 이 카드의 Light 줄이 정한다 | 고정 몫의 face-light 줄은 키라이트를 위·옆에 두는데 滤镜 #023 #027 #033은 무영 천장광과 평광이고 #036은 이중 흰 커튼 투광이라 그림자 방향이 갈린다 |
+| face-clear | 켠다(끄지 않는다). hair 줄이 이미 머리를 귀 뒤로 넘기거나 얼굴을 연다고 말하는 A·D의 `검은 긴 생머리`, A의 `사이드 파트`, C의 `슬릭 로우포니테일`에는 `face clear`를 다시 붙이지 않고, B의 `슬릭컷`·`태슬컷`과 D의 `잔머리`에는 붙는다. 어느 hair 줄·세트·쌍도 얼굴을 가로지르는 가닥을 말하지 않는다 | hair 줄이 이마와 눈썹을 이미 열어 두고 가림 머리를 원하는 갈래가 없다 |
 | base | 모든 갈래에서 카드 줄이 이긴다. 단 S1은 Light에서 무광(哑光 #021)을 정하니 A base 줄의 satin 마감과 광대뼈의 광을 쓰지 않고 세트의 `쿨톤 무광 베이스`로 쓴다(세트가 갈래 줄보다 이긴다) | KR `물광 피부`는 젖은 광택인데 滤镜 #021은 `哑光无油`, #027은 `哑光陶瓷底妆`, #040은 무보정을 말해 한 프리셋 안에서 매트와 물광이 부딪혔다. 촉촉한 쪽은 D의 `쿨 제이드 스킨`만 맡는다 |
 | lip | A·C·D는 카드 줄이 이긴다. B는 `쿨톤 매트` 줄이 회분홍 벨벳 입술까지 정하니 고정 몫 입술을 끈다 | KR `그라데이션 립`이 더 붙으면 입술색이 둘이 된다. Iris 메이크업 고정문의 `珊瑚裸粉玻璃唇`도 B의 회분홍 벨벳 입술과 겹친다 |
 | blush | 카드 줄이 이긴다 | KR `딸기우유 블러셔`는 넓은 우유빛 분홍이라 회청 팔레트에서 뺨만 따뜻해진다. Iris 원문은 맑은 장미빛 한 겹(`清透玫瑰粉腮红`)이다 |
 | catchlight | 켠다. A는 `창가 사각 캐치라이트`, B·C는 `캐치라이트` 줄이 대신한다. 눈이 안 보이는 장면(#036 이중 흰 커튼 뒤)에서는 끈다 | 창·패널 모양 반사를 줄마다 정해 두면 고정 몫의 `<창·램프·하늘>` 빈칸이 둘이 되지 않는다 |
-| lens | 켠다. 렌즈를 말하는 줄은 쌍마다 정확히 하나다. 출처 순서는 세트의 렌즈 > 쌍 Camera 줄의 렌즈 > 갈래의 본체·렌즈 줄 > 고정 몫 `自然透视`이다. (1) 세트가 렌즈를 말하면 그 렌즈가 렌즈 줄이고 `自然透视`는 붙이지 않는다: S1의 50mm f/1.8, S2의 Summilux 50mm, S5의 50mm f/1.2, S6의 FE 35mm f/1.4 GM(Iris 원본 그대로). 이 세트들이 속한 갈래 A·D의 쌍 Camera 줄(쌍 1~4·11·12)은 렌즈를 말하지 않아 겹치지 않는다. (2) 세트가 렌즈를 말하지 않고 쌍 Camera 줄이 말하면 그것이다: 쌍 8의 `망원 압축`(중망원). (3) 갈래의 Optics `camera` 줄(`Sony A7R V`·`Hasselblad X2D 100C`·`Phase One IQ4`·`Sony A7R IV`·`Canon EOS R5`)은 본체만 말하고 렌즈를 말하지 않는다. (4) 위가 모두 없으면(쌍 1~7·9~12 가운데 세트가 렌즈를 말하지 않는 것) 고정 몫 `自然透视`(표준~중망원, 렌즈 종류만 말하고 높이는 정하지 않는다)이 렌즈 줄이다. 카메라 높이는 쌍 3(하이앵글)·쌍 6(로우앵글)이 Camera 줄로 정하고 나머지 쌍은 눈높이다. 세트가 없는 #024 #029 #034 #035의 Iris 렌즈(35mm, 24-70mm)는 카드가 옮기지 않으니 그 경우 본체 줄만 쓴다 | Iris 원문은 35mm 계열 렌즈와 `50mm 무왜곡` 꼬리가 한 프리셋에 섞여 있다. 높이는 렌즈 줄에서 빼고 쌍이 맡아야 쌍 3·6의 높이와 부딪히지 않는다. S6의 35mm는 이전에 카드가 표준 시선으로 바꿨던 것을 Iris 원본으로 되돌렸다 |
-| grain | 켠다. 고정 몫 `数码噪点`이 그대로 맞다 | 매체가 풀프레임 디지털이다 |
+| lens | 켠다. 렌즈를 말하는 줄은 쌍마다 정확히 하나다. 출처 순서는 세트의 렌즈 > 쌍 Camera 줄의 렌즈 > 갈래의 본체·렌즈 줄 > 고정 몫 lens 줄이다. (1) 세트가 렌즈를 말하면 그 렌즈가 렌즈 줄이고 고정 몫 lens 줄은 붙이지 않는다: S1의 50mm f/1.8, S2의 Summilux 50mm, S5의 50mm f/1.2, S6의 FE 35mm f/1.4 GM(Iris 원본 그대로). 그 렌즈 구절은 세트가 쓰는 본체의 Optics `camera` 줄 문장 끝에 붙인다(S1 `Sony A7R V`, S5 `Canon EOS R5`. S2의 `Leica SL2-S`와 S6의 `Sony A7 IV`는 카드에 `camera` 줄이 없으니 세트가 말한 본체의 줄을 쓰고 그 문장 끝에 붙인다). 이 세트들이 속한 갈래 A·D의 쌍 Camera 줄(쌍 1~4·11·12)은 렌즈를 말하지 않아 겹치지 않는다. (2) 세트가 렌즈를 말하지 않고 쌍 Camera 줄이 말하면 그것이다: 쌍 8의 `망원 압축`(중망원). (3) 갈래의 Optics `camera` 줄(`Sony A7R V`·`Hasselblad X2D 100C`·`Phase One IQ4`·`Sony A7R IV`·`Canon EOS R5`)은 본체만 말하고 렌즈를 말하지 않는다. (4) 위가 모두 없으면(쌍 1~7·9~12 가운데 세트가 렌즈를 말하지 않는 것) 고정 몫 lens 줄(표준~중망원, 렌즈 종류만 말하고 높이는 정하지 않는다)이 렌즈 줄이다. 카메라 높이는 쌍 3(하이앵글)·쌍 6(로우앵글)이 Camera 줄로 정하고 나머지 쌍은 눈높이다. 세트가 없는 #024 #029 #034 #035의 Iris 렌즈(35mm, 24-70mm)는 카드가 옮기지 않으니 그 경우 본체 줄만 쓴다 | Iris 원문은 35mm 계열 렌즈와 `50mm 무왜곡` 꼬리가 한 프리셋에 섞여 있다. 높이는 렌즈 줄에서 빼고 쌍이 맡아야 쌍 3·6의 높이와 부딪히지 않는다. S6의 35mm는 이전에 카드가 표준 시선으로 바꿨던 것을 Iris 원본으로 되돌렸다 |
+| grain | 켠다. 고정 몫의 grain 줄이 그대로 맞다 | 매체가 풀프레임 디지털이다 |
 | framing | 켠다. 쌍 5(머리 위부터 가슴 중간), 쌍 6(주머니의 손까지), 쌍 10(얼굴만), 쌍 12(허벅지 중간)는 Camera 줄이 범위를 말하니 그 쌍이 정한다. 쌍 12는 고정 사실 figure의 허리 위 범위보다 이 쌍이 이긴다 | 나머지 쌍은 프레임 범위를 말하지 않아 고정 몫 허리 위 줄이 범위를 정한다 |
 | ratio | 켠다. 사용자 비율이 없으면 3:4 세로 | 쌍은 비율을 정하지 않는다 |
 
@@ -74,6 +75,9 @@
 **시선 슬롯은 하나다:** `카메라 밖 시선`·`내리깐 눈`·`독서 몰입`·`뒤돌아 꽂히는 시선`처럼 시선을 정하는 Expression 줄은 하나만 쓴다. Pose나 세트가 시선을 직접 정하면(쌍 3·5·11의 렌즈 응시, S2의 책, S6의 렌즈 응시) 그 값이 Expression의 다른 시선 줄을 대신한다.
 
 ## Outfit
+**하나만 고르는 슬롯:** `outfit`·`outfit-knit`(속에 입는 윗옷 후보. 둘 가운데 하나)
+**함께 쓰는 슬롯:** `outfit-outer`(겉옷은 윗옷 위에)
+
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
 | A, C | outfit | 캐시미어 니트 — A soft mocha-brown cashmere knit with a deep V-neck and a brushed surface, its fuzz catching a faint halo of cool light along the shoulders. (滤镜 #022) |
@@ -144,10 +148,12 @@
 | D | weather | 옅은 안개 — Light haze scatters the daylight so contrast drops and distant shapes fade into pale layers. (滤镜 #026 #035) |
 | D | ambient | 블루 아워 — Just after sunset the sky turns a deep, pure blue that gives cool, shadowless ambient light across her profile. (滤镜 #031) |
 | D | light-fill | 눈 반사광 — Snow on the ground bounces even soft light upward into her face and makes the catchlights clear. (滤镜 #038) |
-| D | skyline | 블루 아워 — On the rooftop, the skyline far below is reduced to small points of light and the car lights melt into soft blurred bokeh. |
+| D | skyline | 야경 보케 — On the rooftop, the skyline far below is reduced to small points of light and the car lights melt into soft blurred bokeh. |
 | D | wet-pavement | Wet Street Reflections — On the boulevard, the wet pavement mirrors the low grey sky in pale glossy patches. |
 
 ## Optics
+**하나만 고르는 슬롯:** `body-*`(쓰는 본체와 같은 이름의 줄만. `camera` 줄을 골랐거나 세트가 그 본체를 말했을 때: `body-a7rv`는 `Sony A7R V`, `body-sl2`는 S2의 Leica SL2-S, `body-x2d`는 `Hasselblad X2D 100C`, `body-iq4`는 `Phase One IQ4`, `body-a7r4`는 `Sony A7R IV`, `body-r5`는 `Canon EOS R5`, `body-a7iv`는 S6의 Sony A7 IV)
+
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
 | A | camera | Sony A7R V — A high-resolution full-frame mirrorless camera. (滤镜 #021) |
@@ -185,18 +191,20 @@
 ## 포즈·구도 쌍
 | 번호 | 갈래 | Pose | Camera |
 |---|---|---|---|
-| 1 | A | 뒤돌아보기 — She turns from a three-quarter stance and looks back over one shoulder toward the lens, shoulders dropped and relaxed. | 전경 가림 — A blurred rim of a cup or the edge of a leaf crosses one lower corner of the frame while her face stays sharp. |
-| 2 | A | 머리 넘기기 — Two fingers hook a loose strand behind the ear with the elbow lifted, the head turned slightly to show the jaw and ear. | 삼분할 구도 — She stands on the left third of the frame while the pale wall and the soft window glow fill the other two thirds. |
-| 3 | A | 턱 괴기 — One elbow rests on a cafe table and the hand props her cheek, the head tilted into the palm and her gaze on the lens. | 하이앵글 — The camera sits a little above her eyes, so the table edge and her propped arm lead down into the frame. |
-| 4 | A | 창가 찻잔 — She holds a cup near her chin beside a window, her face in profile toward the glass. | 여백 — She fills about a third of a vertical frame and the pale, nearly empty wall fills the rest. |
+| 1 | A | 뒤돌아보기 — She turns from a three-quarter stance and looks back over one shoulder toward the lens, shoulders dropped and relaxed. | 전경 가림 — A blurred rim of a nearby object crosses one lower corner of the frame while her face stays sharp. |
+| 2 | A | 머리 넘기기 — Two fingers hook a loose strand behind the ear with the elbow lifted, the head turned slightly to show the jaw and ear. | 삼분할 구도 — She stands on the left third of the frame while the wall behind her fills the other two thirds. |
+| 3 | A | 턱 괴기 — One elbow rests on a table and the hand props her cheek, the head tilted into the palm and her gaze on the lens. | 하이앵글 — The camera sits a little above her eyes, so the table edge and her propped arm lead down into the frame. |
+| 4 | A | 창가 찻잔 — She holds a cup near her chin beside a window, her face in profile toward the glass. | 여백 — She fills about a third of a vertical frame and the nearly empty wall fills the rest. |
 | 5 | A, B | 안경테 만지기 — Both hands pinch the temples of thin glasses as she settles them on her nose, her eyes half raised toward the lens. | 미디엄 클로즈업 — The frame runs from the top of the head to mid-chest, so the face, the glasses and the collarbone chain fill the picture. |
-| 6 | B | 주머니에 손 넣기 — One or both hands sit in the blazer pockets, elbows a little out and shoulders dropped. | 로우앵글 — The camera sits just below her chest and tips up a few degrees, so the bright ceiling panel lengthens her neck without bending the face, and the frame reaches down to the blazer pockets so her hands stay in the picture. |
-| 7 | B | 벽에 기대기 — One shoulder rests against a bare concrete wall with her weight on one leg and her head turned toward the lens. | 프레임 속 프레임 — A gallery doorway boxes her into a narrow pale rectangle with the dim room around it. |
-| 8 | B | 뒷짐 — Both hands clasp behind her back so the chest opens and the shoulders settle as she pauses mid-stride. | 망원 압축 — A moderate telephoto from several steps away stacks the white corridor walls into flat pale planes behind her. |
-| 9 | C | 팔짱 — Her arms fold loosely across the chest as she leans back a little, shoulders square to the softbox. | 중앙 구도 — She sits dead center against the seamless white backdrop with an even margin on every side. |
+| 6 | B | 주머니에 손 넣기 — One or both hands sit in the blazer pockets, elbows a little out and shoulders dropped. | 로우앵글 — The camera sits just below her chest and tips up a few degrees, so the ceiling above lengthens her neck without bending the face, and the frame reaches down to the blazer pockets so her hands stay in the picture. |
+| 7 | B | 벽에 기대기 — One shoulder rests against a bare concrete wall with her weight on one leg and her head turned toward the lens. | 프레임 속 프레임 — A doorway boxes her into a narrow rectangle with the room around it. |
+| 8 | B | 뒷짐 — Both hands clasp behind her back so the chest opens and the shoulders settle as she pauses mid-stride. | 망원 압축 — A moderate telephoto from several steps away stacks the corridor walls into flat planes behind her. |
+| 9 | C | 팔짱 — Her arms fold loosely across the chest as she leans back a little, shoulders square to the front. | 중앙 구도 — She sits dead center against a plain backdrop with an even margin on every side. |
 | 10 | C | 옆모습 — Her head turns fully to one side so the forehead, nose, lips and jaw read as one clean profile line. | 클로즈업 — The frame holds only the face and fills the picture with skin texture and the line of the lashes. |
-| 11 | D | 우산 쓰고 돌아보기 — She holds a clear umbrella over one shoulder and turns her head back beneath its rim toward the lens. | 유리창 이중 반사 — Shot through rain-beaded cafe glass, her figure overlaps a faint reflection of the wet street. |
-| 12 | D | 하늘 바라보기 — Her body turns sideways and the chin lifts slightly so her eyes rest on the pale sky or the far hills. | 카우보이 샷 — The frame cuts at mid-thigh, so the upper part of the coat or trench hangs in the picture against a wide gray sky. |
+| 11 | D | 우산 쓰고 돌아보기 — She holds a clear umbrella over one shoulder and turns her head back beneath its rim toward the lens. | 유리창 이중 반사 — Shot through glass, her figure overlaps a faint reflection of the street. |
+| 12 | D | 하늘 바라보기 — Her body turns sideways and the chin lifts slightly so her eyes rest on the sky or the far hills. | 카우보이 샷 — The frame cuts at mid-thigh, so the upper part of the coat or trench hangs in the picture against a wide sky. |
+
+장소: 쌍 3은 탁자가 있는 곳일 때. 쌍 4는 창가일 때. 쌍 6은 천장이 높은 실내일 때. 쌍 7은 문틀이 있는 벽 곁일 때. 쌍 8은 긴 복도일 때. 쌍 9는 무지 배경 앞 스튜디오일 때. 쌍 11은 유리창 너머로 찍을 수 있는 곳일 때. 쌍 12는 하늘이 넓게 트인 곳일 때. 쌍 1·2·5·10은 장소를 가리지 않는다.
 
 ## 맞지 않는 것
 직사 햇빛과 골든아워 주황빛, 네온·텅스텐 야간 조명, 정면 플래시, 필름 입자와 할레이션, 파스텔 핑크·민트, 두꺼운 스모키 화장과 진한 입술, 큰 웃음, 정면 증명사진 자세, 광각 왜곡과 딥 포커스, 읽히는 로고·간판 글자.

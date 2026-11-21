@@ -14,7 +14,7 @@
 | closer | `ノワール映画スチール` |
 | time | 한밤중(D 갈래는 새벽 2시 무렵). 비가 오는 중이거나 막 갠 뒤라 노면이 젖어 있다. 해가 화면에 없다 |
 | light-key | 장면 속 실용광: 네온 간판, 대형 LED 스크린, 가로등, 차량 헤드램프와 테일램프. 젖은 노면과 유리가 그 빛을 되비춘다 |
-| palette | 차가운 보라, 시안, 얼음 같은 흰색, 광택 있는 검정. 붉은색은 테일램프나 도쿄타워 같은 작은 점으로만(C 갈래는 붉은 빛줄기와 도쿄타워의 옅은 붉은 안개까지), 호박색은 긴자 가로등 한 줄기로만 들어온다. A의 歌舞伎町는 분홍·마젠타 네온이 보라 곁에 섞인다. 파스텔, 낮빛, 텅스텐이 화면을 덮는 장면 없음 |
+| palette | 차가운 보라, 시안, 얼음 같은 흰색, 광택 있는 검정. 붉은색은 테일램프나 도쿄타워 같은 작은 점으로만(C 갈래는 붉은 빛줄기와 도쿄타워의 옅은 붉은 안개까지), 호박색은 긴자 가로등 한 줄기로만 들어온다. 분홍·마젠타 네온은 歌舞伎町 장면에서만 보라 곁에 섞인다(다른 장소 요청에서는 쓰지 않는다). 파스텔, 낮빛, 텅스텐이 화면을 덮는 장면 없음 |
 | grain | 디지털 시네마 계열이라 입자가 거의 없다. 어두운 곳에만 아주 고운 노이즈가 있고(D 갈래는 노이즈도 없다) 필름 입자와 할레이션은 없다 |
 | lens | 대구경 단렌즈. 네온과 먼 간판은 큰 보케로 풀리고 인물은 또렷하다. A 갈래는 35mm 아나모픽(타원 보케), B 갈래는 24~85mm, C 갈래는 50~90mm, D 갈래는 50mm(세트가 정한 렌즈가 이긴다: S2는 35mm 구면 단렌즈, S5는 28~70mm 줌) |
 | figure | 한 사람이 젖은 길이나 유리 앞에 홀로 서거나 걷는다. 카메라를 의식하지 않고 시선이 렌즈를 스친다(B·D의 `自然なカメラ目線` 줄과 쌍 7은 렌즈를 똑바로 본다). 정면 증명사진 자세 없음 |
@@ -30,13 +30,13 @@
 ## 끄는 고정 몫 (fixed-lines.md의 슬롯)
 | 슬롯 | 처리 | 이유 |
 |---|---|---|
-| face-light | 모든 갈래에서 끈다. 얼굴 빛은 이 카드의 Light 줄이 정한다 | 위·옆 키라이트(`立体光`)가 네온 분할광, 대형 스크린의 위광, 가로등 한 점, 차창 반사와 부딪힌다 |
+| face-light | 모든 갈래에서 끈다. 얼굴 빛은 이 카드의 Light 줄이 정한다 | 고정 몫의 face-light 줄(위·옆 키라이트)이 네온 분할광, 대형 스크린의 위광, 가로등 한 점, 차창 반사와 부딪힌다 |
 | catchlight | 카드 줄이 이긴다 | 눈에 비치는 빛이 네온 링, 스크린 사각형, 도시 불빛, 가로등 점으로 갈래마다 다르다 |
 | base, lip, blush | 카드 줄이 이긴다 | 고정 몫의 `シアーリップ`(코랄)과 `桜色チーク`(벚꽃 분홍)가 차가운 보라·시안 빛 아래서 혼자 따뜻하게 떠 보인다. 뺨은 비바람이 만든 차가운 홍조, 입술은 갈래별 줄로 간다 |
 | under-eye, liner | 켠다. 고정 몫 그대로 | 이 룩은 눈 화장을 따로 정하지 않는다 |
-| face-clear | B 갈래에서 끈다. A·C·D는 켠다 | B 갈래의 젖은 머리 가닥이 뺨과 턱선에 붙는 것이 이 룩의 특징이다(神态 #079). 눈썹과 눈은 계속 보인다 |
-| lens | 모든 갈래에서 끈다(`自然透视` 줄은 붙이지 않는다). 렌즈를 말하는 줄은 프롬프트에서 하나이고 출처 순서는 세트의 렌즈 > 쌍의 렌즈 > 갈래의 본체·렌즈 줄 > 고정 몫 줄이다. 세트를 쓰지 않으면 쌍의 Camera 줄이다(열두 쌍이 모두 mm를 말한다). 세트를 쓰면 세트 Optics의 렌즈(S1 35mm 아나모픽, S2 35mm f/1.4, S3 24mm, S4 50mm, S5 28~70mm 줌, S6 50mm)가 렌즈 줄이고 쌍의 Camera 줄은 mm와 `anamorphic`을 빼고 구도와 시점만 쓴다. Optics의 `camera` 줄과 `ブルーストリーク` 줄은 렌즈 길이와 렌즈 종류를 말하지 않고 효과만 말한다(S2는 구면 단렌즈라 `ブルーストリーク` 줄을 쓰지 않는다) | #091 아나모픽 35mm, #092 24mm와 `自然透视` 줄의 표준~중망원이 갈린다 |
-| grain | A·B·C는 켠다(`数码噪点` 줄이 그대로 맞다). D는 끈다 | #100의 어두운 곳은 노이즈가 없다. D의 Optics `key` 줄이 그 사실을 정한다 |
+| face-clear | 갈래·세트 단위다. 켠다: A·C·D와 세트 S1·S2·S5·S6. `bangs`의 `シースルーバング`는 이마가 비치는 얇은 앞머리이고 A·C의 `濡れ髪`는 젖은 가닥이 리본처럼 뭉친 머리 모양이라 눈썹·눈·턱선을 가리지 않는다. 끈다: B와 세트 S3·S4(B의 `濡れ髪` 줄에서 젖은 가닥이 뺨과 턱선에 붙는다). 끄는 경우에도 눈썹과 눈은 계속 보인다 | B 갈래의 젖은 머리 가닥이 뺨과 턱선에 붙는 것이 이 룩의 특징이다(神态 #079). 눈썹과 눈은 계속 보인다 |
+| lens | 모든 갈래에서 끈다(고정 몫 lens 줄은 붙이지 않는다). 렌즈를 말하는 줄은 프롬프트에서 하나이고 출처 순서는 세트의 렌즈 > 쌍의 렌즈 > 갈래의 본체·렌즈 줄 > 고정 몫 줄이다. 세트를 쓰지 않으면 쌍의 Camera 줄이다(열두 쌍이 모두 mm를 말한다). 세트를 쓰면 세트 Optics의 렌즈(S1 35mm 아나모픽, S2 35mm f/1.4, S3 24mm, S4 50mm, S5 28~70mm 줌, S6 50mm)가 렌즈 줄이다. 그 렌즈 구절은 세트가 고른 Optics `camera` 줄(S1 `ARRI Alexa Mini`, S2 `Sony A7S III`, S3 `Sony FX3`, S4 `Leica SL2`, S5 `RED Komodo`, S6 `Leica M11`) 문장 끝에 붙인다(예: S1이면 `ARRI Alexa Mini` 줄 끝에 `with a 35mm anamorphic lens`). 세트를 쓸 때 쌍의 Camera 줄은 mm와 `anamorphic`을 빼고 구도와 시점만 쓰며 렌즈는 위 `camera` 줄 문장이 말한다. Optics의 `camera` 줄과 `ブルーストリーク` 줄은 렌즈 길이와 렌즈 종류를 말하지 않고 효과만 말한다(S2는 구면 단렌즈라 `ブルーストリーク` 줄을 쓰지 않는다) | #091 아나모픽 35mm, #092 24mm와 고정 몫 lens 줄의 표준~중망원이 갈린다 |
+| grain | A·B·C는 켠다(고정 몫의 grain 줄이 그대로 맞다). D는 끈다 | #100의 어두운 곳은 노이즈가 없다. D의 Optics `key` 줄이 그 사실을 정한다 |
 | framing | 켠다. 쌍 8·12는 인물이 프레임의 3분의 1이라고 직접 말하니 framing 줄과 부딪히지 않게 쓴다. 범위를 말하지 않는 쌍 가운데 걸음·서 있는 전신이 보이는 1·3·4·5·11은 `from head to toe`로, 상체와 손이 중심인 2·6·7·9·10은 `from the top of the head to the waist`로 쓴다 | 나머지 쌍은 프레임 범위를 말하지 않는데 Pose가 걸음이나 서 있는 자세를 말하면 허리 위 프레임에서 안 보인다 |
 | ratio | 켠다. 사용자 비율이 없으면 3:4 세로 | Iris 원본이 3:4다. 시네마스코프 가로를 요청하면 사용자 값이 이긴다 |
 
@@ -66,9 +66,11 @@
 | C, D | expression | 物思い — The lids lower and the gaze drifts unfocused over the lights below or the black water, the mouth relaxed and the head tilted slightly. (滤镜 #096 #097) |
 | D | expression | 流し目 — The eyes rest on a point about fifteen degrees to the side of the lens, as if something out of frame had her attention. |
 
-**시선 슬롯은 하나다:** `自然なカメラ目線`·`流し目`·`物思い`·`Dispassionate Onlooker`처럼 시선을 정하는 Expression 줄은 하나만 쓴다. 쌍이나 세트가 시선을 직접 정하면(쌍 7·11과 S6의 렌즈 응시) 그 값이 Expression의 다른 시선 줄을 대신한다.
+**시선 슬롯은 하나다:** `自然なカメラ目線`·`流し目`·`物思い`·`Dispassionate Onlooker`처럼 시선을 정하는 Expression 줄은 하나만 쓴다. 쌍이나 세트가 시선을 직접 정하면(쌍 7·11과 S6의 렌즈 응시, 쌍 9·12의 아래로 향한 시선) 그 값이 Expression의 다른 시선 줄을 대신한다.
 
 ## Outfit
+**함께 쓰는 슬롯:** `outfit`·`outfit-outer`(C의 겉옷은 속옷 위에. 슬롯마다 장면에 맞는 줄 하나)
+
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
 | A | outfit | ヴィンテージレザージャケット — A black leather jacket with the collar turned up, rain beads on the shoulders and a worn sheen at elbow and shoulder that picks up violet from the signs. (风格/01 #004) |
@@ -135,10 +137,10 @@
 | B | face-light | Warm-Cool Contrast — An amber street lamp lights one side of her face and the cold white of passing headlights lights the other, the two meeting at the cheek. (滤镜 #093) |
 | B | light-fill | 蛍光灯 — Flat cool-white fluorescent light from the shop window washes the wet pavement and the lower half of her coat. (风格/03 #045) |
 | B | catchlight | キャッチライト — A small rectangular patch of the big screen or the shop window sits in each eye. |
-| B | rain | 雨の夜 — Under the shop eave, the heavy rain curtain catches the glow of the signs and lamps and reads as a bright, pale veil against the dark street. |
+| B | rain | 土砂降り — Under the shop eave, the heavy rain curtain catches the glow of the signs and lamps and reads as a bright, pale veil against the dark street. |
 | C | face-light | 雨夜のテールランプ — Red tail lights streaming past the rain-streaked window rim her profile with dim red light while the car interior stays almost black. (滤镜 #099) |
 | C | through-glass | 水滴越し — Raindrops on the glass between the camera and her scatter the city lights into overlapping soft blobs and short streaks. (카메라가 유리 바깥에 있거나 유리를 사이에 둔 경로 전용이다. 차 안 시점(쌍 10, S5)에서는 창이 인물 뒤에 있으니 쓰지 않는다) |
-| C | light-trail | 車のライトの軌跡 — Long red and white streaks from the traffic far below run along the road like rivers of light. (滤镜 #096) |
+| C | traffic-trail | 車のライトの軌跡 — Long red and white streaks from the traffic far below run along the road like rivers of light. (滤镜 #096) |
 | C | cityscape | 雨の夜 — Beyond the glass of the observation corridor the lights of the city below spread as a sea of cold points, each wrapped in a soft halo of rain mist, while the interior stays black. |
 | C | haze | Atmospheric Haze — In the rain mist beyond the slope, the lit steel edges of the red-and-white tower glow and spread a soft deep-red haze across the sky. |
 | C | in-car | 雨夜のテールランプ — From the passenger seat, red and white lights from the road slide in bands across the dashboard, her cheek and the window glass. |
@@ -148,6 +150,8 @@
 | D | catchlight | キャッチライト — A single small cool point of the lamp sits in each eye. |
 
 ## Optics
+**하나만 고르는 슬롯:** `tone-*`(고른 `camera` 줄의 본체와 같은 이름의 줄만: `tone-alexa`는 `ARRI Alexa Mini`, `tone-sl2`는 `Leica SL2`, `tone-x2d`는 `Hasselblad X2D 100C`, `tone-komodo`는 `RED Komodo`, `tone-m11`은 `Leica M11`을 골랐을 때)
+
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
 | A | camera | ARRI Alexa Mini — A compact digital cinema camera with a Super 35 sensor. (滤镜 #091) |
@@ -158,11 +162,11 @@
 | A, B, C | color | Cool Tone — The whole palette leans cold blue-white with the shadows tinted violet, quiet and slightly pale. |
 | B | camera | Sony FX3 — A compact full-frame cinema-line camera. (滤镜 #092) |
 | B | camera | Leica SL2 — A full-frame mirrorless camera. (滤镜 #093) |
-| B | tone-sl2 | Leica SL2 — Crisp detail and deep, calm color keep the amber lamp and the white headlights cleanly separate, with no purple fringing. |
+| B | tone-sl2 | Leica SL2 — On the Leica SL2, crisp detail and deep, calm color keep the amber lamp and the white headlights cleanly separate, with no purple fringing. |
 | C | camera | Hasselblad X2D 100C — A medium-format mirrorless digital camera. (滤镜 #096) |
-| C | tone-x2d | Hasselblad X2D 100C — Smooth color and a wide tonal range keep the distant city lights delicate and unclipped. |
+| C | tone-x2d | Hasselblad X2D 100C — On the Hasselblad X2D 100C, smooth color and a wide tonal range keep the distant city lights delicate and unclipped. |
 | C | camera | RED Komodo — A compact 6K cinema camera. (滤镜 #099) |
-| C | tone-komodo | RED Komodo — Crisp detail and clean color hold up through the rain-streaked window. |
+| C | tone-komodo | RED Komodo — On the RED Komodo, crisp detail and clean color hold up through the rain-streaked window. |
 | C | motion | 光跡 — Headlights and tail lights stretch into smooth colored streaks along the road while the buildings stay still and sharp. |
 | C | bokeh | Bokeh — Distant lights turn into big round overlapping discs behind her. |
 | D | camera | Leica M11 — A compact full-frame digital rangefinder camera. (滤镜 #100) |
@@ -185,18 +189,20 @@
 ## 포즈·구도 쌍
 | 번호 | 갈래 | Pose | Camera |
 |---|---|---|---|
-| 1 | A | Umbrella Rim Lift — She walks toward the lens down the middle of the lane and tilts the umbrella rim up with one hand so her face comes out of its shadow. | Low Angle — The camera sits at knee height tilted up with a 35mm anamorphic lens, so the wet asphalt mirror fills the lower frame and the signs stack above her. |
-| 2 | A | ポケットイン — She stands still facing slightly away, four fingers pushed into a jacket pocket and the collar up, the shoulders slightly lifted. | Frame Within a Frame — A 35mm anamorphic lens shoots through the neon gate arch, which boxes her into a narrow lit slot between dark walls. |
+| 1 | A | Umbrella Rim Lift — She walks toward the lens down the middle of the lane and tilts the umbrella rim up with one hand so her face comes out of its shadow. | Low Angle — The camera sits at knee height tilted up with a 35mm anamorphic lens, so the road surface fills the lower frame and the buildings stack above her. |
+| 2 | A | ポケットイン — She stands still facing slightly away, four fingers pushed into a jacket pocket and the collar up, the shoulders slightly lifted. | Frame Within a Frame — A 35mm anamorphic lens shoots through an arch over the street, which boxes her into a narrow slot between walls. |
 | 3 | A | 振り返り — Walking away from the camera, she holds the umbrella over one shoulder and turns her head back beneath its rim. | Foreground Obstruction — A 35mm anamorphic lens sees her past a blurred umbrella edge and a passer-by crossing one corner of the frame. |
-| 4 | A | Sovereign Stance — She stands upright with the chin tipped up and the eyes looking down along the nose, the hands loose at her sides. | Dutch Angle — A 35mm anamorphic lens held a few degrees off level, so the screens and rooflines lean and the wet street tilts with them. |
-| 5 | B | ポケットイン — She stands still in the middle of the green-light crowd, both hands sunk into the coat pockets and the shoulders relaxed. | High Angle — A 24mm lens from a raised walkway looks down at her, the clear umbrellas around her reading as small bright discs. |
-| 6 | B | 襟を直す — Under the awning she smooths the coat collar with one hand, the chin dipped toward it. | Telephoto Compression — An 85mm lens across the street stacks the amber lamps and passing headlights behind her into one band of glow. |
-| 7 | B | 傘の水を切る — She shakes a closed umbrella downward under the shop eave so drops arc through the air, the body leaning to one side. | カメラ目線 — A 35mm lens close at eye level, she glances straight into it while the shop window glows behind her. |
-| 8 | C | Leaning on a Railing Gazing Out — Her forearms rest on the footbridge railing with the weight leaning forward and the chin sunk into a scarf. | Negative Space — A 50mm lens frames her on one third of the vertical frame, the dark road and its light streaks filling the rest. |
-| 9 | C | Summit Overlook — She stands at the glass edge of the observation corridor, the forehead near the cold pane and the eyes down over the city. | Window Double Reflection — A 90mm lens shoots at the tall window, where her ghost reflection overlaps the sea of city lights beyond the glass. |
-| 10 | C | Window Rain Lean — Seated in the passenger seat, one shoulder and the head rest against the rain-streaked window, the face turned toward the glass. | reflection frame — A 50mm lens from the driver's side, where the expressway lights slide past in the glass and double her outline. |
-| 11 | D | 振り返り — Standing in the middle of the empty crosswalk, she turns her head over the shoulder toward the lens while the body faces away. | 日の丸構図 — A 50mm lens at chest height puts her dead center on the crosswalk, the empty street and its lamps balanced on both sides. |
-| 12 | D | Leaning on a Bridge Rail — Her forearms rest on the bridge railing with the torso leaning over and the eyes on the black water below. | 三分割構図 — A 50mm lens sets her on the right third of the vertical frame, the lantern reflections on the water filling the other two thirds. |
+| 4 | A | Sovereign Stance — She stands upright with the chin tipped up and the eyes looking down along the nose, the hands loose at her sides. | Dutch Angle — A 35mm anamorphic lens held a few degrees off level, so the buildings and rooflines lean and the street tilts with them. |
+| 5 | B | ポケットイン — She stands still in the middle of the crowd, both hands sunk into the coat pockets and the shoulders relaxed. | High Angle — A 24mm lens from a raised walkway looks down at her, the crowd and umbrellas around her reading as small discs. |
+| 6 | B | 襟を直す — Under the awning she smooths the coat collar with one hand, the chin dipped toward it. | Telephoto Compression — An 85mm lens across the street stacks the street lamps and passing cars behind her into one compressed band. |
+| 7 | B | 傘の水を切る — She shakes a closed umbrella downward under the shop eave so drops arc through the air, the body leaning to one side. | カメラ目線 — A 35mm lens close at eye level, she glances straight into it with the shop window behind her. |
+| 8 | C | Leaning on a Railing Gazing Out — Her forearms rest on the footbridge railing with the weight leaning forward and the chin sunk into a scarf. | Negative Space — A 50mm lens frames her on one third of the vertical frame, the road filling the rest. |
+| 9 | C | Summit Overlook — She stands at the glass edge of the observation corridor, the forehead near the pane and the eyes down over the city. | Window Double Reflection — A 90mm lens shoots at the tall window, where her ghost reflection overlaps the view beyond the glass. |
+| 10 | C | Window Rain Lean — Seated in the passenger seat, one shoulder and the head rest against the rain-streaked window, the face turned toward the glass. | reflection frame — A 50mm lens from the driver's side, where the passing view slides in the glass and doubles her outline. |
+| 11 | D | 振り返り — Standing in the middle of the empty crosswalk, she turns her head over the shoulder toward the lens while the body faces away. | 日の丸構図 — A 50mm lens at chest height puts her dead center on the crosswalk, the empty street balanced on both sides. |
+| 12 | D | Leaning on a Bridge Rail — Her forearms rest on the bridge railing with the torso leaning over and the eyes on the black water below. | 三分割構図 — A 50mm lens sets her on the right third of the vertical frame, the water filling the other two thirds. |
+
+장소: 쌍 2는 아치나 게이트가 있는 거리일 때. 쌍 5는 인파가 모이는 교차로나 광장에 내려다볼 높은 곳이 있을 때. 쌍 6은 처마나 차양이 있는 길가일 때. 쌍 7은 가게 처마와 쇼윈도가 있을 때. 쌍 8은 육교 난간일 때. 쌍 9는 전망 창이 있는 높은 곳일 때. 쌍 10은 차 안 조수석일 때. 쌍 11은 횡단보도나 넓은 길 한가운데일 때. 쌍 12는 다리 난간과 물이 있는 곳일 때. 쌍 1·3·4는 장소를 가리지 않는다.
 
 ## 맞지 않는 것
 한낮의 해, 텅스텐 호박색이 화면을 덮는 장면, 붉은 네온 일색의 색조, 스텝 프린팅 잔상과 카메라나 인물이 흔들려 번지는 느린 셔터 번짐(C의 `光跡`·`車のライトの軌跡`처럼 지나가는 차 불빛이 늘어나는 줄은 예외), 필름 입자와 할레이션, 파스텔, 스튜디오 흰 배경, 마른 노면, 큰 웃음, 정면 증명사진 자세, 읽히는 간판·상표 글자.

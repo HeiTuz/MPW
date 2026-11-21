@@ -32,10 +32,10 @@
 |---|---|---|
 | face-light | 모든 갈래에서 끈다. 얼굴 빛은 이 카드의 Light 줄(창빛, 블라인드 줄무늬, 램프, 촛불, 역광)이 정한다 | #044의 줄무늬 빛, #045의 반쪽 얼굴 램프, #048의 역광 윤곽이 Iris 꼬리의 위·옆 입체광과 부딪혔다 |
 | catchlight | 카드 줄이 이긴다. 눈이 감겼거나 가려진 쌍(3번의 눈 위만 보이는 줄 제외, 눈이 닫힌 표정 줄)이면 붙이지 않는다 | Iris는 모든 블록에 같은 단일 점 캐치라이트를 넣었는데 이 룩의 광원은 창·촛불·램프·석양으로 갈린다 |
-| face-clear | 켠다. 머리는 귀 뒤로 넘겨 눈썹과 눈이 열려 있다. B의 `베드헤드 펌` 줄도 눈 앞은 비운다 | Iris 모든 블록이 같은 문장으로 이마와 눈썹을 열어 이 룩과 충돌이 없다 |
+| face-clear | 켠다. 어느 hair 줄도 눈썹과 눈을 가리지 않는다(B의 `베드헤드 펌`은 눈 앞을 비우고, D의 `잔머리`는 헤어라인과 관자놀이에 붙는다). A의 `사이드 파트`는 머리를 귀 뒤로 넘긴다고 말하니 `face clear`를 다시 붙이지 않고, B·D의 `검은 긴 생머리`와 C의 `반묶음`에는 붙는다. D의 `눈 감고 바람 느끼기`에서 옆으로 흩날리는 가닥도 눈썹과 눈을 덮지 않으니 켠 채로 둔다 | Iris 모든 블록이 같은 문장으로 이마와 눈썹을 열어 이 룩과 충돌이 없다 |
 | base, lip | 카드 줄이 이긴다. D는 base 줄이 없으니 고정 몫 `물광 피부`가 붙는다 | Iris의 고정 메이크업은 모든 빛에 같은 코랄 누드 글래스 립과 수광 베이스였다. 이 룩은 창빛 속 속광, 촛불 아래 촉촉함, 역광 속 누드 글로스로 질감이 갈린다 |
-| lens | 쌍마다 렌즈를 말하는 줄이 정확히 하나다. 출처 순서는 세트의 렌즈 > 쌍 Camera 줄의 렌즈 > 갈래의 본체·렌즈 줄 > 고정 몫 `自然透视`이다. (1) 세트가 렌즈를 말하면 그 렌즈가 렌즈 줄이다: S1의 23mm f/2(Optics `Fujifilm X100V` 줄이 같은 렌즈를 말한다), S2의 Summicron 35mm, S3의 50mm f/1.8, S4의 50mm f/1.4, S6의 85mm(`85mm 인물 렌즈`). 이때 쌍 Camera 줄은 렌즈 이름 없이 구도만 쓰고(S6와 쌍 11을 같이 고르면 `망원 압축` 문장에서 '망원' 말을 빼고 갈대와 먼 다리가 한 겹의 금빛으로 쌓인다는 구도만 쓴다), S6의 85mm가 D의 `85mm 인물 렌즈` 줄을 겸하니 그 줄을 하나 더 붙이지 않는다. (2) 세트가 렌즈를 말하지 않고 쌍 Camera 줄이 말하면 그것이다: 쌍 11(D)의 `망원 압축`이고 Optics `85mm 인물 렌즈`도 붙이지 않는다. (3) 둘 다 아니면 갈래의 줄이다: A에서 `Fujifilm X100V`를 고르면 그 줄(내장 23mm)이 렌즈 줄이고 `Leica M10`은 렌즈를 말하지 않는다. 쌍 8(C)에서 Optics `Leica Q`(28mm)를 고르면 그 줄이 렌즈 줄이다. 쌍 12(D)는 Camera 줄 `앙각`이 렌즈를 말하지 않으니 Optics `85mm 인물 렌즈`가 렌즈 줄이다. (4) 위가 모두 없는 나머지(쌍 1~7·9·10에서 `Leica M10`이나 다른 본체를 고른 경우)는 고정 몫 `自然透视`가 렌즈 줄이다. 카메라 높이는 `自然透视` 줄이 아니라 쌍 Camera 줄이 정한다 | #052(28mm)와 #048(85mm)에 Iris 꼬리의 50mm 무왜곡이 같이 있어 렌즈가 둘이었다 |
-| grain | A·B·D는 켠다(고정 몫의 `数码噪点` 줄이 맞다). C는 카드의 `고감도 노이즈` 줄이 이긴다 | #049(A7S III, ISO 6400)는 고정 문장보다 눈에 띄는 노이즈다 |
+| lens | 쌍마다 렌즈를 말하는 줄이 정확히 하나다. 출처 순서는 세트의 렌즈 > 쌍 Camera 줄의 렌즈 > 갈래의 본체·렌즈 줄 > 고정 몫 lens 줄이다. (1) 세트가 렌즈를 말하면 그 렌즈가 렌즈 줄이다: S1의 23mm f/2는 Optics `Fujifilm X100V` 줄이 같은 렌즈를 말하니 그 줄이 렌즈 줄이고, S2의 Summicron 35mm·S3의 50mm f/1.8·S4의 50mm f/1.4는 세트가 쓰는 본체의 Optics `camera` 줄 문장 끝에 붙이고(S2 `Leica M10`, S3 `Canon EOS R6`, S4는 세트가 말한 `Sony A7 III`), S6의 85mm는 D의 Optics `85mm 인물 렌즈` 줄이 렌즈 줄이다. 이때 쌍 Camera 줄은 렌즈 이름 없이 구도만 쓰고(S6와 쌍 11을 같이 고르면 `망원 압축` 문장에서 '망원' 말을 빼고 앞의 식물과 먼 구조물이 한 겹으로 쌓인다는 구도만 쓴다) 렌즈는 위 줄이 말한다. S6은 `85mm 인물 렌즈` 줄 하나로 85mm를 말하니 그 줄 말고 렌즈 줄을 더 붙이지 않는다. (2) 세트가 렌즈를 말하지 않고 쌍 Camera 줄이 말하면 그것이다: 쌍 11(D)의 `망원 압축`이고 Optics `85mm 인물 렌즈`도 붙이지 않는다. (3) 둘 다 아니면 갈래의 줄이다: A에서 `Fujifilm X100V`를 고르면 그 줄(내장 23mm)이 렌즈 줄이고 `Leica M10`은 렌즈를 말하지 않는다. 쌍 8(C)에서 Optics `Leica Q`(28mm)를 고르면 그 줄이 렌즈 줄이다. 쌍 12(D)는 Camera 줄 `앙각`이 렌즈를 말하지 않으니 Optics `85mm 인물 렌즈`가 렌즈 줄이다. (4) 위가 모두 없는 나머지(쌍 1~7·9·10에서 `Leica M10`이나 다른 본체를 고른 경우)는 고정 몫 lens 줄이 렌즈 줄이다. 카메라 높이는 고정 몫 lens 줄이 아니라 쌍 Camera 줄이 정한다 | #052(28mm)와 #048(85mm)에 Iris 꼬리의 50mm 무왜곡이 같이 있어 렌즈가 둘이었다 |
+| grain | A·B·D는 켠다(고정 몫의 grain 줄이 맞다). C는 카드의 `고감도 노이즈` 줄이 이긴다 | #049(A7S III, ISO 6400)는 고정 문장보다 눈에 띄는 노이즈다 |
 | framing | 켠다. 쌍 4(무릎 위 샷)·7(미디엄 클로즈업)·9(클로즈업)는 Camera 줄이 프레임 범위를 직접 말하니 그 쌍이 정한다 | 나머지 쌍은 범위를 말하지 않아 고정 몫 허리 위 줄이 범위를 정한다 |
 | ratio | 켠다. 사용자 비율이 없으면 3:4 세로 | 쌍은 비율을 정하지 않는다 |
 
@@ -66,13 +66,16 @@
 | D | expression | 눈 감고 바람 느끼기 — The eyes close and the chin lifts slightly into the cold air, the face relaxed while loose strands stream sideways. |
 
 ## Outfit
+**하나만 고르는 슬롯:** `outfit`·`outfit-twopiece`·`outfit-home`(B의 입는 옷 후보. 니트, 투피스, 가운 가운데 하나)
+**함께 쓰는 슬롯:** `outfit-scarf`(D에서 위에 두른다)
+
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
 | A, C | outfit | 스퀘어 넥 — A slim charcoal long-sleeve knit cut in a clean square neckline that leaves the collarbones bare, the fine rib holding a soft matte surface. (滤镜 #041 #045) |
 | A, C | outfit | 캐시미어 니트 — A mocha-brown brushed cashmere knit with a deep V-neck and a smooth rib at the cuffs, the nap giving its edge a soft halo. (滤镜 #042 #046) |
 | B, D | outfit | 보트넥 — A slim black long-sleeve knit with a straight bateau neckline running across the collarbones to the tips of the shoulders. (滤镜 #044 #048) |
-| B | outfit-set | 오트 블레이저 튜브탑 — A black strapless tube top under a pale oat boxy blazer worn open, the lapels folded back so the neckline and bare shoulders stay clear. (滤镜 #043 #047) |
-| B | outfit-set | 니트 투피스 — An ivory soft-yarn knit bandeau top with a matching cardigan in the same fibre and tone, the fuzzy fibres haloed by window light. |
+| B | outfit-twopiece | 오트 블레이저 튜브탑 — A black strapless tube top under a pale oat boxy blazer worn open, the lapels folded back so the neckline and bare shoulders stay clear. (滤镜 #043 #047) |
+| B | outfit-twopiece | 니트 투피스 — An ivory soft-yarn knit bandeau top with a matching cardigan in the same fibre and tone, the fuzzy fibres haloed by window light. |
 | B | outfit-home | 와플 로브 — A thick cotton waffle-weave robe tied at the waist, each honeycomb cell holding a small soft shadow and the collar sinking open. |
 | D | outfit-scarf | 울 머플러 — A thick grey wool scarf wrapped high over the chin, its knit pile catching the backlight as a fuzzy bright edge. |
 
@@ -139,14 +142,16 @@
 | C | face-light | 촛불 조명 — A small flame close by casts warm amber light that falls off fast into darkness, flickers softly and leaves a tiny warm glint in the eyes. (滤镜 #049) |
 | C | ambient | 냉온 대비 — Cool blue dusk light from the window and a small warm lamp inside meet on the face, one side reading blue and the other amber with a soft seam between. (滤镜 #055) |
 | C | backlight | 뱅커스 램프 — A green glass-shaded desk lamp behind and to one side traces a thin gold line along the hair and shoulder while its warm pool lights the desk. (滤镜 #060) |
-| C | pile | 低调布光 — On the corduroy sofa, the soft ribbed pile swallows stray light, so the lit side of her face is set off in warm white against the dark fabric. |
+| C | pile | 로우키 조명 — On the corduroy sofa, the soft ribbed pile swallows stray light, so the lit side of her face is set off in warm white against the dark fabric. |
 | C | catchlight | 램프 캐치라이트 — One small warm point of light from a lamp or flame sits in each eye. |
 | D | face-light | 역광 금빛 테두리 — A low sun from behind rings the hair and shoulder outline in gold while the face stays in soft shadow lifted by sky and ground. (滤镜 #048) |
 | D | backlight | 역광 — Light from behind lifts the whole frame into a soft, airy brightness, and the steam from the cup glows white and blurs the background into a haze. (滤镜 #046) |
 | D | catchlight | 황금빛 눈동자 — The low setting sun puts fine amber sparkles in the irises and a warm gold edge along the cheek. |
-| D | reed-glow | 逆光 — At the riverside, low gold backlight makes each feathered reed tip glow against the warm hazy sky. |
+| D | reed-glow | 억새 역광 — At the riverside, low gold backlight makes each feathered reed tip glow against the warm hazy sky. |
 
 ## Optics
+**하나만 고르는 슬롯:** `body-*`(고른 `camera` 줄의 본체와 같은 이름의 줄만: `body-x100v`는 `Fujifilm X100V`, `body-m10`은 `Leica M10`, `body-r6`은 `Canon EOS R6`, `body-a7s`는 `Sony A7S III`, `body-q`는 `Leica Q`, `body-r5`는 `Canon EOS R5`, `body-xt4`는 `Fujifilm X-T4`를 골랐을 때)
+
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
 | A | camera | Fujifilm X100V — A compact APS-C camera with a fixed 23mm lens. (滤镜 #041) |
@@ -187,18 +192,20 @@
 ## 포즈·구도 쌍
 | 번호 | 갈래 | Pose | Camera |
 |---|---|---|---|
-| 1 | A | 두 손으로 컵 감싸기 — Both hands wrap a paper cup at chest height with the elbows tucked in and the shoulders soft, her eyes on a friend just off the frame. | 오버 더 숄더 — Over the blurred shoulder of the friend across the table, her face sharp and lit from the window side. |
-| 2 | A | 턱 괴기 — Elbow planted on a dark walnut table, palm under the cheek and the head tipped slightly to one side, looking out of the window. | 삼분할 구도 — She sits on the left third beside the window and the soft window glow fills the right two thirds. |
-| 3 | A | 메뉴판으로 얼굴 가리기 — A kraft menu held up hides the lower half of her face, only the eyes and hair showing above its edge. | 전경 가림 — Shot past blurred pastries on a glass tray crossing one lower corner of the frame. |
+| 1 | A | 두 손으로 컵 감싸기 — Both hands wrap a paper cup at chest height with the elbows tucked in and the shoulders soft, her eyes on a friend just off the frame. | 오버 더 숄더 — Over the blurred shoulder of the friend across the table, her face sharp. |
+| 2 | A | 턱 괴기 — Elbow planted on a table, palm under the cheek and the head tipped slightly to one side, looking out of the window. | 삼분할 구도 — She sits on the left third beside a window and the window fills the right two thirds. |
+| 3 | A | 메뉴판으로 얼굴 가리기 — A kraft menu held up hides the lower half of her face, only the eyes and hair showing above its edge. | 전경 가림 — Shot past blurred objects on a counter crossing one lower corner of the frame. |
 | 4 | A | 벽에 기대기 — One shoulder rests on a plaster wall beside a shop door, the weight on one hip. | 무릎 위 샷 — The frame cuts at the knees, so the whole stance, the hands and the shopfront threshold all read. |
-| 5 | B | 쿠션 끌어안기 — Sitting up in the middle of a white bed with a big pillow hugged to the chest and the chin resting on it. | 하이앵글 — From above the bed edge looking down, the white sheets spreading around her in soft folds. |
-| 6 | B | 기지개 — Standing at a window with both arms raised and the fingers interlaced, the spine arching in a slow stretch against the sheer curtain. | 여백 — She fills about a third of the vertical frame and the pale curtain and wall leave the rest as quiet empty space. |
-| 7 | B | 머그컵 후후 불기 — Both hands wrap a mug held near the lips while the mouth blows softly across the hot surface, the eyes lowered. | 미디엄 클로즈업 — The frame runs from the top of the head to mid-chest with the mug in the lower third and the window glow behind. |
-| 8 | C | 소파에 파묻히기 — Sunk deep into the corner of a corduroy sofa with the shoulders low and a cushion hugged to the chest. | 중앙 구도 — She sits dead centre and the warm folds of the sofa close around her on all sides. |
+| 5 | B | 쿠션 끌어안기 — Sitting up on a soft seat with a big pillow hugged to the chest and the chin resting on it. | 하이앵글 — From above looking down, the soft cloth spreading around her in folds. |
+| 6 | B | 기지개 — Standing at a window with both arms raised and the fingers interlaced, the spine arching in a slow stretch against the sheer curtain. | 여백 — She fills about a third of the vertical frame and the surroundings leave the rest as quiet empty space. |
+| 7 | B | 머그컵 후후 불기 — Both hands wrap a mug held near the lips while the mouth blows softly across the hot surface, the eyes lowered. | 미디엄 클로즈업 — The frame runs from the top of the head to mid-chest with the mug in the lower third and the window behind. |
+| 8 | C | 소파에 파묻히기 — Sunk deep into the corner of a sofa with the shoulders low and a cushion hugged to the chest. | 중앙 구도 — She sits dead centre and the folds of the sofa close around her on all sides. |
 | 9 | C | 팔꿈치 괴기 — One elbow rests on the bedside surface and the chin sits in the palm, the eyes soft on the candle flame. | 클로즈업 — The frame holds the face, the hand cupping the chin and the flame, filling the picture edge to edge. |
-| 10 | C | 창가 찻잔 — One hand holds a cup near the chin beside a window, the face in profile toward the glass. | 유리창 이중 반사 — A faint ghost of her face and the small warm lamp lies over the dusk-blue glass beside the live profile. |
-| 11 | D | 하늘 바라보기 — Her body turns sideways and the chin lifts slightly so the eyes rest on the far horizon above the reeds. | 망원 압축 — A moderate telephoto stacks the reed heads and the far bridge into one glowing golden layer behind her. |
-| 12 | D | 어깨 너머 시선 — She walks away along the river path and turns her head back over one shoulder, the low sun behind her. | 앙각 — The camera sits low and looks up, so the sun skims her shoulder line and her figure stands tall against the glowing sky. |
+| 10 | C | 창가 찻잔 — One hand holds a cup near the chin beside a window, the face in profile toward the glass. | 유리창 이중 반사 — A faint ghost of her face lies over the glass beside the live profile. |
+| 11 | D | 하늘 바라보기 — Her body turns sideways and the chin lifts slightly so the eyes rest on the far horizon. | 망원 압축 — A moderate telephoto stacks the foreground plants and the far structures into one compressed layer behind her. |
+| 12 | D | 어깨 너머 시선 — She walks away along a path and turns her head back over one shoulder. | 앙각 — The camera sits low and looks up, so her figure stands tall against the sky. |
+
+장소: 쌍 1은 맞은편에 사람이 앉는 탁자가 있을 때. 쌍 2는 창가 탁자일 때. 쌍 3은 앞에 진열대나 카운터가 있을 때. 쌍 4는 가게 문 옆 벽이 있을 때. 쌍 5는 침대나 큰 소파처럼 푹신한 자리가 있을 때. 쌍 6은 창과 커튼이 있는 방일 때. 쌍 7·10은 창이 있는 실내일 때. 쌍 8은 소파가 있을 때. 쌍 9는 촛불이 있는 침대 곁일 때(`촛불 응시` 줄과 짝). 쌍 11은 먼 풍경이 앞 식물 뒤로 겹쳐 보이는 강변일 때. 쌍 12는 걸을 수 있는 길일 때.
 
 ## 맞지 않는 것
 형광등 백색 직광, 직부 플래시, 네온 간판, 차가운 청회색 낮빛, 한낮 직사광, 형광·파스텔 색, 필름 입자와 할레이션, 스튜디오 흰 배경, 하드한 그림자(B의 블라인드 줄무늬·커튼 틈 햇살과 D의 역광 제외), 정면 증명사진 자세, 읽히는 간판·메뉴·상표 글자.

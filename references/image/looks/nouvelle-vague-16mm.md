@@ -33,12 +33,12 @@
 | 슬롯 | 처리 | 이유 |
 |---|---|---|
 | face-light | 모든 갈래에서 끈다. 얼굴 빛은 Light 줄이 정한다 | Iris 꼬리의 위·옆 입체광이 #014 역광, #012 불빛, #017 추적광과 부딪혔다 |
-| face-clear | 모든 갈래에서 끈다. 앞머리가 이마·관자놀이에 닿아도 눈썹과 눈은 드러난다 | #001 #003의 헝클어진 머리·八字刘海가 귀 뒤로 넘긴 머리 줄과 공존했다 |
+| face-clear | 켠다: A·B·C의 `hair`(`Coiffure effet saut du lit`)와 `bangs`의 `Frange rideau`는 이마와 관자놀이 위로 쓸릴 뿐 눈썹과 눈을 열어 둔다(세트 S1·S3·S5). 끈다: D의 `Coiffé-décoiffé`(곱슬 가닥이 뺨과 귀를 따라 흩어진다)와 세트 S4(바람에 날리는 앞머리)·S6(곱슬 잔머리가 뺨에 흩어진다). S2는 hair 줄이 머리를 귀 뒤로 넘긴다고 말하니 `face clear`를 다시 붙이지 않는다. 끄는 경우에도 눈썹과 눈은 드러난다(`bangs` 줄이 그렇게 쓴다) | #001 #003의 헝클어진 머리·八字刘海가 귀 뒤로 넘긴 머리 줄과 공존했다 |
 | base, lip | 카드 줄이 이긴다(base 줄은 FR 문화권 공식의 주근깨를 되풀이하지 않는다) | Iris 고정문의 浆果玫瑰唇가 #006 #011 #013의 입술색 위에 둘째 입술색을 얹었다 |
 | catchlight | 카드 줄이 이긴다 | #012의 불꽃 두 점이 고정 줄의 점 하나와 어긋난다 |
 | grain | 카드 줄이 이긴다(Optics의 `16mm` 줄은 입자를 말하지 않고 갈래별 grain 줄이 입자를 정한다) | 고정 줄의 고운 입자와 Iris의 굵은 16mm 입자(#001 #006 #017)가 어긋난다 |
 | realism | 모든 갈래에서 바꾼다. `8K`·땀구멍 줄 대신 `native resolution` 줄을 쓴다. 매체 구절은 `16mm cinema negative frame`(B 갈래는 `black-and-white reversal 16mm film frame`), 질감은 `visible 16mm grain, softened highlights and skin that shows no individual pores` | 16mm 필름의 입자와 해상도에 8K 모공 묘사를 얹으면 룩의 정체와 반대다 |
-| lens | 켠다. 렌즈를 말하는 줄은 정확히 하나이고 출처는 세트의 렌즈 > 쌍의 렌즈 > 갈래의 렌즈 줄 > 고정 몫 `自然透视` 줄 순이다. 세트: S6만 렌즈를 말한다(Optics `Zeiss Super Speed T1.3` 줄). 쌍: 쌍 10은 Camera 줄 `telephoto compression`이 렌즈 줄이다(S4·S5의 본체 줄은 렌즈를 말하지 않는다). 갈래 줄: D는 Optics `Zeiss Super Speed T1.3` 줄(쌍 11·12의 Camera 줄은 렌즈를 말하지 않는다). A·B·C는 갈래 렌즈 줄이 없다. 고정 몫: 그 밖의 모든 조합(쌍 1~9, 쌍 10이 아닌 C, S1~S5의 A·B·C)은 `自然透视` 줄이 렌즈 줄이다. 쌍 7·8은 카메라 각도만 말한다 | #010(T1.3 근접)과 `뒤로 물러선 표준~중망원` 문장이 공존했다. 세트·쌍·갈래가 함께 걸릴 때 어느 줄이 렌즈 줄인지 한 가지로 정했다 |
+| lens | 켠다. 렌즈를 말하는 줄은 정확히 하나이고 출처는 세트의 렌즈 > 쌍의 렌즈 > 갈래의 렌즈 줄 > 고정 몫 lens 줄 순이다. 세트: S6만 렌즈를 말하고 그 렌즈는 D의 Optics `Zeiss Super Speed T1.3` 줄이 그대로 쓴다(S1~S5의 Optics는 본체·필름만 말한다). 쌍: 쌍 10은 Camera 줄 `telephoto compression`이 렌즈 줄이다(S4·S5의 본체 줄은 렌즈를 말하지 않는다). 갈래 줄: D는 Optics `Zeiss Super Speed T1.3` 줄(쌍 11·12의 Camera 줄은 렌즈를 말하지 않는다). A·B·C는 갈래 렌즈 줄이 없다. 고정 몫: 그 밖의 모든 조합(쌍 1~9, 쌍 10이 아닌 C, S1~S5의 A·B·C)은 고정 몫 lens 줄이 렌즈 줄이다. 쌍 7·8은 카메라 각도만 말한다 | #010(T1.3 근접)과 `뒤로 물러선 표준~중망원` 문장이 공존했다. 세트·쌍·갈래가 함께 걸릴 때 어느 줄이 렌즈 줄인지 한 가지로 정했다 |
 | framing | 켠다. 쌍 3·5·8·11·12는 범위를 직접 말하니 그때는 3:4만 쓴다 | 나머지 쌍은 범위를 말하지 않는다 |
 | ratio | 켠다. 사용자 비율이 없으면 3:4 세로 | 쌍은 비율을 정하지 않는다 |
 
@@ -63,6 +63,8 @@
 | D | expression | Regard fixe vers l'objectif — A direct stare into the lens from a still face, like the last frame of a film. |
 
 ## Outfit
+**함께 쓰는 슬롯:** `outfit`·`outfit-outer`·`outfit-bottom`(겉옷은 속옷 위에, 하의는 함께. 슬롯마다 장면에 맞는 줄 하나)
+
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
 | A, C | outfit | Marinière classique bretonne — Narrow navy and ecru stripes in heavy combed cotton, a boat neck and dropped shoulders, the matte weave taking soft grey light. |
@@ -115,13 +117,15 @@
 | C | place | Pont des Arts — An iron-railed footbridge over the Seine with river haze. |
 
 ## Light
+**하나만 고르는 슬롯:** `face-light`·`face-light-back`(해가 옆에 있는지 뒤에 있는지에 따라 주광 줄 하나)
+
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
 | A, B | face-light | Paris Overcast Light — Cloud cover works as one giant softbox: even, shadowless light, a pale grey-blue shade and low contrast. |
 | A | face-light | Lumière tungstène — Indoors in the evening, warm bulbs pool amber on her face and the wall while the window behind holds cool dusk blue. |
 | A, B | catchlight | Lumière du ciel gris — A soft crescent of pale sky glows at the top edge of each iris under even overcast light. |
 | C | face-light | heure dorée — Low warm sun from the side lays long shadows and a gold rim along hair and shoulders. |
-| C | backlight | Contre-jour — The low sun sits behind her, so hair and shoulders glow with a gold rim while the face reads slightly darker. |
+| C | face-light-back | Contre-jour — The low sun sits behind her, so hair and shoulders glow with a gold rim while the face reads slightly darker. |
 | C | dapple | Dappled Shade — Under the olive trees or the chestnut canopy, the leaves break the sun into shifting patches of bright and shade that scatter across the path, her skin and her clothes. |
 | D | face-light | Lumière du matin — Soft light from one tall window beside her falls gently from bright to shadow across the nose. |
 
@@ -133,7 +137,7 @@
 | B | stock | Kodak Tri-X Reversal 7266 — A black-and-white reversal 16mm film with pure monochrome tone, ink-deep blacks and bright highlights that stay open. |
 | C | stock | Kodak Vision3 250D — Daylight cinema negative: neutral-warm natural color and supple highlights. |
 | A | camera | ARRI 16SR3 — A handheld 16mm cinema camera. |
-| A | corner | 16mm film — On the ARRI 16SR3 the frame holds sharp toward the centre while the corners soften slightly and unevenly. |
+| A | corner | Soft Corner Falloff — On the ARRI 16SR3 the frame holds sharp toward the centre while the corners soften slightly and unevenly. |
 | D | lens | Zeiss Super Speed T1.3 — A wide-open fast prime with a razor-thin focal plane on the near pupil, ears and hair melting into soft blur. |
 | A | grain | Gros grain — Coarse, organic grain across the whole frame, heaviest in the shadows. |
 | B | grain | Grain argentique — Coarse silver grain over monochrome with deep blacks and a gritty texture. |
@@ -155,18 +159,20 @@
 ## 포즈·구도 쌍
 | 번호 | 갈래 | Pose | Camera |
 |---|---|---|---|
-| 1 | A | Mains dans les poches — Both hands deep in the coat pockets, shoulders slightly raised, her gaze down on the pavement as she walks. | Travelling latéral — The camera tracks beside her at chest height and walking speed, the boulevard wall sliding past in parallax. |
-| 2 | A | Accoudée à la table en zinc — One elbow on a small zinc café table, her cheek in the palm and her eyes cutting toward the street. | Reflets superposés — Shot through the café window, the street and passers-by reflected over her face. |
+| 1 | A | Mains dans les poches — Both hands deep in the coat pockets, shoulders slightly raised, her gaze down on the pavement as she walks. | Travelling latéral — The camera tracks beside her at chest height and walking speed, the street wall sliding past in parallax. |
+| 2 | A | Accoudée à la table en zinc — One elbow on a small zinc table, her cheek in the palm and her eyes cutting toward the street. | Reflets superposés — Shot through a window, the street and passers-by reflected over her face. |
 | 3 | A | Marcher d'un pas vif — A long fast stride toward the camera, the coat hem flicking behind and one arm swinging. | Plan américain — Head-on at eye level, the frame cut at mid-thigh, swaying slightly as the camera backs away. |
 | 4 | A | Adossée à la vitrine — Her back and shoulders rest against a shop window, her head turned slightly away. | Amorce — Shot from across the street past a blurred passer-by crossing one corner of the frame. |
 | 5 | A | Jambes croisées — Seated on a banquette with her knees crossed, the top foot hanging relaxed. | Over the Shoulder — Seated at eye level, over the blurred shoulder of a companion across the table, the frame wide enough to take in her crossed legs. |
-| 6 | B | Adossée à la pile de pierre — Leaning on a shaded stone bridge pier, hands in her pockets, her face in profile toward the distance. | negative space — She fills a third of a vertical frame; empty river and sky fill the rest. |
+| 6 | B | Adossée à la pile de pierre — Leaning on a stone bridge pier, hands in her pockets, her face in profile toward the distance. | negative space — She fills a third of a vertical frame; empty space fills the rest. |
 | 7 | B | Accoudée à la boîte de bouquiniste — An elbow on the metal lid edge while the other hand holds a book of poems open. | Plongée — From the quay above looking down, the cobbles leading the eye to her. |
-| 8 | C | Descendre l'escalier — A fast step down the stair, the skirt hem flaring and one hand skimming the rail. | Contre-plongée — From the foot of the steps looking up, the whole stair and her full figure against the low sun behind plane-tree leaves. |
-| 9 | C | Main en visière — One flat hand shades her brow, the eyes narrowing as sunlight leaks around the fingers. | Règle des tiers — She sits on the left third line, and open field and trees fill the other two thirds. |
-| 10 | C | Presser un gros livre contre la poitrine — A thick hardcover hugged flat to her chest with both arms as she walks a leafy path. | telephoto compression — A long lens stacks the avenue of trees behind her into one flat band of leaves and light. |
+| 8 | C | Descendre l'escalier — A fast step down the stair, the skirt hem flaring and one hand skimming the rail. | Contre-plongée — From the foot of the steps looking up, the whole stair and her full figure against the sky and foliage behind her. |
+| 9 | C | Main en visière — One flat hand shades her brow, the eyes narrowing behind the fingers. | Règle des tiers — She sits on the left third line, and the open background fills the other two thirds. |
+| 10 | C | Presser un gros livre contre la poitrine — A thick hardcover hugged flat to her chest with both arms as she walks a leafy path. | telephoto compression — A long lens stacks the avenue of trees behind her into one flat band of leaves. |
 | 11 | D | Coude en appui, menton dans la paume — Her chin is cupped in the palm of one hand, the eyes cutting sideways. | Gros plan — The frame holds her face and the hand cupping her chin, filling the picture edge to edge. |
 | 12 | D | Visage de trois quarts — The head turns into a three-quarter view toward the lens, the near cheek and one eye in sharp focus. | Plan rapproché — The frame runs from the top of the head to mid-chest. |
+
+장소: 쌍 2는 길가 카페의 창이나 유리벽이 있을 때. 쌍 4는 상점 쇼윈도가 있는 거리일 때. 쌍 5는 벤치형 의자(banquette)와 탁자가 있는 카페 안일 때. 쌍 6은 돌다리 기둥이나 강가일 때. 쌍 7은 책 상자가 놓인 강변 난간일 때. 쌍 8은 계단이 있는 언덕길일 때. 쌍 10은 나무가 늘어선 길일 때. 쌍 1·3·9·11·12는 장소를 가리지 않는다.
 
 ## 맞지 않는 것
 정오에 내리꽂는 직사광, 스트로브·링라이트 조명, 네온 간판의 밤거리, 디지털 청록-주황 보정, 파스텔 일색(S5 제외), 큰 웃음 포즈, 정면 증명사진 자세, 읽히는 간판·잡지 글자.

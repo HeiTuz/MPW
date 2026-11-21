@@ -32,11 +32,11 @@
 |---|---|---|
 | face-light | 모든 갈래에서 끈다. 얼굴 빛은 갈래의 Light 줄이 정한다 | Iris 꼬리의 위·옆 입체광이 그림자 없는 흐린 하늘빛(#041 #042), 빌딩 협곡의 수직 광선(#045), 상점 형광등(#055)과 한 프롬프트에서 부딪혔다 |
 | catchlight | 카드 줄이 이긴다. 선글라스를 쓴 장면(S1·S5와 `Sunglasses` 줄)에서는 붙이지 않는다 | #041 #043은 선글라스를 쓰는데 Iris 고정문에는 눈의 캐치라이트가 같이 있었다 |
-| face-clear | 모든 갈래에서 완화한다. 바람에 날린 가닥이 뺨·목 옆을 지나가도 되고 눈썹과 눈은 덮지 않는다 | #044 #052 #054의 바람머리가 이 룩의 특징인데 Iris는 가림 금지문으로 지웠다 |
+| face-clear | hair 줄·세트 단위로 정한다. 끈다: 가닥이 뺨·목 옆을 지나는 hair 줄(`Windblown Hair`·`Sea Salt Waves`·`Air-Dried Texture`)을 고른 때와 그 줄을 쓰는 세트 S2·S3·S6. 켠다: `Glass Hair`(S1)·`Half Bun`(S5). `Neat Pixie Cut`·`Ear-Tucked Bob`(S4)은 줄이 이미 머리를 귀 뒤로 넘겼다고 말하니 `face clear`를 다시 붙이지 않는다. 쌍 5·8은 바람이 머리를 뒤로 날릴 뿐이라 hair 줄이 정한 대로 따른다. 끄는 경우에도 눈썹과 눈은 어느 줄도 덮지 않는다(hair 줄의 문장이 눈을 열어 둔다) | #044 #052 #054의 바람머리가 이 룩의 특징인데 Iris는 가림 금지문으로 지웠다 |
 | lip | 카드 줄이 이긴다 | 고정 US 입술 줄은 복숭아빛 글로스인데 #041은 무광 누드 입술이고 B는 흑백이라 광택이 입술 모양을 흐린다 |
 | blush | A·B·C에서 카드 줄이 이긴다. D는 고정 몫이 그대로 붙는다 | 고정 US 코랄 블러셔는 따뜻한 색이라 냉회색 팔레트와 부딪힌다. 이 룩의 뺨 색은 찬 바람에 오른 홍조다 |
-| grain | 카드의 `胶片颗粒` 줄은 필름 stock(Portra·Gold·T-Max·Tri-X)일 때만 쓴다. 디지털 stock(`Leica M11`, `Hasselblad 907X`, `Ricoh GR IIIx`, `Leica Monochrom`)이면 줄을 쓰지 않고 고정 몫의 디지털 노이즈 줄이 붙는다 | #044의 T-Max 극세 은염 입자와 고정 몫의 컬러 필름 입자 문장은 모양이 다르고, #041 #042 #055는 디지털이다 |
-| lens | 끈다. 렌즈를 말하는 줄은 프롬프트마다 정확히 하나이고 출처 순서는 세트의 렌즈 > 쌍의 렌즈 > 갈래의 Optics 렌즈 줄 > 고정 몫 줄이다. 이 카드는 갈래마다 렌즈 줄이 있어 고정 몫 `自然透视`은 어느 경우에도 붙이지 않는다. 얕은 심도 문구는 쓰지 않는다. 세트를 쓰면 세트 Optics가 말한 렌즈(S1 APO-Summicron-M 50mm f/2 ASPH, S2 Zuiko 28mm f/2, S3 AI Nikkor 50mm f/1.4S, S4 EF 24-70mm f/2.8L 줌을 약 35–50mm대로 쓴다, S5 Summilux 35mm f/1.4, S6 Ricoh GR IIIx 내장 렌즈의 약 40mm 환산 시야)가 렌즈 줄이고 Optics `lens` 줄을 따로 두지 않는다. 세트를 쓰고 쌍 1을 고르면 Camera 줄에서 `A moderate telephoto`를 빼고 거리와 층쌓임만 쓴다. 세트가 없으면 쌍 1은 Camera 줄 `telephoto compression`이 렌즈 줄이다. D 갈래(쌍 11·12)는 Optics `Ricoh GR IIIx` 줄의 40mm 시야가 렌즈 줄이다. 나머지 쌍(2~10)은 Camera 줄이 렌즈를 말하지 않으니 본체와 마운트가 맞는 Optics `lens` 줄 하나가 렌즈 줄이다(A·B `Summicron 50mm f/2`는 `Leica M11`·`Leica Monochrom`이나 본체가 정해지지 않았을 때, A의 `Hasselblad 907X`는 `XCD 45mm f/4 P`, C `Summilux 35mm f/1.4`, A의 `Zeiss Biogon 28mm f/2.8`은 사용자가 광각을 말할 때만이고 `Hasselblad 907X`에는 붙이지 않는다) | Iris의 50mm 눈높이 시점 고정문이 #049(28mm) #043 #048 #051(35mm) #045(24-70mm)와 한 프롬프트에 공존했고, #042는 룩에 없는 얕은 심도를 요구했다. 쌍마다 렌즈 줄의 출처를 정해 둔다 |
+| grain | 카드의 `film grain` 줄은 필름 stock(Portra·Gold·T-Max·Tri-X)일 때만 쓴다. 디지털 stock(`Leica M11`, `Hasselblad 907X`, `Ricoh GR IIIx`, `Leica Monochrom`)이면 줄을 쓰지 않고 고정 몫의 디지털 노이즈 줄이 붙는다 | #044의 T-Max 극세 은염 입자와 고정 몫의 컬러 필름 입자 문장은 모양이 다르고, #041 #042 #055는 디지털이다 |
+| lens | 끈다. 렌즈를 말하는 줄은 프롬프트마다 정확히 하나이고 출처 순서는 세트의 렌즈 > 쌍의 렌즈 > 갈래의 Optics 렌즈 줄 > 고정 몫 줄이다. 이 카드는 갈래마다 렌즈 줄이 있어 고정 몫 lens 줄은 어느 경우에도 붙이지 않는다. 얕은 심도 문구는 쓰지 않는다. 세트를 쓰면 세트 Optics가 말한 렌즈(S1 APO-Summicron-M 50mm f/2 ASPH, S2 Zuiko 28mm f/2, S3 AI Nikkor 50mm f/1.4S, S4 EF 24-70mm f/2.8L 줌을 약 35–50mm대로 쓴다, S5 Summilux 35mm f/1.4, S6 Ricoh GR IIIx 내장 렌즈의 약 40mm 환산 시야)가 렌즈 줄이다. 그 렌즈 구절은 세트가 고른 Optics `stock` 줄(S1 `Leica M11`, S2·S5 `Kodak Portra 400`, S3 `Kodak T-Max`, S4 `Kodak Tri-X 400`, S6 `Ricoh GR IIIx`)의 문장 끝에 붙이고(예: S1이면 `Leica M11` 줄 끝에 `with an APO-Summicron-M 50mm f/2 ASPH lens`), Optics `lens` 줄은 따로 두지 않는다. 세트를 쓰고 쌍 1을 고르면 Camera 줄에서 `A moderate telephoto`를 빼고 거리와 층쌓임만 쓴다(렌즈는 위 `stock` 줄 문장이 말한다). 세트가 없으면 쌍 1은 Camera 줄 `telephoto compression`이 렌즈 줄이다. D 갈래(쌍 11·12)는 Optics `Ricoh GR IIIx` 줄의 40mm 시야가 렌즈 줄이다. 나머지 쌍(2~10)은 Camera 줄이 렌즈를 말하지 않으니 본체와 마운트가 맞는 Optics `lens` 줄 하나가 렌즈 줄이다(A·B `Summicron 50mm f/2`는 `Leica M11`·`Leica Monochrom`이나 본체가 정해지지 않았을 때, A의 `Hasselblad 907X`는 `XCD 45mm f/4 P`, C `Summilux 35mm f/1.4`, A의 `Zeiss Biogon 28mm f/2.8`은 사용자가 광각을 말할 때만이고 `Hasselblad 907X`에는 붙이지 않는다) | Iris의 50mm 눈높이 시점 고정문이 #049(28mm) #043 #048 #051(35mm) #045(24-70mm)와 한 프롬프트에 공존했고, #042는 룩에 없는 얕은 심도를 요구했다. 쌍마다 렌즈 줄의 출처를 정해 둔다 |
 | framing | 켠다. 쌍의 Camera 줄은 자리·각도·구도 기법을 정하고 프레임 범위는 fixed-lines.md의 framing 줄이 정한다. 쌍 2(Cowboy Shot)와 5(Extreme Wide Shot)는 범위를 직접 말하니 그 말과 부딪히지 않게 쓴다. 쌍 1(긴 걸음)·4(계단)·6(앞다리 체중)·9(부츠와 웅덩이)는 Pose가 낮은 몸을 말하니 framing 줄의 범위를 머리부터 발끝으로 쓴다 | 나머지 쌍은 범위를 말하지 않고 Pose가 허리 위에서 보인다 |
 | ratio | 켠다. 사용자 비율이 없으면 3:4 세로 | 쌍은 비율을 정하지 않는다 |
 
@@ -72,6 +72,8 @@
 | D | expression | Half-Lidded Gaze — The lids rest halfway down over the irises for a relaxed, unbothered look with the brows smooth. (滤镜 #055) |
 
 ## Outfit
+**함께 쓰는 슬롯:** `outfit`·`outfit-outer`·`outfit-bottom`(겉옷은 속옷 위에, 하의는 함께. 슬롯마다 장면에 맞는 줄 하나)
+
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
 | A | outfit-outer | wool trench coat — A charcoal double-breasted wool trench hangs open from the shoulders, its heavy cloth falling in vertical folds and the lapels holding a hard edge. (滤镜 #041) |
@@ -112,6 +114,8 @@
 | 전부 | nails | Vanilla Matte Nails — Short square nails in an opaque creamy vanilla with a velvety matte finish that absorbs the flat light. |
 
 ## Style
+**함께 쓰는 슬롯:** `style-core`(갈래의 기본 줄)·`style`(장면에 맞는 계열 줄 하나)
+
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
 | A, B, C | style-core | NYC Street Style — Tailored coats, quick strides and stone-and-iron facades under a flat grey sky, nothing arranged for the camera. |
@@ -161,9 +165,11 @@
 | D | catchlight | Catchlight — A thin pale vertical strip from the fluorescent tube sits in each eye. |
 
 ## Optics
+**하나만 고르는 슬롯:** `tone-*`(고른 `stock` 본체와 같은 이름의 줄만: `tone-m11`은 `Leica M11`, `tone-907x`는 `Hasselblad 907X`, `tone-monochrom`은 `Leica Monochrom`, `tone-ricoh`는 `Ricoh GR IIIx`를 골랐을 때)
+
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
-| A, C | stock | Kodak Portra 400 — Cool-shifted color negative with creamy highlights on the skin, soft highlight roll-off, blue-grey shadows and fine even grain. (滤镜 #043 #049 #050 #052) |
+| A, C | stock | Kodak Portra 400 — In this look the color negative is kept on a cool balance, with creamy highlights on the skin, soft highlight roll-off, blue-grey shadows and fine even grain. (滤镜 #043 #049 #050 #052) |
 | A | stock | Kodak Portra 160 — Finer-grained than Portra 400 and kept slightly cool in this look, with muted color and smooth mid-tones. (滤镜 #046 #053) |
 | A | stock | Kodak Gold 200 — Consumer color film kept on a cool, neutral color balance in this look, so the usual golden cast stays out and brick reds stay rich against slate-blue shadow. (滤镜 #047) |
 | A | stock | Leica M11 — A compact rangefinder digital frame. (滤镜 #041) |
@@ -181,12 +187,12 @@
 | C | lens | Summilux 35mm f/1.4 — A wide-normal lens at a middle aperture holds the avenue or glass wall around her instead of melting it. (滤镜 #043 #051) |
 | C | filter | Circular Polarizer — A rotating polarizer deepens the sky reflected in glass and strips white glare off the wet asphalt, so both read as dark clear mirrors. (滤镜 #043 #051) |
 | B | filter | Fog Filter — A diffusion filter spreads highlights into a hazy bloom and lifts the blacks to faint grey, so distant cables dissolve into the fog. (滤镜 #044) |
-| A, C | grain | 胶片颗粒 — Fine, even color-film grain sits across the whole frame, slightly heavier in the shadows. |
-| B | grain | 胶片颗粒 — Crisp silver grain lies over the whole grey ramp, fine on T-Max and bold on Tri-X. |
-| A | highlight-m11 | Highlight Roll-off — Crisp micro-contrast holds in the fine surfaces while bright areas fade gradually into white without a hard clipped edge. |
-| A | gradient-907x | Highlight Roll-off — Extremely smooth gradients step the greys finely and keep the highlights restrained. |
-| B | mono-monochrom | 黑白银盐 — Rich tonal depth and razor-fine edge detail run along a long, clean grey ramp. |
-| D | accent-ricoh | 彩度高め — Only the small accents, a yellow taxi or a snack wrapper, come out crisp and punchy against the cold white light, with a deep dark falloff beyond it. |
+| A, C | grain | film grain — Fine, even color-film grain sits across the whole frame, slightly heavier in the shadows. |
+| B | grain | B&W film grain — Crisp silver grain lies over the whole grey ramp, fine on T-Max and bold on Tri-X. |
+| A | tone-m11 | Highlight Roll-off — Crisp micro-contrast holds in the fine surfaces while bright areas fade gradually into white without a hard clipped edge. |
+| A | tone-907x | Smooth Tonal Gradation — Extremely smooth gradients step the greys finely and keep the highlights restrained. |
+| B | tone-monochrom | Monochrome Tonal Depth — Rich tonal depth and razor-fine edge detail run along a long, clean grey ramp. |
+| D | tone-ricoh | Punchy Accent Colour — Only the small accents, a yellow taxi or a snack wrapper, come out crisp and punchy against the cold white light, with a deep dark falloff beyond it. |
 
 ## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 세트를 쓰는 조건은 규칙 4항이 정하고, 세트 값은 고정 사실보다 먼저다. 규칙은 image-brief.md §4 '룩 카드' 4항과 '비워 둔 층')
 | 세트 | 갈래 | 묶음 |
@@ -202,17 +208,19 @@
 | 번호 | 갈래 | Pose | Camera |
 |---|---|---|---|
 | 1 | A | Crosswalk Stride — She crosses wide white crosswalk stripes with a long confident step, the coat hem swinging behind her and her body angled across the road. | telephoto compression — A moderate telephoto from the far kerb squeezes the street so cabs and building edges stack in tight layers behind her. |
-| 2 | A | Hands in Pockets — She stands square to the lens on the cobblestones with both hands sunk in her coat pockets, shoulders relaxed and the chin level. | Cowboy Shot — The frame cuts at mid-thigh so the full coat, her hands and the cast-iron facade behind her read together. |
-| 3 | A | Fire Escape Overlook — She leans on a black iron fire-escape railing and looks down through the metal grid, her elbows resting on the bars. | low-angle shot — The camera stands on the street and looks up through the iron grid so the railing lines frame her against the pale sky. |
-| 4 | A | Stoop Stroll — She walks down red-brick front steps with one hand sliding along the iron railing, her eyes following the treads. | Leading Lines — The railing and the stair edges run through the frame and converge on her, leading the eye to her. |
-| 5 | A | Arms Outstretched — She stands at the end of a pier facing the river with both arms spread wide, her sleeves and hair streaming in the wind. | Extreme Wide Shot — The camera stands far back on the pier so she becomes a small figure between the grey river, the haze and the far shore. |
-| 6 | B | Over-the-Shoulder Glance — She stops mid-walk, shifts her weight onto the front leg and twists to look back at the lens over one shoulder. | negative space — She fills the left third of the frame and pale fog leaves the rest almost empty. |
-| 7 | B | Watch Check — She lifts one wrist to chest height and glances at it while still moving fast, the other arm swinging back. | deep focus — Everything from her shoulder to the far limestone facades stays sharp, so the canyon walls read as full-depth architecture. |
+| 2 | A | Hands in Pockets — She stands square to the lens on the pavement with both hands sunk in her coat pockets, shoulders relaxed and the chin level. | Cowboy Shot — The frame cuts at mid-thigh so the full coat, her hands and the building facade behind her read together. |
+| 3 | A | Fire Escape Overlook — She leans on a black iron fire-escape railing and looks down through the metal grid, her elbows resting on the bars. | low-angle shot — The camera stands on the street and looks up through the iron grid so the railing lines frame her against the sky. |
+| 4 | A | Stoop Stroll — She walks down front steps with one hand sliding along the iron railing, her eyes following the treads. | Leading Lines — The railing and the stair edges run through the frame and converge on her, leading the eye to her. |
+| 5 | A | Arms Outstretched — She stands at the end of a pier facing the water with both arms spread wide, her sleeves and hair streaming in the wind. | Extreme Wide Shot — The camera stands far back on the pier so she becomes a small figure between the water and the far shore. |
+| 6 | B | Over-the-Shoulder Glance — She stops mid-walk, shifts her weight onto the front leg and twists to look back at the lens over one shoulder. | negative space — She fills the left third of the frame and the rest of the frame is left almost empty. |
+| 7 | B | Watch Check — She lifts one wrist to chest height and glances at it while still moving fast, the other arm swinging back. | deep focus — Everything from her shoulder to the far building facades stays sharp, so the walls along both sides of the street read as full-depth architecture. |
 | 8 | A, B | Coat Wind Blow — A gust throws her open coat wide to both sides while one hand lifts to hold her sunglasses or her hair. | Dutch angle — The camera tilts a few degrees so the vertical building edges lean and the flare of the coat seems to push the frame. |
-| 9 | C | Puddle Leap — She takes one long step over a puddle on the crosswalk, trench hem flying, one boot already across and the other still pushing off. | Puddle Reflection — The camera sits low over the wet asphalt so the puddle doubles her and the grey sky upside down beneath her feet. |
-| 10 | C | Revolving Door Exit — One hand pushes the brass bar of a revolving door as she steps out of the building mid-motion. | frame within a frame — The curved glass and brass framing of the door box her in as one lit panel against the dim lobby behind. |
-| 11 | D | Bodega Lean — One shoulder rests on the shopfront beside the fruit stand, a cold drink hanging from one hand and the light of the open door on her face. | centered composition — She stands at the centre of the frame, the shop's cold glow on one side and the dark street on the other. |
-| 12 | D | Subway Door Lean — Her back rests against a closed subway door, the shoulders low and the eyes tired but steady. | glass reflection overlay — The window glass in the door beside her shoulder holds a faint ghost of the car's cool white lights next to her face. |
+| 9 | C | Puddle Leap — She takes one long step over a puddle on the crosswalk, trench hem flying, one boot already across and the other still pushing off. | Puddle Reflection — The camera sits low over the wet asphalt so the puddle doubles her and the sky upside down beneath her feet. |
+| 10 | C | Revolving Door Exit — One hand pushes the brass bar of a revolving door as she steps out of the building mid-motion. | frame within a frame — The curved glass and brass framing of the door box her in as one panel against the lobby behind. |
+| 11 | D | Bodega Lean — One shoulder rests on the shopfront beside the fruit stand, a cold drink hanging from one hand and her face turned toward the open door. | centered composition — She stands at the centre of the frame, the shopfront on one side and the street on the other. |
+| 12 | D | Subway Door Lean — Her back rests against a closed subway door, the shoulders low and the eyes tired but steady. | glass reflection overlay — The window glass in the door beside her shoulder holds a faint ghost reflection of the car interior next to her face. |
+
+장소: 쌍 1은 횡단보도가 있는 길일 때. 쌍 3은 철제 비상계단이 있는 건물 앞일 때. 쌍 4는 현관 계단과 철제 난간이 있는 골목일 때. 쌍 5는 부두나 물가 난간이 있는 곳일 때. 쌍 9는 젖은 횡단보도나 웅덩이가 있는 길일 때. 쌍 10은 회전문이 있는 건물 입구일 때. 쌍 11은 가게 앞(보데가)일 때. 쌍 12는 지하철 승강장일 때. 쌍 2·6·7·8은 장소를 가리지 않는다.
 
 ## 맞지 않는 것
 황금빛 석양과 직사 햇빛, 또렷한 그림자 윤곽, 네온 핑크·보라 조명, 파스텔과 채도 높은 색 면(노란 택시 같은 작은 점 하나는 허용), 스튜디오 흰 배경, 연출된 큰 웃음, 정면 증명사진 자세, 읽히는 간판·상표·표지 글자, 피부를 지운 듯한 과한 보정.
