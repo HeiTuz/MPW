@@ -96,13 +96,18 @@ function expandTerms(terms, rows, cardWords = new Set(), cardCalled = false) {
 
 // Look cards: references/image/looks/index.md lists one row per card (slug | names | words that must not call it | culture | branches | axis | summary).
 // A card is called when the raw query contains one of its names, the reverse of the row search above. The match ignores how the query was cut:
-// commas, spaces and brackets are dropped, and a multi-word name also matches when every one of its words is in the query, in any order.
-// Hangul and CJK names match as text; Latin names match whole words only, so a short name like "WKW" never fires inside another word.
+// commas, spaces and brackets are dropped between the characters of a name. Hangul and CJK names match as text; Latin names match whole words only,
+// so a short name like "WKW" never fires inside another word.
+// A multi-word name whose words are not written together still calls the card when every word is in the query, in any order, with at most one other word between them
+// ("캘리포니아, 골든아워", "Gold Kodak 200"); words spread over the query ("a Kodak camera, a gold silk dress, ISO 200") call nothing.
+// A name or do-not-call word with a negation right next to it (no Kodak Gold, Kodak Gold 말고, 不要...) is ignored.
+// Called cards come out in the order their names first appear in the query, which decides the default card when two cards share an axis.
 // A card that is not called but lists a query word as one it must not answer to is offered as a candidate with its summary.
-const nameWords = (alias) => norm(alias).split(/[\s\-\u2010-\u2015\u00b7\u30fb]+/).filter(Boolean);
+const nameWords = (alias) => norm(alias).split(/[\s\-‐-―·・]+/).filter(Boolean);
+const SEP_CHARS = '\\s\\-\\u2010-\\u2015\\u00b7\\u30fb,，、;；:：.。!！?？"\'“”‘’()（）\\[\\]【】「」『』/／';
 const PUNCT = /[,，、;；:：.。!！?？"'“”‘’()（）[\]【】「」『』/／]+/g;
 const strip = (s) => squash(s).replace(PUNCT, '');
-const isLatin = (s) => /^[a-z0-9\s\-\u00b7.']+$/.test(norm(s));
+const isLatin = (s) => /^[a-z0-9\s\-·.']+$/.test(norm(s));
 const hasName = (name, raw, stripped) => {
   if (isLatin(name)) {
     const body = nameWords(name).map(escapeRe).join('[\\s\\-\\u00b7]*');
@@ -110,10 +115,58 @@ const hasName = (name, raw, stripped) => {
   }
   return stripped.includes(strip(name));
 };
-const hasAllWords = (name, raw, stripped) => {
-  const words = norm(name).split(/\s+/).filter(Boolean);
-  return words.length >= 2 && words.every((w) => hasName(w, raw, stripped));
+const spanRegexes = new Map();
+function nameRegex(name) {
+  if (!spanRegexes.has(name)) {
+    const chars = [...strip(name)];
+    spanRegexes.set(name, isLatin(name)
+      ? new RegExp(`(?<![a-z0-9])${nameWords(name).map(escapeRe).join('[\\s\\-\\u00b7]*')}(?![a-z0-9])`, 'g')
+      : chars.length ? new RegExp(chars.map(escapeRe).join(`[${SEP_CHARS}]*`), 'gu') : null);
+  }
+  return spanRegexes.get(name);
+}
+const spansOf = (name, text) => {
+  const re = nameRegex(name);
+  return re ? [...text.matchAll(re)].map((m) => ({ start: m.index, end: m.index + m[0].length })) : [];
 };
+const TOKEN = new RegExp(`[^${SEP_CHARS.replace('\\-\\u2010-\\u2015\\u00b7\\u30fb', '')}]+`, 'gu');
+// The words of a multi-word name found as separate query words, in any order, with at most one other word inside the stretch they cover.
+function scatteredSpan(name, text) {
+  const words = norm(name).split(/\s+/).filter(Boolean);
+  if (words.length < 2) return null;
+  const tokens = [...text.matchAll(TOKEN)].map((m) => ({ s: squash(m[0]), start: m.index, end: m.index + m[0].length }));
+  const slots = words.map((w) => tokens.flatMap((t, i) => ((isLatin(w) ? t.s === squash(w) : t.s.includes(squash(w))) ? [i] : [])));
+  if (slots.some((found) => !found.length)) return null;
+  let best = null;
+  const walk = (k, picked) => {
+    if (k === slots.length) {
+      const lo = Math.min(...picked), hi = Math.max(...picked);
+      if (hi - lo + 1 <= words.length + 1 && (!best || hi - lo < best.hi - best.lo)) best = { lo, hi };
+      return;
+    }
+    for (const i of slots[k]) if (!picked.includes(i)) walk(k + 1, [...picked, i]);
+  };
+  walk(0, []);
+  return best && { start: tokens[best.lo].start, end: tokens[best.hi].end };
+}
+// English negators come before the name, Korean and Japanese ones after it. Blanking a negated name lets the next word of the same phrase ("no Kodak Gold") count as negated too.
+const NEG_BEFORE = /(?:(?<![\p{L}\p{N}])(?:no|not|without|never)|不要|不用|别用)\s*$/u;
+const NEG_AFTER = /^\s*(?:말고|없이|빼고|제외|아닌|아니고|なし|無し|抜き)/u;
+function maskNegated(text, looks) {
+  const words = [...new Set(looks.flatMap((l) => [...l.names, ...l.avoid]))];
+  for (let pass = 0; pass < 3; pass++) {
+    let changed = false;
+    for (const w of words) {
+      for (const { start, end } of spansOf(w, text)) {
+        if (!NEG_BEFORE.test(text.slice(0, start)) && !NEG_AFTER.test(text.slice(end))) continue;
+        text = text.slice(0, start) + ' '.repeat(end - start) + text.slice(end);
+        changed = true;
+      }
+    }
+    if (!changed) break;
+  }
+  return text;
+}
 export function loadLooks(dir = LOOKS_DIR) {
   const file = path.join(dir, 'index.md');
   if (!fs.existsSync(file)) return [];
@@ -134,12 +187,17 @@ export function loadLooks(dir = LOOKS_DIR) {
 }
 
 export function findLookCards(terms, dir = LOOKS_DIR) {
-  const raw = norm(terms.join(','));
-  const stripped = strip(raw);
-  return loadLooks(dir).flatMap((look) => {
-    const name = look.names.find((n) => hasName(n, raw, stripped)) ?? look.names.find((n) => hasAllWords(n, raw, stripped));
-    return name ? [{ ...look, matched: name }] : [];
-  });
+  const looks = loadLooks(dir);
+  const raw = maskNegated(norm(terms.join(',')), looks);
+  return looks.flatMap((look) => {
+    const hits = look.names.flatMap((name) => {
+      const span = spansOf(name, raw)[0] ?? scatteredSpan(name, raw);
+      return span ? [{ name, ...span }] : [];
+    });
+    if (!hits.length) return [];
+    const first = hits.sort((a, b) => a.start - b.start || (b.end - b.start) - (a.end - a.start))[0];
+    return [{ ...look, matched: first.name, at: first.start }];
+  }).sort((a, b) => a.at - b.at);
 }
 
 const MAX_CANDIDATES = 6;
@@ -166,13 +224,15 @@ const wordHits = (look, words) => {
 export function findLookCandidates(terms, called = [], dir = LOOKS_DIR) {
   const raw = norm(terms.join(','));
   const stripped = strip(raw);
+  const looks = loadLooks(dir);
+  const masked = maskNegated(raw, looks);
   const skip = new Set(called.map((c) => c.slug));
   const cultures = queryCultures(raw, stripped);
   const words = queryWords(terms);
-  return loadLooks(dir)
+  return looks
     .filter((look) => !skip.has(look.slug))
     .flatMap((look) => {
-      const hits = look.avoid.filter((w) => hasName(w, raw, stripped));
+      const hits = look.avoid.filter((w) => spansOf(w, masked).length > 0);
       if (!hits.length) return [];
       const inCulture = [...cultures].some((c) => look.culture.includes(c)) ? 1 : 0;
       return [{ ...look, matched: hits.sort((a, b) => b.length - a.length)[0], inCulture, hits: wordHits(look, words) }];
@@ -222,7 +282,7 @@ const cardBlock = (cards) => (cards.length
   : '');
 
 const candidateBlock = (candidates) => (candidates.length
-  ? `## Look card candidates\n(no card was named exactly; these list a word of the query as one they do not answer to. Read one only if its summary matches the medium or look the request asks for; if the request names no medium or look, write without a card.)\n${candidates.map((c) => `- ${c.title} [${c.axis}, ${c.culture}] — ${c.summary}\n  read: node scripts/read_refs.mjs ${c.file}`).join('\n')}\n\n`
+  ? `## Look card candidates\n(no card was named exactly; these cards list a word of your query as a general word. Pick the first one whose summary fits the medium or look the request asks for and read it; if none fits, or the request names no medium or look, write without a card.)\n${candidates.map((c) => `- ${c.title} [${c.axis}, ${c.culture}] — ${c.summary}\n  read: node scripts/read_refs.mjs ${c.file}`).join('\n')}\n\n`
   : '');
 
 export function formatText(results, cards = [], candidates = []) {

@@ -211,6 +211,28 @@ for (const q of ['캘리포니아 골든아워, Kodak Gold 200', '캘리포니�
   assert.deepEqual(both.map((l) => [l.slug, l.axis]), [['california-golden-hour', '장면'], ['kodak-gold-200', '매체']], q);
   assert.match(run(['--q', q, '--limit', '1']).stdout, /^## Look card\n.+ \[장면\] — .+\nread: .+\n.+ \[매체\] — .+\nread: /, q);
 }
+// A name's words that are scattered over the query call nothing (they stay candidates); a comma or one other word between them is fine.
+{
+  const looksOf = (q) => JSON.parse(run(['--q', q, '--json']).stdout);
+  const scattered = looksOf('a Kodak camera, a gold silk dress, ISO 200');
+  assert.deepEqual(scattered.looks, [], 'scattered words of Kodak Gold 200 call no card');
+  assert.ok(scattered.candidates.some((c) => c.slug === 'kodak-gold-200'), 'the card stays a candidate');
+  for (const q of ['Kodak, Gold, 200', 'Kodak Gold ISO 200', 'Kodak 200 gold', 'Kodak Gold 200, no flash']) assert.deepEqual(looksOf(q).looks.map((l) => l.slug), ['kodak-gold-200'], q);
+  assert.deepEqual(looksOf('캘리포니아, 골든아워').looks.map((l) => l.slug), ['california-golden-hour']);
+}
+// A name with a negation next to it calls nothing and is not offered as a candidate either.
+for (const q of ['no Kodak Gold, clean digital color', 'Kodak Gold 말고 디지털', '코닥 골드 200 말고 포트라', '不要 Kodak Gold 200', 'without Wong Kar-wai, a plain street']) {
+  const json = JSON.parse(run(['--q', q, '--json']).stdout);
+  assert.deepEqual(json.looks, [], q);
+  assert.ok(json.candidates.every((c) => c.slug !== 'kodak-gold-200'), `${q}: the negated card is not offered`);
+}
+// Two cards come out in the order their names appear in the query, not in index order.
+{
+  const order = (q) => JSON.parse(run(['--q', q, '--json']).stdout).looks.map((l) => l.slug);
+  assert.deepEqual(order('Kodak Gold 200, 캘리포니아 골든아워'), ['kodak-gold-200', 'california-golden-hour']);
+  assert.deepEqual(order('캘리포니아 골든아워, Kodak Gold 200'), ['california-golden-hour', 'kodak-gold-200']);
+  assert.match(run(['--q', 'Kodak Gold 200, 캘리포니아 골든아워', '--limit', '1']).stdout, /^## Look card\n.+ \[매체\] — .+\nread: .+\n.+ \[장면\] — .+\nread: /);
+}
 // Nouvelle Vague has its own card now.
 assert.deepEqual(JSON.parse(run(['--q', 'Nouvelle Vague', '--json']).stdout).looks.map((l) => l.slug), ['nouvelle-vague-16mm']);
 // The card path in the block is the path read_refs.mjs reads (documented command works as printed).
