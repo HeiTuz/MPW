@@ -10,9 +10,9 @@
 ## 고정 사실 (모든 갈래가 지킨다)
 | 슬롯 | 값 |
 |---|---|
-| medium | 35mm 컬러 네거티브로 찍은 흐린 파리 오후의 캔디드 필름 사진. 영화 스틸도 스튜디오 화보도 아니다(16mm 영화 스틸은 누벨바그 카드의 몫). 첫 줄은 `A Paris overcast-afternoon candid film photograph shot on colour-negative 35mm film`로 시작한다 |
+| medium | 35mm 컬러 네거티브로 찍은 흐린 파리 오후의 캔디드 필름 사진. 영화 스틸도 스튜디오 화보도 아니다(16mm 영화 스틸은 누벨바그 카드의 몫). 첫 줄은 `A candid overcast-afternoon film photograph in Paris shot on colour-negative 35mm film`로 시작한다. 매체 구절과 장소 구절 `in Paris`를 나눠 적은 것이라, 사용자가 다른 도시를 말하면 장소 구절만 바꾼다. 흑백을 요청해 C·D의 `Kodak Tri-X 400` 줄을 쓰면 첫 줄 끝도 `…shot on Kodak Tri-X 400 black-and-white 35mm negative`로 맞춘다 |
 | closer | `Photographie argentique` |
-| time | 오후. 해가 하늘 어디에도 보이지 않는다(5000~5800K, S5는 4800K). 해 질 녘·밤·한낮 직사광은 이 룩이 아니다 |
+| time | 오후. 해가 하늘 어디에도 보이지 않는다(5000~5800K, S5는 4800K. 이 카드의 K 숫자는 측정값이 아니라 이 룩의 연출 값이다). 해 질 녘·밤·한낮 직사광은 이 룩이 아니다 |
 | light-key | 하늘 전체가 한 장의 소프트박스다. 석회암·대리석·젖은 포장석·담쟁이 벽이 2차 반사판이 된다. 방향이 뚜렷한 직사광과 단단한 그림자 가장자리가 없다 |
 | palette | 석회암 아이보리, 그레이지, 옅은 청회색 그림자, 눌린 초록·벽돌·카멜. 채도가 낮다. 네온·붉은 석양·형광색 없음 |
 | grain | 고운 은염 입자가 화면 전체에 깔린다. 암부와 어두운 아케이드·골목에서 조금 더 보인다(S5는 푸시 현상의 짙은 입자) |
@@ -35,14 +35,14 @@
 | base, lip | 카드 줄이 이긴다(base 줄은 FR 문화권 공식의 주근깨를 되풀이하지 않는다) | Iris 고정문의 浆果玫瑰唇이 #023 #025 #030 #031의 입술색(豆沙·红棕·枯玫瑰) 위에 둘째 입술색을 얹었다 |
 | catchlight | A·B·C는 카드 줄이 이긴다. D는 고정 줄을 켠다 | A·B·C는 하늘 초승달 한 점이 이 룩의 눈빛이다. D의 아케이드·안뜰은 하늘이 가려져 창·램프 모양이 맞다 |
 | grain | 카드 줄이 이긴다 | 고정 줄은 "고르게"만 말하지만 C·D의 어두운 골목·아케이드(#025 #029)는 암부에서 입자가 더 보인다 |
-| lens | 모든 갈래에서 끈다. 렌즈를 말하는 줄은 하나다: 세트를 쓰면 세트 Optics의 렌즈, 아니면 갈래의 Optics lens 줄(A·D Summicron 35mm, B Zeiss Planar 45mm, C Canon FD 50mm). 쌍 2는 Camera 줄 `telephoto compression`이 렌즈를 정하니 Optics lens 줄 대신 그 줄 하나가 렌즈 줄이다. 나머지 쌍(1·3~11)의 Camera 줄은 렌즈를 말하지 않는다 | Iris는 #030 #034의 필드를 Biogon 28mm f/2.8로 적었지만 본문과 고정 꼬리는 50mm 인물 렌즈를 말해 어긋났다. 이 카드는 Planar 45mm로 쓴다 |
+| lens | 모든 갈래에서 끈다(갈래마다 Optics lens 줄이 있어 고정 `自然透视` 줄까지 내려올 일이 없다). 렌즈를 말하는 줄은 하나이고 출처 순서는 세트의 렌즈 > 쌍의 렌즈 > 갈래의 Optics lens 줄이다(A·D Summicron 35mm, B Zeiss Planar 45mm, C Canon FD 50mm). 쌍 2의 Camera 줄 `telephoto compression`만 렌즈를 말하는 쌍이다: 세트 없이 쌍 2를 쓰면 그 줄이 렌즈 줄이라 갈래 lens 줄을 붙이지 않고, 세트와 함께 쓰면 세트 렌즈가 렌즈 줄이라 쌍 2의 Camera 줄은 `A longer lens` 같은 렌즈 구절을 빼고 줄기들이 한 장의 띠로 겹친다는 구도만 쓴다. 나머지 쌍(1·3~11)의 Camera 줄은 렌즈를 말하지 않는다 | Iris는 #030 #034의 필드를 Biogon 28mm f/2.8로 적었지만 본문과 고정 꼬리는 50mm 인물 렌즈를 말해 어긋났다. 이 카드는 Planar 45mm로 쓴다 |
 | framing | 켠다. 쌍 1·4·5·9·11은 프레임 범위를 직접 말하니 그때는 3:4만 쓴다 | 나머지 쌍은 범위를 말하지 않는다 |
 | ratio | 켠다. 사용자 비율이 없으면 3:4 세로 | 쌍은 비율을 정하지 않는다 |
 
 ## Hair and makeup
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
-| A, C | hair | Cheveux saut du lit — Dark-brown curls fall past the collarbones with uneven, flicked ends and roots lifted off the scalp, loose strands catching the grey light without a hard sheen. |
+| A, C | hair | Coiffure effet saut du lit — Dark-brown curls fall past the collarbones with uneven, flicked ends and roots lifted off the scalp, loose strands catching the grey light without a hard sheen. |
 | B | hair | Chignon bas — The hair is twisted into a loose low bun at the nape with a few wisps left along the cheeks, so the sky light reaches the temples and the jawline. |
 | D | hair | Coiffé-décoiffé — Shoulder-length brown hair left finger-tousled and uneven, one side tucked and the other loose, never set. |
 | 전부 | bangs | Frange rideau — Centre-parted curtain bangs sweep in soft arcs over the temples and cheekbones while the brows and eyes stay visible. |
@@ -64,8 +64,8 @@
 | A | expression | Sourire franc — A plain open smile lifts both cheeks and shows a little of the teeth, the eyes crinkling at the corners with no pose in it. |
 | A | gaze | Regard émerveillé — The head tips up and the lips part slightly while the eyes widen on something large and bright above the lens. |
 | A, B, D | gaze | Regard dans le vague — The gaze drifts unfocused past the camera to a distant roofline or square, the lids soft and the brows slack. |
-| B | expression | Arrêt sur image — The face holds still in a direct stare into the lens, like the last frame of a reel. |
-| B, C | gaze | Flânerie contemplative — The lips part a little and the eyes go soft and far, caught in a pause while moving air stirs a few strands of hair. |
+| B | expression | Regard fixe vers l'objectif — The face holds still in a direct stare into the lens, like the last frame of a reel. |
+| B, C | gaze | Regard songeur — The lips part a little and the eyes go soft and far, caught in a pause while moving air stirs a few strands of hair. |
 | C | expression | Sourire en coin — One corner of the mouth lifts a millimetre into a half-smile while the eyes look back playfully. |
 | C, D | expression | Air serein — The face is smooth and unhurried, the lids relaxed and the mouth softly closed as she takes in the place around her. |
 | D | expression | Air de rien — A level, neutral face with closed lips and eyes drifting slightly to one side, assured without trying. |
@@ -128,7 +128,7 @@
 | C | place | Pont des Arts — A wooden plank deck and iron balustrade over the Seine in winter, river vapour hanging above water the colour of the sky. (风格 #049) |
 | C | place | Montmartre — A steep cobbled stair alley between old walls, the setts dark and glossy after a shower with an old iron street lamp above. (滤镜 #029) |
 | C | place | Père-Lachaise — A cobbled lane past moss-covered family tombs and carved stone crosses under old chestnut trees, deep red maple leaves and yellow leaves on the ground. (滤镜 #031) |
-| C | place | Escalier d'eau — Old stone steps on the Seine quay running down to the water, the stone dark and soaked and faintly mirroring the sky, willow branches trailing above. (滤镜 #038) |
+| C | place | Escalier de quai — Old stone steps on the Seine quay running down to the water, the stone dark and soaked and faintly mirroring the sky, willow branches trailing above. (滤镜 #038) |
 | D | place | Place des Vosges — Symmetrical red-brick and stone arcades under pointed slate roofs, the soft arch shadows holding warm brick tones. (滤镜 #025) |
 | D | place | Bouquinistes — Dark-green painted iron book boxes along the Seine parapet with cracked paint edges, filled with yellowed prints and paperbacks. (滤镜 #027) |
 | D | place | Colonnes de Buren — Short black-and-white striped marble columns in the Palais-Royal courtyard, throwing only faint elongated grey shadows under the flat sky. (滤镜 #028) |
@@ -158,7 +158,7 @@
 | B | color | Cool Grey Tone — A pale grey palette with a trace of blue, restrained contrast and clean cold whites. |
 | A, C | stock | Kodak Portra 400 — Soft low-contrast colour negative with creamy midtones, gentle highlight roll-off and fine even grain, the blue-grey shadows kept clear. |
 | D | stock | Kodak Portra 160 — A finer-grained, slightly cooler colour negative with muted pastel colour and smooth mid-tones. |
-| B | stock | Pro 400H — Pastel teal-green highlights with soft airy light and a cool, high-key look on skin lit by the bright stone. |
+| B | stock | Pro 400H — Pastel teal-green highlights with soft airy light; in this look skin lit by the bright stone leans toward a cool, high-key rendering. |
 | C, D | stock-mono | Kodak Tri-X 400 — Pure black-and-white tone with ink-deep blacks and open highlights, used only when the request asks for monochrome. |
 | D | push | Pellicule poussée — The film is overdeveloped for extra speed, giving stronger contrast and a deeper shadow tone in the arcade shade. |
 | A, D | camera | Leica M6 — A 35mm rangefinder with a quiet, candid feel and rich micro-contrast. |
@@ -173,12 +173,12 @@
 ## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 요청의 장소·소품·시간대·의상 가운데 둘 이상이 그 세트의 단서와 같으면 통째로 쓰고, 세트 값은 고정 사실보다 먼저다. 규칙은 image-brief.md §4 '룩 카드' 4항과 '비워 둔 층')
 | 세트 | 갈래 | 묶음 |
 |---|---|---|
-| S1 생제르맹 카페 테라스 (滤镜 #021) | A | 단서: 생제르맹, 카페 테라스, 등나무 의자, 줄무늬 상의, 청바지 / Hair Cheveux saut du lit(깊은 갈색 곱슬 장발, 결이 흐트러진다) + Frange rideau / Base Teint nu / Lip Framboise(물기 있는 베리 로즈) / Outfit Marinière classique bretonne + Jean évasé / Scene Terrasse de Café, 생제르맹 대로 인도 쪽 등나무 의자 / Light Paris Overcast Light(오후 5200K, 단단한 하이라이트 가장자리 없음, 암부는 옅은 청회색, 중간 톤이 풍부) / Optics Leica M6, Summicron 35mm f/2, Kodak Portra 400, 암부에 가는 입자 / Expression Nonchalance parisienne, 시선이 거리로 / Pose 등나무 의자에 앉아 몸을 느슨하게 |
-| S2 북향 발코니 (滤镜 #039) | A | 단서: 북향 발코니, 흰 셔츠 한 장, 맨발, 도자기 컵, 아연 지붕 / Hair Cheveux saut du lit(허리까지 오는 장발) + Frange rideau / Base Teint nu / Lip Gloss transparent(자연스러운 물기 있는 핑크) / Outfit Chemise blanche boyfriend(맨발, 흰 면린넨 셔츠 한 장) / Props Tasse en porcelaine(흰 도자기 컵) / Scene balcon haussmannien, 검은 주철 난간과 아연 지붕 너머 몽마르트 언덕 / Light Lumière du nord(5200K, 직사광 없는 안정된 확산광, 어깨선을 따라 비단처럼 붙는 빛) / Optics Leica M6, Summicron 35mm f/2, Kodak Portra 400, 가는 입자 / Expression Regard dans le vague(먼 언덕 쪽) / Pose 난간에 기대 컵을 두 손으로 든다 |
-| S3 오페라 대리석 (滤镜 #030) | B | 단서: 오페라 대리석, 흰 석조 기둥, 검은 실크 슬립, 회색 캐시미어 가디건, 광장 / Hair 어깨 길이 흐트러진 갈색, mèche derrière l'oreille + Frange rideau / Base Peau diaphane / Lip Beige rosé(차가운 토프 베이지) / Outfit Robe caraco(검은 실크 슬립 롱드레스) + Gilet(연회색 얇은 캐시미어, 열어서 걸친다) / Scene Opéra Garnier, 흰 조각 대리석 기둥 회랑의 계단에 기댄다 / Light Lumière réfléchie(5600K, 흰 대리석 벽이 고명도 냉회백 빛을 돌려준다, 암부는 옅은 청회색) / Optics Contax G2, Zeiss Planar 45mm f/2(Iris 필드는 Biogon 28mm f/2.8, 본문은 50mm 인물 렌즈로 어긋난다), Pro 400H, 가는 입자 / Expression Regard dans le vague(차분하고 도도하게 광장 차들을 본다) / Pose Adossée à la pile de pierre |
-| S4 센강 비 갠 계단 (滤镜 #038) | C | 단서: 센강 돌계단, 비 갠 뒤, 트렌치, 우산, 버드나무 / Hair Effet mouillé(젖은 곱슬 어깨 길이, 목 옆에 붙는 잔머리) + Frange rideau / Base Teint nu(비 갠 뒤 상기된 뺨) / Lip Framboise(윤기 나는 붉은 입술) / Outfit Trench classique(연한 카키 더블 롱) + Jean évasé + Botte Chelsea / Props Parapluie pliant / Scene Escalier d'eau, 버드나무 아래 젖은 센강 돌계단 / Light Après la pluie(5400K, 회백 구름과 젖은 돌이 위아래에서 서로 받아치는 부드러운 빛) / Optics Canon New F-1, Canon FD 50mm f/1.4, Kodak Portra 400(Iris 필드는 Kodak Tri-X 400이지만 의상·입술이 컬러라 컬러 네거티브로 읽는다), 암부에 촘촘한 입자 / Expression Air serein(구름 틈의 빛을 향해 고개를 든다) / Pose Refermer son parapluie |
-| S5 보주 광장 아케이드 (滤镜 #025) | D | 단서: 보주 광장, 붉은 벽돌 아케이드, 트위드 블레이저, 문고본, 아케이드 그늘 / Hair Coiffé-décoiffé(어깨 길이 흐트러진 갈색) + Frange rideau / Base Teint nu(깨끗한 맨 피부) / Lip Rouge brique(레트로 홍갈색 무광) / Outfit Tweed chevron(코냑색 헤링본 블레이저) / Props Collection Blanche(낡은 프랑스어 문고본) / Scene Place des Vosges, 붉은 벽돌과 석조 아케이드를 걷는다 / Light Ombre douce(4800K, 아케이드 밖에서 비스듬히 들어온 하늘빛과 붉은 벽돌의 따뜻한 중립 반사가 옆얼굴에 윤곽을 만든다, 암부는 깊되 까맣지 않다) / Optics Leica MP, Summicron 35mm f/2, Kodak Portra 400 + Pellicule poussée(Iris 필드는 Kodak Tri-X 400 Pushed to 800, 컬러 의상이라 컬러로 읽는다), 짙은 입자 / Expression Regard dans le vague(아케이드 밖 분수 광장 쪽으로 고개를 돌린다) / Pose 걷다가 고개를 돌린다 |
-| S6 담쟁이 안뜰 (滤镜 #036) | D | 단서: 담쟁이 안뜰, 석계단, 린넨 슬립 드레스, 허브차 컵, 흰 수국 / Hair 한쪽 어깨로 내린 긴 갈색 머리 + Frange rideau / Base Teint nu / Lip Gloss transparent(옅은 살구 핑크) / Outfit Lin lavé(에크뤼 워시드 린넨 무릎 길이 슬립 드레스) / Props Tasse en porcelaine(허브차 도자기 컵), hortensias / Scene cour intérieure pavée, 담쟁이가 덮인 석벽과 오래된 석계단에 앉는다 / Light Ombre douce(5300K, 흐린 하늘빛이 담쟁이를 거치며 흰 린넨과 얼굴에 옅은 청록 회색 반사를 얹는다) / Optics Contax RTS III, Zeiss Planar 50mm f/1.4, Kodak Portra 400, 고운 입자 / Expression Air serein(구석의 흰 수국을 본다) / Pose 석계단에 앉아 두 손으로 잔을 든다 |
+| S1 생제르맹 카페 테라스 (滤镜 #021) | A | 단서: 장소 생제르맹 카페 테라스, 등나무 의자 / 소품 - / 시간대 오후 / 의상 줄무늬 상의, 청바지 / Hair Coiffure effet saut du lit(깊은 갈색 곱슬 장발, 결이 흐트러진다) + Frange rideau / Base Teint nu / Lip Framboise(물기 있는 베리 로즈) / Outfit Marinière classique bretonne + Jean évasé / Scene Terrasse de Café, 생제르맹 대로 인도 쪽 등나무 의자 / Light Paris Overcast Light(오후 5200K, 단단한 하이라이트 가장자리 없음, 암부는 옅은 청회색, 중간 톤이 풍부) / Optics Leica M6, Summicron 35mm f/2, Kodak Portra 400, 암부에 가는 입자 / Expression Nonchalance parisienne, 시선이 거리로 / Pose 등나무 의자에 앉아 몸을 느슨하게 |
+| S2 북향 발코니 (滤镜 #039) | A | 단서: 장소 북향 발코니, 아연 지붕 / 소품 도자기 컵 / 시간대 - / 의상 흰 셔츠 한 장, 맨발 / Hair Coiffure effet saut du lit(허리까지 오는 장발) + Frange rideau / Base Teint nu / Lip Gloss transparent(자연스러운 물기 있는 핑크) / Outfit Chemise blanche boyfriend(맨발, 흰 면린넨 셔츠 한 장) / Props Tasse en porcelaine(흰 도자기 컵) / Scene balcon haussmannien, 검은 주철 난간과 아연 지붕 너머 몽마르트 언덕 / Light Lumière du nord(5200K, 직사광 없는 안정된 확산광, 어깨선을 따라 비단처럼 붙는 빛) / Optics Leica M6, Summicron 35mm f/2, Kodak Portra 400, 가는 입자 / Expression Regard dans le vague(먼 언덕 쪽) / Pose 난간에 기대 컵을 두 손으로 든다 |
+| S3 오페라 대리석 (滤镜 #030) | B | 단서: 장소 오페라 대리석, 흰 석조 기둥, 광장 / 소품 - / 시간대 - / 의상 검은 실크 슬립, 회색 캐시미어 가디건 / Hair 어깨 길이 흐트러진 갈색, mèche derrière l'oreille + Frange rideau / Base Peau diaphane / Lip Beige rosé(차가운 토프 베이지) / Outfit Robe caraco(검은 실크 슬립 롱드레스) + Gilet(연회색 얇은 캐시미어, 열어서 걸친다) / Scene Opéra Garnier, 흰 조각 대리석 기둥 회랑의 계단에 기댄다 / Light Lumière réfléchie(5600K, 흰 대리석 벽이 고명도 냉회백 빛을 돌려준다, 암부는 옅은 청회색) / Optics Contax G2, Zeiss Planar 45mm f/2(Iris 필드는 Biogon 28mm f/2.8, 본문은 50mm 인물 렌즈로 어긋난다), Pro 400H, 가는 입자 / Expression Regard dans le vague(차분하고 도도하게 광장 차들을 본다) / Pose Adossée à un pilier de pierre |
+| S4 센강 비 갠 계단 (滤镜 #038) | C | 단서: 장소 센강 돌계단, 버드나무 / 소품 우산 / 시간대 비 갠 뒤 / 의상 트렌치 / Hair Effet mouillé(젖은 곱슬 어깨 길이, 목 옆에 붙는 잔머리) + Frange rideau / Base Teint nu(비 갠 뒤 상기된 뺨) / Lip Framboise(윤기 나는 붉은 입술) / Outfit Trench classique(연한 카키 더블 롱) + Jean évasé + Botte Chelsea / Props Parapluie pliant / Scene Escalier de quai, 버드나무 아래 젖은 센강 돌계단 / Light Après la pluie(5400K, 회백 구름과 젖은 돌이 위아래에서 서로 받아치는 부드러운 빛) / Optics Canon New F-1, Canon FD 50mm f/1.4, Kodak Portra 400(Iris 필드는 Kodak Tri-X 400이지만 의상·입술이 컬러라 컬러 네거티브로 읽는다), 암부에 촘촘한 입자 / Expression Air serein(구름 틈의 빛을 향해 고개를 든다) / Pose Refermer son parapluie |
+| S5 보주 광장 아케이드 (滤镜 #025) | D | 단서: 장소 보주 광장, 붉은 벽돌 아케이드 / 소품 문고본 / 시간대 - / 의상 트위드 블레이저 / Hair Coiffé-décoiffé(어깨 길이 흐트러진 갈색) + Frange rideau / Base Teint nu(깨끗한 맨 피부) / Lip Rouge brique(레트로 홍갈색 무광) / Outfit Tweed chevron(코냑색 헤링본 블레이저) / Props Collection Blanche(낡은 프랑스어 문고본) / Scene Place des Vosges, 붉은 벽돌과 석조 아케이드를 걷는다 / Light Ombre douce(4800K, 아케이드 밖에서 비스듬히 들어온 하늘빛과 붉은 벽돌의 따뜻한 중립 반사가 옆얼굴에 윤곽을 만든다, 암부는 깊되 까맣지 않다) / Optics Leica MP, Summicron 35mm f/2, Kodak Portra 400 + Pellicule poussée(Iris 필드는 Kodak Tri-X 400 Pushed to 800, 컬러 의상이라 컬러로 읽는다), 짙은 입자 / Expression Regard dans le vague(아케이드 밖 분수 광장 쪽으로 고개를 돌린다) / Pose 걷다가 고개를 돌린다 |
+| S6 담쟁이 안뜰 (滤镜 #036) | D | 단서: 장소 담쟁이 안뜰, 석계단 / 소품 허브차 컵, 흰 수국 / 시간대 - / 의상 린넨 슬립 드레스 / Hair 한쪽 어깨로 내린 긴 갈색 머리 + Frange rideau / Base Teint nu / Lip Gloss transparent(옅은 살구 핑크) / Outfit Lin lavé(에크뤼 워시드 린넨 무릎 길이 슬립 드레스) / Props Tasse en porcelaine(허브차 도자기 컵), hortensias / Scene cour intérieure pavée, 담쟁이가 덮인 석벽과 오래된 석계단에 앉는다 / Light Ombre douce(5300K, 흐린 하늘빛이 담쟁이를 거치며 흰 린넨과 얼굴에 옅은 청록 회색 반사를 얹는다) / Optics Contax RTS III, Zeiss Planar 50mm f/1.4, Kodak Portra 400, 고운 입자 / Expression Air serein(구석의 흰 수국을 본다) / Pose 석계단에 앉아 두 손으로 잔을 든다 |
 
 ## 포즈·구도 쌍
 | 번호 | 갈래 | Pose | Camera |
@@ -186,8 +186,8 @@
 | 1 | A | Accoudée à la table en zinc — One elbow rests on a small zinc café table with her cheek sunk into the palm and the other arm hanging loose, her weight collapsed onto the elbow. | Plan moyen — At eye level from across the narrow table, the frame runs from the head to about the waist with the boulevard facades blurred behind. |
 | 2 | A | Mains dans les poches — Both hands sunk deep in coat pockets and shoulders slightly raised, she walks a gravel alley and turns her head toward the lens. | telephoto compression — A longer lens stacks the ranks of bare trunks behind her into one flat band of thin grey verticals. |
 | 3 | A | Appui latéral contre la grille — One shoulder leans sideways against the wrought-iron balcony railing, the body slack and a cup held in both hands. | Cadre dans le cadre — Shot from inside through the open balcony door, whose dark frame boxes her into the bright grey opening. |
-| 4 | B | Marcher d'un pas vif — A long unhurried stride toward the camera, the coat hem flicking behind her and one arm swinging. | Plan américain — Head-on at eye level with the frame cut at the knees, limestone facades receding on both sides. |
-| 5 | B | Adossée à la pile de pierre — Her back rests on a white marble column, one hand lightly on a bag strap at her shoulder, the face turned toward the distance. | Plan rapproché — Chest-up at eye level, the pale stone filling the frame behind her shoulder. |
+| 4 | B | Marcher d'un pas vif — A long unhurried stride toward the camera, the coat hem flicking behind her and one arm swinging. | Plan américain — Head-on at eye level with the frame cut at mid-thigh, limestone facades receding on both sides. |
+| 5 | B | Adossée à un pilier de pierre — Her back rests on a white marble column, one hand lightly on a bag strap at her shoulder, the face turned toward the distance. | Plan rapproché — Chest-up at eye level, the pale stone filling the frame behind her shoulder. |
 | 6 | B | Presser un gros livre contre la poitrine — One arm hugs a thick hardcover flat to her chest while she stands before tall columns, the shoulders drawn slightly in. | Contre-plongée — From the foot of the steps looking up, the columns rising behind her into an open grey sky. |
 | 7 | C | Mains jointes sur la rambarde — Both hands rest joined on a wooden rail with her head turned in profile toward the river, one windblown strand crossing the cheek. | Règle des tiers — She stands on the left third line and the open water and misty far bank fill the rest. |
 | 8 | C | Descendre l'escalier — She steps down a wet cobbled stair with one hand in a pocket and looks back toward the camera mid-stride. | Plongée — From the top of the steps looking down, the dark glossy setts leading the eye to her. |
