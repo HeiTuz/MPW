@@ -8,7 +8,7 @@ import os from "node:os";
 import path from "node:path";
 import { spawnSync } from "node:child_process";
 import { fileURLToPath } from "node:url";
-import { BUNDLES, cutParts, expandBundles, extractSection, parseHeadings, parsePart, partitionChunks, readTargets } from "./read_refs.mjs";
+import { BUNDLES, PART_LIMIT_BYTES, cutParts, expandBundles, extractSection, parseHeadings, parsePart, partitionChunks, readTargets } from "./read_refs.mjs";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 
@@ -353,5 +353,22 @@ assert.deepEqual(partitionChunks(["one chunk"], 3), [1], "a single chunk lands i
   const small = read("--bundle", "batch", "--part", "3/3");
   assert.equal(small.status, 0, small.stderr);
   assert.match(small.stdout, /^part 3 of 3, last part/);
+}
+// Every bundle read in the parts --bundles names keeps each part at least 5% under the byte limit (the limit is bytes, so parts are balanced by bytes).
+{
+  const read = (...args) => spawnSync(process.execPath, [path.join(root, "scripts", "read_refs.mjs"), ...args], { encoding: "utf8", maxBuffer: 8 * 1024 * 1024 });
+  // 90 bytes of Hangul then three 30-byte Latin chunks: by bytes the Hangul chunk fills part 1 alone (by characters it would take a Latin chunk with it).
+  assert.deepEqual(partitionChunks(["가".repeat(30), "a".repeat(30), "a".repeat(30), "a".repeat(30)], 2), [0, 1, 1, 1], "chunks are balanced by bytes");
+  const listing = read("--bundles");
+  assert.equal(listing.status, 0, listing.stderr);
+  for (const name of Object.keys(BUNDLES)) {
+    const m = Number(new RegExp(`^${name}  \\(.*read in (\\d+) parts`, "m").exec(listing.stdout)?.[1] ?? 1);
+    for (let n = 1; n <= m; n += 1) {
+      const out = m === 1 ? read("--bundle", name) : read("--bundle", name, "--part", `${n}/${m}`);
+      assert.equal(out.status, 0, out.stderr);
+      const bytes = Buffer.byteLength(out.stdout);
+      assert.ok(bytes <= 0.95 * PART_LIMIT_BYTES, `${name} part ${n}/${m} is ${bytes} bytes, over 95% of ${PART_LIMIT_BYTES}`);
+    }
+  }
 }
 console.log("read_refs: section extraction ok; " + checked + " section pointers and " + Object.keys(BUNDLES).length + " named bundles resolve");

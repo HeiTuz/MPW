@@ -289,8 +289,10 @@ export function readTargets(targets, read = readSource) {
 
 // One tool output holds about 40,000 bytes (a Korean character is 3 bytes), so --bundles says how many --part pieces a bundle needs.
 export const PART_LIMIT_BYTES = 40000;
+// Parts are planned 5% under the limit so a part near it is not cut by the host.
+export const PART_TARGET_BYTES = Math.floor(PART_LIMIT_BYTES * 0.95);
 
-export function partsNeeded(results, limit = PART_LIMIT_BYTES) {
+export function partsNeeded(results, limit = PART_TARGET_BYTES) {
   const pieces = results.reduce((count, result) => count + result.cuts.length + 1, 0);
   for (let m = 1; m <= pieces; m += 1) {
     if (cutParts(results, m).every((part) => Buffer.byteLength(part.join("\n")) <= limit)) return m;
@@ -363,8 +365,9 @@ export function parsePart(argv) {
 }
 
 // Give each chunk to the part that holds the middle of it, so the parts stay in order and about equal in size.
+// Sizes are bytes, the unit of the part limit (a Korean character is 3 bytes, a Latin one 1).
 export function partitionChunks(chunks, m) {
-  const sizes = chunks.map((chunk) => [...chunk].length);
+  const sizes = chunks.map((chunk) => Buffer.byteLength(chunk));
   const total = sizes.reduce((sum, size) => sum + size, 0);
   let before = 0;
   return chunks.map((_, index) => {
