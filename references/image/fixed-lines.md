@@ -99,7 +99,7 @@ GPT Image(웹·API)·대상 미정인 새 이미지(인물 사진과 인물 없�
 | FR | `Photographie` | `photoréaliste` | `prise de vue réelle` |
 | US·그 밖(영어) | `photograph` | `photorealistic` | `real photograph` |
 
-행은 룩 카드가 있으면 카드의 문화권(갈래가 다른 문화권의 장면을 정하면 갈래의 것)으로, 카드가 없으면 요청한 장소·말·사진 속 장소의 문화권으로 고른다. 문화권 단서가 없으면 KR 행이다(Identity의 '한·중·일 단서도 없음' 행). 인물이 `그 밖` 행이면 마지막 행이다. 사진 추출은 사진 속 장소의 문화권을 쓴다.
+행은 사진 추출이면 카드가 있어도 사진 속 장소의 문화권이다. 그 밖은 룩 카드가 있으면 카드의 문화권(갈래가 다른 문화권의 장면을 정하면 갈래의 것), 없으면 요청한 장소·말의 문화권이다. 문화권 단서가 없으면 KR 행이다(Identity의 '한·중·일 단서도 없음' 행). 인물이 `그 밖` 행이면 마지막 행이다.
 
 - `closer`: `<closer 토큰> — The whole frame reads as <첫 줄의 매체>, not a <반대 매체>.` 카드의 고정 사실이 closer 토큰을 주면 그것을 쓰고(왕가위 카드는 `港片剧照`, 반대 매체는 스냅·화보), 카드가 없으면 위 표의 `closer` 기본으로 `<closer 기본> — The whole frame reads as a real <첫 줄의 매체>.`를 쓴다. 매체 이름이 `photograph`·`snapshot`·`still`로 끝나지 않으면 끝에 `photograph`를 붙인다(`clean digital`이면 `a real clean digital photograph`, `candid street-style photograph`면 이름 그대로). 사진 추출에서 카드가 없으면 사진 문화권의 말로 부른 매체 이름도 closer 토큰이 된다(일본 스냅이면 `実写スナップ`). 끄는 조건 없음.
 - `realism`: `<realism 토큰> — Ultra-realistic 8K photographic detail: real pores on the skin, real weave in the fabric, real wear on the surfaces.` 인물 없는 사진은 `real <장면의 재질 둘> and real wear on the surfaces`로 바꾼다. 끄는 조건: 그림·3D 매체를 요청함. 사용자가 피부 디테일을 빼 달라고 했으면 `real pores on the skin,`만 뺀다. 일반 35mm·중형 필름(고운~보통 입자)은 이 8K 줄을 그대로 쓴다. 아래 두 경우에만 이 줄 대신 매체의 해상도를 말하는 `native resolution — The frame holds the resolution of a <그 매체> and no more: <그 매체가 만드는 질감 한 구절>.`을 쓴다. 이 줄에는 숫자 품질 표기를 쓰지 않고, 금지 한 줄(`anti-cg`)은 그대로 붙는다.

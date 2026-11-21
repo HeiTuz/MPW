@@ -310,6 +310,9 @@ assert.match(help.stdout, /usage: node scripts\/find_tokens\.mjs/);
     assert.ok(!run(['--q', q]).stdout.includes('## Look card candidates'), `${q}: no candidate block`);
   }
   assert.ok(candidates('비 오는 밤,네온,젖은 도로,투명 우산,雨夜,ネオン').length <= 6, 'at most six');
+  // A card offered only for the same cues as a card above it is dropped (several cards matched only 네온 and 우산 here).
+  const reasons = JSON.parse(run(['--q', '네온,비,우산,신주쿠,밤,젖은 노면', '--json']).stdout).candidates.map((c) => c.matched);
+  assert.equal(new Set(reasons).size, reasons.length, `no two candidates for the same cues: ${reasons.join(' / ')}`);
   // A cue on its own offers nothing; the old do-not-call rule still offers one card on one word.
   assert.deepEqual(candidates('雨夜'), []);
   assert.ok(candidates('네온사인').includes('rainy-night-shinjuku'));

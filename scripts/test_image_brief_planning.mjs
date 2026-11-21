@@ -108,7 +108,7 @@ assert.ok(examples.some(t => t.includes('## Identity Reference')), 'a person exa
 // Photo extraction example (structure, not prose): the first line opens with a medium name from the section 12.0 table, most
 // token lines are native-language names, no token is a slot name, and the whole thing passes the native checker.
 {
-  const media = [...sec('12').matchAll(/^\| [^|\n]+ \| [^|\n]+ \| `(An? [^`]+)` \|$/gm)].map(m => m[1].trim());
+  const media = [...sec('12').matchAll(/^\| [^|\n]+ \| [^|\n]+ \| `(An? [^`]+)` \|(?: [^|\n]+ \|)?$/gm)].map(m => m[1].trim());
   assert.ok(media.length >= 8, `12.0 medium table rows: ${media.length}`);
   // §12.0 step 3: a called look card's first-line phrase wins over the table name, so a card's `medium` row also counts.
   const cardOpenings = fs.readdirSync(new URL('../references/image/looks/', import.meta.url)).filter(f => f.endsWith('.md') && f !== 'index.md')
@@ -201,6 +201,8 @@ for (const [layer, slug] of Object.entries(LAYER_FILES)) {
 // the extraction bundle skips fixed-lines Camera, and image-brief section 10 is read by part (new 81289, portrait 94914, edit 20303, extract 112588 measured, ceilings about 2% above).
 // Token stage 2: the extraction bundle reads image-brief section 4 without its '룩 카드' subsection and no longer carries looks/index.md (section 12.0 now holds the extraction card steps
 // and points at read_look.mjs --list), and every layer-lexicon reader gets back the 층별 파일 table that 사용법 1 points at (new 82424, portrait 96049, edit 20303, extract 94388 measured, ceilings about 2% above).
+// Token stage 4: section 12.0 asks yes/no questions before a card is used (medium marks column, light, place for scene cards) and overlapping section 12 sentences were cut to pay for it
+// (new 82855, portrait 96480, edit 20303, extract 94570 measured; ceilings unchanged, about 2% above).
 assert.ok(sizes['gpt-image-new'].utf8_bytes <= 84100, `gpt-image-new is ${sizes['gpt-image-new'].utf8_bytes} bytes`);
 assert.ok(sizes['gpt-image-portrait'].utf8_bytes <= 98000, `gpt-image-portrait is ${sizes['gpt-image-portrait'].utf8_bytes} bytes`);
 assert.ok(sizes['gpt-image-edit'].utf8_bytes <= 20700, `gpt-image-edit is ${sizes['gpt-image-edit'].utf8_bytes} bytes`);

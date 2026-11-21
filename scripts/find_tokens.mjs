@@ -248,6 +248,7 @@ const cueHits = (look, cues) => cues.filter((c) => hasName(c, look.cues.text, lo
 // A card is offered when a query word is one of its do-not-call words (one is enough), or when two or more cues of the query are in what the card says about its look
 // (비 오는 밤, 네온: a photo described by what it shows, not by the card's name). Candidates come out closest to the request first: a card of the culture the query points to,
 // then more shared cues, then more query words in its words and summary, then index order. A card the query named and negated (no Kodak Gold) is not offered for shared cues.
+// A card offered only for the same cues as a card above it (four cards on 네온, 우산) adds no reason and is dropped; a card with one more or other cue stays.
 export function findLookCandidates(terms, called = [], dir = LOOKS_DIR) {
   const raw = norm(terms.join(','));
   const stripped = strip(raw);
@@ -265,10 +266,11 @@ export function findLookCandidates(terms, called = [], dir = LOOKS_DIR) {
       const negated = [...look.names, ...look.avoid].some((w) => spansOf(w, raw).length > 0 && spansOf(w, masked).length === 0);
       if (!hits.length && (negated || shared.length < 2)) return [];
       const inCulture = [...cultures].some((c) => look.culture.includes(c)) ? 1 : 0;
-      return [{ ...look, matched: hits.length ? hits.sort((a, b) => b.length - a.length)[0] : shared.join(', '), inCulture, shared: shared.length, hits: wordHits(look, words) }];
+      return [{ ...look, matched: hits.length ? hits.sort((a, b) => b.length - a.length)[0] : shared.join(', '), avoidHit: hits.length > 0, cueList: shared, inCulture, shared: shared.length, hits: wordHits(look, words) }];
     })
     .map((c, i) => ({ ...c, i }))
     .sort((a, b) => b.inCulture - a.inCulture || b.shared - a.shared || b.hits - a.hits || a.i - b.i)
+    .filter((c, k, all) => c.avoidHit || !all.slice(0, k).some((up) => up.cueList.join(',') === c.cueList.join(',')))
     .slice(0, MAX_CANDIDATES);
 }
 
@@ -313,7 +315,7 @@ const cardBlock = (cards) => (cards.length
   : '');
 
 const candidateBlock = (candidates) => (candidates.length
-  ? `## Look card candidates\n(no card was named; read the first whose summary fits the medium or look with \`node scripts/read_look.mjs <slug> --outline\` (new image) or \`--facts\` (extract). If none fits, write without a card.)\n${candidates.map((c) => `- ${c.slug} · ${c.title} [${c.axis}, ${c.culture}] — ${c.summary}`).join('\n')}\n\n`
+  ? `## Look card candidates\n(no card was named. New image: read the first whose summary fits with \`node scripts/read_look.mjs <slug> --outline\`; if none fits, write without a card. Photo extraction: a candidate is only a suggestion; check it with \`--facts\` only when the photo shows that medium's marks (image-brief §12.0), otherwise write without a card. [매체] cards name a film or camera, [장면] cards a place.)\n${candidates.map((c) => `- ${c.slug} · ${c.title} [${c.axis}, ${c.culture}] — ${c.summary}`).join('\n')}\n\n`
   : '');
 
 export function formatText(results, cards = [], candidates = [], { aliases = false } = {}) {
