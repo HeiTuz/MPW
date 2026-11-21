@@ -1,0 +1,190 @@
+# 富士经典负片 · クラシックネガ — 후지 필름의 청록 그림자로 찍은 일본 일상 필름 스냅
+
+| 항목 | 값 |
+|---|---|
+| 부르는 이름 | 富士经典负片; 富士Classic Neg; 후지 클래식 네거티브; 후지 클래식 네그; クラシックネガ; Classic Neg; Classic Negative; Fujifilm Classic Neg; Fujifilm Classic Negative; 胶片绿; 富士胶片绿; 후지 그린; 후지 필름 그린; フィルムシミュレーション; 후지 필름 시뮬레이션; Fujifilm film simulation; Superia; 슈페리아; Superia Premium 400; 슈페리아 프리미엄 400; Pro 400H; 프로 400H; Reala; 리알라; 레알라; Natura 1600; 나츄라 1600; 나추라 1600; Venus 800; 비너스 800; Eterna; 에테르나; Velvia; 벨비아; Sensia; 센시아; Fortia; 포르티아; Acros; 아크로스; Neopan; 네오판; 業務用 100; 業務用 400 |
+| 부르지 않는 말 | 필름; 필름 감성; 필름 카메라; 필름 사진; 후지필름; Fujifilm; 일본 필름 감성; 도쿄 스냅; 일본 스냅; 일본 감성 |
+| 문화권 | JP |
+| 기본 갈래 | A |
+
+## 고정 사실 (모든 갈래가 지킨다)
+| 슬롯 | 값 |
+|---|---|
+| medium | 후지 필름으로 찍은 일본 일상 필름 스냅. 디지털 사진도 화보도 아니다. 첫 줄은 `A Japanese everyday film snapshot shot on Fujifilm color film`로 시작한다(D 갈래는 반전 필름이면 `…shot on Fujifilm slide film`, 흑백이면 `…shot on Fujifilm black-and-white film`) |
+| closer | `銀塩写真` |
+| time | 해가 있는 낮이 기본이고 흐린 낮도 된다. C만 밤과 실내 저녁이다. D는 해질녘도 된다 |
+| light-key | 있는 빛: 직사광, 흐린 하늘, 나뭇잎 사이 햇빛, 창빛. C는 실내 전구·홍등·네온·창밖 불빛 |
+| palette | A는 그림자에 청록이 깔리고 하이라이트는 조금 따뜻한 붉은 쪽, 채도는 낮춘다. B는 박하색 하이라이트와 분홍빛 흰 피부. C는 붉고 초록으로 기운 어둠. D 슬라이드는 짙은 에메랄드와 높은 채도(흑백 세트만 무채색). 형광 파스텔과 디지털 선명색 없음 |
+| grain | 필름 입자가 화면 전체에 보이고 어두운 곳에서 더 보인다. A·B는 곱게, C와 네오판은 굵게, 슬라이드와 아크로스는 아주 곱게 |
+| lens | 35~50mm 표준 화각을 눈높이에서 쓴다. 배경은 읽힐 만큼만 부드럽다(B 중형은 크림처럼 풀리고 D 풍경은 심도가 깊다) |
+| figure | 일상 동작 중인 한 사람. 카메라를 의식하지 않고 시선이 렌즈를 스쳐 지나간다. 정면 증명사진 자세 없음 |
+
+## 갈래 고르기
+| 갈래 | 요청에 이 말이 있으면 | 성격 | Iris 근거 |
+|---|---|---|---|
+| A 街角クラシックネガ (기본) | 클래식 네그, 청록 그림자, 후지 그린, 흐린 날, 신호 대기, 횡단보도, 시모키타자와, 골목, 하천·공원 벤치, 자전거, 헌책방, 슈페리아, 業務用 | 낮의 일본 거리와 공원을 걷는 사람. 그림자에 청록이 깔리고 하이라이트는 따뜻한 붉은 쪽, 채도는 조금 낮고 입자는 곱다 | 滤镜 #001 #002 #003 #012 #013 #014, 穿搭/04 #053 #065, 拍照姿势/02 #021 #022 #023 #030 |
+| B 空気感ハイキー | 공기감, 하이키, 파스텔, 박하 청록, 도자기 피부, 투명감, 프로 400H, 레알라, 아스티아, 센시아, 피크닉, 은행나무길, 흰 벽, 창가 | 밝게 노출해 하이라이트가 박하색으로 뜨고 그림자가 옅다. 피부는 분홍빛 도는 흰색이고 배경은 크림처럼 풀린다 | 滤镜 #004 #007 #009 #019 |
+| C 夜の高感度 | 밤, 야경, 쇼와, 골든가이, 찻집, 킷사텐, 노플래시, 택시, 육교, 붉은 할레이션, 나츄라, 비너스 800, 에테르나 | 어두운 곳을 고감도 필름으로 찍는다. 굵은 입자, 붉고 초록으로 기운 어둠, 불빛 둘레의 붉은 번짐 | 滤镜 #005 #006 #010 #011, 风格/02 #024 #027 |
+| D リバーサルと白黒 | 반전 필름, 슬라이드, 벨비아, 프로비아, 포르티아, 에메랄드 녹색, 수국, 이끼, 해질녘 바다, 흑백, 아크로스, 네오판, 콘크리트 | 반전 필름의 짙은 녹색과 높은 채도, 또는 흑백의 깊은 검정과 거친 입자. 풍경이 크고 인물은 작거나 윤곽으로 선다 | 滤镜 #008 #015 #016 #017 #018 #020, 风格/04 #065 #068 |
+
+## 끄는 고정 몫 (fixed-lines.md의 슬롯)
+| 슬롯 | 처리 | 이유 |
+|---|---|---|
+| face-light | 모든 갈래에서 끈다. 얼굴 빛은 이 카드의 Light 줄이 정한다 | Iris 꼬리의 위·옆 입체광이 #002 #014의 흐린 하늘 확산광, #004의 부드러운 역광, #016의 강한 측역광과 부딪힌다 |
+| face-clear | 모든 갈래에서 끈다. 앞머리와 바람에 날린 머리가 이마·뺨에 닿아도 눈썹과 눈은 드러난다 | 프리셋마다 시스루 앞머리가 바람에 흔들리는데 고정 줄은 머리를 귀 뒤로 넘기라고 한다 |
+| under-eye, liner | 모든 갈래에서 끈다 | Iris 滤镜 프리셋의 화장 문장은 투명한 베이스, 혈색 있는 볼, 물기 있는 입술이 전부고 눈 화장 줄이 없다 |
+| base | B는 카드 줄(`もち肌`)이 이긴다. 나머지는 고정 몫 `透明感`을 쓴다 | #004 #019의 도자기 같은 분홍빛 흰 피부는 `透明感`보다 한 단계 더 부드럽다 |
+| lip, blush | D의 흑백 세트(아크로스·네오판)에서 끈다. 나머지는 켠다 | 흑백 필름에는 분홍·코랄 색이 찍히지 않는다. 입술과 볼은 명암으로만 읽힌다 |
+| grain | 모든 갈래에서 카드 줄이 이긴다 | 고정 줄의 고운 입자가 #005 #006의 굵은 입자, #014 #016의 거친 입자와 어긋난다 |
+| lens | 켠다. 쌍 12는 Camera 줄이 21mm를 말하고 쌍 11은 인물이 작게 나오니 두 쌍에서는 끈다 | Iris 꼬리의 `50mm 얕은 심도`는 옮기지 않았다. 원본 기종은 35mm 위주이고 #005는 28mm 컴팩트, #016은 21mm다 |
+| framing | 켠다. 쌍 7(가슴 위)과 쌍 11(인물이 작게)은 범위를 직접 말하니 그때는 3:4만 쓴다 | 나머지 쌍은 프레임 범위를 말하지 않는다 |
+| ratio | 켠다. 사용자 비율이 없으면 3:4 세로 | 쌍은 비율을 정하지 않는다 |
+
+## Hair and makeup
+| 갈래 | 슬롯 | 줄 |
+|---|---|---|
+| 전부 | bangs | シースルーバング — A thin see-through fringe with visible gaps between the strands lifts and sways in the breeze, and the brows and eyes still read through it. |
+| A, C, D | hair | 濡れ髪 — Shoulder-length black hair holds a damp gloss and clumps into thin dark ribbons, the ends stirring a little in the air. |
+| B | hair | 切りっぱなしボブ — A blunt one-length bob between jaw and collarbone, dry and airy, its ends parting into soft pieces in the pale light. |
+| B | base | もち肌 — Plump-looking cheeks with a soft matte sheen and a faint pink flush, so the skin reads like pale porcelain. |
+
+## Expression
+| 갈래 | 슬롯 | 줄 |
+|---|---|---|
+| A | expression | 無防備 — Nothing is held for the camera: the gaze slides past the lens to something at the side, the mouth rests soft and the shoulders stay loose. |
+| A | expression | 無邪気な振り返り — A quick glance over the shoulder mid-step, the hair still moving and an unguarded half-smile on the lips. |
+| A, D | squint | まぶしげ — The lids narrow against the sun and the brows pinch slightly, lifting the cheeks into a faint squint. |
+| B | expression | 澄んだ瞳 — The eyes rest level and bright with no posed charm in the lids or brows, and the skin around them looks clear. |
+| B | expression | 温潤な眼差し — Slightly moist eyes carry a soft shine along the lower lids, the brows relaxed and the gaze warm and gentle. |
+| C | expression | 物思い — The lids lower and the gaze drifts to one side, the mouth relaxed and the head tilted a little toward the lamp. |
+| C | expression | 振り返る瞳 — The head turns back with the hair still swinging, the pupils small and the eyes alert in the dim light. |
+| D | expression | 芯のある眼差し — A steady level gaze with still brows and a relaxed jaw, calm and unhurried against the large scene behind her. |
+| D | expression | ペーソス — Low golden light on a tired, relaxed face and a faint closed-mouth smile. |
+
+## Outfit
+| 갈래 | 슬롯 | 줄 |
+|---|---|---|
+| A | outfit | バンドカラーシャツ — A washed ivory linen band-collar shirt hangs long and loose with soft creases, its slubs catching small bright patches where leaf shadow breaks. (滤镜 #001, 穿搭/04 #053) |
+| A | outfit | ローゲージニット — A thick white chunky sweater whose large stitches cast tiny shadows on each other, with a soft slouch at the shoulder. (滤镜 #003) |
+| A, B | outfit-outer | トレンチコート — A thin cotton trench worn open with the belt loose and the hem swinging with each step, deep gray under cloud or pale honey-khaki against a white wall. (滤镜 #002 #004) |
+| B | outfit | ホワイトリネンワンピース — A sleeveless white linen dress with natural creases, its edges turning bright where light passes through the weave. (滤镜 #007) |
+| B | outfit | シルクサテンブラウス — An off-white silk satin blouse with a hidden placket, long soft highlights sliding along the sleeve folds in the window light. (滤镜 #019) |
+| B | outfit-outer | ダッフルコート — A navy wool duffle coat with chunky horn toggles, its matte nap soaking up light while yellow ginkgo leaves fall around it. (滤镜 #009) |
+| C, D | outfit | タートルネック — A fine black knit turtleneck folded once at the collar and close to the neck, losing its texture in the dark of a room or against pale concrete. (滤镜 #005 #015) |
+| C | outfit-outer | ヴィンテージレザージャケット — A washed-soft black leather jacket with worn edges, small warm highlights sitting on the zip and the creases. (滤镜 #006) |
+| C | outfit | フーディー — A heavyweight black hoodie with a thick double hood, hanging loose off a slightly dropped shoulder. (滤镜 #011) |
+| D | outfit | 綿麻ワンピース — A deep ink-green sleeveless cotton-linen dress with natural wrinkles, the hem moving a little in the damp air. (滤镜 #008) |
+| D | outfit-outer | 羽織 — A wide-sleeved pale-green linen haori worn open at the front and falling to the hip. (滤镜 #017) |
+| D | outfit-outer | アノラックパーカー — A dark gray weatherproof shell with a half zip and drawstring hood, the nylon puffing slightly in the wind. (滤镜 #018) |
+
+## Props and nails
+| 갈래 | 슬롯 | 줄 |
+|---|---|---|
+| A | hand-prop | トートバッグ — A plain canvas tote hangs from one shoulder, its soft folds sagging as the strap slips and the shoulder lifts to hold it. (滤镜 #013) |
+| A | bike | 通勤自転車 — A cream city bicycle with a front basket and chain guard stands beside her or is walked by the handlebar. (滤镜 #012) |
+| A | drink | ホット缶コーヒー — A small dented steel can of hot coffee warms her fingers, with a faint breath of steam beside it. (拍照姿势/02 #023) |
+| A, B | hand-prop | 文庫本 — A pocket paperback in a plain bookshop cover, its pages curling at the edges, held open in one hand. (滤镜 #014) |
+| B | hand-prop | かごバッグ — A stiff woven basket bag sits at her side, small points of light slipping through the open weave. (滤镜 #007) |
+| C | hand-prop | ティーカップ — A thin white porcelain cup on its saucer holds hot coffee, steam rising through the amber lamp light. (滤镜 #005) |
+| A, B | nails | シアーヌード — Near-bare milky pink nails that let the nail bed show through with a soft flush at the tip. |
+
+## Style
+| 갈래 | 슬롯 | 줄 |
+|---|---|---|
+| A | style | スナップ — An unposed candid frame with the person caught mid-errand and the crop cut a little loosely. |
+| A, C | style | 下北沢Vintage — A thrifted, worn-in look of secondhand knits and jackets with an indie vintage mood. |
+| B | style | 透け感 — Thin fabrics show the faint edge of a layer behind them and stay matte in the pale light. |
+| C | style | 東京ノワール — A dark city frame with wet reflections and deep shadows, cold cyan set against warm lamp light. |
+| D | style | 侘び寂び — Quiet imperfection in moss, stone and weathered concrete, with muted tea-green and clay tones. |
+| 전부 | palette | palette — Film color with green in the shadows and restrained saturation, and nothing digital, neon or pastel anywhere; the slide film of D runs deep emerald and its black-and-white sets run gray. |
+
+## Scene
+| 갈래 | 슬롯 | 줄 |
+|---|---|---|
+| A | place | 下北沢 — A maze of narrow lanes with secondhand shops and racks spilling onto the street, leaf shadows moving across the pavement in the afternoon. (滤镜 #001) |
+| A | place | 渋谷スクランブル交差点 — A wide diagonal crossing under a flat gray sky, the crowd shadowless and the signs above it dull. (滤镜 #002) |
+| A | place-old | 下町 — Low timber houses, utility poles and potted plants line a narrow lane in mild morning light, shop shutters half raised. (滤镜 #012 #013) |
+| A | place-old | 神保町 — A narrow lane of secondhand book shops with shelves under the eaves, yellowed spines and hand-lettered boards in cool gray daylight. (滤镜 #014) |
+| A, B | park | 井の頭公園 — A lakeside park with a damp wooden bench, dark pine needles and maple leaves, the sun slanting low through the trees. (滤镜 #003) |
+| B | place | 代官山 — A quiet slope of low boutiques beside a white-walled building, soft spring light lying level on the plaster. (滤镜 #004) |
+| B | place | 代々木公園 — A wide lawn under tall trees with a linen picnic sheet in the shade and light moving in the leaves. (滤镜 #007) |
+| B | background | 銀杏並木 — An avenue of ginkgo trees drops yellow fan-shaped leaves over a pale pavement in front of a red-brick hall. (滤镜 #009) |
+| C | place | 純喫茶 — A dim old wooden coffee parlor with a small marble table, a thick porcelain cup and one amber lamp. (滤镜 #005, 风格/02 #024) |
+| C | place | 新宿ゴールデン街 — Tiny bars packed into narrow wet alleys under red lanterns, neon and rain on the paving. (滤镜 #006) |
+| C | place-transit | 深夜タクシー — The back seat of a taxi at night, headlights and neon sliding along rain-spotted glass. (滤镜 #010) |
+| C, D | place-transit | 歩道橋 — A concrete footbridge stairway with a turning landing and a cross-hatched railing, throwing hard diagonal shadows over night traffic or a daytime underpass. (滤镜 #011 #016) |
+| D | place | 強羅 — A damp moss garden with stone lanterns, mist hanging between dark trees and vivid green on every stone. (滤镜 #017, 风格/04 #065) |
+| D | place | 紫陽花 — Dense blue-violet hydrangea blooms stand in a hedge before an old temple's stone wall, packed to the edges of the frame. (滤镜 #008) |
+| D | place-open | 七里ヶ浜 — A wide dusk beach with the sea's edge glowing and the dark outline of a far volcano on the horizon. (滤镜 #020) |
+| D | place-mono | 安藤忠雄 — Smooth bare concrete walls with narrow slits of daylight, cool gray and quiet, cut by sharp diagonal sun. (滤镜 #015) |
+
+## Light
+| 갈래 | 슬롯 | 줄 |
+|---|---|---|
+| A | face-light | Overcast Light — Even gray cloud light wraps her with almost no shadow edge, flat and cool, and the shade picks up a faint green. (滤镜 #002 #014) |
+| A, B | face-light | 木漏れ日 — Sunlight through leaves drops small soft-edged gold spots on cheek and shoulder while the rest of the face stays in open shade. (滤镜 #001 #003) |
+| B | face-light | 逆光 — Soft spring light from behind and above rims her hair and shoulders with a glowing edge, and the face is lit by the open sky and a pale wall. (滤镜 #004) |
+| B | window | Window Light — Daylight through a sheer curtain falls from one side, a bright cheek and a soft shadow side with no hard edge. (滤镜 #019) |
+| C | face-light | 裸電球 — One amber lamp above the table warms the cup and her hands and leaves the rest of the room dim. (滤镜 #005) |
+| C | weather | 雨の夜 — Fine rain gives every lamp a soft cold halo and leaves small bright beads on wet paving and glass. (滤镜 #006 #010) |
+| C | bloom | ハレーション — Red-orange glow bleeds around the brightest lights against the dark. (滤镜 #011) |
+| D | face-light | 夕暮れ — Low orange sun from behind lays a warm rim along her hair and shoulder, and the sky leans faintly magenta. (滤镜 #020) |
+| D | face-light | 几何光影 — Hard sun through architectural openings cuts crisp geometric shapes of light and shadow across the wall and her face. (滤镜 #015) |
+
+## Optics
+| 갈래 | 슬롯 | 줄 |
+|---|---|---|
+| A | stock | クラシックネガ — Cyan-green settles into the shadows and midtone grays while the highlights lean slightly warm and red, with saturation held low and contrast firm. |
+| A | stock | フジカラー Superia 400 — Neutral grays turn a cool Fuji green under cloud, reds and yellows stay full without getting loud, and the 400-speed grain is a little coarse. |
+| A | stock-clear | フジカラー 100 — Clean, transparent daylight color: blue sky and white clothes render crisp over fine, even grain. |
+| A | stock-grit | 業務用 400 — Dull gray-green tones with slightly muddy shadows and visible grain, plain and unpolished. |
+| B | stock | フジカラー PRO 400H — Mint-teal tints sit in the highlights of a bright, low-contrast frame, and skin turns pale and creamy. |
+| B | stock | リアラ 100 — Skin keeps its true under-color with a faint flush and greens stay rich and natural, with no cast pulling the frame either way. |
+| B | stock-slide | アスティア 100F — Soft-contrast slide film with translucent pink-leaning skin and delicate pastel color. |
+| B | stock-slide | センシア 100 — Mild slide contrast with gentle saturation and warm cream in the highlights. |
+| B | camera | Contax 645 — A medium-format frame with very smooth tone transitions, the background melting into cream behind a silky focus plane. |
+| C | stock | ナチュラ 1600 — Coarse high-speed grain and soft lamp-lit exposure without flash, shadows drifting toward red-gray. |
+| C | stock | フジカラー Venus 800 — A night snapshot with red-leaning shadows and green-tinted neon, heavy grain and a Showa-era warmth. |
+| C | stock-cine | ETERNA 250D — Flat cinema negative with low saturation, soft highlight roll-off and lifted gray-cyan shadows. |
+| D | stock | ベルビア 50 — Extreme saturation: deep emerald greens, dense shadow color and hard contrast. |
+| D | stock | フォルティア SP — Very high chroma slide film in which blue-violet blooms and dark greens hit with an oil-paint punch. |
+| D | stock-natural | プロビア 100F — Neutral, true-to-nature slide color with lush emerald greens and clean contrast, no cast. |
+| D | stock-dusk | プロビア 400X — A faint magenta cast and warm golden glow with slightly lifted dark tones at dusk. |
+| D | stock-mono | アクロス 100 II — Black-and-white with extremely fine grain, a smooth gray ramp and gentle contrast. |
+| D | stock-mono | ネオパン 400 — Gritty black-and-white with coarse grain, crushed shadows and bright blown highlights. |
+| A, B | grain | 胶片颗粒 — Fine, even film grain sits across the whole frame, slightly heavier in the shadows. |
+| C | grain | 粗颗粒 — Large uneven grain across the whole frame roughens the edges and thickens in the dark. |
+| D | grain | 胶片颗粒 — On slide film and Acros the grain is very fine, almost invisible in lit areas and a little stronger in the shadows. |
+| D | grain-mono | 흑백 필름 그레인 — On Neopan 400 coarse silver grain covers the monochrome frame, with deep blacks and clipped highlights. |
+
+## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 요청이 세트와 맞으면 통째로 쓰고, 세트 값이 같은 슬롯의 갈래 줄보다 먼저다)
+| 세트 | 갈래 | 묶음 |
+|---|---|---|
+| S1 街角 (滤镜 #001) | A | Hair 濡れ髪, 어깨 길이 검은 단발에 シースルーバング가 바람에 흔들린다 / Outfit バンドカラーシャツ(생성색 면마 셔츠를 헐렁하게 걸침) / Scene 下北沢의 오후 길모퉁이, 가로수 잎 그림자가 얼룩진다 / Light 木漏れ日(5300K), 잎 그림자가 셔츠와 볼에 떨어진다 / Optics クラシックネガ, 그림자의 청록과 하이라이트의 붉은 온기, 고운 입자(Iris 원본 Fujifilm X-Pro3 + XF 35mm f/1.4, 필름 카메라 쪽으로 바꿔 옮겼다) / Expression 無防備, 렌즈를 의식하지 않는 시선과 숨 / Pose 느슨한 걸음으로 걷는다 |
+| S2 渋谷 曇天 (滤镜 #002) | A | Hair 濡れ髪, シースルーバング가 바람에 흔들린다 / Outfit トレンチコート(진회색 얇은 천) / Scene 渋谷スクランブル交差点 옆 보도, 바람 부는 흐린 날 / Light Overcast Light(5600K 부드러운 산란광), 중간 회색에 청록이 낀다 / Optics フジカラー Superia 400, 어두운 쪽에 조금 굵은 입자(Iris 원본 Nikon FM2 + Nikkor 50mm f/1.4) / Expression 無防備, 바람에 머리가 날리다 문득 멈춘 순간 / Pose 걸음을 멈추고 선다 |
+| S3 代官山 白壁 (滤镜 #004) | B | Hair 濡れ髪 + シースルーバング(Iris 원본 값. 세트 밖에서는 B의 切りっぱなしボブ) / Outfit トレンチコート(연한 꿀색 카키 얇은 천) / Scene 代官山의 흰 건축 외벽 앞, 봄 / Light 逆光(5400K), 부드러운 역광이 옆얼굴과 어깨를 감싼다 / Optics フジカラー PRO 400H, 하이라이트의 박하 청록과 도자기 같은 피부, Contax 645 중형(Iris 원본 Contax 645 + Planar 80mm f/2) / Expression 澄んだ瞳, 조용히 선 얼굴 / Pose 壁もたれ, 흰 벽에 가볍게 기댄다 / Camera 留白 |
+| S4 純喫茶 (滤镜 #005) | C | Hair 濡れ髪 / Outfit タートルネック(검정 니트) / Props ティーカップ(뜨거운 커피) / Scene 純喫茶의 어두운 구석, 오래된 목조 / Light 裸電球(3200~4000K), 호박색 펜던트 램프가 잔과 손에 따뜻한 빛을 얹는다, 플래시 없음 / Optics ナチュラ 1600, 굵은 입자와 어두운 쪽의 붉은·청회색(Iris 원본 Fujifilm Natura Classica 28-56mm) / Expression 物思い, 잔 앞에서 조용히 생각에 잠긴다 / Pose 테이블에 앉아 잔을 앞에 둔다 |
+| S5 箱根 渓流 (滤镜 #018) | D | Hair 濡れ髪 / Outfit アノラックパーカー(짙은 회색 셸) / Scene 箱根 깊은 계곡의 급류와 젖은 바위, 짙은 원시림 / Light 구름을 찢고 내려온 햇빛(5400K)이 깊은 못과 고목을 비춘다 / Optics ベルビア 50, 짙은 에메랄드 녹색과 강한 대비(Iris 원본 Fuji GX680 III + EBC Fujinon 100mm f/3.2) / Expression 芯のある眼差し / Pose 爪先立ち, 젖은 바위 위를 가볍게 딛는다 / Camera Extreme Wide Shot, 인물이 작게 나온다 |
+| S6 渋谷 高架下 (滤镜 #016) | D | Hair 濡れ髪이 걸음에 흔들린다 / Outfit コーチジャケット(검정 작업 재킷) / Scene 歩道橋(渋谷 고가 아래 콘크리트 통로, 가파른 대각 그림자) / Light 逆光, 강한 측역광이 머리카락과 옆얼굴의 윤곽을 그린다 / Optics ネオパン 400, 흑백, 굵은 입자와 눌린 그림자(Iris 원본 Ricoh GR21 21mm f/3.5) / Expression 流し目 / Pose Walking Shot, 빠른 걸음에 살짝 번진다 / Camera 広角スナップ |
+
+## 포즈·구도 쌍
+| 번호 | 갈래 | Pose | Camera |
+|---|---|---|---|
+| 1 | A | 小走り — She hurries across a crosswalk in short quick steps, torso leaning slightly forward and hair swinging behind her. | 三分割構図 — She stands on the right third while the crosswalk stripes and the far end of the street fill the rest, the background soft but readable. |
+| 2 | A | ポケットイン — She waits at the kerb with both hands in her coat pockets, shoulders raised a little and weight on one leg. | 长焦压缩 — A moderate telephoto from across the street stacks poles and shopfronts into one flat plane behind her. |
+| 3 | A | しゃがみ — She crouches at a vending machine and reaches into its outlet, one hand on her knee. | 仰拍 — The camera sits at knee height and looks up, so the glowing machine and a gray sky fill the upper frame. |
+| 4 | A, B, D | 髪を耳にかける — She faces the wind and combs a loose strand behind one ear with the elbow raised, eyes narrowed a little. | カメラ目線 — Close at eye level she looks straight into the lens, the lane or the sea behind her softly out of focus. |
+| 5 | B, D | 壁もたれ — She leans back against a plain wall with one knee bent and the sole pressed to it, eyes drifting to the side. | 留白 — She fills one third of the frame and the wall takes the rest, white plaster or bare concrete. |
+| 6 | B | 斜め座り — She sits sideways on a linen sheet or a bench with her legs together and ankles crossed, looking down at an open book. | 俯拍 — From a few steps above, the edge of the sheet and the grass lead the eye down to her. |
+| 7 | B, C | 頬杖 — She props her cheek on one hand at a window table and looks out. | Medium Close-Up — The frame runs from the top of the head to mid-chest, with window or lamp light on the near side of her face. |
+| 8 | C | 両手持ち — She holds a warm cup in both hands under a pendant lamp, eyes lowered. | 前景遮挡 — Shot past the blurred rim of a cup or a lamp cord crossing one corner of the frame. |
+| 9 | C | 振り返り — She walks away down a narrow alley and turns her head back over the shoulder. | 手ぶれ — A slight handheld sway at a slow shutter speed softens the lanterns while her face stays readable. |
+| 10 | C | Window Rain Lean — She rests one shoulder on the taxi window with her face turned toward the passing street. | 玻璃窗倒影 — Shot partly through the rain-streaked glass, so the neon street and her faint reflection overlap. |
+| 11 | D | 爪先立ち — She steps lightly from stone to stone with her heels lifted and arms out a little for balance. | Extreme Wide Shot — She is a small figure in a huge green valley or moss garden that fills almost the whole frame. |
+| 12 | D | Walking Shot — She strides through a concrete underpass with her arms swinging, hard side light cutting her profile. | 広角スナップ — A 21mm lens held near hip height tilts the frame edges and stretches the near wall, with a trace of motion blur. |
+
+## 맞지 않는 것
+디지털 샤프닝과 선명한 디지털 색, 스튜디오 조명과 흰 배경, 정면 플래시, 연출한 모델 포즈, 정면 증명사진 자세, 과한 소프트 포커스 필터, 큰 보케의 얕은 심도(B의 중형 제외), 낮 장면의 네온 간판(C 제외), 읽히는 간판·상표 글자.
+
+## 출처
+Iris (noahvisualsx/Iris b83de4c, MIT, © 2026 noahvisuals): 日本/滤镜/01 #001–#020, 日本/风格/02 #024 #027, 日本/风格/04 #065 #068, 日本/穿搭/04 #053 #065, 日本/拍照姿势/02 #021–#023 #030 #032. 낱말과 구성은 참고했고 문장은 MPW용으로 새로 썼다. 라이선스 전문은 [LICENSE-Iris.md](LICENSE-Iris.md).
