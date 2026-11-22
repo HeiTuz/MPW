@@ -668,7 +668,7 @@ function inspectMix(result, instruction) {
     if (body.length >= 8 && nativeHeads * 3 < body.length) thin.push(`${nativeHeads} of ${body.length} line heads are original-language tokens`);
     if (optics.length && !optics.some((item) => item.chunks.some((chunk) => sources.photo[own].has(mixKey(chunk))) || sources.photo[own].has(mixKey(item.head)))) thin.push("no photo term in Optics or Camera");
     if (expression.length && !expression.some((item) => item.chunks.length || NATIVE_CHAR.test(item.head))) thin.push("no expression word in Expression");
-    if (person && thin.length) emit(result, CODE_REGISTRY.mixThin, `The prompt barely mixes languages: ${thin.join("; ")}.`, { hint: "Name what is in the frame with lexicon tokens at the line heads (find_tokens), put photo terms from the scene's column of fixed-lines.md §문장 속 낱말 into the Optics and Camera sentences, and an expression word into Expression (image-brief.md §2.1)." });
+    if (person && thin.length) emit(result, CODE_REGISTRY.mixThin, `The prompt barely mixes languages: ${thin.join("; ")}.`, { hint: "Name what is in the frame at the line heads in the scene's language: the lexicon token when find_tokens has a row, and without a row the everyday name people there use (린넨 팬츠, 선글라스, 카디건 / マウンテンパーカー, デニムスカート). Put photo terms from the scene's column of fixed-lines.md §문장 속 낱말 into the Optics and Camera sentences, and an expression word into Expression (image-brief.md §2.1)." });
   }
 }
 
