@@ -215,6 +215,9 @@ Props and nails 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토�
 | 奶茶 | 나이차; 밀크티; 버블티 컵; milk tea cup | CN | 밀크티; 음료; 컵; 빨대 | A clear plastic cup of pale brown milk tea with a domed or sealed lid and a wide straw, beads of water on its wall. | item |
 | 共享单车 | 궁샹 단처; 공유 자전거; 공유 바이크; shared bike | CN | 자전거; 도시; 길가; 일상 | A bright blue or yellow shared bicycle with a front basket and a lock plate, parked in a row at the curb. | item |
 | 塑料袋 | 쑤랴오다이; 비닐 봉투; plastic bag | CN | 비닐봉지; 장보기; 일상; 손 | A thin plastic shopping bag with knotted handles hanging from one hand, its sides stretched by the contents. | item |
+| 盖碗 | 개완; 盖碗茶具; gaiwan; lidded tea bowl | CN | 茶器; 新中式; 부분; 차 | A lidded tea bowl on a saucer, the lid tilted open. | item |
+| 公道杯 | 公杯; 茶海; fair cup; tea pitcher | CN | 茶器; 부분; 차 | A small spouted glass or ceramic pitcher that holds brewed tea. | item |
+| 蒸笼 | 竹蒸笼; 笼屉; bamboo steamer | CN | 点心; 부분; 요리 | Stacked round bamboo steamer baskets with a woven lid. | item |
 
 ## JP
 
@@ -402,6 +405,7 @@ Props and nails 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토�
 | イヤホン | 이야혼; 이어폰; earphones | JP | 이어폰; 음악; 귀; 코드 | Small earbuds sit in the ears with a thin cord looping down to the chest and into a pocket. | item |
 | 腕時計 | 우데도케이; 손목시계; wristwatch | JP | 시계; 손목; 액세서리 | A slim watch with a round face and a thin strap sits on the wrist, its glass catching a small glint. | item |
 | 折りたたみ傘 | 오리타타미 가사; 접이 우산; folding umbrella | JP | 우산; 비; 가방; 일상 | A compact folding umbrella with a short telescoping handle, either closed in the hand or open as a small canopy. | item |
+| ブックカバー | 북커버; paper book cover; bookshop cover | JP | 文庫本; 書店; 독서; 부분 | A plain paper cover folded around a paperback. | item |
 
 ## US
 

@@ -91,6 +91,13 @@ Expression 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이
 | 慵懒斜视 | 나른한 곁눈질; 게슴츠레 곁눈 | KR | 눈빛; 나른함; 표정; 셀카; 아이폰 원본 셀카; 아이폰 셀카; iPhone native selfie | Heavy-lidded eyes glancing sideways toward a mirror reflection, relaxed face. | look |
 | 嘟嘟唇 | 오리입; 볼 눌러 뾰로통 | KR | 표정; 귀여움; 장난; 손동작 | Both palms pressing the cheeks inward so the cheeks bulge and the lips pout. | look |
 | 나른한 무표정 | 나른한 눈; 무기력한 무표정; 졸린 듯한 무표정 | KR | 무심; 나른함; 시크; 차가움; 千禧CCD直闪; 밀레니엄 CCD 플래시; Y2K CCD flash | The upper lids sag over about a third of the pupils and the unfocused gaze rests just past the lens, the mouth shut and slack. | look |
+| 멈칫 | 멈칫하는 표정; 순간 멈춤; startled pause | KR | 놀람; 순간; 망설임; 정적 | The face and breath stop for an instant, the eyes lifting toward something just heard or seen, the lips parting slightly. | look |
+| 아련한 눈빛 | 아련한 시선; wistful gaze | KR | 애수; 그리움; 눈빛; 감성 | A soft, faintly glassy gaze that looks past the lens as if remembering, the lids slightly lowered. | look |
+| 담담한 표정 | 담담한 얼굴; calm unreadable face | KR | 차분; 무심; 고요; 절제 | A calm, even face with the brows and mouth at rest, showing no strong feeling. | look |
+| 새침한 표정 | 새침; prim sulky look | KR | 도도; 장난기; 귀여움; 시크 | A prim look with the lips pressed lightly together and the eyes sliding aside, the chin slightly raised. | look |
+| 옅은 미소 | 엷은 미소; subtle smile | KR | 차분; 다정; 은은함; 미소 | The mouth corners lift only a little, a faint smile that stays in the lips and barely reaches the eyes. | look |
+| 머쓱한 웃음 | 머쓱 웃음; 머쓱; sheepish smile | KR | 멋쩍음; 친구; 일상; 웃음 | A small sheepish smile with the head tilting slightly and the eyes sliding away, a hand near the neck or hair. | look |
+| 시무룩 | 시무룩한 표정; 시무룩한 얼굴; downcast sulk | KR | 슬픔; 삐침; 풀죽음; 일상 | The mouth turns down a little and the eyes drop, the whole face slack and deflated. | look |
 
 ## CN
 
@@ -249,6 +256,8 @@ Expression 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이
 | アヒル口 | 아히루구치; 오리 입; 오리 입술; duck lips; duck face; 鸭子嘴 | JP | ギャル; 갸루; 셀카; 입술; 귀여움; 프리쿠라 | The lips are pushed slightly forward with the corners pulled up and in, forming a small rounded beak shape, the chin tucked and the eyes widened. | look |
 | 変顔 | 헨가오; 웃긴 얼굴; 장난 얼굴; funny face; silly face; 搞怪脸 | JP | ギャル; 갸루; 장난기; 프리쿠라; 친구; 과장 | A deliberately distorted face: eyes crossed or rolled up, cheeks puffed or sucked in, tongue stuck out and lips pulled sideways, the head tilted close to the lens. | look |
 | キス顔 | 키스 얼굴; 뽀뽀 얼굴; チュー顔; kiss face; pouty kiss; 嘟嘴亲吻 | JP | ギャル; 갸루; 셀카; 입술; 프리쿠라; 애교 | Lips pursed forward and slightly parted toward the lens, the chin lowered and the eyes wide or half-lidded, the cheeks drawn in a little under the cheekbones. | look |
+| ぼんやり | ぼんやりした顔; 본야리; vague blank look | JP | 멍함; 일상; 오후; 무심 | The gaze drifts unfocused into the middle distance, the lids relaxed and the lips softly apart. | look |
+| きょとん | きょとんとした顔; 쿄톤; blank puzzled look | JP | 놀람; 순수; 일상; 멍함 | Round open eyes and a slightly parted mouth, the head tipping a little as if puzzled by something unexpected. | look |
 
 ## US
 
@@ -270,7 +279,7 @@ Expression 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이
 | Squint | Sunlit Squint; sun squint; 햇빛에 눈 찌푸림; 눈부심 찡그림; 迎光眯眼; 햇빛에 찡그림; 阳光微眯; Desert Highway Squint; 사막 눈부심; Plissement d'yeux face au soleil | US | 햇살; 여름; 야외; 골든아워; Preppy; 프레피; 프레피룩; 테니스 코트; Gorpcore; 고프코어; 山系; Western; 웨스턴; 서부; 카우보이; 사막; 아이폰 원본 셀카; 아이폰 셀카; iPhone native selfie; Kodak Gold 200; 코닥 골드 200; 柯达Gold 200 | The lids narrow against bright light, the cheeks lift and the lashes cluster into a dark line over the eyes. | look |
 | Nose Scrunch | nose wrinkle; 코 찡긋; 코찡긋; 皱鼻 | US | 장난기; 귀여움; 자연스러움; 캐주얼 | The nose wrinkles upward with a lopsided smile and the eyes narrow slightly. | look |
 | Jaw Drop | Jaw Drop Laugh; 입 떡 벌어짐; 입이 떡 벌어진 표정; 惊掉下巴 | US | 놀람; 충격; 캔디드; 활기 | The mouth drops open with the brows high and the eyes wide, the jaw hanging in surprise. | look |
-| Half-Lidded Gaze | heavy-lidded gaze; 반쯤 감은 눈; 나른한 눈빛; 半阖眼 | US | 나른함; 무심; 여유; 시크; Old Hollywood; 올드 할리우드; 老好莱坞; 베드룸 아이즈; 글래머 | The lids rest halfway down over the irises for a relaxed, lazy look, the brows smooth. | look |
+| Half-Lidded Gaze | heavy-lidded gaze; 반쯤 감은 눈; 나른한 눈빛; 半阖眼 | US, KR | 나른함; 무심; 여유; 시크; Old Hollywood; 올드 할리우드; 老好莱坞; 베드룸 아이즈; 글래머 | The lids rest halfway down over the irises for a relaxed, lazy look, the brows smooth. | look |
 | Editorial Stare | Dismissive Cool Glance; 에디토리얼 스테어; 화보 시선; 무심한 쿨 시선 | US | 에디토리얼; 쿨함; 무심; 미니멀 | The chin rises a few degrees and heavy lids let the eyes slide past the lens over a flat, unimpressed mouth. | look |
 | Off-Camera Gaze | Off-Camera Glance; off-axis gaze; 카메라 밖 시선; 시선 이탈; 镜头外视线; 카메라 밖 15도 시선; 偏离镜头15度视线; 視線15度 | US | 캔디드; 무심; 도회적; 인디; 当代美术馆冷光极简; 当代美术馆冷光; 美术馆冷光; 冷光极简; 현대 미술관 냉광 미니멀; 미술관 냉광 미니멀; 미술관 냉광; 냉광 미니멀; 쿨톤 도자기 피부; 블루 그레이 미니멀; 냉백 도자기 피부; 회청색 미니멀; 清冷瓷肌; 极简灰蓝 | The eyes rest on a point about fifteen degrees to the side of the lens with relaxed lids, as if something out of frame caught attention. | look |
 | Pensive Gaze | distant gaze; 먼 곳 응시; 사색의 눈빛; 생각에 잠긴 눈 | US | 사색; 고요; 차분; 감성; 森ガール; 모리걸; 昭和レトロ; 쇼와 레트로; 遠い目; 토오이메; 먼 눈; 회상; 향수; 다크 아카데미아; Dark Academia; Kodak Gold 200; 코닥 골드 200; 柯达Gold 200 | The eyes fix on a far point with relaxed lips and a quiet brow. | look |
