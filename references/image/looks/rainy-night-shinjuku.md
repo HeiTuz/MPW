@@ -98,7 +98,7 @@
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
 | A | style | 東京ノワール — Tokyo noir at night: wet asphalt that mirrors the signs, deep shadow between them and cold purple-cyan neon, one figure alone in the reflections. |
-| A | style | サイバーパンク — Electric cyan and ice-blue screen light on dark glossy surfaces, with reflective clothing and a cold, lonely future-city mood. |
+| A | style | サイバーパンク — Electric cyan and ice-blue screen light on dark glossy surfaces and flaring off technical fabrics, with a cold, lonely future-city mood. |
 | B | style | ネオンノワール — Long dark coats moving through rain and crowds under cold colored city light, with a single amber lamp as the only warm counterpoint. |
 | B | style | GINZA — A restrained Tokyo mode look of clean cuts, cool matte makeup and quiet editorial composure under the lamps of 銀座. (긴자 장면일 때) |
 | C | style | Sensual Minimal — A restrained evening look in one dark piece with bare shoulders and low light, almost no accessories, in a high quiet room above the city. (六本木ヒルズ 전망 복도 경로 전용이다. S5와 차 안 경로에는 쓰지 않는다) |

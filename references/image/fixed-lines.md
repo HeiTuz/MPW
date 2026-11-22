@@ -68,23 +68,23 @@ GPT Image(웹·API)·대상 미정인 새 이미지(인물 사진과 인물 없�
 
 ## Identity Reference
 
-문단 하나다(슬롯 identity·skin-tone·proportion). 문안은 [image-brief.md](image-brief.md) §5가 정본이고, `If none is provided,` 뒤에 아래 표의 `<문화권 공식>`을, 문단 끝에 같은 행의 `<비율 문장>`을 쓴다. 성별에 맞춰 `woman`·`she`와 `man`·`he`를 바꾼다. 행은 §문화권 고르기로 정한다.
+문단 하나다(슬롯 identity·skin-tone·proportion). 문안은 [image-brief.md](image-brief.md) §5가 정본이고, 참조 문장의 `<얼굴형>`·`<이목구비>`, `If none is provided,` 뒤의 `<문화권 공식>`, 문단 끝의 `<비율 문장>`을 아래 표의 한 행에서 쓴다. 성별에 맞춰 `woman`·`she`와 `man`·`he`를 바꾼다. 행은 §문화권 고르기로 정한다.
 
-| 문화권 | `<문화권 공식>` | `<비율 문장>` |
-|---|---|---|
-| KR | she is a 22-year-old Korean woman with a 청순 face: 순한 이목구비, 작은 얼굴, 오똑한 콧대, a clean 턱선 and 맑고 흰 쿨톤 피부 | In either case 7.5등신, a small head over 직각 어깨 and a long 목선. |
-| CN | she is a 22-year-old Chinese woman with 清冷 bone structure: 巴掌脸, a straight 鼻梁, a clean 下颌线 and 冷白皮 | In either case 7.5-head proportions, a small head over 直角肩 and 天鹅颈. |
-| JP | she is a 22-year-old Japanese woman with a soft 透明感 look: 小顔, やさしい顔立ち and 色白の肌 | In either case 7.5頭身, a small head over level shoulders and a long neck. |
-| US | she is a 22-year-old American woman with defined cheekbones, sun-warmed golden skin and a healthy, athletic build | In either case she has 7.5-head proportions, a small head over level shoulders and a long neck. |
-| FR | she is a 22-year-old French woman with clean defined bone structure, faint natural freckles across the nose and a slender build | US와 같다 |
-| 한·중·일 단서도 없음 | she is a 22-year-old East Asian woman with 小脸, 오똑한 콧대, a clean 턱선 and 맑고 흰 피부 | In either case 7.5등신, a small head over 直角肩 and 天鹅颈. |
-| 그 밖 | she is a 22-year-old woman from <지역> with clearly defined bone structure and a slender build | US와 같다 |
+| 문화권 | `<문화권 공식>` | `<비율 문장>` | `<얼굴형>`·`<이목구비>` |
+|---|---|---|---|
+| KR | she is a 22-year-old Korean woman with a 청순 face: 순한 이목구비, 작은 얼굴, 오똑한 콧대, a clean 턱선 and 맑고 흰 쿨톤 피부 | In either case 7.5등신, a small head over 직각 어깨 and a long 목선. | 얼굴형·이목구비 |
+| CN | she is a 22-year-old Chinese woman with 清冷 bone structure: 巴掌脸, a straight 鼻梁, a clean 下颌线 and 冷白皮 | In either case 7.5-head proportions, a small head over 直角肩 and 天鹅颈. | 脸型·五官 |
+| JP | she is a 22-year-old Japanese woman with a soft look: 小顔, やさしい顔立ち and 色白の肌 | In either case 7.5頭身, a small head over level shoulders and a long neck. | 輪郭·顔立ち |
+| US | she is a 22-year-old American woman with defined cheekbones, sun-warmed golden skin and a healthy, athletic build | In either case she has 7.5-head proportions, a small head over level shoulders and a long neck. | face shape·facial features |
+| FR | she is a 22-year-old French woman with clean defined bone structure, faint natural freckles across the nose and a slender build | US와 같다 | US와 같다 |
+| 한·중·일 단서도 없음 | she is a 22-year-old East Asian woman with 小脸, 오똑한 콧대, a clean 턱선 and 맑고 흰 피부 | In either case 7.5등신, a small head over 直角肩 and 天鹅颈. | 얼굴형·이목구비 |
+| 그 밖 | she is a 22-year-old woman from <지역> with clearly defined bone structure and a slender build | US와 같다 | US와 같다 |
 
 - 숫자 나이를 정하지 말라고 했으면 `an adult`, 인종이나 체형을 정하지 말라고 했으면 그 말을 뺀다.
 - 문화권 공식과 문단 끝의 비율 문장(`In either case…`)은 **성인 인물에만** 붙는다. 아이·학생으로 요청됐거나 그렇게 보이면(판정은 image-brief.md §5) 공식 대신 `a child`·`a student` 같은 말만 쓰고(남성이면 같은 자리에 `a boy`·`a schoolboy`처럼 한 구절), 비율 문장과 아래 Hair and makeup의 미화 줄(base·under-eye·liner·blush·lip)을 모두 끈다. 룩 카드의 메이크업 줄(입술·블러셔·아이 메이크업)과 Legwear의 스타킹류 줄도 쓰지 않는다(양말은 쓴다). 그 밖의 층(Pose, Camera, Finish 포함)은 평소대로 쓴다(관능 어휘·노출은 image-brief.md §6).
 - 대학생·대학원생은 성인이다(판정은 image-brief.md §5). 공식을 그대로 쓰고 `woman`·`man` 뒤에 `and university student`만 덧붙인다(`a 22-year-old Korean man and university student with a defined 턱선 and a lean build`). 비율 문장과 메이크업 줄도 성인대로 붙는다.
 - 남성 인물: 공식은 `a 22-year-old <culture> man with a defined <턱선> and a lean build`, 문단 끝은 `In either case he has natural <등신> and level shoulders.`다. `<턱선>`은 KR·단서 없음 `턱선`, CN `下颌线`, 그 밖 `jawline`. `<등신>`은 KR·단서 없음 `7.5등신`, JP `7.5頭身`, 그 밖 `7.5-head proportions`. 남성에게는 `直角肩`·`직각 어깨`·`天鹅颈`을 쓰지 않는다. 고정 몫의 메이크업 줄과 룩 카드의 메이크업·네일 색·Legwear 줄은 사용자가 원할 때만 붙인다. 남성이 아이·학생이면 위 학생 처리가 먼저다.
-- JP 공식의 `透明感`은 base 줄도 `透明感`이면 빼고 `with a soft look:`으로 쓴다(피부 마감은 Hair and makeup 한 곳).
+- JP 공식은 base 줄이 기본 `透明感`이 아닐 때만(사용자·카드가 바꿨거나 맨얼굴) `with a soft 透明感 look:`으로 쓴다(피부 마감은 Hair and makeup 한 곳).
 - `identity`: 카드가 `끄는 고정 몫`의 `identity` 행에 덧붙임 구절을 주면, 참조가 없을 때 쓰는 인물 문장(`If none is provided, …`) 끝에 그 구절을 붙인다. 참조가 있을 때는 붙지 않는다(조건절이 참조의 피부색을 지킨다).
 
 ## Hair and makeup

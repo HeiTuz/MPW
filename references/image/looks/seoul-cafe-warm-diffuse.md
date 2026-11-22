@@ -47,7 +47,7 @@
 | B | hair | 베드헤드 펌 — Soft waves flattened a little on one side as if just slept on, the front kept off the eyes. (滤镜 #043) |
 | C | hair | 반묶음 — The top section tied back and the rest of the long hair falling loose over the shoulders, the loose ends picking up lamp gold at the tips. |
 | D | hairline | 잔머리 — Short fine hairs along the hairline and temples curl lightly and catch the backlight as a soft glowing edge. |
-| A, B | base | 속광 메이크업 — A base that looks lit from inside, with a soft diffused sheen on the forehead and nose bridge and no visible powder, so window light spreads smoothly over the skin. |
+| A, B | base | 속광 메이크업 — A base that looks lit from inside, with a soft diffused sheen on the forehead and nose bridge and no visible powder, so daylight spreads smoothly over the skin. |
 | C | base | 촉촉피부 — A dewy finish with a thin moist sheen over the cheeks and nose that catches one small warm highlight from the lamp or flame without turning oily. |
 | A, B | lip | 과즙 립 — A glassy peach-pink gloss with a wet shine and no hard edge, brightest where it catches the window. |
 | C | lip | 깨문 듯한 립 — Colour pressed into the centre of the lips and blended outward until the edges dissolve into bare skin, quiet in low light. |
@@ -75,7 +75,7 @@
 | A, C | outfit | 캐시미어 니트 — A mocha-brown brushed cashmere knit with a deep V-neck and a smooth rib at the cuffs, the nap giving its edge a soft halo. (滤镜 #042 #046) |
 | B, D | outfit | 보트넥 — A slim black long-sleeve knit with a straight bateau neckline running across the collarbones to the tips of the shoulders. (滤镜 #044 #048) |
 | B | outfit-twopiece | 오트 블레이저 튜브탑 — A black strapless tube top under a pale oat boxy blazer worn open, the lapels folded back so the neckline and bare shoulders stay clear. (滤镜 #043 #047) |
-| B | outfit-twopiece | 니트 투피스 — An ivory soft-yarn knit bandeau top with a matching cardigan in the same fibre and tone, the fuzzy fibres haloed by window light. |
+| B | outfit-twopiece | 니트 투피스 — An ivory soft-yarn knit bandeau top with a matching cardigan in the same fibre and tone, the fuzzy fibres haloed by the daylight. |
 | B | outfit-home | 와플 로브 — A thick cotton waffle-weave robe tied at the waist, each honeycomb cell holding a small soft shadow and the collar sinking open. |
 | D | outfit-scarf | 울 머플러 — A thick grey wool scarf wrapped high over the chin, its knit pile catching the backlight as a fuzzy bright edge. |
 
@@ -117,7 +117,7 @@
 | B | wall | 프렌치 몰딩 — White plaster cornice on cream walls. (滤镜 #047) |
 | C | place | 노출콘크리트 카페 — Raw concrete walls and a single wooden counter with matte gray surfaces. (滤镜 #045) |
 | C | bedroom | 심야 침실 — A bedroom at night with white bedding and a bedside shelf. (滤镜 #049) |
-| C | furniture | 코듀로이 소파 — A deep caramel corduroy sofa with a soft ribbed pile. (滤镜 #052) |
+| C | furniture | corduroy sofa — A deep caramel sofa with a soft ribbed pile. (滤镜 #052) |
 | C | study | 심야 독서 — A desk with open pages and hands resting on them. (滤镜 #060) |
 | D | place | 한강 억새 — Reed grass with feathered tips at the riverside. (滤镜 #048) |
 | D | place | 겨울 길모퉁이 카페 — A cold winter street corner outside a small cafe with bare trees, breath and cup steam visible in the air. (滤镜 #046) |
@@ -142,7 +142,7 @@
 | C | face-light | 촛불 조명 — A small flame close by casts warm amber light that falls off fast into darkness, flickers softly and leaves a tiny warm glint in the eyes. (滤镜 #049) (촛불 장면일 때) |
 | C | ambient | 냉온 대비 — Cool blue dusk light from the window and a small warm lamp inside meet on the face, one side reading blue and the other amber with a soft seam between. (滤镜 #055) |
 | C | backlight | 뱅커스 램프 — A green glass-shaded desk lamp behind and to one side traces a thin gold line along the hair and shoulder while its warm pool lights the desk. (滤镜 #060) (서재 장면일 때) |
-| C | pile | 로우키 조명 — On the corduroy sofa, the soft ribbed pile swallows stray light, so the lit side of her face is set off in warm white against the dark fabric. (코듀로이 소파 장면일 때) |
+| C | pile | 로우키 조명 — On the corduroy sofa, the soft ribbed pile swallows stray light, so the lit side of her face is set off in warm white against the dark fabric. (corduroy sofa 장면일 때) |
 | C | catchlight | 램프 캐치라이트 — One small warm point of light from a lamp or flame sits in each eye. |
 | D | face-light | 역광 금빛 테두리 — A low sun from behind rings the hair and shoulder outline in gold while the face stays in soft shadow lifted by sky and ground. (滤镜 #048) |
 | D | backlight | 역광 — Light from behind lifts the whole frame into a soft, airy brightness, and the steam from the cup glows white and blurs the background into a haze. (滤镜 #046) (종이컵 장면일 때) |
@@ -171,7 +171,7 @@
 | A, B | tone | 밀크티 톤 — A low-contrast warm grade that pulls colours toward off-white, oat and camel beige. (滤镜 #041) |
 | B | tone | 크림 톤 — Soft cream-white walls reflect light repeatedly into a smooth, fine, warm white. (滤镜 #047) |
 | A, C | grade | 호박색 톤 — The whole frame bathed in amber-honey warmth, from the wood to the 高光. |
-| 전부 | roll-off | 하이라이트 롤오프 — Bright areas fade gradually into white without a hard 过曝 edge, keeping texture in the knit and in skin highlights. |
+| 전부 | roll-off | 하이라이트 롤오프 — Bright areas fade gradually into white without a hard clipped edge, keeping texture in the knit and in skin highlights. |
 | B, D | bloom | 소프트 글로우 — 高光 spread a gentle luminous halo into the surrounding 暗部, softening the edges of the curtain and the backlit hair. (滤镜 #051) |
 | C | grain | 고감도 노이즈 — At ISO 6400 the dark room shows real luminance noise across the 暗部 and the far wall, softly smearing fine detail with no night-mode lift. (滤镜 #049) |
 | D | lens | 85mm 인물 렌즈 — A short-telephoto portrait look that flatters the face with gentle compression and creamy 虚化. (滤镜 #048) |

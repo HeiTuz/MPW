@@ -234,10 +234,10 @@
 
 ```
 ## Identity Reference
-If a model reference is provided, the woman in this photo is that model: take only the 얼굴형 and 이목구비 from it, adapting them naturally to this scene's expression, angle and light, and keep her own skin tone. Hair, makeup and everything else follow this prompt. If none is provided, <인물 설정>. <비율 문장>
+If a model reference is provided, the woman in this photo is that model: take only the <얼굴형> and <이목구비> from it, adapting them naturally to this scene's expression, angle and light, and keep her own skin tone. Hair, makeup and everything else follow this prompt. If none is provided, <인물 설정>. <비율 문장>
 ```
 
-- `<비율 문장>`(`In either case…`)은 [fixed-lines.md](fixed-lines.md) 같은 문화권 행의 것이고 성인 인물에만 쓴다(아이·학생이면 뺀다).
+- `<얼굴형>`·`<이목구비>`와 `<비율 문장>`(`In either case…`)은 [fixed-lines.md](fixed-lines.md) 같은 문화권 행의 것이다. 비율 문장은 성인 인물에만 쓴다(아이·학생이면 뺀다).
 - `<인물 설정>`이 인물을 정하는 자리다. 사용자가 인물을 지정했으면 그 설정을, 지정하지 않았으면 아래 기본 인물(문화권 공식)을 쓴다. 문단의 "woman"·"her"·"she"는 남성이거나 성별을 정하지 않았으면 첫 줄의 지칭에 맞춰 "man"·"his"·"he"나 "person"·"their"·"they"로 바꿔 쓴다. 남성이면 마지막 비율 문장은 남성용 문장으로 바꿔 쓴다([fixed-lines.md](fixed-lines.md) 남성 인물). `create a new person suited to the scene` 원문은 사용자가 인물을 정하지 않은 범용 템플릿을 달라고 했을 때만 쓴다.
 - 호출자·사용자가 그대로 붙여 넣으라고 완성 문단(저장된 아이덴티티 문단 등)을 주면 그 문단을 글자 그대로 이 구획에 넣는다. 그 문단에 나이가 없어도 나이를 덧붙이거나 고치지 않는다(§9-2의 나이 확인은 내가 지은 인물에만 해당한다). 외모·분위기 값만 준 경우는 이 예외가 아니라 아래 기본 인물 규칙을 따른다. 아이·학생에 관한 §6의 지킴은 이 예외와 무관하게 그대로다.
 - 얼굴형·이목구비·타고난 피부색(fair, pale, tan, 冷白皮처럼 사람의 속성)·나이는 조건절 안에만 쓴다. 체형 비율은 같은 문단의 `In either case` 문장 한 곳에만 쓴다. 타고난 생김새(애교살의 볼록함 자체, 입술 두께, 눈매)도 쓰지 않는다. 화장이 만든 피부 마감(porcelain finish, glass skin, matte base)은 Hair and makeup에, 빛이 피부에 만든 결과(sun-warmed glow on the skin, neon tint on the cheek)는 Light·Style에 쓸 수 있다. 화장과 스타일링으로 만든 것(블러셔, 립 색과 마감, 아이라인, 눈썹을 채운 모양, 헤어 커트와 색)은 쓴다.
@@ -337,7 +337,7 @@ lips and cheeks — A sheer coral-pink lip tint with a little gloss at the cente
 
 ## Expression
 off-lens gaze — Her eyes rest on a point just past the lens to the lower right, the lids relaxed.
-small smile — One corner of her mouth lifts slightly and 미간은 편안하다, as if someone just called her name.
+small smile — One corner of her mouth lifts slightly while the rest of the face stays calm, as if someone just called her name.
 
 ## Outfit
 oversized trench — A stone-beige cotton gabardine trench cut wide through the shoulders, worn open, the belt hanging loose at both sides and the hem swinging just below the knee.
@@ -390,7 +390,7 @@ focus — She is sharp from hair to loafers; the door and the bench at the frame
 A 1990s Hong Kong film still shot on tungsten cinema negative: a woman sheltering under a neon-lit 骑楼 in the night rain, a paper coffee cup in her hand, looking far down the street while the city smears past her.
 
 ## Identity Reference
-If a model reference is provided, the woman in this photo is that model: take only the 얼굴형 and 이목구비 from it, adapting them naturally to this scene's expression, angle and light, and keep her own skin tone. Hair, makeup and everything else follow this prompt. If none is provided, she is a 22-year-old Chinese woman with 清冷 bone structure: 巴掌脸, a straight 鼻梁, a clean 下颌线 and 冷白皮. In either case 7.5-head proportions, a small head over 直角肩 and 天鹅颈.
+If a model reference is provided, the woman in this photo is that model: take only the 脸型 and 五官 from it, adapting them naturally to this scene's expression, angle and light, and keep her own skin tone. Hair, makeup and everything else follow this prompt. If none is provided, she is a 22-year-old Chinese woman with 清冷 bone structure: 巴掌脸, a straight 鼻梁, a clean 下颌线 and 冷白皮. In either case 7.5-head proportions, a small head over 直角肩 and 天鹅颈.
 
 ## Hair and makeup
 王家卫 — A loose 1990s perm grazing the collarbones, airy and slightly undone, the rain-damp ends clumping into soft ropes.
@@ -620,7 +620,7 @@ After:
 
 이름을 먼저 붙이고 문장을 쓴다. 느낌은 이름에서 오고, 이름 없이 영어로 풀어 쓰면 생성기가 무난한 쪽으로 읽는다.
 
-1. **이름 목록부터.** 관찰을 끝내면 문장을 쓰기 전에, 보이는 것의 이름을 층별로 적어 둔다. 문화에 속한 것은 사진의 문화권 말로(일본 거리면 일본어, 한국 거리면 한국어), 어디에나 있는 옷·소품은 영어로 적는다(§2.1 2항). 목록을 쉼표로 이어 한 번에 검색한다. 예: `node scripts/find_tokens.mjs --q "商店街,電柱,通行人,黒髪ロング,逆光,白飛び,パンフォーカス" --culture JP`. 문화권은 KR CN JP US FR 중에서 고른다.
+1. **이름 목록부터.** 관찰을 끝내면 문장을 쓰기 전에, 보이는 것의 이름을 층별로 적어 둔다. 문화에 속한 것은 사진의 문화권 말로(일본 거리면 일본어, 한국 거리면 한국어), 어디에나 있는 옷·소품은 영어로 적는다(§2.1 2항). 목록을 쉼표로 이어 한 번에 검색한다. 예: `node scripts/find_tokens.mjs --q "商店街,電柱,黒髪ロング,逆光,白飛び,パンフォーカス" --culture JP`. 문화권은 KR CN JP US FR 중에서 고른다.
 2. **찾는 순서.** 쓰기로 한 룩 카드의 줄, 사전의 행(별칭으로 찾힌 행 포함), 영어 순이다. 사전에 없는 이름은 그 자리에서 번역하지 않고 영어로 쓴다(§2.1 1항). 사진에 찍힌 글자는 §12.4다.
 3. **층·범주 이름은 토큰이 아니다**(§4 '토큰 찾기' 2항, 슬롯 토큰 예외도 그 항). `passersby`, `road surface` 같은 칸 이름은 검사기 `token/slot-name`이 경고한다.
 
@@ -628,8 +628,7 @@ After:
    |---|---|
    | `hair color` | `黒髪ロング` |
    | `outfit` | `white shirt`, `knit vest` |
-   | `passersby` | `通行人` |
-   | `road surface` | `マンホール` |
+   | `road surface` | `manhole cover` |
    | `lighting` | `逆光` |
    | `background` | `商店街` |
 
@@ -696,14 +695,14 @@ After:
 
 - 매체: 4:3, 깊은 심도, 하늘의 白飛び, 선명한 엣지가 모두 콤팩트 디카를 가리킨다.
 - 룩 카드: `find_tokens --q "コンデジ,商店街,逆光,日本"`의 맨 위에 `日系CCD日光 · コンデジ`가 떴다. §12.0의 질문에 모두 예였다: 위 매체 표지가 보이고, time·light-key·palette(해가 하늘에 있는 낮, 직사 역광과 그늘, 채도 높은 색과 순백의 하늘)가 맞고, `매체` 축이라 장소는 묻지 않는다. 갈래는 A 商店街スナップ로 읽었다. 카드에서 가져온 것: 첫 줄 문구(`Japanese`는 일본 상점가라 남겼다), closer `コンデジ`, realism 자리의 `native resolution` 줄(`8K`와 모공 줄은 쓰지 않는다), 입자 `デジタルノイズ`, 끈 `lens` 몫(Optics의 `コンデジ`가 렌즈를 말한다), 사진의 JP 문화권 행의 Finish 토큰(`実写`).
-- 이름 목록: 보이는 것의 이름(商店街, 電柱, 通行人, 黒髪ロング, 逆光, 白飛び 등)을 일본어로 먼저 적고 층별로 검색했다. 흰 셔츠·조끼·숄더백·스마트폰은 사전에 행이 있어도 어디에나 있는 물건이라 영어로 썼다(§2.1 2항).
+- 이름 목록: 보이는 것의 이름(商店街, 電柱, 黒髪ロング, 逆光, 白飛び 등)을 일본어로 먼저 적고 층별로 검색했다. 흰 셔츠·조끼·숄더백·스마트폰·행인·맨홀·낙엽·그림자는 사전에 행이 있어도 어디에나 있는 것이라 영어로 썼다(§2.1 2항).
 - 사람은 20대 초반 성인으로 읽혀 JP 공식의 나이를 `in her early twenties`로 바꿔 썼다. 흰 셔츠와 검은 베스트, 숄더백은 교복풍으로 읽힐 수 있지만 학교 표식과 학교 장소가 없어 `制服` 같은 말은 쓰지 않았다. 사진 속 인물이 학생으로 보이면 §12.3의 학생 처리로 바꾼다. 편의점 로고는 색 띠만 남겼고 얼굴 생김새는 옮기지 않았다.
 
 ```text
 A Japanese everyday compact digital camera snapshot shot on a small-sensor CCD compact: a woman with long wind-tossed dark hair stands stopped on a sunlit 商店街, a silver smartphone held low in both hands, her eyes meeting the lens while the sky behind her clips to white.
 
 ## Identity Reference
-If a model reference is provided, the woman in this photo is that model: take only the 얼굴형 and 이목구비 from it, adapting them naturally to this scene's expression, angle and light, and keep her own skin tone. Hair, makeup and everything else follow this prompt. If none is provided, she is a Japanese woman in her early twenties with a soft 透明感 look: 小顔, やさしい顔立ち and 色白の肌. In either case 7.5頭身, a small head over level shoulders and a long neck.
+If a model reference is provided, the woman in this photo is that model: take only the 輪郭 and 顔立ち from it, adapting them naturally to this scene's expression, angle and light, and keep her own skin tone. Hair, makeup and everything else follow this prompt. If none is provided, she is a Japanese woman in her early twenties with a soft 透明感 look: 小顔, やさしい顔立ち and 色白の肌. In either case 7.5頭身, a small head over level shoulders and a long neck.
 
 ## Hair and makeup
 黒髪ロング — Long dark hair, black with a brown cast, falls well past the chest in loose layers with a soft center part, and turns lighter brown wherever the sun passes through its edges.
@@ -735,13 +734,13 @@ palette — The white of the shirt, the black vest and shoulder bag, gray asphal
 商店街 — A narrow street of small two- and three-story shops recedes behind her, with a yellow awning at left, green awnings on both sides, shuttered fronts at frame right and a parked bicycle with a basket beside an outdoor air-conditioner unit.
 コンビニ — A convenience store at upper left has a sign reduced to bands of orange, green and red with no readable mark or lettering.
 電柱 — Concrete poles line the right side and recede down the street, with 電線 criss-crossing the white sky between them.
-通行人 — About eight small, sharp pedestrians in dark jackets walk the street and the sidewalks, several carrying white plastic bags or backpacks, a person in a dark hoodie rides a ママチャリ left of center, and a silver minivan comes up the far end of the street.
-マンホール — A round iron manhole cover sits in the gray asphalt at lower left beside diagonal white lane lines and a strip of green paint at the far left edge.
-落ち葉 — A few brown maple leaves lie on the paving stones at lower right beside her shoulder bag, the only sign of the season.
+pedestrians — About eight small, sharp figures in dark jackets walk the street and the sidewalks, several carrying white plastic bags or backpacks, a person in a dark hoodie rides a ママチャリ left of center, and a silver minivan comes up the far end of the street.
+manhole cover — A round iron cover sits in the gray asphalt at lower left beside diagonal white lane lines and a strip of green paint at the far left edge.
+fallen leaves — A few brown maple leaves lie on the paving stones at lower right beside her shoulder bag, the only sign of the season.
 
 ## Light
 逆光 — The sun stands high behind her toward frame right, rimming her hair and the shoulders of her white shirt with a bright edge while her face stays in soft open shade, lit by the pavement and the sky.
-影 — The buildings at right throw a wide dark shadow across the sidewalk, and the 通行人 and the cyclist cast short hard-edged shadows toward the camera and frame left.
+cast shadows — The buildings at right throw a wide dark shadow across the sidewalk, and the pedestrians and the cyclist cast short hard-edged shadows toward the camera and frame left.
 catchlight — A faint small bright point from the open sky sits in each eye.
 
 ## Optics
@@ -752,7 +751,7 @@ catchlight — A faint small bright point from the open sky sits in each eye.
 
 ## Camera
 パンフォーカス — Everything from her hands to the car at the far end of the street stays in focus, with no ボケ.
-horizontal frame — A horizontal 4:3 frame cut at her hips, her face on the vertical center line and the shoulder and shoulder bag filling the right half while the street recedes through the left, shot at about her eye level from roughly 1.5 meters with a slightly wide lens.
+horizontal frame — A horizontal 4:3 frame cut at her hips, her face on the vertical center line and her shoulder and the bag filling the right half while the street recedes through the left, shot at about her eye level from roughly 1.5 meters with a slightly wide lens.
 
 ## Finish
 コンデジ — The whole frame reads as an everyday compact digital camera snapshot, not a fashion shoot.
