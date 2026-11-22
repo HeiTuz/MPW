@@ -47,5 +47,5 @@ python3 scripts/prompt_writing_doctrine_check.py --state "$(mktemp -d)/backlog.j
 ## 편집할 때 자주 걸리는 것
 
 - 예시의 `(N자 실측)` 라벨은 뒤따르는 ```text 블록 길이와 정확히 일치해야 한다. 예시를 고치면 라벨을 다시 잰다(`lint.py`가 잡는다).
-- `SKILL.md`·`package.json`의 버전과 `metadata.*_reviewed_at` 스탬프는 lint가 본다. 버전 범프와 push는 별도 릴리스 승인 대상이다.
+- `SKILL.md`·`package.json`의 버전과 `metadata.*_reviewed_at` 스탬프는 lint가 본다. 버전 범프와 push는 별도 릴리스 승인 대상이고, 버전의 세 칸은 각각 한 자리(0~9)다(`AGENTS.md` §배포 게이트 3번, lint가 검사).
 - 커밋 메시지는 영어. 편집 후에는 `~/handoffs/MPW-<주제>-<타임스탬프>.md` 핸드오프를 남긴다(`AGENTS.md` §운영 소유권).

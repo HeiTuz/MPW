@@ -307,6 +307,12 @@ def skill_body(text, overlay=False):
     return "\n".join(lines).strip()
 
 
+def check_version_digits(version, errors):
+    # Each of the three version fields is one digit (0-9); a patch of 9 rolls the middle field (4.1.9 -> 4.2.0).
+    if version and not re.fullmatch(r"\d\.\d\.\d", str(version)):
+        errors.append(f"version {version}: each of the three fields must be one digit 0-9 (AGENTS.md 배포 게이트 3번)")
+
+
 def check_plugin_skill_sync(root, errors):
     """The plugin overlay carries the canonical SKILL.md body verbatim; only its host block differs."""
     canonical = root / "SKILL.md"
@@ -1070,6 +1076,7 @@ def main():
         skill_version, metadata = parse_frontmatter(fm)
         if not skill_version:
             errors.append("frontmatter: version missing")
+        check_version_digits(skill_version, errors)
         check_review_stamps(metadata, errors, today)
 
         check_plugin_skill_sync(ROOT, errors)
