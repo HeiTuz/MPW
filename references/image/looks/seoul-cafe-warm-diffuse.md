@@ -42,7 +42,7 @@
 ## Hair and makeup
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
-| A | hair | 사이드 파트 — A deep side part with the short side tucked behind one ear, the long side falling smooth over the shoulder in a dark gloss. |
+| A | hair | 사이드 파트 — A deep side part with the short side tucked behind one ear, the long side falling smooth over the shoulder in dark 윤기. |
 | B, D | hair | 검은 긴 생머리 — Long, blunt-ended black straight hair with silky lines of light running down its length, taking a thin gold edge when light comes from behind. |
 | B | hair | 베드헤드 펌 — Soft waves flattened a little on one side as if just slept on, the front kept off the eyes. (滤镜 #043) |
 | C | hair | 반묶음 — The top section tied back and the rest of the long hair falling loose over the shoulders, the loose ends picking up lamp gold at the tips. |
@@ -56,14 +56,14 @@
 ## Expression
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
-| A | expression | 커피잔 사색 — The brows stay relaxed and the eyes rest on a far point, the face still in thought. |
+| A | expression | 커피잔 사색 — 미간은 편안하고 the eyes rest on a far point, the face still in thought. |
 | A | mouth | 살짝 벌어진 입술 — The lips part by a few millimetres with the lower lip catching a soft highlight, as if mid-breath before a bite or a sip. |
-| B | expression | 졸린 눈 — The lids sit half open and a little puffy, the gaze unfocused and the cheek resting near soft white bedding. (滤镜 #043) (S3 전용) |
+| B | expression | 졸린 눈 — The lids sit half open and a little puffy, 눈빛은 멍하고 the cheek rests near soft white bedding. (滤镜 #043) (S3 전용) |
 | B | eyes | 내리깐 눈 — The upper lids drop over part of the irises and the lashes cast thin shadows on the lower lids while she reads or looks down. |
 | B, D | expression | 햇빛 향한 황홀 — The face tips toward the light with the eyes closed and a warm glow washes over the forehead and cheeks. |
-| C | expression | 촛불 응시 — The eyes rest on a small flame below the face, one tiny orange point in each pupil and the face calm. (滤镜 #049. 쌍 9와 짝이다) (촛불 장면일 때) |
-| C | expression | 헤드폰 끼고 음미 — Headphones sit over the ears, the eyes closed and the lips loose, the head swaying a little with the music. (눈이 감기는 줄이라 쌍 8과 짝이다. 눈이 불꽃을 보는 쌍 9와 옆얼굴로 창을 보는 쌍 10에는 쓰지 않는다) |
-| D | expression | 눈 감고 바람 느끼기 — The eyes close and the chin lifts slightly into the cold air, the face relaxed while loose strands stream sideways. |
+| C | expression | 촛불 응시 — The eyes rest on a small flame below the face, one tiny orange point in each pupil, 표정은 담담하다. (滤镜 #049. 쌍 9와 짝이다) (촛불 장면일 때) |
+| C | expression | 헤드폰 끼고 음미 — The 헤드폰 sit over the ears, the eyes closed and the lips loose, the head swaying a little with the music. (눈이 감기는 줄이라 쌍 8과 짝이다. 눈이 불꽃을 보는 쌍 9와 옆얼굴로 창을 보는 쌍 10에는 쓰지 않는다) |
+| D | expression | 눈 감고 바람 느끼기 — The eyes close and the chin lifts slightly into the cold air, 미간은 편안하고 loose strands stream sideways. |
 
 ## Outfit
 **하나만 고르는 슬롯:** `outfit`·`outfit-twopiece`·`outfit-home`(B의 입는 옷 후보. 니트, 투피스, 가운 가운데 하나)
@@ -71,7 +71,7 @@
 
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
-| A, C | outfit | 스퀘어 넥 — A slim charcoal long-sleeve knit cut in a clean square neckline that leaves the collarbones bare, the fine rib holding a soft matte surface. (滤镜 #041 #045) |
+| A, C | outfit | 스퀘어 넥 — A slim charcoal long-sleeve knit cut in a clean square neckline that leaves the collarbones bare, the fine rib holding a soft 무광 surface. (滤镜 #041 #045) |
 | A, C | outfit | 캐시미어 니트 — A mocha-brown brushed cashmere knit with a deep V-neck and a smooth rib at the cuffs, the nap giving its edge a soft halo. (滤镜 #042 #046) |
 | B, D | outfit | 보트넥 — A slim black long-sleeve knit with a straight bateau neckline running across the collarbones to the tips of the shoulders. (滤镜 #044 #048) |
 | B | outfit-twopiece | 오트 블레이저 튜브탑 — A black strapless tube top under a pale oat boxy blazer worn open, the lapels folded back so the neckline and bare shoulders stay clear. (滤镜 #043 #047) |
@@ -108,7 +108,7 @@
 |---|---|---|
 | A | place | 베이커리 카페 — A spacious bakery cafe with glass cases of fresh bread and pastries and a few small tables by the window. (滤镜 #041 #054) |
 | A | place | 을지로 호두나무 카페 — An old Seoul cafe of dark oak and walnut tables, chairs and shelves. (滤镜 #042) |
-| A | shop | 연남동 — A narrow lane of small cafes and shops with painted storefronts, a speckled terrazzo threshold and brick walls. (滤镜 #053) |
+| A | shop | 연남동 — A narrow 골목 of small cafes and shops with painted storefronts, a speckled terrazzo threshold and brick walls. (滤镜 #053) |
 | A | shop | LP바 — A cafe with walnut shelves of vinyl sleeves and a turntable. (滤镜 #058) |
 | B | place | 아침 침대 — White bedding under thin sheer curtains. (滤镜 #043) |
 | B | place | 한남동 — A hillside district interior of pale walls and floor-to-ceiling glass. (滤镜 #059) |
@@ -129,7 +129,7 @@
 | A | face-light | 쇼윈도 스팟 빛 — Warm ceiling spots over a bakery display glow on the pastries and reach her cheek through the glass, with faint glass reflections laid over the skin. (滤镜 #054) (베이커리 장면일 때) |
 | A | light-fill | 텅스텐 조명 — Incandescent bulbs give warm amber-orange pools on the wood, the walls and the near cheek, leaving deeper amber in the corners. |
 | A | bounce | 바닥 반사광 — In the old walnut cafe, the worn dark wood of the tables and shelves bounces a deep reddish warmth up into the shadows. (을지로 카페 장면일 때) |
-| A | lane-light | Sidelight — In the narrow lane, warm side daylight falls softly across the brick walls and the painted storefronts. (연남동 골목 장면일 때) |
+| A | lane-light | Sidelight — In the narrow 골목, warm side daylight falls softly across the brick walls and the painted storefronts. (연남동 골목 장면일 때) |
 | A, B | catchlight | 창문 캐치라이트 — A large window leaves a soft rectangular, sometimes pane-divided highlight in the upper part of each iris. |
 | B | face-light | 아침 햇살 — Low warm sun slips through a gap in the curtains as one golden band across white sheets, lighting one cheek and leaving the rest in pale shade. (滤镜 #043) (S3 전용) |
 | B | face-light | 블라인드 빛 — Afternoon sun through window blinds falls in evenly spaced bright and dark bands over the face, collarbones and wall. (滤镜 #044) (S4 전용) |
@@ -145,9 +145,9 @@
 | C | pile | 로우키 조명 — On the corduroy sofa, the soft ribbed pile swallows stray light, so the lit side of her face is set off in warm white against the dark fabric. (코듀로이 소파 장면일 때) |
 | C | catchlight | 램프 캐치라이트 — One small warm point of light from a lamp or flame sits in each eye. |
 | D | face-light | 역광 금빛 테두리 — A low sun from behind rings the hair and shoulder outline in gold while the face stays in soft shadow lifted by sky and ground. (滤镜 #048) |
-| D | backlight | 역광 — Light from behind lifts the whole frame into a soft, airy brightness, and the steam from the cup glows white and blurs the background into a haze. (滤镜 #046) (종이컵 장면일 때) |
+| D | backlight | 역광 — Light from behind lifts the whole frame into a soft, airy brightness, and the steam from the 종이컵 glows white and blurs the background into a haze. (滤镜 #046) (종이컵 장면일 때) |
 | D | catchlight | 황금빛 눈동자 — The low setting sun puts fine amber sparkles in the irises and a warm gold edge along the cheek. |
-| D | reed-glow | 억새 역광 — At the riverside, low gold backlight makes each feathered reed tip glow against the warm hazy sky. (한강 억새 장면일 때) |
+| D | reed-glow | 억새 역광 — On the 한강 riverside, low gold backlight makes each feathered reed tip glow against the warm hazy sky. (한강 억새 장면일 때) |
 
 ## Optics
 **하나만 고르는 슬롯:** `body-*`(고른 `camera` 줄의 본체와 같은 이름의 줄만: `body-x100v`는 `Fujifilm X100V`, `body-m10`은 `Leica M10`, `body-r6`은 `Canon EOS R6`, `body-a7s`는 `Sony A7S III`, `body-q`는 `Leica Q`, `body-r5`는 `Canon EOS R5`, `body-xt4`는 `Fujifilm X-T4`를 골랐을 때)
@@ -155,7 +155,7 @@
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
 | A | camera | Fujifilm X100V — A compact APS-C camera with a fixed 23mm lens. (滤镜 #041) |
-| A | body-x100v | 소프트 글로우 — On the Fujifilm X100V, a soft wide-open glow gathers around the lit highlights, giving the frame a casual snapshot feel. |
+| A | body-x100v | 소프트 글로우 — On the Fujifilm X100V, a soft wide-open glow gathers around the lit 高光, giving the frame a casual snapshot feel. |
 | A | camera | Leica M10 — A full-frame digital rangefinder camera. (滤镜 #042) |
 | A | body-m10 | Sharp Calm Colour — Sharp, calm colour keeps skin tones clean, with subtle film-like contrast. |
 | B | camera | Canon EOS R6 — A full-frame mirrorless camera. (滤镜 #043) |
@@ -167,14 +167,14 @@
 | D | camera | Fujifilm X-T4 — An APS-C mirrorless camera. (滤镜 #046) |
 | D | camera | Canon EOS R5 — A high-resolution full-frame mirrorless camera. (滤镜 #048) |
 | D | body-r5 | Crisp Natural Rendering — Crisp rendering with natural colour and smooth tonal transitions from the lit edge into the soft shadow. |
-| D | body-xt4 | Warm Film-Simulation Colour — Warm film-simulation colour and soft highlights give the backlit frame a gentle glow. |
+| D | body-xt4 | Warm Film-Simulation Colour — Warm film-simulation colour and soft 高光 give the backlit frame a gentle glow. |
 | A, B | tone | 밀크티 톤 — A low-contrast warm grade that pulls colours toward off-white, oat and camel beige. (滤镜 #041) |
 | B | tone | 크림 톤 — Soft cream-white walls reflect light repeatedly into a smooth, fine, warm white. (滤镜 #047) |
-| A, C | grade | 호박색 톤 — The whole frame bathed in amber-honey warmth, from the wood to the highlights. |
-| 전부 | roll-off | 하이라이트 롤오프 — Bright areas fade gradually into white without a hard clipped edge, keeping texture in the knit and in skin highlights. |
-| B, D | bloom | 소프트 글로우 — Highlights spread a gentle luminous halo into the surrounding shadow, softening the edges of the curtain and the backlit hair. (滤镜 #051) |
-| C | grain | 고감도 노이즈 — At ISO 6400 the dark room shows real luminance noise across the shadows and the far wall, softly smearing fine detail with no night-mode lift. (滤镜 #049) |
-| D | lens | 85mm 인물 렌즈 — A short-telephoto portrait look that flatters the face with gentle compression and creamy blur. (滤镜 #048) |
+| A, C | grade | 호박색 톤 — The whole frame bathed in amber-honey warmth, from the wood to the 高光. |
+| 전부 | roll-off | 하이라이트 롤오프 — Bright areas fade gradually into white without a hard 过曝 edge, keeping texture in the knit and in skin highlights. |
+| B, D | bloom | 소프트 글로우 — 高光 spread a gentle luminous halo into the surrounding 暗部, softening the edges of the curtain and the backlit hair. (滤镜 #051) |
+| C | grain | 고감도 노이즈 — At ISO 6400 the dark room shows real luminance noise across the 暗部 and the far wall, softly smearing fine detail with no night-mode lift. (滤镜 #049) |
+| D | lens | 85mm 인물 렌즈 — A short-telephoto portrait look that flatters the face with gentle compression and creamy 虚化. (滤镜 #048) |
 
 ## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 세트를 쓰는 조건은 규칙 4항이 정하고, 세트 값은 고정 사실보다 먼저다. 규칙은 image-brief.md §4 '룩 카드' 4항과 '비워 둔 층')
 
@@ -192,15 +192,15 @@
 ## 포즈·구도 쌍
 | 번호 | 갈래 | Pose | Camera |
 |---|---|---|---|
-| 1 | A | 두 손으로 컵 감싸기 — Both hands wrap a paper cup at chest height with the elbows tucked in and the shoulders soft, her eyes on a friend just off the frame. | 오버 더 숄더 — Over the blurred shoulder of the friend across the table, her face sharp. |
+| 1 | A | 두 손으로 컵 감싸기 — Both hands wrap a 종이컵 at chest height with the elbows tucked in and the shoulders soft, her eyes on a friend just off the frame. | 오버 더 숄더 — Over the blurred shoulder of the friend across the table, her face sharp. |
 | 2 | A | 턱 괴기 — Elbow planted on a table, palm under the cheek and the head tipped slightly to one side, looking out of the window. | 삼분할 구도 — She sits on the left third beside a window and the window fills the right two thirds. |
 | 3 | A | 메뉴판으로 얼굴 가리기 — A kraft menu held up hides the lower half of her face, only the eyes and hair showing above its edge. | 전경 가림 — Shot past blurred objects on a counter crossing one lower corner of the frame. |
 | 4 | A | 벽에 기대기 — One shoulder rests on a plaster wall beside a shop door, the weight on one hip. | 무릎 위 샷 — The frame cuts at the knees, so the whole stance, the hands and the shopfront threshold all read. |
 | 5 | B | 쿠션 끌어안기 — Sitting up on a soft seat with a big pillow hugged to the chest and the chin resting on it. | 하이앵글 — From above looking down, the soft cloth spreading around her in folds. |
 | 6 | B | 기지개 — Standing at a window with both arms raised and the fingers interlaced, the spine arching in a slow stretch against the sheer curtain. | 여백 — She fills about a third of the vertical frame and the surroundings leave the rest as quiet empty space. |
-| 7 | B | 머그컵 후후 불기 — Both hands wrap a mug held near the lips while the mouth blows softly across the hot surface, the eyes lowered. | 미디엄 클로즈업 — The frame runs from the top of the head to mid-chest with the mug in the lower third and the window behind. |
+| 7 | B | 머그컵 후후 불기 — Both hands wrap a 머그컵 held near the lips while the mouth blows softly across the hot surface, the eyes lowered. | 미디엄 클로즈업 — The frame runs from the top of the head to mid-chest with the 머그컵 in the lower third and the window behind. |
 | 8 | C | 소파에 파묻히기 — Sunk deep into the corner of a sofa with the shoulders low and a cushion hugged to the chest. | 중앙 구도 — She sits dead centre and the folds of the sofa close around her on all sides. |
-| 9 | C | 팔꿈치 괴기 — One elbow rests on the bedside surface and the chin sits in the palm, the eyes soft on the candle flame. | 클로즈업 — The frame holds the face, the hand cupping the chin and the flame, filling the picture edge to edge. |
+| 9 | C | 팔꿈치 괴기 — One elbow rests on the bedside surface and the chin sits in the palm, the eyes soft on the 촛불. | 클로즈업 — The frame holds the face, the hand cupping the chin and the 촛불, filling the picture edge to edge. |
 | 10 | C | 창가 찻잔 — One hand holds a cup near the chin beside a window, the face in profile toward the glass. | 유리창 이중 반사 — A faint ghost of her face lies over the glass beside the live profile. |
 | 11 | D | 하늘 바라보기 — Her body turns sideways and the chin lifts slightly so the eyes rest on the far horizon. | 망원 압축 — A moderate telephoto stacks the foreground plants and the far structures into one compressed layer behind her. |
 | 12 | D | 어깨 너머 시선 — She walks away along a path and turns her head back over one shoulder. | 앙각 — The camera sits low and looks up, so her figure stands tall against the sky. |

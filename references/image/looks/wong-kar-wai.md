@@ -48,12 +48,12 @@
 | A, C | hair | 港风大波浪 — Big side-parted curls with a lifted crown falling past the shoulders, glossy where the curls bend. |
 | B | hair | 1960s bouffant chignon — Hair smoothed into a high rounded crown and a neat low chignon, every strand in place. (1960년대 장면일 때) |
 | D | hair | parted straight hair — Straight dark hair with a soft side part, tucked around the ears. |
-| A, B, C | base | 无粉感底妆 — A matte, shine-free base that still reads as skin under colored light. |
+| A, B, C | base | 无粉感底妆 — A 哑光, shine-free base that still reads as skin under colored light. |
 | D | base | 冷白瓷肌 — A semi-matte cool porcelain base that reads slightly translucent in the green shade. |
 | A, C | brow | 野生眉 — Full natural brows brushed up with the hairs left visible. |
 | B | brow | 柳叶眉 — Fine brows drawn in a long, softly arched line toward the temple. |
-| A | lip | 豆沙唇 — A muted rosy-brown matte lip with a softly blurred edge and no gloss. |
-| B | lip | 山茶花红唇 — A matte camellia red with a cool rose undertone and a firm outline. |
+| A | lip | 豆沙唇 — A muted rosy-brown 哑光 lip with a softly blurred edge and no gloss. |
+| B | lip | 山茶花红唇 — A 哑光 camellia red with a cool rose undertone and a firm outline. |
 | C | lip | 车厘子红 — A deep cherry-red lip, slightly cool, with a defined but soft edge. |
 | D | lip | 浆果唇 — A muted dark berry lip with a slightly stained edge. |
 | B | lip | 丝绒唇 — A soft-matte deep brown-red lip with a velvet finish and a slightly feathered edge. (S1 전용) |
@@ -62,26 +62,26 @@
 ## Expression
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
-| A | expression | 眼神迷离 — Half-lowered lids and an unfocused gaze drifting past the lens, the mouth slightly slack. |
+| A | expression | 眼神迷离 — Half-lowered lids and an unfocused gaze drifting past the lens, with 微张嘴唇. |
 | A | expression | 惆怅 — The inner brows lift a little and the eyes look far off, the lips pressed lightly together. |
-| B | expression | 欲语还休 — The lips part just enough to speak and then hold, the eyes lowering as the words stay unsaid. |
+| B | expression | 欲语还休 — The lips part just enough to speak and then hold, 垂眸 as the words stay unsaid. |
 | B, D | expression | 落寞 — The gaze drops to one side, the mouth corners sag slightly and the brow goes slack. |
-| C | expression | 冷眼 — An unsmiling face with slightly lowered lids and a steady, unreadable gaze into the lens. |
-| C | expression | 玩世不恭 — Chin slightly raised, one brow lifted and a lopsided half-smile aimed past the viewer. |
+| C | expression | 冷眼 — A 面无表情 face with slightly lowered lids and a steady, unreadable gaze into the lens. |
+| C | expression | 玩世不恭 — Chin slightly raised, one brow lifted and a lopsided 似笑非笑 aimed past the viewer. |
 
 ## Outfit
 **함께 쓰는 슬롯:** `outfit`·`outfit-outer`(겉옷은 `outfit` 위에 걸친다)
 
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
-| A | outfit | 吊带裙 — A deep crimson silk slip dress with thin straps; the satin throws a long liquid highlight wherever neon reaches it. |
+| A | outfit | 吊带裙 — A deep crimson silk slip dress with thin straps; the satin throws a long liquid 高光 wherever neon reaches it. |
 | A | outfit-outer | oversized wool coat — A man's boxy black wool coat hangs open from her shoulders, a size too big. |
 | A | outfit | 港风西装 — A boxy oversized suit with wide padded shoulders and a long loose jacket worn open over a plain black vest. |
 | A | outfit | 风衣 — A pale khaki oversized cotton trench worn open, the hem swinging as she walks. (滤镜 #045) |
-| B | outfit | 旗袍 — A fitted emerald silk damask cheongsam with a high stand collar and frog buttons, the woven pattern glinting along the body. (滤镜 #044) |
+| B | outfit | 旗袍 — A fitted emerald silk damask cheongsam with a high 立领 and 盘扣, the woven pattern glinting along the body. (滤镜 #044) |
 | B | outfit | 改良旗袍 — A wine-red silk-velvet cheongsam whose pile drinks the light and turns almost black in the folds. (滤镜 #041) |
-| C | outfit | 机车夹克 — A cropped black leather biker jacket over a slip dress, hard highlights on the zip and creases. |
-| C | outfit | 丝绒晚礼服 — A long deep-red velvet gown with a high slit, soft highlights along the shoulder. (穿搭 #066) |
+| C | outfit | 机车夹克 — A cropped black leather biker jacket over a slip dress, hard 高光 on the zip and creases. |
+| C | outfit | 丝绒晚礼服 — A long deep-red velvet gown with a high slit, soft 高光 along the shoulder. (穿搭 #066) |
 | D | outfit | 旗袍 — A deep forest-green silk cheongsam, its sheen dulled by the humid green shade. (滤镜 #047) |
 
 ## Legwear
@@ -101,15 +101,15 @@
 | B, D | hand-prop | whisky glass — A cut-crystal glass of amber whisky catching the lamp in its facets. (滤镜 #041) |
 | C | hand-prop | 打火机 — A metal flip lighter whose small flame lights the fingers and the underside of the face. |
 | C | hand-prop | 大哥大 — A heavy brick-sized black mobile phone held against the ear. |
-| 전부 | nails | 红指甲 — Glossy opaque red polish on medium oval nails, a sharp highlight on each. |
+| 전부 | nails | 红指甲 — Glossy opaque red polish on medium oval nails, a sharp 高光 on each. |
 
 ## Style
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
 | A | style | 重庆森林 — Chungking Express city mood: saturated neon, a lone still figure, everything around her streaking past. |
-| B | style | 花样年华 — In the Mood for Love restraint: fitted cheongsams, cramped stairwells, warm tungsten pools and deep shadow. |
+| B | style | 花样年华 — In the Mood for Love restraint: fitted 旗袍, cramped stairwells, warm tungsten pools and deep shadow. |
 | C | style | 堕落天使 — Fallen Angels night: faces close to an ultra-wide lens, stretched edges and hard neon contrast. |
-| D | style | 阿飞正传 — Days of Being Wild humidity: green-tinted rooms, a cool porcelain-finish base and slow, heavy air. |
+| D | style | 阿飞正传 — Days of Being Wild humidity: green-tinted rooms, a 冷白瓷肌 base and slow, heavy air. |
 | 전부 | palette | palette — Crimson, black and amber with green-teal shadows, nothing pastel or daylight-white anywhere in the frame. |
 
 ## Scene
@@ -118,10 +118,10 @@
 | A | place | 重庆大厦 — A tight corridor of small shops and mixed signs, reflective floors and close walls. |
 | A | place | 骑楼 — A covered shop arcade along an old Kowloon street, tiled square pillars and a closed rolling shutter. |
 | A | place | 茶餐厅 — A Hong Kong diner with green-white mosaic tiles, and booth seats. |
-| A, C | background | 九龙霓虹 — Dense overlapping neon signs stacked over a narrow old street, red and green tubes clashing in the haze, every sign blurred past reading. |
+| A, C | background | 九龙霓虹 — Dense overlapping 霓虹灯牌 stacked over a narrow old street, red and green tubes clashing in the haze, each one blurred past reading. |
 | B | place | stone stair alley — A narrow stone staircase between weathered plaster walls. (滤镜 #044) |
 | B | place | 金雀餐厅 — A deep red high-backed leather booth under brass wall sconces and green floral wallpaper. (风格 #091) |
-| B | place | 唐楼 — A tenement corridor with green wooden louvres and peeling paint. (滤镜 #055) |
+| B | place | 唐楼 — A tenement corridor with green wooden 百叶窗 and peeling paint. (滤镜 #055) |
 | C | place | 快餐店 — A booth by a window with red plastic seats. (滤镜 #048) |
 | D | place | 绿色百叶窗 — A room behind half-closed green wooden louvres. (滤镜 #047) |
 
@@ -130,7 +130,7 @@
 
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
-| A, C | face-light | 霓虹双色侧光 — A red neon sign on one side and green tube light on the other split her face into two colors that meet along the nose. |
+| A, C | face-light | 霓虹双色侧光 — A red 霓虹灯牌 on one side and green tube light on the other split her face into two colors that meet along the nose. |
 | A | light-fill | 荧光灯 — Green-tinged fluorescent light from a shop interior washes the background flat and cool. |
 | A | place-light-corridor | 荧光灯 — In the cramped shop corridor, mixed light from the signs and tubes bounces between the close walls and over the reflective floor. (상가 복도 장면일 때) |
 | A | place-light-diner | 荧光灯 — In the diner, green-tinged fluorescent light hangs over the booths above the warmer lamps along the walls. (차찬텡 식당 장면일 때) |
@@ -138,25 +138,25 @@
 | B | face-light | 百叶窗光影 — Mixed warm bulb light and cool window light fall through louvres in parallel bars across her cheek. (덧창 복도 장면일 때) |
 | B | place-light-booth | 钨丝灯 — In the deep red booth, the warm light of the brass wall sconces leaves the corners in dark red shade. (식당 부스석 장면일 때) |
 | C | place-light-fastfood | 荧光灯 — At the fast-food booth, hard cool-white fluorescent light falls on the red plastic seats while the window beside it stays dark. (패스트푸드점 장면일 때) |
-| D | face-light | green louvre light — Filtered daylight through green louvres lays a jade-green cast over the room and the shadow side of her face. |
-| D | place-light-room | 钨丝灯 — The room behind the half-closed louvres is lit warm from a lamp, and the louvres lay cool striped light across it. (덧창 방 장면일 때) |
+| D | face-light | green louvre light — Filtered daylight through green 百叶窗 lays a jade-green cast over the room and the shadow side of her face. |
+| D | place-light-room | 钨丝灯 — The room behind the half-closed 百叶窗 is lit warm from a lamp, and their slats lay cool striped light across it. (덧창 방 장면일 때) |
 | A, C | catchlight | 彩色霓虹眼神光 — Thin red and green neon strips mirror as colored streaks in her irises. |
 | B, D | catchlight | lamp catchlight — One small warm point from the lamp sits in each eye. |
-| A | weather | 雨夜 — Fine rain gives every sign a soft cold halo of mist and catches the neon as short bright streaks. (비 오는 밤 장면일 때) |
+| A | weather | 雨夜 — Fine rain gives every 霓虹灯牌 a soft cold halo of mist and catches the neon as short bright streaks. (비 오는 밤 장면일 때) |
 
 ## Optics
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
-| 전부 | stock | Kodak Vision3 500T — A tungsten-balanced cinema negative look: in this look skin highlights lean red-orange, shadows lean teal-green and the blacks are pressed deep. |
+| 전부 | stock | Kodak Vision3 500T — A tungsten-balanced cinema negative look: in this look skin 高光 lean red-orange, 暗部 lean teal-green and the blacks are pressed deep. |
 | A | motion | 抽帧 — Shot with a slow shutter and printed with repeated frames, so passing people and rain smear into stuttering step-printed ghost trails while she stays sharp. |
 | A | motion | 慢门 — Moving crowds and lights stretch into soft streaks around her held, still body. |
 | A, C | bloom | 红色光晕 — Each bright neon tube blooms a soft red halation glow around its edges. |
 | B | key | Hong Kong Noir — Most of the frame sits in deep black, with narrow amber light catching only edges and faces. |
 | B | bloom | 黑柔滤镜 — A gentle diffusion haze softens the brightest lamps into faint halos while her face stays clear. |
 | C | lens | 超广角畸变 — An ultra-wide lens held close stretches the frame edges and gives a slight barrel curve. |
-| D | color | 青绿偏色 — Shadows and midtones lean ink green and the humid light leaves only a faint pale sheen on the skin. |
-| A, B, D | grain | 胶片颗粒 — Fine, even 35mm film grain sits across the whole frame, slightly heavier in the shadows. |
-| C | grain | 胶片颗粒 — Coarse, visible film grain across the whole frame, heaviest in the dark window. (패스트푸드점 창가 장면일 때) |
+| D | color | 青绿偏色 — 暗部 and midtones lean ink green and the humid light leaves only a faint pale sheen on the skin. |
+| A, B, D | grain | 胶片颗粒 — Fine, even 35mm 颗粒 sits across the whole frame, slightly heavier in the 暗部. |
+| C | grain | 胶片颗粒 — Coarse, visible 颗粒 across the whole frame, heaviest in the dark window. (패스트푸드점 창가 장면일 때) |
 
 ## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 세트를 쓰는 조건은 규칙 4항이 정하고, 세트 값은 고정 사실보다 먼저다. 세트를 고르면 갈래는 그 세트의 갈래 열이다. 단서는 네 칸으로 판정하고 찾기용 낱말이 아니라 장소·소품·시간대·의상이 맞는지로 본다. 묶음 속 K 숫자는 Iris 프리셋의 연출 값이고 프롬프트 문장에는 색으로 옮긴다. 규칙은 image-brief.md §4 '룩 카드' 4항과 '비워 둔 층')
 | 세트 | 갈래 | 묶음 |
@@ -179,8 +179,8 @@
 | 6 | B | 下楼梯 — She walks down a narrow stair carrying something in one hand (a requested cup or bag goes in that hand), eyes lowered. | 俯拍 — From the top of the stair looking down, the steps leading the eye to her. |
 | 7 | B | 二郎腿 — Seated in a booth, one leg crossed over the other, one hand resting on the knee and any glass or cup she holds in the other. | 过肩镜头 — Over the blurred shoulder of an unseen companion across the table, the frame running from her head down to the knees so the crossed leg shows. |
 | 8 | C | close lean — She leans toward the lens, chin up, one hand near the face with a lighter (any other held prop takes that hand). | 超广角畸变 — The lens is about 30 cm from her face; the background bends away behind her. |
-| 9 | A, C | tram window seat — She sits at a window seat of a moving tram or bus with her head against the glass, any cup she holds resting in one hand in her lap. | reflection frame — The passing view slides by in the glass beside her, doubling her outline. |
-| 10 | D | standing at louvres — She stands beside half-closed louvres, looking out at the foliage outside, any glass or cup she holds in the hand away from the window. | 留白 — She fills one third of a vertical frame; the wall and louvres fill the rest. |
+| 9 | A, C | tram window seat — She sits at a window seat of a moving 叮叮车 or bus with her head against the glass, any cup she holds resting in one hand in her lap. | reflection frame — The passing view slides by in the glass beside her, doubling her outline. |
+| 10 | D | standing at louvres — She stands beside half-closed 百叶窗, looking out at the foliage outside, any glass or cup she holds in the hand away from the window. | 留白 — She fills one third of a vertical frame; the wall and 百叶窗 fill the rest. |
 
 장소: 쌍 1은 간판·네온이 뒤에 겹치는 곳일 때; 쌍 4는 문틀·출입구가 있는 곳일 때; 쌍 5는 창가 카운터·테이블이 있는 곳일 때; 쌍 6은 계단이 있는 곳일 때; 쌍 7은 부스석이 있는 곳일 때; 쌍 9는 전차·버스 같은 움직이는 차량 안일 때; 쌍 10은 덧창(루버)이 있는 방일 때. 쌍 2·3·8은 장소를 가리지 않는다.
 
