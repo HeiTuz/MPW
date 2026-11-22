@@ -53,7 +53,7 @@ export const CODE_REGISTRY = Object.freeze({
   mixUnlisted: { code: "mix/unlisted", severity: { native: "warning", assembled: null }, intent: "Flag original-language words that no lexicon row, look card or fixed-lines.md carries." },
   mixRenamed: { code: "mix/renamed", severity: { native: "warning", assembled: null }, intent: "Flag one thing called by two names: another alias of a line-head token written outside its line." },
   mixCulture: { code: "mix/culture", severity: { native: "warning", assembled: null }, intent: "Flag a photo term from the other culture's column of fixed-lines.md (高光 in a JP scene, 白飛び in a KR or CN scene), the culture read from the Finish tokens." },
-  mixThin: { code: "mix/thin", severity: { native: "warning", assembled: null }, intent: "Flag a KR, CN or JP photo prompt that barely mixes: few original-language line heads, no photo term in Optics or Camera, or no expression word in Expression." },
+  mixThin: { code: "mix/thin", severity: { native: "warning", assembled: null }, intent: "Flag a KR, CN or JP photo prompt that barely mixes: few original-language line heads, no photo term in Optics or Camera, or no expression word in Expression. For --engine seedream, midjourney and soul (one paragraph, no line heads): a person photo in a KR, CN or JP scene with fewer than three original-language words (engine-levers.md §3)." },
   engineBrand: { code: "coherence/engine-brand", severity: { native: "warning", assembled: "warning" }, intent: "Flag a film stock brand name in a Soul prompt, which draws the film border." },
   parse: { code: "manifest/parse", severity: { native: "error", assembled: "error" }, intent: "Report invalid JSON without losing subsequent rows." },
   notObject: { code: "manifest/not-object", severity: { native: "error", assembled: "error" }, intent: "Require an object for each manifest row." },
@@ -672,6 +672,18 @@ function inspectMix(result, instruction) {
   }
 }
 
+// engine-levers.md §3 keeps original-language names inside the English sentences of these engines' paragraphs (Nano Banana's cell limits them, so it is not read).
+// A one-paragraph prompt has no line heads to count, so only the original-language words in the text are: a person in a KR, CN or JP scene with fewer than three is the flattening this rule exists to stop.
+const MIX_ENGINES = new Set(["seedream", "midjourney", "soul"]);
+const PERSON_WORD = /\b(?:woman|man|girl|boy|she|he|her|his)\b/iu;
+const ASIAN_SCENE = /\b(?:korea(?:n)?|seoul|busan|chinese|china|hong kong|kowloon|shanghai|beijing|taipei|japan(?:ese)?|tokyo|osaka|kyoto|shibuya|shinjuku|chungking|wong kar-wai)\b/iu;
+function inspectEngineMix(result, instruction) {
+  if (!MIX_ENGINES.has(result.engine) || !PERSON_WORD.test(instruction) || !ASIAN_SCENE.test(instruction)) return;
+  const chunks = chunksOf(unquote(instruction));
+  if (chunks.length >= 3) return;
+  emit(result, CODE_REGISTRY.mixThin, `The prompt barely mixes languages: ${chunks.length} original-language word(s) in a ${result.engine} person photo prompt (fewer than three).`, { hint: "Keep the English sentence frame and leave the names, expression words, photo terms and texture or light words in their original language instead of translating them (engine-levers.md §3, image-brief.md §2.1)." });
+}
+
 // engine-levers.md §5: the cells that say "do not write this" for one engine. Text matching only.
 const LAYER_ENGINES = new Set(["seedream", "nano-banana", "soul", "midjourney"]);
 function inspectEngine(result, instruction) {
@@ -741,6 +753,7 @@ export function checkText(input, options = {}) {
   if (result.profile === "native" && result.engine !== "gpt-image") {
     // Only the engine-independent checks run for other engines; their own syntax is outside this checker.
     inspectCoherence(result, text, instruction);
+    inspectEngineMix(result, instruction);
     return result;
   }
   if (result.profile === "assembled" && result.engine === "midjourney") {
