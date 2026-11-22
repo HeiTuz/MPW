@@ -320,13 +320,41 @@ assert.match(help.stdout, /usage: node scripts\/find_tokens\.mjs/);
   assert.ok(!candidates('no Kodak Gold, clean digital color').includes('kodak-gold-200'));
 }
 
-// Output size: the card block and the rows print shorter than before; ceilings are the measured size plus 5% (5076, 6109, 8189 bytes when set).
+// Output size: the card block and the rows print shorter than before; ceilings are the measured size plus 5% (5076, 6109, 8189 bytes when set; the second became 6518 with the 문장 속 낱말 block of up to four rows, so its ceiling went from 6500 to 6850).
 {
   const size = (args) => Buffer.byteLength(run(args).stdout);
   const queries = [
     [['--q', '비 오는 밤 신주쿠,투명 우산,여자', '--limit', '3'], 5400],
-    [['--q', '툇마루,낮잠,고양이,한옥,오후 햇살,KR', '--limit', '4'], 6500],
+    [['--q', '툇마루,낮잠,고양이,한옥,오후 햇살,KR', '--limit', '4'], 6850],
     [['--q', '雨夜新宿,透明傘,女性,ネオン', '--limit', '6'], 8700],
   ];
   for (const [args, limit] of queries) assert.ok(size(args) <= limit, `${args[1]}: ${size(args)} bytes is over ${limit}`);
+}
+
+// Part-name rows (tag 부분): they print once in a "## 문장 속 낱말" block, no more than the block limit, one layer after another; layer lists hold only rows that can head a line.
+{
+  const out = run(['--q', '한옥,新中式']).stdout;
+  const block = out.split('## 문장 속 낱말\n')[1];
+  assert.ok(block, 'a 한옥 + 新中式 query prints the part block');
+  const lines = block.trim().split('\n').slice(1);
+  assert.ok(lines.length >= 2 && lines.length <= 4, `${lines.length} part rows`);
+  const partRows = loadAll().flatMap((l) => l.rows.filter((r) => r.tags.includes('부분')).map((r) => ({ ...r, layer: l.slug })));
+  const found = lines.map((line) => partRows.find((r) => line.startsWith(`${r.token} — ${r.looks}`)));
+  assert.ok(found.every(Boolean), 'every printed part row is a 부분 row');
+  assert.ok(new Set(found.map((r) => r.layer)).size >= 2, 'part rows come from more than one layer');
+  const before = out.split('## 문장 속 낱말')[0];
+  for (const line of lines) assert.ok(!before.includes(`${line.split(' — ')[0]} — `), 'a part row is not listed twice');
+  const json = JSON.parse(run(['--q', '한옥,新中式', '--json']).stdout);
+  assert.ok(json.words.length >= 2 && json.words.every((w) => w.tags.includes('부분')), 'json carries the part rows under words');
+  assert.ok(!Object.values(json.layers).flat().some((m) => m.tags.includes('부분')), 'json layers carry no part rows');
+  // A part row found by its own name still prints, and a query that touches no part prints no block.
+  assert.ok(run(['--q', '마당']).stdout.includes('## 문장 속 낱말\n') && run(['--q', '마당']).stdout.includes('마당 — '));
+  assert.ok(!run(['--q', '시스루뱅']).stdout.includes('문장 속 낱말'));
+  // --limit above 6 lists more parts; --random leaves the tag alone.
+  assert.ok(run(['--q', '한옥', '--limit', '12', '--layers', 'scene']).stdout.split('## 문장 속 낱말\n')[1].trim().split('\n').length > 5);
+  assert.equal(run(['--q', '한옥', '--random', '2', '--layers', 'scene']).status, 0);
+}
+// The new part and expression rows are found by what a request calls them.
+for (const [query, token] of [['한옥 마당', '마당'], ['창호지', '창호지'], ['오비', '帯'], ['개완', '盖碗'], ['멈칫', '멈칫'], ['쿄톤', 'きょとん'], ['북커버', 'ブックカバー']]) {
+  assert.ok(search({ terms: [query] }).flatMap((l) => l.matches.map((m) => m.token)).includes(token), `${query} -> ${token}`);
 }
