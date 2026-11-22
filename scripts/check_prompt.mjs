@@ -48,7 +48,7 @@ export const CODE_REGISTRY = Object.freeze({
   engineFlag: { code: "coherence/engine-flag", severity: { native: "warning", assembled: "warning" }, intent: "Flag a Midjourney flag or ratio token in the body of an engine that takes it as a setting." },
   engineBan: { code: "coherence/engine-ban", severity: { native: "warning", assembled: "warning" }, intent: "Flag a spoken ban on illustration or CGI where the engine's cell says to state the medium or use its own exclusion syntax." },
   slotName: { code: "token/slot-name", severity: { native: "warning", assembled: "warning" }, intent: "Flag a layer-line token that names the slot (hair color, passersby, road surface) instead of the thing shown." },
-  mixLine: { code: "mix/line", severity: { native: "warning", assembled: null }, intent: "Flag a layer line with four or more original-language chunks, or one with no English frame (image-brief.md §2)." },
+  mixLine: { code: "mix/line", severity: { native: "warning", assembled: null }, intent: "Flag a layer line with four or more original-language chunks, one with no English frame, or a spaced original-language phrase outside Expression and Style or twice in one line (image-brief.md §2)." },
   mixAmount: { code: "mix/amount", severity: { native: "warning", assembled: null }, intent: "Flag more original-language chunks in the layer sentences than 1.5 per layer line." },
   mixUnlisted: { code: "mix/unlisted", severity: { native: "warning", assembled: null }, intent: "Flag original-language words that no lexicon row, look card or fixed-lines.md carries." },
   mixRenamed: { code: "mix/renamed", severity: { native: "warning", assembled: null }, intent: "Flag one thing called by two names: another alias of a line-head token written outside its line." },
@@ -475,8 +475,9 @@ const mixKey = (text) => text.normalize("NFKC").toLowerCase().replace(/[\s\-\u00
 const chunksOf = (text) => text.match(NATIVE_CHUNK) ?? [];
 const mixRoot = resolve(dirname(modulePath), "../references/image");
 let mixKnown;
-// Everything an original-language word may come from: lexicon tokens and aliases, every original-language chunk of fixed-lines.md (its sentence-word tables, identity formulas and fixed lines),
-// of the look cards and of the prompt text blocks in image-brief.md. Missing files leave the set partial, so the two checks that need it stay quiet instead of guessing.
+// Everything an original-language word may come from: lexicon tokens and aliases, and the original-language chunks in the table rows and backtick spans of fixed-lines.md
+// (its sentence-word tables, identity formulas and fixed lines) and of the look cards, and the Identity template. The prose around them is left out, and so are the examples in image-brief.md, which must pass
+// on these sources rather than vouch for themselves. If the lexicon cannot be read, the two checks that need it stay quiet instead of guessing.
 function mixSources() {
   if (mixKnown !== undefined) return mixKnown;
   try {
@@ -491,14 +492,29 @@ function mixSources() {
     }
     // A space-joined chunk (순한 이목구비) also lists each of its words.
     const add = (text) => { for (const chunk of chunksOf(text)) for (const word of [chunk, ...chunk.split(/\s+/u)]) known.add(mixKey(word)); };
-    const files = [resolve(mixRoot, "fixed-lines.md")];
+    const fixedLines = resolve(mixRoot, "fixed-lines.md");
+    const files = [fixedLines];
     const looks = resolve(mixRoot, "looks");
     if (fs.existsSync(looks)) for (const name of fs.readdirSync(looks)) if (name.endsWith(".md")) files.push(resolve(looks, name));
-    for (const file of files) if (fs.existsSync(file)) add(fs.readFileSync(file, "utf8"));
-    // image-brief.md: only its ```text blocks (prompt text, such as the Identity Reference template), not the prose around them.
+    for (const file of files) {
+      if (!fs.existsSync(file)) continue;
+      const text = fs.readFileSync(file, "utf8");
+      add(text.split("\n").filter((line) => line.startsWith("|")).join("\n"));
+      add([...text.matchAll(/`([^`\n]+)`/gu)].map((match) => match[1]).join("\n"));
+    }
+    // The Identity Reference template of image-brief.md §5 (얼굴형, 이목구비), which a reference-role line may repeat; not the examples.
     const brief = resolve(mixRoot, "image-brief.md");
-    if (fs.existsSync(brief)) for (const block of fs.readFileSync(brief, "utf8").matchAll(/```text\n([\s\S]*?)```/gu)) add(block[1]);
-    mixKnown = { known, rowsByToken };
+    if (fs.existsSync(brief)) add(fs.readFileSync(brief, "utf8").split("\n## 5. ")[1]?.match(/```\w*\n([\s\S]*?)```/u)?.[1] ?? "");
+    // The first word of each Korean phrase in the expression table (눈꺼풀, 입술, 미간): a longer Expression phrase must be built on one of them (fixed-lines.md §문장 속 낱말).
+    const phraseKeys = [];
+    if (fs.existsSync(fixedLines)) {
+      const table = fs.readFileSync(fixedLines, "utf8").split("\n표정 구절")[1]?.split("\n\n")[1] ?? "";
+      for (const row of table.split("\n").slice(2)) {
+        const word = row.split("|")[2]?.trim().split(/\s+/u)[0] ?? "";
+        if (/^\p{sc=Hangul}+$/u.test(word)) phraseKeys.push(word.replace(/(?:이|가|은|는|한다)$/u, ""));
+      }
+    }
+    mixKnown = { known, rowsByToken, phraseKeys };
   } catch {
     mixKnown = null;
   }
@@ -532,17 +548,20 @@ function inspectMix(result, instruction) {
   const crowded = [];
   const frameless = [];
   let total = 0;
+  // Line-head tokens are not counted: only the original-language chunks inside the sentences (image-brief.md §2.1 rule 4).
   for (const item of lines) {
     item.chunks = chunksOf(item.sentence);
     total += item.chunks.length;
-    if (item.chunks.length >= 4) crowded.push(item);
+    // A spaced phrase of three or more words goes only in Expression and Style, one a line.
+    const phrases = item.chunks.filter((chunk) => chunk.split(/\s+/u).length >= 3).length;
+    if (item.chunks.length >= 4 || phrases > (/^(?:Expression|Style)$/u.test(item.section) ? 1 : 0)) crowded.push(item);
     const native = count(item.sentence, /[\p{sc=Han}\p{sc=Hiragana}\p{sc=Katakana}\p{sc=Hangul}]/gu);
     if (native >= 6 && native > count(item.sentence, /[A-Za-z]/gu)) frameless.push(item);
   }
   const shown = (items) => items.slice(0, 3).map((item) => item.head).join(" | ");
   if (crowded.length || frameless.length) {
     const found = [...new Set([...crowded, ...frameless])];
-    emit(result, CODE_REGISTRY.mixLine, `${found.length} layer line(s) mix too much original language: ${shown(found)}`, { hint: "Keep the sentence English and use original-language words only where §2 puts them: at most three a line, with an English frame around them." });
+    emit(result, CODE_REGISTRY.mixLine, `${found.length} layer line(s) mix too much original language: ${shown(found)}`, { hint: "Keep the sentence English and use original-language words only where §2 puts them: at most three a line, with an English frame around them, and a spaced phrase only in Expression and Style, one a line." });
   }
   if (lines.length >= 8 && total > 1.5 * lines.length) {
     emit(result, CODE_REGISTRY.mixAmount, `${total} original-language chunks in ${lines.length} layer lines (more than 1.5 per line).`, { hint: "Turn the photo-term and texture words back into English first (image-brief.md §2 rule 4)." });
@@ -551,21 +570,30 @@ function inspectMix(result, instruction) {
   if (!sources) return;
   const heads = lines.map((item) => mixKey(item.head));
   const first = sections.find((section) => section.name === null)?.lines.join(" ") ?? "";
+  const long = (chunk) => chunk.split(/\s+/u).length >= 3;
+  // Expression sentences bend the table phrases (particles, endings, a few scene words), so only their long phrases are read: each must carry a table phrase's first word.
+  const offTable = lines.filter((item) => item.section === "Expression").flatMap((item) => item.chunks)
+    .filter((chunk) => long(chunk) && /\p{sc=Hangul}/u.test(chunk) && !sources.phraseKeys.some((key) => chunk.includes(key)));
   const unlisted = [
     ...lines.flatMap((item) => [...chunksOf(item.head), ...(item.section === "Expression" ? [] : item.chunks)]),
     ...chunksOf(first),
   ].filter((chunk) => !isListed(chunk, sources.known, heads));
-  // A Korean phrase of three or more words is a state-of-face or mood phrase that no table can list: §2 keeps it to Expression, and mix/line reads its size.
-  const missing = [...new Set(unlisted.filter((chunk) => chunk.split(/\s+/u).length < 3))];
+  // Other long phrases are the one Style phrase a line allows, or already a mix/line warning.
+  const missing = [...new Set([...unlisted.filter((chunk) => !long(chunk)), ...offTable])];
   if (missing.length) {
     emit(result, CODE_REGISTRY.mixUnlisted, `${missing.length} original-language word(s) not in the lexicon, a look card or fixed-lines.md: ${missing.slice(0, 5).join(" | ")}`, { evidence: missing.slice(0, 5), hint: "Take original-language words only from the lexicon, a look card or fixed-lines.md, or the user's own words; write anything else in English (image-brief.md §2)." });
   }
+  // What the one-name check reads: layer sentences and the scene part of the first line. Layer headings, the Identity paragraph (a fixed formula), the first line's medium or look-card
+  // phrase (up to its first colon, comma or " of ") and the Finish closer that calls that medium again name no thing in the scene (image-brief.md §1, fixed-lines.md Finish).
+  const opener = /:|,\s| of /u.exec(first);
+  const named = [{ line: null, text: opener ? first.slice(opener.index) : first }, ...sections.filter((section) => section.name && section.name !== "Identity Reference")
+    .flatMap((section) => section.lines.map((line) => ({ line, text: LAYER_LINE.exec(line)?.[2] ?? line })))
+    .filter((entry) => !/^The whole frame reads as\b/u.test(entry.text))];
   const renamed = [];
   for (const item of lines) {
     const rows = sources.rowsByToken.get(mixKey(item.head)) ?? [];
     if (!rows.length) continue;
-    const outside = instruction.split(/\r?\n/u).filter((line) => line !== item.line)
-      .map((line) => LAYER_LINE.exec(line)?.[2] ?? line).join("\n");
+    const outside = named.filter((entry) => entry.line !== item.line).map((entry) => entry.text).join("\n");
     const own = mixKey(item.head);
     for (const alias of new Set(rows.flatMap((row) => row.aliases))) {
       const key = mixKey(alias);

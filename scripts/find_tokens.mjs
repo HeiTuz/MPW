@@ -348,7 +348,7 @@ export function formatText(results, cards = [], candidates = [], { aliases = fal
   const head = cardBlock(cards) + candidateBlock(candidates);
   if (results.every((l) => l.matches.length === 0) && !parts.length) {
     if (cards.length) return `${head}no layer rows matched; the card above carries the look.\n`;
-    return `${head}no match in any layer. Use English tokens and sentences unless you know an original-language term for sure (image-brief.md §2, §4).\n`;
+    return `${head}no match in any layer. Use English tokens and sentences: original-language words come only from the lexicon, a look card, fixed-lines.md or the user (image-brief.md §2.1).\n`;
   }
   const layers = results.map((l) => {
     const body = l.matches.length
