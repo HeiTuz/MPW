@@ -299,7 +299,7 @@ assert.equal(viaBundle.status, 0, viaBundle.stderr);
 assert.deepEqual(viaBundle.stdout.match(/^==> .*$/gm).map((line) => line.split(" (L")[0]), [
   "==> references/image/surfaces.md §0",
   "==> references/image/image-brief.md §1",
-  "==> references/image/image-brief.md §2",
+  "==> references/image/image-brief.md §2.1",
   "==> references/image/image-brief.md §6",
   "==> references/image/image-brief.md §7",
   "==> references/image/image-brief.md §8",
