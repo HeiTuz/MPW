@@ -4,7 +4,7 @@ GPT Image(웹·API)·대상 미정인 새 이미지(인물 사진과 인물 없�
 
 ## 문화권 고르기
 
-문화권 행과 아래 낱말 표의 칸은 장면 문화권 하나로 고른다. 사진 추출은 사진 속 장소의 문화권이다(카드가 있어도). 그 밖은 룩 카드의 문화권(갈래가 다른 문화권의 장면을 정하면 그 갈래의 것), 카드가 없으면 요청한 장소·말의 문화권이다. 장소가 문화권을 말하지 않거나 한·중·일 두 문화권을 섞으면(한옥에 차린 純喫茶) Identity는 '한·중·일 단서도 없음' 행, 메이크업 줄·Finish는 KR 행, 낱말 표는 '단서 없음' 칸이다. 인물이 '그 밖' 행이면 메이크업 줄은 US, Finish는 마지막 행이다. US·FR·그 밖의 장면은 낱말 표를 쓰지 않는다.
+문화권 행과 아래 낱말 표의 칸은 장면 문화권 하나로 고른다. 사진 추출은 사진 속 장소의 문화권이다(카드가 있어도). 그 밖은 룩 카드의 문화권(갈래가 다른 문화권의 장면을 정하면 그 갈래의 것), 카드가 없으면 요청한 장소·말의 문화권이다. 장소가 문화권을 말하지 않거나 한·중·일 두 문화권을 섞으면(한옥에 차린 純喫茶) Identity는 '한·중·일 단서도 없음' 행, 메이크업 줄·Finish는 KR 행, 낱말 표는 '단서 없음' 칸이다. 그래서 한 프롬프트에 한국어 토큰과 한자 사진 용어가 함께 나오는 것이 맞는 꼴이다. 인물이 '그 밖' 행이면 메이크업 줄은 US, Finish는 마지막 행이다. US·FR·그 밖의 장면은 낱말 표를 쓰지 않는다.
 
 ## 문장 속 낱말
 
@@ -17,12 +17,12 @@ GPT Image(웹·API)·대상 미정인 새 이미지(인물 사진과 인물 없�
 | highlights | 高光 | |
 | shadows | 暗部 | |
 | darkest parts | 最暗部 | 最暗部 |
-| clipped to white | 过曝 | 白飛び |
+| overexposed, blown to white | 过曝 | 白飛び |
 | crushed blacks | 死黑 | 黒つぶれ |
 | white balance | 白平衡 | |
 | digital noise | 噪点 | |
-| film grain | 颗粒 | |
-| background blur | 虚化 | ボケ |
+| film grain | 胶片颗粒 | |
+| background blur | 虚化 | 背景のボケ |
 | deep focus | 大景深 | パンフォーカス |
 | wide-angle | 广角 | 広角 |
 | telephoto | 长焦 | 望遠 |
@@ -34,27 +34,27 @@ GPT Image(웹·API)·대상 미정인 새 이미지(인물 사진과 인물 없�
 | 뜻 | 단서 없음 | KR | CN | JP |
 |---|---|---|---|---|
 | matte | 哑光 | 무광 | 哑光 | |
-| wet glossy shine | 물광 | 물광 | 水光 | ツヤ |
+| wet glossy shine | 물광 | 물광 | 水光 | 濡れたようなツヤ |
 | subtle soft sheen | 은은한 광택 | 은은한 광택 | | |
 | healthy shine on hair | 윤기 | 윤기 | | ツヤ |
-| clear and dewy skin | 맑고 촉촉하다 | 맑고 촉촉하다 | 水润 | みずみずしい |
+| clear and dewy skin | 맑고 촉촉하다 | 맑고 촉촉하다 | 通透水润的肌肤 | 透明感のあるみずみずしい肌 |
 | soft shadow | やわらかい影 | | | やわらかい影 |
-| airy feel of the frame | 空気感 | | 空气感 | 空気感 |
+| sense of atmosphere | 空気感 | | 空气感 | 空気感 |
 | knife pleats | 칼주름 | 칼주름 | | 車ひだ |
 | sheer, see-through fabric | 透け感 | 시스루 | | 透け感 |
 
-표정 구절(Expression 줄 문장에 하나. 조사·어미는 문장에 맞추고, 앞에 장면을 가리키는 짧은 말 하나까지 붙인다. 줄 머리 낱말은 사전 Expression 표에서 찾는다):
+표정 구절(Expression 줄 문장에 하나. 표 구절의 낱말은 그대로 두고 조사·어미만 문장에 맞추며, 장면을 가리키는 짧은 말을 세 낱말까지 붙인다. 두 구절을 이어도 한 구절이다. 줄 머리 낱말은 사전 Expression 표에서 찾는다):
 
 | 뜻 | KR·단서 없음 | JP | CN |
 |---|---|---|---|
-| lids heavy and languid | 눈꺼풀이 나른하다 | | 眼神慵懒 |
+| lids heavy and languid | 눈꺼풀이 나른하다 | | 眼睑半垂，眼神慵懒 |
 | lips slightly parted | 입술이 살짝 벌어진다 | | |
-| brow relaxed | 미간이 편안하다 | | 眉眼舒展 |
-| mouth corners lift a little | 입꼬리가 살짝 올라간다 | 口元がほころぶ | 嘴角微扬 |
+| brow relaxed | 미간이 편안하다 | | 眉头舒展 |
+| mouth corners lift a little | 입꼬리가 살짝 올라간다 | 口角がわずかに上がる | 嘴角微扬 |
 | wistful eyes | 눈빛이 아련하다 | | |
 | calm, unreadable face | 표정이 담담하다 | | |
 | absent, unfocused | 눈빛이 멍하다 | ぼんやりしている | 眼神放空 |
-| a brief startled pause | 멈칫한다 | | |
+| a brief pause | 멈칫한다 | | |
 | blank, puzzled look | | きょとんとしている | 一脸茫然 |
 | cold, distant eyes | 눈빛이 차갑다 | | |
 
@@ -84,6 +84,7 @@ GPT Image(웹·API)·대상 미정인 새 이미지(인물 사진과 인물 없�
 - 문화권 공식과 문단 끝의 비율 문장(`In either case…`)은 **성인 인물에만** 붙는다. 아이·학생으로 요청됐거나 그렇게 보이면(판정은 image-brief.md §5) 공식 대신 `a child`·`a student` 같은 말만 쓰고(남성이면 같은 자리에 `a boy`·`a schoolboy`처럼 한 구절), 비율 문장과 아래 Hair and makeup의 미화 줄(base·under-eye·liner·blush·lip)을 모두 끈다. 룩 카드의 메이크업 줄(입술·블러셔·아이 메이크업)과 Legwear의 스타킹류 줄도 쓰지 않는다(양말은 쓴다). 그 밖의 층(Pose, Camera, Finish 포함)은 평소대로 쓴다(관능 어휘·노출은 image-brief.md §6).
 - 대학생·대학원생은 성인이다(판정은 image-brief.md §5). 공식을 그대로 쓰고 `woman`·`man` 뒤에 `and university student`만 덧붙인다(`a 22-year-old Korean man and university student with a defined 턱선 and a lean build`). 비율 문장과 메이크업 줄도 성인대로 붙는다.
 - 남성 인물: 공식은 `a 22-year-old <culture> man with a defined <턱선> and a lean build`, 문단 끝은 `In either case he has natural <등신> and level shoulders.`다. `<턱선>`은 KR·단서 없음 `턱선`, CN `下颌线`, 그 밖 `jawline`. `<등신>`은 KR·단서 없음 `7.5등신`, JP `7.5頭身`, 그 밖 `7.5-head proportions`. 남성에게는 `直角肩`·`직각 어깨`·`天鹅颈`을 쓰지 않는다. 고정 몫의 메이크업 줄과 룩 카드의 메이크업·네일 색·Legwear 줄은 사용자가 원할 때만 붙인다. 남성이 아이·학생이면 위 학생 처리가 먼저다.
+- JP 공식의 `透明感`은 base 줄도 `透明感`이면 빼고 `with a soft look:`으로 쓴다(피부 마감은 Hair and makeup 한 곳).
 - `identity`: 카드가 `끄는 고정 몫`의 `identity` 행에 덧붙임 구절을 주면, 참조가 없을 때 쓰는 인물 문장(`If none is provided, …`) 끝에 그 구절을 붙인다. 참조가 있을 때는 붙지 않는다(조건절이 참조의 피부색을 지킨다).
 
 ## Hair and makeup
