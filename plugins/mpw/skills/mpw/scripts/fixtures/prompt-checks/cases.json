@@ -76,5 +76,8 @@
   {"case":"original-language words nothing carries","input":"pass/mix-unlisted.txt","args":[],"expect":{"ok":true,"warnings_include":["mix/unlisted"]}},
   {"case":"one thing called by two names","input":"pass/mix-renamed.txt","args":[],"expect":{"ok":true,"warnings_include":["mix/renamed"]}},
   {"case":"photo terms from the other culture's column","input":"pass/mix-culture.txt","args":[],"expect":{"ok":true,"warnings_include":["mix/culture"]}},
-  {"case":"a person photo prompt written with no original-language words","input":"pass/mix-thin.txt","args":[],"expect":{"ok":true,"warnings_include":["mix/thin"]}}
+  {"case":"a person photo prompt written with no original-language words","input":"pass/mix-thin.txt","args":[],"expect":{"ok":true,"warnings_include":["mix/thin"]}},
+  {"case":"seedream person paragraph with original-language names kept","input":"pass/mix-engine-seedream.txt","args":["--engine","seedream"],"expect":{"ok":true,"warnings_exclude":["mix/thin"]}},
+  {"case":"seedream person paragraph translated to English only","input":"pass/mix-engine-thin.txt","args":["--engine","seedream"],"expect":{"ok":true,"warnings_include":["mix/thin"]}},
+  {"case":"seedream Paris scene with a Japanese denim adjective is not an Asian scene","input":"pass/mix-engine-paris.txt","args":["--engine","seedream"],"expect":{"ok":true,"warnings_exclude":["mix/thin"]}}
 ]
