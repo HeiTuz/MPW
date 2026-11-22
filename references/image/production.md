@@ -100,6 +100,7 @@ manifest 검사는 한 행에 하나의 객체를 받는다. 필수 텍스트는
 | `mix/unlisted` | 경고, native·gpt-image | 사전 토큰·별칭, 룩 카드와 fixed-lines.md의 표·백틱, Identity 틀에 없는 원어. 따옴표 안 정확 문구는 보지 않고, Expression의 띄어 쓴 구절은 표정 구절 표의 한 구절을 낱말마다 담고 장면 말은 셋까지다 |
 | `mix/renamed` | 경고, native·gpt-image | 줄 머리 토큰의 다른 별칭이 다른 줄에 나옴(한 물건 두 이름). 층 제목, Identity 문단, 첫 줄의 매체·룩 구절, Finish closer는 보지 않는다 |
 | `mix/culture` | 경고, native·gpt-image | Finish 토큰이 정한 문화권과 다른 사진 용어 칸의 낱말(JP 장면의 `高光`, KR·CN 장면의 `白飛び`). US·FR 토큰이면 보지 않는다 |
+| `mix/thin` | 경고, native·gpt-image | 사람이 나오는 사진 프롬프트가 거의 섞지 않았을 때: Finish 줄 머리가 문화권 행의 낱말이 아님, KR·CN·JP 행인데 줄 머리 원어가 3분의 1 미만, Optics·Camera에 사진 용어 없음, Expression에 표정 낱말 없음. US·FR 행이면 보지 않는다 |
 | `manifest/parse` | 오류, manifest | JSON 행 파싱 실패 |
 | `manifest/not-object` | 오류, manifest | 행이 객체가 아님 |
 | `manifest/empty` | 오류, manifest | 매니페스트에 행이 없음 |

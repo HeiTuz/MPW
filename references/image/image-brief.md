@@ -42,7 +42,7 @@
 | 사진 용어(Optics·Camera), 질감·마감·빛의 느낌, Identity 문단 | [fixed-lines.md](fixed-lines.md) §문장 속 낱말과 문화권 행(`gently lifted 暗部`) |
 
 1. **가져다 쓴다.** 원어는 사전 토큰, 쓰기로 한 룩 카드의 줄, fixed-lines.md의 고정 문장과 낱말 표, 사용자 말에서만 가져온다. 그 밖은 지어내거나 즉석에서 번역하지 않고 영어로 쓴다.
-2. **문화에 속한 것만 빠짐없이.** 장면의 물건·장소마다 사전을 찾아(`--q "한옥,新中式,文庫本"`) 행이 있으면 줄 머리와 문장 안 모두 그 토큰(그 문화의 말)으로 부른다(`a 立领 and 盘扣`, `the 마당`). 언어는 층이 아니라 물건의 문화가 정한다(한옥의 `마당`, 같은 장면의 `文庫本`). 고유한 것은 건축과 그 부분, 전통·지역 옷과 그 부분, 찻그릇·책 판형·가게 종류, 그 문화가 이름 붙인 화장법·빛·분위기, 사전이 문화의 상징으로 풀이한 일상 물건(`ビニール傘`, `自販機`)이다. 그 밖의 재료·사물은 행이 있어도 줄 머리까지 영어다(velvet, marble, mug, scarf, smartphone, white shirt). 경계는 영어로 부르면 그 문화의 모습이 사라지는가다.
+2. **이름은 빠짐없이 원어로.** 장면의 장소·옷·소품·머리·화장·포즈·표정·빛마다 사전을 찾아(`--q "한옥,新中式,文庫本"`) 행이 있으면 **줄 머리를 그 토큰으로** 쓴다(`プリーツスカート`, `ビニール傘`, `立ち姿`). 어디에나 있는 옷·물건도 행이 있으면 원어다. 언어는 장면의 문화가 정하고(일본 거리면 일본어, 단서가 없으면 한국어 행 먼저), 문화에 고유한 것은 제 문화의 말로 부른다(한옥의 `마당`, 같은 장면의 `文庫本`). 문장 안에서는 줄 머리로 부른 것과 문화에 고유한 것을 그 이름으로 부르고(`a 立领 and 盘扣`, `the 마당`), 곁들여 말하는 재료·색·일반 사물(velvet, marble, a water glass)만 영어로 둔다.
 3. **한 물건 한 이름.** 원어로 부른 것은 첫 줄부터 Finish까지 그 이름으로 부르고 영어 일반명사(`the book`)나 다른 원어(`茶碗`)로 바꾸지 않는다. 꾸밈말이 붙은 토큰(`紫砂盖碗`)은 물건 이름(`盖碗`)으로 불러도 되고, 그 토큰 줄의 문장은 모습을 풀어 써도 된다. 이름은 §4 슬롯 표에서 정한다.
 4. **양.** 문장 안의 원어만 세어(줄 머리 토큰·Identity 문단·첫 줄은 빼고) 층 줄 하나에 셋, 전체로 층 줄 수의 1.5배까지다. 넘으면 사진 용어·질감 낱말부터 영어로 되돌리고, 문화의 이름만으로 넘으면 줄을 나눈다. 첫 줄은 층에서 쓴 이름만 쓴다. 띄어 쓴 원어 구절(낱말 셋 이상)은 Expression(표정 구절)과 Style(줄 머리 룩을 푼 구절)에만 줄마다 하나다. 원어 없는 줄도 된다.
 5. **겹쳐 쓰지 않는다.** 같은 뜻을 두 언어로 병기하지 않고, 줄 머리가 부른 것을 같은 줄 문장에서 다른 원어로 다시 부르지 않는다(`하이라이트 롤오프 — … 高光 …`). 토큰 뒤 문장은 번역이 아니라 그 토큰이 화면에 만드는 결과다. 카드·사전 문장을 옮길 때는 이 절의 이름·낱말만 원어로 바꾼다.
@@ -328,7 +328,7 @@ lips and cheeks — A sheer coral-pink lip tint with a little gloss at the cente
 
 ## Expression
 off-lens gaze — Her eyes rest on a point just past the lens to the lower right, the lids relaxed.
-small smile — One corner of her mouth lifts slightly while the rest of the face stays calm, as if someone just called her name.
+옅은 미소 — 입꼬리가 살짝 올라간다 on one side while the rest of the face stays calm, as if someone just called her name.
 
 ## Outfit
 oversized trench — A stone-beige cotton gabardine trench cut wide through the shoulders, worn open, the belt hanging loose at both sides and the hem swinging just below the knee.
@@ -611,7 +611,7 @@ After:
 
 이름을 먼저 붙이고 문장을 쓴다. 느낌은 이름에서 오고, 이름 없이 영어로 풀어 쓰면 생성기가 무난한 쪽으로 읽는다.
 
-1. **이름 목록부터.** 관찰을 끝내면 문장을 쓰기 전에, 보이는 것의 이름을 층별로 적어 둔다. 문화에 속한 것은 사진의 문화권 말로(일본 거리면 일본어, 한국 거리면 한국어), 어디에나 있는 옷·소품은 영어로 적는다(§2.1 2항). 옷·소품·포즈·표정·머리·장소의 이름을 쉼표로 이어 `--layers`를 붙여 한 번에 검색한다. 이 검색은 §12.0 2의 1항 카드 검색과 같은 메시지에서 낸다(카드 결과를 기다리지 않는다. 매체·빛 낱말은 그 카드 검색이 찾는다). 예: `node scripts/find_tokens.mjs --q "商店街,電柱,黒髪ロング,vest,立ち止まり" --layers outfit,legwear,props-nails,pose,expression,hair-makeup,scene --culture JP`. 문화권은 KR CN JP US FR 중에서 고른다.
+1. **이름 목록부터.** 관찰을 끝내면 문장을 쓰기 전에, 보이는 것의 이름을 층별로 적어 둔다. 이름은 사진의 문화권 말로 부른다(일본 거리면 일본어, 한국 거리면 한국어, 단서가 없으면 한국어 먼저). 어디에나 있는 옷·소품도 사전에 행이 있으면 그 토큰이 줄 머리다(§2.1 2항). 옷·소품·포즈·표정·머리·장소의 이름을 쉼표로 이어 `--layers`를 붙여 한 번에 검색한다. 이 검색은 §12.0 2의 1항 카드 검색과 같은 메시지에서 낸다(카드 결과를 기다리지 않는다. 매체·빛 낱말은 그 카드 검색이 찾는다). 예: `node scripts/find_tokens.mjs --q "商店街,電柱,黒髪ロング,白シャツ,ベスト,スマホ,立ち止まり" --layers outfit,legwear,props-nails,pose,expression,hair-makeup,scene --culture JP`. 문화권은 KR CN JP US FR 중에서 고른다.
 2. **찾는 순서.** 쓰기로 한 룩 카드의 줄, 사전의 행(별칭으로 찾힌 행 포함), 영어 순이다(§2.1 1항). 사진에 찍힌 글자는 §12.4다.
 3. **층·범주 이름은 토큰이 아니다**(§4 '토큰 찾기' 2항, 슬롯 토큰 예외도 그 항). `passersby`, `road surface` 같은 칸 이름은 검사기 `token/slot-name`이 경고한다.
 
@@ -662,7 +662,7 @@ After:
 
 ### 12.7 내기 전에 확인
 
-§9 머리말보다 이 줄이 먼저다. §9의 1~8·10·11을 본다(2와 6은 §12.1의 다인 예외를 따르고, 9는 후속 수정용이라 보지 않는다). 더해서 본다. 첫 줄이 §12.0 표의 매체 이름(카드를 썼으면 카드의 매체 구절)으로 시작하고, 사진에 근거 없는 장소 낱말이 없는가? 토큰 자리에 칸 이름(§12.2 3)이 없고 문화에 속한 것은 원어로, 어디에나 있는 것은 영어로 불렀는가(§2.1 2항)? 판독이 흐린 칸은 채우고 화면 밖은 비웠는가? 사진에 없는 소품·배경, 지어낸 값(뒤판), 로고·브랜드 글자·워터마크가 없는가? Light와 Optics가 따로 있고 각각 방향·결과를 말하는가? 인물의 얼굴·체형을 조건절 밖에 쓰지 않았는가?
+§9 머리말보다 이 줄이 먼저다. §9의 1~8·10·11을 본다(2와 6은 §12.1의 다인 예외를 따르고, 9는 후속 수정용이라 보지 않는다). 더해서 본다. 첫 줄이 §12.0 표의 매체 이름(카드를 썼으면 카드의 매체 구절)으로 시작하고, 사진에 근거 없는 장소 낱말이 없는가? 토큰 자리에 칸 이름(§12.2 3)이 없고 보이는 것의 줄 머리가 사전의 원어 토큰이고 Optics·Expression 문장에 낱말 표의 말이 들어갔는가(§2.1)? 판독이 흐린 칸은 채우고 화면 밖은 비웠는가? 사진에 없는 소품·배경, 지어낸 값(뒤판), 로고·브랜드 글자·워터마크가 없는가? Light와 Optics가 따로 있고 각각 방향·결과를 말하는가? 인물의 얼굴·체형을 조건절 밖에 쓰지 않았는가?
 
 다 보면 프롬프트를 파일로 저장하는 호출 바로 뒤에 `node scripts/check_prompt.mjs <파일>`(또는 `--file <파일>`) 호출을 같은 메시지에서 낸다. 결과의 `ok`·`errors`·`warnings`를 보고, 경고를 고치는 편집 호출과 재검사 호출도 한 메시지에서 낸다(한 메시지의 호출은 낸 순서대로 실행되므로 저장이 먼저 끝난다). 다른 엔진으로 폈으면 `--engine <대상>`을 붙인다.
 
@@ -686,11 +686,11 @@ After:
 
 - 매체: 4:3, 깊은 심도, 하늘의 白飛び, 선명한 엣지가 모두 콤팩트 디카를 가리킨다.
 - 룩 카드: `find_tokens --q "コンデジ,商店街,逆光,日本"`의 맨 위에 `日系CCD日光 · コンデジ`가 떴다. §12.0의 질문에 모두 예였다: 위 매체 표지가 보이고, time·light-key·palette(해가 하늘에 있는 낮, 직사 역광과 그늘, 채도 높은 색과 순백의 하늘)가 맞고, `매체` 축이라 장소는 묻지 않는다. 갈래는 A 商店街スナップ로 읽었다. 카드에서 가져온 것: 첫 줄 문구(`Japanese`는 일본 상점가라 남겼다), closer `コンデジ`, realism 자리의 `native resolution` 줄(`8K`와 모공 줄은 쓰지 않는다), 입자 `デジタルノイズ`, 끈 `lens` 몫(Optics의 `コンデジ`가 렌즈를 말한다), 사진의 JP 문화권 행의 Finish 토큰(`実写`).
-- 이름 목록: 보이는 것의 이름(商店街, 電柱, 黒髪ロング, 逆光, 白飛び 등)을 일본어로 먼저 적고 층별로 검색했다. 흰 셔츠·조끼·숄더백·스마트폰·행인·맨홀·낙엽·그림자는 사전에 행이 있어도 어디에나 있는 것이라 영어로 썼다(§2.1 2항).
+- 이름 목록: 보이는 것의 이름(商店街, 電柱, 黒髪ロング, 逆光, 白飛び 등)을 일본어로 먼저 적고 층별로 검색했다. 흰 셔츠·조끼·숄더백·스마트폰·행인·맨홀·낙엽·그림자도 사전에 행이 있어 그 토큰을 줄 머리로 썼다(§2.1 2항).
 - 사람은 20대 초반 성인으로 읽혀 JP 공식의 나이를 `in her early twenties`로 바꿔 썼다. 흰 셔츠와 검은 베스트, 숄더백은 교복풍으로 읽힐 수 있지만 학교 표식과 학교 장소가 없어 `制服` 같은 말은 쓰지 않았다. 사진 속 인물이 학생으로 보이면 §12.3의 학생 처리로 바꾼다. 편의점 로고는 색 띠만 남겼고 얼굴 생김새는 옮기지 않았다.
 
 ```text
-A Japanese everyday compact digital camera snapshot shot on a small-sensor CCD compact: a woman with long wind-tossed dark hair stands stopped on a sunlit 商店街, a silver smartphone held low in both hands, her eyes meeting the lens while the sky behind her clips to white.
+A Japanese everyday compact digital camera snapshot shot on a small-sensor CCD compact: a woman with long wind-tossed dark hair stands stopped on a sunlit 商店街, a silver スマホ held low in both hands, her eyes meeting the lens while the sky behind her clips to white.
 
 ## Identity Reference
 If a model reference is provided, the woman in this photo is that model: take only the 輪郭 and 顔立ち from it, adapting them naturally to this scene's expression, angle and light, and keep her own skin tone. Hair, makeup and everything else follow this prompt. If none is provided, she is a Japanese woman in her early twenties with a soft 透明感 look: 小顔, やさしい顔立ち and 色白の肌. In either case 7.5頭身, a small head over level shoulders and a long neck.
@@ -701,48 +701,48 @@ If a model reference is provided, the woman in this photo is that model: take on
 素肌感 — A sheer, natural base that leaves the skin looking bare and evenly bright, with the eyes left almost unmade and only a thin soft pink tint on the lips.
 
 ## Expression
-カメラ目線 — Her dark eyes look straight into the lens under level lids and level brows, calm and slightly wary, as if she glanced up from her smartphone just as the shutter went.
+カメラ目線 — Her dark eyes look straight into the lens under level lids and level brows, calm and slightly wary, as if she glanced up from her スマホ just as the shutter went.
 半開き唇 — The lips part by a thin gap with the jaw relaxed and no smile, and the chin dips very slightly toward the lens.
 
 ## Outfit
-white shirt — A white cotton shirt with an open collar and long sleeves, the sunlit sleeve and shoulder nearly clipping to white while the folds in shade stay pale blue-gray.
-vest — A black sleeveless V-neck vest over the shirt, smooth and matte, its plain unmarked front sinking to flat black in shade.
-shoulder bag — A black boxy bag hangs at her hip from a long strap over her shoulder at frame right, with a zip pocket on its front, a small metal buckle and one soft highlight along its top edge.
+白シャツ — A white cotton shirt with an open collar and long sleeves, the sunlit sleeve and shoulder nearly clipping to white while the folds in shade stay pale blue-gray.
+ベスト — A black sleeveless V-neck vest over the 白シャツ, smooth and matte, its plain unmarked front sinking to flat black in shade.
+ショルダーバッグ — A black boxy bag hangs at her hip from a long strap over her shoulder at frame right, with a zip pocket on its front, a small metal buckle and one soft highlight along its top edge.
 
 ## Props and nails
-smartphone — Silver with rounded edges, it is held low in both hands at frame left, tilted so its glossy back and metal rim face the camera and catch one small hard sun glint.
+スマホ — Silver with rounded edges, it is held low in both hands at frame left, tilted so its glossy back and metal rim face the camera and catch one small hard sun glint.
 素爪 — Short natural nails with a faint pink tone and no polish.
 
 ## Pose
 立ち止まり — She stands still in the street with her torso angled about 30 degrees toward frame left and her shoulders nearly level, her head turned back toward the lens.
-両手持ち — Both elbows stay bent close to her ribs and both hands hold the smartphone at waist-to-chest height at frame left, well below the chin and clear of her face.
+両手持ち — Both elbows stay bent close to her ribs and both hands hold the スマホ at waist-to-chest height at frame left, well below the chin and clear of her face.
 
 ## Style
 日常スナップ — An everyday snapshot of an ordinary person caught between errands, in plain clothes and an unposed stance.
-palette — The white of the shirt, the black vest and shoulder bag, gray asphalt, yellow and green awnings, an orange, green and red striped sign and a sky washed out to white.
+palette — The white of the 白シャツ, the black ベスト and ショルダーバッグ, gray asphalt, yellow and green awnings, an orange, green and red striped sign and a sky washed out to white.
 
 ## Scene
 商店街 — A narrow street of small two- and three-story shops recedes behind her, with a yellow awning at left, green awnings on both sides, shuttered fronts at frame right and a parked bicycle with a basket beside an outdoor air-conditioner unit.
 コンビニ — A convenience store at upper left has a sign reduced to bands of orange, green and red with no readable mark or lettering.
 電柱 — Concrete poles line the right side and recede down the street, with 電線 criss-crossing the white sky between them.
-pedestrians — About eight small, sharp figures in dark jackets walk the street and the sidewalks, several carrying white plastic bags or backpacks, a person in a dark hoodie rides a ママチャリ left of center, and a silver minivan comes up the far end of the street.
-manhole cover — A round iron cover sits in the gray asphalt at lower left beside diagonal white lane lines and a strip of green paint at the far left edge.
-fallen leaves — A few brown maple leaves lie on the paving stones at lower right beside her shoulder bag, the only sign of the season.
+通行人 — About eight small, sharp figures in dark jackets walk the street and the sidewalks, several carrying white plastic bags or backpacks, a person in a dark hoodie rides a ママチャリ left of center, and a silver minivan comes up the far end of the street.
+マンホール — A round iron cover sits in the gray asphalt at lower left beside diagonal white lane lines and a strip of green paint at the far left edge.
+落ち葉 — A few brown maple leaves lie on the paving stones at lower right beside her ショルダーバッグ, the only sign of the season.
 
 ## Light
-逆光 — The sun stands high behind her toward frame right, rimming her hair and the shoulders of her white shirt with a bright edge while her face stays in soft open shade, lit by the pavement and the sky.
-cast shadows — The buildings at right throw a wide dark shadow across the sidewalk, and the pedestrians and the cyclist cast short hard-edged shadows toward the camera and frame left.
+逆光 — The sun stands high behind her toward frame right, rimming her hair and the shoulders of her 白シャツ with a bright edge while her face stays in soft open shade, lit by the pavement and the sky.
+影 — The buildings at right throw a wide dark shadow across the sidewalk, and the 通行人 and the cyclist cast short hard-edged shadows toward the camera and frame left.
 catchlight — A faint small bright point from the open sky sits in each eye.
 
 ## Optics
 コンデジ — A pocket compact with a tiny CCD sensor: sharp from front to back, slightly strong sharpening and slightly oversaturated yellow and green awnings under clean daylight white balance.
-白飛び — The sky above the roofs and the sunlit edge of her white shirt sleeve clip to flat white with no detail left in them.
-黒つぶれ — The black vest and shoulder bag sink to near-flat black with almost no fold detail.
+白飛び — The sky above the roofs and the sunlit edge of her 白シャツ sleeve clip to flat white with no detail left in them.
+黒つぶれ — The black ベスト and ショルダーバッグ sink to near-flat black with almost no fold detail.
 デジタルノイズ — Very fine digital noise sits only in the darkest shop interiors and under the awnings.
 
 ## Camera
 パンフォーカス — Everything from her hands to the car at the far end of the street stays in focus, with no ボケ.
-horizontal frame — A horizontal 4:3 frame cut at her hips, her face on the vertical center line and her shoulder and the bag filling the right half while the street recedes through the left, shot at about her eye level from roughly 1.5 meters with a slightly wide lens.
+horizontal frame — A horizontal 4:3 frame cut at her hips, her face on the vertical center line and her shoulder and the ショルダーバッグ filling the right half while the street recedes through the left, shot at about her eye level from roughly 1.5 meters with a slightly wide lens.
 
 ## Finish
 コンデジ — The whole frame reads as an everyday compact digital camera snapshot, not a fashion shoot.

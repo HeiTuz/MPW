@@ -53,6 +53,7 @@ export const CODE_REGISTRY = Object.freeze({
   mixUnlisted: { code: "mix/unlisted", severity: { native: "warning", assembled: null }, intent: "Flag original-language words that no lexicon row, look card or fixed-lines.md carries." },
   mixRenamed: { code: "mix/renamed", severity: { native: "warning", assembled: null }, intent: "Flag one thing called by two names: another alias of a line-head token written outside its line." },
   mixCulture: { code: "mix/culture", severity: { native: "warning", assembled: null }, intent: "Flag a photo term from the other culture's column of fixed-lines.md (高光 in a JP scene, 白飛び in a KR or CN scene), the culture read from the Finish tokens." },
+  mixThin: { code: "mix/thin", severity: { native: "warning", assembled: null }, intent: "Flag a KR, CN or JP photo prompt that barely mixes: few original-language line heads, no photo term in Optics or Camera, or no expression word in Expression." },
   engineBrand: { code: "coherence/engine-brand", severity: { native: "warning", assembled: "warning" }, intent: "Flag a film stock brand name in a Soul prompt, which draws the film border." },
   parse: { code: "manifest/parse", severity: { native: "error", assembled: "error" }, intent: "Report invalid JSON without losing subsequent rows." },
   notObject: { code: "manifest/not-object", severity: { native: "error", assembled: "error" }, intent: "Require an object for each manifest row." },
@@ -525,7 +526,7 @@ function mixSources() {
       }
       for (const line of (text.split("\n## Finish")[1] ?? "").split("\n")) {
         const cells = line.split("|").map((cell) => cell.trim());
-        const group = /^(?:KR|CN)$/u.test(cells[1] ?? "") ? "KRCN" : cells[1] === "JP" ? "JP" : null;
+        const group = /^(?:KR|CN)$/u.test(cells[1] ?? "") ? "KRCN" : cells[1] === "JP" ? "JP" : /^(?:US|FR)/u.test(cells[1] ?? "") ? "LATIN" : null;
         if (group) for (const token of cells.slice(2).join(" ").match(/`[^`]+`/gu) ?? []) finish.set(mixKey(token.slice(1, -1)), group);
       }
     }
@@ -641,11 +642,28 @@ function inspectMix(result, instruction) {
   }
   // One photo-term column a prompt: the Finish tokens name the culture row (KR, CN or 단서 없음 the KR·CN column, JP the JP column); US·FR tokens or none, nothing is read.
   const groups = new Set(lines.filter((item) => item.section === "Finish").map((item) => sources.finish.get(mixKey(item.head))).filter(Boolean));
-  if (groups.size === 1) {
+  const finishLines = lines.filter((item) => item.section === "Finish");
+  // Finish heads that are slot names (closer, realism, anti-cg) instead of the culture row's tokens: the prompt was written without the fixed-lines.md rows at all.
+  const person = sections.some((section) => section.name === "Identity Reference");
+  if (person && finishLines.length && !groups.size) {
+    emit(result, CODE_REGISTRY.mixThin, `The prompt barely mixes languages: the Finish line heads (${finishLines.slice(0, 3).map((item) => item.head).join(" | ")}) are not the culture row's tokens.`, { hint: "Pick the culture row in fixed-lines.md §문화권 고르기 (no cue: the KR row) and use its Finish tokens, Identity paragraph and §문장 속 낱말 column; name what is in the frame with lexicon tokens at the line heads (image-brief.md §2.1)." });
+  }
+  if (groups.size === 1 && !groups.has("LATIN")) {
     const [own] = groups;
     const other = own === "JP" ? "KRCN" : "JP";
     const wrong = lines.flatMap((item) => item.chunks).filter((chunk) => sources.photo[other].has(mixKey(chunk)) && !sources.photo[own].has(mixKey(chunk)));
     if (wrong.length) emit(result, CODE_REGISTRY.mixCulture, `Photo terms from the ${other === "JP" ? "JP" : "KR·CN"} column in a ${own === "JP" ? "JP" : "KR·CN"} prompt: ${[...new Set(wrong)].slice(0, 5).join(" | ")}`, { hint: "Take the photo terms from the column of the scene's culture in fixed-lines.md §문장 속 낱말 (the one its Finish tokens come from), or write them in English." });
+    // The mix is the point of the prompt (image-brief.md §2.1): with or without a look card, most line heads are lexicon tokens and the Optics, Camera and Expression sentences carry table words.
+    const body = lines.filter((item) => item.section !== "Finish");
+    const nativeHeads = body.filter((item) => NATIVE_CHAR.test(item.head)).length;
+    const inSection = (pattern) => body.filter((item) => pattern.test(item.section));
+    const optics = inSection(/^(?:Optics|Camera)$/u);
+    const expression = inSection(/^Expression$/u);
+    const thin = [];
+    if (body.length >= 8 && nativeHeads * 3 < body.length) thin.push(`${nativeHeads} of ${body.length} line heads are original-language tokens`);
+    if (optics.length && !optics.some((item) => item.chunks.some((chunk) => sources.photo[own].has(mixKey(chunk))) || sources.photo[own].has(mixKey(item.head)))) thin.push("no photo term in Optics or Camera");
+    if (expression.length && !expression.some((item) => item.chunks.length || NATIVE_CHAR.test(item.head))) thin.push("no expression word in Expression");
+    if (person && thin.length) emit(result, CODE_REGISTRY.mixThin, `The prompt barely mixes languages: ${thin.join("; ")}.`, { hint: "Name what is in the frame with lexicon tokens at the line heads (find_tokens), put photo terms from the scene's column of fixed-lines.md §문장 속 낱말 into the Optics and Camera sentences, and an expression word into Expression (image-brief.md §2.1)." });
   }
 }
 
