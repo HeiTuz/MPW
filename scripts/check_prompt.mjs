@@ -676,7 +676,8 @@ function inspectMix(result, instruction) {
 // A one-paragraph prompt has no line heads to count, so only the original-language words in the text are: a person in a KR, CN or JP scene with fewer than three is the flattening this rule exists to stop.
 const MIX_ENGINES = new Set(["seedream", "midjourney", "soul"]);
 const PERSON_WORD = /\b(?:woman|man|girl|boy|she|he|her|his)\b/iu;
-const ASIAN_SCENE = /\b(?:korea(?:n)?|seoul|busan|chinese|china|hong kong|kowloon|shanghai|beijing|taipei|japan(?:ese)?|tokyo|osaka|kyoto|shibuya|shinjuku|chungking|wong kar-wai)\b/iu;
+// Only a person's culture ("Korean woman") or a KR, CN, JP place counts; a bare adjective ("Japanese selvedge denim" in Paris) does not.
+const ASIAN_SCENE = /\b(?:(?:korean|chinese|japanese)\s+(?:\w+\s+){0,2}?(?:woman|women|man|men|girl|boy|lady|model|student|person)|korea|seoul|busan|china|hong kong|kowloon|shanghai|beijing|taipei|japan|tokyo|osaka|kyoto|shibuya|shinjuku|chungking|wong kar-wai)\b/iu;
 function inspectEngineMix(result, instruction) {
   if (!MIX_ENGINES.has(result.engine) || !PERSON_WORD.test(instruction) || !ASIAN_SCENE.test(instruction)) return;
   const chunks = chunksOf(unquote(instruction));
@@ -751,7 +752,7 @@ export function checkText(input, options = {}) {
     emit(result, CODE_REGISTRY.engineWords, `Seedream: ${words} words; the published guidance is under 600 English words (surfaces.md §0-1).`);
   }
   if (result.profile === "native" && result.engine !== "gpt-image") {
-    // Only the engine-independent checks run for other engines; their own syntax is outside this checker.
+    // Other engines run inspectCoherence (which calls inspectEngine for the engine-levers.md §5 "do not write" cells) and inspectEngineMix; the GPT Image layer, copy and syntax checks are skipped, and the engine's own syntax is outside this checker.
     inspectCoherence(result, text, instruction);
     inspectEngineMix(result, instruction);
     return result;
