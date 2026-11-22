@@ -312,9 +312,9 @@ assert.equal(unknownBundle.status, 2);
 assert.match(unknownBundle.stderr, /unknown bundle: nope/);
 const listing = spawnSync(process.execPath, [path.join(root, "scripts", "read_refs.mjs"), "--bundles"], { encoding: "utf8" });
 assert.equal(listing.status, 0, listing.stderr);
-for (const name of Object.keys(BUNDLES)) assert.match(listing.stdout, new RegExp("^" + name + "  \\(\\d+ chars, \\d+ bytes(?:, read in \\d+ parts: --part 1/\\d+)?\\)$", "m"));
+for (const name of Object.keys(BUNDLES)) assert.match(listing.stdout, new RegExp("^" + name + "  \\(\\d+ chars, \\d+ bytes(?:, read in \\d+ parts: --part 1/\\d+ to \\d+/\\d+[^)]*)?\\)$", "m"));
 // The photo-extraction bundle (the main use) stays within five 24,000-byte parts.
-assert.ok(Number(listing.stdout.match(/^gpt-image-extract .*--part 1\/(\d+)\)$/m)?.[1] ?? 1) <= 5, "gpt-image-extract reads in at most 5 parts");
+assert.ok(Number(listing.stdout.match(/^gpt-image-extract .*read in (\d+) parts/m)?.[1] ?? 1) <= 5, "gpt-image-extract reads in at most 5 parts");
 // --part n/m: the parts together are the whole output, cut at section boundaries, in order, about equal in size, each with a first line that names the next command.
 assert.deepEqual(parsePart(["--bundle", "x", "--part", "2/3"]), { rest: ["--bundle", "x"], part: { n: 2, m: 3 } });
 assert.deepEqual(parsePart(["--part=1/4", "a.md"]), { rest: ["a.md"], part: { n: 1, m: 4 } });
@@ -340,7 +340,8 @@ assert.deepEqual(partitionChunks(["one chunk"], 3), [1], "a single chunk lands i
     const out = read("--bundle", "gpt-image-portrait", "--part", `${n}/3`);
     assert.equal(out.status, 0, out.stderr);
     const [first, ...body] = out.stdout.split("\n\n");
-    assert.match(first, n < 3 ? new RegExp(`^part ${n} of 3, next: node scripts/read_refs\\.mjs --bundle gpt-image-portrait --part ${n + 1}/3$`) : /^part 3 of 3, last part$/, `part ${n} first line`);
+    assert.match(first, n < 3 ? new RegExp(`^part ${n} of 3, next: node scripts/read_refs\\.mjs --bundle gpt-image-portrait --part ${n + 1}/3(?: \\(.*\\))?$`) : /^part 3 of 3, last part$/, `part ${n} first line`);
+    assert.equal(first.includes(" ("), n === 1, `part ${n} first line names the rest only while two or more parts are left`);
     const text = body.join("\n\n");
     const pieces = text.split(/(?=^==> )/m).filter(Boolean);
     for (const piece of pieces) assert.match(piece.split("\n")[1] ?? "", /^#{1,6} /, `part ${n} piece starts at a heading: ${piece.split("\n")[0]}`);

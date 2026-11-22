@@ -27,8 +27,8 @@
 // boundaries (a long section may be cut between its subsections, and the cut
 // piece gets its own "==>" line with its line range) so the pieces have about
 // the same size. The first line says
-// "part n of m, next: <command>", so a long bundle can be read piece by piece
-// when one tool output cannot hold it.
+// "part n of m, next: <command>" (with two or more parts left, it says the rest are independent calls for the same message),
+// so a long bundle can be read in pieces when one tool output cannot hold it.
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
@@ -333,7 +333,7 @@ function listBundles() {
       }
       const text = chunks.map((result) => result.chunk).join("\n");
       const parts = partsNeeded(chunks);
-      const size = error ? `error: ${error}` : `${[...text].length} chars, ${Buffer.byteLength(text)} bytes${parts > 1 ? `, read in ${parts} parts: --part 1/${parts}` : ""}`;
+      const size = error ? `error: ${error}` : `${[...text].length} chars, ${Buffer.byteLength(text)} bytes${parts > 1 ? `, read in ${parts} parts: --part 1/${parts} to ${parts}/${parts}, one call each, all in the same message` : ""}`;
       return `${name}  (${size})\n${targets.map((target) => `  ${target}`).join("\n")}`;
     })
     .join("\n");
@@ -414,7 +414,8 @@ function main(rawArgv) {
   }
   const { n, m } = parsed.part;
   const mine = cutParts(found, m)[n - 1];
-  const next = n < m ? `next: node scripts/read_refs.mjs ${[...argv, "--part", `${n + 1}/${m}`].map(shellQuote).join(" ")}` : "last part";
+  const rest = m - n > 1 ? ` (${n + 1}/${m} to ${m}/${m} are independent, one call each in the same message)` : "";
+  const next = n < m ? `next: node scripts/read_refs.mjs ${[...argv, "--part", `${n + 1}/${m}`].map(shellQuote).join(" ")}${rest}` : "last part";
   console.log(`part ${n} of ${m}, ${next}${mine.length ? "" : " (no section falls in this part)"}\n`);
   for (const chunk of mine) console.log(chunk);
   return failed ? 1 : 0;
