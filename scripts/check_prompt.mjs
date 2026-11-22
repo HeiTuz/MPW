@@ -2,6 +2,7 @@ import fs from "node:fs";
 import { readFile, readdir, stat } from "node:fs/promises";
 import { dirname, isAbsolute, relative, resolve, sep } from "node:path";
 import { fileURLToPath } from "node:url";
+import { loadAll } from "./find_tokens.mjs";
 
 export const CODE_REGISTRY = Object.freeze({
   flag: { code: "input/flag", severity: { native: "error", assembled: "error" }, intent: "Accept only coherent documented arguments." },
@@ -47,6 +48,10 @@ export const CODE_REGISTRY = Object.freeze({
   engineFlag: { code: "coherence/engine-flag", severity: { native: "warning", assembled: "warning" }, intent: "Flag a Midjourney flag or ratio token in the body of an engine that takes it as a setting." },
   engineBan: { code: "coherence/engine-ban", severity: { native: "warning", assembled: "warning" }, intent: "Flag a spoken ban on illustration or CGI where the engine's cell says to state the medium or use its own exclusion syntax." },
   slotName: { code: "token/slot-name", severity: { native: "warning", assembled: "warning" }, intent: "Flag a layer-line token that names the slot (hair color, passersby, road surface) instead of the thing shown." },
+  mixLine: { code: "mix/line", severity: { native: "warning", assembled: null }, intent: "Flag a layer line with four or more original-language chunks, or one with no English frame (image-brief.md §2)." },
+  mixAmount: { code: "mix/amount", severity: { native: "warning", assembled: null }, intent: "Flag more original-language chunks in the layer sentences than 1.5 per layer line." },
+  mixUnlisted: { code: "mix/unlisted", severity: { native: "warning", assembled: null }, intent: "Flag original-language words that no lexicon row, look card or fixed-lines.md carries." },
+  mixRenamed: { code: "mix/renamed", severity: { native: "warning", assembled: null }, intent: "Flag one thing called by two names: another alias of a line-head token written outside its line." },
   engineBrand: { code: "coherence/engine-brand", severity: { native: "warning", assembled: "warning" }, intent: "Flag a film stock brand name in a Soul prompt, which draws the film border." },
   parse: { code: "manifest/parse", severity: { native: "error", assembled: "error" }, intent: "Report invalid JSON without losing subsequent rows." },
   notObject: { code: "manifest/not-object", severity: { native: "error", assembled: "error" }, intent: "Require an object for each manifest row." },
@@ -412,7 +417,8 @@ function inspectCoherence(result, text, instruction) {
     emit(result, CODE_REGISTRY.occlusion, "Hair is written over the face while another line keeps the face clear.", { hint: "Keep one: turn off the face-clear line when the look needs hair across the face." });
   }
   const mm = [...instruction.matchAll(/(?<![\p{L}\p{N}_.])(\d{1,3})\s?mm\b(?!\s+(?:film|grain|negative|stock|format|cinema|print|slide|super|photographs?|photos?|stills?|frames?|snapshots?|camera(?!\s+lens)))/giu)].map((match) => Number(match[1]));
-  const wideWord = /\b(?:ultra[- ]?wide|fish[- ]?eye|wide[- ]angle\s+(?:lens|shot|view|selfie)|wide\s+lens)\b/iu.test(instruction);
+  // A bare 广角 is not here: the lens fixed line writes "no 广角 stretch", so only the lens forms count.
+  const wideWord = /\b(?:ultra[- ]?wide|fish[- ]?eye|wide[- ]angle\s+(?:lens|shot|view|selfie)|wide\s+lens)\b|超广角|广角镜头|广角 lens|広角レンズ|広角 lens/iu.test(instruction);
   const noStretch = /\bno\s+(?:wide[- ]angle\s+stretch|distortion)\b|\bundistorted\b|\bdistortion[- ]free\b|无畸变|自然透视|natural perspective/iu.test(instruction);
   if (new Set(mm).size >= 2 || (noStretch && (wideWord || mm.some((value) => value <= 28)))) {
     emit(result, CODE_REGISTRY.focal, "Focal lengths disagree: two different lenses, or a wide lens beside an undistorted-face line.", { hint: "Keep one lens statement in the Camera layer." });
@@ -425,7 +431,7 @@ function inspectCoherence(result, text, instruction) {
   const keepsTone = /\bkeeps?\s+(?:her|his|their)\s+own\s+skin\s+tone\b/iu.test(instruction);
   // Only the natural skin color (fair, pale, tan, 冷白皮) is flagged. A finish the makeup makes (porcelain finish, 瓷肌, glass skin; porcelain only inside Hair and makeup) and light on the skin
   // (sun-warmed glow on the skin, a neon tint on the cheek) pass: the color word must be a whole word next to "skin", at most one word between.
-  const skinColor = snippets(/\b(?:fair|pale|porcelain|ivory|olive|tan(?:ned)?|golden|bronzed?|deep|dark|brown|cool|warm|milky)\b[ -]?(?:[\w-]+[ -]){0,1}skin\b|冷白皮|白皙|瓷肌/giu, outsideIdentity);
+  const skinColor = snippets(/\b(?:fair|pale|porcelain|ivory|olive|tan(?:ned)?|golden|bronzed?|deep|dark|brown|cool|warm|milky)\b[ -]?(?:[\w-]+[ -]){0,1}skin\b|冷白皮|白皙|瓷肌|흰 피부|하얀 피부|色白|白い肌/giu, outsideIdentity);
   if (keepsTone && skinColor.length) {
     emit(result, CODE_REGISTRY.identitySkin, `A skin color is written outside the identity paragraph: ${[...new Set(skinColor)].slice(0, 3).join(" | ")}`, { hint: "The natural skin color belongs in the identity condition only; a reference keeps its own tone. Makeup finish and light on the skin are fine elsewhere." });
   }
@@ -433,7 +439,7 @@ function inspectCoherence(result, text, instruction) {
   if (ratios.length >= 2) emit(result, CODE_REGISTRY.ratioDup, `An aspect ratio is written ${ratios.length} times: ${[...new Set(ratios)].join(" | ")}`, { hint: "Write the ratio once, in the Camera layer." });
   const makeup = sections.find((section) => /^(?:Hair and makeup|Makeup)$/iu.test(section.name ?? ""));
   const lipLines = (makeup?.lines ?? []).filter((line) => /\b(?:lips?|lipstick)\b|唇|립|입술/iu.test(line));
-  const catchLines = instruction.split(/\r?\n/u).filter((line) => /catch[- ]?lights?|eye[- ]?lights?|眼神光|\bglints?\s+in\s+(?:each|both|her|his)\s+eyes?|point of light sits in each eye/iu.test(line));
+  const catchLines = instruction.split(/\r?\n/u).filter((line) => /catch[- ]?lights?|eye[- ]?lights?|眼神光|캐치라이트|キャッチライト|\bglints?\s+in\s+(?:each|both|her|his)\s+eyes?|point of light sits in each eye/iu.test(line));
   if (lipLines.length >= 2 || catchLines.length >= 2) {
     emit(result, CODE_REGISTRY.slotDup, lipLines.length >= 2 ? `Hair and makeup has ${lipLines.length} lip lines.` : `The catchlight is written on ${catchLines.length} lines.`, { hint: "A slot is filled once: remove the later line." });
   }
@@ -456,6 +462,121 @@ function inspectSlotNames(result, sections) {
     }
   }
   if (names.length) emit(result, CODE_REGISTRY.slotName, `${names.length} token(s) name the slot, not the thing shown: ${[...new Set(names)].slice(0, 4).join(" | ")}`, { hint: "Name what is shown in the photo's own language (黒髪ロング, 通行人, マンホール) or the thing itself in English (cast shadows)." });
+}
+
+// image-brief.md §2: English sentences carry the prompt; original-language words sit only where a lexicon row, a look card, fixed-lines.md or the user put them.
+// Only the `token — sentence` lines of layers with English names are read, so a prompt the user asked for in Korean (Korean headings) is skipped. Text matching only: no image output is judged.
+const NATIVE_CHAR = /[\p{sc=Han}\p{sc=Hiragana}\p{sc=Katakana}\p{sc=Hangul}]/u;
+// A chunk is a run of original-language characters; Hangul words written with spaces between them count as one chunk.
+const NATIVE_CHUNK = /[\p{sc=Han}\p{sc=Hiragana}\p{sc=Katakana}\p{sc=Hangul}][\p{sc=Han}\p{sc=Hiragana}\p{sc=Katakana}\p{sc=Hangul}ー〜・]*(?:[ ]+\p{sc=Hangul}+)*/gu;
+const LAYER_LINE = /^([^—\n]{1,60}?)\s+—\s+(\S.*)$/u;
+const KOREAN_PARTICLES = ["에서", "으로", "에는", "은", "는", "이", "가", "을", "를", "에", "의", "로", "과", "와", "도", "만"];
+const mixKey = (text) => text.normalize("NFKC").toLowerCase().replace(/[\s\-\u00b7\u30fb]+/gu, "");
+const chunksOf = (text) => text.match(NATIVE_CHUNK) ?? [];
+const mixRoot = resolve(dirname(modulePath), "../references/image");
+let mixKnown;
+// Everything an original-language word may come from: lexicon tokens and aliases, every original-language chunk of fixed-lines.md (its sentence-word tables, identity formulas and fixed lines),
+// of the look cards and of the prompt text blocks in image-brief.md. Missing files leave the set partial, so the two checks that need it stay quiet instead of guessing.
+function mixSources() {
+  if (mixKnown !== undefined) return mixKnown;
+  try {
+    const known = new Set();
+    const rowsByToken = new Map();
+    for (const layer of loadAll(resolve(mixRoot, "lexicon"))) {
+      for (const row of layer.rows) {
+        for (const name of [row.token, ...row.aliases]) known.add(mixKey(name));
+        const key = mixKey(row.token);
+        rowsByToken.set(key, [...(rowsByToken.get(key) ?? []), row]);
+      }
+    }
+    // A space-joined chunk (순한 이목구비) also lists each of its words.
+    const add = (text) => { for (const chunk of chunksOf(text)) for (const word of [chunk, ...chunk.split(/\s+/u)]) known.add(mixKey(word)); };
+    const files = [resolve(mixRoot, "fixed-lines.md")];
+    const looks = resolve(mixRoot, "looks");
+    if (fs.existsSync(looks)) for (const name of fs.readdirSync(looks)) if (name.endsWith(".md")) files.push(resolve(looks, name));
+    for (const file of files) if (fs.existsSync(file)) add(fs.readFileSync(file, "utf8"));
+    // image-brief.md: only its ```text blocks (prompt text, such as the Identity Reference template), not the prose around them.
+    const brief = resolve(mixRoot, "image-brief.md");
+    if (fs.existsSync(brief)) for (const block of fs.readFileSync(brief, "utf8").matchAll(/```text\n([\s\S]*?)```/gu)) add(block[1]);
+    mixKnown = { known, rowsByToken };
+  } catch {
+    mixKnown = null;
+  }
+  return mixKnown;
+}
+
+function isListed(chunk, known, heads) {
+  const key = mixKey(chunk);
+  if (known.has(key) || heads.some((head) => head.includes(key))) return true;
+  // A Korean particle on a listed word (마당은, 창살이) is still that word.
+  return /^\p{sc=Hangul}+$/u.test(key) && KOREAN_PARTICLES.some((tail) => key.endsWith(tail) && known.has(key.slice(0, -tail.length)));
+}
+
+const escapeRegExp = (text) => text.replace(/[.*+?^${}()|[\]\\]/gu, "\\$&");
+function aliasPattern(alias) {
+  const body = escapeRegExp(alias);
+  if (/\p{sc=Hangul}/u.test(alias)) return new RegExp(`(?<!\\p{sc=Hangul})${body}(?!\\p{sc=Hangul})`, "u");
+  if (NATIVE_CHAR.test(alias)) return new RegExp(body, "u");
+  return new RegExp(`(?<![\\p{L}\\p{N}])${body}(?![\\p{L}\\p{N}])`, "iu");
+}
+
+function inspectMix(result, instruction) {
+  const sections = layerSections(instruction).filter((section) => section.name === null || /^[A-Za-z]/u.test(section.name));
+  const lines = sections.filter((section) => section.name && section.name !== "Identity Reference")
+    .flatMap((section) => section.lines.flatMap((line) => {
+      const match = LAYER_LINE.exec(line);
+      return match ? [{ section: section.name, head: match[1].trim(), sentence: match[2], line }] : [];
+    }));
+  if (!lines.length) return;
+  const count = (text, pattern) => (text.match(pattern) ?? []).length;
+  const crowded = [];
+  const frameless = [];
+  let total = 0;
+  for (const item of lines) {
+    item.chunks = chunksOf(item.sentence);
+    total += item.chunks.length;
+    if (item.chunks.length >= 4) crowded.push(item);
+    const native = count(item.sentence, /[\p{sc=Han}\p{sc=Hiragana}\p{sc=Katakana}\p{sc=Hangul}]/gu);
+    if (native >= 6 && native > count(item.sentence, /[A-Za-z]/gu)) frameless.push(item);
+  }
+  const shown = (items) => items.slice(0, 3).map((item) => item.head).join(" | ");
+  if (crowded.length || frameless.length) {
+    const found = [...new Set([...crowded, ...frameless])];
+    emit(result, CODE_REGISTRY.mixLine, `${found.length} layer line(s) mix too much original language: ${shown(found)}`, { hint: "Keep the sentence English and use original-language words only where §2 puts them: at most three a line, with an English frame around them." });
+  }
+  if (lines.length >= 8 && total > 1.5 * lines.length) {
+    emit(result, CODE_REGISTRY.mixAmount, `${total} original-language chunks in ${lines.length} layer lines (more than 1.5 per line).`, { hint: "Turn the photo-term and texture words back into English first (image-brief.md §2 rule 4)." });
+  }
+  const sources = mixSources();
+  if (!sources) return;
+  const heads = lines.map((item) => mixKey(item.head));
+  const first = sections.find((section) => section.name === null)?.lines.join(" ") ?? "";
+  const unlisted = [
+    ...lines.flatMap((item) => [...chunksOf(item.head), ...(item.section === "Expression" ? [] : item.chunks)]),
+    ...chunksOf(first),
+  ].filter((chunk) => !isListed(chunk, sources.known, heads));
+  // A Korean phrase of three or more words is a state-of-face or mood phrase that no table can list: §2 keeps it to Expression, and mix/line reads its size.
+  const missing = [...new Set(unlisted.filter((chunk) => chunk.split(/\s+/u).length < 3))];
+  if (missing.length) {
+    emit(result, CODE_REGISTRY.mixUnlisted, `${missing.length} original-language word(s) not in the lexicon, a look card or fixed-lines.md: ${missing.slice(0, 5).join(" | ")}`, { evidence: missing.slice(0, 5), hint: "Take original-language words only from the lexicon, a look card or fixed-lines.md, or the user's own words; write anything else in English (image-brief.md §2)." });
+  }
+  const renamed = [];
+  for (const item of lines) {
+    const rows = sources.rowsByToken.get(mixKey(item.head)) ?? [];
+    if (!rows.length) continue;
+    const outside = instruction.split(/\r?\n/u).filter((line) => line !== item.line)
+      .map((line) => LAYER_LINE.exec(line)?.[2] ?? line).join("\n");
+    const own = mixKey(item.head);
+    for (const alias of new Set(rows.flatMap((row) => row.aliases))) {
+      const key = mixKey(alias);
+      const latin = !NATIVE_CHAR.test(alias);
+      if (key.length < 2 || (latin && alias.split(/\s+/u).length < 2 && alias.length < 7) || own.includes(key) || key.includes(own)) continue;
+      if (aliasPattern(alias).test(outside)) renamed.push(`${item.head} / ${alias}`);
+    }
+  }
+  if (renamed.length) {
+    emit(result, CODE_REGISTRY.mixRenamed, `One thing is called by two names: ${[...new Set(renamed)].slice(0, 3).join(" | ")}`, { hint: "Call a thing the same way from the first line to Finish: use the line-head token again, or the English name only if the thing has no row (image-brief.md §2 rule 3)." });
+  }
 }
 
 // engine-levers.md §5: the cells that say "do not write this" for one engine. Text matching only.
@@ -544,6 +665,7 @@ export function checkText(input, options = {}) {
   inspectNoise(result, instruction);
   inspectSkinRepeat(result, instruction);
   inspectCoherence(result, text, instruction);
+  if (result.engine === "gpt-image") inspectMix(result, instruction);
   if (result.profile === "assembled") inspectPortrait(result, instruction);
   return result;
 }

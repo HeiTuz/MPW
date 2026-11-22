@@ -30,6 +30,10 @@ has("A 24mm lens up close. 自然透视 — the face keeps natural perspective."
 has("A wide-angle lens up close, 自然透视 face.", "coherence/focal");
 has("A wide-angle lens up close, natural perspective face.", "coherence/focal");
 lacks("natural perspective — The camera stands back with a standard-to-moderate telephoto lens, so the face keeps natural perspective.", "coherence/focal");
+// Original-language lens words: the wide forms count, but the bare 广角 of the lens fixed line ("no 广角 stretch") does not.
+has("A 超广角 lens up close. 自然透视 — the face keeps natural perspective.", "coherence/focal");
+has("A 広角レンズ up close, natural perspective face.", "coherence/focal");
+lacks("自然透视 — The camera stands back with a 标准至中长焦 lens, so the face keeps natural perspective with no 广角 stretch on the nose or forehead.", "coherence/focal");
 
 // identity-skin: skin colour outside the identity paragraph while the reference tone is kept.
 const identity = "## Identity Reference\nIf a model reference is provided, keep her own skin tone. If none is provided, she has cool fair skin.\n\n";
@@ -42,6 +46,8 @@ has(`${identity}## Style\nlook — Tan skin against white linen.`, "coherence/id
 lacks(`${identity}## Hair and makeup\nbase — A semi-matte porcelain finish with a faint satin glow only on the high points.`, "coherence/identity-skin");
 lacks(`${identity}## Hair and makeup\nbase — A glass skin finish: a thin glossy base with a soft wet sheen.`, "coherence/identity-skin");
 // A porcelain base token inside Hair and makeup is a makeup finish; porcelain or the natural cold white outside it, or 冷白皮 anywhere, is still a skin color.
+has(`${identity}## Style\nlook — 맑고 흰 피부 against white linen.`, "coherence/identity-skin");
+has(`${identity}## Style\nlook — 色白の肌 against white linen.`, "coherence/identity-skin");
 lacks(`${identity}## Hair and makeup\n冷白瓷肌 — A semi-matte cool porcelain base with a faint satin glow only on the high points.`, "coherence/identity-skin");
 lacks(`${identity}## Hair and makeup\n微光冷瓷肌 — A cool porcelain base with a faint satin glow.`, "coherence/identity-skin");
 lacks(`${identity}## Hair and makeup\nbase — A cool-toned porcelain skin finish with a faint satin glow.`, "coherence/identity-skin");
@@ -71,6 +77,8 @@ has("## Hair and makeup\nlip tint — A sheer coral lip tint.\nbitten — A deep
 lacks("## Hair and makeup\nlips and cheeks — A sheer coral lip tint and a rose blush.\n\n## Props and nails\nlipstick — A lipstick tube in her hand.", "coherence/slot-dup");
 has("## Light\ncatchlight — A small window shaped point of light sits in each eye.\n\n## Expression\ngaze — A glint in both eyes, her catchlight bright.", "coherence/slot-dup");
 lacks("## Light\ncatchlight — A small window shaped point of light sits in each eye.", "coherence/slot-dup");
+has("## Light\n창문 캐치라이트 — A soft rectangular highlight sits in the upper part of each iris.\n\n## Expression\ngaze — A glint in both eyes, her catchlight bright.", "coherence/slot-dup");
+has("## Light\nキャッチライト — A small window point of light in each eye.\n\n## Expression\ngaze — A catchlight bright in both eyes.", "coherence/slot-dup");
 
 // day-night.
 has("A woman on a rainy night. Hard midday sun throws short shadows.", "coherence/day-night");
