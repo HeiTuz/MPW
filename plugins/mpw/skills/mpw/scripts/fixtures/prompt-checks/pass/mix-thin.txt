@@ -1,0 +1,44 @@
+A natural-light lifestyle photograph of a man in white linen standing on dark volcanic rocks at the sea's edge in the early evening, the hazy sun glowing over the water beside him.
+
+## Identity Reference
+If a model reference is provided, the man in this photo is that model: take only the jawline and facial features from it, adapting them naturally to this scene's expression, angle and light, and keep his own skin tone. Hair, makeup and everything else follow this prompt. If none is provided, he is a man in his thirties with a defined jawline and a lean build. In either case he has natural proportions and level shoulders.
+
+## Hair
+Swept-back hair — Short dark hair swept up and back from the forehead, a few strands lifted and loose in the sea breeze.
+
+## Expression
+Gaze — His eyes look out toward the horizon at frame right, the brows relaxed, the lips closed in a faint, content smile.
+
+## Outfit
+White linen shirt — A loose long-sleeved linen shirt, unbuttoned at the chest, the sleeves rolled to the forearms, its slubbed weave glowing where the sun passes through.
+Linen trousers — Light khaki linen trousers with soft pleats and a relaxed drape that bends slightly at the knee.
+
+## Props and nails
+Sunglasses — A pair of dark round sunglasses hangs from the open collar on the shirt.
+Watch — A slim watch with a brown leather strap on the left wrist, its glass catching a small glint.
+
+## Pose
+Stance — He stands on the rocks with his torso turned slightly toward frame right, one hand holding the collar at his neck and the other hand tucked into a trouser pocket, his weight settled on one leg.
+
+## Style
+Summer coast — A calm, airy mood of white, sand and pale blue, the warm light softening the whole scene.
+palette — White linen, pale sky blue, sea green-blue and warm khaki, with the dark rocks as the only deep tone.
+
+## Scene
+Rocks — Black volcanic rock with tide pools in the foreground, waves breaking white along the rocky shore, and the calm sea stretching to a distant hazy headland.
+
+## Light
+Low sun — Late afternoon sun sits low at frame right, rimming his shoulder and the edge of his hair while his face stays softly lit by the bright sky and the water.
+Sea glitter — Sunlight glints across the water in a broad field of small bright points.
+
+## Optics
+Rendering — Soft, lifted contrast with a light haze over the distance, warm highlights kept just short of white and gentle shadows that keep their detail.
+Grain — Very fine digital noise sits only in the shaded rock crevices.
+
+## Camera
+Frame — A vertical 2:3 frame cut just below his knees, shot at about eye level from roughly two meters away with a natural perspective and the horizon near the top third.
+
+## Finish
+closer — The whole frame reads as a real lifestyle photograph, not an illustration.
+realism — Ultra-realistic 8K photographic detail: real pores on the skin, real weave in the linen, real wear on the rocks.
+anti-cg — A real person photographed on location, never an illustration, anime frame, 3D render or plastic-skinned CGI.
