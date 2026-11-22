@@ -653,6 +653,10 @@ function inspectMix(result, instruction) {
     const other = own === "JP" ? "KRCN" : "JP";
     const wrong = lines.flatMap((item) => item.chunks).filter((chunk) => sources.photo[other].has(mixKey(chunk)) && !sources.photo[own].has(mixKey(chunk)));
     if (wrong.length) emit(result, CODE_REGISTRY.mixCulture, `Photo terms from the ${other === "JP" ? "JP" : "KR·CN"} column in a ${own === "JP" ? "JP" : "KR·CN"} prompt: ${[...new Set(wrong)].slice(0, 5).join(" | ")}`, { hint: "Take the photo terms from the column of the scene's culture in fixed-lines.md §문장 속 낱말 (the one its Finish tokens come from), or write them in English." });
+    // French tokens belong to French scenes only (image-brief.md §2.1): a line head whose every lexicon row is FR does not go in a KR, CN or JP prompt.
+    const french = lines.filter((item) => item.section !== "Finish").map((item) => item.head)
+      .filter((head) => { const rows = sources.rowsByToken.get(mixKey(head)) ?? []; return rows.length && rows.every((row) => row.culture.length === 1 && row.culture[0] === "FR"); });
+    if (french.length) emit(result, CODE_REGISTRY.mixCulture, `French tokens in a ${own === "JP" ? "JP" : "KR·CN"} prompt: ${[...new Set(french)].slice(0, 5).join(" | ")}`, { hint: "French tokens go only in a French scene. Search the scene's own culture first (find_tokens --culture KR, or JP, CN) and write the head in English when it has no row." });
     // The mix is the point of the prompt (image-brief.md §2.1): with or without a look card, most line heads are lexicon tokens and the Optics, Camera and Expression sentences carry table words.
     const body = lines.filter((item) => item.section !== "Finish");
     const nativeHeads = body.filter((item) => NATIVE_CHAR.test(item.head)).length;
