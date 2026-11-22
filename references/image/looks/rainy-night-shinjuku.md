@@ -90,7 +90,7 @@
 | A | hand-prop | ビニール傘 — A clear vinyl umbrella tilts over one shoulder, its dark ribs and beaded canopy catching violet and cyan as rain slides down to the tips. (道具 #036) |
 | B | shop-prop | 傘立て — A shop-front stand packed with ビニール傘 whose droplets and ribs catch the cold white window light. (风格/03 #057) (상점 앞 장면일 때) |
 | B | hand-prop | ホット缶コーヒー — A short steel can of hot coffee from a 自販機 warms both hands, a thin breath of steam at the opening. (风格/03 #044) |
-| D | hand-prop | ビニール傘 — A closed clear umbrella hangs from one wrist, the last drops falling from its tips onto the wet 横断歩道. (횡단보도 장면일 때) |
+| D | hand-prop | ビニール傘 — A closed clear umbrella hangs from one wrist, the last drops falling from its tips onto the wet crosswalk. (횡단보도 장면일 때) |
 | A | nails | Glossy Nails — A wet mirror gloss on the nails runs long clean sign reflections along each nail where the fingers grip the ビニール傘 handle. (투명 우산 장면일 때) |
 | B, C, D | nails | Icy Sheer Nails — Sheer icy-clear nails with a faint milky tint, the natural nail showing through a cool glossy layer. |
 
@@ -122,7 +122,7 @@
 | C | place | 首都高 — A night expressway seen from the passenger seat, gray concrete pillars and bends racing past the rain-streaked window. |
 | C | background | 東京タワー — The red-and-white lattice tower stands in rain mist beyond a quiet slope. |
 | C | overpass | 歩道橋 — A gray footbridge over a wide multi-lane road, its railing cold under her hands while traffic streams below. |
-| D | place | 新宿東口 — The station-exit plaza at 2 a.m. with the crowds gone, a wet 横断歩道 and old street lamps. |
+| D | place | 新宿東口 — The station-exit plaza at 2 a.m. with the crowds gone, a wet crosswalk and old street lamps. |
 | D | place | 中目黒 — A small red arched bridge with black iron railings over a canal of black water in light rain, with pale 提灯 along the bank. |
 
 ## Light
@@ -145,7 +145,7 @@
 | C | haze | Atmospheric Haze — In the rain mist beyond the slope, the lit steel edges of 東京タワー glow and spread a soft deep-red haze across the sky. (도쿄타워 장면일 때) |
 | C | in-car | 雨夜のテールランプ — From the passenger seat, red and white lights from the road slide in bands across the dashboard, her cheek and the window glass. (차 안 장면일 때) |
 | C | catchlight | キャッチライト — Tiny warm points of the city lights below sit in each eye. |
-| D | face-light | Streetlamp Pool — One old street lamp leaves a small hard pool of neutral-cool light on the wet 横断歩道 and a clean highlight on her cheek, everything else in black. (滤镜 #100) (S6 전용) |
+| D | face-light | Streetlamp Pool — One old street lamp leaves a small hard pool of neutral-cool light on the wet crosswalk and a clean highlight on her cheek, everything else in black. (滤镜 #100) (S6 전용) |
 | D | light-fill | 提灯 — Pale pink paper lanterns along the bank glow softly and repeat as shaky lines on the black water. (滤镜 #097) (제등·운하 장면일 때) |
 | D | catchlight | キャッチライト — A single small cool point of the lamp sits in each eye. |
 
@@ -170,7 +170,7 @@
 | C | motion | 光跡 — Headlights and tail lights stretch into smooth colored streaks along the road while the buildings stay still and sharp. |
 | C | bokeh | Bokeh — Distant lights turn into big round overlapping discs behind her. |
 | D | camera | Leica M11 — A compact full-frame digital rangefinder camera. (滤镜 #100) |
-| D | tone-m11 | Highlight Roll-off — On the Leica M11, crisp micro-contrast keeps the wet 横断歩道 sharp while the lamp highlight rolls off gently and stays pure. |
+| D | tone-m11 | Highlight Roll-off — On the Leica M11, crisp micro-contrast keeps the wet crosswalk sharp while the lamp highlight rolls off gently and stays pure. |
 | D | key | Deep Blacks — The 最暗部 of the frame sinks to clean, deep black with no visible noise, and the highlights stay small and unclipped. |
 | D | color | Cool Grey Tone — A pale gray with a trace of blue and restrained contrast, the whites clean and cold. |
 
@@ -196,10 +196,10 @@
 | 5 | B | ポケットイン — She stands still in the middle of the crowd, both hands sunk into the coat pockets and the shoulders relaxed. | High Angle — A 24mm lens from a raised walkway looks down at her, the crowd and umbrellas around her reading as small discs. |
 | 6 | B | 襟を直す — Under the awning she smooths the coat collar with one hand, the chin dipped toward it. | Telephoto Compression — An 85mm lens across the street stacks the street lamps and passing cars behind her into one compressed band. |
 | 7 | B | 傘の水を切る — She shakes a closed ビニール傘 downward under the shop eave so drops arc through the air, the body leaning to one side. | カメラ目線 — A 35mm lens close at eye level, she glances straight into it with the shop window behind her. |
-| 8 | C | Leaning on a Railing Gazing Out — Her forearms rest on the footbridge railing with the weight leaning forward and the chin sunk into the マフラー. | Negative Space — A 50mm lens frames her on one third of the vertical frame, the road filling the rest. |
+| 8 | C | Leaning on a Railing Gazing Out — Her forearms rest on the footbridge railing with the weight leaning forward and the chin sunk into a scarf. | Negative Space — A 50mm lens frames her on one third of the vertical frame, the road filling the rest. |
 | 9 | C | Summit Overlook — She stands at the glass edge of the observation corridor, the forehead near the pane and the eyes down over the city. | Window Double Reflection — A 90mm lens shoots at the tall window, where her ghost reflection overlaps the view beyond the glass. |
 | 10 | C | Window Rain Lean — Seated in the passenger seat, one shoulder and the head rest against the rain-streaked window, the face turned toward the glass. | reflection frame — A 50mm lens from the driver's side, where the passing view slides in the glass and doubles her outline. |
-| 11 | D | 振り返り — Standing in the middle of the empty 横断歩道, she turns her head over the shoulder toward the lens while the body faces away. | 日の丸構図 — A 50mm lens at chest height puts her dead center on the 横断歩道, the empty street balanced on both sides. |
+| 11 | D | 振り返り — Standing in the middle of the empty crosswalk, she turns her head over the shoulder toward the lens while the body faces away. | 日の丸構図 — A 50mm lens at chest height puts her dead center on the crosswalk, the empty street balanced on both sides. |
 | 12 | D | Leaning on a Bridge Rail — Her forearms rest on the bridge railing with the torso leaning over and the eyes on the black water below. | 三分割構図 — A 50mm lens sets her on the right third of the vertical frame, the water filling the other two thirds. |
 
 장소: 쌍 2는 아치나 게이트가 있는 거리일 때. 쌍 5는 인파가 모이는 교차로나 광장에 내려다볼 높은 곳이 있을 때. 쌍 6은 처마나 차양이 있는 길가일 때. 쌍 7은 가게 처마와 쇼윈도가 있을 때. 쌍 8은 육교 난간일 때. 쌍 9는 전망 창이 있는 높은 곳일 때. 쌍 10은 차 안 조수석일 때. 쌍 11은 횡단보도나 넓은 길 한가운데일 때. 쌍 12는 다리 난간과 물이 있는 곳일 때. 쌍 1·3·4는 장소를 가리지 않는다.

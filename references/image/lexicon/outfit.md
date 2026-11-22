@@ -449,9 +449,9 @@ Outfit 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다.
 | カーディガン | 카디간; 가디건; 니트 카디건 | JP | 가디건; 니트; 레이어드; 봄가을 | A soft knit cardigan with a button front, worn open or buttoned over a plain top, the sleeves slightly long over the wrists. | item |
 | 帯 | おび; 오비; obi sash | JP | 着物; 浴衣; 부분; 디테일 | The wide sash around the waist of a kimono or yukata, tied at the back. | item |
 | 帯締め | おびじめ; 오비지메; obi cord | JP | 着物; 부분; 디테일 | A thin braided cord tied over the obi at the front. | item |
-| 半襟 | はんえり; 한에리; under-collar | JP | 着物; 부분; 디테일 | A narrow collar strip inside a kimono neckline, a pale band under the collar. | item |
+| 半襟 | はんえり; 한에리; under-collar | JP | 着物; 부분; 디테일 | A collar strip attached to the nagajuban, visible inside the kimono collar. | item |
 | 袂 | たもと; 다모토; sleeve pouch | JP | 着物; 浴衣; 부분; 소매 | The hanging lower part of a kimono sleeve, a loose pouch of fabric. | item |
-| 草履 | ぞうり; 조리; zori sandals | JP | 着物; 浴衣; 부분; 신발 | Flat thong sandals with a thick straw or lacquered sole, worn with kimono. | item |
+| 草履 | ぞうり; 조리; zori sandals | JP | 着物; 浴衣; 신발 | Flat thong sandals with a thick straw or lacquered sole, worn with kimono. | item |
 
 ## US
 

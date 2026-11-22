@@ -214,11 +214,12 @@ Scene 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다. 
 | 서까래 | exposed rafters; round rafters | KR | 한옥; 부분; 지붕; 목구조 | Round timber rafters showing under a hanok roof or ceiling. | item |
 | 창살 | 격자 창살; window lattice; wooden window bars | KR | 한옥; 부분; 격자; 창 | Thin wooden bars in a grid over a hanok window, striping the light. | item |
 | 문살 | 한옥 문살; door lattice | KR | 한옥; 부분; 격자; 문 | The fine wooden lattice of a hanok door under its paper. | item |
-| 창호지 | 문창호지; 한지 문; hanji door paper | KR | 한옥; 부분; 한지; 투광 | Translucent hanji paper over a door or window, glowing evenly. | item |
+| 창호지 | 문창호지; 문에 바르는 한지; hanji door paper | KR | 한옥; 부분; 한지; 투광 | Translucent hanji paper over a door or window, glowing evenly. | item |
 | 기와 | 기와지붕; 한옥 기와; curved roof tiles | KR | 한옥; 부분; 지붕 | Rows of dark grey curved clay roof tiles. | item |
 | 처마 | 처마선; 한옥 처마; curved eaves | KR | 한옥; 부분; 지붕 | The deep roof overhang of a hanok, curving up at the corners. | item |
 | 돌담 | 한옥 돌담; stone wall; fieldstone wall | KR | 한옥; 부분; 골목 | A low wall of uneven grey fieldstones edging a lane or yard. | item |
-| 장독대 | 장독; 항아리 장독; onggi jar terrace | KR | 한옥; 부분; 마당; 전통 | A raised stone terrace lined with round brown earthenware jars. | place |
+| 장독대 | 장독을 놓는 대; onggi jar terrace | KR | 한옥; 부분; 마당; 전통 | A raised stone terrace lined with round brown earthenware jars. | place |
+| 장독 | 옹기 장독; onggi jar; earthenware sauce jar | KR | 한옥; 장독대; 마당; 전통 | A round glossy brown earthenware jar with a lid, the kind set out in rows on a 장독대. | item |
 
 ## CN
 

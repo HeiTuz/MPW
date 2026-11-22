@@ -24,7 +24,7 @@
 | Hair and makeup | [lexicon/hair-makeup.md](lexicon/hair-makeup.md) | 525 | 102 | 127 | 113 | 113 | 70 |
 | Expression | [lexicon/expression.md](lexicon/expression.md) | 377 | 92 | 72 | 78 | 61 | 74 |
 | Props and nails | [lexicon/props-nails.md](lexicon/props-nails.md) | 642 | 80 | 127 | 183 | 133 | 119 |
-| Scene | [lexicon/scene.md](lexicon/scene.md) | 1170 | 213 | 221 | 249 | 280 | 207 |
+| Scene | [lexicon/scene.md](lexicon/scene.md) | 1171 | 214 | 221 | 249 | 280 | 207 |
 | Camera | [lexicon/camera.md](lexicon/camera.md) | 64 | 2 | 18 | 13 | 12 | 19 |
 <!-- lexicon-counts:end -->
 

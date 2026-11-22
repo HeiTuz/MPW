@@ -109,7 +109,7 @@
 | A | style | 重庆森林 — Chungking Express city mood: saturated neon, a lone still figure, everything around her streaking past. |
 | B | style | 花样年华 — In the Mood for Love restraint: fitted 旗袍, cramped stairwells, warm tungsten pools and deep shadow. |
 | C | style | 堕落天使 — Fallen Angels night: faces close to an ultra-wide lens, stretched edges and hard neon contrast. |
-| D | style | 阿飞正传 — Days of Being Wild humidity: green-tinted rooms, a 冷白瓷肌 base and slow, heavy air. |
+| D | style | 阿飞正传 — Days of Being Wild humidity: green-tinted rooms and slow, heavy air. |
 | 전부 | palette | palette — Crimson, black and amber with green-teal shadows, nothing pastel or daylight-white anywhere in the frame. |
 
 ## Scene

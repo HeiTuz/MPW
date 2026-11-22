@@ -62,7 +62,7 @@
 | B | eyes | 내리깐 눈 — The upper lids drop over part of the irises and the lashes cast thin shadows on the lower lids while she reads or looks down. |
 | B, D | expression | 햇빛 향한 황홀 — The face tips toward the light with the eyes closed and a warm glow washes over the forehead and cheeks. |
 | C | expression | 촛불 응시 — The eyes rest on a small flame below the face, one tiny orange point in each pupil, 표정은 담담하다. (滤镜 #049. 쌍 9와 짝이다) (촛불 장면일 때) |
-| C | expression | 헤드폰 끼고 음미 — The 헤드폰 sit over the ears, the eyes closed and the lips loose, the head swaying a little with the music. (눈이 감기는 줄이라 쌍 8과 짝이다. 눈이 불꽃을 보는 쌍 9와 옆얼굴로 창을 보는 쌍 10에는 쓰지 않는다) |
+| C | expression | 헤드폰 끼고 음미 — Headphones sit over the ears, the eyes closed and the lips loose, the head swaying a little with the music. (눈이 감기는 줄이라 쌍 8과 짝이다. 눈이 불꽃을 보는 쌍 9와 옆얼굴로 창을 보는 쌍 10에는 쓰지 않는다) |
 | D | expression | 눈 감고 바람 느끼기 — The eyes close and the chin lifts slightly into the cold air, 미간은 편안하고 loose strands stream sideways. |
 
 ## Outfit
@@ -108,7 +108,7 @@
 |---|---|---|
 | A | place | 베이커리 카페 — A spacious bakery cafe with glass cases of fresh bread and pastries and a few small tables by the window. (滤镜 #041 #054) |
 | A | place | 을지로 호두나무 카페 — An old Seoul cafe of dark oak and walnut tables, chairs and shelves. (滤镜 #042) |
-| A | shop | 연남동 — A narrow 골목 of small cafes and shops with painted storefronts, a speckled terrazzo threshold and brick walls. (滤镜 #053) |
+| A | shop | 연남동 — A narrow lane of small cafes and shops with painted storefronts, a speckled terrazzo threshold and brick walls. (滤镜 #053) |
 | A | shop | LP바 — A cafe with walnut shelves of vinyl sleeves and a turntable. (滤镜 #058) |
 | B | place | 아침 침대 — White bedding under thin sheer curtains. (滤镜 #043) |
 | B | place | 한남동 — A hillside district interior of pale walls and floor-to-ceiling glass. (滤镜 #059) |
@@ -129,7 +129,7 @@
 | A | face-light | 쇼윈도 스팟 빛 — Warm ceiling spots over a bakery display glow on the pastries and reach her cheek through the glass, with faint glass reflections laid over the skin. (滤镜 #054) (베이커리 장면일 때) |
 | A | light-fill | 텅스텐 조명 — Incandescent bulbs give warm amber-orange pools on the wood, the walls and the near cheek, leaving deeper amber in the corners. |
 | A | bounce | 바닥 반사광 — In the old walnut cafe, the worn dark wood of the tables and shelves bounces a deep reddish warmth up into the shadows. (을지로 카페 장면일 때) |
-| A | lane-light | Sidelight — In the narrow 골목, warm side daylight falls softly across the brick walls and the painted storefronts. (연남동 골목 장면일 때) |
+| A | lane-light | Sidelight — In the narrow lane, warm side daylight falls softly across the brick walls and the painted storefronts. (연남동 골목 장면일 때) |
 | A, B | catchlight | 창문 캐치라이트 — A large window leaves a soft rectangular, sometimes pane-divided highlight in the upper part of each iris. |
 | B | face-light | 아침 햇살 — Low warm sun slips through a gap in the curtains as one golden band across white sheets, lighting one cheek and leaving the rest in pale shade. (滤镜 #043) (S3 전용) |
 | B | face-light | 블라인드 빛 — Afternoon sun through window blinds falls in evenly spaced bright and dark bands over the face, collarbones and wall. (滤镜 #044) (S4 전용) |
@@ -145,7 +145,7 @@
 | C | pile | 로우키 조명 — On the corduroy sofa, the soft ribbed pile swallows stray light, so the lit side of her face is set off in warm white against the dark fabric. (코듀로이 소파 장면일 때) |
 | C | catchlight | 램프 캐치라이트 — One small warm point of light from a lamp or flame sits in each eye. |
 | D | face-light | 역광 금빛 테두리 — A low sun from behind rings the hair and shoulder outline in gold while the face stays in soft shadow lifted by sky and ground. (滤镜 #048) |
-| D | backlight | 역광 — Light from behind lifts the whole frame into a soft, airy brightness, and the steam from the 종이컵 glows white and blurs the background into a haze. (滤镜 #046) (종이컵 장면일 때) |
+| D | backlight | 역광 — Light from behind lifts the whole frame into a soft, airy brightness, and the steam from the cup glows white and blurs the background into a haze. (滤镜 #046) (종이컵 장면일 때) |
 | D | catchlight | 황금빛 눈동자 — The low setting sun puts fine amber sparkles in the irises and a warm gold edge along the cheek. |
 | D | reed-glow | 억새 역광 — On the 한강 riverside, low gold backlight makes each feathered reed tip glow against the warm hazy sky. (한강 억새 장면일 때) |
 
@@ -192,15 +192,15 @@
 ## 포즈·구도 쌍
 | 번호 | 갈래 | Pose | Camera |
 |---|---|---|---|
-| 1 | A | 두 손으로 컵 감싸기 — Both hands wrap a 종이컵 at chest height with the elbows tucked in and the shoulders soft, her eyes on a friend just off the frame. | 오버 더 숄더 — Over the blurred shoulder of the friend across the table, her face sharp. |
+| 1 | A | 두 손으로 컵 감싸기 — Both hands wrap a paper cup at chest height with the elbows tucked in and the shoulders soft, her eyes on a friend just off the frame. | 오버 더 숄더 — Over the blurred shoulder of the friend across the table, her face sharp. |
 | 2 | A | 턱 괴기 — Elbow planted on a table, palm under the cheek and the head tipped slightly to one side, looking out of the window. | 삼분할 구도 — She sits on the left third beside a window and the window fills the right two thirds. |
 | 3 | A | 메뉴판으로 얼굴 가리기 — A kraft menu held up hides the lower half of her face, only the eyes and hair showing above its edge. | 전경 가림 — Shot past blurred objects on a counter crossing one lower corner of the frame. |
 | 4 | A | 벽에 기대기 — One shoulder rests on a plaster wall beside a shop door, the weight on one hip. | 무릎 위 샷 — The frame cuts at the knees, so the whole stance, the hands and the shopfront threshold all read. |
 | 5 | B | 쿠션 끌어안기 — Sitting up on a soft seat with a big pillow hugged to the chest and the chin resting on it. | 하이앵글 — From above looking down, the soft cloth spreading around her in folds. |
 | 6 | B | 기지개 — Standing at a window with both arms raised and the fingers interlaced, the spine arching in a slow stretch against the sheer curtain. | 여백 — She fills about a third of the vertical frame and the surroundings leave the rest as quiet empty space. |
-| 7 | B | 머그컵 후후 불기 — Both hands wrap a 머그컵 held near the lips while the mouth blows softly across the hot surface, the eyes lowered. | 미디엄 클로즈업 — The frame runs from the top of the head to mid-chest with the 머그컵 in the lower third and the window behind. |
+| 7 | B | 머그컵 후후 불기 — Both hands wrap a mug held near the lips while the mouth blows softly across the hot surface, the eyes lowered. | 미디엄 클로즈업 — The frame runs from the top of the head to mid-chest with the mug in the lower third and the window behind. |
 | 8 | C | 소파에 파묻히기 — Sunk deep into the corner of a sofa with the shoulders low and a cushion hugged to the chest. | 중앙 구도 — She sits dead centre and the folds of the sofa close around her on all sides. |
-| 9 | C | 팔꿈치 괴기 — One elbow rests on the bedside surface and the chin sits in the palm, the eyes soft on the 촛불. | 클로즈업 — The frame holds the face, the hand cupping the chin and the 촛불, filling the picture edge to edge. |
+| 9 | C | 팔꿈치 괴기 — One elbow rests on the bedside surface and the chin sits in the palm, the eyes soft on the candle flame. | 클로즈업 — The frame holds the face, the hand cupping the chin and the flame, filling the picture edge to edge. |
 | 10 | C | 창가 찻잔 — One hand holds a cup near the chin beside a window, the face in profile toward the glass. | 유리창 이중 반사 — A faint ghost of her face lies over the glass beside the live profile. |
 | 11 | D | 하늘 바라보기 — Her body turns sideways and the chin lifts slightly so the eyes rest on the far horizon. | 망원 압축 — A moderate telephoto stacks the foreground plants and the far structures into one compressed layer behind her. |
 | 12 | D | 어깨 너머 시선 — She walks away along a path and turns her head back over one shoulder. | 앙각 — The camera sits low and looks up, so her figure stands tall against the sky. |

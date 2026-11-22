@@ -91,10 +91,10 @@ Expression 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이
 | 慵懒斜视 | 나른한 곁눈질; 게슴츠레 곁눈 | KR | 눈빛; 나른함; 표정; 셀카; 아이폰 원본 셀카; 아이폰 셀카; iPhone native selfie | Heavy-lidded eyes glancing sideways toward a mirror reflection, relaxed face. | look |
 | 嘟嘟唇 | 오리입; 볼 눌러 뾰로통 | KR | 표정; 귀여움; 장난; 손동작 | Both palms pressing the cheeks inward so the cheeks bulge and the lips pout. | look |
 | 나른한 무표정 | 나른한 눈; 무기력한 무표정; 졸린 듯한 무표정 | KR | 무심; 나른함; 시크; 차가움; 千禧CCD直闪; 밀레니엄 CCD 플래시; Y2K CCD flash | The upper lids sag over about a third of the pupils and the unfocused gaze rests just past the lens, the mouth shut and slack. | look |
-| 멈칫 | 멈칫하는 표정; 순간 멈춤; startled pause | KR | 놀람; 순간; 망설임; 정적 | The face and breath stop for an instant, the eyes lifting toward something just heard or seen, the lips parting slightly. | look |
+| 멈칫 | 멈칫하는 표정; 순간 멈춤; brief pause | KR | 순간; 망설임; 정적 | The face and breath stop for an instant, the eyes lifting toward something just heard or seen, the lips parting slightly. | look |
 | 아련한 눈빛 | 아련한 시선; wistful gaze | KR | 애수; 그리움; 눈빛; 감성 | A soft, faintly glassy gaze that looks past the lens as if remembering, the lids slightly lowered. | look |
 | 담담한 표정 | 담담한 얼굴; calm unreadable face | KR | 차분; 무심; 고요; 절제 | A calm, even face with the brows and mouth at rest, showing no strong feeling. | look |
-| 새침한 표정 | 새침; prim sulky look | KR | 도도; 장난기; 귀여움; 시크 | A prim look with the lips pressed lightly together and the eyes sliding aside, the chin slightly raised. | look |
+| 새침한 표정 | 새침; prim, slightly aloof look | KR | 도도; 장난기; 귀여움; 시크 | A prim look with the lips pressed lightly together and the eyes sliding aside, the chin slightly raised. | look |
 | 옅은 미소 | 엷은 미소; subtle smile | KR | 차분; 다정; 은은함; 미소 | The mouth corners lift only a little, a faint smile that stays in the lips and barely reaches the eyes. | look |
 | 머쓱한 웃음 | 머쓱 웃음; 머쓱; sheepish smile | KR | 멋쩍음; 친구; 일상; 웃음 | A small sheepish smile with the head tilting slightly and the eyes sliding away, a hand near the neck or hair. | look |
 | 시무룩 | 시무룩한 표정; 시무룩한 얼굴; downcast sulk | KR | 슬픔; 삐침; 풀죽음; 일상 | The mouth turns down a little and the eyes drop, the whole face slack and deflated. | look |
