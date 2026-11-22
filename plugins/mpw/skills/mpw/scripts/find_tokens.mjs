@@ -4,6 +4,7 @@
 // A query that names a look (왕가위, 港风, 홍콩 영화) also prints a "## Look card" block first: read that card before the layer rows.
 // A query that only touches a card's "do not call" words (필카 감성, 폴라로이드), or shares two or more cues (비 오는 밤, 네온) with a card's summary, names and facts, prints a "## Look card candidates" block with one-line summaries instead.
 // Rows print without their aliases (the search still matches them); --aliases adds them.
+// Rows tagged 부분 (마당, 창살, 立领: part names of a culture's things) are called inside the English sentence, so they print once in a "## 문장 속 낱말" block after the layer rows instead of competing for the per-layer limit.
 import { randomInt } from 'node:crypto';
 import fs from 'node:fs';
 import path from 'node:path';
@@ -291,6 +292,33 @@ export function search({ terms, layers = SLUGS, culture = null, dir = LEXICON_DI
   });
 }
 
+// Part-name rows (tag 부분) leave the layer lists and come back as one block of at most PART_LIMIT rows, best match first. The layer lists then hold only rows that can head a line.
+// A row whose token or alias is one of the query terms prints whatever the limit (each named part must be called by its name, image-brief.md §2.1 rule 2); `more` counts the other rows left out.
+export const PART_TAG = '부분';
+export const PART_LIMIT = 4;
+export function takeParts(results, limit = PART_LIMIT, terms = []) {
+  const asked = new Set(terms.map(squash));
+  const named = (m) => [m.token, ...m.aliases].some((name) => asked.has(squash(name)));
+  const parts = [];
+  const layers = results.map((l) => ({
+    ...l,
+    matches: l.matches.filter((m) => {
+      if (!m.tags.includes(PART_TAG)) return true;
+      parts.push({ ...m, layer: l.slug });
+      return false;
+    }),
+  }));
+  // Best score first, then one row per layer in turn, so a 한옥 query does not fill the block with scene rows and hide the 新中式 outfit parts.
+  const queues = new Map();
+  const exact = parts.filter(named);
+  const rest = parts.filter((m) => !named(m));
+  for (const m of rest.sort((a, b) => b.score - a.score)) queues.set(m.layer, [...(queues.get(m.layer) ?? []), m]);
+  const room = Math.max(0, limit - exact.length);
+  const turns = [];
+  for (let i = 0; turns.length < Math.min(room, rest.length); i++) for (const q of queues.values()) if (q[i] && turns.length < room) turns.push(q[i]);
+  return { layers, parts: [...exact, ...turns], more: rest.length - turns.length };
+}
+
 // Random picks reuse draw_portrait_options so the draw works the same way (crypto.randomInt unless a picker is injected).
 // Rows tagged MINOR_TAG (children and students) are never drawn at random; a direct search still returns them.
 export const MINOR_TAG = '아동·학생';
@@ -318,21 +346,27 @@ const candidateBlock = (candidates) => (candidates.length
   ? `## Look card candidates\n(no card was named. New image: read the first whose summary fits with \`node scripts/read_look.mjs <slug> --outline\`; if none fits, write without a card. Photo extraction: a candidate is only a suggestion; check it with \`--facts\` only when the photo shows that medium's marks (image-brief §12.0), otherwise write without a card. [매체] cards name a film or camera, [장면] cards a place.)\n${candidates.map((c) => `- ${c.slug} · ${c.title} [${c.axis}, ${c.culture}] — ${c.summary}`).join('\n')}\n\n`
   : '');
 
-export function formatText(results, cards = [], candidates = [], { aliases = false } = {}) {
+// --limit above 6 is the long listing, so the hint asks for at least 7.
+const partBlock = (parts, more = 0) => (parts.length
+  ? `## 문장 속 낱말\n(part names: use inside the English sentence, not as a line head.)\n${parts.map((m) => `${m.token} — ${m.looks} [${m.culture.join(', ')}]`).join('\n')}\n${more ? `(+${more} more: --limit ${Math.max(7, parts.length + more)})\n` : ''}`
+  : '');
+
+export function formatText(results, cards = [], candidates = [], { aliases = false } = {}, parts = [], more = 0) {
   const head = cardBlock(cards) + candidateBlock(candidates);
-  if (results.every((l) => l.matches.length === 0)) {
+  if (results.every((l) => l.matches.length === 0) && !parts.length) {
     if (cards.length) return `${head}no layer rows matched; the card above carries the look.\n`;
-    return `${head}no match in any layer. Use English tokens and sentences unless you know an original-language term for sure (image-brief.md §2, §4).\n`;
+    return `${head}no match in any layer. Use English tokens and sentences: original-language words come only from the lexicon, a look card, fixed-lines.md or the user (image-brief.md §2.1).\n`;
   }
-  return head + results.map((l) => {
+  const layers = results.map((l) => {
     const body = l.matches.length
       ? l.matches.map((m) => `${m.token} — ${m.looks}${aliases && m.aliases.length ? ` (${m.aliases.slice(0, 4).join(', ')})` : ''} [${m.kind}${m.tags.includes('소품 필요') ? ', 소품 필요' : ''}]`).join('\n')
       : 'no match';
     return `## ${l.title}\n${body}\n`;
   }).join('\n');
+  return head + layers + (parts.length ? `\n${partBlock(parts, more)}` : '');
 }
 
-export function formatJson(results, terms, cards = [], candidates = []) {
+export function formatJson(results, terms, cards = [], candidates = [], parts = [], more = 0) {
   const layers = {};
   for (const l of results) {
     layers[l.slug] = l.matches.map(({ token, aliases, culture, tags, looks, kind, score }) => ({ token, aliases, culture, tags, looks, kind, score }));
@@ -342,6 +376,8 @@ export function formatJson(results, terms, cards = [], candidates = []) {
     looks: cards.map(({ slug, title, axis, file, matched }) => ({ slug, title, axis, file, matched })),
     candidates: candidates.map(({ slug, title, axis, summary, file, matched }) => ({ slug, title, axis, summary, file, matched })),
     layers,
+    words: parts.map(({ token, aliases, culture, tags, looks, kind, score, layer }) => ({ layer, token, aliases, culture, tags, looks, kind, score })),
+    words_more: more,
   };
 }
 
@@ -391,9 +427,16 @@ if (isMainModule()) {
     const opts = parseArgs(argv);
     const cards = findLookCards(opts.terms);
     let results = search({ ...opts, cards });
-    results = opts.random ? drawRandom(results, opts.random) : results.map((l) => ({ ...l, matches: l.matches.slice(0, opts.limit) }));
+    let parts = [];
+    let more = 0;
+    if (opts.random) results = drawRandom(results, opts.random);
+    else {
+      // The block is short by default; a --limit above 6 asks for a long listing and gets as many parts.
+      ({ layers: results, parts, more } = takeParts(results, opts.limit > 6 ? opts.limit : Math.min(opts.limit, PART_LIMIT), opts.terms));
+      results = results.map((l) => ({ ...l, matches: l.matches.slice(0, opts.limit) }));
+    }
     const candidates = findLookCandidates(opts.terms, cards);
-    process.stdout.write(opts.json ? JSON.stringify(formatJson(results, opts.terms, cards, candidates)) + '\n' : formatText(results, cards, candidates, opts));
+    process.stdout.write(opts.json ? JSON.stringify(formatJson(results, opts.terms, cards, candidates, parts, more)) + '\n' : formatText(results, cards, candidates, opts, parts, more));
   } catch (error) {
     console.error(`find_tokens: ${error.message}`);
     process.exitCode = 2;

@@ -43,7 +43,7 @@
 ## Hair and makeup
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
-| A, C | hair | 濡れ髪 — Shoulder-length black hair looks freshly rained on, the strands clumped into dark glossy ribbons that pick up thin lines of violet and cyan from the signs. |
+| A, C | hair | 濡れ髪 — Shoulder-length black hair looks freshly rained on, the strands clumped into dark ribbons with wet ツヤ that pick up thin lines of violet and cyan from the signs. |
 | B | hair | 濡れ髪 — Rain has soaked the black bob so a few strands cling to the cheek and jawline in wet curves and the ends drip, while the brows and eyes stay uncovered. |
 | D | hair | 前下がりボブ — A bob cut longer at the front with the ends rolled under the jaw, its surface combed smooth enough to hold one clean highlight from the street lamp. (发型 #003) |
 | 전부 | bangs | シースルーバング — A thin see-through fringe stirs in the damp wind, showing patches of forehead between the strands. |
@@ -51,19 +51,19 @@
 | A | lip | ガラスリップ — A glassy translucent lip with fine pearl shimmer that mirrors small points of violet and cyan neon. |
 | B | lip | Dusty Rose Lip — A muted rosy-brown matte lip with a soft edge and no gloss, taking the amber lamp light flat. |
 | C | lip | Berry Lip — A dark berry lip with a slightly stained edge that reads almost black in the dim light of the glass or the car. |
-| D | lip | シアーリップ — A sheer coral lip color with a soft stain and one thin wet sheen, the only warm note against the cold light on her face. |
+| D | lip | シアーリップ — A sheer coral lip color with a soft stain and one thin wet ツヤ, the only warm note against the cold light on her face. |
 | 전부 | blush | 頬染め — A cold pink flush sits on the nose tip and cheeks as if the rain and the night wind had just touched them. |
 
 ## Expression
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
-| A | expression | Defiant Aloofness — The chin lifts a little into the cold rain wind and the face stays still, the eyes level and distant under the clear umbrella. (神态 #048) (투명 우산 장면일 때) |
-| A | expression | 睥睨 — The lids half lower and the chin lifts so the eyes pass over the street from above, cyan screen light running along the cheekbone. (滤镜 #098) (S2 전용) |
-| B | expression | Dispassionate Onlooker — The eyes follow the crowd without reacting and the body stays still while umbrellas stream past on both sides. (滤镜 #092) (S3 전용) |
+| A | expression | Defiant Aloofness — The chin lifts a little into the cold rain wind and the face stays still, the eyes level and distant under the ビニール傘. (神态 #048) (투명 우산 장면일 때) |
+| A | expression | 睥睨 — The lids half lower and the chin lifts so the eyes pass over the street from above, cyan light from the 街頭ビジョン running along the cheekbone. (滤镜 #098) (S2 전용) |
+| B | expression | Dispassionate Onlooker — The eyes follow the crowd without reacting and the body stays still while ビニール傘 stream past on both sides. (滤镜 #092) (S3 전용) |
 | B | expression | 無垢な静寂 — A still face with level unhurried eyes and closed lips, so the amber lamp beside her is the only warm thing in the frame. (滤镜 #093) (S4 전용) |
 | B, D | gaze | 自然なカメラ目線 — The face squares to the lens and the eyes hold on it without blinking, level and clear, with rain or an empty street quiet behind. (神态 #079) |
-| C | expression | Taxi Backseat Gaze — Passing lights slide over her cheek and the window glass while the eyes follow one rain streak down the pane. (神态 #019) (차창 장면일 때) |
-| C, D | expression | 物思い — The lids lower and the gaze drifts unfocused over the lights below or the black water, the mouth relaxed and the head tilted slightly. (滤镜 #096 #097) |
+| C | expression | Taxi Backseat Gaze — Passing lights slide over her cheek and the window glass while the eyes follow one rain streak down the pane, ぼんやりしている. (神态 #019) (차창 장면일 때) |
+| C, D | expression | 物思い — The eyes drop into 伏し目 and the gaze drifts unfocused over the lights below or the black water, the mouth relaxed and the head tilted slightly. (滤镜 #096 #097) |
 | D | expression | 流し目 — The eyes rest on a point about fifteen degrees to the side of the lens, as if something out of frame had her attention. |
 
 **시선 슬롯은 하나다:** `自然なカメラ目線`·`流し目`·`物思い`·`Dispassionate Onlooker`처럼 시선을 정하는 Expression 줄은 하나만 쓴다. 쌍이나 세트가 시선을 직접 정하면(쌍 7·11과 S6의 렌즈 응시, 쌍 9·12의 아래로 향한 시선) 그 값이 Expression의 다른 시선 줄을 대신한다.
@@ -75,32 +75,32 @@
 |---|---|---|
 | A | outfit | ヴィンテージレザージャケット — A black leather jacket with the collar turned up, rain beads on the shoulders and a worn sheen at elbow and shoulder that picks up violet from the signs. (风格/01 #004) |
 | A | outfit | リフレクター — Reflective strips and panels on a silver-gray cropped technical jacket flare cold white and cyan under the screens and stay flat gray in the shade. (滤镜 #098) (S2 전용) |
-| B | outfit | 撥水コート — A long dark-gray water-repellent coat with taped seams, rain sitting on the matte surface as round beads that glint under the screen light. (滤镜 #092) (S3 전용) |
+| B | outfit | 撥水コート — A long dark-gray water-repellent coat with taped seams, rain sitting on the matte surface as round beads that glint under the 街頭ビジョン. (滤镜 #092) (S3 전용) |
 | B | outfit | ダブルフェイスカシミヤ — A long light-oat double-faced cashmere coat with a soft matte nap that reads warm on the lamp side and cool white on the headlight side. (滤镜 #093) (S4 전용) |
 | C | outfit | 背中開きニットワンピース — A fitted black knit dress open across the back, the rib stretching over the shoulder blades in the dim light of the glass. (滤镜 #096) |
 | C | outfit | Moto Jacket — A heavy black leather jacket with an asymmetric zip and snap lapels, small hard red reflections sliding along the zip as tail lights pass. (滤镜 #099) (S5 전용) |
-| C | outfit-outer | ダブルフェイスカシミヤ — A long black cashmere coat with wide lapels falling in heavy folds, a fuzzy halo along its edge under the faint red glow of the tower. (滤镜 #095) (도쿄타워 장면일 때) |
+| C | outfit-outer | ダブルフェイスカシミヤ — A long black cashmere coat with wide lapels falling in heavy folds, a fuzzy halo along its edge under the faint red glow of 東京タワー. (滤镜 #095) (도쿄타워 장면일 때) |
 | C | scarf | マフラー — A thick soft scarf wound loose with her chin sunk into it, its fuzz catching a thin line of red tail light on the edge. (风格/03 #055) |
 | D | outfit | ダブルフェイスカシミヤ — A plain charcoal ankle-length coat hangs in straight heavy folds, its dark wool soaking up the street lamp and leaving only a faint edge. (滤镜 #100) |
-| D | outfit | トレンチコート — A pale beige trench worn open, the thin cotton turning gray-blue in the lantern shade and spotted with rain. (滤镜 #097) (제등 장면일 때) |
+| D | outfit | トレンチコート — A pale beige trench worn open, the thin cotton turning gray-blue in the 提灯 shade and spotted with rain. (滤镜 #097) (제등 장면일 때) |
 
 ## Props and nails
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
 | A | hand-prop | ビニール傘 — A clear vinyl umbrella tilts over one shoulder, its dark ribs and beaded canopy catching violet and cyan as rain slides down to the tips. (道具 #036) |
-| B | shop-prop | 傘立て — A shop-front stand packed with clear vinyl umbrellas whose droplets and ribs catch the cold white window light. (风格/03 #057) (상점 앞 장면일 때) |
-| B | hand-prop | ホット缶コーヒー — A short steel can of hot coffee from a vending machine warms both hands, a thin breath of steam at the opening. (风格/03 #044) |
+| B | shop-prop | 傘立て — A shop-front stand packed with ビニール傘 whose droplets and ribs catch the cold white window light. (风格/03 #057) (상점 앞 장면일 때) |
+| B | hand-prop | ホット缶コーヒー — A short steel can of hot coffee from a 自販機 warms both hands, a thin breath of steam at the opening. (风格/03 #044) |
 | D | hand-prop | ビニール傘 — A closed clear umbrella hangs from one wrist, the last drops falling from its tips onto the wet crosswalk. (횡단보도 장면일 때) |
-| A | nails | Glossy Nails — A wet mirror gloss on the nails runs long clean sign reflections along each nail where the fingers grip the umbrella handle. (투명 우산 장면일 때) |
+| A | nails | Glossy Nails — A wet mirror gloss on the nails runs long clean sign reflections along each nail where the fingers grip the ビニール傘 handle. (투명 우산 장면일 때) |
 | B, C, D | nails | Icy Sheer Nails — Sheer icy-clear nails with a faint milky tint, the natural nail showing through a cool glossy layer. |
 
 ## Style
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
 | A | style | 東京ノワール — Tokyo noir at night: wet asphalt that mirrors the signs, deep shadow between them and cold purple-cyan neon, one figure alone in the reflections. |
-| A | style | サイバーパンク — Electric cyan and ice-blue screen light on dark glossy surfaces, with reflective clothing and a cold, lonely future-city mood. |
+| A | style | サイバーパンク — Electric cyan and ice-blue screen light on dark glossy surfaces and flaring off technical fabrics, with a cold, lonely future-city mood. |
 | B | style | ネオンノワール — Long dark coats moving through rain and crowds under cold colored city light, with a single amber lamp as the only warm counterpoint. |
-| B | style | GINZA — A restrained Tokyo mode look of clean cuts, cool matte makeup and quiet editorial composure under the Ginza lamps. (긴자 장면일 때) |
+| B | style | GINZA — A restrained Tokyo mode look of clean cuts, cool matte makeup and quiet editorial composure under the lamps of 銀座. (긴자 장면일 때) |
 | C | style | Sensual Minimal — A restrained evening look in one dark piece with bare shoulders and low light, almost no accessories, in a high quiet room above the city. (六本木ヒルズ 전망 복도 경로 전용이다. S5와 차 안 경로에는 쓰지 않는다) |
 | C | style | ナイトドライブ — A quiet night-drive mood in the car, a dark jacket zipped against the cold and the road and its lights sliding past the window, nothing styled. (차 안 장면일 때) |
 | D | style | クール系 — A low-saturation gray and blue palette with sharp tailored lines and a straight composed stance under cold night light. |
@@ -111,11 +111,11 @@
 ## Scene
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
-| A | place | 歌舞伎町 — A narrow lane under the neon gate arch of the main street and a tall building crowned with a giant monster-head statue, with violet, cyan and magenta signs above black rain-slick asphalt. |
-| A | place | 秋葉原 — An electric-town street under a pedestrian overpass with giant screens overhead and drizzle in the air, every sign blurred beyond reading. |
-| B | place | 渋谷スクランブル交差点 — The wide diagonal crossing at the moment the lights turn green, a sea of clear umbrellas filling the road under towering screens and wet black asphalt. |
+| A | place | 歌舞伎町 — A narrow lane under the neon gate arch of 歌舞伎町一番街 and a tall building crowned with a giant monster-head statue, with violet, cyan and magenta signs above black rain-slick asphalt. |
+| A | place | 秋葉原 — An 電気街 street under a pedestrian overpass with giant 街頭ビジョン overhead and drizzle in the air, every sign blurred beyond reading. |
+| B | place | 渋谷スクランブル交差点 — The wide diagonal crossing at the moment the lights turn green, a sea of ビニール傘 filling the road under towering 街頭ビジョン and wet black asphalt. |
 | B | place | 銀座 — A corner under a luxury-shop awning with a cast-iron street lamp and cars sweeping past on the wet road. |
-| B | storefront | コンビニ — A convenience store with a full-height window, rain-dark pavement and an umbrella stand at its door. |
+| B | storefront | コンビニ — A convenience store with a full-height window, rain-dark pavement and a 傘立て at its door. |
 | B | shelter | 雨宿り — She waits under a shop eave while rain pours past in a heavy curtain, the concrete at her feet darkened with shaken-off drops. |
 | B | back-alley | 非常階段 — A back-alley iron fire stair with a corner landing against dark concrete walls soaked nearly black, the rain echoing in the narrow space. (神态 #079) |
 | C | place | 六本木ヒルズ — A high observation corridor with floor-to-ceiling glass, a black interior and the city spread beyond the pane. |
@@ -123,7 +123,7 @@
 | C | background | 東京タワー — The red-and-white lattice tower stands in rain mist beyond a quiet slope. |
 | C | overpass | 歩道橋 — A gray footbridge over a wide multi-lane road, its railing cold under her hands while traffic streams below. |
 | D | place | 新宿東口 — The station-exit plaza at 2 a.m. with the crowds gone, a wet crosswalk and old street lamps. |
-| D | place | 中目黒 — A small red arched bridge with black iron railings over a canal of black water in light rain, with pale paper lanterns along the bank. |
+| D | place | 中目黒 — A small red arched bridge with black iron railings over a canal of black water in light rain, with pale 提灯 along the bank. |
 
 ## Light
 | 갈래 | 슬롯 | 줄 |
@@ -132,17 +132,17 @@
 | A | face-light | 街頭ビジョン — A giant LED screen throws hard cyan and cold white across one side of her face and the wet ground, leaving the other side in blue shadow. (滤镜 #098) (S2 전용) |
 | A | catchlight | Neon Tube Ring Catchlight — A thin cyan neon tube mirrors as a pale ring in each eye and throws a cold tint onto the lower lids. (神态 #048) |
 | A | reflection | Wet Street Reflection — Wet asphalt turns into a dark mirror that stretches the signs into long violet and cyan streaks under her feet. |
-| A | weather | 雨の夜 — Fine rain gives every sign a soft cold halo of mist and leaves bright beads on the umbrella and the road. |
+| A | weather | 雨の夜 — Fine rain gives every sign a soft cold halo of mist and leaves bright beads on the ビニール傘 and the road. |
 | B | face-light | 街頭ビジョン — Huge screens tens of meters up pour wide cold-white light down through the rain onto the crowd, so lit skin reads evenly bright with no hard shadow. (滤镜 #092) (S3 전용) |
 | B | face-light | Warm-Cool Contrast — An amber street lamp lights one side of her face and the cold white of passing headlights lights the other, the two meeting at the cheek. (滤镜 #093) (S4 전용) |
 | B | light-fill | 蛍光灯 — Flat cool-white fluorescent light from the shop window washes the wet pavement and the lower half of her coat. (风格/03 #045) (상점 창 장면일 때) |
-| B | catchlight | キャッチライト — A small rectangular patch of the big screen or the shop window sits in each eye. |
+| B | catchlight | キャッチライト — A small rectangular patch of the 街頭ビジョン or the shop window sits in each eye. |
 | B | rain | 土砂降り — Under the shop eave, the heavy rain curtain catches the glow of the signs and lamps and reads as a bright, pale veil against the dark street. (처마 아래 장면일 때) |
 | C | face-light | 雨夜のテールランプ — Red tail lights streaming past the rain-streaked window rim her profile with dim red light while the car interior stays almost black. (滤镜 #099) (차 안 장면일 때) |
 | C | through-glass | 水滴越し — Raindrops on the glass between the camera and her scatter the city lights into overlapping soft blobs and short streaks. (카메라가 유리 바깥에 있거나 유리를 사이에 둔 경로 전용이다. 차 안 시점(쌍 10, S5)에서는 창이 인물 뒤에 있으니 쓰지 않는다) |
 | C | traffic-trail | 車のライトの軌跡 — Long red and white streaks from the traffic far below run along the road like rivers of light. (滤镜 #096) (내려다보는 장면일 때) |
 | C | cityscape | 雨の夜 — Beyond the glass of the observation corridor the lights of the city below spread as a sea of cold points, each wrapped in a soft halo of rain mist, while the interior stays black. (전망 복도 장면일 때) |
-| C | haze | Atmospheric Haze — In the rain mist beyond the slope, the lit steel edges of the red-and-white tower glow and spread a soft deep-red haze across the sky. (도쿄타워 장면일 때) |
+| C | haze | Atmospheric Haze — In the rain mist beyond the slope, the lit steel edges of 東京タワー glow and spread a soft deep-red haze across the sky. (도쿄타워 장면일 때) |
 | C | in-car | 雨夜のテールランプ — From the passenger seat, red and white lights from the road slide in bands across the dashboard, her cheek and the window glass. (차 안 장면일 때) |
 | C | catchlight | キャッチライト — Tiny warm points of the city lights below sit in each eye. |
 | D | face-light | Streetlamp Pool — One old street lamp leaves a small hard pool of neutral-cool light on the wet crosswalk and a clean highlight on her cheek, everything else in black. (滤镜 #100) (S6 전용) |
@@ -155,23 +155,23 @@
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
 | A | camera | ARRI Alexa Mini — A compact digital cinema camera with a Super 35 sensor. (滤镜 #091) |
-| A | tone-alexa | Highlight Roll-off — On the Alexa Mini the neon tubes fade gradually into white without a clipped edge, and the blacks around them hold a deep violet-blue. |
+| A | tone-alexa | Highlight Roll-off — On the Alexa Mini the neon tubes fade gradually into white without 白飛び, and the blacks around them hold a deep violet-blue with no 黒つぶれ. |
 | A | camera | Sony A7S III — A full-frame mirrorless camera. (滤镜 #098) |
-| A | flare | ブルーストリーク — Horizontal blue streaks run off each neon tube and the out-of-focus lights behind her stretch into ovals. (S1과 쌍 1~4에서만 쓴다. S2는 구면 단렌즈라 쓰지 않는다) |
+| A | flare | ブルーストリーク — Horizontal blue streaks run off each neon tube and the ボケ behind her stretches into ovals. (S1과 쌍 1~4에서만 쓴다. S2는 구면 단렌즈라 쓰지 않는다) |
 | A, B | bloom | Black Pro-Mist — A black diffusion filter blooms the brightest signs into faint halos and lowers contrast slightly while her face stays clear. |
 | A, B, C | color | Cool Tone — The whole palette leans cold blue-white with the shadows tinted violet, quiet and slightly pale. |
 | B | camera | Sony FX3 — A compact full-frame cinema-line camera. (滤镜 #092) |
 | B | camera | Leica SL2 — A full-frame mirrorless camera. (滤镜 #093) |
 | B | tone-sl2 | Crisp Detail Calm Colour — On the Leica SL2, crisp detail and deep, calm color keep the amber lamp and the white headlights cleanly separate, with no purple fringing. |
 | C | camera | Hasselblad X2D 100C — A medium-format mirrorless digital camera. (滤镜 #096) |
-| C | tone-x2d | Wide Tonal Range — On the Hasselblad X2D 100C, smooth color and a wide tonal range keep the distant city lights delicate and unclipped. |
+| C | tone-x2d | Wide Tonal Range — On the Hasselblad X2D 100C, smooth color and a wide tonal range keep the distant city lights delicate, with no 白飛び. |
 | C | camera | RED Komodo — A compact 6K cinema camera. (滤镜 #099) |
 | C | tone-komodo | Clean Colour Detail — On the RED Komodo, crisp detail and clean color hold up through the rain-streaked window. |
 | C | motion | 光跡 — Headlights and tail lights stretch into smooth colored streaks along the road while the buildings stay still and sharp. |
 | C | bokeh | Bokeh — Distant lights turn into big round overlapping discs behind her. |
 | D | camera | Leica M11 — A compact full-frame digital rangefinder camera. (滤镜 #100) |
 | D | tone-m11 | Highlight Roll-off — On the Leica M11, crisp micro-contrast keeps the wet crosswalk sharp while the lamp highlight rolls off gently and stays pure. |
-| D | key | Deep Blacks — The darkest parts of the frame sink to clean, deep black with no visible noise, and the highlights stay small and unclipped. |
+| D | key | Deep Blacks — The 最暗部 of the frame sinks to clean, deep black with no visible noise, and the highlights stay small and unclipped. |
 | D | color | Cool Grey Tone — A pale gray with a trace of blue and restrained contrast, the whites clean and cold. |
 
 ## 장면 세트 (Iris 프리셋 한 편의 동반값을 그대로 옮긴 묶음. 세트를 쓰는 조건은 규칙 4항이 정하고, 세트 값은 고정 사실보다 먼저다. 규칙은 image-brief.md §4 '룩 카드' 4항과 '비워 둔 층')
@@ -189,13 +189,13 @@
 ## 포즈·구도 쌍
 | 번호 | 갈래 | Pose | Camera |
 |---|---|---|---|
-| 1 | A | Umbrella Rim Lift — She walks toward the lens down the middle of the lane and tilts the umbrella rim up with one hand so her face comes out of its shadow. | Low Angle — The camera sits at knee height tilted up with a 35mm anamorphic lens, so the road surface fills the lower frame and the buildings stack above her. |
+| 1 | A | Umbrella Rim Lift — She walks toward the lens down the middle of the lane and tilts the rim of the ビニール傘 up with one hand so her face comes out of its shadow. | Low Angle — The camera sits at knee height tilted up with a 35mm anamorphic lens, so the road surface fills the lower frame and the buildings stack above her. |
 | 2 | A | ポケットイン — She stands still facing slightly away, four fingers pushed into a jacket pocket and the collar up, the shoulders slightly lifted. | Frame Within a Frame — A 35mm anamorphic lens shoots through an arch over the street, which boxes her into a narrow slot between walls. |
-| 3 | A | 振り返り — Walking away from the camera, she holds the umbrella over one shoulder and turns her head back beneath its rim. | Foreground Obstruction — A 35mm anamorphic lens sees her past a blurred umbrella edge and a passer-by crossing one corner of the frame. |
+| 3 | A | 振り返り — Walking away from the camera, she holds the ビニール傘 over one shoulder and turns her head back beneath its rim. | Foreground Obstruction — A 35mm anamorphic lens sees her past a blurred umbrella edge and a passer-by crossing one corner of the frame. |
 | 4 | A | Sovereign Stance — She stands upright with the chin tipped up and the eyes looking down along the nose, the hands loose at her sides. | Dutch Angle — A 35mm anamorphic lens held a few degrees off level, so the buildings and rooflines lean and the street tilts with them. |
 | 5 | B | ポケットイン — She stands still in the middle of the crowd, both hands sunk into the coat pockets and the shoulders relaxed. | High Angle — A 24mm lens from a raised walkway looks down at her, the crowd and umbrellas around her reading as small discs. |
 | 6 | B | 襟を直す — Under the awning she smooths the coat collar with one hand, the chin dipped toward it. | Telephoto Compression — An 85mm lens across the street stacks the street lamps and passing cars behind her into one compressed band. |
-| 7 | B | 傘の水を切る — She shakes a closed umbrella downward under the shop eave so drops arc through the air, the body leaning to one side. | カメラ目線 — A 35mm lens close at eye level, she glances straight into it with the shop window behind her. |
+| 7 | B | 傘の水を切る — She shakes a closed ビニール傘 downward under the shop eave so drops arc through the air, the body leaning to one side. | カメラ目線 — A 35mm lens close at eye level, she glances straight into it with the shop window behind her. |
 | 8 | C | Leaning on a Railing Gazing Out — Her forearms rest on the footbridge railing with the weight leaning forward and the chin sunk into a scarf. | Negative Space — A 50mm lens frames her on one third of the vertical frame, the road filling the rest. |
 | 9 | C | Summit Overlook — She stands at the glass edge of the observation corridor, the forehead near the pane and the eyes down over the city. | Window Double Reflection — A 90mm lens shoots at the tall window, where her ghost reflection overlaps the view beyond the glass. |
 | 10 | C | Window Rain Lean — Seated in the passenger seat, one shoulder and the head rest against the rain-streaked window, the face turned toward the glass. | reflection frame — A 50mm lens from the driver's side, where the passing view slides in the glass and doubles her outline. |

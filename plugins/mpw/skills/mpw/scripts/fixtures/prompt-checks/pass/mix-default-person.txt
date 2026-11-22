@@ -1,0 +1,62 @@
+A natural-light photograph of a young woman at a window seat in a 한옥 café fitted out like a 純喫茶, lifting her head from a 文庫本 in the 西日.
+
+## Identity Reference
+If a model reference is provided, the woman in this photo is that model: take only the 얼굴형 and 이목구비 from it, adapting them naturally to this scene's expression, angle and light, and keep her own skin tone. Hair, makeup and everything else follow this prompt. If none is provided, she is a 22-year-old East Asian woman with 小脸, 오똑한 콧대, a clean 턱선 and 맑고 흰 피부. In either case 7.5등신, a small head over 直角肩 and 天鹅颈.
+
+## Hair
+시스루뱅 — A thin fringe of separated wisps falls just above the brows, and the forehead shows between the strands.
+低马尾 — Her hair is tied in a smooth low ponytail at the nape, tucked behind both ears so the brows, eyes and jawline stay clear, and the tail hangs straight down her back.
+
+## Makeup
+透明感 — A sheer, low-coverage base with a faint cool correcting tint, so the light seems to pass through it and the skin reads 맑고 촉촉하다.
+애교살 — A soft pearly band under the lower lashes with a faint shadow line beneath it.
+内眼线 — A hair-thin dark line along the upper lash roots defines the eye with no visible wing.
+딸기우유 블러셔 — A sheer, soft milky-pink blush spreads thinly across the cheeks and nose and fades into the base with no hard edge.
+豆沙唇 — A muted rosy-brown 哑光 lip with a softly blurred edge and no gloss.
+
+## Expression
+나른한 눈빛 — Her chin has just lifted from the page and her eyes rest on a point past the lens toward camera left, 눈꺼풀은 독서의 여운으로 아직 나른하다.
+멈칫 — 입술이 살짝 벌어지고 미간은 편안하다, as if a sound at the door pulled her out of the 文庫本.
+
+## Outfit
+新中式衬衫 — An ivory silk shirt with a 立领 and 盘扣 cut in a relaxed modern shape, 은은한 광택 running along the folds of the sleeves.
+プリーツスカート — A knee-length olive wool skirt with 칼주름 that fall in straight, heavy folds over the seat, fold edges catching thin lines of light.
+
+## Props and nails
+文庫本 — A small paperback in a paper ブックカバー, held open in the left hand with one finger keeping her place, the page edges curling slightly.
+紫砂盖碗 — A lidded tea bowl in 哑光 purple-brown clay sits on the table by her right hand, the lid tilted so a soft curl of steam escapes and catches the window light.
+시럽 네일 — Short almond nails in a translucent blush jelly that shows the pale nail bed, each with a thick 물광 coat holding one small highlight.
+
+## Pose
+seated turn — She sits back against the bench with her weight settled into the seat, her shoulders angled three-quarters toward the window at camera left while her head turns up toward the room.
+hands — The 文庫本 rests lowered against the table edge in her left hand, and her right fingertips touch the foot of the 盖碗.
+
+## Style
+꾸안꾸 — The whole look reads as 힘 뺀 듯 갖춘 차림: soft neutrals, clean cuts and nothing that looks newly bought, with Chinese, Japanese and Korean details sitting together as one wardrobe.
+palette — Ivory, olive, dark walnut brown and tea amber, warmed by the low sun with no cold color anywhere in the frame.
+
+## Scene
+한옥 카페 — Dark timber beams overhead and a small open 마당 of pale gravel visible beyond the window, wooden 창살 dividing the glass.
+純喫茶 — The inside is a 喫茶店: a deep wine-red velvet bench, a small round marble table with a thin water glass on it, and a shelf of old 文庫本 behind her, every spine blurred past reading.
+no readable lettering — The wall menu and the ブックカバー carry no legible text.
+
+## Light
+西日 — Low late-afternoon sun comes in sideways through the window at camera left, throwing long warm amber light across her left cheek, shoulder and the table while the right side of her face falls into やわらかい影.
+창살 그림자 — The 창살 lay a sharp-edged bright patch on the marble tabletop, striping the 盖碗 and the backs of her fingers with bands of light and shade.
+창문 캐치라이트 — The large window leaves a soft rectangular, pane-divided highlight in the upper part of each iris.
+
+## Optics
+clean digital color — Warm natural color with gently lifted 暗部, and 高光 on the silk shirt that roll off smoothly instead of 过曝 to white.
+白平衡 — A warm daylight 白平衡 keeps the ivory shirt creamy and the timber a true dark brown.
+数码噪点 — Very fine 噪点 sits only in the 最暗部 of the frame.
+
+## Camera
+三分割構図 — She sits on the right vertical third line with the lit window and the gravel 마당 filling the left two thirds.
+vertical frame — A vertical 3:4 frame from the top of her head to her waist, shot at eye level from across the table.
+natural perspective — The camera stands back with a 标准至中长焦 lens, so the face keeps natural perspective with no 广角 stretch on the nose or forehead.
+focus — Her face and the 盖碗 are sharp; the 마당 and the shelf behind her soften into gentle 虚化.
+
+## Finish
+실사 — The whole frame reads as a real natural-light photograph.
+극사실 — Ultra-realistic 8K photographic detail: real pores on the skin, real weave in the silk and wool, real wear on the velvet and timber.
+실사 촬영 — A real person photographed on location, never an illustration, anime frame, 3D render or plastic-skinned CGI.

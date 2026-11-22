@@ -209,6 +209,17 @@ Scene 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다. 
 | 분식집 | 떡볶이집; 분식점; 포장마차 분식; Korean snack bar | KR | 분식; 떡볶이; 실내; 일상 | A small snack shop with a steaming tteokbokki pan at the counter, plastic stools, a laminated menu and bright overhead light. | place |
 | 가로수 | 가로수 그늘; roadside trees | KR | 가로수; 그늘; 거리; 초록 | Trees planted in a line along the road with trimmed trunks and canopies that shade the sidewalk below. | place |
 | 집 방 벽 거울 | 침실 거울; 방 전신거울; 집 거울 셀카; 벽 거울; bedroom wall mirror | KR | 거울 셀카; 침실; 집; OOTD; 아이폰 원본 셀카; 아이폰 셀카; iPhone native selfie | A bedroom with a tall wall mirror leaning against a pale wall, the bed and floor sharp in the reflection. | place |
+| 마당 | 안마당; 한옥 마당; hanok courtyard; earthen yard | KR | 한옥; 부분; 전통; 야외 | Earth or pale gravel yard inside a hanok, ringed by verandas. | place |
+| 대청마루 | 대청; hanok main hall; open wooden hall | KR | 한옥; 부분; 전통; 실내 | The wide wood-floored central hall of a hanok, open to the yard. | place |
+| 서까래 | exposed rafters; round rafters | KR | 한옥; 부분; 지붕; 목구조 | Round timber rafters showing under a hanok roof or ceiling. | item |
+| 창살 | 격자 창살; window lattice; wooden window bars | KR | 한옥; 부분; 격자; 창 | Thin wooden bars in a grid over a hanok window, striping the light. | item |
+| 문살 | 한옥 문살; door lattice | KR | 한옥; 부분; 격자; 문 | The fine wooden lattice of a hanok door under its paper. | item |
+| 창호지 | 문창호지; 문에 바르는 한지; hanji door paper | KR | 한옥; 부분; 한지; 투광 | Translucent hanji paper over a door or window, glowing evenly. | item |
+| 기와 | 기와지붕; 한옥 기와; curved roof tiles | KR | 한옥; 부분; 지붕 | Rows of dark grey curved clay roof tiles. | item |
+| 처마 | 처마선; 한옥 처마; curved eaves | KR | 한옥; 부분; 지붕 | The deep roof overhang of a hanok, curving up at the corners. | item |
+| 돌담 | 한옥 돌담; stone wall; fieldstone wall | KR | 한옥; 부분; 골목 | A low wall of uneven grey fieldstones edging a lane or yard. | item |
+| 장독대 | 장독을 놓는 대; onggi jar terrace | KR | 한옥; 부분; 마당; 전통 | A raised stone terrace lined with round brown earthenware jars. | place |
+| 장독 | 옹기 장독; onggi jar; earthenware sauce jar | KR | 한옥; 장독대; 마당; 전통 | A round glossy brown earthenware jar with a lid, the kind set out in rows on a 장독대. | item |
 
 ## CN
 
@@ -432,6 +443,9 @@ Scene 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다. 
 | 出租屋 | 추쭈우; 월세방; 자취방; rented room | CN | 자취방; 작은 방; 생활감; 실내 | A small rented room with a single bed, a thin curtain, a desk by the window and cables along the wall. | place |
 | 操场 | 차오창; 운동장; 학교 운동장 트랙; running track field | CN | 운동장; 트랙; 넓음; 오후 | A wide athletic field with a red rubber track, white lane lines and goal posts under an open sky. | place |
 | 小区门口 | 샤오취 먼커우; 단지 입구; 아파트 입구; compound gate | CN | 입구; 경비실; 일상; 도시 | The gate of a residential compound with a barrier arm, a small guard booth, a name plaque and delivery bikes at the curb. | place |
+| 飞檐 | 翘角; 飞檐翘角 | CN | 古建; 园林; 부분; 지붕 | Roof corners of a Chinese roof sweeping up in a curve. | item |
+| 青砖 | 青砖墙; grey-blue brick | CN | 园林; 胡同; 江南; 부분; 벽돌 | Small grey-blue fired bricks laid in neat courses, matte. | item |
+| 回廊 | 游廊; covered corridor | CN | 园林; 古建; 부분; 복도 | A covered walkway of dark columns and a railing around a courtyard. | place |
 
 ## JP
 
@@ -603,7 +617,7 @@ Scene 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다. 
 | ボラード | 볼라드; bollard; 防撞柱 | JP | 거리; 금속; 도시; 낮 | Cylindrical silver steel post reflecting passing color, leant against with one leg bearing weight. | place |
 | ガードレール | 가드레일; guardrail; 护栏 | JP | 도로; 금속; 여름; 낮 | White wavy steel guardrail beside a road, hands pressed on the raised top edge, feet dangling. | place |
 | 道路標識 | 도로 표지판; road sign; 路标 | JP | 거리; 금속; 도시; 교차로 | Tall gray metal pole with reflective signs, hand resting on it with the body leaning slightly outward. | place |
-| 障子 | 쇼지; shoji; 纸门; 陰翳礼讃; 음예예찬; 谷崎潤一郎; 다니자키 준이치로 | JP | 전통; 역광; 격자; 실루엣; 종이; 투광; 그림자; 고요; 일본식 | Paper and thin lattice sliding screen glowing softly with translucent light, body silhouette showing faintly behind. | place |
+| 障子 | 쇼지; shoji; 纸门; 陰翳礼讃; 음예예찬; 谷崎潤一郎; 다니자키 준이치로 | JP | 전통; 역광; 격자; 실루엣; 종이; 투광; 그림자; 고요; 일본식; 和室; 부분 | Paper and thin lattice sliding screen glowing softly with translucent light, body silhouette showing faintly behind. | place |
 | フローリング | 마루; wood floor; 木地板 | JP | 나무; 따뜻함; 실내; 낮 | Warm yellow wood floor with a polished sheen, long window light stripes lying across it. | place |
 | 地下道 | Subway Passage; 지하도; 지하 통로; 시부야 지하 | JP | 지하; 형광등; 이동; 도시; 古早DV梦核; 古早DV; 梦核; 夢核; 低保真录像带; 몽핵; 드림코어; 올드 DV; 写ルンです; 우츠룬데스; 일회용 카메라 | A tiled underground passage with blurred pedestrian motion trails. | place |
 | 桜 | Sakura; 사쿠라; 벚꽃; 벚나무 | JP | 봄; 벚꽃; 분홍; 아침 | Pale pink cherry blossoms in soft diffuse light with loose petals drifting through the air. | place |
@@ -680,6 +694,12 @@ Scene 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다. 
 | 交差点 | 코사텐; 교차로; 사거리; intersection | JP | 교차로; 신호; 도로; 낮 | A street crossing with traffic lights on poles, painted lane lines, a crosswalk and people waiting at the curb. | place |
 | 土手 | 도테; 둑길; 강둑; riverbank embankment | JP | 강둑; 잔디; 산책; 석양 | A grassy embankment sloping to a river with a paved path along the top, a chain fence and a wide sky. | place |
 | 看板 | 칸반; 간판; 가게 간판; shop signboard | JP | 간판; 상점; 거리; 색 | Shop signboards of painted or printed panels stack along the street front, their letters reduced to blocks of color. | item |
+| 襖 | ふすま; 후스마; fusuma; sliding panel | JP | 和室; 町家; 부분; 문 | Opaque paper-covered sliding panels that divide a tatami room. | item |
+| 格子戸 | こうしど; 고시도; lattice door | JP | 和室; 町家; 부분; 문 | A narrow wooden door of fine vertical lattice on an old townhouse. | item |
+| 欄間 | らんま; 란마; transom panel | JP | 和室; 町家; 부분; 천장 | A carved or slatted open panel above the doors of a tatami room. | item |
+| 床の間 | とこのま; 도코노마; tokonoma; alcove | JP | 和室; 부분; 실내 | A shallow raised alcove in a tatami room holding a scroll and flowers. | place |
+| 瓦 | かわら; roof tiles | JP | 和室; 町家; 부분; 지붕 | Overlapping grey-black clay tiles on an old Japanese roof. | item |
+| 軒 | のき; 노키; eaves | JP | 和室; 町家; 부분; 지붕 | The projecting edge of a tiled roof over a veranda or shopfront. | item |
 
 ## US
 

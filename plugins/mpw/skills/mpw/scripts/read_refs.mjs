@@ -54,9 +54,9 @@ export const BUNDLES = {
     FIXED_LINES,
     LEXICON_INDEX,
   ],
-  // 대상 미정·GPT Image 원본 편집(image-brief §1·§2·§6~§9 + 편집 패턴 §3.3). 참조 사진의 역할·관찰이 필요하면 from-image.md#1을 덧붙인다.
-  "gpt-image-edit": ["references/image/surfaces.md#0", "references/image/image-brief.md#1,2,6,7,8,9", "references/image/surface-contracts.md#3.3"],
-  "gpt-image-edit-structured": ["references/image/surfaces.md#0", "references/image/image-brief.md#1,2,6,7,8,9", "references/image/surface-contracts.md#3.3,3.4"],
+  // 대상 미정·GPT Image 원본 편집(image-brief §1·§2.1·§6~§9 + 편집 패턴 §3.3). 참조 사진의 역할·관찰이 필요하면 from-image.md#1을 덧붙인다.
+  "gpt-image-edit": ["references/image/surfaces.md#0", "references/image/image-brief.md#1,2.1,6,7,8,9", "references/image/surface-contracts.md#3.3"],
+  "gpt-image-edit-structured": ["references/image/surfaces.md#0", "references/image/image-brief.md#1,2.1,6,7,8,9", "references/image/surface-contracts.md#3.3,3.4"],
   // 대상 미정·GPT Image로 사진(첨부 이미지)을 보고 그 사진을 다시 만들 프롬프트를 쓸 때. 새 이미지 규칙에 §12 추출 규칙(매체 판별, 카드 대조, 원어 이름, 본보기)을 얹는다(§7 후속 수정·§8 편집·§10 예시·§11 정제는 뺀다).
   // §4는 '룩 카드' 하위 절(세트·쌍·여러 장 규칙)을 빼고 읽는다. 추출의 카드 절차는 §12.0이 자족하게 갖고, 카드 목록은 색인 파일 대신 read_look.mjs --list로 필요할 때만 읽는다.
   "gpt-image-extract": ["references/image/surfaces.md#0", "references/image/image-brief.md#1,2,3,사용자가 준 것~토큰 찾기,비워 둔 층~문장 쓰는 법,5,6,9,12", FIXED_LINES_EXTRACT, LEXICON_INDEX],

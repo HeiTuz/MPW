@@ -94,7 +94,12 @@ manifest 검사는 한 행에 하나의 객체를 받는다. 필수 텍스트는
 | `coherence/engine-flag` | 경고, 엔진 한정 | `--engine seedream·nano-banana·soul`의 본문에 `--ar`·`--no`·`--oref` 같은 Midjourney 플래그나 `AR 3:4`. 호출 설정으로 옮긴다 |
 | `coherence/engine-ban` | 경고, 엔진 한정 | `--engine nano-banana·soul·midjourney`에서 `never·not·no` + `illustration·anime·cartoon·3D render·CGI`. Midjourney는 `--no`, 나머지는 `a real photograph` 같은 긍정 매체로(Seedream 칸은 이 문장을 쓴다) |
 | `coherence/engine-brand` | 경고, 엔진 한정 | `--engine soul`에서 Kodak·Portra·Fujifilm·Vision3 같은 필름 상표명. 필름 테두리가 그려진 실측이 있다(soul-v2-director.md 실측 법칙 3) |
-| `token/slot-name` | 경고, 공통 | 층 안 `토큰 — 문장` 줄의 토큰이 `hair color`·`passersby`·`road surface`·`background`·`lighting` 같은 칸 이름. 그 대상을 부르는 이름(`黒髪ロング`, `通行人`, `cast shadows`)으로 쓴다([image-brief.md](image-brief.md) §12.2) |
+| `token/slot-name` | 경고, 공통 | 층 안 `토큰 — 문장` 줄의 토큰이 `hair color`·`passersby`·`road surface`·`background`·`lighting` 같은 칸 이름. 그 대상을 부르는 이름(`黒髪ロング`, `manhole cover`, `cast shadows`)으로 쓴다([image-brief.md](image-brief.md) §12.2) |
+| `mix/line` | 경고, native·gpt-image | 층 줄 문장에 원어 덩어리가 넷 이상, 원어 글자가 라틴 글자보다 많은 줄(영어 뼈대 없음), 또는 띄어 쓴 원어 구절(낱말 셋 이상)이 Expression·Style 밖에 있거나 한 줄에 둘([image-brief.md](image-brief.md) §2.1 4항) |
+| `mix/amount` | 경고, native·gpt-image | 층 줄이 여덟 이상이고 문장 안 원어 덩어리 합이 줄 수의 1.5배를 넘음(줄 머리 토큰은 세지 않는다) |
+| `mix/unlisted` | 경고, native·gpt-image | 사전 토큰·별칭, 룩 카드와 fixed-lines.md의 표·백틱, Identity 틀에 없는 원어. 따옴표 안 정확 문구는 보지 않고, Expression의 띄어 쓴 구절은 표정 구절 표의 한 구절을 낱말마다 담고 장면 말은 셋까지다 |
+| `mix/renamed` | 경고, native·gpt-image | 줄 머리 토큰의 다른 별칭이 다른 줄에 나옴(한 물건 두 이름). 층 제목, Identity 문단, 첫 줄의 매체·룩 구절, Finish closer는 보지 않는다 |
+| `mix/culture` | 경고, native·gpt-image | Finish 토큰이 정한 문화권과 다른 사진 용어 칸의 낱말(JP 장면의 `高光`, KR·CN 장면의 `白飛び`). US·FR 토큰이면 보지 않는다 |
 | `manifest/parse` | 오류, manifest | JSON 행 파싱 실패 |
 | `manifest/not-object` | 오류, manifest | 행이 객체가 아님 |
 | `manifest/empty` | 오류, manifest | 매니페스트에 행이 없음 |

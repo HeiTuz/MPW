@@ -1,7 +1,7 @@
 A color studio headshot of a woman in a muted gray-blue knit top for a company team page, framed head and shoulders in front of a warm gray backdrop.
 
 ## Identity Reference
-If a model reference is provided, the woman in this photo is that model: take only the face shape and facial features from it, adapting them naturally to this scene's expression, angle and light, and keep her own skin tone. Hair, makeup and everything else follow this prompt. If none is provided, she is a 22-year-old East Asian woman with a small face, a defined nose bridge, a clean jawline and clear, fair skin. In either case she has 7.5-head proportions, a small head over level shoulders and a long neck.
+If a model reference is provided, the woman in this photo is that model: take only the 얼굴형 and 이목구비 from it, adapting them naturally to this scene's expression, angle and light, and keep her own skin tone. Hair, makeup and everything else follow this prompt. If none is provided, she is a 22-year-old East Asian woman with 小脸, 오똑한 콧대, a clean 턱선 and 맑고 흰 피부. In either case 7.5등신, a small head over 直角肩 and 天鹅颈.
 
 ## Hair and makeup
 neat hair — Dark hair falls straight to the shoulders with a soft side part, and the ends sit smoothly against the shoulders without stray strands.
@@ -12,11 +12,11 @@ tucked side — The hair on the left side is tucked behind the ear, so the earlo
 natural color — A sheer rose lip tint with a soft edge and a soft peach blush that fades into the cheeks with no visible border; the brows are groomed along their natural line.
 
 ## Expression
-closed smile — A small closed-mouth smile: the corners of the lips lift slightly, the lids stay relaxed and the brows level, so the face reads friendly and calm.
+closed smile — A small closed-mouth smile: 입꼬리가 살짝 올라가고, the lids stay relaxed and the brows level, so the face reads friendly and calm.
 direct gaze — Her eyes look straight into the lens, and the lids sit just below the top of the irises.
 
 ## Outfit
-knit top — A plain muted gray-blue fine-gauge knit top with a clean round neckline that sits flat against the collarbones; the knit has a soft matte surface and shows only small, even ripples at the shoulders.
+knit top — A plain muted gray-blue fine-gauge knit top with a clean round neckline that sits flat against the collarbones; the knit has a soft 哑光 surface and shows only small, even ripples at the shoulders.
 no marks — The top has no logos or patterns, so the face leads and the color stays quiet against the warm backdrop.
 jewelry — Small pearl stud earrings are the only accessory, each with one soft highlight on its curve.
 
@@ -39,14 +39,14 @@ hair light — A small light from behind and above on the right puts a thin brig
 catchlight — Each eye holds one small bright catchlight from the main light, placed at the upper left of the pupil.
 
 ## Optics
-clean digital color — Natural, accurate color with gently lifted shadows; the knit stays blue-gray and the skin keeps its cool, even tone.
-highlights — Highlights on the forehead and the nose bridge roll off smoothly instead of clipping to white.
+clean digital color — Natural, accurate color with gently lifted 暗部; the knit stays blue-gray and the skin keeps its cool, even tone.
+highlights — Highlights on the forehead and the nose bridge roll off smoothly instead of 过曝 to white.
 sharpness — Modern digital sharpness with a clean, noise-free backdrop and no visible grain.
 
 ## Camera
 vertical frame — A vertical 3:4 frame from just above her hair to her upper chest, the face slightly left of center with a little space above the head.
 lens — The camera is at eye level about two meters away with a short telephoto lens, so the face is not stretched.
-focus — The eyes are sharp, the ears and the shoulders soften very slightly, and the backdrop is smooth.
+focus — The eyes are sharp, the ears and the shoulders soften very slightly, and the backdrop melts into smooth 虚化.
 
 ## Finish
 photograph — The whole frame reads as a real color studio headshot photograph.

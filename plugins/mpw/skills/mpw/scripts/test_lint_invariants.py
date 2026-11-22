@@ -26,6 +26,16 @@ class LintInvariantSmokeTests(unittest.TestCase):
             self.assertEqual(root, module.ROOT)
 
 
+    def test_version_fields_are_single_digits(self):
+        for version in ("4.1.2", "4.1.9", "4.2.0", "9.9.9"):
+            errors = []
+            lint.check_version_digits(version, errors)
+            self.assertEqual([], errors, version)
+        for version in ("4.1.10", "4.10.0", "10.0.0", "4.1"):
+            errors = []
+            lint.check_version_digits(version, errors)
+            self.assertEqual(1, len(errors), version)
+
     def test_i0_rejects_universal_2000_character_rule(self):
         for sentence in (
             "모든 프롬프트는 2000자 이하로 작성한다.",

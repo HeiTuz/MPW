@@ -40,5 +40,11 @@ for (const name of examples) {
     process.stderr.write(result.stderr);
     process.exit(1);
   }
+  // Structure only: no mix/* warning (image-brief.md §2: original-language words from the lexicon, look cards and fixed-lines.md, in a light amount).
+  const mix = report.warnings.filter((warning) => warning.code.startsWith("mix/"));
+  if (mix.length) {
+    console.error(`FAIL ${name}: ${mix.map((warning) => `${warning.code} ${warning.message}`).join(" / ")}`);
+    process.exit(1);
+  }
   console.log(`PASS ${name}`);
 }

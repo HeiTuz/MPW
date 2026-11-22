@@ -215,6 +215,9 @@ Props and nails 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토�
 | 奶茶 | 나이차; 밀크티; 버블티 컵; milk tea cup | CN | 밀크티; 음료; 컵; 빨대 | A clear plastic cup of pale brown milk tea with a domed or sealed lid and a wide straw, beads of water on its wall. | item |
 | 共享单车 | 궁샹 단처; 공유 자전거; 공유 바이크; shared bike | CN | 자전거; 도시; 길가; 일상 | A bright blue or yellow shared bicycle with a front basket and a lock plate, parked in a row at the curb. | item |
 | 塑料袋 | 쑤랴오다이; 비닐 봉투; plastic bag | CN | 비닐봉지; 장보기; 일상; 손 | A thin plastic shopping bag with knotted handles hanging from one hand, its sides stretched by the contents. | item |
+| 盖碗 | 개완; 盖碗茶具; gaiwan; lidded tea bowl | CN | 茶器; 新中式; 차 | A lidded tea bowl on a saucer, the lid tilted open. | item |
+| 公道杯 | 公杯; 茶海; fair cup; tea pitcher | CN | 茶器; 차 | A small spouted glass or ceramic pitcher that holds brewed tea. | item |
+| 蒸笼 | 竹蒸笼; 笼屉; bamboo steamer | CN | 点心; 요리 | Stacked round bamboo steamer baskets with a woven lid. | item |
 
 ## JP
 
@@ -362,7 +365,7 @@ Props and nails 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토�
 | 水玉 | polka dot; 미즈타마; 물방울 무늬; 波点 | JP | 레트로; 귀여움; 패턴; 유리 | Evenly spaced round white dots printed across a glass or fabric surface, each dot crisp against a translucent or solid ground. | look |
 | 花火 | hanabi; 하나비; 불꽃; 烟花 | JP | 여름; 밤; 축제; 불 | Bright gold sparks and soft smoke lit against a deep blue night. | item |
 | ホットカフェラテ | hot latte; 핫 라테; 따뜻한 라테; 热拿铁 | JP | 카페; 따뜻함; 컵; 음료 | A lidded paper cup warm in both hands with a thin line of steam from the sip hole. | item |
-| 傘立て | 우산꽂이; umbrella stand; 伞架; ビニール傘; 비닐우산; clear umbrella | JP | 비; 장마; 편의점; 투명; 물아; 雨夜新宿; 비 오는 신주쿠 밤; 東京ノワール; 도쿄 누아르; 歌舞伎町ネオン; 가부키초 네온 | A shop-front stand packed with clear vinyl umbrellas whose droplets and ribs catch cool grey light. | item |
+| 傘立て | 우산꽂이; umbrella stand; 伞架 | JP | 비; 장마; 편의점; 투명; 물아; 雨夜新宿; 비 오는 신주쿠 밤; 東京ノワール; 도쿄 누아르; 歌舞伎町ネオン; 가부키초 네온 | A shop-front stand packed with clear vinyl umbrellas whose droplets and ribs catch cool grey light. | item |
 | 学生鞄 | 학생 가방; 교복 가방; school bag; 学生包 | JP | 가방; 교복; 가죽; 통학; 아동·학생; 昭和レトロ; 쇼와 레트로; 쇼와 학생 | A stiff black leather or navy canvas school bag with a flat body and metal clasp, carried by the handle or over one shoulder. | item |
 | 明治おいしい牛乳 | Meiji Oishii milk; 메이지 우유; 메이지 오이시이 규뉴; 明治美味牛奶 | JP | 우유팩; 편의점; 일본 브랜드; 아침 | A small 200ml gable-top carton printed in deep blue and white blocks, one corner of the folded top pushed open into a triangular spout with a drop of white milk at the tip. | brand |
 | 屋根型パック | gable-top carton; 지붕형 종이팩; 박공 팩; 屋形纸盒 | JP | 종이팩; 우유; 포장; 미니 | A coated-paper carton with a peaked gable top sealed in pressed folds, matte food-grade surface and a faint silver foil layer visible at the opening. | item |
@@ -402,6 +405,7 @@ Props and nails 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토�
 | イヤホン | 이야혼; 이어폰; earphones | JP | 이어폰; 음악; 귀; 코드 | Small earbuds sit in the ears with a thin cord looping down to the chest and into a pocket. | item |
 | 腕時計 | 우데도케이; 손목시계; wristwatch | JP | 시계; 손목; 액세서리 | A slim watch with a round face and a thin strap sits on the wrist, its glass catching a small glint. | item |
 | 折りたたみ傘 | 오리타타미 가사; 접이 우산; folding umbrella | JP | 우산; 비; 가방; 일상 | A compact folding umbrella with a short telescoping handle, either closed in the hand or open as a small canopy. | item |
+| ブックカバー | 북커버; paper book cover; bookshop cover | JP | 文庫本; 書店; 독서 | A plain paper cover folded around a paperback. | item |
 
 ## US
 

@@ -146,6 +146,8 @@ Outfit 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다.
 | 오트 블레이저 튜브탑 | 튜브탑 블레이저; 오트 블레이저; 귀리색 블레이저; oat blazer tube top; 抹胸西装 | KR | 서울 카페 웜톤; 서울 카페 웜톤 확산광; 웜톤 확산광; 首尔咖啡馆与居家暖调漫射; 한남동; 아침 침실; 오트; 블랙 | A black strapless tube top under a pale oat boxy blazer worn open, the lapels folded back so the neckline and bare shoulders stay clear. | item |
 | 와이드 데님 | 와이드 청바지; 루즈핏 청바지; 와이드 팬츠 데님; wide-leg denim | KR | 데일리; 캐주얼; 청바지; 한강; 폴라로이드 빛샘; 필름 빛샘; 필카 감성 | Wide-leg washed denim hangs straight from the hip with a soft break over the shoe, the fabric faded at the knees. | item |
 | 조거 팬츠 | 조거; 트레이닝 팬츠; 스웨트팬츠; 집콕 바지; jogger pants | KR | 편한 옷; 집; 캐주얼; 아이폰 원본 셀카; 아이폰 셀카; iPhone native selfie | Soft grey cotton jogger pants with a drawstring waist and ribbed ankle cuffs, the loose fabric folding at the knees under an oversized tee. | item |
+| 고름 | 옷고름; 한복 고름; ribbon ties | KR | 한복; 부분; 저고리; 디테일 | The long ties knotted at the chest of a hanbok jacket, two loose tails. | item |
+| 동정 | 한복 동정; white collar strip | KR | 한복; 부분; 저고리; 디테일 | A narrow white strip sewn along the neckline of a hanbok jacket. | item |
 
 ## CN
 
@@ -183,9 +185,9 @@ Outfit 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다.
 | 烟草棕 | 토바코 브라운; 담배색; tobacco brown | CN | 갈색; 따뜻한 톤; 가을; 클래식; 故宫朱红暖金; 고궁 주홍 웜골드; 宫廷历史胶片; 궁정 역사 필름; 故宫人文大片 | A warm dark brown with a golden-amber undertone. | item |
 | 燕麦色 | 오트밀 컬러; 오트밀색; 오트밀; oatmeal | CN | 베이지; 중성 톤; 가을; 니트; 老钱风; 라오첸펑; 올드머니 | A soft warm light beige-grey with a woolly look. | item |
 | 琵琶袖 | 비파 소매; 비파소매; pipa sleeve | CN | 명나라; 소매; 전통; 우아함 | A sleeve that swells at the forearm and narrows sharply at the cuff, like the body of a lute. | item |
-| 盘扣 | 매듭단추; 차이나 매듭단추; 판커우; 立领盘扣; frog button; Chinese knot button; 红丝绒盘扣 | CN | 매듭; 수공예; 전통; 디테일; 国潮; 궈차오; 국조 | Small knotted cloth buttons on loops closing a collar or placket, casting tiny raised shadows. | item |
+| 盘扣 | 매듭단추; 차이나 매듭단추; 판커우; 立领盘扣; frog button; Chinese knot button; 红丝绒盘扣 | CN | 매듭; 수공예; 전통; 디테일; 国潮; 궈차오; 국조; 新中式; 부분 | Small knotted cloth buttons on loops closing a collar or placket, casting tiny raised shadows. | item |
 | 盘扣衬衫 | 매듭단추 셔츠; 프로그 버튼 셔츠; frog-button shirt | CN | 셔츠; 스탠드 칼라; 단정함; 봄가을 | A relaxed shirt with a stand collar fastened with knotted cloth buttons. | item |
-| 立领 | 스탠드 칼라; 차이나 칼라; 입령; mandarin collar; stand collar | CN | 단정함; 전통; 실크; 셔츠; 国潮; 궈차오; 국조; 新中式水墨; 신중식 수묵; 水墨影调; 수묵 톤 | A narrow upright band collar that stands against the neck without folding over. | item |
+| 立领 | 스탠드 칼라; 차이나 칼라; 입령; mandarin collar; stand collar | CN | 단정함; 전통; 실크; 셔츠; 国潮; 궈차오; 국조; 新中式水墨; 신중식 수묵; 水墨影调; 수묵 톤; 新中式; 부분 | A narrow upright band collar that stands against the neck without folding over. | item |
 | 竹节棉 | 슬럽 코튼; 슬러브 면; slub cotton | CN | 면; 캐주얼; 결감; 여름 | Cotton with irregular thick-and-thin yarn that gives the face a lightly bumpy texture. | item |
 | 粗花呢 | 트위드; 트위드 원단; tweed | CN | 트위드; 클래식; 가을; 재킷; 老钱风; 라오첸펑; 올드머니 | A nubby woven cloth flecked with contrasting yarns that scatter light in tiny specks. | item |
 | 织金 | 직금; 织金锦; 금사 직조; gold brocade; gold-thread weave | CN | 전통; 금사; 화려함; 브로케이드; 故宫朱红暖金; 고궁 주홍 웜골드; 宫廷历史胶片; 궁정 역사 필름; 故宫人文大片 | Fabric woven with gold thread in repeating patterns, giving a low metallic glint along each fold. | item |
@@ -268,6 +270,9 @@ Outfit 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다.
 | oversized wool coat | 오버사이즈 울 코트; 남자 코트; 大码羊毛大衣; boxy wool coat; man's wool coat | CN | 홍콩; 港风; 王家卫; 왕가위; 重庆森林; 코트; 오버사이즈; 뉴욕 쿨 그레이; 맨해튼 쿨 그레이; New York overcast cool grey; 纽约SOHO阴天冷调; 曼哈顿冷灰 | A boxy black wool coat cut a size too big hangs open from the shoulders, its heavy fabric falling in straight, loose folds. | item |
 | 抹胸礼服 | 抹胸晚礼服; 抹胸长裙; 튜브톱 드레스; 스트랩리스 이브닝 드레스; strapless gown; strapless evening dress | CN | 当代美术馆冷光极简; 当代美术馆冷光; 美术馆冷光; 冷光极简; 현대 미술관 냉광 미니멀; 미술관 냉광 미니멀; 미술관 냉광; 냉광 미니멀; 晚礼服; 검은 드레스 | A strapless gown cut straight across above the bust leaves the shoulders and collarbones bare and falls in one smooth column to the floor. | item |
 | 金线滚边 | 金线绣边; 金丝绲边; 금실 파이핑; 금사 파이핑; gold-thread piping | CN | 전통; 금사; 화려함; 가장자리; 故宫朱红暖金; 고궁 주홍 웜골드; 宫廷历史胶片; 궁정 역사 필름; 故宫人文大片 | Gold thread is worked as piping along the hem and the placket edge, giving a low metallic glint at each curve. | item |
+| 开衩 | 侧开衩; 旗袍开衩; side slit | CN | 旗袍; 新中式; 부분; 디테일 | A side opening cut up from the hem of a qipao or skirt. | item |
+| 滚边 | 镶边; 旗袍滚边; piping trim | CN | 旗袍; 新中式; 부분; 디테일 | A narrow band of contrast fabric wrapped around a hem or collar edge. | item |
+| 广袖 | 宽袖; 汉服广袖; wide sleeves | CN | 汉服; 新中式; 부분; 소매 | Wide flowing sleeves that open broadly at the cuff. | item |
 
 ## JP
 
@@ -442,6 +447,11 @@ Outfit 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다.
 | ベスト | 베스토; ニットベスト; vest | JP | 조끼; 레이어드; 캐주얼; 니트 | A sleeveless V-neck vest worn over a collared shirt, smooth or knit, ending at the hip with ribbed trim at the neck and armholes. | item |
 | スニーカー | 스니카 | JP | 운동화; 캐주얼; 신발; 일상 | Low canvas or leather sneakers with a rubber sole, laced up and lightly scuffed at the toe. | item |
 | カーディガン | 카디간; 가디건; 니트 카디건 | JP | 가디건; 니트; 레이어드; 봄가을 | A soft knit cardigan with a button front, worn open or buttoned over a plain top, the sleeves slightly long over the wrists. | item |
+| 帯 | おび; 오비; obi sash | JP | 着物; 浴衣; 부분; 디테일 | The wide sash around the waist of a kimono or yukata, tied at the back. | item |
+| 帯締め | おびじめ; 오비지메; obi cord | JP | 着物; 부분; 디테일 | A thin braided cord tied over the obi at the front. | item |
+| 半襟 | はんえり; 한에리; under-collar | JP | 着物; 부분; 디테일 | A collar strip attached to the nagajuban, visible inside the kimono collar. | item |
+| 袂 | たもと; 다모토; sleeve pouch | JP | 着物; 浴衣; 부분; 소매 | The hanging lower part of a kimono sleeve, a loose pouch of fabric. | item |
+| 草履 | ぞうり; 조리; zori sandals | JP | 着物; 浴衣; 신발 | Flat thong sandals with a thick straw or lacquered sole, worn with kimono. | item |
 
 ## US
 
