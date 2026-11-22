@@ -19,7 +19,7 @@ shadow side — The left side of the cup falls into a soft shadow with a faint c
 
 ## Camera
 framing — A slightly high three-quarter view about half a meter from the cup, with the cup filling a third of the frame.
-focus — The cup is sharp from rim to foot, and the shelf in the distance is blurred.
+focus — The cup is sharp from rim to foot, and the shelf in the distance falls into soft 虚化.
 
 ## Finish
 photograph — The whole frame reads as a real still-life photograph.

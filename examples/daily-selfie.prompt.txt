@@ -1,7 +1,7 @@
 A casual front-camera phone selfie of a man in his home kitchen on a weekday morning, holding a mug of coffee.
 
 ## Identity Reference
-If a model reference is provided, the man in this photo is that model: take only the face shape and facial features from it, adapting them naturally to this scene's expression, angle and light, and keep his own skin tone. Hair, makeup and everything else follow this prompt. If none is provided, he is a man in his thirties with a relaxed, slightly sleepy face and clear skin. In either case he has 7.5-head proportions, a small head over level shoulders and a long neck.
+If a model reference is provided, the man in this photo is that model: take only the 얼굴형 and 이목구비 from it, adapting them naturally to this scene's expression, angle and light, and keep his own skin tone. Hair, makeup and everything else follow this prompt. If none is provided, he is a man in his thirties with a relaxed, slightly sleepy face and clear skin. In either case he has natural 7.5등신 and level shoulders.
 
 ## Hair and makeup
 flat hair — His hair is still a little flat from sleep, with one section pressed to the side.

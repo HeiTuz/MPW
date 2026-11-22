@@ -35,7 +35,7 @@
 A waist-up studio profile portrait of a woman standing at a workbench in front of a plain gray wall, in a navy canvas jacket and holding a closed notebook.
 
 ## Identity Reference
-If a model reference is provided, the woman in this photo is that model: take only the face shape and facial features from it, adapting them naturally to this scene's expression, angle and light, and keep her own skin tone. Hair, makeup and everything else follow this prompt. If none is provided, she is a 22-year-old East Asian woman with a small face, a defined nose bridge, a clean jawline and clear, fair skin. In either case she has 7.5-head proportions, a small head over level shoulders and a long neck.
+If a model reference is provided, the woman in this photo is that model: take only the 얼굴형 and 이목구비 from it, adapting them naturally to this scene's expression, angle and light, and keep her own skin tone. Hair, makeup and everything else follow this prompt. If none is provided, she is a 22-year-old East Asian woman with 小脸, 오똑한 콧대, a clean 턱선 and 맑고 흰 피부. In either case 7.5등신, a small head over 直角肩 and 天鹅颈.
 
 ## Hair and makeup
 straight bob — Dark brown hair cut to the jaw with a soft side part, one side tucked behind the ear so the jawline shows.
@@ -91,7 +91,7 @@ real photograph — A real person photographed in a studio, never an illustratio
 A waist-up studio profile portrait of a woman standing at a workbench in front of a plain gray wall, in a navy canvas jacket and holding a closed notebook.
 
 ## Identity Reference
-If a model reference is provided, the woman in this photo is that model: take only the face shape and facial features from it, adapting them naturally to this scene's expression, angle and light, and keep her own skin tone. Hair, makeup and everything else follow this prompt. If none is provided, she is a 22-year-old East Asian woman with a small face, a defined nose bridge, a clean jawline and clear, fair skin. In either case she has 7.5-head proportions, a small head over level shoulders and a long neck.
+If a model reference is provided, the woman in this photo is that model: take only the 얼굴형 and 이목구비 from it, adapting them naturally to this scene's expression, angle and light, and keep her own skin tone. Hair, makeup and everything else follow this prompt. If none is provided, she is a 22-year-old East Asian woman with 小脸, 오똑한 콧대, a clean 턱선 and 맑고 흰 피부. In either case 7.5등신, a small head over 直角肩 and 天鹅颈.
 
 ## Hair and makeup
 straight bob — Dark brown hair cut to the jaw with a soft side part, one side tucked behind the ear so the jawline shows.
