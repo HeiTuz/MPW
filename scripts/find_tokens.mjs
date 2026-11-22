@@ -293,9 +293,12 @@ export function search({ terms, layers = SLUGS, culture = null, dir = LEXICON_DI
 }
 
 // Part-name rows (tag 부분) leave the layer lists and come back as one block of at most PART_LIMIT rows, best match first. The layer lists then hold only rows that can head a line.
+// A row whose token or alias is one of the query terms prints whatever the limit (each named part must be called by its name, image-brief.md §2.1 rule 2); `more` counts the other rows left out.
 export const PART_TAG = '부분';
 export const PART_LIMIT = 4;
-export function takeParts(results, limit = PART_LIMIT) {
+export function takeParts(results, limit = PART_LIMIT, terms = []) {
+  const asked = new Set(terms.map(squash));
+  const named = (m) => [m.token, ...m.aliases].some((name) => asked.has(squash(name)));
   const parts = [];
   const layers = results.map((l) => ({
     ...l,
@@ -307,10 +310,13 @@ export function takeParts(results, limit = PART_LIMIT) {
   }));
   // Best score first, then one row per layer in turn, so a 한옥 query does not fill the block with scene rows and hide the 新中式 outfit parts.
   const queues = new Map();
-  for (const m of parts.sort((a, b) => b.score - a.score)) queues.set(m.layer, [...(queues.get(m.layer) ?? []), m]);
+  const exact = parts.filter(named);
+  const rest = parts.filter((m) => !named(m));
+  for (const m of rest.sort((a, b) => b.score - a.score)) queues.set(m.layer, [...(queues.get(m.layer) ?? []), m]);
+  const room = Math.max(0, limit - exact.length);
   const turns = [];
-  for (let i = 0; turns.length < Math.min(limit, parts.length); i++) for (const q of queues.values()) if (q[i] && turns.length < limit) turns.push(q[i]);
-  return { layers, parts: turns };
+  for (let i = 0; turns.length < Math.min(room, rest.length); i++) for (const q of queues.values()) if (q[i] && turns.length < room) turns.push(q[i]);
+  return { layers, parts: [...exact, ...turns], more: rest.length - turns.length };
 }
 
 // Random picks reuse draw_portrait_options so the draw works the same way (crypto.randomInt unless a picker is injected).
@@ -340,11 +346,12 @@ const candidateBlock = (candidates) => (candidates.length
   ? `## Look card candidates\n(no card was named. New image: read the first whose summary fits with \`node scripts/read_look.mjs <slug> --outline\`; if none fits, write without a card. Photo extraction: a candidate is only a suggestion; check it with \`--facts\` only when the photo shows that medium's marks (image-brief §12.0), otherwise write without a card. [매체] cards name a film or camera, [장면] cards a place.)\n${candidates.map((c) => `- ${c.slug} · ${c.title} [${c.axis}, ${c.culture}] — ${c.summary}`).join('\n')}\n\n`
   : '');
 
-const partBlock = (parts) => (parts.length
-  ? `## 문장 속 낱말\n(part names: use inside the English sentence, not as a line head.)\n${parts.map((m) => `${m.token} — ${m.looks} [${m.culture.join(', ')}]`).join('\n')}\n`
+// --limit above 6 is the long listing, so the hint asks for at least 7.
+const partBlock = (parts, more = 0) => (parts.length
+  ? `## 문장 속 낱말\n(part names: use inside the English sentence, not as a line head.)\n${parts.map((m) => `${m.token} — ${m.looks} [${m.culture.join(', ')}]`).join('\n')}\n${more ? `(+${more} more: --limit ${Math.max(7, parts.length + more)})\n` : ''}`
   : '');
 
-export function formatText(results, cards = [], candidates = [], { aliases = false } = {}, parts = []) {
+export function formatText(results, cards = [], candidates = [], { aliases = false } = {}, parts = [], more = 0) {
   const head = cardBlock(cards) + candidateBlock(candidates);
   if (results.every((l) => l.matches.length === 0) && !parts.length) {
     if (cards.length) return `${head}no layer rows matched; the card above carries the look.\n`;
@@ -356,10 +363,10 @@ export function formatText(results, cards = [], candidates = [], { aliases = fal
       : 'no match';
     return `## ${l.title}\n${body}\n`;
   }).join('\n');
-  return head + layers + (parts.length ? `\n${partBlock(parts)}` : '');
+  return head + layers + (parts.length ? `\n${partBlock(parts, more)}` : '');
 }
 
-export function formatJson(results, terms, cards = [], candidates = [], parts = []) {
+export function formatJson(results, terms, cards = [], candidates = [], parts = [], more = 0) {
   const layers = {};
   for (const l of results) {
     layers[l.slug] = l.matches.map(({ token, aliases, culture, tags, looks, kind, score }) => ({ token, aliases, culture, tags, looks, kind, score }));
@@ -370,6 +377,7 @@ export function formatJson(results, terms, cards = [], candidates = [], parts = 
     candidates: candidates.map(({ slug, title, axis, summary, file, matched }) => ({ slug, title, axis, summary, file, matched })),
     layers,
     words: parts.map(({ token, aliases, culture, tags, looks, kind, score, layer }) => ({ layer, token, aliases, culture, tags, looks, kind, score })),
+    words_more: more,
   };
 }
 
@@ -420,14 +428,15 @@ if (isMainModule()) {
     const cards = findLookCards(opts.terms);
     let results = search({ ...opts, cards });
     let parts = [];
+    let more = 0;
     if (opts.random) results = drawRandom(results, opts.random);
     else {
       // The block is short by default; a --limit above 6 asks for a long listing and gets as many parts.
-      ({ layers: results, parts } = takeParts(results, opts.limit > 6 ? opts.limit : Math.min(opts.limit, PART_LIMIT)));
+      ({ layers: results, parts, more } = takeParts(results, opts.limit > 6 ? opts.limit : Math.min(opts.limit, PART_LIMIT), opts.terms));
       results = results.map((l) => ({ ...l, matches: l.matches.slice(0, opts.limit) }));
     }
     const candidates = findLookCandidates(opts.terms, cards);
-    process.stdout.write(opts.json ? JSON.stringify(formatJson(results, opts.terms, cards, candidates, parts)) + '\n' : formatText(results, cards, candidates, opts, parts));
+    process.stdout.write(opts.json ? JSON.stringify(formatJson(results, opts.terms, cards, candidates, parts, more)) + '\n' : formatText(results, cards, candidates, opts, parts, more));
   } catch (error) {
     console.error(`find_tokens: ${error.message}`);
     process.exitCode = 2;

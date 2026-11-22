@@ -336,7 +336,7 @@ assert.match(help.stdout, /usage: node scripts\/find_tokens\.mjs/);
   const out = run(['--q', '한옥,新中式']).stdout;
   const block = out.split('## 문장 속 낱말\n')[1];
   assert.ok(block, 'a 한옥 + 新中式 query prints the part block');
-  const lines = block.trim().split('\n').slice(1);
+  const lines = block.trim().split('\n').slice(1).filter((line) => !line.startsWith('(+'));
   assert.ok(lines.length >= 2 && lines.length <= 4, `${lines.length} part rows`);
   const partRows = loadAll().flatMap((l) => l.rows.filter((r) => r.tags.includes('부분')).map((r) => ({ ...r, layer: l.slug })));
   const found = lines.map((line) => partRows.find((r) => line.startsWith(`${r.token} — ${r.looks}`)));
@@ -353,6 +353,16 @@ assert.match(help.stdout, /usage: node scripts\/find_tokens\.mjs/);
   // --limit above 6 lists more parts; --random leaves the tag alone.
   assert.ok(run(['--q', '한옥', '--limit', '12', '--layers', 'scene']).stdout.split('## 문장 속 낱말\n')[1].trim().split('\n').length > 5);
   assert.equal(run(['--q', '한옥', '--random', '2', '--layers', 'scene']).status, 0);
+  // Parts named in the query all print past the block limit, and a cut block says how many rows it left out and which --limit shows them.
+  const named = ['마당', '창살', '문살', '창호지', '기와', '처마', '돌담'];
+  const full = run(['--q', `한옥,${named.join(',')}`, '--culture', 'KR']).stdout.split('## 문장 속 낱말\n')[1];
+  for (const token of named) assert.ok(full.includes(`\n${token} — `), `${token} is named in the query and prints`);
+  const cut = run(['--q', '한옥', '--culture', 'KR']).stdout.split('## 문장 속 낱말\n')[1];
+  const more = /\(\+(\d+) more: --limit (\d+)\)/.exec(cut);
+  assert.ok(more, 'a cut part block ends with a +N more line');
+  const long = run(['--q', '한옥', '--culture', 'KR', '--limit', more[2]]).stdout.split('## 문장 속 낱말\n')[1];
+  assert.ok(!long.includes('more: --limit') && long.trim().split('\n').length - 1 === 4 + Number(more[1]), 'the suggested --limit shows every part row');
+  assert.equal(JSON.parse(run(['--q', '한옥', '--culture', 'KR', '--json']).stdout).words_more, Number(more[1]));
 }
 // The new part and expression rows are found by what a request calls them.
 for (const [query, token] of [['한옥 마당', '마당'], ['창호지', '창호지'], ['오비', '帯'], ['개완', '盖碗'], ['멈칫', '멈칫'], ['쿄톤', 'きょとん'], ['북커버', 'ブックカバー']]) {

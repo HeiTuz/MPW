@@ -30,4 +30,18 @@ has("A natural-light photograph of a woman at a window seat.\n\n## Expression\n�
 lacks("A natural-light photograph of a woman at a window seat.\n\n## Expression\n멈칫 — 입술이 살짝 벌어지고 미간은 편안하다, as if a sound pulled her out of the book.\ngaze — She looks past the lens.", "mix/unlisted");
 has("A natural-light photograph of a woman at a window seat.\n\n## Expression\n멈칫 — 어깨가 굳고 숨이 잠깐 멎는다, as if a sound pulled her out of the book.\ngaze — She looks past the lens.", "mix/unlisted");
 
-console.log("mix checks: one-name skips (heading, medium phrase, closer, Identity), spaced-phrase places and Expression phrase sources pass; image output NOT RUN.");
+// Short Expression words are read too: a word no table, lexicon or card carries is unlisted, and a long phrase must carry every word of a table phrase.
+has("A natural-light photograph of a woman at a window seat.\n\n## Expression\nwet eyes — Her 눈동자 trembles and her 슬픔 shows, her chin low.\ngaze — She looks past the lens.", "mix/unlisted");
+has("A natural-light photograph of a woman at a window seat.\n\n## Expression\nsad face — Her chin drops and 표정이 아주 슬프고 몹시 외롭다, eyes on the floor.\ngaze — She looks past the lens.", "mix/unlisted");
+lacks("A natural-light photograph of a woman at a window seat.\n\n## Expression\n멍때리기 — Her eyes rest on the window, 눈빛이 멍하고 차가운, as if she forgot the cup.\ngaze — She looks past the lens.", "mix/unlisted");
+// Exact copy in quotes is the photo's or the user's text, not mixed-in words.
+lacks("A natural-light photograph of a small shop front.\n\n## Scene\nshop sign — A white board over the door reads \"営業中\" in small black letters, the only text in the frame.\nchalkboard — A stand by the door reads \"오늘의 커피\" in chalk.", "mix/unlisted");
+// One photo-term column a prompt, read from the Finish tokens: 高光 in a JP prompt and 白飛び in a KR prompt are the other column; 高光 in a KR prompt is not.
+const finish = (realism, cg) => `\n\n## Finish\n${realism} — Ultra-realistic 8K photographic detail.\n${cg} — A real photograph, never an illustration, 3D render or CGI.`;
+const optics = (word) => `A natural-light photograph of a woman by a window.\n\n## Optics\nclean color — Natural color with ${word} on the shirt that roll off smoothly.\nfocus — Her face is sharp.`;
+has(optics("高光") + finish("高精細", "実写"), "mix/culture");
+has(optics("白飛び") + finish("극사실", "실사 촬영"), "mix/culture");
+lacks(optics("高光") + finish("극사실", "실사 촬영"), "mix/culture");
+lacks(optics("最暗部") + finish("高精細", "実写"), "mix/culture");
+
+console.log("mix checks: one-name skips (heading, medium phrase, closer, Identity), spaced-phrase places, Expression phrases, quoted copy and photo-term columns pass; image output NOT RUN.");

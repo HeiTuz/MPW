@@ -74,5 +74,6 @@
   {"case":"layer line with no English frame","input":"pass/mix-line.txt","args":[],"expect":{"ok":true,"warnings_include":["mix/line"]}},
   {"case":"more original-language chunks than 1.5 per layer line","input":"pass/mix-amount.txt","args":[],"expect":{"ok":true,"warnings_include":["mix/amount"]}},
   {"case":"original-language words nothing carries","input":"pass/mix-unlisted.txt","args":[],"expect":{"ok":true,"warnings_include":["mix/unlisted"]}},
-  {"case":"one thing called by two names","input":"pass/mix-renamed.txt","args":[],"expect":{"ok":true,"warnings_include":["mix/renamed"]}}
+  {"case":"one thing called by two names","input":"pass/mix-renamed.txt","args":[],"expect":{"ok":true,"warnings_include":["mix/renamed"]}},
+  {"case":"photo terms from the other culture's column","input":"pass/mix-culture.txt","args":[],"expect":{"ok":true,"warnings_include":["mix/culture"]}}
 ]

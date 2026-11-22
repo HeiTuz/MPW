@@ -52,6 +52,7 @@ export const CODE_REGISTRY = Object.freeze({
   mixAmount: { code: "mix/amount", severity: { native: "warning", assembled: null }, intent: "Flag more original-language chunks in the layer sentences than 1.5 per layer line." },
   mixUnlisted: { code: "mix/unlisted", severity: { native: "warning", assembled: null }, intent: "Flag original-language words that no lexicon row, look card or fixed-lines.md carries." },
   mixRenamed: { code: "mix/renamed", severity: { native: "warning", assembled: null }, intent: "Flag one thing called by two names: another alias of a line-head token written outside its line." },
+  mixCulture: { code: "mix/culture", severity: { native: "warning", assembled: null }, intent: "Flag a photo term from the other culture's column of fixed-lines.md (高光 in a JP scene, 白飛び in a KR or CN scene), the culture read from the Finish tokens." },
   engineBrand: { code: "coherence/engine-brand", severity: { native: "warning", assembled: "warning" }, intent: "Flag a film stock brand name in a Soul prompt, which draws the film border." },
   parse: { code: "manifest/parse", severity: { native: "error", assembled: "error" }, intent: "Report invalid JSON without losing subsequent rows." },
   notObject: { code: "manifest/not-object", severity: { native: "error", assembled: "error" }, intent: "Require an object for each manifest row." },
@@ -461,7 +462,7 @@ function inspectSlotNames(result, sections) {
       if (token && SLOT_NAMES.has(token.toLowerCase())) names.push(token);
     }
   }
-  if (names.length) emit(result, CODE_REGISTRY.slotName, `${names.length} token(s) name the slot, not the thing shown: ${[...new Set(names)].slice(0, 4).join(" | ")}`, { hint: "Name what is shown in the photo's own language (黒髪ロング, 通行人, マンホール) or the thing itself in English (cast shadows)." });
+  if (names.length) emit(result, CODE_REGISTRY.slotName, `${names.length} token(s) name the slot, not the thing shown: ${[...new Set(names)].slice(0, 4).join(" | ")}`, { hint: "Name what is shown: a culture's thing in its own language (黒髪ロング, 商店街), anything else in English (manhole cover, cast shadows)." });
 }
 
 // image-brief.md §2: English sentences carry the prompt; original-language words sit only where a lexicon row, a look card, fixed-lines.md or the user put them.
@@ -505,20 +506,51 @@ function mixSources() {
     // The Identity Reference template of image-brief.md §5 (얼굴형, 이목구비), which a reference-role line may repeat; not the examples.
     const brief = resolve(mixRoot, "image-brief.md");
     if (fs.existsSync(brief)) add(fs.readFileSync(brief, "utf8").split("\n## 5. ")[1]?.match(/```\w*\n([\s\S]*?)```/u)?.[1] ?? "");
-    // The first word of each Korean phrase in the expression table (눈꺼풀, 입술, 미간): a longer Expression phrase must be built on one of them (fixed-lines.md §문장 속 낱말).
-    const phraseKeys = [];
+    // fixed-lines.md §문장 속 낱말: the Korean and Japanese expression phrases an Expression sentence bends, and the two photo-term columns.
+    // The Finish table says which column a prompt uses: its KR and CN tokens mean the KR·CN column, its JP tokens the JP column.
+    const phrases = [];
+    const jpPhrases = [];
+    const photo = { KRCN: new Set(), JP: new Set() };
+    const finish = new Map();
     if (fs.existsSync(fixedLines)) {
-      const table = fs.readFileSync(fixedLines, "utf8").split("\n표정 구절")[1]?.split("\n\n")[1] ?? "";
-      for (const row of table.split("\n").slice(2)) {
-        const word = row.split("|")[2]?.trim().split(/\s+/u)[0] ?? "";
-        if (/^\p{sc=Hangul}+$/u.test(word)) phraseKeys.push(word.replace(/(?:이|가|은|는|한다)$/u, ""));
+      const text = fs.readFileSync(fixedLines, "utf8");
+      const rows = (title) => (text.split(`\n${title}`)[1]?.split("\n\n")[1] ?? "").split("\n").slice(2).map((row) => row.split("|").map((cell) => cell.trim()));
+      for (const cells of rows("표정 구절")) {
+        if (/\p{sc=Hangul}/u.test(cells[2] ?? "")) phrases.push({ stems: cells[2].split(/\s+/u).map(stemKey), words: cells[2].split(/\s+/u).length });
+        if (cells[3]?.length >= 5) jpPhrases.push(cells[3].slice(0, -2));
+      }
+      for (const cells of rows("사진 용어")) {
+        if (cells[2]) photo.KRCN.add(mixKey(cells[2]));
+        if (cells[3]) photo.JP.add(mixKey(cells[3]));
+      }
+      for (const line of (text.split("\n## Finish")[1] ?? "").split("\n")) {
+        const cells = line.split("|").map((cell) => cell.trim());
+        const group = /^(?:KR|CN)$/u.test(cells[1] ?? "") ? "KRCN" : cells[1] === "JP" ? "JP" : null;
+        if (group) for (const token of cells.slice(2).join(" ").match(/`[^`]+`/gu) ?? []) finish.set(mixKey(token.slice(1, -1)), group);
       }
     }
-    mixKnown = { known, rowsByToken, phraseKeys };
+    mixKnown = { known, rowsByToken, phrases, jpPhrases, photo, finish };
   } catch {
     mixKnown = null;
   }
   return mixKnown;
+}
+
+// A Korean word's stem for matching a bent phrase: the particle or verb ending cut and the last syllable's final consonant dropped,
+// so 눈꺼풀이 matches 눈꺼풀은, 나른하다 matches 나른한 and 차갑다 matches 차가운 (compared as decomposed jamo).
+function stemKey(word) {
+  const stem = /(?:하다|한다|진다|간다)$/u.test(word) ? word.slice(0, -2) : /다$/u.test(word) ? word.slice(0, -1) : word.replace(/(?:이|가|은|는)$/u, "");
+  return stem.normalize("NFD").replace(/[\u11a8-\u11c2]$/u, "");
+}
+
+// An Expression chunk: a spaced Korean phrase carries every word of one or more table phrases, with three scene words at most beside them;
+// a single word or a Chinese or Japanese chunk is listed, or bends a table word (two syllables or more) or a Japanese table phrase's ending.
+function expressionListed(chunk, sources, heads) {
+  if (!/\p{sc=Hangul}/u.test(chunk)) return isListed(chunk, sources.known, heads) || sources.jpPhrases.some((prefix) => chunk.startsWith(prefix));
+  const words = chunk.split(/\s+/u).map((word) => word.normalize("NFD"));
+  const found = sources.phrases.filter((phrase) => phrase.stems.every((stem) => words.some((word) => word.startsWith(stem))));
+  if (words.length > 1) return found.length > 0 && words.length <= found.reduce((sum, phrase) => sum + phrase.words, 0) + 3;
+  return isListed(chunk, sources.known, heads) || sources.phrases.some((phrase) => phrase.stems.some((stem) => stem.length >= 4 && words[0].startsWith(stem)));
 }
 
 function isListed(chunk, known, heads) {
@@ -536,12 +568,14 @@ function aliasPattern(alias) {
   return new RegExp(`(?<![\\p{L}\\p{N}])${body}(?![\\p{L}\\p{N}])`, "iu");
 }
 
+// Exact copy in quotes (a sign that reads "営業中") is the user's or the photo's text (image-brief.md §6, §12.4), not mixed-in words.
+const unquote = (text) => text.replace(/"[^"\n]*"|“[^”\n]*”|「[^」\n]*」|『[^』\n]*』/gu, '""');
 function inspectMix(result, instruction) {
   const sections = layerSections(instruction).filter((section) => section.name === null || /^[A-Za-z]/u.test(section.name));
   const lines = sections.filter((section) => section.name && section.name !== "Identity Reference")
     .flatMap((section) => section.lines.flatMap((line) => {
       const match = LAYER_LINE.exec(line);
-      return match ? [{ section: section.name, head: match[1].trim(), sentence: match[2], line }] : [];
+      return match ? [{ section: section.name, head: match[1].trim(), sentence: unquote(match[2]), line }] : [];
     }));
   if (!lines.length) return;
   const count = (text, pattern) => (text.match(pattern) ?? []).length;
@@ -569,11 +603,11 @@ function inspectMix(result, instruction) {
   const sources = mixSources();
   if (!sources) return;
   const heads = lines.map((item) => mixKey(item.head));
-  const first = sections.find((section) => section.name === null)?.lines.join(" ") ?? "";
+  const first = unquote(sections.find((section) => section.name === null)?.lines.join(" ") ?? "");
   const long = (chunk) => chunk.split(/\s+/u).length >= 3;
-  // Expression sentences bend the table phrases (particles, endings, a few scene words), so only their long phrases are read: each must carry a table phrase's first word.
+  // Expression sentences bend the table phrases (particles, endings, a few scene words), so they are read against the phrases themselves.
   const offTable = lines.filter((item) => item.section === "Expression").flatMap((item) => item.chunks)
-    .filter((chunk) => long(chunk) && /\p{sc=Hangul}/u.test(chunk) && !sources.phraseKeys.some((key) => chunk.includes(key)));
+    .filter((chunk) => !expressionListed(chunk, sources, heads));
   const unlisted = [
     ...lines.flatMap((item) => [...chunksOf(item.head), ...(item.section === "Expression" ? [] : item.chunks)]),
     ...chunksOf(first),
@@ -587,7 +621,7 @@ function inspectMix(result, instruction) {
   // phrase (up to its first colon, comma or " of ") and the Finish closer that calls that medium again name no thing in the scene (image-brief.md §1, fixed-lines.md Finish).
   const opener = /:|,\s| of /u.exec(first);
   const named = [{ line: null, text: opener ? first.slice(opener.index) : first }, ...sections.filter((section) => section.name && section.name !== "Identity Reference")
-    .flatMap((section) => section.lines.map((line) => ({ line, text: LAYER_LINE.exec(line)?.[2] ?? line })))
+    .flatMap((section) => section.lines.map((line) => ({ line, text: unquote(LAYER_LINE.exec(line)?.[2] ?? line) })))
     .filter((entry) => !/^The whole frame reads as\b/u.test(entry.text))];
   const renamed = [];
   for (const item of lines) {
@@ -604,6 +638,14 @@ function inspectMix(result, instruction) {
   }
   if (renamed.length) {
     emit(result, CODE_REGISTRY.mixRenamed, `One thing is called by two names: ${[...new Set(renamed)].slice(0, 3).join(" | ")}`, { hint: "Call a thing the same way from the first line to Finish: use the line-head token again, or the English name only if the thing has no row (image-brief.md §2 rule 3)." });
+  }
+  // One photo-term column a prompt: the Finish tokens name the culture row (KR, CN or 단서 없음 the KR·CN column, JP the JP column); US·FR tokens or none, nothing is read.
+  const groups = new Set(lines.filter((item) => item.section === "Finish").map((item) => sources.finish.get(mixKey(item.head))).filter(Boolean));
+  if (groups.size === 1) {
+    const [own] = groups;
+    const other = own === "JP" ? "KRCN" : "JP";
+    const wrong = lines.flatMap((item) => item.chunks).filter((chunk) => sources.photo[other].has(mixKey(chunk)) && !sources.photo[own].has(mixKey(chunk)));
+    if (wrong.length) emit(result, CODE_REGISTRY.mixCulture, `Photo terms from the ${other === "JP" ? "JP" : "KR·CN"} column in a ${own === "JP" ? "JP" : "KR·CN"} prompt: ${[...new Set(wrong)].slice(0, 5).join(" | ")}`, { hint: "Take the photo terms from the column of the scene's culture in fixed-lines.md §문장 속 낱말 (the one its Finish tokens come from), or write them in English." });
   }
 }
 

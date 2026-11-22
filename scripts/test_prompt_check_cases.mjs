@@ -16,7 +16,7 @@ const coverageExceptions = {
   "input/unreadable": "The CLI tests use a missing path and a directory; neither is a registered fixture.",
 };
 const registryCodes = new Set(Object.values(CODE_REGISTRY).map((entry) => entry.code));
-assert.equal(registryCodes.size, 53);
+assert.equal(registryCodes.size, 54);
 const validatorSource = await readFile(validator, "utf8");
 for (const code of registryCodes) assert.equal(validatorSource.split(JSON.stringify(code)).length - 1, 1, code);
 assert.ok(validatorSource.split("\n").includes('const BANNED_MJ_FLAGS = ["no", "ar", "p", "stylize", "v", "sref", "seed"];'));
