@@ -431,5 +431,6 @@ function isMainModule() {
 }
 
 if (isMainModule()) {
-  process.exit(main(process.argv.slice(2)));
+  // exitCode, not process.exit(): exit() drops stdout still queued on a pipe (cut at 64 KiB when the reader is slow).
+  process.exitCode = main(process.argv.slice(2));
 }
