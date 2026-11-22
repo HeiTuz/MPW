@@ -610,7 +610,8 @@ function inspectMix(result, instruction) {
   const offTable = lines.filter((item) => item.section === "Expression").flatMap((item) => item.chunks)
     .filter((chunk) => !expressionListed(chunk, sources, heads));
   const unlisted = [
-    ...lines.flatMap((item) => [...chunksOf(item.head), ...(item.section === "Expression" ? [] : item.chunks)]),
+    // Line heads are not read: a head may be an original-language name the writer is sure of even without a lexicon row (image-brief.md §2.1 rule 1).
+    ...lines.flatMap((item) => (item.section === "Expression" ? [] : item.chunks)),
     ...chunksOf(first),
   ].filter((chunk) => !isListed(chunk, sources.known, heads));
   // Other long phrases are the one Style phrase a line allows, or already a mix/line warning.
