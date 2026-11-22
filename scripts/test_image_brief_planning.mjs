@@ -49,7 +49,7 @@ const expectedSections = {
   'gpt-image-edit': [s1, s6, s7, s8, s9],
   'gpt-image-edit-structured': [s1, s6, s7, s8, s9],
 };
-const [s2place, s2table] = ['2.1', '2.2'].map(sec);
+const s2place = sec('2.1');
 for (const [name, targets] of Object.entries(BUNDLES)) {
   const result = readTargets(targets);
   assert.equal(result.error, undefined, name);
@@ -60,7 +60,6 @@ for (const [name, targets] of Object.entries(BUNDLES)) {
     assert.equal(result.text.includes(sec(id)), wanted, `${name}: image-brief §${id} routing`);
   }
   assert.equal(result.text.includes(s2place), true, `${name}: image-brief §2.1 routing`);
-  assert.equal(result.text.includes(s2table), !name.startsWith('gpt-image-edit'), `${name}: image-brief §2.2 routing`);
   for (const part of [s10read, s10person, s10scene]) {
     assert.equal(result.text.includes(part), (expectedExamples[name] ?? []).includes(part), `${name}: image-brief §10 part routing`);
   }
@@ -210,10 +209,13 @@ for (const [layer, slug] of Object.entries(LAYER_FILES)) {
 // Raised (mix-language): image-brief section 2 rewritten as 2.1 (where original-language words go and how many) and 2.2 (wrong/right lines), and fixed-lines.md
 // gained one culture-choice paragraph and the sentence-word tables (photo terms, texture words, expression phrases); the edit routes read 2.1 only. Overlapping sentences
 // in section 2, section 12.2 and fixed-lines.md were cut first (new 87870, portrait 101373, edit 20799, extract 99566 measured, ceilings about 2% above).
-assert.ok(sizes['gpt-image-new'].utf8_bytes <= 89700, `gpt-image-new is ${sizes['gpt-image-new'].utf8_bytes} bytes`);
-assert.ok(sizes['gpt-image-portrait'].utf8_bytes <= 103400, `gpt-image-portrait is ${sizes['gpt-image-portrait'].utf8_bytes} bytes`);
-assert.ok(sizes['gpt-image-edit'].utf8_bytes <= 21200, `gpt-image-edit is ${sizes['gpt-image-edit'].utf8_bytes} bytes`);
-assert.ok(sizes['gpt-image-extract'].utf8_bytes <= 101600, `gpt-image-extract is ${sizes['gpt-image-extract'].utf8_bytes} bytes`);
+// Lowered (mix-language polish): section 2.2's two wrong/right rows were folded into rules 3 and the frame sentence of 2.1, sentences that said one decision twice
+// (2.1 table and rule 2, the token search and rule 2, the slot table and rules 2-3, 9-5, 12.2) and the per-culture variants of the grain and lens lines (now the
+// sentence-word columns) were cut (new 87038, portrait 100543, edit 20602, extract 98507 measured, ceilings about 2% above).
+assert.ok(sizes['gpt-image-new'].utf8_bytes <= 88800, `gpt-image-new is ${sizes['gpt-image-new'].utf8_bytes} bytes`);
+assert.ok(sizes['gpt-image-portrait'].utf8_bytes <= 102600, `gpt-image-portrait is ${sizes['gpt-image-portrait'].utf8_bytes} bytes`);
+assert.ok(sizes['gpt-image-edit'].utf8_bytes <= 21000, `gpt-image-edit is ${sizes['gpt-image-edit'].utf8_bytes} bytes`);
+assert.ok(sizes['gpt-image-extract'].utf8_bytes <= 100500, `gpt-image-extract is ${sizes['gpt-image-extract'].utf8_bytes} bytes`);
 
 const scenarios = JSON.parse(read('scripts/fixtures/behavioral/image-planning.json')).cases;
 assert.deepEqual(scenarios.map(c => c.id), [

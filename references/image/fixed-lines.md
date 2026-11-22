@@ -4,11 +4,11 @@ GPT Image(웹·API)·대상 미정인 새 이미지(인물 사진과 인물 없�
 
 ## 문화권 고르기
 
-문화권 행과 아래 낱말 표의 칸은 장면 문화권 하나로 고른다. 사진 추출은 사진 속 장소의 문화권이다(카드가 있어도). 그 밖은 룩 카드의 문화권(갈래가 다른 문화권의 장면을 정하면 그 갈래의 것), 카드가 없으면 요청한 장소·말의 문화권이다. 장소가 문화권을 말하지 않거나 한·중·일 두 문화권을 섞으면(한옥에 차린 純喫茶) Identity는 '한·중·일 단서도 없음' 행, 메이크업 줄·Finish는 KR 행, 낱말 표는 '단서 없음' 칸이다. 그래서 한 프롬프트에 한국어 토큰과 한자 사진 용어가 함께 나오는 것이 맞는 꼴이다. 인물이 '그 밖' 행이면 메이크업 줄은 US, Finish는 마지막 행이다. US·FR·그 밖의 장면은 낱말 표를 쓰지 않는다.
+문화권 행과 낱말 표의 칸은 장면 문화권 하나로 고른다. 사진 추출은 사진 속 장소의 것(카드가 있어도), 그 밖은 룩 카드의 것(갈래가 다른 문화권의 장면을 정하면 그 갈래의 것), 카드가 없으면 요청한 장소·말의 것이다. 장소가 문화권을 말하지 않거나 한·중·일 두 문화권을 섞으면(한옥에 차린 純喫茶) Identity는 '한·중·일 단서도 없음' 행, 메이크업 줄·Finish는 KR 행, 낱말 표는 '단서 없음' 칸이다(한국어 토큰과 한자 사진 용어가 함께 나와도 맞다). 인물이 '그 밖' 행이면 메이크업 줄은 US, Finish는 마지막 행이다. US·FR·그 밖의 장면은 낱말 표를 쓰지 않는다.
 
 ## 문장 속 낱말
 
-영어 문장 안에 섞는 낱말이다. 자리와 양은 [image-brief.md](image-brief.md) §2. 빈 칸은 영어로 쓴다.
+영어 문장 안에 섞는 낱말이다(자리와 양은 image-brief.md §2.1). 빈 칸은 '뜻'의 영어로 쓰고, 이 파일의 고정 문장 속 원어도 장면 문화권의 칸대로 바꾼다.
 
 사진 용어(Optics·Camera 문장):
 
@@ -43,7 +43,7 @@ GPT Image(웹·API)·대상 미정인 새 이미지(인물 사진과 인물 없�
 | knife pleats | 칼주름 | 칼주름 | | 車ひだ |
 | sheer, see-through fabric | 透け感 | 시스루 | | 透け感 |
 
-표정 구절(Expression 줄 문장에 하나. 표 구절의 낱말은 그대로 두고 조사·어미만 문장에 맞추며, 장면을 가리키는 짧은 말을 세 낱말까지 붙인다. 두 구절을 이어도 한 구절이다. 줄 머리 낱말은 사전 Expression 표에서 찾는다):
+표정 구절(Expression 문장에 하나. 낱말은 그대로 두고 조사·어미만 바꾸며 장면을 가리키는 말을 셋까지 붙인다. 두 구절을 이어도 한 구절이다. 줄 머리는 사전 Expression 표에서):
 
 | 뜻 | KR·단서 없음 | JP | CN |
 |---|---|---|---|
@@ -83,7 +83,7 @@ GPT Image(웹·API)·대상 미정인 새 이미지(인물 사진과 인물 없�
 - 숫자 나이를 정하지 말라고 했으면 `an adult`, 인종이나 체형을 정하지 말라고 했으면 그 말을 뺀다.
 - 문화권 공식과 문단 끝의 비율 문장(`In either case…`)은 **성인 인물에만** 붙는다. 아이·학생으로 요청됐거나 그렇게 보이면(판정은 image-brief.md §5) 공식 대신 `a child`·`a student` 같은 말만 쓰고(남성이면 같은 자리에 `a boy`·`a schoolboy`처럼 한 구절), 비율 문장과 아래 Hair and makeup의 미화 줄(base·under-eye·liner·blush·lip)을 모두 끈다. 룩 카드의 메이크업 줄(입술·블러셔·아이 메이크업)과 Legwear의 스타킹류 줄도 쓰지 않는다(양말은 쓴다). 그 밖의 층(Pose, Camera, Finish 포함)은 평소대로 쓴다(관능 어휘·노출은 image-brief.md §6).
 - 대학생·대학원생은 성인이다(판정은 image-brief.md §5). 공식을 그대로 쓰고 `woman`·`man` 뒤에 `and university student`만 덧붙인다(`a 22-year-old Korean man and university student with a defined 턱선 and a lean build`). 비율 문장과 메이크업 줄도 성인대로 붙는다.
-- 남성 인물: 공식은 `a 22-year-old <culture> man with a defined <턱선> and a lean build`, 문단 끝은 `In either case he has natural <등신> and level shoulders.`다. `<턱선>`은 KR·단서 없음 `턱선`, CN `下颌线`, 그 밖 `jawline`. `<등신>`은 KR·단서 없음 `7.5등신`, JP `7.5頭身`, 그 밖 `7.5-head proportions`. 남성에게는 `直角肩`·`직각 어깨`·`天鹅颈`을 쓰지 않는다. 고정 몫의 메이크업 줄과 룩 카드의 메이크업·네일 색·Legwear 줄은 사용자가 원할 때만 붙인다. 남성이 아이·학생이면 위 학생 처리가 먼저다.
+- 남성 인물: 공식은 `a 22-year-old <culture> man with a defined <턱선> and a lean build`, 문단 끝은 `In either case he has natural <등신> and level shoulders.`다. `<턱선>`·`<등신>`은 그 행의 말(`턱선`·`下颌线`, `7.5등신`·`7.5頭身`)이고 없으면 `jawline`·`7.5-head proportions`다. 남성에게는 `直角肩`·`직각 어깨`·`天鹅颈`을 쓰지 않는다. 고정 몫의 메이크업 줄과 룩 카드의 메이크업·네일 색·Legwear 줄은 사용자가 원할 때만 붙인다. 남성이 아이·학생이면 위 학생 처리가 먼저다.
 - JP 공식은 base 줄이 기본 `透明感`이 아닐 때만(사용자·카드가 바꿨거나 맨얼굴) `with a soft 透明感 look:`으로 쓴다(피부 마감은 Hair and makeup 한 곳).
 - `identity`: 카드가 `끄는 고정 몫`의 `identity` 행에 덧붙임 구절을 주면, 참조가 없을 때 쓰는 인물 문장(`If none is provided, …`) 끝에 그 구절을 붙인다. 참조가 있을 때는 붙지 않는다(조건절이 참조의 피부색을 지킨다).
 
@@ -94,7 +94,7 @@ GPT Image(웹·API)·대상 미정인 새 이미지(인물 사진과 인물 없�
 문화권 줄은 §문화권 고르기로 고른다.
 
 - `face-clear`: `face clear — The hair falls away from the face, tucked behind one ear, so the brows, eyes and jawline stay clear.` 끄는 조건: 사용자나 룩 카드가 얼굴을 가리는 머리(눈을 덮는 앞머리, 얼굴을 가로지르는 가닥, 얼굴에 붙는 바람맞은 머리)를 원함, 뒷모습. 이마가 비치는 시스루뱅과 젖은 머리는 걸리지 않는다.
-- `base`: 문화권마다 한 줄(위 단서 없음·그 밖 규칙 포함). 끄는 조건: 사용자나 카드가 베이스를 정함, 맨얼굴.
+- `base`: 문화권마다 한 줄. 끄는 조건: 사용자나 카드가 베이스를 정함, 맨얼굴.
   - KR `물광 피부 — A thin glossy base leaves a soft wet sheen on the cheekbones and nose bridge while pores still show.`
   - CN `冷白瓷肌 — A semi-matte cool porcelain base with a faint satin glow only on the high points.`
   - JP `透明感 — A sheer, low-coverage base with a faint cool correcting tint, so the skin reads clear and light.`
@@ -123,8 +123,8 @@ GPT Image(웹·API)·대상 미정인 새 이미지(인물 사진과 인물 없�
 
 ## Optics
 
-- `grain`(필름 매체): `<토큰> — Fine, even 颗粒 sits across the whole frame, slightly heavier in the 暗部.` 토큰은 KR·CN·단서 없음 `胶片颗粒`, JP `粒状感`, US·FR·그 밖 `film grain`(JP·US·FR 문장은 `Fine, even film grain sits across the whole frame, slightly heavier in the shadows.`), 한국어 문안 `필름 그레인`. 끄는 조건: 매체가 필름이 아님, 카드가 입자 줄을 줌, 사용자가 입자의 양을 정함이나 입자를 빼 달라고 함.
-- `grain`(디지털 매체): `<토큰> — Very fine 噪点 sits only in the 最暗部 of the frame.` 토큰은 KR·CN·단서 없음 `数码噪点`, JP `デジタルノイズ`(문장의 `噪点`은 `noise`), US·FR·그 밖 `digital noise`(문장은 `Very fine digital noise sits only in the darkest parts of the frame.`), 한국어 문안 `디지털 노이즈`. 끄는 조건: 매체가 디카·폰이 아님, 카드가 입자 줄을 줌, 사용자가 입자를 정함이나 빼 달라고 함.
+- `grain`(필름 매체): `<토큰> — Fine, even 颗粒 sits across the whole frame, slightly heavier in the 暗部.` 토큰은 KR·CN·단서 없음 `胶片颗粒`, JP `粒状感`, US·FR·그 밖 `film grain`, 한국어 문안 `필름 그레인`(문장의 `颗粒`은 `胶片颗粒`을 줄인 말). 끄는 조건: 매체가 필름이 아님, 카드가 입자 줄을 줌, 사용자가 입자의 양을 정함이나 입자를 빼 달라고 함.
+- `grain`(디지털 매체): `<토큰> — Very fine 噪点 sits only in the 最暗部 of the frame.` 토큰은 KR·CN·단서 없음 `数码噪点`, JP `デジタルノイズ`, US·FR·그 밖 `digital noise`, 한국어 문안 `디지털 노이즈`. 끄는 조건: 매체가 디카·폰이 아님, 카드가 입자 줄을 줌, 사용자가 입자를 정함이나 빼 달라고 함.
 
 입자의 양은 사용자가 정하고, 정하지 않았으면 위 문장이다.
 
@@ -141,7 +141,7 @@ GPT Image(웹·API)·대상 미정인 새 이미지(인물 사진과 인물 없�
 
   끄는 조건: 사용자가 프레이밍을 정함, 카드의 포즈·구도 쌍이 프레임 범위를 직접 말함(기본 줄의 위·아래 범위를 쓰지 않고 방향·비율 한 문장 `vertical frame — A vertical 3:4 frame.`만 쓰며 범위는 쌍의 Camera 줄에서 한 번만 말한다), 비율을 API `size` 같은 설정으로 넘김(이때는 비율만 빼고 프레이밍은 쓴다).
   카드의 `ratio` 행이 정사각이나 가로를 정했으면 `vertical frame`과 `A vertical 3:4 frame`을 통째로 바꾼다: `square frame — A square 1:1 frame from <위> to <아래>, <인물의 자리 한 구절>.`, `horizontal frame — A horizontal 4:3 frame from <위> to <아래>, <인물의 자리 한 구절>.`(비율은 카드가 정한 값이고 `vertical`을 남기지 않는다).
-- `lens`: `<토큰> — The camera stands back with a 标准至中长焦 lens, so the face keeps natural perspective with no 广角 stretch on the nose or forehead.` JP는 `標準〜中望遠`·`広角`, US·FR·그 밖은 `standard-to-moderate telephoto`·`wide-angle`로 바꾼다. 렌즈 줄 하나 규칙과 출처 순서는 image-brief.md §3. 카메라 높이는 쌍의 Camera 줄이나 위 `framing` 줄이 정한다. 끄는 조건: 셀카, POV, 광각·어안 룩, 사용자·카드·쌍이 렌즈를 정함(`长焦压缩`·`超广角畸变` 같은 렌즈 줄, 렌즈를 말하는 Optics의 카메라 본체 줄 포함). 토큰은 CN `自然透视`, 그 밖은 영어 `natural perspective`다.
+- `lens`: `<토큰> — The camera stands back with a 标准至中长焦 lens, so the face keeps natural perspective with no 广角 stretch on the nose or forehead.` 렌즈 줄 하나 규칙과 출처 순서는 image-brief.md §3. 카메라 높이는 쌍의 Camera 줄이나 위 `framing` 줄이 정한다. 끄는 조건: 셀카, POV, 광각·어안 룩, 사용자·카드·쌍이 렌즈를 정함(`长焦压缩`·`超广角畸变` 같은 렌즈 줄, 렌즈를 말하는 Optics의 카메라 본체 줄 포함). 토큰은 CN `自然透视`, 그 밖은 영어 `natural perspective`다.
 
 ## Finish
 
