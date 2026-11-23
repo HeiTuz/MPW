@@ -250,7 +250,7 @@ If a model reference is provided, the woman in this photo is that model: take on
 
 - 정확한 문구: 사용자가 준 문구를 따옴표 안에 한 글자도 바꾸지 않고 한 번만 쓴다. 그 줄에 위치, 크기, 서체, 또렷하게 읽힐 것, 한 번만 나온다는 것을 함께 쓰고, 다른 글자가 없다는 문장을 같은 층에 한 줄 둔다. 글자는 `Text`나 `Label` 같은 층에 모은다.
 - 사용자가 문구를 주지 않았으면 글자를 지어내지 않는다. 간판·포장·화면은 `no readable lettering`처럼 보이는 상태로 쓴다.
-- 브랜드·제품명(카메라, 필름, 패션, 소품 등)은 룩을 가리키는 말로 쓸 수 있다. 로고와 상표 글자는 새로 그리지 않는다(사용자가 지키라고 한 제품·의상 참조의 실제 로고·라벨은 그대로 둔다). 실존 인물의 이름은 스타일을 가리킬 때만 쓰고(예: Godard, Jane Birkin), 그 사람의 얼굴이나 몸을 닮게 하는 용도로는 쓰지 않는다.
+- 브랜드·제품명(카메라, 필름, 패션, 소품 등)은 룩을 가리키는 말로 쓸 수 있다. 로고와 상표 글자는 새로 그리지 않는다(사용자가 지키라고 한 제품·의상 참조의 실제 로고·라벨은 그대로 둔다. 사진 속 로고는 §12.4). 실존 인물의 이름은 스타일을 가리킬 때만 쓰고(예: Godard, Jane Birkin), 그 사람의 얼굴이나 몸을 닮게 하는 용도로는 쓰지 않는다.
 - 첨부하지 않은 참조를 말하지 않는다(reference, same face). `## Identity Reference` 구획만 예외다.
 - 아이·학생이 나오는 이미지도 만든다. 교복과 학생 연출도 쓸 수 있고, 스쿨룩·프레피·하이틴은 성인 패션 장르다. 지키는 것은 둘이다: 미성년을 성적으로 그리지 않는다(아이·학생이 나오는 이미지에는 관능 어휘와 노출 연출을 붙이지 않는다), 실존 인물의 얼굴·몸을 닮게 하지 않는다.
 - 금지 문장은 네 경우에 쓴다: 사용자가 빼 달라고 한 것, 정확 문구 밖의 글자, 편집에서 지킬 것, `## Finish`의 금지 한 줄. 관련 층 안에 한 문장으로 쓰고, `no X, no Y`처럼 늘어놓지 않는다. 그 밖에 비워 두고 싶은 것은 보이는 상태로 쓴다("the table is bare", "the street is empty").
@@ -575,7 +575,7 @@ After:
 
 - 화면에 보이는 칸은 사진이 정한다.
 - 화면 밖(잘린 다리, 프레임 밖의 손)은 비운다. 카드나 고정 몫으로 채우면 프레이밍이 바뀐다. Camera에 어디서 잘렸는지만 쓴다.
-- 화면 안인데 판독이 흐린 칸은 비워 두지 않는다(비우면 생성기가 무난한 값을 넣는다). 매체 쪽 칸과 메이크업 칸(작게 잡힌 얼굴의 입술색, 아주 작은 손톱)은 쓰기로 한 카드의 줄, 카드가 없으면 [fixed-lines.md](fixed-lines.md)의 고정 몫으로 채운다. 장소 이름, 인물의 속성, 옷·소품의 브랜드나 종류처럼 사진에 있어야 할 것은 흐려도 카드로 채우지 않고 보이는 만큼만 넓은 말로 쓴다(`a dark jacket`). 뒤판·안감·로고 글자·혼용률처럼 정체를 지어내야 하는 값은 쓰지 않는다.
+- 화면 안인데 판독이 흐린 칸은 비워 두지 않는다(비우면 생성기가 무난한 값을 넣는다). 매체 쪽 칸과 메이크업 칸(작게 잡힌 얼굴의 입술색, 아주 작은 손톱)은 쓰기로 한 카드의 줄, 카드가 없으면 [fixed-lines.md](fixed-lines.md)의 고정 몫으로 채운다. 장소 이름, 인물의 속성, 옷·소품의 브랜드나 종류처럼 사진에 있어야 할 것은 흐려도 카드로 채우지 않고 보이는 만큼만 넓은 말로 쓴다(`a dark jacket`). 뒤판·안감·읽히지 않는 로고 글자·혼용률처럼 정체를 지어내야 하는 값은 쓰지 않는다.
 
 ### 12.1 보는 순서
 
@@ -645,10 +645,11 @@ After:
 
 ### 12.4 사진에 찍힌 표식
 
-- 사진 속 로고, 브랜드 마크, 브랜드 글자, 워터마크, 잡지 제호는 옮겨 적지 않는다. 그 자리는 무지 표면으로 쓰고 위치·재료·색은 그대로 쓴다(`a plain unmarked chest area`). 작거나 일부만 보여도, 브랜드 글자인지 애매해도 같다. 상표 글자는 생성기가 깨뜨려 그리기 쉽고 그러면 느낌이 더 크게 깨진다. 색 띠·위치·재료를 남겨 같은 인상을 준다(본보기의 편의점 간판).
-- 이것은 사진에 찍힌 표식을 화면에 다시 그리지 않는다는 것만 정한다. §6이 허용하는, 룩을 가리키는 브랜드명 토큰(카메라, 필름 이름 등)은 그대로 쓸 수 있다.
+- 사진에 보이는 로고, 브랜드 마크, 브랜드 글자는 옷·가방·소품·간판 어디 것이든 보이는 대로 쓴다. 무엇인지(이름이 읽히면 마지막 줄대로 정확 문구, 읽히지 않으면 모양·색), 위치, 크기, 색, 재료(자수·프린트·금속)를 쓴다. 상표 글자는 생성기가 깨뜨려 그리기 쉬우니 이름은 짧게 쓴다(`a white stitched wordmark "NORTHFIELD" at the left chest`). 판독이 애매한 글자는 이름을 지어내지 않고 판독 불가 상태로 쓴다.
+- 사진 위에 덧씌운 워터마크, 자막, 캡션, 서명, 잡지 제호는 장면의 일부가 아니므로 옮기지 않는다.
+- §6이 허용하는 룩을 가리키는 브랜드명 토큰(카메라, 필름 이름 등)은 이 절과 상관없이 그대로 쓴다.
 - 사진 속 물건의 브랜드 고유 기능명·부품명(예: 폰 뒷면의 자석 링을 부르는 상표 기능명)은 화면에 그리는 물건을 가리키므로 일반 명칭으로 쓴다(`a magnetic ring on the phone back`).
-- 브랜드와 무관한 일반 글자로 읽은 것은 §6 첫째 줄의 사용자가 준 문구로 본다(§6 둘째 줄보다 이 줄이 먼저다). 원문 그대로 따옴표에 넣고 위치, 크기, 서체, 한 번만 나온다는 것을 쓴다. 읽을 수 없는 글자가 함께 있으면 "다른 글자가 없다"는 문장 대신 그 글자의 위치와 판독 불가 상태(`small illegible lettering`)를 쓴다.
+- 읽은 글자는 브랜드 글자든 일반 글자든 §6 첫째 줄의 사용자가 준 문구로 본다(§6 둘째 줄보다 이 줄이 먼저다). 원문 그대로 따옴표에 넣고 위치, 크기, 서체, 한 번만 나온다는 것을 그 글자가 있는 물건의 줄에 쓴다(§6의 Text 층은 쓰지 않는다). 읽을 수 없는 글자가 함께 있으면 "다른 글자가 없다"는 문장 대신 그 글자의 위치와 판독 불가 상태(`small illegible lettering`)를 쓴다.
 
 ### 12.5 변경 요청이 함께 올 때
 
@@ -662,7 +663,7 @@ After:
 
 ### 12.7 내기 전에 확인
 
-§9 머리말보다 이 줄이 먼저다. §9의 1~8·10·11을 본다(2와 6은 §12.1의 다인 예외를 따르고, 9는 후속 수정용이라 보지 않는다). 더해서 본다. 첫 줄이 §12.0 표의 매체 이름(카드를 썼으면 카드의 매체 구절)으로 시작하고, 사진에 근거 없는 장소 낱말이 없는가? 토큰 자리에 칸 이름(§12.2 3)이 없고 보이는 것의 줄 머리가 사전의 원어 토큰이고 Optics·Expression 문장에 낱말 표의 말이 들어갔는가(§2.1)? 판독이 흐린 칸은 채우고 화면 밖은 비웠는가? 사진에 없는 소품·배경, 지어낸 값(뒤판), 로고·브랜드 글자·워터마크가 없는가? Light와 Optics가 따로 있고 각각 방향·결과를 말하는가? 인물의 얼굴·체형을 조건절 밖에 쓰지 않았는가?
+§9 머리말보다 이 줄이 먼저다. §9의 1~8·10·11을 본다(2와 6은 §12.1의 다인 예외를 따르고, 9는 후속 수정용이라 보지 않는다). 더해서 본다. 첫 줄이 §12.0 표의 매체 이름(카드를 썼으면 카드의 매체 구절)으로 시작하고, 사진에 근거 없는 장소 낱말이 없는가? 토큰 자리에 칸 이름(§12.2 3)이 없고 보이는 것의 줄 머리가 사전의 원어 토큰이고 Optics·Expression 문장에 낱말 표의 말이 들어갔는가(§2.1)? 판독이 흐린 칸은 채우고 화면 밖은 비웠는가? 사진에 없는 소품·배경, 지어낸 값(뒤판), 지어낸 로고·글자, 덧씌운 워터마크·자막이 없는가? Light와 Optics가 따로 있고 각각 방향·결과를 말하는가? 인물의 얼굴·체형을 조건절 밖에 쓰지 않았는가?
 
 다 보면 프롬프트를 파일로 저장하는 호출 바로 뒤에 `node scripts/check_prompt.mjs <파일>`(또는 `--file <파일>`) 호출을 같은 메시지에서 낸다. 결과의 `ok`·`errors`·`warnings`를 보고, 경고를 고치는 편집 호출과 재검사 호출도 한 메시지에서 낸다(한 메시지의 호출은 낸 순서대로 실행되므로 저장이 먼저 끝난다). 다른 엔진으로 폈으면 `--engine <대상>`을 붙인다.
 
@@ -685,9 +686,9 @@ After:
 아래는 §12.0~12.3을 차례로 따라 룩 카드를 붙여 쓴 결과다. 읽는 순서만 따르고 장면, 문장, 층 이름을 다른 사진에 옮기지 않는다.
 
 - 매체: 4:3, 깊은 심도, 하늘의 白飛び, 선명한 엣지가 모두 콤팩트 디카를 가리킨다.
-- 룩 카드: `find_tokens --q "コンデジ,商店街,逆光,日本"`의 맨 위에 `日系CCD日光 · コンデジ`가 떴다. §12.0의 질문에 모두 예였다: 위 매체 표지가 보이고, time·light-key·palette(해가 하늘에 있는 낮, 직사 역광과 그늘, 채도 높은 색과 순백의 하늘)가 맞고, `매체` 축이라 장소는 묻지 않는다. 갈래는 A 商店街スナップ로 읽었다. 카드에서 가져온 것: 첫 줄 문구(`Japanese`는 일본 상점가라 남겼다), closer `コンデジ`, realism 자리의 `native resolution` 줄(`8K`와 모공 줄은 쓰지 않는다), 입자 `デジタルノイズ`, 끈 `lens` 몫(Optics의 `コンデジ`가 렌즈를 말한다), 사진의 JP 문화권 행의 Finish 토큰(`実写`).
+- 룩 카드: `find_tokens --q "コンデジ,商店街,逆光,日本"`의 맨 위에 `日系CCD日光 · コンデジ`가 떴다. §12.0의 질문에 모두 예였다(`매체` 축이라 장소는 묻지 않는다). 갈래는 A 商店街スナップ로 읽었다. 카드에서 가져온 것: 첫 줄 문구(`Japanese`는 일본 상점가라 남겼다), closer `コンデジ`, realism 자리의 `native resolution` 줄(`8K`와 모공 줄은 쓰지 않는다), 입자 `デジタルノイズ`, 끈 `lens` 몫(Optics의 `コンデジ`가 렌즈를 말한다), 사진의 JP 문화권 행의 Finish 토큰(`実写`).
 - 이름 목록: 보이는 것의 이름(商店街, 電柱, 黒髪ロング, 逆光, 白飛び 등)을 일본어로 먼저 적고 층별로 검색했다. 흰 셔츠·조끼·숄더백·스마트폰·행인·맨홀·낙엽·그림자도 사전에 행이 있어 그 토큰을 줄 머리로 썼다(§2.1 2항).
-- 사람은 20대 초반 성인으로 읽혀 JP 공식의 나이를 `in her early twenties`로 바꿔 썼다. 흰 셔츠와 검은 베스트, 숄더백은 교복풍으로 읽힐 수 있지만 학교 표식과 학교 장소가 없어 `制服` 같은 말은 쓰지 않았다. 사진 속 인물이 학생으로 보이면 §12.3의 학생 처리로 바꾼다. 편의점 로고는 색 띠만 남겼고 얼굴 생김새는 옮기지 않았다.
+- 사람은 20대 초반 성인으로 읽혀 JP 공식의 나이를 `in her early twenties`로 바꿔 썼다. 흰 셔츠와 검은 베스트, 숄더백은 교복풍으로 읽힐 수 있지만 학교 표식과 학교 장소가 없어 `制服` 같은 말은 쓰지 않았다. 편의점 로고는 너무 작아 읽히지 않아 색 띠와 판독 불가 상태로 썼고 얼굴 생김새는 옮기지 않았다.
 
 ```text
 A Japanese everyday compact digital camera snapshot shot on a small-sensor CCD compact: a woman with long wind-tossed dark hair stands stopped on a sunlit 商店街, a silver スマホ held low in both hands, her eyes meeting the lens while the sky behind her clips to white.
@@ -706,7 +707,7 @@ If a model reference is provided, the woman in this photo is that model: take on
 
 ## Outfit
 白シャツ — A white cotton shirt with an open collar and long sleeves, the sunlit sleeve and shoulder nearly clipping to white while the folds in shade stay pale blue-gray.
-ベスト — A black sleeveless V-neck vest over the 白シャツ, smooth and matte, its plain unmarked front sinking to flat black in shade.
+ベスト — A black sleeveless V-neck vest over the 白シャツ, smooth and matte, its plain front sinking to flat black in shade.
 ショルダーバッグ — A black boxy bag hangs at her hip from a long strap over her shoulder at frame right, with a zip pocket on its front, a small metal buckle and one soft highlight along its top edge.
 
 ## Props and nails
@@ -723,7 +724,7 @@ palette — The white of the 白シャツ, the black ベスト and ショルダ�
 
 ## Scene
 商店街 — A narrow street of small two- and three-story shops recedes behind her, with a yellow awning at left, green awnings on both sides, shuttered fronts at frame right and a parked bicycle with a basket beside an outdoor air-conditioner unit.
-コンビニ — A convenience store at upper left has a sign reduced to bands of orange, green and red with no readable mark or lettering.
+コンビニ — A convenience store at upper left has a sign of orange, green and red bands carrying a mark too small to read.
 電柱 — Concrete poles line the right side and recede down the street, with 電線 criss-crossing the white sky between them.
 通行人 — About eight small, sharp figures in dark jackets walk the street and the sidewalks, several carrying white plastic bags or backpacks, a person in a dark hoodie rides a ママチャリ left of center, and a silver minivan comes up the far end of the street.
 マンホール — A round iron cover sits in the gray asphalt at lower left beside diagonal white lane lines and a strip of green paint at the far left edge.
