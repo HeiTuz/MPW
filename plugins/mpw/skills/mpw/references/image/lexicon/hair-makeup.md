@@ -108,6 +108,8 @@ Hair and makeup 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토�
 | 운동 후 땀 광택 | 운동 후 땀; 땀 광택; 운동 후 물광 | KR | 운동; 땀; 광택; 건강; 필라테스; 아이폰 원본 셀카; 아이폰 셀카; iPhone native selfie | A thin film of sweat beads on the forehead and cheekbones after exercise while the pores stay visible. | look |
 | 자다 일어난 머리 | 베드헤어; 눌린 머리; 잠자리 머리 | KR | 나른; 내추럴; 아침; 침대; 아이폰 원본 셀카; 아이폰 셀카; iPhone native selfie | Hair flattened on one side and puffed on the other as if just slept on, a few strands lying loose across the face or bedding. | look |
 | 점막 아이라인 | 점막 라인 | KR | 아이; 미니멀; 또렷; 데일리 | A hair-thin dark line along the upper lash roots defines the eye with no visible wing. | look |
+| 댕기 | 한복 댕기; 제비부리댕기; braid ribbon | KR | 한복; 부분; 머리; 장식 | A long narrow silk ribbon braided into or tied at the end of a plait, its two tails hanging down the back. | item |
+| 뒤꽂이 | 한복 뒤꽂이; 쪽머리 뒤꽂이; hanbok hair pin | KR | 한복; 부분; 머리; 쪽머리; 장식 | A slim decorated pin pushed into the hair at a low chignon, its ornamented head showing above the bun. | item |
 
 ## CN
 

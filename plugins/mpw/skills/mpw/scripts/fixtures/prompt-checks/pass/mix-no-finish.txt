@@ -1,0 +1,35 @@
+A warm late-afternoon telephoto photograph taken from several meters back, a fairly small full-length woman in a hanbok standing slightly left of center on the stone walkway of a palace hall, her body turned three-quarters toward frame left and the back of her right hand resting on her forehead, while low sun glows through her sheer apricot-gold skirt and the painted eaves fill the top of the frame.
+
+## Identity Reference
+If a model reference is provided, the woman in this photo is that model: take only the face shape and facial features from it, adapting them naturally to this scene's expression, angle and light. Hair, makeup and everything else follow this prompt. If none is provided, create a new person suited to the scene.
+
+## Hair and makeup
+낮은 쪽머리 — Dark brown hair is pulled back smoothly into a low, neat chignon at the nape, with the sides tucked behind the ears and no loose lengths on the shoulders.
+hair ribbon — A thin sheer white ribbon is tied flat at the back of the chignon with no big bow, its long narrow tails floating down behind her frame-right shoulder, with a small pearl hairpin tucked above the ear.
+clear hanbok makeup — A soft matte base, a faint peach blush on the cheeks, straight natural brows and a muted coral lip.
+
+## Expression
+담담한 눈빛 — Her eyes look straight into the lens with a calm, level gaze, the lids relaxed and the brows resting flat.
+
+## Outfit
+한복 — A short ivory wrap-front jacket with long narrow sleeves, a thin white collar strip along the neckline and a small ivory ribbon tied at the chest whose short tails stop well above the waist, worn over a very full high-waisted skirt that starts just under the chest.
+sheer gradient skirt — The skirt is layered sheer organza in warm apricot-gold, a deeper apricot orange at the waist fading to pale butter cream at the hem, ballooning out wide and falling in long soft folds all the way to the stone.
+
+## Pose
+Main en visière — Her body turns about three-quarters toward frame left while her face turns back to the lens; she raises her right arm, elbow lifted out to frame left at head height, and rests the back of her right hand lightly against her forehead above the brow, fingers loosely curled.
+skirt hold — Her left hand rests low at her left hip, the fingers lightly pinching a fold of the skirt and drawing it slightly to the side.
+
+## Scene
+경복궁 회랑 — A long palace hall runs along the frame-right side, with tall vermilion pillars, celadon-green lattice doors and windows, and granite blocks set along the base of the building receding into the distance.
+palace courtyard — Pale grey stone paving runs under her feet beside a wide sandy gravel courtyard at frame left, with a second hall of red pillars and green lattice windows across it in soft focus.
+
+## Light
+西日 — Low late-afternoon sun comes from behind her on the frame-left side, shining through the sheer skirt so the whole skirt glows bright translucent golden apricot, with a thin warm edge of sun along the frame-left side of her sleeve and hair.
+long shadows — Long soft-edged shadows slant from her and from the pillars across the pale stone paving toward the lower right, her face and the front of the jacket sit in open shade.
+
+## Optics
+85mm 人像 — A short-telephoto lens compresses the long walkway and pillars into stacked layers behind her and softens the far hall into gentle blur.
+warm digital grade — Warm amber highlights that roll off softly without clipping, slightly lifted blacks, faintly green-teal shadows and fine digital noise in the shaded areas.
+
+## Camera
+full-figure walkway shot — A vertical full-length shot from about chest height roughly five meters away, her whole figure fairly small and slightly left of center: the top of her head sits about a quarter of the way down from the top edge and the hem ends a little above the bottom edge, with the walkway and its granite blocks leading back on the right; her face and outfit in sharp focus with the background softly out of focus.

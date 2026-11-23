@@ -220,6 +220,13 @@ Scene 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다. 
 | 돌담 | 한옥 돌담; stone wall; fieldstone wall | KR | 한옥; 부분; 골목 | A low wall of uneven grey fieldstones edging a lane or yard. | item |
 | 장독대 | 장독을 놓는 대; onggi jar terrace | KR | 한옥; 부분; 마당; 전통 | A raised stone terrace lined with round brown earthenware jars. | place |
 | 장독 | 옹기 장독; onggi jar; earthenware sauce jar | KR | 한옥; 장독대; 마당; 전통 | A round glossy brown earthenware jar with a lid, the kind set out in rows on a 장독대. | item |
+| 고궁 | 궁궐; 조선 궁궐; Korean palace | KR | 궁궐; 한옥; 전통; 석조; 서울 장소 | A Joseon royal palace of long timber halls on stone platforms, with vermilion pillars, painted eaves, curved tiled roofs and wide granite-paved courtyards. | place |
+| 경복궁 | 경복궁 근정전; Gyeongbokgung | KR | 고궁; 궁궐; 조선 궁궐; 서울 장소 | The main Joseon royal palace in Seoul, a throne hall and long timber halls around wide granite courtyards under a mountain backdrop. | place |
+| 창덕궁 | 창덕궁 후원; Changdeokgung | KR | 고궁; 궁궐; 조선 궁궐; 서울 장소 | A Joseon royal palace in Seoul whose halls sit among trees and a wooded rear garden. | place |
+| 창경궁 | Changgyeonggung | KR | 고궁; 궁궐; 조선 궁궐; 서울 장소 | A Joseon royal palace in Seoul of smaller halls and quiet courtyards beside Changdeokgung. | place |
+| 박석 | 박석 마당; 궁궐 박석; uneven granite paving | KR | 고궁; 부분; 바닥; 석조 | Rough, thin granite slabs of uneven size laid edge to edge across a palace courtyard, their surfaces pitted and the gaps between them dark. | item |
+| 단청 | 궁궐 단청; 단청 문양; dancheong | KR | 고궁; 부분; 처마; 색 | Bands and patterns of green, blue, red and yellow painted along the timber eaves, beams and brackets of a palace or temple. | item |
+| 기둥 | 궁궐 기둥; 붉은 기둥; vermilion pillar | KR | 고궁; 부분; 목구조; 붉은색 | Tall round timber pillars painted vermilion, standing in a row on stone bases under the eaves of a palace hall. | item |
 
 ## CN
 

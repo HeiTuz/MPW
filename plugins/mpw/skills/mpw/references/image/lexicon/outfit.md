@@ -148,6 +148,8 @@ Outfit 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다.
 | 조거 팬츠 | 조거; 트레이닝 팬츠; 스웨트팬츠; 집콕 바지; jogger pants | KR | 편한 옷; 집; 캐주얼; 아이폰 원본 셀카; 아이폰 셀카; iPhone native selfie | Soft grey cotton jogger pants with a drawstring waist and ribbed ankle cuffs, the loose fabric folding at the knees under an oversized tee. | item |
 | 고름 | 옷고름; 한복 고름; ribbon ties | KR | 한복; 부분; 저고리; 디테일 | The long ties knotted at the chest of a hanbok jacket, two loose tails. | item |
 | 동정 | 한복 동정; white collar strip | KR | 한복; 부분; 저고리; 디테일 | A narrow white strip sewn along the neckline of a hanbok jacket. | item |
+| 노방 | 노방주; sheer silk gauze | KR | 한복; 부분; 옷감; 시스루; 여름 | A thin, crisp, see-through silk gauze with a fine open weave that lets the layer beneath show faintly. | item |
+| 배래 | 소매 배래; 한복 소매 배래; sleeve curve | KR | 한복; 부분; 저고리; 소매 | The softly curved lower edge of a hanbok sleeve, swelling out from the armpit and narrowing to the cuff. | item |
 
 ## CN
 

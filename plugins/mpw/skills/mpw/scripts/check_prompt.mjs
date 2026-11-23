@@ -52,8 +52,8 @@ export const CODE_REGISTRY = Object.freeze({
   mixAmount: { code: "mix/amount", severity: { native: "warning", assembled: null }, intent: "Flag more original-language chunks in the layer sentences than 1.5 per layer line." },
   mixUnlisted: { code: "mix/unlisted", severity: { native: "warning", assembled: null }, intent: "Flag original-language words that no lexicon row, look card or fixed-lines.md carries." },
   mixRenamed: { code: "mix/renamed", severity: { native: "warning", assembled: null }, intent: "Flag one thing called by two names: another alias of a line-head token written outside its line." },
-  mixCulture: { code: "mix/culture", severity: { native: "warning", assembled: null }, intent: "Flag a photo term from the other culture's column of fixed-lines.md (高光 in a JP scene, 白飛び in a KR or CN scene), the culture read from the Finish tokens." },
-  mixThin: { code: "mix/thin", severity: { native: "warning", assembled: null }, intent: "Flag a KR, CN or JP photo prompt that barely mixes: few original-language line heads, no photo term in Optics or Camera, or no expression word in Expression. For --engine seedream, midjourney and soul (one paragraph, no line heads): a person photo in a KR, CN or JP scene with fewer than three original-language words (engine-levers.md §3)." },
+  mixCulture: { code: "mix/culture", severity: { native: "warning", assembled: null }, intent: "Flag a photo term from the other culture's column of fixed-lines.md (高光 in a JP scene, 白飛び in a KR or CN scene), the culture read from the Finish tokens, or from the language of the line heads and sentence words when there are none." },
+  mixThin: { code: "mix/thin", severity: { native: "warning", assembled: null }, intent: "Flag a KR, CN or JP photo prompt that barely mixes: no Finish layer in a person photo prompt, an owner (한복, 고궁) called without any of its part names in the original language, few original-language line heads, no photo term in Optics or Camera, or no expression word in Expression. For --engine seedream, midjourney and soul (one paragraph, no line heads): a person photo in a KR, CN or JP scene with fewer than three original-language words (engine-levers.md §3)." },
   engineBrand: { code: "coherence/engine-brand", severity: { native: "warning", assembled: "warning" }, intent: "Flag a film stock brand name in a Soul prompt, which draws the film border." },
   parse: { code: "manifest/parse", severity: { native: "error", assembled: "error" }, intent: "Report invalid JSON without losing subsequent rows." },
   notObject: { code: "manifest/not-object", severity: { native: "error", assembled: "error" }, intent: "Require an object for each manifest row." },
@@ -485,11 +485,38 @@ function mixSources() {
   try {
     const known = new Set();
     const rowsByToken = new Map();
+    const everyRow = [];
     for (const layer of loadAll(resolve(mixRoot, "lexicon"))) {
       for (const row of layer.rows) {
         for (const name of [row.token, ...row.aliases]) known.add(mixKey(name));
         const key = mixKey(row.token);
         rowsByToken.set(key, [...(rowsByToken.get(key) ?? []), row]);
+        everyRow.push({ row, slug: layer.slug });
+      }
+    }
+    // A 부분 row's first tag names what it is a part of (고름 → 한복, 박석 → 고궁; layer-lexicon.md). Each outfit or scene row that owns part rows, with the original-language names of its parts
+    // (an alias that repeats the owner's own name, 한복 고름, does not count as the part's name).
+    const ownersByName = new Map();
+    for (const { row, slug } of everyRow) {
+      if (row.tags.includes("부분") || (slug !== "outfit" && slug !== "scene")) continue;
+      for (const name of [row.token, ...row.aliases]) ownersByName.set(mixKey(name), [...(ownersByName.get(mixKey(name)) ?? []), { row, slug }]);
+    }
+    const owners = new Map();
+    for (const { row } of everyRow) {
+      if (!row.tags.includes("부분")) continue;
+      for (const owner of (ownersByName.get(mixKey(row.tags[0])) ?? []).filter((entry) => entry.row.culture.some((culture) => row.culture.includes(culture)))) {
+        const ownKey = mixKey(owner.row.token);
+        const names = [row.token, ...row.aliases.filter((alias) => NATIVE_CHAR.test(alias) && !mixKey(alias).includes(ownKey))];
+        const entry = owners.get(owner.row) ?? { slug: owner.slug, parts: [], others: [] };
+        entry.parts.push({ token: row.token, names });
+        owners.set(owner.row, entry);
+      }
+    }
+    // A 부분 row's first tag is not always an owner (立领 is tagged 단정함, 障子 전통): any 부분 row of the owner's layer and culture is one of its parts too.
+    for (const [owner, entry] of owners) {
+      for (const { row, slug } of everyRow) {
+        if (slug !== entry.slug || !row.tags.includes("부분") || !row.culture.some((culture) => owner.culture.includes(culture))) continue;
+        if (!entry.parts.some((part) => part.token === row.token)) entry.others.push({ token: row.token, names: [row.token, ...row.aliases.filter((alias) => NATIVE_CHAR.test(alias))] });
       }
     }
     // A space-joined chunk (순한 이목구비) also lists each of its words.
@@ -530,7 +557,7 @@ function mixSources() {
         if (group) for (const token of cells.slice(2).join(" ").match(/`[^`]+`/gu) ?? []) finish.set(mixKey(token.slice(1, -1)), group);
       }
     }
-    mixKnown = { known, rowsByToken, phrases, jpPhrases, photo, finish };
+    mixKnown = { known, rowsByToken, phrases, jpPhrases, photo, finish, owners };
   } catch {
     mixKnown = null;
   }
@@ -571,6 +598,41 @@ function aliasPattern(alias) {
 
 // Exact copy in quotes (a sign that reads "営業中") is the user's or the photo's text (image-brief.md §6, §12.4), not mixed-in words.
 const unquote = (text) => text.replace(/"[^"\n]*"|“[^”\n]*”|「[^」\n]*」|『[^』\n]*』/gu, '""');
+// A prompt that never writes a Finish layer: the machine contract ceiling (image-brief.md §1) or a drawn, painted or 3D medium in the first line.
+const CONTRACT_LIMIT = 2000;
+const NOT_PHOTO = /\b(?:illustration|illustrated|anime|manga|cartoon|3d|render(?:ed)?|painting|watercolou?r|drawing|sketch|vector|cgi)\b/iu;
+const CUE_GROUP = (text) => { const found = ASIAN_SCENE.exec(text)?.[0]; return found ? (/japan|tokyo|osaka|kyoto|shibuya|shinjuku/iu.test(found) ? "JP" : "KRCN") : null; };
+
+// The culture's column (KRCN or JP) of a prompt with no Finish tokens: the language most of its original-language chunks are in, the line heads and the sentence words together
+// (a lexicon row of one culture counts for that culture, otherwise Hangul or Han counts KRCN and kana JP); a lead of fewer than three (one Japanese jacket name in a Paris scene) falls to the place cues of the first line and Scene, and no cue leaves it unread.
+function proseCulture(lines, first, scene, sources) {
+  const votes = { KRCN: 0, JP: 0 };
+  for (const item of lines.filter((entry) => entry.section !== "Finish")) {
+    for (const chunk of [...chunksOf(item.head), ...item.chunks]) {
+      const cultures = new Set((sources.rowsByToken.get(mixKey(chunk)) ?? []).flatMap((row) => row.culture).filter((culture) => /^(?:KR|CN|JP)$/u.test(culture)));
+      const group = !cultures.size ? null : cultures.has("JP") ? (cultures.size === 1 ? "JP" : null) : "KRCN";
+      votes[group ?? (/[\p{sc=Hiragana}\p{sc=Katakana}]/u.test(chunk) ? "JP" : "KRCN")]++;
+    }
+  }
+  if (Math.abs(votes.KRCN - votes.JP) >= 3) return votes.KRCN > votes.JP ? "KRCN" : "JP";
+  return CUE_GROUP(`${first} ${scene}`);
+}
+
+// A 부분 row's owner (한복, 고궁) called at a line head or in the first line, but none of its parts named in the original language anywhere in the prompt: the parts were written out in English.
+// The clothes' parts are read only when the prompt has an Outfit layer, so a face close-up that shows no sleeve or ribbon is not asked for one (image-brief.md §2.1).
+function inspectParts(result, sections, lines, first, instruction, sources) {
+  const text = mixKey(unquote(instruction));
+  let shown = 0;
+  for (const [row, { slug, parts, others }] of sources.owners) {
+    if (shown >= 2 || !sections.some((section) => section.name === (slug === "outfit" ? "Outfit" : "Scene"))) continue;
+    const names = [row.token, ...row.aliases].filter((name) => (NATIVE_CHAR.test(name) ? mixKey(name).length >= 2 : name.length >= 6));
+    const called = names.some((name) => lines.some((item) => item.section !== "Finish" && mixKey(item.head).includes(mixKey(name))) || aliasPattern(name).test(first));
+    if (!called || [...parts, ...others].some((part) => part.names.some((name) => text.includes(mixKey(name))))) continue;
+    shown++;
+    emit(result, CODE_REGISTRY.mixThin, `The prompt barely mixes languages: ${row.token} is called, but none of its part names is written in the original language (${[...parts, ...others].slice(0, 6).map((part) => part.token).join(" | ")}).`, { hint: "Call the parts the frame shows by these names inside the English sentence (find_tokens prints them under 문장 속 낱말) instead of describing them in English; leave out a part the frame does not show (image-brief.md §2.1)." });
+  }
+}
+
 function inspectMix(result, instruction) {
   const sections = layerSections(instruction).filter((section) => section.name === null || /^[A-Za-z]/u.test(section.name));
   const lines = sections.filter((section) => section.name && section.name !== "Identity Reference")
@@ -641,16 +703,24 @@ function inspectMix(result, instruction) {
   if (renamed.length) {
     emit(result, CODE_REGISTRY.mixRenamed, `One thing is called by two names: ${[...new Set(renamed)].slice(0, 3).join(" | ")}`, { hint: "Call a thing the same way from the first line to Finish: use the line-head token again, or the English name only if the thing has no row (image-brief.md §2 rule 3)." });
   }
-  // One photo-term column a prompt: the Finish tokens name the culture row (KR, CN or 단서 없음 the KR·CN column, JP the JP column); US·FR tokens or none, nothing is read.
+  inspectParts(result, sections, lines, first, instruction, sources);
+  // One photo-term column a prompt: the Finish tokens name the culture row (KR, CN or 단서 없음 the KR·CN column, JP the JP column); US·FR tokens, nothing is read.
+  // No Finish tokens at all (no Finish layer, or slot-name heads) and not a drawn or 3D medium: the language of the line heads and sentence words names the column instead (proseCulture), so the checks below still run.
   const groups = new Set(lines.filter((item) => item.section === "Finish").map((item) => sources.finish.get(mixKey(item.head))).filter(Boolean));
   const finishLines = lines.filter((item) => item.section === "Finish");
-  // Finish heads that are slot names (closer, realism, anti-cg) instead of the culture row's tokens: the prompt was written without the fixed-lines.md rows at all.
   const person = sections.some((section) => section.name === "Identity Reference");
+  const own = groups.size ? (groups.size === 1 && !groups.has("LATIN") ? [...groups][0] : null)
+    : NOT_PHOTO.test(first) ? null : proseCulture(lines, first, sections.filter((section) => section.name === "Scene").flatMap((section) => section.lines).join(" "), sources);
+  // Finish heads that are slot names (closer, realism, anti-cg) instead of the culture row's tokens: the prompt was written without the fixed-lines.md rows at all.
   if (person && finishLines.length && !groups.size) {
     emit(result, CODE_REGISTRY.mixThin, `The prompt barely mixes languages: the Finish line heads (${finishLines.slice(0, 3).map((item) => item.head).join(" | ")}) are not the culture row's tokens.`, { hint: "Pick the culture row in fixed-lines.md §문화권 고르기 (no cue: the KR row) and use its Finish tokens, Identity paragraph and §문장 속 낱말 column; name what is in the frame with lexicon tokens at the line heads (image-brief.md §2.1)." });
   }
-  if (groups.size === 1 && !groups.has("LATIN")) {
-    const [own] = groups;
+  // image-brief.md §3: a photo always ends in Finish; only a machine contract (2,000 characters, so the layers are trimmed, §1) or a drawn or 3D medium leaves it out.
+  const photo = sections.some((section) => /^(?:Optics|Camera)$/u.test(section.name ?? "")) && !NOT_PHOTO.test(first);
+  if (person && photo && !sections.some((section) => section.name === "Finish") && result.surface !== "s1" && result.length.codepoints > CONTRACT_LIMIT) {
+    emit(result, CODE_REGISTRY.mixThin, "A person photo prompt has no Finish layer, so its closer, realism and anti-cg line heads (the culture row's tokens) are missing.", { hint: "End with ## Finish: the three lines of the scene's culture row in fixed-lines.md ## Finish, unless the contract limit or a drawn or 3D medium leaves it out (image-brief.md §3)." });
+  }
+  if (own) {
     const other = own === "JP" ? "KRCN" : "JP";
     const wrong = lines.flatMap((item) => item.chunks).filter((chunk) => sources.photo[other].has(mixKey(chunk)) && !sources.photo[own].has(mixKey(chunk)));
     if (wrong.length) emit(result, CODE_REGISTRY.mixCulture, `Photo terms from the ${other === "JP" ? "JP" : "KR·CN"} column in a ${own === "JP" ? "JP" : "KR·CN"} prompt: ${[...new Set(wrong)].slice(0, 5).join(" | ")}`, { hint: "Take the photo terms from the column of the scene's culture in fixed-lines.md §문장 속 낱말 (the one its Finish tokens come from), or write them in English." });
@@ -658,6 +728,13 @@ function inspectMix(result, instruction) {
     const french = lines.filter((item) => item.section !== "Finish").map((item) => item.head)
       .filter((head) => { const rows = sources.rowsByToken.get(mixKey(head)) ?? []; return rows.length && rows.every((row) => row.culture.length === 1 && row.culture[0] === "FR"); });
     if (french.length) emit(result, CODE_REGISTRY.mixCulture, `French tokens in a ${own === "JP" ? "JP" : "KR·CN"} prompt: ${[...new Set(french)].slice(0, 5).join(" | ")}`, { hint: "French tokens go only in a French scene. Search the scene's own culture first (find_tokens --culture KR, or JP, CN) and write the head in English when it has no row." });
+    // A head whose every row belongs to the other side of KR·CN and JP (西日 in a Korean palace, 旗袍 in a Tokyo street) is another culture's word too.
+    const asian = new Set(["KR", "CN", "JP"]);
+    const aside = lines.filter((item) => item.section !== "Finish").map((item) => item.head).filter((head) => {
+      const rows = sources.rowsByToken.get(mixKey(head)) ?? [];
+      return rows.length && rows.every((row) => { const cultures = row.culture.filter((culture) => asian.has(culture)); return cultures.length && (own === "JP" ? !cultures.includes("JP") : cultures.every((culture) => culture === "JP")); });
+    });
+    if (aside.length) emit(result, CODE_REGISTRY.mixCulture, `${other === "JP" ? "JP" : "KR·CN"} tokens in a ${own === "JP" ? "JP" : "KR·CN"} prompt: ${[...new Set(aside)].slice(0, 5).join(" | ")}`, { hint: "Search the scene's own culture first (find_tokens --culture KR, or JP, CN) and write the head in English when it has no row." });
     // The mix is the point of the prompt (image-brief.md §2.1): with or without a look card, most line heads are lexicon tokens and the Optics, Camera and Expression sentences carry table words.
     const body = lines.filter((item) => item.section !== "Finish");
     const nativeHeads = body.filter((item) => NATIVE_CHAR.test(item.head)).length;

@@ -79,5 +79,7 @@
   {"case":"a person photo prompt written with no original-language words","input":"pass/mix-thin.txt","args":[],"expect":{"ok":true,"warnings_include":["mix/thin"]}},
   {"case":"seedream person paragraph with original-language names kept","input":"pass/mix-engine-seedream.txt","args":["--engine","seedream"],"expect":{"ok":true,"warnings_exclude":["mix/thin"]}},
   {"case":"seedream person paragraph translated to English only","input":"pass/mix-engine-thin.txt","args":["--engine","seedream"],"expect":{"ok":true,"warnings_include":["mix/thin"]}},
-  {"case":"seedream Paris scene with a Japanese denim adjective is not an Asian scene","input":"pass/mix-engine-paris.txt","args":["--engine","seedream"],"expect":{"ok":true,"warnings_exclude":["mix/thin"]}}
+  {"case":"seedream Paris scene with a Japanese denim adjective is not an Asian scene","input":"pass/mix-engine-paris.txt","args":["--engine","seedream"],"expect":{"ok":true,"warnings_exclude":["mix/thin"]}},
+  {"case":"a hanbok photo prompt with no Finish layer, English part names and a French head still reads as KR","input":"pass/mix-no-finish.txt","args":[],"expect":{"ok":true,"warnings_include":["mix/culture","mix/thin"]}},
+  {"case":"the same hanbok scene with part names kept, a Finish layer and no French head","input":"pass/mix-with-finish.txt","args":[],"expect":{"ok":true,"warnings_exclude":["mix/line","mix/amount","mix/unlisted","mix/renamed","mix/culture","mix/thin"]}}
 ]
