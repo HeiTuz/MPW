@@ -6,7 +6,7 @@
 
 1. 층을 정하고 아래 층 표에서 그 층 파일을 연다. Identity Reference 층은 표가 없고 [image-brief.md](image-brief.md) §5를 따른다. 룩 이름이 요청에 있으면 층 표보다 먼저 `looks/`의 카드를 읽는다(검색 결과의 `## Look card` 블록이 읽는 명령을 준다. 카드 목록은 `node scripts/read_look.mjs --list`).
 2. 검색 명령과 결과를 쓰는 법은 [image-brief.md](image-brief.md) §4 '토큰 찾기', 원어를 쓰는 기준은 §2, 브랜드·실존 인물 이름은 §6이다. 스크립트를 못 돌리면 `grep -n "신중식" references/image/lexicon/*.md`로 찾는다.
-3. 열은 토큰, 별칭, 문화권, 태그, 화면에 보이는 모습, 종류다. 표는 열린 예시다. 개수 할당은 없고 장면에 맞는 것만 쓴다. 태그 `부분` 행(마당·창살·立领)은 문장 안에서 부르는 부분 이름이고, 검색에서 `## 문장 속 낱말` 블록으로 따로 나온다. 첫 태그는 딸린 것의 이름이다(고름 → `한복`).
+3. 열은 토큰, 별칭, 문화권, 태그, 화면에 보이는 모습, 종류다. 표는 열린 예시다. 개수 할당은 없고 장면에 맞는 것만 쓴다. 태그 `부분` 행(마당·창살·立领)은 문장 안에서 부르는 부분 이름이고, 검색에서 `## 문장 속 낱말` 블록으로 따로 나온다. 첫 태그가 한복·和室 같은 것의 이름인 행(고름 → `한복`)은 그것의 부분으로 읽는다.
 
 아이·학생 항목은 태그 `아동·학생`이 붙고, `--random`에서만 빠지며 관능 어휘를 붙이지 않는다. 넣지 않은 것: 실존 인물의 얼굴·몸을 닮게 하는 항목. 출처: noahvisualsx/Iris b83de4c(MIT)에서 낱말을 참고했고 문장은 새로 썼다. 룩 카드(`looks/`)는 Iris 프리셋의 구성과 디테일을 층별로 옮긴 것이라 고지 전문이 [looks/LICENSE-Iris.md](looks/LICENSE-Iris.md)에 있다.
 
@@ -24,7 +24,7 @@
 | Hair and makeup | [lexicon/hair-makeup.md](lexicon/hair-makeup.md) | 527 | 104 | 127 | 113 | 113 | 70 |
 | Expression | [lexicon/expression.md](lexicon/expression.md) | 377 | 92 | 72 | 78 | 61 | 74 |
 | Props and nails | [lexicon/props-nails.md](lexicon/props-nails.md) | 642 | 80 | 127 | 183 | 133 | 119 |
-| Scene | [lexicon/scene.md](lexicon/scene.md) | 1175 | 218 | 221 | 249 | 280 | 207 |
+| Scene | [lexicon/scene.md](lexicon/scene.md) | 1178 | 221 | 221 | 249 | 280 | 207 |
 | Camera | [lexicon/camera.md](lexicon/camera.md) | 64 | 2 | 18 | 13 | 12 | 19 |
 <!-- lexicon-counts:end -->
 
