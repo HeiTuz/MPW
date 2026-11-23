@@ -1,7 +1,7 @@
 A quiet documentary portrait of a woman greenhouse caretaker at the end of a workday, one hand resting on a bench of young tomato plants.
 
 ## Identity Reference
-If a model reference is provided, the woman in this photo is that model: take only the 얼굴형 and 이목구비 from it, adapting them naturally to this scene's expression, angle and light, and keep her own skin tone. Hair, makeup and everything else follow this prompt. If none is provided, she is an East Asian woman in her mid-forties with a calm, weathered face, clear bone structure and clear skin with fine lines. In either case 7.5등신, a small head over 直角肩 and 天鹅颈.
+If a model reference is provided, the woman in this photo is that model: take only the 얼굴형 and 이목구비 from it, adapting them naturally to this scene's expression, angle and light, and keep her own skin tone. Hair, makeup and everything else follow this prompt. If none is provided, she is an East Asian woman in her mid-forties with a calm, weathered face, clear bone structure and clear skin with fine lines. In either case 7.5등신, 小头 over 直角肩 and 天鹅颈.
 
 ## Hair and makeup
 tied hair — Gray-streaked dark hair is tied back loosely at the nape, with a few short strands escaping at the temples and catching the light.

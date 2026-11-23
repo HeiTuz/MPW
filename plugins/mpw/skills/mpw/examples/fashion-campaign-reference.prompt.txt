@@ -1,7 +1,7 @@
 A vertical autumn fashion campaign photo of a woman walking across a stone plaza in a belted stone-beige trench coat.
 
 ## Identity Reference
-If a model reference is provided, the woman in this photo is that model: take only the 얼굴형 and 이목구비 from it, adapting them naturally to this scene's expression, angle and light, and keep her own skin tone. Hair, makeup and everything else follow this prompt. If none is provided, she is a 22-year-old East Asian woman with 小脸, 오똑한 콧대, a clean 턱선 and 맑고 흰 피부. In either case 7.5등신, a small head over 直角肩 and 天鹅颈.
+If a model reference is provided, the woman in this photo is that model: take only the 얼굴형 and 이목구비 from it, adapting them naturally to this scene's expression, angle and light, and keep her own skin tone. Hair, makeup and everything else follow this prompt. If none is provided, she is a 22-year-old East Asian woman with 小脸, 오똑한 콧대, a clean 턱선 and 맑고 흰 피부. In either case 7.5등신, 小头 over 直角肩 and 天鹅颈.
 
 ## Attachments
 image 1 — Image 1 is the model photo and gives only the 얼굴형 and 이목구비.
