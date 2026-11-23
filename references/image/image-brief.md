@@ -645,11 +645,11 @@ After:
 
 ### 12.4 사진에 찍힌 표식
 
-- 사진에 보이는 로고, 브랜드 마크, 브랜드 글자는 옷·가방·소품·간판 어디 것이든 보이는 대로 쓴다. 무엇인지(이름이 읽히면 마지막 줄대로 정확 문구, 읽히지 않으면 모양·색), 위치, 크기, 색, 재료(자수·프린트·금속)를 쓴다. 상표 글자는 생성기가 깨뜨려 그리기 쉬우니 이름은 한 번만 위치·크기와 함께 짧게 쓴다(`a white stitched wordmark "NORTHFIELD" at the left chest`). 판독이 애매한 글자는 이름을 지어내지 않고 판독 불가 상태로 쓴다.
-- 사진 위에 덧씌운 워터마크, 자막, 캡션, 서명, 잡지 제호, 프레임 가장자리 마크는 장면의 일부가 아니므로 옮기지 않는다.
+- 사진에 보이는 로고, 브랜드 마크, 브랜드 글자는 옷·가방·소품·간판 어디 것이든 보이는 대로 쓴다. 무엇인지(이름이 읽히면 마지막 줄대로 정확 문구, 읽히지 않으면 모양·색), 위치, 크기, 색, 재료(자수·프린트·금속)를 쓴다. 상표 글자는 생성기가 깨뜨려 그리기 쉬우니 이름은 짧게 쓴다(`a white stitched wordmark "NORTHFIELD" at the left chest`). 판독이 애매한 글자는 이름을 지어내지 않고 판독 불가 상태로 쓴다.
+- 사진 위에 덧씌운 워터마크, 자막, 캡션, 서명, 잡지 제호는 장면의 일부가 아니므로 옮기지 않는다.
 - §6이 허용하는 룩을 가리키는 브랜드명 토큰(카메라, 필름 이름 등)은 이 절과 상관없이 그대로 쓴다.
 - 사진 속 물건의 브랜드 고유 기능명·부품명(예: 폰 뒷면의 자석 링을 부르는 상표 기능명)은 화면에 그리는 물건을 가리키므로 일반 명칭으로 쓴다(`a magnetic ring on the phone back`).
-- 읽은 글자는 브랜드 글자든 일반 글자든 §6 첫째 줄의 사용자가 준 문구로 본다(§6 둘째 줄보다 이 줄이 먼저다). 원문 그대로 따옴표에 넣고 위치, 크기, 서체, 한 번만 나온다는 것을 쓴다. 읽을 수 없는 글자가 함께 있으면 "다른 글자가 없다"는 문장 대신 그 글자의 위치와 판독 불가 상태(`small illegible lettering`)를 쓴다.
+- 읽은 글자는 브랜드 글자든 일반 글자든 §6 첫째 줄의 사용자가 준 문구로 본다(§6 둘째 줄보다 이 줄이 먼저다). 원문 그대로 따옴표에 넣고 위치, 크기, 서체, 한 번만 나온다는 것을 그 글자가 있는 물건의 줄에 쓴다(§6의 Text 층은 쓰지 않는다). 읽을 수 없는 글자가 함께 있으면 "다른 글자가 없다"는 문장 대신 그 글자의 위치와 판독 불가 상태(`small illegible lettering`)를 쓴다.
 
 ### 12.5 변경 요청이 함께 올 때
 
@@ -724,7 +724,7 @@ palette — The white of the 白シャツ, the black ベスト and ショルダ�
 
 ## Scene
 商店街 — A narrow street of small two- and three-story shops recedes behind her, with a yellow awning at left, green awnings on both sides, shuttered fronts at frame right and a parked bicycle with a basket beside an outdoor air-conditioner unit.
-コンビニ — A convenience store at upper left has a sign of orange, green and red bands carrying a small white wordmark too small to read.
+コンビニ — A convenience store at upper left has a sign of orange, green and red bands carrying a mark too small to read.
 電柱 — Concrete poles line the right side and recede down the street, with 電線 criss-crossing the white sky between them.
 通行人 — About eight small, sharp figures in dark jackets walk the street and the sidewalks, several carrying white plastic bags or backpacks, a person in a dark hoodie rides a ママチャリ left of center, and a silver minivan comes up the far end of the street.
 マンホール — A round iron cover sits in the gray asphalt at lower left beside diagonal white lane lines and a strip of green paint at the far left edge.
