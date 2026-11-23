@@ -2,6 +2,7 @@
 // mix/* shapes the fixtures do not cover: what the one-name check skips (layer headings, the first line's medium or look phrase,
 // the Finish closer, the Identity paragraph) and where a spaced phrase may stand. Text matching only; no image output is judged.
 import assert from "node:assert/strict";
+import { readFileSync } from "node:fs";
 import { checkText } from "./check_prompt.mjs";
 
 const codes = (text) => {
@@ -43,5 +44,35 @@ has(optics("高光") + finish("高精細", "実写"), "mix/culture");
 has(optics("白飛び") + finish("극사실", "실사 촬영"), "mix/culture");
 lacks(optics("高光") + finish("극사실", "실사 촬영"), "mix/culture");
 lacks(optics("最暗部") + finish("高精細", "実写"), "mix/culture");
+
+// No Finish layer: the culture is read from the language of the line heads and sentence words, then from place cues, so the other mix checks still run.
+const count = (text, code) => codes(text).filter((item) => item === code).length;
+lacks(optics("高光"), "mix/culture");
+has(optics("白飛び").replace("clean color", "깨끗한 색").replace("focus —", "초점 —"), "mix/culture");
+has(optics("高光").replace("clean color", "自然な色").replace("focus —", "ピント —"), "mix/culture");
+// One Han chunk and one kana chunk tie, so the place decides; with no place cue nothing is read.
+const tied = optics("高光 and 白飛び");
+lacks(tied, "mix/culture");
+has(tied.replace("a woman by", "a woman in Tokyo by"), "mix/culture");
+has(tied.replace("a woman by", "a woman in Seoul by"), "mix/culture");
+
+// A person photo ends in Finish; the contract ceiling and a drawn medium leave it out. The same prompt with its Finish layer has one mix/thin less.
+const fixture = (name) => readFileSync(new URL(`./fixtures/prompt-checks/pass/${name}`, import.meta.url), "utf8");
+const noFinish = fixture("mix-no-finish.txt");
+const withFinish = fixture("mix-with-finish.txt");
+const finishLayer = withFinish.slice(withFinish.indexOf("## Finish"));
+assert.equal(count(noFinish, "mix/thin") - count(noFinish + "\n" + finishLayer, "mix/thin"), 1, "a Finish layer removes the missing-Finish warning");
+const short = noFinish.split("\n\n").filter((block) => /^(?:A warm|## Identity|## Optics|## Camera)/u.test(block)).join("\n\n");
+assert.ok(short.length < 2000);
+assert.equal(count(short, "mix/thin"), count(short + "\n\n" + finishLayer, "mix/thin"), "under the 2,000-character contract ceiling nothing is asked");
+assert.equal(count(noFinish.replace("A warm late-afternoon telephoto photograph", "A watercolor illustration"), "mix/thin"), count(noFinish + "\n\n" + finishLayer, "mix/thin"), "a drawn medium needs no Finish");
+
+// A thing with part names (한복: 고름, 동정 …) called at a line head or in the first line but with none of the part names in the prompt gets one mix/thin;
+// a part name anywhere, or no Outfit layer for a clothes part, takes it away.
+const named = noFinish.replace("a thin white collar strip along the neckline", "a thin white 동정 along the neckline");
+assert.equal(count(noFinish, "mix/thin") - count(named, "mix/thin"), 1, "one part name satisfies the owner");
+assert.equal(count(noFinish, "mix/thin") - count(noFinish.replace(/## Outfit[\s\S]*?(?=## Pose)/u, ""), "mix/thin"), 1, "clothes parts are asked for only when there is an Outfit layer");
+assert.equal(count(withFinish, "mix/thin"), 0);
+assert.equal(checkText(withFinish).warnings.length, 0, "the properly mixed hanbok prompt has no warning at all");
 
 console.log("mix checks: one-name skips (heading, medium phrase, closer, Identity), spaced-phrase places, Expression phrases, quoted copy and photo-term columns pass; image output NOT RUN.");
