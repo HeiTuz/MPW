@@ -316,7 +316,7 @@ unchanged — Keep the room, the sofa's shape and position, the window light dir
 A clean digital street-style photograph: a woman pausing outside a converted red-brick café in 성수동 on an autumn afternoon, a stone-beige trench open over a charcoal skirt, shot full-length.
 
 ## Identity Reference
-If a model reference is provided, the woman in this photo is that model: take only the 얼굴형 and 이목구비 from it, adapting them naturally to this scene's expression, angle and light, and keep her own skin tone. Hair, makeup and everything else follow this prompt. If none is provided, she is a 22-year-old Korean woman with a 청순 face: 순한 이목구비, 작은 얼굴, 오똑한 콧대, a clean 턱선 and 맑고 흰 쿨톤 피부. In either case 7.5등신, a small head over 직각 어깨 and a long 목선.
+If a model reference is provided, the woman in this photo is that model: take only the 얼굴형 and 이목구비 from it, adapting them naturally to this scene's expression, angle and light, and keep her own skin tone. Hair, makeup and everything else follow this prompt. If none is provided, she is a 22-year-old Korean woman with a 청순 face: 순한 이목구비, 작은 얼굴, 오똑한 콧대, a clean 턱선 and 맑고 흰 쿨톤 피부. In either case 7.5등신, 小头 over 直角肩 and 天鹅颈.
 
 ## Hair and makeup
 시스루뱅 — A thin fringe of separated strands falls just above the brows, and the forehead shows between the strands.
@@ -381,7 +381,7 @@ focus — She is sharp from hair to loafers; the door and the bench at the frame
 A 1990s Hong Kong film still shot on tungsten cinema negative: a woman sheltering under a neon-lit 骑楼 in the night rain, a paper coffee cup in her hand, looking far down the street while the city smears past her.
 
 ## Identity Reference
-If a model reference is provided, the woman in this photo is that model: take only the 脸型 and 五官 from it, adapting them naturally to this scene's expression, angle and light, and keep her own skin tone. Hair, makeup and everything else follow this prompt. If none is provided, she is a 22-year-old Chinese woman with 清冷 bone structure: 巴掌脸, a straight 鼻梁, a clean 下颌线 and 冷白皮. In either case 7.5-head proportions, a small head over 直角肩 and 天鹅颈.
+If a model reference is provided, the woman in this photo is that model: take only the 脸型 and 五官 from it, adapting them naturally to this scene's expression, angle and light, and keep her own skin tone. Hair, makeup and everything else follow this prompt. If none is provided, she is a 22-year-old Chinese woman with 清冷 bone structure: 巴掌脸, a straight 鼻梁, a clean 下颌线 and 冷白皮. In either case 7.5-head proportions, 小头 over 直角肩 and 天鹅颈.
 
 ## Hair and makeup
 王家卫 — A loose 1990s perm grazing the collarbones, airy and slightly undone, the rain-damp ends clumping into soft ropes.
