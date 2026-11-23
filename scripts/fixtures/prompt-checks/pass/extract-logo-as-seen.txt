@@ -1,0 +1,56 @@
+A compact digital camera snapshot on a sunny day in a Japanese 下町 shopping street: a woman with long wind-blown hair, a phone held in both hands, turns back to look into the camera while the sky behind her blows out to white.
+
+## Identity Reference
+If a model reference is provided, the woman in this photo is that model: take only the face shape and facial features from it, adapting them naturally to this scene's expression, angle and light, and keep her own skin tone. Hair, makeup and everything else follow this prompt. If none is provided, she is a 22-year-old Japanese woman with a soft 透明感 look: a small face, gentle features and clear, fair skin. In either case she has 7.5-head proportions, a small head over level shoulders and a long neck.
+
+## Hair and makeup
+黒髪ロング — Long straight black hair falls past the chest with a loose center part and no fringe, turning warm dark brown wherever the sun shines through it.
+wind-blown strands — The breeze lifts loose strands across the frame-left side of her face and down over the shoulder at frame right, their edges glowing brown-gold against the bright street.
+透明感 — A sheer, barely-there base: the skin reads clear with a faint sheen on the cheekbones, no visible blush edge, and the eyes left almost bare.
+シアーリップ — A sheer coral-pink tint on the lips, soft and slightly translucent, on lips slightly parted.
+
+## Expression
+カメラ目線 — Her eyes look straight into the lens, calm and a little guarded, as if a friend just called her name and pressed the shutter.
+半開き唇 — The lips part slightly and the brows stay level, with no smile.
+
+## Outfit
+白シャツ — A crisp white cotton shirt with a pointed collar and long sleeves, the sunlit sleeve bright but still showing its folds.
+ニットベスト — A black fine-knit V-neck vest over the shirt, matte and soft, swallowing the light, with a small white stitched wordmark "NORTHFIELD" on the left chest, legible and appearing only once.
+black shoulder bag — A black faux-leather bag with a zip top hangs from her left shoulder on a long strap, one soft highlight running along its upper edge, with the name "HARBOR & CO" printed once in small, legible silver capitals on the front.
+
+## Props and nails
+スマホ — A silver smartphone with rounded edges, held in both hands at chest height with the screen toward her, its metal frame throwing a small sun glint.
+素爪 — Short bare nails with a faint natural gloss.
+
+## Pose
+振り返り — Her body faces frame left down the street while her head turns back over her left shoulder toward the camera.
+hands at the phone — Both elbows stay close to her body and both thumbs rest on the screen, as if she was typing a message a second ago.
+
+## Style
+日常スナップ — An everyday street snapshot: ordinary clothes on an ordinary afternoon, nothing staged or styled for the camera.
+palette — White shirt, black knit and bag, gray asphalt, green and yellow awnings, and a sky washed out to white.
+
+## Scene
+商店街 — A narrow shopping street of two- and three-story shops with green and yellow 日除け awnings, and on the left a convenience store with a plain orange, green and red striped sign and no logo or readable lettering.
+電柱 — Concrete poles stand on both sides of the street, a tangle of 電線 cables slung across the bright sky between them.
+通行人 — People with shopping bags walk the sidewalk, a man on a ママチャリ rides past at frame left, and a silver car comes up the far end of the street.
+マンホール — A round iron manhole cover sits in the gray asphalt at lower left beside a white lane line, and a few fallen leaves lie on the paving stones near her.
+
+## Light
+逆光 — The midday sun is high behind her toward frame left, rimming her hair and shoulders with a thin bright edge while her face sits in open shade, filled evenly by light bouncing off the street.
+cast shadows — The passersby throw short, hard-edged shadows toward the camera across the sidewalk.
+catchlight — A small soft bright patch from the open street sits in each eye.
+
+## Optics
+コンデジ — An early-2000s compact digital camera rendering: crisp, slightly over-sharpened edges, bright saturated awnings and clean daylight white balance.
+白飛び — The sky and the far end of the street clip to flat white, and the brightest edges of the white sleeve clip with them.
+デジタルノイズ — Very fine digital noise sits only in the dark shop interiors and under the awnings.
+
+## Camera
+パンフォーカス — Everything from her face to the far end of the street stays in focus, the deep depth of field of a small sensor.
+horizontal frame — A horizontal 4:3 frame cut at her hips, her figure in the right half and the street receding through the left half, shot at her eye level from about two meters.
+
+## Finish
+実写スナップ — The whole frame reads as an unretouched compact-camera snapshot a friend took on the street, not a fashion shoot.
+高精細 — Ultra-realistic 8K photographic detail: real skin texture, real cotton weave, real grit on the asphalt.
+実写 — A real person photographed on a real street, never an illustration, anime frame, 3D render or plastic-skinned CGI.
