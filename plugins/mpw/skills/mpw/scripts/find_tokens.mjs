@@ -351,13 +351,16 @@ const partBlock = (parts, more = 0) => (parts.length
   ? `## 문장 속 낱말\n(part names: use inside the English sentence, not as a line head.)\n${parts.map((m) => `${m.token} — ${m.looks} [${m.culture.join(', ')}]`).join('\n')}\n${more ? `(+${more} more: --limit ${Math.max(7, parts.length + more)})\n` : ''}`
   : '');
 
+// Rows are candidates for one image: the author picks the one that fits (image-brief.md slot table), so the prompt never carries the other rows or a choose-one line.
+export const ROWS_ARE_CANDIDATES = '(layer rows are candidates: for one image pick the row that fits and write it; leave the other candidates and any "choose one" wording out of the prompt.)';
+
 export function formatText(results, cards = [], candidates = [], { aliases = false } = {}, parts = [], more = 0) {
   const head = cardBlock(cards) + candidateBlock(candidates);
   if (results.every((l) => l.matches.length === 0) && !parts.length) {
     if (cards.length) return `${head}no layer rows matched; the card above carries the look.\n`;
     return `${head}no match in any layer. Use English tokens and sentences: original-language words come only from the lexicon, a look card, fixed-lines.md or the user (image-brief.md §2.1).\n`;
   }
-  const layers = results.map((l) => {
+  const layers = `${ROWS_ARE_CANDIDATES}\n` + results.map((l) => {
     const body = l.matches.length
       ? l.matches.map((m) => `${m.token} — ${m.looks}${aliases && m.aliases.length ? ` (${m.aliases.slice(0, 4).join(', ')})` : ''} [${m.kind}${m.tags.includes('소품 필요') ? ', 소품 필요' : ''}]`).join('\n')
       : 'no match';

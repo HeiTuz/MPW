@@ -54,6 +54,8 @@ export const CODE_REGISTRY = Object.freeze({
   mixRenamed: { code: "mix/renamed", severity: { native: "warning", assembled: null }, intent: "Flag one thing called by two names: another alias of a line-head token written outside its line." },
   mixCulture: { code: "mix/culture", severity: { native: "warning", assembled: null }, intent: "Flag a photo term from the other culture's column of fixed-lines.md (高光 in a JP scene, 白飛び in a KR or CN scene), the culture read from the Finish tokens, or from the language of the line heads and sentence words when there are none." },
   mixThin: { code: "mix/thin", severity: { native: "warning", assembled: null }, intent: "Flag a KR, CN or JP photo prompt that barely mixes: no Finish layer in a person photo prompt, an owner (한복, 고궁) called without any of its part names in the original language, few original-language line heads, no photo term in Optics or Camera, or no expression word in Expression. For --engine seedream, midjourney and soul (one paragraph, no line heads): a person photo in a KR, CN or JP scene with fewer than three original-language words (engine-levers.md §3)." },
+  pickOne: { code: "phrasing/pick-one", severity: { native: "warning", assembled: "warning" }, intent: "Flag wording that hands the choice to the model: the author writes one value and leaves no option list in the prompt." },
+  poseOptions: { code: "coherence/pose-options", severity: { native: "warning", assembled: "warning" }, intent: "Flag a Pose layer that lists alternative poses (numbered or bulleted lines, or two posture words joined by or) instead of one pose." },
   engineBrand: { code: "coherence/engine-brand", severity: { native: "warning", assembled: "warning" }, intent: "Flag a film stock brand name in a Soul prompt, which draws the film border." },
   parse: { code: "manifest/parse", severity: { native: "error", assembled: "error" }, intent: "Report invalid JSON without losing subsequent rows." },
   notObject: { code: "manifest/not-object", severity: { native: "error", assembled: "error" }, intent: "Require an object for each manifest row." },
@@ -449,7 +451,62 @@ function inspectCoherence(result, text, instruction) {
     emit(result, CODE_REGISTRY.dayNight, "A night cue and midday light appear in the same prompt.", { hint: "Pick one time of day and make Light and Optics agree." });
   }
   inspectSlotNames(result, sections);
+  inspectChoices(result, instruction);
   inspectEngine(result, instruction);
+}
+
+// One image is one pose: the author picks the value (image-brief.md slot table). A prompt that hands the choice to the model ("Choose exactly one") or lists poses makes a batch collapse onto one of them.
+// The choose/pick/select verbs count only as a command (sentence start, after a colon, dash or bullet, or after "you must"): "She will choose one of the cups" and "pick one petal" describe the scene. Korean counts only 다음·아래·위·이·그 중 하나를/만, or an imperative ending: "꽃 하나를 골라 든 손" describes the scene. Limit: a bare "하나를 골라 그린다" is not caught.
+const PICK_LEAD = "(?<=(?:^|[.!?:;—–(\\-*•])[ \\t]*(?:(?:please|now|then|just)\\s+|(?:you|the\\s+model|model)\\s+(?:should|must|may|can|will)\\s+)?)";
+const PICK_ONE = new RegExp(`${PICK_LEAD}(?:(?:choose|select)\\s+(?:exactly\\s+|only\\s+)?one\\s+of\\b|(?:choose|pick|select)\\s+(?:exactly|only)\\s+one\\b|(?:choose|pick)\\s+one\\b(?!\\s+up\\b))|\\bone\\s+of\\s+the\\s+following\\b|\\bany\\s+one\\s+of\\s+(?:these|the\\s+following)\\b|(?<![\\p{L}\\p{N}])(?:다음|아래|위|이|그)\\s*중(?:에서)?\\s*(?:하나|한\\s*가지)(?:를|을|만|로)|하나(?:만|를)?\\s*(?:고르세요|고르시오|고르십시오|골라라|골라\\s*주세요|선택하세요|선택하시오)`, "gimu");
+const POSE_LIST_LINE = /^\s*(?:\d{1,2}\s*[.)]\s|\(\d{1,2}\)\s|[-*•]\s+|(?:option|pose|variant|choice)\s+[A-Z0-9]\b|(?:옵션|포즈|자세)\s*\d)/iu;
+// A posture word per stem; two different stems on either side of "or" is a list of poses ("standing or sitting"). A pose on one side only ("one hand on the rail or hip") is not.
+const POSTURE = /\b(?:stand(?:s|ing)?|sit(?:s|ting)?|seated|lean(?:s|ing)?|walk(?:s|ing)?|kneel(?:s|ing)?|crouch(?:es|ing)?|squat(?:s|ting)?|lie|lies|lying|recline[ds]?|reclining|perch(?:es|ed)?|dancing|running)\b|서\s*있|앉|기대|걷|누워/giu;
+const POSTURE_STEMS = [["stand", /^stand/], ["sit", /^(?:sit|seated)/], ["lean", /^lean/], ["walk", /^walk/], ["kneel", /^kneel/], ["crouch", /^crouch/], ["squat", /^squat/], ["lie", /^(?:lie|lying|reclin)/], ["perch", /^perch/], ["dance", /^danc/], ["run", /^runn/], ["서", /^서/], ["앉", /^앉/], ["기대", /^기대/], ["걷", /^걷/], ["누", /^누/]];
+const POSTURE_OR = /\bor\b|또는|혹은|아니면/giu;
+// A negated pair ("standing tall, not leaning or sitting", "no standing or walking blur") rules postures out, so the pose is already one.
+const NEGATION = /\b(?:not|never|no|nor|without|avoid|instead\s+of|rather\s+than)\b|않|말고|없이|아닌/iu;
+const postureStems = (text) => new Set(snippets(POSTURE, text).map((word) => POSTURE_STEMS.find(([, stem]) => stem.test(word.toLowerCase()))?.[0]));
+// Semicolons stay inside a segment so "stands at the window; or sits on the sill" keeps its left side. Three different postures in one segment with no negation ("one of standing, sitting, leaning") is a list too; a two-posture list without "or" ("standing; sitting") is not caught.
+function postureAlternatives(line) {
+  const hits = [];
+  for (const segment of line.split(/[.。]|\s[—–]\s/u)) {
+    if (postureStems(segment).size >= 3 && !NEGATION.test(segment)) hits.push(segment.trim().slice(0, 80));
+    for (const connector of segment.matchAll(POSTURE_OR)) {
+      if (NEGATION.test(segment.slice(0, connector.index))) continue;
+      const left = segment.slice(0, connector.index).replace(/[,;\s]+$/u, "").split(/[,;]/u).at(-1).split(/\s+/u).slice(-6).join(" ");
+      const right = segment.slice(connector.index + connector[0].length).replace(/^[,;\s]+/u, "").split(/[,;]/u)[0].split(/\s+/u).slice(0, 6).join(" ");
+      const [before, after] = [postureStems(left), postureStems(right)];
+      if ([...before].some((stem) => [...after].some((other) => other !== stem))) hits.push(segment.trim().slice(0, 80));
+    }
+  }
+  return hits;
+}
+// The Pose layer is any heading level whose name starts with pose, posture, 포즈 or 자세 ("## Pose and hands", "### POSE"). A line that ends or starts with "or" is joined to its neighbour so a wrapped "standing, or / sitting" reads as one.
+function poseLines(instruction) {
+  const lines = [];
+  let inPose = false;
+  for (const line of instruction.split(/\r?\n/u)) {
+    const heading = /^#{1,6}\s+(.+?)\s*$/u.exec(line);
+    if (heading) inPose = /^(?:poses?|posture)(?![\p{L}])|^(?:포즈|자세)/iu.test(heading[1]);
+    else if (inPose && line.trim()) lines.push(line);
+  }
+  return lines.reduce((joined, line) => {
+    if (joined.length && (/(?:\bor|또는|혹은|아니면)[,\s]*$/iu.test(joined.at(-1)) || /^\s*(?:or\b|또는|혹은|아니면)/iu.test(line))) joined[joined.length - 1] += ` ${line.trim()}`;
+    else joined.push(line);
+    return joined;
+  }, []);
+}
+function inspectChoices(result, instruction) {
+  evidence(result, CODE_REGISTRY.pickOne, snippets(PICK_ONE, instruction), "The prompt hands a choice to the model",
+    "The author picks the value and writes it as one statement; leave no option list or choose-one wording in the prompt (image-brief.md slot table).");
+  const lines = poseLines(instruction);
+  const listed = lines.filter((line) => POSE_LIST_LINE.test(line));
+  const alternatives = lines.flatMap(postureAlternatives);
+  if (listed.length >= 2 || alternatives.length) {
+    emit(result, CODE_REGISTRY.poseOptions, listed.length >= 2 ? `The Pose layer has ${listed.length} numbered or bulleted lines, a list of options.` : `The Pose layer joins different postures with "or": ${[...new Set(alternatives)].slice(0, 2).join(" | ")}`,
+      { hint: "Write one pose: the author picks it, and weight shift, hands and turn are lines of that one pose. For several images, write one prompt per pose." });
+  }
 }
 
 // image-brief.md §12.2: a token names the thing shown, never a layer or category name. Slot tokens that fixed-lines.md and the look-card frame define (face clear, catchlight, palette, vertical frame, horizontal frame, focus, hands) are allowed. Only the `token — sentence` lines inside a layer are read.

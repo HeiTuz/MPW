@@ -78,6 +78,7 @@ manifest 검사는 한 행에 하나의 객체를 받는다. 필수 텍스트는
 | `phrasing/ko-negation` | 경고, assembled | 한국어 지시형 부정문을 긍정형 결과로 바꿀 수 있음 |
 | `phrasing/quality-tag` | 오류, assembled | 품질 태그 사용. native 새 이미지 문안의 Finish `8K`([fixed-lines.md](fixed-lines.md))는 보지 않는다. assembled도 `## Finish` 층 안의 첫 `8K` 하나는 보지 않고, 다른 곳의 `8K`와 둘째 `8K`는 오류다 |
 | `phrasing/vague-adjective` | 경고, 공통 | 결과를 판정하기 어려운 평가형 수식어 |
+| `phrasing/pick-one` | 경고, 공통 | 모델에게 선택을 넘기는 문구. 영어 `choose (exactly·only) one`·`choose one of`·`pick (exactly·only) one`·`select one of`는 문장 첫머리·콜론·대시·글머리표 뒤나 `you must` 뒤의 명령일 때만 본다(`She will choose one of the cups`·`pick one petal`은 장면 묘사). `one of the following`, `any one of these`, 한국어 `다음·아래·위·이·그 중 하나를·만`과 `하나를 고르세요·골라라`. 작성자가 값을 하나로 정해 쓰고 선택지 목록을 프롬프트에 남기지 않는다. 따옴표 안 정확 문구는 보지 않는다 |
 | `phrasing/noise-trigger` | 경고, gpt-image 엔진의 assembled와 `Edit the attached`로 시작하는 편집 문안(새 이미지 native 문안은 입자·`8K`를 [fixed-lines.md](fixed-lines.md)가 정하므로 보지 않는다) | 부정·제거 구문 밖에 [surface-contracts.md](surface-contracts.md) §3.2.4 표의 어휘가 있음. 입자·매체와 과잉 세부 행 전체, 부유 입자 행의 `particles` 계열, 거친 표면 행의 `paper grain`·`canvas texture`·`rough texture`·거친 질감만 본다. 사물로도 흔히 쓰는 `sparkles`·`glitter`·`textured background`와 한국어 먼지·종이 질감은 보지 않는다. 삭제 지시가 아니라 알림 후보 |
 | `portrait/skin-token` | 경고, assembled | 피부 어휘의 의도를 검토하되 요청 질감·부위·부분 수정 범위를 보존 |
 | `portrait/nationality-skin` | 경고, assembled | 색의 출처를 확인하며 요청 캐릭터색을 보존; 어휘만으로 국적 추론을 단정하지 않음 |
@@ -90,6 +91,7 @@ manifest 검사는 한 행에 하나의 객체를 받는다. 필수 텍스트는
 | `coherence/decimal` | 오류, 공통 | 소수점이 `。`로 바뀜(`7。5`) |
 | `coherence/slot-dup` | 경고, 공통 | Hair and makeup(나눈 `Makeup` 층 포함)에 입술 줄이 둘 이상이거나, 캐치라이트를 적은 줄이 둘 이상 |
 | `coherence/day-night` | 경고, 공통 | 밤 단서와 `noon`·`midday`가 한 문안에 함께 있음 |
+| `coherence/pose-options` | 경고, 공통 | 이름이 `Pose`·`Posture`·`포즈`·`자세`로 시작하는 층(제목 수준·대소문자 무관, `## Pose and hands` 포함)에 번호·글머리표(`1.`, `2)`, `- `, `Option A`, `Pose 1`) 줄이 둘 이상이거나, 서로 다른 자세 낱말(standing·sitting·leaning·walking·kneeling·lying 등, 한국어 서 있·앉·기대·걷·누워)이 `or`·`또는`·`혹은`·`아니면`(`;`·줄바꿈 너머 포함)으로 묶이거나, 부정 없이 세 가지 이상 나열됨. 한 자세를 부위별로 나눈 줄(weight shift·hands·turn), `either side`·`left or right hand`, `not leaning or sitting`처럼 부정으로 배제하는 줄은 보지 않는다. 자세 둘을 `or` 없이 `;`로만 나열한 줄은 놓친다 |
 | `coherence/engine-layers` | 경고, 엔진 한정 | `--engine seedream·nano-banana·soul·midjourney`에서 `## 층` 제목이 둘 이상. GPT Image 층 문안을 그 엔진 모양으로 펴지 않았다([engine-levers.md](engine-levers.md) §4) |
 | `coherence/engine-flag` | 경고, 엔진 한정 | `--engine seedream·nano-banana·soul`의 본문에 `--ar`·`--no`·`--oref` 같은 Midjourney 플래그나 `AR 3:4`. 호출 설정으로 옮긴다 |
 | `coherence/engine-ban` | 경고, 엔진 한정 | `--engine nano-banana·soul·midjourney`에서 `never·not·no` + `illustration·anime·cartoon·3D render·CGI`. Midjourney는 `--no`, 나머지는 `a real photograph` 같은 긍정 매체로(Seedream 칸은 이 문장을 쓴다) |
