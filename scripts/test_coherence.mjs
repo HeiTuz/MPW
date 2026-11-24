@@ -120,6 +120,7 @@ lacks(legs("와이드 팬츠", "니삭스"), "coherence/legwear");
 lacks(legs("와이드 팬츠", "素足"), "coherence/legwear");
 lacks(legs("와이드 팬츠", "스타킹", "Wide trousers with a long slit up each leg."), "coherence/legwear");
 lacks(legs("와이드 팬츠", "스타킹", "Wide trousers, cropped at the shin."), "coherence/legwear");
+lacks(legs("Cotton Maxi Dress", "damask tights", "A dress faintly translucent where the low sun comes through."), "coherence/legwear");
 lacks(legs("와이드 팬츠", "데미지 스타킹", "Wide trousers.", "Tights with torn holes."), "coherence/legwear");
 lacks("A photograph.\n\n## Legwear\n스타킹 — Fine sheer stockings.", "coherence/legwear");
 lacks("A photograph.\n\n## Outfit\n와이드 팬츠 — Wide trousers.", "coherence/legwear");

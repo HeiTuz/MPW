@@ -527,7 +527,7 @@ function inspectChoices(result, instruction) {
 // 밤 한정 and 한낮 한정 (Light and Scene: night only, midday only). A tag counts only when every row of that head in that layer has it; a head with no row is read as English where noted. A warning, never an error.
 const LAYER_KEY = { outfit: /^(?:Outfit|Outerwear|Clothing)\b/iu, legwear: /^(?:Legwear|Hosiery)\b/iu, pose: /^(?:Poses?|Posture)\b/iu, expression: /^Expression\b/iu, light: /^Light\b/iu, scene: /^Scene\b/iu };
 // A visible-leg cue (a slit, rips, mesh, a cropped hem) in the Outfit sentence, or rips and slits in the Legwear sentence, takes the legwear warning away: the stockings are meant to show.
-const LEG_SHOWN = /\b(?:slits?|split|rips?|ripped|torn|tears?|distressed|holes?|cut-?outs?|sheer|see-through|mesh|lace|cropped|openings?)\b/iu;
+const LEG_SHOWN = /\b(?:slits?|split|rips?|ripped|torn|tears?|distressed|holes?|cut-?outs?|sheer|see-through|translucent|transparent|semi-sheer|mesh|lace|cropped|openings?)\b/iu;
 const HOSE_SHOWN = /\b(?:rips?|ripped|slits?|torn|holes?|cut-?outs?)\b/iu;
 const COVERS_HEAD = /\b(?:trousers|pants|jeans|slacks|chinos|jumpsuit|overalls|dungarees|leggings|joggers|sweatpants|culottes|maxi (?:dress|skirt)|(?:floor|ankle)[- ]length)\b/iu;
 const SHORT_HEAD = /\b(?:shorts?|cropped|capris?|mini)\b/iu;
