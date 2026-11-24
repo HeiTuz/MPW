@@ -670,12 +670,58 @@ const particleStems = (key) => (/^\p{sc=Hangul}+$/u.test(key) ? KOREAN_PARTICLES
   .filter((tail) => key.length > tail.length && key.endsWith(tail) && (key.length - tail.length > 1 || NATIVE_PARTICLES.includes(tail) || SHORT_STEM_TAILS.has(tail))).map((tail) => key.slice(0, -tail.length));
 const mixRoot = resolve(dirname(modulePath), "../references/image");
 let mixKnown;
-// Everything an original-language word may come from: lexicon tokens and aliases, and the original-language chunks in the table rows and backtick spans of fixed-lines.md
-// (its sentence-word tables, identity formulas and fixed lines) and of the look cards, and the Identity template. The prose around them is left out, and so are the examples in image-brief.md, which must pass
-// on these sources rather than vouch for themselves. If the lexicon or fixed-lines.md cannot be read, the checks that need them stay quiet instead of guessing, and the result's scope.unchecked says so (lexicon_checks).
+// Everything an original-language word may come from: lexicon tokens and aliases, the line cells, scene-set slot values and 고정 사실 backticks of the look cards, the original-language columns and line backticks of fixed-lines.md
+// (lookCardSource, fixedLinesSource), and the Identity template. The explanation around them (카드의 갈래 고르기·끄는 고정 몫·장면 세트의 이름과 단서, fixed-lines.md's procedure and 입력 용도별 table) is left out, and so are the examples
+// in image-brief.md, which must pass on these sources rather than vouch for themselves. If the lexicon or fixed-lines.md cannot be read, the checks that need them stay quiet instead of guessing, and the result's scope.unchecked says so (lexicon_checks).
 function mixSources() {
   if (mixKnown === undefined) mixKnown = readMixSources(mixRoot);
   return mixKnown;
+}
+// What the card and fixed-lines.md hand over as words to copy into a prompt (image-brief.md §2.1 rule 1): the line cells of a card (the 줄 column of a layer table, the Pose and Camera columns of the pair table),
+// the slot values of a scene set's 묶음 cell, and the backticked phrases of its 고정 사실 values; in fixed-lines.md the original-language columns of the word, Identity, Finish and shrink-word tables and the backticks of the sections that write lines.
+// The explanation around them (갈래 고르기, 끄는 고정 몫, a set's name and 단서 summary, the 입력 용도별 table, the procedure) is not a source.
+// A line cell may end with a note after its closing period: when the line applies, where it is borrowed from (수영장 장면일 때, 滤镜 #043).
+const NOTE_AFTER_LINE = /(?<=[.。!?])\s+\(.*\)\s*$/u;
+const tableCells = (row) => row.split("|").slice(1, -1).map((cell) => cell.trim());
+const backticked = (text) => [...text.matchAll(/`([^`\n]+)`/gu)].map((match) => match[1]).filter((span) => !span.startsWith("<") && !span.includes("#"));
+function lookCardSource(text) {
+  const out = [];
+  let section = "";
+  let columns = null;
+  let afterRow = false;
+  for (const line of text.split("\n")) {
+    if (line.startsWith("## ")) section = line.slice(3);
+    if (!line.startsWith("|")) { columns = null; afterRow = false; continue; }
+    const cells = tableCells(line);
+    if (!afterRow) {
+      afterRow = true;
+      columns = /^(?:고정 사실)/u.test(section) ? "backtick" : cells.includes("묶음") ? "set" : cells.map((cell, index) => (/^(?:줄|Pose|Camera)$/u.test(cell) ? index : -1)).filter((index) => index >= 0);
+      continue;
+    }
+    if (/^-+$/u.test(cells[0] ?? "")) continue;
+    // A scene set's 묶음 cell is `/`-separated slot values the card says to copy whole (image-brief.md §4 rule 4): the pieces that begin with a layer name (Outfit 毛边 denim cutoff shorts). 단서·소품·시간대·의상 summaries and 쌍 notes are not values.
+    if (columns === "set") out.push(...(cells[2] ?? "").split(" / ").filter((piece) => /^[A-Z][A-Za-z]+ /u.test(piece)));
+    else if (columns === "backtick") out.push(...backticked(cells.slice(1).join(" ")));
+    else for (const index of columns) if (cells[index]) out.push(cells[index].replace(NOTE_AFTER_LINE, ""));
+  }
+  return out.join("\n");
+}
+function fixedLinesSource(text) {
+  const out = [];
+  const sections = new Set(["문장 속 낱말", "Identity Reference", "Hair and makeup", "Light", "Optics", "Camera", "Finish", "압축 낱말"]);
+  let keep = false;
+  let section = "";
+  let afterRow = 2;
+  for (const line of text.split("\n")) {
+    if (line.startsWith("## ")) { section = line.slice(3).trim(); keep = sections.has(section); }
+    if (!keep) continue;
+    if (!line.startsWith("|")) { afterRow = 0; out.push(...backticked(line)); continue; }
+    afterRow++;
+    // A table's header and separator rows are labels; the first column is the English meaning or the culture's name.
+    if (afterRow <= 2) continue;
+    out.push(...tableCells(line).slice(1).filter((cell) => !/같다$/u.test(cell)));
+  }
+  return out.join("\n");
 }
 function readMixSources(root) {
   try {
@@ -724,15 +770,9 @@ function readMixSources(root) {
     // A space-joined chunk (순한 이목구비) also lists each of its words.
     const add = (text) => { for (const chunk of chunksOf(text)) for (const word of [chunk, ...chunk.split(/\s+/u)]) known.add(mixKey(word)); };
     const fixedLines = resolve(root, "fixed-lines.md");
-    const files = [fixedLines];
+    if (fs.existsSync(fixedLines)) add(fixedLinesSource(fs.readFileSync(fixedLines, "utf8")));
     const looks = resolve(root, "looks");
-    if (fs.existsSync(looks)) for (const name of fs.readdirSync(looks)) if (name.endsWith(".md")) files.push(resolve(looks, name));
-    for (const file of files) {
-      if (!fs.existsSync(file)) continue;
-      const text = fs.readFileSync(file, "utf8");
-      add(text.split("\n").filter((line) => line.startsWith("|")).join("\n"));
-      add([...text.matchAll(/`([^`\n]+)`/gu)].map((match) => match[1]).join("\n"));
-    }
+    if (fs.existsSync(looks)) for (const name of fs.readdirSync(looks)) if (name.endsWith(".md")) add(lookCardSource(fs.readFileSync(resolve(looks, name), "utf8")));
     // The Identity Reference template of image-brief.md §5 (얼굴형, 이목구비), which a reference-role line may repeat; not the examples.
     const brief = resolve(root, "image-brief.md");
     if (fs.existsSync(brief)) add(fs.readFileSync(brief, "utf8").split("\n## 5. ")[1]?.match(/```\w*\n([\s\S]*?)```/u)?.[1] ?? "");
@@ -792,8 +832,8 @@ function expressionListed(chunk, sources, heads) {
 function isListed(chunk, known, heads) {
   const key = mixKey(chunk);
   if (known.has(key) || heads.some((head) => head.includes(key))) return true;
-  // A particle on a listed word (마당은, 창살이, 文庫本の, 盘扣的) is still that word.
-  return particleStems(key).some((stem) => known.has(stem));
+  // A particle on a listed word or on a word a line head of this prompt already names (마당은, 창살이, 文庫本の, 盘扣的, 窓辺に under a 窓辺 head) is still that word.
+  return particleStems(key).some((stem) => known.has(stem) || heads.includes(stem));
 }
 
 const escapeRegExp = (text) => text.replace(/[.*+?^${}()|[\]\\]/gu, "\\$&");
