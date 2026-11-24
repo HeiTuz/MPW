@@ -39,7 +39,7 @@
   ],
   "scripts": {
     "lint": "python3 scripts/lint.py",
-    "test": "python3 scripts/lint.py && node scripts/run_tests.mjs",
+    "test": "node scripts/run_tests.mjs",
     "check:installs": "node scripts/check_install_parity.mjs",
     "test:apparel": "python3 scripts/test_compile_apparel_handoff.py",
     "test:contracts": "python3 scripts/test_contracts.py",

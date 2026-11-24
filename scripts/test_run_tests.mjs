@@ -41,6 +41,7 @@ function assertPass(result) {
 try {
   fs.mkdirSync(path.join(temporary, "scripts"));
   fs.copyFileSync(path.join(root, "scripts/run_tests.mjs"), path.join(temporary, "scripts/run_tests.mjs"));
+  write("scripts/lint.py", 'print("LINT_RAN")\n');
   write("scripts/test_00_python.py", 'print("PYTHON_RAN")\n');
   write("scripts/test_01_python.py", 'print("LATER_PYTHON_RAN")\n');
   write("scripts/test_00_node.mjs", 'console.log("NODE_RAN");\n');
@@ -52,9 +53,10 @@ try {
 
   let result = run();
   assertPass(result);
-  for (const marker of ["PYTHON_RAN", "LATER_PYTHON_RAN", "NODE_RAN", "LATER_NODE_RAN", "CHECKER_RAN"]) {
+  for (const marker of ["LINT_RAN", "PYTHON_RAN", "LATER_PYTHON_RAN", "NODE_RAN", "LATER_NODE_RAN", "CHECKER_RAN"]) {
     assert.ok(result.stdout.includes(marker), `test discovery missed ${marker}`);
   }
+  assert.ok(result.stdout.indexOf("LINT_RAN") < result.stdout.indexOf("PYTHON_RAN"));
   assert.ok(result.stdout.indexOf("LATER_PYTHON_RAN") < result.stdout.indexOf("NODE_RAN"));
   assert.ok(result.stdout.indexOf("LATER_NODE_RAN") < result.stdout.indexOf("CHECKER_RAN"));
 
@@ -65,14 +67,15 @@ try {
   assertPass(run({ MPW_ALLOW_MISSING_EXTERNAL_INTEGRATION: "1" }));
 
   // Every failure is retained, including a failing validator after passing tests.
+  write("scripts/lint.py", 'import sys\nprint("LINT_FAILED")\nsys.exit(2)\n');
   write("scripts/test_00_python.py", 'import sys\nprint("PYTHON_FAILED")\nsys.exit(3)\n');
   write("scripts/test_00_node.mjs", 'console.log("NODE_FAILED"); process.exit(4);\n');
   write("scripts/check_prompt.mjs", 'console.log("CHECKER_FAILED"); process.exit(5);\n');
   result = run();
   assert.equal(result.status, 1, result.stdout + result.stderr);
   assert.match(result.stdout, /^FAIL$/mu);
-  assert.match(result.stdout, /summary failed=3 \(test_00_python.py, test_00_node.mjs, check_prompt.mjs --test\)/u);
-  for (const marker of ["PYTHON_FAILED", "LATER_PYTHON_RAN", "NODE_FAILED", "LATER_NODE_RAN", "CHECKER_FAILED"]) {
+  assert.match(result.stdout, /summary failed=4 \(lint.py, test_00_python.py, test_00_node.mjs, check_prompt.mjs --test\)/u);
+  for (const marker of ["LINT_FAILED", "PYTHON_FAILED", "LATER_PYTHON_RAN", "NODE_FAILED", "LATER_NODE_RAN", "CHECKER_FAILED"]) {
     assert.ok(result.stdout.includes(marker), `runner stopped before ${marker}`);
   }
 
@@ -81,7 +84,7 @@ try {
   write("scripts/check_prompt.mjs", 'console.log("CHECKER_RAN");\n');
   result = run({ PATH: path.join(temporary, "no-executables") });
   assert.equal(result.status, 1, result.stdout + result.stderr);
-  assert.match(result.stdout, /summary failed=2 \(test_00_python.py, test_01_python.py\)/u);
+  assert.match(result.stdout, /summary failed=3 \(lint.py, test_00_python.py, test_01_python.py\)/u);
   assert.match(result.stdout, /LATER_NODE_RAN/u);
   assert.match(result.stdout, /CHECKER_RAN/u);
   console.log("supported test runner: discovery, legacy isolation, and failure aggregation OK");

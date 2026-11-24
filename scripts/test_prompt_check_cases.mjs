@@ -5,6 +5,7 @@ import { tmpdir } from "node:os";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { CODE_REGISTRY, checkText, runHarness } from "./check_prompt.mjs";
+import { readTargets } from "./read_refs.mjs";
 
 const scripts = dirname(fileURLToPath(import.meta.url));
 const fixtureRoot = resolve(scripts, "fixtures/prompt-checks");
@@ -16,7 +17,7 @@ const coverageExceptions = {
   "input/unreadable": "The CLI tests use a missing path and a directory; neither is a registered fixture.",
 };
 const registryCodes = new Set(Object.values(CODE_REGISTRY).map((entry) => entry.code));
-assert.equal(registryCodes.size, 61);
+assert.equal(registryCodes.size, 60);
 const validatorSource = await readFile(validator, "utf8");
 for (const code of registryCodes) assert.equal(validatorSource.split(JSON.stringify(code)).length - 1, 1, code);
 assert.ok(validatorSource.split("\n").includes('const BANNED_MJ_FLAGS = ["no", "ar", "p", "stylize", "v", "sref", "seed"];'));
@@ -51,6 +52,13 @@ for (const suffix of ["Aspect ratio: 4:5", "비율: 4:5"]) {
   assert.equal(ratioWarning("A simple poster. " + suffix, { profile: "assembled" }), true);
 }
 assert.equal(ratioWarning("A simple poster. AR 4:5"), true);
+
+// The shrink hint names a command that must run as printed, because the section is read only when a prompt overflows.
+const overflow = checkText("가".repeat(3334));
+const shrinkHint = [...overflow.errors, ...overflow.warnings].map((item) => item.hint ?? "").find((hint) => hint.includes("압축 낱말")) ?? "";
+const shrinkTarget = /node scripts\/read_refs\.mjs "([^"]+)"/u.exec(shrinkHint)?.[1];
+assert.ok(shrinkTarget, shrinkHint);
+assert.equal(readTargets([shrinkTarget]).error, undefined, shrinkTarget);
 
 let scenarios = 0;
 const temp = await mkdtemp(resolve(tmpdir(), "mpw-prompt-cases-"));

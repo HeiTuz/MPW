@@ -39,10 +39,10 @@ has("A natural-light photograph of a woman at a window seat.\n\n## Expression\ns
 lacks("A natural-light photograph of a woman at a window seat.\n\n## Expression\n멍때리기 — Her eyes rest on the window, 눈빛이 멍하고 차가운, as if she forgot the cup.\ngaze — She looks past the lens.", "mix/unlisted");
 // Exact copy in quotes is the photo's or the user's text, not mixed-in words.
 lacks("A natural-light photograph of a small shop front.\n\n## Scene\nshop sign — A white board over the door reads \"営業中\" in small black letters, the only text in the frame.\nchalkboard — A stand by the door reads \"오늘의 커피\" in chalk.", "mix/unlisted");
-// One photo-term column a prompt, read from the Finish tokens: 高光 in a JP prompt and 白飛び in a KR prompt are the other column; 高光 in a KR prompt is not.
+// One photo-term column a prompt, read from the Finish tokens: another column's word is fine only when it is shorter in the same row (高光 for an empty JP cell), 白飛び in a KR prompt is longer than 过曝.
 const finish = (realism, cg) => `\n\n## Finish\n${realism} — Ultra-realistic 8K photographic detail.\n${cg} — A real photograph, never an illustration, 3D render or CGI.`;
 const optics = (word) => `A natural-light photograph of a woman by a window.\n\n## Optics\nclean color — Natural color with ${word} on the shirt that roll off smoothly.\nfocus — Her face is sharp.`;
-has(optics("高光") + finish("高精細", "実写"), "mix/culture");
+lacks(optics("高光") + finish("高精細", "実写"), "mix/culture");
 has(optics("白飛び") + finish("극사실", "실사 촬영"), "mix/culture");
 lacks(optics("高光") + finish("극사실", "실사 촬영"), "mix/culture");
 lacks(optics("最暗部") + finish("高精細", "実写"), "mix/culture");
@@ -53,14 +53,23 @@ lacks(optics("高光"), "mix/culture");
 // A lead of three decides: line heads and sentence words in one language against a single token of the other.
 const light = (...heads) => "\n\n## Light\n" + heads.map((head) => `${head} — Soft low sun.`).join("\n");
 has(optics("白飛び").replace("clean color", "깨끗한 색").replace("focus —", "초점 —") + light("노을빛", "그림자", "역광"), "mix/culture");
-has(optics("高光").replace("clean color", "自然な色").replace("focus —", "ピント —") + light("西日", "木漏れ日", "逆光"), "mix/culture");
+lacks(optics("高光").replace("clean color", "自然な色").replace("focus —", "ピント —") + light("西日", "木漏れ日", "逆光"), "mix/culture");
 // One Japanese head in a Paris scene is not a JP prompt, so its French head is not out of place.
 lacks("A street photograph of a young woman on the Seine embankment in Paris.\n\n## Outfit\nデニムジャケット — A snow-washed denim jacket.\n\n## Pose\nAdossée à la vitrine — Her back rests against a bookshop window.", "mix/culture");
 // One Han chunk and one kana chunk tie, so the place decides; with no place cue nothing is read.
 const tied = optics("高光 and 白飛び");
 lacks(tied, "mix/culture");
-has(tied.replace("a woman by", "a woman in Tokyo by"), "mix/culture");
+lacks(tied.replace("a woman by", "a woman in Tokyo by"), "mix/culture");
 has(tied.replace("a woman by", "a woman in Seoul by"), "mix/culture");
+// JP-column photo terms are the JP scene's own cue: with no Finish and no place cue they still decide the culture, so the KR·CN word 广角 is caught.
+has("A natural-light photograph of a young woman by a window.\n\n## Identity Reference\nThe same young woman as in the reference photo, her face kept exactly.\n\n## Optics\nピント — Her face is sharp with soft 背景のボケ behind her and no 白飛び on the shirt.\n逆光 — Low sun from behind through a 广角 view of the room.\n\n## Expression\ncalm — Her eyes rest on the window.", "mix/culture");
+// A length-limited prompt takes the shortest word of the row: a shorter other-column word passes, an equal one (广角 and 広角) and an English-less line do not.
+const jp = finish("高精細", "実写");
+lacks(optics("过曝 and 噪点") + jp, "mix/culture");
+lacks(optics("过曝 and 噪点") + jp, "mix/thin");
+has(optics("广角") + jp, "mix/culture");
+lacks("A natural-light photograph of a woman by a window.\n\n## Optics\n高光 — Soft 高光 and 暗部, 过曝 and 死黑 and 白平衡 and 噪点 on the shirt.\nfocus — Her face is sharp." + jp, "mix/line");
+has("A natural-light photograph of a woman by a window.\n\n## Optics\nfocus — 高光と暗部と過曝と黒つぶれと白平衡のバランスを取る。" + jp, "mix/line");
 
 // A person photo ends in Finish; the contract ceiling and a drawn medium leave it out. The same prompt with its Finish layer has one mix/thin less.
 const fixture = (name) => readFileSync(new URL(`./fixtures/prompt-checks/pass/${name}`, import.meta.url), "utf8");

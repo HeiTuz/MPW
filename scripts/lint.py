@@ -10,7 +10,7 @@ Checks the skill's own hardlines against its files:
   Labels bind to the nearest ```text fence before or after within BIND_WINDOW
   chars; far references (checklist/table mentions) must match some block in the
   same file.
-- every ```text example block is <= 2000 chars (all core files; image-brief.md is <= 10000)
+- every ```text example block is <= 2000 chars (all core files; image-brief.md, portrait-variations.md, engine-levers.md and examples/*.prompt.txt are <= 10000 UTF-8 bytes)
 - no approximate labels (`약 N자`)
 - YAML frontmatter parses and carries version + dated model/role review stamps (rejects future dates; re-verify after 6 calendar months)
 - canonical inline `(YYYY-MM 실측...)` measurement stamps are current, non-future, and used across all repository-owned Markdown
@@ -910,7 +910,7 @@ def check_labels(f, s, errors):
                 errors.append(f"{f}:{ln}: label {n}자 — 인접 블록 없음 + 파일 내 어떤 text 블록과도 불일치")
 
 
-# image-brief examples are ChatGPT-web paste blocks (surfaces.md §0-1), not machine contracts.
+# image-brief examples are default-path paste blocks capped in UTF-8 bytes (surfaces.md §0-1), not machine contracts.
 EXAMPLE_LIMITS = {
     "references/image/image-brief.md": 10000,
     "references/image/editorial/portrait-variations.md": 10000,
@@ -919,19 +919,22 @@ EXAMPLE_LIMITS = {
 
 
 def check_example_lengths(filename, text, errors):
-    limit = EXAMPLE_LIMITS.get(filename, 2000)
+    limit = EXAMPLE_LIMITS.get(filename)
     for i, body in enumerate(re.findall(r"```text\n(.*?)```", text, re.S)):
-        actual = measured_len(body)
-        if actual > limit:
-            errors.append(f"{filename}: text block #{i} is {actual} chars (> {limit})")
+        if limit is None:
+            actual = measured_len(body)
+            if actual > 2000:
+                errors.append(f"{filename}: text block #{i} is {actual} chars (> 2000)")
+        elif (actual := len(body.strip().encode("utf-8"))) > limit:
+            errors.append(f"{filename}: text block #{i} is {actual} bytes (> {limit})")
 
 
 def check_examples_dir_lengths(root, errors):
     """examples/*.prompt.txt are ChatGPT-web paste blocks: same 10000 cap as image-brief.md."""
     for path in sorted((root / "examples").glob("*.prompt.txt")):
-        actual = measured_len(path.read_text(encoding="utf-8"))
+        actual = len(path.read_text(encoding="utf-8").strip().encode("utf-8"))
         if actual > 10000:
-            errors.append(f"examples/{path.name}: {actual} chars (> 10000)")
+            errors.append(f"examples/{path.name}: {actual} bytes (> 10000)")
 
 
 def extract_validator_codes(text):
