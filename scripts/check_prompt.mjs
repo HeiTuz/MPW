@@ -984,9 +984,17 @@ function inspectMix(result, instruction) {
     if (french.length) emit(result, CODE_REGISTRY.mixCulture, `French tokens in a ${own === "JP" ? "JP" : "KR·CN"} prompt: ${[...new Set(french)].slice(0, 5).join(" | ")}`, { hint: "French tokens go only in a French scene. Search the scene's own culture first (find_tokens --culture KR, or JP, CN) and write the head in English when it has no row." });
     // A head whose every row belongs to the other side of KR·CN and JP (西日 in a Korean palace, 旗袍 in a Tokyo street) is another culture's word too.
     const asian = new Set(["KR", "CN", "JP"]);
-    // The Identity row "East Asian" is fixed-lines.md's 단서 없음 row, which a scene mixing KR·CN and JP takes (한옥에 차린 純喫茶): no side's head is the other's then.
-    const mixedRow = sections.some((section) => section.name === "Identity Reference" && /\bEast Asian\b/u.test(section.lines.join(" ")));
-    const aside = mixedRow ? [] : lines.filter((item) => item.section !== "Finish").map((item) => item.head).filter((head) => {
+    // fixed-lines.md §문화권 고르기: a place that mixes KR·CN and JP (한옥에 차린 純喫茶) or names no culture takes the 단서 없음 row, and no side's head is the other's then.
+    // The place is read from the scene-lexicon tokens of the first line and the Scene layer; a place that names no culture is trusted only when the Identity paragraph says so (East Asian),
+    // and a Korean, Chinese or Japanese Identity row keeps the heads checked even in a mixed place (the row or the heads are wrong).
+    const sideOf = (rows) => { const sets = rows.map((row) => row.culture.filter((culture) => asian.has(culture))); return !sets.length || sets.some((set) => !set.length) ? null : sets.every((set) => set.every((culture) => culture === "JP")) ? "JP" : sets.every((set) => !set.includes("JP")) ? "KRCN" : null; };
+    const sceneText = [first, ...sections.filter((section) => section.name === "Scene").flatMap((section) => section.lines)].join("\n");
+    // Each scene-lexicon token named there gives its side (a spaced Hangul run glued to a Han or kana word, 純喫茶처럼 꾸민 한옥 카페에서, or a token with a describing word after it, 경복궁 회랑, is read from the trailing and the leading word runs of the chunk); only kind "place" rows (한옥 카페, 純喫茶, 商店街) make a place mixed, while items (창살, 通行人) still show that the place has a culture.
+    const named = chunksOf(unquote(sceneText)).flatMap((chunk) => { const words = chunk.split(/ +/u); const read = (spans) => spans.flatMap((span) => { const key = mixKey(span.join(" ")); return [key, ...particleStems(key)]; }).map((key) => (sources.rowsByToken.get(key) ?? []).filter((row) => row.slug === "scene")).find((rows) => sideOf(rows)) ?? []; return [...read(words.map((_, from) => words.slice(from))), ...read(words.map((_, to) => words.slice(0, words.length - to)))]; });
+    const sides = (kind) => new Set(named.filter((row) => !kind || row.kind === kind).map((row) => sideOf([row])).filter(Boolean));
+    const identity = sections.filter((section) => section.name === "Identity Reference").flatMap((section) => section.lines).join(" ");
+    const unread = (sides("place").size === 2 && !/\b(?:Korean|Chinese|Japanese) (?:wo)?man\b/u.test(identity)) || (!sides().size && /\bEast Asian\b/u.test(identity));
+    const aside = unread ? [] : lines.filter((item) => item.section !== "Finish").map((item) => item.head).filter((head) => {
       const rows = sources.rowsByToken.get(mixKey(head)) ?? [];
       return rows.length && rows.every((row) => { const cultures = row.culture.filter((culture) => asian.has(culture)); return cultures.length && (own === "JP" ? !cultures.includes("JP") : cultures.every((culture) => culture === "JP")); });
     });
