@@ -57,6 +57,22 @@ try {
   run(process.execPath, ["scripts/install.mjs", "--", "--dest", forwardedDest, "--force", "--quiet"]);
   assert.equal(fs.existsSync(path.join(forwardedDest, "SKILL.md")), true, "forwarded -- arguments did not install");
 
+  // --force는 MPW 설치본만 교체한다
+  const foreign = path.join(temp, "foreign");
+  fs.mkdirSync(foreign);
+  fs.writeFileSync(path.join(foreign, "notes.txt"), "keep me\n");
+  const refused = spawnSync(process.execPath, ["scripts/install.mjs", "--dest", foreign, "--force", "--quiet"], { cwd: root, encoding: "utf8" });
+  assert.notEqual(refused.status, 0, "--force replaced a non-MPW folder");
+  assert.match(refused.stderr, /not an MPW install/);
+  assert.equal(fs.readFileSync(path.join(foreign, "notes.txt"), "utf8"), "keep me\n");
+  fs.writeFileSync(path.join(foreign, "SKILL.md"), "---\nname: other\n---\n");
+  assert.notEqual(spawnSync(process.execPath, ["scripts/install.mjs", "--dest", foreign, "--force", "--quiet"], { cwd: root }).status, 0, "--force replaced another skill");
+  assert.equal(fs.existsSync(path.join(foreign, "notes.txt")), true);
+  fs.writeFileSync(path.join(installDest, "stale.txt"), "old\n");
+  run(process.execPath, ["scripts/install.mjs", "--dest", installDest, "--force", "--quiet"]);
+  assert.equal(fs.existsSync(path.join(installDest, "stale.txt")), false, "marked MPW install was not replaced");
+  assert.equal(fs.existsSync(path.join(installDest, "SKILL.md")), true);
+
   const packed = JSON.parse(run("npm", ["pack", "--dry-run", "--json"]));
   const manifest = Array.isArray(packed) ? packed[0] : Object.values(packed)[0];
   assert.ok(manifest && Array.isArray(manifest.files), "npm pack --json returned no package manifest");

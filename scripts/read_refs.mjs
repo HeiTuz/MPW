@@ -61,7 +61,7 @@ export const BUNDLES = {
   // §4는 '룩 카드' 하위 절(세트·쌍·여러 장 규칙)을 빼고 읽는다. 추출의 카드 절차는 §12.0이 자족하게 갖고, 카드 목록은 색인 파일 대신 read_look.mjs --list로 필요할 때만 읽는다.
   "gpt-image-extract": ["references/image/surfaces.md#0", "references/image/image-brief.md#1,2,3,사용자가 준 것~토큰 찾기,비워 둔 층~문장 쓰는 법,5,6,9,12", FIXED_LINES_EXTRACT, LEXICON_INDEX],
   // 영상 생성.
-  video: ["references/image/surfaces.md#0", "references/image/lanes.md#영상 공통 규칙,이미지 슬롯 기본값"],
+  video: ["references/image/surfaces.md#0", "references/image/lanes.md#영상 공통 규칙,이미지 슬롯 기본값", "references/image/model-routing.md#6"],
   // 실행 작업·자동화 지시.
   delegation: ["references/templates/delegation.md"],
   // 팀 작업 지시: 위임 계약 + TEAM 골격 + 역할·권한 라우팅.

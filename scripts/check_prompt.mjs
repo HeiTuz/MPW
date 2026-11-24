@@ -310,8 +310,11 @@ function inspectSyntax(result, instruction) {
   }
   evidence(result, CODE_REGISTRY.placeholder, snippets(/\[[A-Z_]{3,}\]|\{\{\s*[A-Za-z_][A-Za-z_0-9]*\s*\}\}/gu, instruction),
     "Unresolved substitutions");
-  const weights = [...instruction.matchAll(/\(([^()\r\n]+):\s*(?:\d*\.\d+)\s*\)|<([^<>\r\n]+):\s*(?:\d*\.\d+)\s*>/gu)]
-    .filter((match) => /\p{L}/u.test(match[1] ?? match[2])).map((match) => match[0]);
+  // An integer weight counts only as SD syntax ("(cat:2)": lowercase-initial label, colon, one digit 0-3); "(Time 12:30)", "(Day:2)", "(Seed:42)" and "(fig:2)" are ordinary parentheses.
+  const weights = [...instruction.matchAll(/\(([^()\r\n]+):\s*(?:\d*\.\d+)\s*\)|<([^<>\r\n]+):\s*(?:\d*\.\d+)\s*>|\((\p{Ll}[^()\r\n]*[\p{L}_-]):[0-3]\)|<(\p{Ll}[^<>\r\n]*[\p{L}_-]):[0-3]>/gu)]
+    .filter((match) => /\p{L}/u.test(match[1] ?? match[2] ?? match[3] ?? match[4])
+      && !/(?:^|[\s(])(?:fig|figs|figure|table|tab|ch|chapter|vol|no|ref|step|scene|shot|image|img|page|section|pp?|note|cf)\.?$/iu.test(match[3] ?? match[4] ?? ""))
+    .map((match) => match[0]);
   evidence(result, CODE_REGISTRY.weight, weights, "Numeric emphasis notation is not image prose");
   const flags = result.profile === "native"
     ? snippets(/(?<![\p{L}\p{N}_-])--[A-Za-z][A-Za-z0-9_-]*/gu, instruction)
@@ -322,8 +325,8 @@ function inspectSyntax(result, instruction) {
   // S3 has no evidence that the requested ratio was delivered via a UI setting.
   // Keep natural-language ratio labels there; only legacy AR tokens are suspect.
   const ratioToken = result.profile === "native" && result.surface === "s3"
-    ? /\bar\s*[:：=]?\s*\d+\s*:\s*\d+\s*$/iu
-    : /(?:\b(?:ar|aspect\s+ratio)|비율)\s*[:：=]?\s*\d+\s*:\s*\d+\s*$/iu;
+    ? /\bar\s*[:：=]?\s*\d+\s*[:：]\s*\d+\s*$/iu
+    : /(?:\b(?:ar|aspect\s+ratio)|비율)\s*[:：=]?\s*\d+\s*[:：]\s*\d+\s*$/iu;
   if (ratioToken.test(instruction)) {
     emit(result, CODE_REGISTRY.ratioToken, "A ratio token ends the prompt.", { hint: "Move it to parameters, UI settings, or a separate label line; see surface-contracts.md §4." });
   }
@@ -350,7 +353,7 @@ function inspectPhrasing(result, instruction) {
       "Negative instruction wording",
       "Name the concrete state that should be visible. Keep a separate preservation sentence for the original logo or brand.");
     evidence(result, CODE_REGISTRY.koNegation,
-      snippets(/[^\s,.!?;\n\r。]{0,12}(?:금지|하지\s*마(?:세요|라)?|하지\s*않(?:도록|게)|없어야|없도록|빼고|제외하고)[^,.!?;\n\r。]{0,12}/gu, remaining).slice(0, 3),
+      snippets(/[^\s,.!?;\n\r。]{0,12}(?:금지|하지\s*마(?:세요|라)?|하지\s*않(?:도록|게)|(?<!하|바꾸|바꿔|바뀌|건드리|지우|없애|옮기|움직이|훼손하|손대|고치|달라지)지\s*(?:마(?:세요|라|십시오)|않(?:도록|게))(?![가-힣])|없어야|없도록|빼고|제외하고)[^,.!?;\n\r。]{0,12}/gu, remaining).slice(0, 3),
       "Korean directive negation", "State the visible result positively, for example 책상 위에는 책 한 권만 놓인다.");
     const tags = snippets(/(?<![\p{L}\p{N}_])(?:masterpiece|(?:best|top|highest)\s+quality|(?:4|8|16)k|uhd|(?:ultra|hyper|extremely|insanely)[ -]+detailed|trending\s+on\s+artstation|featured\s+on\s+behance|award[ -]+winning|octane\s+render|unreal\s+engine)(?![\p{L}\p{N}_])/giu, instruction);
     evidence(result, CODE_REGISTRY.quality, tags.map((tag) => tag.toLowerCase()), "Generic quality tags");
@@ -399,7 +402,7 @@ function inspectNoise(result, instruction) {
     "Not a deletion order: report it to the user, and keep it if that look was requested. In new prompts name the visible detail or tone instead.");
 }
 
-const KNOWN_RATIOS = "(?:1:1|2:3|3:2|3:4|4:3|4:5|5:4|9:16|16:9|9:21|21:9|1:2|2:1|1:3|3:1|2\\.39:1|1\\.85:1)";
+const KNOWN_RATIOS = "(?:1[:：]1|2[:：]3|3[:：]2|3[:：]4|4[:：]3|4[:：]5|5[:：]4|9[:：]16|16[:：]9|9[:：]21|21[:：]9|1[:：]2|2[:：]1|1[:：]3|3[:：]1|2\\.39[:：]1|1\\.85[:：]1)";
 const SENTENCE_SPLIT = /(?<=[.?!。])\s+|\r?\n/u;
 
 function layerSections(instruction) {
@@ -447,7 +450,7 @@ function inspectCoherence(result, text, instruction) {
   if (keepsTone && skinColor.length) {
     emit(result, CODE_REGISTRY.identitySkin, `A skin color is written outside the identity paragraph: ${[...new Set(skinColor)].slice(0, 3).join(" | ")}`, { hint: "The natural skin color belongs in the identity condition only; a reference keeps its own tone. Makeup finish and light on the skin are fine elsewhere." });
   }
-  const ratios = instruction.match(new RegExp(`(?<![\\d:.])${KNOWN_RATIOS}(?![\\d:])`, "gu")) ?? [];
+  const ratios = instruction.match(new RegExp(`(?<![\\d:：.])${KNOWN_RATIOS}(?![\\d:：])`, "gu")) ?? [];
   if (ratios.length >= 2) emit(result, CODE_REGISTRY.ratioDup, `An aspect ratio is written ${ratios.length} times: ${[...new Set(ratios)].join(" | ")}`, { hint: "Write the ratio once, in the Camera layer." });
   const makeup = sections.find((section) => /^(?:Hair and makeup|Makeup)$/iu.test(section.name ?? ""));
   const lipLines = (makeup?.lines ?? []).filter((line) => /\b(?:lips?|lipstick)\b|唇|립|입술/iu.test(line));
@@ -458,7 +461,7 @@ function inspectCoherence(result, text, instruction) {
   const layerFacts = inspectLayerFacts(result, sections);
   // Words, or the Light and Scene line heads whose lexicon rows are tagged night-only or midday-only (a head in any language reads the same). 밤 is also the chestnut: only 밤하늘, 밤거리, 밤에, 밤의, 밤중 count (not a bare 밤, 밤을, 밤이 or 밤색); "밤에 구운 밤" misreads and a bare "at 밤" is missed.
   const nightHeads = layerFacts.night, middayHeads = layerFacts.noon;
-  const night = /\b(?:night(?:time)?|midnight|after dark)\b|深夜|夜晚|の夜|한밤|심야|야경|야간|(?<!\p{sc=Hangul})밤(?:하늘|거리|에|의|중)(?!\p{sc=Hangul})/iu.test(instruction) || nightHeads.length > 0;
+  const night = /\b(?:night(?:time)?|midnight|after dark)\b|深夜|夜晚|の夜|한밤|심야|야경|야간|夜景(?!モード)|夜空(?![色蓝藍])|真夜中|夜間|夜间|夜里|夜の街|(?<!\p{sc=Hangul})(?:밤(?:하늘|거리|중)(?:에서|에는|에도|에|으로|이|가|은|는|을|를|의|도|만|과|와|로)?|밤(?:에(?:는|도|만)?|의)|오늘밤(?:에|은|는|의)?)(?!\p{sc=Hangul})/iu.test(instruction) || nightHeads.length > 0;
   const midday = /\b(?:noon|midday|mid-day|noonday)\b|正午|中午|真昼|한낮|대낮|정오(?!각)/iu.test(instruction) || middayHeads.length > 0;
   if (night && midday) {
     const named = (heads) => (heads.length ? ` (${heads.slice(0, 2).join(", ")})` : "");

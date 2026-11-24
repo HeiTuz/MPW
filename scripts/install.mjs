@@ -232,11 +232,22 @@ export function validateDestination(destination, homeDir, sourceRoot = root) {
   }
 }
 
+// --force가 임의 폴더를 통째로 지우지 않도록, 교체 대상이 MPW 설치본(SKILL.md name: mpw)인지 확인한다.
+function assertMpwInstall(destination) {
+  const skill = path.join(destination, "SKILL.md");
+  const text = fs.existsSync(skill) && fs.statSync(skill).isFile() ? fs.readFileSync(skill, "utf8") : null;
+  const name = text && /^---\r?\n([\s\S]*?)\r?\n---/u.exec(text)?.[1].match(/^name:\s*["']?([^"'\s]+)/mu)?.[1];
+  if (name !== "mpw") {
+    throw new Error(`Refusing to replace ${destination}: it is not an MPW install (expected SKILL.md with frontmatter "name: mpw", ${text === null ? "no SKILL.md found" : `found name: ${name ?? "(none)"}`}).\nMove or empty the folder, or pick another --dest.`);
+  }
+}
+
 export function installToDestination(destination, { sourceRoot = root, force = false, homeDir = os.homedir() } = {}) {
   validateDestination(destination, homeDir, sourceRoot);
   if (fs.existsSync(destination) && !isEmptyDir(destination) && !force) {
     throw new Error(`Destination already exists and is not empty: ${destination}\nUse --force to replace it.`);
   }
+  if (fs.existsSync(destination) && !isEmptyDir(destination)) assertMpwInstall(destination);
   const parent = path.dirname(destination);
   fs.mkdirSync(parent, { recursive: true });
   const stageRoot = fs.mkdtempSync(path.join(parent, ".heituzmpw-stage-"));

@@ -103,5 +103,18 @@
   {"case":"a car pose beside a scene that parks a car","input":"pass/coherence-pose-place-ok.txt","args":[],"expect":{"ok":true,"warnings_exclude":["coherence/pose-place"]}},
   {"case":"a stair pose whose scene row describes steps","input":"pass/coherence-pose-place-row.txt","args":[],"expect":{"ok":true,"warnings_exclude":["coherence/pose-place"]}},
   {"case":"밤색 is a brown, not a night cue","input":"pass/coherence-day-night-ok.txt","args":[],"expect":{"ok":true,"warnings_exclude":["coherence/day-night"]}},
-  {"case":"a night market with moonlight is one time of day","input":"pass/coherence-day-night-both-night.txt","args":[],"expect":{"ok":true,"warnings_exclude":["coherence/day-night"]}}
+  {"case":"a night market with moonlight is one time of day","input":"pass/coherence-day-night-both-night.txt","args":[],"expect":{"ok":true,"warnings_exclude":["coherence/day-night"]}},
+  {"case":"integer weight notation","input":"fail/syntax-int-weight.txt","args":[],"expect":{"ok":false,"errors":["syntax/weight"]}},
+  {"case":"parenthesised integers that are not weights","input":"pass/syntax-int-weight-ok.txt","args":[],"expect":{"ok":true,"warnings_exclude":["syntax/weight"]}},
+  {"case":"fullwidth-colon trailing ratio","input":"pass/syntax-dock-ratio-fullwidth.txt","args":[],"expect":{"ok":true,"warnings_include":["syntax/ratio-token"]}},
+  {"case":"fullwidth-colon ratio written twice","input":"pass/coherence-ratio-dup-fullwidth.txt","args":[],"expect":{"ok":true,"warnings_include":["coherence/ratio-dup"]}},
+  {"case":"one fullwidth-colon ratio mid-prompt","input":"pass/coherence-ratio-once-fullwidth.txt","args":[],"expect":{"ok":true,"warnings_exclude":["coherence/ratio-dup","syntax/ratio-token"]}},
+  {"case":"Korean prohibitions on other verbs","input":"pass/phrasing-ko-verbs.txt","args":["--profile","assembled"],"expect":{"ok":true,"warnings_include":["phrasing/ko-negation"]}},
+  {"case":"Korean preservation locks and ordinary sentences","input":"pass/phrasing-ko-keep-ok.txt","args":["--profile","assembled"],"expect":{"ok":true,"warnings_exclude":["phrasing/ko-negation"]}},
+  {"case":"Korean night words with particles beside noon","input":"pass/coherence-day-night-ko-particles.txt","args":[],"expect":{"ok":true,"warnings_include":["coherence/day-night"]}},
+  {"case":"Chinese and Japanese night words beside noon","input":"pass/coherence-day-night-cjk.txt","args":[],"expect":{"ok":true,"warnings_include":["coherence/day-night"]}},
+  {"case":"capitalised or large integer labels are not weights","input":"pass/syntax-int-weight-labels.txt","args":[],"expect":{"ok":true,"warnings_exclude":["syntax/weight"]}},
+  {"case":"Japanese night-sky colour and night-mode negation beside noon","input":"pass/coherence-day-night-cjk-color.txt","args":[],"expect":{"ok":true,"warnings_exclude":["coherence/day-night"]}},
+  {"case":"Korean fix and change-state preservation locks","input":"pass/phrasing-ko-keep-verbs.txt","args":["--profile","assembled"],"expect":{"ok":true,"warnings_exclude":["phrasing/ko-negation"]}},
+  {"case":"chestnut 밤 is not a night cue","input":"pass/coherence-day-night-chestnut.txt","args":[],"expect":{"ok":true,"warnings_exclude":["coherence/day-night"]}}
 ]
