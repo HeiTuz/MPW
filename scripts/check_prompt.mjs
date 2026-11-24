@@ -456,11 +456,13 @@ function inspectCoherence(result, text, instruction) {
     emit(result, CODE_REGISTRY.slotDup, lipLines.length >= 2 ? `Hair and makeup has ${lipLines.length} lip lines.` : `The catchlight is written on ${catchLines.length} lines.`, { hint: "A slot is filled once: remove the later line." });
   }
   const layerFacts = inspectLayerFacts(result, sections);
-  // Words, or the Light and Scene line heads whose lexicon rows are tagged night-only or midday-only (a head in any language reads the same). A Hangul 밤 stands alone: 밤색 is a brown.
-  const night = /\b(?:night(?:time)?|midnight|after dark)\b|深夜|夜晚|の夜|한밤|심야|야경|야간|(?<!\p{sc=Hangul})밤(?:하늘|거리|에|의|은|이|을|도|중)?(?!\p{sc=Hangul})/iu.test(instruction) || layerFacts.night;
-  const midday = /\b(?:noon|midday|mid-day|noonday)\b|正午|中午|真昼|한낮|대낮|정오/iu.test(instruction) || layerFacts.noon;
+  // Words, or the Light and Scene line heads whose lexicon rows are tagged night-only or midday-only (a head in any language reads the same). 밤 is also the chestnut: only 밤하늘, 밤거리, 밤에, 밤의, 밤중 count (not a bare 밤, 밤을, 밤이 or 밤색); "밤에 구운 밤" misreads and a bare "at 밤" is missed.
+  const nightHeads = layerFacts.night, middayHeads = layerFacts.noon;
+  const night = /\b(?:night(?:time)?|midnight|after dark)\b|深夜|夜晚|の夜|한밤|심야|야경|야간|(?<!\p{sc=Hangul})밤(?:하늘|거리|에|의|중)(?!\p{sc=Hangul})/iu.test(instruction) || nightHeads.length > 0;
+  const midday = /\b(?:noon|midday|mid-day|noonday)\b|正午|中午|真昼|한낮|대낮|정오(?!각)/iu.test(instruction) || middayHeads.length > 0;
   if (night && midday) {
-    emit(result, CODE_REGISTRY.dayNight, "A night cue and midday light appear in the same prompt.", { hint: "Pick one time of day and make Light and Optics agree." });
+    const named = (heads) => (heads.length ? ` (${heads.slice(0, 2).join(", ")})` : "");
+    emit(result, CODE_REGISTRY.dayNight, `A night cue${named(nightHeads)} and midday light${named(middayHeads)} appear in the same prompt.`, { hint: "Pick one time of day and make Light and Optics agree." });
   }
   inspectSlotNames(result, sections);
   inspectChoices(result, instruction);
@@ -526,12 +528,14 @@ function inspectChoices(result, instruction) {
 // 몸:등 and 몸:정면 (Expression and Pose: the body turned away, square to the camera), 장소:<kind> (Pose: needs a car, rail, stair, bed, sofa, water's edge, road or elevator),
 // 밤 한정 and 한낮 한정 (Light and Scene: night only, midday only). A tag counts only when every row of that head in that layer has it; a head with no row is read as English where noted. A warning, never an error.
 const LAYER_KEY = { outfit: /^(?:Outfit|Outerwear|Clothing)\b/iu, legwear: /^(?:Legwear|Hosiery)\b/iu, pose: /^(?:Poses?|Posture)\b/iu, expression: /^Expression\b/iu, light: /^Light\b/iu, scene: /^Scene\b/iu };
-// A visible-leg cue (a slit, rips, mesh, a cropped hem) in the Outfit sentence, or rips and slits in the Legwear sentence, takes the legwear warning away: the stockings are meant to show.
-const LEG_SHOWN = /\b(?:slits?|split|rips?|ripped|torn|tears?|distressed|holes?|cut-?outs?|sheer|see-through|translucent|transparent|semi-sheer|mesh|lace|cropped|openings?)\b/iu;
-const HOSE_SHOWN = /\b(?:rips?|ripped|slits?|torn|holes?|cut-?outs?)\b/iu;
-const COVERS_HEAD = /\b(?:trousers|pants|jeans|slacks|chinos|jumpsuit|overalls|dungarees|leggings|joggers|sweatpants|culottes|maxi (?:dress|skirt)|(?:floor|ankle)[- ]length)\b/iu;
-const SHORT_HEAD = /\b(?:shorts?|cropped|capris?|mini)\b/iu;
-const HOSE_HEAD = /\b(?:tights|stockings?|pantyhose|hosiery|nylons|fishnets?)\b/iu;
+// A visible-leg cue takes the legwear warning away: the stockings are meant to show. In the Outfit sentence it is a slit, rips, mesh, a cropped hem; in either sentence it is the ankle or the strip between hem and shoe
+// ("the hem stops above the ankle", "show at the ankle between the hem and the loafers"). Limit: a real clash that also writes "show" or "ankle" goes unflagged.
+const ANKLE_SHOWN = /\b(?:ankles?|above the (?:shoes|loafers|heels|sneakers|boots)|between the (?:hem|skirt|pant|trouser)s?|visible|shows?|showing|baring|lifted)\b/iu;
+const LEG_SHOWN = new RegExp(`\\b(?:slits?|split|rips?|ripped|torn|tears?|distressed|holes?|cut-?outs?|sheer|see-through|translucent|transparent|semi-sheer|mesh|lace|cropped|openings?)\\b|${ANKLE_SHOWN.source}`, "iu");
+const HOSE_SHOWN = new RegExp(`\\b(?:rips?|ripped|slits?|torn|holes?|cut-?outs?)\\b|${ANKLE_SHOWN.source}`, "iu");
+const COVERS_HEAD = /\b(?:trousers|pants|jeans|slacks|chinos|jumpsuit|overalls|dungarees|leggings|joggers|sweatpants|culottes|maxi (?:dress|skirt)|floor[- ]length)\b/iu;
+const SHORT_HEAD = /\b(?:shorts?|cropped|capris?|mini|ankle[- ]length)\b/iu;
+const HOSE_HEAD = /\b(?:tights|stockings?|pantyhose|hosiery|nylons|fishnets?|collants?)\b/iu;
 const NOT_HOSE = /\b(?:socks?|knee|ankle|thigh|bare|no|without)\b/iu;
 // English words of each place kind, read in the opener and the layers outside Pose and in the English description of every line-head row outside Pose. Wide on purpose: a stray word means no warning.
 const PLACE_WORDS = {
@@ -544,6 +548,17 @@ const PLACE_WORDS = {
   도로: /\b(?:roads?|streets?|highways?|asphalt|lanes?|avenues?|boulevards?|crossings?|crosswalks?|sidewalks?|curbs?|pavements?|alleys?|intersections?|motorways?|freeways?|routes?|paths?)\b/iu,
   엘리베이터: /\b(?:elevators?|lifts?|elevator cars?)\b/iu,
 };
+// The same kinds in the original languages a mixed prompt writes them in (Hangul, Han, kana have no \b). Wide on purpose, like the English list.
+const PLACE_NATIVE = {
+  차: /자동차|승용차|택시|차창|차량|汽车|轿车|出租车|车窗|车内|自動車|タクシー|車内|車窓/u,
+  난간: /난간|펜스|울타리|베란다|발코니|테라스|옥상|옥탑|대교|철교|육교|栏杆|围栏|护栏|扶手|桥|阳台|露台|天台|屋顶|手すり|欄干|橋|ベランダ|バルコニー|屋上|フェンス/u,
+  계단: /계단|층계|댓돌|툇마루|현관|에스컬레이터|楼梯|台阶|石阶|阶梯|门廊|门口|階段|石段|玄関|エスカレーター/u,
+  침대: /침대|이불|베개|침구|침실|기숙사|床上|床边|床头|床单|被子|枕头|卧室|宿舍|ベッド|布団|寝室|枕/u,
+  소파: /소파|쿠션|거실|라운지|沙发|客厅|抱枕|ソファ|クッション|カウチ|リビング/u,
+  물가: /물가|바다|바닷가|해변|해안|강가|강변|호수|연못|수영장|분수|항구|부두|파도|모래|海|河|湖|江|池|港|码头|沙滩|喷泉|游泳池|水边|川|ビーチ|砂浜|プール|噴水|水辺|波/u,
+  도로: /도로|골목|거리|횡단보도|인도|보도|차도|길가|马路|街|路|人行道|斑马线|道路|通り|道|横断歩道|歩道|路地/u,
+  엘리베이터: /엘리베이터|승강기|电梯|升降机|エレベーター|エレベータ/u,
+};
 function layerLines(sections) {
   return sections.filter((section) => section.name && /^[A-Za-z]/u.test(section.name) && section.name !== "Identity Reference")
     .flatMap((section) => section.lines.flatMap((line) => {
@@ -553,7 +568,7 @@ function layerLines(sections) {
 }
 function inspectLayerFacts(result, sections) {
   const lines = layerLines(sections);
-  const facts = { night: false, noon: false };
+  const facts = { night: [], noon: [] };
   if (!lines.length) return facts;
   const sources = mixSources();
   const rowsOf = (item, slug) => (sources?.rowsByName.get(mixKey(item.head)) ?? []).filter((row) => row.slug === slug);
@@ -561,8 +576,9 @@ function inspectLayerFacts(result, sections) {
   const inLayer = (key) => lines.filter((item) => LAYER_KEY[key].test(item.section));
   const tagged = (key, slug, tag) => inLayer(key).filter((item) => tagsOf(item, slug).includes(tag));
   const english = (key, slug, wanted, unwanted) => inLayer(key).filter((item) => !rowsOf(item, slug).length && wanted.test(item.head) && !unwanted.test(item.head));
-  facts.night = [...tagged("light", "light", "밤 한정"), ...tagged("scene", "scene", "밤 한정")].length > 0;
-  facts.noon = [...tagged("light", "light", "한낮 한정"), ...tagged("scene", "scene", "한낮 한정")].length > 0;
+  const named = (items) => items.map((item) => `${item.section} ${item.head}`);
+  facts.night = named([...tagged("light", "light", "밤 한정"), ...tagged("scene", "scene", "밤 한정")]);
+  facts.noon = named([...tagged("light", "light", "한낮 한정"), ...tagged("scene", "scene", "한낮 한정")]);
 
   const covers = [...tagged("outfit", "outfit", "긴 기장"), ...english("outfit", "outfit", COVERS_HEAD, SHORT_HEAD)].filter((item) => !LEG_SHOWN.test(item.sentence));
   const hose = [...tagged("legwear", "legwear", "스타킹류"), ...english("legwear", "legwear", HOSE_HEAD, NOT_HOSE)].filter((item) => !HOSE_SHOWN.test(item.sentence));
@@ -587,7 +603,8 @@ function inspectLayerFacts(result, sections) {
       const kind = /^장소:(.+)$/u.exec(tag)?.[1];
       const words = kind && PLACE_WORDS[kind];
       if (!words) continue;
-      const shown = words.test(first) || outside.some((other) => words.test(`${other.head} ${other.sentence}`) || (sources?.rowsByName.get(mixKey(other.head)) ?? []).some((row) => words.test(row.looks)));
+      const seen = (text) => words.test(text) || PLACE_NATIVE[kind].test(text);
+      const shown = seen(first) || outside.some((other) => seen(`${other.head} ${other.sentence}`) || (sources?.rowsByName.get(mixKey(other.head)) ?? []).some((row) => words.test(row.looks)));
       if (!shown) unshown.push(`${item.head} (${kind})`);
     }
   }
@@ -915,18 +932,20 @@ function inspectEngineMix(result, instruction) {
 // engine-levers.md §3 ("펴는 것은 모양이지 원어가 아니다") and §4 step 3: the flattened prompt keeps the original-language names of the layer prompt it was made from.
 // --source gives that layer prompt. Its line-head tokens and its sentence words in Han, kana or Hangul must still be in the checked prompt (the Identity and Finish layers are left out: the engine's
 // own cells replace their wording). A name that is gone, or whose row's other alias is written instead (文庫本 became paperback), is the flattening this rule exists to stop.
-// Midjourney and Soul cut sentences to phrases, so only line heads are read there. Nano Banana's cell lets its prompt gloss original-language words, so it is not read (scope.unchecked says so).
+// Midjourney and Soul cut each layer to one phrase, so only line heads are read there and a layer counts as dropped only when none of its names is left. Nano Banana's cell lets its prompt gloss original-language words, so it is not read (scope.unchecked says so).
 // A sentence cut for length leaves its names out too: the hint says so, and the finding is a warning.
 const DROPPED_ENGINES = new Set(["seedream", "midjourney", "soul"]);
 const KEPT_STEM = 4;
 function sourceNames(sourceText, headsOnly) {
   const names = new Map();
+  let layer = null;
   const add = (text) => {
     const key = mixKey(text);
-    if (key && !names.has(key)) names.set(key, text.trim());
+    if (key && !names.has(key)) names.set(key, { text: text.trim(), layer });
   };
   for (const section of layerSections(unquote(sourceText))) {
     if (section.name !== null && (!/^[A-Za-z]/u.test(section.name) || /^(?:Finish|Identity Reference)$/u.test(section.name))) continue;
+    layer = section.name;
     for (const line of section.lines) {
       const match = section.name === null ? null : LAYER_LINE.exec(line);
       if (match && NATIVE_CHAR.test(match[1])) add(match[1]);
@@ -954,7 +973,7 @@ function inspectDropped(result, instruction, sourceText) {
   const targetJamo = target.normalize("NFD");
   const missing = [];
   const renamed = [];
-  for (const [key, text] of names) {
+  for (const [key, { text }] of names) {
     if (nameKept(text, targetKey, targetJamo)) continue;
     missing.push(text);
     const other = [...new Set((sources?.rowsByName.get(key) ?? []).flatMap((row) => [row.token, ...row.aliases]))]
@@ -963,9 +982,20 @@ function inspectDropped(result, instruction, sourceText) {
     if (other) renamed.push(`${text} → ${other}`);
   }
   if (!missing.length) return;
-  evidence(result, CODE_REGISTRY.mixDropped, missing,
-    `${missing.length} of ${names.size} original-language names of the layer prompt are not in this ${result.engine} prompt${renamed.length ? ` (written under another name: ${renamed.slice(0, 3).join(" | ")})` : ""}`,
-    "Flattening drops the line heads and the layer headings, not the names: call the thing by its original-language name inside the English sentence (engine-levers.md §3). A name left out only because a second sentence was cut for length can stay out.");
+  const note = renamed.length ? ` (written under another name: ${renamed.slice(0, 3).join(" | ")})` : "";
+  if (result.engine === "seedream") {
+    evidence(result, CODE_REGISTRY.mixDropped, missing,
+      `${missing.length} of ${names.size} original-language names of the layer prompt are not in this seedream prompt${note}`,
+      "Flattening drops the line heads and the layer headings, not the names: call the thing by its original-language name inside the English sentence (engine-levers.md §3). A name left out only because a second sentence was cut for length can stay out.");
+    return;
+  }
+  const byLayer = new Map();
+  for (const { text, layer } of names.values()) byLayer.set(layer, [...(byLayer.get(layer) ?? []), text]);
+  const lost = [...byLayer].filter(([, texts]) => texts.every((text) => missing.includes(text)));
+  if (!lost.length) return;
+  evidence(result, CODE_REGISTRY.mixDropped, lost.flatMap(([, texts]) => texts.slice(0, 1)),
+    `${lost.length} of ${byLayer.size} layers of the layer prompt keep none of their original-language names in this ${result.engine} prompt${note}`,
+    "This engine cuts each layer to one phrase, so keeping one name of a layer in its phrase is enough: use the original-language name there, not an English word for it (engine-levers.md §3).");
 }
 
 // engine-levers.md §5: the cells that say "do not write this" for one engine. Text matching only.

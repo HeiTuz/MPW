@@ -30,7 +30,7 @@ Pose 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다. �
 | 餐巾纸轻按唇角 | 냅킨으로 입가 닦기; 냅킨 우아한 포즈 | KR | 식사; 우아함; 소품; 레스토랑 | One hand pressing a folded white napkin lightly to the corner of the lips with a slightly raised finger, composed and polite. | look |
 | 跨坐栏杆 | 난간에 걸터앉기; 난간 위 앉기 | KR | 야외; 난간; 강변; 활동적; 캐주얼; 장소:난간 | Sitting sideways on a low wrought-iron railing with one foot on the ground and the other leg swinging in the air, both hands gripping the rail. | look |
 | 趴床晃腿 | 침대에 엎드려 다리 흔들기; 엎드려 다리 까딱 | KR | 침실; 침대; 실내; 편안함; 캐주얼; 장소:침대 | Lying face down on a bed with hands stacked under the chin and both lower legs bent up and swaying in the air. | look |
-| 擦头发 | 수건으로 머리 말리기; 젖은 머리 닦기 | KR | 욕실; 헤어; 수건; 실내; 편안함; 장소:침대 | Seated on the edge of a bed pressing a towel against wet hair, head slightly tilted back. | look |
+| 擦头发 | 수건으로 머리 말리기; 젖은 머리 닦기 | KR | 욕실; 헤어; 수건; 실내; 편안함 | Seated with a towel pressed against wet hair, head slightly tilted back. | look |
 | 床沿坐姿 | 침대 끝에 앉기; 침대 가장자리 앉기 | KR | 침실; 침대; 앉은 자세; 실내; 장소:침대 | Seated on the edge of a bed with feet on the floor and a relaxed posture. | look |
 | 投喂互动 | 먹여주기 시점; 떠먹여주는 구도 | KR | 데이트; 1인칭; 음식; 카페; 연인 시점 | A hand pushing a latte or spoonful of food toward the lens in first-person view, body leaning forward with an eager look. | look |
 | 누워서 폰 보기 | 누워서 셀카; 침대에서 폰 보기; 폰 위로 들기; lying phone selfie | KR | 아이폰 원본 셀카; 아이폰 셀카; iPhone native selfie; 침대; 심야; 불면; 장소:침대 | She lies on her back in bed holding the phone above her face with both hands, the screen glow resting on her features. | look |
@@ -73,7 +73,7 @@ Pose 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다. �
 | 팔 벌리기 | 두 팔 벌리기; 팔 벌린 자세; arms spread; 张开双臂 | KR | 개방감; 활짝 | Both arms open wide at the sides as if embracing the air, with the chest lifted. | look |
 | 빙글 돌기 | 한 바퀴 돌기; 빙글빙글; twirl; 转圈 | KR | 회전; 치맛자락; 움직임 | A spin caught mid-turn with the skirt or coat flaring and the hair swinging around the head. | look |
 | 손차양 | 손으로 햇빛 가리기; 손으로 눈 위 가리기; shading the eyes; 手搭凉棚 | KR | 햇빛; 이마 위 손 | One flat hand is raised above the brow to shade the eyes from the sun. | look |
-| 반측면 | 반측면 포즈; 45도 측면; 3/4 측면; three-quarter turn; 3/4侧颜 | KR | 45도; 얼굴 각도 | The face and shoulders turn about three quarters away from the lens, with the far cheek slightly hidden and the eyes returned to the camera. | look |
+| 반측면 | 반측면 포즈; 45도 측면; 3/4 측면; three-quarter turn; 3/4侧颜 | KR | 45도; 얼굴 각도 | The face and shoulders turn into a three-quarter view, about forty-five degrees from the lens, with the far cheek slightly hidden and the eyes returned to the camera. | look |
 
 ## CN
 
@@ -166,7 +166,7 @@ Pose 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다. �
 | 蹲姿 | 下蹲; 高街下蹲; 街拍蹲; 쪼그려 앉기; 쪼그려앉기; 스쿼트 포즈; street squat; Street Photography Crouch | KR, CN | 힙함; 스트릿; 거리; 낮은 자세; 国潮; 궈차오; 국조 | A deep squat with the heels down or one knee lowered toward the ground, the forearms resting on the knees. | look |
 | 靠墙斜倚 | 靠墙; 倚墙; 벽에 기대기; 벽 기대 서기; lean on wall | KR, CN | 시크; 스트릿; 거리; 서 있기; 홍콩; 港风 | One shoulder or the back rests against a wall while one foot stays flat and the other bends with its sole pressed to the wall. | look |
 | 天鹅颈 | 천아경; 微扬下颌; swan neck; elevated chin; 턱 살짝 들기; 백조목; 턱을 살짝 든 자세; swan neck lift; raised chin poise | CN | 도도함; 차가움; 실내; 정면; 우아함; 계단; 저녁; 대여주계열; Old Hollywood; 올드 할리우드; 老好莱坞; 턱 들기; 글래머; 江南烟雨柔焦; 강남 연우 소프트 포커스; 烟雨柔焦; 연우 소프트 포커스; 当代美术馆冷光极简; 当代美术馆冷光; 美术馆冷光; 冷光极简; 현대 미술관 냉광 미니멀; 미술관 냉광 미니멀; 미술관 냉광; 냉광 미니멀 | The chin lifts about ten degrees so the neck stretches long and the collarbones open, shoulders pressed down, weight even over both feet. | look |
-| 3/4侧颜 | 3/4 측면; 쓰리쿼터 측면; three-quarter profile; 사분의삼 옆얼굴; 三四侧脸; 3/4 옆모습 | CN | 차가움; 갤러리; 정면과 측면 사이; 도도함; 고고함; 미술관; 사계절; Old Hollywood; 올드 할리우드; 老好莱坞; 스튜디오 인물; 글래머 포트레이트; 当代美术馆冷光极简; 当代美术馆冷光; 美术馆冷光; 冷光极简; 현대 미술관 냉광 미니멀; 미술관 냉광 미니멀; 미술관 냉광; 냉광 미니멀 | The head turns three quarters away from the lens with the far cheek just visible and the eyes lowered, while light carves the jaw and cheekbone edge. | look |
+| 3/4侧颜 | 3/4 측면; 쓰리쿼터 측면; three-quarter profile; 사분의삼 옆얼굴; 三四侧脸; 3/4 옆모습 | CN | 차가움; 갤러리; 정면과 측면 사이; 도도함; 고고함; 미술관; 사계절; Old Hollywood; 올드 할리우드; 老好莱坞; 스튜디오 인물; 글래머 포트레이트; 当代美术馆冷光极简; 当代美术馆冷光; 美术馆冷光; 冷光极简; 현대 미술관 냉광 미니멀; 미술관 냉광 미니멀; 미술관 냉광; 냉광 미니멀 | The head turns into a three-quarter view, about forty-five degrees from the lens, with the far cheek just visible and the eyes lowered, while light carves the jaw and cheekbone edge. | look |
 | 纯侧颜 | 순측면; 90度侧颜; pure profile; 완전 옆모습 | CN | 차가움; 건축; 낮; 날카로움; 江南烟雨柔焦; 강남 연우 소프트 포커스; 烟雨柔焦; 연우 소프트 포커스; 当代美术馆冷光极简; 当代美术馆冷光; 美术馆冷光; 冷光极简; 현대 미술관 냉광 미니멀; 미술관 냉광 미니멀; 미술관 냉광; 냉광 미니멀 | The head turns a full ninety degrees so only one eye, the nose line and the jaw show as a clean outline, with a slanting light leaving a blade-like split of light and shadow. | look |
 | 单手叉腰 | 한 손 허리; 搭胯; hand on hip; one hip brace; 손 허리에 얹기 | CN | 모델; 미니멀; 갤러리; 차가움; Old Hollywood; 올드 할리우드; 老好莱坞; 핀업; 글래머 스탠스 | One hand rests on the hip bone with the elbow pushed out and the face tilted slightly up, giving a sculptural runway line. | look |
 | 双手环胸 | 쌍수환흉; 环抱双臂; folded arms; arms crossed; 팔짱 | CN | 방어적; 도시; 차가움; 당당함 | Both arms fold across the chest with the chin slightly lifted, the shoulders squared and the weight settled on both feet. | look |
@@ -323,7 +323,7 @@ Pose 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다. �
 
 | 토큰 | 별칭 | 문화권 | 태그 | 화면에 보이는 모습 | 종류 |
 | Airborne Glance | mid-run glance; running leap glance; 달리다 돌아보기; 점프하며 돌아보기 | US | 활기; 웃음; 동세; 야외 | Both feet leave the ground mid-run while the face snaps back over one shoulder and the hair trails behind. | look |
-| Arms Folded Lean | arms crossed lean; 팔짱 끼고 기대기; 팔짱 기대 서기 | US | 차분함; 자신감; 기대기; 서 있기; Preppy; 프레피; 프레피룩; Western; 웨스턴; 서부; 울타리; 장소:난간 | The arms fold across the chest while one shoulder leans against a fence, wall or post. | look |
+| Arms Folded Lean | arms crossed lean; 팔짱 끼고 기대기; 팔짱 기대 서기 | US | 차분함; 자신감; 기대기; 서 있기; Preppy; 프레피; 프레피룩; Western; 웨스턴; 서부; 울타리 | The arms fold across the chest while one shoulder leans against a fence, wall or post. | look |
 | Backseat Stand | standing in the backseat; 뒷좌석에서 일어서기; 오픈카 뒷좌석 환호 | US | 로드트립; 환희; 오픈카; 팔 들기; 장소:차 | Standing up on the rear seat of an open car with both arms raised overhead. | look |
 | Booth Knee Up | knee on seat; 부스 무릎 세우기; 무릎 세워 앉기 | US | 다이너; 캐주얼; 반항; 앉기 | Seated in a booth with one knee raised and the shoe on the seat cushion, a hand resting on the knee. | look |
 | Booth Slouch | slouched in booth; 부스에 깊이 앉기; 소파에 파묻히기 | US | 다이너; 나른함; 편안함; 앉기; 그런지; Grunge | The body sinks deep into the corner of a booth or sofa with the shoulders low and a cushion hugged to the chest. | look |

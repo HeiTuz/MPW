@@ -98,7 +98,7 @@ Optics 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다.
 | 紫边 | 色散; 色差; 보라 테두리; 퍼플 프린지; purple fringing | CN | 보라색 테두리; 렌즈 결함 | Thin purple and green fringes appear along high-contrast edges such as hair against bright sky, as if the colors did not quite line up. | look |
 | 浅景深 | 景深浅; 虚化; 얕은 심도; shallow depth of field | CN | 배경 흐림; 눈에만 초점 | Only a thin plane around the eyes stays sharp while the hair behind and the whole background melt into smooth blur. | look |
 | 焦外成像 | 焦外; 焦外虚化; 보케; bokeh | CN | 보케 모양; 배경 흐림의 질감 | Out-of-focus lights and shapes spread into soft, evenly filled discs whose edges and texture show the character of the lens. | look |
-| 傻瓜相机 | 傻瓜机; 点射相机; 똑딱이; point-and-shoot; コンパクトカメラ | CN | 자동 카메라; 똑딱이; 가벼운 스냅 | A basic point-and-shoot with automatic exposure and a small lens gives a plain, slightly flat snapshot with deep focus and casual framing. | gear |
+| 傻瓜相机 | 傻瓜机; 똑딱이; point-and-shoot; コンパクトカメラ | CN | 자동 카메라; 똑딱이; 가벼운 스냅 | A basic point-and-shoot with automatic exposure and a small lens gives a plain, slightly flat snapshot with deep focus and casual framing. | gear |
 | 一次性相机 | 一次性胶片相机; 일회용 카메라; disposable camera; 使い捨てカメラ | CN | 정면 플래시; 입자; 어두운 모서리 | Flat on-camera flash, a slightly soft plastic lens, dark corners and visible grain give a casual disposable-camera snapshot look. | look |
 | 胶片感 | 胶片质感; 필름 감성; film look | CN | 필름 감성; 입자; 부드러운 대비 | Soft contrast, gently rolled-off highlights, a fine grain and slightly shifted color recall the look of a film negative. | look |
 | 通透 | 通透感; 투명한 색감; clear transparent tones | CN | 맑은 공기; 깨끗한 색; 투명한 톤 | Clean, clear tones with crisp air between subject and background, clear whites and no muddy haze in shadows or sky. | look |

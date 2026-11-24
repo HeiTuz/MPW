@@ -56,7 +56,8 @@ Outfit 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다.
 | 퍼 트리밍 | 퍼 트리밍 자켓; 퍼 장식; 퍼 트림; fur trim | KR | 포근함; 겨울; 스키 리조트; 럭셔리 | Soft faux-fur edging along a collar and cuffs, its fibres fluffing and glowing at the tips in backlight. | look |
 | 플란넬 체크 셔츠 | 플란넬 셔츠; 체크 셔츠; 남방; flannel shirt | KR | 빈티지; 가을; 캠퍼스; 그런지 | A large-check brushed flannel shirt with a faded surface and a soft napped weave. | look |
 | 홀로그램 원피스 | 홀로그램; 홀로그래픽 원피스; 레인보우 홀로; holographic dress | KR | 화려함; 여름 밤; 페스티벌; 사이버 | A short dress in iridescent holographic film that shifts between pink, cyan and gold as the viewing angle changes. | look |
-| 한복 | 한복 저고리; 치마저고리; 저고리; hanbok; 韩服; 韓服 | KR | 전통; 한국; 저고리; 치마; 곡선; 한옥 | A short wrapped-front jacket with long sleeves worn over a high-waisted full skirt that flares from just under the chest, with a ribbon tie at the chest. | look |
+| 한복 | 치마저고리; hanbok; 韩服; 韓服 | KR | 전통; 한국; 저고리; 치마; 곡선; 한옥; 긴 기장 | A short wrapped-front jacket with long sleeves worn over a high-waisted full skirt that flares from just under the chest, with a ribbon tie at the chest. | look |
+| 저고리 | 한복 저고리; hanbok jacket | KR | 전통; 한국; 한옥; 상의 | A short wrapped-front jacket with long sleeves and a ribbon tie at the chest, worn on its own or over any skirt. | item |
 | 생활한복 | 개량한복; 모던 한복; 데일리 한복; 일상 한복; modern hanbok | KR | 전통; 일상; 편안함; 개량; 한옥; 긴 기장 | Hanbok-cut tops and wide trousers in everyday cotton or linen, with a wrap front, loose sleeves and an easy straight drape. | look |
 | 아이돌 무대의상 | 무대의상; 무대 의상; 스테이지 의상; 打歌服; idol stage outfit; 타가복; idol stage costume; K-POP 스테이지 | KR | 무대; 반짝임; 코디; 퍼포먼스 | A coordinated stage outfit with structured shoulders, metallic or sequined trim and matching pieces that read clearly under bright stage lights. | look |
 | 펌프스 | 浅口泵鞋; pump shoe; pumps | KR | 오피스; 클래식; 가을; 데일리 | A closed low-cut shoe with a matte leather upper and a slim heel that skims the floor. | item |
@@ -156,7 +157,7 @@ Outfit 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다.
 | 토큰 | 별칭 | 문화권 | 태그 | 화면에 보이는 모습 | 종류 |
 |---|---|---|---|---|---|
 | 一字领 | 보트넥; 일자 넥; boat neck; bateau neckline | CN | 니트; 우아함; 드레스; 클래식; 아이폰 원본 셀카; 아이폰 셀카; iPhone native selfie; 当代美术馆冷光极简; 当代美术馆冷光; 美术馆冷光; 冷光极简; 현대 미술관 냉광 미니멀; 미술관 냉광 미니멀; 미술관 냉광; 냉광 미니멀; 서울 카페 웜톤; 서울 카페 웜톤 확산광; 웜톤 확산광; 首尔咖啡馆与居家暖调漫射; 쿨톤 도자기 피부; 블루 그레이 미니멀; 냉백 도자기 피부; 회청색 미니멀; 清冷瓷肌; 极简灰蓝 | A straight horizontal neckline running across the collarbones to the tops of the shoulders. | item |
-| 丝绒晚礼服 | 벨벳 이브닝 드레스; 벨벳 드레스; velvet gown; velvet evening dress | CN | 벨벳; 저녁; 복고; 가운; 홍콩; 港风; Old Hollywood; 올드 할리우드; 老好莱坞; 글래머 가운 | A long velvet evening gown with deep matte color and soft highlights along the shoulders and folds. | item |
+| 丝绒晚礼服 | 벨벳 이브닝 드레스; 벨벳 드레스; velvet gown; velvet evening dress | CN | 벨벳; 저녁; 복고; 가운; 홍콩; 港风; Old Hollywood; 올드 할리우드; 老好莱坞; 글래머 가운; 긴 기장 | A long velvet evening gown with deep matte color and soft highlights along the shoulders and folds. | item |
 | 云锦 | 운금; 남경 운금; 云锦立领; Yunjin; Yunjin brocade | CN | 전통 직물; 화려함; 금사; 궁중; 国潮; 궈차오; 국조 | Heavy woven brocade with raised cloud-and-flower patterns in metallic thread that glitter in small deep patches. | item |
 | 交领 | 교령; 교차 깃; 교차 칼라; crossed collar; cross-collar | CN | 한푸; 전통; 실크; V넥; 江南烟雨柔焦; 강남 연우 소프트 포커스; 烟雨柔焦; 연우 소프트 포커스 | A collar that crosses right over left in a V shape across the chest. | item |
 | 大袖衫 | 대수삼; 交领大袖; 교령 대수; 넓은 소매 한푸; wide-sleeve robe | CN | 한푸; 넓은 소매; 전통; 송나라 | A thin layered robe with very wide sleeves that fall in long, soft, rounded folds from the arms. | item |
@@ -180,7 +181,7 @@ Outfit 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다.
 | 明制 | 명제; 명나라 한푸; 명나라 복식; Ming dynasty dress | CN | 명나라; 한푸; 전통; 자수 | Garments with wide pipa sleeves, high collars and side-fastened fronts in woven patterned silk. | item |
 | 暗纹 | 톤온톤 문양; 은은한 문양; 자카드; tone-on-tone pattern | CN | 자카드; 은은함; 실크; 전통 | A pattern woven in the same color as the cloth, visible only as a faint change of sheen. | item |
 | 月白 | 월백; 월백색; moon white; pale blue-white | CN | 옅은 색; 청량함; 전통색; 실크; 江南烟雨柔焦; 강남 연우 소프트 포커스; 烟雨柔焦; 연우 소프트 포커스; 新中式水墨; 신중식 수묵; 水墨影调; 수묵 톤 | A cool pale white with a faint blue cast that looks like moonlight on silk. | item |
-| 汉服 | 한푸; hanfu; Han clothing | CN | 한푸; 전통; 레이어드; 중국풍 | Traditional layered robes with crossed collars, wide sleeves and tied waistbands in flowing fabric. | item |
+| 汉服 | 한푸; hanfu; Han clothing | CN | 한푸; 전통; 레이어드; 중국풍; 긴 기장 | Traditional layered robes with crossed collars, wide sleeves and tied waistbands in flowing fabric. | item |
 | 法兰绒 | 플란넬; 플라넬; flannel | CN | 울; 회색; 가을겨울; 부드러움 | Brushed wool with a soft fuzzy surface and a faint diffused sheen. | item |
 | 波尔多红 | 보르도 레드; 보르도; 버건디; Bordeaux red; burgundy | CN | 와인색; 깊은 붉은색; 저녁; 복고 | A deep red-purple wine color with dark shadows and a rich glow in the folds. | item |
 | 漳绒 | 장융; 장저우 벨벳; Zhangzhou velvet | CN | 전통 벨벳; 화려함; 겨울; 문양 | Cut-pile velvet woven with raised patterns, its dense matte nap drinking in light. | item |
@@ -210,7 +211,7 @@ Outfit 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다.
 | 长衫 | 장삼; 창산; 对襟长衫; long robe; changshan; 真丝对襟长衫; 실크 장삼 | CN | 전통; 롱 기장; 남녀 공용; 차분함; 故宫朱红暖金; 고궁 주홍 웜골드; 宫廷历史胶片; 궁정 역사 필름; 故宫人文大片; 江南烟雨柔焦; 강남 연우 소프트 포커스; 烟雨柔焦; 연우 소프트 포커스; 当代美术馆冷光极简; 当代美术馆冷光; 美术馆冷光; 冷光极简; 현대 미술관 냉광 미니멀; 미술관 냉광 미니멀; 미술관 냉광; 냉광 미니멀; 新中式水墨; 신중식 수묵; 水墨影调; 수묵 톤 | A long straight robe that falls to the shin, with side slits that swing as the wearer moves. | item |
 | 青瓷绿 | 청자색; 셀라돈 그린; celadon green | CN | 옅은 초록; 도자기; 봄여름; 우아함 | A soft grey-green with a glassy depth like glazed porcelain. | item |
 | 香云纱 | 향운사; 광둥 흑견; gambiered Canton silk; xiangyunsha; 莨绸; 莨纱绸 | CN | 전통 직물; 광둥; 여름; 검정 | A black-brown silk with a slightly stiff, crinkled, waxy-glossy face that rustles when it moves. | item |
-| 马面裙 | 马面; 마면군; 마면치마; 마몐췬; horse-face skirt; mamianqun | CN | 치마; 플리츠; 명나라; 전통; 国潮; 궈차오; 국조; 新中式水墨; 신중식 수묵; 水墨影调; 수묵 톤 | A long skirt with flat front and back panels and pleated sides, the stiff panel standing smooth while the side pleats fall in sharp folds. | item |
+| 马面裙 | 马面; 마면군; 마면치마; 마몐췬; horse-face skirt; mamianqun | CN | 치마; 플리츠; 명나라; 전통; 国潮; 궈차오; 국조; 新中式水墨; 신중식 수묵; 水墨影调; 수묵 톤; 긴 기장 | A long skirt with flat front and back panels and pleated sides, the stiff panel standing smooth while the side pleats fall in sharp folds. | item |
 | 麦尔登呢 | 멜턴 울; 멜톤; melton wool | CN | 울; 두꺼움; 겨울; 아우터; 故宫朱红暖金; 고궁 주홍 웜골드; 宫廷历史胶片; 궁정 역사 필름; 故宫人文大片 | Thick dense felted wool with a smooth matte face that holds a stiff outline. | item |
 | 黛绿 | 다크 그린; 짙은 녹색; dark green; slate green | CN | 깊은 초록; 전통색; 차분함; 가을 | A deep grey-toned green that turns almost black in shadow. | item |
 | 小香风 | 샤넬풍; 샤넬룩; 샤넬풍 트위드; Chanel-style tweed jacket | CN | 트위드; 재킷; 클래식; 우아함; 老钱风; 라오첸펑; 올드머니 | A boxy collarless tweed jacket with braided trim, gold buttons and neat patch pockets. | look |
@@ -301,7 +302,7 @@ Outfit 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다.
 | コーデュロイワークジャケット | 코듀로이 워크 재킷; 골덴 워크 재킷; corduroy work jacket; 工装灯芯绒夹克 | JP | 워크웨어; 가을; 빈티지; 코듀로이 | A wide-wale corduroy work jacket with snaps and chest flap pockets, the ribs flattening at the elbows. | item |
 | コクーンコート | 코쿤 코트; cocoon coat; 茧型大衣 | JP | 겨울; 울; 오버사이즈; 미니멀 | A heavy wool coat with dropped shoulders that balloons through the body and curves back in at the hem. | item |
 | コラムドレス | 컬럼 드레스; 칼럼 드레스; column dress | JP | 저녁; 블랙; 조각적; 미니멀; 긴 기장 | A narrow sleeveless dress that falls in one straight vertical line from shoulder to ankle. | item |
-| サテンロングワンピース | 새틴 롱 원피스; 새틴 롱원피스; satin maxi dress | JP | 저녁; 광택; 우아함; 롱 드레스 | A long satin dress that shines like dark water and pools highlights along its folds. | item |
+| サテンロングワンピース | 새틴 롱 원피스; 새틴 롱원피스; satin maxi dress | JP | 저녁; 광택; 우아함; 롱 드레스; 긴 기장 | A long satin dress that shines like dark water and pools highlights along its folds. | item |
 | シアーウールニット | 시어 니트; 시어 울 니트; sheer wool knit; sheer knit | JP | 봄; 투명감; 울; 레이어드 | An ultrafine knit so thin that its stitches turn see-through, showing the color of the layer beneath as a soft haze. | item |
 | シアーリネン | 시어 린넨; 얇은 린넨; sheer linen | JP | 여름; 가벼움; 투명감; 린넨 | Very thin washed linen whose open weave glows coolly where light passes through. | item |
 | シルクサテンブラウス | 실크 새틴 블라우스; 새틴 블라우스; silk satin blouse | JP | 오피스; 우아함; 실크; 광택 | A heavy silk satin blouse with a hidden placket, long highlights sliding along the sleeve folds. | item |
@@ -363,7 +364,8 @@ Outfit 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다.
 | 千鳥格子 | 치도리 격자; 치도리; 하운드투스; 하운즈투스; houndstooth; 千鸟格 | JP | 체크; 클래식; 울; 겨울 | A small broken-check weave in two contrasting tones that forms sharp jagged points. | look |
 | 古着 | 후루기; 빈티지 옷; 구제; 구제 옷; vintage clothing; 古着系; 구제 패션; 구제 룩; 빈티지; Shimokitazawa Vintage; ふるぎ; 古着风 | JP | 빈티지; 레이어드; 캐주얼; 스트리트; 森ガール; 모리걸 | Second-hand garments with softened fabric, faded dye, stretched hems and visible wear along seams and cuffs. | look |
 | ヨウジヤマモト | 요지 야마모토; 요지; Yohji Yamamoto; 山本耀司 | JP | 블랙; 와이드; 해체주의; 아방가르드 | Long loose black layers cut asymmetric, with wide trousers and draped hems that hide the body's outline. | person-style |
-| 浴衣 | 유카타; 유까따; 유카타 차림; yukata; 浴衣姿 | JP | 여름; 축제; 전통; 면 | A light cotton summer kimono with a wrapped front closed by a wide sash tied at the back, printed with large seasonal patterns. | look |
+| 着物 | きもの; キモノ; 기모노; kimono; 着物姿 | JP | 전통; 정장; 비단; 긴 기장 | A formal silk kimono with a wrapped front closed by a wide obi, long hanging sleeves and a hem that falls to the ankle. | look |
+| 浴衣 | 유카타; 유까따; 유카타 차림; yukata; 浴衣姿 | JP | 여름; 축제; 전통; 면; 긴 기장 | A light cotton summer kimono with a wrapped front closed by a wide sash tied at the back, printed with large seasonal patterns. | look |
 | 水玉 | 미즈타마; 물방울 무늬; 도트 무늬; 폴카 도트; polka dot | JP | 도트; 패턴; 레트로; 경쾌함 | Evenly spaced round dots printed across fabric, bold and large or small and tight, repeating in a regular grid. | look |
 | オーバーサイズコート | 오버사이즈 코트; oversized coat; 大衣; 宽大大衣 | JP | 겨울; 실루엣; 캐주얼; 울 | Wool coat cut wide with dropped shoulder seams, hem to the knee and cuffs covering the wrists, hands deep in the pockets widening the shape. | look |
 | マフラー | 머플러; 스카프; scarf; 围巾 | JP | 겨울; 울; 따뜻함; 얼굴 | Thick wool scarf wound three times around the neck, burying the face below the nose and leaving only the eyes visible. | look |
@@ -466,10 +468,10 @@ Outfit 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다.
 | Juicy Velour | 쥬시 벨루어; 쥬시 쿠튀르 벨루어; 쥬시 트레이닝복; Juicy Couture | US | Y2K; 핑크; 벨루어; 캐주얼; 긴 기장 | A matching velour zip hoodie and track pants with a plush nap that catches light unevenly. | brand |
 | Argyle | 아가일; 아가일 니트; 아가일 가디건; 아가일 패턴; argyle knit; アーガイル; 菱格纹针织; 다이아몬드 체크 니트 | US | 니트; 다이아몬드 무늬; 클래식; 가을 | A diamond lattice knitted in two or three colors and crossed by thin diagonal lines. | item |
 | Baby Tee | 베이비 티; 베이비티; 크롭 티; Y2K 티셔츠; fitted tee | US | 짧은 기장; Y2K; 여름; 캐주얼; Kodak Gold 200; 코닥 골드 200; 柯达Gold 200 | A short, snug cotton tee with a small neckline that ends at the waist. | item |
-| Boho Maxi Skirt | 보헤미안 치마; 보헤미안 스커트; 티어드 롱스커트; boho maxi skirt; Bohemian skirt; 보호 스커트 | US | 보헤미안; 페스티벌; 여름; 동세 | A long tiered cotton skirt with printed patterns that flares wide when it moves. | item |
+| Boho Maxi Skirt | 보헤미안 치마; 보헤미안 스커트; 티어드 롱스커트; boho maxi skirt; Bohemian skirt; 보호 스커트 | US | 보헤미안; 페스티벌; 여름; 동세; 긴 기장 | A long tiered cotton skirt with printed patterns that flares wide when it moves. | item |
 | Camel Coat | 캐멀 코트; 카멜 코트; 캐시미어 코트; camel cashmere coat | US | 올드머니; 가을겨울; 클래식; 미니멀; 老钱风; 라오첸펑; 驼色大衣 | A long camel-colored wool or cashmere coat with a soft drape and a lightly brushed surface. | item |
 | Chainmail Top | 체인메일 탑; 메탈 탑; 체인 탑; metal mesh top | US | 금속; 반짝임; 페스티벌; 밤 | A top made of small linked metal discs that shimmers and hangs in fluid folds. | item |
-| Chiffon Maxi | 쉬폰 맥시; 시폰 롱원피스; 쉬폰 원피스; chiffon dress | US | 쉬폰; 꽃무늬; 보헤미안; 여름 | A long floral chiffon dress in sheer light layers that float in the wind. | item |
+| Chiffon Maxi | 쉬폰 맥시; 시폰 롱원피스; 쉬폰 원피스; chiffon dress | US | 쉬폰; 꽃무늬; 보헤미안; 여름; 긴 기장 | A long floral chiffon dress in sheer light layers that float in the wind. | item |
 | Corduroy Blazer | 코듀로이 재킷; 골덴 재킷; 코듀로이 블레이저; corduroy jacket | US | 가을; 갈색; 70년대; 아카데미아 | A fine-wale corduroy blazer whose vertical ridges catch light in thin stripes. | item |
 | Dad Jeans | 대드 진; 대디진; 대디 진; dad denim | US | 데님; 헐렁함; 90년대; 빈티지; Kodak Gold 200; 코닥 골드 200; 柯达Gold 200; 긴 기장 | Loose straight-leg jeans with a high waist and relaxed seat in a faded mid or light wash. | item |
 | Double-Breasted Blazer | 더블 브레스티드 블레이저; 더블 재킷; 더블 블레이저; double breasted jacket | US | 테일러링; 클래식; 오피스; 가을; 뉴욕 쿨 그레이; 맨해튼 쿨 그레이; New York overcast cool grey; 纽约SOHO阴天冷调; 曼哈顿冷灰 | A tailored jacket with two parallel rows of buttons and wide peaked lapels closing across the chest in a strong line. | item |
@@ -559,7 +561,7 @@ Outfit 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다.
 | Marabou Robe | 마라부 가운; 마라부 로브; 깃털 가운; 깃털 로브; 羽毛睡袍; marabou-trimmed robe | US | Old Hollywood; 올드 할리우드; 老好莱坞; 깃털; 글래머; 침실; 가운 | A satin dressing robe with a band of fluffy marabou feathers along the collar and cuffs, the fine fibres moving and glowing at their edges. | item |
 | Fedora | 페도라; 중절모; 페도라 모자; 软呢帽; felt fedora | US | Old Hollywood; 올드 할리우드; 老好莱坞; 필름 누아르; 갱스터; 모자; 1940년대 | A soft felt hat with a creased crown, a pinched front and a brim angled down over one eye, throwing a band of shadow across the upper face. | item |
 | Turban | 터번; 터번 헤어; 헤드 터번; 터번 모자; turban headwrap | US | Old Hollywood; 올드 할리우드; 老好莱坞; 1940년대; 글래머; 헤드웨어; 복고 | A jersey or satin scarf wound around the head in tight twisted folds that sit high over the forehead, hiding the hair and leaving the ears and neck bare. | item |
-| Sequin Gown | 시퀸 가운; 시퀸 드레스; 스팽글 드레스; 스팽글 가운; 亮片晚礼服; beaded gown | US | Old Hollywood; 올드 할리우드; 老好莱坞; 이브닝; 글래머; 반짝임; 레드카펫 | A long fitted gown covered in small sequins that catch the light as hundreds of tiny bright points and flash at every fold and curve, the fabric hanging heavy. | item |
+| Sequin Gown | 시퀸 가운; 시퀸 드레스; 스팽글 드레스; 스팽글 가운; 亮片晚礼服; beaded gown | US | Old Hollywood; 올드 할리우드; 老好莱坞; 이브닝; 글래머; 반짝임; 레드카펫; 긴 기장 | A long fitted gown covered in small sequins that catch the light as hundreds of tiny bright points and flash at every fold and curve, the fabric hanging heavy. | item |
 | Linen Sundress | 리넨 썬드레스; 린넨 선드레스; 흰 리넨 원피스; white linen sundress | US | 加州 골든아워; 캘리포니아 골든아워; California golden hour; 해변; 여름; 리넨 | A white linen dress on thin straps that lifts in the wind and turns faintly translucent where low sun passes through the thin cloth. | item |
 | Ribbed Tank Top | 립 탱크탑; 립드 탱크탑; 골지 탱크탑; ribbed scoop-neck tank | US | 加州 골든아워; 캘리포니아 골든아워; California golden hour; 클린걸; 여름; 운동 | A fitted ribbed cotton tank with a wide scoop neckline that follows the torso and leaves the shoulders and collarbones bare. | item |
 | Utility Jumpsuit | 유틸리티 점프수트; 카키 점프수트; 워크 점프수트; khaki utility jumpsuit | US | 加州 골든아워; 캘리포니아 골든아워; California golden hour; 사막; 로드트립; 데스밸리; 긴 기장 | A faded khaki cotton jumpsuit with a belted waist and patch pockets, the heavy twill creasing sharply at the elbows and knees. | item |
@@ -610,7 +612,7 @@ Outfit 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다.
 | Robe chemisier | 셔츠 원피스; 셔츠 드레스; 셔츠원피스; shirt dress; 텐셀 셔츠 원피스 | FR | 클래식; 봄; 전원; 파리 | A shirt dress with a pointed collar and a row of buttons down the front, belted at the waist in a soft knot. | item |
 | Robe de thé | 티 드레스; 티 원피스; 로브 드 테; tea dress | FR | 로맨틱; 봄여름; 빈티지; 플로럴 | A mid-calf printed dress in light crepe with a fitted bodice, button front and loose skirt that sways at the shin. | item |
 | Robe de soirée | 이브닝 드레스; 실크 이브닝 드레스; 롱 이브닝 드레스; evening gown | FR | 저녁; 고급; 오페라; 우아함; Old Hollywood; 올드 할리우드; 老好莱坞; 글래머 가운; 새틴; 긴 기장 | A floor-length silk satin evening dress with a high sheen that pools into dark reflections in the folds. | item |
-| Robe dos nu | 오픈백 드레스; 백리스 드레스; 등 파인 원피스; open-back dress | FR | 여름; 저녁; 골든아워; 리비에라; Old Hollywood; 올드 할리우드; 老好莱坞; 백리스 가운; 등 파인 이브닝드레스; 이브닝; 1930년대; 露背礼服; 남프랑스 한여름 과노출; 南法盛夏过曝; Soleil du Midi | A long satin dress cut open at the back, its fabric shining in long highlights down the skirt. | item |
+| Robe dos nu | 오픈백 드레스; 백리스 드레스; 등 파인 원피스; open-back dress | FR | 여름; 저녁; 골든아워; 리비에라; Old Hollywood; 올드 할리우드; 老好莱坞; 백리스 가운; 등 파인 이브닝드레스; 이브닝; 1930년대; 露背礼服; 남프랑스 한여름 과노출; 南法盛夏过曝; Soleil du Midi; 긴 기장 | A long satin dress cut open at the back, its fabric shining in long highlights down the skirt. | item |
 | Robe smockée | 스모킹 원피스; 셔링 원피스; 스퀘어넥 개더 원피스; smocked dress; robe froncée | FR | 봄여름; 피크닉; 전원; 로맨틱 | A dress with a stitched smocked bodice that pulls the cotton into small even ripples above a loose skirt. | item |
 | Robe portefeuille | 랩 원피스; 랩 드레스; 로브 포르트푀유; wrap dress | FR | 로맨틱; 봄여름; 빈티지; 파리 | A wrap dress with a crossover bodice and a tie at the side waist, the overlapping skirt moving on every step. | item |
 | Robe pull | 스웨터 원피스; 니트 원피스; 울 니트 원피스; knit dress | FR | 가을겨울; 미니멀; 파리; 니트 | A short wool jumper dress with a close rib and a high neck, the matte fibres lying flat. | item |
@@ -649,7 +651,7 @@ Outfit 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다.
 | Manteau en tweed | 트위드 코트; tweed overcoat; 트위드 롱 코트 | FR | 겨울; 가을; 묘지 산책; 좌안 | A mid-length tweed coat with a wide notched collar and deep pockets, wool heavy enough to hold a straight line. | item |
 | Gilet cachemire | 캐시미어 베스트; cashmere waistcoat; 니트 조끼; 캐시미어 조끼 | FR | 가을; 레이어드; 빈티지; 좌안 | A soft cashmere waistcoat worn over a shirt under a tweed jacket, the fuzzy surface slightly pilled at the edges. | item |
 | Cachemire | 캐시미어; cashmere; 카시미어 | FR | 겨울; 가을; 미니멀; 콰이어트 럭셔리 | A soft brushed cashmere knit with a velvet pile that blurs the stitch lines, loosely draped over silk. | item |
-| Robe de soirée en soie | 실크 이브닝 드레스; silk evening dress; 새틴 롱 드레스 | FR | 저녁; 가을; 오페라; 고급 | A heavy silk satin dress in deep jewel tones with a high sheen that pools into dark reflections at the folds. | item |
+| Robe de soirée en soie | 실크 이브닝 드레스; silk evening dress; 새틴 롱 드레스 | FR | 저녁; 가을; 오페라; 고급; 긴 기장 | A heavy silk satin dress in deep jewel tones with a high sheen that pools into dark reflections at the folds. | item |
 | Manteau en cachemire | 캐시미어 코트; cashmere coat; 캐멀 코트 | FR | 겨울; 가을; 고급; 저녁 | A long camel cashmere coat with a wide lapel and soft drape, brushed wool glowing warm in low light. | item |
 | Étole en cachemire | 캐시미어 숄; cashmere stole; 큰 숄; 캐시미어 스톨 | FR | 겨울; 저녁; 미니멀; 오페라 | A large cashmere wrap draped over bare shoulders with fringe at the ends, its nap catching the light. | item |
 | Lin lavé | 워시드 린넨; washed linen; 린넨; 라방 린넨; 세탁 가공 린넨 | FR | 여름; 남프랑스; 통기성; 자연스러움; 남프랑스 한여름 과노출; 南法盛夏过曝; Soleil du Midi | Washed linen with a soft slubby weave that creases deeply at the elbows and waist and glows slightly where light passes through. | item |

@@ -16,7 +16,7 @@ Scene 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다. 
 | 광화문 | 光化门; Gwanghwamun; 광화문 광장; 광화문 사거리 | KR | 서울; 오피스; 낮; 도심 | A wide Seoul avenue with tall glass office towers and flat overcast daylight on pale paving. | place |
 | 남산 서울타워 | 남산; N서울타워; Namsan Tower; 南山; 남산 케이블카; 남산타워; Namsan cable car; 首尔塔缆车 | KR | 야경; 산책로; 전망; 서울 | Hilltop promenade with a slim lit tower above the trees and a hazy city skyline in blue evening light. | place |
 | 노래방 | KTV包厢; KTV; 노래방 방; 코인노래방; karaoke room | KR | 밤; 마젠타; 블루; 파티 | A small dark private karaoke room with a large screen and padded sofa, rotating magenta and blue lights sweeping over glossy tabletops. | place |
-| 노량진 수산시장 | 노량진; 노량진 시장; Noryangjin fish market; 鹭梁津 | KR | 시장; 밤; 생활감; 리얼리즘; 밤 한정 | A late-night fish market of wet tiled floors, steel tanks and bright bare bulbs, with water glinting under harsh overhead lamps. | place |
+| 노량진 수산시장 | 노량진; 노량진 시장; Noryangjin fish market; 鹭梁津 | KR | 시장; 밤; 생활감; 리얼리즘 | A late-night fish market of wet tiled floors, steel tanks and bright bare bulbs, with water glinting under harsh overhead lamps. | place |
 | 달빛무지개분수 | 반포대교 분수; 달빛 무지개 분수; Banpo rainbow fountain; 盘浦彩虹喷泉 | KR | 야경; 여름; 다리; 분수; 밤 한정 | A long bridge fountain at night, arcs of water lit in rainbow colors falling over the dark river. | place |
 | 대관령 양떼목장 | 대관령; 양떼목장; Daegwallyeong; 大关岭 | KR | 겨울; 설원; 언덕; 광활 | A wide snow-covered hill pasture with a wooden fence and very few features on the ground. | place |
 | 덕수궁 돌담길 | 덕수궁; Deoksugung stone wall; 돌담길; 德寿宫 | KR | 고즈넉함; 가을; 돌담; 서울 장소 | Long grey stone palace wall path with fallen ginkgo leaves and wet autumn pavement under a soft overcast sky. | place |
@@ -53,7 +53,7 @@ Scene 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다. 
 | 편의점 | 便利店; convenience store; 편의점 앞; 심야 편의점; CU; GS25; 씨유; CU 편의점; 편의점 심야 불빛 | KR | 심야; 형광등; 일상; 상점; 생활감; 서울 밤 시네마; 서울 나이트 시네마; 차창 불빛 시네마; Seoul night cinema; 首尔夜生活电影感; 车内流光 | A convenience store at night with packed shelves and glass fridge doors. | place |
 | 피팅룸 | 탈의실; 탈의실 거울; 피팅룸 셀카; fitting room; 试衣间; 피팅룸 거울 기록; フィッティングルーム; 試着室 | KR | 거울; 쇼핑; 실내; 스팟 조명; 아이폰 원본 셀카; 아이폰 셀카; iPhone native selfie | A small boutique fitting room with a full-length mirror and curtain. | place |
 | 하늘공원 | 하늘공원 억새; 억새밭; Haneul Park; 天空公园; 하늘공원 은빛 억새 | KR | 가을; 억새; 언덕; 바람 | A rolling field of silver miscanthus swaying in wind, low side sun turning each plume into a glowing wisp. | place |
-| 한강 치맥 | 치맥; 치킨 맥주; 한강 치킨; chimaek; fried chicken and beer | KR | 여름; 밤; 강변; 여유; 밤 한정 | A riverside lawn at night with delivery fried chicken and cold beer on a picnic mat, bridge lights reflected on the dark water. | place |
+| 한강 치맥 | 치맥; 치킨 맥주; 한강 치킨; chimaek; fried chicken and beer | KR | 여름; 밤; 강변; 여유 | A riverside lawn at night with delivery fried chicken and cold beer on a picnic mat, bridge lights reflected on the dark water. | place |
 | 한강공원 | 한강; 한강 피크닉; 한강 잔디밭; Hangang Park; Han River park; 汉江公园; 汉江野餐 | KR | 피크닉; 강변; 서울; 여유; 노을; 야경; 꾸안꾸; 꾸민 듯 안 꾸민 듯 | A wide grassy riverside park beside large bridges, with picnic mats on the lawn and a running path. | place |
 | 한남동 | 한남; 한남동 갤러리; 한남동 브런치; Hannam-dong; 汉南洞; 한남동 갤러리 룩 | KR | 고급; 갤러리; 브런치; 차분함; 서울; 꾸안꾸; 꾸민 듯 안 꾸민 듯; 아이폰 원본 셀카; 아이폰 셀카; iPhone native selfie; 폴라로이드 빛샘; 유통기한 지난 필름; 과기필름; 古早胶片; 서울 카페 웜톤; 서울 카페 웜톤 확산광; 웜톤 확산광; 首尔咖啡馆与居家暖调漫射; 쿨톤 도자기 피부; 블루 그레이 미니멀; 냉백 도자기 피부; 회청색 미니멀; 清冷瓷肌; 极简灰蓝; 서울 밤 시네마; 서울 나이트 시네마; 차창 불빛 시네마; Seoul night cinema; 首尔夜生活电影感; 车内流光 | A hillside district of minimal galleries and brunch cafes with pale walls and floor-to-ceiling glass. | place |
 | 한옥 카페 | 한옥 중정 카페; 한옥 마당 카페; 한옥 중정; hanok cafe; 韩屋咖啡; 한옥마을 카페 | KR | 전통; 마당; 카페; 고요 | An open-sky hanok courtyard with wooden verandas around gravel and stones, soft sunlight dropping into the center. | place |
@@ -96,7 +96,7 @@ Scene 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다. 
 | 프렌치 디저트샵 | 프렌치 크림 디저트샵; 크림 디저트 카페; French cream parlor; 法式甜品店 | KR | 부드러움; 낮; 디저트; 프렌치 | A dessert shop with cream-white plaster moldings, marble counters and pastry cases, soft bright daylight on pale glossy surfaces. | place |
 | 한강 억새 | 한강 노을 억새풀; 한강 노을; Han River sunset reeds; 汉江芦苇 | KR | 따뜻함; 가을; 저녁; 강변; 폴라로이드 빛샘; 유통기한 지난 필름; 과기필름; 古早胶片; 서울 카페 웜톤; 서울 카페 웜톤 확산광; 웜톤 확산광; 首尔咖啡馆与居家暖调漫射 | Tall reed grass with feathered tips stands at the riverside. | place |
 | 데크로드 | 해변 데크로드; 해변 산책로; coastal boardwalk; 海滨木栈道 | KR | 바람; 여름; 바다; 산책; 폴라로이드 빛샘; 유통기한 지난 필름; 과기필름; 古早胶片 | A wooden boardwalk beside the sea, wind lifting long hair and loose fabric under an open sky. | place |
-| 해안도로 | 해안도로 드라이브; coastal highway; 沿海公路 | KR | 자유; 낮; 도로; 바다; 한낮 한정 | A straight coastal road running to the horizon beside open sea, hard midday sun and long vanishing-point perspective. | place |
+| 해안도로 | 해안도로 드라이브; coastal highway; 沿海公路 | KR | 자유; 낮; 도로; 바다 | A straight coastal road running to the horizon beside open sea, hard midday sun and long vanishing-point perspective. | place |
 | 타일 베이커리 | 화이트 타일 베이커리; 화이트타일 베이커리; white tile bakery; 白瓷砖烘焙 | KR | 깔끔함; 낮; 베이커리; 미니멀 | A bakery of glossy white subway tile and steel racks, bright even light with warm bread tones against cool white. | place |
 | 회전문 | 회전문 스냅; revolving door; 旋转门 | KR | 움직임; 낮; 건물; 대비 | A glass revolving door that slices bright and dark bands of light across the figure as the panels turn. | place |
 | 횡단보도 | 횡단보도 스냅; 스크램블 횡단보도; crosswalk; 斑马线 | KR | 움직임; 낮; 도심; 인파; 서울 밤 시네마; 서울 나이트 시네마; 차창 불빛 시네마; Seoul night cinema; 首尔夜生活电影感; 车内流光 | A busy crosswalk where walking crowds blur with shutter motion while the main figure stays sharp against the flow. | place |
@@ -269,22 +269,22 @@ Scene 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다. 
 | 四合院 | 사합원; 베이징 전통 가옥; siheyuan; Beijing courtyard; courtyard house; 老北京 | CN | 베이징; 안뜰; 주택; 고풍 | Grey brick single-storey buildings enclose a quiet square courtyard with a locust tree and stone table. | place |
 | 国子监 | 국자감; Guozijian; Imperial College | CN | 베이징; 학문; 패루; 유리기와 | A glazed-tile memorial archway and square hall stand on an axis with cypress trees, giving a formal symmetrical scene of yellow and green roofs. | place |
 | 外滩 | 와이탄; the Bund; 상하이 와이탄; the bund shanghai; 上海外滩; Shanghai Bund; 외탄; Bund | CN | 상하이; 야경; 강변; 석조; 근대건축 | A row of stone neoclassical buildings with tall colonnades faces a wide river, with cool river wind along the embankment. | place |
-| 外白渡桥 | 와이바이두 교; Waibaidu Bridge; Garden Bridge | CN | 상하이; 철교; 밤; 강; 영화적; 밤 한정 | A steel truss bridge spans the river at night under cold light, with its crossed girders forming strong dark geometry against the glowing sky. | place |
+| 外白渡桥 | 와이바이두 교; Waibaidu Bridge; Garden Bridge | CN | 상하이; 철교; 밤; 강; 영화적 | A steel truss bridge spans the river at night under cold light, with its crossed girders forming strong dark geometry against the glowing sky. | place |
 | 夜市 | 야시장; 중국 야시장; night market; 小吃街 | CN | 야시장; 김; 백열등; 활기; 밤; 国潮; 궈차오; 국조; 밤 한정 | A crowded night market of food stalls with rising steam, bare warm bulbs and dense glowing signs. | place |
 | 大排档 | 다파이당; 홍콩 노천 식당; dai pai dong; street-side eatery | CN | 홍콩; 식당; 백열등; 활기; 밤 | Open-air Hong Kong eatery with hanging yellow bulbs, steel tables and steaming woks. | place |
 | 大澳 | 타이오; Tai O; 大澳棚屋 | CN | 홍콩; 어촌; 고상가옥; 황혼 | Wooden stilt houses stand over shallow water at dusk, with small yellow lamps glowing along the fishing village. | place |
 | 大觉寺 | 대각사; Dajue Temple | CN | 베이징; 가을; 은행; 사찰; 석판길; 故宫朱红暖金; 고궁 주홍 웜골드; 宫廷历史胶片; 궁정 역사 필름; 故宫人文大片 | A huge golden ginkgo tree fills a temple courtyard and drops yellow leaves over a grey stone path. | place |
 | 天坛祈年殿 | 천단; 기년전; Temple of Heaven; Hall of Prayer for Good Harvests | CN | 베이징; 제단; 청색; 원형 | A round three-tier hall with deep blue glazed tile roofs stands on white marble terraces under a clear sky, so the blue and white read as a single sharp pair. | place |
-| 天星小轮 | 스타페리; Star Ferry; 홍콩 페리; 维港 | CN | 페리; 갑판; 홍콩; 밤; 바다; 복고; 밤 한정 | A green wooden slat bench on an old ferry deck faces the harbour at night, with sea wind and distant skyline lights. | place |
+| 天星小轮 | 스타페리; Star Ferry; 홍콩 페리; 维港 | CN | 페리; 갑판; 홍콩; 밤; 바다; 복고 | A green wooden slat bench on an old ferry deck faces the harbour at night, with sea wind and distant skyline lights. | place |
 | 孙科别墅 | 손과 별장; Sun Ke Villa; Sun Ke Mansion | CN | 상하이; 스페인풍; 붉은 기와; 저택 | A villa in Spanish Baroque style has curved red clay roof tiles and warm stucco walls, shown clearly in strong daylight. | place |
 | 安吉竹海 | 안지 죽해; 죽해; 대나무 바다; Anji bamboo sea; 竹海; bamboo sea | CN | 대나무; 초록; 산; 빛줄기; 新中式水墨; 신중식 수묵; 水墨影调; 수묵 톤 | Endless slopes of tall green bamboo whose leaves move like waves, with mossy paths. | place |
-| 安福路 | 안푸루; 상하이 안푸로; Anfu Road; Shanghai cafe street | CN | 카페; 거리; 상하이; 세련됨; 밤; 밤 한정 | A tree-lined Shanghai street of small cafe terraces and boutiques, warm window light glowing under plane trees at night. | place |
+| 安福路 | 안푸루; 상하이 안푸로; Anfu Road; Shanghai cafe street | CN | 카페; 거리; 상하이; 세련됨; 밤 | A tree-lined Shanghai street of small cafe terraces and boutiques, warm window light glowing under plane trees at night. | place |
 | 宏村 | 홍촌; 훙춘; Hongcun village | CN | 휘파; 마을; 연못; 백벽; 흑와; 안개; 江南烟雨柔焦; 강남 연우 소프트 포커스; 烟雨柔焦; 연우 소프트 포커스 | A Huizhou village across a pond with stacked white walls and black tiles. | place |
 | 寄畅园 | 기창원; Jichang Garden | CN | 정원; 수변; 샘; 무석 | A timber platform juts over a spring-fed pond under old trees, and the water carries clear reflections of the railings and eaves. | place |
 | 尖沙咀钟楼 | 침사추이 시계탑; Tsim Sha Tsui Clock Tower | CN | 홍콩; 벽돌; 항구; 바닷바람 | A red brick and granite clock tower stands by the harbour, with sea haze behind and warm sun on the brick. | place |
 | 山中天艺术中心 | 윈드H 아트센터; Wind H Art Center; 山中天 | CN | 미술관; 콘크리트; 동굴; 어둠; 当代美术馆冷光极简; 当代美术馆冷光; 美术馆冷光; 冷光极简; 현대 미술관 냉광 미니멀; 미술관 냉광 미니멀; 미술관 냉광; 냉광 미니멀 | Wave-shaped concrete walls form a cave-like gallery with smooth curves. | place |
 | 广汇美术馆 | 광후이 미술관; Guanghui Museum | CN | 미술관; 대리석; 기하; 흰색 | A museum clad in sculptural white marble blocks forms bold angular shapes, with strong light separating the planes. | place |
-| 庙街 | 템플 스트리트; 묘가; Temple Street; 庙街夜市 | CN | 홍콩; 야시장; 증기; 밤; 밤 한정 | Canvas stalls and iron-frame food stands line a night street, with steam rising through the bright bulbs above. | place |
+| 庙街 | 템플 스트리트; 묘가; Temple Street; 庙街夜市 | CN | 홍콩; 야시장; 증기; 밤 | Canvas stalls and iron-frame food stands line a night street, with steam rising through the bright bulbs above. | place |
 | 张园石库门 | 장원; 스쿠먼; 石库门; shikumen | CN | 상하이; 골목; 벽돌; 일상; 역사 | Narrow lanes of grey and red brick townhouses with stone-framed black doors run under overhead bridges, with washing and wires crossing the strip of sky. | place |
 | 御花园 | 어화원; Imperial Garden | CN | 궁전; 정원; 바위; 베이징 | A rock mountain with a pavilion on top stands in a palace garden among old cypress trees, with dark stone against red walls. | place |
 | 徽州祠堂 | 휘주 사당; Huizhou ancestral hall | CN | 안후이; 사당; 중정; 향 | A courtyard hall with carved beams has a skylight well where a single column of daylight lands on the stone floor amid incense smoke. | place |
@@ -298,7 +298,7 @@ Scene 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다. 
 | 新天地 | 신천지; Xintiandi; 石库门改造 | CN | 상하이; 재생; 유리; 벽돌; 밤 | Weathered grey brick shikumen facades with black stone-framed doors stand beside clean modern glass, so old and new materials meet in one frame. | place |
 | 旧启德机场 | 구 카이탁 공항; 카이탁; Kai Tak airport | CN | 홍콩; 옥상; 복고; 비행기; 향수; 낮 | A dense old residential rooftop skyline with a low airliner passing close overhead in warm hazy light. | place |
 | 旺角 | 몽콕; Mong Kok; 旺角西洋菜街 | CN | 홍콩; 네온; 간판; 밤; 혼잡 | Layers of overhanging neon signs fill a narrow street and cast mixed red, green and white light over the crowd below. | place |
-| 星光大道 | 스타의 거리; Avenue of Stars | CN | 홍콩; 야경; 항구; 스카이라인; 밤 한정 | A waterfront promenade at night faces the harbour skyline, with building lights shining on dark water. | place |
+| 星光大道 | 스타의 거리; Avenue of Stars | CN | 홍콩; 야경; 항구; 스카이라인 | A waterfront promenade at night faces the harbour skyline, with building lights shining on dark water. | place |
 | 普洱古茶山 | 푸얼; Pu'er; 普洱 | CN | 운남; 차; 산; 고목 | Old tea trees with thick mossy trunks stand on a mountain, and a wooden hut nearby has smoke rising from the hearth. | place |
 | 景山 | 경산; 경산공원; 경산 만춘정; Jingshan Park; 景山公园; 万春亭; 景山万春亭 | CN | 베이징; 전망; 황혼; 지붕; 故宫朱红暖金; 고궁 주홍 웜골드; 宫廷历史胶片; 궁정 역사 필름; 故宫人文大片 | A hilltop pavilion looks down along a straight central axis over a sea of yellow roofs, with the whole city laid out in even rows. | place |
 | 景德镇 | 경덕진; Jingdezhen | CN | 도자기; 가마; 송나라; 흙 | An old kiln workshop has shelves of pale blue-white porcelain and clay dust on dark wood, lit by soft window light. | place |
@@ -316,7 +316,7 @@ Scene 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다. 
 | 沈园 | 심원; Shen Garden | CN | 정원; 비가; 석비; 소흥; 쓸쓸 | A pale stone stele inscribed with a poem stands against a weathered wall beside a quiet pond, with dim even light and a sorrowful mood. | place |
 | 沙美大楼 | 사미 빌딩; Somekh Building | CN | 상하이; 바로크; 테라스; 옥상; 커피 | A rooftop terrace beneath a Baroque dome overlooks the river, with pale stone balustrades warmed by low light. | place |
 | 沧浪亭 | 창랑정; Canglang Pavilion | CN | 정원; 회랑; 흐림; 강남 | A double-sided covered corridor runs along a pond, its two sides divided by a wall pierced with openings so the garden and water appear framed through the holes. | place |
-| 油麻地果栏 | 야우마테 과일시장; Yau Ma Tei Fruit Market | CN | 홍콩; 시장; 밤; 나무상자; 밤 한정 | Stacked old wooden crates and hanging bulbs fill a midnight fruit market, with yellow light on worn wood and wet ground. | place |
+| 油麻地果栏 | 야우마테 과일시장; Yau Ma Tei Fruit Market | CN | 홍콩; 시장; 밤; 나무상자 | Stacked old wooden crates and hanging bulbs fill a midnight fruit market, with yellow light on worn wood and wet ground. | place |
 | 法云安缦 | 아만파윈; Amanfayun | CN | 항저우; 찻집; 대나무; 은거; 럭셔리 | A hidden tea room stands in an old village among deep bamboo lanes, with dark timber, stone and soft green light. | place |
 | 法海寺壁画 | 법해사; Fahai Temple; 明代壁画 | CN | 벽화; 어둠; 불교; 명나라 | A dim stone hall lit only by low side light reveals faint colour on aged Ming murals, with gold lines glinting from the dark. | place |
 | 法租界 | 프랑스 조계; 프렌치 콘세션; 올드 상하이; French Concession; 法国梧桐; 法租界梧桐; 老上海法租界 | CN | 상하이; 플라타너스; 가로수; 주택가; 레트로 | Plane tree trunks line a quiet street of old villas, with broken sunlight dropping onto the pavement through the leaves. | place |
@@ -337,8 +337,8 @@ Scene 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다. 
 | 红墙 | 붉은 담장; 궁궐 붉은 담; 자금성 붉은 담; 朱墙; 故宫红墙; 红墙白雪; red palace wall; vermilion wall | CN | 궁정; 붉은색; 겨울; 눈; 베이징; 国潮; 궈차오; 국조; 故宫朱红暖金; 고궁 주홍 웜골드; 宫廷历史胶片; 궁정 역사 필름; 故宫人文大片 | A long deep vermilion palace wall with yellow-tiled coping, its flat saturated red standing out sharply against snow or pale sky. | place |
 | 红墙夹道 | 홍장; 붉은 담장 골목; red wall alley | CN | 베이징; 궁전; 골목; 적막; 붉은 벽; 国潮; 궈차오; 국조; 故宫朱红暖金; 고궁 주홍 웜골드; 宫廷历史胶片; 궁정 역사 필름; 故宫人文大片 | A long narrow lane between tall red walls runs to a vanishing point, with a strip of pale sky overhead and still, empty paving underfoot. | place |
 | 红砖美术馆 | 홍전 미술관; Red Brick Art Museum | CN | 베이징; 벽돌; 격자; 그림자 | A brick screen wall with open-pattern gaps throws a dotted pattern of sun and shade onto the floor behind. | place |
-| 维多利亚港 | 빅토리아 하버; 빅토리아 항; Victoria Harbour | CN | 항구; 야경; 홍콩; 파란색; 반사; 밤 한정 | A deep blue night harbour with gold building lights reflected on dark water. | place |
-| 网师园 | 망사원; Master of the Nets Garden; 월도풍래정; 月到风来亭 | CN | 밤; 달빛; 수경; 정원; 고요; 밤 한정 | A small pavilion sits at the edge of a dark pond at night, with a pale moon reflection on the water and a faint lantern glow warming the timber eaves. | place |
+| 维多利亚港 | 빅토리아 하버; 빅토리아 항; Victoria Harbour | CN | 항구; 야경; 홍콩; 파란색; 반사 | A deep blue night harbour with gold building lights reflected on dark water. | place |
+| 网师园 | 망사원; Master of the Nets Garden; 월도풍래정; 月到风来亭 | CN | 밤; 달빛; 수경; 정원; 고요 | A small pavilion sits at the edge of a dark pond at night, with a pale moon reflection on the water and a faint lantern glow warming the timber eaves. | place |
 | 老洋房 | 올드 양옥; 옛 양옥; 상하이 옛 양옥; 상하이 옛 저택; old Shanghai villa; French Concession villa; 老上海洋房; 法租界老洋房 | CN | 상하이; 저택; 빈티지; 철제 문; 오후; 老钱风; 라오첸펑; 올드머니 | A pale stucco villa sits behind a black wrought-iron gate with curled patterns, half hidden by trees and silent in even light. | place |
 | 茶餐厅 | 차찬텡; 홍콩 옛 식당; 홍콩 다이너; cha chaan teng; 老茶餐厅 | CN | 홍콩; 식당; 타일; 복고; 형광등; 港风 | A Hong Kong diner with green-white mosaic tiles and booth seats. | place |
 | 茶馆 | 옛 찻집; 중국 찻집; old teahouse; 老茶馆 | CN | 찻집; 비; 나무 창; 따뜻한 조명 | An old wooden teahouse on a river with lattice windows, warm yellow lamp inside and a cool gray rainy light outside. | place |
@@ -382,7 +382,7 @@ Scene 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다. 
 | 古柏 | 고백; 고백림; 옛 측백나무; ancient cypress | CN | 오래됨; 나무; 사원; 갈색; 故宫朱红暖金; 고궁 주홍 웜골드; 宫廷历史胶片; 궁정 역사 필름; 故宫人文大片 | Old twisted cypress trunks in deep brown under a dense canopy. | place |
 | 古渡口 | 옛 나루터; 나루터; old river ferry pier; 瓜洲古渡 | CN | 비바람; 강; 회색; 장엄함 | A bare embankment at a wide river with rough water and heavy rain, everything washed in gray. | place |
 | 天井积水 | 천정 물웅덩이; 마당 물웅덩이; courtyard puddle; puddle reflection | CN | 비 갠 후; 반사; 기와; 하늘; 대칭; 江南烟雨柔焦; 강남 연우 소프트 포커스; 烟雨柔焦; 연우 소프트 포커스 | A shallow puddle in a courtyard that mirrors dark tile eaves and sky. | place |
-| 天台酒吧 | 루프탑 바; 옥상 칵테일 바; rooftop bar | CN | 옥상; 밤; 칵테일; 소파; 밤 한정 | A rooftop booth with cocktails, string lights and a blurred night skyline behind. | place |
+| 天台酒吧 | 루프탑 바; 옥상 칵테일 바; rooftop bar | CN | 옥상; 밤; 칵테일; 소파 | A rooftop booth with cocktails, string lights and a blurred night skyline behind. | place |
 | 涂鸦铁卷门 | 그래피티 셔터; 낙서 셔터; graffiti shutter | KR, CN | 거침; 밤; 골목; 벽; 인디 | A rolled steel shutter covered in colorful graffiti, low ground-level light picking out the paint. | place |
 | 潮牌店 | 스트리트 브랜드 매장; 스트릿 편집숍; street brand store; 潮流店 | KR, CN | 힙함; 낮; 상점; 스트릿 | A concrete-fronted streetwear store with large mirrors, clothing racks and steps outside it. | place |
 | 白盒子美术馆 | 화이트큐브; 화이트 큐브 미술관; white cube gallery; 白盒子 | CN | 미술관; 흰 벽; 냉광; 미니멀; 当代美术馆冷光极简; 当代美术馆冷光; 美术馆冷光; 冷光极简; 현대 미술관 냉광 미니멀; 미술관 냉광 미니멀; 미술관 냉광; 냉광 미니멀 | A stark white gallery with blank walls and even ceiling lights, nothing in the room except the figure and a bench. | place |
@@ -422,7 +422,7 @@ Scene 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다. 
 | 灯会 | 元宵灯会; 花灯; 등회; 원소절 등불 축제; 등불 축제; lantern festival | CN | 国潮; 궈차오; 국조; 중국풍; 밤; 등불; 축제; 붉은색; 금색; 밤 한정 | A night street hung with rows of glowing lanterns in red and gold, their warm light spilling onto crowd faces and wet stone while the sky behind stays dark. | place |
 | 戏台 | 古戏台; 戏楼; 희대; 옛 극장 무대; 전통 극장 무대; Chinese opera stage; traditional opera stage | CN | 国潮; 궈차오; 국조; 중국풍; 경극; 무대; 붉은 기둥; 전통 | A raised wooden stage under a carved tiled-roof canopy with red pillars and gilt couplets on either side, lit from the front by warm light that picks out the carving. | place |
 | 大唐不夜城 | 大唐不夜城步行街; 西安大唐不夜城; 대당불야성; 다탕부야청; Datang Everbright City; Xi'an Everbright City | CN | 国潮; 궈차오; 국조; 중국풍; 시안; 야경; 당나라; 금색; 거리 | A wide pedestrian avenue lined with Tang-style pavilion facades and tiled eaves outlined in gold light, the stone paving reflecting warm orange glow after dark. | place |
-| 洪崖洞 | 重庆洪崖洞; 홍애동; 충칭 홍야동; Hongyadong; Chongqing stilted buildings | CN | 国潮; 궈차오; 국조; 중국풍; 충칭; 야경; 조각루; 황금빛; 밤 한정 | Many tiers of timber stilted houses climb a cliff face, each eave outlined in glowing yellow lights that reflect on the river below at night. | place |
+| 洪崖洞 | 重庆洪崖洞; 홍애동; 충칭 홍야동; Hongyadong; Chongqing stilted buildings | CN | 国潮; 궈차오; 국조; 중국풍; 충칭; 야경; 조각루; 황금빛 | Many tiers of timber stilted houses climb a cliff face, each eave outlined in glowing yellow lights that reflect on the river below at night. | place |
 | 酒庄 | 葡萄酒庄; 庄园酒窖; 와이너리; 샤토; winery estate; wine chateau | CN | 포도밭; 저택; 오크통; 지하 저장고; 老钱风; 라오첸펑; 올드머니 | A stone château-style winery with ordered rows of vines running away from its walls, and below it a cool dim cellar of stacked oak barrels lit warmly on pale stone. | place |
 | 游艇会 | 游艇俱乐部; 游艇码头; 요트 하버; marina | CN | 요트; 항구; 여름; 해안; 老钱风; 라오첸펑; 올드머니 | A harbour of moored white yachts with polished teak decks and coiled rope, a white-railed clubhouse behind and glassy water breaking the reflections into small bright pieces. | place |
 | 壁炉 | 壁炉前; 欧式壁炉; 大理石壁炉; 난로 벽; 벽난로 맨틀; fireplace mantel | CN | 벽난로; 실내; 저녁; 따뜻함; 老钱风; 라오첸펑; 올드머니 | A carved white-marble fireplace with a deep mantel and a low fire glowing orange in the grate, dark wood paneling and a framed painting above, flickering warm light on the nearby floor and armchairs. | item |
@@ -496,9 +496,9 @@ Scene 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다. 
 | 代々木公園 | 요요기 공원; Yoyogi Park; 代代木公园 | JP | 공원; 가을; 낙엽; 낮; 잔디; 캠핑 | Broad park with forest paths, wide lawns, tall trees and fallen leaves. | place |
 | 代官山 | 다이칸야마; Daikanyama; 다이칸야마 가로수길; 代官山静谧街道 | JP | 세련됨; 녹음; 카페; 도쿄; 오후; 日系Provia; 高保真Provia; Provia; 프로비아; プロビア; Astia; 아스티아; アスティア; リバーサルフィルム | A quiet slope of low boutiques and a glass-walled bookstore lounge with pale wooden shelves and trees overhead. | place |
 | 倉敷美観地区 | 쿠라시키; Kurashiki; 倉敷; 仓敷美观地区 | JP | 여름; 운하; 흰 벽; 버드나무; 오카야마 | A canal with weeping willow branches, white plaster walls with black tile roofs and a stone bridge reflected in still water. | place |
-| 先斗町 | 폰토초; Pontocho; 先斗町夏夜; 木格窗小巷 | JP | 교토; 밤; 홍등; 골목; 여름; 밤 한정 | A narrow stone alley with wooden lattice windows and rows of red paper lanterns glowing in the night. | place |
+| 先斗町 | 폰토초; Pontocho; 先斗町夏夜; 木格窗小巷 | JP | 교토; 밤; 홍등; 골목; 여름 | A narrow stone alley with wooden lattice windows and rows of red paper lanterns glowing in the night. | place |
 | 六本木 | 롯폰기; Roppongi | JP | 야간; 현대 건축; 유리; 도시; 전망 | Glass towers and waterfront steps with reflections of city lights and deep blue dusk. | place |
-| 六本木ヒルズ | 롯폰기 힐즈; 모리 타워; Roppongi Hills; 六本木之丘; 森タワー | JP | 도쿄; 전망대; 야경; 보케; 고층; 럭셔리; 雨夜新宿; 비 오는 신주쿠 밤; 東京ノワール; 도쿄 누아르; 歌舞伎町ネオン; 가부키초 네온; 밤 한정 | A glass observation deck high above the city, night skyline with a red lattice tower in the distance. | place |
+| 六本木ヒルズ | 롯폰기 힐즈; 모리 타워; Roppongi Hills; 六本木之丘; 森タワー | JP | 도쿄; 전망대; 야경; 보케; 고층; 럭셔리; 雨夜新宿; 비 오는 신주쿠 밤; 東京ノワール; 도쿄 누아르; 歌舞伎町ネオン; 가부키초 네온 | A glass observation deck high above the city, night skyline with a red lattice tower in the distance. | place |
 | 原宿 | 하라주쿠; Harajuku; 原宿街头; 竹下通り; 다케시타 거리; 原宿天桥; 하라주쿠 거리; 竹下通 | JP | 하라주쿠; 컬러풀; 스트리트; 패션; 도쿄 | A narrow pedestrian street crowded with candy-colored shop signs, crepe stands and pastel storefronts under bright flat daylight. | place |
 | 古民家 | 고민가; kominka; 古民家カフェ; 고민가 카페 | JP | 전통; 목조; 따뜻함; 골목; 森ガール; 모리걸 | An old timber townhouse with sliding wooden doors, grey tile roof and worn warm-brown beams softened by window light. | place |
 | 古着屋 | furugi shop; 후루기 가게; 빈티지 샵; 古着店 | JP | 빈티지; 옷가게; 쇼핑; 도쿄 | A cramped secondhand clothing shop with packed racks, wood floors and kraft paper bags. | place |
@@ -518,8 +518,8 @@ Scene 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다. 
 | 強羅 | 고라; Gora; 强罗; 苔庭; 이끼 정원 | JP | 온천; 이끼; 안개; 석등; 촉촉함; 森ガール; 모리걸; 富士经典负片; 후지 클래식 네그; クラシックネガ; Classic Neg | A damp moss garden with stone lanterns, soft mist hanging between dark trees and vivid green moss. | place |
 | 御茶ノ水 | 오차노미즈; Ochanomizu; 聖橋; 히지리바시; 圣桥 | JP | 철도; 다리; 교차; 애니풍; 도시 | A concrete arch bridge over a deep valley where several train lines cross at different levels under a clear sky. | place |
 | 恵比寿ガーデンプレイス | 에비스 가든 플레이스; Ebisu Garden Place; 惠比寿花园广场; Ebisu | JP | 저녁; 분수; 벽돌; 야경; 고급; 프랑스풍 | A plaza with a French chateau-style building, a symmetrical fountain and clipped trees under soft overcast light. | place |
-| 押上 | 오시아게; Oshiage; 十間橋; 십간교; 逆さツリー; 스카이트리 반영 | JP | 반영; 야경; 수면; 강; 도시; 밤 한정 | A small canal bridge at night where a tall slender tower reflects upside down on still dark water. | place |
-| 新宿ゴールデン街 | 신주쿠 골든가이; 골든가이; Golden Gai; 新宿黄金街 | JP | 밤; 좁은 골목; 네온; 바; 밤 한정 | Tiny bars crammed into narrow alleys with hand-painted signs and wet pavement at night. | place |
+| 押上 | 오시아게; Oshiage; 十間橋; 십간교; 逆さツリー; 스카이트리 반영 | JP | 반영; 야경; 수면; 강; 도시 | A small canal bridge at night where a tall slender tower reflects upside down on still dark water. | place |
+| 新宿ゴールデン街 | 신주쿠 골든가이; 골든가이; Golden Gai; 新宿黄金街 | JP | 밤; 좁은 골목; 네온; 바 | Tiny bars crammed into narrow alleys with hand-painted signs and wet pavement at night. | place |
 | 新宿御苑 | 신주쿠 교엔; Shinjuku Gyoen; 新宿御苑大草坪 | JP | 공원; 정원; 소풍; 낮; 잔디; 도시; 日系Provia; 高保真Provia; Provia; 프로비아; プロビア; Astia; 아스티아; アスティア; リバーサルフィルム | A wide lawn against a hazy city skyline with tall plane trees. | place |
 | 新宿東口 | 신주쿠 동쪽 출구; 신주쿠 히가시구치; 신주쿠; Shinjuku East Exit | JP | 도쿄; 번화가; 밤; 도시; 雨夜新宿; 비 오는 신주쿠 밤; 東京ノワール; 도쿄 누아르; 歌舞伎町ネオン; 가부키초 네온 | A busy station exit plaza ringed by huge screens and neon signs, with crowds and taxis. | place |
 | 旅館 | 료칸; ryokan; 旅馆 | JP | 전통; 온천; 회랑; 실내 | Traditional inn with wood corridors, paper doors and a hushed warm glow. | place |
@@ -528,10 +528,10 @@ Scene 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다. 
 | 明治神宮 | 메이지 신궁; Meiji Shrine; 明治神宫 | JP | 숲길; 자갈; 그늘; 낮 | Gravel path under tall cedars with cool deep shade and sparse shafts of light on the ground. | place |
 | 昭和アパート | 쇼와 아파트; Showa apartment; 昭和公寓 | JP | 쇼와; 녹슨; 낡음; 현관; 향수 | An old apartment entry hall with a bank of rusty metal mailboxes and flaking painted walls under a dim bare bulb. | place |
 | 村上春樹ライブラリー | 무라카미 하루키 라이브러리; Murakami Haruki Library; 村上春树图书馆; 早稲田国際文学館; 와세다 국제문학관 | JP | 나무; 도서관; 아치; 여백; 투명 | A tunnel-like wooden arcade of wave-curved timber ribs and bookshelves rising up the walls, pale light on honey-colored wood. | place |
-| 東京タワー | Tokyo Tower; 도쿄 타워; 도쿄타워; 东京铁塔 | JP | 도쿄; 빨강; 비; 밤; 야경; 로맨틱; 雨夜新宿; 비 오는 신주쿠 밤; 東京ノワール; 도쿄 누아르; 歌舞伎町ネオン; 가부키초 네온; 밤 한정 | A red-and-white lattice tower seen from below through dark tree silhouettes against the night sky. | place |
+| 東京タワー | Tokyo Tower; 도쿄 타워; 도쿄타워; 东京铁塔 | JP | 도쿄; 빨강; 비; 밤; 야경; 로맨틱; 雨夜新宿; 비 오는 신주쿠 밤; 東京ノワール; 도쿄 누아르; 歌舞伎町ネオン; 가부키초 네온 | A red-and-white lattice tower seen from below through dark tree silhouettes against the night sky. | place |
 | 枯山水 | 가레산스이; 고산수; dry landscape garden; karesansui | JP | 젠; 정원; 자갈; 정적; 日系Provia; 高保真Provia; Provia; 프로비아; プロビア; Astia; 아스티아; アスティア; リバーサルフィルム | Raked gravel and a few placed rocks form a dry garden with fine raked lines in the gravel. | place |
 | 根津美術館 | 네즈 미술관; Nezu Museum; 根津美术馆庭院 | JP | 정원; 대나무; 여름; 고요; 건축 | A museum garden with bamboo shadows on grey granite and a deep covered veranda of pale wood. | place |
-| 歌舞伎町 | Kabukicho; 가부키초; 신주쿠 가부키초; 歌舞伎町一番街; 가부키초 네온 | JP | 도쿄; 밤; 네온; 비; 도시; 누아르; 雨夜新宿; 비 오는 신주쿠 밤; 東京ノワール; 도쿄 누아르; 歌舞伎町ネオン; 가부키초 네온; 밤 한정 | A narrow neon-gated street at night where red, magenta, violet and cyan signs over rain-slicked asphalt and puddles. | place |
+| 歌舞伎町 | Kabukicho; 가부키초; 신주쿠 가부키초; 歌舞伎町一番街; 가부키초 네온 | JP | 도쿄; 밤; 네온; 비; 도시; 누아르; 雨夜新宿; 비 오는 신주쿠 밤; 東京ノワール; 도쿄 누아르; 歌舞伎町ネオン; 가부키초 네온 | A narrow neon-gated street at night where red, magenta, violet and cyan signs over rain-slicked asphalt and puddles. | place |
 | 歩道橋 | 육교; 보도교; pedestrian bridge; 人行天桥; 天桥 | JP | 도시; 콘크리트; 계단; 도로; 雨夜新宿; 비 오는 신주쿠 밤; 東京ノワール; 도쿄 누아르; 歌舞伎町ネオン; 가부키초 네온 | Concrete stairs with a turning landing and cross-hatched railing, stepped height differences creating strong diagonals. | place |
 | 汐留 | 시오도메; Shiodome; 汐留高架玻璃天桥 | JP | 비 오는 날; 도시; 유리; 현대 | Glass sky-bridges and towers shining with rain on the pavement after a storm. | place |
 | 江の島 | 에노시마; Enoshima; 江之岛; 稚児ヶ淵; 치고가후치 | JP | 노을; 바위; 바다; 후지산; 일몰 | A rocky wave-cut platform at sunset with dark wet stone in the foreground and a distant volcano silhouette against orange-pink sky. | place |
@@ -572,7 +572,7 @@ Scene 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다. 
 | 軽井沢 | 가루이자와; Karuizawa; 轻井泽 | JP | 여름; 숲; 자작나무; 교회; 고원; 자전거; 森ガール; 모리걸 | A road lined with pale slender birch trunks and dappled sun, cool highland air and green-white contrast. | place |
 | 逗子マリーナ | 즈시 마리나; Zushi Marina; 逗子 | JP | 석양; 야자수; 요트; 해변; 캘리포니아풍 | A yacht harbor lined with palm trees against an orange-pink sunset, warm backlight on glossy hulls. | place |
 | 通勤ラッシュ | 출근 러시; 통근 러시; 출근길 지하통로; commuter rush; 朝の地下通路 | JP | 아침; 인파; 지하; 역행; 군중 | A station passage at morning rush hour packed with commuters in dark coats flowing in one direction under flat fluorescent light. | place |
-| 道玄坂 | 도겐자카; Dogenzaka; 道玄坂街 | JP | 밤; 네온; 비탈길; 유흥가; 밤 한정 | A steep Shibuya slope of dense neon signs, club entrances and small shops, with taxis crawling uphill under mixed night light. | place |
+| 道玄坂 | 도겐자카; Dogenzaka; 道玄坂街 | JP | 밤; 네온; 비탈길; 유흥가 | A steep Shibuya slope of dense neon signs, club entrances and small shops, with taxis crawling uphill under mixed night light. | place |
 | 都庁地下通路 | 도청 지하통로; Tokyo Metropolitan Government; 都厅地下通道; 西新宿; 니시신주쿠 | JP | 지하; 거대; 기하; 콘크리트; 공업 | A huge underground concourse of repeating concrete columns and long straight lines, cool fluorescent glow. | place |
 | 都電荒川線 | 도덴 아라카와선; Toden Arakawa; 都电荒川线 | JP | 쇼와; 전차; 초록; 레트로; 느림 | A single retro tram car rolling between green hedges and rose bushes, soft daylight on its cream-and-green paint. | place |
 | 銀座 | 긴자; Ginza; 银座; 긴자 거리 | JP | 고급; 백화점; 거리; 낮; 도쿄; 비; 雨夜新宿; 비 오는 신주쿠 밤; 東京ノワール; 도쿄 누아르; 歌舞伎町ネオン; 가부키초 네온 | A broad avenue of stone-faced department stores with a Baroque clock tower, polished storefront glass and pale facades. | place |
@@ -758,7 +758,7 @@ Scene 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다. 
 | Cornell | 코넬; 코넬 대학; 코넬대; Cornell campus | US | 캠퍼스; 가을; 식물원; 벽돌; 계곡; Preppy; 프레피; 프레피룩; 아이비리그 | A hilltop campus of stone and brick buildings with a leafy botanical garden in autumn. | place |
 | Coronado Beach | 코로나도; 科罗纳多; Coronado | US | 해변; 부두; 실루엣 | A wooden pier in silhouette against an orange-to-deep-blue sunset sea. | place |
 | Dartmouth | 다트머스; 다트머스 대학; 다트머스대; Dartmouth college | US | 캠퍼스; 가을; 숲; 뉴햄프셔; 아웃도어; Preppy; 프레피; 프레피룩; 아이비리그; 뉴잉글랜드 | A New England college green with white steeple buildings and forested hills behind. | place |
-| Death Valley | Death Valley Road; 데스밸리; 데스 밸리; 죽음의 계곡 | US | 사막; 건조; 대지; 로드트립; 한낮 한정 | A bone-dry salt-flat road with distant brown ridges and heat shimmer at midday. | place |
+| Death Valley | Death Valley Road; 데스밸리; 데스 밸리; 죽음의 계곡 | US | 사막; 건조; 대지; 로드트립 | A bone-dry salt-flat road with distant brown ridges and heat shimmer at midday. | place |
 | Zabriskie Point | 자브리스키 포인트; 데스밸리 자브리스키; Zabriskie Point Death Valley; Death Valley Zabriskie Point | US | 사막; 주름 능선; 석양 | Rippled golden badlands cut by long low light and deep shadow. | place |
 | Drive-in Theater | 드라이브인 극장; 汽车影院; Drive-in; 露天汽车电影院 | US | 레트로; 황혼; 자동차; Kodak Gold 200; 코닥 골드 200; 柯达Gold 200 | Vintage cars lined on grass facing a huge outdoor screen. | place |
 | DUMBO | 덤보; 브루클린 덤보; Manhattan Bridge View | US | 다리; 브루클린; 벽돌; 낮 | A cobbled brick street framing the steel arch of a bridge and skyscrapers behind it. | place |
@@ -790,9 +790,9 @@ Scene 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다. 
 | speakeasy | 스피크이지; 스피크이지 바; 재즈 위스키 바; Jazz Whiskey Bar; 地下酒吧; Speakeasy; 스피크이지 룩; Low-Key Speakeasy; 로우키 스피크이지; Speakeasy Noir; 스피크이지 누아르 | US | 지하; 바; 재즈; 밤 | A hidden dim bar behind an unmarked door, with a long wooden counter, amber lamps and smoky haze. | place |
 | Joshua Tree | 조슈아 트리; 约书亚树; 조슈아트리; 조슈아 트리 국립공원; joshua tree national park; 조슈아트리 국립공원 | US | 사막; 캠핑; 바위; 일몰; 캘리포니아; 로드트립; Gorpcore; 고프코어; 山系; Venice Beach Polaroid; 베니스 비치 폴라로이드; road trip light leak; 로드트립 빛샘 | A dry rocky desert of twisted spiky trees and pale boulders. | place |
 | Key West | 키웨스트; 키 웨스트; Mallory Square | US | 섬; 일몰; 카리브; 부두 | A wooden pier at the southern tip with a flaming orange sunset and pastel gingerbread houses. | place |
-| Laguna Beach | 라구나 비치; 라구나 해변; Laguna coast; 拉古纳 | US | 해변; 캘리포니아; 여름; 절벽; 낮; 해안; 한낮 한정 | A rocky Southern California cove with turquoise water, cliffs and bright spray, lit by strong overhead sun. | place |
+| Laguna Beach | 라구나 비치; 라구나 해변; Laguna coast; 拉古纳 | US | 해변; 캘리포니아; 여름; 절벽; 낮; 해안 | A rocky Southern California cove with turquoise water, cliffs and bright spray, lit by strong overhead sun. | place |
 | Lake Tahoe | 레이크 타호; 타호 호수; 에메랄드 베이; Emerald Bay | US | 호수; 소나무; 여름; 맑음; Gorpcore; 고프코어; 山系 | A clear alpine lake with transparent turquoise shallows, granite shore and dark pine edges. | place |
-| Las Vegas | 라스베이거스; 라스베가스; 베가스; Vegas; 拉斯维加斯; Las Vegas Casino Hallway; 카지노 복도 | US | 네온; 밤; 카지노; 도시; 밤 한정 | A neon-lit strip at night with large glowing signs and fast car traffic. | place |
+| Las Vegas | 라스베이거스; 라스베가스; 베가스; Vegas; 拉斯维加斯; Las Vegas Casino Hallway; 카지노 복도 | US | 네온; 밤; 카지노; 도시 | A neon-lit strip at night with large glowing signs and fast car traffic. | place |
 | Lido Beach | 리도 비치; 사라소타 리도 비치 | US | 해변; 일몰; 플로리다 | Sugar-white sand and flat Gulf water in a calm apricot twilight. | place |
 | Lincoln Road | 링컨 로드; 링컨 로드 몰 | US | 마이애미; 거리; 카페; 낮 | A broad pedestrian mall with curved concrete shade canopies and outdoor café tables. | place |
 | Little Havana | 리틀 하바나; 칼레 오초; Calle Ocho | US | 쿠바; 시가; 마이애미; 공방 | A colorful street with hand-painted signs and small domino tables and cigar shops. | place |
@@ -807,7 +807,7 @@ Scene 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다. 
 | Miami Design District | 마이애미 디자인 디스트릭트; 디자인 디스트릭트 | US | 건축; 조각; 마이애미; 낮 | A polished plaza of sculptural buildings, geodesic canopies and sleek white stone. | place |
 | Monument Valley | 모뉴먼트 밸리; 모뉴먼트 밸리 서부 | US | 서부; 사막; 낮; 붉은 암석 | Isolated red sandstone buttes rising from flat orange desert with vivid long shadows. | place |
 | roadside motel | 로드사이드 모텔; 모텔 주차장; 사막 모텔; 모텔 네온사인; desert motel; 汽车旅馆; Motel Neon Sign; Motel Parking Lot | US | 모텔; 네온; 사막; 레트로; Venice Beach Polaroid; 베니스 비치 폴라로이드; road trip light leak; 로드트립 빛샘 | A low roadside motel strip around a flat asphalt lot, a faded neon sign glowing over the row of doors. | place |
-| Mulholland Drive | 멀홀랜드 드라이브; 멀홀랜드; Mulholland | US | 야경; 드라이브; LA; 밤; 밤 한정 | A hillside road overlooking a sea of orange city lights with deep blue night sky. | place |
+| Mulholland Drive | 멀홀랜드 드라이브; 멀홀랜드; Mulholland | US | 야경; 드라이브; LA; 밤 | A hillside road overlooking a sea of orange city lights with deep blue night sky. | place |
 | Muscle car | 머슬카; 머슬 카; 핫로드; 로우라이더; hot rod; lowrider | US | 자동차; 레트로; 도로; 노을 | A long low American muscle car with a glossy painted body and chrome grille, reflecting sky and streetlights along its curves. | item |
 | Nantucket | 낸터킷; 난터켓 | US | 섬; 회색 지붕; 자전거; 여름; Preppy; 프레피; 프레피룩; 뉴잉글랜드 | Weathered grey cedar-shingle cottages among beach roses and low dunes with sea wind. | place |
 | Napa Valley | 나파 밸리; 纳帕谷 | US | 포도밭; 가을; 와인 | Golden autumn vineyard slopes lit like spilled paint by evening sun. | place |
@@ -841,9 +841,9 @@ Scene 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다. 
 | SoHo | 소호; 뉴욕 소호; 소호 거리; 소호 철제 건물; SoHo NYC; SoHo New York; 纽约SoHo; SoHo cast iron; SoHo Cast-Iron; SoHo cobblestone street | US | 뉴욕; 주철 건물; 돌길; 부티크; 도시; 뉴욕 쿨 그레이; 맨해튼 쿨 그레이; New York overcast cool grey; 纽约SOHO阴天冷调; 曼哈顿冷灰 | A downtown Manhattan district of cast-iron buildings, cobbled streets and loft windows. | place |
 | South Pointe Park | 사우스 포인트 파크; 사우스포인트 공원 | US | 부두; 일몰; 마이애미 | A long concrete pier at sunset with huge cruise ships gliding by. | place |
 | Sunset Boulevard | 선셋 대로; 선셋 블러바드; 일몰 대로; 日落大道 | US | LA; 밤; 네온; 도로 | A wide palm-lined boulevard with neon signs and car lights reflected on the dark asphalt. | place |
-| Sunset Strip | 선셋 스트립; 선셋 스트립 나이트 | US | 밤; 네온; LA; 클럽; 밤 한정 | A neon-signed stretch of boulevard lined with billboards, music clubs and cars on dark asphalt at night. | place |
+| Sunset Strip | 선셋 스트립; 선셋 스트립 나이트 | US | 밤; 네온; LA; 클럽 | A neon-signed stretch of boulevard lined with billboards, music clubs and cars on dark asphalt at night. | place |
 | The Met Steps | 메트 계단; 메트로폴리탄 미술관 계단; Met steps; Metropolitan Museum steps | US | 계단; 뉴욕; 미술관; 낮 | Wide pale stone steps climbing to a columned museum facade, busy with soft city daylight. | place |
-| Times Square | 타임스퀘어; 时代广场 | US | 뉴욕; 네온; 야경; 밤 한정 | Gigantic LED billboards flooding the night street and its crowds in saturated, constantly shifting color. | place |
+| Times Square | 타임스퀘어; 时代广场 | US | 뉴욕; 네온; 야경 | Gigantic LED billboards flooding the night street and its crowds in saturated, constantly shifting color. | place |
 | Tribeca | 트라이베카; 트리베카; Tribeca loft; 翠贝卡 | US | 뉴욕; 로프트; 벽돌; 돌길; 저녁; 뉴욕 쿨 그레이; 맨해튼 쿨 그레이; New York overcast cool grey; 纽约SOHO阴天冷调; 曼哈顿冷灰 | Quiet cobbled streets with loft windows and and old warehouse brick. | place |
 | Universal Studios Backlot | 유니버설 스튜디오 백롯; 유니버설 백롯 | US | 영화; 세트장; 낮; Old Hollywood; 올드 할리우드; 老好莱坞; 스튜디오 시스템 | A false-front movie street with painted facades and trolley rails in bright dry sun. | place |
 | Upper East Side | 어퍼 이스트 사이드; 어퍼이스트; UES; Upper East Side chic; 업타운; 어퍼이스트사이드 | US | 뉴욕; 고급; 단정; 도시; 클래식; 공원 | A polished Manhattan neighborhood of stone townhouses and tree-lined streets, lit by cool soft daylight. | place |
@@ -868,7 +868,7 @@ Scene 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다. 
 | Bleau Bar | 블로 바; 퐁텐블로 바; Fontainebleau Bleau Bar | US | 클럽; 밤; 원형; 마이애미 | A round, mirror-ceilinged lounge with warm glowing lights and a polished floor. | place |
 | Boardwalk Pier | 나무 부두; 낡은 부두; 피어; wooden pier; old pier | US | 바다; 저녁; 고독; 낡음 | A weathered plank pier extending out over dark water, its railings dripping spray. | place |
 | Botanical Spa | 보태니컬 스파; 식물원 스파; plant spa | US | 스파; 식물; 수증기 | A glass spa room with damp tile, hanging ferns and softly steamed air over a still plunge pool. | place |
-| Century City Penthouse | 센추리 시티 펜트하우스; 펜트하우스; penthouse party | US | 야경; 파티; 밤; 럭셔리; 밤 한정 | A high penthouse with floor-to-ceiling glass, a balcony and a glittering night skyline. | place |
+| Century City Penthouse | 센추리 시티 펜트하우스; 펜트하우스; penthouse party | US | 야경; 파티; 밤; 럭셔리 | A high penthouse with floor-to-ceiling glass, a balcony and a glittering night skyline. | place |
 | coastal bluff meadow | 해안 절벽 초원; 바닷가 초원; coastal meadow | US | 피크닉; 여름; 바다; 바람; Venice Beach Polaroid; 베니스 비치 폴라로이드; road trip light leak; 로드트립 빛샘 | A grassy clifftop with wildflowers and the sea behind. | place |
 | Cruise Ship Channel | 크루즈 해협; 크루즈 쉽 채널; cruise channel | US | 바다; 일몰; 마이애미 | A dark water channel with a giant white cruise ship gliding through at golden hour. | place |
 | Festival Lawn | 페스티벌 잔디; 음악제 잔디; 잔디밭; festival field; music festival grass | US | 여름; 페스티벌; 저녁; 열기 | A huge green lawn with colored lights and tents in the distance under a sky going gold. | place |
@@ -1070,7 +1070,7 @@ Scene 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다. 
 | Montparnasse | 몽파르나스; 몽파르나스 카페; Montparnasse bistro; 보헤미안 식당 | FR | 보헤미안; 비스트로; 유화; 오후; Nouvelle Vague; 누벨바그; 프렌치 뉴웨이브; 60년대; 고다르 | A narrow old bistro with yellow wood panelling, unframed paintings on the walls, an old wooden bar and faded red check tablecloths in slanting afternoon sun. | place |
 | Mosaïque hall d'entrée | 모자이크 현관; 현관 홀; vestibule; mosaic vestibule | FR | 타일; 현관; 아파트; 클래식 | A building entrance hall with a geometric terrazzo mosaic floor, marble pilasters, brass mailboxes and a spiral wooden stair with red carpet. | place |
 | Moulin de la Galette | 물랭 드 라 갈레트; 갈레트 풍차; Moulin Blute-Fin | FR | 인상파; 나무; 풍차; 아침; 정원 | An old timber windmill with cracked oak posts and large wooden sails above a flower garden fence, lit by low golden morning sun. | place |
-| Moulin Rouge | 물랭 루즈; 물랑루즈; 물랑 루주; red windmill | FR | 빨간색; 네온; 밤; 풍차; 밤 한정 | A red windmill roof with red neon tube lettering above a wet black road, red glow colliding with blue streetlight at night. | place |
+| Moulin Rouge | 물랭 루즈; 물랑루즈; 물랑 루주; red windmill | FR | 빨간색; 네온; 밤; 풍차 | A red windmill roof with red neon tube lettering above a wet black road, red glow colliding with blue streetlight at night. | place |
 | Mur des Je t'aime | 사랑해 벽; 사랑해벽; je t'aime wall; Wall of Love | FR | 푸른색; 타일; 벽; 글씨; 공원 | A tall wall of dark blue glazed tiles covered in white handwritten love words with red fragments, glossy ceramic highlights under tree shade. | place |
 | Musée d'Orsay | 오르세 미술관; 오르세; 오르세 시계; Orsay Museum; Gare d'Orsay | FR | 파리; 미술관; 시계; 역광; 철골 | A huge translucent clock face with black iron numerals; strong backlight turns the room into a silhouette against a view of the Seine. | place |
 | Nymphéas | 수련; 모네 수련; 오랑주리; 오랑주리 미술관; Musée de l'Orangerie; 睡莲 | FR | 오랑주리; 모네; 미술관; 확산광; 파리 소프트 그레이; 巴黎午后柔灰漫射; Lumière grise de Paris | Oval gallery where huge pale water-lily murals hang. | place |
@@ -1091,7 +1091,7 @@ Scene 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다. 
 | Place des Vosges | 보주 광장; 孚日广场; 보쥬 광장; Place des Vosges arcade; 보주 광장 아케이드; 붉은 벽돌 아케이드; 보주광장; Place Royale | FR | 붉은 벽돌; 아케이드; 대칭; 광장; 파리; Parisian Chic; 파리지앵 시크; 파리 소프트 그레이; 巴黎午后柔灰漫射; Lumière grise de Paris | Symmetrical red-brick and limestone arcades with pointed slate roofs, a square of clipped linden trees and fallen leaves scattered on the pavement. | place |
 | Place du Tertre | 테르트르 광장; 테르트르; Place du Tertre easels; 화가 광장; 거리 화가 | FR | 거리; 화가; 이젤; 광장; 나무그늘 | A small stone square of wooden easels and palettes with paint splashes on the ground, café terraces nearby and dappled light on the canvases. | place |
 | Place Saint-Sulpice | 생쉴피스; 생 쉴피스 광장; four bishops fountain; 네 주교 분수 | FR | 분수; 광장; 비둘기; 오후 | A stone fountain with cascading water and birds lifting from an open square, with the twin towers of a church behind in soft afternoon light. | place |
-| Place Vendôme | 플라스 방돔; 방돔 광장; Vendome Square; 파리 방돔; vendôme; 旺多姆广场; 방돔; 방돔 광장 기둥; 방돔 기둥 | FR | 고급; 파리; 광장; 보석상; 저녁; 밤 한정 | A stately Parisian square at night, pale cream stone facades and a tall column in the middle. | place |
+| Place Vendôme | 플라스 방돔; 방돔 광장; Vendome Square; 파리 방돔; vendôme; 旺多姆广场; 방돔; 방돔 광장 기둥; 방돔 기둥 | FR | 고급; 파리; 광장; 보석상; 저녁 | A stately Parisian square at night, pale cream stone facades and a tall column in the middle. | place |
 | Pont Alexandre III | 알렉상드르 3세 다리; 알렉상드르 3세; 뽕 알렉상드르; 금박 페가수스; gilded Pegasus | FR | 금박; 조각; 가로등; 노을; 화려 | A bridge with gilded winged horses on marble pylons, Art Nouveau water-nymph reliefs and black triple lamps under fierce sunset gold. | place |
 | Pont des Arts | 퐁데자르; 퐁 데 자르; 뽕 데 자르; 예술의 다리; Passerelle des Arts; art bridge; 艺术桥 | FR | 다리; 센강; 보행교; 황혼; 파리; Nouvelle Vague; 누벨바그; 프렌치 뉴웨이브; 60년대; Parisian Chic; 파리지앵 시크 | Iron-railed footbridge over the Seine with river mist and zinc-grey roofs. | place |
 | Pont Mirabeau | 미라보 다리; 미라보; Mirabeau Bridge | FR | 청동상; 강철; 아치; 블루아워; 시적 | A single steel-arch bridge flanked by bronze maritime statues over still water, with first golden street lamps at deep blue dusk. | place |
@@ -1105,7 +1105,7 @@ Scene 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다. 
 | Musée Rodin | 로댕 미술관; 로댕 미술관 정원; 로댕 정원; Musée Rodin garden; Rodin Museum; Rodin Museum Garden | FR | 파리; 정원; 여름; 조각 | A tree-lined garden with bronze sculptures on stone plinths and a gravel path under shade. | place |
 | Roussillon | 루시옹; 붉은 황토 마을; Roussillon ochre; 오커 마을; 루시용; 오커 절벽; ocre; Ochres; 황토 절벽; Sentier des Ocres | FR | 남프랑스; 오커; 황토; 절벽; 여름 | A canyon of yellow, orange and blood-red ochre cliffs topped with dark green pines, glowing like flame in low afternoon sun. | place |
 | Rue de Buci | 뷔시 거리; 뷔시 시장; Rue de Buci market | FR | 시장; 과일; 치즈; 활기; Parisian Chic; 파리지앵 시크 | A crowded market street of red awnings, cheese, oysters, baguettes and bright produce under clear morning light. | place |
-| Sacré-Cœur | 사크레쾨르; 사크레쾨르 대성당; Sacré-Coeur | FR | 흰색; 석재; 계단; 정오; 맑음; 한낮 한정 | A hilltop basilica of white travertine and wide white steps reflecting hard midday sunlight over a clear wide Paris panorama. | place |
+| Sacré-Cœur | 사크레쾨르; 사크레쾨르 대성당; Sacré-Coeur | FR | 흰색; 석재; 계단; 정오; 맑음 | A hilltop basilica of white travertine and wide white steps reflecting hard midday sunlight over a clear wide Paris panorama. | place |
 | Saint-Germain-des-Prés | 생제르맹데프레; 생제르맹; Saint-Germain; rive gauche; 리브 고슈; 좌안 | FR | 파리; 좌안; 흐림; 거리; 문학적; Nouvelle Vague; 누벨바그; 프렌치 뉴웨이브; 60년대; 흑백; Parisian Chic; 파리지앵 시크 | A grey limestone street with weathered facades, damp cobblestones and dark-green cast-iron lampposts under flat, shadowless overcast daylight. | place |
 | Saint-Paul-de-Vence | 생폴드방스; 생폴 드 방스; Saint Paul de Vence; 자갈 모자이크 | FR | 예술; 마을; 자갈; 모자이크; 보라; 꽃; 남프랑스 한여름 과노출; 南法盛夏过曝; Soleil du Midi | A walled hill town with pebble-mosaic floors in petal patterns, old stone galleries draped in wisteria and bougainvillea, polished by footsteps. | place |
 | Saint-Tropez | 생트로페; St Tropez; 생 트로페; 생트로페 항구 | FR | 여름; 리비에라; 요트; 50년대 | A sunny harbour with moored yachts, pastel-painted facades and warm stone quay. | place |

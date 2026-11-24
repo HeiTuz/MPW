@@ -112,6 +112,13 @@ const sentenceName = "A photograph of a woman.\n\n## Outfit\nwhite shirt — A c
 assert.equal(dropped("a woman in a white shirt", "midjourney", sentenceName).length, 0);
 assert.equal(dropped("a woman in a white shirt", "seedream", sentenceName).length, 1);
 assert.equal(dropped("a woman in a hanbok", "soul", "A woman.\n\n## Outfit\n한복 — A short ivory jacket over a full skirt.").length, 1);
+// Those cut each layer to one phrase: a layer is dropped only when none of its names is left, so one name of two in a layer passes and a layer with none is reported.
+const twoNames = "A woman.\n\n## Hair and makeup\n王家卫 — A loose perm.\n豆沙唇 — A muted rosy-brown lip.\n\n## Outfit\n吊带裙 — A silk slip dress.";
+assert.equal(dropped("a woman in a loose 王家卫 perm and a 吊带裙", "soul", twoNames).length, 0, "one of two names kept in a layer");
+const lostLayer = dropped("a woman in a loose perm and a 吊带裙", "midjourney", twoNames);
+assert.equal(lostLayer.length, 1);
+assert.match(lostLayer[0].message, /1 of 2 layers/u);
+assert.equal(dropped("a woman in a loose perm and a slip dress", "soul", twoNames)[0].message.match(/2 of 2 layers/u)?.length, 1);
 // Nano Banana may gloss original-language words: not read, and the result says so.
 const nano = checkText("A woman in a hanbok.", { profile: "native", surface: "s3", engine: "nano-banana", sourceText: "A woman.\n\n## Outfit\n한복 — A short ivory jacket." });
 assert.ok(!nano.warnings.some((item) => item.code === "mix/dropped") && nano.scope.unchecked.includes("source_original_language_names"));

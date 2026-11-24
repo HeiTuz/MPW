@@ -80,6 +80,13 @@ blocks.forEach((block, index) => {
   const result = checkText(block, { engine: engines[index] });
   assert.deepEqual([...result.errors, ...result.warnings].map((item) => item.code), [], `example under ${engines[index]}`);
 });
+// §4 step 3 runs `--source`: every example, flattened from the image-brief §10.1 Hong Kong layer prompt, keeps its original-language names (Seedream all, Midjourney and Soul one or more per layer).
+const brief = fs.readFileSync(new URL("../references/image/image-brief.md", import.meta.url), "utf8");
+const layerPrompt = /```text\n([\s\S]*?)```/u.exec(brief.slice(brief.indexOf("인물, 참조 없이 필름 룩과 중국어 토큰")))[1];
+blocks.forEach((block, index) => {
+  const dropped = checkText(block, { engine: engines[index], sourceText: layerPrompt }).warnings.filter((item) => item.code === "mix/dropped");
+  assert.deepEqual(dropped.map((item) => item.message), [], `example ${index + 1} under ${engines[index]} with --source`);
+});
 assert.ok(blocks[0].split(/\s+/u).length < 600, "seedream example under 600 words");
 assert.match(blocks[2], / --ar 3:4 .*--no /u, "midjourney example keeps its flags");
 assert.ok(/^\p{sc=Han}/u.test(blocks[4]) && !/\n/u.test(blocks[4]), "豆包·即梦 example is one Chinese paragraph");

@@ -85,10 +85,14 @@ has("## Light\nキャッチライト — A small window point of light in each e
 has("A woman on a rainy night. Hard midday sun throws short shadows.", "coherence/day-night");
 lacks("A woman at midday under hard sun, her daylight white balance neutral.", "coherence/day-night");
 lacks("A woman on a rainy night under a sodium lamp.", "coherence/day-night");
-// Korean words: 한밤, 심야, 야경, a standalone 밤 against 한낮, 정오, 대낮. 밤색 is a brown and 야채 is not 야경.
+// Korean words: 한밤, 심야, 야경, 밤하늘, 밤에 against 한낮, 정오, 대낮. 밤 alone is also the chestnut, 밤색 is a brown, 야채 is not 야경 and 정오각형 is a pentagon.
 has("A woman on a 한밤 street. 정오 sun overhead.", "coherence/day-night");
 has("심야 편의점 앞, 한낮의 햇빛 같은 직사광.", "coherence/day-night");
-has("A woman in the 밤 air at 대낮 light.", "coherence/day-night");
+has("A woman under the 밤하늘 at 대낮 light.", "coherence/day-night");
+has("A woman walking 밤에 under 한낮 sun.", "coherence/day-night");
+lacks("A market stall selling roasted 밤 in paper cones, Noon Sunlight.", "coherence/day-night");
+lacks("An old woman peels 밤을 on a straw mat under 한낮 sun.", "coherence/day-night");
+lacks("A pentagon sign shaped like a 정오각형 in the dark night.", "coherence/day-night");
 lacks("A woman in a 밤색 coat at 정오.", "coherence/day-night");
 lacks("A woman on a 한밤 street under a 가로등.", "coherence/day-night");
 lacks("A woman at 정오 beside a market of 야채 stalls.", "coherence/day-night");
@@ -96,11 +100,17 @@ lacks("A woman at 정오 beside a market of 야채 stalls.", "coherence/day-nigh
 const dayNight = (scene, light) => `A candid street photograph of a woman.\n\n## Scene\n${scene} — A place.\n\n## Light\n${light} — Some light.`;
 has(dayNight("夜市", "正午顶光"), "coherence/day-night");
 has(dayNight("심야식당", "직사광"), "coherence/day-night");
-has(dayNight("歌舞伎町", "Harsh Midday Sun"), "coherence/day-night");
+has(dayNight("花火大会", "Harsh Midday Sun"), "coherence/day-night");
 has(dayNight("tennis club court", "Moonlight"), "coherence/day-night");
 lacks(dayNight("夜市", "Moonlight"), "coherence/day-night");
 lacks(dayNight("편의점", "직사광"), "coherence/day-night");
 lacks(dayNight("한강 야경", "窓辺の光"), "coherence/day-night");
+// A landmark or street seen by day and by night carries no time tag: it does not clash with midday light. Limit: a night view written for a landmark must name the night itself (밤 베란다, 심야식당).
+lacks(dayNight("東京タワー", "직사광"), "coherence/day-night");
+lacks(dayNight("维多利亚港", "Noon Sunlight"), "coherence/day-night");
+lacks(dayNight("Sacré-Cœur", "Moonlight"), "coherence/day-night");
+// The warning names the heads that gave the cue.
+assert.ok(checkText(dayNight("夜市", "正午顶光")).warnings.find((item) => item.code === "coherence/day-night").message.includes("夜市"), "day-night names the heads");
 
 // legwear: a Legwear stockings or tights line next to an Outfit garment that covers the whole leg, read through the lexicon rows so any language's head counts.
 const legs = (outfit, legwear, outfitSentence = "A garment.", legSentence = "A line.") => `A natural-light photograph of a woman on a street.\n\n## Outfit\n${outfit} — ${outfitSentence}\n\n## Legwear\n${legwear} — ${legSentence}`;
@@ -124,6 +134,25 @@ lacks(legs("Cotton Maxi Dress", "damask tights", "A dress faintly translucent wh
 lacks(legs("와이드 팬츠", "데미지 스타킹", "Wide trousers.", "Tights with torn holes."), "coherence/legwear");
 lacks("A photograph.\n\n## Legwear\n스타킹 — Fine sheer stockings.", "coherence/legwear");
 lacks("A photograph.\n\n## Outfit\n와이드 팬츠 — Wide trousers.", "coherence/legwear");
+// Hems that stop above the ankle show the stockings: the ankle, the strip between hem and shoe, a lifted hem in either sentence leaves the warning out. No cue, the clash stays.
+lacks(legs("ワイドパンツ", "黒ストッキング", "Wide trousers whose hem stops just above the ankle bone.", "Sheer stockings show in the strip of ankle."), "coherence/legwear");
+lacks(legs("ロングスカート", "シアータイツ", "A long skirt that ends a hand's width above the shoes.", "Sheer tights."), "coherence/legwear");
+lacks(legs("와이드 팬츠", "스타킹", "Wide trousers.", "Nude stockings visible between the hem and the loafers."), "coherence/legwear");
+lacks(legs("ankle-length trousers", "black sheer tights"), "coherence/legwear");
+has(legs("와이드 팬츠", "스타킹", "Wide trousers falling to the floor.", "Black stockings."), "coherence/legwear");
+has(legs("floor-length trousers", "black tights"), "coherence/legwear");
+// Long garments of every culture: kimono, yukata, hanbok skirt, mamianqun, gowns. A bare jacket (저고리) and short or ankle-baring rows do not.
+has(legs("着物", "黒ストッキング"), "coherence/legwear");
+has(legs("기모노", "스타킹"), "coherence/legwear");
+has(legs("浴衣", "シアータイツ"), "coherence/legwear");
+has(legs("한복", "스타킹"), "coherence/legwear");
+has(legs("马面裙", "丝袜"), "coherence/legwear");
+has(legs("Chiffon Maxi", "스타킹"), "coherence/legwear");
+has(legs("와이드 팬츠", "시스루 스타킹"), "coherence/legwear");
+has(legs("슬랙스", "Collants opaques"), "coherence/legwear");
+has(legs("슬랙스", "low-rise sheer tights"), "coherence/legwear");
+lacks(legs("저고리", "스타킹"), "coherence/legwear");
+lacks(legs("Pantalon cigarette", "스타킹"), "coherence/legwear");
 
 // body-dir: an Expression row that turns the body away beside a Pose row that faces the camera square on (or the reverse); the rows that agree, or no body tag, pass.
 const dir = (expression, pose) => `A natural-light photograph of a woman on a terrace.\n\n## Expression\n${expression} — A look.\n\n## Pose\n${pose} — A pose.`;
@@ -152,6 +181,17 @@ lacks(place("Car Window Lean", "plain — A plain grey wall.", "A photograph of 
 lacks(place("계단에 앉기", "石板街 — A narrow lane."), "coherence/pose-place");
 lacks(place("누워서 폰 보기", "원룸 — A compact room."), "coherence/pose-place");
 lacks(place("seated turn", "plain — A plain grey wall."), "coherence/pose-place");
+// The scene may name the place in its own language: a native word in the opener, a line head or a sentence shows it as an English word does.
+lacks(place("계단에 앉기", "달동네 골목 — Worn concrete 계단 climb between two red-brick houses."), "coherence/pose-place");
+lacks(place("下楼梯", "旋转楼梯 — A spiral 楼梯 of white marble."), "coherence/pose-place");
+lacks(place("台阶驻足垂眸", "石の階段 — Moss-covered 階段 lead up to a vermilion shrine gate."), "coherence/pose-place");
+lacks(place("凭栏远眺", "江边步道 — A waist-high iron 栏杆 along the river."), "coherence/pose-place");
+lacks(place("凭桥看水", "石拱桥 — A stone arch 桥 over a narrow canal."), "coherence/pose-place");
+lacks(place("엘리베이터 셀카", "엘리베이터 — The mirrored walls of a small 엘리베이터 cabin."), "coherence/pose-place");
+lacks(place("누워서 폰 보기", "plain — A plain grey wall.", "A woman on her 침대 at night."), "coherence/pose-place");
+// Poses whose row is not about one place carry no place tag: a lean against a wall, a towel for wet hair.
+lacks(place("Arms Folded Lean", "brick wall — A sunlit red-brick wall."), "coherence/pose-place");
+lacks(place("擦头发", "욕실 — A white-tiled bathroom."), "coherence/pose-place");
 // A head's tags count only when every row of that name in that layer has them; a layer named Posture is the Pose layer too.
 has(dir("뒤돌아 꽂히는 시선", "前置自拍").replace("## Pose", "## Posture"), "coherence/body-dir");
 
