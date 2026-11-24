@@ -209,7 +209,7 @@ Outfit 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다.
 | 金丝绒 | 벨루어; 실크 벨벳; velours; lustrous velvet | CN | 벨벳; 광택; 저녁; 복고; 홍콩; 港风 | A short-pile velvet with a liquid sheen that shifts tone along the folds. | item |
 | 长衫 | 장삼; 창산; 对襟长衫; long robe; changshan; 真丝对襟长衫; 실크 장삼 | CN | 전통; 롱 기장; 남녀 공용; 차분함; 故宫朱红暖金; 고궁 주홍 웜골드; 宫廷历史胶片; 궁정 역사 필름; 故宫人文大片; 江南烟雨柔焦; 강남 연우 소프트 포커스; 烟雨柔焦; 연우 소프트 포커스; 当代美术馆冷光极简; 当代美术馆冷光; 美术馆冷光; 冷光极简; 현대 미술관 냉광 미니멀; 미술관 냉광 미니멀; 미술관 냉광; 냉광 미니멀; 新中式水墨; 신중식 수묵; 水墨影调; 수묵 톤 | A long straight robe that falls to the shin, with side slits that swing as the wearer moves. | item |
 | 青瓷绿 | 청자색; 셀라돈 그린; celadon green | CN | 옅은 초록; 도자기; 봄여름; 우아함 | A soft grey-green with a glassy depth like glazed porcelain. | item |
-| 香云纱 | 향운사; 광둥 흑견; gambiered Canton silk; xiangyunsha | CN | 전통 직물; 광둥; 여름; 검정 | A black-brown silk with a slightly stiff, crinkled, waxy-glossy face that rustles when it moves. | item |
+| 香云纱 | 향운사; 광둥 흑견; gambiered Canton silk; xiangyunsha; 莨绸; 莨纱绸 | CN | 전통 직물; 광둥; 여름; 검정 | A black-brown silk with a slightly stiff, crinkled, waxy-glossy face that rustles when it moves. | item |
 | 马面裙 | 马面; 마면군; 마면치마; 마몐췬; horse-face skirt; mamianqun | CN | 치마; 플리츠; 명나라; 전통; 国潮; 궈차오; 국조; 新中式水墨; 신중식 수묵; 水墨影调; 수묵 톤 | A long skirt with flat front and back panels and pleated sides, the stiff panel standing smooth while the side pleats fall in sharp folds. | item |
 | 麦尔登呢 | 멜턴 울; 멜톤; melton wool | CN | 울; 두꺼움; 겨울; 아우터; 故宫朱红暖金; 고궁 주홍 웜골드; 宫廷历史胶片; 궁정 역사 필름; 故宫人文大片 | Thick dense felted wool with a smooth matte face that holds a stiff outline. | item |
 | 黛绿 | 다크 그린; 짙은 녹색; dark green; slate green | CN | 깊은 초록; 전통색; 차분함; 가을 | A deep grey-toned green that turns almost black in shadow. | item |

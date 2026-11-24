@@ -6,7 +6,7 @@ Legwear 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다
 
 | 토큰 | 별칭 | 문화권 | 태그 | 화면에 보이는 모습 | 종류 |
 |---|---|---|---|---|---|
-| 누드토 | 누드 토; 누드 토우; 누드토 스타킹; 투명 발끝; 透明脚尖; nude toe; sandal toe; seamless toe; 露趾肉丝; 足尖透明; sandal-toe invisible; Collant bout ouvert invisible; 샌들 토 | KR | 투명; 샌들; 여름; 데일리 | Tights whose toe is as sheer as the leg with no reinforced band, so the toes look bare inside an open shoe. | item |
+| 누드토 | 누드 토; 누드 토우; 누드토 스타킹; 투명 발끝; 透明脚尖; nude toe; sandal toe; seamless toe; 露趾肉丝; 足尖透明; sandal-toe invisible; Collant bout ouvert invisible; 샌들 토; 隐形足尖; 隐形脚尖 | KR | 투명; 샌들; 여름; 데일리 | Tights whose toe is as sheer as the leg with no reinforced band, so the toes look bare inside an open shoe. | item |
 | 약압박 타이즈 | 약압박; 압박 타이즈; 쉐이핑 타이즈; 压力袜; light compression tights; shaping tights; 渐进式微压; 微压美腿袜 | KR | 압박; 실루엣; 오피스; 사계절 | Lightly compressive tights that smooth the leg into an even line, slightly firmer at the ankle and easing toward the knee. | item |
 | 오픈토 스타킹 | 오픈토; 오픈 토 스타킹; 토리스 스타킹; 露趾丝袜; toeless tights; open-toe tights | KR | 샌들; 여름; 데일리; 스타킹 | Sheer tights that end in a band across the forefoot, leaving the toes fully uncovered. | item |
 | 골지 타이즈 | 골지 타이츠; 골지 스타킹; 립 타이즈; 竖坑条袜; ribbed tights; ribbed knit tights; Collant côtelé | KR | 니트; 캐주얼; 가을겨울; 타이즈 | Knit tights with fine vertical ridges that cast tiny parallel shadows along the leg. | look |
@@ -57,7 +57,7 @@ Legwear 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다
 |---|---|---|---|---|---|
 | 防勾丝袜 | 防勾丝; 10D防勾丝; 올 걸림 방지 스타킹; anti-snag tights; ladder-resist heavy-duty; 내구성 스타킹 | CN | 실용; 출근; 내구성; 사계절 | Sheer hosiery with a tight resilient knit that keeps its surface smooth, without pulled threads, after rubbing against bags or furniture. | item |
 | 蝉翼丝袜 | 蝉翼袜; 5D蝉翼; 초박 스타킹; 매미날개 스타킹; 찬이 스타킹; cicada-wing hosiery; ultra-sheer hosiery; 5D蝉翼肉丝 | CN | 초박; 투명; 봄여름; 데일리; 老钱风; 라오첸펑; 올드머니 | Hosiery so thin it nearly vanishes, leaving only a faint pearly sheen where light slides along the shin. | item |
-| 素颜丝袜 | 素颜袜; 粉底袜; 쑤옌 스타킹; 파운데이션 스타킹; foundation tights; 8D素颜肉丝; 柔焦遮瑕连裤袜; 柔焦肉丝; コンシーラーストッキング; 컨실러 스타킹; 소프트포커스 스타킹 | CN | 무광; 보정; 데일리; 오피스; 老钱风; 라오첸펑; 올드머니 | Matte sheer tights that diffuse light like a foundation layer, evening out the leg's surface with no glare. | item |
+| 素颜丝袜 | 素颜袜; 粉底袜; 쑤옌 스타킹; 파운데이션 스타킹; foundation tights; 8D素颜肉丝; 柔焦遮瑕连裤袜; 柔焦肉丝; コンシーラーストッキング; 컨실러 스타킹; 소프트포커스 스타킹; 肉丝; 肉色丝袜 | CN | 무광; 보정; 데일리; 오피스; 老钱风; 라오첸펑; 올드머니 | Matte sheer tights that diffuse light like a foundation layer, evening out the leg's surface with no glare. | item |
 | 包芯丝袜 | 包芯丝; 코어사 스타킹; 코어스펀 스타킹; core-spun tights; 包芯黑丝 | CN | 내구성; 실용; 데일리; 사계절 | Hosiery knit from core-spun yarn, giving a slightly firm, uniformly smooth surface with a soft low sheen. | item |
 | 后中缝 | 后缝丝袜; 后线丝袜; 백심 스타킹; 뒷솔기 스타킹; back seam stockings; rear seam | CN | 빈티지; 클래식; 솔기; 레트로; 홍콩; 港风 | A single thin seam line running straight up the back of the leg from heel to thigh, centered on the calf. | item |
 | 微网袜 | 微网; 미세 망사 스타킹; 마이크로 메시 스타킹; micro-mesh tights; naked-mesh couture; 초미세 망사 | CN | 망사; 미세 격자; 스트릿; 저녁 | Very fine diamond mesh that gives a textured surface close to the leg and blurs into an even tone from a distance. | item |
@@ -94,7 +94,7 @@ Legwear 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다
 | 冷白瓷肌 | 냉백자기; 냉백 도자기 피부; porcelain matte skin; cool porcelain | CN | 도자기; 무광; 차가운 흰톤; 미술관; 미니멀 | Cool, even, matte porcelain finish on the leg, with a diffused soft-focus look and no hot highlight on the knee or shin. | look |
 | 名媛天鹅腿 | 名媛; 천아 다리; swan leg; high-society tights; 명원 룩 | CN | 우아함; 광택; 상류층; 파티; 외탄; 老钱风; 라오첸펑; 올드머니 | Long, smooth, softly glossy legs in fine sheer tights, with a gentle pearly highlight that follows the line of the calf. | look |
 | T裆无痕 | 无痕T裆; 全透T裆; T-crotch seamless; 투명 T 크로치 스타킹; 심리스 스타킹 | CN | 무봉제; 초박; 올 투명; 드레스 매치; 미니멀 | Fully transparent hosiery with a seamless, clean finish and no visible seam or thick band at the upper leg. | item |
-| 极透黑丝 | 10D 黑丝; 蝉翼黑丝; 玄黑丝袜; 초박 검정 스타킹; 흑사; raven black sheer | CN | 검정; 초박; 밤; 차가운 분위기; 저녁; 홍콩; 港风; 当代美术馆冷光极简; 当代美术馆冷光; 美术馆冷光; 冷光极简; 현대 미술관 냉광 미니멀; 미술관 냉광 미니멀; 미술관 냉광; 냉광 미니멀 | Very sheer black stockings where skin tone shows through as a deep, smoky, cool gray, brightening only where light grazes the shin. | item |
+| 极透黑丝 | 10D 黑丝; 蝉翼黑丝; 玄黑丝袜; 초박 검정 스타킹; 흑사; raven black sheer; 黑丝; 黑色丝袜 | CN | 검정; 초박; 밤; 차가운 분위기; 저녁; 홍콩; 港风; 当代美术馆冷光极简; 当代美术馆冷光; 美术馆冷光; 冷光极简; 현대 미술관 냉광 미니멀; 미술관 냉광 미니멀; 미술관 냉광; 냉광 미니멀 | Very sheer black stockings where skin tone shows through as a deep, smoky, cool gray, brightening only where light grazes the shin. | item |
 | 缎光黑丝 | 水光黑丝; 缎面油亮黑丝; 20D 새틴 흑사; liquid satin black hosiery; 오일 광택 스타킹 | CN | 광택; 새틴; 검정; 파티; 런웨이; 홍콩; 港风 | Glossy black tights with a satin sheen, where a bright, smooth highlight runs along the front of the shin and bends over the knee. | item |
 | 大女主黑丝 | 大女主; 女强人黑丝; 대녀주 흑사; power woman black sheer | CN | 강인함; 검정; 초박; 권위; 드라마; 当代美术馆冷光极简; 当代美术馆冷光; 美术馆冷光; 冷光极简; 현대 미술관 냉광 미니멀; 미술관 냉광 미니멀; 미술관 냉광; 냉광 미니멀 | Razor-clean sheer black legs with a seamless T-crotch finish, giving a sharp, cool, composed silhouette. | look |
 | 盘扣 | 苏工盘扣; 手工盘扣; frog button; 반코; 판코; 중국식 매듭 단추 | CN | 매듭 단추; 전통; 수공예; 한정판; 실크; 新中式; 신중식; 国潮; 궈차오; 국조 | Small hand-knotted cloth buttons in tight loops, standing a little proud of the fabric and casting a tiny shadow at the garment edge. | item |

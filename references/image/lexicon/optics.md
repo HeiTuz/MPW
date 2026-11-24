@@ -8,16 +8,16 @@ Optics 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다.
 |---|---|---|---|---|---|
 | CCD 카메라 | CCD Camera; CCD相机; 씨씨디 디카; 디카; CCD 감성; 디카 감성; 씨씨디 카메라 | KR | Y2K; 레트로; 셀카; 디카; 플래시 | Early-2000s compact digital rendering with flat on-camera flash, slightly blown highlights, cool colour and fine digital noise in the shadows. | gear |
 | Samsung Digimax A400 | 삼성 디지맥스; 디지맥스 A400; 三星Digimax; 삼성 디카 | KR | Y2K; 디카; 과노출; 플래시 | A 2000s compact digital look whose strong built-in flash overexposes the nearest surfaces to cool white, with low dynamic range and soft digital detail. | gear |
-| 아웃포커싱 | 아웃 포커싱; 배경 흐림; 배경날림; bokeh blur; 大光圈虚化; 浅景深 | KR | 인물; 배경 정리; 보케; 얕은 심도 | A wide aperture melts the background into soft blur and isolates the subject. | look |
+| 아웃포커싱 | 아웃 포커싱; 배경 흐림; 배경날림; bokeh blur; 大光圈虚化; 浅景深; 얕은 심도; 얕은 피사계 심도; shallow depth of field | KR | 인물; 배경 정리; 보케; 얕은 심도 | A wide aperture melts the background into soft blur and isolates the subject. | look |
 | 필카 감성 | 필카; 필름카메라 감성; 필름 카메라 감성; 필름 감성 | KR | 레트로; 필름; 일상; 감성; 꾸안꾸; 꾸민 듯 안 꾸민 듯 | Analog 35mm film rendering with visible grain, soft highlight roll-off and slightly warm, faded colour. | look |
 | 폴라로이드 라이트 리크 | 폴라로이드 빛샘; 폴라로이드 누광; Polaroid light leak; 拍立得漏光 | KR | 인스턴트; 빛샘; 따뜻함; 레트로; 폴라로이드 빛샘; 유통기한 지난 필름; 과기필름; 古早胶片 | Red-orange light leaks wash over the edges of an instant print, with soft contrast and a thick white border. | look |
 | 홀로그램 프리즘 | 프리즘 필터; 프리즘 렌즈; prism filter; 棱镜滤镜 | KR | 프리즘; 무지개빛; 플레어; 실험적 | A prism held at the lens throws rainbow-edged refractions and doubled, iridescent flares across part of the frame. | look |
 | 흑백 필름 그레인 | 흑백 그레인; 고감도 흑백 필름; B&W film grain; high ISO grain; 黑白颗粒 | KR | 흑백; 거친 입자; 고대비; 야간; 그런지; Grunge; 폴라로이드 빛샘; 유통기한 지난 필름; 과기필름; 古早胶片; 흑백 인문 사진 | Coarse silver grain over monochrome with deep blacks and bright clipped highlights, giving a gritty high-contrast texture. | look |
 | 柔焦 | 소프트 포커스; soft focus; 몽글 포커스; 柔化 | KR | 몽환; 화사함; 부드러움; 창가; 森ガール; 모리걸; Old Hollywood; 올드 할리우드; 老好莱坞; 글래머 소프트 포커스; 江南烟雨柔焦; 강남 연우 소프트 포커스; 烟雨柔焦; 연우 소프트 포커스; 폴라로이드 빛샘; 유통기한 지난 필름; 과기필름; 古早胶片 | Slightly diffused sharpness, with edges and highlights glowing softly. | look |
 | 冷调 | 쿨톤; cool tone; 차가운 톤; 冷白色调 | KR | 쿨; 차가움; 미니멀; 청량; 雨夜新宿; 비 오는 신주쿠 밤; 東京ノワール; 도쿄 누아르; 歌舞伎町ネオン; 가부키초 네온; 쿨톤 도자기 피부; 블루 그레이 미니멀; 냉백 도자기 피부; 회청색 미니멀; 清冷瓷肌; 极简灰蓝 | The whole palette leans cold blue-white with a slightly pale and quiet mood. | look |
-| 低饱和 | 로우 새츄레이션; 저채도; desaturated; 低饱和微青 | KR | 미니멀; 무채색; 차분함; 콘크리트; 江南烟雨柔焦; 강남 연우 소프트 포커스; 烟雨柔焦; 연우 소프트 포커스; 쿨톤 도자기 피부; 블루 그레이 미니멀; 냉백 도자기 피부; 회청색 미니멀; 清冷瓷肌; 极简灰蓝 | Color purity is pulled back to near grey with pale pink-white and a faint olive cast. | look |
+| 低饱和 | 로우 새츄레이션; 저채도; desaturated; 低饱和微青; 톤다운 | KR | 미니멀; 무채색; 차분함; 콘크리트; 江南烟雨柔焦; 강남 연우 소프트 포커스; 烟雨柔焦; 연우 소프트 포커스; 쿨톤 도자기 피부; 블루 그레이 미니멀; 냉백 도자기 피부; 회청색 미니멀; 清冷瓷肌; 极简灰蓝 | Color purity is pulled back to near grey with pale pink-white and a faint olive cast. | look |
 | 奶油色 | 크림 톤; cream tone; 奶油白; 크림색 벽 | KR | 프렌치; 따뜻함; 화이트; 몰딩; 서울 카페 웜톤; 서울 카페 웜톤 확산광; 웜톤 확산광; 首尔咖啡馆与居家暖调漫射 | Soft cream-white walls reflect light repeatedly into a smooth, fine, warm white. | look |
-| 光斑虚化 | 보케; bokeh; 원형 보케; 车流光斑 | KR | 야간; 도시; 고속도로; 135mm; 雨夜新宿; 비 오는 신주쿠 밤; 東京ノワール; 도쿄 누아르; 歌舞伎町ネオン; 가부키초 네온; 서울 밤 시네마; 서울 나이트 시네마; 차창 불빛 시네마; Seoul night cinema; 首尔夜生活电影感; 车内流光 | Distant lights turn into big round overlapping discs behind the subject. | look |
+| 光斑虚化 | 보케; bokeh; 원형 보케; 车流光斑; 빛망울; 망울 보케 | KR | 야간; 도시; 고속도로; 135mm; 雨夜新宿; 비 오는 신주쿠 밤; 東京ノワール; 도쿄 누아르; 歌舞伎町ネオン; 가부키초 네온; 서울 밤 시네마; 서울 나이트 시네마; 차창 불빛 시네마; Seoul night cinema; 首尔夜生活电影感; 车内流光 | Distant lights turn into big round overlapping discs behind the subject. | look |
 | 长曝光 | 장노출; light trails; 라이트 트레일; 光轨 | KR | 야경; 택시; 잔상; 네온; 서울 밤 시네마; 서울 나이트 시네마; 차창 불빛 시네마; Seoul night cinema; 首尔夜生活电影感; 车内流光 | A long exposure stretches red tail lights and blue signs into dream-like light streaks. | look |
 | Slow-Sync Flash Party Blur | 슬로우 싱크로 플래시; 후막 싱크 파티; 슬로우셔터 플래시 | KR | 잔상; 파티; 플래시; 광궤적 | Sharp flash-lit subject against streaked colored light trails from a long shutter exposure. | look |
 | 디지털 노이즈 | 컬러 노이즈; CCD 노이즈 | KR | 아이폰 원본 셀카; 아이폰 셀카; iPhone native selfie; 폰카; 밤; 노이즈; 千禧CCD直闪; 밀레니엄 CCD 직광 플래시; Y2K CCD; 직부 플래시 | Very fine digital noise sits only in the darkest parts of the frame and leaves the lit areas clean. | look |
@@ -30,6 +30,19 @@ Optics 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다.
 | 핀 나감 | 핀이 나감; 핀 안 맞음; missed focus | KR | 초점; 흐림; 스냅; 실수 | The focus lands slightly in front of or behind the subject, so edges stay soft and fine detail is smeared. | look |
 | Crisp Computational Sharpness | 폰 연산 선명도; 폰 카메라 샤프닝; phone computational sharpening | KR | 아이폰 원본 셀카; 아이폰 셀카; iPhone native selfie; 아이폰 후면 카메라; 아이폰 16 프로; 거울 셀카 | On a phone camera, computational processing keeps every hair edge, the face and the whole scene crisp and clean at once. | look |
 | 필름 그레인 | 필름 입자; 그레인 | KR | 필름; 질감; 빈티지; 저조도 | Fine, even film grain sits across the whole frame, slightly heavier in the shadows. | look |
+| 빛번짐 | 빛 번짐; 블룸; soft glow bloom; bloom; 光晕; ブルーム | KR | 몽글; 하이라이트 번짐; 램프 | Bright areas bleed a soft glow into the darker pixels around them, hazing the edges of lamps, white clothes and windows. | look |
+| 렌즈 플레어 | 렌즈플레어; 플레어; 햇빛 플레어; lens flare; 镜头光斑; レンズフレア | KR | 산란광; 빛줄기; 대비 저하 | A streak, ring or veil of scattered light crosses the frame from a bright source and washes a little contrast out of the shadows. | look |
+| 비네팅 | 비네트; 가장자리 어두움; vignetting; 暗角; 周辺減光 | KR | 모서리; 어두운 가장자리 | Corners and edges darken gradually toward the frame border and draw the eye toward the brighter center. | look |
+| 색수차 | 퍼플 프린지; 보라 테두리; chromatic aberration; 紫边; 色収差 | KR | 보라색 테두리; 렌즈 결함 | Thin purple and green fringes appear along high-contrast edges such as hair against bright sky, as if the colors did not quite line up. | look |
+| 선예도 | 샤프니스; 선명도; 날카로움; sharpness; 锐度 | KR | 또렷함; 디테일; 샤프 | Fine edges such as lashes, hair strands and fabric weave render crisp and clearly separated, with strong local contrast. | look |
+| 해상력 | 렌즈 해상력; 디테일 해상; resolving power; 解析力 | KR | 미세 질감; 고해상 | The lens resolves very fine texture such as pores, thread and individual hairs, so detail stays clear even when the frame is enlarged. | look |
+| 일회용 카메라 | 일회용 필름 카메라; 일회용 카메라 감성; disposable camera; 一次性相机; 使い捨てカメラ | KR | 정면 플래시; 입자; 어두운 모서리 | Flat on-camera flash, a slightly soft plastic lens, dark corners and visible grain give a casual disposable-camera snapshot look. | look |
+| 즉석 사진 | 즉석카메라; 인스탁스; instant photo; 拍立得; インスタント写真 | KR | 하얀 테두리; 인화; 색 바램 | A small instant print look with slightly soft detail, warm washed color, a bright flash center and a thin white border around the frame. | look |
+| 올드렌즈 | 올드 렌즈; 빈티지 렌즈; 구형 렌즈; vintage lens; 老镜头; オールドレンズ | KR | 몽환; 낮은 대비; 소용돌이 보케 | An old vintage lens gives softly glowing edges, lower contrast, uneven or swirling blur and a slightly warm color cast. | gear |
+| 손떨림 | 흔들린 사진; 카메라 흔들림; camera shake; 手ブレ | KR | 흔들림; 번짐; 저속 셔터 | A small shake during a slow shutter doubles edges and smears fine detail, as if the photo was taken in a hurry. | look |
+| 빛샘 | 필름 빛샘; 빛 샘; light leak; 漏光; 光漏れ | KR | 주황 빛; 필름 가장자리; 카메라 뒷면 | Warm orange or red streaks of stray light flare in from one edge of the frame, as if the camera back had leaked light onto the film. | look |
+| 쨍한 색감 | 쨍한 보정; 선명한 색감; 채도 높은 색감; vivid color; 鲜艳色彩; 鮮やかな色 | KR | 선명; 청량; 비비드 | Colors are pushed clean and saturated with high clarity, giving punchy blue skies, bright reds and green leaves. | look |
+| 색온도 | 화이트밸런스; 색 온도 조절; white balance; 色温; 白平衡 | KR | 따뜻한 쏠림; 푸른 쏠림 | The color cast of the whole frame shifts toward warm yellow or cool blue, tinting whites and skin accordingly. | look |
 
 ## CN
 
@@ -82,6 +95,13 @@ Optics 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다.
 | Rich Material Texture | Fine Material Texture; 풍부한 질감; 소재 질감과 깊은 색 | CN | 故宫朱红暖金; 고궁 주홍 웜골드; 宫廷历史胶片; 궁정 역사 필름; 故宫人文大片; 중형; 질감; 풍부한 색 | Fine material texture and rich, deep colour, so silk, wood and enamel each keep a distinct surface. | look |
 | 数码噪点 | 感光噪点 | CN | 数码; 手机; 夜景; 噪点; 暗部 | Very fine digital noise sits only in the darkest parts of the frame and leaves the lit areas clean. | look |
 | 胶片颗粒 | 细腻颗粒 | CN | 필름; 질감; 빈티지; 저조도; 当代美术馆冷光极简; 当代美术馆冷光; 美术馆冷光; 冷光极简; 현대 미술관 냉광 미니멀; 미술관 냉광 미니멀; 미술관 냉광; 냉광 미니멀 | Fine, even film grain across dark areas and midtones. | look |
+| 紫边 | 色散; 色差; 보라 테두리; 퍼플 프린지; purple fringing | CN | 보라색 테두리; 렌즈 결함 | Thin purple and green fringes appear along high-contrast edges such as hair against bright sky, as if the colors did not quite line up. | look |
+| 浅景深 | 景深浅; 虚化; 얕은 심도; shallow depth of field | CN | 배경 흐림; 눈에만 초점 | Only a thin plane around the eyes stays sharp while the hair behind and the whole background melt into smooth blur. | look |
+| 焦外成像 | 焦外; 焦外虚化; 보케; bokeh | CN | 보케 모양; 배경 흐림의 질감 | Out-of-focus lights and shapes spread into soft, evenly filled discs whose edges and texture show the character of the lens. | look |
+| 傻瓜相机 | 傻瓜机; 点射相机; 똑딱이; point-and-shoot; コンパクトカメラ | CN | 자동 카메라; 똑딱이; 가벼운 스냅 | A basic point-and-shoot with automatic exposure and a small lens gives a plain, slightly flat snapshot with deep focus and casual framing. | gear |
+| 一次性相机 | 一次性胶片相机; 일회용 카메라; disposable camera; 使い捨てカメラ | CN | 정면 플래시; 입자; 어두운 모서리 | Flat on-camera flash, a slightly soft plastic lens, dark corners and visible grain give a casual disposable-camera snapshot look. | look |
+| 胶片感 | 胶片质感; 필름 감성; film look | CN | 필름 감성; 입자; 부드러운 대비 | Soft contrast, gently rolled-off highlights, a fine grain and slightly shifted color recall the look of a film negative. | look |
+| 通透 | 通透感; 투명한 색감; clear transparent tones | CN | 맑은 공기; 깨끗한 색; 투명한 톤 | Clean, clear tones with crisp air between subject and background, clear whites and no muddy haze in shadows or sky. | look |
 
 ## JP
 
@@ -383,7 +403,7 @@ Optics 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다.
 | Chromatic Aberration | 색수차; 色散; Color Fringing; 컬러 프린징 | US | 빈티지; 플라스틱 렌즈; 저가 렌즈; 아이폰 원본 셀카; 아이폰 셀카; iPhone native selfie | Thin red and cyan fringes appear along high-contrast edges, strongest toward the corners of the frame. | look |
 | Film Burn | 필름 번; 필름 끝 노출; 롤 끝 번; end-of-roll burn; 卷末过卷漏光; 首张漏光; 필름 첫 컷 빛샘; 卷尾漏光; 胶卷尾部漏光 | US | 필름; 레트로; 주황빛; 빛샘; 폴라로이드 빛샘; 유통기한 지난 필름; 과기필름; 古早胶片; Venice Beach Polaroid; 베니스 비치 폴라로이드; road trip light leak; 로드트립 빛샘 | One edge of the frame is scorched by a red-orange-yellow gradient where the start or end of the roll was exposed to light. | look |
 | Halation | 할레이션; 헐레이션; 필름 번짐; 红色泛晕; 红色光晕 | US | 필름; 빛번짐; 몽환; 역광; 노을; Kodak Gold 200; 코닥 골드 200; 柯达Gold 200; 남프랑스 한여름 과노출; 南法盛夏过曝; Soleil du Midi | Bright highlights bleeding a soft red-orange glow around their edges, as light scatters in analog film. | look |
-| Highlight Roll-off | 하이라이트 롤오프; 高光滚落; Roll-off; 부드러운 하이라이트 | US | 부드러움; 필름; 피부톤; 柯达Portra 400; 코닥 포트라 400; 포트라 400; Kodak Portra 400; Portra 400; 서울 카페 웜톤; 서울 카페 웜톤 확산광; 웜톤 확산광; 首尔咖啡馆与居家暖调漫射 | Bright areas fade gradually into white without a hard clipped edge, keeping texture in white cloth and skin highlights. | look |
+| Highlight Roll-off | 하이라이트 롤오프; 高光滚落; Roll-off; 부드러운 하이라이트; 高光过渡; ハイライトのロールオフ | US, KR, JP, CN | 부드러움; 필름; 피부톤; 柯达Portra 400; 코닥 포트라 400; 포트라 400; Kodak Portra 400; Portra 400; 서울 카페 웜톤; 서울 카페 웜톤 확산광; 웜톤 확산광; 首尔咖啡馆与居家暖调漫射 | Bright areas fade gradually into white without a hard clipped edge, keeping texture in white cloth and skin highlights. | look |
 | Paparazzi Flash | 파파라치 플래시; 파파라치 감성; 직사 플래시 | US | 밤; 플래시; 셀럽; 스냅; 千禧CCD直闪; 밀레니엄 CCD 직광 플래시 | Hard on-camera flash fired at close range that flattens the background to black and throws bright specular glints on any shiny surface. | look |
 | Push Processing | Push +1; Push +2; 푸시 현상; 增感冲洗 | US | 거친 입자; 저조도; 고대비; 그런지; Grunge; 시애틀 그런지; 흑백 인문 사진 | Film is overdeveloped for extra speed, giving stronger contrast, bolder grain and richer saturated shadows. | look |
 | Rainbow Lens Flare | 레인보우 플레어; 무지개 렌즈 플레어; 彩虹光晕 | US | 역광; 석양; 빈티지; 폴라로이드 빛샘; 유통기한 지난 필름; 과기필름; 古早胶片 | Faint rainbow streaks and colored ghost circles drift across the frame from the sun at the lens edge. | look |

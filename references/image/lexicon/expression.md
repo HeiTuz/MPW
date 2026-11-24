@@ -152,7 +152,7 @@ Expression 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이
 | 闭目冥思 | 双目微阖; 눈 감고 명상; 명상하는 얼굴; eyes-closed meditation; serene closed eyes | CN | 고요; 명상; 고찰; 아침; 동양여백계열; 新中式; 신중식 | Both lids rest closed with the lashes flat, brow smooth and mouth relaxed, as if listening to a distant bell. | look |
 | 剑眉星目 | 剑眉; 검미성목; 칼날 같은 눈썹; sword brows bright eyes; sharp brows clear eyes | CN | 선명함; 위압; 복도; 낮; 대여주계열 | Straight, tapered brows over clear dark eyes with a steady, direct stare that reads as sharp and precise. | look |
 | 下颌线 | 如刃下颌线; 利落折角侧颜; 칼 같은 턱선; razor jawline; sharp mandible line | CN | 선명함; 차가움; 콘크리트; 낮; 当代美术馆冷光极简; 当代美术馆冷光; 美术馆冷光; 冷光极简; 현대 미술관 냉광 미니멀; 미술관 냉광 미니멀; 미술관 냉광; 냉광 미니멀 | Profile with a clean angular jaw, a hard slanted light edge along it and an ice-cold glance. | look |
-| 面无表情 | 无形威压; 무표정; 무표정한 위압; deadpan face; blank intimidating stare | CN | 위압; 냉정함; 살롱; 밤; 대여주계열 | Smooth, expressionless face with direct level eyes that carry quiet pressure. | look |
+| 面无表情 | 无形威压; 무표정; 무표정한 위압; deadpan face; blank intimidating stare; unsmiling; unsmiling face | CN | 위압; 냉정함; 살롱; 밤; 대여주계열 | Smooth, expressionless face with direct level eyes that carry quiet pressure. | look |
 | 柳叶眉 | 微蹙柳叶细眉; 버들잎 눈썹; 가는 눈썹; willow-leaf brows; thin curved brows | CN | 애수; 고전; 정원; 저녁; 동양여백계열 | Thin brows that curve gently like willow leaves, drawn slightly together in a quiet sigh. | look |
 | 双唇微张 | 心悸凝固; 被戳中心事; 입술이 벌어짐; 경직; lips parted in shock; frozen gasp | CN | 충격; 긴장; 살롱; 밤; 대여주계열 | A narrow gap between still lips and fixed eyes in a stunned freeze. | look |
 | 轻咬下唇 | 아랫입술 깨물기; 입술 살짝 깨물기 | CN | 입술; 표정; 억누른 감정; 디테일 | Upper teeth lightly pressing the lower lip, lips slightly pressed, with a faint tension in the jaw. | look |

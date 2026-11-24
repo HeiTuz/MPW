@@ -97,7 +97,7 @@ Hair and makeup 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토�
 | 취한 듯한 블러셔 | 취중 메이크업; Tipsy Blush; 微醺妆; 홍조 메이크업; 미흡 블러셔 | KR | 홍조; 블러셔; 밤; 글로우; 분위기; 千禧CCD直闪; 밀레니엄 CCD 직광 플래시 | Warm pink blush spread widely across the cheekbones and bridge of the nose like a flush. | look |
 | 샤워 직후 헤어 | 출욕 헤어; Just Out of Shower Hair; 刚出浴发; 젖은 머릿결 무드; 샤워 후 무드 | KR | 젖은 머리; 글로우; 자연스러움; 분위기; 밤 | Long hair in damp, clumped strands lying over the shoulders and collarbone with a wet gloss. | look |
 | 로즈 블러셔 | 로즈 핑크 블러셔; 장미빛 블러셔; rose blush; 玫瑰粉腮红; 清透玫瑰腮红 | KR | 쿨톤 도자기 피부; 블루 그레이 미니멀; 냉백 도자기 피부; 회청색 미니멀; 清冷瓷肌; 极简灰蓝; 쿨톤; 냉백 | A thin cool rose-pink wash sits high on the cheekbones and melts into the base with no visible edge, adding color without any warmth. | look |
-| 긴 생머리 | 긴 스트레이트; 생머리; 롱 스트레이트; long straight hair | KR | 생머리; 긴 머리; 청순; 일상 | Long hair hangs straight past the shoulders with a smooth surface, a faint natural sheen and almost no curl at the ends. | look |
+| 긴 생머리 | 긴 스트레이트; 생머리; 롱 스트레이트; long straight hair; long hair | KR | 생머리; 긴 머리; 청순; 일상 | Long hair hangs straight past the shoulders with a smooth surface, a faint natural sheen and almost no curl at the ends. | look |
 | 단발머리 | 단발; 어깨 단발; chin-length bob | KR | 단발; 보브; 깔끔; 목선 | Hair cut in one length at the jaw or just above the shoulders, framing the face with a clean blunt edge. | look |
 | 하나로 묶은 머리 | 하나로 묶기; 묶음 머리; hair tied back in one tie | KR | 묶음 머리; 깔끔; 일상; 목선 | All the hair is gathered into a single tie at the nape or crown, leaving the face and neck fully open with a few loose strands. | look |
 | 앞머리 | 앞머리 있는 머리; 풀뱅 컷; fringe | KR | 앞머리; 이마; 얼굴선; 단정 | A cut of shorter hair falls across the forehead above the eyebrows and shapes the whole face. | look |
