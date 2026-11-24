@@ -6,7 +6,7 @@ import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { CULTURES, LEXICON_DIR, MINOR_TAG, SLUGS, drawRandom, findLookCards, loadAll, search } from './find_tokens.mjs';
+import { CULTURES, LEXICON_DIR, MINOR_TAG, ROWS_ARE_CANDIDATES, SLUGS, drawRandom, findLookCards, loadAll, search } from './find_tokens.mjs';
 
 const scripts = path.dirname(fileURLToPath(import.meta.url));
 const cli = path.join(scripts, 'find_tokens.mjs');
@@ -205,7 +205,7 @@ for (const q of ['후지 퀵스냅', 'Fujifilm QuickSnap']) assert.deepEqual(JSO
 assert.ok(JSON.parse(run(['--q', '필카 감성', '--json']).stdout).candidates.length >= 5);
 // A called card is not offered again as a candidate, and an ordinary query has no candidate block.
 assert.ok(JSON.parse(run(['--q', '90년대 홍콩영화(왕가위 감성)', '--json']).stdout).candidates.every((c) => c.slug !== 'wong-kar-wai'));
-assert.ok(!run(['--q', '老钱风']).stdout.includes('candidates'));
+assert.ok(!run(['--q', '老钱风']).stdout.includes('## Look card candidates'));
 // One query can call a 장면 card and a 매체 card together; both come out with their axis so the brief can split the roles.
 for (const q of ['캘리포니아 골든아워, Kodak Gold 200', '캘리포니아 골든아워 코닥 골드 200']) {
   const both = JSON.parse(run(['--q', q, '--json']).stdout).looks;
@@ -367,4 +367,13 @@ assert.match(help.stdout, /usage: node scripts\/find_tokens\.mjs/);
 // The new part and expression rows are found by what a request calls them.
 for (const [query, token] of [['한옥 마당', '마당'], ['창호지', '창호지'], ['오비', '帯'], ['개완', '盖碗'], ['멈칫', '멈칫'], ['쿄톤', 'きょとん'], ['북커버', 'ブックカバー']]) {
   assert.ok(search({ terms: [query] }).flatMap((l) => l.matches.map((m) => m.token)).includes(token), `${query} -> ${token}`);
+}
+
+// Layer rows are candidates for one image: the text output says so once, ahead of the layers; the empty result and the JSON output do not carry the line.
+{
+  const out = run(['--q', 'walking', '--layers', 'pose']).stdout;
+  assert.equal(out.split(ROWS_ARE_CANDIDATES).length - 1, 1, 'the candidate line is printed once');
+  assert.ok(out.indexOf(ROWS_ARE_CANDIDATES) < out.indexOf('## Pose'), 'the candidate line comes before the layers');
+  assert.ok(!run(['--q', nonsense]).stdout.includes(ROWS_ARE_CANDIDATES), 'no rows, no candidate line');
+  assert.ok(!run(['--q', 'walking', '--layers', 'pose', '--json']).stdout.includes(ROWS_ARE_CANDIDATES), 'JSON output is unchanged');
 }
