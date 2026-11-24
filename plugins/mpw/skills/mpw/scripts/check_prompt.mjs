@@ -43,7 +43,10 @@ export const CODE_REGISTRY = Object.freeze({
   ratioDup: { code: "coherence/ratio-dup", severity: { native: "warning", assembled: "warning" }, intent: "Flag an aspect ratio written more than once." },
   decimal: { code: "coherence/decimal", severity: { native: "error", assembled: "error" }, intent: "Reject a decimal point replaced by an ideographic full stop." },
   slotDup: { code: "coherence/slot-dup", severity: { native: "warning", assembled: "warning" }, intent: "Flag a slot filled twice: lips in Hair and makeup, or the catchlight." },
-  dayNight: { code: "coherence/day-night", severity: { native: "warning", assembled: "warning" }, intent: "Flag a night cue next to midday light." },
+  dayNight: { code: "coherence/day-night", severity: { native: "warning", assembled: "warning" }, intent: "Flag a night cue next to midday light, in words or in the tags of the Light and Scene line-head rows." },
+  legwear: { code: "coherence/legwear", severity: { native: "warning", assembled: "warning" }, intent: "Flag a stockings or tights line in Legwear next to an Outfit line whose garment covers the whole leg, read from the lexicon row tags." },
+  bodyDir: { code: "coherence/body-dir", severity: { native: "warning", assembled: "warning" }, intent: "Flag an Expression row that turns the body away beside a Pose row that faces the camera square on, or the reverse, read from the lexicon row tags." },
+  posePlace: { code: "coherence/pose-place", severity: { native: "warning", assembled: "warning" }, intent: "Flag a Pose row that needs a place (car, rail, stair, bed, sofa, water's edge, road, elevator) that nothing outside the Pose layer shows." },
   engineLayers: { code: "coherence/engine-layers", severity: { native: "warning", assembled: "warning" }, intent: "Flag GPT Image layer headings left in a prompt for another engine." },
   engineFlag: { code: "coherence/engine-flag", severity: { native: "warning", assembled: "warning" }, intent: "Flag a Midjourney flag or ratio token in the body of an engine that takes it as a setting." },
   engineBan: { code: "coherence/engine-ban", severity: { native: "warning", assembled: "warning" }, intent: "Flag a spoken ban on illustration or CGI where the engine's cell says to state the medium or use its own exclusion syntax." },
@@ -53,6 +56,7 @@ export const CODE_REGISTRY = Object.freeze({
   mixUnlisted: { code: "mix/unlisted", severity: { native: "warning", assembled: null }, intent: "Flag original-language words that no lexicon row, look card or fixed-lines.md carries." },
   mixRenamed: { code: "mix/renamed", severity: { native: "warning", assembled: null }, intent: "Flag one thing called by two names: another alias of a line-head token written outside its line." },
   mixCulture: { code: "mix/culture", severity: { native: "warning", assembled: null }, intent: "Flag a photo term from the other culture's column of fixed-lines.md (高光 in a JP scene, 白飛び in a KR or CN scene), the culture read from the Finish tokens, or from the language of the line heads and sentence words when there are none." },
+  mixDropped: { code: "mix/dropped", severity: { native: "warning", assembled: "warning" }, intent: "With --source: flag original-language names of the layer prompt that are missing from its flattened form for another engine, or replaced by another alias of the same dictionary row." },
   mixThin: { code: "mix/thin", severity: { native: "warning", assembled: null }, intent: "Flag a KR, CN or JP photo prompt that barely mixes: no Finish layer in a person photo prompt, an owner (한복, 고궁) called without any of its part names in the original language, few original-language line heads, no photo term in Optics or Camera, or no expression word in Expression. For --engine seedream, midjourney and soul (one paragraph, no line heads): a person photo in a KR, CN or JP scene with fewer than three original-language words (engine-levers.md §3)." },
   pickOne: { code: "phrasing/pick-one", severity: { native: "warning", assembled: "warning" }, intent: "Flag wording that hands the choice to the model: the author writes one value and leaves no option list in the prompt." },
   poseOptions: { code: "coherence/pose-options", severity: { native: "warning", assembled: "warning" }, intent: "Flag a Pose layer that lists alternative poses (numbered or bulleted lines, or two posture words joined by or) instead of one pose." },
@@ -115,7 +119,7 @@ export function parseFlags(args) {
     "--channel": ["unbounded", "bounded"],
     "--engine": ["gpt-image", "unknown", "midjourney", "higgsfield", "seedream", "nano-banana", "soul"],
   };
-  const valued = new Set([...Object.keys(choices), "--manifest", "--channel-limit", "--file"]);
+  const valued = new Set([...Object.keys(choices), "--manifest", "--channel-limit", "--file", "--source"]);
   const reject = (message, details) => errors.push(diagnostic(CODE_REGISTRY.flag.code, message, details));
   for (let index = 0; index < args.length; index += 1) {
     const token = args[index];
@@ -164,6 +168,10 @@ export function parseFlags(args) {
   if (options.test && args.length !== 1) reject("--test must be used alone.");
   if (options.manifest !== undefined && options.input !== undefined) reject("A manifest cannot be combined with a positional input.");
   if (options.channel === "unbounded" && options.channelLimit !== undefined) reject("An unbounded channel cannot also have a channel limit.");
+  if (options.source !== undefined) {
+    if (options.manifest !== undefined) reject("--source cannot be combined with a manifest.");
+    if (!DROPPED_ENGINES.has(options.engine) && options.engine !== "nano-banana") reject(`--source compares a flattened prompt with its layer prompt: add --engine ${[...DROPPED_ENGINES, "nano-banana"].join("|")}.`);
+  }
   return { options, errors };
 }
 
@@ -447,8 +455,14 @@ function inspectCoherence(result, text, instruction) {
   if (lipLines.length >= 2 || catchLines.length >= 2) {
     emit(result, CODE_REGISTRY.slotDup, lipLines.length >= 2 ? `Hair and makeup has ${lipLines.length} lip lines.` : `The catchlight is written on ${catchLines.length} lines.`, { hint: "A slot is filled once: remove the later line." });
   }
-  if (/\b(?:night(?:time)?|midnight|after dark)\b|深夜|夜晚|の夜/iu.test(instruction) && /\b(?:noon|midday|mid-day|noonday)\b|正午|中午|真昼/iu.test(instruction)) {
-    emit(result, CODE_REGISTRY.dayNight, "A night cue and midday light appear in the same prompt.", { hint: "Pick one time of day and make Light and Optics agree." });
+  const layerFacts = inspectLayerFacts(result, sections);
+  // Words, or the Light and Scene line heads whose lexicon rows are tagged night-only or midday-only (a head in any language reads the same). 밤 is also the chestnut: only 밤하늘, 밤거리, 밤에, 밤의, 밤중 count (not a bare 밤, 밤을, 밤이 or 밤색); "밤에 구운 밤" misreads and a bare "at 밤" is missed.
+  const nightHeads = layerFacts.night, middayHeads = layerFacts.noon;
+  const night = /\b(?:night(?:time)?|midnight|after dark)\b|深夜|夜晚|の夜|한밤|심야|야경|야간|(?<!\p{sc=Hangul})밤(?:하늘|거리|에|의|중)(?!\p{sc=Hangul})/iu.test(instruction) || nightHeads.length > 0;
+  const midday = /\b(?:noon|midday|mid-day|noonday)\b|正午|中午|真昼|한낮|대낮|정오(?!각)/iu.test(instruction) || middayHeads.length > 0;
+  if (night && midday) {
+    const named = (heads) => (heads.length ? ` (${heads.slice(0, 2).join(", ")})` : "");
+    emit(result, CODE_REGISTRY.dayNight, `A night cue${named(nightHeads)} and midday light${named(middayHeads)} appear in the same prompt.`, { hint: "Pick one time of day and make Light and Optics agree." });
   }
   inspectSlotNames(result, sections);
   inspectChoices(result, instruction);
@@ -509,6 +523,97 @@ function inspectChoices(result, instruction) {
   }
 }
 
+// image-brief.md §3 slot table: one slot, one owner layer. These checks read the line heads of layers through their lexicon rows, so a head in any language reads the same
+// (와이드 팬츠, 阔腿裤 and wide-leg trousers are one row). Row tags the lexicon carries: 긴 기장 (Outfit: a garment that covers the whole leg), 스타킹류 (Legwear: stockings, tights),
+// 몸:등 and 몸:정면 (Expression and Pose: the body turned away, square to the camera), 장소:<kind> (Pose: needs a car, rail, stair, bed, sofa, water's edge, road or elevator),
+// 밤 한정 and 한낮 한정 (Light and Scene: night only, midday only). A tag counts only when every row of that head in that layer has it; a head with no row is read as English where noted. A warning, never an error.
+const LAYER_KEY = { outfit: /^(?:Outfit|Outerwear|Clothing)\b/iu, legwear: /^(?:Legwear|Hosiery)\b/iu, pose: /^(?:Poses?|Posture)\b/iu, expression: /^Expression\b/iu, light: /^Light\b/iu, scene: /^Scene\b/iu };
+// A visible-leg cue takes the legwear warning away: the stockings are meant to show. In the Outfit sentence it is a slit, rips, mesh, a cropped hem; in either sentence it is the ankle or the strip between hem and shoe
+// ("the hem stops above the ankle", "show at the ankle between the hem and the loafers"). Limit: a real clash that also writes "show" or "ankle" goes unflagged.
+const ANKLE_SHOWN = /\b(?:ankles?|above the (?:shoes|loafers|heels|sneakers|boots)|between the (?:hem|skirt|pant|trouser)s?|visible|shows?|showing|baring|lifted)\b/iu;
+const LEG_SHOWN = new RegExp(`\\b(?:slits?|split|rips?|ripped|torn|tears?|distressed|holes?|cut-?outs?|sheer|see-through|translucent|transparent|semi-sheer|mesh|lace|cropped|openings?)\\b|${ANKLE_SHOWN.source}`, "iu");
+const HOSE_SHOWN = new RegExp(`\\b(?:rips?|ripped|slits?|torn|holes?|cut-?outs?)\\b|${ANKLE_SHOWN.source}`, "iu");
+const COVERS_HEAD = /\b(?:trousers|pants|jeans|slacks|chinos|jumpsuit|overalls|dungarees|leggings|joggers|sweatpants|culottes|maxi (?:dress|skirt)|floor[- ]length)\b/iu;
+const SHORT_HEAD = /\b(?:shorts?|cropped|capris?|mini|ankle[- ]length)\b/iu;
+const HOSE_HEAD = /\b(?:tights|stockings?|pantyhose|hosiery|nylons|fishnets?|collants?)\b/iu;
+const NOT_HOSE = /\b(?:socks?|knee|ankle|thigh|bare|no|without)\b/iu;
+// English words of each place kind, read in the opener and the layers outside Pose and in the English description of every line-head row outside Pose. Wide on purpose: a stray word means no warning.
+const PLACE_WORDS = {
+  차: /\b(?:cars?|taxis?|cabs?|vehicles?|trucks?|pickups?|vans?|minivans?|sedans?|hatchbacks?|wagons?|suvs?|jeeps?|coup[eé]s?|convertibles?|automobiles?|limousines?|buses|motorcycles?|windshield|headlights?|tail ?lights?|garage|driveway|parked|parking|(?:back|rear|passenger|driver'?s?) ?seat)\b/iu,
+  난간: /\b(?:rails?|railings?|balustrades?|banisters?|handrails?|parapets?|guardrails?|guard rails?|balcon(?:y|ies)|terraces?|rooftops?|overlooks?|fences?|bridges?|fire escapes?|piers?|docks?)\b/iu,
+  계단: /\b(?:stairs?|staircases?|stairways?|stairwells?|steps|stoops?|escalators?|landings?|porch(?:es)?|entrances?|doorsteps?|terraces?)\b/iu,
+  침대: /\b(?:beds?|bedding|bedsheets?|sheets|bed ?linen|duvets?|quilts?|blankets?|pillows?|mattress(?:es)?|bedrooms?|bedside|headboards?|dorms?|apartments?|hotel rooms?)\b/iu,
+  소파: /\b(?:sofas?|couch(?:es)?|settees?|canap[ée]s?|armchairs?|loveseats?|booths?|banquettes?|cushions?|living rooms?|lounges?)\b/iu,
+  물가: /\b(?:beach(?:es)?|sand|shore(?:line)?s?|surf|sea|seaside|ocean|coast(?:al|line)?|waves?|lakes?|lakeside|rivers?|riverside|riverbanks?|ponds?|canals?|harbou?rs?|piers?|quays?|waterfront|bay|dunes?|pools?|fountains?|water)\b/iu,
+  도로: /\b(?:roads?|streets?|highways?|asphalt|lanes?|avenues?|boulevards?|crossings?|crosswalks?|sidewalks?|curbs?|pavements?|alleys?|intersections?|motorways?|freeways?|routes?|paths?)\b/iu,
+  엘리베이터: /\b(?:elevators?|lifts?|elevator cars?)\b/iu,
+};
+// The same kinds in the original languages a mixed prompt writes them in (Hangul, Han, kana have no \b). Wide on purpose, like the English list.
+const PLACE_NATIVE = {
+  차: /자동차|승용차|택시|차창|차량|汽车|轿车|出租车|车窗|车内|自動車|タクシー|車内|車窓/u,
+  난간: /난간|펜스|울타리|베란다|발코니|테라스|옥상|옥탑|대교|철교|육교|栏杆|围栏|护栏|扶手|桥|阳台|露台|天台|屋顶|手すり|欄干|橋|ベランダ|バルコニー|屋上|フェンス/u,
+  계단: /계단|층계|댓돌|툇마루|현관|에스컬레이터|楼梯|台阶|石阶|阶梯|门廊|门口|階段|石段|玄関|エスカレーター/u,
+  침대: /침대|이불|베개|침구|침실|기숙사|床上|床边|床头|床单|被子|枕头|卧室|宿舍|ベッド|布団|寝室|枕/u,
+  소파: /소파|쿠션|거실|라운지|沙发|客厅|抱枕|ソファ|クッション|カウチ|リビング/u,
+  물가: /물가|바다|바닷가|해변|해안|강가|강변|호수|연못|수영장|분수|항구|부두|파도|모래|海|河|湖|江|池|港|码头|沙滩|喷泉|游泳池|水边|川|ビーチ|砂浜|プール|噴水|水辺|波/u,
+  도로: /도로|골목|거리|횡단보도|인도|보도|차도|길가|马路|街|路|人行道|斑马线|道路|通り|道|横断歩道|歩道|路地/u,
+  엘리베이터: /엘리베이터|승강기|电梯|升降机|エレベーター|エレベータ/u,
+};
+function layerLines(sections) {
+  return sections.filter((section) => section.name && /^[A-Za-z]/u.test(section.name) && section.name !== "Identity Reference")
+    .flatMap((section) => section.lines.flatMap((line) => {
+      const match = LAYER_LINE.exec(line);
+      return match ? [{ section: section.name, head: match[1].trim(), sentence: unquote(match[2]) }] : [];
+    }));
+}
+function inspectLayerFacts(result, sections) {
+  const lines = layerLines(sections);
+  const facts = { night: [], noon: [] };
+  if (!lines.length) return facts;
+  const sources = mixSources();
+  const rowsOf = (item, slug) => (sources?.rowsByName.get(mixKey(item.head)) ?? []).filter((row) => row.slug === slug);
+  const tagsOf = (item, slug) => { const rows = rowsOf(item, slug); return rows.length ? rows[0].tags.filter((tag) => rows.every((row) => row.tags.includes(tag))) : []; };
+  const inLayer = (key) => lines.filter((item) => LAYER_KEY[key].test(item.section));
+  const tagged = (key, slug, tag) => inLayer(key).filter((item) => tagsOf(item, slug).includes(tag));
+  const english = (key, slug, wanted, unwanted) => inLayer(key).filter((item) => !rowsOf(item, slug).length && wanted.test(item.head) && !unwanted.test(item.head));
+  const named = (items) => items.map((item) => `${item.section} ${item.head}`);
+  facts.night = named([...tagged("light", "light", "밤 한정"), ...tagged("scene", "scene", "밤 한정")]);
+  facts.noon = named([...tagged("light", "light", "한낮 한정"), ...tagged("scene", "scene", "한낮 한정")]);
+
+  const covers = [...tagged("outfit", "outfit", "긴 기장"), ...english("outfit", "outfit", COVERS_HEAD, SHORT_HEAD)].filter((item) => !LEG_SHOWN.test(item.sentence));
+  const hose = [...tagged("legwear", "legwear", "스타킹류"), ...english("legwear", "legwear", HOSE_HEAD, NOT_HOSE)].filter((item) => !HOSE_SHOWN.test(item.sentence));
+  if (covers.length && hose.length) {
+    emit(result, CODE_REGISTRY.legwear, `${covers[0].head} (Outfit) covers the whole leg, yet Legwear writes ${hose[0].head}.`, { hint: "Legwear is left out when trousers or a long skirt cover the legs (image-brief.md §3). Drop the Legwear line, or keep it when a slit, rips or a cropped hem show the leg." });
+  }
+
+  const turned = [...tagged("expression", "expression", "몸:등"), ...tagged("pose", "pose", "몸:등")];
+  const square = [...tagged("expression", "expression", "몸:정면"), ...tagged("pose", "pose", "몸:정면")];
+  const isPose = (item) => LAYER_KEY.pose.test(item.section);
+  const clash = turned.find((one) => square.some((other) => isPose(one) !== isPose(other)));
+  if (clash) {
+    const other = square.find((item) => isPose(item) !== isPose(clash));
+    emit(result, CODE_REGISTRY.bodyDir, `${clash.head} (${clash.section}) turns the body away, ${other.head} (${other.section}) faces the camera square on.`, { hint: "The body angle belongs to Pose (image-brief.md §3 slot table): write the Expression line for the face only, or pick the Pose and Expression rows that agree." });
+  }
+
+  const first = unquote(sections.find((section) => section.name === null)?.lines.join(" ") ?? "");
+  const outside = lines.filter((item) => !LAYER_KEY.pose.test(item.section));
+  const unshown = [];
+  for (const item of inLayer("pose")) {
+    for (const tag of tagsOf(item, "pose")) {
+      const kind = /^장소:(.+)$/u.exec(tag)?.[1];
+      const words = kind && PLACE_WORDS[kind];
+      if (!words) continue;
+      const seen = (text) => words.test(text) || PLACE_NATIVE[kind].test(text);
+      const shown = seen(first) || outside.some((other) => seen(`${other.head} ${other.sentence}`) || (sources?.rowsByName.get(mixKey(other.head)) ?? []).some((row) => words.test(row.looks)));
+      if (!shown) unshown.push(`${item.head} (${kind})`);
+    }
+  }
+  if (unshown.length) {
+    emit(result, CODE_REGISTRY.posePlace, `${unshown.length} Pose row(s) need a place nothing else in the prompt shows: ${[...new Set(unshown)].slice(0, 3).join(" | ")}`, { hint: "Put the place the pose uses (the car, the rail, the stair, the bed) in Scene, or pick a pose that fits the scene." });
+  }
+  return facts;
+}
+
 // image-brief.md §12.2: a token names the thing shown, never a layer or category name. Slot tokens that fixed-lines.md and the look-card frame define (face clear, catchlight, palette, vertical frame, horizontal frame, focus, hands) are allowed. Only the `token — sentence` lines inside a layer are read.
 const SLOT_NAMES = new Set(["hair color", "hair colour", "hair", "hairstyle", "makeup", "outfit", "clothing", "clothes", "pose", "expression", "background", "foreground", "scene", "setting", "location", "passersby", "passers-by", "people", "crowd", "road surface", "ground", "floor", "sky", "lighting", "light", "shadow", "shadows", "mood", "atmosphere", "color", "colors", "colour", "camera", "camera angle", "composition", "style", "medium", "nails", "nail", "props", "legwear", "optics"]);
 function inspectSlotNames(result, sections) {
@@ -542,10 +647,15 @@ function mixSources() {
   try {
     const known = new Set();
     const rowsByToken = new Map();
+    const rowsByName = new Map();
     const everyRow = [];
     for (const layer of loadAll(resolve(mixRoot, "lexicon"))) {
       for (const row of layer.rows) {
-        for (const name of [row.token, ...row.aliases]) known.add(mixKey(name));
+        row.slug = layer.slug;
+        for (const name of [row.token, ...row.aliases]) {
+          known.add(mixKey(name));
+          rowsByName.set(mixKey(name), [...(rowsByName.get(mixKey(name)) ?? []), row]);
+        }
         const key = mixKey(row.token);
         rowsByToken.set(key, [...(rowsByToken.get(key) ?? []), row]);
         everyRow.push({ row, slug: layer.slug });
@@ -614,7 +724,7 @@ function mixSources() {
         if (group) for (const token of cells.slice(2).join(" ").match(/`[^`]+`/gu) ?? []) finish.set(mixKey(token.slice(1, -1)), group);
       }
     }
-    mixKnown = { known, rowsByToken, phrases, jpPhrases, photo, finish, owners };
+    mixKnown = { known, rowsByToken, rowsByName, phrases, jpPhrases, photo, finish, owners };
   } catch {
     mixKnown = null;
   }
@@ -819,6 +929,75 @@ function inspectEngineMix(result, instruction) {
   emit(result, CODE_REGISTRY.mixThin, `The prompt barely mixes languages: ${chunks.length} original-language word(s) in a ${result.engine} person photo prompt (fewer than three).`, { hint: "Keep the English sentence frame and leave the names, expression words, photo terms and texture or light words in their original language instead of translating them (engine-levers.md §3, image-brief.md §2.1)." });
 }
 
+// engine-levers.md §3 ("펴는 것은 모양이지 원어가 아니다") and §4 step 3: the flattened prompt keeps the original-language names of the layer prompt it was made from.
+// --source gives that layer prompt. Its line-head tokens and its sentence words in Han, kana or Hangul must still be in the checked prompt (the Identity and Finish layers are left out: the engine's
+// own cells replace their wording). A name that is gone, or whose row's other alias is written instead (文庫本 became paperback), is the flattening this rule exists to stop.
+// Midjourney and Soul cut each layer to one phrase, so only line heads are read there and a layer counts as dropped only when none of its names is left. Nano Banana's cell lets its prompt gloss original-language words, so it is not read (scope.unchecked says so).
+// A sentence cut for length leaves its names out too: the hint says so, and the finding is a warning.
+const DROPPED_ENGINES = new Set(["seedream", "midjourney", "soul"]);
+const KEPT_STEM = 4;
+function sourceNames(sourceText, headsOnly) {
+  const names = new Map();
+  let layer = null;
+  const add = (text) => {
+    const key = mixKey(text);
+    if (key && !names.has(key)) names.set(key, { text: text.trim(), layer });
+  };
+  for (const section of layerSections(unquote(sourceText))) {
+    if (section.name !== null && (!/^[A-Za-z]/u.test(section.name) || /^(?:Finish|Identity Reference)$/u.test(section.name))) continue;
+    layer = section.name;
+    for (const line of section.lines) {
+      const match = section.name === null ? null : LAYER_LINE.exec(line);
+      if (match && NATIVE_CHAR.test(match[1])) add(match[1]);
+      if (!headsOnly) for (const chunk of chunksOf(match ? match[2] : line)) add(chunk);
+    }
+  }
+  return names;
+}
+// A Hangul word's stem in the target ("마당이" for 마당은); a spaced phrase counts when half of its words are there (a bent expression phrase).
+function nameKept(name, targetKey, targetJamo) {
+  if (targetKey.includes(mixKey(name))) return true;
+  if (!/\p{sc=Hangul}/u.test(name)) return false;
+  const words = name.split(/\s+/u);
+  const found = words.filter((word) => { const stem = stemKey(word); return stem.length >= KEPT_STEM && targetJamo.includes(stem); }).length;
+  return found > 0 && found * 2 >= words.length;
+}
+function inspectDropped(result, instruction, sourceText) {
+  if (result.engine === "nano-banana") result.scope.unchecked.push("source_original_language_names");
+  if (!DROPPED_ENGINES.has(result.engine)) return;
+  const names = sourceNames(sourceText, result.engine !== "seedream");
+  if (!names.size) return;
+  const sources = mixSources();
+  const target = unquote(instruction);
+  const targetKey = mixKey(target);
+  const targetJamo = target.normalize("NFD");
+  const missing = [];
+  const renamed = [];
+  for (const [key, { text }] of names) {
+    if (nameKept(text, targetKey, targetJamo)) continue;
+    missing.push(text);
+    const other = [...new Set((sources?.rowsByName.get(key) ?? []).flatMap((row) => [row.token, ...row.aliases]))]
+      .filter((alias) => mixKey(alias) !== key && !mixKey(alias).includes(key) && !key.includes(mixKey(alias)) && mixKey(alias).length >= 2 && (NATIVE_CHAR.test(alias) || alias.split(/\s+/u).length >= 2 || alias.length >= 7))
+      .find((alias) => aliasPattern(alias).test(target));
+    if (other) renamed.push(`${text} → ${other}`);
+  }
+  if (!missing.length) return;
+  const note = renamed.length ? ` (written under another name: ${renamed.slice(0, 3).join(" | ")})` : "";
+  if (result.engine === "seedream") {
+    evidence(result, CODE_REGISTRY.mixDropped, missing,
+      `${missing.length} of ${names.size} original-language names of the layer prompt are not in this seedream prompt${note}`,
+      "Flattening drops the line heads and the layer headings, not the names: call the thing by its original-language name inside the English sentence (engine-levers.md §3). A name left out only because a second sentence was cut for length can stay out.");
+    return;
+  }
+  const byLayer = new Map();
+  for (const { text, layer } of names.values()) byLayer.set(layer, [...(byLayer.get(layer) ?? []), text]);
+  const lost = [...byLayer].filter(([, texts]) => texts.every((text) => missing.includes(text)));
+  if (!lost.length) return;
+  evidence(result, CODE_REGISTRY.mixDropped, lost.flatMap(([, texts]) => texts.slice(0, 1)),
+    `${lost.length} of ${byLayer.size} layers of the layer prompt keep none of their original-language names in this ${result.engine} prompt${note}`,
+    "This engine cuts each layer to one phrase, so keeping one name of a layer in its phrase is enough: use the original-language name there, not an English word for it (engine-levers.md §3).");
+}
+
 // engine-levers.md §5: the cells that say "do not write this" for one engine. Text matching only.
 const LAYER_ENGINES = new Set(["seedream", "nano-banana", "soul", "midjourney"]);
 function inspectEngine(result, instruction) {
@@ -885,6 +1064,7 @@ export function checkText(input, options = {}) {
   if (result.engine === "seedream" && words >= 600) {
     emit(result, CODE_REGISTRY.engineWords, `Seedream: ${words} words; the published guidance is under 600 English words (surfaces.md §0-1).`);
   }
+  if (options.sourceText !== undefined) inspectDropped(result, instruction, options.sourceText);
   if (result.profile === "native" && result.engine !== "gpt-image") {
     // Other engines run inspectCoherence (which calls inspectEngine for the engine-levers.md §5 "do not write" cells) and inspectEngineMix; the GPT Image layer, copy and syntax checks are skipped, and the engine's own syntax is outside this checker.
     inspectCoherence(result, text, instruction);
@@ -976,6 +1156,15 @@ async function execute(args) {
     emit(result, CODE_REGISTRY.unreadable, `Cannot read input: ${error.message}`);
     return result;
   }
+  if (options.source !== undefined) {
+    try {
+      options.sourceText = await fileText(options.source);
+    } catch (error) {
+      const result = textResult(options);
+      emit(result, CODE_REGISTRY.unreadable, `Cannot read the source layer prompt: ${error.message}`);
+      return result;
+    }
+  }
   return options.manifest !== undefined ? checkManifest(input, options) : checkText(input, options);
 }
 
@@ -1056,7 +1245,9 @@ export async function runHarness(casesPath = process.env.MPW_PROMPT_CHECK_CASES 
     const input = resolve(base, item.input);
     registered.add(input);
     for (const code of [...(item.expect.errors ?? []), ...(item.expect.warnings_include ?? [])]) expectedCodes.add(code);
-    const result = await execute([...item.args, input]);
+    // A --source file is named relative to the cases file, like the input.
+    const args = item.args.map((arg, index) => (item.args[index - 1] === "--source" ? resolve(base, arg) : arg));
+    const result = await execute([...args, input]);
     const comparison = compare(result, item.expect);
     if (comparison.ok) {
       passed += 1;
@@ -1106,6 +1297,7 @@ export const USAGE = `usage: node scripts/check_prompt.mjs [<prompt-file> | --fi
   --surface s1|s2|s3             the execution surface
   --engine gpt-image|unknown|midjourney|higgsfield|seedream|nano-banana|soul
   --channel unbounded|bounded    --channel-limit <characters>
+  --source <layer-prompt-file>   with --engine seedream|midjourney|soul: the GPT Image layer prompt this flattened prompt was made from; its original-language names must survive (nano-banana: accepted, not read)
   --manifest <file>              check a JSON-lines manifest instead of one prompt
   --test                         run the built-in cases (used alone)
   --help                         this text`;

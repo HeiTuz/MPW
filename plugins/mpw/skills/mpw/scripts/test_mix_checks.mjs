@@ -2,7 +2,9 @@
 // mix/* shapes the fixtures do not cover: what the one-name check skips (layer headings, the first line's medium or look phrase,
 // the Finish closer, the Identity paragraph) and where a spaced phrase may stand. Text matching only; no image output is judged.
 import assert from "node:assert/strict";
+import { spawnSync } from "node:child_process";
 import { readFileSync } from "node:fs";
+import { fileURLToPath } from "node:url";
 import { checkText } from "./check_prompt.mjs";
 
 const codes = (text) => {
@@ -88,4 +90,45 @@ assert.equal(count(noFinish, "mix/thin") - count(noFinish.replace(/## Outfit[\s\
 assert.equal(count(withFinish, "mix/thin"), 0);
 assert.equal(checkText(withFinish).warnings.length, 0, "the properly mixed hanbok prompt has no warning at all");
 
-console.log("mix checks: one-name skips (heading, medium phrase, closer, Identity), spaced-phrase places, Expression phrases, quoted copy and photo-term columns pass; image output NOT RUN.");
+// --source: the layer prompt a flattened prompt came from. Its line-head names and sentence words must survive the flattening; engine-levers.md §3.
+const layers = readFileSync(new URL("./fixtures/prompt-checks/source/mix-dropped-layers.txt", import.meta.url), "utf8");
+const dropped = (text, engine = "seedream", source = layers) => {
+  const result = checkText(text, { profile: "native", surface: "s3", engine, sourceText: source });
+  return result.warnings.filter((item) => item.code === "mix/dropped");
+};
+const kept = readFileSync(new URL("./fixtures/prompt-checks/pass/mix-dropped-kept.txt", import.meta.url), "utf8");
+assert.equal(dropped(kept).length, 0, "every name kept, a Korean particle bent (창살이)");
+assert.equal(dropped(kept.replace("낮은 쪽머리", "low chignon")).length, 1, "one name gone");
+assert.match(dropped(kept.replace("낮은 쪽머리", "low chignon"))[0].message, /1 of \d+ original-language names/u);
+// A name written under another alias of its dictionary row is reported with the alias it became (惆怅 → wistful).
+const hk = "A woman in a 1990s film still.\n\n## Expression\n惆怅 — She looks far down the street, waiting.";
+const renamedText = dropped("A 1990s film still of a woman with a wistful, waiting look far down the street.", "seedream", hk);
+assert.equal(renamedText.length, 1);
+assert.match(renamedText[0].message, /written under another name: 惆怅 → wistful/u);
+// Exact copy in quotes in the layer prompt is the photo's text, not a name to keep; Finish and Identity wording is the engine's own.
+assert.equal(dropped("A photograph of a woman beside a shop.", "seedream", "A photograph of a woman beside a shop.\n\n## Scene\nshop sign — A board reads \"営業中\" over the door.\n\n## Finish\n실사 — A real photograph.").length, 0);
+// Midjourney and Soul cut sentences to phrases: only the line heads are read there, a name inside a sentence is not.
+const sentenceName = "A photograph of a woman.\n\n## Outfit\nwhite shirt — A crisp shirt with a thin 동정 along the neckline.";
+assert.equal(dropped("a woman in a white shirt", "midjourney", sentenceName).length, 0);
+assert.equal(dropped("a woman in a white shirt", "seedream", sentenceName).length, 1);
+assert.equal(dropped("a woman in a hanbok", "soul", "A woman.\n\n## Outfit\n한복 — A short ivory jacket over a full skirt.").length, 1);
+// Those cut each layer to one phrase: a layer is dropped only when none of its names is left, so one name of two in a layer passes and a layer with none is reported.
+const twoNames = "A woman.\n\n## Hair and makeup\n王家卫 — A loose perm.\n豆沙唇 — A muted rosy-brown lip.\n\n## Outfit\n吊带裙 — A silk slip dress.";
+assert.equal(dropped("a woman in a loose 王家卫 perm and a 吊带裙", "soul", twoNames).length, 0, "one of two names kept in a layer");
+const lostLayer = dropped("a woman in a loose perm and a 吊带裙", "midjourney", twoNames);
+assert.equal(lostLayer.length, 1);
+assert.match(lostLayer[0].message, /1 of 2 layers/u);
+assert.equal(dropped("a woman in a loose perm and a slip dress", "soul", twoNames)[0].message.match(/2 of 2 layers/u)?.length, 1);
+// Nano Banana may gloss original-language words: not read, and the result says so.
+const nano = checkText("A woman in a hanbok.", { profile: "native", surface: "s3", engine: "nano-banana", sourceText: "A woman.\n\n## Outfit\n한복 — A short ivory jacket." });
+assert.ok(!nano.warnings.some((item) => item.code === "mix/dropped") && nano.scope.unchecked.includes("source_original_language_names"));
+// No source, no check.
+assert.equal(checkText("A woman in a hanbok.", { profile: "native", surface: "s3", engine: "seedream" }).warnings.filter((item) => item.code === "mix/dropped").length, 0);
+// The CLI: a source with no flattening engine, or an unreadable one, is reported instead of silently ignored.
+const cli = (...args) => spawnSync(process.execPath, [fileURLToPath(new URL("./check_prompt.mjs", import.meta.url)), ...args], { encoding: "utf8", input: "A woman in a hanbok." });
+const noEngine = JSON.parse(cli("--source", "x.txt").stdout);
+assert.ok(noEngine.errors.some((item) => item.code === "input/flag" && /--engine/u.test(item.message)));
+const missing = JSON.parse(cli("--engine", "seedream", "--source", "/nonexistent/layers.txt").stdout);
+assert.ok(missing.errors.some((item) => item.code === "input/unreadable"));
+
+console.log("mix checks: one-name skips (heading, medium phrase, closer, Identity), spaced-phrase places, Expression phrases, quoted copy, photo-term columns and the --source flattening check pass; image output NOT RUN.");

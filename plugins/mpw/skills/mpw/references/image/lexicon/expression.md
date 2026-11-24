@@ -46,7 +46,7 @@ Expression 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이
 | 비밀 미소 | 눈치 빠른 비밀 미소; 몰래 웃기; 暗笑; secret smile | KR | 은근함; 장난기; 신비; 여유 | The eyes slide down and to the side while the lips curl into a closed, knowing smile. | look |
 | 독서 몰입 | 독서에 몰입; 책에 몰입; 책 읽는 눈; 专注阅读; reading focus; 読書への没頭; Art Monograph Immersion; Regard baissé sur les pages; Immersion tactile | KR | 독서; 집중; 고요; 지적; 다크 아카데미아; Dark Academia; 쿨톤 도자기 피부; 블루 그레이 미니멀; 냉백 도자기 피부; 회청색 미니멀; 清冷瓷肌; 极简灰蓝; 베르메르; 페르메이르; Vermeer; 维米尔; 维米尔窗边光 | The eyes angle down at a page and follow the lines, the lashes lowered toward the cheek and the lips softly closed, ignoring the camera. | look |
 | 무광 눈빛 | 동공 풀린 무광 눈빛; 깊은 검은 눈; 哑光深渊凝视; matte void gaze | KR | 미스터리; 어두움; 무심; 강렬함 | The irises look deep and flat with no catchlight, the gaze steady on the lens and the face unreadable. | look |
-| 뒤돌아 꽂히는 시선 | 돌아보는 눈빛; 어깨너머 시선; 回眸; over-the-shoulder stare | KR | 차가움; 강렬함; 시선; 도도 | The body faces away while the head swings back over the shoulder, the eyes fixed on the lens with no smile. | look |
+| 뒤돌아 꽂히는 시선 | 돌아보는 눈빛; 어깨너머 시선; 回眸; over-the-shoulder stare | KR | 차가움; 강렬함; 시선; 도도; 몸:등 | The body faces away while the head swings back over the shoulder, the eyes fixed on the lens with no smile. | look |
 | 뒤로 물러서는 경계 | 뒤로 물러남; 경계하며 몸 빼기; 后仰避让; leaning back defensively | KR | 방어; 경계; 긴장; 거리감 | The upper body leans back from the center line, the chin tucked, the eyes wide and steady and the shoulders lifted toward the neck. | look |
 | 물건을 바라보는 시선 | 소품 감상; 물건 들여다보기; 端详小物; fond gaze at a trinket | KR | 다정; 호기심; 손; 섬세 | The eyes dwell on a small object held in the hand, the brows softened and a faint smile on the lips. | look |
 | 번쩍 뜬 눈 | 번쩍 뜨인 긴장감; 번쩍 눈뜸; 화들짝 깬 눈; 惊觉; startled awake | KR | 긴장; 놀람; 순간; 경계 | The upper lids snap up so white shows all around the iris, the face frozen in sudden alertness. | look |
@@ -93,7 +93,7 @@ Expression 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이
 | 나른한 무표정 | 나른한 눈; 무기력한 무표정; 졸린 듯한 무표정 | KR | 무심; 나른함; 시크; 차가움; 千禧CCD直闪; 밀레니엄 CCD 플래시; Y2K CCD flash | The upper lids sag over about a third of the pupils and the unfocused gaze rests just past the lens, the mouth shut and slack. | look |
 | 멈칫 | 멈칫하는 표정; 순간 멈춤; brief pause | KR | 순간; 망설임; 정적 | The face and breath stop for an instant, the eyes lifting toward something just heard or seen, the lips parting slightly. | look |
 | 아련한 눈빛 | 아련한 시선; wistful gaze | KR | 애수; 그리움; 눈빛; 감성 | A soft, faintly glassy gaze that looks past the lens as if remembering, the lids slightly lowered. | look |
-| 담담한 표정 | 담담한 얼굴; calm unreadable face | KR | 차분; 무심; 고요; 절제 | A calm, even face with the brows and mouth at rest, showing no strong feeling. | look |
+| 담담한 표정 | 담담한 얼굴; calm unreadable face; calm face | KR | 차분; 무심; 고요; 절제 | A calm, even face with the brows and mouth at rest, showing no strong feeling. | look |
 | 새침한 표정 | 새침; prim, slightly aloof look | KR | 도도; 장난기; 귀여움; 시크 | A prim look with the lips pressed lightly together and the eyes sliding aside, the chin slightly raised. | look |
 | 옅은 미소 | 엷은 미소; subtle smile | KR | 차분; 다정; 은은함; 미소 | The mouth corners lift only a little, a faint smile that stays in the lips and barely reaches the eyes. | look |
 | 머쓱한 웃음 | 머쓱 웃음; 머쓱; sheepish smile | KR | 멋쩍음; 친구; 일상; 웃음 | A small sheepish smile with the head tilting slightly and the eyes sliding away, a hand near the neck or hair. | look |
@@ -117,7 +117,7 @@ Expression 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이
 | 清冷感 | 清冷; 칭렁감; 청랭감; 차가운 분위기; cool aloofness | CN | 차가움; 고요; 시크; 우아; 新中式; 신중식; 老钱风; 라오첸펑; 올드머니; 江南烟雨柔焦; 강남 연우 소프트 포커스; 烟雨柔焦; 연우 소프트 포커스; 当代美术馆冷光极简; 当代美术馆冷光; 美术馆冷光; 冷光极简; 현대 미술관 냉광 미니멀; 미술관 냉광 미니멀; 미술관 냉광; 냉광 미니멀; 新中式水墨; 신중식 수묵; 水墨影调; 수묵 톤 | A still face with level, unhurried eyes and closed lips, nothing animated, so the whole look reads cool and distant. | look |
 | 欲语还休 | 욕어환휴; 말하려다 멈춤; 망설이는 입술; words withheld; 떨리는 입술 망설임; 颤唇欲言又止 | CN | 애수; 절제; 망설임; 고요; 홍콩; 港风 | The lips part just enough to speak and then hold, the eyes lowering as the words are held back. | look |
 | 歪头杀 | 歪头浅笑; 와이터우샤; 고개 갸웃; 갸웃 미소; head-tilt smile | CN | 귀여움; 밝음; 장난기; 셀카 | The head tilts to one side with a small curved smile and bright eyes held on the lens. | look |
-| 波澜不惊 | 沉稳如岳; 파란불경; 산처럼 침착함; unshaken calm | CN | 침착; 절제; 차분; 정적; 新中式; 신중식; 老钱风; 라오첸펑; 올드머니; 江南烟雨柔焦; 강남 연우 소프트 포커스; 烟雨柔焦; 연우 소프트 포커스; 新中式水墨; 신중식 수묵; 水墨影调; 수묵 톤 | Perfectly steady eyes with still brows and mouth, the face showing no reaction at all. | look |
+| 波澜不惊 | 沉稳如岳; 파란불경; 산처럼 침착함; unshaken calm; calm face | CN | 침착; 절제; 차분; 정적; 新中式; 신중식; 老钱风; 라오첸펑; 올드머니; 江南烟雨柔焦; 강남 연우 소프트 포커스; 烟雨柔焦; 연우 소프트 포커스; 新中式水墨; 신중식 수묵; 水墨影调; 수묵 톤 | Perfectly steady eyes with still brows and mouth, the face showing no reaction at all. | look |
 | 玩味眼神 | 玩味; 戏谑; 장난기 섞인 눈빛; 놀리는 눈빛; amused gaze; 玩味戏谑; 냉소적인 장난기 | CN | 장난기; 여유; 도발; 아이러니 | A slight sideways smile with amused, narrowed eyes, as if quietly enjoying a private joke. | look |
 | 皮笑肉不笑 | 피소육불소; 웃어도 웃는 게 아닌; 억지 미소; polite cold smile | CN | 가식; 사교; 차가움; 냉소 | The lips curve politely but the cheeks stay flat and the eyes stay cold, a fixed social mask. | look |
 | 目光如炬 | 목광여거; 형형한 눈빛; 불타는 눈빛; blazing stare | CN | 위압; 결단; 강렬함; 카리스마 | The brows lower and draw in slightly over bright, unwavering eyes fixed on one point. | look |
@@ -152,7 +152,7 @@ Expression 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이
 | 闭目冥思 | 双目微阖; 눈 감고 명상; 명상하는 얼굴; eyes-closed meditation; serene closed eyes | CN | 고요; 명상; 고찰; 아침; 동양여백계열; 新中式; 신중식 | Both lids rest closed with the lashes flat, brow smooth and mouth relaxed, as if listening to a distant bell. | look |
 | 剑眉星目 | 剑眉; 검미성목; 칼날 같은 눈썹; sword brows bright eyes; sharp brows clear eyes | CN | 선명함; 위압; 복도; 낮; 대여주계열 | Straight, tapered brows over clear dark eyes with a steady, direct stare that reads as sharp and precise. | look |
 | 下颌线 | 如刃下颌线; 利落折角侧颜; 칼 같은 턱선; razor jawline; sharp mandible line | CN | 선명함; 차가움; 콘크리트; 낮; 当代美术馆冷光极简; 当代美术馆冷光; 美术馆冷光; 冷光极简; 현대 미술관 냉광 미니멀; 미술관 냉광 미니멀; 미술관 냉광; 냉광 미니멀 | Profile with a clean angular jaw, a hard slanted light edge along it and an ice-cold glance. | look |
-| 面无表情 | 无形威压; 무표정; 무표정한 위압; deadpan face; blank intimidating stare | CN | 위압; 냉정함; 살롱; 밤; 대여주계열 | Smooth, expressionless face with direct level eyes that carry quiet pressure. | look |
+| 面无表情 | 无形威压; 무표정; 무표정한 위압; deadpan face; blank intimidating stare; unsmiling; unsmiling face | CN | 위압; 냉정함; 살롱; 밤; 대여주계열 | Smooth, expressionless face with direct level eyes that carry quiet pressure. | look |
 | 柳叶眉 | 微蹙柳叶细眉; 버들잎 눈썹; 가는 눈썹; willow-leaf brows; thin curved brows | CN | 애수; 고전; 정원; 저녁; 동양여백계열 | Thin brows that curve gently like willow leaves, drawn slightly together in a quiet sigh. | look |
 | 双唇微张 | 心悸凝固; 被戳中心事; 입술이 벌어짐; 경직; lips parted in shock; frozen gasp | CN | 충격; 긴장; 살롱; 밤; 대여주계열 | A narrow gap between still lips and fixed eyes in a stunned freeze. | look |
 | 轻咬下唇 | 아랫입술 깨물기; 입술 살짝 깨물기 | CN | 입술; 표정; 억누른 감정; 디테일 | Upper teeth lightly pressing the lower lip, lips slightly pressed, with a faint tension in the jaw. | look |
@@ -308,7 +308,7 @@ Expression 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이
 | Sunglasses Wide Grin | 선글라스 웃음; 墨镜露齿笑; 셀럽 오프듀티 | US | 셀럽; 자신감; 여름; 선글라스 | Dark sunglasses sit over a wide, confident grin that shows teeth, small reflections glinting in the lenses. | look |
 | Sunset Serene Grin | 석양 고요한 미소; 입술 살짝 벌린 미소; 夕阳从容微笑; soft parted lips | US | 고요; 평온; 미소; 따뜻함 | The lips part just enough to show a thin line of teeth in a calm, quiet smile. | look |
 | Toast Mid-Laugh | 건배 웃음; 파티 웃음; 碰杯欢笑 | US | 파티; 사교; 따뜻함; 웃음 | A glass rises in a toast while the mouth opens in a laugh and the eyes turn to someone just outside the frame. | look |
-| Turnaround Laugh | 뒤돌아보며 웃기; 돌아보며 활짝 웃기; 回眸大笑; over-the-shoulder laugh | US | 캔디드; 활기; 웃음; 놀람 | The shoulders stay turned away as the head swings back toward the lens, the mouth open in surprised laughter and the eyes bright. | look |
+| Turnaround Laugh | 뒤돌아보며 웃기; 돌아보며 활짝 웃기; 回眸大笑; over-the-shoulder laugh | US | 캔디드; 활기; 웃음; 놀람; 몸:등 | The shoulders stay turned away as the head swings back toward the lens, the mouth open in surprised laughter and the eyes bright. | look |
 | Windswept Coastal Laugh | 바닷바람 웃음; 머리카락 휘날리는 웃음; 海风大笑 | US | 자유; 야외; 웃음; 바람; Preppy; 프레피; 프레피룩; 요트; Gorpcore; 고프코어; 山系 | The mouth opens in a laugh while long strands of hair stream sideways across the cheek in the wind. | look |
 | Americana Radiance | 아메리카나 래디언스; Genuine Joy; 미국식 환한 무드; Sunny Girl; California Pop; 캘리포니아 팝 | US | 밝음; 활기; 낮; 미국; 명랑; Kodak Gold 200; 코닥 골드 200; 柯达Gold 200 | Open, high-energy joy that reads in the whole face: bright eyes, lifted cheeks, warm daylight color on the cheeks under direct sun. | look |
 | Coachella Sass | 코첼라 새스; Festival Rocker; 페스티벌 록커; Rock-and-Roll Rebellious; 록앤롤 반항 | US | 페스티벌; 록; 반항; 여름; 장난 | Festival-field rebel attitude: playful dare in the eyes, dusty afternoon sun, loose messy hair. | look |
@@ -373,7 +373,7 @@ Expression 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이
 | Regard de biche | 사슴 같은 경계; 사슴 눈; doe-eyed alertness; 小鹿の瞳 | FR | 경계; 놀람; 본능; 순수 | The eyes open wide and wary as the chin tucks and the body draws back half a pace like a startled deer. | look |
 | Regard embrumé du réveil | 잠에서 막 깬 눈; 비몽사몽; waking haze; somnolence matinale; Waking from Sunbath | FR | 나른함; 아침; 몽롱; 침실 | The lids sit half open and heavy, a faint softness around the eyes and the skin warm and slightly flushed from sleep. | look |
 | Regard énigmatique | 수수께끼의 시선; enigmatic gaze | FR | 신비; 고딕; 미스터리; 그림자 | A guarded, unreadable glance with the face half in shadow and only a sliver of light along the cheek and the turn of the eyes. | look |
-| Retrait hautain | 차갑게 돌아섬; 돌아선 거리두기; turned-away glance | FR | 거리두기; 냉랭; 도도; 뒷모습 | The body half turns away while the face glances back over a shoulder with the lower lids slightly lifted, shutting the other out. | look |
+| Retrait hautain | 차갑게 돌아섬; 돌아선 거리두기; turned-away glance | FR | 거리두기; 냉랭; 도도; 뒷모습; 몸:등 | The body half turns away while the face glances back over a shoulder with the lower lids slightly lifted, shutting the other out. | look |
 | Souffler sur sa frange | 앞머리 후 불기; fringe blow | FR | 짜증; 귀여움; 더위; 장난기 | The cheeks puff and a breath blows the fringe up off the forehead while the eyes roll to the ceiling. | look |
 | Sourire cruel | 냉혹한 미소; cold triumph | FR | 냉혹; 승리; 정적; 차가움 | The mouth lifts by half a millimetre while the eyes stay completely cold and clear. | look |
 | Amélie Poulain | 아멜리; 아멜리 푸생; Amélie look; Montmartre quirk | FR | 엉뚱; 몽마르트; 레트로; 영화 | Mischievous half-smile and wide bright eyes under warm red-green toned light, with a quirky storybook Montmartre feel. | person-style |

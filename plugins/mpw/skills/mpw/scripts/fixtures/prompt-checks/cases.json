@@ -86,5 +86,22 @@
   {"case":"seedream person paragraph translated to English only","input":"pass/mix-engine-thin.txt","args":["--engine","seedream"],"expect":{"ok":true,"warnings_include":["mix/thin"]}},
   {"case":"seedream Paris scene with a Japanese denim adjective is not an Asian scene","input":"pass/mix-engine-paris.txt","args":["--engine","seedream"],"expect":{"ok":true,"warnings_exclude":["mix/thin"]}},
   {"case":"a hanbok photo prompt with no Finish layer, English part names and a French head still reads as KR","input":"pass/mix-no-finish.txt","args":[],"expect":{"ok":true,"warnings_include":["mix/culture","mix/thin"]}},
-  {"case":"the same hanbok scene with part names kept, a Finish layer and no French head","input":"pass/mix-with-finish.txt","args":[],"expect":{"ok":true,"warnings_exclude":["mix/line","mix/amount","mix/unlisted","mix/renamed","mix/culture","mix/thin"]}}
+  {"case":"the same hanbok scene with part names kept, a Finish layer and no French head","input":"pass/mix-with-finish.txt","args":[],"expect":{"ok":true,"warnings_exclude":["mix/line","mix/amount","mix/unlisted","mix/renamed","mix/culture","mix/thin"]}},
+  {"case":"seedream paragraph flattened from a layer prompt keeps its original-language names","input":"pass/mix-dropped-kept.txt","args":["--engine","seedream","--source","source/mix-dropped-layers.txt"],"expect":{"ok":true,"warnings_exclude":["mix/dropped"]}},
+  {"case":"seedream paragraph flattened to English drops every original-language name","input":"pass/mix-dropped-english.txt","args":["--engine","seedream","--source","source/mix-dropped-layers.txt"],"expect":{"ok":true,"warnings_include":["mix/dropped"]}},
+  {"case":"nano banana may gloss original-language names so --source is not read","input":"pass/mix-dropped-english.txt","args":["--engine","nano-banana","--source","source/mix-dropped-layers.txt"],"expect":{"ok":true,"warnings_exclude":["mix/dropped"]}},
+  {"case":"trousers in Outfit and stockings in Legwear, heads in Korean","input":"pass/coherence-legwear.txt","args":[],"expect":{"ok":true,"warnings_include":["coherence/legwear"]}},
+  {"case":"expression that turns the body away beside a front-facing selfie pose","input":"pass/coherence-body-dir.txt","args":[],"expect":{"ok":true,"warnings_include":["coherence/body-dir"]}},
+  {"case":"a car pose in a scene with no car","input":"pass/coherence-pose-place.txt","args":[],"expect":{"ok":true,"warnings_include":["coherence/pose-place"]}},
+  {"case":"Korean night and noon words together","input":"pass/coherence-day-night-ko.txt","args":[],"expect":{"ok":true,"warnings_include":["coherence/day-night"]}},
+  {"case":"a night-only Scene row beside a midday-only Light row","input":"pass/coherence-day-night-tags.txt","args":[],"expect":{"ok":true,"warnings_include":["coherence/day-night"]}},
+  {"case":"a skirt with stockings","input":"pass/coherence-legwear-ok.txt","args":[],"expect":{"ok":true,"warnings_exclude":["coherence/legwear"]}},
+  {"case":"trousers with knee socks","input":"pass/coherence-legwear-socks.txt","args":[],"expect":{"ok":true,"warnings_exclude":["coherence/legwear"]}},
+  {"case":"trousers with a slit and stockings that show through it","input":"pass/coherence-legwear-slit.txt","args":[],"expect":{"ok":true,"warnings_exclude":["coherence/legwear"]}},
+  {"case":"expression and pose that both turn the body away","input":"pass/coherence-body-dir-ok.txt","args":[],"expect":{"ok":true,"warnings_exclude":["coherence/body-dir"]}},
+  {"case":"a neutral expression beside a front-facing pose","input":"pass/coherence-body-dir-neutral.txt","args":[],"expect":{"ok":true,"warnings_exclude":["coherence/body-dir"]}},
+  {"case":"a car pose beside a scene that parks a car","input":"pass/coherence-pose-place-ok.txt","args":[],"expect":{"ok":true,"warnings_exclude":["coherence/pose-place"]}},
+  {"case":"a stair pose whose scene row describes steps","input":"pass/coherence-pose-place-row.txt","args":[],"expect":{"ok":true,"warnings_exclude":["coherence/pose-place"]}},
+  {"case":"밤색 is a brown, not a night cue","input":"pass/coherence-day-night-ok.txt","args":[],"expect":{"ok":true,"warnings_exclude":["coherence/day-night"]}},
+  {"case":"a night market with moonlight is one time of day","input":"pass/coherence-day-night-both-night.txt","args":[],"expect":{"ok":true,"warnings_exclude":["coherence/day-night"]}}
 ]

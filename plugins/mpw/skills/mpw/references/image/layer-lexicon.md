@@ -15,17 +15,17 @@
 <!-- lexicon-counts:start -->
 | 층 | 파일 | 행 수 | KR | CN | JP | US | FR |
 |---|---|---|---|---|---|---|---|
-| Optics | [lexicon/optics.md](lexicon/optics.md) | 495 | 24 | 47 | 195 | 184 | 45 |
-| Light | [lexicon/light.md](lexicon/light.md) | 278 | 36 | 71 | 40 | 86 | 45 |
-| Pose | [lexicon/pose.md](lexicon/pose.md) | 452 | 36 | 134 | 69 | 121 | 92 |
-| Outfit | [lexicon/outfit.md](lexicon/outfit.md) | 665 | 144 | 120 | 174 | 115 | 112 |
-| Legwear | [lexicon/legwear.md](lexicon/legwear.md) | 272 | 44 | 58 | 65 | 70 | 35 |
+| Optics | [lexicon/optics.md](lexicon/optics.md) | 515 | 37 | 54 | 195 | 184 | 45 |
+| Light | [lexicon/light.md](lexicon/light.md) | 323 | 58 | 79 | 55 | 86 | 45 |
+| Pose | [lexicon/pose.md](lexicon/pose.md) | 515 | 68 | 149 | 85 | 121 | 92 |
+| Outfit | [lexicon/outfit.md](lexicon/outfit.md) | 670 | 145 | 120 | 178 | 115 | 112 |
+| Legwear | [lexicon/legwear.md](lexicon/legwear.md) | 273 | 44 | 58 | 66 | 70 | 35 |
 | Style | [lexicon/style.md](lexicon/style.md) | 662 | 126 | 64 | 140 | 195 | 137 |
 | Hair and makeup | [lexicon/hair-makeup.md](lexicon/hair-makeup.md) | 527 | 104 | 127 | 113 | 113 | 70 |
 | Expression | [lexicon/expression.md](lexicon/expression.md) | 377 | 92 | 72 | 78 | 61 | 74 |
 | Props and nails | [lexicon/props-nails.md](lexicon/props-nails.md) | 642 | 80 | 127 | 183 | 133 | 119 |
 | Scene | [lexicon/scene.md](lexicon/scene.md) | 1178 | 221 | 221 | 249 | 280 | 207 |
-| Camera | [lexicon/camera.md](lexicon/camera.md) | 64 | 2 | 18 | 13 | 12 | 19 |
+| Camera | [lexicon/camera.md](lexicon/camera.md) | 106 | 23 | 27 | 21 | 12 | 23 |
 <!-- lexicon-counts:end -->
 
 ## 문화권 룩 묶음
