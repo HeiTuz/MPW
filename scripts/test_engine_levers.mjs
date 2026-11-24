@@ -34,7 +34,7 @@ for (const name of ["GPT Image 웹", "Seedream ModelArk", "Nano Banana", "Midjou
 
 // §5 effect table: six columns, every cell carries an evidence grade or says there is none.
 const grades = /`\[(?:실측|공식|Iris|문서|미검증)\]`/u;
-const effects = cells(section(5));
+const effects = cells(section(5).split(/^### /mu)[0]);
 assert.ok(effects.length >= 13, `effect rows ${effects.length}`);
 for (const row of effects) {
   assert.equal(row.length, 6, `effect row: ${row[0]}`);
@@ -43,6 +43,14 @@ for (const row of effects) {
 for (const name of ["매체 고정", "얼굴 고정", "몸 비율", "필름·입자", "애니·CG 방지", "글자·로고·워터마크", "화면비", "언어"]) {
   assert.ok(effects.some((row) => row[0] === name), `effect ${name}`);
 }
+// §5.1: the Chinese cells of the 豆包·即梦 row, two columns, each carrying an evidence grade.
+const chinese = cells(section(5).split(/^### /mu)[1] ?? "");
+assert.ok(chinese.length >= 8, `Chinese cells ${chinese.length}`);
+for (const row of chinese) {
+  assert.equal(row.length, 2, `5.1 row: ${row[0]}`);
+  assert.ok(grades.test(row[1]) && /\p{sc=Han}/u.test(row[1]), `5.1 cell without a grade or Chinese text: ${row[0]}`);
+}
+assert.ok(chinese.some((row) => row[0] === "언어"), "5.1 language cell");
 // Soul: the anti-CG cell says not to write it, which check_prompt.mjs enforces below.
 assert.match(effects.find((row) => row[0] === "애니·CG 방지")[5], /\*\*쓰지 않는다\.\*\*/u);
 
@@ -66,7 +74,7 @@ assert.ok(BUNDLES["image-other-engine"].some((target) => target.startsWith("refe
 // under the word guidance; the same Seedream text moved to Soul trips the two cells that say
 // not to write a ban tail and a film brand.
 const blocks = [...doc.matchAll(/```text\n([\s\S]*?)```/gu)].map((match) => match[1].trim());
-const engines = ["seedream", "nano-banana", "midjourney", "soul"];
+const engines = ["seedream", "nano-banana", "midjourney", "soul", "seedream"];
 assert.equal(blocks.length, engines.length, "one example per engine");
 blocks.forEach((block, index) => {
   const result = checkText(block, { engine: engines[index] });
@@ -74,6 +82,7 @@ blocks.forEach((block, index) => {
 });
 assert.ok(blocks[0].split(/\s+/u).length < 600, "seedream example under 600 words");
 assert.match(blocks[2], / --ar 3:4 .*--no /u, "midjourney example keeps its flags");
+assert.ok(/^\p{sc=Han}/u.test(blocks[4]) && !/\n/u.test(blocks[4]), "豆包·即梦 example is one Chinese paragraph");
 const soul = new Set([...checkText(blocks[0], { engine: "soul" }).warnings].map((item) => item.code));
 assert.ok(soul.has("coherence/engine-ban") && soul.has("coherence/engine-brand"), "seedream text under soul");
 
