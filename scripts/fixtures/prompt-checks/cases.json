@@ -94,7 +94,7 @@
   {"case":"trousers in Outfit and stockings in Legwear, heads in Korean","input":"pass/coherence-legwear.txt","args":[],"expect":{"ok":true,"warnings_include":["coherence/legwear"]}},
   {"case":"expression that turns the body away beside a front-facing selfie pose","input":"pass/coherence-body-dir.txt","args":[],"expect":{"ok":true,"warnings_include":["coherence/body-dir"]}},
   {"case":"a car pose in a scene with no car","input":"pass/coherence-pose-place.txt","args":[],"expect":{"ok":true,"warnings_include":["coherence/pose-place"]}},
-  {"case":"Korean night and noon words together","input":"pass/coherence-day-night-ko.txt","args":[],"expect":{"ok":true,"warnings_include":["coherence/day-night"]}},
+  {"case":"Korean night and noon words together (the Korean words are the point of this case, not a lexicon test)","input":"pass/coherence-day-night-ko.txt","args":[],"expect":{"ok":true,"warnings_include":["coherence/day-night"]}},
   {"case":"a night-only Scene row beside a midday-only Light row","input":"pass/coherence-day-night-tags.txt","args":[],"expect":{"ok":true,"warnings_include":["coherence/day-night"]}},
   {"case":"a skirt with stockings","input":"pass/coherence-legwear-ok.txt","args":[],"expect":{"ok":true,"warnings_exclude":["coherence/legwear"]}},
   {"case":"trousers with knee socks","input":"pass/coherence-legwear-socks.txt","args":[],"expect":{"ok":true,"warnings_exclude":["coherence/legwear"]}},
@@ -103,7 +103,7 @@
   {"case":"a neutral expression beside a front-facing pose","input":"pass/coherence-body-dir-neutral.txt","args":[],"expect":{"ok":true,"warnings_exclude":["coherence/body-dir"]}},
   {"case":"a car pose beside a scene that parks a car","input":"pass/coherence-pose-place-ok.txt","args":[],"expect":{"ok":true,"warnings_exclude":["coherence/pose-place"]}},
   {"case":"a stair pose whose scene row describes steps","input":"pass/coherence-pose-place-row.txt","args":[],"expect":{"ok":true,"warnings_exclude":["coherence/pose-place"]}},
-  {"case":"밤색 is a brown, not a night cue","input":"pass/coherence-day-night-ok.txt","args":[],"expect":{"ok":true,"warnings_exclude":["coherence/day-night"]}},
+  {"case":"밤색 is a brown, not a night cue, beside a Korean midday phrase (한낮 햇빛, a lexicon alias, so the case tests only coherence/day-night)","input":"pass/coherence-day-night-ok.txt","args":[],"expect":{"ok":true,"warnings_exclude":["coherence/day-night"]}},
   {"case":"a night market with moonlight is one time of day","input":"pass/coherence-day-night-both-night.txt","args":[],"expect":{"ok":true,"warnings_exclude":["coherence/day-night"]}},
   {"case":"integer weight notation","input":"fail/syntax-int-weight.txt","args":[],"expect":{"ok":false,"errors":["syntax/weight"]}},
   {"case":"parenthesised integers that are not weights","input":"pass/syntax-int-weight-ok.txt","args":[],"expect":{"ok":true,"warnings_exclude":["syntax/weight"]}},
@@ -155,5 +155,11 @@
   {"case":"the same room under the Korean Identity row still flags its Japanese heads","input":"pass/mix-korean-room-jp-head.txt","args":[],"expect":{"ok":true,"warnings_include":["mix/culture"]}},
   {"case":"words a look card's line cell hands over are listed","input":"pass/mix-card-line-words.txt","args":[],"expect":{"ok":true,"warnings_exclude":["mix/unlisted"]}},
   {"case":"a scene set's slot values (\u6bdb\u8fb9, \u70c8\u7130\u7ea2\u5507) are listed","input":"pass/mix-card-set-words.txt","args":[],"expect":{"ok":true,"warnings_exclude":["mix/unlisted"]}},
-  {"case":"general Korean words that only a look card's explanation columns carry are unlisted","input":"pass/mix-card-prose-words.txt","args":[],"expect":{"ok":true,"warnings_include":["mix/unlisted"]}}
+  {"case":"general Korean words that only a look card's explanation columns carry are unlisted","input":"pass/mix-card-prose-words.txt","args":[],"expect":{"ok":true,"warnings_include":["mix/unlisted"]}},
+  {"case":"a word of a multi-word line head, or the whole head, is that head's word","input":"pass/mix-head-word.txt","args":[],"expect":{"ok":true,"warnings_exclude":["mix/unlisted"]}},
+  {"case":"a part of a line-head word (나다 in 가나다) is not that head's word","input":"pass/mix-head-part.txt","args":[],"expect":{"ok":true,"warnings_include":["mix/unlisted"]}},
+  {"case":"a backticked card section name (끄는 고정 몫) is not a word to write, so 끄는 is unlisted","input":"pass/mix-card-section-name.txt","args":[],"expect":{"ok":true,"warnings_include":["mix/unlisted"]}},
+  {"case":"a set's Expression value of several Korean words is listed as it stands","input":"pass/mix-card-set-expression.txt","args":[],"expect":{"ok":true,"warnings_exclude":["mix/unlisted"]}},
+  {"case":"a particle on one word of a multi-word line head (다라는 under 가나 다라 마바) is still that word","input":"pass/mix-head-word-particle.txt","args":[],"expect":{"ok":true,"warnings_exclude":["mix/unlisted"]}},
+  {"case":"an unspaced CJK head is one word: 瓷杯 inside the head 青花瓷杯 is unlisted (intended, write the whole head or a lexicon word)","input":"pass/mix-head-cjk-compound.txt","args":[],"expect":{"ok":true,"warnings_include":["mix/unlisted"]}}
 ]

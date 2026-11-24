@@ -683,8 +683,9 @@ function mixSources() {
 // A line cell may end with a note after its closing period: when the line applies, where it is borrowed from (수영장 장면일 때, 滤镜 #043).
 const NOTE_AFTER_LINE = /(?<=[.。!?])\s+\(.*\)\s*$/u;
 const tableCells = (row) => row.split("|").slice(1, -1).map((cell) => cell.trim());
-const backticked = (text) => [...text.matchAll(/`([^`\n]+)`/gu)].map((match) => match[1]).filter((span) => !span.startsWith("<") && !span.includes("#"));
-function lookCardSource(text) {
+// `skip` holds the names of the look cards' sections (끄는 고정 몫): a span that only points at a card section is not a word to write.
+const backticked = (text, skip = new Set()) => [...text.matchAll(/`([^`\n]+)`/gu)].map((match) => match[1]).filter((span) => !span.startsWith("<") && !span.includes("#") && !skip.has(span));
+function lookCardSource(text, skip = new Set()) {
   const out = [];
   let section = "";
   let columns = null;
@@ -701,12 +702,12 @@ function lookCardSource(text) {
     if (/^-+$/u.test(cells[0] ?? "")) continue;
     // A scene set's 묶음 cell is `/`-separated slot values the card says to copy whole (image-brief.md §4 rule 4): the pieces that begin with a layer name (Outfit 毛边 denim cutoff shorts). 단서·소품·시간대·의상 summaries and 쌍 notes are not values.
     if (columns === "set") out.push(...(cells[2] ?? "").split(" / ").filter((piece) => /^[A-Z][A-Za-z]+ /u.test(piece)));
-    else if (columns === "backtick") out.push(...backticked(cells.slice(1).join(" ")));
+    else if (columns === "backtick") out.push(...backticked(cells.slice(1).join(" "), skip));
     else for (const index of columns) if (cells[index]) out.push(cells[index].replace(NOTE_AFTER_LINE, ""));
   }
   return out.join("\n");
 }
-function fixedLinesSource(text) {
+function fixedLinesSource(text, skip = new Set()) {
   const out = [];
   const sections = new Set(["문장 속 낱말", "Identity Reference", "Hair and makeup", "Light", "Optics", "Camera", "Finish", "압축 낱말"]);
   let keep = false;
@@ -715,7 +716,7 @@ function fixedLinesSource(text) {
   for (const line of text.split("\n")) {
     if (line.startsWith("## ")) { section = line.slice(3).trim(); keep = sections.has(section); }
     if (!keep) continue;
-    if (!line.startsWith("|")) { afterRow = 0; out.push(...backticked(line)); continue; }
+    if (!line.startsWith("|")) { afterRow = 0; out.push(...backticked(line, skip)); continue; }
     afterRow++;
     // A table's header and separator rows are labels; the first column is the English meaning or the culture's name.
     if (afterRow <= 2) continue;
@@ -770,9 +771,11 @@ function readMixSources(root) {
     // A space-joined chunk (순한 이목구비) also lists each of its words.
     const add = (text) => { for (const chunk of chunksOf(text)) for (const word of [chunk, ...chunk.split(/\s+/u)]) known.add(mixKey(word)); };
     const fixedLines = resolve(root, "fixed-lines.md");
-    if (fs.existsSync(fixedLines)) add(fixedLinesSource(fs.readFileSync(fixedLines, "utf8")));
     const looks = resolve(root, "looks");
-    if (fs.existsSync(looks)) for (const name of fs.readdirSync(looks)) if (name.endsWith(".md")) add(lookCardSource(fs.readFileSync(resolve(looks, name), "utf8")));
+    const cards = fs.existsSync(looks) ? fs.readdirSync(looks).filter((name) => name.endsWith(".md")).map((name) => fs.readFileSync(resolve(looks, name), "utf8")) : [];
+    const cardSections = new Set(cards.flatMap((card) => [...card.matchAll(/^## ([^\n(]+?)\s*(?:\(|$)/gmu)].map((match) => match[1])));
+    if (fs.existsSync(fixedLines)) add(fixedLinesSource(fs.readFileSync(fixedLines, "utf8"), cardSections));
+    for (const card of cards) add(lookCardSource(card, cardSections));
     // The Identity Reference template of image-brief.md §5 (얼굴형, 이목구비), which a reference-role line may repeat; not the examples.
     const brief = resolve(root, "image-brief.md");
     if (fs.existsSync(brief)) add(fs.readFileSync(brief, "utf8").split("\n## 5. ")[1]?.match(/```\w*\n([\s\S]*?)```/u)?.[1] ?? "");
@@ -825,15 +828,19 @@ function expressionListed(chunk, sources, heads) {
   if (!/\p{sc=Hangul}/u.test(chunk)) return isListed(chunk, sources.known, heads) || sources.jpPhrases.some((prefix) => chunk.startsWith(prefix));
   const words = chunk.split(/\s+/u).map((word) => word.normalize("NFD"));
   const found = sources.phrases.filter((phrase) => phrase.stems.every((stem) => words.some((word) => word.startsWith(stem))));
-  if (words.length > 1) return found.length > 0 && words.length <= found.reduce((sum, phrase) => sum + phrase.words, 0) + 3;
+  // A spaced phrase a look card hands over whole (a set's Expression value) is listed as it stands.
+  if (words.length > 1) return isListed(chunk, sources.known, heads) || (found.length > 0 && words.length <= found.reduce((sum, phrase) => sum + phrase.words, 0) + 3);
   return isListed(chunk, sources.known, heads) || sources.phrases.some((phrase) => phrase.stems.some((stem) => stem.length >= 4 && words[0].startsWith(stem)));
 }
 
+// A line head as its words (mixKey'd, split at spaces, hyphens and middle dots), so a chunk matches the head or one or more neighbouring words of it, never a part of one word (코 is not in the head 코트).
+const headWords = (head) => head.split(/[\s\-\u00b7\u30fb]+/u).map(mixKey).filter(Boolean);
+const headNames = (heads, key) => heads.some((words) => words.some((_, from) => { let run = ""; return words.slice(from).some((word) => (run += word) === key); }));
 function isListed(chunk, known, heads) {
   const key = mixKey(chunk);
-  if (known.has(key) || heads.some((head) => head.includes(key))) return true;
+  if (known.has(key) || headNames(heads, key)) return true;
   // A particle on a listed word or on a word a line head of this prompt already names (마당은, 창살이, 文庫本の, 盘扣的, 窓辺に under a 窓辺 head) is still that word.
-  return particleStems(key).some((stem) => known.has(stem) || heads.includes(stem));
+  return particleStems(key).some((stem) => known.has(stem) || headNames(heads, stem));
 }
 
 const escapeRegExp = (text) => text.replace(/[.*+?^${}()|[\]\\]/gu, "\\$&");
@@ -910,7 +917,7 @@ function inspectMix(result, instruction) {
   }
   const sources = mixSources();
   if (!sources) return;
-  const heads = lines.map((item) => mixKey(item.head));
+  const heads = lines.map((item) => headWords(item.head));
   const first = unquote(sections.find((section) => section.name === null)?.lines.join(" ") ?? "");
   const long = (chunk) => chunk.split(/\s+/u).length >= 3;
   // Expression sentences bend the table phrases (particles, endings, a few scene words), so they are read against the phrases themselves.
