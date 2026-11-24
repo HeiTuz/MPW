@@ -175,6 +175,14 @@ for (const q of ['홍콩', '신중식,찻집', '老钱风', '홍콩 여행 스�
   assert.ok(!/^## Look card$/m.test(out.stdout), `${q} calls no card`);
   assert.deepEqual(JSON.parse(run(['--q', q, '--json']).stdout).looks, []);
 }
+// The card block and the candidate block name the command that reads image-brief's '룩 카드' subsection; a query that names no card and has no candidates prints neither.
+{
+  const pointer = 'node scripts/read_refs.mjs "references/image/image-brief.md#룩 카드"';
+  assert.ok(run(['--q', '왕가위', '--limit', '2']).stdout.includes(pointer), 'the Look card block carries the read pointer');
+  const candidate = run(['--q', '필카 감성', '--limit', '2']).stdout;
+  assert.ok(candidate.includes('## Look card candidates') && candidate.includes(pointer), 'the candidate block carries the read pointer');
+  assert.ok(!run(['--q', '老钱风']).stdout.includes(pointer), 'an ordinary query prints no pointer');
+}
 // The card is found however the query was cut: commas and brackets are ignored, and a name's words match in any order.
 for (const q of ['캘리포니아, 골든아워, 해변, Kodak Gold 200', '골든아워 캘리포니아 해변,Gold Kodak 200', '캘리포니아(골든아워), Kodak Gold 200']) {
   assert.deepEqual(JSON.parse(run(['--q', q, '--json']).stdout).looks.map((l) => l.slug).sort(), ['california-golden-hour', 'kodak-gold-200'], q);
@@ -320,11 +328,11 @@ assert.match(help.stdout, /usage: node scripts\/find_tokens\.mjs/);
   assert.ok(!candidates('no Kodak Gold, clean digital color').includes('kodak-gold-200'));
 }
 
-// Output size: the card block and the rows print shorter than before; ceilings are the measured size plus 5% (5076, 6109, 8189 bytes when set; the second became 6518 with the 문장 속 낱말 block of up to four rows, so its ceiling went from 6500 to 6850, then to 7410 when KR Camera grew from 2 to 21 rows and the KR term printed four Camera rows instead of two: 7056 bytes measured).
+// Output size: the card block and the rows print shorter than before; ceilings are the measured size plus 5% (the first became 5403 with the one-sentence 룩 카드 read pointer in the card block, so its ceiling went from 5400 to 5680; 5076, 6109, 8189 bytes when set; the second became 6518 with the 문장 속 낱말 block of up to four rows, so its ceiling went from 6500 to 6850, then to 7410 when KR Camera grew from 2 to 21 rows and the KR term printed four Camera rows instead of two: 7056 bytes measured).
 {
   const size = (args) => Buffer.byteLength(run(args).stdout);
   const queries = [
-    [['--q', '비 오는 밤 신주쿠,투명 우산,여자', '--limit', '3'], 5400],
+    [['--q', '비 오는 밤 신주쿠,투명 우산,여자', '--limit', '3'], 5680],
     [['--q', '툇마루,낮잠,고양이,한옥,오후 햇살,KR', '--limit', '4'], 7410],
     [['--q', '雨夜新宿,透明傘,女性,ネオン', '--limit', '6'], 8700],
   ];

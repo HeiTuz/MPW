@@ -52,7 +52,8 @@ for (const name of ['gpt-image-edit', 'gpt-image-edit-structured']) {
 for (const name of ['gpt-image-new', 'gpt-image-new-structured']) {
   const result = readTargets(BUNDLES[name]);
   assert.equal(result.error, undefined, name);
-  for (const required of [brief('3'), brief('4')]) assert.ok(result.text.includes(required), `${name} drops a generation section`);
+  for (const required of [brief('3'), brief('토큰 찾기'), brief('문장 쓰는 법')]) assert.ok(result.text.includes(required), `${name} drops a generation section`);
+  assert.ok(!result.text.includes(brief('룩 카드')), `${name} reads the look-card subsection only when a card is called`);
   assert.ok(!result.text.includes(brief('8')), `${name} loads the edit-only section`);
   assert.ok(!result.text.includes(section('3.2.4')), `${name} loads the noise detail section`);
 }

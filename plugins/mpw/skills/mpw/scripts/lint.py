@@ -30,8 +30,8 @@ Checks the skill's own hardlines against its files:
 Exit 0 on pass, 1 on any failure. No dependencies beyond PyYAML (optional:
 falls back to a minimal frontmatter parse when PyYAML is missing).
 """
-import calendar, hashlib, json, re, sys, unicodedata, pathlib
-from datetime import date
+import calendar, hashlib, json, os, re, sys, unicodedata, pathlib
+from datetime import date, timedelta
 
 ROOT = pathlib.Path(__file__).absolute().parent.parent
 FILES = [
@@ -59,6 +59,8 @@ PRODUCTION = "references/image/production.md"
 # "제3자" 같은 비라벨, "1~2000자)" 범위 표기는 제외. bare 포맷은 실길이 라벨만 대상(N >= 50).
 LABEL_PATTERNS = [r"(?<!블록당 )(?<!\d)(\d+)자 실측", r"실측:\s*(\d+)자", r"(?<!제)(?<![~〜-])(?<!\d)(\d+)자\)"]
 STAMP_FUTURE_SKEW_DAYS = 1  # author-local vs CI-UTC date skew
+STAMP_WARN_DAYS = 30  # warn (stderr, exit 0) this many days before a stamp starts failing
+TODAY_ENV = "MPW_LINT_TODAY"  # YYYY-MM-DD; lets tests and CI previews fix the clock
 BARE_PATTERN_MIN = 50
 BIND_WINDOW = 200  # 라벨-코드블록 펜스 간 인접 판정 거리(문자)
 MEASUREMENT_STAMP_PATTERN = re.compile(r"\((\d{4})-(\d{2}) 실측[^)\n]*\)")
@@ -262,6 +264,35 @@ def six_months_before(today):
     return date(year, month, min(today.day, calendar.monthrange(year, month)[1]))
 
 
+def lint_today():
+    """Today, or the YYYY-MM-DD in MPW_LINT_TODAY (an invalid value exits with one line)."""
+    override = os.environ.get(TODAY_ENV)
+    try:
+        return date.fromisoformat(override) if override else date.today()
+    except ValueError:
+        raise SystemExit(f"{TODAY_ENV}={override!r} is not a YYYY-MM-DD date")
+
+
+def month_stamp_expiry(year, month):
+    """First day a (YYYY-MM) stamp fails: the 1st of the 7th month after it."""
+    index = year * 12 + month - 1 + 7
+    return date(index // 12, index % 12 + 1, 1)
+
+
+def review_stamp_expiry(reviewed_at):
+    """First day a YYYY-MM-DD review stamp fails the six_months_before cutoff."""
+    day = reviewed_at + timedelta(days=1)
+    while six_months_before(day) <= reviewed_at:
+        day += timedelta(days=1)
+    return day
+
+
+def warn_expiring(warnings, where, stamp, expiry, today):
+    """Record a warning when a still-valid stamp fails within STAMP_WARN_DAYS."""
+    if warnings is not None and today >= expiry - timedelta(days=STAMP_WARN_DAYS):
+        warnings.append(f"{where}: {stamp} expires {expiry.isoformat()} ({(expiry - today).days}d left) — re-verify")
+
+
 def parse_frontmatter(fm, use_yaml=True):
     """Parse frontmatter consistently with and without optional PyYAML."""
     if use_yaml:
@@ -330,7 +361,7 @@ def check_plugin_skill_sync(root, errors):
         )
 
 
-def check_review_stamps(metadata, errors, today):
+def check_review_stamps(metadata, errors, today, warnings=None):
     cutoff = six_months_before(today)
     for field in REVIEW_STAMP_FIELDS:
         value = metadata.get(field)
@@ -354,9 +385,11 @@ def check_review_stamps(metadata, errors, today):
             errors.append(f"frontmatter: {field} {value} violates — future-dated review stamp")
         elif reviewed_at < cutoff:
             errors.append(f"frontmatter: {field} {value} violates the 6-month re-verification rule (AGENTS.md hardline 4)")
+        else:
+            warn_expiring(warnings, f"frontmatter: {field}", value, review_stamp_expiry(reviewed_at), today)
 
 
-def check_measurement_stamps(f, s, errors, today):
+def check_measurement_stamps(f, s, errors, today, warnings=None):
     for match in MEASUREMENT_STAMP_PATTERN.finditer(s):
         year, month = map(int, match.groups())
         stamp = match.group(0)
@@ -367,9 +400,11 @@ def check_measurement_stamps(f, s, errors, today):
             errors.append(f"{f}:{line}: measurement stamp {stamp} violates — future-dated measurement stamp")
         elif (today.year - year) * 12 + today.month - month > 6:
             errors.append(f"{f}:{line}: measurement stamp {stamp} violates the 6-month re-verification rule (AGENTS.md hardline 4)")
+        else:
+            warn_expiring(warnings, f"{f}:{line}", stamp, month_stamp_expiry(year, month), today)
 
 
-def check_verification_stamps(f, s, errors, today):
+def check_verification_stamps(f, s, errors, today, warnings=None):
     """I-adjacent: '(YYYY-MM[-DD] …확인|대조|검증…)' ages like measurement stamps."""
     measurement_spans = [match.span() for match in MEASUREMENT_STAMP_PATTERN.finditer(s)]
     for match in VERIFICATION_STAMP_PATTERN.finditer(s):
@@ -392,6 +427,19 @@ def check_verification_stamps(f, s, errors, today):
             errors.append(
                 f"{f}:{line}: verification stamp {stamp} violates the 6-month re-verification rule (AGENTS.md hardline 4)"
             )
+        else:
+            warn_expiring(warnings, f"{f}:{line}", stamp, month_stamp_expiry(year, month), today)
+
+
+def check_evidence_row_markers(f, s, errors):
+    """surface-evidence.md §7: a row with 확인일 '—' never carries [미확인] (the two are exclusive)."""
+    for number, row in enumerate(s.splitlines(), 1):
+        # unescaped pipes split cells; trailing empty cells (e.g. "| — | |") are ignored
+        cells = [cell.strip() for cell in re.split(r"(?<!\\)\|", row.strip())[1:]]
+        while cells and not cells[-1]:
+            cells.pop()
+        if row.lstrip().startswith("|") and cells and cells[-1] == "—" and "[미확인]" in row:
+            errors.append(f"{f}:{number}: row with 확인일 — must not carry [미확인] (surface-evidence.md §7)")
 
 
 def check_measurement_near_misses(f, s, errors):
@@ -1051,7 +1099,8 @@ def check_schema_enum_counts(texts, errors):
 
 def main():
     errors = []
-    today = date.today()
+    warnings = []
+    today = lint_today()
     missing = [f for f in FILES if not (ROOT / f).exists()]
     if missing:
         fail([f"missing file: {m}" for m in missing])
@@ -1080,7 +1129,7 @@ def main():
         if not skill_version:
             errors.append("frontmatter: version missing")
         check_version_digits(skill_version, errors)
-        check_review_stamps(metadata, errors, today)
+        check_review_stamps(metadata, errors, today, warnings)
 
         check_plugin_skill_sync(ROOT, errors)
 
@@ -1125,8 +1174,8 @@ def main():
 
     # dated measurement/verification stamps and near-misses (all repository-owned Markdown)
     for f, s in stamp_texts.items():
-        check_measurement_stamps(f, s, errors, today)
-        check_verification_stamps(f, s, errors, today)
+        check_measurement_stamps(f, s, errors, today, warnings)
+        check_verification_stamps(f, s, errors, today, warnings)
         check_measurement_near_misses(f, s, errors)
     # example blocks at or under 2000 characters, except files listed in EXAMPLE_LIMITS
     for f, s in texts.items():
@@ -1172,7 +1221,11 @@ def main():
     check_code_family_shapes(ROOT, errors)
     check_named_anchors(ROOT, errors)
     check_schema_enum_counts(texts, errors)
+    check_evidence_row_markers(
+        "references/image/surface-evidence.md", stamp_texts.get("references/image/surface-evidence.md", ""), errors
+    )
 
+    for w in warnings: print("WARN", w, file=sys.stderr)
     if errors: fail(errors)
     total_labels = sum(len(re.findall(p, s)) for p in LABEL_PATTERNS[:2] for s in texts.values())
     print(f"OK — {len(texts)} files, {total_labels} measured labels, all checks passed")

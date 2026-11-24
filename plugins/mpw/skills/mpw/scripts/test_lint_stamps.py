@@ -1,9 +1,11 @@
 #!/usr/bin/env python3
 """Regression tests for lint.py review and measurement stamp checks."""
 import importlib.util
-from datetime import date
+from datetime import date, timedelta
+import os
 from pathlib import Path
 import unittest
+from unittest.mock import patch
 
 
 LINT_PATH = Path(__file__).with_name("lint.py")
@@ -162,6 +164,84 @@ metadata:
         self.assertEqual(fallback, review)
         self.assertEqual(fallback["model_claims_reviewed_at"], "2026-07-07")
         self.assertEqual(fallback["role_routing_reviewed_at"], "2026-07-10")
+
+
+class ExpiryWarningTests(unittest.TestCase):
+    """30-day pre-expiry warnings; the clock is always injected, never read."""
+
+    def test_expiry_dates_match_the_failing_rule(self):
+        self.assertEqual(lint.month_stamp_expiry(2026, 7), date(2027, 2, 1))
+        self.assertEqual(lint.month_stamp_expiry(2026, 6), date(2027, 1, 1))
+        self.assertEqual(lint.month_stamp_expiry(2026, 12), date(2027, 7, 1))
+        for reviewed in (date(2026, 9, 5), date(2026, 8, 31), date(2026, 1, 31)):
+            expiry = lint.review_stamp_expiry(reviewed)
+            for today, stale in ((expiry - timedelta(days=1), False), (expiry, True)):
+                errors = []
+                lint.check_review_stamps({f: reviewed.isoformat() for f in lint.REVIEW_STAMP_FIELDS}, errors, today)
+                self.assertEqual(bool(errors), stale, (reviewed, today))
+
+    def measurement(self, today):
+        errors, warnings = [], []
+        lint.check_measurement_stamps("f.md", "(2026-07 실측)", errors, today, warnings)
+        return errors, warnings
+
+    def test_measurement_warns_only_inside_the_window(self):
+        self.assertEqual(self.measurement(date(2027, 1, 1)), ([], []))
+        errors, warnings = self.measurement(date(2027, 1, 2))
+        self.assertEqual(errors, [])
+        self.assertIn("f.md:1: (2026-07 실측) expires 2027-02-01 (30d left)", warnings[0])
+        self.assertEqual(self.measurement(date(2027, 1, 31))[0], [])
+        errors, warnings = self.measurement(date(2027, 2, 1))
+        self.assertIn("6-month re-verification", errors[0])
+        self.assertEqual(warnings, [])
+
+    def test_verification_and_review_stamps_warn(self):
+        errors, warnings = [], []
+        lint.check_verification_stamps("f.md", "(2026-07-25 스키마 직접 확인)", errors, date(2027, 1, 20), warnings)
+        self.assertEqual((errors, len(warnings)), ([], 1))
+        errors, warnings = [], []
+        lint.check_review_stamps(
+            {f: "2026-09-05" for f in lint.REVIEW_STAMP_FIELDS}, errors, date(2027, 2, 20), warnings
+        )
+        self.assertEqual((errors, len(warnings)), ([], len(lint.REVIEW_STAMP_FIELDS)))
+        self.assertIn("expires 2027-03-06", warnings[0])
+
+    def test_warnings_are_optional_for_existing_callers(self):
+        errors = []
+        lint.check_measurement_stamps("f.md", "(2026-07 실측)", errors, date(2027, 1, 15))
+        self.assertEqual(errors, [])
+
+    def test_clock_override_from_environment(self):
+        with patch.dict(os.environ, {lint.TODAY_ENV: "2027-01-15"}):
+            self.assertEqual(lint.lint_today(), date(2027, 1, 15))
+        with patch.dict(os.environ, {lint.TODAY_ENV: "2027-13-45"}):
+            with self.assertRaises(SystemExit) as raised:
+                lint.lint_today()
+        self.assertIn(lint.TODAY_ENV, str(raised.exception))
+
+
+class EvidenceRowMarkerTests(unittest.TestCase):
+    def check(self, text):
+        errors = []
+        lint.check_evidence_row_markers("evidence.md", text, errors)
+        return errors
+
+    def test_dash_row_rejects_unverified_marker(self):
+        self.assertIn("evidence.md:1:", self.check("| 항목 | 근거 **[미확인]** | — |")[0])
+
+    def test_dash_row_with_trailing_empty_cell_or_escaped_pipe(self):
+        self.assertTrue(self.check("| 항목 | 근거 **[미확인]** | — | |"))
+        self.assertTrue(self.check(r"| a \| b | **[미확인]** | — |"))
+
+    def test_allowed_rows(self):
+        self.assertEqual(self.check("| 항목 | 근거 **[미확인]** | 2026-10-04 |"), [])
+        self.assertEqual(self.check("| 항목 | 런타임 배선 값 | — |"), [])
+        self.assertEqual(self.check("| 항목 | 근거 **[미확인]** | 2026-10-04 | |"), [])
+        self.assertEqual(self.check("확인일이 `—`인 행에는 **[미확인]**을 달지 않는다."), [])
+
+    def test_current_evidence_file_passes(self):
+        path = lint.ROOT / "references/image/surface-evidence.md"
+        self.assertEqual(self.check(path.read_text(encoding="utf-8")), [])
 
 
 if __name__ == "__main__":

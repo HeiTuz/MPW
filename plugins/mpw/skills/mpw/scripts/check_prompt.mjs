@@ -670,12 +670,59 @@ const particleStems = (key) => (/^\p{sc=Hangul}+$/u.test(key) ? KOREAN_PARTICLES
   .filter((tail) => key.length > tail.length && key.endsWith(tail) && (key.length - tail.length > 1 || NATIVE_PARTICLES.includes(tail) || SHORT_STEM_TAILS.has(tail))).map((tail) => key.slice(0, -tail.length));
 const mixRoot = resolve(dirname(modulePath), "../references/image");
 let mixKnown;
-// Everything an original-language word may come from: lexicon tokens and aliases, and the original-language chunks in the table rows and backtick spans of fixed-lines.md
-// (its sentence-word tables, identity formulas and fixed lines) and of the look cards, and the Identity template. The prose around them is left out, and so are the examples in image-brief.md, which must pass
-// on these sources rather than vouch for themselves. If the lexicon or fixed-lines.md cannot be read, the checks that need them stay quiet instead of guessing, and the result's scope.unchecked says so (lexicon_checks).
+// Everything an original-language word may come from: lexicon tokens and aliases, the line cells, scene-set slot values and 고정 사실 backticks of the look cards, the original-language columns and line backticks of fixed-lines.md
+// (lookCardSource, fixedLinesSource), and the Identity template. The explanation around them (카드의 갈래 고르기·끄는 고정 몫·장면 세트의 이름과 단서, fixed-lines.md's procedure and 입력 용도별 table) is left out, and so are the examples
+// in image-brief.md, which must pass on these sources rather than vouch for themselves. If the lexicon or fixed-lines.md cannot be read, the checks that need them stay quiet instead of guessing, and the result's scope.unchecked says so (lexicon_checks).
 function mixSources() {
   if (mixKnown === undefined) mixKnown = readMixSources(mixRoot);
   return mixKnown;
+}
+// What the card and fixed-lines.md hand over as words to copy into a prompt (image-brief.md §2.1 rule 1): the line cells of a card (the 줄 column of a layer table, the Pose and Camera columns of the pair table),
+// the slot values of a scene set's 묶음 cell, and the backticked phrases of its 고정 사실 values; in fixed-lines.md the original-language columns of the word, Identity, Finish and shrink-word tables and the backticks of the sections that write lines.
+// The explanation around them (갈래 고르기, 끄는 고정 몫, a set's name and 단서 summary, the 입력 용도별 table, the procedure) is not a source.
+// A line cell may end with a note after its closing period: when the line applies, where it is borrowed from (수영장 장면일 때, 滤镜 #043).
+const NOTE_AFTER_LINE = /(?<=[.。!?])\s+\(.*\)\s*$/u;
+const tableCells = (row) => row.split("|").slice(1, -1).map((cell) => cell.trim());
+// `skip` holds the names of the look cards' sections (끄는 고정 몫): a span that only points at a card section is not a word to write.
+const backticked = (text, skip = new Set()) => [...text.matchAll(/`([^`\n]+)`/gu)].map((match) => match[1]).filter((span) => !span.startsWith("<") && !span.includes("#") && !skip.has(span));
+function lookCardSource(text, skip = new Set()) {
+  const out = [];
+  let section = "";
+  let columns = null;
+  let afterRow = false;
+  for (const line of text.split("\n")) {
+    if (line.startsWith("## ")) section = line.slice(3);
+    if (!line.startsWith("|")) { columns = null; afterRow = false; continue; }
+    const cells = tableCells(line);
+    if (!afterRow) {
+      afterRow = true;
+      columns = /^(?:고정 사실)/u.test(section) ? "backtick" : cells.includes("묶음") ? "set" : cells.map((cell, index) => (/^(?:줄|Pose|Camera)$/u.test(cell) ? index : -1)).filter((index) => index >= 0);
+      continue;
+    }
+    if (/^-+$/u.test(cells[0] ?? "")) continue;
+    // A scene set's 묶음 cell is `/`-separated slot values the card says to copy whole (image-brief.md §4 rule 4): the pieces that begin with a layer name (Outfit 毛边 denim cutoff shorts). 단서·소품·시간대·의상 summaries and 쌍 notes are not values.
+    if (columns === "set") out.push(...(cells[2] ?? "").split(" / ").filter((piece) => /^[A-Z][A-Za-z]+ /u.test(piece)));
+    else if (columns === "backtick") out.push(...backticked(cells.slice(1).join(" "), skip));
+    else for (const index of columns) if (cells[index]) out.push(cells[index].replace(NOTE_AFTER_LINE, ""));
+  }
+  return out.join("\n");
+}
+function fixedLinesSource(text, skip = new Set()) {
+  const out = [];
+  const sections = new Set(["문장 속 낱말", "Identity Reference", "Hair and makeup", "Light", "Optics", "Camera", "Finish", "압축 낱말"]);
+  let keep = false;
+  let section = "";
+  let afterRow = 2;
+  for (const line of text.split("\n")) {
+    if (line.startsWith("## ")) { section = line.slice(3).trim(); keep = sections.has(section); }
+    if (!keep) continue;
+    if (!line.startsWith("|")) { afterRow = 0; out.push(...backticked(line, skip)); continue; }
+    afterRow++;
+    // A table's header and separator rows are labels; the first column is the English meaning or the culture's name.
+    if (afterRow <= 2) continue;
+    out.push(...tableCells(line).slice(1).filter((cell) => !/같다$/u.test(cell)));
+  }
+  return out.join("\n");
 }
 function readMixSources(root) {
   try {
@@ -724,15 +771,11 @@ function readMixSources(root) {
     // A space-joined chunk (순한 이목구비) also lists each of its words.
     const add = (text) => { for (const chunk of chunksOf(text)) for (const word of [chunk, ...chunk.split(/\s+/u)]) known.add(mixKey(word)); };
     const fixedLines = resolve(root, "fixed-lines.md");
-    const files = [fixedLines];
     const looks = resolve(root, "looks");
-    if (fs.existsSync(looks)) for (const name of fs.readdirSync(looks)) if (name.endsWith(".md")) files.push(resolve(looks, name));
-    for (const file of files) {
-      if (!fs.existsSync(file)) continue;
-      const text = fs.readFileSync(file, "utf8");
-      add(text.split("\n").filter((line) => line.startsWith("|")).join("\n"));
-      add([...text.matchAll(/`([^`\n]+)`/gu)].map((match) => match[1]).join("\n"));
-    }
+    const cards = fs.existsSync(looks) ? fs.readdirSync(looks).filter((name) => name.endsWith(".md")).map((name) => fs.readFileSync(resolve(looks, name), "utf8")) : [];
+    const cardSections = new Set(cards.flatMap((card) => [...card.matchAll(/^## ([^\n(]+?)\s*(?:\(|$)/gmu)].map((match) => match[1])));
+    if (fs.existsSync(fixedLines)) add(fixedLinesSource(fs.readFileSync(fixedLines, "utf8"), cardSections));
+    for (const card of cards) add(lookCardSource(card, cardSections));
     // The Identity Reference template of image-brief.md §5 (얼굴형, 이목구비), which a reference-role line may repeat; not the examples.
     const brief = resolve(root, "image-brief.md");
     if (fs.existsSync(brief)) add(fs.readFileSync(brief, "utf8").split("\n## 5. ")[1]?.match(/```\w*\n([\s\S]*?)```/u)?.[1] ?? "");
@@ -785,15 +828,19 @@ function expressionListed(chunk, sources, heads) {
   if (!/\p{sc=Hangul}/u.test(chunk)) return isListed(chunk, sources.known, heads) || sources.jpPhrases.some((prefix) => chunk.startsWith(prefix));
   const words = chunk.split(/\s+/u).map((word) => word.normalize("NFD"));
   const found = sources.phrases.filter((phrase) => phrase.stems.every((stem) => words.some((word) => word.startsWith(stem))));
-  if (words.length > 1) return found.length > 0 && words.length <= found.reduce((sum, phrase) => sum + phrase.words, 0) + 3;
+  // A spaced phrase a look card hands over whole (a set's Expression value) is listed as it stands.
+  if (words.length > 1) return isListed(chunk, sources.known, heads) || (found.length > 0 && words.length <= found.reduce((sum, phrase) => sum + phrase.words, 0) + 3);
   return isListed(chunk, sources.known, heads) || sources.phrases.some((phrase) => phrase.stems.some((stem) => stem.length >= 4 && words[0].startsWith(stem)));
 }
 
+// A line head as its words (mixKey'd, split at spaces, hyphens and middle dots), so a chunk matches the head or one or more neighbouring words of it, never a part of one word (코 is not in the head 코트).
+const headWords = (head) => head.split(/[\s\-\u00b7\u30fb]+/u).map(mixKey).filter(Boolean);
+const headNames = (heads, key) => heads.some((words) => words.some((_, from) => { let run = ""; return words.slice(from).some((word) => (run += word) === key); }));
 function isListed(chunk, known, heads) {
   const key = mixKey(chunk);
-  if (known.has(key) || heads.some((head) => head.includes(key))) return true;
-  // A particle on a listed word (마당은, 창살이, 文庫本の, 盘扣的) is still that word.
-  return particleStems(key).some((stem) => known.has(stem));
+  if (known.has(key) || headNames(heads, key)) return true;
+  // A particle on a listed word or on a word a line head of this prompt already names (마당은, 창살이, 文庫本の, 盘扣的, 窓辺に under a 窓辺 head) is still that word.
+  return particleStems(key).some((stem) => known.has(stem) || headNames(heads, stem));
 }
 
 const escapeRegExp = (text) => text.replace(/[.*+?^${}()|[\]\\]/gu, "\\$&");
@@ -870,7 +917,7 @@ function inspectMix(result, instruction) {
   }
   const sources = mixSources();
   if (!sources) return;
-  const heads = lines.map((item) => mixKey(item.head));
+  const heads = lines.map((item) => headWords(item.head));
   const first = unquote(sections.find((section) => section.name === null)?.lines.join(" ") ?? "");
   const long = (chunk) => chunk.split(/\s+/u).length >= 3;
   // Expression sentences bend the table phrases (particles, endings, a few scene words), so they are read against the phrases themselves.
@@ -937,9 +984,17 @@ function inspectMix(result, instruction) {
     if (french.length) emit(result, CODE_REGISTRY.mixCulture, `French tokens in a ${own === "JP" ? "JP" : "KR·CN"} prompt: ${[...new Set(french)].slice(0, 5).join(" | ")}`, { hint: "French tokens go only in a French scene. Search the scene's own culture first (find_tokens --culture KR, or JP, CN) and write the head in English when it has no row." });
     // A head whose every row belongs to the other side of KR·CN and JP (西日 in a Korean palace, 旗袍 in a Tokyo street) is another culture's word too.
     const asian = new Set(["KR", "CN", "JP"]);
-    // The Identity row "East Asian" is fixed-lines.md's 단서 없음 row, which a scene mixing KR·CN and JP takes (한옥에 차린 純喫茶): no side's head is the other's then.
-    const mixedRow = sections.some((section) => section.name === "Identity Reference" && /\bEast Asian\b/u.test(section.lines.join(" ")));
-    const aside = mixedRow ? [] : lines.filter((item) => item.section !== "Finish").map((item) => item.head).filter((head) => {
+    // fixed-lines.md §문화권 고르기: a place that mixes KR·CN and JP (한옥에 차린 純喫茶) or names no culture takes the 단서 없음 row, and no side's head is the other's then.
+    // The place is read from the scene-lexicon tokens of the first line and the Scene layer; a place that names no culture is trusted only when the Identity paragraph says so (East Asian),
+    // and a Korean, Chinese or Japanese Identity row keeps the heads checked even in a mixed place (the row or the heads are wrong).
+    const sideOf = (rows) => { const sets = rows.map((row) => row.culture.filter((culture) => asian.has(culture))); return !sets.length || sets.some((set) => !set.length) ? null : sets.every((set) => set.every((culture) => culture === "JP")) ? "JP" : sets.every((set) => !set.includes("JP")) ? "KRCN" : null; };
+    const sceneText = [first, ...sections.filter((section) => section.name === "Scene").flatMap((section) => section.lines)].join("\n");
+    // Each scene-lexicon token named there gives its side (a spaced Hangul run glued to a Han or kana word, 純喫茶처럼 꾸민 한옥 카페에서, or a token with a describing word after it, 경복궁 회랑, is read from the trailing and the leading word runs of the chunk); only kind "place" rows (한옥 카페, 純喫茶, 商店街) make a place mixed, while items (창살, 通行人) still show that the place has a culture.
+    const named = chunksOf(unquote(sceneText)).flatMap((chunk) => { const words = chunk.split(/ +/u); const read = (spans) => spans.flatMap((span) => { const key = mixKey(span.join(" ")); return [key, ...particleStems(key)]; }).map((key) => (sources.rowsByToken.get(key) ?? []).filter((row) => row.slug === "scene")).find((rows) => sideOf(rows)) ?? []; return [...read(words.map((_, from) => words.slice(from))), ...read(words.map((_, to) => words.slice(0, words.length - to)))]; });
+    const sides = (kind) => new Set(named.filter((row) => !kind || row.kind === kind).map((row) => sideOf([row])).filter(Boolean));
+    const identity = sections.filter((section) => section.name === "Identity Reference").flatMap((section) => section.lines).join(" ");
+    const unread = (sides("place").size === 2 && !/\b(?:Korean|Chinese|Japanese) (?:wo)?man\b/u.test(identity)) || (!sides().size && /\bEast Asian\b/u.test(identity));
+    const aside = unread ? [] : lines.filter((item) => item.section !== "Finish").map((item) => item.head).filter((head) => {
       const rows = sources.rowsByToken.get(mixKey(head)) ?? [];
       return rows.length && rows.every((row) => { const cultures = row.culture.filter((culture) => asian.has(culture)); return cultures.length && (own === "JP" ? !cultures.includes("JP") : cultures.every((culture) => culture === "JP")); });
     });
