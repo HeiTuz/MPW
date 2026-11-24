@@ -75,15 +75,15 @@ manifest 검사는 한 행에 하나의 객체를 받는다. 필수 텍스트는
 | `syntax/ratio-token` | 경고, 공통 | 본문 끝에 구형 비율 토큰이 붙음. native/S3의 자연어 `Aspect ratio`·`비율` 지시는 제외 |
 | `phrasing/exclusion-list` | native 경고, assembled 오류 | 제외 구획 라벨 또는 부정 항목의 나열 |
 | `phrasing/negation` | 경고, assembled | 영어 부정문을 원하는 결과 상태로 바꿀 수 있음 |
-| `phrasing/ko-negation` | 경고, assembled | 한국어 지시형 부정문(`금지`, `하지 마`, `~지 않도록`, `없어야`, `빼고` 등)을 긍정형 결과로 바꿀 수 있음. 동사 어간은 가리지 않지만, `바꾸지 않도록`·`건드리지 마`처럼 보존·고정 동사 뒤는 보존 지시라 뺀다 |
+| `phrasing/ko-negation` | 경고, assembled | 한국어 지시형 부정문(`금지`, `하지 마`, `~지 않도록`, `없어야`, `빼고` 등)을 긍정형 결과로 바꿀 수 있음. 동사 어간은 가리지 않지만, `바꾸지 않도록`·`건드리지 마`처럼 보존·고정 동사 뒤는 보존 지시라 뺀다. `주차금지`·`출입금지`처럼 앞말에 붙은 표지 명사(주차·정차·출입·진입·통행·접근·촬영·흡연·추월·낚시·취식·반입)도 뺀다(띄어 쓴 `글자 금지`는 지시로 본다) |
 | `phrasing/quality-tag` | 오류, assembled | 품질 태그 사용. native 새 이미지 문안의 Finish `8K`([fixed-lines.md](fixed-lines.md))는 보지 않는다. assembled도 `## Finish` 층 안의 첫 `8K` 하나는 보지 않고, 다른 곳의 `8K`와 둘째 `8K`는 오류다 |
-| `phrasing/vague-adjective` | 경고, 공통 | 결과를 판정하기 어려운 평가형 수식어 |
+| `phrasing/vague-adjective` | 경고, 공통 | 결과를 판정하기 어려운 평가형 수식어. `a perfect circle` 같은 도형 사실과, 문장 중간에서 뒤에 대문자 낱말이 이어져 상호명 접미 낱말(Bakery·Cafe·Studio 등)로 끝나는 대문자 수식어(`the Beautiful Day Bakery`)는 뺀다 |
 | `phrasing/pick-one` | 경고, 공통 | 모델에게 선택을 넘기는 문구. 영어 `choose (exactly·only) one`·`choose one of`·`pick (exactly·only) one`·`select one of`는 문장 첫머리·콜론·대시·글머리표 뒤나 `you must` 뒤의 명령일 때만 본다(`She will choose one of the cups`·`pick one petal`은 장면 묘사). `one of the following`, `any one of these`, 한국어 `다음·아래·위·이·그 중 하나를·만`과 `하나를 고르세요·골라라`. 작성자가 값을 하나로 정해 쓰고 선택지 목록을 프롬프트에 남기지 않는다. 따옴표 안 정확 문구는 보지 않는다 |
 | `phrasing/noise-trigger` | 경고, gpt-image 엔진의 assembled와 `Edit the attached`로 시작하는 편집 문안(새 이미지 native 문안은 입자·`8K`를 [fixed-lines.md](fixed-lines.md)가 정하므로 보지 않는다) | 부정·제거 구문 밖에 [surface-contracts.md](surface-contracts.md) §3.2.4 표의 어휘가 있음. 입자·매체와 과잉 세부 행 전체, 부유 입자 행의 `particles` 계열, 거친 표면 행의 `paper grain`·`canvas texture`·`rough texture`·거친 질감만 본다. 사물로도 흔히 쓰는 `sparkles`·`glitter`·`textured background`와 한국어 먼지·종이 질감은 보지 않는다. 삭제 지시가 아니라 알림 후보 |
-| `portrait/skin-token` | 경고, assembled | 피부 어휘의 의도를 검토하되 요청 질감·부위·부분 수정 범위를 보존 |
+| `portrait/skin-token` | 경고, assembled | 피부 어휘의 의도를 검토하되 요청 질감·부위·부분 수정 범위를 보존. 같은 문장이 유약·나무결 같은 비피부 재료를 말하고 피부·사람 낱말이 없으면(`glaze showing micro texture`) 뺀다 |
 | `portrait/nationality-skin` | 경고, assembled | 색의 출처를 확인하며 요청 캐릭터색을 보존; 어휘만으로 국적 추론을 단정하지 않음 |
 | `portrait/glow-stack` | 경고, assembled | 광택 어휘 중첩 검토 휴리스틱이며 실패 예측이나 매트 강제 아님 |
-| `portrait/skin-repeat` | 경고 | 여러 구획의 피부 질감 표현을 검토하되 서로 다른 부위·부분 수정 조건을 보존 |
+| `portrait/skin-repeat` | 경고 | 여러 구획의 피부 질감 표현을 검토하되 서로 다른 부위·부분 수정 조건을 보존. 비피부 재료 문장의 `visible pores`(참나무 결)는 세지 않는다 |
 | `coherence/occlusion` | 경고, 공통 | 머리가 얼굴을 가린다는 문장과 얼굴을 비워 둔다는 문장(`stay clear`, `no hair across`)이 함께 있음 |
 | `coherence/focal` | 경고, 공통 | 서로 다른 렌즈 mm가 둘 이상이거나, 광각 렌즈·28mm 이하와 자연 원근(`自然透视`·`natural perspective`·무왜곡) 문장이 함께 있음. 필름 규격(`35mm film`)은 세지 않는다 |
 | `coherence/identity-skin` | 경고, 공통 | `keep her own skin tone`이 있는데 Identity Reference 밖 층에 피부색 서술이 있음 |
@@ -103,7 +103,7 @@ manifest 검사는 한 행에 하나의 객체를 받는다. 필수 텍스트는
 | `mix/line` | 경고, native·gpt-image | 층 줄 문장에 원어 글자가 라틴 글자보다 많은 줄(영어 뼈대 없음), 또는 띄어 쓴 원어 구절(낱말 셋 이상)이 Expression·Style 밖에 있거나 한 줄에 둘. 원어 덩어리 수는 세지 않는다([image-brief.md](image-brief.md) §2.1 4항) |
 | `mix/unlisted` | 경고, native·gpt-image | 사전 토큰·별칭, 룩 카드와 fixed-lines.md의 표·백틱, Identity 틀에 없는 원어. 따옴표 안 정확 문구는 보지 않고, Expression의 띄어 쓴 구절은 표정 구절 표의 한 구절을 낱말마다 담고 장면 말은 셋까지다 |
 | `mix/renamed` | 경고, native·gpt-image | 줄 머리 토큰의 다른 별칭이 다른 줄에 나옴(한 물건 두 이름). 층 제목, Identity 문단, 첫 줄의 매체·룩 구절, Finish closer는 보지 않는다 |
-| `mix/culture` | 경고, native·gpt-image | Finish 토큰이 정한 문화권과 다른 사진 용어 칸의 낱말(KR·CN 장면의 `白飛び`. 다른 칸 낱말이 같은 행 장면 칸 낱말보다 짧거나 장면 칸이 비었으면 보지 않는다, 같은 길이는 본다. 길이를 줄인 문안, [image-brief.md](image-brief.md) §2.1 4항)과 KR·CN·JP 장면의 프랑스어 줄 머리. KR·CN 장면의 일본어 줄 머리(`西日`)나 JP 장면의 KR·CN 줄 머리도 같다. Finish 토큰이 없고 그림·3D 매체도 아니면 줄 머리와 문장 속 원어가 가장 많은 쪽(사전 행의 문화권, 행이 없으면 글자: 한글·한자는 KR·CN, 가나는 JP, 사진 용어 표 낱말은 세지 않는다)으로 문화권을 읽고, 차이가 3 미만이면 첫 줄·Scene의 장소 낱말로 읽는다. 단서가 없으면 읽지 않는다. US·FR 토큰이면 보지 않는다 |
+| `mix/culture` | 경고, native·gpt-image | Finish 토큰이 정한 문화권과 다른 사진 용어 칸의 낱말(KR·CN 장면의 `白飛び`. 다른 칸 낱말이 같은 행 장면 칸 낱말보다 짧거나 장면 칸이 비었으면 보지 않는다, 같은 길이는 본다. 길이를 줄인 문안, [image-brief.md](image-brief.md) §2.1 4항)과 KR·CN·JP 장면의 프랑스어 줄 머리. KR·CN 장면의 일본어 줄 머리(`西日`)나 JP 장면의 KR·CN 줄 머리도 같다. 다만 Identity 문단이 '한·중·일 단서도 없음' 행(`East Asian woman`)이면 한·중·일이 섞인 장면(한옥에 차린 純喫茶)이라 줄 머리는 보지 않는다(낱말 칸은 그대로 KR·CN 칸). 길이 비교는 UTF-8 바이트다. Finish 토큰이 없고 그림·3D 매체도 아니면 줄 머리와 문장 속 원어가 가장 많은 쪽(사전 행의 문화권, 행이 없으면 글자: 한글·한자는 KR·CN, 가나는 JP, 사진 용어 표 낱말은 세지 않는다)으로 문화권을 읽고, 차이가 3 미만이면 첫 줄·Scene의 장소 낱말로 읽는다. 단서가 없으면 읽지 않는다. US·FR 토큰이면 보지 않는다 |
 | `mix/thin` | 경고, native·gpt-image, 엔진 한정 | 사람이 나오는 사진 프롬프트가 거의 섞지 않았을 때: Finish 줄 머리가 문화권 행의 낱말이 아님, 새 인물 사진 문안에 `## Finish` 층이 없음(`s1`이거나 2,000자 이하로 줄인 문안, 그림·3D 매체는 제외), 줄 머리나 첫 줄에서 부른 한복·和室 같은 것의 부분 이름(사전 `부분` 행: 첫 태그가 그것인 행과 같은 층·문화권의 다른 `부분` 행)이 원어로 하나도 없음(사람 없이도 보고, 옷은 Outfit 층이 있을 때만), KR·CN·JP 행인데 줄 머리 원어가 3분의 1 미만, Optics·Camera에 사진 용어 없음(어느 칸의 것이든), Expression에 표정 낱말 없음. US·FR 행이면 보지 않는다. `--engine seedream·midjourney·soul`의 한 문단은 줄 머리가 없어 원어 낱말이 셋 미만인 것만 본다(영어 단서에 한국·중국·일본 장면 낱말이 있는 인물 사진일 때, [engine-levers.md](engine-levers.md) §3 원어 규칙). Nano Banana는 근거가 적힌 예외라 보지 않는다 |
 | `mix/dropped` | 경고, 엔진 한정, `--source` | `--engine seedream·midjourney·soul --source <층 문안>`에서 층 문안의 원어 이름(Identity·Finish 층 밖의 한자·가나·한글 줄 머리, Seedream은 문장 속 원어까지)이 편 문안에 없거나, 같은 사전 행의 다른 별칭(`惆怅` → `wistful`)으로 바뀜. 길이 때문에 일부러 줄인 문장의 이름은 둘 수 있다([engine-levers.md](engine-levers.md) §3). Midjourney·Soul은 층마다 한 구절로 줄이는 엔진이라 층의 이름이 하나도 남지 않을 때만 읽는다. `nano-banana`는 풀기가 허용돼 읽지 않고 결과의 `scope.unchecked`에 적는다 |
 | `manifest/parse` | 오류, manifest | JSON 행 파싱 실패 |

@@ -339,6 +339,14 @@ function inspectSyntax(result, instruction) {
   }
 }
 
+// A geometric fact ("a perfect circle") or an adjective inside a capitalized business name (the Beautiful Day Bakery, mid-sentence, ending in a business word) is not an evaluation.
+function factualOrName(text, match) {
+  const before = text.slice(0, match.index);
+  const after = text.slice(match.index + match[0].length);
+  if (/^\s+(?:circle|square|rectangle|triangle|sphere|cube|oval|ellipse)\b/iu.test(after) && /^perfect$/iu.test(match[0])) return true;
+  return /^\p{Lu}/u.test(match[0]) && /[^.!?:;\s][ \t]+$/u.test(before) && /^(?:[ \t]+\p{Lu}[\p{L}'’-]*)*[ \t]+(?:Bakery|Cafe|Café|Studios?|Restaurant|Bar|Shop|Gallery|Salon|Hotel|Diner|Boutique|Books|Market|Kitchen)(?![\p{L}\p{N}_])/u.test(after);
+}
+
 function inspectPhrasing(result, instruction) {
   let remaining = instruction.replace(/\bnegative\s+space\b/giu, (text) => " ".repeat(text.length));
   const exclusions = [];
@@ -360,13 +368,13 @@ function inspectPhrasing(result, instruction) {
       "Negative instruction wording",
       "Name the concrete state that should be visible. Keep a separate preservation sentence for the original logo or brand.");
     evidence(result, CODE_REGISTRY.koNegation,
-      snippets(/[^\s,.!?;\n\r。]{0,12}(?:금지|하지\s*마(?:세요|라)?|하지\s*않(?:도록|게)|(?<!하|바꾸|바꿔|바뀌|건드리|지우|없애|옮기|움직이|훼손하|손대|고치|달라지)지\s*(?:마(?:세요|라|십시오)|않(?:도록|게))(?![가-힣])|없어야|없도록|빼고|제외하고)[^,.!?;\n\r。]{0,12}/gu, remaining).slice(0, 3),
+      snippets(/[^\s,.!?;\n\r。]{0,12}(?:(?<!(?:주차|정차|출입|진입|통행|접근|촬영|흡연|추월|낚시|취식|반입))금지|하지\s*마(?:세요|라)?|하지\s*않(?:도록|게)|(?<!하|바꾸|바꿔|바뀌|건드리|지우|없애|옮기|움직이|훼손하|손대|고치|달라지)지\s*(?:마(?:세요|라|십시오)|않(?:도록|게))(?![가-힣])|없어야|없도록|빼고|제외하고)[^,.!?;\n\r。]{0,12}/gu, remaining).slice(0, 3),
       "Korean directive negation", "State the visible result positively, for example 책상 위에는 책 한 권만 놓인다.");
     const tags = snippets(/(?<![\p{L}\p{N}_])(?:masterpiece|(?:best|top|highest)\s+quality|(?:4|8|16)k|uhd|(?:ultra|hyper|extremely|insanely)[ -]+detailed|trending\s+on\s+artstation|featured\s+on\s+behance|award[ -]+winning|octane\s+render|unreal\s+engine)(?![\p{L}\p{N}_])/giu, instruction);
     evidence(result, CODE_REGISTRY.quality, tags.map((tag) => tag.toLowerCase()), "Generic quality tags");
   }
   evidence(result, CODE_REGISTRY.vague,
-    snippets(/(?<![\p{L}\p{N}_])(?:예쁘게|멋있게|근사하게|분위기\s+있게|느낌\s+있게|감각적으로|트렌디하게|힙하게|퀄리티\s+높게|완벽하게|고퀄로|gorgeous|breathtaking|epic|amazing|awesome|eye-catching|stunning|beautiful|perfect)(?![\p{L}\p{N}_])/giu, instruction),
+    [...instruction.matchAll(/(?<![\p{L}\p{N}_])(?:예쁘게|멋있게|근사하게|분위기\s+있게|느낌\s+있게|감각적으로|트렌디하게|힙하게|퀄리티\s+높게|완벽하게|고퀄로|gorgeous|breathtaking|epic|amazing|awesome|eye-catching|stunning|beautiful|perfect)(?![\p{L}\p{N}_])/giu)].filter((match) => !factualOrName(instruction, match)).map((match) => match[0].trim()),
     "Evaluative wording", "Specify the light, material or composition that creates the desired appearance.");
 }
 
@@ -919,8 +927,8 @@ function inspectMix(result, instruction) {
   }
   if (own) {
     const other = own === "JP" ? "KRCN" : "JP";
-    // The other column's word is fine when it is shorter than the scene column's word of the same row (a length-limited prompt takes the shortest word, image-brief.md §2.1 rule 4); equal length is not.
-    const shorter = (key) => (sources.photo.rows.get(key) ?? []).some((pair) => pair[other] === key && (!pair[own] || [...key].length < [...pair[own]].length));
+    // The other column's word is fine when it has fewer UTF-8 bytes than the scene column's word of the same row (a length-limited prompt takes the shortest word, image-brief.md §2.1 rule 4); equal is not.
+    const shorter = (key) => (sources.photo.rows.get(key) ?? []).some((pair) => pair[other] === key && (!pair[own] || Buffer.byteLength(key) < Buffer.byteLength(pair[own])));
     const wrong = lines.flatMap((item) => item.chunks).filter((chunk) => { const key = mixKey(chunk); return sources.photo[other].has(key) && !sources.photo[own].has(key) && !shorter(key); });
     if (wrong.length) emit(result, CODE_REGISTRY.mixCulture, `Photo terms from the ${other === "JP" ? "JP" : "KR·CN"} column in a ${own === "JP" ? "JP" : "KR·CN"} prompt: ${[...new Set(wrong)].slice(0, 5).join(" | ")}`, { hint: "Take the photo terms from the column of the scene's culture in fixed-lines.md §문장 속 낱말 (the one its Finish tokens come from), or a word of the other column only when it is shorter in the same row, or write them in English." });
     // French tokens belong to French scenes only (image-brief.md §2.1): a line head whose every lexicon row is FR does not go in a KR, CN or JP prompt.
@@ -929,7 +937,9 @@ function inspectMix(result, instruction) {
     if (french.length) emit(result, CODE_REGISTRY.mixCulture, `French tokens in a ${own === "JP" ? "JP" : "KR·CN"} prompt: ${[...new Set(french)].slice(0, 5).join(" | ")}`, { hint: "French tokens go only in a French scene. Search the scene's own culture first (find_tokens --culture KR, or JP, CN) and write the head in English when it has no row." });
     // A head whose every row belongs to the other side of KR·CN and JP (西日 in a Korean palace, 旗袍 in a Tokyo street) is another culture's word too.
     const asian = new Set(["KR", "CN", "JP"]);
-    const aside = lines.filter((item) => item.section !== "Finish").map((item) => item.head).filter((head) => {
+    // The Identity row "East Asian" is fixed-lines.md's 단서 없음 row, which a scene mixing KR·CN and JP takes (한옥에 차린 純喫茶): no side's head is the other's then.
+    const mixedRow = sections.some((section) => section.name === "Identity Reference" && /\bEast Asian\b/u.test(section.lines.join(" ")));
+    const aside = mixedRow ? [] : lines.filter((item) => item.section !== "Finish").map((item) => item.head).filter((head) => {
       const rows = sources.rowsByToken.get(mixKey(head)) ?? [];
       return rows.length && rows.every((row) => { const cultures = row.culture.filter((culture) => asian.has(culture)); return cultures.length && (own === "JP" ? !cultures.includes("JP") : cultures.every((culture) => culture === "JP")); });
     });
@@ -1062,16 +1072,22 @@ function inspectEngine(result, instruction) {
   }
 }
 
+// Pores or micro texture on a named non-skin material (oak grain, a celadon glaze) is not skin vocabulary; a sentence that also names skin or a person still counts.
+const MATERIAL_WORD = /\b(?:wood(?:en)?|oak|walnut|pine|timber|grain|bark|leather|glaze[ds]?|ceramic|porcelain|pottery|celadon|clay|stone|marble|concrete|plaster|enamel|paper|bread|crust|fruit|peel)\b|나무|목재|도자기|유약|가죽|대리석|석재/iu;
+const SKIN_WORD = /\b(?:skin|face|facial|cheeks?|nose|forehead|lips?|hands?|knuckles?|arms?|legs?|neck|chin|model|woman|man|girl|boy|person|portrait)\b|피부|얼굴|볼|코|이마|손/iu;
+const onMaterial = (sentence) => MATERIAL_WORD.test(sentence) && !SKIN_WORD.test(sentence);
+const sentenceOf = (text, index) => text.slice(Math.max(text.lastIndexOf(".", index - 1), text.lastIndexOf("\n", index - 1)) + 1).split(/[.!?\n]/u)[0];
+
 function inspectSkinRepeat(result, instruction) {
   const skinTexture = /\b(?:skin[ -](?:texture|detail|pores?|grain)|fine skin detail|(?:visible|natural|open)\s+pores|pores?\s+(?:vary|visible|remain)|vellus\s+hair|(?:naturally\s+)?textured\s+skin|skin\s+remains\s+(?:naturally\s+)?textured|airbrushed)\b|피부\s*(?:결|질감|모공)|모공|잔털/iu;
   const blocks = instruction.split(/\r?\n(?=[A-Z][A-Z0-9 &/,'’-]{1,40}:|\s*\r?\n)/u).map((block) => block.trim()).filter(Boolean);
-  const hits = blocks.filter((block) => skinTexture.test(block));
+  const hits = blocks.filter((block) => block.split(/[.!?\n]+/u).some((sentence) => skinTexture.test(sentence) && !onMaterial(sentence)));
   if (hits.length >= 2) emit(result, CODE_REGISTRY.skinRepeat, `Skin surface texture appears in ${hits.length} separate sections.`, { hint: "Check whether these sections repeat the same condition or describe distinct areas. Preserve requested texture, color, area, degree and partial-edit scope; consolidate only redundant wording without forcing a heading." });
 }
 
 function inspectPortrait(result, instruction) {
   evidence(result, CODE_REGISTRY.skinToken,
-    snippets(/\bmicro[ -]?(?:skin(?:[ -]?texture)?|pores?|texture)\b|\b(?:realistic[ -]?)?skin(?:[ -]?texture)?[ -]?ai\b|마이크로\s*(?:피부\s*)?(?:질감|피부결)|(?:사실적(?:인)?\s*)?피부(?:\s*(?:질감|결))?\s*AI/giu, instruction),
+    [...instruction.matchAll(/\bmicro[ -]?(?:skin(?:[ -]?texture)?|pores?|texture)\b|\b(?:realistic[ -]?)?skin(?:[ -]?texture)?[ -]?ai\b|마이크로\s*(?:피부\s*)?(?:질감|피부결)|(?:사실적(?:인)?\s*)?피부(?:\s*(?:질감|결))?\s*AI/giu)].filter((match) => !onMaterial(sentenceOf(instruction, match.index))).map((match) => match[0].trim()),
     "Skin vocabulary to review, not proof of a defect", "Confirm the intended area and texture. Preserve requested texture, color and partial-edit scope; clarify only ambiguity, without automatically adding pores or fine facial hair.");
   evidence(result, CODE_REGISTRY.skinColor,
     snippets(/\byellow(?:ish)?(?:[ -]+undertone)?[ -]+skin\b|(?:노란|누런|황색)\s*피부/giu, instruction),

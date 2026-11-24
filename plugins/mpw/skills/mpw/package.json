@@ -1,6 +1,6 @@
 {
   "name": "heituzmpw",
-  "version": "4.3.0",
+  "version": "4.3.1",
   "description": "MPW prompt-writing skill: plugin build, release tooling, and skill payload installer.",
   "license": "MIT",
   "type": "module",
