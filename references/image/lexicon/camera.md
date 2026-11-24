@@ -8,6 +8,27 @@ Camera 층에서 쓰는 원어 토큰 사전이다. 프레이밍·카메라 높�
 |---|---|---|---|---|---|
 | 백미러 구도 | 룸미러 구도; 후사경 구도; 백미러 속 눈; 后视镜构图; rearview mirror framing | KR | 서울 밤 시네마; 서울 나이트 시네마; 차창 불빛 시네마; Seoul night cinema; 首尔夜生活电影感; 车内流光; 택시; 거울; 눈; 구도 | The frame is cut down to a narrow rearview-mirror strip that holds only the eyes, with the road behind the car streaked in light. | look |
 | 기울어진 프레이밍 | 살짝 기울어진 프레임; 비스듬한 프레임 | KR | 구도; 일상; 걷기; 스냅; 아이폰 원본 셀카; 아이폰 셀카; iPhone native selfie | The frame sits a few degrees off level, as if a friend walking alongside held the phone slightly crooked. | look |
+| 눈높이 촬영 | 눈높이 샷; 아이레벨; 수평 앵글; eye level; eye-level shot; 平视 | KR | 수평 시선; 자연스러운 높이 | The camera sits at the subject's eye height and looks straight across, so the head is neither stretched nor foreshortened and the gaze meets the lens. | look |
+| 정면 샷 | 정면 촬영; 정면 구도; frontal shot; 正面 | KR | 정면; 좌우 균형 | The face and body square to the camera for a direct, symmetrical frontal view with both shoulders at equal distance. | look |
+| 측면 샷 | 측면 촬영; 프로필 샷; profile shot; 侧面 | KR | 옆선; 옆얼굴 | The camera sees the subject from the side so the outline of nose, lips, jaw and neck reads as a clean profile line. | look |
+| 상반신 샷 | 상반신 컷; 상반신 구도; upper-body shot; 半身 | KR | 허리 위; 상체 | The frame cuts across the waist or hip and holds head, shoulders, arms and torso with some background around them. | look |
+| 전신 샷 | 전신 컷; 풀샷; 전신 구도; full-body shot; 全身 | KR | 머리부터 발끝; 전체 실루엣 | The whole figure from head to shoes fits in the frame with room above and below, showing the full outfit and stance. | look |
+| 바스트 샷 | 바스트샷; 가슴 위 샷; 가슴 위 컷; bust shot | KR | 가슴 위; 얼굴과 어깨 | The frame ends at the chest, centering face and shoulders and keeping the expression and neckline prominent. | look |
+| 웨이스트 샷 | 웨이스트샷; 허리 위 샷; 허리 샷; waist shot | KR | 허리 위; 손과 팔 | The frame ends at the waist and shows the face, arms and hands with a little of the surroundings. | look |
+| 클로즈업 | 얼굴 클로즈업; 근접 샷; 얼굴 샷; close-up; 特写 | KR | 얼굴 가득; 근접 | The face fills most of the frame with eyes, lips and skin texture large and the background almost gone. | look |
+| 삼분할 구도 | 삼분할; 3분할 구도; 삼등분 구도; rule of thirds; 三分法 | KR | 3분할; 교차점; 균형 | The subject or the eyes sit on a third-line crossing instead of the center, leaving balanced empty space on the other side. | look |
+| 중앙 구도 | 센터 구도; 가운데 배치; 중앙 배치; centered composition; 中心构图 | KR | 가운데; 정중앙 | The subject stands dead center with the surroundings balanced evenly on both sides, giving a calm, direct look. | look |
+| 대칭 구도 | 좌우 대칭; 대칭 프레임; symmetrical composition; 对称构图 | KR | 좌우 대칭; 정면 복도 | The left and right halves mirror each other around the figure, as in a symmetrical hall, corridor or doorway. | look |
+| 대각선 구도 | 사선 구도; diagonal composition; 对角线构图 | KR | 사선; 역동감 | A strong line such as a stair edge, fence or road crosses the frame on the diagonal and the subject sits along it, adding movement. | look |
+| 리딩 라인 | 유도선; 시선 유도선; leading lines; 引导线 | KR | 시선 유도; 길; 난간 | Roads, rails, railings or corridor edges run toward the subject and carry the eye straight to her. | look |
+| 로우앵글 | 로우 앵글; 아래에서 위로; low angle; 仰拍; ローアングル | KR | 아래에서 촬영; 긴 다리 | The camera sits below the subject and tilts up, lengthening the legs and setting the head against sky or ceiling. | look |
+| 하이앵글 | 하이 앵글; 위에서 아래로; 부감 샷; high angle; 俯拍; ハイアングル | KR | 위에서 촬영; 큰 눈 | The camera looks down from above, making the head larger and the legs shorter, with the floor leading the eye. | look |
+| 오버 더 숄더 | 오버더숄더; 어깨 너머 샷; over the shoulder; 过肩镜头 | KR | 어깨 너머; 대화 장면 | The camera looks past the blurred shoulder and head of a person in the foreground to the sharp subject beyond. | look |
+| 더치 앵글 | 더치앵글; 기울인 앵글; 기울어진 구도; Dutch angle; 荷兰角; ダッチアングル | KR | 기울임; 불안감 | The whole frame tilts a few degrees so the horizon and verticals lean, giving the scene an uneasy tilt. | look |
+| 정면 응시 | 카메라 응시; 렌즈 응시; 카메라 정면 응시; direct gaze; front lens gaze; camera gaze; 直视镜头; カメラ目線 | KR | 시선; 눈 맞춤; 직시 | The eyes look straight into the lens so the viewer feels directly met. | look |
+| 자연스러운 원근감 | 표준 렌즈 원근; 왜곡 없는 원근; natural perspective; 自然透视; 標準レンズの遠近感 | KR | 왜곡 없음; 자연스러운 비율 | A normal-length lens keeps proportions as the eye sees them, with no stretching of limbs or face and a calm sense of depth between near and far planes. | look |
+| 망원 압축 | 공간 압축; 압축감; telephoto compression; 长焦压缩; 望遠圧縮 | KR | 겹쳐 보임; 배경이 당겨짐 | A long lens flattens distance so far buildings and hills pile up close behind the subject like stacked layers. | look |
+| 광각 왜곡 | 광각 렌즈 왜곡; 와이드 왜곡; wide-angle distortion; 广角畸变 | KR | 가까운 손이 커짐; 가장자리 늘어남 | A wide lens held close enlarges the nearest hand or face and stretches the edges of the frame. | look |
 
 ## CN
 
@@ -31,6 +52,15 @@ Camera 층에서 쓰는 원어 토큰 사전이다. 프레이밍·카메라 높�
 | 低机位倒影 | 低机位水面倒影; 水洼倒影; 贴地倒影; 저각 물 반사; 낮은 앵글 반사; low-angle reflection | CN | 江南烟雨柔焦; 강남 연우 소프트 포커스; 烟雨柔焦; 연우 소프트 포커스; 青石板; 水洼; 倒影; 乌镇 | The camera sits just above wet paving or a pond surface, so the figure and the buildings behind her repeat upside-down in the glossy stone or water below. | look |
 | 大特写 | 极近特写; 大特写镜头; 익스트림 클로즈업; 초근접 클로즈업; extreme close-up | CN | 当代美术馆冷光极简; 当代美术馆冷光; 美术馆冷光; 冷光极简; 현대 미술관 냉광 미니멀; 미술관 냉광 미니멀; 미술관 냉광; 냉광 미니멀; 눈; 접사 | The frame holds only the eyes, the brow and the bridge of the nose, filling the picture edge to edge with nothing else in view. | look |
 | 自然透视 | 无畸变; 自然遠近; natural perspective; no wide-angle stretch; 표준 거리 렌즈 | CN | 인물; 자연스러운 비율; 구도; 렌즈 | The camera stands back with a standard-to-moderate telephoto lens, so the face keeps natural perspective with no wide-angle stretch on the nose or forehead. | item |
+| 近景 | 近景镜头; 胸像景别; close shot; 가슴 위 샷 | CN | 가슴 위; 얼굴과 어깨 | The frame ends around the chest so the face and shoulders fill it and the expression carries the shot. | look |
+| 中景 | 中景镜头; 膝上景别; medium shot; 무릎 위 샷 | CN | 무릎 위; 상체와 배경 | The frame ends around the knees or waist and holds the whole upper body and hands with a readable stretch of the setting. | look |
+| 全景 | 全身镜头; 全身景别; full shot; 전신 샷 | CN | 전신; 머리부터 발끝 | The whole figure from head to shoes fits in the frame with a little room around it, showing the full outfit and stance. | look |
+| 特写 | 特写镜头; 脸部特写; close-up; 클로즈업 | CN | 얼굴 가득; 근접 | The face fills most of the frame with eyes, lips and skin texture large and the background almost gone. | look |
+| 平视 | 平视角度; 平拍; eye level; 눈높이 촬영 | CN | 수평 시선; 눈높이 | The camera sits at the subject's eye height and looks straight across, so the head is neither stretched nor foreshortened. | look |
+| 高机位 | 高位拍摄; 机位抬高; high camera position; 높은 위치 촬영 | CN | 위에서 촬영; 내려다봄 | The camera is held high above the subject and looks down, shrinking the legs, enlarging the head and showing more of the ground around her. | look |
+| 中心构图 | 居中构图; 중앙 구도; centered composition | CN | 정중앙; 가운데 배치 | The subject stands dead center with the surroundings balanced evenly on both sides, giving a calm, direct look. | look |
+| 引导线构图 | 引导线; 引导线条; leading lines; 리딩 라인 | CN | 시선 유도; 길; 난간 | Roads, rails, railings or corridor edges run toward the subject and carry the eye straight to her. | look |
+| 直视镜头 | 看镜头; 直视相机; direct gaze; front lens gaze; camera gaze; 정면 응시 | CN | 시선; 눈 맞춤; 직시 | The eyes look straight into the lens so the viewer feels directly met. | look |
 
 ## JP
 
@@ -49,6 +79,14 @@ Camera 층에서 쓰는 원어 토큰 사전이다. 프레이밍·카메라 높�
 | 手持ち撮影 | 手持ち; handheld shooting; 핸드헬드 촬영; 손으로 든 카메라 | JP | 핸드헬드; 手持ち; 일상; 걷기; 선명; 日系CCD日光; 일본 CCD 감성; 古早DV梦核 | The camera is held in the hands and the framing shifts a little between frames, but every frame stays sharp with no motion blur. | item |
 | 標準レンズの遠近感 | 표준 렌즈 원근; 標準レンズ; Standard-Lens Perspective; standard lens perspective; 표준 렌즈 원근감 | JP | 렌즈; 표준; 원근; 중형; 6x7; 日系Provia; 高保真Provia; Provia; 프로비아; プロビア; Astia; アスティア; リバーサルフィルム | A standard lens at middle distance keeps the natural perspective the eye sees, with no wide-angle stretch and no telephoto stacking of far shapes. | item |
 | 膝下フレーミング | 무릎 아래 프레임; 무릎 아래 구도; ひざ下フレーミング; Below-Knee Framing; below-knee framing | JP | 구도; 전신; 무릎 아래; 물보라; 바다; 写ルンです; 우츠룬데스; 일회용 카메라 | The frame cuts just below the knees, so the whole body above and the action around the lower legs both stay in the picture. | look |
+| バストアップ | バストショット; 바스트업; 가슴 위 샷; bust-up | JP | 가슴 위; 얼굴과 어깨 | The frame ends at the chest, centering face and shoulders and keeping the expression and neckline prominent. | look |
+| 全身ショット | 全身; 全身カット; 전신 샷; full-body shot | JP | 전신; 머리부터 발끝 | The whole figure from head to shoes fits in the frame with room above and below, showing the full outfit and stance. | look |
+| 俯瞰 | 俯瞰撮影; 上から撮影; 후칸; bird's-eye view | JP | 위에서 촬영; 내려다봄 | The camera looks down steeply from high above, turning the floor or street into a flat pattern and shrinking the figure into it. | look |
+| あおり | あおり撮影; 煽り; 아오리; looking up from below | JP | 아래에서 올려다봄; 웅장함 | The camera crouches low and tilts up so the figure towers against sky or ceiling and the legs stretch long. | look |
+| ダッチアングル | 斜めアングル; 다치 앵글; 더치 앵글; Dutch Angle | JP | 기울임; 불안감 | The whole frame tilts a few degrees so the horizon and verticals lean, giving the scene an uneasy tilt. | look |
+| 額縁構図 | 窓枠構図; 액자 구도; 프레임 속 프레임; frame within a frame | JP | 액자; 문틀; 창틀 | A window, arch or door opening works like a picture frame around the figure and gives the shot depth. | look |
+| 前ボケ | マエボケ; 手前ボケ; 전경 흐림; foreground blur | JP | 앞쪽 흐림; 꽃 프레임 | Blurred leaves, flowers or lights in the near foreground soften one edge of the frame and push the sharp subject back into depth. | look |
+| 余白 | 余白構図; 요하쿠; 여백; negative space | JP | 여백; 고요; 미니멀 | The subject fills a small part of the frame and the rest stays as plain wall, sky or water, leaving quiet empty space. | look |
 
 ## US
 
@@ -90,3 +128,7 @@ Camera 층에서 쓰는 원어 토큰 사전이다. 프레이밍·카메라 높�
 | Plan taille | 플랑 타이; waist-up frame; framed at the waist; 허리 위 샷; 미디엄 샷; medium shot; 中景; Plan rapproché taille; waist-up close shot; 플랑 라프로셰 타이 | FR | 베르메르; 페르메이르; Vermeer; 维米尔; 维米尔窗边光; 부엌; 탁자; 파리 소프트 그레이; 巴黎午后柔灰漫射; Lumière grise de Paris; 카페; 테이블; 눈높이 | The frame is cut at the waist, so the face, the arms and the edge of a table or object in her hands all stay in view. | look |
 | Très gros plan | 트레 그로 플랑; 익스트림 클로즈업; 눈만 나오는 근접; extreme close-up; eyes-only close-up | FR | 베르메르; 페르메이르; Vermeer; 维米尔; 维米尔窗边光; 눈; 블라인드 틈; 마크로 | The frame holds only the eyes and the bridge of the nose, filling the picture edge to edge with eyelash and iris detail. | look |
 | Reflet dans un miroir ancien | 낡은 거울 속 반사; 앤티크 거울 반사; reflection in an old mirror | FR | 거울; 얼룩; 앤티크; 롤라이플렉스; Rolleiflex; 禄来双反; 双反双重倒影; 유리 이중 반사; Reflet de vitrine | A second, hazier picture of the room shows inside an aged mirror beside her profile while she stays sharp in front of it. | look |
+| Champ-contrechamp | 샹 콩트르샹; 마주 보는 두 컷; shot reverse shot; 正反打 | FR | 대화; 마주 봄; 두 사람 | One person is seen from the position directly opposite the previous frame of the other, so the two frames read as a looking-back exchange. | look |
+| Plan subjectif | 플랑 쉬브젝티프; 주관 시점; 시점 샷; POV shot; 主观镜头 | FR | 1인칭 시점; 눈앞 | The camera sits where a person's eyes would be and shows what she sees, with her hands or the edge of the frame entering the shot. | look |
+| Cadrage décentré | 카드라주 데상트레; 한쪽으로 치우친 구도; off-center framing; 偏心构图 | FR | 치우친 배치; 여백 | The subject sits well off the middle of the frame, leaving a wide empty area on one side to give the shot tension. | look |
+| Cadrage serré | 카드라주 세레; 타이트한 프레임; tight framing; 紧凑构图 | FR | 타이트; 가까움; 꽉 찬 프레임 | The frame is cropped tightly so the figure's head, shoulders or hands touch the edges and little space is left around them. | look |

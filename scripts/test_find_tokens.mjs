@@ -320,12 +320,12 @@ assert.match(help.stdout, /usage: node scripts\/find_tokens\.mjs/);
   assert.ok(!candidates('no Kodak Gold, clean digital color').includes('kodak-gold-200'));
 }
 
-// Output size: the card block and the rows print shorter than before; ceilings are the measured size plus 5% (5076, 6109, 8189 bytes when set; the second became 6518 with the 문장 속 낱말 block of up to four rows, so its ceiling went from 6500 to 6850).
+// Output size: the card block and the rows print shorter than before; ceilings are the measured size plus 5% (5076, 6109, 8189 bytes when set; the second became 6518 with the 문장 속 낱말 block of up to four rows, so its ceiling went from 6500 to 6850, then to 7410 when KR Camera grew from 2 to 21 rows and the KR term printed four Camera rows instead of two: 7056 bytes measured).
 {
   const size = (args) => Buffer.byteLength(run(args).stdout);
   const queries = [
     [['--q', '비 오는 밤 신주쿠,투명 우산,여자', '--limit', '3'], 5400],
-    [['--q', '툇마루,낮잠,고양이,한옥,오후 햇살,KR', '--limit', '4'], 6850],
+    [['--q', '툇마루,낮잠,고양이,한옥,오후 햇살,KR', '--limit', '4'], 7410],
     [['--q', '雨夜新宿,透明傘,女性,ネオン', '--limit', '6'], 8700],
   ];
   for (const [args, limit] of queries) assert.ok(size(args) <= limit, `${args[1]}: ${size(args)} bytes is over ${limit}`);

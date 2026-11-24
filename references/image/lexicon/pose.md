@@ -42,6 +42,38 @@ Pose 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다. �
 | 담벼락에 기대기 | 벽 기대기; 담에 기대기; leaning on a wall | KR | 벽; 기대기; 골목; 여유 | The shoulder or back rests against a plain wall with one foot propped behind and the weight on the other leg, the arms loosely crossed or in pockets. | look |
 | 걸어가는 뒷모습 | 멀어지는 뒷모습; 뒤돌아 걷기; walking away seen from behind | KR | 뒷모습; 걷기; 거리; 여운 | Seen from behind in mid-stride, the figure walks away along the street with arms swinging and the hair or coat moving with the step. | look |
 | 벤치에 앉기 | 벤치 앉기; 공원 벤치 앉기; 벤치에 걸터앉기; sitting on a bench | KR | 벤치; 앉기; 휴식; 공원 | Seated on a slatted bench with the back straight or slightly slumped, knees together or crossed and the hands resting on the lap or the seat edge. | look |
+| 허리에 손 | 손 허리; 허리에 손 올리기; 손으로 허리 짚기; hand on hip; 叉腰 | KR | 허리; 당당함; 한 손 | One hand rests on the hip with the elbow angled out, giving the torso a defined waist and a confident stance. | look |
+| 다리 꼬기 | 다리 꼬고 앉기; 다리 꼰 자세; crossed legs; 二郎腿 | KR | 앉은 자세; 하체 라인 | Legs are crossed at the knee or ankle, making the lower body a neat diagonal line. | look |
+| 브이 포즈 | 브이; V 포즈; V sign; 比耶 | KR | 손가락 브이; 볼 옆 | The index and middle fingers form a V beside the cheek or eye while the face stays relaxed. | look |
+| 손하트 | 손 하트; 하트 손가락; finger heart; 比心 | KR | 하트; 엄지와 검지 | Thumb and index finger cross into a small heart held toward the camera or beside the cheek. | look |
+| 볼콕 | 볼콕 포즈; 볼에 손가락 대기; 볼 콕 찌르기; cheek poke | KR | 볼; 귀여움; 검지 | An index finger presses into the cheek while the head tilts slightly, a playful and cute pose. | look |
+| 턱 괴기 | 턱 괴고 앉기; 한 손으로 턱 받치기; chin on hand; 托腮 | KR | 팔꿈치; 멍하니; 책상 | One hand props the chin or cheek with the elbow resting on a table or knee, the head leaning lightly into the palm. | look |
+| 뒷짐 | 뒷짐 지기; 뒷짐 진 자세; hands behind the back; 背手 | KR | 손 뒤로; 가슴 펴기 | Both hands clasp behind the lower back, opening the chest and tipping the shoulders slightly forward. | look |
+| 양반다리 | 양반다리 앉기; 책상다리; cross-legged; 盘腿 | KR | 바닥에 앉기; 무릎 벌림 | Seated with the legs folded crossed in front, knees out and hands resting on them. | look |
+| 무릎 꿇기 | 무릎 꿇고 앉기; 한쪽 무릎 꿇기; kneeling; 跪姿 | KR | 무릎; 낮은 자세 | One or both knees rest on the floor with the torso upright, a low kneeling pose. | look |
+| 걸터앉기 | 걸터앉은 자세; 가장자리에 걸터앉기; sitting on an edge; 坐在边缘 | KR | 가장자리; 테이블 끝; 다리 흔들 | The figure perches on the edge of a ledge, table or railing with one leg dangling and the hands braced beside the hips. | look |
+| 뒤돌아보기 | 돌아보기; 어깨 너머로 돌아보기; 뒤돌아보는 포즈; glance back; 回眸 | KR | 어깨 너머; 시선 | The body faces away while the head turns back over one shoulder toward the lens. | look |
+| 손 흔들기 | 손 인사; 손 흔드는 포즈; waving; 挥手 | KR | 인사; 밝음 | One hand lifts open and waves toward the camera with loose fingers and a friendly tilt of the head. | look |
+| 입 가리기 | 손으로 입 가리기; 입가림; covering the mouth; 捂嘴 | KR | 웃음; 수줍음 | A hand covers the mouth or lower face while only the eyes show, as in a shy laugh. | look |
+| 얼굴 감싸기 | 두 손으로 얼굴 감싸기; 볼 감싸기; hands cupping the face; 双手托脸 | KR | 두 손; 볼; 귀여움 | Both hands cup the cheeks or frame the face, the elbows tucked in and the head tilted slightly. | look |
+| 으쓱 | 어깨 으쓱; 어깨 으쓱하기; shrug; 耸肩 | KR | 어깨; 어색한 웃음 | The shoulders lift toward the ears with the palms turned out, a light shrug with a half-smile. | look |
+| 점프샷 | 점프 컷; 점프 포즈; 공중 점프; jump shot; 跳跃 | KR | 공중; 도약; 역동 | The figure is caught in the air with both feet off the ground, knees bent and hair and clothes lifted by the jump. | look |
+| 워킹샷 | 워킹 컷; 걷는 샷; 걸어오는 컷; walking shot; 走拍 | KR | 걷는 중; 보폭; 움직임 | Caught mid-stride with one foot ahead and the arms swinging naturally, coat or hair moving with the step. | look |
+| 뒤태 | 뒤태샷; 뒷모습 포즈; back view; 背影 | KR | 등 라인; 뒷모습; 머리카락 | The figure faces away so the shoulders, back line and hair show, with the face hidden or only a sliver of cheek in profile. | look |
+| 옆태 | 옆라인; 옆모습 라인; side silhouette; 侧身 | KR | 옆선; 몸의 곡선 | The body turns side-on to the camera, showing the line of shoulder, back and waist against the background. | look |
+| 사선 포즈 | 몸 사선으로 틀기; 몸 틀기; angled stance; 斜身站 | KR | 45도; 어깨 먼저; 슬림한 실루엣 | The body turns about forty-five degrees from the lens with one shoulder leading, narrowing the silhouette. | look |
+| 깍지 끼기 | 손깍지; 깍지 낀 손; clasped hands; 十指交扣 | KR | 손; 가슴 앞; 모은 손 | The fingers interlace and rest at the chest, in front of the waist or behind the head. | look |
+| 손 모으기 | 두 손 모으기; 앞에 손 모으기; hands together in front; 双手叠放 | KR | 공손함; 단정함 | Both hands rest together in front of the lower body, an upright, composed and polite stance. | look |
+| 고개 갸웃 | 고개 기울이기; 갸웃; 고개 갸우뚱; head tilt; 歪头 | KR | 궁금함; 귀여움 | The head tilts to one side with the eyes on the lens, curious and soft. | look |
+| 고개 숙이기 | 고개 숙인 포즈; 시선 아래로; head bowed; 低头 | KR | 아래로 시선; 수줍음; 그늘 | The chin drops and the eyes look down, leaving the upper face partly in its own shadow. | look |
+| 쭈그려 앉기 | 쭈그려 앉은 자세; 쪼그려 앉기; squat; 蹲姿; しゃがみ | KR | 낮은 자세; 무릎 접음 | The knees fold fully and the hips drop close to the heels, the forearms resting on the thighs. | look |
+| 앞머리 만지기 | 앞머리 정리; 앞머리 넘기기; touching the bangs; 摸刘海 | KR | 앞머리; 손끝; 거울 | One hand lifts to smooth or adjust the bangs while the eyes look slightly away. | look |
+| 머리 묶기 | 머리 묶는 중; 머리끈 묶기; tying hair; 扎头发 | KR | 팔 올림; 머리끈 | Both arms rise behind the head to gather and tie the hair, the elbows out and the neck exposed. | look |
+| 손잡기 | 손잡고 걷기; 손 잡아끌기; holding hands; 牵手 | KR | 두 사람; 연인; 걷기 | Two people walk or stand with their hands joined, the arms forming a gentle line between them. | look |
+| 팔 벌리기 | 두 팔 벌리기; 팔 벌린 자세; arms spread; 张开双臂 | KR | 개방감; 활짝 | Both arms open wide at the sides as if embracing the air, with the chest lifted. | look |
+| 빙글 돌기 | 한 바퀴 돌기; 빙글빙글; twirl; 转圈 | KR | 회전; 치맛자락; 움직임 | A spin caught mid-turn with the skirt or coat flaring and the hair swinging around the head. | look |
+| 손차양 | 손으로 햇빛 가리기; 손으로 눈 위 가리기; shading the eyes; 手搭凉棚 | KR | 햇빛; 이마 위 손 | One flat hand is raised above the brow to shade the eyes from the sun. | look |
+| 반측면 | 반측면 포즈; 45도 측면; 3/4 측면; three-quarter turn; 3/4侧颜 | KR | 45도; 얼굴 각도 | The face and shoulders turn about three quarters away from the lens, with the far cheek slightly hidden and the eyes returned to the camera. | look |
 
 ## CN
 
@@ -181,6 +213,21 @@ Pose 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다. �
 | 仰望梁枋 | 仰望梁架; 抬头看梁; 들보 올려다보기; looking up at the beams | CN | 사색; 전각; 시선; 故宫朱红暖金; 고궁 주홍 웜골드; 宫廷历史胶片; 궁정 역사 필름; 故宫人文大片 | The body turns sideways and the chin lifts so the eyes rest on the painted beams and brackets high overhead. | look |
 | 双手持香 | 合十持香; 捧香; 향 두 손으로 들기; holding incense with both hands | CN | 향; 사찰; 격식; 정면; 故宫朱红暖金; 고궁 주홍 웜골드; 宫廷历史胶片; 궁정 역사 필름; 故宫人文大片; 소품 필요 | Standing straight with level shoulders, both hands join in front of her around burning incense sticks held upright between them. | look |
 | 肩颈放松 | 松肩长颈; 어깨 목 이완; relaxed shoulders and neck | CN | 목선; 이완; 우아함; 자세; 故宫朱红暖金; 고궁 주홍 웜골드; 宫廷历史胶片; 궁정 역사 필름; 故宫人文大片 | The shoulders drop loose and the neck stays long with the chin lifted slightly, no stiff posed tension. | look |
+| 比心 | 手指比心; 손하트; 손 하트; finger heart; 指尖比心 | CN | 하트; 엄지와 검지; 귀여움 | Thumb and index finger cross into a small heart held toward the camera or beside the cheek. | look |
+| 摸头杀 | 摸头; 쓰다듬기; 머리 쓰다듬기; head pat | CN | 머리 쓰다듬기; 두 사람; 다정함 | A hand rests on the other person's head in a gentle pat while the one being patted looks up with soft eyes. | look |
+| 捂嘴笑 | 捂嘴; 掩嘴笑; 입 가리고 웃기; covering the mouth while laughing | CN | 웃음; 수줍음 | A hand covers the mouth or lower face while only the eyes crease into a laugh. | look |
+| 背影杀 | 背影; 背对镜头; 뒷모습; seen from behind | CN | 등 라인; 뒷모습; 머리카락 | The figure faces away so the shoulders, back line and hair show, with the face hidden or only a sliver of cheek in profile. | look |
+| 转圈 | 转圈圈; 原地转圈; 빙글 돌기; twirl | CN | 회전; 치맛자락; 움직임 | A spin caught mid-turn with the skirt or coat flaring and the hair swinging around the head. | look |
+| 扶额 | 手扶额头; 손으로 이마 짚기; hand on the forehead | CN | 이마; 피곤함; 고민 | One hand rests against the forehead, the head bowed slightly, as if tired, thinking or shading the eyes. | look |
+| 靠肩 | 靠肩膀; 어깨에 기대기; head on the shoulder | CN | 어깨 기대기; 두 사람 | One person lets their head rest against the other's shoulder, both leaning slightly into each other. | look |
+| 牵手 | 牵着手; 손잡기; holding hands | CN | 두 사람; 손; 걷기 | Two people walk or stand with their hands joined, the arms forming a gentle line between them. | look |
+| 搭肩 | 搭肩膀; 어깨동무; arm around the shoulder | CN | 어깨동무; 친밀 | One arm drapes over the other person's shoulders, drawing the two close together. | look |
+| 走拍 | 边走边拍; 走路抓拍; 걷는 샷; walking shot | CN | 걷는 중; 보폭; 움직임 | Caught mid-stride with one foot ahead and the arms swinging naturally, coat or hair moving with the step. | look |
+| 双手托脸 | 托脸; 双手捧脸; 두 손으로 볼 받치기; hands cupping the face | CN | 두 손; 볼; 귀여움 | Both hands cup the cheeks or frame the face, the elbows tucked in and the head tilted slightly. | look |
+| 仰头 | 抬头; 仰起头; 턱 들기; tilting the head up | CN | 하늘; 목선 | The chin lifts and the face turns up toward the sky or the light, the neck stretched long. | look |
+| 趴姿 | 趴着; 俯卧; 엎드려 있기; lying on the stomach | CN | 엎드림; 바닥; 침대 | The figure lies face down on a bed or floor with the head propped on the hands and the legs relaxed behind. | look |
+| 低头 | 垂头; 低着头; 고개 숙이기; head bowed | CN | 아래로 시선; 수줍음; 그늘 | The chin drops and the eyes look down, leaving the upper face partly in its own shadow. | look |
+| 捂脸 | 捂住脸; 手捂脸; 얼굴 가리기; hands covering the face | CN | 얼굴 가림; 수줍음 | Hands cover the face, with the eyes peeking out between the fingers or hidden completely. | look |
 
 ## JP
 
@@ -255,6 +302,22 @@ Pose 층에서 쓰는 원어 토큰 사전이다. 한 줄이 한 토큰이다. �
 | 手をかざす | 테오 카자스; 손 그늘; shading the eyes with a hand | JP | 햇빛; 손; 눈부심; 여름 | A flat hand held above the brow shades the eyes and casts a soft shadow across the upper face while the lower face stays lit. | look |
 | 後ろ手 | 우시로데; 뒤로 깍지; hands clasped behind the back | JP | 뒷짐; 손; 수줍음; 산책 | Both hands clasp loosely behind the back so the chest opens slightly and the elbows angle out to the sides. | look |
 | 髪をかき上げる | 카미오 카키아게루; 머리 쓸어올리기; 앞머리 넘기기; pushing the hair back | JP | 머리; 손동작; 바람; 이마 | One hand sweeps the hair back from the forehead and holds it against the crown, elbow raised and the face fully open. | look |
+| 体育座り | 타이이쿠즈와리; 체육좌; 무릎 세워 앉기; sitting with knees hugged; 抱膝坐 | JP | 무릎 안기; 작게 웅크림; 바닥 | Seated on the floor with the knees pulled up to the chest and the arms wrapped around them, the figure folded small. | look |
+| 手を腰に | 手を腰に当てる; 손 허리; 허리에 손; hand on hip; 叉腰 | JP | 허리; 당당함; 한 손 | One hand rests on the hip with the elbow angled out, giving the torso a defined waist and a confident stance. | look |
+| 髪を触る | 髪をいじる; 머리 만지기; 머리카락 만지기; touching the hair; 摸头发 | JP | 머리카락; 손끝; 무의식 | One hand lifts to touch or twist a lock of hair while the eyes look a little away. | look |
+| 後ろ姿 | 後ろ姿ショット; 뒷모습; 背影; seen from behind | JP | 등; 뒷모습; 머리카락 | The figure faces away so the shoulders, back line and hair show, with the face hidden or only a sliver of cheek in profile. | look |
+| 寝転がる | 寝転び; 뒹굴기; 누워 뒹굴기; lying down; 躺下 | JP | 바닥에 누움; 느긋함 | The figure lies loosely on grass, floor or bed with the limbs relaxed and the head turned toward the camera. | look |
+| 壁ドン | 카베돈; 벽쿵; 벽에 손 짚기; hand pinned on a wall; 壁咚 | JP | 벽; 두 사람; 연애 | One arm reaches out and braces flat against the wall beside the other person's head, the two faces close together. | look |
+| 手つなぎ | 手をつなぐ; 손잡기; 손잡고; holding hands; 牵手 | JP | 두 사람; 손; 걷기 | Two people walk or stand with their hands joined, the arms forming a gentle line between them. | look |
+| ジャンプ | ジャンプショット; 점프; 점프샷; jump shot; 跳跃 | JP | 공중; 도약; 역동 | The figure is caught in the air with both feet off the ground, knees bent and hair and clothes lifted by the jump. | look |
+| 首をかしげる | 首かしげ; 고개 갸웃; 고개 기울이기; head tilt; 歪头 | JP | 궁금함; 귀여움 | The head tilts to one side with the eyes on the lens, curious and soft. | look |
+| 頬に手を当てる | 頬に手; 볼에 손 대기; 볼 짚기; hand on the cheek; 手托脸颊 | JP | 볼; 손바닥; 수줍음 | A hand rests flat against the cheek, the fingers soft, with the head leaning slightly toward it. | look |
+| 両手を広げる | 手を広げる; 두 팔 벌리기; 양팔 벌리기; arms spread; 张开双臂 | JP | 개방감; 활짝 | Both arms open wide at the sides as if embracing the air, with the chest lifted. | look |
+| くるりと回る | くるくる回る; 빙글 돌기; 한 바퀴 돌기; twirl; 转圈 | JP | 회전; 치맛자락; 움직임 | A spin caught mid-turn with the skirt or coat flaring and the hair swinging around the head. | look |
+| うつむき | 俯き; 俯く; 고개 숙이기; head bowed; 低头 | JP | 아래로 시선; 수줍음; 그늘 | The chin drops and the eyes look down, leaving the upper face partly in its own shadow. | look |
+| 背中合わせ | 背中あわせ; 등 맞대기; back to back; 背靠背 | JP | 두 사람; 등; 맞닿음 | Two people stand with their backs pressed together, their heads turned slightly toward the camera. | look |
+| 並んで歩く | 並び歩き; 나란히 걷기; 나란히 걷는 두 사람; walking side by side; 并肩走 | JP | 두 사람; 같은 보폭; 걷는 중 | Two people walk at the same pace shoulder to shoulder, the steps and arms swinging almost in time. | look |
+| 髪を結ぶ | 髪を結う; 머리 묶기; 머리끈 묶기; tying hair; 扎头发 | JP | 팔 올림; 머리끈 | Both arms rise behind the head to gather and tie the hair, the elbows out and the neck exposed. | look |
 
 ## US
 
