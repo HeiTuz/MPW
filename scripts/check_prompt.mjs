@@ -53,6 +53,7 @@ export const CODE_REGISTRY = Object.freeze({
   mixUnlisted: { code: "mix/unlisted", severity: { native: "warning", assembled: null }, intent: "Flag original-language words that no lexicon row, look card or fixed-lines.md carries." },
   mixRenamed: { code: "mix/renamed", severity: { native: "warning", assembled: null }, intent: "Flag one thing called by two names: another alias of a line-head token written outside its line." },
   mixCulture: { code: "mix/culture", severity: { native: "warning", assembled: null }, intent: "Flag a photo term from the other culture's column of fixed-lines.md (高光 in a JP scene, 白飛び in a KR or CN scene), the culture read from the Finish tokens, or from the language of the line heads and sentence words when there are none." },
+  mixDropped: { code: "mix/dropped", severity: { native: "warning", assembled: "warning" }, intent: "With --source: flag original-language names of the layer prompt that are missing from its flattened form for another engine, or replaced by another alias of the same dictionary row." },
   mixThin: { code: "mix/thin", severity: { native: "warning", assembled: null }, intent: "Flag a KR, CN or JP photo prompt that barely mixes: no Finish layer in a person photo prompt, an owner (한복, 고궁) called without any of its part names in the original language, few original-language line heads, no photo term in Optics or Camera, or no expression word in Expression. For --engine seedream, midjourney and soul (one paragraph, no line heads): a person photo in a KR, CN or JP scene with fewer than three original-language words (engine-levers.md §3)." },
   pickOne: { code: "phrasing/pick-one", severity: { native: "warning", assembled: "warning" }, intent: "Flag wording that hands the choice to the model: the author writes one value and leaves no option list in the prompt." },
   poseOptions: { code: "coherence/pose-options", severity: { native: "warning", assembled: "warning" }, intent: "Flag a Pose layer that lists alternative poses (numbered or bulleted lines, or two posture words joined by or) instead of one pose." },
@@ -115,7 +116,7 @@ export function parseFlags(args) {
     "--channel": ["unbounded", "bounded"],
     "--engine": ["gpt-image", "unknown", "midjourney", "higgsfield", "seedream", "nano-banana", "soul"],
   };
-  const valued = new Set([...Object.keys(choices), "--manifest", "--channel-limit", "--file"]);
+  const valued = new Set([...Object.keys(choices), "--manifest", "--channel-limit", "--file", "--source"]);
   const reject = (message, details) => errors.push(diagnostic(CODE_REGISTRY.flag.code, message, details));
   for (let index = 0; index < args.length; index += 1) {
     const token = args[index];
@@ -164,6 +165,10 @@ export function parseFlags(args) {
   if (options.test && args.length !== 1) reject("--test must be used alone.");
   if (options.manifest !== undefined && options.input !== undefined) reject("A manifest cannot be combined with a positional input.");
   if (options.channel === "unbounded" && options.channelLimit !== undefined) reject("An unbounded channel cannot also have a channel limit.");
+  if (options.source !== undefined) {
+    if (options.manifest !== undefined) reject("--source cannot be combined with a manifest.");
+    if (!DROPPED_ENGINES.has(options.engine) && options.engine !== "nano-banana") reject(`--source compares a flattened prompt with its layer prompt: add --engine ${[...DROPPED_ENGINES, "nano-banana"].join("|")}.`);
+  }
   return { options, errors };
 }
 
@@ -542,10 +547,14 @@ function mixSources() {
   try {
     const known = new Set();
     const rowsByToken = new Map();
+    const rowsByName = new Map();
     const everyRow = [];
     for (const layer of loadAll(resolve(mixRoot, "lexicon"))) {
       for (const row of layer.rows) {
-        for (const name of [row.token, ...row.aliases]) known.add(mixKey(name));
+        for (const name of [row.token, ...row.aliases]) {
+          known.add(mixKey(name));
+          rowsByName.set(mixKey(name), [...(rowsByName.get(mixKey(name)) ?? []), row]);
+        }
         const key = mixKey(row.token);
         rowsByToken.set(key, [...(rowsByToken.get(key) ?? []), row]);
         everyRow.push({ row, slug: layer.slug });
@@ -614,7 +623,7 @@ function mixSources() {
         if (group) for (const token of cells.slice(2).join(" ").match(/`[^`]+`/gu) ?? []) finish.set(mixKey(token.slice(1, -1)), group);
       }
     }
-    mixKnown = { known, rowsByToken, phrases, jpPhrases, photo, finish, owners };
+    mixKnown = { known, rowsByToken, rowsByName, phrases, jpPhrases, photo, finish, owners };
   } catch {
     mixKnown = null;
   }
@@ -819,6 +828,62 @@ function inspectEngineMix(result, instruction) {
   emit(result, CODE_REGISTRY.mixThin, `The prompt barely mixes languages: ${chunks.length} original-language word(s) in a ${result.engine} person photo prompt (fewer than three).`, { hint: "Keep the English sentence frame and leave the names, expression words, photo terms and texture or light words in their original language instead of translating them (engine-levers.md §3, image-brief.md §2.1)." });
 }
 
+// engine-levers.md §3 ("펴는 것은 모양이지 원어가 아니다") and §4 step 3: the flattened prompt keeps the original-language names of the layer prompt it was made from.
+// --source gives that layer prompt. Its line-head tokens and its sentence words in Han, kana or Hangul must still be in the checked prompt (the Identity and Finish layers are left out: the engine's
+// own cells replace their wording). A name that is gone, or whose row's other alias is written instead (文庫本 became paperback), is the flattening this rule exists to stop.
+// Midjourney and Soul cut sentences to phrases, so only line heads are read there. Nano Banana's cell lets its prompt gloss original-language words, so it is not read (scope.unchecked says so).
+// A sentence cut for length leaves its names out too: the hint says so, and the finding is a warning.
+const DROPPED_ENGINES = new Set(["seedream", "midjourney", "soul"]);
+const KEPT_STEM = 4;
+function sourceNames(sourceText, headsOnly) {
+  const names = new Map();
+  const add = (text) => {
+    const key = mixKey(text);
+    if (key && !names.has(key)) names.set(key, text.trim());
+  };
+  for (const section of layerSections(unquote(sourceText))) {
+    if (section.name !== null && (!/^[A-Za-z]/u.test(section.name) || /^(?:Finish|Identity Reference)$/u.test(section.name))) continue;
+    for (const line of section.lines) {
+      const match = section.name === null ? null : LAYER_LINE.exec(line);
+      if (match && NATIVE_CHAR.test(match[1])) add(match[1]);
+      if (!headsOnly) for (const chunk of chunksOf(match ? match[2] : line)) add(chunk);
+    }
+  }
+  return names;
+}
+// A Hangul word's stem in the target ("마당이" for 마당은); a spaced phrase counts when half of its words are there (a bent expression phrase).
+function nameKept(name, targetKey, targetJamo) {
+  if (targetKey.includes(mixKey(name))) return true;
+  if (!/\p{sc=Hangul}/u.test(name)) return false;
+  const words = name.split(/\s+/u);
+  const found = words.filter((word) => { const stem = stemKey(word); return stem.length >= KEPT_STEM && targetJamo.includes(stem); }).length;
+  return found > 0 && found * 2 >= words.length;
+}
+function inspectDropped(result, instruction, sourceText) {
+  if (result.engine === "nano-banana") result.scope.unchecked.push("source_original_language_names");
+  if (!DROPPED_ENGINES.has(result.engine)) return;
+  const names = sourceNames(sourceText, result.engine !== "seedream");
+  if (!names.size) return;
+  const sources = mixSources();
+  const target = unquote(instruction);
+  const targetKey = mixKey(target);
+  const targetJamo = target.normalize("NFD");
+  const missing = [];
+  const renamed = [];
+  for (const [key, text] of names) {
+    if (nameKept(text, targetKey, targetJamo)) continue;
+    missing.push(text);
+    const other = [...new Set((sources?.rowsByName.get(key) ?? []).flatMap((row) => [row.token, ...row.aliases]))]
+      .filter((alias) => mixKey(alias) !== key && !mixKey(alias).includes(key) && !key.includes(mixKey(alias)) && mixKey(alias).length >= 2 && (NATIVE_CHAR.test(alias) || alias.split(/\s+/u).length >= 2 || alias.length >= 7))
+      .find((alias) => aliasPattern(alias).test(target));
+    if (other) renamed.push(`${text} → ${other}`);
+  }
+  if (!missing.length) return;
+  evidence(result, CODE_REGISTRY.mixDropped, missing,
+    `${missing.length} of ${names.size} original-language names of the layer prompt are not in this ${result.engine} prompt${renamed.length ? ` (written under another name: ${renamed.slice(0, 3).join(" | ")})` : ""}`,
+    "Flattening drops the line heads and the layer headings, not the names: call the thing by its original-language name inside the English sentence (engine-levers.md §3). A name left out only because a second sentence was cut for length can stay out.");
+}
+
 // engine-levers.md §5: the cells that say "do not write this" for one engine. Text matching only.
 const LAYER_ENGINES = new Set(["seedream", "nano-banana", "soul", "midjourney"]);
 function inspectEngine(result, instruction) {
@@ -885,6 +950,7 @@ export function checkText(input, options = {}) {
   if (result.engine === "seedream" && words >= 600) {
     emit(result, CODE_REGISTRY.engineWords, `Seedream: ${words} words; the published guidance is under 600 English words (surfaces.md §0-1).`);
   }
+  if (options.sourceText !== undefined) inspectDropped(result, instruction, options.sourceText);
   if (result.profile === "native" && result.engine !== "gpt-image") {
     // Other engines run inspectCoherence (which calls inspectEngine for the engine-levers.md §5 "do not write" cells) and inspectEngineMix; the GPT Image layer, copy and syntax checks are skipped, and the engine's own syntax is outside this checker.
     inspectCoherence(result, text, instruction);
@@ -976,6 +1042,15 @@ async function execute(args) {
     emit(result, CODE_REGISTRY.unreadable, `Cannot read input: ${error.message}`);
     return result;
   }
+  if (options.source !== undefined) {
+    try {
+      options.sourceText = await fileText(options.source);
+    } catch (error) {
+      const result = textResult(options);
+      emit(result, CODE_REGISTRY.unreadable, `Cannot read the source layer prompt: ${error.message}`);
+      return result;
+    }
+  }
   return options.manifest !== undefined ? checkManifest(input, options) : checkText(input, options);
 }
 
@@ -1056,7 +1131,9 @@ export async function runHarness(casesPath = process.env.MPW_PROMPT_CHECK_CASES 
     const input = resolve(base, item.input);
     registered.add(input);
     for (const code of [...(item.expect.errors ?? []), ...(item.expect.warnings_include ?? [])]) expectedCodes.add(code);
-    const result = await execute([...item.args, input]);
+    // A --source file is named relative to the cases file, like the input.
+    const args = item.args.map((arg, index) => (item.args[index - 1] === "--source" ? resolve(base, arg) : arg));
+    const result = await execute([...args, input]);
     const comparison = compare(result, item.expect);
     if (comparison.ok) {
       passed += 1;
@@ -1106,6 +1183,7 @@ export const USAGE = `usage: node scripts/check_prompt.mjs [<prompt-file> | --fi
   --surface s1|s2|s3             the execution surface
   --engine gpt-image|unknown|midjourney|higgsfield|seedream|nano-banana|soul
   --channel unbounded|bounded    --channel-limit <characters>
+  --source <layer-prompt-file>   with --engine seedream|midjourney|soul: the GPT Image layer prompt this flattened prompt was made from; its original-language names must survive (nano-banana: accepted, not read)
   --manifest <file>              check a JSON-lines manifest instead of one prompt
   --test                         run the built-in cases (used alone)
   --help                         this text`;
