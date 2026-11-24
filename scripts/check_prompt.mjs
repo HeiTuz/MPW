@@ -43,7 +43,10 @@ export const CODE_REGISTRY = Object.freeze({
   ratioDup: { code: "coherence/ratio-dup", severity: { native: "warning", assembled: "warning" }, intent: "Flag an aspect ratio written more than once." },
   decimal: { code: "coherence/decimal", severity: { native: "error", assembled: "error" }, intent: "Reject a decimal point replaced by an ideographic full stop." },
   slotDup: { code: "coherence/slot-dup", severity: { native: "warning", assembled: "warning" }, intent: "Flag a slot filled twice: lips in Hair and makeup, or the catchlight." },
-  dayNight: { code: "coherence/day-night", severity: { native: "warning", assembled: "warning" }, intent: "Flag a night cue next to midday light." },
+  dayNight: { code: "coherence/day-night", severity: { native: "warning", assembled: "warning" }, intent: "Flag a night cue next to midday light, in words or in the tags of the Light and Scene line-head rows." },
+  legwear: { code: "coherence/legwear", severity: { native: "warning", assembled: "warning" }, intent: "Flag a stockings or tights line in Legwear next to an Outfit line whose garment covers the whole leg, read from the lexicon row tags." },
+  bodyDir: { code: "coherence/body-dir", severity: { native: "warning", assembled: "warning" }, intent: "Flag an Expression row that turns the body away beside a Pose row that faces the camera square on, or the reverse, read from the lexicon row tags." },
+  posePlace: { code: "coherence/pose-place", severity: { native: "warning", assembled: "warning" }, intent: "Flag a Pose row that needs a place (car, rail, stair, bed, sofa, water's edge, road, elevator) that nothing outside the Pose layer shows." },
   engineLayers: { code: "coherence/engine-layers", severity: { native: "warning", assembled: "warning" }, intent: "Flag GPT Image layer headings left in a prompt for another engine." },
   engineFlag: { code: "coherence/engine-flag", severity: { native: "warning", assembled: "warning" }, intent: "Flag a Midjourney flag or ratio token in the body of an engine that takes it as a setting." },
   engineBan: { code: "coherence/engine-ban", severity: { native: "warning", assembled: "warning" }, intent: "Flag a spoken ban on illustration or CGI where the engine's cell says to state the medium or use its own exclusion syntax." },
@@ -452,7 +455,11 @@ function inspectCoherence(result, text, instruction) {
   if (lipLines.length >= 2 || catchLines.length >= 2) {
     emit(result, CODE_REGISTRY.slotDup, lipLines.length >= 2 ? `Hair and makeup has ${lipLines.length} lip lines.` : `The catchlight is written on ${catchLines.length} lines.`, { hint: "A slot is filled once: remove the later line." });
   }
-  if (/\b(?:night(?:time)?|midnight|after dark)\b|深夜|夜晚|の夜/iu.test(instruction) && /\b(?:noon|midday|mid-day|noonday)\b|正午|中午|真昼/iu.test(instruction)) {
+  const layerFacts = inspectLayerFacts(result, sections);
+  // Words, or the Light and Scene line heads whose lexicon rows are tagged night-only or midday-only (a head in any language reads the same). A Hangul 밤 stands alone: 밤색 is a brown.
+  const night = /\b(?:night(?:time)?|midnight|after dark)\b|深夜|夜晚|の夜|한밤|심야|야경|야간|(?<!\p{sc=Hangul})밤(?:하늘|거리|에|의|은|이|을|도|중)?(?!\p{sc=Hangul})/iu.test(instruction) || layerFacts.night;
+  const midday = /\b(?:noon|midday|mid-day|noonday)\b|正午|中午|真昼|한낮|대낮|정오/iu.test(instruction) || layerFacts.noon;
+  if (night && midday) {
     emit(result, CODE_REGISTRY.dayNight, "A night cue and midday light appear in the same prompt.", { hint: "Pick one time of day and make Light and Optics agree." });
   }
   inspectSlotNames(result, sections);
@@ -514,6 +521,82 @@ function inspectChoices(result, instruction) {
   }
 }
 
+// image-brief.md §3 slot table: one slot, one owner layer. These checks read the line heads of layers through their lexicon rows, so a head in any language reads the same
+// (와이드 팬츠, 阔腿裤 and wide-leg trousers are one row). Row tags the lexicon carries: 긴 기장 (Outfit: a garment that covers the whole leg), 스타킹류 (Legwear: stockings, tights),
+// 몸:등 and 몸:정면 (Expression and Pose: the body turned away, square to the camera), 장소:<kind> (Pose: needs a car, rail, stair, bed, sofa, water's edge, road or elevator),
+// 밤 한정 and 한낮 한정 (Light and Scene: night only, midday only). A tag counts only when every row of that head in that layer has it; a head with no row is read as English where noted. A warning, never an error.
+const LAYER_KEY = { outfit: /^(?:Outfit|Outerwear|Clothing)\b/iu, legwear: /^(?:Legwear|Hosiery)\b/iu, pose: /^(?:Poses?|Posture)\b/iu, expression: /^Expression\b/iu, light: /^Light\b/iu, scene: /^Scene\b/iu };
+// A visible-leg cue (a slit, rips, mesh, a cropped hem) in the Outfit sentence, or rips and slits in the Legwear sentence, takes the legwear warning away: the stockings are meant to show.
+const LEG_SHOWN = /\b(?:slits?|split|rips?|ripped|torn|tears?|distressed|holes?|cut-?outs?|sheer|see-through|mesh|lace|cropped|openings?)\b/iu;
+const HOSE_SHOWN = /\b(?:rips?|ripped|slits?|torn|holes?|cut-?outs?)\b/iu;
+const COVERS_HEAD = /\b(?:trousers|pants|jeans|slacks|chinos|jumpsuit|overalls|dungarees|leggings|joggers|sweatpants|culottes|maxi (?:dress|skirt)|(?:floor|ankle)[- ]length)\b/iu;
+const SHORT_HEAD = /\b(?:shorts?|cropped|capris?|mini)\b/iu;
+const HOSE_HEAD = /\b(?:tights|stockings?|pantyhose|hosiery|nylons|fishnets?)\b/iu;
+const NOT_HOSE = /\b(?:socks?|knee|ankle|thigh|bare|no|without)\b/iu;
+// English words of each place kind, read in the opener and the layers outside Pose and in the English description of every line-head row outside Pose. Wide on purpose: a stray word means no warning.
+const PLACE_WORDS = {
+  차: /\b(?:cars?|taxis?|cabs?|vehicles?|trucks?|pickups?|vans?|minivans?|sedans?|hatchbacks?|wagons?|suvs?|jeeps?|coup[eé]s?|convertibles?|automobiles?|limousines?|buses|motorcycles?|windshield|headlights?|tail ?lights?|garage|driveway|parked|parking|(?:back|rear|passenger|driver'?s?) ?seat)\b/iu,
+  난간: /\b(?:rails?|railings?|balustrades?|banisters?|handrails?|parapets?|guardrails?|guard rails?|balcon(?:y|ies)|terraces?|rooftops?|overlooks?|fences?|bridges?|fire escapes?|piers?|docks?)\b/iu,
+  계단: /\b(?:stairs?|staircases?|stairways?|stairwells?|steps|stoops?|escalators?|landings?|porch(?:es)?|entrances?|doorsteps?|terraces?)\b/iu,
+  침대: /\b(?:beds?|bedding|bedsheets?|sheets|bed ?linen|duvets?|quilts?|blankets?|pillows?|mattress(?:es)?|bedrooms?|bedside|headboards?|dorms?|apartments?|hotel rooms?)\b/iu,
+  소파: /\b(?:sofas?|couch(?:es)?|settees?|canap[ée]s?|armchairs?|loveseats?|booths?|banquettes?|cushions?|living rooms?|lounges?)\b/iu,
+  물가: /\b(?:beach(?:es)?|sand|shore(?:line)?s?|surf|sea|seaside|ocean|coast(?:al|line)?|waves?|lakes?|lakeside|rivers?|riverside|riverbanks?|ponds?|canals?|harbou?rs?|piers?|quays?|waterfront|bay|dunes?|pools?|fountains?|water)\b/iu,
+  도로: /\b(?:roads?|streets?|highways?|asphalt|lanes?|avenues?|boulevards?|crossings?|crosswalks?|sidewalks?|curbs?|pavements?|alleys?|intersections?|motorways?|freeways?|routes?|paths?)\b/iu,
+  엘리베이터: /\b(?:elevators?|lifts?|elevator cars?)\b/iu,
+};
+function layerLines(sections) {
+  return sections.filter((section) => section.name && /^[A-Za-z]/u.test(section.name) && section.name !== "Identity Reference")
+    .flatMap((section) => section.lines.flatMap((line) => {
+      const match = LAYER_LINE.exec(line);
+      return match ? [{ section: section.name, head: match[1].trim(), sentence: unquote(match[2]) }] : [];
+    }));
+}
+function inspectLayerFacts(result, sections) {
+  const lines = layerLines(sections);
+  const facts = { night: false, noon: false };
+  if (!lines.length) return facts;
+  const sources = mixSources();
+  const rowsOf = (item, slug) => (sources?.rowsByName.get(mixKey(item.head)) ?? []).filter((row) => row.slug === slug);
+  const tagsOf = (item, slug) => { const rows = rowsOf(item, slug); return rows.length ? rows[0].tags.filter((tag) => rows.every((row) => row.tags.includes(tag))) : []; };
+  const inLayer = (key) => lines.filter((item) => LAYER_KEY[key].test(item.section));
+  const tagged = (key, slug, tag) => inLayer(key).filter((item) => tagsOf(item, slug).includes(tag));
+  const english = (key, slug, wanted, unwanted) => inLayer(key).filter((item) => !rowsOf(item, slug).length && wanted.test(item.head) && !unwanted.test(item.head));
+  facts.night = [...tagged("light", "light", "밤 한정"), ...tagged("scene", "scene", "밤 한정")].length > 0;
+  facts.noon = [...tagged("light", "light", "한낮 한정"), ...tagged("scene", "scene", "한낮 한정")].length > 0;
+
+  const covers = [...tagged("outfit", "outfit", "긴 기장"), ...english("outfit", "outfit", COVERS_HEAD, SHORT_HEAD)].filter((item) => !LEG_SHOWN.test(item.sentence));
+  const hose = [...tagged("legwear", "legwear", "스타킹류"), ...english("legwear", "legwear", HOSE_HEAD, NOT_HOSE)].filter((item) => !HOSE_SHOWN.test(item.sentence));
+  if (covers.length && hose.length) {
+    emit(result, CODE_REGISTRY.legwear, `${covers[0].head} (Outfit) covers the whole leg, yet Legwear writes ${hose[0].head}.`, { hint: "Legwear is left out when trousers or a long skirt cover the legs (image-brief.md §3). Drop the Legwear line, or keep it when a slit, rips or a cropped hem show the leg." });
+  }
+
+  const turned = [...tagged("expression", "expression", "몸:등"), ...tagged("pose", "pose", "몸:등")];
+  const square = [...tagged("expression", "expression", "몸:정면"), ...tagged("pose", "pose", "몸:정면")];
+  const isPose = (item) => LAYER_KEY.pose.test(item.section);
+  const clash = turned.find((one) => square.some((other) => isPose(one) !== isPose(other)));
+  if (clash) {
+    const other = square.find((item) => isPose(item) !== isPose(clash));
+    emit(result, CODE_REGISTRY.bodyDir, `${clash.head} (${clash.section}) turns the body away, ${other.head} (${other.section}) faces the camera square on.`, { hint: "The body angle belongs to Pose (image-brief.md §3 slot table): write the Expression line for the face only, or pick the Pose and Expression rows that agree." });
+  }
+
+  const first = unquote(sections.find((section) => section.name === null)?.lines.join(" ") ?? "");
+  const outside = lines.filter((item) => !LAYER_KEY.pose.test(item.section));
+  const unshown = [];
+  for (const item of inLayer("pose")) {
+    for (const tag of tagsOf(item, "pose")) {
+      const kind = /^장소:(.+)$/u.exec(tag)?.[1];
+      const words = kind && PLACE_WORDS[kind];
+      if (!words) continue;
+      const shown = words.test(first) || outside.some((other) => words.test(`${other.head} ${other.sentence}`) || (sources?.rowsByName.get(mixKey(other.head)) ?? []).some((row) => words.test(row.looks)));
+      if (!shown) unshown.push(`${item.head} (${kind})`);
+    }
+  }
+  if (unshown.length) {
+    emit(result, CODE_REGISTRY.posePlace, `${unshown.length} Pose row(s) need a place nothing else in the prompt shows: ${[...new Set(unshown)].slice(0, 3).join(" | ")}`, { hint: "Put the place the pose uses (the car, the rail, the stair, the bed) in Scene, or pick a pose that fits the scene." });
+  }
+  return facts;
+}
+
 // image-brief.md §12.2: a token names the thing shown, never a layer or category name. Slot tokens that fixed-lines.md and the look-card frame define (face clear, catchlight, palette, vertical frame, horizontal frame, focus, hands) are allowed. Only the `token — sentence` lines inside a layer are read.
 const SLOT_NAMES = new Set(["hair color", "hair colour", "hair", "hairstyle", "makeup", "outfit", "clothing", "clothes", "pose", "expression", "background", "foreground", "scene", "setting", "location", "passersby", "passers-by", "people", "crowd", "road surface", "ground", "floor", "sky", "lighting", "light", "shadow", "shadows", "mood", "atmosphere", "color", "colors", "colour", "camera", "camera angle", "composition", "style", "medium", "nails", "nail", "props", "legwear", "optics"]);
 function inspectSlotNames(result, sections) {
@@ -551,6 +634,7 @@ function mixSources() {
     const everyRow = [];
     for (const layer of loadAll(resolve(mixRoot, "lexicon"))) {
       for (const row of layer.rows) {
+        row.slug = layer.slug;
         for (const name of [row.token, ...row.aliases]) {
           known.add(mixKey(name));
           rowsByName.set(mixKey(name), [...(rowsByName.get(mixKey(name)) ?? []), row]);

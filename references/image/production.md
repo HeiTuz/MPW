@@ -90,7 +90,10 @@ manifest 검사는 한 행에 하나의 객체를 받는다. 필수 텍스트는
 | `coherence/ratio-dup` | 경고, 공통 | 화면비(`3:4`, `16:9` 등 알려진 값)가 둘 이상 적힘 |
 | `coherence/decimal` | 오류, 공통 | 소수점이 `。`로 바뀜(`7。5`) |
 | `coherence/slot-dup` | 경고, 공통 | Hair and makeup(나눈 `Makeup` 층 포함)에 입술 줄이 둘 이상이거나, 캐치라이트를 적은 줄이 둘 이상 |
-| `coherence/day-night` | 경고, 공통 | 밤 단서와 `noon`·`midday`가 한 문안에 함께 있음 |
+| `coherence/day-night` | 경고, 공통 | 밤 단서(`night`·`深夜`·`の夜`·`한밤`·`심야`·`야경`·`야간`, 홀로 쓴 `밤`)와 낮 단서(`noon`·`midday`·`正午`·`真昼`·`한낮`·`정오`·`대낮`)가 한 문안에 함께 있음. Light·Scene 줄 머리의 사전 행 태그 `밤 한정`·`한낮 한정`도 단서로 읽는다(어느 언어의 머리든 같다) |
+| `coherence/legwear` | 경고, 공통 | Outfit 줄 머리의 사전 행에 태그 `긴 기장`(긴 바지·점프수트·발목·바닥 기장 치마와 드레스)이 있는데 Legwear 줄 머리의 행에 태그 `스타킹류`(스타킹·타이츠)가 있음. 행이 없는 영어 머리는 `trousers`·`jeans`·`tights`·`stockings` 낱말로 읽고 `shorts`·`cropped`·`socks`·`knee`·`bare`는 뺀다. Outfit 문장에 트임·찢김·메시·크롭이, Legwear 문장에 찢김·트임이 있으면 다리를 보이려는 것이라 경고하지 않는다 |
+| `coherence/body-dir` | 경고, 공통 | Expression 줄 머리의 행이 몸을 돌린다(태그 `몸:등`)는데 Pose 줄 머리의 행이 정면(태그 `몸:정면`)이거나, 그 반대. 몸의 각도는 Pose의 슬롯이다([image-brief.md](image-brief.md) §3). 한 머리의 행이 여럿이면 모두 그 태그여야 읽는다 |
+| `coherence/pose-place` | 경고, 공통 | Pose 줄 머리의 행이 장소를 요구하는데(태그 `장소:차`·`난간`·`계단`·`침대`·`소파`·`물가`·`도로`·`엘리베이터`) 첫 줄, Pose 밖 층의 줄 머리와 문장, Pose 밖 줄 머리 행의 영어 모습 설명 어디에도 그 장소의 영어 낱말이 없음 |
 | `coherence/pose-options` | 경고, 공통 | 이름이 `Pose`·`Posture`·`포즈`·`자세`로 시작하는 층(제목 수준·대소문자 무관, `## Pose and hands` 포함)에 번호·글머리표(`1.`, `2)`, `- `, `Option A`, `Pose 1`) 줄이 둘 이상이거나, 서로 다른 자세 낱말(standing·sitting·leaning·walking·kneeling·lying 등, 한국어 서 있·앉·기대·걷·누워)이 `or`·`또는`·`혹은`·`아니면`(`;`·줄바꿈 너머 포함)으로 묶이거나, 부정 없이 세 가지 이상 나열됨. 한 자세를 부위별로 나눈 줄(weight shift·hands·turn), `either side`·`left or right hand`, `not leaning or sitting`처럼 부정으로 배제하는 줄은 보지 않는다. 자세 둘을 `or` 없이 `;`로만 나열한 줄은 놓친다 |
 | `coherence/engine-layers` | 경고, 엔진 한정 | `--engine seedream·nano-banana·soul·midjourney`에서 `## 층` 제목이 둘 이상. GPT Image 층 문안을 그 엔진 모양으로 펴지 않았다([engine-levers.md](engine-levers.md) §4) |
 | `coherence/engine-flag` | 경고, 엔진 한정 | `--engine seedream·nano-banana·soul`의 본문에 `--ar`·`--no`·`--oref` 같은 Midjourney 플래그나 `AR 3:4`. 호출 설정으로 옮긴다 |

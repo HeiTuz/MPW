@@ -2,6 +2,7 @@
 // Text matching only: coherence/* heuristics of check_prompt.mjs. No image output is judged.
 import assert from "node:assert/strict";
 import { checkText } from "./check_prompt.mjs";
+import { loadAll } from "./find_tokens.mjs";
 
 const codes = (text, options) => {
   const result = checkText(text, options);
@@ -84,24 +85,95 @@ has("## Light\nキャッチライト — A small window point of light in each e
 has("A woman on a rainy night. Hard midday sun throws short shadows.", "coherence/day-night");
 lacks("A woman at midday under hard sun, her daylight white balance neutral.", "coherence/day-night");
 lacks("A woman on a rainy night under a sodium lamp.", "coherence/day-night");
+// Korean words: 한밤, 심야, 야경, a standalone 밤 against 한낮, 정오, 대낮. 밤색 is a brown and 야채 is not 야경.
+has("A woman on a 한밤 street. 정오 sun overhead.", "coherence/day-night");
+has("심야 편의점 앞, 한낮의 햇빛 같은 직사광.", "coherence/day-night");
+has("A woman in the 밤 air at 대낮 light.", "coherence/day-night");
+lacks("A woman in a 밤색 coat at 정오.", "coherence/day-night");
+lacks("A woman on a 한밤 street under a 가로등.", "coherence/day-night");
+lacks("A woman at 정오 beside a market of 야채 stalls.", "coherence/day-night");
+// Line heads carry it too: a night-only Scene row beside a midday-only Light row, in any language; two night rows, or a night row with a plain Light row, are one time of day.
+const dayNight = (scene, light) => `A candid street photograph of a woman.\n\n## Scene\n${scene} — A place.\n\n## Light\n${light} — Some light.`;
+has(dayNight("夜市", "正午顶光"), "coherence/day-night");
+has(dayNight("심야식당", "직사광"), "coherence/day-night");
+has(dayNight("歌舞伎町", "Harsh Midday Sun"), "coherence/day-night");
+has(dayNight("tennis club court", "Moonlight"), "coherence/day-night");
+lacks(dayNight("夜市", "Moonlight"), "coherence/day-night");
+lacks(dayNight("편의점", "직사광"), "coherence/day-night");
+lacks(dayNight("한강 야경", "窓辺の光"), "coherence/day-night");
 
-// Scope: native checks for other engines still run these; assembled midjourney stops at engine-scope but keeps them.
-has("A 24mm lens. An 85mm lens.", "coherence/focal", { engine: "higgsfield" });
-has("A 24mm lens. An 85mm lens.", "coherence/focal", { profile: "assembled", engine: "midjourney" });
-// token/slot-name: a layer-line token that names the slot; names of the thing shown and flat prompts pass.
-has("## Hair and makeup\nhair color — Long straight black hair.", "token/slot-name");
-has("## Scene\npassersby — People walk the sidewalk.\nroad surface — Gray asphalt.", "token/slot-name");
-lacks("## Hair and makeup\n黒髪ロング — Long straight black hair.\nwind-blown strands — Loose strands lift.", "token/slot-name");
-lacks("## Light\ncast shadows — Short hard shadows fall toward the camera.\ncatchlight — A small bright patch sits in each eye.", "token/slot-name");
-lacks("A woman with hair color — dark brown — stands in the street.", "token/slot-name");
-lacks("hair color — Long straight black hair, before any layer heading.", "token/slot-name");
-// The slot tokens fixed-lines.md and the card frame define are allowed; the layer and category names are not.
-has("## Props and nails\nnails — Short bare nails with a faint gloss.", "token/slot-name");
-has("## Outfit\noutfit — A white shirt.", "token/slot-name");
-has("## Scene\nbackground — A narrow shopping street.", "token/slot-name");
-has("## Light\nlighting — Midday sun from behind.", "token/slot-name");
-for (const token of ["face clear", "catchlight", "palette", "vertical frame", "horizontal frame", "focus", "hands"]) {
-  lacks(`## Camera\n${token} — A line that fills the ${token} slot.`, "token/slot-name");
+// legwear: a Legwear stockings or tights line next to an Outfit garment that covers the whole leg, read through the lexicon rows so any language's head counts.
+const legs = (outfit, legwear, outfitSentence = "A garment.", legSentence = "A line.") => `A natural-light photograph of a woman on a street.\n\n## Outfit\n${outfit} — ${outfitSentence}\n\n## Legwear\n${legwear} — ${legSentence}`;
+has(legs("와이드 팬츠", "스타킹"), "coherence/legwear");
+has(legs("阔腿裤", "黑丝"), "coherence/legwear");
+has(legs("デニムパンツ", "黒タイツ"), "coherence/legwear");
+has(legs("Pantalon à pinces", "Collant noir"), "coherence/legwear");
+has(legs("ロングスカート", "ストッキング"), "coherence/legwear");
+// A head with no row is read as English: trousers or tights as a word, not shorts, knee socks or bare legs.
+has(legs("linen trousers", "black tights"), "coherence/legwear");
+lacks(legs("linen shorts", "black tights"), "coherence/legwear");
+lacks(legs("linen trousers", "knee socks"), "coherence/legwear");
+lacks(legs("linen trousers", "bare legs"), "coherence/legwear");
+// A short skirt, knee socks, ankle socks and bare legs leave nothing to hide; a slit, rips or a cropped hem in the Outfit sentence, or a rip in the Legwear sentence, show the leg on purpose.
+lacks(legs("플리츠 스커트", "스타킹"), "coherence/legwear");
+lacks(legs("와이드 팬츠", "니삭스"), "coherence/legwear");
+lacks(legs("와이드 팬츠", "素足"), "coherence/legwear");
+lacks(legs("와이드 팬츠", "스타킹", "Wide trousers with a long slit up each leg."), "coherence/legwear");
+lacks(legs("와이드 팬츠", "스타킹", "Wide trousers, cropped at the shin."), "coherence/legwear");
+lacks(legs("와이드 팬츠", "데미지 스타킹", "Wide trousers.", "Tights with torn holes."), "coherence/legwear");
+lacks("A photograph.\n\n## Legwear\n스타킹 — Fine sheer stockings.", "coherence/legwear");
+lacks("A photograph.\n\n## Outfit\n와이드 팬츠 — Wide trousers.", "coherence/legwear");
+
+// body-dir: an Expression row that turns the body away beside a Pose row that faces the camera square on (or the reverse); the rows that agree, or no body tag, pass.
+const dir = (expression, pose) => `A natural-light photograph of a woman on a terrace.\n\n## Expression\n${expression} — A look.\n\n## Pose\n${pose} — A pose.`;
+has(dir("뒤돌아 꽂히는 시선", "前置自拍"), "coherence/body-dir");
+has(dir("Turnaround Laugh", "気をつけ"), "coherence/body-dir");
+has(dir("Retrait hautain", "Skateboard Stand"), "coherence/body-dir");
+lacks(dir("뒤돌아 꽂히는 시선", "뒤돌아보기"), "coherence/body-dir");
+lacks(dir("담담한 눈빛", "前置自拍"), "coherence/body-dir");
+lacks(dir("뒤돌아 꽂히는 시선", "seated turn"), "coherence/body-dir");
+lacks("A photograph.\n\n## Pose\n前置自拍 — A front-facing selfie.\n\n## Pose and hands\n뒤돌아보기 — Body faces away.", "coherence/body-dir");
+
+// pose-place: a Pose row that needs a place (car, rail, stair, bed, sofa, water's edge, road, elevator) when nothing outside the Pose layer shows it.
+// The place is shown by an English word in the opener or any other layer, or by the English description of any line-head row outside Pose (택시 뒷좌석 describes a taxi).
+const place = (pose, scene, opener = "A natural-light photograph of a woman.") => `${opener}\n\n## Pose\n${pose} — A pose.\n\n## Scene\n${scene}`;
+has(place("Car Window Lean", "terrace — A pale stone terrace."), "coherence/pose-place");
+has(place("계단에 앉기", "plain — A plain grey wall."), "coherence/pose-place");
+has(place("趴栏杆", "plain — A plain grey wall."), "coherence/pose-place");
+has(place("누워서 폰 보기", "plain — A plain grey wall."), "coherence/pose-place");
+has(place("Un genou sur le canapé", "plain — A plain grey wall."), "coherence/pose-place");
+has(place("Wet Sand Stretch", "plain — A plain grey wall."), "coherence/pose-place");
+has(place("Highway Stance", "plain — A plain grey wall."), "coherence/pose-place");
+has(place("엘리베이터 셀카", "plain — A plain grey wall."), "coherence/pose-place");
+lacks(place("Car Window Lean", "택시 뒷좌석 — The city moves past."), "coherence/pose-place");
+lacks(place("Car Window Lean", "lot — A lot with a parked hatchback."), "coherence/pose-place");
+lacks(place("Car Window Lean", "plain — A plain grey wall.", "A photograph of a woman beside a car."), "coherence/pose-place");
+lacks(place("계단에 앉기", "石板街 — A narrow lane."), "coherence/pose-place");
+lacks(place("누워서 폰 보기", "원룸 — A compact room."), "coherence/pose-place");
+lacks(place("seated turn", "plain — A plain grey wall."), "coherence/pose-place");
+// A head's tags count only when every row of that name in that layer has them; a layer named Posture is the Pose layer too.
+has(dir("뒤돌아 꽂히는 시선", "前置自拍").replace("## Pose", "## Posture"), "coherence/body-dir");
+
+// Every tag these checks read names something the checks know: each tagged row, written alone, fires its code. A name that another row of the same layer also carries
+// as an alias (백심 스타킹) is read as no tag at all (every row of a head must have it), so those rows are skipped here.
+const key = (text) => text.normalize("NFKC").toLowerCase().replace(/[\s\-\u00b7\u30fb]+/gu, "");
+const taggedRows = (slug, tag) => {
+  const rows = loadAll().find((layer) => layer.slug === slug).rows;
+  return rows.filter((row) => row.tags.includes(tag) && !rows.some((other) => other !== row && [other.token, ...other.aliases].some((name) => key(name) === key(row.token))));
+};
+const fires = (text, code) => checkText(text, { profile: "native", surface: "s3", engine: "gpt-image" }).warnings.some((item) => item.code === code);
+const kinds = loadAll().find((layer) => layer.slug === "pose").rows.flatMap((row) => row.tags.filter((tag) => tag.startsWith("장소:")));
+assert.ok(kinds.length > 40 && new Set(kinds).size === 8, "eight place kinds in use");
+for (const kind of new Set(kinds)) {
+  for (const row of taggedRows("pose", kind)) assert.ok(fires(place(row.token, "plain — A plain grey wall."), "coherence/pose-place"), `pose-place: ${row.token} ${kind}`);
+}
+for (const row of taggedRows("outfit", "긴 기장")) assert.ok(fires(legs(row.token, "ストッキング"), "coherence/legwear"), `legwear Outfit row: ${row.token}`);
+for (const row of taggedRows("legwear", "스타킹류")) assert.ok(fires(legs("와이드 팬츠", row.token), "coherence/legwear"), `legwear Legwear row: ${row.token}`);
+for (const row of taggedRows("expression", "몸:등")) assert.ok(fires(dir(row.token, "前置自拍"), "coherence/body-dir"), `body-dir Expression row: ${row.token}`);
+for (const row of taggedRows("pose", "몸:정면")) assert.ok(fires(dir("뒤돌아 꽂히는 시선", row.token), "coherence/body-dir"), `body-dir Pose row: ${row.token}`);
+for (const [slug, layer] of [["light", "Light"], ["scene", "Scene"]]) {
+  for (const row of taggedRows(slug, "밤 한정")) assert.ok(fires(`A photograph.\n\n## ${layer}\n${row.token} — A line.\n\n## Light\nHarsh Midday Sun — Some light.`, "coherence/day-night"), `day-night night row: ${slug} ${row.token}`);
+  for (const row of taggedRows(slug, "한낮 한정")) assert.ok(fires(`A photograph.\n\n## ${layer}\n${row.token} — A line.\n\n## Scene\n夜市 — A line.`, "coherence/day-night"), `day-night midday row: ${slug} ${row.token}`);
 }
 
-console.log("Coherence matching: occlusion, focal, identity-skin, ratio-dup, decimal, slot-dup, day-night and token/slot-name cases pass; image output NOT RUN.");
+console.log("Coherence matching: occlusion, focal, identity-skin, ratio-dup, decimal, slot-dup, day-night, legwear, body-dir, pose-place and token/slot-name cases pass; image output NOT RUN.");
