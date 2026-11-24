@@ -57,10 +57,10 @@ class LintInvariantSmokeTests(unittest.TestCase):
 
         brief = "references/image/image-brief.md"
         errors = []
-        lint.check_example_lengths(brief, f"```text\n{'가' * 4000}\n```", errors)
+        lint.check_example_lengths(brief, f"```text\n{'가' * 3333}\n```", errors)
         self.assertEqual([], errors)
-        lint.check_example_lengths(brief, f"```text\n{'가' * 10001}\n```", errors)
-        self.assertTrue(any("10001 chars (> 10000)" in error for error in errors), errors)
+        lint.check_example_lengths(brief, f"```text\n{'가' * 3334}\n```", errors)
+        self.assertTrue(any("10002 bytes (> 10000)" in error for error in errors), errors)
 
     def test_i17_rejects_s2_runtime_value_redefinition(self):
         for sentence in (

@@ -61,12 +61,25 @@ assert.match(doc, /\(2026-08-02 확인\)/u);
 
 // Reader bundles carry the file; the two paths named in SKILL.md exist.
 for (const name of ["image-prompt-conversion", "image-other-engine"]) {
-  assert.ok(BUNDLES[name]?.includes("references/image/engine-levers.md"), `${name} bundle`);
+  assert.ok(BUNDLES[name]?.some((target) => target.startsWith("references/image/engine-levers.md")), `${name} bundle`);
 }
 for (const name of ["image-other-engine", "image-prompt-conversion"]) {
   const result = spawnSync(process.execPath, ["scripts/read_refs.mjs", "--bundle", name], { cwd: root, encoding: "utf8", maxBuffer: 4 * 1024 * 1024 });
   assert.equal(result.status, 0, result.stderr);
   assert.ok(result.stdout.includes("엔진별 효과 장치"), `${name} output`);
+}
+// The bundles stop before section 8; section 4 sends the reader to one engine's example by command, and each command must run.
+for (const name of ["image-other-engine", "image-prompt-conversion"]) {
+  const out = spawnSync(process.execPath, ["scripts/read_refs.mjs", "--bundle", name], { cwd: root, encoding: "utf8", maxBuffer: 4 * 1024 * 1024 }).stdout;
+  assert.doesNotMatch(out, /^## 8\. |^### 8\.\d/mu, `${name} carries no section 8`);
+  for (const number of [3, 4, 5, 6, 7]) assert.match(out, new RegExp(`^## ${number}\\. `, "mu"), `${name} carries section ${number}`);
+}
+const pointer = section(4).slice(0, section(4).indexOf("2. **장치 붙이기.**"));
+for (const target of ["#8.N", "#8.1,8.5"]) assert.ok(pointer.includes(target), `section 4 names ${target}`);
+for (const target of ["8.1", "8.2", "8.3", "8.4", "8.1,8.5"]) {
+  const run = spawnSync(process.execPath, ["scripts/read_refs.mjs", `references/image/engine-levers.md#${target}`], { cwd: root, encoding: "utf8" });
+  assert.equal(run.status, 0, `#${target}: ${run.stderr}`);
+  assert.ok(run.stdout.includes("```text"), `#${target} prints an example block`);
 }
 assert.ok(BUNDLES["image-other-engine"].some((target) => target.startsWith("references/image/fixed-lines.md")), "other-engine bundle writes layers first");
 

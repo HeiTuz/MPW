@@ -105,8 +105,14 @@ export function listFiles(base) {
   return out.sort();
 }
 
-const PRIVATE_HOME = /\/(?:Users|home)\/(eusin)\b/u;
-const TEXT_SUFFIX = /\.(?:md|mjs|js|py|json|txt|yaml|yml)$/u;
+const HOME_PATH = /\/(?:Users|home)\/([A-Za-z0-9_.-]+)/gu;
+// 문서·테스트 예시에 실제로 나오는 자리표시자 사용자명(2026-11 payload 전수 확인)
+export const HOME_PLACEHOLDERS = new Set(["example", "operator", "help", "user", "person"]);
+const TEXT_SUFFIX = /\.(?:md|mjs|js|py|json|jsonl|tsv|csv|html|txt|yaml|yml)$/u;
+
+export function hasPrivateHome(text) {
+  return [...text.matchAll(HOME_PATH)].some((match) => !HOME_PLACEHOLDERS.has(match[1]));
+}
 
 export function validatePlugin(pluginDir, { sourceRoot = root } = {}) {
   const problems = [];
@@ -117,7 +123,7 @@ export function validatePlugin(pluginDir, { sourceRoot = root } = {}) {
   for (const file of files) {
     if (/(^|\/)(?:docs-internal|agents|__pycache__|node_modules)(\/|$)/u.test(file) || /\.pyc$/u.test(file)) problems.push("excluded path shipped: " + file);
     if (file.split("/").some((part) => part.startsWith(".") && ![".codex-plugin", ".claude-plugin"].includes(part))) problems.push("hidden path shipped: " + file);
-    if (TEXT_SUFFIX.test(file) && PRIVATE_HOME.test(fs.readFileSync(path.join(pluginDir, file), "utf8"))) problems.push("private home path shipped: " + file);
+    if (TEXT_SUFFIX.test(file) && hasPrivateHome(fs.readFileSync(path.join(pluginDir, file), "utf8"))) problems.push("private home path shipped: " + file);
   }
   const skill = fs.readFileSync(path.join(pluginDir, "skills/mpw/SKILL.md"), "utf8");
   const frontmatter = /^---\n([\s\S]*?)\n---\n/u.exec(skill);

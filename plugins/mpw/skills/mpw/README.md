@@ -17,6 +17,8 @@
 bunx --package github:HeiTuz/MPW heituzmpw
 ```
 
+이 명령은 직접 설치하지 않고 플러그인 설치 안내(`mpw@heituz`)를 출력합니다.
+
 </div>
 
 ---
@@ -176,7 +178,7 @@ bunx --package github:HeiTuz/MPW heituzmpw -- --dest /custom/skills/MPW
 
 배치 텍스트는 `node scripts/check_prompt.mjs --manifest jobs.jsonl`로 확인합니다. 각 행의 `id`와 `prompt` 또는 `full_prompt`만 읽으며 나머지 옛 메타데이터를 검증하거나 해석하지 않습니다. 실행 핸드오프 스키마 검사는 `contracts/validate.py`로 별도 수행합니다.
 
-홍보물·글자 중심 포스터의 결정 기준은 [text-structure.md](references/image/text-structure.md), 사진 결과 사전은 [photo-results.md](references/image/editorial/photo-results.md)에 있습니다. 삭제된 개별 패턴·프리셋 문서의 링크는 새 정본으로 바꿉니다. 예시는 생성 결과가 아닌 텍스트 3종이며 검사 통과가 이미지 품질을 증명하지 않습니다.
+홍보물·글자 중심 포스터의 결정 기준은 [text-structure.md](references/image/text-structure.md), 사진 결과 사전은 [photo-results.md](references/image/editorial/photo-results.md)에 있습니다. 삭제된 개별 패턴·프리셋 문서의 링크는 새 정본으로 바꿉니다. 예시는 생성 결과가 아닌 텍스트 6종이며 검사 통과가 이미지 품질을 증명하지 않습니다.
 
 ## 💬 짧게 던지는 예시
 
@@ -273,7 +275,7 @@ node scripts/export_grok_bot.mjs --out /tmp/mpw-grok-video --bundle video
 
 `--bundle <이름>`은 `read_refs.mjs`의 같은 bundle 정의를 사용합니다. 정본 커널 전체와 Grok Bot 어댑터 절, 선택한 참고 파일·절만 담고 연결 문서를 재귀 수집하지 않습니다. manifest v2에는 원본 파일 해시와 발췌별 행 범위·바이트 수·해시, 선택 목록과 링크 포함 상태를 기록합니다. 부분 파일의 링크 대상 범위는 미검증이며 Markdown 링크가 아닌 의존성까지 완전하게 나열한 목록은 아닙니다. 관련 없는 기능이나 전체 의존성 보존을 보증하지 않습니다. 필요한 자료가 없으면 추가 자료를 요청하고 그 자료에 의존하는 작업을 멈춥니다. `--bundle` 없는 기본 전체 내보내기와 manifest v1은 유지합니다.
 
-`HANDOFF.md`를 검토해 대화에 텍스트/파일로 전달하고 안전한 예제로 먼저 사용하세요. 기본 전체 내보내기는 600 KB 이상일 수 있으므로 호스트의 실제 수신·저장 상한을 확인해야 합니다. 크기는 실행 결과의 바이트 수가 정확한 값이며 호스트 수용성을 보증하지 않습니다. Markdown 링크 의존성만 포함하므로 스크립트·스키마 검사가 필요한 작업은 해당 자료와 실행 환경이 별도로 필요합니다. 필요한 본문이 없거나 잘리면 경로를 요청하고 멈추도록 명시했습니다. 플러그인·앱 등록이나 ZIP 설치를 수행하는 도구가 아닙니다. 저장·호출·발견·단일 모델 fallback과 공식 근거는 [런타임 어댑터](references/adapters.md#grok-bot-개인-스킬-전달-2026-11-14-공식-문서-확인)를 따릅니다.
+`HANDOFF.md`를 검토해 대화에 텍스트/파일로 전달하고 안전한 예제로 먼저 사용하세요. 기본 전체 내보내기는 수 MB(4.2.1 기준 약 3.6MB)일 수 있으므로 호스트의 실제 수신·저장 상한을 확인해야 합니다. 크기는 실행 결과의 바이트 수가 정확한 값이며 호스트 수용성을 보증하지 않습니다. Markdown 링크 의존성만 포함하므로 스크립트·스키마 검사가 필요한 작업은 해당 자료와 실행 환경이 별도로 필요합니다. 필요한 본문이 없거나 잘리면 경로를 요청하고 멈추도록 명시했습니다. 플러그인·앱 등록이나 ZIP 설치를 수행하는 도구가 아닙니다. 저장·호출·발견·단일 모델 fallback과 공식 근거는 [런타임 어댑터](references/adapters.md#grok-bot-개인-스킬-전달-2026-11-14-공식-문서-확인)를 따릅니다.
 
 [공식 가이드](https://x.ai/bot/guides)를 반영해 일회성 작업·지속 역할·스킬·루틴·공유 템플릿의 작성 표면을 구분합니다. 최신 UI와 가이드 사례의 적용 경계, 코딩 실행자에게 요구할 증거, 템플릿 의존성·공개 전 점검은 같은 어댑터 절에서 관리하며 모든 `--bundle` 전달문에도 포함합니다. 아래 추가 사례는 아직 실행하지 않은 수동 검증 항목입니다.
 

@@ -1,6 +1,6 @@
 {
   "name": "heituzmpw",
-  "version": "4.2.1",
+  "version": "4.3.0",
   "description": "MPW prompt-writing skill: plugin build, release tooling, and skill payload installer.",
   "license": "MIT",
   "type": "module",
@@ -39,13 +39,12 @@
   ],
   "scripts": {
     "lint": "python3 scripts/lint.py",
-    "test": "python3 scripts/lint.py && node scripts/run_tests.mjs",
+    "test": "node scripts/run_tests.mjs",
     "check:installs": "node scripts/check_install_parity.mjs",
     "test:apparel": "python3 scripts/test_compile_apparel_handoff.py",
     "test:contracts": "python3 scripts/test_contracts.py",
     "test:garden": "python3 scripts/test_compile_garden_recipe.py",
     "test:handoff": "python3 scripts/test_compile_image_handoff.py",
-    "test:promo": "python3 scripts/test_promo_contract.py",
     "smoke:install": "node scripts/install.mjs --dest /tmp/MPW-install-smoke --force --quiet",
     "build:plugin": "node scripts/build_plugin.mjs",
     "release:plugin": "node scripts/release_plugin.mjs"

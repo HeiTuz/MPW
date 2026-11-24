@@ -61,7 +61,7 @@ export const BUNDLES = {
   // §4는 '룩 카드' 하위 절(세트·쌍·여러 장 규칙)을 빼고 읽는다. 추출의 카드 절차는 §12.0이 자족하게 갖고, 카드 목록은 색인 파일 대신 read_look.mjs --list로 필요할 때만 읽는다.
   "gpt-image-extract": ["references/image/surfaces.md#0", "references/image/image-brief.md#1,2,3,사용자가 준 것~토큰 찾기,비워 둔 층~문장 쓰는 법,5,6,9,12", FIXED_LINES_EXTRACT, LEXICON_INDEX],
   // 영상 생성.
-  video: ["references/image/surfaces.md#0", "references/image/lanes.md#영상 공통 규칙,이미지 슬롯 기본값"],
+  video: ["references/image/surfaces.md#0", "references/image/lanes.md#영상 공통 규칙,이미지 슬롯 기본값", "references/image/model-routing.md#6"],
   // 실행 작업·자동화 지시.
   delegation: ["references/templates/delegation.md"],
   // 팀 작업 지시: 위임 계약 + TEAM 골격 + 역할·권한 라우팅.
@@ -79,9 +79,9 @@ export const BUNDLES = {
   // 텍스트 모델 적응·변환. 색인이 가리키는 공급자의 날짜 절을 덧붙인다.
   "text-model-adapt": ["references/model-playbooks.md#공통 적응 규칙,공급자 색인"],
   // 이미지·영상 프롬프트의 엔진 간 변환. §6 색인이 가리키는 엔진 어댑터 절을 덧붙인다.
-  "image-prompt-conversion": ["references/image/prompt-conversion.md", "references/image/engine-levers.md", "references/image/model-routing.md#6"],
-  // 다른 엔진(Seedream·Nano Banana·Midjourney·Soul)을 지정한 새 이미지. 층 문안은 gpt-image-new 묶음과 같은 규칙으로 먼저 쓰고 engine-levers.md로 그 엔진에 편다. 그 엔진 어댑터는 묶음에 실린 model-routing §6 색인이 가리키는 문서로 덧붙인다.
-  "image-other-engine": ["references/image/surfaces.md#0", "references/image/image-brief.md#1,2,3,4,5,6,9,11", FIXED_LINES, LEXICON_INDEX, "references/image/engine-levers.md", "references/image/model-routing.md#6"],
+  "image-prompt-conversion": ["references/image/prompt-conversion.md", "references/image/engine-levers.md#엔진별 효과 장치: 층 문안을 엔진에 맞게 펴는 표~7", "references/image/model-routing.md#6"],
+  // 다른 엔진(Seedream·Nano Banana·Midjourney·Soul)을 지정한 새 이미지. 층 문안은 gpt-image-new 묶음과 같은 규칙으로 먼저 쓰고 engine-levers.md §3~§7로 그 엔진에 편다(§8 본보기는 §4가 가리키는 대로 대상 엔진 하나만 따로 읽는다). 그 엔진 어댑터는 묶음에 실린 model-routing §6 색인이 가리키는 문서로 덧붙인다.
+  "image-other-engine": ["references/image/surfaces.md#0", "references/image/image-brief.md#1,2,3,4,5,6,9,11", FIXED_LINES, LEXICON_INDEX, "references/image/engine-levers.md#엔진별 효과 장치: 층 문안을 엔진에 맞게 펴는 표~7", "references/image/model-routing.md#6"],
 };
 
 export function parseHeadings(text) {

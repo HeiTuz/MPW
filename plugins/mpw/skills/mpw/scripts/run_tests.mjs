@@ -11,7 +11,8 @@ function listed(prefix, suffix) {
   return fs.readdirSync(scriptsDir).filter((name) => name.startsWith(prefix) && name.endsWith(suffix)).sort();
 }
 
-const steps = [];
+// lint runs as a step so its failure is accumulated instead of short-circuiting the suite.
+const steps = [{ name: "lint.py", command: "python3", args: [path.join("scripts", "lint.py")] }];
 for (const name of listed("test_", ".py")) {
   steps.push({ name, command: "python3", args: [path.join("scripts", name)] });
 }

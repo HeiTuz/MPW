@@ -42,7 +42,9 @@ assert.doesNotMatch(route('delegation'), /GPT Image|팩트체크 축/);
 // gpt-image-edit lowered 21300 -> 20800 (step 9: 20300 measured) after the duplicated rules in sections 1, 2, 7 and 9 and in surfaces.md section 0 were cut to pointers.
 // gpt-image-edit raised 20800 -> 21200 (mix-language fixes: 21139 measured) for the culture-only rule, the uncounted line heads and the Expression/Style phrase place in image-brief section 2.1.
 // gpt-image-edit lowered 21200 -> 21000 (mix-language polish: 20602 measured) after the 2.1 table row and sentences that repeated rule 2 and 9-5 were cut.
-const ceilings = { extraction: 3000, batch: 1500, research: 7500, delegation: 4000, 'gpt-image-edit': 21000 };
+// gpt-image-edit raised 21000 -> 21300 (mix quantity: 21280 measured) for the shrink order in section 1, the compression rule 2.1-4 and the check in 9-10.
+// gpt-image-edit raised 21300 -> 21400 (review fix: 21340 measured) for the tie rule and the narrower English-kept list in the compression rule 2.1-4.
+const ceilings = { extraction: 3000, batch: 1500, research: 7500, delegation: 4000, 'gpt-image-edit': 21400 };
 const measurements = { kernel: { bytes: kernelBytes, codepoints: [...kernel].length } };
 for (const [name, ceiling] of Object.entries(ceilings)) {
   const text = route(name);

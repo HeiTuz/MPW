@@ -73,7 +73,7 @@ try {
   const long = "나".repeat(2100);
   const assumed = await cli("default channel", "나".repeat(10100), [], ["length/channel"]);
   assert.equal(assumed.length.binding, "channel");
-  assert.deepEqual(assumed.length.layers[0], { kind: "channel", limit: 10000, assumed: true });
+  assert.deepEqual(assumed.length.layers[0], { kind: "channel", limit: 10000, unit: "bytes", assumed: true });
   const contract = await cli("machine handoff", long, ["--surface", "s1"], ["length/contract"]);
   assert.equal(contract.length.binding, "contract");
   assert.ok(!contract.length.layers.some((layer) => layer.kind === "channel"));
@@ -136,6 +136,7 @@ try {
   await cli("pictograph is content", "🌿");
   const measured = await cli("unicode and whitespace retained", "\uFEFF 🪴\n", ["--channel-limit", "3"]);
   assert.equal(measured.length.codepoints, 3);
+  assert.equal(measured.length.bytes, 6);
   assert.equal(unit("remove one BOM only", "\uFEFF\uFEFF木").length.codepoints, 2);
   await cli("length precedes empty", " ".repeat(10001), [], ["length/channel", "input/empty"]);
 
@@ -158,6 +159,9 @@ try {
   await cli("engine one over", "a".repeat(32001), ["--surface", "s2"], ["length/engine"]);
   await cli("default boundary", "a".repeat(10000), []);
   await cli("default one over", "a".repeat(10001), [], ["length/channel"]);
+  await cli("default byte boundary", "가".repeat(3333), []);
+  await cli("default byte one over", "가".repeat(3334), [], ["length/channel"]);
+  await cli("explicit channel limit counts codepoints", "가".repeat(10), ["--channel-limit", "10"]);
   await cli("channel exact boundary", "a".repeat(10), ["--channel-limit", "10"]);
   await cli("channel one over", "a".repeat(11), ["--channel-limit", "10"], ["length/channel"]);
   await cli("unbounded still engine gated", "a".repeat(32001), ["--channel", "unbounded"], ["length/engine"]);

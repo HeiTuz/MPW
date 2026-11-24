@@ -214,8 +214,14 @@ for (const [layer, slug] of Object.entries(LAYER_FILES)) {
 // sentence-word columns) were cut (new 87038, portrait 100543, edit 20602, extract 98507 measured, ceilings about 2% above).
 assert.ok(sizes['gpt-image-new'].utf8_bytes <= 88800, `gpt-image-new is ${sizes['gpt-image-new'].utf8_bytes} bytes`);
 assert.ok(sizes['gpt-image-portrait'].utf8_bytes <= 102600, `gpt-image-portrait is ${sizes['gpt-image-portrait'].utf8_bytes} bytes`);
-assert.ok(sizes['gpt-image-edit'].utf8_bytes <= 21000, `gpt-image-edit is ${sizes['gpt-image-edit'].utf8_bytes} bytes`);
-assert.ok(sizes['gpt-image-extract'].utf8_bytes <= 100500, `gpt-image-extract is ${sizes['gpt-image-extract'].utf8_bytes} bytes`);
+// Raised (mix quantity): section 1 and 2.1 rule 4 now say the shrink order and the original-language compression, and 9-10 checks it (edit 21280, extract 101008 measured; ceilings just above, the count cap they replace is gone).
+assert.ok(sizes['gpt-image-edit'].utf8_bytes <= 21400, `gpt-image-edit is ${sizes['gpt-image-edit'].utf8_bytes} bytes`);
+assert.ok(sizes['gpt-image-extract'].utf8_bytes <= 101100, `gpt-image-extract is ${sizes['gpt-image-extract'].utf8_bytes} bytes`);
+// Engine-levers section 8 (one worked example per engine) is read for the target engine only, so the two engine bundles stay without it (other-engine 118005, conversion 43779 measured, ceilings about 2% above).
+for (const [name, ceiling] of [['image-other-engine', 120400], ['image-prompt-conversion', 44700]]) {
+  const bytes = Buffer.byteLength(readTargets(BUNDLES[name]).text);
+  assert.ok(bytes <= ceiling, `${name} is ${bytes} bytes`);
+}
 
 const scenarios = JSON.parse(read('scripts/fixtures/behavioral/image-planning.json')).cases;
 assert.deepEqual(scenarios.map(c => c.id), [

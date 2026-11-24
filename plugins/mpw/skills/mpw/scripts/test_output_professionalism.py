@@ -75,8 +75,9 @@ class OutputProfessionalismTest(unittest.TestCase):
             prompts = expected.items() if entry_id == "image-video" else (("", expected),)
             for kind, prompt in prompts:
                 # The image prompt is a layered ChatGPT-web paste block (10,000); the rest stay at 2000.
+                size, unit = (len(prompt.encode("utf-8")), "bytes") if kind == "image" else (len(prompt), "code points")
                 limit = 10000 if kind == "image" else 2000
-                self.assertLessEqual(len(prompt), limit, f"{entry_id} {kind} exceeds {limit} code points")
+                self.assertLessEqual(size, limit, f"{entry_id} {kind} exceeds {limit} {unit}")
 
     def test_non_image_expected_prompts_have_no_image_lane_terms(self):
         for entry_id, payload in self.entries:
