@@ -18,8 +18,8 @@
 | Optics | [lexicon/optics.md](lexicon/optics.md) | 515 | 37 | 54 | 195 | 184 | 45 |
 | Light | [lexicon/light.md](lexicon/light.md) | 323 | 58 | 79 | 55 | 86 | 45 |
 | Pose | [lexicon/pose.md](lexicon/pose.md) | 515 | 68 | 149 | 85 | 121 | 92 |
-| Outfit | [lexicon/outfit.md](lexicon/outfit.md) | 665 | 144 | 120 | 174 | 115 | 112 |
-| Legwear | [lexicon/legwear.md](lexicon/legwear.md) | 272 | 44 | 58 | 65 | 70 | 35 |
+| Outfit | [lexicon/outfit.md](lexicon/outfit.md) | 668 | 144 | 120 | 177 | 115 | 112 |
+| Legwear | [lexicon/legwear.md](lexicon/legwear.md) | 273 | 44 | 58 | 66 | 70 | 35 |
 | Style | [lexicon/style.md](lexicon/style.md) | 662 | 126 | 64 | 140 | 195 | 137 |
 | Hair and makeup | [lexicon/hair-makeup.md](lexicon/hair-makeup.md) | 527 | 104 | 127 | 113 | 113 | 70 |
 | Expression | [lexicon/expression.md](lexicon/expression.md) | 377 | 92 | 72 | 78 | 61 | 74 |
