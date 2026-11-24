@@ -31,7 +31,8 @@ assert.match(evidence.body, /원문 프롬프트·이미지 모음은 재배포�
 
 const sizes = {};
 // §10 is read by part: 10.0 (how to read the examples) with 10.1 (person examples, portrait bundle) or 10.2 (no-person examples, new bundles).
-const generation = [s1, s2, s3, s4, s5, s6, s7, s9];
+// §4 is read by subsection: the '룩 카드' subsection is left out of every bundle and read only when find_tokens.mjs prints a Look card block (it names the command).
+const generation = [s1, s2, s3, s5, s6, s7, s9];
 const [s10read, s10person, s10scene] = ['10.0', '10.1', '10.2'].map(sec);
 const s4cards = sec('룩 카드');
 const s4parts = ['사용자가 준 것', '토큰 찾기', '비워 둔 층', '쓰기 전에 슬롯 표를 정한다', '문장 쓰는 법'].map(sec);
@@ -63,14 +64,30 @@ for (const [name, targets] of Object.entries(BUNDLES)) {
   for (const part of [s10read, s10person, s10scene]) {
     assert.equal(result.text.includes(part), (expectedExamples[name] ?? []).includes(part), `${name}: image-brief §10 part routing`);
   }
-  // The extraction bundle reads §4 by subsection without '룩 카드' (§12.0 carries its own card steps); the other §4 readers get it whole.
-  if (expectedSections[name].includes(s4) || name === 'gpt-image-extract') {
+  // Every generation bundle reads §4 by subsection without '룩 카드' (find_tokens.mjs prints the command that reads it; §12.0 carries the extraction card steps).
+  if (!name.startsWith('gpt-image-edit')) {
     for (const part of s4parts) assert.ok(result.text.includes(part), `${name}: image-brief §4 subsection routing`);
-    assert.equal(result.text.includes(s4cards), name !== 'gpt-image-extract', `${name}: image-brief §4 '룩 카드' routing`);
+    assert.equal(result.text.includes(s4cards), false, `${name}: image-brief §4 '룩 카드' routing`);
   }
   assert.ok(!result.text.includes(legacyPlanning), `${name}: §3.2.2 body must not be bundled`);
   assert.ok(!result.text.includes(legacyNoise), `${name}: §3.2.4 body must not be bundled`);
   sizes[name] = { utf8_bytes: Buffer.byteLength(result.text), codepoints: [...result.text].length };
+}
+
+// The pointer find_tokens.mjs prints reads exactly the '룩 카드' subsection; the other-engine bundle leaves it out too; every lexicon reader keeps the 층별 파일 table and none the 문화권 룩 묶음 subsection.
+{
+  const card = readTargets(['references/image/image-brief.md#룩 카드']);
+  assert.equal(card.error, undefined);
+  assert.ok(card.text.includes(s4cards) && !card.text.includes(s4parts[1]), 'the pointer reads the 룩 카드 subsection alone');
+  const lexicon = read('references/image/layer-lexicon.md');
+  const table = extractSection(lexicon, '층별 파일').body;
+  const cultures = extractSection(lexicon, '문화권 룩 묶음').body;
+  for (const name of ['gpt-image-new', 'gpt-image-new-structured', 'gpt-image-portrait', 'gpt-image-extract', 'image-other-engine']) {
+    const text = readTargets(BUNDLES[name]).text;
+    assert.ok(text.includes(table), `${name}: layer-lexicon 층별 파일 table`);
+    assert.ok(!text.includes(cultures), `${name}: layer-lexicon 문화권 룩 묶음 subsection`);
+    if (name === 'image-other-engine') assert.ok(!text.includes(s4cards), `${name}: image-brief §4 '룩 카드' routing`);
+  }
 }
 
 // Structure only (prose is not pinned): every ```text example in image-brief is a
@@ -212,13 +229,14 @@ for (const [layer, slug] of Object.entries(LAYER_FILES)) {
 // Lowered (mix-language polish): section 2.2's two wrong/right rows were folded into rules 3 and the frame sentence of 2.1, sentences that said one decision twice
 // (2.1 table and rule 2, the token search and rule 2, the slot table and rules 2-3, 9-5, 12.2) and the per-culture variants of the grain and lens lines (now the
 // sentence-word columns) were cut (new 87038, portrait 100543, edit 20602, extract 98507 measured, ceilings about 2% above).
-assert.ok(sizes['gpt-image-new'].utf8_bytes <= 88800, `gpt-image-new is ${sizes['gpt-image-new'].utf8_bytes} bytes`);
-assert.ok(sizes['gpt-image-portrait'].utf8_bytes <= 102600, `gpt-image-portrait is ${sizes['gpt-image-portrait'].utf8_bytes} bytes`);
+// Lowered (look-card read pointer, no 문화권 룩 묶음): the new and portrait bundles read image-brief §4 without '룩 카드' (5,051 chars, read only when a card is called) and layer-lexicon without 문화권 룩 묶음 (new 76142, portrait 89635, extract 99415, other-engine 106287 measured, ceilings about 2% above).
+assert.ok(sizes['gpt-image-new'].utf8_bytes <= 77700, `gpt-image-new is ${sizes['gpt-image-new'].utf8_bytes} bytes`);
+assert.ok(sizes['gpt-image-portrait'].utf8_bytes <= 91500, `gpt-image-portrait is ${sizes['gpt-image-portrait'].utf8_bytes} bytes`);
 // Raised (mix quantity): section 1 and 2.1 rule 4 now say the shrink order and the original-language compression, and 9-10 checks it (edit 21280, extract 101008 measured; ceilings just above, the count cap they replace is gone).
 assert.ok(sizes['gpt-image-edit'].utf8_bytes <= 21400, `gpt-image-edit is ${sizes['gpt-image-edit'].utf8_bytes} bytes`);
-assert.ok(sizes['gpt-image-extract'].utf8_bytes <= 101100, `gpt-image-extract is ${sizes['gpt-image-extract'].utf8_bytes} bytes`);
+assert.ok(sizes['gpt-image-extract'].utf8_bytes <= 101000, `gpt-image-extract is ${sizes['gpt-image-extract'].utf8_bytes} bytes`);
 // Engine-levers section 8 (one worked example per engine) is read for the target engine only, so the two engine bundles stay without it (other-engine 118005, conversion 43779 measured, ceilings about 2% above).
-for (const [name, ceiling] of [['image-other-engine', 120400], ['image-prompt-conversion', 44700]]) {
+for (const [name, ceiling] of [['image-other-engine', 108400], ['image-prompt-conversion', 44700]]) {
   const bytes = Buffer.byteLength(readTargets(BUNDLES[name]).text);
   assert.ok(bytes <= ceiling, `${name} is ${bytes} bytes`);
 }
