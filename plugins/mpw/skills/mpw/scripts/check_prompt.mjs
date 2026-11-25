@@ -179,20 +179,26 @@ export function parseFlags(args) {
   return { options, errors };
 }
 
+// Writing caps the user set for an engine, in UTF-8 bytes (surfaces.md §0-1). Neither is a published engine limit, so the layer is `assumed`.
+const ENGINE_BYTE_CAPS = { midjourney: 1500, soul: 2000 };
+
 function measure(text, result, options) {
   const layers = [];
   if (result.surface === "s1") layers.push({ kind: "contract", limit: 2000, unit: "codepoints", assumed: false });
   if (options.channelLimit !== undefined) {
-    layers.push({ kind: "channel", limit: options.channelLimit, unit: "codepoints", assumed: false });
+    layers.push({ kind: "channel", limit: options.channelLimit, unit: "bytes", assumed: false });
   } else if (options.channel === "bounded") {
-    layers.push({ kind: "channel", limit: 2000, unit: "codepoints", assumed: false });
+    layers.push({ kind: "channel", limit: 2000, unit: "bytes", assumed: false });
   } else if (options.channel === undefined && result.surface === "s3") {
     // Assumed default paste cap in UTF-8 bytes (surfaces.md §0-1). It applies to every S3 prompt (image, video, text), not only images.
     layers.push({ kind: "channel", limit: 10000, unit: "bytes", assumed: true });
   }
+  // gpt-image's 32,000 is the official figure and the official docs count characters, so it stays in codepoints.
   if (result.engine === "gpt-image") layers.push({ kind: "engine", limit: 32000, unit: "codepoints", assumed: false });
-  const binding = layers.reduce((best, layer) => best === null || BigInt(layer.limit) < BigInt(best.limit) ? layer : best, null);
-  // Raw limits compare across units because the one byte layer is the default channel, which never meets the contract layer, and bytes >= codepoints.
+  else if (Object.hasOwn(ENGINE_BYTE_CAPS, result.engine)) layers.push({ kind: "engine", limit: ENGINE_BYTE_CAPS[result.engine], unit: "bytes", assumed: true });
+  // The narrowest limit binds. At the same number a byte limit is narrower than a codepoint limit, because bytes >= codepoints.
+  const narrower = (layer, best) => BigInt(layer.limit) < BigInt(best.limit) || (BigInt(layer.limit) === BigInt(best.limit) && layer.unit === "bytes" && best.unit !== "bytes");
+  const binding = layers.reduce((best, layer) => best === null || narrower(layer, best) ? layer : best, null);
   const codepoints = Array.from(text).length;
   const bytes = Buffer.byteLength(text);
   result.length = { codepoints, bytes, layers, binding: binding?.kind ?? null };
@@ -200,14 +206,19 @@ function measure(text, result, options) {
     emit(result, CODE_REGISTRY.ungated, "No numeric length layer applies; manage signal density as described in surfaces.md §0-1.");
     return;
   }
+  const sizeOf = (layer) => layer.unit === "bytes" ? bytes : codepoints;
+  const exceeds = (layer) => sizeOf(layer) > BigInt(layer.limit);
+  // bytes >= codepoints, so a byte limit at or under another layer's limit has that layer passed already; a codepoint limit says nothing about bytes.
+  const covers = (a, b) => BigInt(a.limit) <= BigInt(b.limit) && (a.unit === b.unit || a.unit === "bytes");
   const names = { contract: "기계 계약", channel: "전달 채널", engine: "타깃 엔진" };
   for (const layer of layers) {
-    const size = layer.unit === "bytes" ? bytes : codepoints;
-    if (size <= BigInt(layer.limit) || (layer !== binding && layer.kind !== "contract")) continue;
-    const assumption = layer.assumed ? " 채널 미지정 — 보수적 가정값." : "";
+    if (!exceeds(layer) || (layer !== binding && layer.kind !== "contract" && exceeds(binding) && covers(binding, layer))) continue;
+    const assumption = !layer.assumed ? "" : layer.kind === "engine" ? " 사용자 지정 작성 상한 — 엔진의 공식 수치 아님." : " 채널 미지정 — 보수적 가정값.";
     emit(result, CODE_REGISTRY[layer.kind],
-      `${names[layer.kind]}: ${size} ${layer.unit} exceeds ${layer.limit}; surface=${result.surface}, engine=${result.engine}.${assumption}`,
-      layer.assumed ? { hint: "Shrink as image-brief.md §1 says (original-language words: node scripts/read_refs.mjs \"references/image/fixed-lines.md#압축 낱말\"), or use --channel unbounded for an unlimited channel, or --channel-limit for its actual limit in codepoints." } : {});
+      `${names[layer.kind]}: ${sizeOf(layer)} ${layer.unit} exceeds ${layer.limit}; surface=${result.surface}, engine=${result.engine}.${assumption}`,
+      !layer.assumed ? {} : layer.kind === "engine"
+        ? { hint: "Shrink as image-brief.md §1 says (original-language words: node scripts/read_refs.mjs \"references/image/fixed-lines.md#압축 낱말\"). This cap is a user-designated writing limit, not a number the engine publishes (surfaces.md §0-1)." }
+        : { hint: "Shrink as image-brief.md §1 says (original-language words: node scripts/read_refs.mjs \"references/image/fixed-lines.md#압축 낱말\"), or use --channel unbounded for an unlimited channel, or --channel-limit for its actual limit in bytes." });
   }
 }
 
@@ -312,10 +323,10 @@ function evidence(result, entry, found, message, hint) {
 
 function inspectSyntax(result, instruction) {
   const leading = /^\[([^\]\r\n]*)\]/u.exec(instruction.trim());
-  if (leading && Array.from(leading[0]).length <= 80 && /\d+\s*:\s*\d+|\d+\s*[x×]\s*\d+|\b(?:size|ratio)\b/iu.test(leading[1])) {
+  if (leading && Array.from(leading[0]).length <= 80 && /\d+\s*[:：]\s*\d+|\d+\s*[x×]\s*\d+|\b(?:size|ratio)\b/iu.test(leading[1])) {
     emit(result, CODE_REGISTRY.leadingMeta, "Leading brackets contain execution size or ratio metadata.", { hint: "Put size and ratio in settings outside the prompt body." });
   }
-  evidence(result, CODE_REGISTRY.placeholder, snippets(/\[[A-Z_]{3,}\]|\{\{\s*[A-Za-z_][A-Za-z_0-9]*\s*\}\}/gu, instruction),
+  evidence(result, CODE_REGISTRY.placeholder, snippets(/\[[A-Z_]{3,}[A-Z_0-9]*\]|\{\{\s*[A-Za-z_][A-Za-z_0-9]*\s*\}\}/gu, instruction),
     "Unresolved substitutions");
   // An integer weight counts only as SD syntax ("(cat:2)": lowercase-initial label, colon, one digit 0-3); "(Time 12:30)", "(Day:2)", "(Seed:42)" and "(fig:2)" are ordinary parentheses.
   const weights = [...instruction.matchAll(/\(([^()\r\n]+):\s*(?:\d*\.\d+)\s*\)|<([^<>\r\n]+):\s*(?:\d*\.\d+)\s*>|\((\p{Ll}[^()\r\n]*[\p{L}_-]):[0-3]\)|<(\p{Ll}[^<>\r\n]*[\p{L}_-]):[0-3]>/gu)]
@@ -332,8 +343,8 @@ function inspectSyntax(result, instruction) {
   // S3 has no evidence that the requested ratio was delivered via a UI setting.
   // Keep natural-language ratio labels there; only legacy AR tokens are suspect.
   const ratioToken = result.profile === "native" && result.surface === "s3"
-    ? /\bar\s*[:：=]?\s*\d+\s*[:：]\s*\d+\s*$/iu
-    : /(?:\b(?:ar|aspect\s+ratio)|비율)\s*[:：=]?\s*\d+\s*[:：]\s*\d+\s*$/iu;
+    ? /\bar\s*[:：=]?\s*\d+\s*[:：]\s*\d+[\s.。)\]]*$/iu
+    : /(?:\bar\s*[:：=]?\s*\d+\s*[:：]\s*\d+[\s.。)\]]*|(?:\baspect\s+ratio|비율)\s*[:：=]?\s*\d+\s*[:：]\s*\d+\s*)$/iu;
   if (ratioToken.test(instruction)) {
     emit(result, CODE_REGISTRY.ratioToken, "A ratio token ends the prompt.", { hint: "Move it to parameters, UI settings, or a separate label line; see surface-contracts.md §4." });
   }
@@ -346,6 +357,10 @@ function factualOrName(text, match) {
   if (/^\s+(?:circle|square|rectangle|triangle|sphere|cube|oval|ellipse)\b/iu.test(after) && /^perfect$/iu.test(match[0])) return true;
   return /^\p{Lu}/u.test(match[0]) && /[^.!?:;\s][ \t]+$/u.test(before) && /^(?:[ \t]+\p{Lu}[\p{L}'’-]*)*[ \t]+(?:Bakery|Cafe|Café|Studios?|Restaurant|Bar|Shop|Gallery|Salon|Hotel|Diner|Boutique|Books|Market|Kitchen)(?![\p{L}\p{N}_])/u.test(after);
 }
+
+// Praise words and their adverb and Korean inflected forms. `perfectly` stays out (perfectly centered is a fact);
+// `pretty` stays out: it is mostly an intensifier (a pretty good match, pretty soft light) and the checker cannot tell it from the adjective.
+const VAGUE_WORDS = new RegExp(`(?<![\\p{L}\\p{N}_])(?:예쁘게|멋있게|근사하게|분위기\\s+있게|느낌\\s+있게|감각적으로|트렌디하게|힙하게|퀄리티\\s+높게|완벽하게|고퀄로|아름답[게다]|아름다운|멋진|멋지[게다]|예쁜|예쁘다|훌륭(?:한|하게)|환상적(?:인|으로)|(?:gorgeous|breathtaking|amazing|stunning|beautiful|magnificent|wonderful|marvell?ous|spectacular|splendid|superb|fabulous|glorious)(?:ly)?|epic|awesome|eye-catching|perfect|lovely|incredible)(?![\\p{L}\\p{N}_])`, "giu");
 
 function inspectPhrasing(result, instruction) {
   let remaining = instruction.replace(/\bnegative\s+space\b/giu, (text) => " ".repeat(text.length));
@@ -364,17 +379,17 @@ function inspectPhrasing(result, instruction) {
     "Describe the intended background, objects and headcount, for example a plain gray background with one person.");
   if (result.profile === "assembled") {
     evidence(result, CODE_REGISTRY.negation,
-      snippets(/\b(?:never|avoid|exclude|without|no|free\s+of|devoid\s+of|don['’]t|do\s+not)\s+[\p{L}\p{N}][^,.;!?\n\r。]*/giu, remaining),
+      snippets(/\b(?:never|avoid|exclude|without|no|free\s+of|devoid\s+of|don['’]t|do\s+not|(?:must|should|shall|does|is|are)\s+not|can(?:\s+)?not|(?:can|mustn|shouldn|doesn|isn|aren)['’]t)\s+[\p{L}\p{N}][^,.;!?\n\r。]*/giu, remaining),
       "Negative instruction wording",
       "Name the concrete state that should be visible. Keep a separate preservation sentence for the original logo or brand.");
     evidence(result, CODE_REGISTRY.koNegation,
-      snippets(/[^\s,.!?;\n\r。]{0,12}(?:(?<!(?:주차|정차|출입|진입|통행|접근|촬영|흡연|추월|낚시|취식|반입))금지|하지\s*마(?:세요|라)?|하지\s*않(?:도록|게)|(?<!하|바꾸|바꿔|바뀌|건드리|지우|없애|옮기|움직이|훼손하|손대|고치|달라지)지\s*(?:마(?:세요|라|십시오)|않(?:도록|게))(?![가-힣])|없어야|없도록|빼고|제외하고)[^,.!?;\n\r。]{0,12}/gu, remaining).slice(0, 3),
+      snippets(/[^\s,.!?;\n\r。]{0,12}(?:(?<!(?:주차|정차|출입|진입|통행|접근|촬영|흡연|추월|낚시|취식|반입))금지|하지\s*(?:마(?:세요|라)?|말\s*것|말(?:고|아))|하지\s*않(?:도록|게)|(?<!하|바꾸|바꿔|바뀌|건드리|지우|없애|옮기|움직이|훼손하|손대|고치|달라지)지\s*(?:(?:마(?:세요|라|십시오)|않(?:도록|게))(?![가-힣])|말\s*것|말(?:고|아))|없어야|없도록|없게\s*(?:한|하|해|둔|두|둬|만들)|없는\s*상태로\s*(?:둔|두|둬|유지|한|하|해|만들)|빼고|제외하고)[^,.!?;\n\r。]{0,12}/gu, remaining).slice(0, 3),
       "Korean directive negation", "State the visible result positively, for example 책상 위에는 책 한 권만 놓인다.");
     const tags = snippets(/(?<![\p{L}\p{N}_])(?:masterpiece|(?:best|top|highest)\s+quality|(?:4|8|16)k|uhd|(?:ultra|hyper|extremely|insanely)[ -]+detailed|trending\s+on\s+artstation|featured\s+on\s+behance|award[ -]+winning|octane\s+render|unreal\s+engine)(?![\p{L}\p{N}_])/giu, instruction);
     evidence(result, CODE_REGISTRY.quality, tags.map((tag) => tag.toLowerCase()), "Generic quality tags");
   }
   evidence(result, CODE_REGISTRY.vague,
-    [...instruction.matchAll(/(?<![\p{L}\p{N}_])(?:예쁘게|멋있게|근사하게|분위기\s+있게|느낌\s+있게|감각적으로|트렌디하게|힙하게|퀄리티\s+높게|완벽하게|고퀄로|gorgeous|breathtaking|epic|amazing|awesome|eye-catching|stunning|beautiful|perfect)(?![\p{L}\p{N}_])/giu)].filter((match) => !factualOrName(instruction, match)).map((match) => match[0].trim()),
+    [...instruction.matchAll(VAGUE_WORDS)].filter((match) => !factualOrName(instruction, match)).map((match) => match[0].trim()),
     "Evaluative wording", "Specify the light, material or composition that creates the desired appearance.");
 }
 
@@ -417,7 +432,7 @@ function inspectNoise(result, instruction) {
     "Not a deletion order: report it to the user, and keep it if that look was requested. In new prompts name the visible detail or tone instead.");
 }
 
-const KNOWN_RATIOS = "(?:1[:：]1|2[:：]3|3[:：]2|3[:：]4|4[:：]3|4[:：]5|5[:：]4|9[:：]16|16[:：]9|9[:：]21|21[:：]9|1[:：]2|2[:：]1|1[:：]3|3[:：]1|2\\.39[:：]1|1\\.85[:：]1)";
+const KNOWN_RATIOS = "(?:1[ \\t]?[:：][ \\t]?1|2[ \\t]?[:：][ \\t]?3|3[ \\t]?[:：][ \\t]?2|3[ \\t]?[:：][ \\t]?4|4[ \\t]?[:：][ \\t]?3|4[ \\t]?[:：][ \\t]?5|5[ \\t]?[:：][ \\t]?4|9[ \\t]?[:：][ \\t]?16|16[ \\t]?[:：][ \\t]?9|9[ \\t]?[:：][ \\t]?21|21[ \\t]?[:：][ \\t]?9|1[ \\t]?[:：][ \\t]?2|2[ \\t]?[:：][ \\t]?1|1[ \\t]?[:：][ \\t]?3|3[ \\t]?[:：][ \\t]?1|2\\.39[ \\t]?[:：][ \\t]?1|1\\.85[ \\t]?[:：][ \\t]?1)";
 const SENTENCE_SPLIT = /(?<=[.?!。])\s+|\r?\n/u;
 
 function layerSections(instruction) {
@@ -436,6 +451,8 @@ function layerSections(instruction) {
   return sections;
 }
 
+// A time or a mixing ratio written like a frame ratio (3 : 4 pm, 1 : 1 sugar) is not an aspect ratio.
+const NOT_TIME_OR_MIX = "(?![ \\t]*(?:[ap]\\.?m|o['’]clock|hours?|hrs?|minutes?|mins?)(?![\\p{L}\\p{N}_]))(?![ \\t]+(?:sugar|water|milk|flour|butter|oil|vinegar|syrup|espresso|coffee|tea|rice|salt|cream|juice|resin|cement)(?![\\p{L}\\p{N}_]))";
 // Engine-independent contradictions. Heuristics only: each one is a review prompt except the decimal point.
 function inspectCoherence(result, text, instruction) {
   if (/\d。\d/u.test(text)) emit(result, CODE_REGISTRY.decimal, "A decimal point was replaced by an ideographic full stop.", { hint: "Write 7.5 and f/1.4 with an ASCII period." });
@@ -446,7 +463,7 @@ function inspectCoherence(result, text, instruction) {
   if (sentences.some((sentence) => overFace.test(sentence) && !awayFromFace.test(sentence)) && keptClear.test(instruction)) {
     emit(result, CODE_REGISTRY.occlusion, "Hair is written over the face while another line keeps the face clear.", { hint: "Keep one: turn off the face-clear line when the look needs hair across the face." });
   }
-  const mm = [...instruction.matchAll(/(?<![\p{L}\p{N}_.])(\d{1,3})\s?mm\b(?!\s+(?:film|grain|negative|stock|format|cinema|print|slide|super|photographs?|photos?|stills?|frames?|snapshots?|camera(?!\s+lens)))/giu)].map((match) => Number(match[1]));
+  const mm = [...instruction.matchAll(/(?<![\p{L}\p{N}_.])(\d{1,3})(?:\s?mm|[ -]?millimet(?:er|re)s?)\b(?!\s+(?:film|grain|negative|stock|format|cinema|print|slide|super|photographs?|photos?|stills?|frames?|snapshots?|camera(?!\s+lens)))/giu)].map((match) => Number(match[1]));
   // A bare 广角 is not here: the lens fixed line writes "no 广角 stretch", so only the lens forms count.
   const wideWord = /\b(?:ultra[- ]?wide|fish[- ]?eye|wide[- ]angle\s+(?:lens|shot|view|selfie)|wide\s+lens)\b|超广角|广角镜头|广角 lens|広角レンズ|広角 lens/iu.test(instruction);
   const noStretch = /\bno\s+(?:wide[- ]angle\s+stretch|distortion)\b|\bundistorted\b|\bdistortion[- ]free\b|无畸变|自然透视|natural perspective/iu.test(instruction);
@@ -465,7 +482,7 @@ function inspectCoherence(result, text, instruction) {
   if (keepsTone && skinColor.length) {
     emit(result, CODE_REGISTRY.identitySkin, `A skin color is written outside the identity paragraph: ${[...new Set(skinColor)].slice(0, 3).join(" | ")}`, { hint: "The natural skin color belongs in the identity condition only; a reference keeps its own tone. Makeup finish and light on the skin are fine elsewhere." });
   }
-  const ratios = instruction.match(new RegExp(`(?<![\\d:：.])${KNOWN_RATIOS}(?![\\d:：])`, "gu")) ?? [];
+  const ratios = instruction.match(new RegExp(`(?<![\\d:：.])${KNOWN_RATIOS}(?![\\d:：])${NOT_TIME_OR_MIX}`, "gu")) ?? [];
   if (ratios.length >= 2) emit(result, CODE_REGISTRY.ratioDup, `An aspect ratio is written ${ratios.length} times: ${[...new Set(ratios)].join(" | ")}`, { hint: "Write the ratio once, in the Camera layer." });
   const makeup = sections.find((section) => /^(?:Hair and makeup|Makeup)$/iu.test(section.name ?? ""));
   const lipLines = (makeup?.lines ?? []).filter((line) => /\b(?:lips?|lipstick)\b|唇|립|입술/iu.test(line));
@@ -495,7 +512,7 @@ const POSE_LIST_LINE = /^\s*(?:\d{1,2}\s*[.)]\s|\(\d{1,2}\)\s|[-*•]\s+|(?:opti
 // A posture word per stem; two different stems on either side of "or" is a list of poses ("standing or sitting"). A pose on one side only ("one hand on the rail or hip") is not.
 const POSTURE = /\b(?:stand(?:s|ing)?|sit(?:s|ting)?|seated|lean(?:s|ing)?|walk(?:s|ing)?|kneel(?:s|ing)?|crouch(?:es|ing)?|squat(?:s|ting)?|lie|lies|lying|recline[ds]?|reclining|perch(?:es|ed)?|dancing|running)\b|서\s*있|앉|기대|걷|누워/giu;
 const POSTURE_STEMS = [["stand", /^stand/], ["sit", /^(?:sit|seated)/], ["lean", /^lean/], ["walk", /^walk/], ["kneel", /^kneel/], ["crouch", /^crouch/], ["squat", /^squat/], ["lie", /^(?:lie|lying|reclin)/], ["perch", /^perch/], ["dance", /^danc/], ["run", /^runn/], ["서", /^서/], ["앉", /^앉/], ["기대", /^기대/], ["걷", /^걷/], ["누", /^누/]];
-const POSTURE_OR = /\bor\b|또는|혹은|아니면/giu;
+const POSTURE_OR = /\bor\b|또는|혹은|아니면|거나/giu;
 // A negated pair ("standing tall, not leaning or sitting", "no standing or walking blur") rules postures out, so the pose is already one.
 const NEGATION = /\b(?:not|never|no|nor|without|avoid|instead\s+of|rather\s+than)\b|않|말고|없이|아닌/iu;
 const postureStems = (text) => new Set(snippets(POSTURE, text).map((word) => POSTURE_STEMS.find(([, stem]) => stem.test(word.toLowerCase()))?.[0]));
@@ -506,6 +523,8 @@ function postureAlternatives(line) {
     if (postureStems(segment).size >= 3 && !NEGATION.test(segment)) hits.push(segment.trim().slice(0, 80));
     for (const connector of segment.matchAll(POSTURE_OR)) {
       if (NEGATION.test(segment.slice(0, connector.index))) continue;
+      // Korean puts the negator last (앉거나 기대지 않는다 rules both out).
+      if (connector[0] === "거나" && NEGATION.test(segment.slice(connector.index))) continue;
       const left = segment.slice(0, connector.index).replace(/[,;\s]+$/u, "").split(/[,;]/u).at(-1).split(/\s+/u).slice(-6).join(" ");
       const right = segment.slice(connector.index + connector[0].length).replace(/^[,;\s]+/u, "").split(/[,;]/u)[0].split(/\s+/u).slice(0, 6).join(" ");
       const [before, after] = [postureStems(left), postureStems(right)];
@@ -713,14 +732,17 @@ function fixedLinesSource(text, skip = new Set()) {
   let keep = false;
   let section = "";
   let afterRow = 2;
+  let notes = [];
   for (const line of text.split("\n")) {
     if (line.startsWith("## ")) { section = line.slice(3).trim(); keep = sections.has(section); }
     if (!keep) continue;
     if (!line.startsWith("|")) { afterRow = 0; out.push(...backticked(line, skip)); continue; }
     afterRow++;
     // A table's header and separator rows are labels; the first column is the English meaning or the culture's name.
+    // A 결과 column holds the generation result in Korean prose, not words to write.
+    if (afterRow === 1) notes = tableCells(line).flatMap((cell, index) => cell === "결과" ? [index] : []);
     if (afterRow <= 2) continue;
-    out.push(...tableCells(line).slice(1).filter((cell) => !/같다$/u.test(cell)));
+    out.push(...tableCells(line).filter((cell, index) => index > 0 && !notes.includes(index) && !/같다$/u.test(cell)));
   }
   return out.join("\n");
 }
@@ -844,9 +866,13 @@ function isListed(chunk, known, heads) {
 }
 
 const escapeRegExp = (text) => text.replace(/[.*+?^${}()|[\]\\]/gu, "\\$&");
-function aliasPattern(alias) {
+// `particles`: a Hangul alias with one particle glued on (계단은, 마당에서) is still that alias; the one-name check asks for it, the other callers keep the bare word.
+function aliasPattern(alias, particles = false) {
   const body = escapeRegExp(alias);
-  if (/\p{sc=Hangul}/u.test(alias)) return new RegExp(`(?<!\\p{sc=Hangul})${body}(?!\\p{sc=Hangul})`, "u");
+  if (/\p{sc=Hangul}/u.test(alias)) {
+    const tail = particles ? `(?:${[...KOREAN_PARTICLES].sort((a, b) => b.length - a.length).join("|")})?` : "";
+    return new RegExp(`(?<!\\p{sc=Hangul})${body}${tail}(?!\\p{sc=Hangul})`, "u");
+  }
   if (NATIVE_CHAR.test(alias)) return new RegExp(body, "u");
   return new RegExp(`(?<![\\p{L}\\p{N}])${body}(?![\\p{L}\\p{N}])`, "iu");
 }
@@ -949,7 +975,7 @@ function inspectMix(result, instruction) {
       const key = mixKey(alias);
       const latin = !NATIVE_CHAR.test(alias);
       if (key.length < 2 || (latin && alias.split(/\s+/u).length < 2 && alias.length < 7) || own.includes(key) || key.includes(own)) continue;
-      if (aliasPattern(alias).test(outside)) renamed.push(`${item.head} / ${alias}`);
+      if (aliasPattern(alias, true).test(outside)) renamed.push(`${item.head} / ${alias}`);
     }
   }
   if (renamed.length) {
@@ -1122,7 +1148,7 @@ function inspectEngine(result, instruction) {
     }
   }
   if (engine === "soul") {
-    const brands = snippets(/\b(?:kodak|portra|ektachrome|ektar|fujifilm|fuji\s+(?:superia|velvia|provia|pro)|cinestill|vision3|ilford|tri-x)\b/giu, instruction);
+    const brands = snippets(/\b(?:kodak|kodachrome|portra|ektachrome|ektar|fujifilm|fuji\s+(?:superia|velvia|provia|pro)|cinestill|vision3|ilford|tri-x|agfa|lomography)(?![a-z])/giu, instruction);
     if (brands.length) emit(result, CODE_REGISTRY.engineBrand, `Soul: film brand in the prompt (${[...new Set(brands.map((name) => name.toLowerCase()))].slice(0, 3).join(" | ")}).`, { hint: "Say the color response instead: fine grain, softly lifted blacks (soul-v2-director.md, real-run rule 3)." });
   }
 }
@@ -1180,7 +1206,7 @@ export function checkText(input, options = {}) {
     return result;
   }
   if (result.profile === "assembled" && result.engine === "midjourney") {
-    emit(result, CODE_REGISTRY.engineScope, `단어 수: ${words}. This checker does not judge Midjourney syntax; channel and machine-contract character limits still apply. See surfaces.md §0-1.`);
+    emit(result, CODE_REGISTRY.engineScope, `단어 수: ${words}. This checker does not judge Midjourney syntax; the length limits (channel, machine contract, engine writing cap) still apply. See surfaces.md §0-1.`);
     inspectCoherence(result, text, instruction);
     return result;
   }
@@ -1414,7 +1440,7 @@ export const USAGE = `usage: node scripts/check_prompt.mjs [<prompt-file> | --fi
   --profile native|assembled     native (default) is a natural-language prompt; assembled is machine-assembled handoff text
   --surface s1|s2|s3             the execution surface
   --engine gpt-image|unknown|midjourney|higgsfield|seedream|nano-banana|soul
-  --channel unbounded|bounded    --channel-limit <codepoints>  (default S3 channel: 10000 UTF-8 bytes)
+  --channel unbounded|bounded    --channel-limit <bytes>  (UTF-8 bytes; default S3 channel: 10000; bounded: 2000)
   --source <layer-prompt-file>   with --engine seedream|midjourney|soul: the GPT Image layer prompt this flattened prompt was made from; its original-language names must survive (nano-banana: accepted, not read)
   --manifest <file>              check a JSON-lines manifest instead of one prompt
   --test                         run the built-in cases (used alone)

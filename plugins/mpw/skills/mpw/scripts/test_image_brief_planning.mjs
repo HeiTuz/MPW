@@ -234,6 +234,7 @@ assert.ok(sizes['gpt-image-new'].utf8_bytes <= 77700, `gpt-image-new is ${sizes[
 assert.ok(sizes['gpt-image-portrait'].utf8_bytes <= 91500, `gpt-image-portrait is ${sizes['gpt-image-portrait'].utf8_bytes} bytes`);
 // Raised (mix quantity): section 1 and 2.1 rule 4 now say the shrink order and the original-language compression, and 9-10 checks it (edit 21280, extract 101008 measured; ceilings just above, the count cap they replace is gone).
 assert.ok(sizes['gpt-image-edit'].utf8_bytes <= 21400, `gpt-image-edit is ${sizes['gpt-image-edit'].utf8_bytes} bytes`);
+assert.ok(sizes['gpt-image-edit-structured'].utf8_bytes <= 23500, `gpt-image-edit-structured is ${sizes['gpt-image-edit-structured'].utf8_bytes} bytes`); // 23045 measured, about 2% above
 assert.ok(sizes['gpt-image-extract'].utf8_bytes <= 101000, `gpt-image-extract is ${sizes['gpt-image-extract'].utf8_bytes} bytes`);
 // Engine-levers section 8 (one worked example per engine) is read for the target engine only, so the two engine bundles stay without it (other-engine 118005, conversion 43779 measured, ceilings about 2% above).
 for (const [name, ceiling] of [['image-other-engine', 108400], ['image-prompt-conversion', 44700]]) {

@@ -8,7 +8,7 @@ import unittest
 ROOT = Path(__file__).resolve().parent.parent
 EDITORIAL = ROOT / "references" / "image" / "editorial"
 ROUTER = ROOT / "references" / "image" / "editorial-fashion.md"
-FASHION_CHAR_LIMIT = 3500
+FASHION_BYTE_LIMIT = 6125  # editorial-fashion.md measured 4075 bytes (2329 chars); the old 3500-char cap was 1.503x its chars, 4075 * 1.503 = 6125
 TOPIC_BYTE_LIMIT = 26000  # portrait-variations.md examples carry Finish, 3:4 and catchlight lines (25,314)
 
 REQUIRED_FASHION_HEADINGS = (
@@ -58,7 +58,7 @@ class EditorialStructureTests(unittest.TestCase):
     def test_fashion_headings_and_size(self):
         for heading in REQUIRED_FASHION_HEADINGS:
             self.assertIn(heading, self.router_text)
-        self.assertLessEqual(len(self.router_text), FASHION_CHAR_LIMIT)
+        self.assertLessEqual(len(self.router_text.encode("utf-8")), FASHION_BYTE_LIMIT)
 
     def test_topics_are_size_bounded(self):
         for path in self.topic_files:

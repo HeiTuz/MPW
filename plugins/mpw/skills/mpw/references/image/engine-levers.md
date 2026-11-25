@@ -43,8 +43,8 @@
 | Seedream ModelArk(영어) | 한 문단 | 매체 문장, 참조 역할, 몸 비율 문장, 장소와 자세, 소품과 시선, 헤어·메이크업, 의상·레그웨어, 배경과 글자 상태, 빛, Optics, 입자, Camera, 실사 문장, 끝 문장(매체와 금지) | `size`, 출력 형식 | 위 규칙대로 영어 문장 안에 남긴다. 영어 600단어 상한은 길이 권장이고(§5 '언어') 원어를 막는 근거가 아니다. 영어 토큰과 `Black Pro-Mist` 같은 필터·렌즈 상표도 그대로 둔다 | 영어 600단어 미만. 줄이는 순서: 고정 메이크업 줄의 수식어, 배경 인물·소품의 둘째 묘사, 층별 둘째 문장. 룩을 정하는 Optics·Light의 사실과 사용자가 말한 소품은 끝까지 남긴다 |
 | Seedream 豆包·即梦 | 중문 한 문단 | 위와 같음 | UI의 비율 | 중문 토큰과 CN 칸 낱말은 문장의 말이고, KR·JP 원어도 위 규칙대로 그 글자로 남긴다(§5.1 '언어'). 장치 문구는 §5.1 | 표면 상한은 미확인 |
 | Nano Banana | 서술 문장 몇 개 | 동사 작업 문장(매체), 참조 역할, 용도 한 줄, 배경(Scene), 중간(Light), 전경 인물(Pose, Outfit, Hair and makeup, Expression, Props), 촬영 용어(Camera, Optics, 필름), 실사 | 비율, 해상도 | 짧은 원어 낱말과 한국어 표정 구절은 남길 수 있다. 근거가 있는 예외다: 권장 언어 목록 밖 언어는 결과가 떨어질 수 있다([nano-banana.md](nano-banana.md) 한계) | 용도와 배경 문장부터 줄인다 |
-| Midjourney | 짧은 서술 + 파라미터 | 매체, 피사체와 행동, 의상, 장소와 빛, 색·필름, 파라미터(`--ar` `--oref` `--no` `--raw`) | 파라미터 | 위 규칙대로 짧은 원어 이름을 구절 안에 남긴다(구절은 영어 뼈대). 한 구절이 짧아도 층마다 원어 이름을 하나 이상 남긴다. 필름 이름(`Kodak Vision3 500T`)도 남긴다 | 층마다 한 구절, 룩을 정하는 층(Optics·Light)만 두 구절. 단어 수 경계는 없다(surfaces.md §0-1) |
-| Soul 2 | 용어 스택 | 구도 관용어, 피사체, 의상, 장소, 빛 관용어, 발색 | `soul_id`, 비율 | 위 규칙대로 짧은 원어 이름을 용어 안에 남긴다(용어 스택은 영어 뼈대). 층마다 원어 이름을 하나 이상 남긴다. 필름 이름은 Soul만 뺀다(발색으로 푼다) | 금지 문장 없음 |
+| Midjourney | 짧은 서술 + 파라미터 | 매체, 피사체와 행동, 의상, 장소와 빛, 색·필름, 파라미터(`--ar` `--oref` `--no` `--raw`) | 파라미터 | 위 규칙대로 짧은 원어 이름을 구절 안에 남긴다(구절은 영어 뼈대). 한 구절이 짧아도 층마다 원어 이름을 하나 이상 남긴다. 필름 이름(`Kodak Vision3 500T`)도 남긴다 | 층마다 한 구절, 룩을 정하는 층(Optics·Light)만 두 구절. 단어 수 경계는 없고 바이트 작성 상한은 surfaces.md §0-1이 정한다 |
+| Soul 2 | 용어 스택 | 구도 관용어, 피사체, 의상, 장소, 빛 관용어, 발색 | `soul_id`, 비율 | 위 규칙대로 짧은 원어 이름을 용어 안에 남긴다(용어 스택은 영어 뼈대). 층마다 원어 이름을 하나 이상 남긴다. 필름 이름은 Soul만 뺀다(발색으로 푼다) | 금지 문장 없음. 바이트 작성 상한은 surfaces.md §0-1이 정한다 |
 
 - 요청이 "Seedream"이라고만 하면 `Seedream ModelArk(영어)` 행이 기본이다(영어 한 문단, 비율은 `size`). 가정한 표면은 블록 밖에 한 줄로 밝힌다. Seedream 5.5를 지정했을 때도 이 행을 쓴다([seedream-5-5.md](seedream-5-5.md)도 층 문안을 이 표로 펴라고 한다). 이 행이 이 레포의 Seedream 문서가 다루는 표면이다(BytePlus ModelArk direct, 영어 문안). Higgsfield `seedream_v5_pro`는 별도 표면이라 문장 형식만 이 행을 쓰고 모델 id·파라미터는 런타임 정의로 확인한다([seedream-5-pro.md](seedream-5-pro.md) 적용 경계). `Seedream 豆包·即梦` 행은 이 레포에 표면 문서가 없는 중국 표면이라 중문 한 문단 형식이 `[Iris]` 수준이고 영어 600단어 기준을 적용하지 않는다. 그 행의 장치 문구는 §5의 영어 칸이 아니라 §5.1의 중문 칸을 쓴다. 5.5에서 그 칸의 효과는 확인되지 않았다.
 - Soul 2는 Higgsfield의 `soul_2`다. 모델 id가 요청에 이미 있으면 그 id가 라우팅이고, 이 표는 문장 쪽만 맡는다([model-routing.md](model-routing.md) §4).
@@ -148,7 +148,7 @@ image-brief.md §10의 홍콩 층 문안(인물, 참조 없이 필름 룩과 중
 
 장치는 얼굴 고정, 몸 비율, 실사 문장, 끝 문장이다. 얼굴 고정, 렌즈, 매체 고정 끝 문장은 §5 칸의 영어 문구이고, 렌즈·입자 줄의 값과 이름(`标准至中长焦`·`自然透视`·`胶片颗粒`)은 칸의 문구 안에 원문 그대로 넣었다. 층 문안의 원어 이름은 하나도 빼지 않았다. 층 문안의 `vertical frame` 줄은 `size`로 빠졌고, 간판 글자는 끝 문장 한 곳에서만 막아 Scene의 `blurred past reading`은 뺐다. 입자는 칸의 문구 한 줄이라 층 문안의 `조금 더 짙게`는 옮기지 않았다.
 
-(2575자 실측)
+(2781바이트 실측)
 ```text
 A 1990s Hong Kong film still shot on tungsten cinema negative. Use Image 1 only for the woman's identity: keep her face shape, facial features and natural skin tone, and do not take her clothes, hair, background or pose from Image 1. She has 7.5-head proportions, 小头 over 直角肩 and 天鹅颈. She shelters under a 骑楼 on an old Kowloon street at night in the rain, in a 靠墙斜倚 lean with her left shoulder resting against a tiled pillar, a closed rolling shutter behind her, weight in her left hip, left hand deep in her coat pocket. She holds a white paper take-out coffee cup with a brown sleeve at chest height in her right hand, steam rising and catching red light, and looks far down the street to the right with a 惆怅, waiting look, not at the camera. Her hair is a loose 1990s 王家卫 perm grazing the collarbones, tucked behind the right ear, a few damp strands loose on the far side. A 无粉感底妆 shine-free 哑光 base, full natural 野生眉, a soft pearly 卧蚕 band under the lower lashes, a hair-thin upper liner, a muted rosy-brown 豆沙唇 and glossy 红指甲. She wears a deep crimson silk 吊带裙 under a man's oversized black wool coat hanging open from her shoulders, the wool beaded with rain and the satin throwing a long liquid highlight where neon reaches it. Rain sheets off the arcade edge in a bright curtain; across the street the 九龙霓虹 of dense red and green 霓虹灯牌 stack up an old tenement over black mirror-wet asphalt. The mood is 重庆森林: saturated neon, one still figure, everything else streaking past. The 霓虹双色侧光 is a red 霓虹灯牌 at the left that lights the left side of her face and the silk, with green tube light edging her right cheek and the two colors meeting along her nose; 彩色霓虹眼神光 shows as thin red and green streaks mirrored in her irises, and in the 雨夜 every light wears a cold halo of mist while the falling rain catches the neon in short bright streaks. Kodak Vision3 500T color: red-orange 高光, teal-green 暗部, deep pressed blacks, 红色光晕 around the brightest tubes, and 抽帧 ghost trails on the rain, passing umbrellas and a cyclist while she stays sharp. Fine even 35mm 胶片颗粒 across the whole frame. Shot from across the 骑楼 with a 标准至中长焦 lens that keeps her face in 自然透视 with no 广角 stretch, waist-up, her in the left third, a 前景遮挡 of a blurred umbrella edge in the lower right foreground. Ultra-realistic photographic detail with real skin pores, wool weave and wet tile. This is a real person photographed on location as a still from a 1990s Hong Kong feature film, not an illustration, anime, 3D render or plastic CGI, with no on-screen text, watermark, collage border or extra fingers.
 ```
@@ -159,7 +159,7 @@ A 1990s Hong Kong film still shot on tungsten cinema negative. Use Image 1 only 
 
 동사로 시작하는 작업 문장, 참조 역할 문장, 배경에서 전경으로 가는 단계, 촬영 용어, 부정 없는 실사 문장 순서다. 요청에 용도가 없어 용도 한 줄은 뺐다. 손가락은 쥐는 모양으로 한 구절만 썼다.
 
-(2168자 실측)
+(2168바이트 실측)
 ```text
 Create a photograph that reads as a still from a 1990s Hong Kong feature film, shot on tungsten cinema negative. Use the attached photo for her face; everything else comes from this description.
 
@@ -172,7 +172,7 @@ Shot from across the arcade with a standard-to-moderate telephoto lens, waist-up
 
 한 줄의 구절 목록이다. 금지는 `--no`, 비율은 `--ar`로 나가고 본문에 문장이 없다. 필름 룩이라 매체 이름만으로 스타일이 흐르기 쉬워 `--raw`를 썼고(매체 고정 칸의 조건), 간판 글자는 `--no text`가 맡아 본문에서 뺐다. 몸 비율과 매체는 구절로 줄였다. 필름 스톡 이름, 프레임 범위, 왼쪽 삼분의 일 배치, 주머니에 넣은 손, 전경의 우산은 층 문안의 장면 사실이라 구절로 남겼다. 얼굴 참조를 붙이면 V7은 `--oref <url>`을 파라미터 구간에 더하고, V8은 Edit Model에 참조를 연결한다(웹은 Attach to prompt, Discord는 파라미터 구간의 `--edit URL1 URL2`, ../midjourney-identity.md §2).
 
-(799자 실측)
+(881바이트 실측)
 ```text
 1990s Hong Kong film still on Kodak Vision3 500T tungsten cinema negative, waist-up, a woman in a loose 1990s 王家卫 perm sheltering under a 骑楼 at night in the rain, in the left third of the frame, a 靠墙斜倚 lean on a tiled pillar, left hand deep in her coat pocket, a white paper coffee cup at her chest with steam rising, looking far down the street, 惆怅, a 前景遮挡 of a blurred black umbrella edge in the lower right, tall slender figure, small head, deep crimson silk 吊带裙 under an oversized black wool coat, muted rosy-brown lip, glossy 红指甲, dense red and green 霓虹灯牌 across the street, 霓虹双色侧光 red on her left cheek and green on her right, black mirror-wet asphalt, rain streaks, 重庆森林 mood, 红色光晕, 抽帧 ghost trails, teal-green shadows, fine grain --ar 3:4 --raw --no illustration, anime, cgi, text, watermark
 ```
@@ -181,7 +181,7 @@ Shot from across the arcade with a standard-to-moderate telephoto lens, waist-up
 
 구도 관용어가 머리 명사이고, 뒤는 용어 스택이다. 인물은 참조가 없으니 문화권 공식을 성별·나이·문화권 구절로 줄여 피사체 항에 넣었다. 금지 꼬리와 필름 상표명(`Kodak Vision3 500T`)은 없고 발색으로 풀었으며, 매체는 발색 항 끝의 `a real photograph` 하나다. 이 장면의 palette가 눌린 검정이라 `softly lifted blacks`는 쓰지 않았다. 글자 억제는 `every surface plain and unlettered`로 쓴다.
 
-(1133자 실측)
+(1219바이트 실측)
 ```text
 A medium shot of a 22-year-old Chinese woman with statuesque proportions sheltering under a 骑楼 on an old Kowloon street at night in the rain, a 靠墙斜倚 lean with her left shoulder on a tiled pillar, weight in her left hip, left hand deep in her coat pocket, a white paper coffee cup at her chest with steam rising, her gaze far down the street to the right, 惆怅. Loose 1990s 王家卫 perm grazing the collarbones, matte shine-free base, full natural brows, muted rosy-brown matte lip, glossy 红指甲. Deep crimson silk 吊带裙 under an oversized black wool coat, the wool beaded with rain, a long liquid highlight on the satin. Dense red and green 霓虹灯牌 tubes stacked up a tenement across the street, every surface plain and unlettered, black mirror-wet asphalt, rain sheeting off the 骑楼 edge, a 前景遮挡 of a blurred umbrella edge in the lower right. A 霓虹双色侧光 of red neon on the left side of her face and green tube light on her right cheek, a cold halo of mist around every light. 重庆森林 mood, tungsten-balanced cinema color: red-orange highlights, teal-green shadows, deep pressed blacks, 红色光晕, 抽帧 ghost trails on the rain, fine grain, a real photograph.
 ```
@@ -190,7 +190,7 @@ A medium shot of a 22-year-old Chinese woman with statuesque proportions shelter
 
 8.1의 장면 사실을 §5.1의 칸으로 옮긴 중문 한 문단이다. 이 장면의 원어(`骑楼`·`王家卫`·`卧蚕`·`霓虹灯牌`·`高光`·`暗部`·`抽帧`)는 중문의 말이라 문장 안에서 그 이름으로 부르고(`靠墙斜倚`·`九龙霓虹`·`雨夜`처럼 줄 머리 이름도 그대로), 영어로 남은 것은 `Kodak Vision3 500T`뿐이다. 한글·가나 원어 이름이 있는 장면은 §5.1 '언어' 칸대로 그 글자 그대로 둔다. 비율 3:4는 UI 설정이라 본문에 없고, 간판 글자는 8.1처럼 끝 문장 한 곳에서만 막는다.
 
-(861자 실측)
+(2495바이트 실측)
 ```text
 一张1990年代香港电影剧照，用钨丝灯电影负片拍摄。只用图1确定人物身份：保留她的脸型、五官和自然肤色，不要取用图1的服装、发型、背景或姿势。她有7.5头身的比例，小头配直角肩和天鹅颈。雨夜里，她在九龙一条老街的骑楼下避雨，靠墙斜倚，左肩抵着贴满小瓷砖的柱子，身后是拉下的卷闸门，重心落在左胯，左手深插在大衣口袋里。右手在胸口高度握着一杯带棕色杯套的白色纸质外带咖啡，热气升起，沾着红光；她望向街的远处右侧，神情惆怅，像在等人，没有看镜头。头发是松散的1990年代王家卫式卷发，垂到锁骨，别在右耳后，远侧有几缕潮湿的碎发。无粉感底妆，哑光不泛油光，自然的野生眉，下睫毛下一道柔和的珍珠色卧蚕，极细的上眼线，柔和的豆沙唇和亮泽的红指甲。她穿一条深红色真丝吊带裙，外面披着男式的黑色宽大羊毛大衣，大衣从肩上敞开垂下，羊毛上挂着雨珠，霓虹照到的地方，缎面拉出一道长长的流动高光。雨水从骑楼边缘垂成一道明亮的雨帘；街对面是九龙霓虹：密密匝匝的红绿霓虹灯牌堆满一栋老楼，映在镜面般湿亮的黑色柏油路上。整个画面像《重庆森林》：饱和的霓虹，一个静止的人，其余一切都在飞掠而过。霓虹双色侧光：左侧一块红色霓虹灯牌照亮她脸的左侧和丝绸，绿色灯管勾出右脸颊的边缘，两种颜色在鼻梁处相遇，彩色霓虹眼神光是映在虹膜里的红绿细光，每盏灯都罩着一圈冷冷的雾晕，落下的雨在霓虹里划出短而亮的光痕。Kodak Vision3 500T色彩：红橙色的高光，青绿色的暗部，浓重压实的黑色，最亮的灯管周围一圈红色光晕，雨丝、路过的雨伞和一位骑车人拖着抽帧的重影，而她始终清晰。整个画面是细腻均匀的35mm胶片颗粒。从骑楼对面用标准至中长焦镜头拍摄，让她的脸保持自然透视，没有广角拉伸，取景到腰部，她在画面左三分之一处，右下角是前景遮挡的一角虚化雨伞边缘。真实的摄影细节：真实的皮肤毛孔、羊毛的织纹和湿漉漉的瓷砖。这是在现场拍下的真人，像一部1990年代香港电影里的一帧，不是插画、动漫、3D渲染或塑料感CGI，画面中没有文字、水印、拼贴边框，也没有多余的手指。
 ```

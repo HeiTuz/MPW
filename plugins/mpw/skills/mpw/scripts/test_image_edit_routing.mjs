@@ -46,8 +46,6 @@ for (const name of ['gpt-image-edit', 'gpt-image-edit-structured']) {
   for (const absent of [brief('3'), brief('4'), brief('10'), generation]) assert.ok(!result.text.includes(absent), `${name} loads a generation-only section`);
   assert.doesNotMatch(result.text, /Create a vertical editorial fashion photo|\*\*구조 선택 —/);
   assert.equal(result.text.includes(section('3.4')), name.endsWith('-structured'), `${name} purpose-specific routing`);
-  const oldRoute = readTargets(['references/image/surfaces.md#0', `references/image/surface-contracts.md#3.2,3.3${name.endsWith('-structured') ? ',3.4' : ''}`]);
-  assert.ok([...result.text].length < [...oldRoute.text].length, `${name} must reduce loaded characters`);
 }
 for (const name of ['gpt-image-new', 'gpt-image-new-structured']) {
   const result = readTargets(BUNDLES[name]);

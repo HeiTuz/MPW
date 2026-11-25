@@ -326,8 +326,19 @@ drifted rule\n"""
         self.assertIn("references/garden-recipe-compiler.md", names)
         self.assertNotIn("references/garden-recipe-compiler.md", lint.FILES)
         errors = []
-        lint.check_labels("references/new-topic.md", "(120자 실측)\n```text\nshort\n```\n", errors)
-        self.assertTrue(any("label 120자" in error for error in errors), errors)
+        lint.check_labels("references/new-topic.md", "(120바이트 실측)\n```text\nshort\n```\n", errors)
+        self.assertTrue(any("label 120바이트" in error for error in errors), errors)
+
+    def test_labels_count_utf8_bytes_and_reject_the_character_unit(self):
+        errors = []
+        lint.check_labels("references/new-topic.md", "(9바이트 실측)\n```text\n가나다\n```\n", errors)
+        self.assertEqual([], errors)
+        errors = []
+        lint.check_labels("references/new-topic.md", "(3자 실측)\n```text\n가나다\n```\n", errors)
+        self.assertTrue(any("in characters" in error for error in errors), errors)
+        errors = []
+        lint.check_labels("references/new-topic.md", "(3바이트 실측)\n```text\n가나다\n```\n", errors)
+        self.assertTrue(any("label 3바이트 != 실측 9바이트" in error for error in errors), errors)
 
     def test_bare_range_label_is_not_measured(self):
         errors = []

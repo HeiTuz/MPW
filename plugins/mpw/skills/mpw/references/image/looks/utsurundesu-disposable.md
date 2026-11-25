@@ -85,8 +85,8 @@
 ## Legwear
 | 갈래 | 슬롯 | 줄 |
 |---|---|---|
-| A | legwear | 下駄 — Raised wooden geta on two dark blocks with a velvet thong lift her heel off the ground, leaving a bare-toe line that the flash picks out in pale white.
-| A | legwear | 素足 — Bare lower legs and ankles with no hosiery, the skin flash-pale and flat below the hem of a yukata or skirt.
+| A | legwear | 下駄 — Raised wooden geta on two dark blocks with a velvet thong lift her heel off the ground, leaving a bare-toe line that the flash picks out in pale white. |
+| A | legwear | 素足 — Bare lower legs and ankles with no hosiery, the skin flash-pale and flat below the hem of a yukata or skirt. |
 | A, B | legwear | 黒タイツ — Solid black tights with an even knit that absorbs the flash and leaves the leg one clean dark line. |
 | C | legwear | 紺色ハイソックス — Navy ribbed cotton socks ending just below the knee with a snug ribbed cuff. (C의 교복 장면은 학생이라 스타킹류 줄은 쓰지 않고 이 양말 줄은 쓴다) |
 

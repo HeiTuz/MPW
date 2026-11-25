@@ -76,7 +76,7 @@ class NearMissTests(unittest.TestCase):
         errors = []
         lint.check_measurement_near_misses("fixture.md", "실측 2026-07", errors)
         self.assertIn("fixture.md:1: noncanonical measurement stamp", errors[0])
-        for text in ("(312자 실측)", "실측: 215자", "plain 2026-07"):
+        for text in ("(312바이트 실측)", "실측: 215바이트", "plain 2026-07"):
             errors = []
             lint.check_measurement_near_misses("fixture.md", text, errors)
             self.assertEqual(errors, [])

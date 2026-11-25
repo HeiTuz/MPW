@@ -1,0 +1,1 @@
+It shouldn't show text. The sky mustn't be cloudy.

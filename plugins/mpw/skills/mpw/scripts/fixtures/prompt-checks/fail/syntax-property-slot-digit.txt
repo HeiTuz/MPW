@@ -1,0 +1,1 @@
+A property leaflet shows a brick courtyard with [BUILDING_NAME_2] above a doorway and [OWNER1] below the plan.

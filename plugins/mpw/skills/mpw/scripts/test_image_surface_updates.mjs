@@ -59,7 +59,7 @@ check('Explicit 2.6 wrapper entry resolves its canonical section', () => {
 check('Defaults, roster date and S1 protocol remain unchanged', () => {
   const routing = read('references/image/model-routing.md');
   assert.match(routing, /기본 생성 모델은 `gpt-image-2\.5-sunburst`/);
-  assert.match(routing, /<!-- roster-snapshot: 2026-10-10 -->/);
+  assert.match(routing, /<!-- roster-snapshot: 2026-11-25 -->/);
   assert.match(routing, /2026-11-16.*gpt_image_2_6.*gpt_image_2_6_flare/);
   const schema = JSON.parse(read('contracts/v1/production-adapter-options.schema.json'));
   assert.equal(schema.properties.output_format.const, 'png');

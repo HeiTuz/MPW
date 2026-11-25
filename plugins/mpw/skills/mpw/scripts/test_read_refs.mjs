@@ -346,10 +346,11 @@ assert.deepEqual(partitionChunks(["one chunk"], 3), [1], "a single chunk lands i
     const pieces = text.split(/(?=^==> )/m).filter(Boolean);
     for (const piece of pieces) assert.match(piece.split("\n")[1] ?? "", /^#{1,6} /, `part ${n} piece starts at a heading: ${piece.split("\n")[0]}`);
     gathered.push(...bodyLines(text));
-    sizes.push([...text].length);
+    sizes.push(Buffer.byteLength(text));
   }
   assert.deepEqual(gathered, bodyLines(whole.stdout), "the three parts hold every line once, in order");
-  assert.ok(Math.max(...sizes) < 0.45 * sizes.reduce((a, b) => a + b, 0), `parts are about equal: ${sizes}`);
+  // Parts are cut by bytes: measured max share 0.3414 (30625/29560/29517 bytes); the old 0.45 was 1.216x its code-point share 0.3699, so 0.3414 * 1.216 = 0.4153, rounded up to 0.42.
+  assert.ok(Math.max(...sizes) < 0.42 * sizes.reduce((a, b) => a + b, 0), `parts are about equal (bytes): ${sizes}`);
   assert.equal(read("--bundle", "gpt-image-portrait", "--part", "4/3").status, 2, "n above m exits 2");
   const small = read("--bundle", "batch", "--part", "3/3");
   assert.equal(small.status, 0, small.stderr);
