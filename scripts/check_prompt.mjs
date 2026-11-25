@@ -358,6 +358,10 @@ function factualOrName(text, match) {
   return /^\p{Lu}/u.test(match[0]) && /[^.!?:;\s][ \t]+$/u.test(before) && /^(?:[ \t]+\p{Lu}[\p{L}'’-]*)*[ \t]+(?:Bakery|Cafe|Café|Studios?|Restaurant|Bar|Shop|Gallery|Salon|Hotel|Diner|Boutique|Books|Market|Kitchen)(?![\p{L}\p{N}_])/u.test(after);
 }
 
+// Praise words and their adverb and Korean inflected forms. `perfectly` stays out (perfectly centered is a fact);
+// `pretty` stays out: it is mostly an intensifier (a pretty good match, pretty soft light) and the checker cannot tell it from the adjective.
+const VAGUE_WORDS = new RegExp(`(?<![\\p{L}\\p{N}_])(?:예쁘게|멋있게|근사하게|분위기\\s+있게|느낌\\s+있게|감각적으로|트렌디하게|힙하게|퀄리티\\s+높게|완벽하게|고퀄로|아름답[게다]|아름다운|멋진|멋지[게다]|예쁜|예쁘다|훌륭(?:한|하게)|환상적(?:인|으로)|(?:gorgeous|breathtaking|amazing|stunning|beautiful|magnificent|wonderful|marvell?ous|spectacular|splendid|superb|fabulous|glorious)(?:ly)?|epic|awesome|eye-catching|perfect|lovely|incredible)(?![\\p{L}\\p{N}_])`, "giu");
+
 function inspectPhrasing(result, instruction) {
   let remaining = instruction.replace(/\bnegative\s+space\b/giu, (text) => " ".repeat(text.length));
   const exclusions = [];
@@ -385,7 +389,7 @@ function inspectPhrasing(result, instruction) {
     evidence(result, CODE_REGISTRY.quality, tags.map((tag) => tag.toLowerCase()), "Generic quality tags");
   }
   evidence(result, CODE_REGISTRY.vague,
-    [...instruction.matchAll(/(?<![\p{L}\p{N}_])(?:예쁘게|멋있게|근사하게|분위기\s+있게|느낌\s+있게|감각적으로|트렌디하게|힙하게|퀄리티\s+높게|완벽하게|고퀄로|gorgeous|breathtaking|epic|amazing|awesome|eye-catching|stunning|beautiful|perfect)(?![\p{L}\p{N}_])/giu)].filter((match) => !factualOrName(instruction, match)).map((match) => match[0].trim()),
+    [...instruction.matchAll(VAGUE_WORDS)].filter((match) => !factualOrName(instruction, match)).map((match) => match[0].trim()),
     "Evaluative wording", "Specify the light, material or composition that creates the desired appearance.");
 }
 
@@ -447,6 +451,8 @@ function layerSections(instruction) {
   return sections;
 }
 
+// A time or a mixing ratio written like a frame ratio (3 : 4 pm, 1 : 1 sugar) is not an aspect ratio.
+const NOT_TIME_OR_MIX = "(?![ \\t]*(?:[ap]\\.?m|o['’]clock|hours?|hrs?|minutes?|mins?)(?![\\p{L}\\p{N}_]))(?![ \\t]+(?:sugar|water|milk|flour|butter|oil|vinegar|syrup|espresso|coffee|tea|rice|salt|cream|juice|resin|cement)(?![\\p{L}\\p{N}_]))";
 // Engine-independent contradictions. Heuristics only: each one is a review prompt except the decimal point.
 function inspectCoherence(result, text, instruction) {
   if (/\d。\d/u.test(text)) emit(result, CODE_REGISTRY.decimal, "A decimal point was replaced by an ideographic full stop.", { hint: "Write 7.5 and f/1.4 with an ASCII period." });
@@ -476,7 +482,7 @@ function inspectCoherence(result, text, instruction) {
   if (keepsTone && skinColor.length) {
     emit(result, CODE_REGISTRY.identitySkin, `A skin color is written outside the identity paragraph: ${[...new Set(skinColor)].slice(0, 3).join(" | ")}`, { hint: "The natural skin color belongs in the identity condition only; a reference keeps its own tone. Makeup finish and light on the skin are fine elsewhere." });
   }
-  const ratios = instruction.match(new RegExp(`(?<![\\d:：.])${KNOWN_RATIOS}(?![\\d:：])`, "gu")) ?? [];
+  const ratios = instruction.match(new RegExp(`(?<![\\d:：.])${KNOWN_RATIOS}(?![\\d:：])${NOT_TIME_OR_MIX}`, "gu")) ?? [];
   if (ratios.length >= 2) emit(result, CODE_REGISTRY.ratioDup, `An aspect ratio is written ${ratios.length} times: ${[...new Set(ratios)].join(" | ")}`, { hint: "Write the ratio once, in the Camera layer." });
   const makeup = sections.find((section) => /^(?:Hair and makeup|Makeup)$/iu.test(section.name ?? ""));
   const lipLines = (makeup?.lines ?? []).filter((line) => /\b(?:lips?|lipstick)\b|唇|립|입술/iu.test(line));

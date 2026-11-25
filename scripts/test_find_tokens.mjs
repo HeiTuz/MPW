@@ -328,13 +328,24 @@ assert.match(help.stdout, /usage: node scripts\/find_tokens\.mjs/);
   assert.ok(!candidates('no Kodak Gold, clean digital color').includes('kodak-gold-200'));
 }
 
-// Output size: the card block and the rows print shorter than before; ceilings are the measured size plus 5% (the first became 5403 with the one-sentence 룩 카드 read pointer in the card block, so its ceiling went from 5400 to 5680; 5076, 6109, 8189 bytes when set; the second became 6518 with the 문장 속 낱말 block of up to four rows, so its ceiling went from 6500 to 6850, then to 7410 when KR Camera grew from 2 to 21 rows and the KR term printed four Camera rows instead of two: 7056 bytes measured).
+// The candidate block repeats the two conditions image-brief's '룩 카드' subsection opens with: a place name alone names no look, and beside a called card a candidate is only the second card. It does not say 'no card was named' when one was.
+{
+  const alone = run(['--q', '필카 감성', '--limit', '2']).stdout;
+  assert.ok(alone.includes('no card was named') && alone.includes('a place name alone'), 'the candidate block alone says no card was named and that a place name names no look');
+  const both = run(['--q', '왕가위, 폴라로이드', '--limit', '2']).stdout;
+  assert.ok(both.startsWith('## Look card\n') && both.includes('## Look card candidates'), 'the query names a card and has candidates');
+  assert.ok(both.includes('read a candidate only as its second card') && !both.includes('no card was named'), 'beside a called card the candidates are the second card only');
+}
+
+// Output size: the card block and the rows print shorter than before; ceilings are the measured size plus 5% (the candidate block's two conditions added the fourth and fifth queries, 2547 and 5922 bytes measured; the first became 5403 with the one-sentence 룩 카드 read pointer in the card block, so its ceiling went from 5400 to 5680; 5076, 6109, 8189 bytes when set; the second became 6518 with the 문장 속 낱말 block of up to four rows, so its ceiling went from 6500 to 6850, then to 7410 when KR Camera grew from 2 to 21 rows and the KR term printed four Camera rows instead of two: 7056 bytes measured).
 {
   const size = (args) => Buffer.byteLength(run(args).stdout);
   const queries = [
     [['--q', '비 오는 밤 신주쿠,투명 우산,여자', '--limit', '3'], 5680],
     [['--q', '툇마루,낮잠,고양이,한옥,오후 햇살,KR', '--limit', '4'], 7410],
     [['--q', '雨夜新宿,透明傘,女性,ネオン', '--limit', '6'], 8700],
+    [['--q', '필카 감성', '--limit', '2'], 2680],
+    [['--q', '왕가위 느낌, 필카 감성, 비 오는 밤', '--limit', '2'], 6220],
   ];
   for (const [args, limit] of queries) assert.ok(size(args) <= limit, `${args[1]}: ${size(args)} bytes is over ${limit}`);
 }

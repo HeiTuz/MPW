@@ -153,7 +153,7 @@
 | D | face-light | 손전등 조명 — A friend's phone flashlight from close at the side gives blunt, slightly overexposed light with a lively spontaneous feel. |
 | D | car-light | 차창 불빛 — In the taxi at night, streaks of city light sweep across the window and over her face. (택시 장면일 때) |
 | D | bulb-light | String Lights — Under the canopy of the street food tent, warm bulbs glow above the steaming counter against the dark street. (포장마차 장면일 때) |
-| D | catchlight | 폰 화면 반사 캐치라이트 — A tiny cool blue-white rectangle sits in the center of each pupil, only when the phone screen is the light.
+| D | catchlight | 폰 화면 반사 캐치라이트 — A tiny cool blue-white rectangle sits in the center of each pupil, only when the phone screen is the light. |
 | D | catchlight | 플래시 캐치라이트 — One small hard white dot from the friend's flashlight sits at the side of each pupil, only when the flashlight is the light. |
 
 ## Optics

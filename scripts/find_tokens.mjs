@@ -342,8 +342,8 @@ const cardBlock = (cards) => (cards.length
   ? `## Look card\n${cards.map((c) => `${c.title} [${c.axis}] — ${c.file}\nnew image: node scripts/read_look.mjs ${c.slug} --outline, then --branch <A|B|C|D> [--set S<n>] [--pair <n>]\nextract: node scripts/read_look.mjs ${c.slug} --facts, then --branch <A|B|C|D> --no-pairs`).join('\n')}\n(Read the card before the layer rows below. Use a scene set only when the request names its place or prop, not a city or a kind of place alone; the request beats the card. No shell: open the card file. New image: in the same message as read_look --outline, run node scripts/read_refs.mjs "references/image/image-brief.md#룩 카드" once. Extraction: image-brief §12.0.)\n\n`
   : '');
 
-const candidateBlock = (candidates) => (candidates.length
-  ? `## Look card candidates\n(no card was named. New image: read the first whose summary fits with \`node scripts/read_look.mjs <slug> --outline\` and, in the same message, \`node scripts/read_refs.mjs "references/image/image-brief.md#룩 카드"\` once; if none fits, write without a card. Photo extraction: a candidate is only a suggestion; check it with \`--facts\` only when the photo shows that medium's marks (image-brief §12.0), otherwise write without a card. [매체] cards name a film or camera, [장면] cards a place.)\n${candidates.map((c) => `- ${c.slug} · ${c.title} [${c.axis}, ${c.culture}] — ${c.summary}`).join('\n')}\n\n`
+const candidateBlock = (candidates, called) => (candidates.length
+  ? `## Look card candidates\n(${called ? 'a card was named above, so read a candidate only as its second card.' : 'no card was named; if the request names no medium or look (a place name alone), write without a card.'} New image: read the first whose summary fits with \`node scripts/read_look.mjs <slug> --outline\` and, in the same message, \`node scripts/read_refs.mjs "references/image/image-brief.md#룩 카드"\` once; if none fits, write without a card. Photo extraction: a candidate is only a suggestion; check it with \`--facts\` only when the photo shows that medium's marks (image-brief §12.0), otherwise write without a card. [매체] cards name a film or camera, [장면] cards a place.)\n${candidates.map((c) => `- ${c.slug} · ${c.title} [${c.axis}, ${c.culture}] — ${c.summary}`).join('\n')}\n\n`
   : '');
 
 // --limit above 6 is the long listing, so the hint asks for at least 7.
@@ -355,7 +355,7 @@ const partBlock = (parts, more = 0) => (parts.length
 export const ROWS_ARE_CANDIDATES = '(layer rows are candidates: for one image pick the row that fits and write it; leave the other candidates and any "choose one" wording out of the prompt.)';
 
 export function formatText(results, cards = [], candidates = [], { aliases = false } = {}, parts = [], more = 0) {
-  const head = cardBlock(cards) + candidateBlock(candidates);
+  const head = cardBlock(cards) + candidateBlock(candidates, cards.length > 0);
   if (results.every((l) => l.matches.length === 0) && !parts.length) {
     if (cards.length) return `${head}no layer rows matched; the card above carries the look.\n`;
     return `${head}no match in any layer. Use English tokens and sentences: original-language words come only from the lexicon, a look card, fixed-lines.md or the user (image-brief.md §2.1).\n`;
