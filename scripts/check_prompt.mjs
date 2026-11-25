@@ -179,20 +179,26 @@ export function parseFlags(args) {
   return { options, errors };
 }
 
+// Writing caps the user set for an engine, in UTF-8 bytes (surfaces.md §0-1). Neither is a published engine limit, so the layer is `assumed`.
+const ENGINE_BYTE_CAPS = { midjourney: 1500, soul: 2000 };
+
 function measure(text, result, options) {
   const layers = [];
   if (result.surface === "s1") layers.push({ kind: "contract", limit: 2000, unit: "codepoints", assumed: false });
   if (options.channelLimit !== undefined) {
-    layers.push({ kind: "channel", limit: options.channelLimit, unit: "codepoints", assumed: false });
+    layers.push({ kind: "channel", limit: options.channelLimit, unit: "bytes", assumed: false });
   } else if (options.channel === "bounded") {
-    layers.push({ kind: "channel", limit: 2000, unit: "codepoints", assumed: false });
+    layers.push({ kind: "channel", limit: 2000, unit: "bytes", assumed: false });
   } else if (options.channel === undefined && result.surface === "s3") {
     // Assumed default paste cap in UTF-8 bytes (surfaces.md §0-1). It applies to every S3 prompt (image, video, text), not only images.
     layers.push({ kind: "channel", limit: 10000, unit: "bytes", assumed: true });
   }
+  // gpt-image's 32,000 is the official figure and the official docs count characters, so it stays in codepoints.
   if (result.engine === "gpt-image") layers.push({ kind: "engine", limit: 32000, unit: "codepoints", assumed: false });
-  const binding = layers.reduce((best, layer) => best === null || BigInt(layer.limit) < BigInt(best.limit) ? layer : best, null);
-  // Raw limits compare across units because the one byte layer is the default channel, which never meets the contract layer, and bytes >= codepoints.
+  else if (Object.hasOwn(ENGINE_BYTE_CAPS, result.engine)) layers.push({ kind: "engine", limit: ENGINE_BYTE_CAPS[result.engine], unit: "bytes", assumed: true });
+  // The narrowest limit binds. At the same number a byte limit is narrower than a codepoint limit, because bytes >= codepoints.
+  const narrower = (layer, best) => BigInt(layer.limit) < BigInt(best.limit) || (BigInt(layer.limit) === BigInt(best.limit) && layer.unit === "bytes" && best.unit !== "bytes");
+  const binding = layers.reduce((best, layer) => best === null || narrower(layer, best) ? layer : best, null);
   const codepoints = Array.from(text).length;
   const bytes = Buffer.byteLength(text);
   result.length = { codepoints, bytes, layers, binding: binding?.kind ?? null };
@@ -200,14 +206,19 @@ function measure(text, result, options) {
     emit(result, CODE_REGISTRY.ungated, "No numeric length layer applies; manage signal density as described in surfaces.md §0-1.");
     return;
   }
+  const sizeOf = (layer) => layer.unit === "bytes" ? bytes : codepoints;
+  const exceeds = (layer) => sizeOf(layer) > BigInt(layer.limit);
+  // bytes >= codepoints, so a byte limit at or under another layer's limit has that layer passed already; a codepoint limit says nothing about bytes.
+  const covers = (a, b) => BigInt(a.limit) <= BigInt(b.limit) && (a.unit === b.unit || a.unit === "bytes");
   const names = { contract: "기계 계약", channel: "전달 채널", engine: "타깃 엔진" };
   for (const layer of layers) {
-    const size = layer.unit === "bytes" ? bytes : codepoints;
-    if (size <= BigInt(layer.limit) || (layer !== binding && layer.kind !== "contract")) continue;
-    const assumption = layer.assumed ? " 채널 미지정 — 보수적 가정값." : "";
+    if (!exceeds(layer) || (layer !== binding && layer.kind !== "contract" && exceeds(binding) && covers(binding, layer))) continue;
+    const assumption = !layer.assumed ? "" : layer.kind === "engine" ? " 사용자 지정 작성 상한 — 엔진의 공식 수치 아님." : " 채널 미지정 — 보수적 가정값.";
     emit(result, CODE_REGISTRY[layer.kind],
-      `${names[layer.kind]}: ${size} ${layer.unit} exceeds ${layer.limit}; surface=${result.surface}, engine=${result.engine}.${assumption}`,
-      layer.assumed ? { hint: "Shrink as image-brief.md §1 says (original-language words: node scripts/read_refs.mjs \"references/image/fixed-lines.md#압축 낱말\"), or use --channel unbounded for an unlimited channel, or --channel-limit for its actual limit in codepoints." } : {});
+      `${names[layer.kind]}: ${sizeOf(layer)} ${layer.unit} exceeds ${layer.limit}; surface=${result.surface}, engine=${result.engine}.${assumption}`,
+      !layer.assumed ? {} : layer.kind === "engine"
+        ? { hint: "Shrink as image-brief.md §1 says (original-language words: node scripts/read_refs.mjs \"references/image/fixed-lines.md#압축 낱말\"). This cap is a user-designated writing limit, not a number the engine publishes (surfaces.md §0-1)." }
+        : { hint: "Shrink as image-brief.md §1 says (original-language words: node scripts/read_refs.mjs \"references/image/fixed-lines.md#압축 낱말\"), or use --channel unbounded for an unlimited channel, or --channel-limit for its actual limit in bytes." });
   }
 }
 
@@ -715,14 +726,17 @@ function fixedLinesSource(text, skip = new Set()) {
   let keep = false;
   let section = "";
   let afterRow = 2;
+  let notes = [];
   for (const line of text.split("\n")) {
     if (line.startsWith("## ")) { section = line.slice(3).trim(); keep = sections.has(section); }
     if (!keep) continue;
     if (!line.startsWith("|")) { afterRow = 0; out.push(...backticked(line, skip)); continue; }
     afterRow++;
     // A table's header and separator rows are labels; the first column is the English meaning or the culture's name.
+    // A 결과 column holds the generation result in Korean prose, not words to write.
+    if (afterRow === 1) notes = tableCells(line).flatMap((cell, index) => cell === "결과" ? [index] : []);
     if (afterRow <= 2) continue;
-    out.push(...tableCells(line).slice(1).filter((cell) => !/같다$/u.test(cell)));
+    out.push(...tableCells(line).filter((cell, index) => index > 0 && !notes.includes(index) && !/같다$/u.test(cell)));
   }
   return out.join("\n");
 }
@@ -1186,7 +1200,7 @@ export function checkText(input, options = {}) {
     return result;
   }
   if (result.profile === "assembled" && result.engine === "midjourney") {
-    emit(result, CODE_REGISTRY.engineScope, `단어 수: ${words}. This checker does not judge Midjourney syntax; channel and machine-contract character limits still apply. See surfaces.md §0-1.`);
+    emit(result, CODE_REGISTRY.engineScope, `단어 수: ${words}. This checker does not judge Midjourney syntax; the length limits (channel, machine contract, engine writing cap) still apply. See surfaces.md §0-1.`);
     inspectCoherence(result, text, instruction);
     return result;
   }
@@ -1420,7 +1434,7 @@ export const USAGE = `usage: node scripts/check_prompt.mjs [<prompt-file> | --fi
   --profile native|assembled     native (default) is a natural-language prompt; assembled is machine-assembled handoff text
   --surface s1|s2|s3             the execution surface
   --engine gpt-image|unknown|midjourney|higgsfield|seedream|nano-banana|soul
-  --channel unbounded|bounded    --channel-limit <codepoints>  (default S3 channel: 10000 UTF-8 bytes)
+  --channel unbounded|bounded    --channel-limit <bytes>  (UTF-8 bytes; default S3 channel: 10000; bounded: 2000)
   --source <layer-prompt-file>   with --engine seedream|midjourney|soul: the GPT Image layer prompt this flattened prompt was made from; its original-language names must survive (nano-banana: accepted, not read)
   --manifest <file>              check a JSON-lines manifest instead of one prompt
   --test                         run the built-in cases (used alone)

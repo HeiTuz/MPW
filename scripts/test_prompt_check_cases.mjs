@@ -13,7 +13,7 @@ const validator = resolve(scripts, "check_prompt.mjs");
 const cases = JSON.parse(await readFile(resolve(fixtureRoot, "cases.json"), "utf8"));
 const coverageExceptions = {
   "length/contract": "Temporary inputs in test_surface_length_contract.mjs exercise the 2000 boundary.",
-  "length/engine": "Temporary inputs in test_surface_length_contract.mjs exercise the 32000 boundary.",
+  "length/engine": "Temporary inputs in test_surface_length_contract.mjs exercise the 32000 boundary and the Midjourney and Soul writing caps.",
   "input/unreadable": "The CLI tests use a missing path and a directory; neither is a registered fixture.",
 };
 const registryCodes = new Set(Object.values(CODE_REGISTRY).map((entry) => entry.code));

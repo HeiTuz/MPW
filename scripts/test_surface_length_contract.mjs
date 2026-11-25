@@ -86,18 +86,26 @@ try {
   await cli("engine over boundary", "界".repeat(32001), ["--surface", "s3", "--channel", "unbounded"], ["length/engine"]);
   const cabin = await readFile(fixture("fail/input-cabin-engine.txt"), "utf8");
   await cli("external syntax short circuit", cabin, ["--profile", "assembled", "--engine", "midjourney"], ["input/engine-scope"]);
-  await cli("long engine scope native", "ridge ".repeat(1700), ["--profile", "native", "--engine", "midjourney"], ["length/channel"]);
-  await cli("long engine scope assembled", "ridge ".repeat(1700), ["--profile", "assembled", "--engine", "midjourney"], ["length/channel", "input/engine-scope"]);
+  await cli("long engine scope native", "ridge ".repeat(1700), ["--profile", "native", "--engine", "midjourney"], ["length/engine"]);
+  await cli("long engine scope assembled", "ridge ".repeat(1700), ["--profile", "assembled", "--engine", "midjourney"], ["length/engine", "input/engine-scope"]);
+  await cli("long engine scope under a narrower channel", "ridge ".repeat(1700), ["--engine", "midjourney", "--channel-limit", "1000"], ["length/channel"]);
   await cli("explicit narrow external engine", "Mountain ridges beside a lake.", ["--profile", "assembled", "--engine", "midjourney", "--channel-limit", "10"], ["length/channel", "input/engine-scope"]);
   const dual = await cli("both machine and channel failures", "山".repeat(3000), ["--surface", "s1", "--channel-limit", "1999"], ["length/channel", "length/contract"]);
   assert.equal(dual.length.binding, "channel");
   assert.deepEqual(dual.length.layers.map((layer) => layer.limit), [2000, 1999, 32000]);
-  const tie = unit("equal ceilings prefer machine", long, { surface: "s1", channelLimit: 2000 }, ["length/contract"]);
-  assert.equal(tie.length.binding, "contract");
+  const tie = unit("equal numbers: the byte limit is the narrower one", long, { surface: "s1", channelLimit: 2000 }, ["length/contract", "length/channel"]);
+  assert.equal(tie.length.binding, "channel");
+  const alone = unit("s1 without a channel binds on the contract", "a".repeat(2001), { surface: "s1" }, ["length/contract"]);
+  assert.equal(alone.length.binding, "contract");
   const engineTie = unit("channel wins engine tie", "山".repeat(32001), { surface: "s2", channelLimit: 32000 }, ["length/channel"]);
   assert.equal(engineTie.length.binding, "channel");
   await cli("assembled API engine default", long, ["--profile", "assembled", "--surface", "s2"], [], ["length/ungated"]);
-  await cli("bounded explicit limit at boundary", "字".repeat(500), ["--channel", "bounded", "--channel-limit", "500"]);
+  await cli("bounded explicit limit at boundary", "a".repeat(500), ["--channel", "bounded", "--channel-limit", "500"]);
+  await cli("bounded explicit limit one over", "a".repeat(501), ["--channel", "bounded", "--channel-limit", "500"], ["length/channel"]);
+  const bounded = await cli("bounded counts bytes", "字".repeat(667), ["--channel", "bounded"], ["length/channel"]);
+  assert.deepEqual(bounded.length.layers.at(-1), { kind: "engine", limit: 32000, unit: "codepoints", assumed: false });
+  assert.deepEqual(bounded.length.layers[0], { kind: "channel", limit: 2000, unit: "bytes", assumed: false });
+  await cli("bounded byte boundary", "字".repeat(666), ["--channel", "bounded"]);
 
   const invalidArguments = [
     ["--surafce", "s1"], ["--profile", "compiled"], ["--profile", "invented"],
@@ -134,9 +142,10 @@ try {
   }
   await cli("quoted symbols render content", '"#123" exactly once.');
   await cli("pictograph is content", "🌿");
-  const measured = await cli("unicode and whitespace retained", "\uFEFF 🪴\n", ["--channel-limit", "3"]);
+  const measured = await cli("unicode and whitespace retained", "\uFEFF 🪴\n", ["--channel-limit", "6"]);
   assert.equal(measured.length.codepoints, 3);
   assert.equal(measured.length.bytes, 6);
+  await cli("a byte limit under the measured bytes", "\uFEFF 🪴\n", ["--channel-limit", "5"], ["length/channel"]);
   assert.equal(unit("remove one BOM only", "\uFEFF\uFEFF木").length.codepoints, 2);
   await cli("length precedes empty", " ".repeat(10001), [], ["length/channel", "input/empty"]);
 
@@ -161,10 +170,32 @@ try {
   await cli("default one over", "a".repeat(10001), [], ["length/channel"]);
   await cli("default byte boundary", "가".repeat(3333), []);
   await cli("default byte one over", "가".repeat(3334), [], ["length/channel"]);
-  await cli("explicit channel limit counts codepoints", "가".repeat(10), ["--channel-limit", "10"]);
+  await cli("explicit channel limit counts bytes", "가".repeat(3), ["--channel-limit", "10"]);
+  await cli("explicit channel limit does not count codepoints", "가".repeat(4), ["--channel-limit", "10"], ["length/channel"]);
   await cli("channel exact boundary", "a".repeat(10), ["--channel-limit", "10"]);
   await cli("channel one over", "a".repeat(11), ["--channel-limit", "10"], ["length/channel"]);
   await cli("unbounded still engine gated", "a".repeat(32001), ["--channel", "unbounded"], ["length/engine"]);
+  const korean = await cli("4000 Hangul characters pass the old character count and fail the byte count", "가".repeat(4000), [], ["length/channel"]);
+  assert.equal(korean.length.codepoints, 4000);
+  assert.equal(korean.length.bytes, 12000);
+  assert.equal(korean.length.binding, "channel");
+  for (const [engine, cap] of [["midjourney", 1500], ["soul", 2000]]) {
+    const at = await cli(`${engine} cap boundary`, "a".repeat(cap), ["--engine", engine]);
+    assert.deepEqual(at.length.layers.at(-1), { kind: "engine", limit: cap, unit: "bytes", assumed: true });
+    assert.equal(at.length.binding, "engine");
+    const over = await cli(`${engine} cap one over`, "a".repeat(cap + 1), ["--engine", engine], ["length/engine"]);
+    assert.match(over.errors[0].message, /사용자 지정 작성 상한/u);
+    await cli(`${engine} cap counts bytes`, "가".repeat(Math.floor(cap / 3) + 1), ["--engine", engine], ["length/engine"]);
+    await cli(`${engine} cap under unbounded channel`, "a".repeat(cap + 1), ["--engine", engine, "--channel", "unbounded"], ["length/engine"]);
+    await cli(`${engine} cap is the same error severity as the assumed channel`, "a".repeat(cap + 1), ["--engine", engine, "--profile", "assembled", "--surface", "s2"], ["length/engine", ...(engine === "midjourney" ? ["input/engine-scope"] : [])]);
+  }
+  // Parameters and reference URLs travel with the prompt, so the Midjourney cap counts the whole string.
+  await cli("midjourney body alone fits", "a".repeat(1490), ["--engine", "midjourney"]);
+  await cli("midjourney parameters count toward the cap", `${"a".repeat(1490)} --ar 3:4 --raw --v 7`, ["--engine", "midjourney"], ["length/engine"]);
+  await cli("other engines have no writing cap", "a".repeat(5000), ["--engine", "seedream"]);
+  await manifest("manifest engine writing cap", [{ id: "one", prompt: "x".repeat(1501) }], ["--engine", "midjourney"], ["length/engine"]);
+  // A byte channel limit above the character-counted engine ceiling still reports: 15,000 Hangul pass 32,000 characters but are 45,000 bytes.
+  await cli("byte channel above the codepoint engine ceiling still reports", "가".repeat(15000), ["--channel-limit", "40000"], ["length/channel"]);
   await cli("Korean native constraint", "원본 로고를 유지한다. 그림자 추가 금지.", [], [], [], ["phrasing/ko-negation"]);
 
   for (const punctuation of ["", "(", ",", ";", "："]) {

@@ -2,16 +2,16 @@
 """MPW self-lint.
 
 Checks the skill's own hardlines against its files:
-- every measured-length label — "(N자 실측)" / "실측: N자" / "N자 실측" / bare "(…, N자)"
+- every measured-length label — "(N바이트 실측)" / "실측: N바이트" / "N바이트 실측" / bare "(…, N바이트)"
   — matches the adjacent ```text block's body length across ALL core files.
-  Labels count trimmed example bodies in Unicode code points. The prompt checker
-  measures untrimmed input after removing a leading BOM. Blocks containing
-  combining marks or ZWJ fail loudly instead of miscounting.
+  Labels count trimmed example bodies in UTF-8 bytes. The prompt checker
+  measures untrimmed input after removing a leading BOM. A label in the old
+  character unit ("N자 실측") fails: the unit is bytes (surfaces.md §0-1).
   Labels bind to the nearest ```text fence before or after within BIND_WINDOW
   chars; far references (checklist/table mentions) must match some block in the
   same file.
 - every ```text example block is <= 2000 chars (all core files; image-brief.md, portrait-variations.md, engine-levers.md and examples/*.prompt.txt are <= 10000 UTF-8 bytes)
-- no approximate labels (`약 N자`)
+- no approximate labels (`약 N자`, `약 N바이트`)
 - YAML frontmatter parses and carries version + dated model/role review stamps (rejects future dates; re-verify after 6 calendar months)
 - canonical inline `(YYYY-MM 실측...)` measurement stamps are current, non-future, and used across all repository-owned Markdown
 - no Cyrillic/Greek lookalike letters
@@ -55,9 +55,11 @@ FILES = [
 ]
 VALIDATOR = ROOT / "scripts" / "check_prompt.mjs"
 PRODUCTION = "references/image/production.md"
-# 라벨 3+1포맷: "N자 실측"(괄호형 포함) / "실측: N자" / bare "(…, N자)" — "블록당 N자"(규칙 문구)와
-# "제3자" 같은 비라벨, "1~2000자)" 범위 표기는 제외. bare 포맷은 실길이 라벨만 대상(N >= 50).
-LABEL_PATTERNS = [r"(?<!블록당 )(?<!\d)(\d+)자 실측", r"실측:\s*(\d+)자", r"(?<!제)(?<![~〜-])(?<!\d)(\d+)자\)"]
+# 라벨 3+1포맷: "N바이트 실측"(괄호형 포함) / "실측: N바이트" / bare "(…, N바이트)" — "블록당 N바이트"(규칙 문구)와
+# "1~2000바이트)" 범위 표기는 제외. bare 포맷은 실길이 라벨만 대상(N >= 50).
+LABEL_PATTERNS = [r"(?<!블록당 )(?<!\d)(\d+)바이트 실측", r"실측:\s*(\d+)바이트", r"(?<![~〜-])(?<!\d)(\d+)바이트\)"]
+# 옛 글자 단위 라벨. 단위가 바이트로 바뀌었으니 남아 있으면 오류다("제3자" 같은 비라벨과 범위 표기는 제외).
+LEGACY_LABEL_PATTERNS = [r"(?<!블록당 )(?<!\d)(\d+)자 실측", r"실측:\s*(\d+)자", r"(?<!제)(?<![~〜-])(?<!\d)(\d+)자\)"]
 STAMP_FUTURE_SKEW_DAYS = 1  # author-local vs CI-UTC date skew
 STAMP_WARN_DAYS = 30  # warn (stderr, exit 0) this many days before a stamp starts failing
 TODAY_ENV = "MPW_LINT_TODAY"  # YYYY-MM-DD; lets tests and CI previews fix the clock
@@ -244,12 +246,13 @@ def fail(msgs):
 
 
 def measured_len(body):
-    """트림된 본문 코드포인트 수 — check_prompt.mjs의 trim() 후 .length와 등가."""
+    """트림된 본문 코드포인트 수. 2000자 예시 상한(check_example_lengths)이 쓴다."""
     return len(body.strip())
 
 
-def grapheme_unsafe(body):
-    return any(unicodedata.combining(c) or c == "\u200d" for c in body)
+def measured_bytes(body):
+    """트림된 본문 UTF-8 바이트 수 — 실측 라벨의 단위(check_prompt.mjs의 bytes와 같은 단위)."""
+    return len(body.strip().encode("utf-8"))
 
 
 def line_of(s, pos):
@@ -929,7 +932,12 @@ def check_contract_index_table(root, errors):
 
 def check_labels(f, s, errors):
     blocks = [(m.start(), m.end(), m.group(1)) for m in re.finditer(r"```text\n(.*?)```", s, re.S)]
-    lengths = {measured_len(b) for _, _, b in blocks}
+    lengths = {measured_bytes(b) for _, _, b in blocks}
+    for pi, pat in enumerate(LEGACY_LABEL_PATTERNS):
+        for lm in re.finditer(pat, s):
+            if pi == 2 and int(lm.group(1)) < BARE_PATTERN_MIN:
+                continue
+            errors.append(f"{f}:{line_of(s, lm.start())}: label {lm.group(0)!r} is in characters — labels count UTF-8 bytes (N바이트 실측)")
     seen = set()
     for pi, pat in enumerate(LABEL_PATTERNS):
         for lm in re.finditer(pat, s):
@@ -949,13 +957,11 @@ def check_labels(f, s, errors):
             ln = line_of(s, lm.start())
             if cands:
                 body = min(cands, key=lambda c: c[0])[1][2]
-                if grapheme_unsafe(body):
-                    errors.append(f"{f}:{ln}: text block has combining marks/ZWJ — grapheme 재측정 필요")
-                actual = measured_len(body)
+                actual = measured_bytes(body)
                 if actual != n:
-                    errors.append(f"{f}:{ln}: label {n}자 != 실측 {actual}자 (인접 text 블록)")
+                    errors.append(f"{f}:{ln}: label {n}바이트 != 실측 {actual}바이트 (인접 text 블록)")
             elif n not in lengths:
-                errors.append(f"{f}:{ln}: label {n}자 — 인접 블록 없음 + 파일 내 어떤 text 블록과도 불일치")
+                errors.append(f"{f}:{ln}: label {n}바이트 — 인접 블록 없음 + 파일 내 어떤 text 블록과도 불일치")
 
 
 # image-brief examples are default-path paste blocks capped in UTF-8 bytes (surfaces.md §0-1), not machine contracts.
@@ -1184,7 +1190,7 @@ def main():
 
     # no approximate labels
     for f, s in texts.items():
-        if re.search(r"약 [\d,]+자", s):
+        if re.search(r"약 [\d,]+(?:자|바이트)", s):
             errors.append(f"{f}: approximate length label found")
 
     # lookalike scan

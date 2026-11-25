@@ -59,4 +59,4 @@
 One East Asian woman in her late twenties, her chok-chok skin reading as a hydrated dewy base and her aegyo-sal as soft fullness under the eyes, hair in a sleek slicked-back bun. A file folder and a mug hang motionless on threads beside her. She wears a grey tailored blazer with satin ballet flats and leans against a ribbon-tied wooden chair with one leg stretched out on a seamless cream floor. Soft high-key strobe, near-shadowless, 5500K. Her gaze is aloof and her face expressionless. She is placed at one side of the frame with generous empty space beside her. Glass skin translucency stays a soft subsurface glow with a matte T-zone; pores vary across the face, fine irregular grain over the midtones. Portra film tonality. Medium-format clarity, clean tonal separation.
 ```
 
-실측: 778자. 빼기 문장 없음. 끝 비율 토큰 없음. Soul 계열 대상이면 위 제어구 보존 절의 예외에 따라 마지막 두 제어구를 오른쪽 열의 관찰로 바꾼다.
+실측: 778바이트. 빼기 문장 없음. 끝 비율 토큰 없음. Soul 계열 대상이면 위 제어구 보존 절의 예외에 따라 마지막 두 제어구를 오른쪽 열의 관찰로 바꾼다.

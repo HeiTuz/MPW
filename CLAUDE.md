@@ -26,7 +26,7 @@ MPW(프롬프트 작성 스킬)의 **정본이자 유일한 실제 트리**다. 
 
 ```sh
 npm test                      # lint.py → scripts/test_*.py, test_*.mjs 전부 → check_prompt.mjs --test (현재 지원 범위)
-npm run lint                  # python3 scripts/lint.py — 실측 라벨·2000자 상한(image-brief·portrait-variations·engine-levers의 예시 블록과 examples/*.prompt.txt만 10,000바이트)·frontmatter 스탬프 등 하드라인 검사
+npm run lint                  # python3 scripts/lint.py — 실측 라벨(UTF-8 바이트)·2000자 상한(image-brief·portrait-variations·engine-levers의 예시 블록과 examples/*.prompt.txt만 10,000바이트)·frontmatter 스탬프 등 하드라인 검사
 python3 scripts/test_contracts.py        # 단일 테스트: 해당 파일을 직접 실행 (Python)
 node scripts/test_examples.mjs           # 단일 테스트: 해당 파일을 직접 실행 (Node)
 node scripts/check_prompt.mjs --test     # 검증기 자체 케이스
@@ -46,6 +46,6 @@ python3 scripts/prompt_writing_doctrine_check.py --state "$(mktemp -d)/backlog.j
 
 ## 편집할 때 자주 걸리는 것
 
-- 예시의 `(N자 실측)` 라벨은 뒤따르는 ```text 블록 길이와 정확히 일치해야 한다. 예시를 고치면 라벨을 다시 잰다(`lint.py`가 잡는다).
+- 예시의 `(N바이트 실측)` 라벨은 뒤따르는 ```text 블록의 UTF-8 바이트 수와 정확히 일치해야 한다. 예시를 고치면 라벨을 다시 잰다(`lint.py`가 잡고, 옛 `N자` 라벨은 오류다).
 - `SKILL.md`·`package.json`의 버전과 `metadata.*_reviewed_at` 스탬프는 lint가 본다. 버전 범프와 push는 별도 릴리스 승인 대상이고, 버전의 세 칸은 각각 한 자리(0~9)다(`AGENTS.md` §배포 게이트 3번, lint가 검사).
 - 커밋 메시지는 영어. 편집 후에는 `~/handoffs/MPW-<주제>-<타임스탬프>.md` 핸드오프를 남긴다(`AGENTS.md` §운영 소유권).
