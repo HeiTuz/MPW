@@ -312,10 +312,10 @@ function evidence(result, entry, found, message, hint) {
 
 function inspectSyntax(result, instruction) {
   const leading = /^\[([^\]\r\n]*)\]/u.exec(instruction.trim());
-  if (leading && Array.from(leading[0]).length <= 80 && /\d+\s*:\s*\d+|\d+\s*[x×]\s*\d+|\b(?:size|ratio)\b/iu.test(leading[1])) {
+  if (leading && Array.from(leading[0]).length <= 80 && /\d+\s*[:：]\s*\d+|\d+\s*[x×]\s*\d+|\b(?:size|ratio)\b/iu.test(leading[1])) {
     emit(result, CODE_REGISTRY.leadingMeta, "Leading brackets contain execution size or ratio metadata.", { hint: "Put size and ratio in settings outside the prompt body." });
   }
-  evidence(result, CODE_REGISTRY.placeholder, snippets(/\[[A-Z_]{3,}\]|\{\{\s*[A-Za-z_][A-Za-z_0-9]*\s*\}\}/gu, instruction),
+  evidence(result, CODE_REGISTRY.placeholder, snippets(/\[[A-Z_]{3,}[A-Z_0-9]*\]|\{\{\s*[A-Za-z_][A-Za-z_0-9]*\s*\}\}/gu, instruction),
     "Unresolved substitutions");
   // An integer weight counts only as SD syntax ("(cat:2)": lowercase-initial label, colon, one digit 0-3); "(Time 12:30)", "(Day:2)", "(Seed:42)" and "(fig:2)" are ordinary parentheses.
   const weights = [...instruction.matchAll(/\(([^()\r\n]+):\s*(?:\d*\.\d+)\s*\)|<([^<>\r\n]+):\s*(?:\d*\.\d+)\s*>|\((\p{Ll}[^()\r\n]*[\p{L}_-]):[0-3]\)|<(\p{Ll}[^<>\r\n]*[\p{L}_-]):[0-3]>/gu)]
@@ -332,8 +332,8 @@ function inspectSyntax(result, instruction) {
   // S3 has no evidence that the requested ratio was delivered via a UI setting.
   // Keep natural-language ratio labels there; only legacy AR tokens are suspect.
   const ratioToken = result.profile === "native" && result.surface === "s3"
-    ? /\bar\s*[:：=]?\s*\d+\s*[:：]\s*\d+\s*$/iu
-    : /(?:\b(?:ar|aspect\s+ratio)|비율)\s*[:：=]?\s*\d+\s*[:：]\s*\d+\s*$/iu;
+    ? /\bar\s*[:：=]?\s*\d+\s*[:：]\s*\d+[\s.。)\]]*$/iu
+    : /(?:\bar\s*[:：=]?\s*\d+\s*[:：]\s*\d+[\s.。)\]]*|(?:\baspect\s+ratio|비율)\s*[:：=]?\s*\d+\s*[:：]\s*\d+\s*)$/iu;
   if (ratioToken.test(instruction)) {
     emit(result, CODE_REGISTRY.ratioToken, "A ratio token ends the prompt.", { hint: "Move it to parameters, UI settings, or a separate label line; see surface-contracts.md §4." });
   }
@@ -364,11 +364,11 @@ function inspectPhrasing(result, instruction) {
     "Describe the intended background, objects and headcount, for example a plain gray background with one person.");
   if (result.profile === "assembled") {
     evidence(result, CODE_REGISTRY.negation,
-      snippets(/\b(?:never|avoid|exclude|without|no|free\s+of|devoid\s+of|don['’]t|do\s+not)\s+[\p{L}\p{N}][^,.;!?\n\r。]*/giu, remaining),
+      snippets(/\b(?:never|avoid|exclude|without|no|free\s+of|devoid\s+of|don['’]t|do\s+not|(?:must|should|shall|does|is|are)\s+not|can(?:\s+)?not|(?:can|mustn|shouldn|doesn|isn|aren)['’]t)\s+[\p{L}\p{N}][^,.;!?\n\r。]*/giu, remaining),
       "Negative instruction wording",
       "Name the concrete state that should be visible. Keep a separate preservation sentence for the original logo or brand.");
     evidence(result, CODE_REGISTRY.koNegation,
-      snippets(/[^\s,.!?;\n\r。]{0,12}(?:(?<!(?:주차|정차|출입|진입|통행|접근|촬영|흡연|추월|낚시|취식|반입))금지|하지\s*마(?:세요|라)?|하지\s*않(?:도록|게)|(?<!하|바꾸|바꿔|바뀌|건드리|지우|없애|옮기|움직이|훼손하|손대|고치|달라지)지\s*(?:마(?:세요|라|십시오)|않(?:도록|게))(?![가-힣])|없어야|없도록|빼고|제외하고)[^,.!?;\n\r。]{0,12}/gu, remaining).slice(0, 3),
+      snippets(/[^\s,.!?;\n\r。]{0,12}(?:(?<!(?:주차|정차|출입|진입|통행|접근|촬영|흡연|추월|낚시|취식|반입))금지|하지\s*(?:마(?:세요|라)?|말\s*것|말(?:고|아))|하지\s*않(?:도록|게)|(?<!하|바꾸|바꿔|바뀌|건드리|지우|없애|옮기|움직이|훼손하|손대|고치|달라지)지\s*(?:(?:마(?:세요|라|십시오)|않(?:도록|게))(?![가-힣])|말\s*것|말(?:고|아))|없어야|없도록|없게\s*(?:한|하|해|둔|두|둬|만들)|없는\s*상태로\s*(?:둔|두|둬|유지|한|하|해|만들)|빼고|제외하고)[^,.!?;\n\r。]{0,12}/gu, remaining).slice(0, 3),
       "Korean directive negation", "State the visible result positively, for example 책상 위에는 책 한 권만 놓인다.");
     const tags = snippets(/(?<![\p{L}\p{N}_])(?:masterpiece|(?:best|top|highest)\s+quality|(?:4|8|16)k|uhd|(?:ultra|hyper|extremely|insanely)[ -]+detailed|trending\s+on\s+artstation|featured\s+on\s+behance|award[ -]+winning|octane\s+render|unreal\s+engine)(?![\p{L}\p{N}_])/giu, instruction);
     evidence(result, CODE_REGISTRY.quality, tags.map((tag) => tag.toLowerCase()), "Generic quality tags");
@@ -417,7 +417,7 @@ function inspectNoise(result, instruction) {
     "Not a deletion order: report it to the user, and keep it if that look was requested. In new prompts name the visible detail or tone instead.");
 }
 
-const KNOWN_RATIOS = "(?:1[:：]1|2[:：]3|3[:：]2|3[:：]4|4[:：]3|4[:：]5|5[:：]4|9[:：]16|16[:：]9|9[:：]21|21[:：]9|1[:：]2|2[:：]1|1[:：]3|3[:：]1|2\\.39[:：]1|1\\.85[:：]1)";
+const KNOWN_RATIOS = "(?:1[ \\t]?[:：][ \\t]?1|2[ \\t]?[:：][ \\t]?3|3[ \\t]?[:：][ \\t]?2|3[ \\t]?[:：][ \\t]?4|4[ \\t]?[:：][ \\t]?3|4[ \\t]?[:：][ \\t]?5|5[ \\t]?[:：][ \\t]?4|9[ \\t]?[:：][ \\t]?16|16[ \\t]?[:：][ \\t]?9|9[ \\t]?[:：][ \\t]?21|21[ \\t]?[:：][ \\t]?9|1[ \\t]?[:：][ \\t]?2|2[ \\t]?[:：][ \\t]?1|1[ \\t]?[:：][ \\t]?3|3[ \\t]?[:：][ \\t]?1|2\\.39[ \\t]?[:：][ \\t]?1|1\\.85[ \\t]?[:：][ \\t]?1)";
 const SENTENCE_SPLIT = /(?<=[.?!。])\s+|\r?\n/u;
 
 function layerSections(instruction) {
@@ -446,7 +446,7 @@ function inspectCoherence(result, text, instruction) {
   if (sentences.some((sentence) => overFace.test(sentence) && !awayFromFace.test(sentence)) && keptClear.test(instruction)) {
     emit(result, CODE_REGISTRY.occlusion, "Hair is written over the face while another line keeps the face clear.", { hint: "Keep one: turn off the face-clear line when the look needs hair across the face." });
   }
-  const mm = [...instruction.matchAll(/(?<![\p{L}\p{N}_.])(\d{1,3})\s?mm\b(?!\s+(?:film|grain|negative|stock|format|cinema|print|slide|super|photographs?|photos?|stills?|frames?|snapshots?|camera(?!\s+lens)))/giu)].map((match) => Number(match[1]));
+  const mm = [...instruction.matchAll(/(?<![\p{L}\p{N}_.])(\d{1,3})(?:\s?mm|[ -]?millimet(?:er|re)s?)\b(?!\s+(?:film|grain|negative|stock|format|cinema|print|slide|super|photographs?|photos?|stills?|frames?|snapshots?|camera(?!\s+lens)))/giu)].map((match) => Number(match[1]));
   // A bare 广角 is not here: the lens fixed line writes "no 广角 stretch", so only the lens forms count.
   const wideWord = /\b(?:ultra[- ]?wide|fish[- ]?eye|wide[- ]angle\s+(?:lens|shot|view|selfie)|wide\s+lens)\b|超广角|广角镜头|广角 lens|広角レンズ|広角 lens/iu.test(instruction);
   const noStretch = /\bno\s+(?:wide[- ]angle\s+stretch|distortion)\b|\bundistorted\b|\bdistortion[- ]free\b|无畸变|自然透视|natural perspective/iu.test(instruction);
@@ -495,7 +495,7 @@ const POSE_LIST_LINE = /^\s*(?:\d{1,2}\s*[.)]\s|\(\d{1,2}\)\s|[-*•]\s+|(?:opti
 // A posture word per stem; two different stems on either side of "or" is a list of poses ("standing or sitting"). A pose on one side only ("one hand on the rail or hip") is not.
 const POSTURE = /\b(?:stand(?:s|ing)?|sit(?:s|ting)?|seated|lean(?:s|ing)?|walk(?:s|ing)?|kneel(?:s|ing)?|crouch(?:es|ing)?|squat(?:s|ting)?|lie|lies|lying|recline[ds]?|reclining|perch(?:es|ed)?|dancing|running)\b|서\s*있|앉|기대|걷|누워/giu;
 const POSTURE_STEMS = [["stand", /^stand/], ["sit", /^(?:sit|seated)/], ["lean", /^lean/], ["walk", /^walk/], ["kneel", /^kneel/], ["crouch", /^crouch/], ["squat", /^squat/], ["lie", /^(?:lie|lying|reclin)/], ["perch", /^perch/], ["dance", /^danc/], ["run", /^runn/], ["서", /^서/], ["앉", /^앉/], ["기대", /^기대/], ["걷", /^걷/], ["누", /^누/]];
-const POSTURE_OR = /\bor\b|또는|혹은|아니면/giu;
+const POSTURE_OR = /\bor\b|또는|혹은|아니면|거나/giu;
 // A negated pair ("standing tall, not leaning or sitting", "no standing or walking blur") rules postures out, so the pose is already one.
 const NEGATION = /\b(?:not|never|no|nor|without|avoid|instead\s+of|rather\s+than)\b|않|말고|없이|아닌/iu;
 const postureStems = (text) => new Set(snippets(POSTURE, text).map((word) => POSTURE_STEMS.find(([, stem]) => stem.test(word.toLowerCase()))?.[0]));
@@ -506,6 +506,8 @@ function postureAlternatives(line) {
     if (postureStems(segment).size >= 3 && !NEGATION.test(segment)) hits.push(segment.trim().slice(0, 80));
     for (const connector of segment.matchAll(POSTURE_OR)) {
       if (NEGATION.test(segment.slice(0, connector.index))) continue;
+      // Korean puts the negator last (앉거나 기대지 않는다 rules both out).
+      if (connector[0] === "거나" && NEGATION.test(segment.slice(connector.index))) continue;
       const left = segment.slice(0, connector.index).replace(/[,;\s]+$/u, "").split(/[,;]/u).at(-1).split(/\s+/u).slice(-6).join(" ");
       const right = segment.slice(connector.index + connector[0].length).replace(/^[,;\s]+/u, "").split(/[,;]/u)[0].split(/\s+/u).slice(0, 6).join(" ");
       const [before, after] = [postureStems(left), postureStems(right)];
@@ -844,9 +846,13 @@ function isListed(chunk, known, heads) {
 }
 
 const escapeRegExp = (text) => text.replace(/[.*+?^${}()|[\]\\]/gu, "\\$&");
-function aliasPattern(alias) {
+// `particles`: a Hangul alias with one particle glued on (계단은, 마당에서) is still that alias; the one-name check asks for it, the other callers keep the bare word.
+function aliasPattern(alias, particles = false) {
   const body = escapeRegExp(alias);
-  if (/\p{sc=Hangul}/u.test(alias)) return new RegExp(`(?<!\\p{sc=Hangul})${body}(?!\\p{sc=Hangul})`, "u");
+  if (/\p{sc=Hangul}/u.test(alias)) {
+    const tail = particles ? `(?:${[...KOREAN_PARTICLES].sort((a, b) => b.length - a.length).join("|")})?` : "";
+    return new RegExp(`(?<!\\p{sc=Hangul})${body}${tail}(?!\\p{sc=Hangul})`, "u");
+  }
   if (NATIVE_CHAR.test(alias)) return new RegExp(body, "u");
   return new RegExp(`(?<![\\p{L}\\p{N}])${body}(?![\\p{L}\\p{N}])`, "iu");
 }
@@ -949,7 +955,7 @@ function inspectMix(result, instruction) {
       const key = mixKey(alias);
       const latin = !NATIVE_CHAR.test(alias);
       if (key.length < 2 || (latin && alias.split(/\s+/u).length < 2 && alias.length < 7) || own.includes(key) || key.includes(own)) continue;
-      if (aliasPattern(alias).test(outside)) renamed.push(`${item.head} / ${alias}`);
+      if (aliasPattern(alias, true).test(outside)) renamed.push(`${item.head} / ${alias}`);
     }
   }
   if (renamed.length) {
@@ -1122,7 +1128,7 @@ function inspectEngine(result, instruction) {
     }
   }
   if (engine === "soul") {
-    const brands = snippets(/\b(?:kodak|portra|ektachrome|ektar|fujifilm|fuji\s+(?:superia|velvia|provia|pro)|cinestill|vision3|ilford|tri-x)\b/giu, instruction);
+    const brands = snippets(/\b(?:kodak|kodachrome|portra|ektachrome|ektar|fujifilm|fuji\s+(?:superia|velvia|provia|pro)|cinestill|vision3|ilford|tri-x|agfa|lomography)(?![a-z])/giu, instruction);
     if (brands.length) emit(result, CODE_REGISTRY.engineBrand, `Soul: film brand in the prompt (${[...new Set(brands.map((name) => name.toLowerCase()))].slice(0, 3).join(" | ")}).`, { hint: "Say the color response instead: fine grain, softly lifted blacks (soul-v2-director.md, real-run rule 3)." });
   }
 }
