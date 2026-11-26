@@ -87,7 +87,7 @@ assert.ok(!noFinishWarning(noFinish.replace("A warm late-afternoon telephoto pho
 // a line head that is only the other side's word (西日, a Japanese head, in a Korean scene) is flagged.
 assert.equal(count(noFinish.replace("A warm late-afternoon telephoto photograph", "An anime illustration"), "mix/culture"), 0, "no culture column for a drawn medium");
 assert.equal(count(noFinish, "mix/culture") - count(noFinish.replace("西日", "sunset glow"), "mix/culture"), 1, "a Japanese head in a Korean scene");
-// 문화권 줄 머리 검사는 장소를 읽는다 (fixed-lines.md §문화권 고르기): 섞인 장소(kind place 행이 KR·CN과 JP 양쪽)는 줄 머리를 보지 않되 한·중·일 단일 행 Identity는 예외, 장소가 문화권이 없으면 East Asian Identity만 건너뛴다.
+// 문화권 줄 머리 검사는 장소를 읽는다 (fixed-lines.md §문화권 고르기): 섞인 장소(kind place 행이 KR·CN과 JP 양쪽)는 Identity 행과 상관없이 줄 머리를 보지 않고, 장소가 문화권이 없으면 East Asian Identity만 건너뛴다.
 const jpHeads = (text) => checkText(text, { profile: "native", surface: "s3", engine: "gpt-image" }).warnings.filter((item) => item.code === "mix/culture" && /^JP tokens in a KR·CN/u.test(item.message)).length;
 const place = (text, line) => text.replace("palace courtyard —", line + "\npalace courtyard —");
 const hanok = "한옥 카페 — An open-sky courtyard with wooden verandas around gravel and stones.";
@@ -100,10 +100,24 @@ assert.equal(jpHeads(eastAsian), 1, "a Korean place with an East Asian row does 
 assert.equal(jpHeads(noFinish.replace("create a new person suited to the scene.", "a 22-year-old East Asian woman with 小脸 and a clean 턱선.")), 1, "the fixture's own 경복궁 회랑 head (a token and a describing word) reads as a Korean place");
 assert.equal(jpHeads(place(eastAsian, "通行人 — A few passers-by walk past behind her.")), 1, "a Japanese item row is no mixed place");
 assert.equal(jpHeads(place(eastAsian, cafe)), 0, "the same with a Japanese place row: mixed");
-assert.equal(jpHeads(place(eastAsian, cafe).replace("East Asian woman", "Korean woman")), 1, "a single-culture Identity row keeps the heads checked in a mixed place");
+assert.equal(jpHeads(place(eastAsian, cafe).replace("East Asian woman", "Korean woman")), 0, "a mixed place passes both columns' heads under a single-culture Identity row too");
 const qipao = "A natural-light photograph of a woman in a qipao.\n\n## Outfit\n旗袍 — A fitted ivory silk sheath with a high 立领.";
 assert.equal(count(qipao, "mix/thin"), 0, "a part of the same layer and culture is enough");
 assert.equal(count(qipao.replace("立领", "stand collar"), "mix/thin"), 1, "no part name at all");
+
+// Finish heads that are only the US·FR row switch the other checks off, so a person photo with a KR, CN or JP cue or the East Asian Identity row gets one warning for it,
+// unless the scene names a place outside KR·CN·JP (a US or FR scene row of the lexicon, or a capitalized place after in, at, on or near).
+const wrongRow = (text) => checkText(text, { profile: "native", surface: "s3", engine: "gpt-image" }).warnings.filter((item) => item.code === "mix/culture" && /US·FR row/u.test(item.message)).length;
+const portrait = (first, who, finishHeads = ["photograph", "photorealistic", "real photograph"]) => `${first}\n\n## Identity Reference\nIf none is provided, she is a 22-year-old ${who} woman with a clean jawline. In either case she has 7.5-head proportions.\n\n## Finish\n${finishHeads.map((head) => `${head} — A real photograph.`).join("\n")}`;
+const frenchHeads = ["Photographie", "photoréaliste", "prise de vue réelle"];
+assert.equal(wrongRow(portrait("A studio headshot of a woman.", "East Asian")), 1, "East Asian row with the US Finish row");
+assert.equal(wrongRow(portrait("A natural-light photograph of a woman in Seoul.", "Korean")), 1, "a Korean place with the US Finish row");
+assert.equal(wrongRow(portrait("A natural-light photograph of a woman in Paris.", "East Asian", frenchHeads)), 0, "a Paris scene takes the French Finish row");
+assert.equal(wrongRow(portrait("A natural-light photograph of an East Asian woman in New York.", "East Asian")), 0, "a New York scene takes the US Finish row");
+assert.equal(wrongRow(portrait("A natural-light photograph of a woman on Fifth Avenue.", "East Asian")), 0, "a US lexicon place");
+assert.equal(wrongRow(portrait("A natural-light photograph of a woman.", "East Asian").replace("\n\n## Finish", "\n\n## Scene\nSoHo — A cast-iron street.\n\n## Finish")), 0, "a US scene row in the Scene layer");
+assert.equal(wrongRow(portrait("A studio headshot of a woman.", "American")), 0, "no KR, CN or JP cue and no East Asian row");
+assert.equal(wrongRow(portrait("A studio headshot of a woman.", "East Asian", ["실사", "극사실", "실사 촬영"])), 0, "the KR Finish row");
 
 // A thing with part names (한복: 고름, 동정 …) called at a line head or in the first line but with none of the part names in the prompt gets one mix/thin;
 // a part name anywhere, or no Outfit layer for a clothes part, takes it away.

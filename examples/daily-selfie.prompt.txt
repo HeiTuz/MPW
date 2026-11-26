@@ -1,15 +1,15 @@
 A casual front-camera phone selfie of a man in his home kitchen on a weekday morning, holding a mug of coffee.
 
 ## Identity Reference
-If a model reference is provided, the man in this photo is that model: take only the 얼굴형 and 이목구비 from it, adapting them naturally to this scene's expression, angle and light, and keep his own skin tone. Hair, makeup and everything else follow this prompt. If none is provided, he is a man in his thirties with a relaxed, slightly sleepy face and clear skin. In either case he has natural 7.5등신 and level shoulders.
+If a model reference is provided, the man in this photo is that model: take only the 얼굴형 and 이목구비 from it, adapting them naturally to this scene's expression, angle and light, and keep his own skin tone. Hair, makeup and everything else follow this prompt. If none is provided, he is an East Asian man in his thirties with a defined 턱선, a relaxed, slightly sleepy face and clear skin. In either case he has natural 7.5등신 and level shoulders.
 
 ## Hair and makeup
-flat hair — His hair is still a little flat from sleep, with one section pressed to the side.
-bare face — No makeup, so the skin looks natural with a little shine on the forehead and nose.
+자다 일어난 머리 — His hair is still a little flat from sleep, with one section pressed to the side.
+쌩얼 — No makeup, so the skin looks natural with a little shine on the forehead and nose.
 
 ## Expression
 half-smile — A relaxed half-smile toward the screen, with one cheek lifting slightly.
-sleepy eyes — The eyelids sit half relaxed, as if he just woke up.
+졸린 눈 — The eyelids sit half relaxed, as if he just woke up.
 
 ## Outfit
 morning clothes — A soft gray cotton t-shirt with a slightly stretched collar.
@@ -21,19 +21,19 @@ white mug — A white ceramic mug held near his chest in the free hand, with two
 arm's length — The phone is held at arm's length slightly above eye level and stays out of frame; his extended arm and shoulder enter from the lower edge of the frame.
 
 ## Scene
-home kitchen — Behind him the kitchen is slightly out of focus: a kettle and a cutting board on the counter and pale cabinet doors.
+아침 주방 — Behind him the kitchen is slightly out of focus: a kettle and a cutting board on the counter and pale cabinet doors.
 
 ## Light
 window light — Soft morning daylight from a window at camera right lights one side of his face and leaves the other side in gentle shade.
-catchlight — A small window shaped point of light sits in each eye.
+창문 캐치라이트 — A small window shaped point of light sits in each eye.
 
 ## Optics
-phone camera — Natural phone-camera color with a little noise in the shadows, and the close distance stretches the frame edges slightly.
+phone camera — Natural phone-camera color with a little 噪点 in the 暗部, and the close distance stretches the frame edges slightly.
 
 ## Camera
 selfie frame — A vertical 3:4 frame with his face and upper chest filling most of it, seen from slightly above.
 
 ## Finish
-photograph — The whole frame reads as a real front-camera phone selfie.
-photorealistic — Ultra-realistic 8K photographic detail: real pores on the skin, real weave in the cotton, real steam off the coffee.
-real photograph — A real person photographed in his own kitchen, never an illustration, anime frame, 3D render or plastic-skinned CGI.
+실사 — The whole frame reads as a real front-camera phone selfie.
+극사실 — Ultra-realistic 8K photographic detail: real pores on the skin, real weave in the cotton, real steam off the coffee.
+실사 촬영 — A real person photographed in his own kitchen, never an illustration, anime frame, 3D render or plastic-skinned CGI.

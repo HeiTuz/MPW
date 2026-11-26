@@ -5,14 +5,14 @@ If a model reference is provided, the woman in this photo is that model: take on
 
 ## Hair and makeup
 neat hair — Dark hair falls straight to the shoulders with a soft side part, and the ends sit smoothly against the shoulders without stray strands.
-tucked side — The hair on the left side is tucked behind the ear, so the earlobe, a small pearl stud and the line of the jaw are clear.
+사이드 파트 — The hair on the left side is tucked behind the ear, so the earlobe, a small pearl stud and the line of the jaw are clear.
 촉촉피부 — A thin dewy base leaves a soft sheen on the cheekbones and the bridge of the nose while fine skin texture still shows, lightly retouched so nothing looks plastic.
 애교살 — A soft pearly band under the lower lashes with a faint shadow line beneath it.
 점막 아이라인 — A hair-thin dark line along the upper lash roots defines the eye with no visible wing.
 natural color — A sheer rose lip tint with a soft edge and a soft peach blush that fades into the cheeks with no visible border; the brows are groomed along their natural line.
 
 ## Expression
-closed smile — A small closed-mouth smile: 입꼬리가 살짝 올라가고, the lids stay relaxed and the brows level, so the face reads friendly and calm.
+옅은 미소 — A small closed-mouth smile: 입꼬리가 살짝 올라가고, the lids stay relaxed and the brows level, so the face reads friendly and calm.
 direct gaze — Her eyes look straight into the lens, and the lids sit just below the top of the irises.
 
 ## Outfit
@@ -25,7 +25,7 @@ quarter turn — The shoulders turn a quarter away from the camera and the face 
 chin — The chin is lowered a few degrees and the head tilts very slightly toward the lower shoulder, which softens the jawline.
 
 ## Style
-corporate clean — A tidy, current professional look: a restrained palette, smooth lines and nothing that dates the photo.
+클린핏 — A tidy, current professional look: a restrained palette, smooth lines and nothing that dates the photo.
 palette — Warm gray, muted blue-gray, soft rose and the dark brown of the hair, all low in saturation.
 
 ## Scene
@@ -33,7 +33,7 @@ paper backdrop — A seamless warm gray paper backdrop fills the frame behind he
 backdrop falloff — The paper falls off a little darker behind the shoulders and stays lighter behind the head, so her outline separates cleanly.
 
 ## Light
-key light — One large soft light from camera left and slightly above lights the near side of the face and casts a gentle shadow across the far cheek.
+소프트박스 — One large soft light from camera left and slightly above lights the near side of the face and casts a gentle shadow across the far cheek.
 fill — A dim fill from camera right keeps the shadow side readable, and the shadow edge stays soft and slow.
 hair light — A small light from behind and above on the right puts a thin bright edge along the hair and the shoulder.
 catchlight — Each eye holds one small bright catchlight from the main light, placed at the upper left of the pupil.
@@ -44,11 +44,11 @@ highlights — Highlights on the forehead and the nose bridge roll off smoothly 
 sharpness — Modern digital sharpness with a clean, noise-free backdrop and no visible grain.
 
 ## Camera
-vertical frame — A vertical 3:4 frame from just above her hair to her upper chest, the face slightly left of center with a little space above the head.
-lens — The camera is at eye level about two meters away with a short telephoto lens, so the face is not stretched.
+바스트 샷 — A vertical 3:4 frame from just above her hair to her upper chest, the face slightly left of center with a little space above the head.
+눈높이 촬영 — The camera is at eye level about two meters away with a short telephoto lens, so the face is not stretched.
 focus — The eyes are sharp, the ears and the shoulders soften very slightly, and the backdrop melts into smooth 虚化.
 
 ## Finish
-photograph — The whole frame reads as a real color studio headshot photograph.
-photorealistic — Ultra-realistic 8K photographic detail: real pores on the skin, real weave in the knit, real fibers in the paper backdrop.
-real photograph — A real person photographed in a studio, never an illustration, anime frame, 3D render or plastic-skinned CGI.
+실사 — The whole frame reads as a real color studio headshot photograph.
+극사실 — Ultra-realistic 8K photographic detail: real pores on the skin, real weave in the knit, real fibers in the paper backdrop.
+실사 촬영 — A real person photographed in a studio, never an illustration, anime frame, 3D render or plastic-skinned CGI.

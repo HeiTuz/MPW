@@ -54,7 +54,7 @@ export const CODE_REGISTRY = Object.freeze({
   mixLine: { code: "mix/line", severity: { native: "warning", assembled: null }, intent: "Flag a layer line with no English frame, or a spaced original-language phrase outside Expression and Style or twice in one line (image-brief.md §2)." },
   mixUnlisted: { code: "mix/unlisted", severity: { native: "warning", assembled: null }, intent: "Flag original-language words that no lexicon row, look card or fixed-lines.md carries." },
   mixRenamed: { code: "mix/renamed", severity: { native: "warning", assembled: null }, intent: "Flag one thing called by two names: another alias of a line-head token written outside its line." },
-  mixCulture: { code: "mix/culture", severity: { native: "warning", assembled: null }, intent: "Flag a photo term from the other culture's column of fixed-lines.md (白飛び in a KR or CN scene) unless it is shorter than the scene column's word in the same row (高光 in a JP scene), the culture read from the Finish tokens, or from the language of the line heads and sentence words when there are none." },
+  mixCulture: { code: "mix/culture", severity: { native: "warning", assembled: null }, intent: "Flag a photo term from the other culture's column of fixed-lines.md (白飛び in a KR or CN scene) unless it is shorter than the scene column's word in the same row (高光 in a JP scene), the culture read from the Finish tokens, or from the language of the line heads and sentence words when there are none. Also flag Finish heads that are only the US·FR row in a person photo with a KR, CN or JP cue or the East Asian Identity row, unless the scene names a place outside KR·CN·JP." },
   mixDropped: { code: "mix/dropped", severity: { native: "warning", assembled: "warning" }, intent: "With --source: flag original-language names of the layer prompt that are missing from its flattened form for another engine, or replaced by another alias of the same dictionary row." },
   mixThin: { code: "mix/thin", severity: { native: "warning", assembled: null }, intent: "Flag a KR, CN or JP photo prompt that barely mixes: no Finish layer in a person photo prompt, an owner (한복, 고궁) called without any of its part names in the original language, few original-language line heads, no photo term (either column) in Optics or Camera, or no expression word in Expression. For --engine seedream, midjourney and soul (one paragraph, no line heads): a person photo in a KR, CN or JP scene with fewer than three original-language words (engine-levers.md §3)." },
   pickOne: { code: "phrasing/pick-one", severity: { native: "warning", assembled: "warning" }, intent: "Flag wording that hands the choice to the model: the author writes one value and leaves no option list in the prompt." },
@@ -901,6 +901,16 @@ function proseCulture(lines, first, scene, sources) {
   return CUE_GROUP(`${first} ${scene}`);
 }
 
+// fixed-lines.md §문화권 고르기: a scene that names a place outside KR·CN·JP takes the US or FR Finish row, so English Finish heads are right there. The place is a scene-lexicon row of no KR, CN or JP culture
+// (whose name the text carries) or a capitalized name after in, at, on or near that is not a KR, CN or JP place (in New York, near Fifth Avenue).
+const PLACE_NAME = /\b(?:in|at|on|near|outside|inside|along|across) (?:the |a |an )?((?!(?:Korean|Chinese|Japanese|East|Asian)\b)[A-Z][\p{L}'-]*(?: [A-Z][\p{L}'-]*)*)/gu;
+function elsewhere(text, sources) {
+  const key = mixKey(text);
+  return [...sources.rowsByName].some(([name, rows]) => (NATIVE_CHAR.test(name) ? name.length >= 2 : name.length >= 4) && key.includes(name)
+    && rows.every((row) => row.slug === "scene" && !row.culture.some((culture) => /^(?:KR|CN|JP)$/u.test(culture))))
+    || [...text.matchAll(PLACE_NAME)].some((match) => !ASIAN_SCENE.test(match[1]));
+}
+
 // A 부분 row's owner (한복, 고궁) called at a line head or in the first line, but none of its parts named in the original language anywhere in the prompt: the parts were written out in English.
 // The clothes' parts are read only when the prompt has an Outfit layer, so a face close-up that shows no sleeve or ribbon is not asked for one (image-brief.md §2.1).
 function inspectParts(result, sections, lines, first, instruction, sources) {
@@ -987,8 +997,19 @@ function inspectMix(result, instruction) {
   const groups = new Set(lines.filter((item) => item.section === "Finish").map((item) => sources.finish.get(mixKey(item.head))).filter(Boolean));
   const finishLines = lines.filter((item) => item.section === "Finish");
   const person = sections.some((section) => section.name === "Identity Reference");
-  const own = groups.size ? (groups.size === 1 && !groups.has("LATIN") ? [...groups][0] : null)
-    : NOT_PHOTO.test(first) ? null : proseCulture(lines, first, sections.filter((section) => section.name === "Scene").flatMap((section) => section.lines).join(" "), sources);
+  const sceneLines = sections.filter((section) => section.name === "Scene").flatMap((section) => section.lines).join(" ");
+  const identity = sections.filter((section) => section.name === "Identity Reference").flatMap((section) => section.lines).join(" ");
+  let own = groups.size ? (groups.size === 1 && !groups.has("LATIN") ? [...groups][0] : null)
+    : NOT_PHOTO.test(first) ? null : proseCulture(lines, first, sceneLines, sources);
+  // Finish heads that are only the US·FR row would switch every check below off. In a person photo whose first line or Scene names a KR, CN or JP place or person, or whose Identity is the East Asian row,
+  // they are a wrong row unless the scene names a place outside KR·CN·JP (fixed-lines.md §문화권 고르기): warn once and read the rest by that culture's column (no place cue: KR·CN).
+  if (person && groups.size === 1 && groups.has("LATIN") && !NOT_PHOTO.test(first)) {
+    const cue = CUE_GROUP(`${first} ${sceneLines}`);
+    if ((cue || /\bEast Asian\b/u.test(identity)) && !elsewhere(`${first} ${sceneLines}`, sources)) {
+      emit(result, CODE_REGISTRY.mixCulture, `The Finish line heads are the US·FR row in a ${cue ? "KR, CN or JP" : "no-cue East Asian"} prompt.`, { hint: "Take the Finish tokens from the row of the scene's culture in fixed-lines.md §문화권 고르기 (no KR, CN or JP place cue: the KR row), unless the scene names a place outside KR·CN·JP (image-brief.md §3)." });
+      own = cue ?? "KRCN";
+    }
+  }
   // Finish heads that are slot names (closer, realism, anti-cg) instead of the culture row's tokens: the prompt was written without the fixed-lines.md rows at all.
   if (person && finishLines.length && !groups.size) {
     emit(result, CODE_REGISTRY.mixThin, `The prompt barely mixes languages: the Finish line heads (${finishLines.slice(0, 3).map((item) => item.head).join(" | ")}) are not the culture row's tokens.`, { hint: "Pick the culture row in fixed-lines.md §문화권 고르기 (no cue: the KR row) and use its Finish tokens, Identity paragraph and §문장 속 낱말 column; name what is in the frame with lexicon tokens at the line heads (image-brief.md §2.1)." });
@@ -1011,15 +1032,14 @@ function inspectMix(result, instruction) {
     // A head whose every row belongs to the other side of KR·CN and JP (西日 in a Korean palace, 旗袍 in a Tokyo street) is another culture's word too.
     const asian = new Set(["KR", "CN", "JP"]);
     // fixed-lines.md §문화권 고르기: a place that mixes KR·CN and JP (한옥에 차린 純喫茶) or names no culture takes the 단서 없음 row, and no side's head is the other's then.
-    // The place is read from the scene-lexicon tokens of the first line and the Scene layer; a place that names no culture is trusted only when the Identity paragraph says so (East Asian),
-    // and a Korean, Chinese or Japanese Identity row keeps the heads checked even in a mixed place (the row or the heads are wrong).
+    // The place is read from the scene-lexicon tokens of the first line and the Scene layer; a place that names no culture is trusted only when the Identity paragraph says so (East Asian).
+    // A mixed place passes both columns' heads whatever the Identity row says.
     const sideOf = (rows) => { const sets = rows.map((row) => row.culture.filter((culture) => asian.has(culture))); return !sets.length || sets.some((set) => !set.length) ? null : sets.every((set) => set.every((culture) => culture === "JP")) ? "JP" : sets.every((set) => !set.includes("JP")) ? "KRCN" : null; };
     const sceneText = [first, ...sections.filter((section) => section.name === "Scene").flatMap((section) => section.lines)].join("\n");
     // Each scene-lexicon token named there gives its side (a spaced Hangul run glued to a Han or kana word, 純喫茶처럼 꾸민 한옥 카페에서, or a token with a describing word after it, 경복궁 회랑, is read from the trailing and the leading word runs of the chunk); only kind "place" rows (한옥 카페, 純喫茶, 商店街) make a place mixed, while items (창살, 通行人) still show that the place has a culture.
     const named = chunksOf(unquote(sceneText)).flatMap((chunk) => { const words = chunk.split(/ +/u); const read = (spans) => spans.flatMap((span) => { const key = mixKey(span.join(" ")); return [key, ...particleStems(key)]; }).map((key) => (sources.rowsByToken.get(key) ?? []).filter((row) => row.slug === "scene")).find((rows) => sideOf(rows)) ?? []; return [...read(words.map((_, from) => words.slice(from))), ...read(words.map((_, to) => words.slice(0, words.length - to)))]; });
     const sides = (kind) => new Set(named.filter((row) => !kind || row.kind === kind).map((row) => sideOf([row])).filter(Boolean));
-    const identity = sections.filter((section) => section.name === "Identity Reference").flatMap((section) => section.lines).join(" ");
-    const unread = (sides("place").size === 2 && !/\b(?:Korean|Chinese|Japanese) (?:wo)?man\b/u.test(identity)) || (!sides().size && /\bEast Asian\b/u.test(identity));
+    const unread = sides("place").size === 2 || (!sides().size && /\bEast Asian\b/u.test(identity));
     const aside = unread ? [] : lines.filter((item) => item.section !== "Finish").map((item) => item.head).filter((head) => {
       const rows = sources.rowsByToken.get(mixKey(head)) ?? [];
       return rows.length && rows.every((row) => { const cultures = row.culture.filter((culture) => asian.has(culture)); return cultures.length && (own === "JP" ? !cultures.includes("JP") : cultures.every((culture) => culture === "JP")); });
