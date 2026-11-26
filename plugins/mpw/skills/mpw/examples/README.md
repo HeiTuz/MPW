@@ -8,7 +8,7 @@ These files are original, text-only native prompt examples for distinct requests
 | greenhouse-portrait.prompt.txt | A documentary portrait of a greenhouse caretaker |
 | teacup-still-life.prompt.txt | A handmade teacup still life |
 | studio-portrait.prompt.txt | A studio headshot for a team page; the request gives no age or appearance, so the default person applies; no reference image |
-| daily-selfie.prompt.txt | A front-camera morning selfie of a man in his thirties, as the request specifies; no reference image |
+| daily-selfie.prompt.txt | A front-camera morning selfie of a man; the request gives only his thirties and his own kitchen, no culture, so the default East Asian row fills the Identity formula; no reference image |
 | fashion-campaign-reference.prompt.txt | A trench coat campaign photo with two attached images: image 1 is the model, image 2 is the product |
 
 Photographs close with a `## Finish` layer (medium closer, realism line, anti-CG line from references/image/fixed-lines.md); portraits carry the 3:4 frame and the Identity Reference proportion sentence. The three portrait requests show the rules in references/image/image-brief.md section 5 and references/image/editorial/portrait-brief.md: a default person written inside the Identity Reference condition when the request gives none, no preservation wording without a reference, and numbered roles with preserved identity and product construction when references exist.

@@ -4,14 +4,14 @@ A quiet documentary portrait of a woman greenhouse caretaker at the end of a wor
 If a model reference is provided, the woman in this photo is that model: take only the 얼굴형 and 이목구비 from it, adapting them naturally to this scene's expression, angle and light, and keep her own skin tone. Hair, makeup and everything else follow this prompt. If none is provided, she is an East Asian woman in her mid-forties with a calm, weathered face, clear bone structure and clear skin with fine lines. In either case 7.5등신, 小头 over 直角肩 and 天鹅颈.
 
 ## Hair and makeup
-tied hair — Gray-streaked dark hair is tied back loosely at the nape, with a few short strands escaping at the temples and catching the light.
-bare skin — No visible makeup: the skin shows fine lines at the eyes and a natural matte finish with a little sheen at the forehead.
-brows — The brows are untouched, slightly uneven, dark with a few gray hairs near the tails.
+하나로 묶은 머리 — Gray-streaked dark hair is tied back loosely at the nape, with a few short strands escaping at the temples and catching the light.
+쌩얼 — No visible makeup: the skin shows fine lines at the eyes and a natural matte finish with a little sheen at the forehead.
+野生眉 — The brows are untouched, slightly uneven, dark with a few gray hairs near the tails.
 lips — The lips carry their own color, a dry pale rose with a small crease at the center.
 
 ## Expression
-thoughtful gaze — Her eyes look toward the open greenhouse door with the eyelids relaxed and the brow smooth.
-unposed — Her mouth rests nearly closed and the face stays unposed, as if she did not notice the camera.
+시선 회피 — Her eyes look toward the open greenhouse door with the eyelids relaxed and the brow smooth.
+무표정 — Her mouth rests nearly closed and the face stays unposed, as if she did not notice the camera.
 small tension — A faint line between the brows shows she is thinking about something outside the frame.
 
 ## Outfit
@@ -20,7 +20,7 @@ shirt — The faded blue-green cotton shirt has a soft, thinned surface; the col
 pockets — The apron's front pocket holds a folded pair of pruning gloves and the handle of a small trowel, pulling the fabric down on that side.
 
 ## Props and nails
-bench hand — The resting hand is broad and capable, with short clean nails, a thin line of soil in the creases of the knuckles and a faint tan line at the wrist.
+맨손톱 — The resting hand is broad and capable, with short clean nails, a thin line of soil in the creases of the knuckles and a faint tan line at the wrist.
 watch — A plain steel watch with a scratched crystal sits on the other wrist and catches one small point of light.
 
 ## Pose
@@ -38,23 +38,23 @@ glass roof — Damp glass panels and a thin white metal frame rise behind her, w
 bench surface — The wooden bench is gray with old water stains, and small clay pots and a metal watering can sit at its far end.
 
 ## Light
-late afternoon — Low afternoon light passes through damp glass and gives the metal frame soft, gentle reflections; the light is warm yellow and a little hazy from the humid air.
+늦은 오후 빛 — Low afternoon light passes through damp glass and gives the metal frame soft, gentle reflections; the light is warm yellow and a little hazy from the humid air.
 face light — The light falls evenly on her face and the resting hand from the open door side, and the shadows stay soft and low in contrast.
 leaf glow — The edges of the nearest leaves glow pale green where the light passes through them.
 catchlight — A small point of light shaped like the open door sits in each eye.
 
 ## Optics
 documentary color — Natural, slightly muted color with softly rolled highlights on the wet glass and no hard clipping.
-film-like softness — A gentle, low-contrast rendering like a slow color negative.
+胶片感 — A gentle, low-contrast rendering like a slow color negative.
 胶片颗粒 — Fine, even film grain sits across the whole frame, slightly heavier in the shadows under the bench.
 glass haze — A faint veil of haze lifts the blacks slightly in the far background, where the light passes through the damp roof.
 
 ## Camera
-vertical frame — A vertical 3:4 frame from the waist up with the open door at the upper right, the camera at eye level about two meters away.
-lens — A moderate 50mm view keeps the proportions natural and the bench lines straight.
+웨이스트 샷 — A vertical 3:4 frame from the waist up with the open door at the upper right, the camera at eye level about two meters away.
+자연스러운 원근감 — A moderate 50mm view keeps the proportions natural and the bench lines straight.
 focus — Her face and hand are in clear focus, and the leaves behind her soften gradually.
 
 ## Finish
-photograph — The whole frame reads as a real documentary portrait photograph.
-photorealistic — Ultra-realistic 8K photographic detail: real lines in the skin, real soil in the creases, real wear on the canvas and glass.
-real photograph — A real person photographed on location, never an illustration, anime frame, 3D render or plastic-skinned CGI.
+실사 — The whole frame reads as a real documentary portrait photograph.
+극사실 — Ultra-realistic 8K photographic detail: real lines in the skin, real soil in the creases, real wear on the canvas and glass.
+실사 촬영 — A real person photographed on location, never an illustration, anime frame, 3D render or plastic-skinned CGI.

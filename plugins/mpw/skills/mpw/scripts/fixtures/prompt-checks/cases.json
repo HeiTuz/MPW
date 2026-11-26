@@ -158,7 +158,7 @@
   {"case":"micro texture on cheeks and pores in two skin sections are still skin vocabulary","input":"pass/portrait-skin-still.txt","args":["--profile","assembled"],"expect":{"ok":true,"warnings_include":["portrait/skin-token","portrait/skin-repeat"]}},
   {"case":"a \uc8fc\ucc28\uae08\uc9c0 sign noun is not a directive","input":"pass/phrasing-ko-sign.txt","args":["--profile","assembled"],"expect":{"ok":true,"warnings_exclude":["phrasing/ko-negation"]}},
   {"case":"a spaced \uae08\uc9c0 directive is still a directive","input":"pass/phrasing-ko-sign-still.txt","args":["--profile","assembled"],"expect":{"ok":true,"warnings_include":["phrasing/ko-negation"]}},
-  {"case":"the same room under the Korean Identity row still flags its Japanese heads","input":"pass/mix-korean-room-jp-head.txt","args":[],"expect":{"ok":true,"warnings_include":["mix/culture"]}},
+  {"case":"the same room under the Korean Identity row keeps its Japanese heads: a mixed place passes both columns","input":"pass/mix-korean-room-jp-head.txt","args":[],"expect":{"ok":true,"warnings_exclude":["mix/culture"]}},
   {"case":"words a look card's line cell hands over are listed","input":"pass/mix-card-line-words.txt","args":[],"expect":{"ok":true,"warnings_exclude":["mix/unlisted"]}},
   {"case":"a scene set's slot values (\u6bdb\u8fb9, \u70c8\u7130\u7ea2\u5507) are listed","input":"pass/mix-card-set-words.txt","args":[],"expect":{"ok":true,"warnings_exclude":["mix/unlisted"]}},
   {"case":"general Korean words that only a look card's explanation columns carry are unlisted","input":"pass/mix-card-prose-words.txt","args":[],"expect":{"ok":true,"warnings_include":["mix/unlisted"]}},
