@@ -5,7 +5,7 @@ If a model reference is provided, the woman in this photo is that model: take on
 
 ## Hair and makeup
 neat hair — Dark hair falls straight to the shoulders with a soft side part, and the ends sit smoothly against the shoulders without stray strands.
-사이드 파트 — The hair on the left side is tucked behind the ear, so the earlobe, a small pearl stud and the line of the jaw are clear.
+tucked side — The hair on the left side is tucked behind the ear, so the earlobe, a small pearl stud and the line of the jaw are clear.
 촉촉피부 — A thin dewy base leaves a soft sheen on the cheekbones and the bridge of the nose while fine skin texture still shows, lightly retouched so nothing looks plastic.
 애교살 — A soft pearly band under the lower lashes with a faint shadow line beneath it.
 점막 아이라인 — A hair-thin dark line along the upper lash roots defines the eye with no visible wing.
@@ -41,7 +41,7 @@ catchlight — Each eye holds one small bright catchlight from the main light, p
 ## Optics
 clean digital color — Natural, accurate color with gently lifted 暗部; the knit stays blue-gray and the skin keeps its cool, even tone.
 highlights — Highlights on the forehead and the nose bridge roll off smoothly instead of 过曝 to white.
-sharpness — Modern digital sharpness with a clean, noise-free backdrop and no visible grain.
+선예도 — Modern digital sharpness with a clean, noise-free backdrop and no visible grain.
 
 ## Camera
 바스트 샷 — A vertical 3:4 frame from just above her hair to her upper chest, the face slightly left of center with a little space above the head.

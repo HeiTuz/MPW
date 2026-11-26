@@ -118,6 +118,21 @@ assert.equal(wrongRow(portrait("A natural-light photograph of a woman on Fifth A
 assert.equal(wrongRow(portrait("A natural-light photograph of a woman.", "East Asian").replace("\n\n## Finish", "\n\n## Scene\nSoHo — A cast-iron street.\n\n## Finish")), 0, "a US scene row in the Scene layer");
 assert.equal(wrongRow(portrait("A studio headshot of a woman.", "American")), 0, "no KR, CN or JP cue and no East Asian row");
 assert.equal(wrongRow(portrait("A studio headshot of a woman.", "East Asian", ["실사", "극사실", "실사 촬영"])), 0, "the KR Finish row");
+// The check is sure or silent: a KR, CN or JP place (lexicon place row or a place name, not a person's culture) fires it; a plain word that merely contains a lexicon name, a film name after in or on,
+// or any capitalized name beside the East Asian row does not switch it off or on wrongly.
+const withScene = (text, scene) => text.replace("\n\n## Finish", `\n\n## Scene\n${scene}\n\n## Finish`);
+assert.equal(wrongRow(portrait("A nicely lit photograph of a woman in Seoul.", "Korean")), 1, "nicely holds no lexicon name");
+assert.equal(wrongRow(withScene(portrait("A photograph of a woman.", "Korean"), "한옥 카페 — An open-sky courtyard with wooden verandas.")), 1, "a Korean place row, courtyard is no place");
+assert.equal(wrongRow(portrait("A photograph of a woman in Seoul in Kodak Gold tones.", "Korean")), 1, "a film name after in is no place outside KR·CN·JP");
+assert.equal(wrongRow(portrait("A photograph of a woman in her London flat.", "East Asian")), 0, "a capitalized name beside the East Asian row stays silent");
+assert.equal(wrongRow(portrait("A photograph of a woman walking a Paris street.", "East Asian")), 0, "a Paris street stays silent");
+assert.equal(wrongRow(portrait("A photograph of a woman shot in Kodak Gold.", "East Asian")), 0, "a film name stays silent too: sure or silent");
+assert.equal(wrongRow(withScene(portrait("A photograph of a woman.", "Japanese"), "下町 — Low wooden houses and narrow lanes.")), 1, "a Japanese place row");
+assert.equal(wrongRow(portrait("A photograph of a Korean woman against a wall.", "Korean")), 0, "a person's culture is no place");
+const koreanInTokyo = withScene(portrait("A natural-light photograph of a Korean woman walking down a Tokyo street.", "Korean"), "商店街 — A shopping street.").replace("\n\n## Scene", "\n\n## Outfit\nプリーツスカート — A pleated skirt.\n\n## Scene");
+const jpHeadWarnings = checkText(koreanInTokyo, { profile: "native", surface: "s3", engine: "gpt-image" }).warnings.filter((item) => /^JP tokens in a KR·CN/u.test(item.message)).length;
+assert.equal(wrongRow(koreanInTokyo), 1, "a Korean woman in Tokyo gets the one row warning");
+assert.equal(jpHeadWarnings, 0, "and is read in the JP column, so its Japanese heads pass");
 
 // A thing with part names (한복: 고름, 동정 …) called at a line head or in the first line but with none of the part names in the prompt gets one mix/thin;
 // a part name anywhere, or no Outfit layer for a clothes part, takes it away.

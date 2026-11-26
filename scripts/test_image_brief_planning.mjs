@@ -230,13 +230,13 @@ for (const [layer, slug] of Object.entries(LAYER_FILES)) {
 // (2.1 table and rule 2, the token search and rule 2, the slot table and rules 2-3, 9-5, 12.2) and the per-culture variants of the grain and lens lines (now the
 // sentence-word columns) were cut (new 87038, portrait 100543, edit 20602, extract 98507 measured, ceilings about 2% above).
 // Lowered (look-card read pointer, no 문화권 룩 묶음): the new and portrait bundles read image-brief §4 without '룩 카드' (5,051 chars, read only when a card is called) and layer-lexicon without 문화권 룩 묶음 (new 76142, portrait 89635, extract 99415, other-engine 106287 measured, ceilings about 2% above).
-// Raised (per-person identity row, scene-culture columns): fixed-lines.md §문화권 고르기 now says which Identity cells follow the person and which the scene, and image-brief §5 and §2.1 rule 2 point at it (new 77968, extract 101147 measured; ceilings about 2% above, edit 21380 shrank).
-assert.ok(sizes['gpt-image-new'].utf8_bytes <= 79500, `gpt-image-new is ${sizes['gpt-image-new'].utf8_bytes} bytes`);
+// Raised (per-person identity row, scene-culture columns): fixed-lines.md §문화권 고르기 now says which Identity cells follow the person and which the scene, and image-brief §5 and §2.1 rule 2 point at it (new 77968, extract 101147 measured; ceilings a few hundred bytes above, edit 21380 shrank).
+assert.ok(sizes['gpt-image-new'].utf8_bytes <= 78200, `gpt-image-new is ${sizes['gpt-image-new'].utf8_bytes} bytes`);
 assert.ok(sizes['gpt-image-portrait'].utf8_bytes <= 91500, `gpt-image-portrait is ${sizes['gpt-image-portrait'].utf8_bytes} bytes`);
 // Raised (mix quantity): section 1 and 2.1 rule 4 now say the shrink order and the original-language compression, and 9-10 checks it (edit 21280, extract 101008 measured; ceilings just above, the count cap they replace is gone).
 assert.ok(sizes['gpt-image-edit'].utf8_bytes <= 21400, `gpt-image-edit is ${sizes['gpt-image-edit'].utf8_bytes} bytes`);
 assert.ok(sizes['gpt-image-edit-structured'].utf8_bytes <= 23500, `gpt-image-edit-structured is ${sizes['gpt-image-edit-structured'].utf8_bytes} bytes`); // 23045 measured, about 2% above
-assert.ok(sizes['gpt-image-extract'].utf8_bytes <= 103200, `gpt-image-extract is ${sizes['gpt-image-extract'].utf8_bytes} bytes`);
+assert.ok(sizes['gpt-image-extract'].utf8_bytes <= 101400, `gpt-image-extract is ${sizes['gpt-image-extract'].utf8_bytes} bytes`);
 // Engine-levers section 8 (one worked example per engine) is read for the target engine only, so the two engine bundles stay without it (other-engine 118005, conversion 43779 measured, ceilings about 2% above).
 for (const [name, ceiling] of [['image-other-engine', 108400], ['image-prompt-conversion', 44700]]) {
   const bytes = Buffer.byteLength(readTargets(BUNDLES[name]).text);

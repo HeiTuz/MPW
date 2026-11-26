@@ -8,15 +8,15 @@ image 1 — Image 1 is the model photo and gives only the 얼굴형 and 이목�
 image 2 — Image 2 is the trench coat product photo and gives the coat's color, cut and details.
 
 ## Hair and makeup
-잔머리 — Her dark hair is pulled back loosely into a low twist, with a few soft strands falling at the temples and one longer strand moving in the wind.
+loose updo — Her dark hair is pulled back loosely into a low twist, with a few soft strands falling at the temples and one longer strand moving in the wind.
 natural makeup — A sheer, soft matte base with a faint satin glow only on the cheekbones, and a muted rose lip color with a soft powdery edge.
-brows and eyes — The brows are brushed up and filled in a soft brown-gray; a thin brown liner and a single coat of mascara define the lashes without making the eyes heavy.
+毛流眉 — The brows are brushed up and filled in a soft brown-gray; a thin brown liner and a single coat of mascara define the lashes without making the eyes heavy.
 애교살 — A soft pearly band under the lower lashes with a faint shadow line beneath it.
 로즈 블러셔 — A diffuse dusty-rose blush sits high on the cheeks and fades out with no visible edge.
 
 ## Expression
 무표정 — A calm expression with relaxed eyelids and a closed mouth, her gaze just past the lens to the left.
-head angle — The head turns slightly toward her shoulder with the chin level while she looks past the lens.
+시선 회피 — The head turns slightly toward her shoulder with the chin level while she looks past the lens.
 
 ## Outfit
 trench coat — The trench coat from image 2, belted and open at the collar, in cotton gabardine with a fine diagonal twill and a soft matte surface.
@@ -52,7 +52,7 @@ catchlight — A small point of light shaped like the low sun sits in each eye.
 
 ## Optics
 clean digital color — Natural color with gently lifted 暗部; the coat stays a true stone beige and 高光 on the twill roll off smoothly instead of 过曝.
-색온도 — A slightly warm daylight cast keeps the cream knit neutral and the stone a soft pale gray.
+white balance — A slightly warm daylight white balance keeps the cream knit neutral and the stone a soft pale gray.
 선예도 — Modern crisp rendering with a smooth, noise-free sky and plaza and no visible grain.
 
 ## Camera
